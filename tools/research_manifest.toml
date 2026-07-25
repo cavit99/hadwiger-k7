@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "0bd65dc7da766e22b1810052d5fd15db7fefed542980b3897b1d39b0d55fc020"
+expected_source_sha256 = "e33df18c3955e5899ca804aa086fd2b592718236ba6d2faf315e7c133d50e164"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -539,6 +539,34 @@ does_not_prove = [
   "closure of the small-shore or odd-wheel branch",
 ]
 keywords = ["degree eight", "portal reduction", "positive excess", "minimum boundary", "response coupling", "confined lobe"]
+
+[[claims]]
+id = "hc7.order8_nearfull_edge_three_component_closure"
+title = "A near-full edge component and two additional full components are impossible at the compact order-eight boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_nearfull_edge_triangle_closure.md"
+source_heading = "Theorem 6.1"
+active = false
+audit = "results/hc7_order8_nearfull_edge_triangle_closure_audit.md"
+expected_source_sha256 = "9fa601e3e8a1d29dc9de239029809379e92b9187750034d590ea4989dad48667"
+scope = "the original aligned degree-eight three-component host when one full exterior component is a two-vertex edge whose endpoints each miss at most one boundary vertex"
+label_fidelity = "the two endpoint misses, boundary triangle, opposite full component and singleton low-degree root remain literal branch-set data"
+conclusions = [
+  "all 13505 full/full, one-miss and ordered distinct-two-miss profiles on the 185 compact boundary types have a compatible oriented bipartition or a triangle away from both misses",
+  "the 258 incompatible profiles all have such a triangle",
+  "compatible profiles contradict minor-criticality by an explicit two-set contraction",
+  "a triangle profile gives an explicit seven-branch-set K7-minor model using the edge component and the two additional full components",
+  "the exact aligned two-vertex exterior case is closed whenever both endpoint defects are at most one",
+]
+does_not_prove = [
+  "HC7",
+  "that either aligned exterior component has order two",
+  "closure when at least one endpoint of a two-vertex exterior component has defect two",
+  "closure of the minimum-boundary interface with exactly two full components",
+  "closure of other small shores or the general bounded-interface composition theorem",
+]
+keywords = ["degree eight", "near-full edge", "odd-cycle transversal", "boundary triangle", "explicit K7 minor"]
 
 [[claims]]
 id = "hc7.barrier.degree8_portal_role_erasure"
@@ -6735,6 +6763,30 @@ kind = "sharpness_witness"
 note = "The six-connected saturation shows why individual two-apex certificates and unlabelled dominating-model regeneration do not complete the bridge theorem."
 
 [[relations]]
+source = "hc7.order8_nearfull_edge_three_component_closure"
+target = "hc7.low_degree_adjacent_pair_alignment"
+kind = "uses"
+note = "The aligned corollary uses the degree-eight neighbourhood independence bound."
+
+[[relations]]
+source = "hc7.order8_nearfull_edge_three_component_closure"
+target = "hc7.degree8_aligned_pair_bilateral_cycle"
+kind = "uses"
+note = "The aligned application retains the literal boundary, the two full exterior components and the singleton low-degree root from this setup."
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.order8_nearfull_edge_three_component_closure"
+kind = "related_to"
+note = "The new theorem closes the exact order-two, endpoint-defect-at-most-one part of the portal reduction's small-shore outcome."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.order8_nearfull_edge_three_component_closure"
+kind = "related_to"
+note = "This is a terminal conditional subcase; the primary two-component response-coupling interface and the remaining small shores stay open."
+
+[[relations]]
 source = "hc7.barrier.atomic_h0_multipartite_bridge_guardrail"
 target = "hc7.atomic_weak_k7_immersion_rounding"
 kind = "related_to"
@@ -10600,4 +10652,36 @@ expected_stdout = [
   "checked_branch_sets=168 checked_adjacencies=504 deficit=10",
   "fixed_graph6=I]~vy}jhw",
   "catalogue_sha256=2cd2a8faf6f70327a9d2c7b4ec7084bd5981349d529a59708d69e84f05acdaa2",
+]
+
+[[verifiers]]
+id = "order8-rooted-oct-triangle-certificate"
+path = "results/hc7_order8_rooted_oct_triangle_certificate.py"
+sha256 = "5805b098e305fd1c2b74f7913bed4a235ea21becc3679f12d2d5ca96b2355caf"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "graphs 12346",
+  "eligible_graphs 185",
+  "marked_profiles 13505",
+  "oct_witnesses 13247 by_miss_count=[185, 2960, 10102]",
+  "triangle_witnesses 258 by_miss_count=[0, 0, 258]",
+  "records_sha256 c7a4323ec9f23faa1499d8891c33eced2f11ca7270db98bb44dcc8832bb0520d",
+  "PASS",
+]
+
+[[verifiers]]
+id = "order8-rooted-oct-triangle-certificate-check"
+path = "results/hc7_order8_rooted_oct_triangle_check.py"
+sha256 = "05d6c41ff9331b427c2f4c69f56b6bd1705451877a8415f0838dba4f59f66b7f"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "graphs 12346",
+  "eligible_graphs 185",
+  "marked_profiles 13505",
+  "oct_witnesses 13247 by_miss_count=[185, 2960, 10102]",
+  "triangle_witnesses 258 by_miss_count=[0, 0, 258]",
+  "records_sha256 c7a4323ec9f23faa1499d8891c33eced2f11ca7270db98bb44dcc8832bb0520d",
+  "PASS",
 ]
