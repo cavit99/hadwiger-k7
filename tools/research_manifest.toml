@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "26e2276cbfc24f51902aba22bbe51c1914e4026c5c811df37fcab8a1ecf82053"
+expected_source_sha256 = "84859bb72ff6ba2c32ff08f11d004a046cc58073c643523e8255424410cad2e5"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -6707,6 +6707,193 @@ lacks = [
   "a refutation of the fuller tie-break, since the high-degree branch-transit witness has T equal to one",
 ]
 
+[[claims]]
+id = "hc7.order8_arbitrary_edge_response_star"
+title = "One critical-edge response in paired boundary columns"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_arbitrary_edge_response_star.md"
+active = false
+audit = "results/hc7_order8_arbitrary_edge_response_star_audit.md"
+expected_source_sha256 = "1002b613be45b830372c88dc3f3c7c16d501ab8779f38169976a865ebe8c6e8d"
+scope = "one fixed edge and one fixed edge-deletion six-colouring in an exactly-two-component boundary-full order-eight interface"
+label_fidelity = "the target, five colour-indexed first neighbours, seven column labels, two roots and five literal source-to-target paths come from the same edge and colouring"
+separator_order = "an actual order-seven full neighbourhood or a strict order-eight response-side descent"
+strict_parameter = "order of the connected response side in the unchanged host"
+conclusions = [
+  "an exact-seven response or strict order-eight response-side descent",
+  "or two adjacent roots and seven boundary-labelled columns retaining one target, five sources and all five same-colouring response paths",
+]
+does_not_prove = [
+  "that a response path avoids roots or old columns",
+  "that a low-degree contact column is the target or a response source",
+  "a label-preserving split of an intermediate column",
+  "a common boundary partition",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_dual_free_root_response_star"
+title = "Two free root choices in one critical-edge response star"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_dual_free_root_response_star.md"
+active = false
+audit = "results/hc7_order8_dual_free_root_response_star_audit.md"
+expected_source_sha256 = "bb78ac1cc61c501a5f871ab9b69a402f765ee333dabe0c9deeff5805bc94a323"
+scope = "the same fixed edge and edge-deletion colouring as the arbitrary-edge response star, retaining both nonresponse fan limbs before choosing a root"
+label_fidelity = "eight latent column labels, including the target, five response sources and two nonresponse labels"
+conclusions = [
+  "either a strict response output",
+  "or either nonresponse latent column may be consumed to form two roots and seven surviving columns",
+  "the simultaneous pole-target and other-free-label pentagonal-bipyramid exception is impossible in a K7-minor-free host",
+]
+does_not_prove = [
+  "that either free-root contact graph avoids the low-degree alternative",
+  "a clean response path or intermediate-column split",
+  "closure of the order-eight interface",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.seven_column_contact_structure"
+title = "Low degree or pentagonal bipyramid for seven column contacts"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_seven_column_contact_structure.md"
+active = false
+audit = "results/hc7_seven_column_contact_structure_audit.md"
+expected_source_sha256 = "b48e19642347571a713f60d2b045be85907bfe6a07052465ba09d2446d516859"
+scope = "seven connected columns dominated by two adjacent connected roots in a K7-minor-free host"
+label_fidelity = "literal root and column subgraphs and their exact contact graph"
+conclusions = [
+  "the contact graph has a vertex of degree at most three or is the pentagonal bipyramid",
+  "one added missing contact in the pentagonal-bipyramid case lifts to an explicit K7-minor model",
+]
+does_not_prove = [
+  "that a low-degree quotient column gives a bounded host separator",
+  "a response-compatible added contact",
+  "a common boundary partition",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.one_defect_two_root_k5_separator"
+title = "One-defect two-root K5 completion or full-neighbourhood separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_one_defect_two_root_k5_separator.md"
+active = false
+audit = "results/hc7_one_defect_two_root_k5_separator_audit.md"
+expected_source_sha256 = "87e08e0a151f0aca4c168995a906b60b0a95d9023e8076d4fa92b8982a002179"
+scope = "two adjacent connected roots and a K5 model to which one root is complete and the other has at most one missing adjacency"
+separator_order = "an actual full-neighbourhood separation of order at least seven, with no upper bound"
+conclusions = [
+  "an explicit K7-minor model",
+  "or an actual full-neighbourhood separation",
+]
+does_not_prove = [
+  "that the separation has bounded order",
+  "a selected colouring response on the separation",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.six_vertex_source_rooted_k4"
+title = "Six-vertex source-rooted K4 lemma"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_six_vertex_source_rooted_k4.md"
+active = false
+audit = "results/hc7_six_vertex_source_rooted_k4_audit.md"
+expected_source_sha256 = "720b3a93f646f4515824c01f3da1ec7ce9ba90694d0227585c498d2740f6617c"
+scope = "a six-vertex graph with five marked vertices of degree at least three and one auxiliary vertex of degree at most three"
+label_fidelity = "all four K4 branch sets contain a marked vertex"
+conclusions = [
+  "a source-rooted K4 minor",
+  "in a source-saturated K5-minor-free seven-column graph, some response source has degree at most three",
+]
+does_not_prove = [
+  "that the low-degree source misses the target",
+  "a bounded host separator from quotient degree",
+  "the dirty-path exchange or HC7",
+]
+
+[[claims]]
+id = "hc7.order8_dual_root_contact_overlap_closure"
+title = "Dual-root contact overlap closes the pentagonal-bipyramid alternative"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_dual_root_contact_overlap_closure.md"
+active = false
+audit = "results/hc7_order8_dual_root_contact_overlap_closure_audit.md"
+expected_source_sha256 = "d42eb35b88280f98a062c2c231a9e0fac7fe47de8e05bb4e0edac80af35845e6"
+scope = "the two free-root contact graphs arising from one eight-column critical-edge response system"
+label_fidelity = "the same eight latent columns are retained while any one label may be consumed to form the two roots"
+conclusions = [
+  "two pentagonal-bipyramid vertex deletions of one eight-vertex contact graph force a K5 minor after another vertex deletion",
+  "in a K7-minor-free host at least one free-root contact graph has a vertex of degree at most three",
+]
+does_not_prove = [
+  "that the low-degree column is a target or response source",
+  "a bounded host separator from the quotient degree",
+  "a common boundary partition or strict response descent",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_low_degree_incident_source_fork"
+title = "Noncontacting incident-source fork in the order-eight response columns"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_low_degree_incident_source_fork.md"
+active = false
+audit = "results/hc7_order8_low_degree_incident_source_fork_audit.md"
+expected_source_sha256 = "bcaeaceda7f57fbcf8b28316fcd23b2cd5d838b88ac62698ebb2995f55b5a478"
+scope = "the source-saturated low-degree branch of one fixed order-eight critical-edge response-star column system"
+label_fidelity = "two prescribed first edges and their noncontacting source columns retain the labels of the original fixed edge and colouring"
+conclusions = [
+  "a common three-edge response table",
+  "universal bichromatic saturation at one prescribed incident edge",
+  "or a dirty three-colour bypass with two coupled one-edge responses",
+]
+does_not_prove = [
+  "alignment of the simultaneous-contraction colouring with the original boundary partition",
+  "a no-contact-loss dirty-root or dirty-column exchange",
+  "a common boundary partition, strict shore descent, or HC7",
+]
+
+[[claims]]
+id = "hc7.target.order8_low_degree_response_column"
+title = "Low-degree same-operation response-column composition"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_order8_low_degree_response_column_frontier.md"
+source_heading = "Low-degree response-column composition theorem"
+active = false
+expected_source_sha256 = "c4b0bf1c5a5713879198cc114291987163a9140c67ef97c6a70e45b2ebaef556"
+scope = "the minimum order-eight exactly-two-full-component interface after the dual-root pentagonal-bipyramid alternative is eliminated"
+label_fidelity = "one fixed critical edge, one fixed deletion colouring, fixed root seeds and roles, seven column labels, one target, five first neighbours and all old contacts"
+separator_order = "an exact order-seven selected response or a strict order-eight response-side descent on a proper literal connected shore"
+strict_parameter = "literal operated-shore order, or a fully declared finite same-operation column-system rank"
+allowed_exits = [
+  "an explicit K7-minor model",
+  "one complete boundary equality partition extending through both closed shores",
+  "a strict exact-seven selected-response interface",
+  "a strict order-eight response-side descent",
+  "a same-operation no-contact-loss reassignment which strictly improves the declared finite rank",
+]
+does_not_prove = [
+  "that a low-degree quotient column gives a bounded host separator",
+  "closure of universal incident-edge saturation or a dirty incident-source bypass",
+  "a no-contact-loss first-obstruction exchange for an exposed source-target path",
+  "that contact or coverage maximization supplies an exchange",
+  "provenance alignment with an independently chosen two-shore incidence cycle",
+  "the other bounded-interface branches",
+  "HC7",
+]
+keywords = ["order eight", "same operation", "response columns", "low-degree contact", "strict descent"]
+
 [[relations]]
 source = "hc7.atomic_octahedral_frame_augmentation"
 target = "hc7.atomic_weak_k7_immersion_rounding"
@@ -7071,6 +7258,129 @@ note = "This controls the omitted endpoint of prescribed response fans and suppl
 source = "hc7.order8_prescribed_omission_paired_columns"
 target = "hc7.order8_all_boundary_source_fan"
 kind = "uses"
+
+[[relations]]
+source = "hc7.order8_arbitrary_edge_response_star"
+target = "hc7.order8_prescribed_omission_paired_columns"
+kind = "uses"
+note = "The prescribed-first-edge fan supplies the strict order-seven/eight outputs and the paired latent columns."
+
+[[relations]]
+source = "hc7.order8_arbitrary_edge_response_star"
+target = "hc7.seven_column_contact_structure"
+kind = "uses"
+note = "The response-star contact consequences use the exact seven-vertex K5-minor-free classification."
+
+[[relations]]
+source = "hc7.order8_dual_free_root_response_star"
+target = "hc7.order8_arbitrary_edge_response_star"
+kind = "uses"
+note = "The dual construction retains both nonresponse fan limbs before making the response star's root choice."
+
+[[relations]]
+source = "hc7.order8_dual_free_root_response_star"
+target = "hc7.seven_column_contact_structure"
+kind = "related_to"
+note = "Each free-root choice yields a seven-column graph to which the contact classification applies."
+
+[[relations]]
+source = "hc7.order8_dual_root_contact_overlap_closure"
+target = "hc7.order8_dual_free_root_response_star"
+kind = "uses"
+note = "The overlap theorem uses the same eight latent columns and the ability to consume any one label."
+
+[[relations]]
+source = "hc7.order8_dual_root_contact_overlap_closure"
+target = "hc7.seven_column_contact_structure"
+kind = "uses"
+note = "Applying the classification to both free-root deletions leaves low degree unless both are pentagonal bipyramids."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.target.bounded_interface_bridge"
+kind = "subproblem_of"
+note = "This is the current same-operation laboratory inside the minimum order-eight exactly-two-full-component branch."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_arbitrary_edge_response_star"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_dual_free_root_response_star"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_dual_root_contact_overlap_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.seven_column_contact_structure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.two_full_shore_boundary_absorption"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.six_vertex_source_rooted_k4"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_low_degree_incident_source_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+note = "A raw order-seven full neighbourhood is supplied with a selected crossing-edge response and enters the generic restart theorem."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.one_defect_two_root_k5_separator"
+kind = "uses"
+note = "The conditional abstract-saturation compression returns K7 or an unbounded full-neighbourhood separation."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.barrier.degree8_dirty_path_local_uncrossing"
+kind = "guarded_by"
+note = "A same-colouring path can meet old bags without admitting a one-column no-contact-loss reassignment."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.two_shore_kempe_list_dichotomy"
+kind = "related_to"
+note = "The two-shore transition is not yet aligned with the fixed edge, colouring and column labels."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.two_shore_kempe_incidence_cycle"
+kind = "related_to"
+note = "The incidence cycle remains secondary until its operation provenance is aligned with the response star."
+
+[[relations]]
+source = "hc7.order8_low_degree_incident_source_fork"
+target = "hc7.order8_dual_free_root_response_star"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_low_degree_incident_source_fork"
+target = "hc7.six_vertex_source_rooted_k4"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_low_degree_incident_source_fork"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+note = "The low-degree source supplies two noncontacting prescribed incident edges, so the nonadjacent-leaf branch applies without a critical-triangle case."
 
 [[relations]]
 source = "hc7.order8_two_three_centre_component_closure"
@@ -10755,4 +11065,18 @@ expected_stdout = [
   "triangle_witnesses 258 by_miss_count=[0, 0, 258]",
   "records_sha256 c7a4323ec9f23faa1499d8891c33eced2f11ca7270db98bb44dcc8832bb0520d",
   "PASS",
+]
+
+[[verifiers]]
+id = "six-vertex-source-rooted-k4"
+path = "results/hc7_six_vertex_source_rooted_k4_verify.py"
+sha256 = "f9b0649fb9e5a7b4ec84027d614738e883c9b2b045a36f2dc8176117ccbce5ef"
+timeout = 30
+expected_stdout = [
+  "eligible_graphs 1656",
+  "edge_minimal_graphs 175",
+  "rooted_core_orbits 5",
+  "rooted_core_certificate_sha256 613efaf4a975e63ed872525e1c11a64fd78cc870f030b81535b21cb98e6a2abb",
+  "failures 0",
+  "PASS six_vertex_source_rooted_k4",
 ]

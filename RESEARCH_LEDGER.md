@@ -317,14 +317,40 @@ The primary next theorem is the block-blind minimum-boundary
 response-coupling case, beginning with an order-eight boundary and exactly
 two full components.  It must produce an explicit `K_7` model, one common
 complete boundary partition, or an exact-seven response on a strictly
-smaller literal connected shore.  Genuinely split-terminal `I,T` cuts remain
-a conditional fast route to two adjacent bags with one common defect of
-order at most two; the strengthened finite allocation then closes them.
-The remaining small-shore and odd-wheel alternatives remain separate.
-Computation at
-the new order-eight-to-thirteen interface is presently diagnostic only: a
-proof search still needs a finite-signature replacement theorem for the
-unbounded component interiors and a certificate lift to the unchanged host.
+smaller literal connected shore.
+
+The audited arbitrary-edge response construction and its dual-free-root
+refinement now give the right local object without changing colouring
+quantifiers.  For one fixed edge `e` and one fixed six-colouring of `G-e`,
+they retain two adjacent roots, eight latent boundary-labelled columns, one
+target, five operation-specific sources and all five same-colouring
+source-to-target paths.  Consuming either of the two nonresponse columns
+gives a seven-column contact graph.  The newly audited
+[dual-root contact-overlap theorem](results/hc7_order8_dual_root_contact_overlap_closure.md)
+shows that the two choices cannot both be pentagonal bipyramids: their common
+eight-column graph would already yield an explicit `K_7`-minor model.
+Therefore one root choice has a column of contact degree at most three.
+
+The exact surviving laboratory is the
+[low-degree response-column frontier](active/hc7_order8_low_degree_response_column_frontier.md).
+The low-degree column need not initially carry a response label.  A new
+written six-vertex rooted-minor lemma, independently checked by exhaustive
+regression, shows that when the target contacts all five sources, at least
+one response source has contact degree at most three.  This is a genuine
+normalization but not a closure: that source already contacts the target.
+It is, however, nonadjacent to another response source.  The audited
+incident-source fork now gives two prescribed noncontacting edges from the
+original response and either universal bichromatic saturation at one edge
+or a dirty three-colour bypass with two coupled one-edge responses.  The
+focused next target is to compose those objects while retaining the current
+root/column labels, or return a terminal outcome or strict
+response-preserving descent.  When a source misses the target, the separate
+first-obstruction problem remains: its path may meet a root or an old column
+without admitting a no-contact-loss reassignment.  The two-shore list
+dichotomy and incidence cycle remain secondary until their colouring
+operation is aligned with this fixed response.  Genuinely split-terminal
+`I,T` cuts remain a conditional fast route; the other small-shore and
+odd-wheel alternatives remain separate.
 
 A promoted
 [near-full edge-component closure](results/hc7_order8_nearfull_edge_triangle_closure.md)

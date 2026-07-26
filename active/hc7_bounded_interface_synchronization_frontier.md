@@ -424,6 +424,63 @@ Other small-shore shapes remain open, but the two-vertex edge shape is now
 fully eliminated.  Further static boundary-colouring enumeration is not
 the missing mechanism in the surviving cases.
 
+### Same-operation low-degree response-column laboratory
+
+In the exactly-two-component order-eight interface, the audited
+[boundary-absorption theorem](../results/hc7_two_full_shore_boundary_absorption.md)
+gives \(\chi(G[S])\le4\).  More importantly, the audited
+[arbitrary-edge response star](../results/hc7_order8_arbitrary_edge_response_star.md)
+and its
+[dual-free-root refinement](../results/hc7_order8_dual_free_root_response_star.md)
+retain one fixed critical edge `e`, one fixed six-colouring of `G-e`, two
+adjacent roots, eight latent boundary-labelled columns, one target, five
+response sources and the five corresponding source-to-target Kempe paths.
+Thus the local data do not come from unrelated colouring operations.
+
+The [dual-free-root construction](../results/hc7_order8_dual_free_root_response_star.md)
+allows either of two nonresponse columns to be consumed as a root.  The
+audited [seven-column theorem](../results/hc7_seven_column_contact_structure.md)
+then returns a low-degree contact graph or a pentagonal bipyramid.  The
+newly audited
+[dual-root overlap closure](../results/hc7_order8_dual_root_contact_overlap_closure.md)
+eliminates the possibility that both free-root choices are pentagonal
+bipyramids: after consuming a third latent column, their overlap already
+contains the five column branch sets needed with the two roots for an
+explicit `K_7`-minor model.  Hence a surviving choice has a column of
+contact degree at most three.
+
+The precise open problem is recorded in the
+[low-degree response-column frontier](hc7_order8_low_degree_response_column_frontier.md).
+The low-degree column need not initially be the target or one of the five
+response sources.  The audited six-vertex rooted-`K_4` lemma nevertheless
+shows that if the target contacts all five sources, some response source has
+contact degree at most three.  It is then nonadjacent to another response
+source.  The audited incident-source fork gives either one universally
+bichromatically saturated prescribed edge or a dirty three-colour bypass
+between those two noncontacting source columns, together with coupled
+one-edge responses.  Its simultaneous-contraction colouring need not be the
+original response colouring.  Maximizing the contact graph and covered
+vertices, and then minimizing old-column/root encounters and path length,
+is a finite normalization only; it does not prove the needed no-contact-loss
+exchange.  A first obstruction can also be a root, not merely an old column.
+
+The focused next target is therefore to use the critical-host nonextension
+data.  In the source-saturated case it should compose the universal
+saturation or dirty incident-source bypass while retaining this same column
+model, or return `K_7`, a common complete boundary partition or a strict
+selected-response descent.  In the exposed case it should reassign the
+first root/column encounter while retaining the same edge, colouring, root
+roles, seven labels, five first neighbours and every old contact, or
+strictly improve a declared finite rank.  A low-degree quotient separator
+is not a bounded separator of the host.
+
+The audited
+[two-shore Kempe/list dichotomy](../results/hc7_two_shore_kempe_list_dichotomy.md)
+and [incidence-cycle theorem](../results/hc7_two_shore_kempe_incidence_cycle.md)
+remain secondary: their transition need not use the same edge, colouring,
+colour pair or labelled columns.  No inference combines them with the
+response star until that provenance is proved.
+
 Computation on the bounded separator is presently a falsification and
 discovery tool.  A proof-producing exhaustive search first needs a finite-
 signature replacement lemma for the unbounded full components, retaining
