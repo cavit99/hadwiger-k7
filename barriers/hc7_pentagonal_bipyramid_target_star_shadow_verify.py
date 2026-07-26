@@ -106,6 +106,30 @@ def main() -> None:
     assert graph.has_edge(2, 6) and graph.has_edge(6, 4)
     assert not graph.has_edge(2, 4)
 
+    # The corresponding common deletion is exactly six-connected and still
+    # contains the centre-free dirty path through the singleton column.
+    common_deletion = graph.copy()
+    common_deletion.remove_edges_from((("v", 2), ("v", 4)))
+    assert nx.node_connectivity(common_deletion) == 6
+    assert all(x not in {"v", "w"} for x in (2, 6, 4))
+    assert all(
+        common_deletion.has_edge(x, y) for x, y in ((2, 6), (6, 4))
+    )
+
+    # K2 joined to this odd wheel is a six-chromatic subgraph.
+    wheel = {0, 1, 5, 11, 7, 8}
+    rim = (1, 5, 11, 7, 8)
+    assert all(common_deletion.has_edge(0, x) for x in rim)
+    assert all(
+        common_deletion.has_edge(rim[i], rim[(i + 1) % len(rim)])
+        for i in range(len(rim))
+    )
+    assert all(
+        common_deletion.has_edge(root, x)
+        for root in ("v", "w")
+        for x in wheel
+    )
+
     # Four-colourability of the planar core supplies the stated trust
     # boundary (the join then uses two fresh colours).
     colouring = nx.coloring.greedy_color(

@@ -1,6 +1,6 @@
 # A seven-connected target-star shadow on the pentagonal bipyramid
 
-**Status:** barrier/counterexample to two intermediate geometric claims;
+**Status:** barrier/counterexample to three intermediate geometric claims;
 computer-checked by
 [`hc7_pentagonal_bipyramid_target_star_shadow_verify.py`](hc7_pentagonal_bipyramid_target_star_shadow_verify.py).
 This graph is six-colourable and has order-seven separations.  It is not a
@@ -22,6 +22,8 @@ from seven-connectivity and exclusion of a `K_7` minor.
    path runs through one intermediate column, then that intermediate column
    necessarily admits the connected split used by the column-peeling
    construction.
+3. After deleting the two incident endpoint spokes, six-connectivity,
+   six-chromaticity and a path avoiding both fan centres force such a split.
 
 The obstruction is literal rather than merely a seven-vertex quotient.
 It realizes only this labelled spoke geometry, not the operation-specific
@@ -121,3 +123,20 @@ Thus the graph has singleton-side order-seven separations.  The example
 does **not** refute a disjunction whose alternatives include an exact-seven
 response separation, nor does it realize the universal operation-specific
 nonextendability of a hypothetical contraction-critical counterexample.
+
+There is a sharper common-deletion version of the barrier.  Delete the two
+spokes `v2` and `v4` and call the resulting graph `H`.  Then `H` is exactly
+six-connected.  It is exactly six-chromatic: it is a subgraph of
+`K_2 vee I`, hence six-colourable, while the vertices `v,w` joined to the
+odd wheel with centre `0` and rim
+
+\[
+                         1,5,11,7,8,1
+\]
+
+form a six-chromatic subgraph.  It remains `K_7`-minor-free as a subgraph of
+`G_0`, and the centre-free path `2-6-4` still passes through the unsplittable
+singleton column `{6}`.  Consequently connectivity, chromatic number,
+minor exclusion and centre-free geometry alone do not prove the dirty-path
+exchange.  The live theorem must use the named component switches or return
+the exact-seven separation which this shadow already has.
