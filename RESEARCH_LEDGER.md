@@ -333,20 +333,42 @@ Therefore one root choice has a column of contact degree at most three.
 
 The exact surviving laboratory is the
 [low-degree response-column frontier](active/hc7_order8_low_degree_response_column_frontier.md).
-The low-degree column need not initially carry a response label.  A new
-written six-vertex rooted-minor lemma, independently checked by exhaustive
-regression, shows that when the target contacts all five sources, at least
-one response source has contact degree at most three.  This is a genuine
-normalization but not a closure: that source already contacts the target.
-It is, however, nonadjacent to another response source.  The audited
-incident-source fork now gives two prescribed noncontacting edges from the
-original response and either universal bichromatic saturation at one edge
-or a dirty three-colour bypass with two coupled one-edge responses.  The
-focused next target is to compose those objects while retaining the current
-root/column labels, or return a terminal outcome or strict
-response-preserving descent.  When a source misses the target, the separate
-first-obstruction problem remains: its path may meet a root or an old column
-without admitting a no-contact-loss reassignment.  The two-shore list
+The low-degree column need not initially carry a response label.  The
+audited six-vertex rooted-minor lemma shows that when the target contacts all
+five sources, a response source has contact degree at most three.  The
+written unified incident-pair theorem now removes the former split between
+this case and an exposed source--target noncontact.  In every survivor, two
+noncontacting response columns are represented by two literal edges incident
+with the same vertex.  Their common deletion has the exact signature table
+`(=,not equal)`, `(not equal,=)`, `(=,=)` and gives either universal
+bichromatic saturation or one dirty bypass with two coupled one-edge
+responses.
+
+Two further written deductions make the host geometry sharper.  An
+eight-latent-column contact/coverage maximum spans `G` outside the two fixed
+fan centres, and changing the consumed nonresponse label converts every
+first root hit except the opposite centre into a latent-column hit.  More
+substantively, the common two-edge deletion is six-connected unless the
+operated vertex has degree exactly seven; in that exception its singleton
+shore is already a strict generic exact-seven response restart.  Thus every
+nonrecursive dirty bypass now lives in one six-connected common deletion.
+Every root-first encounter reduces to a latent-column encounter unless the
+named bypass uses the single opposite fan centre.  Six-connectivity then
+supplies a centre-free path, but not one retaining the named switch
+provenance.
+An exhaustive conditional contact theorem identifies a labelled
+`K_7`-minus-one-edge model whenever the seven-column graph is abstractly
+edge-maximal, but realizable exchange-maximality does not imply that abstract
+hypothesis.
+
+The focused next target is therefore one label-preserving first-obstruction
+theorem in the six-connected common deletion.  It must turn the first
+already-contacting latent column or the fixed-centre provenance bottleneck
+into a controlled contact rotation,
+two-column absorption, an explicit `K_7` model, a common boundary partition,
+or strict response-preserving descent.  Universal saturation separately
+reduces to a named one-edge response or a joint five-colour triad fan, whose
+palette paths are not yet assigned to column labels.  The two-shore list
 dichotomy and incidence cycle remain secondary until their colouring
 operation is aligned with this fixed response.  Genuinely split-terminal
 `I,T` cuts remain a conditional fast route; the other small-shore and

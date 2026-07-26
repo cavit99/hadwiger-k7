@@ -99,186 +99,136 @@ graph `J` with
 Thus no pentagonal-bipyramid path-splitting theorem is required in this
 dual-root construction.
 
-## 4. The low-degree branch has two different response modes
+## 4. One noncontacting incident-pair normal form
 
 The seven labels of `J` consist of the target `t`, the five response sources
-`c_0,...,c_4`, and one remaining nonresponse label `q`.
+`c_0,...,c_4`, and one remaining nonresponse label `q`.  The written
+[unified incident-pair theorem](../results/hc7_order8_unified_incident_pair_normal_form.md)
+removes the former split between an exposed source--target pair and a
+source-saturated target.
 
-### 4.1 Exposed source--target noncontact
-
-If
-
-\[
-                         tc_i\notin E(J)               \tag{4.1}
-\]
-
-for some `i`, the corresponding same-`(e,c)` path has the correct endpoint
-labels.  A subpath from `c_i` to `t` whose interior avoids both roots and all
-seven columns can be absorbed into one endpoint column, preserving every
-old contact and adding `tc_i`.  This is the audited clean first-hit
-augmentation.
-
-If no such clean subpath exists, the first obstruction met by the path may
-be a root or another column.  The missing step is a connected reassignment
-that preserves both roots, all seven labels, all five prescribed first
-neighbours and all old column contacts, or instead returns a terminal
-minor, a common boundary partition or a strict literal-shore descent.
-
-### 4.2 Source-saturated target
-
-It is possible that
+If some source `c_i` does not contact `t`, choose the incident edges
 
 \[
-                         tc_i\in E(J)
-                         \quad(0\le i\le4).             \tag{4.2}
+                              vx,\quad vv_i.             \tag{4.1}
 \]
 
-Then none of the five named paths is aimed at a missing column contact.  A
-low-degree source can already be adjacent to `t`, and all five response
-paths can avoid the low-degree part of the system.
-
-This is not repaired by the proposed lexicographic normalization.  At the
-abstract contact-graph level, let
+If every source contacts `t`, the audited six-vertex rooted-`K_4` lemma
+forces a source `c_i` of contact degree at most three.  It misses at least
+two other sources; choose one `c_j` and the incident pair
 
 \[
-                       H=K_2\vee\overline {K_4},
-                       \qquad J=K_1\vee H,
+                              vv_i,\quad vv_j.           \tag{4.2}
 \]
 
-and let the outer universal vertex be `t`.  The graph `H` is a six-vertex
-2-tree and `J` is edge-maximal `K_5`-minor-free.  Four vertices have degree
-three, while `t` contacts all five chosen source labels.  The named paths
-may already be single contact edges.  Contact count and coverage are then
-maximal and the path-intersection count and path lengths are minimal.
+In both cases the outer endpoints are nonadjacent because their columns do
+not contact.  On the common two-edge deletion there are exactly the three
+positive equality signatures
 
-The audited
-[seven-column planar shadow](../barriers/hc7_seven_column_k2_planar_shadow.md)
-realizes the same obstruction at host level in a seven-connected
-`K_7`-minor-free graph.  That graph is six-colourable and has actual
-order-seven exits, so it does not refute the full terminal disjunction.  It
-does prove that the universal proper-minor rejection data or an equivalent
-critical-host consequence must be used.
+\[
+                         (=,\ne),\quad(\ne,=),\quad(=,=), \tag{4.3}
+\]
 
-### 4.3 The low-degree label can be chosen as a source
+and no all-proper signature.  The common contraction colouring has exact
+monochromatic neighbourhood trace consisting of the two outer endpoints.
+It gives either:
 
-The computer-assisted, audited
-[six-vertex rooted `K_4` lemma](../results/hc7_six_vertex_source_rooted_k4.md)
-gives a useful finite normalization in the source-saturated case.  If every
-source had degree at least four, then after deleting `t` the five sources
-would have degree at least three and the auxiliary vertex would have degree
-at most three.  The lemma gives a `K_4` model whose four bags each contain a
-source.  Adjoining `t` gives a `K_5` model in `J`, a contradiction.
+1. one selected incident edge bichromatically linked for all five alternate
+   colours; or
+2. a bypass between the two noncontacting endpoint columns, avoiding `v`,
+   with two named component switches giving the opposite one-edge responses.
 
-Consequently (4.2) forces at least one response source `c_i` to have contact
-degree at most three.  This is not response exposure: `c_i` is adjacent to
-`t`, so its named path need not add a contact.
+A clean bypass adds the missing contact.  A dirty bypass and universal
+saturation remain nonterminal.  In the saturation branch, either one named
+component switch already gives an opposite one-edge response, or all five
+bichromatic components contain the whole endpoint triad.  In the latter
+case five colour-distinct first edges together with the selected pair give
+a prescribed seven-edge all-boundary fan, unless an order-seven separation
+or strict order-eight descent occurs.  The fan preserves first edges, not
+the five complete bichromatic paths.
 
-### 4.4 A noncontacting prescribed incident pair
+The simultaneous-contraction colouring need not induce the boundary
+partition of the original fixed colouring `c`.  The common data are the
+literal operation, column labels, incident edges, contraction colouring and
+named switches—not a common boundary trace.
 
-The audited
-[incident-source fork](../results/hc7_order8_low_degree_incident_source_fork.md)
-spends that low degree without introducing a critical-triangle case.  Since
-`c_i` already contacts `t`, it is nonadjacent to at least two other response
-sources; choose one, `c_j`.  Their prescribed vertices `v_i,v_j` are
-nonadjacent, and the incident edges `vv_i,vv_j` come from the original fixed
-`(e,c)` response.
+## 5. Eight-latent-column and rank normalizations
 
-Simultaneously contracting those two incident edges gives one exact
-colouring in which either one edge is bichromatically linked for all five
-alternate colours, or there is a three-colour `v_i`--`v_j` bypass avoiding
-`v` together with two coupled one-edge responses.  The original colouring
-and the three contraction colourings give a common operation table on
-`G-{e,vv_i,vv_j}`.  A clean bypass adds the missing column contact, so in a
-contact-maximal system the bypass first meets a root or a third column.
+The separately written
+[latent-column spanning normalization](../results/hc7_order8_latent_column_spanning_normalization.md)
+keeps both fan centres and all eight original fan-tail cores fixed.  Among
+pairwise disjoint connected enlargements of those eight columns, maximize
+the eight-column contact graph and then total coverage.  Seven-connectivity
+and elementary absorption prove
 
-The contraction colouring need not induce the original boundary partition.
-The two surviving objects are therefore a universally bichromatically
-saturated incident edge or a dirty root/column bypass, not a terminal
-outcome.
+\[
+                    V(G)=\{v,w\}\mathbin{\dot\cup}
+                          \bigcup_{s\in S}\widehat K_s. \tag{5.1}
+\]
 
-## 5. Spanning and lexicographic normalizations
+Thus a selected bypass avoiding `v` has no unclassified exterior interior:
+after leaving its endpoint column it meets either `w` or another latent
+column.  If its first old-object encounter lies in a root away from `w`,
+changing which nonresponse label is consumed turns that encounter into a
+latent-column encounter.  With enlarged columns the column encounter can
+occur earlier.  The selected endpoint columns and incident edges survive,
+but the low-degree property of the new seven-column deletion need not.
 
-### 5.1 A maximum system spans the host
+The written
+[common-deletion connectivity theorem](../results/hc7_order8_incident_pair_common_deletion_connectivity.md)
+adds a host-level alternative.  The graph obtained by deleting the selected
+incident pair is six-connected, unless `v` has degree exactly seven and its
+singleton shore is already a strict generic exact-seven response restart.
+Thus every nonrecursive dirty bypass now lives in one six-connected common
+deletion.  For its named bypass, every root-first encounter can be changed
+to a latent-column encounter unless the bypass itself uses the fixed opposite
+centre `w`.  In that exceptional case six-connectivity supplies a path
+avoiding both centres, but does not preserve the two named bichromatic
+component switches.  Thus the exact remaining path residues are a first
+already-contacting latent column and a fixed-centre provenance bottleneck.
 
-**Status:** written proof in this frontier; not separately audited.
-
-Fix the initial two root seeds and roles and the seven column seeds,
-including every prescribed vertex and label.  Allow any of the nine
-connected sets to be enlarged while they remain pairwise disjoint, the
-roots remain adjacent and each root remains adjacent to every column.  First
-maximize the number of column contacts and then maximize the total number
-of vertices in the nine sets.
-
-This system spans `G`.  Indeed, let `Z` be a component outside the nine
-sets and let `A` be the set of columns met by `Z`.  If `A` contains two
-nonadjacent labels, a path through `Z` between the corresponding columns can
-be absorbed into one of them.  It preserves all old data and adds a column
-contact.  Its new contact graph remains `K_5`-minor-free, since otherwise
-the two roots would lift it to a `K_7` minor.  This contradicts the first
-maximization.
-
-Hence `A` is a clique.  If `A` is nonempty, absorb all of `Z` into one
-column in `A`; every other newly met column was already adjacent to it.  If
-`A` is empty, connectedness of `G` makes `Z` adjacent to a root, and it can
-be absorbed into that root.  Either operation preserves all required
-contacts and increases total coverage, a contradiction.
-
-Consequently a low-degree column is separated from its nonneighbour columns
-by the union of the two roots and at most three neighbouring columns.  This
-is a genuine host separation, but its boundary is a set of literal vertices
-inside those connected subgraphs and can have unbounded order.  The
-normalization therefore does not supply an exact-seven response or a strict
-operated-shore descent.
-
-### 5.2 What a lexicographic rank can and cannot do
-
-For one fixed `e,c` and one fixed set of literal labels, an admissible column
-system may be chosen lexicographically to
+A decorated finite rank must live on all eight latent labels, not one
+seven-column deletion.  A useful order is
 
 \[
  \left(
-   |E(J)|,
-   \left|\bigcup_sV(L_s)\right|,
+   |E(K)|,
+   \left|\bigcup_sV(K_s)\right|,
    -d_{\rm old}(P),
    -|P|
- \right),                                                   \tag{5.1}
+ \right),                                                   \tag{5.2}
 \]
 
-where `d_old(P)` counts root or old-column occurrences on a selected
-source--target path.  Finiteness of `G` makes this a valid normalization.
+maximizing the first two coordinates and minimizing the last two.  Contact-
+neutral rotations are permitted only when they preserve the fixed operation,
+the endpoint seeds, all eight labels and dual-root realizability, and improve
+a later coordinate without reducing an earlier one.  The rank makes a
+proved exchange terminate; it does not create that exchange.
 
-The rank does not create an exchange.  Maximizing contacts among realizable
-same-operation systems is weaker than making `J` abstractly edge-maximal,
-and (4.2) can leave no selected path to a missing contact.  Every claimed
-rank improvement must therefore include a literal no-contact-loss
-reassignment proof.
-
-There is one useful conditional compression.  If `J` is abstractly
-edge-maximal `K_5`-minor-free and (4.2) holds, then the two roots and columns
-contain a `K_7` with one edge missing.  If `tq` is present, `J-t` is an
-edge-maximal `K_4`-minor-free graph, hence a 2-tree containing `K_4` with one
-edge missing.  If `tq` is absent, a `K_5` model in `J+tq` yields a `K_4`
-model in `J-t`.  This model must use `q`, since otherwise adjoining the
-target already gives a `K_5` model in `J`.  Its bag containing `q` must be
-the singleton `{q}`: if it also contained a source vertex, that vertex would
-restore the target contact and again give a `K_5` model in `J`.  In either
-case `t` and four column bags form a `K_5` with at most one edge missing;
-when `tq` is absent, that possible missing edge is incident with `q`.  The
-roots complete a `K_7` with one edge missing.
+There is one useful conditional finite compression.  If the target contacts
+all five sources, a designated low-degree source has degree at most three,
+and `J` is **abstractly** edge-maximal `K_5`-minor-free, the finite
+[edge-maximal source-contact theorem](../results/hc7_order8_edge_maximal_source_contact.md)
+gives a spanning `K_4` model in `J-c_i` met by `c_i` in exactly three bags.
+The two roots, `c_i`, and those four bags form a labelled `K_7` with one
+missing adjacency, incident with `c_i`.
 
 The audited
 [one-defect two-root completion/separation theorem](../results/hc7_one_defect_two_root_k5_separator.md)
-then gives a `K_7` minor or a genuine full-neighbourhood separation, but the
+then gives a `K_7` minor or a genuine full-neighbourhood separation.  The
 separation can have unbounded order and need not preserve the selected
-response.  This conditional compression is a written proof in this
-frontier, not a separately audited or terminal result.
+response.  More importantly, maximality under realizable exchanges in
+(5.2) is strictly weaker than abstract edge-maximality.  This finite result
+is therefore a conditional endpoint for the dirty exchange, not a proof of
+that exchange.
 
 ## 6. Exact open theorem
 
-### Low-degree response-column composition theorem
+### Coupled dirty-bypass and saturation composition theorem
 
-In the setting of Sections 1--3, choose a free-root system satisfying
-(3.1).  Prove at least one of:
+In the setting of Sections 1--4, choose the incident pair and common
+contraction colouring from Section 4 and an eight-latent-column system
+maximal under (5.2).  Prove at least one of:
 
 1. an explicit `K_7`-minor model in `G`;
 2. one complete equality partition of `S` extending through both closed
@@ -287,19 +237,21 @@ In the setting of Sections 1--3, choose a free-root system satisfying
    connected subset of `C` or `D`;
 4. a strict order-eight response-side descent on a proper connected subset
    of the operated shore; or
-5. for the same edge `e`, colouring `c`, root seeds and roles, seven labels,
-   five first neighbours and target, a no-contact-loss reassignment which
-   strictly improves a declared finite rank.
+5. for the same edge `e`, colouring `c`, eight latent labels, five first
+   neighbours, target and dual-root roles, a connected reassignment or
+   controlled contact rotation which strictly improves (5.2).
 
-The proof has two separate obligations:
+The proof has two precise obligations:
 
-- **incident-source composition:** in the source-saturated configuration
-  (4.2), close either the universally saturated incident edge or the dirty
-  root/column bypass from Section 4.4 while retaining the common three-edge
-  operation table and the fixed column labels;
-- **first-obstruction exchange:** when (4.1) holds, handle both a first root
-  encounter and a first old-column encounter without losing operation
-  provenance.
+- **dirty-bypass first obstruction:** in the six-connected common deletion,
+  handle a first latent-column encounter or a hit on `w`.  A valid exchange
+  may use a one-column split, a controlled contact rotation or the audited
+  two-column absorption construction, but it must retain the coupled
+  one-edge responses or return a terminal/strict recursive outcome;
+- **joint triad saturation:** compose the named one-edge response or the
+  prescribed seven-edge fan from the universal-saturation branch with the
+  same latent columns.  Palette-indexed fan arms cannot be read as column
+  labels without proof.
 
 An order-seven output is recursive only with the stated proper literal
 shore decrease and named crossing-edge response.  A fresh response, an
@@ -326,8 +278,13 @@ should enter this branch only after an explicit provenance-alignment lemma.
 - [dual-root pentagonal-bipyramid overlap closure](../results/hc7_order8_dual_root_contact_overlap_closure.md)
 - [six-vertex source-rooted `K_4` lemma](../results/hc7_six_vertex_source_rooted_k4.md)
 - [noncontacting incident-source fork](../results/hc7_order8_low_degree_incident_source_fork.md)
+- [unified noncontacting incident-pair response](../results/hc7_order8_unified_incident_pair_normal_form.md)
+- [eight-latent-column spanning normalization](../results/hc7_order8_latent_column_spanning_normalization.md)
+- [six-connected common deletion or strict exact-seven restart](../results/hc7_order8_incident_pair_common_deletion_connectivity.md)
+- [conditional edge-maximal source-contact theorem](../results/hc7_order8_edge_maximal_source_contact.md)
 - [generic exact-seven response restart](../results/hc7_generic_exact7_response_restart.md)
 - [one-defect two-root completion or separation](../results/hc7_one_defect_two_root_k5_separator.md)
 - [a local path need not split an intermediate column](../barriers/hc7_degree8_dirty_path_local_uncrossing_barrier.md)
+- [six-connectivity and a centre-free path still do not split a singleton column](../barriers/hc7_pentagonal_bipyramid_target_star_shadow.md)
 - [seven-connected planar column shadow](../barriers/hc7_seven_column_k2_planar_shadow.md)
 - [contact maximization need not provide an improving transfer](hc7_pb_max_contact_nine_four_colour.md)

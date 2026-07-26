@@ -6864,14 +6864,105 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_unified_incident_pair_normal_form"
+title = "Unified noncontacting incident-pair response at order eight"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_unified_incident_pair_normal_form.md"
+active = false
+audit = "results/hc7_order8_unified_incident_pair_normal_form_audit.md"
+expected_source_sha256 = "f1c9bb1131d2ea406c6e2d77395a0c45e3446adf43792aa986507427cd9642be"
+scope = "one fixed critical-edge response star after a free-root contact graph of minimum degree at most three is selected"
+label_fidelity = "the target or source endpoint columns, two incident seed edges and the two component switches retain the original fixed response labels"
+conclusions = [
+  "every survivor has two noncontacting response labels represented by incident edges with nonadjacent outer endpoints",
+  "the common deletion has the exact three positive equality signatures and exact two-vertex monochromatic trace",
+  "one selected edge is universally bichromatically linked, or a coupled dirty bypass gives the two opposite one-edge responses",
+  "universal saturation gives a named one-edge response or a joint five-colour triad fan unless a bounded strict output occurs",
+]
+does_not_prove = [
+  "alignment of the contraction colouring with the original boundary partition",
+  "a label-preserving dirty-bypass exchange",
+  "allocation of the five saturated paths to column labels",
+  "closure of the order-eight interface or HC7",
+]
+
+[[claims]]
+id = "hc7.order8_latent_column_spanning_normalization"
+title = "Spanning normalization for eight latent response columns"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_latent_column_spanning_normalization.md"
+active = false
+audit = "results/hc7_order8_latent_column_spanning_normalization_audit.md"
+expected_source_sha256 = "da16de3ea6868291038f14b83f4cf75b2d783ebfbd5de2240ded7864286760a5"
+scope = "the eight fan-tail cores from one dual-free-root order-eight response star"
+label_fidelity = "both fan centres, all eight latent labels and every original fan-tail core remain fixed under monotone enlargement"
+conclusions = [
+  "a contact-then-coverage maximum covers every host vertex except the two fixed fan centres",
+  "a first noncentral root hit becomes a latent-column hit after changing the consumed free label",
+]
+does_not_prove = [
+  "preservation of low contact degree under the free-root switch",
+  "a connected exchange moving an original fan-tail vertex",
+  "a rank improvement, terminal response or HC7",
+]
+
+[[claims]]
+id = "hc7.order8_incident_pair_common_deletion_connectivity"
+title = "Six-connected common incident-pair deletion or strict exact-seven response"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_incident_pair_common_deletion_connectivity.md"
+active = false
+audit = "results/hc7_order8_incident_pair_common_deletion_connectivity_audit.md"
+expected_source_sha256 = "fca23a393c3b912fabef6164a111244359f4ab72bc933676ba934d9ea0a1a283"
+scope = "the selected noncontacting incident pair in the exact order-eight two-full-component response-column setting"
+separator_order = "failure of six-connectivity isolates the common endpoint behind its exact seven-vertex neighbourhood"
+strict_parameter = "the singleton response shore is a proper subset of the old operated full component"
+conclusions = [
+  "the common two-edge deletion is six-connected and six-chromatic",
+  "or the common endpoint gives a strict generic exact-seven response restart",
+  "outside the fixed opposite centre, a named-bypass first root hit converts to a latent-column hit",
+]
+does_not_prove = [
+  "that a standard linkage avoids the fixed root and column subgraphs",
+  "that a centre-free replacement path retains the named bichromatic switches",
+  "a labelled dirty-bypass allocation",
+  "closure of the order-eight interface or HC7",
+]
+
+[[claims]]
+id = "hc7.order8_edge_maximal_source_contact"
+title = "Abstractly edge-maximal source contacts give a labelled one-defect K7 model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_edge_maximal_source_contact.md"
+active = false
+audit = "results/hc7_order8_edge_maximal_source_contact_audit.md"
+expected_source_sha256 = "d5ada64351dab70919e7800ada3b9869830df197ab523bbdf380d8bbcbd1ddd1"
+scope = "seven labelled contact vertices with a target complete to five sources, one source of degree at most three and abstract K5-minor edge-maximality"
+label_fidelity = "the unique possible missing adjacency is incident with the designated low-degree response source"
+conclusions = [
+  "562 labelled graphs in six ordinary unlabelled types exhaust the hypotheses",
+  "deleting the designated source leaves a spanning K4 model met by that source in exactly three bags",
+  "two universal adjacent roots complete a labelled seven-bag system with exactly one missing adjacency",
+]
+does_not_prove = [
+  "that decorated host-realizable maximality implies abstract edge-maximality",
+  "a bounded response separator from the one-defect model",
+  "a dirty-path exchange, closure of the order-eight interface or HC7",
+]
+
+[[claims]]
 id = "hc7.target.order8_low_degree_response_column"
 title = "Low-degree same-operation response-column composition"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_order8_low_degree_response_column_frontier.md"
-source_heading = "Low-degree response-column composition theorem"
+source_heading = "Coupled dirty-bypass and saturation composition theorem"
 active = false
-expected_source_sha256 = "c4b0bf1c5a5713879198cc114291987163a9140c67ef97c6a70e45b2ebaef556"
+expected_source_sha256 = "140811c41e7493b457154b516e2ce9185617adcc27019ac939c49f42573a1d6c"
 scope = "the minimum order-eight exactly-two-full-component interface after the dual-root pentagonal-bipyramid alternative is eliminated"
 label_fidelity = "one fixed critical edge, one fixed deletion colouring, fixed root seeds and roles, seven column labels, one target, five first neighbours and all old contacts"
 separator_order = "an exact order-seven selected response or a strict order-eight response-side descent on a proper literal connected shore"
@@ -6881,7 +6972,7 @@ allowed_exits = [
   "one complete boundary equality partition extending through both closed shores",
   "a strict exact-seven selected-response interface",
   "a strict order-eight response-side descent",
-  "a same-operation no-contact-loss reassignment which strictly improves the declared finite rank",
+  "a same-operation reassignment or controlled contact rotation which strictly improves the declared finite rank",
 ]
 does_not_prove = [
   "that a low-degree quotient column gives a bounded host separator",
@@ -7338,6 +7429,30 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_unified_incident_pair_normal_form"
+kind = "uses"
+note = "The formerly separate source-target and source-source modes now enter one exact incident-pair response fork."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_latent_column_spanning_normalization"
+kind = "uses"
+note = "The active rank and first-obstruction analysis use all eight latent labels and the two fixed centres."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_incident_pair_common_deletion_connectivity"
+kind = "uses"
+note = "Low connectivity is already a strict exact-seven restart; every other selected bypass lives in a six-connected common deletion."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_edge_maximal_source_contact"
+kind = "related_to"
+note = "Abstract edge-maximality supplies a one-defect terminal model, but the dirty exchange has not established that hypothesis."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
 target = "hc7.generic_exact7_response_restart"
 kind = "uses"
 note = "A raw order-seven full neighbourhood is supplied with a selected crossing-edge response and enters the generic restart theorem."
@@ -7381,6 +7496,53 @@ source = "hc7.order8_low_degree_incident_source_fork"
 target = "hc7.shared_interface_bichromatic_bypass"
 kind = "uses"
 note = "The low-degree source supplies two noncontacting prescribed incident edges, so the nonadjacent-leaf branch applies without a critical-triangle case."
+
+[[relations]]
+source = "hc7.order8_unified_incident_pair_normal_form"
+target = "hc7.order8_dual_free_root_response_star"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_unified_incident_pair_normal_form"
+target = "hc7.six_vertex_source_rooted_k4"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_unified_incident_pair_normal_form"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_unified_incident_pair_normal_form"
+target = "hc7.order8_arbitrary_edge_response_star"
+kind = "uses"
+note = "The saturation refinement applies the prescribed-first-edge all-boundary fan theorem."
+
+[[relations]]
+source = "hc7.order8_latent_column_spanning_normalization"
+target = "hc7.order8_dual_free_root_response_star"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_incident_pair_common_deletion_connectivity"
+target = "hc7.order8_unified_incident_pair_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_incident_pair_common_deletion_connectivity"
+target = "hc7.order8_latent_column_spanning_normalization"
+kind = "uses"
+note = "The root-provenance corollary uses the alternative free-root realization and spanning enlarged latent columns."
+
+[[relations]]
+source = "hc7.order8_incident_pair_common_deletion_connectivity"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_edge_maximal_source_contact"
+target = "hc7.one_defect_two_root_k5_separator"
+kind = "uses"
 
 [[relations]]
 source = "hc7.order8_two_three_centre_component_closure"
@@ -11079,4 +11241,18 @@ expected_stdout = [
   "rooted_core_certificate_sha256 613efaf4a975e63ed872525e1c11a64fd78cc870f030b81535b21cb98e6a2abb",
   "failures 0",
   "PASS six_vertex_source_rooted_k4",
+]
+
+[[verifiers]]
+id = "order8-edge-maximal-source-contact"
+path = "results/hc7_order8_edge_maximal_source_contact_verify.py"
+sha256 = "108d79e76cf029707e29df51e0b35258fb1b4bae84b52fbea1780a1f16906da4"
+timeout = 90
+expected_stdout = [
+  "labelled_graphs 65536",
+  "edge_maximal_survivors 562",
+  "unlabelled_types 6",
+  "type_counts 007fff:10 00efff:192 01d7ff:120 01deff:84 05cdff:144 05defb:12",
+  "spanning_k4_failures 0",
+  "PASS order8_edge_maximal_source_contact",
 ]
