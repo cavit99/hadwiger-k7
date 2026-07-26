@@ -320,38 +320,40 @@ complete boundary partition, or an exact-seven response on a strictly
 smaller literal connected shore.  Genuinely split-terminal `I,T` cuts remain
 a conditional fast route to two adjacent bags with one common defect of
 order at most two; the strengthened finite allocation then closes them.
-The small-shore and odd-wheel alternatives remain separate.  Computation at
+The remaining small-shore and odd-wheel alternatives remain separate.
+Computation at
 the new order-eight-to-thirteen interface is presently diagnostic only: a
 proof search still needs a finite-signature replacement theorem for the
 unbounded component interiors and a certificate lift to the unchanged host.
 
-A recovered order-eight laboratory now settles one exact small-shore
-subcase.  The active, separately audited
-[two-vertex-shore contraction lemma](active/hc7_two_vertex_shore_bipartite_contraction.md)
-excludes an open-shore edge whenever deletion of at most two boundary
-vertices leaves an independent bipartition that can be oriented into the
-two endpoint neighbourhoods.  A separately checked finite certificate
-proves that every eight-vertex `K_4`-minor-free boundary has such an
-odd-cycle transversal; hence the boundary-full/boundary-full version of
-that two-vertex shore is impossible.  This is a genuine terminal
-subcase, but it is not yet a promoted input to the primary target.
+A promoted
+[near-full edge-component closure](results/hc7_order8_nearfull_edge_triangle_closure.md)
+now settles the exact two-vertex small-shore case in the original aligned
+three-component host whenever each endpoint misses at most one boundary
+vertex.  Its written contraction argument handles every compatible
+bipartition.  A separately checked finite theorem tests the actual `185`
+compact boundary types and all `13,505` full/full, one-miss and ordered
+distinct-two-miss profiles.  Exactly `258` two-miss profiles are
+incompatible, and every one contains a boundary triangle away from the two
+misses.  That triangle, the open-shore edge, the opposite full component
+and the singleton `{u}` give an explicit seven-branch-set `K_7` model.
+Thus the whole displayed near-full edge subcase is terminal; no operation
+provenance or abstract rooted-`K_4` selection is needed.
 
-The [near-full census](active/hc7_p2_nearfull_bipartition_census.md) is
-diagnostic only.  In its explicitly defined static universe, the
-`K_4`-minor-free residue consists of exactly `520` ordered marked
-configurations, all with two distinct missed boundary vertices and
-incompatible bipartition parity.  It omits host realizability,
-opposite-shore geometry and operation provenance.  Separately, the audited
+This does not force either aligned component to have order two or its two
+vertices to have defect at most one.  The earlier
+[near-full census](active/hc7_p2_nearfull_bipartition_census.md) remains a
+reproducible diagnostic for a broader static `K_4`-minor-free universe, but
+its `520` configurations are no longer the live obstruction in the exact
+three-component host above.  The audited
 [relative-seven quotient closure](active/hc7_relative7_planar_deficit_closure.md)
-closes all `48` sharp marker quotients (`24` by a direct `K_7` model and
-`24` by a rooted-`K_4`/planarity degree-deficit argument), but no theorem
-yet forces the live residue into that quotient family.  The checked
+still closes all `48` sharp marker quotients, while no theorem sends every
+other live residue to that family.  The checked
 [three-colourful-set assessment](active/hc7_three_colourful_sets_route_assessment.md)
-also records why the available Colorful Minors theorem does not supply the
-missing synchronization.  The live obligation is therefore to spend the
-full host hypotheses on the incompatible-parity residue, obtaining an
-explicit `K_7` model or a strict exact-seven response rather than another
-static boundary classification.
+remains relevant only beyond the closed edge subcase.  The principal live
+obligation is still minimum-boundary response coupling with exactly two
+full components, followed by the other small shores and the two-vertex
+profiles in which at least one endpoint has defect two.
 
 Audited response theorems now strengthen the tight cases.  In degree eight,
 the retained root `x` has nonempty opposite-shore leaf sets whose
