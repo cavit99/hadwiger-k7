@@ -390,9 +390,19 @@ Every full/full and one-miss profile has a compatible oriented
 bipartition.  Of the ordered distinct-two-miss profiles, `258` are
 incompatible, and every one contains a triangle away from both misses.
 Together with the opposite full component and `{u}`, that triangle gives an
-explicit seven-branch-set `K_7`-minor model.  Hence incompatible parity is terminal
-in this precise three-component edge geometry without operation provenance
-or a synchronized rooted-`K_4` theorem.
+explicit seven-branch-set `K_7`-minor model.  Hence incompatible parity is
+terminal in this precise three-component edge geometry without operation
+provenance or a synchronized rooted-`K_4` theorem.
+
+The separately audited
+[defect-two rerooting theorem](../results/hc7_order8_defect2_edge_reroot_closure.md)
+closes the rest of this edge geometry.  If one endpoint misses two boundary
+vertices, it has degree seven.  At that endpoint the old misses enter the
+new anti-neighbourhood and, together with the opposite full component and
+`{u}`, form two disjoint connected subgraphs full to the new seven-vertex
+boundary.  This contradicts the promoted singleton packing-one theorem.
+Seven-connectivity bounds every endpoint defect by two, so the two results
+together eliminate every aligned two-vertex exterior component.
 
 The active
 [two-vertex-shore contraction laboratory](hc7_two_vertex_shore_bipartite_contraction.md)
@@ -410,9 +420,9 @@ therefore remains relevant only outside the closed near-full edge case.
 The principal target is still the order-eight minimum-boundary interface
 with exactly two full components, where there is only one opposite
 component and the triangle construction lacks its second completing bag.
-Other unclosed small shores include the two-vertex edge profiles in which
-at least one endpoint has defect two.  Further static boundary-colouring
-enumeration is not the missing mechanism in those cases.
+Other small-shore shapes remain open, but the two-vertex edge shape is now
+fully eliminated.  Further static boundary-colouring enumeration is not
+the missing mechanism in the surviving cases.
 
 Computation on the bounded separator is presently a falsification and
 discovery tool.  A proof-producing exhaustive search first needs a finite-

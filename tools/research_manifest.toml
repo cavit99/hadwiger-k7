@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "e33df18c3955e5899ca804aa086fd2b592718236ba6d2faf315e7c133d50e164"
+expected_source_sha256 = "26e2276cbfc24f51902aba22bbe51c1914e4026c5c811df37fcab8a1ecf82053"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -567,6 +567,33 @@ does_not_prove = [
   "closure of other small shores or the general bounded-interface composition theorem",
 ]
 keywords = ["degree eight", "near-full edge", "odd-cycle transversal", "boundary triangle", "explicit K7 minor"]
+
+[[claims]]
+id = "hc7.order8_aligned_edge_component_closure"
+title = "Rerooting eliminates every aligned order-eight two-vertex exterior component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_defect2_edge_reroot_closure.md"
+source_heading = "Corollary 3.1"
+active = false
+audit = "results/hc7_order8_defect2_edge_reroot_closure_audit.md"
+expected_source_sha256 = "be6b422467b4e6e640f0c00c068d0379893c92913a7467d5f40067a590a9e3ae"
+scope = "the original aligned degree-eight host when one of the two full anti-neighbourhood components is a two-vertex edge"
+label_fidelity = "rerooting retains the other endpoint, the two old missed boundary vertices, the opposite full component and the old low-degree root as literal vertices and connected subgraphs"
+conclusions = [
+  "an endpoint with two boundary misses has degree seven",
+  "its rerooted anti-neighbourhood contains two disjoint connected subgraphs full to the new seven-vertex boundary, contradicting singleton packing one",
+  "defect two is impossible at either endpoint",
+  "together with the near-full edge theorem, every endpoint-defect profile and hence the entire aligned two-vertex exterior-component branch is eliminated",
+]
+does_not_prove = [
+  "HC7",
+  "that either aligned exterior component has order two",
+  "closure of another small-shore shape",
+  "closure of the minimum-boundary interface with exactly two full components",
+  "closure of the general bounded-interface composition theorem",
+]
+keywords = ["degree eight", "two-vertex component", "defect two", "rerooting", "degree seven", "packing one"]
 
 [[claims]]
 id = "hc7.barrier.degree8_portal_role_erasure"
@@ -4496,6 +4523,20 @@ conclusions = ["a six-colouring", "or an explicit K7-minor model"]
 does_not_prove = ["the one-block K4 or K5 cases", "positive total list-degree excess", "HC7"]
 
 [[claims]]
+id = "hc7.singleton_exact7_packing_one"
+title = "A singleton exact-seven anti-neighbourhood has full-connected-subgraph packing number one"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_singleton_exact7_terminal_normal_form.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_singleton_exact7_terminal_normal_form_audit.md"
+expected_source_sha256 = "f9af9b8edc55af116151cc7c7e3b4d30532fb44c338faee6239b888f36297feb"
+scope = "the singleton-shore mode of a generic exact-seven selected-response interface"
+conclusions = ["the connected anti-neighbourhood has maximum boundary-full connected-subgraph packing number one"]
+does_not_prove = ["closure of the surviving packing-one exterior", "HC7"]
+
+[[claims]]
 id = "hc7.singleton_exact7_terminal_normal_form"
 title = "Singleton exact-seven terminal normal form"
 kind = "theorem"
@@ -6785,6 +6826,36 @@ source = "hc7.target.bounded_interface_bridge"
 target = "hc7.order8_nearfull_edge_three_component_closure"
 kind = "related_to"
 note = "This is a terminal conditional subcase; the primary two-component response-coupling interface and the remaining small shores stay open."
+
+[[relations]]
+source = "hc7.order8_aligned_edge_component_closure"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+note = "Rerooting at a defect-two endpoint uses the generic exact-seven definition and its automatic selected-response properties."
+
+[[relations]]
+source = "hc7.order8_aligned_edge_component_closure"
+target = "hc7.singleton_exact7_packing_one"
+kind = "uses"
+note = "The two explicit connected subgraphs contradict packing number one at the rerooted degree-seven boundary."
+
+[[relations]]
+source = "hc7.order8_aligned_edge_component_closure"
+target = "hc7.order8_nearfull_edge_three_component_closure"
+kind = "uses"
+note = "The prior theorem eliminates the complementary endpoint-defect-at-most-one profiles."
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.order8_aligned_edge_component_closure"
+kind = "related_to"
+note = "The composition closes the entire order-two component part of the portal reduction's small-shore outcome."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.order8_aligned_edge_component_closure"
+kind = "related_to"
+note = "This is a terminal conditional small-shore closure; the primary minimum-boundary two-component interface and other small-shore shapes remain open."
 
 [[relations]]
 source = "hc7.barrier.atomic_h0_multipartite_bridge_guardrail"
