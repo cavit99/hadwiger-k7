@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 22 July 2026
+**Last updated:** 26 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
 This is the sole authority for the current status of the project. Exact
@@ -336,12 +336,22 @@ compact boundary types and all `13,505` full/full, one-miss and ordered
 distinct-two-miss profiles.  Exactly `258` two-miss profiles are
 incompatible, and every one contains a boundary triangle away from the two
 misses.  That triangle, the open-shore edge, the opposite full component
-and the singleton `{u}` give an explicit seven-branch-set `K_7` model.
+and the singleton `{u}` give an explicit seven-branch-set `K_7`-minor model.
 Thus the whole displayed near-full edge subcase is terminal; no operation
 provenance or abstract rooted-`K_4` selection is needed.
 
-This does not force either aligned component to have order two or its two
-vertices to have defect at most one.  The earlier
+The separately audited
+[defect-two rerooting closure](results/hc7_order8_defect2_edge_reroot_closure.md)
+eliminates the remaining endpoint profiles without another census.  An
+endpoint missing two boundary vertices has degree seven.  Rerooting there
+moves the two misses into its anti-neighbourhood and exhibits two disjoint
+connected subgraphs full to the new seven-vertex boundary, contradicting
+the promoted singleton packing-one theorem.  Combined with the preceding
+near-full theorem, this eliminates every aligned two-vertex exterior
+component.
+
+This still does not force either aligned component to have order two.  The
+earlier
 [near-full census](active/hc7_p2_nearfull_bipartition_census.md) remains a
 reproducible diagnostic for a broader static `K_4`-minor-free universe, but
 its `520` configurations are no longer the live obstruction in the exact
@@ -352,8 +362,7 @@ other live residue to that family.  The checked
 [three-colourful-set assessment](active/hc7_three_colourful_sets_route_assessment.md)
 remains relevant only beyond the closed edge subcase.  The principal live
 obligation is still minimum-boundary response coupling with exactly two
-full components, followed by the other small shores and the two-vertex
-profiles in which at least one endpoint has defect two.
+full components, followed by the other small-shore shapes.
 
 Audited response theorems now strengthen the tight cases.  In degree eight,
 the retained root `x` has nonempty opposite-shore leaf sets whose
