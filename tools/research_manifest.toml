@@ -252,7 +252,7 @@ keywords = ["low degree", "component boundary", "edge-deletion response", "stric
 
 [[claims]]
 id = "hc7.low_degree_exterior_component_bounds"
-title = "Sharp exterior-component bounds at low-degree vertices"
+title = "Exterior-component upper bounds at low-degree vertices"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_exterior_component_bounds.md"

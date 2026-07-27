@@ -6,6 +6,11 @@
 partial-results manuscript candidate, but it is not submission-ready;
 novelty, priority, and proof correctness still require conventional
 literature review and independent human validation.
+**Current programme mode:** intensive autonomous proof search is paused at
+tag `mathematical-freeze-2026-07-27`.  The current phase is the
+[external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md),
+not preparation of a complete manuscript.  The primary open theorem remains
+the mathematical proof spine and has not been retracted.
 
 This is the sole authority for the current status of the project. Exact
 theorem statements and proofs live in the linked frontier and result files;
@@ -46,7 +51,7 @@ closed shore separately has a six-colouring in which `I` is exactly one
 boundary colour class. These two colourings need not induce the same
 partition on `S-I`.
 
-At the same low-degree vertex, the audited sharp component bounds give
+At the same low-degree vertex, the audited component upper bounds give
 
 \[
  \#\operatorname{comp}(G-N[u])\le
@@ -582,8 +587,14 @@ the conjecture.  Its proposed core is:
 - the
   [exact order-seven packing restrictions](results/hc7_exact_seven_packet_packing.md)
   for disjoint connected subgraphs adjacent to every boundary vertex; and
-- a focused application such as the
-  [boundary-labelled degree-seven near-clique model](results/hc7_degree7_aligned_near_k7_model.md).
+- the
+  [component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md)
+  as the principal multi-component application.
+
+The
+[boundary-labelled degree-seven near-clique model](results/hc7_degree7_aligned_near_k7_model.md)
+is a possible secondary application, subject to a particularly careful
+overlap review against the public unlabelled near-`K_7` theorem.
 
 This is a credible partial-results package, not a claim that `HC_7` is close
 or that the listed results are novel in their present form.  The public
@@ -600,7 +611,10 @@ priority review, independent human audits by graph-minor and
 colouring/Kempe specialists, and independent reproduction of the
 load-bearing finite classifications.  The extensive conditional
 order-eight/order-nine case tree should not lead the manuscript.  The
-[verification-gate report](active/hc7_verification_gate_report.md#partial-results-manuscript-go-after-one-source-and-novelty-gate)
+[external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md)
+defines the frozen package, review questions, reproducibility inventory and
+acceptance gate.  The earlier
+[verification-gate report](active/hc7_verification_gate_report.md#partial-results-paper-blueprint-only-until-the-external-review-gates-pass)
 records the internal go/no-go assessment; it is not external peer review.
 
 ## Headline audited advances
@@ -613,7 +627,7 @@ records the internal go/no-go assessment; it is not external peer review.
   outside the closed neighbourhood has its own boundary vertex `z_D` with
   `chi(G-{u,z_D})=6`.  Any actual smaller component is therefore a strict
   same-form restart without preserving the old boundary label.
-- **Sharp exterior-component bounds.** At degrees seven, eight and nine,
+- **Exterior-component upper bounds.** At degrees seven, eight and nine,
   the numbers of components outside the closed neighbourhood are at most
   one, two and three, respectively.  The degree-eight and degree-nine
   endpoints use retained, independently rerun finite boundary certificates.

@@ -2,10 +2,10 @@
 
 **Status:** point-in-time internal verification report, 20 July 2026;
 labelled-colour normalization corrected and re-audited 21 July 2026;
-publication-scope wording refreshed 27 July 2026.  This is not a status
-authority, a new theorem or external peer review.  Current status remains
-governed by [`RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md), and the
-reconstructed case graph is
+publication-scope and programme-mode wording refreshed 27 July 2026.  This
+is not a status authority, a new theorem or external peer review.  Current
+status remains governed by [`RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md), and
+the reconstructed case graph is
 [`hc7_live_case_dag.md`](hc7_live_case_dag.md).
 
 ## 1. Purpose
@@ -137,55 +137,59 @@ programme until a pullback theorem restores the required data.
 
 ## 5. Reassessment
 
-### Full-proof campaign: conditional GO
+### Full-proof campaign: FROZEN after the follow-up gates
 
-The promoted chain is mathematically coherent enough to justify one further
-focused unbounded campaign.  It is not evidence that a complete proof is
-near, and it does not justify more labelled residue enumeration.
+The conditional campaign recommended on 20 July was subsequently carried
+out and is now closed as a strategy.  The
+[low-degree incident-source fork](../results/hc7_order8_low_degree_incident_source_fork.md),
+[unified incident-pair response](../results/hc7_order8_unified_incident_pair_normal_form.md),
+[height-six clean bypass](../results/hc7_height6_topological_clean_bypass.md)
+and
+[incident-bypass conflict theorem](../results/hc7_order8_incident_bypass_conflict_split.md)
+are genuine audited gains.  They retain progressively stronger operation
+provenance, but none returns an explicit `K_7` model, a common complete
+boundary partition, or a strict same-host component descent.
 
-The next theorem should be narrower than the global bridge-composition
-statement and should test the missing mechanism directly:
+The adjacent
+[conflict-compression barrier](../barriers/hc7_incident_bypass_conflict_compression_barrier.md)
+shows that the normalized conflict graph may have arbitrary bipartite
+topology under the local response data.  It omits the full
+contraction-critical host hypotheses and therefore does not refute the open
+theorem.  It does show that another path- or conflict-topology campaign has
+poor expected value.
 
-> **Minimum-positive-excess response-coupling target.**  In a minimum
-> generic exact-seven response interface, suppose a proper two-root
-> list-critical core has a full boundary of order eight or nine and deleting
-> that boundary leaves exactly two or three boundary-full components with
-> the audited operation-specific exclusive responses.  Then construct an
-> explicit `K_7`-minor model, produce an actual order-seven separation on
-> which one complete equality partition extends through both closed shores,
-> or return a strictly smaller connected generic exact-seven response shore.
+Intensive autonomous proof search is consequently paused.  This is a
+strategic decision, not a mathematical retraction: the pole-free
+bridge-composition theorem remains the sole exhaustive all-degree target.
+The current work is the
+[external-review and manuscript blueprint](hc7_partial_results_external_review_blueprint.md).
+Proof search should reopen only after a specialist supplies a concrete
+matching mechanism, a new external theorem matches the required hypotheses,
+or a future model closes an exhaustive branch with one of the three allowed
+outputs and survives cold adversarial reconstruction.
 
-The first milestone should be the two-component order-eight case.  It is an
-unbounded host-level theorem, is strictly weaker than `HC_7`, and would turn
-the positive-excess normal form into a genuine induction.  Even closing that
-case would materially improve the programme's prospects; another static
-first-hit or portal classification would not.
+### Partial-results paper: blueprint only until the external review gates pass
 
-The campaign should stop or pivot if it produces only fresh response
-interfaces without a proved rank, or if a full-host counterexample defeats
-the two-component order-eight statement.  Useful outputs must explicitly do
-one of: construct the minor, synchronize a complete boundary partition, or
-decrease the literal connected-shore order while preserving the generic
-response data.
-
-### Partial-results manuscript: GO after one source-and-novelty gate
-
-There is enough audited unbounded mathematics to prepare a separate
-partial-results manuscript even if the full-proof campaign fails.  The
+There is enough internally audited unbounded mathematics to prepare an
+external-review blueprint for a possible partial-results paper.  The
 current strongest coherent package is the low-degree bounded-interface
 entry, component-uniform colouring responses, the proved one/two/three
 exterior-component upper bounds, exact-seven full-connected-subgraph
-packing, and one boundary-labelled degree-seven application.  The public
+packing, and the component-deletion Kempe exchange.  A boundary-labelled
+degree-seven result is only an optional secondary application.  The public
 benchmark already includes Norin and Totschnig's global unlabelled
 [$K_7^\vee$-minor theorem](https://arxiv.org/abs/2507.03244); the possible
 contribution here is instead the interface localization, uniform responses,
-component bounds, packing restrictions, and retained labels.
+component bounds, packing restrictions, and retained colouring data.
 
-A manuscript must not present the detailed order-eight/order-nine programme
-as exhaustive or lead with its live case tree.  It must not claim novelty or
-submission readiness until a conventional literature and priority review,
-independent human graph-minor and colouring audits, and independent
-reproduction of the load-bearing finite classifications are complete.
+No full manuscript should be drafted until the gate in the
+[external-review blueprint](hc7_partial_results_external_review_blueprint.md)
+passes.  A later manuscript must not present the detailed
+order-eight/order-nine programme as exhaustive or lead with its live case
+tree.  It must not claim novelty or submission readiness until a conventional
+literature and priority review, independent human graph-minor and colouring
+audits, and independent reproduction of the load-bearing finite
+classifications are complete.
 
 ### No-go directions
 
@@ -201,9 +205,10 @@ reproduction of the load-bearing finite classifications are complete.
 ## 6. Bottom line
 
 The verification gate is passed in the limited sense that the principal
-promoted theorems remain sound and the programme now has an honest map of
-its exhaustive and nonexhaustive parts.  It fails any claim that the current
-detailed reductions already form a convergent proof.  Further investment is
-justified only as a focused attempt to discover the host-level
-response-coupling theorem above, alongside preservation of the standalone
-unbounded results for independent review and eventual publication.
+promoted theorems remain sound and the programme has an honest map of its
+exhaustive and nonexhaustive parts.  It fails any claim that the current
+detailed reductions form a convergent proof.  Current investment should go
+to external proof and priority review, independent computational
+reproduction, and a blueprint for eventual publication.  Open-ended proof
+search with the same architecture is frozen pending one of the explicit
+restart triggers above.

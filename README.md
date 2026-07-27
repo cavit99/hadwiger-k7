@@ -84,7 +84,9 @@ minor-minimal counterexample.  A coherent core consists of the bounded full
 separations of order seven to nine, component-uniform colouring responses,
 the proved one/two/three exterior-component upper bounds, exact order-seven
 packing restrictions for connected subgraphs adjacent to the whole boundary,
-and a boundary-labelled degree-seven application.
+and the multi-component colouring-response theorem.  The boundary-labelled
+degree-seven result is a possible secondary application, subject to a careful
+overlap review against the public unlabelled near-clique theorem.
 
 This is not a proof of $HC_7$, evidence that completion is near, or a
 confirmed novelty claim.  In particular, Norin and Totschnig already prove
@@ -97,7 +99,11 @@ bounds, packing restrictions, and retained boundary labels.  Submission
 should wait for a conventional literature and priority review, independent
 human audits by graph-minor and colouring specialists, and independent
 reproduction of the load-bearing finite classifications.  See the
-[verification-gate assessment](active/hc7_verification_gate_report.md#partial-results-manuscript-go-after-one-source-and-novelty-gate).
+[external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md)
+and the
+[verification-gate assessment](active/hc7_verification_gate_report.md#partial-results-paper-blueprint-only-until-the-external-review-gates-pass).
+Intensive autonomous proof search is paused pending the external review gate
+described there; the open proof target remains mathematically current.
 
 ## Start here
 
@@ -105,12 +111,13 @@ reproduction of the load-bearing finite classifications.  See the
 |---|---|
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current research status |
 | [`active/INDEX.md`](active/INDEX.md) | Concise navigation to live proof work |
+| [External-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md) | Frozen theorem package, review questions, reproduction plan, and restart criteria |
 | [Live case verification map](active/hc7_live_case_dag.md) | Exhaustive global chain, conditional refinements, and every missing descent arrow |
 | [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Primary all-degree theorem, direct inputs, and trust boundary |
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
-| [Sharp exterior-component bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
+| [Exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
 | [Exact order-seven packing restrictions](results/hc7_exact_seven_packet_packing.md) | Limits disjoint connected subgraphs adjacent to every vertex of an order-seven boundary |
 | [Component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md) | Simultaneous component-supported augmentation and rejection-map dichotomy |
 | [Full-component common-root exchange](results/hc7_full_exterior_component_common_root_exchange.md) | Exact two-component rooted residue in the full unique-rejector case |
