@@ -6985,11 +6985,72 @@ does_not_prove = [
 ]
 keywords = ["order eight", "same operation", "response columns", "low-degree contact", "strict descent"]
 
+[[claims]]
+id = "hc7.height6_topological_clean_bypass"
+title = "A six-vertex topological K5 has a universally linked half-edge or a support-clean response bypass"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_height6_topological_clean_bypass.md"
+active = false
+audit = "results/hc7_height6_topological_clean_bypass_audit.md"
+expected_source_sha256 = "66d9ef5f6195eacc2d5dc8cf459388f48a41b905d240c5548cc03ec555b79ff0"
+scope = "one six-vertex TK5 in a seven-chromatic graph whose proper minors are six-colourable, with absent unsubdivided branch edge"
+label_fidelity = "the subdivided segment, both half-edges, one double-contraction colouring, both switched components and the returned bypass are literal"
+colour_compatibility = "both opposite one-half-edge responses arise by named switches from the same double-contraction colouring"
+conclusions = [
+  "the common two-half-edge deletion realizes exactly the three equality signatures other than both proper",
+  "one half-edge is bichromatically linked for every alternate colour, or an opposite-end bypass has interior outside the entire selected TK5 support",
+  "the nonsaturated bypass uses the two colours not present on the three unsubdivided branch vertices",
+]
+does_not_prove = [
+  "alignment of half-edge choices across several supports",
+  "a pair meeting every TK5 support through order six",
+  "an increase in global topological pair height",
+  "HC7",
+]
+keywords = ["topological K5", "height six", "incident edges", "Kempe bypass", "operation provenance"]
+
+[[claims]]
+id = "hc7.barrier.height6_topological_transversal_static"
+title = "Complete small-TK5 data and global height six do not force a two-vertex transversal"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_height6_topological_transversal_static_barrier.md"
+active = false
+audit = "barriers/hc7_height6_topological_transversal_static_barrier_audit.md"
+expected_source_sha256 = "522748a4af07fa32816a5e00d63ad8daef252541e202dfd7653143d2f658b265"
+scope = "one 15-vertex five-chromatic K7-minor-free graph; not a seven-connected contraction-critical host"
+label_fidelity = "the complete TK5 support family through order six, six private pairs, and each unique subdivided segment are literal"
+conclusions = [
+  "the complete family has three literal K5 supports, 48 six-vertex TK5 supports and transversal number three",
+  "six topological supports form a relative-minimal kernel whose private pairs all have globally maximal height six",
+  "all selected supports have unique topological witnesses of type (1,3,0) or (1,2,1)",
+  "a width-five tree decomposition excludes a K7 minor",
+]
+does_not_prove = [
+  "failure of the height-six topological-transversal theorem in a hypothetical minimal counterexample",
+  "failure of a whole-family theorem using seven-connectivity or operation-specific critical responses",
+  "HC7",
+]
+keywords = ["topological K5", "transversal barrier", "pair height", "critical family", "treewidth five"]
+
 [[relations]]
 source = "hc7.atomic_octahedral_frame_augmentation"
 target = "hc7.atomic_weak_k7_immersion_rounding"
 kind = "uses"
 note = "The exact J quotient and H0-subdivision provenance are supplied by the audited atomic collision classification."
+
+[[relations]]
+source = "hc7.height6_topological_clean_bypass"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+note = "The support-clean path is obtained by specializing the incident-edge saturation-or-bypass theorem to the subdivided segment and excluding the three branch-clique colours."
+
+[[relations]]
+source = "hc7.height6_topological_clean_bypass"
+target = "hc7.barrier.height6_topological_transversal_static"
+kind = "guarded_by"
+note = "The finite barrier shows that one-support provenance still requires a whole-family host-level composition before it can increase the global pair height."
 
 [[relations]]
 source = "hc7.atomic_h0_bridge_quadrant_normal_form"
@@ -11255,4 +11316,18 @@ expected_stdout = [
   "type_counts 007fff:10 00efff:192 01d7ff:120 01deff:84 05cdff:144 05defb:12",
   "spanning_k4_failures 0",
   "PASS order8_edge_maximal_source_contact",
+]
+
+[[verifiers]]
+id = "height6-topological-transversal-static-barrier"
+path = "barriers/hc7_height6_topological_transversal_static_barrier_verify.py"
+sha256 = "fec6a3f3b58c5ec572289c049becab0514271d0cb5060da830eb8188f12e390c"
+timeout = 30
+expected_stdout = [
+  "GREEN height-six topological-transversal static barrier",
+  "graph vertices=15 edges=50 literal_K5=3 six_vertex_TK5=48 tau=3",
+  "relative_kernel=6 types=(1,3,0):3,(1,2,1):3 private_disjoint=yes",
+  "treewidth_upper_bound=5 chromatic_number=5 seven_connected=no",
+  "edge_sha256=ba8924dea37e6343a51fddd5818d34a4bf5e8650309c34f303f73c01f5cfd65d",
+  "family_sha256=a5890f1aca440564136fa8714a1f7727a0c0958ccfcd6b2e749dc945bc29d428",
 ]
