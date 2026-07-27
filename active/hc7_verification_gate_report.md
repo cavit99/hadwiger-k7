@@ -1,10 +1,11 @@
 # Verification-gate report and research reassessment
 
 **Status:** point-in-time internal verification report, 20 July 2026;
-labelled-colour normalization corrected and re-audited 21 July 2026.  This
-is not a status authority, a new theorem or external peer review.  Current
-status remains governed by [`RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md),
-and the reconstructed case graph is
+labelled-colour normalization corrected and re-audited 21 July 2026;
+publication-scope wording refreshed 27 July 2026.  This is not a status
+authority, a new theorem or external peer review.  Current status remains
+governed by [`RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md), and the
+reconstructed case graph is
 [`hc7_live_case_dag.md`](hc7_live_case_dag.md).
 
 ## 1. Purpose
@@ -171,12 +172,20 @@ response data.
 
 There is enough audited unbounded mathematics to prepare a separate
 partial-results manuscript even if the full-proof campaign fails.  The
-strongest coherent package is the low-degree bounded-interface entry,
-cycle-boundary completion, exact-seven full-subgraph packing, and the
-large-boundary density descent.  A manuscript must not present the detailed
-order-eight/order-nine programme as exhaustive and must not claim novelty
-until a conventional literature review and independent human proof audit
-are complete.
+current strongest coherent package is the low-degree bounded-interface
+entry, component-uniform colouring responses, the proved one/two/three
+exterior-component upper bounds, exact-seven full-connected-subgraph
+packing, and one boundary-labelled degree-seven application.  The public
+benchmark already includes Norin and Totschnig's global unlabelled
+[$K_7^\vee$-minor theorem](https://arxiv.org/abs/2507.03244); the possible
+contribution here is instead the interface localization, uniform responses,
+component bounds, packing restrictions, and retained labels.
+
+A manuscript must not present the detailed order-eight/order-nine programme
+as exhaustive or lead with its live case tree.  It must not claim novelty or
+submission readiness until a conventional literature and priority review,
+independent human graph-minor and colouring audits, and independent
+reproduction of the load-bearing finite classifications are complete.
 
 ### No-go directions
 

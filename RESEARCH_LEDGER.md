@@ -1,7 +1,11 @@
 # $HC_7$ research ledger
 
-**Last updated:** 26 July 2026
+**Last updated:** 27 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
+**Publication assessment:** the internally audited corpus is a credible
+partial-results manuscript candidate, but it is not submission-ready;
+novelty, priority, and proof correctness still require conventional
+literature review and independent human validation.
 
 This is the sole authority for the current status of the project. Exact
 theorem statements and proofs live in the linked frontier and result files;
@@ -557,6 +561,47 @@ six-residual terminal edge. Its host deliberately has a `K_7` minor, so
 it shows why global minor exclusion is indispensable rather than refuting
 the full theorem. The closure gate failed and whole-sink classification
 was not started.
+
+## Standalone-results and publication status
+
+The strongest coherent manuscript candidate is about necessary structure in
+a hypothetical minor-minimal counterexample, rather than about completion of
+the conjecture.  Its proposed core is:
+
+- the
+  [bounded full-separation entry](results/hc7_low_degree_adjacent_pair_alignment.md)
+  of order seven to nine, including exact independent-block colour responses
+  on both closed shores;
+- the
+  [component-uniform alignment](results/hc7_component_uniform_boundary_alignment.md),
+  which assigns every component `D` of `G-N[u]` its own
+  `z_D in N(D)` with `chi(G-{u,z_D})=6`;
+- the proved
+  [one/two/three exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md)
+  in degrees seven, eight and nine;
+- the
+  [exact order-seven packing restrictions](results/hc7_exact_seven_packet_packing.md)
+  for disjoint connected subgraphs adjacent to every boundary vertex; and
+- a focused application such as the
+  [boundary-labelled degree-seven near-clique model](results/hc7_degree7_aligned_near_k7_model.md).
+
+This is a credible partial-results package, not a claim that `HC_7` is close
+or that the listed results are novel in their present form.  The public
+benchmark already includes Norin and Totschnig's theorem that every
+non-six-colourable graph contains a
+[$K_7^\vee$ minor](https://arxiv.org/abs/2507.03244), where $K_7^\vee$ is
+$K_7$ with two adjacent edges deleted.  The possible new contribution here
+is the literal bounded-interface localization, component-uniform responses,
+proved component bounds, packing restrictions, and retained labels—not the
+unlabelled near-`K_7` guarantee itself.
+
+Before submission, the package still needs a conventional literature and
+priority review, independent human audits by graph-minor and
+colouring/Kempe specialists, and independent reproduction of the
+load-bearing finite classifications.  The extensive conditional
+order-eight/order-nine case tree should not lead the manuscript.  The
+[verification-gate report](active/hc7_verification_gate_report.md#partial-results-manuscript-go-after-one-source-and-novelty-gate)
+records the internal go/no-go assessment; it is not external peer review.
 
 ## Headline audited advances
 

@@ -76,6 +76,29 @@ authoritative status is maintained in the research ledger, and its full
 hypotheses and trust boundary are stated in the technical frontier rather
 than duplicated here.
 
+### Partial-results manuscript status
+
+The internally audited corpus now supports a credible specialist
+partial-results manuscript candidate about the structure of a hypothetical
+minor-minimal counterexample.  A coherent core consists of the bounded full
+separations of order seven to nine, component-uniform colouring responses,
+the proved one/two/three exterior-component upper bounds, exact order-seven
+packing restrictions for connected subgraphs adjacent to the whole boundary,
+and a boundary-labelled degree-seven application.
+
+This is not a proof of $HC_7$, evidence that completion is near, or a
+confirmed novelty claim.  In particular, Norin and Totschnig already prove
+the global unlabelled result that every non-six-colourable graph contains a
+minor isomorphic to
+[$K_7^\vee$](https://arxiv.org/abs/2507.03244), obtained from $K_7$ by
+deleting two adjacent edges.  The repository's possible contribution is the
+bounded-interface localization, component-uniform responses, component
+bounds, packing restrictions, and retained boundary labels.  Submission
+should wait for a conventional literature and priority review, independent
+human audits by graph-minor and colouring specialists, and independent
+reproduction of the load-bearing finite classifications.  See the
+[verification-gate assessment](active/hc7_verification_gate_report.md#partial-results-manuscript-go-after-one-source-and-novelty-gate).
+
 ## Start here
 
 | Document | Purpose |
@@ -88,6 +111,7 @@ than duplicated here.
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
 | [Sharp exterior-component bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
+| [Exact order-seven packing restrictions](results/hc7_exact_seven_packet_packing.md) | Limits disjoint connected subgraphs adjacent to every vertex of an order-seven boundary |
 | [Component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md) | Simultaneous component-supported augmentation and rejection-map dichotomy |
 | [Full-component common-root exchange](results/hc7_full_exterior_component_common_root_exchange.md) | Exact two-component rooted residue in the full unique-rejector case |
 | [Degree-seven boundary-labelled near-clique model](results/hc7_degree7_aligned_near_k7_model.md) | Principal degree-seven structural compression |
