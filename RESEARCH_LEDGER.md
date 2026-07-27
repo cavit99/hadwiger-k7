@@ -356,21 +356,39 @@ Every root-first encounter reduces to a latent-column encounter unless the
 named bypass uses the single opposite fan centre.  Six-connectivity then
 supplies a centre-free path, but not one retaining the named switch
 provenance.
+The separately audited
+[incident-bypass conflict theorem](results/hc7_order8_incident_bypass_conflict_split.md)
+now removes the remaining path-level ambiguity.  Whether or not the two
+named bichromatic components intersect, their coupled switches isolate one
+nonempty bipartite conflict edge set `F`.  The conflict deletion `G-F`
+realizes the all-edge signature, full minor-criticality realizes every
+singleton signature and forbids the empty signature.  Every singleton response is
+locked in all five alternate colours; unit edges on opposite shores with
+one boundary partition would already glue.  One induced conflict
+component splits into two adjacent connected sides which both see all five
+alternate colours in the same colouring.  The accompanying
+[compression barrier](barriers/hc7_incident_bypass_conflict_compression_barrier.md)
+shows that shortestness and central-colouring Kempe normalization alone
+cannot simplify `F`: every nonempty bipartite graph occurs, even in a
+seven-connected example which is already terminal through a `K_7` minor.
 An exhaustive conditional contact theorem identifies a labelled
 `K_7`-minus-one-edge model whenever the seven-column graph is abstractly
 edge-maximal, but realizable exchange-maximality does not imply that abstract
 hypothesis.
 
-The focused next target is therefore one label-preserving first-obstruction
-theorem in the six-connected common deletion.  It must turn the first
-already-contacting latent column or the fixed-centre provenance bottleneck
-into a controlled contact rotation,
-two-column absorption, an explicit `K_7` model, a common boundary partition,
-or strict response-preserving descent.  Universal saturation separately
-reduces to a named one-edge response or a joint five-colour triad fan, whose
-palette paths are not yet assigned to column labels.  The two-shore list
-dichotomy and incidence cycle remain secondary until their colouring
-operation is aligned with this fixed response.  Genuinely split-terminal
+The focused next target in the bypass branch is therefore palette-to-column
+alignment: use the all-edge, singleton and five-colour-lock responses on
+`F` to construct the required labelled `K_5` model from the bilateral
+palette contacts and the latent columns, or return an explicit `K_7` model,
+a common boundary partition, an exact-seven
+response, or a response-preserving proper nested same-form order-eight
+continuation which strictly decreases the literal operated shore.  A
+conflict component, a new colouring, or a contact rotation alone is not an acceptable
+exit.  Universal saturation separately reduces to a named one-edge response
+or a joint five-colour triad fan, whose palette paths are not yet assigned to
+column labels.  The two-shore list dichotomy and incidence cycle remain
+secondary until their colouring operation is aligned with this fixed response.
+Genuinely split-terminal
 `I,T` cuts remain a conditional fast route; the other small-shore and
 odd-wheel alternatives remain separate.
 

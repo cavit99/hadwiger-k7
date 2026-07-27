@@ -464,15 +464,32 @@ vertices, and then minimizing old-column/root encounters and path length,
 is a finite normalization only; it does not prove the needed no-contact-loss
 exchange.  A first obstruction can also be a root, not merely an old column.
 
-The focused next target is therefore to use the critical-host nonextension
-data.  In the source-saturated case it should compose the universal
-saturation or dirty incident-source bypass while retaining this same column
-model, or return `K_7`, a common complete boundary partition or a strict
-selected-response descent.  In the exposed case it should reassign the
-first root/column encounter while retaining the same edge, colouring, root
-roles, seven labels, five first neighbours and every old contact, or
-strictly improve a declared finite rank.  A low-degree quotient separator
-is not a bounded separator of the host.
+The separately audited
+[incident-bypass conflict theorem](../results/hc7_order8_incident_bypass_conflict_split.md)
+normalizes every bypass outcome, including intersecting named bichromatic
+components.  Their coupled switches isolate a nonempty bipartite edge set
+`F`; the conflict deletion `G-F` has the all-edge signature, full
+minor-criticality gives every singleton signature and excludes the empty signature.  Each
+unit edge is locked in all five alternate colours; opposite-shore unit
+edges with one boundary partition would already glue.  One
+induced conflict component has two adjacent connected sides which both see
+all five alternate colours in the same colouring.  The paired
+[compression barrier](../barriers/hc7_incident_bypass_conflict_compression_barrier.md)
+realizes an arbitrary nonempty bipartite `F`, so shortest-path or
+central-colouring Kempe normalization cannot be the missing composition
+mechanism.
+
+The focused bypass target is therefore to spend the all-edge, singleton and
+five-colour-lock responses on `F`: use the bilateral palette contacts and
+latent columns to construct the required labelled `K_5` model, or return
+`K_7`, a common complete boundary partition, a strict exact-seven response,
+or a response-preserving proper nested same-form order-eight continuation
+which strictly decreases the literal operated shore.  Palette exposure, a
+conflict component, a new colouring or a contact rotation is not by itself
+an exit.  The universal-saturation branch
+remains separate: its named response or joint five-colour triad fan still
+lacks an allocation of palette paths to column labels.  A low-degree
+quotient separator is not a bounded separator of the host.
 
 The audited
 [two-shore Kempe/list dichotomy](../results/hc7_two_shore_kempe_list_dichotomy.md)

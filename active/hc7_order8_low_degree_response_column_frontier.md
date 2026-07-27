@@ -152,6 +152,43 @@ partition of the original fixed colouring `c`.  The common data are the
 literal operation, column labels, incident edges, contraction colouring and
 named switches—not a common boundary trace.
 
+### 4.1 Conflict-component normal form for every bypass
+
+The separately audited
+[incident-bypass conflict theorem](../results/hc7_order8_incident_bypass_conflict_split.md)
+removes the distinction between disjoint and intersecting named bichromatic
+components.  From their one fixed common-deletion colouring and two named
+switches it obtains a nonempty bipartite edge set `F` with:
+
+1. one colouring in which exactly all edges of `F` are monochromatic;
+2. for every `f in F`, a minor-critical colouring in which exactly `f` is
+   monochromatic;
+3. no colouring in which every edge of `F` is proper; and
+4. all five alternate-colour Kempe locks at every unit edge in its own unit
+   colouring;
+5. one induced conflict component which, in the first colouring, splits
+   into two adjacent connected sides each seeing all five alternate palette
+   colours outside the full conflict set.
+
+Thus every dirty bypass now has an exact same-operation conflict object and
+a complete all-edge/unit/no-empty response table.  Unit edges on opposite
+open shores orient their boundary responses in opposite directions, so a
+shared boundary partition would already glue; neither shore occurrence nor
+a partition collision is forced.  The theorem still does not assign
+the five palette colours to five distinct latent columns.  This distinction
+is essential: the audited paired-colourful-set barriers already show that
+two connected full-palette sets do not statically force the labelled rooted
+minor required here.
+
+The accompanying
+[conflict-compression barrier](../barriers/hc7_incident_bypass_conflict_compression_barrier.md)
+realizes every prescribed nonempty bipartite conflict graph with the central
+response table and rigid central Kempe class.  Its seven-connected instance
+contains an explicit `K_7`-minor model and is not minor-critical.  It does
+not refute the target, but proves that shortestness or Kempe normalization
+alone cannot simplify `F`; a proof must use `K_7`-minor exclusion, the unit
+responses or the literal column labels.
+
 ## 5. Eight-latent-column and rank normalizations
 
 The separately written
@@ -243,19 +280,23 @@ maximal under (5.2).  Prove at least one of:
 
 The proof has two precise obligations:
 
-- **dirty-bypass first obstruction:** in the six-connected common deletion,
-  handle a first latent-column encounter or a hit on `w`.  A valid exchange
-  may use a one-column split, a controlled contact rotation or the audited
-  two-column absorption construction, but it must retain the coupled
-  one-edge responses or return a terminal/strict recursive outcome;
+- **conflict-component label alignment:** use the all-edge/unit/no-empty
+  response table from Section 4.1 and the bilateral palette contacts to
+  construct the required labelled `K_5` model from the latent columns, or
+  return an explicit `K_7`-minor model, a common boundary partition, a
+  strict exact-seven response, or a proper
+  nested same-form order-eight interface which preserves the selected
+  response and strictly decreases the literal operated shore.  A first
+  old-column encounter, a hit on `w`, another colouring or an unranked contact rotation is not a
+  final outcome;
 - **joint triad saturation:** compose the named one-edge response or the
   prescribed seven-edge fan from the universal-saturation branch with the
   same latent columns.  Palette-indexed fan arms cannot be read as column
   labels without proof.
 
-An order-seven output is recursive only with the stated proper literal
-shore decrease and named crossing-edge response.  A fresh response, an
-unbounded separator or a new quotient contact system without a proved rank
+An order-seven or nested order-eight output is recursive only with the
+stated proper literal shore decrease and named crossing-edge response.  A
+fresh response, an unbounded separator or a new quotient contact system without a proved rank
 increase is not a terminal conclusion.
 
 ## 7. Secondary two-shore structure
@@ -279,6 +320,7 @@ should enter this branch only after an explicit provenance-alignment lemma.
 - [six-vertex source-rooted `K_4` lemma](../results/hc7_six_vertex_source_rooted_k4.md)
 - [noncontacting incident-source fork](../results/hc7_order8_low_degree_incident_source_fork.md)
 - [unified noncontacting incident-pair response](../results/hc7_order8_unified_incident_pair_normal_form.md)
+- [exact conflict component and all-edge/unit response table](../results/hc7_order8_incident_bypass_conflict_split.md)
 - [eight-latent-column spanning normalization](../results/hc7_order8_latent_column_spanning_normalization.md)
 - [six-connected common deletion or strict exact-seven restart](../results/hc7_order8_incident_pair_common_deletion_connectivity.md)
 - [conditional edge-maximal source-contact theorem](../results/hc7_order8_edge_maximal_source_contact.md)
@@ -286,5 +328,6 @@ should enter this branch only after an explicit provenance-alignment lemma.
 - [one-defect two-root completion or separation](../results/hc7_one_defect_two_root_k5_separator.md)
 - [a local path need not split an intermediate column](../barriers/hc7_degree8_dirty_path_local_uncrossing_barrier.md)
 - [six-connectivity and a centre-free path still do not split a singleton column](../barriers/hc7_pentagonal_bipyramid_target_star_shadow.md)
+- [central Kempe normalization permits an arbitrary bipartite conflict graph](../barriers/hc7_incident_bypass_conflict_compression_barrier.md)
 - [seven-connected planar column shadow](../barriers/hc7_seven_column_k2_planar_shadow.md)
 - [contact maximization need not provide an improving transfer](hc7_pb_max_contact_nine_four_colour.md)

@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "84859bb72ff6ba2c32ff08f11d004a046cc58073c643523e8255424410cad2e5"
+expected_source_sha256 = "562fe1c68fdd150db8dc3a2735dd5d88ecefe9623644da3326b6d2d37a3b5d50"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -6888,6 +6888,55 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_incident_bypass_conflict_split"
+title = "A coupled incident-edge bypass has an exact bipartite conflict component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_incident_bypass_conflict_split.md"
+active = false
+audit = "results/hc7_order8_incident_bypass_conflict_split_audit.md"
+expected_source_sha256 = "4b3f0eea1436d1337da1b842aaf07e56a4f81f888ed596b4bc8f03915bb1c297"
+scope = "the bypass branch of one coupled noncontacting incident-edge response in a minor-minimal non-q-colourable graph"
+label_fidelity = "the two incident edges, common deletion colouring, two named bichromatic components and their individual switches remain fixed"
+colour_compatibility = "one derived colouring realizes every conflict edge; separate minor-critical colourings realize each singleton conflict edge"
+conclusions = [
+  "the simultaneous switches isolate a nonempty bipartite conflict edge set even when the named components intersect",
+  "the conflict deletion G-F realizes the all-edge and every unit response signature but no empty signature",
+  "every conflict edge is bichromatically locked for every alternate colour in its own unit colouring",
+  "conflict components are induced and pairwise anticomplete",
+  "one conflict component splits into adjacent connected sides each seeing every alternate palette colour in the same colouring",
+  "simultaneously contracting all conflict components leaves an exactly q-chromatic proper minor",
+  "unit edges on opposite open shores with one boundary partition give the common-partition outcome",
+]
+does_not_prove = [
+  "alignment of palette colours with distinct latent column labels",
+  "that conflict edges occur on both open shores or that their unit boundary partitions coincide",
+  "an explicit K7-minor model, common boundary partition or bounded-interface restart",
+  "closure of universal saturation, the order-eight interface or HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.incident_bypass_conflict_compression"
+title = "Central Kempe normalization permits an arbitrary bipartite conflict graph"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_incident_bypass_conflict_compression_barrier.md"
+active = false
+audit = "barriers/hc7_incident_bypass_conflict_compression_barrier_audit.md"
+expected_source_sha256 = "7f19e5c78a1a004f7624e24eb1e4bcdb86dece590c72560be7216a51f9f77691"
+scope = "a parameter-uniform incident-edge response construction; its q=6 instance is seven-connected but already contains a K7 minor"
+label_fidelity = "the incident edges, three equality signatures, named component switches and prescribed bipartite conflict graph are explicit"
+conclusions = [
+  "every prescribed nonempty bipartite graph occurs as a simultaneous-switch conflict graph",
+  "all central colourings differ only by a palette permutation and central-preserving Kempe switches are global",
+  "the q=6 K3,3 instance is seven-connected and has an explicit K7-minor model",
+]
+does_not_prove = [
+  "a counterexample to the order-eight response theorem or HC7",
+  "failure after imposing K7-minor exclusion, full minor-critical unit responses and latent-column geometry",
+]
+
+[[claims]]
 id = "hc7.order8_latent_column_spanning_normalization"
 title = "Spanning normalization for eight latent response columns"
 kind = "theorem"
@@ -6962,7 +7011,7 @@ status = "conditional-target"
 source = "active/hc7_order8_low_degree_response_column_frontier.md"
 source_heading = "Coupled dirty-bypass and saturation composition theorem"
 active = false
-expected_source_sha256 = "140811c41e7493b457154b516e2ce9185617adcc27019ac939c49f42573a1d6c"
+expected_source_sha256 = "1f6b23141b27a9f8af213b9119922c75a8ba534dff5a700db19f67e973f67176"
 scope = "the minimum order-eight exactly-two-full-component interface after the dual-root pentagonal-bipyramid alternative is eliminated"
 label_fidelity = "one fixed critical edge, one fixed deletion colouring, fixed root seeds and roles, seven column labels, one target, five first neighbours and all old contacts"
 separator_order = "an exact order-seven selected response or a strict order-eight response-side descent on a proper literal connected shore"
@@ -6976,9 +7025,9 @@ allowed_exits = [
 ]
 does_not_prove = [
   "that a low-degree quotient column gives a bounded host separator",
-  "closure of universal incident-edge saturation or a dirty incident-source bypass",
-  "a no-contact-loss first-obstruction exchange for an exposed source-target path",
-  "that contact or coverage maximization supplies an exchange",
+  "alignment of the bilateral palette contacts and unit edge responses with five distinct latent column labels",
+  "closure of the joint five-colour triad-saturation branch",
+  "that conflict normalization, contact maximization or coverage maximization supplies a terminal or nested outcome",
   "provenance alignment with an independently chosen two-shore incidence cycle",
   "the other bounded-interface branches",
   "HC7",
@@ -7496,6 +7545,18 @@ note = "The formerly separate source-target and source-source modes now enter on
 
 [[relations]]
 source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.order8_incident_bypass_conflict_split"
+kind = "uses"
+note = "Every bypass outcome now enters one exact bipartite conflict object with all-edge and singleton response signatures."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
+target = "hc7.barrier.incident_bypass_conflict_compression"
+kind = "guarded_by"
+note = "Shortestness and central-colouring Kempe normalization cannot simplify the conflict graph without using the omitted host hypotheses."
+
+[[relations]]
+source = "hc7.target.order8_low_degree_response_column"
 target = "hc7.order8_latent_column_spanning_normalization"
 kind = "uses"
 note = "The active rank and first-obstruction analysis use all eight latent labels and the two fixed centres."
@@ -7578,6 +7639,22 @@ source = "hc7.order8_unified_incident_pair_normal_form"
 target = "hc7.order8_arbitrary_edge_response_star"
 kind = "uses"
 note = "The saturation refinement applies the prescribed-first-edge all-boundary fan theorem."
+
+[[relations]]
+source = "hc7.order8_incident_bypass_conflict_split"
+target = "hc7.order8_unified_incident_pair_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_incident_bypass_conflict_split"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_incident_bypass_conflict_split"
+target = "hc7.barrier.incident_bypass_conflict_compression"
+kind = "guarded_by"
+note = "The conflict graph itself need not simplify; the positive theorem's unit responses and column alignment remain essential."
 
 [[relations]]
 source = "hc7.order8_latent_column_spanning_normalization"
