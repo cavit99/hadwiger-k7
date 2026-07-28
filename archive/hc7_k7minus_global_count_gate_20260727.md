@@ -4,6 +4,9 @@
 does not replace the authoritative `HC_7` proof spine in
 `RESEARCH_LEDGER.md` and `active/INDEX.md`.
 
+The compact specialist packet is
+[here](../active/hc7_k7minus_external_review_packet.md).
+
 ## What survived hostile audit
 
 Two proposed load-bearing lemmas survived separate internal cold audits:
@@ -18,20 +21,27 @@ count reduction: every hypothetical counterexample has at least five
 degree-eight vertices lying in no literal `K_5`, including two nonadjacent
 ones.
 
-## Exact open continuation
+## Exact sufficient continuation
 
-The route now requires a genuinely new global theorem.  For the returned
-nonadjacent bad pair `u,v`, one must use seven-connectivity and the
-contraction-critical colouring responses to produce five pairwise adjacent
-connected branch sets in `G-\{u,v\}`, each meeting both `N(u)` and `N(v)`,
-or derive another contradiction.  The two singleton roots would then
-complete a `K_7^-` model.
+The narrowest sufficient theorem is that such a host has at most four
+degree-eight vertices with `K_4`-free neighbourhoods.  This would contradict
+the five vertices forced by the count reduction.  It may require all five
+vertices simultaneously.
+
+One stronger possible route selects a returned nonadjacent pair `u,v` and
+uses the contraction-critical colouring responses to produce five pairwise
+adjacent connected branch sets in `G-\{u,v\}`, each meeting both `N(u)` and
+`N(v)`.  The two singleton roots would then complete a `K_7^-` model.  This
+paired-rooted certificate is sufficient, not equivalent to the exact
+five-vertex theorem.
 
 The retained 11-vertex barrier proves that the two local neighbourhood
 types plus seven internally disjoint `u`--`v` paths are insufficient.
-Thus the missing theorem must compose the operation-specific externally
+Thus any pair-based proof must compose the operation-specific externally
 routed paths available at the two degree-eight neighbourhoods; ordinary
-Menger linkage alone cannot do the work.
+Menger linkage alone cannot do the work.  A proof using all five exceptional
+vertices may instead obtain a different minor, colouring contradiction or
+critical separation.
 
 ## Decision
 

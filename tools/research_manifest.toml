@@ -7127,47 +7127,69 @@ does_not_prove = [
 keywords = ["K7 minus", "literal K5", "Niu Zhang", "two apex"]
 
 [[claims]]
-id = "hc7.k7minus_bad_degree8_pair_reduction"
-title = "A hypothetical K7-minus six-colour counterexample has a nonadjacent bad degree-eight pair"
+id = "hc7.k7minus_five_exceptional_vertices_reduction"
+title = "A hypothetical K7-minus six-colour counterexample has five exceptional degree-eight vertices"
 kind = "theorem"
 status = "audited-green"
-source = "results/hc7_k7minus_bad_degree8_pair_reduction.md"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
 source_heading = "Theorem 1 (global count reduction)"
 active = false
-audit = "results/hc7_k7minus_bad_degree8_pair_reduction_audit.md"
-expected_source_sha256 = "fcb6edc6e6d204f3f521ab2703bd7591c90a9abfed8ed6ddc31d953c19071456"
+audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
+expected_source_sha256 = "3ebcbaf595b16d616dcd01efdc2e8dd23f0ed6079a3294e8299f7b365787483b"
 scope = "hypothetical minor-minimal non-six-colourable K7-minus-minor-free graphs"
-label_fidelity = "the returned vertices are literal, nonadjacent, degree eight and each has a K4-free neighbourhood"
+label_fidelity = "the five returned vertices are literal and degree eight, each has a K4-free neighbourhood, and two are nonadjacent"
 conclusions = [
   "there are at least five degree-eight vertices lying in no literal K5",
   "two such vertices are nonadjacent",
 ]
 does_not_prove = [
-  "a paired-rooted K5 model in the complement of the selected pair",
+  "exclusion of five exceptional degree-eight vertices",
+  "a paired-rooted K5 model in the complement of a selected pair",
   "the K7-minus six-colour conjecture",
   "HC7",
 ]
 keywords = ["K7 minus", "Jakobsen density", "degree eight", "bad pair"]
 
 [[claims]]
-id = "hc7.target.k7minus_nonadjacent_bad_pair"
-title = "Nonadjacent bad degree-eight pair exclusion"
+id = "hc7.target.k7minus_five_exceptional_vertices"
+title = "Five exceptional degree-eight vertices cannot coexist"
 kind = "target"
 status = "frozen"
-source = "results/hc7_k7minus_bad_degree8_pair_reduction.md"
-source_heading = "Corollary 2 (precise remaining theorem)"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
+source_heading = "Corollary 2 (exact sufficient finishing theorem)"
 active = false
-scope = "the nonadjacent bad pair forced in every hypothetical counterexample to the K7-minus six-colour conjecture"
-label_fidelity = "five pairwise adjacent connected branch sets must each meet both literal root neighbourhoods"
+scope = "the five degree-eight vertices with K4-free neighbourhoods forced in every hypothetical counterexample to the K7-minus six-colour conjecture"
+label_fidelity = "all five literal exceptional vertices remain available; a proof need not select or eliminate one arbitrary pair"
 allowed_exits = [
   "an explicit K7-minus minor model",
   "a contradiction to the full contraction-critical response system",
 ]
 does_not_prove = [
-  "that ordinary seven-path linkage supplies the paired-rooted K5 model",
-  "HC7 unless the full target is proved",
+  "that every nonadjacent exceptional pair is impossible",
+  "that ordinary seven-path linkage supplies a paired-rooted K5 model",
+  "HC7",
 ]
-keywords = ["K7 minus", "paired-rooted K5", "degree-eight pair", "frozen campaign"]
+keywords = ["K7 minus", "five exceptional vertices", "degree eight", "frozen campaign"]
+
+[[claims]]
+id = "hc7.target.k7minus_nonadjacent_bad_pair"
+title = "Nonadjacent bad degree-eight pair exclusion"
+kind = "target"
+status = "frozen"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
+source_heading = "A stronger possible pair route"
+active = false
+scope = "a stronger route that excludes every nonadjacent pair among the exceptional degree-eight vertices"
+label_fidelity = "a paired-rooted certificate retains both literal degree-eight vertices and both literal neighbourhood sets"
+allowed_exits = [
+  "an explicit K7-minus minor model from five connected bags meeting both root neighbourhoods",
+  "another contradiction excluding the selected pair under the full contraction-critical hypotheses",
+]
+does_not_prove = [
+  "that ordinary seven-path linkage supplies the paired-rooted K5 model",
+  "HC7",
+]
+keywords = ["K7 minus", "paired-rooted K5", "degree-eight pair", "stronger route"]
 
 [[claims]]
 id = "hc7.barrier.k7minus_bad_pair_seven_paths"
@@ -7220,25 +7242,30 @@ target = "hc7.degree7_matching_rooted_separator"
 kind = "uses"
 
 [[relations]]
-source = "hc7.k7minus_bad_degree8_pair_reduction"
+source = "hc7.k7minus_five_exceptional_vertices_reduction"
 target = "hc7.k7minus_degree7_clique_incidence"
 kind = "uses"
 
 [[relations]]
-source = "hc7.k7minus_bad_degree8_pair_reduction"
+source = "hc7.k7minus_five_exceptional_vertices_reduction"
 target = "hc7.k7minus_three_clique_bound"
 kind = "uses"
 
 [[relations]]
-source = "hc7.target.k7minus_nonadjacent_bad_pair"
-target = "hc7.k7minus_bad_degree8_pair_reduction"
+source = "hc7.target.k7minus_five_exceptional_vertices"
+target = "hc7.k7minus_five_exceptional_vertices_reduction"
 kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_nonadjacent_bad_pair"
+target = "hc7.target.k7minus_five_exceptional_vertices"
+kind = "strengthens"
 
 [[relations]]
 source = "hc7.target.k7minus_nonadjacent_bad_pair"
 target = "hc7.barrier.k7minus_bad_pair_seven_paths"
 kind = "guarded_by"
-note = "The barrier shows that the target must use contraction-critical colouring responses, not only the two neighbourhood types and seven-path linkage."
+note = "The barrier shows that a stronger one-pair route must use contraction-critical colouring responses, not only the two neighbourhood types and seven-path linkage."
 
 [[relations]]
 source = "hc7.atomic_h0_bridge_quadrant_normal_form"

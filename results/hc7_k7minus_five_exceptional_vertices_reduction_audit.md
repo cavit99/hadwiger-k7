@@ -1,9 +1,9 @@
-# Internal audit: reduction to a nonadjacent bad degree-eight pair
+# Internal audit: five exceptional degree-eight vertices
 
 **Verdict:** GREEN.
 
 **Audited theorem SHA-256:**
-`fcb6edc6e6d204f3f521ab2703bd7591c90a9abfed8ed6ddc31d953c19071456`.
+`3ebcbaf595b16d616dcd01efdc2e8dd23f0ed6079a3294e8299f7b365787483b`.
 
 This is a separate internal mathematical audit, not external peer review.
 
@@ -28,7 +28,7 @@ With minimum degree seven,
 
 so `2n_7+n_8>=25` is correct.
 
-## Count and terminal pair
+## Count and exceptional set
 
 The audited input revisions are:
 
@@ -51,9 +51,12 @@ The last inequality uses `n_7<=10`.  Five bad vertices cannot form a clique,
 because each would then lie in that literal `K_5`; therefore two are
 nonadjacent.
 
-## Trust boundary
+## Finishing theorem and trust boundary
 
-The paired-rooted `K_5` statement in Corollary 2 is sufficient but unproved.
-The theorem does not assert that ordinary seven-path linkage supplies the
-five paired branch sets.  The adjacent barrier explicitly rules out that
-weaker inference.
+The exact sufficient finishing statement is that at most four exceptional
+degree-eight vertices occur.  This is contradicted directly by the proved
+lower bound `b>=5`.  Excluding every nonadjacent exceptional pair is
+stronger, and producing five pairwise adjacent bags meeting both root
+neighbourhoods is stronger again.  The theorem does not assert either pair
+statement.  The adjacent barrier explicitly rules out deriving the paired
+model from ordinary seven-path linkage alone.

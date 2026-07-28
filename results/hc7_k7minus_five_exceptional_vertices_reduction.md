@@ -1,9 +1,9 @@
-# Reduction of the `K_7^-` six-colour conjecture to a bad degree-eight pair
+# Five exceptional degree-eight vertices under `K_7^-` exclusion
 
 **Status:** written proof; separate internal audit GREEN.  This reduction is
-conditional on the two adjacent audited results.  Its final paired-rooted
-minor theorem remains open, so it proves neither the `K_7^-` conjecture nor
-`HC_7`.
+conditional on the two adjacent audited results.  The resulting
+five-exceptional-vertices theorem remains open, so this proves neither the
+`K_7^-` conjecture nor `HC_7`.
 
 Call a degree-eight vertex `bad` if it belongs to no literal `K_5`;
 equivalently, its neighbourhood contains no literal `K_4`.
@@ -67,25 +67,39 @@ In particular `n_7<=10`.  Combining (2) and (3),
 Five bad vertices cannot be pairwise adjacent, since they would themselves
 form a literal `K_5`.  Thus two of them are nonadjacent.  \(\square\)
 
-## Corollary 2 (precise remaining theorem)
+## Corollary 2 (exact sufficient finishing theorem)
 
 The following statement would prove that every `K_7^-`-minor-free graph is
 six-colourable:
 
-> **Nonadjacent bad-pair theorem.** A seven-connected graph with
-> `chi(G)=7`, every proper minor six-colourable, and no `K_7^-` minor has no
-> two nonadjacent degree-eight vertices whose neighbourhoods are
-> `K_4`-free.
+> **Five-exceptional-vertices theorem.** A seven-connected graph with
+> `chi(G)=7`, every proper minor six-colourable, and no `K_7^-` minor has at
+> most four degree-eight vertices whose neighbourhoods are `K_4`-free.
 
-A sufficient branch-set form is: for every pair `u,v` returned by Theorem 1,
-the graph `G-\{u,v\}` contains five pairwise adjacent connected branch sets,
-each meeting both `N(u)` and `N(v)`.  Together with the singleton branch
-sets `\{u\},\{v\}`, these form a `K_7^-` model whose only permitted missing
-adjacency is `uv`.
+Indeed, Theorem 1 gives at least five such vertices in any minor-minimal
+counterexample.
 
-This paired-rooted `K_5` conclusion is open.  Seven internally disjoint
-`u`--`v` paths and the two local neighbourhood types do not force it; the
-adjacent barrier gives an explicit counterexample to that weaker inference.
+## A stronger possible pair route
+
+The following statements would also suffice, but are stronger than the
+five-exceptional-vertices theorem:
+
+1. no two nonadjacent bad degree-eight vertices occur under the same host
+   hypotheses;
+2. for every nonadjacent bad degree-eight pair `u,v`, the graph
+   `G-\{u,v\}` contains five pairwise adjacent connected branch sets, each
+   meeting both `N(u)` and `N(v)`.
+
+In the second outcome, the five bags together with `\{u\},\{v\}` form a
+`K_7^-` model whose only permitted missing adjacency is `uv`.  Neither pair
+statement is equivalent to the exact finishing theorem: a bad pair might be
+eliminated by another minor construction, a colouring contradiction or a
+critical separation, and a proof may need all five exceptional vertices
+simultaneously.
+
+Seven internally disjoint `u`--`v` paths and the two local neighbourhood
+types do not force the paired-rooted model; the adjacent barrier gives an
+explicit counterexample to that weaker inference.
 
 ## Published input
 
