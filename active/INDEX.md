@@ -50,6 +50,7 @@ Immediate barriers:
 
 ## Conditional refinements and frozen laboratories
 
+- [`K_7^-` density, rooted-transversal, and seven-cut frontier](hc7_k7minus_density_frontier.md)
 - [same-operation low-degree response-column frontier at an order-eight boundary](hc7_order8_low_degree_response_column_frontier.md)
 - [generic exact-seven degree-seven terminal theorem](hc7_degree7_model_separator_frontier.md#generic-exact-seven-restart-and-the-remaining-terminal-theorem)
 - [exact-seven full-connected-subgraph packing theorem](../results/hc7_exact_seven_packet_packing.md)

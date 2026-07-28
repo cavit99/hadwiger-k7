@@ -7132,10 +7132,10 @@ title = "A hypothetical K7-minus six-colour counterexample has five exceptional 
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
-source_heading = "Theorem 1 (global count reduction)"
+source_heading = "Theorem 4 (five exceptional degree-eight vertices)"
 active = false
 audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
-expected_source_sha256 = "3ebcbaf595b16d616dcd01efdc2e8dd23f0ed6079a3294e8299f7b365787483b"
+expected_source_sha256 = "834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff"
 scope = "hypothetical minor-minimal non-six-colourable K7-minus-minor-free graphs"
 label_fidelity = "the five returned vertices are literal and degree eight, each has a K4-free neighbourhood, and two are nonadjacent"
 conclusions = [
@@ -7151,12 +7151,144 @@ does_not_prove = [
 keywords = ["K7 minus", "Jakobsen density", "degree eight", "bad pair"]
 
 [[claims]]
+id = "hc7.k7minus_degree7_neighbourhood_types"
+title = "A degree-seven vertex has one of two exact neighbourhood types under K7-minus exclusion"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
+source_heading = "Lemma 1 (exact degree-seven neighbourhood types)"
+active = false
+audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
+expected_source_sha256 = "834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff"
+scope = "degree-seven vertices in seven-connected seven-chromatic proper-minor-critical K7-minus-minor-free graphs"
+label_fidelity = "the degree-seven vertex, its literal K5 or two K5s, their shared vertex, and the two external triangles are literal"
+conclusions = [
+  "the neighbourhood is K4 disjoint-union K3 or K1 join (K3 disjoint-union K3)",
+  "a degree-seven vertex lies in exactly one literal K5 or exactly two meeting in two vertices",
+  "unique membership gives a private external triangle anticomplete to the other four clique vertices",
+]
+does_not_prove = [
+  "the same classification under bare seven-connectivity",
+  "that every degree-seven vertex has unique K5 membership",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree seven", "neighbourhood classification", "private triangle"]
+
+[[claims]]
+id = "hc7.k7minus_density_order_rigidity"
+title = "A hypothetical K7-minus six-colour counterexample has density 4n-5 and order at least nineteen"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
+source_heading = "Theorem 3 (density, minimum order, and the first residue)"
+active = false
+audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
+expected_source_sha256 = "834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff"
+scope = "hypothetical minor-minimal non-six-colourable K7-minus-minor-free graphs"
+label_fidelity = "degree-seven vertices remain assigned to their literal K5s; the order-nineteen overlap and degree labels are literal"
+conclusions = [
+  "m is at least 4n-5 and n is at least nineteen",
+  "the exact excess is epsilon=10-n7+sum over degrees at least nine of (d-8)n_d",
+  "order nineteen has degree sequence 7^6 8^13 or 7^7 8^11 9^1",
+  "the equality density layer has ten degree-seven vertices and starts at order at least twenty-one",
+]
+does_not_prove = [
+  "the seven-connected 4n-5 extremal target",
+  "exclusion of either order-nineteen residue",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "4n-5 density", "minimum order nineteen", "degree excess"]
+
+[[claims]]
+id = "hc7.k7minus_seven_cut_contraction"
+title = "Exact component and boundary restrictions behind a seven-cut under K7-minus exclusion"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_cut_contraction.md"
+source_heading = "Theorem 1"
+active = false
+audit = "results/hc7_k7minus_seven_cut_contraction_audit.md"
+expected_source_sha256 = "3a746698ba61603ccbdc236d79afd5a4ba1f860c84a987b168f25cd962a00586"
+scope = "all seven-connected K7-minus-minor-free graphs with an order-seven vertex cut"
+label_fidelity = "every literal cut component is retained as one independent full boundary branch set in the quotient"
+conclusions = [
+  "every cut component has the full seven-set as its neighbourhood",
+  "the number r of components is between two and five and boundary connectivity is at most 6-r",
+  "at r=2 the boundary is K5-minor-free, at r=3 it has at most nine edges, at r=4 it has maximum degree one, and at r=5 it is edgeless",
+]
+does_not_prove = [
+  "that arbitrary component contraction preserves seven-connectivity",
+  "a strict density-preserving fragment descent",
+  "the 4n-5 extremal target or either colouring conjecture",
+]
+keywords = ["K7 minus", "seven-cut", "component contraction", "boundary connectivity"]
+
+[[claims]]
+id = "hc7.target.k7minus_extremal_4n_minus_5"
+title = "Every seven-connected graph with m at least 4n-5 contains K7-minus"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_density_frontier.md"
+source_heading = "2. Exact sufficient extremal theorem"
+active = false
+scope = "all seven-connected graphs at the exact density threshold sufficient for the K7-minus six-colour conjecture"
+label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "a complete structural classification with every exception excluded from the critical host",
+]
+does_not_prove = ["HC7"]
+keywords = ["K7 minus", "extremal target", "4n-5", "seven connectivity"]
+
+[[claims]]
+id = "hc7.target.k7minus_two_transversals"
+title = "Two disjoint connected transversals of five private triangles"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_density_frontier.md"
+source_heading = "3. Tight-density rooted-minor target"
+active = false
+scope = "the all-degree-seven literal K5 equality layer in a critical K7-minus-free host"
+label_fidelity = "both connected subgraphs must be disjoint and each must meet all five literal private triangles"
+allowed_exits = [
+  "two disjoint connected transversals, giving an L-rooted K2,5 model",
+  "another explicit K7-minus minor model using the same literal K5",
+]
+does_not_prove = [
+  "the non-equality density layers",
+  "the bare rooted statement without the critical-host hypotheses",
+  "HC7",
+]
+keywords = ["K7 minus", "rooted K2,5", "private triangles", "connected transversals"]
+
+[[claims]]
+id = "hc7.target.k7minus_fragment_descent"
+title = "Seven-cut fragment gives a density-preserving descent or K7-minus model"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_density_frontier.md"
+source_heading = "4. Exact seven-cut obstruction"
+active = false
+scope = "a smallest seven-connected counterexample to the 4n-5 extremal target with an exact seven-cut"
+label_fidelity = "the descent must preserve seven-connectivity and density surplus, or retain literal component and boundary branch sets in the minor model"
+allowed_exits = [
+  "a smaller seven-connected graph with no smaller density surplus",
+  "an explicit K7-minus minor model",
+]
+does_not_prove = [
+  "that every component contraction preserves seven-connectivity",
+  "the full extremal target without closing the internally eight-connected branch",
+  "HC7",
+]
+keywords = ["K7 minus", "seven-cut", "fragment descent", "density surplus"]
+
+[[claims]]
 id = "hc7.target.k7minus_five_exceptional_vertices"
 title = "Five exceptional degree-eight vertices cannot coexist"
 kind = "target"
 status = "frozen"
 source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
-source_heading = "Corollary 2 (exact sufficient finishing theorem)"
+source_heading = "Corollary 5 (two sufficient finishing theorems)"
 active = false
 scope = "the five degree-eight vertices with K4-free neighbourhoods forced in every hypothetical counterexample to the K7-minus six-colour conjecture"
 label_fidelity = "all five literal exceptional vertices remain available; a proof need not select or eliminate one arbitrary pair"
@@ -7176,8 +7308,8 @@ id = "hc7.target.k7minus_nonadjacent_bad_pair"
 title = "Nonadjacent bad degree-eight pair exclusion"
 kind = "target"
 status = "frozen"
-source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
-source_heading = "A stronger possible pair route"
+source = "active/hc7_k7minus_external_review_packet.md"
+source_heading = "1. Proposed note"
 active = false
 scope = "a stronger route that excludes every nonadjacent pair among the exceptional degree-eight vertices"
 label_fidelity = "a paired-rooted certificate retains both literal degree-eight vertices and both literal neighbourhood sets"
@@ -7242,6 +7374,27 @@ target = "hc7.degree7_matching_rooted_separator"
 kind = "uses"
 
 [[relations]]
+source = "hc7.k7minus_degree7_neighbourhood_types"
+target = "hc7.degree7_aligned_near_k7"
+kind = "uses"
+note = "K7-minus exclusion removes the explicit one-defect branch, leaving the two exact complement types classified in the aligned-model proof."
+
+[[relations]]
+source = "hc7.k7minus_density_order_rigidity"
+target = "hc7.k7minus_degree7_neighbourhood_types"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_density_order_rigidity"
+target = "hc7.k7minus_degree7_clique_incidence"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_density_order_rigidity"
+target = "hc7.k7minus_three_clique_bound"
+kind = "uses"
+
+[[relations]]
 source = "hc7.k7minus_five_exceptional_vertices_reduction"
 target = "hc7.k7minus_degree7_clique_incidence"
 kind = "uses"
@@ -7266,6 +7419,29 @@ source = "hc7.target.k7minus_nonadjacent_bad_pair"
 target = "hc7.barrier.k7minus_bad_pair_seven_paths"
 kind = "guarded_by"
 note = "The barrier shows that a stronger one-pair route must use contraction-critical colouring responses, not only the two neighbourhood types and seven-path linkage."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_5"
+target = "hc7.k7minus_density_order_rigidity"
+kind = "uses"
+note = "The density theorem shows this bare extremal statement is sufficient for the K7-minus six-colour conjecture."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_5"
+target = "hc7.k7minus_seven_cut_contraction"
+kind = "uses"
+note = "The seven-cut theorem gives the exact fragment obstruction for a smallest extremal counterexample."
+
+[[relations]]
+source = "hc7.target.k7minus_two_transversals"
+target = "hc7.k7minus_density_order_rigidity"
+kind = "uses"
+note = "Equality in the density reduction produces the two all-degree-seven K5s and their private triangles."
+
+[[relations]]
+source = "hc7.target.k7minus_fragment_descent"
+target = "hc7.k7minus_seven_cut_contraction"
+kind = "uses"
 
 [[relations]]
 source = "hc7.atomic_h0_bridge_quadrant_normal_form"

@@ -1,16 +1,17 @@
 # $HC_7$ research ledger
 
-**Last updated:** 27 July 2026
+**Last updated:** 28 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 **Publication assessment:** the internally audited corpus is a credible
 partial-results manuscript candidate, but it is not submission-ready;
 novelty, priority, and proof correctness still require conventional
 literature review and independent human validation.
-**Current programme mode:** intensive autonomous proof search is paused at
-tag `mathematical-freeze-2026-07-27`.  The current phase is the
-[external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md),
-not preparation of a complete manuscript.  The primary open theorem remains
-the mathematical proof spine and has not been retracted.
+**Current programme mode:** the primary `HC_7` proof search remains frozen
+at tag `mathematical-freeze-2026-07-27` for
+[external review and manuscript planning](active/hc7_partial_results_external_review_blueprint.md).
+A focused experiment has resumed on branch `experiment/k7minus-density-route`
+for the adjacent `K_7^-` six-colour conjecture.  This does not alter the
+primary all-degree `HC_7` target.
 
 This is the sole authority for the current status of the project. Exact
 theorem statements and proofs live in the linked frontier and result files;
@@ -80,7 +81,61 @@ produce at least one of:
 This theorem is unproved. Relative to the audited entry reduction, it is
 sufficient for `HC_7` and is the sole exhaustive all-degree obligation.
 
-### 2. Degree-seven structural refinement
+### 2. Principal conditional refinement: the `K_7^-` density route
+
+For a hypothetical minor-minimal non-six-colourable `K_7^-`-minor-free
+graph, the [internally audited density and low-degree rigidity reduction](results/hc7_k7minus_five_exceptional_vertices_reduction.md)
+now gives
+
+\[
+ |E(G)|\ge4|V(G)|-5,
+ \qquad
+ |V(G)|\ge19.
+\]
+
+The density inequality follows because every degree-seven vertex lies in a
+literal `K_5`, while at most two such cliques occur, so there are at most ten
+degree-seven vertices.  The stronger order bound uses the exact two possible
+degree-seven neighbourhoods and Jakobsen's upper bound.  The first possible
+order has degree sequence `7^6 8^13` or `7^7 8^11 9^1`.
+
+Thus the exact sufficient global statement is:
+
+> Every seven-connected `n`-vertex graph with at least `4n-5` edges
+> contains a `K_7^-` minor.
+
+This extremal statement is open.  It would prove the `K_7^-` six-colour
+conjecture, not by itself `HC_7`.  The current proof obligations are recorded
+in the [density frontier](active/hc7_k7minus_density_frontier.md).
+
+### 3. Immediate structural laboratory: rooted transversals and seven-cuts
+
+At equality, the host has ten degree-seven vertices covered by two disjoint
+literal `K_5`s and has order at least twenty-one.  Each clique has five
+private external triangles.  Two disjoint connected subgraphs meeting all
+five triangles would give an explicit `K_7^-` model; after deleting the
+clique, any counterexample to this rooted two-transversal statement is
+already three-connected.
+
+Independently, the [seven-cut component-contraction theorem](results/hc7_k7minus_seven_cut_contraction.md)
+proves that an order-seven cut with `r` components satisfies
+
+\[
+ 2\le r\le5,
+ \qquad
+ \kappa(G[S])\le6-r.
+\]
+
+For two components the boundary is `K_5`-minor-free; for three it has at
+most nine edges; for four it is a matching plus isolated vertices; for five
+it is edgeless.  The remaining task is to turn this exact contraction
+failure into either a smaller
+seven-connected density instance or a branch-set model.  Neither this
+fragment target nor the rooted two-transversal target is proved.
+
+## Supporting `HC_7` refinements and decoder status
+
+### Degree-seven structural refinement
 
 When `d_G(u)=7`, the boundary is `S=N(u)` and the exterior `G-N[u]` is
 connected. Audited reductions give an exact matching description of the
@@ -137,7 +192,7 @@ independent-block contraction and colour gluing. It does **not** supply a
 small transversal, an apex pair, or a common boundary partition in the
 remaining cases.
 
-### 3. Immediate global terminal-decoder laboratory
+### Immediate global terminal-decoder laboratory
 
 The audited
 [last-pole normal form](results/hc7_bounded_interface_pole_move_normal_form.md)
@@ -661,6 +716,16 @@ records the internal go/no-go assessment; it is not external peer review.
 - **Boundary-labelled near-clique structure.** The
   [degree-seven aligned model theorem](results/hc7_degree7_aligned_near_k7_model.md)
   retains the literal boundary labels needed for branch-set surgery.
+- **Adjacent `K_7^-` density reduction.** In a hypothetical critical
+  `K_7^-`-minor-free host, the exact degree-seven neighbourhood types and
+  global two-clique bound give `m>=4n-5`, `n>=19`, and order at least
+  twenty-one in the equality-density layer.  This is an internally audited
+  conditional reduction, not an `HC_7` result.
+- **Seven-cut contraction obstruction.** In every seven-connected
+  `K_7^-`-minor-free graph, an order-seven cut has at most five components
+  and boundary connectivity at most `6-r`; the three-, four-, and
+  five-component boundaries have at most nine, three, and zero edges,
+  respectively.
 - **First-hit reductions.** Rado--gammoid and transfer results convert much
   of the palette-to-label problem into literal first-hit geometry, but the
   final response-coupling step remains open.
@@ -915,6 +980,7 @@ records the internal go/no-go assessment; it is not external peer review.
 |---|---|
 | [`active/hc7_live_case_dag.md`](active/hc7_live_case_dag.md) | Exhaustive global chain and exact missing arrow |
 | [`active/hc7_bounded_interface_synchronization_frontier.md`](active/hc7_bounded_interface_synchronization_frontier.md) | Full all-degree theorem and guardrails |
+| [`active/hc7_k7minus_density_frontier.md`](active/hc7_k7minus_density_frontier.md) | Live conditional `K_7^-` density and rooted-minor route |
 | [`active/hc7_degree7_model_separator_frontier.md`](active/hc7_degree7_model_separator_frontier.md) | Conditional degree-seven terminal theorem |
 | [`active/hc7_atomic_weak_immersion_frontier.md`](active/hc7_atomic_weak_immersion_frontier.md) | Frozen conditional one-collision laboratory |
 | [`active/hc7_pentagonal_bipyramid_paired_rooted_target.md`](active/hc7_pentagonal_bipyramid_paired_rooted_target.md) | Frozen conditional structural laboratory |

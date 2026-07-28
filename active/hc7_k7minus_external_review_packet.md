@@ -3,6 +3,11 @@
 **Status:** compact review blueprint; not a manuscript, external peer review,
 proof of the `K_7^-` six-colour conjecture, or proof of `HC_7`.
 
+**Historical note:** the statements and hashes below are frozen at tag
+`k7minus-global-count-review-2026-07-28`.  The linked density result has
+since been strengthened; use the
+[current density frontier](hc7_k7minus_density_frontier.md) for live status.
+
 **Review branch:** `experiment/k7minus-global-count-gate`
 
 **Frozen review tag:** `k7minus-global-count-review-2026-07-28`
