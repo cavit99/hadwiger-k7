@@ -7083,6 +7083,136 @@ does_not_prove = [
 ]
 keywords = ["topological K5", "transversal barrier", "pair height", "critical family", "treewidth five"]
 
+[[claims]]
+id = "hc7.k7minus_degree7_clique_incidence"
+title = "Every degree-seven vertex lies in a literal K5 under K7-minus exclusion"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_degree7_clique_incidence.md"
+active = false
+audit = "results/hc7_k7minus_degree7_clique_incidence_audit.md"
+expected_source_sha256 = "8378b1920987284abf3ff33d476d28efee5c9a13659afe7a192febaacb3d501f"
+scope = "seven-connected seven-chromatic minor-minimal hosts with no K7-minus minor"
+label_fidelity = "the degree-seven vertex and five literal neighbourhood roots remain fixed in the seven-bag model"
+conclusions = [
+  "the neighbourhood of every degree-seven vertex contains a literal K4",
+  "every degree-seven vertex lies in a literal K5",
+]
+does_not_prove = [
+  "the K7-minus six-colour conjecture",
+  "the corresponding degree-eight neighbourhood statement",
+  "HC7",
+]
+keywords = ["K7 minus", "degree seven", "literal K5", "rooted K5"]
+
+[[claims]]
+id = "hc7.k7minus_three_clique_bound"
+title = "A K7-minus-free seven-connected non-two-apex graph has at most two literal K5s"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_three_clique_bound.md"
+active = false
+audit = "results/hc7_k7minus_three_clique_bound_audit.md"
+expected_source_sha256 = "5b5e399122b996186e861f5075e7808c8e6fe4353082256ee12d5074499d2574"
+scope = "all seven-connected non-two-apex K7-minus-minor-free graphs"
+conclusions = [
+  "three distinct literal K5 subgraphs force a K7-minus minor",
+  "the overlap-at-most-three branch in fact forces a K7 minor by Niu-Zhang Theorem 1.10",
+]
+does_not_prove = [
+  "a bound on arbitrary K5 minor models",
+  "that the overlap-four branch forces K7 rather than K7-minus",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "literal K5", "Niu Zhang", "two apex"]
+
+[[claims]]
+id = "hc7.k7minus_five_exceptional_vertices_reduction"
+title = "A hypothetical K7-minus six-colour counterexample has five exceptional degree-eight vertices"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
+source_heading = "Theorem 1 (global count reduction)"
+active = false
+audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
+expected_source_sha256 = "3ebcbaf595b16d616dcd01efdc2e8dd23f0ed6079a3294e8299f7b365787483b"
+scope = "hypothetical minor-minimal non-six-colourable K7-minus-minor-free graphs"
+label_fidelity = "the five returned vertices are literal and degree eight, each has a K4-free neighbourhood, and two are nonadjacent"
+conclusions = [
+  "there are at least five degree-eight vertices lying in no literal K5",
+  "two such vertices are nonadjacent",
+]
+does_not_prove = [
+  "exclusion of five exceptional degree-eight vertices",
+  "a paired-rooted K5 model in the complement of a selected pair",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "Jakobsen density", "degree eight", "bad pair"]
+
+[[claims]]
+id = "hc7.target.k7minus_five_exceptional_vertices"
+title = "Five exceptional degree-eight vertices cannot coexist"
+kind = "target"
+status = "frozen"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
+source_heading = "Corollary 2 (exact sufficient finishing theorem)"
+active = false
+scope = "the five degree-eight vertices with K4-free neighbourhoods forced in every hypothetical counterexample to the K7-minus six-colour conjecture"
+label_fidelity = "all five literal exceptional vertices remain available; a proof need not select or eliminate one arbitrary pair"
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "a contradiction to the full contraction-critical response system",
+]
+does_not_prove = [
+  "that every nonadjacent exceptional pair is impossible",
+  "that ordinary seven-path linkage supplies a paired-rooted K5 model",
+  "HC7",
+]
+keywords = ["K7 minus", "five exceptional vertices", "degree eight", "frozen campaign"]
+
+[[claims]]
+id = "hc7.target.k7minus_nonadjacent_bad_pair"
+title = "Nonadjacent bad degree-eight pair exclusion"
+kind = "target"
+status = "frozen"
+source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
+source_heading = "A stronger possible pair route"
+active = false
+scope = "a stronger route that excludes every nonadjacent pair among the exceptional degree-eight vertices"
+label_fidelity = "a paired-rooted certificate retains both literal degree-eight vertices and both literal neighbourhood sets"
+allowed_exits = [
+  "an explicit K7-minus minor model from five connected bags meeting both root neighbourhoods",
+  "another contradiction excluding the selected pair under the full contraction-critical hypotheses",
+]
+does_not_prove = [
+  "that ordinary seven-path linkage supplies the paired-rooted K5 model",
+  "HC7",
+]
+keywords = ["K7 minus", "paired-rooted K5", "degree-eight pair", "stronger route"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_bad_pair_seven_paths"
+title = "Seven paths between bad degree-eight vertices do not force K7-minus"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_bad_pair_seven_paths_barrier.md"
+active = false
+audit = "barriers/hc7_k7minus_bad_pair_seven_paths_barrier_audit.md"
+expected_source_sha256 = "56d4ba8793c2b9bd596cef9e0449f106f9296b722c096e670b66a369c24f67e6"
+scope = "an 11-vertex non-contraction-critical graph of treewidth at most four"
+conclusions = [
+  "two nonadjacent degree-eight vertices have K4-free alpha-three neighbourhoods",
+  "seven internally disjoint paths join the two vertices",
+  "the graph has no K7-minus minor",
+]
+does_not_prove = [
+  "failure of the full seven-connected contraction-critical nonadjacent bad-pair target",
+  "failure after imposing the proper-minor colouring responses",
+  "HC7",
+]
+keywords = ["K7 minus", "bad pair", "seven paths", "treewidth four", "barrier"]
+
 [[relations]]
 source = "hc7.atomic_octahedral_frame_augmentation"
 target = "hc7.atomic_weak_k7_immersion_rounding"
@@ -7100,6 +7230,42 @@ source = "hc7.height6_topological_clean_bypass"
 target = "hc7.barrier.height6_topological_transversal_static"
 kind = "guarded_by"
 note = "The finite barrier shows that one-support provenance still requires a whole-family host-level composition before it can increase the global pair height."
+
+[[relations]]
+source = "hc7.k7minus_degree7_clique_incidence"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_degree7_clique_incidence"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_five_exceptional_vertices_reduction"
+target = "hc7.k7minus_degree7_clique_incidence"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_five_exceptional_vertices_reduction"
+target = "hc7.k7minus_three_clique_bound"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_five_exceptional_vertices"
+target = "hc7.k7minus_five_exceptional_vertices_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_nonadjacent_bad_pair"
+target = "hc7.target.k7minus_five_exceptional_vertices"
+kind = "strengthens"
+
+[[relations]]
+source = "hc7.target.k7minus_nonadjacent_bad_pair"
+target = "hc7.barrier.k7minus_bad_pair_seven_paths"
+kind = "guarded_by"
+note = "The barrier shows that a stronger one-pair route must use contraction-critical colouring responses, not only the two neighbourhood types and seven-path linkage."
 
 [[relations]]
 source = "hc7.atomic_h0_bridge_quadrant_normal_form"
@@ -11407,4 +11573,18 @@ expected_stdout = [
   "treewidth_upper_bound=5 chromatic_number=5 seven_connected=no",
   "edge_sha256=ba8924dea37e6343a51fddd5818d34a4bf5e8650309c34f303f73c01f5cfd65d",
   "family_sha256=a5890f1aca440564136fa8714a1f7727a0c0958ccfcd6b2e749dc945bc29d428",
+]
+
+[[verifiers]]
+id = "k7minus-bad-pair-seven-paths-barrier"
+path = "barriers/hc7_k7minus_bad_pair_seven_paths_barrier_verify.py"
+sha256 = "25adaa447476d7637ef963de28c25fdda5dc34b441413d0346b7eba3b5fd1b36"
+timeout = 30
+expected_stdout = [
+  "GREEN K7-minus bad-pair seven-path barrier",
+  "graph vertices=11 edges=25 degrees_u_v=8,8 uv_edge=no",
+  "neighbourhoods=K3+K3+K2 alpha=3 K4=no",
+  "internally_disjoint_u_v_paths=7",
+  "tree_decomposition=yes max_bag_size=5 treewidth_upper_bound=4",
+  "K7_minus_minor=no",
 ]
