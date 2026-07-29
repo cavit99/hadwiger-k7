@@ -7252,8 +7252,77 @@ does_not_prove = [
 keywords = ["K7 minus", "strict density", "equality exclusion", "Kempe components", "private triangles"]
 
 [[claims]]
+id = "hc7.k7minus_private_triangle_allocation"
+title = "Private-triangle Kempe allocation gives an explicit K7-minus model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_all_degree7_k5_exclusion.md"
+source_heading = "Theorem 1 (private-triangle Kempe allocation)"
+active = false
+audit = "results/hc7_k7minus_all_degree7_k5_exclusion_audit.md"
+expected_source_sha256 = "e2e5f5dc6c4456413e306c7844771157c5f3d9663553c1170e33a298a8148bf5"
+scope = "proper-minor six-colour-critical seven-chromatic graphs containing one literal K5 with five disjoint private external triangles and connected clique deletion"
+label_fidelity = "the five literal clique vertices, five private triangles, selected edge-deletion colouring, Kempe components, and seven final branch sets remain explicit"
+conclusions = [
+  "the stated private-triangle configuration contains an explicit K7-minus minor",
+  "one connected branch set meets all five private triangles and a disjoint connected branch set meets at least four",
+]
+does_not_prove = [
+  "two full connected transversals or a bond meeting all five triangles",
+  "the bare seven-connected 4n-4 extremal theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "private triangles", "Kempe allocation", "explicit minor model"]
+
+[[claims]]
+id = "hc7.k7minus_all_degree7_k5_exclusion"
+title = "No critical K7-minus host contains an all-degree-seven literal K5"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_all_degree7_k5_exclusion.md"
+source_heading = "Theorem 7 (all-degree-seven clique exclusion)"
+active = false
+audit = "results/hc7_k7minus_all_degree7_k5_exclusion_audit.md"
+expected_source_sha256 = "e2e5f5dc6c4456413e306c7844771157c5f3d9663553c1170e33a298a8148bf5"
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
+label_fidelity = "the literal K5, each degree-seven neighbourhood, its five private triangles, and every final branch set remain explicit"
+conclusions = [
+  "no literal K5 has all five vertices of degree seven",
+]
+does_not_prove = [
+  "the bare seven-connected 4n-4 extremal theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree seven", "literal K5", "Kempe components"]
+
+[[claims]]
+id = "hc7.k7minus_tight_layer_structure"
+title = "A critical K7-minus host has at most eight degree-seven vertices and an exact 4n-4 layer"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_all_degree7_k5_exclusion.md"
+source_heading = "Corollary 8 (degree count and the tight layer)"
+active = false
+audit = "results/hc7_k7minus_all_degree7_k5_exclusion_audit.md"
+expected_source_sha256 = "e2e5f5dc6c4456413e306c7844771157c5f3d9663553c1170e33a298a8148bf5"
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
+label_fidelity = "degree-seven vertices remain assigned to their literal K5s and the equality-layer clique intersection and degrees are literal"
+conclusions = [
+  "there are at most eight degree-seven vertices and m is at least 4n-4",
+  "at equality the degree sequence is 7^8 8^(n-8)",
+  "exactly two literal K5s cover the degree-seven vertices, each contains four, and they are disjoint or share their degree-eight vertex",
+  "the equality layer has order at least twenty-one",
+]
+does_not_prove = [
+  "a numerical critical-host bound stronger than 4n-4",
+  "the bare seven-connected 4n-4 extremal theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree seven", "4n-4 density", "tight layer", "two K5s"]
+
+[[claims]]
 id = "hc7.k7minus_seven_cut_contraction"
-title = "Exact component and boundary restrictions behind a seven-cut under K7-minus exclusion"
+title = "Component and boundary restrictions behind a seven-cut under K7-minus exclusion"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_seven_cut_contraction.md"
@@ -7274,6 +7343,119 @@ does_not_prove = [
   "either the 4n-4 or stronger 4n-5 extremal target, or either colouring conjecture",
 ]
 keywords = ["K7 minus", "seven-cut", "component contraction", "boundary connectivity"]
+
+[[claims]]
+id = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
+title = "At most four disjoint connected subgraphs can be adjacent to all seven boundary vertices"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_boundary_component_descent.md"
+source_heading = "Theorem 1 (capacity for connected subgraphs adjacent to every boundary vertex)"
+active = false
+audit = "results/hc7_k7minus_seven_boundary_component_descent_audit.md"
+expected_source_sha256 = "9e2f616c98dd17670f4d15e962f3b36e4fc1f4c4dc9aee4227eabeb51ca33913"
+scope = "any graph with no K7-minus minor and a specified seven-vertex boundary"
+label_fidelity = "the literal boundary vertices and every disjoint boundary-full connected subgraph are retained in the explicit branch models"
+conclusions = [
+  "at most four pairwise disjoint connected subgraphs outside the boundary can each be adjacent to every boundary vertex",
+  "for a family of order p at least two the boundary connectivity is at most 6-p",
+  "at family orders two, three, and four the boundary is respectively K5-minor-free, has at most nine edges, and has maximum degree one",
+]
+does_not_prove = [
+  "that contraction of a whole connected subgraph preserves seven-connectivity or density",
+  "the bare seven-connected 4n-4 extremal theorem",
+]
+keywords = ["K7 minus", "seven boundary", "boundary-full connected subgraphs", "packing capacity"]
+
+[[claims]]
+id = "hc7.k7minus_sharpened_seven_cut"
+title = "A seven-cut has at most four components and at most four pairwise disjoint boundary-full connected subgraphs"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_boundary_component_descent.md"
+source_heading = "Corollary 2 (sharpened seven-cut theorem)"
+active = false
+audit = "results/hc7_k7minus_seven_boundary_component_descent_audit.md"
+expected_source_sha256 = "9e2f616c98dd17670f4d15e962f3b36e4fc1f4c4dc9aee4227eabeb51ca33913"
+scope = "all seven-connected K7-minus-minor-free graphs with an order-seven vertex cut"
+label_fidelity = "the literal cut, its components, and a maximum family of disjoint boundary-full connected subgraphs remain fixed"
+conclusions = [
+  "every cut component has the full boundary as its neighbourhood and the component count is at most the maximum family order, which is at most four",
+  "the family-order boundary restrictions specialize to every component family",
+]
+does_not_prove = [
+  "a threshold-preserving proper-minor descent",
+  "the bare seven-connected 4n-4 extremal theorem",
+]
+keywords = ["K7 minus", "seven-cut", "four components", "boundary-full connected subgraphs"]
+
+[[claims]]
+id = "hc7.k7minus_four_component_interiors"
+title = "Every nonsingleton component behind a four-component seven-cut is two-connected"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_boundary_component_descent.md"
+source_heading = "Corollary 3 (four-component interiors)"
+active = false
+audit = "results/hc7_k7minus_seven_boundary_component_descent_audit.md"
+expected_source_sha256 = "9e2f616c98dd17670f4d15e962f3b36e4fc1f4c4dc9aee4227eabeb51ca33913"
+scope = "the four-component case behind an order-seven cut in a seven-connected K7-minus-minor-free graph"
+label_fidelity = "the cutvertex pieces, five common literal boundary contacts, other three components, and seven explicit branch sets remain fixed"
+conclusions = [
+  "every cut component is a singleton or is two-connected",
+]
+does_not_prove = [
+  "three-connectivity of component interiors",
+  "a threshold-preserving proper-minor descent",
+  "the bare seven-connected 4n-4 extremal theorem",
+]
+keywords = ["K7 minus", "seven-cut", "four components", "two-connected interior"]
+
+[[claims]]
+id = "hc7.k7minus_whole_component_descent_criterion"
+title = "Exact density and connectivity criterion for whole-component contraction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_boundary_component_descent.md"
+source_heading = "Theorem 4 (exact whole-component contraction criterion)"
+active = false
+audit = "results/hc7_k7minus_seven_boundary_component_descent_audit.md"
+expected_source_sha256 = "9e2f616c98dd17670f4d15e962f3b36e4fc1f4c4dc9aee4227eabeb51ca33913"
+scope = "whole-component contractions behind an order-seven cut in a seven-connected K7-minus-minor-free graph"
+label_fidelity = "every selected literal cut component, its contracted vertex, and component excess remain explicit"
+conclusions = [
+  "the global and contracted 4n-4 surpluses satisfy the displayed exact additive formulas",
+  "seven-connectivity after simultaneous contraction is equivalent to the quantified component-deletion condition",
+]
+does_not_prove = [
+  "that a density-eligible component or component family always exists",
+  "that the connectivity condition always holds",
+  "the full seven-cut dichotomy or bare 4n-4 extremal theorem",
+]
+keywords = ["K7 minus", "seven-cut", "component excess", "density descent", "connectivity certificate"]
+
+[[claims]]
+id = "hc7.k7minus_descent_failure_certificate"
+title = "A failed density-eligible component contraction has an exact deletion certificate"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_boundary_component_descent.md"
+source_heading = "Corollary 5 (exact failure certificate in a descent-minimal graph)"
+active = false
+audit = "results/hc7_k7minus_seven_boundary_component_descent_audit.md"
+expected_source_sha256 = "9e2f616c98dd17670f4d15e962f3b36e4fc1f4c4dc9aee4227eabeb51ca33913"
+scope = "descent-minimal seven-connected K7-minus-minor-free graphs with an order-seven cut and a density-eligible whole-component contraction"
+label_fidelity = "the selected literal components, deleted component subfamily, and external deletion set remain explicit"
+conclusions = [
+  "failure of a density-eligible proper whole-component descent gives the quantified component-deletion disconnection certificate",
+  "each density-eligible nonsingleton individual component has a certificate using at most five external vertices",
+]
+does_not_prove = [
+  "that a density-eligible component or component family always exists",
+  "a threshold-preserving proper-minor descent",
+  "the full seven-cut dichotomy or bare 4n-4 extremal theorem",
+]
+keywords = ["K7 minus", "seven-cut", "descent failure", "deletion certificate"]
 
 [[claims]]
 id = "hc7.target.k7minus_extremal_4n_minus_5"
@@ -7338,9 +7520,9 @@ keywords = ["K7 minus", "rooted K2,5", "private triangles", "connected transvers
 id = "hc7.target.k7minus_all_degree7_k5_exclusion"
 title = "No critical K7-minus host contains an all-degree-seven literal K5"
 kind = "target"
-status = "conditional-target"
-source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "5. Ordered next attacks and research discipline"
+status = "superseded"
+source = "results/hc7_k7minus_all_degree7_k5_exclusion.md"
+source_heading = "Theorem 7 (all-degree-seven clique exclusion)"
 active = false
 scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
 label_fidelity = "the five literal clique vertices and their five private external triangles must be retained in every Kempe component and final minor model"
@@ -7360,7 +7542,7 @@ title = "Every seven-cut at 4n-4 gives K7-minus or a threshold-preserving proper
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "4. Exact seven-cut obstruction"
+source_heading = "4. Boundary-full connected subgraphs and exact contraction obstruction"
 active = false
 scope = "seven-connected graphs with at least 4n-4 edges and a vertex cut of order seven"
 label_fidelity = "the descent must preserve seven-connectivity and the 4n-4 density threshold, or retain literal component and boundary branch sets in the minor model"
@@ -7536,9 +7718,9 @@ note = "The density theorem shows this bare extremal statement is sufficient for
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_5"
-target = "hc7.k7minus_seven_cut_contraction"
+target = "hc7.k7minus_sharpened_seven_cut"
 kind = "uses"
-note = "The seven-cut theorem gives the exact fragment obstruction for a smallest extremal counterexample."
+note = "The sharpened seven-cut theorem removes the five-component case and gives the current boundary obstruction for a smallest extremal counterexample."
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_5"
@@ -7548,15 +7730,15 @@ note = "The frozen 4n-5 benchmark is a strictly stronger bare extremal statement
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_4"
-target = "hc7.k7minus_equality_kempe_exclusion"
+target = "hc7.k7minus_tight_layer_structure"
 kind = "uses"
-note = "The strict critical-host density theorem makes this bare 4n-4 statement sufficient for the K7-minus six-colour conjecture."
+note = "The all-degree-seven exclusion gives the direct 4n-4 critical-host threshold and makes this bare statement sufficient for the K7-minus six-colour conjecture."
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_4"
-target = "hc7.k7minus_seven_cut_contraction"
+target = "hc7.k7minus_whole_component_descent_criterion"
 kind = "uses"
-note = "The seven-cut theorem supplies the exact fragment obstruction for a smallest counterexample at the new threshold."
+note = "The contraction theorem gives the exact density and connectivity obstruction for a smallest counterexample at the current threshold."
 
 [[relations]]
 source = "hc7.target.k7minus_two_transversals"
@@ -7565,26 +7747,90 @@ kind = "uses"
 note = "The equality reduction supplies the five-connected host, exact private triangles, order bound, and bond formulation for the target."
 
 [[relations]]
-source = "hc7.target.k7minus_all_degree7_k5_exclusion"
+source = "hc7.k7minus_all_degree7_k5_exclusion"
+target = "hc7.k7minus_private_triangle_allocation"
+kind = "uses"
+note = "The private-triangle allocation is the terminal explicit-minor theorem after the critical host supplies its five triangles."
+
+[[relations]]
+source = "hc7.k7minus_all_degree7_k5_exclusion"
 target = "hc7.k7minus_degree7_neighbourhood_types"
 kind = "uses"
 note = "The exact neighbourhood theorem supplies the local types; seven-connectivity then rules out a second K5 through a clique vertex and yields five pairwise disjoint private triangles."
 
 [[relations]]
-source = "hc7.target.k7minus_all_degree7_k5_exclusion"
-target = "hc7.k7minus_equality_connectivity_reduction"
-kind = "related_to"
-note = "The proposed proof must restate and audit the edge-critical Kempe fork outside its current equality-scoped source rather than cite that theorem as a dependency."
+source = "hc7.k7minus_all_degree7_k5_exclusion"
+target = "hc7.target.k7minus_all_degree7_k5_exclusion"
+kind = "supersedes"
+note = "The written and audited theorem proves the former target by an explicit K7-minus model."
+
+[[relations]]
+source = "hc7.k7minus_tight_layer_structure"
+target = "hc7.k7minus_all_degree7_k5_exclusion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_tight_layer_structure"
+target = "hc7.k7minus_three_clique_bound"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_tight_layer_structure"
+target = "hc7.k7minus_degree7_neighbourhood_types"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
+target = "hc7.k7minus_seven_cut_contraction"
+kind = "uses"
+note = "The previous theorem supplies the finite p=2,3,4 seven-connected join constructions; the new five-subgraph model is direct."
+
+[[relations]]
+source = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
+target = "hc7.k7minus_seven_cut_contraction"
+kind = "strengthens"
+note = "The connected-subgraph theorem removes the former five-component possibility and applies to arbitrary disjoint boundary-full connected subgraphs."
+
+[[relations]]
+source = "hc7.k7minus_sharpened_seven_cut"
+target = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_component_interiors"
+target = "hc7.k7minus_sharpened_seven_cut"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_whole_component_descent_criterion"
+target = "hc7.k7minus_sharpened_seven_cut"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_descent_failure_certificate"
+target = "hc7.k7minus_whole_component_descent_criterion"
+kind = "uses"
 
 [[relations]]
 source = "hc7.target.k7minus_fragment_descent"
-target = "hc7.k7minus_seven_cut_contraction"
+target = "hc7.k7minus_whole_component_descent_criterion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_fragment_descent"
+target = "hc7.k7minus_four_component_interiors"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_fragment_descent"
+target = "hc7.k7minus_descent_failure_certificate"
 kind = "uses"
 
 [[relations]]
 source = "hc7.target.k7minus_fragment_descent"
 target = "hc7.target.k7minus_extremal_4n_minus_4"
-kind = "subproblem_of"
+kind = "related_to"
+note = "The cut dichotomy is equivalent in strength to the global extremal target by proper-minor minimality and the edge-deletion argument in the eight-connected case."
 
 [[relations]]
 source = "hc7.atomic_h0_bridge_quadrant_normal_form"

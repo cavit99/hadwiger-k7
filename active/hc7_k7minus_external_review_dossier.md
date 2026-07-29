@@ -14,8 +14,8 @@ The authoritative project status remains
 
 ## 1. Candidate paper thesis
 
-**Working title:** *Degree-seven rigidity and strict density in a
-hypothetical critical graph with no `K_7^-` minor*.
+**Working title:** *Degree-seven rigidity, private-triangle allocation, and
+seven-boundary contraction criteria without a `K_7^-` minor*.
 
 The proposed note studies a hypothetical minor-minimal non-six-colourable
 `K_7^-`-minor-free graph.  Its central chain is:
@@ -38,11 +38,19 @@ The proposed note studies a hypothetical minor-minimal non-six-colourable
    least twenty-nine, either clique deletion is five-connected, and the
    private triangles satisfy exact overlap, bond, Hall, and edge-critical
    Kempe formulations.
-6. A symmetric Kempe-component allocation turns each outcome of the Hall
-   dichotomy into an explicit `K_7^-`-minor model.  Equality is therefore
-   impossible, and every hypothetical critical host has `m>=4n-4`.
-7. Independently, every order-seven cut has the exact component and boundary
-   restrictions recorded in the seven-cut theorem.
+6. A private-triangle Kempe allocation, reconstructed without the equality
+   assumption, shows that no literal `K_5` has all five vertices of degree
+   seven.  Hence `n_7<=8` and every hypothetical critical host has
+   `m>=4n-4`; equality has degree sequence `7^8 8^{n-8}` and the exact
+   two-clique structure stated below.
+7. Independently, five disjoint connected subgraphs outside a seven-vertex
+   boundary, each adjacent to every boundary vertex, already force
+   `K_7^-`.  Thus every order-seven cut has at most four components;
+   in the four-component case every nonsingleton component is two-connected.
+   Exact surplus and connectivity formulas characterize every
+   whole-component contraction.  Under the no-proper-descent hypothesis, a
+   density-eligible contraction that fails has an explicit deletion
+   certificate.
 
 The note must not claim the global `4n-4` extremal target, a standalone bond
 or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
@@ -113,15 +121,41 @@ set to meet all five private triangles; the other may miss one.  Thus it
 does not prove a standalone bond theorem or the existence of two disjoint
 connected subgraphs each meeting all five private triangles.
 
-### Seven-cut component contraction
+### All-degree-seven clique exclusion and the tight layer
 
-- [Theorem](../results/hc7_k7minus_seven_cut_contraction.md)
-- [Internal audit](../results/hc7_k7minus_seven_cut_contraction_audit.md)
+- [Theorem](../results/hc7_k7minus_all_degree7_k5_exclusion.md)
+- [Internal audit](../results/hc7_k7minus_all_degree7_k5_exclusion_audit.md)
 - Theorem SHA-256:
-  `bbb9919b6d04c08836526d017607d318323fe457baa75d4c3364be85a4ad1ff5`
+  `e2e5f5dc6c4456413e306c7844771157c5f3d9663553c1170e33a298a8148bf5`
 
-The written proof is computation-free.  The finite scan recorded in its
-audit only corroborates one elementary seven-vertex lemma.
+The private-triangle theorem uses no density equality, Hall theorem,
+five-connected clique deletion, or finite classification.  It excludes an
+all-degree-seven literal `K_5`, proves `n_7<=8`, and gives `m>=4n-4`
+directly.  At equality the degree sequence is `7^8 8^{n-8}`; exactly two
+literal `K_5`s cover the degree-seven vertices, each contains four of them,
+the cliques are disjoint or share their degree-eight vertex, and `n>=21`.
+
+### Seven-boundary connected-subgraph capacity and contraction criteria
+
+- [Theorem](../results/hc7_k7minus_seven_boundary_component_descent.md)
+- [Internal audit](../results/hc7_k7minus_seven_boundary_component_descent_audit.md)
+- Theorem SHA-256:
+  `9e2f616c98dd17670f4d15e962f3b36e4fc1f4c4dc9aee4227eabeb51ca33913`
+
+This theorem strengthens the earlier audited seven-cut result.  It proves
+that at most four disjoint connected subgraphs outside the boundary can each
+be adjacent to all seven boundary vertices, removes the former
+five-component case, proves that four-component interiors are singletons or
+two-connected, and gives
+the exact density and seven-connectivity criteria for simultaneous whole-
+component contraction.  It does not prove that a qualifying contraction
+always exists.
+
+Its `p=2,3,4` join constructions use the earlier
+[seven-cut theorem](../results/hc7_k7minus_seven_cut_contraction.md) and
+[audit](../results/hc7_k7minus_seven_cut_contraction_audit.md), at exact
+theorem SHA-256
+`bbb9919b6d04c08836526d017607d318323fe457baa75d4c3364be85a4ad1ff5`.
 
 ## 3. Dependency and trust map
 
@@ -144,13 +178,20 @@ exact neighbourhoods + two-K5 bound + Jakobsen/Albar
          ├─ exclusion of the 4n-5 critical-host equality layer
          └─ critical-host density at least 4n-4
 
+exact neighbourhoods + two-K5 bound + private-triangle Kempe allocation
+├─ no all-degree-seven literal K5
+├─ at most eight degree-seven vertices
+└─ critical-host density at least 4n-4 with exact tight-layer structure
+
 seven-connectivity + elementary minor constructions + Mader bounds
-└─ seven-cut component and boundary restrictions
+└─ capacity of boundary-full connected subgraphs at most four
+   ├─ sharpened seven-cut boundary and interior restrictions
+   └─ exact whole-component density/connectivity contraction criterion
 ```
 
 No computer-assisted finite classification is load-bearing in this chain.
-The audits are internal checks and must not be described as independent or
-external review.  The bond formulation in the equality theorem is an
+The audits are internal checks and must not be described as independent
+human review or external peer review.  The bond formulation in the equality theorem is an
 equivalent target inside the now-excluded equality host, not a proved
 standalone bond or two-full-transversal theorem.
 
@@ -173,18 +214,8 @@ statement
 
 No theorem of that form is proved here.
 
-The immediate, time-bounded extraction target is to prove that no literal
-`K_5` in the critical host has all five vertices of degree seven.  The
-existing Kempe allocation appears to need only that clique, its five private
-triangles, critical edge-deletion colourings, and connectedness after deleting
-the clique.  This remains conjectural until restated outside the equality
-context and separately audited.  It would imply `n_7<=8` and reduce the
-`m=4n-4` layer to degree sequence `7^8 8^{n-8}`, with exactly two `K_5`s
-each containing four degree-seven vertices.  It would strengthen the
-structure, not the current numerical density bound.
-
-The principal attack after that extraction is the positive seven-cut
-reduction statement:
+The all-degree-seven extraction is complete.  The remaining positive target
+is the seven-cut reduction statement:
 
 > If a seven-connected graph `G` has `m>=4n-4` and an order-seven cut, then
 > `G` contains a `K_7^-` minor or has a proper seven-connected minor `H` with
@@ -192,9 +223,18 @@ reduction statement:
 
 Together with minor minimality and the easy eight-connected case, this would
 prove the bare extremal theorem and hence the `K_7^-` six-colour conjecture.
-The attack should treat the `r=5,4,3` boundary types first and reserve the
-`r=2` `K_5`-minor-free boundary as the likely hard kernel.  Every successful
-case must produce an explicit minor model or threshold-preserving descent.
+Conversely, the bare theorem immediately supplies the first outcome, so this
+dichotomy is headline-equivalent rather than a routine preliminary lemma.
+
+The first attack has removed `r=5` and reduced every whole-component descent
+to an exact surplus inequality and an exact deletion-connectivity test.  It
+has also proved that all nonsingleton components in the `r=4` case are
+two-connected.  The next attack should therefore treat `r=4`, combining the
+deletion certificate of any density-eligible contraction with the other
+three components, each adjacent to every boundary vertex.  Then come `r=3`
+and the likely hard
+`r=2` `K_5`-minor-free boundary.  Every successful case must produce an
+explicit minor model or threshold-preserving descent.
 Counterexamples to intermediate lemmas are falsification checks and pivot
 signals, not a successful endpoint.  A normalized Norin--Totschnig
 near-`K_7` upgrade remains the higher-risk fallback.
@@ -252,23 +292,30 @@ longer the minimal extremal input required by the critical-host reduction.
     choice `n_l<=1` ensure that one connected set meets all five triangles,
     the other meets at least four, and the resulting seven bags form an
     explicit `K_7^-` model?
-11. Does Proposition 9's dichotomy exhaust every equality colouring, so that
-    the two Kempe allocations exclude the whole `4n-5` layer and justify
-    only the critical-host lower bound `m>=4n-4`?
-12. Is the scope stated sharply enough that no reader can infer a global
+11. Does the private-triangle reconstruction genuinely avoid every equality
+    hypothesis, and does seven-connectivity supply its five disjoint private
+    triangles for an arbitrary all-degree-seven literal `K_5`?
+12. Does the five-subgraph branch model prove capacity at most four, and
+    does the cutvertex split in the four-component case give both sides six
+    boundary contacts and hence five common contacts?
+13. Are the simultaneous-contraction surplus formula and the quantified
+    deletion condition exactly equivalent to preservation of
+    seven-connectivity?
+14. Is the scope stated sharply enough that no reader can infer a global
     `4n-4` extremal theorem, a bond theorem, or two full connected
     transversals?
-13. Are any of the exact neighbourhood, density, equality-structure, or
-    equality-exclusion conclusions already explicit or implicit in the
-    literature?
+15. Are any of the exact neighbourhood, private-triangle, density,
+    equality-structure, connected-subgraph-capacity, or contraction conclusions already
+    explicit or implicit in the literature?
 
 ## 7. Review and publication gate
 
 The internal package is ready to send to graph-minor and colouring/Kempe
 specialists.  Before submission it still requires:
 
-- independent human proof review of the degree-seven, two-clique, density,
-  equality-structure, and equality-exclusion arguments;
+- independent human proof review of the degree-seven, two-clique,
+  private-triangle, density, equality-structure, connected-subgraph capacity, and
+  contraction arguments;
 - conventional novelty and priority searches, including forward citation
   chains of Niu--Zhang, Rolek--Song, Albar, and Norin--Totschnig;
 - correction and renewed hashes for any mathematical change; and

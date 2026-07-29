@@ -66,19 +66,23 @@ The main internally audited reductions currently establish that:
 Separately, a computation-free, internally audited route toward the adjacent
 `K_7^-` problem, where `K_7^-` is `K_7` with one edge deleted, proves that
 every minor-minimal non-six-colourable `K_7^-`-minor-free graph has at least
-`4n-4` edges.  It also gives exact degree-seven neighbourhoods, excludes the
-former `4n-5` equality layer by explicit minor models, and restricts every
-order-seven cut.  This is a structural theorem about a hypothetical critical
-graph; it is not the bare extremal `4n-4` theorem, the `K_7^-` six-colour
-conjecture, or `HC_7`.
+`4n-4` edges and at most eight degree-seven vertices.  At equality it gives
+the exact degree sequence and two-clique structure.  It also gives exact
+degree-seven neighbourhoods and proves that outside every order-seven cut
+there are at most four disjoint connected subgraphs each adjacent to every
+boundary vertex, with exact whole-component contraction criteria.  These
+are structural theorems about a hypothetical critical graph and about
+seven-connected `K_7^-`-minor-free graphs; they are not the bare
+extremal `4n-4` theorem, the `K_7^-` six-colour conjecture, or `HC_7`.
 
-These results substantially constrain a counterexample, but they do not yet
-synchronize the required branch-set labels and boundary colourings. The
-remaining work is to turn proper-minor colouring responses into either an
-explicit $K_7$-minor model, a common complete boundary partition on the
-resulting order-seven, -eight, or -nine separation, or a genuine same-host
-descent. The degree-seven programme is a sharper conditional refinement of
-this exhaustive bounded-interface problem.
+On the primary `HC_7` route, the remaining work is to synchronize branch-set
+labels and boundary colourings: proper-minor colouring responses must yield
+an explicit $K_7$-minor model, a common complete boundary partition on the
+order-seven, -eight, or -nine separation, or a genuine same-host descent.
+On the adjacent `K_7^-` route, the separate remaining target is the bare
+`4n-4` extremal theorem, equivalently the full seven-cut dichotomy described
+in the technical frontier.  The new contraction criteria do not force that
+dichotomy by themselves.
 
 The exact live theorem changes as new reductions are proved. Its
 authoritative status is maintained in the research ledger, and its full

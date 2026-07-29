@@ -95,18 +95,27 @@ first gives
  |V(G)|\ge19.
 \]
 
-The new internally audited
+The internally audited
 [Kempe-component equality exclusion](results/hc7_k7minus_equality_kempe_exclusion.md)
-rules out equality.  Consequently every such critical host satisfies the
-strictly stronger bound
+first ruled out equality.  The new, more general
+[private-triangle Kempe allocation and all-degree-seven clique exclusion](results/hc7_k7minus_all_degree7_k5_exclusion.md)
+proves that no literal `K_5` has all five vertices of degree seven.  Since
+every degree-seven vertex lies in one of at most two literal `K_5`s, it gives
+
+\[
+                              n_7\le8
+\]
+
+and hence directly
 
 \[
                          |E(G)|\ge4|V(G)|-4.
 \]
 
-The density inequality follows because every degree-seven vertex lies in a
-literal `K_5`, while at most two such cliques occur, so there are at most ten
-degree-seven vertices.  The stronger order bound uses the exact two possible
+At equality the degree sequence is exactly `7^8 8^{n-8}`.  Two literal
+`K_5`s cover the eight degree-seven vertices, each contains four of them,
+and the cliques are disjoint or share their degree-eight vertex; moreover
+`n\ge21`.  The general order bound `n\ge19` uses the exact two possible
 degree-seven neighbourhoods and Jakobsen's upper bound.  The first possible
 order has degree sequence `7^6 8^13` or `7^7 8^11 9^1`.
 
@@ -129,65 +138,47 @@ stronger open extremal benchmark, but it is no longer the exact threshold
 needed by the critical-host reduction.  The current proof obligations are
 recorded in the [density frontier](active/hc7_k7minus_density_frontier.md).
 
-### 3. Immediate structural laboratory: strict density and seven-cut descent
+### 3. Immediate structural laboratory: strict density and seven-cut contraction
 
-Under the now-contradictory critical-host equality assumption, the host has
-ten degree-seven vertices covered by two disjoint literal `K_5`s.  The
-internally audited
-[equality connectivity and overlap reduction](results/hc7_k7minus_equality_connectivity_reduction.md)
-improves its order bound from twenty-one to twenty-nine.  Deleting either
-clique leaves a five-connected graph with `4h-10` edges, while deleting
-both leaves a three-connected graph `R`.  The cross-edges between the two
-cliques form a matching of order at most three.  Exact overlap,
-nonseparating-selection, and block--cut-tree arguments force
-`|V(R)|\ge19` for every matching order.
+The private-triangle allocation reconstructs the decisive Kempe argument
+without density equality.  Starting from any all-degree-seven literal
+`K_5`, it produces two disjoint connected branch sets, one meeting all five
+private triangles and the other meeting at least four, and hence an explicit
+`K_7^-` model.  It does not prove the stronger standalone bond or two-full-
+transversal statement; that assertion is unnecessary because `K_7^-`
+permits one missing branch-set adjacency.
 
-Each clique has five private external triangles.  The equality theorem's
-edge-deletion colouring forces three rooted two-colour components; in the
-rigid branch they share four prescribed triangle contacts.  Applying the
-same argument to the missing colour produces symmetric components with
-disjoint colour palettes.  In the rigid branch two such components meet the
-same four triangles and one absorbs a path from the fifth.  In the other
-branch, a three-colour counting argument gives one connected set meeting all
-five triangles and a disjoint connected set meeting at least four.  Together
-with the five singleton clique vertices, either construction is an explicit
-`K_7^-`-minor model.  Thus the `4n-5` critical-host equality layer is empty
-and the critical density is at least `4n-4`.
-
-This does not prove the stronger standalone statement that the five private
-triangles always have two full connected transversals, or equivalently that
-the deletion graph has a bond meeting all five.  Rather, the permitted one
-missing adjacency of `K_7^-` closes the critical equality case before that
-stronger conclusion is needed.
-
-Independently, the [seven-cut component-contraction theorem](results/hc7_k7minus_seven_cut_contraction.md)
-proves that an order-seven cut with `r` components satisfies
+Independently, the new
+[seven-boundary connected-subgraph and component-descent theorem](results/hc7_k7minus_seven_boundary_component_descent.md)
+proves that, for an order-seven cut `S`,
 
 \[
- 2\le r\le5,
- \qquad
- \kappa(G[S])\le6-r.
+ 2\le r\le\pi_S(G)\le4,
+ \qquad \kappa(G[S])\le6-\pi_S(G),
 \]
 
-For two components the boundary is `K_5`-minor-free; for three it has at
-most nine edges; for four it is a matching plus isolated vertices; for five
-it is edgeless.  The remaining task is to turn this exact contraction
-failure into either a smaller
-seven-connected density instance or a branch-set model.  This fragment
-target remains open at the new `4n-4` threshold.
+where `\pi_S(G)` is the maximum number of disjoint connected subgraphs
+outside `S` adjacent to all seven boundary vertices.  Thus the former
+five-component case is impossible.  The boundary is `K_5`-minor-free for
+two components, has at most nine edges for three, and has maximum degree one
+for four.  In the four-component case every nonsingleton component is
+two-connected.
 
-The ordered next work is positive rather than barrier-led.  First, in one
-bounded proof-extraction pass, restate and audit the Kempe allocation under
-the weaker assumption that a critical host contains one all-degree-seven
-literal `K_5`.  The target is that no such clique exists; if proved it gives
-`n_7<=8` and an exact `7^8 8^{n-8}` description at `m=4n-4`, but no further
-numerical density gain.  Then attack the main seven-cut reduction: every
-seven-connected graph at the `4n-4` threshold with an order-seven cut must
-contain an explicit `K_7^-` model or have a proper seven-connected minor
-still at that threshold.  This dichotomy would prove the global extremal
-target by minor minimality.  Counterexamples to intermediate lemmas are
-retained only as falsification and pivot evidence, not as the programme's
-success criterion.
+The same theorem gives the exact density change and an if-and-only-if
+seven-connectivity test for contracting any collection of whole components.
+In a descent-minimal graph, every density-eligible nonsingleton component
+whose contraction fails therefore has a set `Z` of at most five external
+vertices such that deleting the component and `Z` disconnects the graph.
+Boundary arithmetic alone still permits formal excess patterns in which no
+whole-component contraction preserves the threshold.  These are arithmetic
+patterns, not asserted graph examples.
+
+The full seven-cut dichotomy—an explicit `K_7^-` model or a proper
+seven-connected minor still at `4n-4`—remains open.  It is equivalent in
+strength to the bare global `4n-4` extremal theorem, not a routine auxiliary
+lemma.  The next positive attack is the `r=4` case: combine its sparse
+boundary, two-connected interiors, and any small contraction-failure
+certificate.  Then come `r=3` and the likely hard `r=2` case.
 
 ## Supporting `HC_7` refinements and decoder status
 
@@ -705,10 +696,14 @@ is:
 
 The narrower adjacent-`K_7^-` package is now the cleaner theorem chain.  It
 combines the computation-free exact degree-seven neighbourhood theorem, the
-global two-`K_5` bound, the initial `4n-5` density and order reduction, the
-equality connectivity/Kempe structure, the Kempe exclusion of that equality
-layer and resulting `4n-4` critical density, and the independent seven-cut
-theorem.  Its
+global two-`K_5` bound, the initial `4n-5` density and order reduction, and
+the generalized private-triangle allocation.  The latter excludes every
+all-degree-seven literal `K_5`, gives `n_7\le8` and `m\ge4n-4`, and describes
+the tight layer exactly.  The equality-specific connectivity and Kempe chain
+is retained as a secondary specialization.  The independent separator
+theorem bounds disjoint boundary-full connected subgraphs and cut components
+by four, proves two-connected interiors in the four-component case, and gives
+exact whole-component contraction criteria.  Its
 [current external-review dossier](active/hc7_k7minus_external_review_dossier.md)
 records exact source hashes and review questions.  This package still proves
 neither the `K_7^-` six-colour conjecture nor `HC_7`.
@@ -785,21 +780,23 @@ records the internal go/no-go assessment; it is not external peer review.
 - **Boundary-labelled near-clique structure.** The
   [degree-seven aligned model theorem](results/hc7_degree7_aligned_near_k7_model.md)
   retains the literal boundary labels needed for branch-set surgery.
-- **Adjacent `K_7^-` strict density and equality exclusion.** A direct
+- **Adjacent `K_7^-` degree rigidity and strict density.** A direct
   contraction--Kempe proof gives the exact degree-seven neighbourhood types
   without the earlier finite residual.  With the global two-clique bound
-  this first yields `m>=4n-5` and `n>=19`; the equality reduction supplies
-  five-connected clique deletions, exact overlap restrictions, a Hall
-  dichotomy, and rooted Kempe components.  Symmetric Kempe components then
-  force an explicit `K_7^-` model in both branches, excluding equality and
-  improving the critical-host bound to `m>=4n-4`.  This is an internally
-  audited conditional reduction, not a bare extremal theorem or an `HC_7`
-  result.
-- **Seven-cut contraction obstruction.** In every seven-connected
-  `K_7^-`-minor-free graph, an order-seven cut has at most five components
-  and boundary connectivity at most `6-r`; the three-, four-, and
-  five-component boundaries have at most nine, three, and zero edges,
-  respectively.
+  this first yields `m>=4n-5` and `n>=19`.  A generalized private-triangle
+  Kempe allocation excludes every all-degree-seven literal `K_5`, giving
+  `n_7<=8` and `m>=4n-4` directly.  At equality the degree sequence is
+  `7^8 8^{n-8}`, with two precisely constrained literal `K_5`s and
+  `n>=21`.  This is an internally audited conditional reduction, not a bare
+  extremal theorem or an `HC_7` result.
+- **Seven-boundary connected-subgraph and descent obstruction.** In every
+  seven-connected `K_7^-`-minor-free graph, an order-seven cut has at most
+  four disjoint connected subgraphs outside it that are each adjacent to all
+  seven boundary vertices, and hence at most four components.  The three- and four-component
+  boundaries have at most nine and three edges, respectively; every
+  nonsingleton four-component interior is two-connected.  Exact density and
+  connectivity formulas characterize whole-component contractions and
+  their failure certificates, but do not yet force a descent.
 - **First-hit reductions.** Rado--gammoid and transfer results convert much
   of the palette-to-label problem into literal first-hit geometry, but the
   final response-coupling step remains open.

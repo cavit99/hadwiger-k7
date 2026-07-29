@@ -1,10 +1,11 @@
 # Density frontier for the `K_7^-` six-colour route
 
 **Status:** live conditional refinement; not a proof of the `K_7^-`
-six-colour conjecture or of `HC_7`.  The entrance reduction, equality
-reduction, equality exclusion, and seven-cut theorem are written proofs with
+six-colour conjecture or of `HC_7`.  The entrance reduction,
+private-triangle Kempe allocation, all-degree-seven clique exclusion, and
+seven-boundary connected-subgraph and contraction theorems are written proofs with
 separate internal audits GREEN for their current revisions.  The displayed
-finishing targets below remain conjectural.
+finishing target below remains conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -23,11 +24,17 @@ first proves
  |V(G)|\ge19.                                           \tag{1}
 \]
 
-The
+The former
 [Kempe-component equality-exclusion theorem](../results/hc7_k7minus_equality_kempe_exclusion.md)
-rules out the case `|E(G)|=4|V(G)|-5`.  Hence the current proved entrance is
+rules out the case `|E(G)|=4|V(G)|-5`.  More generally, the new
+[all-degree-seven clique exclusion](../results/hc7_k7minus_all_degree7_k5_exclusion.md)
+proves that no literal `K_5` can have all five vertices of degree seven.
+Since every degree-seven vertex lies in one of at most two literal `K_5`s,
+the current proved entrance is
 
 \[
+ n_7\le8,
+ \qquad
  |E(G)|\ge4|V(G)|-4,
  \qquad
  |V(G)|\ge19.                                           \tag{2}
@@ -49,9 +56,17 @@ then
  2\le\varepsilon\le |V(G)|-15,                         \tag{3}
 \]
 
-with `epsilon` even.  The former value `epsilon=0` forced `n_7=10` and two
-disjoint literal `K_5`s covering those ten vertices.  Section 3 records why
-that entire critical-host equality layer is now impossible.
+with `epsilon` even.  At the tight value `|E(G)|=4|V(G)|-4`, equivalently
+`epsilon=2`, the new theorem gives
+
+\[
+ n_7=8,\qquad s=0,\qquad
+ \text{degree sequence }7^8 8^{|V(G)|-8}.
+\]
+
+Exactly two literal `K_5`s cover the eight degree-seven vertices; each has
+four degree-seven vertices and one degree-eight vertex.  They are disjoint
+or meet in their common degree-eight vertex, and `|V(G)|\ge21`.
 
 The first possible order now has only two degree patterns:
 
@@ -106,7 +121,7 @@ The former `4n-5` target is a stronger open statement: it would force the
 minor one edge earlier.  It is no longer the current sufficient obligation,
 because the critical equality layer at that density has been excluded.
 
-## 3. Excluded critical-host equality layer: Kempe-component allocation
+## 3. Private-triangle Kempe allocation and the excluded `4n-5` layer
 
 Suppose equality held in the original density inequality (1), and let
 
@@ -154,8 +169,8 @@ or at least two colours occur on all five triangles.  For every edge
 three two-colour components rooted at `x`; in the rigid branch, each meets
 the same four specified triangles.
 
-The new
-[Kempe-component allocation theorem](../results/hc7_k7minus_equality_kempe_exclusion.md)
+The earlier equality-case
+[Kempe-component allocation and exclusion](../results/hc7_k7minus_equality_kempe_exclusion.md)
 applies the argument symmetrically to the colour absent from `L`.  In the
 rigid branch, a `p`-component and a disjoint `q`-component meet the same four
 triangles, and one can absorb a path from the fifth.  In the all-five-colour
@@ -164,7 +179,17 @@ union meets all five triangles and a disjoint `q`-component meeting at least
 four.  In either case these two connected sets and the five singleton
 vertices of `L` form an explicit `K_7^-`-minor model, with at most the one
 permitted owner adjacency missing.  This contradiction excludes equality
-and proves (2).
+and proves the strict `4n-4` critical-host density bound.
+
+The new
+[private-triangle Kempe allocation theorem](../results/hc7_k7minus_all_degree7_k5_exclusion.md)
+reconstructs this argument using only a literal `K_5`, five pairwise
+disjoint private external triangles, connectedness after deleting the
+clique, and a proper-minor six-colouring.  Seven-connectivity and the exact
+degree-seven neighbourhood theorem supply those hypotheses for any
+all-degree-seven literal `K_5`.  Thus the allocation is no longer confined
+to density equality and gives the stronger entrance and tight-layer
+structure in Section 1.
 
 The proof does **not** establish the stronger standalone two-transversal
 statement, nor the equivalent assertion that `H` has a bond meeting all five
@@ -174,27 +199,59 @@ triangle.  The critical equality host is nevertheless eliminated because a
 two-transversal target is therefore retired as a live obligation, not
 promoted as a proved theorem.
 
-## 4. Exact seven-cut obstruction
+## 4. Boundary-full connected subgraphs and exact contraction obstruction
 
 The proved
-[seven-cut component-contraction theorem](../results/hc7_k7minus_seven_cut_contraction.md)
-gives a second route into the extremal target.  If `S` is an order-seven cut
-and `G-S` has `r` components, then
+[connected-subgraph capacity and component-contraction theorem](../results/hc7_k7minus_seven_boundary_component_descent.md)
+strictly sharpens the earlier seven-cut result.  Let `S` be an order-seven
+cut, let `G-S` have `r` components, and let `\pi_S(G)` be the maximum number
+of pairwise vertex-disjoint connected subgraphs of `G-S` each adjacent to
+all of `S`.  Then
 
 \[
- 2\le r\le5,
+ 2\le r\le\pi_S(G)\le4,
  \qquad
  N(C)=S\text{ for every component `C`},
  \qquad
- \kappa(G[S])\le6-r.                                  \tag{10}
+ \kappa(G[S])\le6-\pi_S(G).                           \tag{10}
 \]
 
 For `r=2`, the boundary is `K_5`-minor-free; for `r=3`, it has at most nine
-edges; for `r=4`, it is a matching plus isolated vertices; and for `r=5`,
-it is edgeless.
-The theorem isolates the exact failure of naive contraction: contracting
-all components gives `I_r\vee G[S]`, and that minor would contain `K_7^-`
-whenever it remained seven-connected.
+edges; and for `r=4`, it is a matching plus isolated vertices.  The former
+five-component case is impossible: five disjoint connected subgraphs outside
+the boundary, each adjacent to every boundary vertex, give an explicit
+`K_7^-` model.  In the four-component case, every component is either a
+singleton or is two-connected.
+
+For a component `C_i`, put
+
+\[
+ n_i=|V(C_i)|,\quad
+ e_i=|E(C_i)|+|E(C_i,S)|,\quad
+ \delta_i=e_i-4n_i,\quad
+ q=|E(G)|-(4|V(G)|-4).                                \tag{11}
+\]
+
+For a nonempty component set `X`, contracting every `C_i`, `i\in X`, gives
+`H_X` with exact surplus
+
+\[
+ |E(H_X)|-(4|V(H_X)|-4)
+   =q+\sum_{i\in X}(3-\delta_i).                      \tag{12}
+\]
+
+The theorem also gives an exact, not merely sufficient, connectivity test:
+`H_X` is seven-connected precisely when deleting any nonempty subfamily
+`D\subseteq X` together with any external set `Z` satisfying
+`|D|+|Z|\le6` leaves the corresponding graph connected.  Consequently a
+descent-minimal graph has a concrete failure certificate whenever a
+nonsingleton component is density-eligible.  In particular,
+
+\[
+ |V(C_i)|\ge2,\quad \delta_i\le3+q
+ \quad\Longrightarrow\quad
+ G-V(C_i)-Z\text{ is disconnected for some }|Z|\le5. \tag{13}
+\]
 
 The main structural step is therefore the following positive cut-reduction
 theorem, not a density recount:
@@ -204,39 +261,42 @@ theorem, not a density recount:
 > either `G` contains a `K_7^-` minor, or `G` has a proper minor `H` that is
 > seven-connected and satisfies `|E(H)|>=4|V(H)|-4`.
 
-This target is open.  It would prove (5).  Choose a proper-minor-minimal
-counterexample to the extremal target.  If it were eight-connected, then
-`G-e` would be seven-connected for every edge `e`, while minimum degree eight
-would give `|E(G-e)|>=4|V(G)|-1`; hence `G-e` would be a smaller
+This target is open.  It is equivalent in strength to the global extremal
+statement in Section 2, rather than being an ordinary preliminary lemma.
+That global statement trivially gives the first outcome.  Conversely, choose
+a proper-minor-minimal counterexample to it.  If it were eight-connected,
+then `G-e` would be seven-connected for every edge `e`, while minimum degree
+eight would give `|E(G-e)|>=4|V(G)|-1`; hence `G-e` would be a smaller
 counterexample.  Thus the chosen graph has an order-seven cut, and either
-outcome of the target is contradictory.  The existing seven-cut theorem does
-not itself show that an arbitrary component contraction preserves
-seven-connectivity or the density threshold.
+outcome of the target is contradictory.  The proved theorem does not close
+this dichotomy; it identifies exactly what a successful whole-component
+contraction must satisfy and what separator certificate exists when it
+fails.
 
 ## 5. Ordered next attacks and research discipline
 
-First perform one short proof-extraction pass on the following target:
+The all-degree-seven extraction is complete, and the first separator attack
+has removed `r=5`, strengthened the boundary statement to the maximum
+boundary-full connected-subgraph packing number, proved two-connectivity of
+every nonsingleton component when `r=4`, and
+replaced informal contraction language by the exact surplus and connectivity
+criteria above.
 
-> **All-degree-seven clique target.** Under the critical-host hypotheses of
-> Section 1, no literal `K_5` has all five vertices of degree seven.
+The next positive attack should start with `r=4`.  Its boundary has maximum
+degree one.  Split the case according to whether a nonsingleton component is
+density-eligible.  In that branch, use the set `Z` from (13), whose deletion
+together with the component disconnects the graph, and the other three
+boundary-full components.  In the complementary branch, use the exact excess
+identity and the two-connected component interiors.  The required endpoint
+remains an explicit `K_7^-` model or an
+explicit proper seven-connected minor retaining the `4n-4` threshold.  Only
+after closing `r=4` should the programme pass to `r=3` and the likely hard
+`r=2` case.
 
-This is conjectural until it is written and independently audited.  The
-existing equality proof suggests that its colouring and Kempe-component
-allocation needs only such a clique, its five private triangles, and
-connectedness after deleting the clique; the current theorem is nevertheless
-scoped to equality and cannot simply be cited outside that scope.  A valid
-proof would give `n_7<=8` directly.  At the tight value `epsilon=2`, it would
-force `n_7=8`, `s=0`, degree sequence `7^8 8^{n-8}`, and exactly two literal
-`K_5`s, each with four degree-seven vertices; the cliques would be disjoint
-or meet in their common degree-eight vertex.  This strengthens the structure
-but does not improve the numerical `4n-4` bound, so it is a bounded
-consolidation pass rather than a new long campaign.
-
-After that extraction, the principal attack is the seven-cut reduction
-target above.  Analyze `r=5,4,3` first, using the edgeless, matching, and
-at-most-nine-edge boundary conclusions in (10), and then the harder `r=2`
-case.  Every closed case must end with either an explicit `K_7^-`-minor model
-or an explicit proper seven-connected minor retaining the `4n-4` threshold.
+Boundary arithmetic alone cannot finish this: the restrictions permit formal
+excess patterns in which every whole-component contraction loses too much
+density.  These are arithmetic patterns, not asserted graph examples.
+Internal component structure is therefore the load-bearing next input.
 The normalized Norin--Totschnig near-`K_7` upgrade remains a higher-risk
 fallback because four global surplus edges need not occur at the deficient
 branch set.
@@ -253,6 +313,6 @@ signal, not the success criterion for this route.
 The [current external-review dossier](hc7_k7minus_external_review_dossier.md)
 packages this computation-free density/equality spine for specialist
 checking.  The earlier
-[global-count packet](hc7_k7minus_external_review_packet.md) remains a
+[global-count review record](hc7_k7minus_external_review_packet.md) remains a
 frozen record of the preceding five-exceptional-vertices route; its open
 target has not been proved.
