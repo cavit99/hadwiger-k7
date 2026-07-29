@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 28 July 2026
+**Last updated:** 29 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 **Publication assessment:** the internally audited corpus is a credible
 partial-results manuscript candidate, but it is not submission-ready;
@@ -9,9 +9,10 @@ literature review and independent human validation.
 **Current programme mode:** the primary `HC_7` proof search remains frozen
 at tag `mathematical-freeze-2026-07-27` for
 [external review and manuscript planning](active/hc7_partial_results_external_review_blueprint.md).
-A focused experiment has resumed on branch `experiment/k7minus-density-route`
-for the adjacent `K_7^-` six-colour conjecture.  This does not alter the
-primary all-degree `HC_7` target.
+A focused experiment continues on branch
+`experiment/k7minus-equality-transversal` for the adjacent `K_7^-`
+six-colour conjecture.  This does not alter the primary all-degree `HC_7`
+target.
 
 This is the sole authority for the current status of the project. Exact
 theorem statements and proofs live in the linked frontier and result files;
@@ -111,11 +112,24 @@ in the [density frontier](active/hc7_k7minus_density_frontier.md).
 ### 3. Immediate structural laboratory: rooted transversals and seven-cuts
 
 At equality, the host has ten degree-seven vertices covered by two disjoint
-literal `K_5`s and has order at least twenty-one.  Each clique has five
-private external triangles.  Two disjoint connected subgraphs meeting all
-five triangles would give an explicit `K_7^-` model; after deleting the
-clique, any counterexample to this rooted two-transversal statement is
-already three-connected.
+literal `K_5`s.  The new internally audited
+[equality connectivity and overlap reduction](results/hc7_k7minus_equality_connectivity_reduction.md)
+improves its order bound from twenty-one to twenty-nine.  Deleting either
+clique leaves a five-connected graph with `4h-10` edges, while deleting
+both leaves a three-connected graph `R`.  The cross-edges between the two
+cliques form a matching of order at most three.  Exact overlap,
+nonseparating-selection, and block--cut-tree arguments force
+`|V(R)|\ge19` for every matching order.
+
+Each clique still has five private external triangles.  Two disjoint
+connected subgraphs meeting all five triangles would give an explicit
+`K_7^-` model.  Equivalently, the five-connected deletion graph must have a
+bond meeting all five triangles.  It has a cycle through all fifteen
+triangle vertices, and every six-colouring satisfies one of two exact Hall
+patterns: four triangles use the same three colours, or two colours occur
+on all five.  Neither the terminal-spanning cycle nor the Hall dichotomy has
+yet been converted into the required bond; the remaining positive step is
+a five-connected bridge-rerouting or Kempe-component theorem.
 
 Independently, the [seven-cut component-contraction theorem](results/hc7_k7minus_seven_cut_contraction.md)
 proves that an order-seven cut with `r` components satisfies

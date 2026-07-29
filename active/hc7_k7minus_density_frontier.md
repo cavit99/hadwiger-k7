@@ -1,10 +1,10 @@
 # Density frontier for the `K_7^-` six-colour route
 
 **Status:** live conditional refinement; not a proof of the `K_7^-`
-six-colour conjecture or of `HC_7`.  The entrance reduction and the
-seven-cut theorem are written proofs with separate internal audits GREEN
-for their current revisions.  The displayed finishing targets below remain
-conjectural.
+six-colour conjecture or of `HC_7`.  The entrance reduction, equality
+reduction, and seven-cut theorem are written proofs with separate internal
+audits GREEN for their current revisions.  The displayed finishing targets
+below remain conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -40,8 +40,8 @@ then
 \]
 
 with `epsilon` even.  Equality in the density inequality in (1) forces
-`n_7=10`, two disjoint
-literal `K_5`s covering those ten vertices, and order at least twenty-one.
+`n_7=10` and two disjoint literal `K_5`s covering those ten vertices.  The
+equality refinement in Section 3 improves its order bound to twenty-nine.
 
 The first possible order now has only two degree patterns:
 
@@ -113,24 +113,60 @@ This gives the sharper finishing statement for the equality layer:
 > five private triangles in (5) admit two vertex-disjoint connected
 > transversals in `G-L`.
 
-There is a useful proved reduction.  Put `H=G-L`.  Seven-connectivity gives
-that `H` is two-connected.  If `{x,y}` were a two-vertex cut of `H`, then
-every component of `H-{x,y}` would meet all five triangles: a missed
-triangle would make its neighbourhood in `G` have order at most six.  Any
-two components would therefore be the two required connected transversals.
-Consequently a counterexample to the two-transversal target must have `H`
-three-connected.
+The new
+[equality connectivity and overlap theorem](../results/hc7_k7minus_equality_connectivity_reduction.md)
+gives a substantially stronger reduction.  Put `H=G-L`.  Then
+
+\[
+ \kappa(H)\ge5,
+ \qquad |E(H)|=4|V(H)|-10.                             \tag{6}
+\]
+
+Indeed, if a set `Z` of at most four vertices separated `H`,
+seven-connectivity would force each component to meet at least
+`7-|Z|` of the five triangles.  The surviving part of a triangle is a
+clique and lies in only one component, making two components impossible.
+
+Let `A,B` be the two degree-seven `K_5`s, put
+`R=G-(A\cup B)`, and let `k=|E(A,B)|`.  The same theorem proves
+
+\[
+ \kappa(R)\ge3,
+ \qquad |E(R)|=4|V(R)|-15+k,
+ \qquad k\le3.                                         \tag{7}
+\]
+
+It also gives the sharp current order information
+
+\[
+ |V(R)|\ge19,
+ \qquad
+ |V(G)|\ge29.                                          \tag{8}
+\]
+
+These bounds are written deductions from nonseparating-vertex and degree
+counts, not finite enumeration.
 
 More generally, if `H-Z` is disconnected, then every component `C` of
 `H-Z` satisfies
 
 \[
  |N_H(C)|+
- |\{i:C\cap T_i\ne\varnothing\}|\ge7.                  \tag{6}
+ |\{i:C\cap T_i\ne\varnothing\}|\ge7.                  \tag{9}
 \]
 
-The unresolved task is to turn (6), three-connectivity, and the critical
-colouring responses into two disjoint connected transversals.
+The target is equivalently a bond of `H` meeting every triangle.  Fournier's
+cyclability theorem and five-connectivity give a cycle of `H` through all
+fifteen triangle vertices, but a terminal-spanning cycle alone is
+insufficient: five triangles joined cyclically by one edge per consecutive
+pair give an explicit two-connected obstruction.  The missing positive
+argument must use the at-least-five attachments of the off-cycle bridges.
+
+Critical colouring supplies a second exact constraint.  In every
+six-colouring of `H`, either four triangles use one common three-colour set,
+or at least two colours occur on all five triangles.  This is the complete
+Hall obstruction to extending the colouring across `L`; converting it into
+two disjoint universal Kempe components is open.
 
 Wollan's exact rooted-`K_{2,t}` theorem is the closest general input, but at
 `t=5` its edge threshold is `5|V(H)|-14`, far above the present density and
@@ -149,7 +185,7 @@ and `G-S` has `r` components, then
  \qquad
  N(C)=S\text{ for every component `C`},
  \qquad
- \kappa(G[S])\le6-r.                                   \tag{7}
+ \kappa(G[S])\le6-r.                                  \tag{10}
 \]
 
 For `r=2`, the boundary is `K_5`-minor-free; for `r=3`, it has at most nine
@@ -164,7 +200,7 @@ density recount:
 
 > **Fragment target.** In a smallest counterexample to (4), either a
 > contraction preserving seven-connectivity reduces the order without
-> reducing the density surplus, or an order-seven fragment satisfying (7)
+> reducing the density surplus, or an order-seven fragment satisfying (10)
 > yields an explicit `K_7^-` model.
 
 This target is open.  In particular, the seven-cut theorem does not itself
@@ -174,16 +210,17 @@ show that an arbitrary component contraction preserves seven-connectivity.
 
 The next useful work is one of:
 
-1. prove the two-transversal target from (6);
+1. prove the bond target from (6)--(9), by bridge rerouting or the Hall--Kempe
+   dichotomy;
 2. prove the fragment target by analyzing the small-connectivity boundary
-   graphs in (7); or
+   graphs in (10); or
 3. upgrade a normalized Norin--Totschnig near-`K_7` model using the three
    edges of surplus over `4n-8`.
 
-Further enumeration below order nineteen is obsolete.  Enumeration at
-order nineteen is useful only if it exposes a lemma that survives at
-unbounded order.  Neither random tests nor finite host elimination may be
-promoted as a proof of (4).
+Further enumeration below order nineteen is obsolete globally, and below
+order twenty-nine in the equality layer.  Enumeration is useful only if it
+exposes a lemma that survives at unbounded order.  Neither random tests nor
+finite host elimination may be promoted as a proof of (4).
 
 The earlier
 [external-review packet](hc7_k7minus_external_review_packet.md) remains a
