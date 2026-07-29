@@ -6,16 +6,16 @@ Audited file:
 Audited SHA-256:
 
 ```text
-834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff
+604d11d4276ce6a3c57a8375d702624a1c364b5123f122b7e9e3dc18d11bf8f4
 ```
 
 **Verdict:** **GREEN** for the exact revision above.
 
 This is a separate internal mathematical audit, not external peer review.
-The cold audit checked the theorem at the immediately preceding content
-revision; the final revision changes only the status line and adds the
-explicit reason that the remainder in one eight-vertex clique-union case is
-nonempty.  Both changes were rechecked against the proof.
+The current audit rechecked the full proof after replacing the earlier
+aligned-model classification by the computation-free exact degree-seven
+neighbourhood theorem.  The density, order, and exceptional-vertex
+arguments are otherwise mathematically unchanged.
 
 ## 1. Dependencies and hypotheses
 
@@ -23,11 +23,10 @@ The audited local dependencies are:
 
 | result | SHA-256 |
 |---|---|
-| degree-seven aligned near-`K_7` model | `51bd2cf191f848a398a1a4aee711ef0c4d36c747468ce9613b9514cbc56cd060` |
-| degree-seven clique incidence | `8378b1920987284abf3ff33d476d28efee5c9a13659afe7a192febaacb3d501f` |
+| exact degree-seven neighbourhoods | `04e085032a096ef3fd508ca4ee287ef82417a718ae3d95646ae4cbd0b911ed2e` |
 | at most two literal `K_5`s | `5b5e399122b996186e861f5075e7808c8e6fe4353082256ee12d5074499d2574` |
 
-The displayed host hypotheses match all three inputs.  Exclusion of a
+The displayed host hypotheses match both local inputs.  Exclusion of a
 `K_7^-` minor also excludes a `K_7` minor.  Seven-chromaticity excludes the
 two-apex case used by the three-clique theorem.
 
@@ -42,11 +41,13 @@ six-chromatic.  The strict threshold therefore gives
 
 ## 2. Exact degree-seven neighbourhoods
 
-The aligned-model proof first classifies the complement of the
-seven-vertex neighbourhood.  Its degree-two branch gives an explicit
-`K_7^-` model; its earlier alternatives give `K_7`; and the only remaining
-complements are `K_{3,4}` and `K_{3,3} dotcup K_1`.  Taking complements
-gives exactly
+The new local theorem obtains a rooted `K_5` on the other five neighbours
+for every neighbourhood nonedge, using one proper-minor colouring,
+bichromatic component connectivity, and Kriesell--Mohr Theorem 7.  It then
+shows directly that every nonisolated vertex of the triangle-free
+neighbourhood complement has degree at least three.  Mantel's theorem and
+parity leave exactly `K_{3,4}` and `K_{3,3} dotcup K_1`.  Taking complements
+gives
 
 \[
  K_4\mathbin{\dot\cup}K_3,
@@ -54,13 +55,15 @@ gives exactly
  K_1\vee(K_3\mathbin{\dot\cup}K_3).
 \]
 
-The first type has one literal `K_4`.  The second has two, sharing its
-universal vertex.  Thus the asserted one- or two-`K_5` membership and the
-two-vertex intersection in the latter case are exact.  The audit also
-checked the important distinction that, in the two-clique type, the outside
-triangle remains adjacent to the shared universal vertex; the proof does
-not incorrectly call that triangle fully anticomplete to the chosen
-clique.
+The local theorem's separate audit checks the contraction colouring,
+Kriesell--Mohr hypothesis match, both explicit seven-bag contradictions,
+and the exhaustive complement classification.  The first displayed type
+has one literal `K_4`; the second has two sharing its universal vertex.
+Thus the asserted one- or two-`K_5` membership and the two-vertex
+intersection in the latter case are exact.  In the two-clique type, the
+outside triangle remains adjacent to the shared universal vertex; the
+proof does not incorrectly call that triangle fully anticomplete to the
+chosen clique.
 
 ## 3. Private-triangle capacity
 
@@ -147,5 +150,6 @@ are nonadjacent.
 The result does not prove the `4n-5` extremal target, exclude the two
 order-nineteen degree patterns, prove the five-exceptional-vertices target,
 or prove either colouring conjecture.  The local proof depends on the
-audited critical-host machinery and is not a theorem of bare
-seven-connectivity.  No finite enumeration is a dependency.
+audited computation-free degree-seven theorem and is not a theorem of bare
+seven-connectivity.  No finite enumeration is a dependency anywhere in
+this density proof spine.

@@ -23,13 +23,15 @@ The theorem assumes the full critical-host hypotheses, exclusion of a
 audited density and low-degree rigidity theorem at SHA-256
 
 ```text
-834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff
+604d11d4276ce6a3c57a8375d702624a1c364b5123f122b7e9e3dc18d11bf8f4
 ```
 
-That input supplies exactly ten degree-seven vertices, two disjoint literal
-`K_5`s covering them, degree eight elsewhere, and the five pairwise disjoint
-private external triangles on each side.  The present proof does not use an
-unrecorded finite classification or infer an unbounded theorem from
+and supplies exactly ten degree-seven vertices, two disjoint literal `K_5`s
+covering them, degree eight elsewhere, and the five pairwise disjoint
+private external triangles on each side.  The present proof was rechecked
+against that revision.  Its local structure now descends from the audited
+computation-free degree-seven neighbourhood theorem; no finite
+classification is load-bearing and no unbounded theorem is inferred from
 enumeration.
 
 ## 2. Equality bookkeeping and connectivity

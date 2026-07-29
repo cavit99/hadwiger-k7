@@ -56,6 +56,14 @@ vertex and one vertex of degree eight or nine; their six exclusive vertices
 all have degree seven.  This is a structural test case, not a finite
 reduction of the unbounded problem.
 
+The entrance proof is computation-free.  For every nonedge in a
+degree-seven neighbourhood, a star contraction, one fixed six-colouring,
+Kempe-chain connectivity, and Kriesell--Mohr Theorem 7 give a rooted `K_5`
+on the other five neighbours.  This forces the neighbourhood complement to
+be `K_{3,4}` or `K_{3,3} dotcup K_1`.  The former anti-neighbourhood
+129-graph residual and aligned near-`K_7` theorem remain valid elsewhere in
+the repository but are not dependencies of this density or equality chain.
+
 ## 2. Exact sufficient extremal theorem
 
 The following statement is sufficient for the `K_7^-` six-colour
@@ -227,8 +235,9 @@ order twenty-nine in the equality layer.  Enumeration is useful only if it
 exposes a lemma that survives at unbounded order.  Neither random tests nor
 finite host elimination may be promoted as a proof of (4).
 
-The earlier
-[external-review packet](hc7_k7minus_external_review_packet.md) remains a
-frozen record of the preceding five-exceptional-vertices route.  Its open
-target has not been proved; this frontier records the stronger current
-reduction.
+The [current external-review dossier](hc7_k7minus_external_review_dossier.md)
+packages this computation-free density/equality spine for specialist
+checking.  The earlier
+[global-count packet](hc7_k7minus_external_review_packet.md) remains a
+frozen record of the preceding five-exceptional-vertices route; its open
+target has not been proved.

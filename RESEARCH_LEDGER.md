@@ -9,10 +9,11 @@ literature review and independent human validation.
 **Current programme mode:** the primary `HC_7` proof search remains frozen
 at tag `mathematical-freeze-2026-07-27` for
 [external review and manuscript planning](active/hc7_partial_results_external_review_blueprint.md).
-A focused experiment continues on branch
-`experiment/k7minus-equality-transversal` for the adjacent `K_7^-`
-six-colour conjecture.  This does not alter the primary all-degree `HC_7`
-target.
+The adjacent `K_7^-` density route remains a focused conditional programme,
+with its live status in the
+[density frontier](active/hc7_k7minus_density_frontier.md) and its current
+[external-review dossier](active/hc7_k7minus_external_review_dossier.md).
+This does not alter the primary all-degree `HC_7` target.
 
 This is the sole authority for the current status of the project. Exact
 theorem statements and proofs live in the linked frontier and result files;
@@ -99,6 +100,14 @@ literal `K_5`, while at most two such cliques occur, so there are at most ten
 degree-seven vertices.  The stronger order bound uses the exact two possible
 degree-seven neighbourhoods and Jakobsen's upper bound.  The first possible
 order has degree sequence `7^6 8^13` or `7^7 8^11 9^1`.
+
+The degree-seven entrance is now computation-free.  Contracting the star on
+`v` and any two nonadjacent neighbours, followed by one Kempe-chain argument
+and Kriesell--Mohr's five-root theorem, produces a rooted `K_5` on the other
+five neighbours.  An elementary triangle-free complement argument then
+gives exactly the two neighbourhoods used by the density proof.  The former
+anti-neighbourhood 129-graph residual and aligned near-`K_7` classification
+are no longer dependencies of this `K_7^-` proof spine.
 
 Thus the exact sufficient global statement is:
 
@@ -642,9 +651,10 @@ was not started.
 
 ## Standalone-results and publication status
 
-The strongest coherent manuscript candidate is about necessary structure in
-a hypothetical minor-minimal counterexample, rather than about completion of
-the conjecture.  Its proposed core is:
+There are now two distinct partial-results packages.  The frozen general
+`HC_7` package is about necessary structure in a hypothetical minor-minimal
+counterexample, rather than completion of the conjecture.  Its proposed core
+is:
 
 - the
   [bounded full-separation entry](results/hc7_low_degree_adjacent_pair_alignment.md)
@@ -664,6 +674,14 @@ the conjecture.  Its proposed core is:
   [component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md)
   as the principal multi-component application.
 
+The narrower adjacent-`K_7^-` package is now the cleaner theorem chain.  It
+combines the computation-free exact degree-seven neighbourhood theorem, the
+global two-`K_5` bound, the `4n-5` density and order reduction, the equality
+connectivity/Kempe structure, and the independent seven-cut theorem.  Its
+[current external-review dossier](active/hc7_k7minus_external_review_dossier.md)
+records exact source hashes and review questions.  This package still proves
+neither the `K_7^-` six-colour conjecture nor `HC_7`.
+
 The
 [boundary-labelled degree-seven near-clique model](results/hc7_degree7_aligned_near_k7_model.md)
 is a possible secondary application, subject to a particularly careful
@@ -679,10 +697,12 @@ is the literal bounded-interface localization, component-uniform responses,
 proved component bounds, packing restrictions, and retained labels—not the
 unlabelled near-`K_7` guarantee itself.
 
-Before submission, the package still needs a conventional literature and
-priority review, independent human audits by graph-minor and
-colouring/Kempe specialists, and independent reproduction of the
-load-bearing finite classifications.  The extensive conditional
+Before submission, the general `HC_7` package still needs a conventional
+literature and priority review, independent human audits by graph-minor and
+colouring/Kempe specialists, and independent reproduction of its
+load-bearing finite classifications.  The adjacent-`K_7^-` package needs
+the same source, priority, and human proof review, but its current proof
+spine has no load-bearing computation.  The extensive conditional
 order-eight/order-nine case tree should not lead the manuscript.  The
 [external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md)
 defines the frozen package, review questions, reproducibility inventory and
@@ -734,10 +754,13 @@ records the internal go/no-go assessment; it is not external peer review.
 - **Boundary-labelled near-clique structure.** The
   [degree-seven aligned model theorem](results/hc7_degree7_aligned_near_k7_model.md)
   retains the literal boundary labels needed for branch-set surgery.
-- **Adjacent `K_7^-` density reduction.** In a hypothetical critical
-  `K_7^-`-minor-free host, the exact degree-seven neighbourhood types and
-  global two-clique bound give `m>=4n-5`, `n>=19`, and order at least
-  twenty-one in the equality-density layer.  This is an internally audited
+- **Adjacent `K_7^-` density and equality structure.** A direct
+  contraction--Kempe proof gives the exact degree-seven neighbourhood types
+  without the earlier finite residual.  With the global two-clique bound
+  this yields `m>=4n-5` and `n>=19`; the separate equality reduction raises
+  the tight layer to order at least twenty-nine and supplies the
+  five-connected clique deletions, exact overlap restrictions, Hall
+  dichotomy, and rooted Kempe components.  This is an internally audited
   conditional reduction, not an `HC_7` result.
 - **Seven-cut contraction obstruction.** In every seven-connected
   `K_7^-`-minor-free graph, an order-seven cut has at most five components

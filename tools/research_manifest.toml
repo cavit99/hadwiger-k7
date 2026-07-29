@@ -7085,18 +7085,19 @@ keywords = ["topological K5", "transversal barrier", "pair height", "critical fa
 
 [[claims]]
 id = "hc7.k7minus_degree7_clique_incidence"
-title = "Every degree-seven vertex lies in a literal K5 under K7-minus exclusion"
+title = "Every degree-seven neighbourhood nonedge yields a rooted K5 under K7-minus exclusion"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_degree7_clique_incidence.md"
+source_heading = "Theorem 1 (uniform rooted `K_5`)"
 active = false
 audit = "results/hc7_k7minus_degree7_clique_incidence_audit.md"
-expected_source_sha256 = "8378b1920987284abf3ff33d476d28efee5c9a13659afe7a192febaacb3d501f"
+expected_source_sha256 = "04e085032a096ef3fd508ca4ee287ef82417a718ae3d95646ae4cbd0b911ed2e"
 scope = "seven-connected seven-chromatic minor-minimal hosts with no K7-minus minor"
-label_fidelity = "the degree-seven vertex and five literal neighbourhood roots remain fixed in the seven-bag model"
+label_fidelity = "the degree-seven vertex, selected neighbourhood nonedge, and other five literal neighbourhood roots remain fixed"
 conclusions = [
-  "the neighbourhood of every degree-seven vertex contains a literal K4",
-  "every degree-seven vertex lies in a literal K5",
+  "for every neighbourhood nonedge ab, the other five neighbours root a K5 model avoiding v, a, and b",
+  "the rooted model follows from one proper-minor colouring and uses no exterior-component or finite-classification input",
 ]
 does_not_prove = [
   "the K7-minus six-colour conjecture",
@@ -7135,7 +7136,7 @@ source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
 source_heading = "Theorem 4 (five exceptional degree-eight vertices)"
 active = false
 audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
-expected_source_sha256 = "834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff"
+expected_source_sha256 = "604d11d4276ce6a3c57a8375d702624a1c364b5123f122b7e9e3dc18d11bf8f4"
 scope = "hypothetical minor-minimal non-six-colourable K7-minus-minor-free graphs"
 label_fidelity = "the five returned vertices are literal and degree eight, each has a K4-free neighbourhood, and two are nonadjacent"
 conclusions = [
@@ -7155,11 +7156,11 @@ id = "hc7.k7minus_degree7_neighbourhood_types"
 title = "A degree-seven vertex has one of two exact neighbourhood types under K7-minus exclusion"
 kind = "theorem"
 status = "audited-green"
-source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
-source_heading = "Lemma 1 (exact degree-seven neighbourhood types)"
+source = "results/hc7_k7minus_degree7_clique_incidence.md"
+source_heading = "Theorem 2 (exact neighbourhood classification)"
 active = false
-audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
-expected_source_sha256 = "834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff"
+audit = "results/hc7_k7minus_degree7_clique_incidence_audit.md"
+expected_source_sha256 = "04e085032a096ef3fd508ca4ee287ef82417a718ae3d95646ae4cbd0b911ed2e"
 scope = "degree-seven vertices in seven-connected seven-chromatic proper-minor-critical K7-minus-minor-free graphs"
 label_fidelity = "the degree-seven vertex, its literal K5 or two K5s, their shared vertex, and the two external triangles are literal"
 conclusions = [
@@ -7176,21 +7177,21 @@ keywords = ["K7 minus", "degree seven", "neighbourhood classification", "private
 
 [[claims]]
 id = "hc7.k7minus_density_order_rigidity"
-title = "A hypothetical K7-minus six-colour counterexample has density 4n-5 and order at least nineteen"
+title = "A hypothetical K7-minus six-colour counterexample has at least 4n-5 edges and order at least nineteen"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_exceptional_vertices_reduction.md"
 source_heading = "Theorem 3 (density, minimum order, and the first residue)"
 active = false
 audit = "results/hc7_k7minus_five_exceptional_vertices_reduction_audit.md"
-expected_source_sha256 = "834b70c1a1ad076ad00a0468226788e33f6f7bab70590b67a629f0d33b5945ff"
+expected_source_sha256 = "604d11d4276ce6a3c57a8375d702624a1c364b5123f122b7e9e3dc18d11bf8f4"
 scope = "hypothetical minor-minimal non-six-colourable K7-minus-minor-free graphs"
 label_fidelity = "degree-seven vertices remain assigned to their literal K5s; the order-nineteen overlap and degree labels are literal"
 conclusions = [
   "m is at least 4n-5 and n is at least nineteen",
   "the exact excess is epsilon=10-n7+sum over degrees at least nine of (d-8)n_d",
   "order nineteen has degree sequence 7^6 8^13 or 7^7 8^11 9^1",
-  "the equality density layer has ten degree-seven vertices and starts at order at least twenty-one",
+  "the theorem itself gives order at least twenty-one in the equality layer; the separate equality reduction sharpens this to twenty-nine",
 ]
 does_not_prove = [
   "the seven-connected 4n-5 extremal target",
@@ -7390,29 +7391,14 @@ kind = "guarded_by"
 note = "The finite barrier shows that one-support provenance still requires a whole-family host-level composition before it can increase the global pair height."
 
 [[relations]]
-source = "hc7.k7minus_degree7_clique_incidence"
-target = "hc7.degree7_antineighbourhood_connectivity"
-kind = "uses"
-
-[[relations]]
-source = "hc7.k7minus_degree7_clique_incidence"
-target = "hc7.degree7_matching_rooted_separator"
-kind = "uses"
-
-[[relations]]
 source = "hc7.k7minus_degree7_neighbourhood_types"
-target = "hc7.degree7_aligned_near_k7"
+target = "hc7.k7minus_degree7_clique_incidence"
 kind = "uses"
-note = "K7-minus exclusion removes the explicit one-defect branch, leaving the two exact complement types classified in the aligned-model proof."
+note = "The exact classification uses the uniform rooted K5 for each complement edge to exclude complement degrees one and two."
 
 [[relations]]
 source = "hc7.k7minus_density_order_rigidity"
 target = "hc7.k7minus_degree7_neighbourhood_types"
-kind = "uses"
-
-[[relations]]
-source = "hc7.k7minus_density_order_rigidity"
-target = "hc7.k7minus_degree7_clique_incidence"
 kind = "uses"
 
 [[relations]]
@@ -7422,7 +7408,7 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.k7minus_five_exceptional_vertices_reduction"
-target = "hc7.k7minus_degree7_clique_incidence"
+target = "hc7.k7minus_degree7_neighbourhood_types"
 kind = "uses"
 
 [[relations]]

@@ -41,28 +41,12 @@ either clique, the three outside neighbours form a triangle adjacent to
 
 ### Proof
 
-Put `H=G[N(v)]` and `F=\overline H`.  The proof of the separately audited
-[degree-seven aligned near-`K_7` theorem](hc7_degree7_aligned_near_k7_model.md)
-establishes the following exhaustive classification before its final
-branch-set choice.  A degree-two vertex of the nonisolated core of `F`
-produces an explicit boundary-labelled `K_7^-` model.  If that branch is
-absent, the nonisolated core is either `K_{3,4}`, or `K_{3,3}` with the
-seventh vertex isolated.  The other branches in that proof produce a
-`K_7` minor.
-
-Hypothesis (H) excludes both `K_7^-` and `K_7`, so only the two exceptional
-complements remain:
-
-\[
- F\cong K_{3,4}
- \quad\text{or}\quad
- F\cong K_{3,3}\mathbin{\dot\cup}K_1.
-\]
-
-Taking complements gives (1).  The literal `K_4`s in the first graph
-consist only of its four-vertex component.  In the second they are the
-universal vertex joined to either one of the two triangles.  Adjoining `v`
-gives exactly the asserted literal `K_5`s and attachment patterns.
+The separately audited
+[exact degree-seven neighbourhood theorem](hc7_k7minus_degree7_clique_incidence.md)
+gives (1) directly.  The literal `K_4`s in the first graph consist only of
+its four-vertex component.  In the second they are the universal vertex
+joined to either one of the two triangles.  Adjoining `v` gives exactly the
+asserted literal `K_5`s and attachment patterns.
 \(\square\)
 
 ## Lemma 2 (private-triangle capacity)
@@ -356,8 +340,8 @@ statement 1, while Theorem 4 contradicts statement 2.  \(\square\)
 The density input is Jakobsen's theorem as quoted in Boris Albar,
 [*Coloration of `K_7^-`-minor free graphs*](https://arxiv.org/abs/1402.2806),
 Theorem 2 and Corollary 4.  The local classification uses the separately
-audited degree-seven aligned near-`K_7` proof at the exact branch indicated
-in Lemma 1.
+audited computation-free degree-seven neighbourhood theorem cited in
+Lemma 1.
 
 Theorem 3 is a reduction to the extremal statement in Corollary 5, not a
 proof of that statement.  The order-nineteen description is a structural
