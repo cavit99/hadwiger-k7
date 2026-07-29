@@ -15,7 +15,7 @@ The authoritative project status remains
 ## 1. Candidate paper thesis
 
 **Working title:** *Degree-seven rigidity, private-triangle allocation, and
-seven-boundary contraction criteria without a `K_7^-` minor*.
+critical seven-cut reflection without a `K_7^-` minor*.
 
 The proposed note studies a hypothetical minor-minimal non-six-colourable
 `K_7^-`-minor-free graph.  Its central chain is:
@@ -51,6 +51,11 @@ The proposed note studies a hypothetical minor-minimal non-six-colourable
    whole-component contraction.  Under the no-proper-descent hypothesis, a
    density-eligible contraction that fails has an explicit deletion
    certificate.
+8. In the actual minor-minimal non-six-colourable host, exact boundary-
+   colouring reflection improves the maximum packing and component count to
+   three, eliminating the four-component case.  With three components the
+   boundary is exactly three-chromatic, and every proper three-colouring has
+   colour-class sizes `3,2,2`.
 
 The note must not claim the global `4n-4` extremal target, a standalone bond
 or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
@@ -157,6 +162,29 @@ Its `p=2,3,4` join constructions use the earlier
 theorem SHA-256
 `bbb9919b6d04c08836526d017607d318323fe457baa75d4c3364be85a4ad1ff5`.
 
+### Critical seven-cut capacity and three-component boundary
+
+- [Theorem](../results/hc7_k7minus_critical_seven_cut_capacity.md)
+- [Internal audit](../results/hc7_k7minus_critical_seven_cut_capacity_audit.md)
+- Theorem SHA-256:
+  `d4d650fee168fc2ff0e00a3b7b0faed6ff674ba8cd3c06c263f63c4170656f34`
+
+The theorem gives a self-contained exact boundary-colouring reflection
+argument for the critical host.  It improves the maximum boundary-full
+connected-subgraph packing number from four to three and consequently
+excludes four-component seven-cuts.  If three components remain, each has
+packing number one, the boundary is exactly three-chromatic, and every
+proper three-colouring has class sizes `3,2,2`.  For two components, one has
+boundary-full packing number one, their packing numbers sum to at most three,
+and the boundary has an edge.
+
+The capacity-three conclusion and four-component exclusion overlap older
+audited exact-seven packing and adaptive reflection results.  The new
+deduction from the present `K_7^-` boundary theorem is the exact
+three-component chromatic conclusion.  Proper-minor six-colourability is
+essential, so this does not exclude four-component cuts in arbitrary
+seven-connected graphs or prove the bare extremal theorem.
+
 ## 3. Dependency and trust map
 
 ```text
@@ -187,6 +215,12 @@ seven-connectivity + elementary minor constructions + Mader bounds
 └─ capacity of boundary-full connected subgraphs at most four
    ├─ sharpened seven-cut boundary and interior restrictions
    └─ exact whole-component density/connectivity contraction criterion
+
+proper-minor six-colourability
+└─ exact boundary-colouring reflection
+   + capacity at most four + non-six-colourability
+   ├─ critical-host capacity at most three and no four-component cut
+   └─ three components: boundary chromatic number three, classes 3,2,2
 ```
 
 No computer-assisted finite classification is load-bearing in this chain.
@@ -214,8 +248,8 @@ statement
 
 No theorem of that form is proved here.
 
-The all-degree-seven extraction is complete.  The remaining positive target
-is the seven-cut reduction statement:
+The all-degree-seven extraction is complete.  The remaining positive bare-
+extremal target is the seven-cut reduction statement:
 
 > If a seven-connected graph `G` has `m>=4n-4` and an order-seven cut, then
 > `G` contains a `K_7^-` minor or has a proper seven-connected minor `H` with
@@ -226,15 +260,24 @@ prove the bare extremal theorem and hence the `K_7^-` six-colour conjecture.
 Conversely, the bare theorem immediately supplies the first outcome, so this
 dichotomy is headline-equivalent rather than a routine preliminary lemma.
 
-The first attack has removed `r=5` and reduced every whole-component descent
-to an exact surplus inequality and an exact deletion-connectivity test.  It
-has also proved that all nonsingleton components in the `r=4` case are
-two-connected.  The next attack should therefore treat `r=4`, combining the
-deletion certificate of any density-eligible contraction with the other
-three components, each adjacent to every boundary vertex.  Then come `r=3`
-and the likely hard
-`r=2` `K_5`-minor-free boundary.  Every successful case must produce an
-explicit minor model or threshold-preserving descent.
+The general attack removed `r=5`, reduced every whole-component descent to
+an exact surplus inequality and deletion-connectivity test, and proved that
+all nonsingleton components in the `r=4` case are two-connected.  The
+critical-host reflection attack now removes `r=4` altogether.  The next
+critical-host attack should therefore treat the exact `r=3` form: three
+packing-one components and a three-chromatic boundary whose proper
+three-colourings all have class sizes `3,2,2`.  Then comes the likely hard
+`r=2` case with one component of boundary-full packing number one and a
+nonempty `K_5`-minor-free boundary.  Every successful critical-host case must
+produce an explicit
+minor model or compatible component-side six-colourings, contradicting
+seven-chromaticity.
+
+The bare extremal route still contains an `r=4` case because its arbitrary
+seven-connected host lacks the proper-minor colouring hypothesis.  That
+separate route may seek a threshold-preserving descent but cannot use the
+critical theorem's three-component normal form.  No simultaneous
+chromatic-critical and density-descent minimality reduction is proved here.
 Counterexamples to intermediate lemmas are falsification checks and pivot
 signals, not a successful endpoint.  A normalized Norin--Totschnig
 near-`K_7` upgrade remains the higher-risk fallback.
@@ -301,10 +344,18 @@ longer the minimal extremal input required by the critical-host reduction.
 13. Are the simultaneous-contraction surplus formula and the quantified
     deletion condition exactly equivalent to preservation of
     seven-connectivity?
-14. Is the scope stated sharply enough that no reader can infer a global
+14. In the boundary-colouring reflection lemma, is the pulled-back colouring
+    restricted to the untouched opposite shore, and does the contracted
+    clique force the equality partition to be exact?
+15. Does `\pi_S(G)=\sum_i\mu_i`, together with the `2+2` and `1+3`
+    reflection arguments, exclude every positive composition of four?
+16. Does the hand proof cover every four-critical graph on at most seven
+    vertices with at most nine edges, and hence justify the exact
+    three-component chromatic conclusion without relying on enumeration?
+17. Is the scope stated sharply enough that no reader can infer a global
     `4n-4` extremal theorem, a bond theorem, or two full connected
     transversals?
-15. Are any of the exact neighbourhood, private-triangle, density,
+18. Are any of the exact neighbourhood, private-triangle, density,
     equality-structure, connected-subgraph-capacity, or contraction conclusions already
     explicit or implicit in the literature?
 
@@ -315,7 +366,7 @@ specialists.  Before submission it still requires:
 
 - independent human proof review of the degree-seven, two-clique,
   private-triangle, density, equality-structure, connected-subgraph capacity, and
-  contraction arguments;
+  critical reflection and contraction arguments;
 - conventional novelty and priority searches, including forward citation
   chains of Niu--Zhang, Rolek--Song, Albar, and Norin--Totschnig;
 - correction and renewed hashes for any mathematical change; and

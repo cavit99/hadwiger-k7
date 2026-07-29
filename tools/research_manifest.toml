@@ -7368,6 +7368,76 @@ does_not_prove = [
 keywords = ["K7 minus", "seven boundary", "boundary-full connected subgraphs", "packing capacity"]
 
 [[claims]]
+id = "hc7.k7minus_exact_boundary_colouring_reflection"
+title = "Boundary blocks carried by full connected subgraphs give an exact opposite-shore colouring"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_critical_seven_cut_capacity.md"
+source_heading = "Lemma 1 (exact boundary-colouring reflection)"
+active = false
+audit = "results/hc7_k7minus_critical_seven_cut_capacity_audit.md"
+expected_source_sha256 = "d4d650fee168fc2ff0e00a3b7b0faed6ff674ba8cd3c06c263f63c4170656f34"
+scope = "a seven-vertex separation in a graph whose proper minors are six-colourable, with independent boundary blocks assigned to disjoint boundary-full connected subgraphs and retained singleton blocks forming a clique"
+label_fidelity = "the literal boundary partition is reproduced exactly on the untouched opposite closed shore; no contracted connected subgraph is expanded on its own shore"
+conclusions = [
+  "the opposite closed shore has a proper six-colouring whose equality partition on the literal boundary is exactly the prescribed partition",
+]
+does_not_prove = [
+  "that arbitrary boundary partitions are reflectable without the stated connected-subgraph assignment",
+  "a common boundary colouring of both shores without a separate gluing argument",
+  "the bare seven-connected 4n-4 extremal theorem",
+]
+keywords = ["K7 minus", "seven boundary", "colouring reflection", "exact partition"]
+
+[[claims]]
+id = "hc7.k7minus_critical_seven_cut_capacity"
+title = "A critical K7-minus host has seven-cut packing capacity at most three"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_critical_seven_cut_capacity.md"
+source_heading = "Theorem 3 (critical seven-cut capacity)"
+active = false
+audit = "results/hc7_k7minus_critical_seven_cut_capacity_audit.md"
+expected_source_sha256 = "d4d650fee168fc2ff0e00a3b7b0faed6ff674ba8cd3c06c263f63c4170656f34"
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable, with an order-seven vertex cut"
+label_fidelity = "the literal cut, each component, and every member of each componentwise boundary-full connected-subgraph packing remain fixed"
+conclusions = [
+  "the maximum number of disjoint connected subgraphs outside the cut adjacent to every boundary vertex is at most three",
+  "deleting the cut leaves two or three components and never four",
+  "with two components, one has packing number one, their packing numbers sum to at most three, and the boundary has an edge",
+]
+does_not_prove = [
+  "the same capacity-three bound in arbitrary seven-connected K7-minus-minor-free graphs",
+  "a threshold-preserving proper-minor descent",
+  "the bare seven-connected 4n-4 extremal theorem or either colouring conjecture",
+]
+keywords = ["K7 minus", "critical graph", "seven-cut", "packing capacity", "four components"]
+
+[[claims]]
+id = "hc7.k7minus_three_component_boundary_chromatic"
+title = "A three-component seven-cut in a critical K7-minus host has an exact three-colouring form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_critical_seven_cut_capacity.md"
+source_heading = "Theorem 3 (critical seven-cut capacity)"
+active = false
+audit = "results/hc7_k7minus_critical_seven_cut_capacity_audit.md"
+expected_source_sha256 = "d4d650fee168fc2ff0e00a3b7b0faed6ff674ba8cd3c06c263f63c4170656f34"
+scope = "the three-component case behind an order-seven cut in a seven-connected seven-chromatic K7-minus-minor-free graph whose every proper minor is six-colourable"
+label_fidelity = "the three literal components have packing number one and every colouring conclusion concerns the literal seven-vertex boundary"
+conclusions = [
+  "each of the three components has boundary-full connected-subgraph packing number one",
+  "the boundary has chromatic number three",
+  "every proper three-colouring of the boundary has colour-class sizes 3,2,2",
+]
+does_not_prove = [
+  "a complete classification of the three-component boundary graph",
+  "an explicit K7-minus model or threshold-preserving descent in every three-component case",
+  "the bare seven-connected 4n-4 extremal theorem or either colouring conjecture",
+]
+keywords = ["K7 minus", "seven-cut", "three components", "three-colouring", "boundary partition"]
+
+[[claims]]
 id = "hc7.k7minus_sharpened_seven_cut"
 title = "A seven-cut has at most four components and at most four pairwise disjoint boundary-full connected subgraphs"
 kind = "theorem"
@@ -7790,6 +7860,36 @@ source = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
 target = "hc7.k7minus_seven_cut_contraction"
 kind = "strengthens"
 note = "The connected-subgraph theorem removes the former five-component possibility and applies to arbitrary disjoint boundary-full connected subgraphs."
+
+[[relations]]
+source = "hc7.k7minus_critical_seven_cut_capacity"
+target = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
+kind = "uses"
+note = "The general theorem supplies capacity at most four and the maximum-degree-one boundary when equality holds."
+
+[[relations]]
+source = "hc7.k7minus_critical_seven_cut_capacity"
+target = "hc7.k7minus_exact_boundary_colouring_reflection"
+kind = "uses"
+note = "Exact reflected boundary partitions exclude every 2+2 and 1+3 distribution of four full connected subgraphs."
+
+[[relations]]
+source = "hc7.k7minus_three_component_boundary_chromatic"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+note = "Capacity at most three forces all three componentwise packing numbers to equal one."
+
+[[relations]]
+source = "hc7.k7minus_three_component_boundary_chromatic"
+target = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
+kind = "uses"
+note = "The general boundary theorem supplies the nine-edge bound used in the hand four-critical-graph argument."
+
+[[relations]]
+source = "hc7.k7minus_three_component_boundary_chromatic"
+target = "hc7.k7minus_exact_boundary_colouring_reflection"
+kind = "uses"
+note = "Reflecting one-, two-, and singleton-containing three-block partitions forces the exact chromatic form."
 
 [[relations]]
 source = "hc7.k7minus_sharpened_seven_cut"

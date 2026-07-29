@@ -3,9 +3,10 @@
 **Status:** live conditional refinement; not a proof of the `K_7^-`
 six-colour conjecture or of `HC_7`.  The entrance reduction,
 private-triangle Kempe allocation, all-degree-seven clique exclusion, and
-seven-boundary connected-subgraph and contraction theorems are written proofs with
-separate internal audits GREEN for their current revisions.  The displayed
-finishing target below remains conjectural.
+seven-boundary connected-subgraph, critical-host capacity, and contraction
+theorems are written proofs with separate internal audits GREEN for their
+current revisions.  The displayed finishing target below remains
+conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -223,6 +224,25 @@ the boundary, each adjacent to every boundary vertex, give an explicit
 `K_7^-` model.  In the four-component case, every component is either a
 singleton or is two-connected.
 
+The separately audited
+[critical seven-cut capacity theorem](../results/hc7_k7minus_critical_seven_cut_capacity.md)
+adds the proper-minor six-colouring hypothesis of the hypothetical critical
+host and obtains the strict bound
+
+\[
+                         2\le r\le\pi_S(G)\le3.
+\]
+
+It follows that the critical host has no four-component seven-cut.  More
+precisely, if `r=3`, then every component has boundary-full connected-
+subgraph packing number one, `\chi(G[S])=3`, and every proper three-colouring
+of `G[S]` has class sizes `3,2,2`.  If `r=2`, one component has packing
+number one, the two packing numbers sum to at most three, and `G[S]` has an
+edge.  The capacity-three and four-component conclusions were already
+implicit in older audited exact-seven reflection machinery.  The new use of
+the present `K_7^-` boundary theorem is the exact three-component chromatic
+normal form.
+
 For a component `C_i`, put
 
 \[
@@ -268,30 +288,39 @@ a proper-minor-minimal counterexample to it.  If it were eight-connected,
 then `G-e` would be seven-connected for every edge `e`, while minimum degree
 eight would give `|E(G-e)|>=4|V(G)|-1`; hence `G-e` would be a smaller
 counterexample.  Thus the chosen graph has an order-seven cut, and either
-outcome of the target is contradictory.  The proved theorem does not close
-this dichotomy; it identifies exactly what a successful whole-component
-contraction must satisfy and what separator certificate exists when it
-fails.
+outcome of the target is contradictory.  The proved theorems do not close
+this dichotomy.  The critical-host theorem eliminates `r=4` by a colouring
+argument, while the contraction theorem identifies exactly what a successful
+whole-component contraction in an arbitrary extremal graph must satisfy and
+what separator certificate exists when it fails.
 
 ## 5. Ordered next attacks and research discipline
 
-The all-degree-seven extraction is complete, and the first separator attack
-has removed `r=5`, strengthened the boundary statement to the maximum
-boundary-full connected-subgraph packing number, proved two-connectivity of
-every nonsingleton component when `r=4`, and
-replaced informal contraction language by the exact surplus and connectivity
-criteria above.
+The all-degree-seven extraction is complete.  The general separator attack
+removed `r=5`, strengthened the boundary statement to the maximum boundary-
+full connected-subgraph packing number, proved two-connectivity of every
+nonsingleton component when `r=4`, and replaced informal contraction
+language by the exact surplus and connectivity criteria above.  The
+critical-host reflection attack has now removed `r=4` altogether and
+normalized `r=3`.
 
-The next positive attack should start with `r=4`.  Its boundary has maximum
-degree one.  Split the case according to whether a nonsingleton component is
-density-eligible.  In that branch, use the set `Z` from (13), whose deletion
-together with the component disconnects the graph, and the other three
-boundary-full components.  In the complementary branch, use the exact excess
-identity and the two-connected component interiors.  The required endpoint
-remains an explicit `K_7^-` model or an
-explicit proper seven-connected minor retaining the `4n-4` threshold.  Only
-after closing `r=4` should the programme pass to `r=3` and the likely hard
-`r=2` case.
+The next positive critical-host attack should therefore start from `r=3`.
+Each of its three components has boundary-full packing number one, while the
+boundary is three-chromatic and every proper three-colouring has class sizes
+`3,2,2`.  The objective is to use this exact boundary-colouring restriction
+and the packing-one component structure to produce an explicit `K_7^-`
+model or compatible six-colourings of the component sides, contradicting
+`\chi(G)=7`.  The `r=2` case, with one component of boundary-full packing
+number one and a `K_5`-minor-free nonempty boundary, follows and is likely
+harder.
+
+For the bare extremal theorem, `r=4` remains open because an arbitrary
+seven-connected graph at the density threshold has no proper-minor
+six-colouring responses to reflect.  That separate route may use the surplus
+identity and contraction-failure certificates, and must still handle the
+sparse four-component boundary before reaching the weaker general
+three-component restrictions.  No simultaneous chromatic-critical and
+density-descent minimality reduction has been proved here.
 
 Boundary arithmetic alone cannot finish this: the restrictions permit formal
 excess patterns in which every whole-component contraction loses too much

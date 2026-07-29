@@ -148,7 +148,7 @@ private triangles and the other meeting at least four, and hence an explicit
 transversal statement; that assertion is unnecessary because `K_7^-`
 permits one missing branch-set adjacency.
 
-Independently, the new
+Independently, the
 [seven-boundary connected-subgraph and component-descent theorem](results/hc7_k7minus_seven_boundary_component_descent.md)
 proves that, for an order-seven cut `S`,
 
@@ -164,8 +164,27 @@ two components, has at most nine edges for three, and has maximum degree one
 for four.  In the four-component case every nonsingleton component is
 two-connected.
 
-The same theorem gives the exact density change and an if-and-only-if
-seven-connectivity test for contracting any collection of whole components.
+For the actual minor-minimal non-six-colourable host, the new
+[critical seven-cut capacity theorem](results/hc7_k7minus_critical_seven_cut_capacity.md)
+uses exact boundary-colouring reflection to sharpen this to
+
+\[
+ 2\le r\le\pi_S(G)\le3.
+\]
+
+Thus four components are impossible in the critical host.  If `r=3`, each
+component contains exactly one member of a maximum boundary-full connected-
+subgraph family, `\chi(G[S])=3`, and every proper three-colouring of `G[S]`
+has colour-class sizes `3,2,2`.  If `r=2`, one component has packing number
+one, the two packing numbers sum to at most three, and `G[S]` has an edge.
+The capacity-three conclusion and four-component exclusion were already
+implicit in older audited exact-seven reflection results; the genuinely new
+consequence of the current `K_7^-` boundary theorem is the exact
+three-component chromatic normal form.
+
+The general component-descent theorem gives the exact density change and an
+if-and-only-if seven-connectivity test for contracting any collection of
+whole components.
 In a descent-minimal graph, every density-eligible nonsingleton component
 whose contraction fails therefore has a set `Z` of at most five external
 vertices such that deleting the component and `Z` disconnects the graph.
@@ -176,9 +195,10 @@ patterns, not asserted graph examples.
 The full seven-cut dichotomy—an explicit `K_7^-` model or a proper
 seven-connected minor still at `4n-4`—remains open.  It is equivalent in
 strength to the bare global `4n-4` extremal theorem, not a routine auxiliary
-lemma.  The next positive attack is the `r=4` case: combine its sparse
-boundary, two-connected interiors, and any small contraction-failure
-certificate.  Then come `r=3` and the likely hard `r=2` case.
+lemma.  The critical-host theorem closes `r=4` only by using proper-minor
+six-colourability; it does not remove `r=4` from an arbitrary extremal graph.
+Within the critical host, the next positive attack is therefore the exact
+`r=3` form above, followed by the likely hard `r=2` case.
 
 ## Supporting `HC_7` refinements and decoder status
 
@@ -700,10 +720,13 @@ global two-`K_5` bound, the initial `4n-5` density and order reduction, and
 the generalized private-triangle allocation.  The latter excludes every
 all-degree-seven literal `K_5`, gives `n_7\le8` and `m\ge4n-4`, and describes
 the tight layer exactly.  The equality-specific connectivity and Kempe chain
-is retained as a secondary specialization.  The independent separator
-theorem bounds disjoint boundary-full connected subgraphs and cut components
-by four, proves two-connected interiors in the four-component case, and gives
-exact whole-component contraction criteria.  Its
+is retained as a secondary specialization.  The independent general
+separator theorem bounds disjoint boundary-full connected subgraphs and cut
+components by four, proves two-connected interiors in the four-component
+case, and gives exact whole-component contraction criteria.  In the actual
+critical host, boundary-colouring reflection improves the capacity to three,
+excludes four components, and forces every three-component boundary to be
+three-chromatic with colour-class sizes `3,2,2`.  Its
 [current external-review dossier](active/hc7_k7minus_external_review_dossier.md)
 records exact source hashes and review questions.  This package still proves
 neither the `K_7^-` six-colour conjecture nor `HC_7`.
@@ -792,11 +815,15 @@ records the internal go/no-go assessment; it is not external peer review.
 - **Seven-boundary connected-subgraph and descent obstruction.** In every
   seven-connected `K_7^-`-minor-free graph, an order-seven cut has at most
   four disjoint connected subgraphs outside it that are each adjacent to all
-  seven boundary vertices, and hence at most four components.  The three- and four-component
-  boundaries have at most nine and three edges, respectively; every
-  nonsingleton four-component interior is two-connected.  Exact density and
-  connectivity formulas characterize whole-component contractions and
-  their failure certificates, but do not yet force a descent.
+  seven boundary vertices, and hence at most four components.  The three- and
+  four-component boundaries have at most nine and three edges, respectively;
+  every nonsingleton four-component interior is two-connected.  In a
+  minor-minimal non-six-colourable host, exact boundary-colouring reflection
+  improves the capacity to three and excludes four components.  With three
+  components the boundary is exactly three-chromatic, and every proper
+  three-colouring has class sizes `3,2,2`.  Exact density and connectivity
+  formulas still characterize whole-component contractions and their failure
+  certificates without forcing the global seven-cut descent.
 - **First-hit reductions.** Rado--gammoid and transfer results convert much
   of the palette-to-label problem into literal first-hit geometry, but the
   final response-coupling step remains open.

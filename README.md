@@ -70,10 +70,14 @@ every minor-minimal non-six-colourable `K_7^-`-minor-free graph has at least
 the exact degree sequence and two-clique structure.  It also gives exact
 degree-seven neighbourhoods and proves that outside every order-seven cut
 there are at most four disjoint connected subgraphs each adjacent to every
-boundary vertex, with exact whole-component contraction criteria.  These
-are structural theorems about a hypothetical critical graph and about
-seven-connected `K_7^-`-minor-free graphs; they are not the bare
-extremal `4n-4` theorem, the `K_7^-` six-colour conjecture, or `HC_7`.
+boundary vertex, with exact whole-component contraction criteria.  In the
+minor-minimal non-six-colourable host, exact boundary-colouring reflection
+improves that bound to three and excludes four-component seven-cuts.  A
+three-component cut has a three-chromatic boundary, and every proper
+three-colouring has class sizes `3,2,2`.  These are structural theorems about
+a hypothetical critical graph and about seven-connected
+`K_7^-`-minor-free graphs; they are not the bare extremal `4n-4` theorem, the
+`K_7^-` six-colour conjecture, or `HC_7`.
 
 On the primary `HC_7` route, the remaining work is to synchronize branch-set
 labels and boundary colourings: proper-minor colouring responses must yield
@@ -136,6 +140,7 @@ current.
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [`K_7^-` strict-density frontier](active/hc7_k7minus_density_frontier.md) | Live adjacent route, exact proved entrance, and positive finishing targets |
 | [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Current theorem hashes, dependency map, review questions, and publication gate |
+| [Critical seven-cut capacity](results/hc7_k7minus_critical_seven_cut_capacity.md) | Excludes four-component seven-cuts in the critical host and normalizes the three-component boundary |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
 | [Exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
