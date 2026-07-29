@@ -7194,7 +7194,7 @@ conclusions = [
   "the theorem itself gives order at least twenty-one in the equality layer; the separate equality reduction sharpens this to twenty-nine",
 ]
 does_not_prove = [
-  "the seven-connected 4n-5 extremal target",
+  "either bare seven-connected 4n-4 or 4n-5 extremal target",
   "exclusion of either order-nineteen residue",
   "the K7-minus six-colour conjecture or HC7",
 ]
@@ -7227,6 +7227,31 @@ does_not_prove = [
 keywords = ["K7 minus", "equality density", "five connectivity", "order twenty-nine", "private triangles", "bond", "Kempe components"]
 
 [[claims]]
+id = "hc7.k7minus_equality_kempe_exclusion"
+title = "Kempe-component allocation excludes 4n-5 equality and gives critical-host density 4n-4"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_equality_kempe_exclusion.md"
+source_heading = "Corollary 7 (improved critical-host density)"
+active = false
+audit = "results/hc7_k7minus_equality_kempe_exclusion_audit.md"
+expected_source_sha256 = "127bdbbf35c7048e93ac042c306165d85b348ae0b40c688fe953afd8ab17edc6"
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs for which every proper minor is six-colourable"
+label_fidelity = "the equality K5, its five private triangles, the named colour classes and Kempe components, and every branch set in the resulting K7-minus models remain literal"
+conclusions = [
+  "no graph in scope has m=4n-5",
+  "every graph in scope has m at least 4n-4",
+  "each branch of the equality Hall dichotomy gives an explicit K7-minus model using the five singleton K5 vertices and two disjoint connected branch sets",
+]
+does_not_prove = [
+  "two disjoint connected transversals meeting all five private triangles",
+  "a bond meeting all five private triangles in a wider five-connected graph",
+  "the bare seven-connected 4n-4 extremal theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "strict density", "equality exclusion", "Kempe components", "private triangles"]
+
+[[claims]]
 id = "hc7.k7minus_seven_cut_contraction"
 title = "Exact component and boundary restrictions behind a seven-cut under K7-minus exclusion"
 kind = "theorem"
@@ -7246,7 +7271,7 @@ conclusions = [
 does_not_prove = [
   "that arbitrary component contraction preserves seven-connectivity",
   "a strict density-preserving fragment descent",
-  "the 4n-5 extremal target or either colouring conjecture",
+  "either the 4n-4 or stronger 4n-5 extremal target, or either colouring conjecture",
 ]
 keywords = ["K7 minus", "seven-cut", "component contraction", "boundary connectivity"]
 
@@ -7254,11 +7279,11 @@ keywords = ["K7 minus", "seven-cut", "component contraction", "boundary connecti
 id = "hc7.target.k7minus_extremal_4n_minus_5"
 title = "Every seven-connected graph with m at least 4n-5 contains K7-minus"
 kind = "target"
-status = "conditional-target"
+status = "frozen"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Exact sufficient extremal theorem"
+source_heading = "2. Current density-only sufficient extremal target"
 active = false
-scope = "all seven-connected graphs at the exact density threshold sufficient for the K7-minus six-colour conjecture"
+scope = "all seven-connected graphs at the former, stronger 4n-5 density benchmark"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
 allowed_exits = [
   "an explicit K7-minus minor model",
@@ -7268,14 +7293,34 @@ does_not_prove = ["HC7"]
 keywords = ["K7 minus", "extremal target", "4n-5", "seven connectivity"]
 
 [[claims]]
-id = "hc7.target.k7minus_two_transversals"
-title = "Two disjoint connected transversals of five private triangles"
+id = "hc7.target.k7minus_extremal_4n_minus_4"
+title = "Every seven-connected graph with m at least 4n-4 contains K7-minus"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "3. Tight-density rooted-minor target"
+source_heading = "2. Current density-only sufficient extremal target"
 active = false
-scope = "the all-degree-seven literal K5 equality layer in a critical K7-minus-free host"
+scope = "all seven-connected graphs at the current density-only sufficient threshold for the K7-minus six-colour conjecture"
+label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "a complete structural classification with every exception excluded from the critical host",
+]
+does_not_prove = [
+  "the stronger seven-connected 4n-5 extremal statement",
+  "HC7",
+]
+keywords = ["K7 minus", "extremal target", "4n-4", "seven connectivity"]
+
+[[claims]]
+id = "hc7.target.k7minus_two_transversals"
+title = "Two disjoint connected transversals of five private triangles"
+kind = "target"
+status = "superseded"
+source = "results/hc7_k7minus_equality_kempe_exclusion.md"
+source_heading = "6. Trust boundary"
+active = false
+scope = "the former two-transversal finishing route inside the now-excluded 4n-5 critical-host equality layer"
 label_fidelity = "both connected subgraphs must be disjoint and each must meet all five literal private triangles"
 allowed_exits = [
   "two disjoint connected transversals, giving an L-rooted K2,5 model",
@@ -7284,6 +7329,7 @@ allowed_exits = [
 does_not_prove = [
   "the non-equality density layers",
   "the bare rooted statement without the critical-host hypotheses",
+  "a standalone bond or two-transversal theorem",
   "HC7",
 ]
 keywords = ["K7 minus", "rooted K2,5", "private triangles", "connected transversals"]
@@ -7296,7 +7342,7 @@ status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
 source_heading = "4. Exact seven-cut obstruction"
 active = false
-scope = "a smallest seven-connected counterexample to the 4n-5 extremal target with an exact seven-cut"
+scope = "a smallest seven-connected counterexample to the 4n-4 extremal target with an exact seven-cut"
 label_fidelity = "the descent must preserve seven-connectivity and density surplus, or retain literal component and boundary branch sets in the minor model"
 allowed_exits = [
   "a smaller seven-connected graph with no smaller density surplus",
@@ -7439,6 +7485,30 @@ kind = "uses"
 note = "Equality in the density theorem supplies the two degree-seven K5s and exact private-triangle structure."
 
 [[relations]]
+source = "hc7.k7minus_equality_kempe_exclusion"
+target = "hc7.k7minus_equality_connectivity_reduction"
+kind = "uses"
+note = "The equality reduction supplies the private triangles, Hall dichotomy and edge-critical Kempe components used to construct the two branch sets."
+
+[[relations]]
+source = "hc7.k7minus_equality_kempe_exclusion"
+target = "hc7.k7minus_density_order_rigidity"
+kind = "uses"
+note = "The earlier density theorem reduces the strict improvement to excluding its 4n-5 equality case."
+
+[[relations]]
+source = "hc7.k7minus_equality_kempe_exclusion"
+target = "hc7.k7minus_density_order_rigidity"
+kind = "strengthens"
+note = "Equality exclusion sharpens the critical-host lower bound from 4n-5 to 4n-4."
+
+[[relations]]
+source = "hc7.k7minus_equality_kempe_exclusion"
+target = "hc7.target.k7minus_two_transversals"
+kind = "supersedes"
+note = "The proof takes the target's permitted explicit-K7-minus exit and eliminates the equality host; it does not prove the named two-transversal or bond assertion."
+
+[[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_5"
 target = "hc7.k7minus_density_order_rigidity"
 kind = "uses"
@@ -7451,6 +7521,24 @@ kind = "uses"
 note = "The seven-cut theorem gives the exact fragment obstruction for a smallest extremal counterexample."
 
 [[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_5"
+target = "hc7.target.k7minus_extremal_4n_minus_4"
+kind = "strengthens"
+note = "The frozen 4n-5 benchmark is a strictly stronger bare extremal statement than the currently sufficient 4n-4 target."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_4"
+target = "hc7.k7minus_equality_kempe_exclusion"
+kind = "uses"
+note = "The strict critical-host density theorem makes this bare 4n-4 statement sufficient for the K7-minus six-colour conjecture."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_4"
+target = "hc7.k7minus_seven_cut_contraction"
+kind = "uses"
+note = "The seven-cut theorem supplies the exact fragment obstruction for a smallest counterexample at the new threshold."
+
+[[relations]]
 source = "hc7.target.k7minus_two_transversals"
 target = "hc7.k7minus_equality_connectivity_reduction"
 kind = "uses"
@@ -7460,6 +7548,11 @@ note = "The equality reduction supplies the five-connected host, exact private t
 source = "hc7.target.k7minus_fragment_descent"
 target = "hc7.k7minus_seven_cut_contraction"
 kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_fragment_descent"
+target = "hc7.target.k7minus_extremal_4n_minus_4"
+kind = "subproblem_of"
 
 [[relations]]
 source = "hc7.atomic_h0_bridge_quadrant_normal_form"

@@ -14,8 +14,8 @@ The authoritative project status remains
 
 ## 1. Candidate paper thesis
 
-**Working title:** *Degree-seven rigidity and density in a hypothetical
-critical graph with no `K_7^-` minor*.
+**Working title:** *Degree-seven rigidity and strict density in a
+hypothetical critical graph with no `K_7^-` minor*.
 
 The proposed note studies a hypothetical minor-minimal non-six-colourable
 `K_7^-`-minor-free graph.  Its central chain is:
@@ -33,15 +33,22 @@ The proposed note studies a hypothetical minor-minimal non-six-colourable
 3. The graph contains at most two literal `K_5` subgraphs.
 4. Degree counting and Jakobsen's theorem give `m>=4n-5`, `n>=19`, and two
    exact degree sequences at the first possible order.
-5. At equality, the ten degree-seven vertices form two disjoint literal
-   `K_5`s, the order is at least twenty-nine, either clique deletion is
-   five-connected, and the remaining two-transversal problem has exact
-   overlap, bond, Hall, and edge-critical Kempe formulations.
-6. Independently, every order-seven cut has the exact component and boundary
+5. Under the temporary critical-host equality assumption, the ten
+   degree-seven vertices form two disjoint literal `K_5`s, the order is at
+   least twenty-nine, either clique deletion is five-connected, and the
+   private triangles satisfy exact overlap, bond, Hall, and edge-critical
+   Kempe formulations.
+6. A symmetric Kempe-component allocation turns each outcome of the Hall
+   dichotomy into an explicit `K_7^-`-minor model.  Equality is therefore
+   impossible, and every hypothetical critical host has `m>=4n-4`.
+7. Independently, every order-seven cut has the exact component and boundary
    restrictions recorded in the seven-cut theorem.
 
-The note must not claim the `4n-5` extremal target, the two-transversal
-target, the `K_7^-` six-colour conjecture, or `HC_7`.
+The note must not claim the global `4n-4` extremal target, a standalone bond
+or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
+`HC_7`.  In particular, the equality exclusion uses one permitted missing
+branch-set adjacency; it does not prove that two disjoint connected
+subgraphs each meet all five private triangles.
 
 ## 2. Exact theorem package
 
@@ -88,7 +95,23 @@ current main finishing target.
 The proof gives five-connected clique deletions, a three-connected central
 graph, cross-matching order at most three, order at least twenty-nine, the
 bond and Hall formulations, and the edge-critical common-spine Kempe fork.
-It does not give the required two disjoint connected transversals.
+It does not give the stronger, formerly targeted two disjoint connected
+transversals.
+
+### Equality exclusion and strict critical-host density
+
+- [Theorem](../results/hc7_k7minus_equality_kempe_exclusion.md)
+- [Internal audit](../results/hc7_k7minus_equality_kempe_exclusion_audit.md)
+- Theorem SHA-256:
+  `127bdbbf35c7048e93ac042c306165d85b348ae0b40c688fe953afd8ab17edc6`
+
+The symmetric `p`- and `q`-component argument excludes both outcomes of the
+equality theorem's Hall dichotomy.  It proves that no critical host in the
+displayed package has `m=4n-5`, and hence strengthens the critical-host
+lower bound to `m>=4n-4`.  Its explicit minor models need only one connected
+set to meet all five private triangles; the other may miss one.  Thus it
+does not prove a standalone bond theorem or the existence of two disjoint
+connected subgraphs each meeting all five private triangles.
 
 ### Seven-cut component contraction
 
@@ -115,7 +138,11 @@ exact neighbourhoods + two-K5 bound + Jakobsen/Albar
 └─ density, order nineteen, and exceptional vertices
    └─ equality bookkeeping and connectivity
       ├─ order at least twenty-nine
-      └─ bond, Hall, and edge-critical Kempe formulations
+      ├─ bond, Hall, and edge-critical Kempe formulations
+      └─ symmetric Kempe-component allocation
+         ├─ explicit K7-minus models in both Hall branches
+         ├─ exclusion of the 4n-5 critical-host equality layer
+         └─ critical-host density at least 4n-4
 
 seven-connectivity + elementary minor constructions + Mader bounds
 └─ seven-cut component and boundary restrictions
@@ -123,29 +150,44 @@ seven-connectivity + elementary minor constructions + Mader bounds
 
 No computer-assisted finite classification is load-bearing in this chain.
 The audits are internal checks and must not be described as independent or
-external review.
+external review.  The bond formulation in the equality theorem is an
+equivalent target inside the now-excluded equality host, not a proved
+standalone bond or two-full-transversal theorem.
 
 ## 4. Open statements and proposed next attack
 
-The full sufficient extremal statement remains open:
+The strengthened critical-host density makes the following the current
+density-only sufficient extremal statement:
 
-> Every seven-connected `n`-vertex graph with at least `4n-5` edges contains
+> Every seven-connected `n`-vertex graph with at least `4n-4` edges contains
 > a `K_7^-` minor.
 
-The next bounded positive target is the equality-host specialization:
+The equality-host two-transversal problem is no longer a finishing target:
+the new Kempe allocation excludes every such critical equality host without
+producing two full transversals.  It must not be promoted to the standalone
+statement
 
-> In the five-connected graph obtained by deleting one equality `K_5`, the
-> five private triangles have two vertex-disjoint connected transversals.
+> Every five-connected graph with five specified disjoint triangles has a
+> bond meeting every triangle, or two vertex-disjoint connected subgraphs
+> each meeting every triangle.
 
-Equivalently, the deletion graph has a bond meeting every private triangle.
-The immediate attack should use the edge-critical common four-triangle
-Kempe spine and the exact overlap restrictions.  It should be time-bounded
-and should not be treated as a prerequisite for external review of the
-proved package.
+No theorem of that form is proved here.
 
-If this attack stalls, the second research route is the fragment/descent
-problem isolated by the seven-cut theorem.  A direct attack on the full
-`4n-5` theorem is not recommended at this stage.
+The next useful attacks are instead:
+
+1. classify the first surviving surplus layer `m=4n-4`, equivalently
+   `epsilon=2` or `n_7-s=8` in the density theorem, and identify which parts
+   of the equality Kempe allocation persist without two all-degree-seven
+   `K_5`s;
+2. prove the fragment/descent statement isolated by the seven-cut theorem,
+   now with the `4n-4` density threshold and its surplus preserved; or
+3. upgrade the Norin--Totschnig two-defect near-`K_7` model using the four
+   edges of density above their `4n-8` benchmark.
+
+These attacks should be time-bounded and are not prerequisites for external
+review of the proved package.  The stronger global `4n-5` statement remains
+open, but it is no longer the minimal extremal input required by the
+critical-host reduction.
 
 ## 5. External sources requiring exact checks
 
@@ -186,8 +228,25 @@ problem isolated by the seven-cut theorem.  A direct attack on the full
    exclusion of every cockade exception?
 7. Are the equality order cases exhaustive, particularly the block--cut
    argument at central order eighteen and the `k=1` overlap case?
-8. Are any of the exact neighbourhood, density, or equality conclusions
-   already explicit or implicit in the literature?
+8. In the symmetric `q,c_j` Kempe arguments, do all component-disjointness,
+   colour-availability, and restored-edge assertions hold with the displayed
+   quantifiers?
+9. In the common four-triangle branch, do the selected `p`- and
+   `q`-components and the shortest-path extension form two disjoint connected
+   branch sets with at most the one stated missing adjacency?
+10. In the all-five-triangles branch, does the count `sum n_j<=4` and the
+    choice `n_l<=1` ensure that one connected set meets all five triangles,
+    the other meets at least four, and the resulting seven bags form an
+    explicit `K_7^-` model?
+11. Does Proposition 9's dichotomy exhaust every equality colouring, so that
+    the two Kempe allocations exclude the whole `4n-5` layer and justify
+    only the critical-host lower bound `m>=4n-4`?
+12. Is the scope stated sharply enough that no reader can infer a global
+    `4n-4` extremal theorem, a bond theorem, or two full connected
+    transversals?
+13. Are any of the exact neighbourhood, density, equality-structure, or
+    equality-exclusion conclusions already explicit or implicit in the
+    literature?
 
 ## 7. Review and publication gate
 
@@ -195,7 +254,7 @@ The internal package is ready to send to graph-minor and colouring/Kempe
 specialists.  Before submission it still requires:
 
 - independent human proof review of the degree-seven, two-clique, density,
-  and equality arguments;
+  equality-structure, and equality-exclusion arguments;
 - conventional novelty and priority searches, including forward citation
   chains of Niu--Zhang, Rolek--Song, Albar, and Norin--Totschnig;
 - correction and renewed hashes for any mathematical change; and

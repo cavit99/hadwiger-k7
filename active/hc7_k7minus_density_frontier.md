@@ -2,9 +2,9 @@
 
 **Status:** live conditional refinement; not a proof of the `K_7^-`
 six-colour conjecture or of `HC_7`.  The entrance reduction, equality
-reduction, and seven-cut theorem are written proofs with separate internal
-audits GREEN for their current revisions.  The displayed finishing targets
-below remain conjectural.
+reduction, equality exclusion, and seven-cut theorem are written proofs with
+separate internal audits GREEN for their current revisions.  The displayed
+finishing targets below remain conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -15,12 +15,22 @@ laboratory for this side route.  It does not replace the primary all-degree
 Let `G` be a hypothetical minor-minimal non-six-colourable graph with no
 `K_7^-` minor.  The updated
 [density and low-degree rigidity theorem](../results/hc7_k7minus_five_exceptional_vertices_reduction.md)
-proves
+first proves
 
 \[
  |E(G)|\ge4|V(G)|-5,
  \qquad
  |V(G)|\ge19.                                           \tag{1}
+\]
+
+The
+[Kempe-component equality-exclusion theorem](../results/hc7_k7minus_equality_kempe_exclusion.md)
+rules out the case `|E(G)|=4|V(G)|-5`.  Hence the current proved entrance is
+
+\[
+ |E(G)|\ge4|V(G)|-4,
+ \qquad
+ |V(G)|\ge19.                                           \tag{2}
 \]
 
 If `n_i` counts the degree-`i` vertices and
@@ -36,19 +46,19 @@ then
 \[
  2|E(G)|=(8|V(G)|-10)+\varepsilon,
  \qquad
- 0\le\varepsilon\le |V(G)|-15,                         \tag{2}
+ 2\le\varepsilon\le |V(G)|-15,                         \tag{3}
 \]
 
-with `epsilon` even.  Equality in the density inequality in (1) forces
-`n_7=10` and two disjoint literal `K_5`s covering those ten vertices.  The
-equality refinement in Section 3 improves its order bound to twenty-nine.
+with `epsilon` even.  The former value `epsilon=0` forced `n_7=10` and two
+disjoint literal `K_5`s covering those ten vertices.  Section 3 records why
+that entire critical-host equality layer is now impossible.
 
 The first possible order now has only two degree patterns:
 
 \[
  7^6 8^{13},
  \qquad
- 7^7 8^{11}9^1.                                        \tag{3}
+ 7^7 8^{11}9^1.                                        \tag{4}
 \]
 
 In the second pattern, the two literal `K_5`s meet in one degree-seven
@@ -64,18 +74,18 @@ be `K_{3,4}` or `K_{3,3} dotcup K_1`.  The former anti-neighbourhood
 129-graph residual and aligned near-`K_7` theorem remain valid elsewhere in
 the repository but are not dependencies of this density or equality chain.
 
-## 2. Exact sufficient extremal theorem
+## 2. Current density-only sufficient extremal target
 
 The following statement is sufficient for the `K_7^-` six-colour
 conjecture:
 
 > **Extremal target.** Every seven-connected `n`-vertex graph with at least
-> `4n-5` edges contains a `K_7^-` minor.
+> `4n-4` edges contains a `K_7^-` minor.
 
 Equivalently, every seven-connected `K_7^-`-minor-free graph should satisfy
 
 \[
-                              m\le4n-6.                 \tag{4}
+                              m\le4n-5.                 \tag{5}
 \]
 
 This target is not proved.  It is nevertheless the right global statement
@@ -86,54 +96,39 @@ hypotheses.
 Norin and Totschnig prove that a four-connected graph at the nearby
 `4n-8` threshold contains the graph obtained from `K_7` by deleting two
 edges with a common end, apart from their explicit small exception.  Thus a
-graph in the range (1) already has this two-defect near-`K_7` minor; one
-possible proof of the extremal target is to recover one of its two missing
+graph at the target threshold has four edges of surplus over that benchmark;
+one possible proof is to use this surplus to recover one of the two missing
 adjacencies.  Their paper explicitly identifies a `K_7^-` strengthening as
 the missing extremal input for the six-colour conjecture:
 [Norin--Totschnig, Theorem 6 and Conjecture 21](https://arxiv.org/abs/2507.03244).
 
-## 3. Tight-density rooted-minor target
+The former `4n-5` target is a stronger open statement: it would force the
+minor one edge earlier.  It is no longer the current sufficient obligation,
+because the critical equality layer at that density has been excluded.
 
-Suppose equality holds in the density inequality in (1), and let
+## 3. Excluded critical-host equality layer: Kempe-component allocation
+
+Suppose equality held in the original density inequality (1), and let
 
 \[
                          L=\{v_1,\ldots,v_5\}
 \]
 
 be one of the two all-degree-seven literal `K_5`s.  The proved local
-classification gives five pairwise disjoint triangles
+classification gives five pairwise disjoint private triangles
 
 \[
-                         T_i=N(v_i)-V(L),               \tag{5}
+                         T_i=N(v_i)-V(L),               \tag{6}
 \]
 
-where `T_i` is anticomplete to `L-{v_i}`.
-
-Two vertex-disjoint connected subgraphs of `G-L`, each meeting every
-`T_i`, together with the five singleton vertices of `L`, form a
-`K_7^-`-minor model.  The only permitted missing adjacency is between the
-two connected subgraphs.  In rooted-minor language, this is an
-`L`-rooted `K_{2,5}` model.
-
-This gives the sharper finishing statement for the equality layer:
-
-> **Two-transversal target.** Under the full critical-host hypotheses, the
-> five private triangles in (5) admit two vertex-disjoint connected
-> transversals in `G-L`.
-
-The new
+where `T_i` is anticomplete to `L-{v_i}`.  The
 [equality connectivity and overlap theorem](../results/hc7_k7minus_equality_connectivity_reduction.md)
-gives a substantially stronger reduction.  Put `H=G-L`.  Then
+supplies the exact host for the Kempe argument.  Put `H=G-L`.  Then
 
 \[
  \kappa(H)\ge5,
- \qquad |E(H)|=4|V(H)|-10.                             \tag{6}
+ \qquad |E(H)|=4|V(H)|-10.                             \tag{7}
 \]
-
-Indeed, if a set `Z` of at most four vertices separated `H`,
-seven-connectivity would force each component to meet at least
-`7-|Z|` of the five triangles.  The surviving part of a triangle is a
-clique and lies in only one component, making two components impossible.
 
 Let `A,B` be the two degree-seven `K_5`s, put
 `R=G-(A\cup B)`, and let `k=|E(A,B)|`.  The same theorem proves
@@ -141,50 +136,43 @@ Let `A,B` be the two degree-seven `K_5`s, put
 \[
  \kappa(R)\ge3,
  \qquad |E(R)|=4|V(R)|-15+k,
- \qquad k\le3.                                         \tag{7}
+ \qquad k\le3,                                         \tag{8}
 \]
 
-It also gives the sharp current order information
+and, before the final exclusion, gives
 
 \[
  |V(R)|\ge19,
  \qquad
- |V(G)|\ge29.                                          \tag{8}
+ |V(G)|\ge29.                                          \tag{9}
 \]
 
-These bounds are written deductions from nonseparating-vertex and degree
-counts, not finite enumeration.
-
-More generally, if `H-Z` is disconnected, then every component `C` of
-`H-Z` satisfies
-
-\[
- |N_H(C)|+
- |\{i:C\cap T_i\ne\varnothing\}|\ge7.                  \tag{9}
-\]
-
-The target is equivalently a bond of `H` meeting every triangle.  Fournier's
-cyclability theorem and five-connectivity give a cycle of `H` through all
-fifteen triangle vertices, but a terminal-spanning cycle alone is
-insufficient: five triangles joined cyclically by one edge per consecutive
-pair give an explicit two-connected obstruction.  The missing positive
-argument must use the at-least-five attachments of the off-cycle bridges.
-
-Critical colouring supplies a second exact constraint.  In every
+It also proves an exact Hall and edge-critical Kempe fork.  In every
 six-colouring of `H`, either four triangles use one common three-colour set,
-or at least two colours occur on all five triangles.  This is the complete
-Hall obstruction to extending the colouring across `L`.  Edge-criticality
-sharpens it: for every edge `v_ix` with `x\in T_i`, a six-colouring of the
-edge-deleted graph forces three two-colour components rooted at `x`, each
-meeting its prescribed triangle.  In the rigid four-triangle-palette branch,
-each component meets all four specified triangles.  They share the same
-four root-coloured triangle vertices, so the remaining task is to split or
-reroute this common spine into two disjoint connected transversals.
+or at least two colours occur on all five triangles.  For every edge
+`v_ix`, with `x\in T_i`, a six-colouring of the edge-deleted graph forces
+three two-colour components rooted at `x`; in the rigid branch, each meets
+the same four specified triangles.
 
-Wollan's exact rooted-`K_{2,t}` theorem is the closest general input, but at
-`t=5` its edge threshold is `5|V(H)|-14`, far above the present density and
-it does not close this specialization.  See
-[Wollan, Theorem 1.3](https://doi.org/10.1002/jgt.20301).
+The new
+[Kempe-component allocation theorem](../results/hc7_k7minus_equality_kempe_exclusion.md)
+applies the argument symmetrically to the colour absent from `L`.  In the
+rigid branch, a `p`-component and a disjoint `q`-component meet the same four
+triangles, and one can absorb a path from the fifth.  In the all-five-colour
+branch, a three-colour count selects two `p`-components whose connected
+union meets all five triangles and a disjoint `q`-component meeting at least
+four.  In either case these two connected sets and the five singleton
+vertices of `L` form an explicit `K_7^-`-minor model, with at most the one
+permitted owner adjacency missing.  This contradiction excludes equality
+and proves (2).
+
+The proof does **not** establish the stronger standalone two-transversal
+statement, nor the equivalent assertion that `H` has a bond meeting all five
+private triangles.  One of the two connected sets may miss the fifth
+triangle.  The critical equality host is nevertheless eliminated because a
+`K_7^-` model permits exactly that one missing branch-set adjacency.  The old
+two-transversal target is therefore retired as a live obligation, not
+promoted as a proved theorem.
 
 ## 4. Exact seven-cut obstruction
 
@@ -211,7 +199,7 @@ whenever it remained seven-connected.
 The next structural step is therefore a genuine fragment theorem, not a
 density recount:
 
-> **Fragment target.** In a smallest counterexample to (4), either a
+> **Fragment target.** In a smallest counterexample to (5), either a
 > contraction preserving seven-connectivity reduces the order without
 > reducing the density surplus, or an order-seven fragment satisfying (10)
 > yields an explicit `K_7^-` model.
@@ -223,17 +211,17 @@ show that an arbitrary component contraction preserves seven-connectivity.
 
 The next useful work is one of:
 
-1. prove the bond target from (6)--(9), by splitting or rerouting the shared
-   four-triangle Kempe spine;
+1. analyze the new tight critical-host layer `epsilon=2`, where
+   `n_7=8+s`, for structure that survives at unbounded order;
 2. prove the fragment target by analyzing the small-connectivity boundary
    graphs in (10); or
-3. upgrade a normalized Norin--Totschnig near-`K_7` model using the three
+3. upgrade a normalized Norin--Totschnig near-`K_7` model using the four
    edges of surplus over `4n-8`.
 
-Further enumeration below order nineteen is obsolete globally, and below
-order twenty-nine in the equality layer.  Enumeration is useful only if it
-exposes a lemma that survives at unbounded order.  Neither random tests nor
-finite host elimination may be promoted as a proof of (4).
+Further enumeration below order nineteen is obsolete globally, and the
+former critical-host equality layer is empty.  Enumeration is useful only
+if it exposes a lemma that survives at unbounded order.  Neither random
+tests nor finite host elimination may be promoted as a proof of (5).
 
 The [current external-review dossier](hc7_k7minus_external_review_dossier.md)
 packages this computation-free density/equality spine for specialist
