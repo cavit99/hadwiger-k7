@@ -2,8 +2,8 @@
 
 **Status:** written proof; separate internal audit GREEN.  This is a
 structural theorem for seven-connected `K_7^-`-minor-free graphs.  It does
-not prove the extremal `4n-5` target, the `K_7^-` six-colour conjecture, or
-`HC_7`.
+not prove the current extremal `4n-4` target, the stronger `4n-5` benchmark,
+the `K_7^-` six-colour conjecture, or `HC_7`.
 
 ## Theorem 1
 
@@ -272,4 +272,5 @@ edges.  The primary source is W. Mader,
 The theorem identifies what must fail when components behind an exact
 seven-cut are contracted.  It does not show that contracting an arbitrary
 connected subgraph preserves seven-connectivity, and it does not provide a
-strict recursive descent by itself.
+strict recursive descent by itself.  In particular, it proves neither the
+current global `4n-4` extremal target nor the stronger `4n-5` benchmark.

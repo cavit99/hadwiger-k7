@@ -147,9 +147,10 @@ defect count and the ten-vertex union bound give at least five degree-eight
 vertices in no literal `K_5`; five such vertices cannot be a clique, so two
 are nonadjacent.
 
-The result does not prove the `4n-5` extremal target, exclude the two
-order-nineteen degree patterns, prove the five-exceptional-vertices target,
-or prove either colouring conjecture.  The local proof depends on the
-audited computation-free degree-seven theorem and is not a theorem of bare
+The result proves neither the current bare `4n-4` extremal target nor the
+stronger `4n-5` benchmark.  It does not exclude the two order-nineteen
+degree patterns, prove the five-exceptional-vertices target, or prove either
+colouring conjecture.  The local proof depends on the audited
+computation-free degree-seven theorem and is not a theorem of bare
 seven-connectivity.  No finite enumeration is a dependency anywhere in
 this density proof spine.

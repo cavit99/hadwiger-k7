@@ -63,6 +63,15 @@ The main internally audited reductions currently establish that:
   into actual full-neighbourhood separations or smaller list-critical
   subgraphs.
 
+Separately, a computation-free, internally audited route toward the adjacent
+`K_7^-` problem, where `K_7^-` is `K_7` with one edge deleted, proves that
+every minor-minimal non-six-colourable `K_7^-`-minor-free graph has at least
+`4n-4` edges.  It also gives exact degree-seven neighbourhoods, excludes the
+former `4n-5` equality layer by explicit minor models, and restricts every
+order-seven cut.  This is a structural theorem about a hypothetical critical
+graph; it is not the bare extremal `4n-4` theorem, the `K_7^-` six-colour
+conjecture, or `HC_7`.
+
 These results substantially constrain a counterexample, but they do not yet
 synchronize the required branch-set labels and boundary colourings. The
 remaining work is to turn proper-minor colouring responses into either an
@@ -88,6 +97,10 @@ and the multi-component colouring-response theorem.  The boundary-labelled
 degree-seven result is a possible secondary application, subject to a careful
 overlap review against the public unlabelled near-clique theorem.
 
+The adjacent `K_7^-` chain is a second, narrower manuscript candidate with no
+load-bearing finite classification.  Its current specialist-review dossier
+records the exact theorem revisions and the limits of the `4n-4` conclusion.
+
 This is not a proof of $HC_7$, evidence that completion is near, or a
 confirmed novelty claim.  In particular, Norin and Totschnig already prove
 the global unlabelled result that every non-six-colourable graph contains a
@@ -102,8 +115,10 @@ reproduction of the load-bearing finite classifications.  See the
 [external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md)
 and the
 [verification-gate assessment](active/hc7_verification_gate_report.md#partial-results-paper-blueprint-only-until-the-external-review-gates-pass).
-Intensive autonomous proof search is paused pending the external review gate
-described there; the open proof target remains mathematically current.
+Intensive autonomous proof search on the primary `HC_7` programme is paused
+pending the external review gate described there; the adjacent `K_7^-`
+density programme remains live.  Both open targets remain mathematically
+current.
 
 ## Start here
 
@@ -115,6 +130,8 @@ described there; the open proof target remains mathematically current.
 | [Live case verification map](active/hc7_live_case_dag.md) | Exhaustive global chain, conditional refinements, and every missing descent arrow |
 | [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Primary all-degree theorem, direct inputs, and trust boundary |
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
+| [`K_7^-` strict-density frontier](active/hc7_k7minus_density_frontier.md) | Live adjacent route, exact proved entrance, and positive finishing targets |
+| [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Current theorem hashes, dependency map, review questions, and publication gate |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
 | [Exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |

@@ -27,12 +27,14 @@ The principal dependency is
 `results/hc7_k7minus_equality_connectivity_reduction.md` at SHA-256
 
 ```text
-451fd13b2fbd688cafb6f8005aefab92cc90eb7a1b92614ca10bdb7bdc9cc128
+9a3e167b4b5be1d1ff9dbafb16a0e7ed6130fc58ad947603a246fa5022c88307
 ```
 
 Its GREEN audit covers the literal `K_5` `A`, its five pairwise disjoint
 private triangles, connectedness of `H=G-A`, and Proposition 9 with the exact
 palettes and rooted `p,c_j` components used here.
+The dependency's mathematical content is unchanged; its new revision only
+records that this theorem subsequently closes the equality layer.
 
 The density corollary also uses
 `results/hc7_k7minus_five_exceptional_vertices_reduction.md` at SHA-256

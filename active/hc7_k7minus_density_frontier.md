@@ -196,32 +196,59 @@ The theorem isolates the exact failure of naive contraction: contracting
 all components gives `I_r\vee G[S]`, and that minor would contain `K_7^-`
 whenever it remained seven-connected.
 
-The next structural step is therefore a genuine fragment theorem, not a
-density recount:
+The main structural step is therefore the following positive cut-reduction
+theorem, not a density recount:
 
-> **Fragment target.** In a smallest counterexample to (5), either a
-> contraction preserving seven-connectivity reduces the order without
-> reducing the density surplus, or an order-seven fragment satisfying (10)
-> yields an explicit `K_7^-` model.
+> **Seven-cut reduction target.** Let `G` be seven-connected with
+> `|E(G)|>=4|V(G)|-4`, and let `S` be a vertex cut of order seven.  Then
+> either `G` contains a `K_7^-` minor, or `G` has a proper minor `H` that is
+> seven-connected and satisfies `|E(H)|>=4|V(H)|-4`.
 
-This target is open.  In particular, the seven-cut theorem does not itself
-show that an arbitrary component contraction preserves seven-connectivity.
+This target is open.  It would prove (5).  Choose a proper-minor-minimal
+counterexample to the extremal target.  If it were eight-connected, then
+`G-e` would be seven-connected for every edge `e`, while minimum degree eight
+would give `|E(G-e)|>=4|V(G)|-1`; hence `G-e` would be a smaller
+counterexample.  Thus the chosen graph has an order-seven cut, and either
+outcome of the target is contradictory.  The existing seven-cut theorem does
+not itself show that an arbitrary component contraction preserves
+seven-connectivity or the density threshold.
 
-## 5. Research discipline for this route
+## 5. Ordered next attacks and research discipline
 
-The next useful work is one of:
+First perform one short proof-extraction pass on the following target:
 
-1. analyze the new tight critical-host layer `epsilon=2`, where
-   `n_7=8+s`, for structure that survives at unbounded order;
-2. prove the fragment target by analyzing the small-connectivity boundary
-   graphs in (10); or
-3. upgrade a normalized Norin--Totschnig near-`K_7` model using the four
-   edges of surplus over `4n-8`.
+> **All-degree-seven clique target.** Under the critical-host hypotheses of
+> Section 1, no literal `K_5` has all five vertices of degree seven.
+
+This is conjectural until it is written and independently audited.  The
+existing equality proof suggests that its colouring and Kempe-component
+allocation needs only such a clique, its five private triangles, and
+connectedness after deleting the clique; the current theorem is nevertheless
+scoped to equality and cannot simply be cited outside that scope.  A valid
+proof would give `n_7<=8` directly.  At the tight value `epsilon=2`, it would
+force `n_7=8`, `s=0`, degree sequence `7^8 8^{n-8}`, and exactly two literal
+`K_5`s, each with four degree-seven vertices; the cliques would be disjoint
+or meet in their common degree-eight vertex.  This strengthens the structure
+but does not improve the numerical `4n-4` bound, so it is a bounded
+consolidation pass rather than a new long campaign.
+
+After that extraction, the principal attack is the seven-cut reduction
+target above.  Analyze `r=5,4,3` first, using the edgeless, matching, and
+at-most-nine-edge boundary conclusions in (10), and then the harder `r=2`
+case.  Every closed case must end with either an explicit `K_7^-`-minor model
+or an explicit proper seven-connected minor retaining the `4n-4` threshold.
+The normalized Norin--Totschnig near-`K_7` upgrade remains a higher-risk
+fallback because four global surplus edges need not occur at the deficient
+branch set.
 
 Further enumeration below order nineteen is obsolete globally, and the
 former critical-host equality layer is empty.  Enumeration is useful only
 if it exposes a lemma that survives at unbounded order.  Neither random
 tests nor finite host elimination may be promoted as a proof of (5).
+Likewise, a smallest-counterexample assumption is a standard engine for a
+positive universal proof; constructing counterexamples to intermediate
+lemmas is only a falsification check.  A new barrier is a stop or pivot
+signal, not the success criterion for this route.
 
 The [current external-review dossier](hc7_k7minus_external_review_dossier.md)
 packages this computation-free density/equality spine for specialist

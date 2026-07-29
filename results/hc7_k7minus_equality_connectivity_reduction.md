@@ -5,6 +5,13 @@ This theorem concerns the equality layer of the proposed `K_7^-`
 six-colour route.  It does not prove the two-transversal target, the
 `K_7^-` six-colour conjecture, or `HC_7`.
 
+**Subsequent status:** the later audited
+[Kempe-component allocation theorem](hc7_k7minus_equality_kempe_exclusion.md)
+uses Proposition 9 below to exclude this equality layer by an explicit
+`K_7^-`-minor model.  It does not prove the stronger bond or two-full-
+transversal statement.  The structural results in this file remain the
+inputs checked by its adjacent audit.
+
 Here `K_7^-` is `K_7` with one edge deleted.  Let `G` be a graph satisfying
 
 \[
@@ -690,16 +697,18 @@ Thus `c_j` remains available at `a_j`; as before, colours outside
 `\{p,c_j\}` remain available.  This assignment colours `G`, and the
 contradiction proves (36).  \(\square\)
 
-## Remaining obstruction and trust boundary
+## Subsequent resolution and trust boundary
 
 Theorem 2 upgrades the former three-connectivity reduction to
 five-connectivity, while Corollary 3 isolates a three-connected central
-subgraph with exact degree and overlap data.  The equality layer is not
-closed.  Its first possible order is now twenty-nine.  In any surviving
-`k=1` case, every three off-matching common neighbours with distinct owners
-in `A` must separate `R`; for `k=0`, the analogous statement holds for
-every four such vertices.  When `k=3` there is no off-matching common
-neighbour, and when `k=2` all such vertices have one common owner in `A`.
+subgraph with exact degree and overlap data.  These results alone do not
+close the equality layer; before the subsequent Kempe exclusion, its first
+possible order was twenty-nine.  In the structural residue described by
+this theorem, any `k=1` case has every three off-matching common neighbours
+with distinct owners in `A` separating `R`; for `k=0`, the analogous
+statement holds for every four such vertices.  When `k=3` there is no
+off-matching common neighbour, and when `k=2` all such vertices have one
+common owner in `A`.
 
 Corollary 7 does not by itself give two connected transversals.  For
 example, arrange five disjoint triangles in a ring, with exactly one edge
@@ -707,17 +716,17 @@ between each consecutive pair, and use two edges inside each triangle to
 form a cycle through all fifteen vertices.  Any connected subgraph meeting
 all five triangles uses at least four of the five inter-triangle edges, so
 two vertex-disjoint such subgraphs cannot exist.  This example is only
-two-connected.  The remaining task is therefore a bridge or rerouting
-argument that uses five-connectivity, the exact overlap restrictions, and
-the critical colouring dichotomy in Proposition 8.
+two-connected.  A bridge or rerouting argument using five-connectivity was
+therefore a natural route to the stronger standalone statement, but it is
+no longer a finishing obligation for the equality host.
 
 Proposition 9 strengthens that dichotomy but still does not supply two
 disjoint connected transversals.  In its rigid branch, the three forced
 Kempe components share the same four `p`-coloured triangle vertices.  The
-remaining positive step is a first-common-vertex splitting or bridge
-rerouting argument that turns this shared four-triangle spine into two
-disjoint connected subgraphs; edge deletion and contraction of the same
-edge do not by themselves give independent spines.
+later Kempe-component allocation theorem introduces symmetric components
+with a disjoint colour palette and obtains the permitted explicit
+`K_7^-`-minor exit, closing the equality layer without inferring two full
+transversals.
 
 The external input in Corollary 7 is Fournier's cyclability theorem, in the
 form already checked in the separate internal audit of

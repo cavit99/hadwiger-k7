@@ -90,7 +90,7 @@ current main finishing target.
 - [Theorem](../results/hc7_k7minus_equality_connectivity_reduction.md)
 - [Internal audit](../results/hc7_k7minus_equality_connectivity_reduction_audit.md)
 - Theorem SHA-256:
-  `451fd13b2fbd688cafb6f8005aefab92cc90eb7a1b92614ca10bdb7bdc9cc128`
+  `9a3e167b4b5be1d1ff9dbafb16a0e7ed6130fc58ad947603a246fa5022c88307`
 
 The proof gives five-connected clique deletions, a three-connected central
 graph, cross-matching order at most three, order at least twenty-nine, the
@@ -118,7 +118,7 @@ connected subgraphs each meeting all five private triangles.
 - [Theorem](../results/hc7_k7minus_seven_cut_contraction.md)
 - [Internal audit](../results/hc7_k7minus_seven_cut_contraction_audit.md)
 - Theorem SHA-256:
-  `3a746698ba61603ccbdc236d79afd5a4ba1f860c84a987b168f25cd962a00586`
+  `bbb9919b6d04c08836526d017607d318323fe457baa75d4c3364be85a4ad1ff5`
 
 The written proof is computation-free.  The finite scan recorded in its
 audit only corroborates one elementary seven-vertex lemma.
@@ -154,7 +154,7 @@ external review.  The bond formulation in the equality theorem is an
 equivalent target inside the now-excluded equality host, not a proved
 standalone bond or two-full-transversal theorem.
 
-## 4. Open statements and proposed next attack
+## 4. Open statements and ordered next attacks
 
 The strengthened critical-host density makes the following the current
 density-only sufficient extremal statement:
@@ -173,21 +173,35 @@ statement
 
 No theorem of that form is proved here.
 
-The next useful attacks are instead:
+The immediate, time-bounded extraction target is to prove that no literal
+`K_5` in the critical host has all five vertices of degree seven.  The
+existing Kempe allocation appears to need only that clique, its five private
+triangles, critical edge-deletion colourings, and connectedness after deleting
+the clique.  This remains conjectural until restated outside the equality
+context and separately audited.  It would imply `n_7<=8` and reduce the
+`m=4n-4` layer to degree sequence `7^8 8^{n-8}`, with exactly two `K_5`s
+each containing four degree-seven vertices.  It would strengthen the
+structure, not the current numerical density bound.
 
-1. classify the first surviving surplus layer `m=4n-4`, equivalently
-   `epsilon=2` or `n_7-s=8` in the density theorem, and identify which parts
-   of the equality Kempe allocation persist without two all-degree-seven
-   `K_5`s;
-2. prove the fragment/descent statement isolated by the seven-cut theorem,
-   now with the `4n-4` density threshold and its surplus preserved; or
-3. upgrade the Norin--Totschnig two-defect near-`K_7` model using the four
-   edges of density above their `4n-8` benchmark.
+The principal attack after that extraction is the positive seven-cut
+reduction statement:
 
-These attacks should be time-bounded and are not prerequisites for external
-review of the proved package.  The stronger global `4n-5` statement remains
-open, but it is no longer the minimal extremal input required by the
-critical-host reduction.
+> If a seven-connected graph `G` has `m>=4n-4` and an order-seven cut, then
+> `G` contains a `K_7^-` minor or has a proper seven-connected minor `H` with
+> `|E(H)|>=4|V(H)|-4`.
+
+Together with minor minimality and the easy eight-connected case, this would
+prove the bare extremal theorem and hence the `K_7^-` six-colour conjecture.
+The attack should treat the `r=5,4,3` boundary types first and reserve the
+`r=2` `K_5`-minor-free boundary as the likely hard kernel.  Every successful
+case must produce an explicit minor model or threshold-preserving descent.
+Counterexamples to intermediate lemmas are falsification checks and pivot
+signals, not a successful endpoint.  A normalized Norin--Totschnig
+near-`K_7` upgrade remains the higher-risk fallback.
+
+These attacks are not prerequisites for external review of the proved
+package.  The stronger global `4n-5` statement remains open, but it is no
+longer the minimal extremal input required by the critical-host reduction.
 
 ## 5. External sources requiring exact checks
 

@@ -7209,7 +7209,7 @@ source = "results/hc7_k7minus_equality_connectivity_reduction.md"
 source_heading = "Theorem 2 (five-connected clique deletion)"
 active = false
 audit = "results/hc7_k7minus_equality_connectivity_reduction_audit.md"
-expected_source_sha256 = "451fd13b2fbd688cafb6f8005aefab92cc90eb7a1b92614ca10bdb7bdc9cc128"
+expected_source_sha256 = "9a3e167b4b5be1d1ff9dbafb16a0e7ed6130fc58ad947603a246fa5022c88307"
 scope = "the equality-density layer of a minor-minimal non-six-colourable K7-minus-minor-free graph"
 label_fidelity = "the two literal K5s, their private triangles, cross-edge matching, and all minor-model branch sets remain explicit"
 conclusions = [
@@ -7260,7 +7260,7 @@ source = "results/hc7_k7minus_seven_cut_contraction.md"
 source_heading = "Theorem 1"
 active = false
 audit = "results/hc7_k7minus_seven_cut_contraction_audit.md"
-expected_source_sha256 = "3a746698ba61603ccbdc236d79afd5a4ba1f860c84a987b168f25cd962a00586"
+expected_source_sha256 = "bbb9919b6d04c08836526d017607d318323fe457baa75d4c3364be85a4ad1ff5"
 scope = "all seven-connected K7-minus-minor-free graphs with an order-seven vertex cut"
 label_fidelity = "every literal cut component is retained as one independent full boundary branch set in the quotient"
 conclusions = [
@@ -7335,22 +7335,42 @@ does_not_prove = [
 keywords = ["K7 minus", "rooted K2,5", "private triangles", "connected transversals"]
 
 [[claims]]
+id = "hc7.target.k7minus_all_degree7_k5_exclusion"
+title = "No critical K7-minus host contains an all-degree-seven literal K5"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_density_frontier.md"
+source_heading = "5. Ordered next attacks and research discipline"
+active = false
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
+label_fidelity = "the five literal clique vertices and their five private external triangles must be retained in every Kempe component and final minor model"
+allowed_exits = [
+  "a written proof that any all-degree-seven literal K5 yields an explicit K7-minus minor",
+]
+does_not_prove = [
+  "a numerical critical-host bound stronger than 4n-4",
+  "the bare seven-connected 4n-4 extremal target",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree seven", "literal K5", "Kempe components", "tight density"]
+
+[[claims]]
 id = "hc7.target.k7minus_fragment_descent"
-title = "Seven-cut fragment gives a density-preserving descent or K7-minus model"
+title = "Every seven-cut at 4n-4 gives K7-minus or a threshold-preserving proper minor"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
 source_heading = "4. Exact seven-cut obstruction"
 active = false
-scope = "a smallest seven-connected counterexample to the 4n-4 extremal target with an exact seven-cut"
-label_fidelity = "the descent must preserve seven-connectivity and density surplus, or retain literal component and boundary branch sets in the minor model"
+scope = "seven-connected graphs with at least 4n-4 edges and a vertex cut of order seven"
+label_fidelity = "the descent must preserve seven-connectivity and the 4n-4 density threshold, or retain literal component and boundary branch sets in the minor model"
 allowed_exits = [
-  "a smaller seven-connected graph with no smaller density surplus",
+  "a proper seven-connected minor H with at least 4|V(H)|-4 edges",
   "an explicit K7-minus minor model",
 ]
 does_not_prove = [
   "that every component contraction preserves seven-connectivity",
-  "the full extremal target without closing the internally eight-connected branch",
+  "the stronger seven-connected 4n-5 extremal statement",
   "HC7",
 ]
 keywords = ["K7 minus", "seven-cut", "fragment descent", "density surplus"]
@@ -7543,6 +7563,18 @@ source = "hc7.target.k7minus_two_transversals"
 target = "hc7.k7minus_equality_connectivity_reduction"
 kind = "uses"
 note = "The equality reduction supplies the five-connected host, exact private triangles, order bound, and bond formulation for the target."
+
+[[relations]]
+source = "hc7.target.k7minus_all_degree7_k5_exclusion"
+target = "hc7.k7minus_degree7_neighbourhood_types"
+kind = "uses"
+note = "The exact neighbourhood theorem supplies the local types; seven-connectivity then rules out a second K5 through a clique vertex and yields five pairwise disjoint private triangles."
+
+[[relations]]
+source = "hc7.target.k7minus_all_degree7_k5_exclusion"
+target = "hc7.k7minus_equality_connectivity_reduction"
+kind = "related_to"
+note = "The proposed proof must restate and audit the edge-critical Kempe fork outside its current equality-scoped source rather than cite that theorem as a dependency."
 
 [[relations]]
 source = "hc7.target.k7minus_fragment_descent"

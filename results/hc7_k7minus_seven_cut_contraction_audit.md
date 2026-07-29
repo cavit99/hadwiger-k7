@@ -5,7 +5,7 @@ Audited file: `results/hc7_k7minus_seven_cut_contraction.md`.
 Audited SHA-256:
 
 ```text
-3a746698ba61603ccbdc236d79afd5a4ba1f860c84a987b168f25cd962a00586
+bbb9919b6d04c08836526d017607d318323fe457baa75d4c3364be85a4ad1ff5
 ```
 
 **Verdict:** **GREEN** for the exact revision above.
@@ -14,6 +14,11 @@ This is a separate internal mathematical audit, not external peer review.
 The cold audit checked this revision, including the seven-vertex
 ten-edge lemma, by reconstructing its proof and by an independent exhaustive
 scan of all labelled seven-vertex graphs.
+The mathematical statement and proof are unchanged from the previously
+audited SHA-256
+`3a746698ba61603ccbdc236d79afd5a4ba1f860c84a987b168f25cd962a00586`;
+the current revision only updates the trust boundary to name both the current
+`4n-4` target and the stronger historical `4n-5` benchmark.
 
 ## 1. Full component neighbourhoods and the quotient
 
@@ -110,4 +115,5 @@ no computation is used.
 The theorem does not say that component contraction preserves
 seven-connectivity.  Instead it proves that preservation would force the
 forbidden minor.  It supplies no strict density-preserving descent and does
-not prove the global `4n-5` extremal target.
+not prove the current global `4n-4` extremal target or the stronger `4n-5`
+benchmark.

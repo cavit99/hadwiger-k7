@@ -6,7 +6,7 @@ Audited file:
 Audited SHA-256:
 
 ```text
-451fd13b2fbd688cafb6f8005aefab92cc90eb7a1b92614ca10bdb7bdc9cc128
+9a3e167b4b5be1d1ff9dbafb16a0e7ed6130fc58ad947603a246fa5022c88307
 ```
 
 **Verdict:** **GREEN** for the exact revision above.
@@ -15,6 +15,12 @@ This is a separate internal mathematical audit, not external peer review.
 Two cold reviews checked the connectivity and order-bound revision,
 including the order-eighteen block--cut-tree lemma and all four matching
 cases.  A further cold review checked the edge-critical Kempe fork.
+The mathematical theorem and proof are unchanged from the previously
+audited SHA-256
+`451fd13b2fbd688cafb6f8005aefab92cc90eb7a1b92614ca10bdb7bdc9cc128`;
+the current revision adds only an explicit subsequent-status note and
+rephrases the final trust boundary to acknowledge the later equality
+exclusion.
 
 ## 1. Scope and dependencies
 
@@ -156,11 +162,13 @@ four specified triangles.
 ## 7. Trust boundary
 
 No unresolved assumption remains in the stated theorem.  The result does
-not prove the bond or two-transversal target, close the equality layer,
-handle positive density surplus, prove the `K_7^-` six-colour conjecture, or
-prove `HC_7`.  The terminal-spanning cycle is explicitly not promoted to a
-transversal theorem; the recorded ring of five triangles is a valid
-two-connected barrier to that inference.  The three Kempe components in
-the rigid branch all contain the same four triangle vertices; the audit
-does not infer two disjoint connected transversals from these overlapping
-components.
+not itself prove the bond or two-transversal target, close the equality
+layer, handle positive density surplus, prove the `K_7^-` six-colour
+conjecture, or prove `HC_7`.  The separately audited later
+`hc7_k7minus_equality_kempe_exclusion.md` closes the equality layer through
+the permitted explicit-`K_7^-` exit; this audit does not attribute that
+conclusion to the present theorem.  The terminal-spanning cycle is not
+promoted to a transversal theorem, and the recorded ring of five triangles
+remains a valid two-connected barrier to that inference.  The three Kempe
+components in the rigid branch all contain the same four triangle vertices;
+no two-full-transversal conclusion is inferred from their overlap.

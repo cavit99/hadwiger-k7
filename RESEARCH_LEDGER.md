@@ -129,7 +129,7 @@ stronger open extremal benchmark, but it is no longer the exact threshold
 needed by the critical-host reduction.  The current proof obligations are
 recorded in the [density frontier](active/hc7_k7minus_density_frontier.md).
 
-### 3. Immediate structural laboratory: equality exclusion and seven-cuts
+### 3. Immediate structural laboratory: strict density and seven-cut descent
 
 Under the now-contradictory critical-host equality assumption, the host has
 ten degree-seven vertices covered by two disjoint literal `K_5`s.  The
@@ -175,6 +175,19 @@ it is edgeless.  The remaining task is to turn this exact contraction
 failure into either a smaller
 seven-connected density instance or a branch-set model.  This fragment
 target remains open at the new `4n-4` threshold.
+
+The ordered next work is positive rather than barrier-led.  First, in one
+bounded proof-extraction pass, restate and audit the Kempe allocation under
+the weaker assumption that a critical host contains one all-degree-seven
+literal `K_5`.  The target is that no such clique exists; if proved it gives
+`n_7<=8` and an exact `7^8 8^{n-8}` description at `m=4n-4`, but no further
+numerical density gain.  Then attack the main seven-cut reduction: every
+seven-connected graph at the `4n-4` threshold with an order-seven cut must
+contain an explicit `K_7^-` model or have a proper seven-connected minor
+still at that threshold.  This dichotomy would prove the global extremal
+target by minor minimality.  Counterexamples to intermediate lemmas are
+retained only as falsification and pivot evidence, not as the programme's
+success criterion.
 
 ## Supporting `HC_7` refinements and decoder status
 
