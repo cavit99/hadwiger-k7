@@ -577,6 +577,119 @@ all five lists has order at most four, and
 
 This is the second alternative.  \(\square\)
 
+## Proposition 9 (edge-critical Kempe fork)
+
+Fix `a_i\in A` and `x\in T_{a_i}`.  Choose a proper six-colouring `phi`
+of the edge-deleted graph `G-a_ix`, which is a proper minor, and put
+`H=G-A`.  Necessarily
+
+\[
+                         \phi(a_i)=\phi(x)=p.           \tag{32}
+\]
+
+The clique `A` uses five distinct colours.  Let `q` be the unique colour
+absent from `\phi(A)`, put `S_a=\phi(T_a)`, and write
+
+\[
+                         S_{a_i}=\{p,q,r\}.             \tag{33}
+\]
+
+Let `a_h` be the unique vertex of `A-\{a_i\}` coloured `r`, put
+
+\[
+                         J=A-\{a_i,a_h\},
+ \qquad c_j=\phi(a_j)\quad(a_j\in J).                  \tag{34}
+\]
+
+Then the following statements hold.
+
+1. For every `a_j\in J`, both `p` and `q` occur on `T_{a_j}`.
+2. For every `a_j\in J`, the component of the two-colour graph
+   `H[p,c_j]` containing `x` also meets `T_{a_j}`.
+3. Either `p,q` occur on all five private triangles, or
+
+   \[
+                         S_{a_j}=S_{a_i}=\{p,q,r\}
+                         \quad\text{for every `a_j\in J`.} \tag{35}
+   \]
+
+4. If the second alternative in part 3 holds, then, for every `a_j\in J`,
+   the component of `H[p,c_j]` containing `x` meets all four triangles
+
+   \[
+                         T_{a_i},\qquad T_{a_ell}\ (a_ell\in J). \tag{36}
+   \]
+
+### Proof
+
+If the two colours in (32) were different, `phi` would already colour
+`G`.  The four vertices of `A-\{a_i\}` receive four distinct colours
+different from `p`, leaving the unique sixth colour `q`.
+
+The colour `q` must occur on `T_{a_i}`.  Otherwise `a_i` has no
+`q`-coloured neighbour in `G-a_ix`: its exact neighbourhood is
+`(A-\{a_i\})\cup T_{a_i}`, and the edge to the only `p`-coloured vertex
+of `T_{a_i}` is deleted.  Recolouring `a_i` with `q` would then make the
+deleted edge proper and give a six-colouring of `G`.  This proves (33).
+
+For each `a\in A`, let
+
+\[
+                         L_a=[6]-S_a                  \tag{37}
+\]
+
+be the colours available at `a` over the fixed colouring of `H`.  The four
+colours on `A-\{a_i\}` are the four colours outside `\{p,q\}`.  Hence
+`a_h` in (34) exists uniquely and
+
+\[
+                         L_{a_i}=\{c_j:a_j\in J\}.      \tag{38}
+\]
+
+Fix `a_j\in J`.  If `p\in L_{a_j}`, assign colour `c_j` to `a_i`, colour
+`p` to `a_j`, and retain the original colour on the other three vertices
+of `A`.  These are five distinct permissible colours.  If instead
+`q\in L_{a_j}`, use `q` at `a_j` in the same assignment.  Either assignment
+would extend the colouring of `H` over `A` and colour `G`.  Thus
+`p,q\in S_{a_j}`, proving part 1.
+
+Let `K_j` be the component of `H[p,c_j]` containing `x`.  Suppose it misses
+`T_{a_j}` and interchange `p,c_j` on `K_j`.  The triangle `T_{a_i}`
+contains `p` only at `x` and contains no `c_j`, by (33)--(38).  After the
+interchange, colour `a_i` with `p` and retain the original colour on every
+vertex of `A-\{a_i\}`.  The list at `a_i` now contains `p`; the list at
+`a_j` is unchanged; and every other retained original colour is different
+from `p,c_j`, so the interchange cannot remove it from its list.  This
+again colours `G`, a contradiction.  Hence `K_j` meets `T_{a_j}`, proving
+part 2.
+
+By part 1, write
+
+\[
+                         S_{a_j}=\{p,q,s_j\}
+                         \quad(a_j\in J).              \tag{39}
+\]
+
+Suppose `p,q` do not both occur on `T_{a_h}`.  Choose
+`t\in\{p,q\}\cap L_{a_h}`.  If some `s_j\ne r`, then `r\in L_{a_j}`.
+Assign `t` to `a_h`, `r` to `a_j`, `c_j` to `a_i`, and retain the two
+original colours on `J-\{a_j\}`.  These are five distinct permissible
+colours, again a contradiction.  Therefore every `s_j=r`, which is (35)
+and proves part 3.
+
+Finally assume (35), fix `a_j\in J`, and retain `K_j`.  It contains `x`
+and, by part 2, the unique `p`-coloured vertex of `T_{a_j}`, because none
+of the four triangles in (36) contains colour `c_j`.  If it missed the
+`p`-coloured vertex of some `T_{a_ell}` with
+`a_ell\in J-\{a_j\}`, interchange `p,c_j` on the component containing
+that vertex.  This component is disjoint from `K_j`, so `x` keeps colour
+`p`.  It also misses `T_{a_j}`, whose unique `p`-coloured vertex lies in
+`K_j` and which contains no `c_j`.  Now assign `p` to `a_ell`, `c_ell` to
+`a_i`, and retain the original colours on the other three vertices of `A`.
+Thus `c_j` remains available at `a_j`; as before, colours outside
+`\{p,c_j\}` remain available.  This assignment colours `G`, and the
+contradiction proves (36).  \(\square\)
+
 ## Remaining obstruction and trust boundary
 
 Theorem 2 upgrades the former three-connectivity reduction to
@@ -597,6 +710,14 @@ two vertex-disjoint such subgraphs cannot exist.  This example is only
 two-connected.  The remaining task is therefore a bridge or rerouting
 argument that uses five-connectivity, the exact overlap restrictions, and
 the critical colouring dichotomy in Proposition 8.
+
+Proposition 9 strengthens that dichotomy but still does not supply two
+disjoint connected transversals.  In its rigid branch, the three forced
+Kempe components share the same four `p`-coloured triangle vertices.  The
+remaining positive step is a first-common-vertex splitting or bridge
+rerouting argument that turns this shared four-triangle spine into two
+disjoint connected subgraphs; edge deletion and contraction of the same
+edge do not by themselves give independent spines.
 
 The external input in Corollary 7 is Fournier's cyclability theorem, in the
 form already checked in the separate internal audit of

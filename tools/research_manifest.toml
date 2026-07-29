@@ -7208,7 +7208,7 @@ source = "results/hc7_k7minus_equality_connectivity_reduction.md"
 source_heading = "Theorem 2 (five-connected clique deletion)"
 active = false
 audit = "results/hc7_k7minus_equality_connectivity_reduction_audit.md"
-expected_source_sha256 = "89e9f8959e1dc16c280308a2c43297ff31a29d08d643529496c41acb951a8aa7"
+expected_source_sha256 = "451fd13b2fbd688cafb6f8005aefab92cc90eb7a1b92614ca10bdb7bdc9cc128"
 scope = "the equality-density layer of a minor-minimal non-six-colourable K7-minus-minor-free graph"
 label_fidelity = "the two literal K5s, their private triangles, cross-edge matching, and all minor-model branch sets remain explicit"
 conclusions = [
@@ -7216,13 +7216,14 @@ conclusions = [
   "the central graph is three-connected and the cross-edge matching has order at most three",
   "the equality layer has order at least twenty-nine",
   "the two-transversal target is exactly a bond target and every six-colouring has the stated Hall dichotomy",
+  "edge-critical colourings force three rooted Kempe components, each meeting the same four specified triangles in the rigid branch",
 ]
 does_not_prove = [
   "the bond or two-transversal target",
   "the positive-density-surplus layers",
   "the K7-minus six-colour conjecture or HC7",
 ]
-keywords = ["K7 minus", "equality density", "five connectivity", "order twenty-nine", "private triangles", "bond"]
+keywords = ["K7 minus", "equality density", "five connectivity", "order twenty-nine", "private triangles", "bond", "Kempe components"]
 
 [[claims]]
 id = "hc7.k7minus_seven_cut_contraction"

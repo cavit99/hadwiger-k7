@@ -165,8 +165,13 @@ argument must use the at-least-five attachments of the off-cycle bridges.
 Critical colouring supplies a second exact constraint.  In every
 six-colouring of `H`, either four triangles use one common three-colour set,
 or at least two colours occur on all five triangles.  This is the complete
-Hall obstruction to extending the colouring across `L`; converting it into
-two disjoint universal Kempe components is open.
+Hall obstruction to extending the colouring across `L`.  Edge-criticality
+sharpens it: for every edge `v_ix` with `x\in T_i`, a six-colouring of the
+edge-deleted graph forces three two-colour components rooted at `x`, each
+meeting its prescribed triangle.  In the rigid four-triangle-palette branch,
+each component meets all four specified triangles.  They share the same
+four root-coloured triangle vertices, so the remaining task is to split or
+reroute this common spine into two disjoint connected transversals.
 
 Wollan's exact rooted-`K_{2,t}` theorem is the closest general input, but at
 `t=5` its edge threshold is `5|V(H)|-14`, far above the present density and
@@ -210,8 +215,8 @@ show that an arbitrary component contraction preserves seven-connectivity.
 
 The next useful work is one of:
 
-1. prove the bond target from (6)--(9), by bridge rerouting or the Hall--Kempe
-   dichotomy;
+1. prove the bond target from (6)--(9), by splitting or rerouting the shared
+   four-triangle Kempe spine;
 2. prove the fragment target by analyzing the small-connectivity boundary
    graphs in (10); or
 3. upgrade a normalized Norin--Totschnig near-`K_7` model using the three

@@ -127,9 +127,13 @@ connected subgraphs meeting all five triangles would give an explicit
 bond meeting all five triangles.  It has a cycle through all fifteen
 triangle vertices, and every six-colouring satisfies one of two exact Hall
 patterns: four triangles use the same three colours, or two colours occur
-on all five.  Neither the terminal-spanning cycle nor the Hall dichotomy has
-yet been converted into the required bond; the remaining positive step is
-a five-connected bridge-rerouting or Kempe-component theorem.
+on all five.  For each edge from a clique vertex to its private triangle,
+an edge-deletion colouring now forces three rooted two-colour components;
+in the rigid branch, every one contains the same four prescribed triangle
+vertices.  This unbounded criticality constraint still has shared terminals,
+so it does not yet give the required bond.  The remaining positive step is
+a five-connected splitting or bridge-rerouting theorem for that common
+four-triangle spine.
 
 Independently, the [seven-cut component-contraction theorem](results/hc7_k7minus_seven_cut_contraction.md)
 proves that an order-seven cut with `r` components satisfies

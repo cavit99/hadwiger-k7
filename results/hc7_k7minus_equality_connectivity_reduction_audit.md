@@ -6,14 +6,15 @@ Audited file:
 Audited SHA-256:
 
 ```text
-89e9f8959e1dc16c280308a2c43297ff31a29d08d643529496c41acb951a8aa7
+451fd13b2fbd688cafb6f8005aefab92cc90eb7a1b92614ca10bdb7bdc9cc128
 ```
 
 **Verdict:** **GREEN** for the exact revision above.
 
 This is a separate internal mathematical audit, not external peer review.
-Two cold reviews checked the mathematical revision independently, including
-the order-eighteen block--cut-tree lemma and all four matching cases.
+Two cold reviews checked the connectivity and order-bound revision,
+including the order-eighteen block--cut-tree lemma and all four matching
+cases.  A further cold review checked the edge-critical Kempe fork.
 
 ## 1. Scope and dependencies
 
@@ -125,11 +126,39 @@ three-element lists of colours available to the vertices of `A`: either
 four complementary triangle colour sets coincide, or at least two colours
 occur on all five triangles.
 
-## 6. Trust boundary
+## 6. Edge-critical Kempe fork
+
+Deleting an edge `a_ix` from a clique vertex to its private triangle and
+six-colouring the result must give the same colour `p` to its endpoints.
+The unique colour `q` absent from the clique must occur on the private
+triangle: otherwise recolouring `a_i` with `q` colours the restored edge.
+This verifies the palette decomposition used in Proposition 9.
+
+The list assignments in parts 1 and 3 were checked colour by colour.  If
+either `p` or `q` is absent from one of the three indexed triangles, moving
+its owner's original colour to `a_i` and using that absent colour at the
+owner gives five distinct permissible clique colours.  In the non-universal
+case, the analogous assignment at the remaining clique vertex forces all
+four specified triangles to have palette `\{p,q,r\}`.
+
+For part 2, if the `p,c_j` component rooted at `x` misses `T_{a_j}`, its
+Kempe interchange removes `p` from `T_{a_i}` without changing
+`T_{a_j}`.  The original colour at every other clique vertex is either
+`c_j` on the unchanged triangle or lies outside `\{p,c_j\}`; hence the
+displayed recolouring really extends over the restored edge.  In the rigid
+branch, interchanging a different `p,c_j` component similarly makes `p`
+available at its triangle owner while leaving `x` fixed.  This proves that
+each of the three rooted components contains the `p`-coloured vertex of all
+four specified triangles.
+
+## 7. Trust boundary
 
 No unresolved assumption remains in the stated theorem.  The result does
 not prove the bond or two-transversal target, close the equality layer,
 handle positive density surplus, prove the `K_7^-` six-colour conjecture, or
 prove `HC_7`.  The terminal-spanning cycle is explicitly not promoted to a
 transversal theorem; the recorded ring of five triangles is a valid
-two-connected barrier to that inference.
+two-connected barrier to that inference.  The three Kempe components in
+the rigid branch all contain the same four triangle vertices; the audit
+does not infer two disjoint connected transversals from these overlapping
+components.
