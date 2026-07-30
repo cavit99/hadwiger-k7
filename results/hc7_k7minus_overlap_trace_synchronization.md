@@ -1,6 +1,8 @@
 # Synchronizing the common six-set in the distinct-miss residue
 
-**Status:** written proof; [separate internal audit GREEN](hc7_k7minus_overlap_trace_synchronization_audit.md).  The six-vertex census in Corollary 4 is a computer-assisted finite result with retained verifier
+**Status:** written proof; [separate internal audit GREEN](hc7_k7minus_overlap_trace_synchronization_audit.md).
+The six-vertex census in Corollary 4 is a computer-assisted finite result
+with retained verifier
 [`hc7_k7minus_overlap_trace_synchronization_verify.py`](hc7_k7minus_overlap_trace_synchronization_verify.py).
 This result strictly reduces, but does not close, the pair of overlapping
 cuts whose two connected-subgraph packing numbers are `(1,1)`.
@@ -103,9 +105,19 @@ Call (3) the **reflection demand** of `Pi`, and let
  \delta_Z=\min_\Pi d_Z(\Pi).                           \tag{5}
 \]
 
-Because `G[Z]` is `K_4`-minor-free in the present residue, it is
-three-colourable.  Hence a minimum-demand partition may be chosen with at
-most three blocks.  Lemma 2 gives the unbounded host conclusion
+The clique-deletion demand identity supplies a minimizing clique `U` with
+
+\[
+                  \delta_Z=\chi(G[Z]-U).               \tag{5a}
+\]
+
+The graph `G[Z]` is `K_4`-minor-free, so `|U|\le3` and `\delta_Z\le3`.
+If `\delta_Z\le2`, take the singleton blocks of `U` together with the at
+most two colour classes of `G[Z]-U`; this minimizing partition has at most
+five blocks.  If `\delta_Z=3`, any proper three-colouring of `G[Z]` is a
+minimizing partition with at most three blocks.  Lemma 2 therefore applies
+to a minimizing partition in every case and gives the unbounded host
+conclusion
 
 \[
  \boxed{\min\{\nu_Z(E),\nu_Z(F)\}<\delta_Z.}          \tag{6}

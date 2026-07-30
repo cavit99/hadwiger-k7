@@ -181,25 +181,42 @@ are the roots of the local model problem.  If a rooted `K_5` model avoids
 one component of `G-N[u]`, seven-connectivity supplies the seventh branch
 set and an explicit `K_7^-` model.
 
-The focused two-component attack now proves substantially more without
-closing allocation.  The
+The focused two-component attack now has a global consequence.  The
+[two-component literal-clique exclusion](results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md)
+proves that if an exceptional centre has two exterior components, then the
+whole host is literal-`K_5`-free.  Hence
+
+\[
+ n_7=0,\qquad \delta(G)\ge8,\qquad |E(G)|\ge4|V(G)|,
+ \qquad n_8\ge25+\sum_{i\ge10}(i-9)n_i,
+\]
+
+so every degree-eight vertex is exceptional and `n\ge25`.  Thus either all
+exceptional centres have connected exterior, or the host enters this
+globally `K_5`-free branch with at least 25 exceptional centres.
+
+Within the two-component branch, the
 [nonfull-attachment reduction](results/hc7_k7minus_nonfull_attachment_reduction.md)
-excludes two exterior components missing the same neighbour and converts
-every remaining nonfull configuration into exact connected-rich `(1,2)`
-seven-cuts or two overlapping `(1,1)` cuts with explicit boundary-minor
-exclusions.  In the one-nonfull cell, uniform defect-two reflection forces
-the missed vertex to have at most four boundary neighbours and at least two
-neighbours in the full exterior component; a retained exact census leaves
-28 possible boundary types.  When both exterior components are full, the
-[boundary and packet reduction](results/hc7_k7minus_both_full_shore_reduction.md)
-reduces 2,076 exceptional neighbourhoods to seven exact types and proves
-that each exterior component contains only one disjoint full packet.  For
-the six- and seven-demand reserve types, every fixed star-contraction
-colouring still has at least two demands supported through each shore.  The
-[scoped barriers](barriers/hc7_k7minus_shore_allocation_barrier.md)
-prove that boundary counting and rotation alone cannot concentrate the
-demands.  Thus this is a genuine structural reduction, not the one-shore
-rooted-model theorem.
+excludes a common missed neighbour and gives exact packing-`(1,2)` or
+overlapping packing-`(1,1)` order-seven cuts.  In the one-nonfull case the
+missed vertex has at most four boundary neighbours and at least two
+neighbours in the full exterior component.  The new theorem forces a
+six-fan and converts a tight failed allocation into two nested order-seven
+cuts; the non-tight attachment case remains.  The
+[two-entrance barrier](barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier.md)
+shows that the two known entrances alone are insufficient without using
+minor exclusion or compatible proper-minor colourings.
+
+For distinct nonadjacent misses, the
+[common-six trace theorem](results/hc7_k7minus_overlap_trace_synchronization.md)
+eliminates the unique demand-one boundary and forces common-six packing-one
+structure on the remaining 27 types, but an exact parity-language barrier
+shows that independent-block coverage alone cannot force synchronization.
+When both exterior components are full,
+the [boundary reduction](results/hc7_k7minus_both_full_shore_reduction.md)
+leaves seven exact types and packing vector `(1,1,1)` for `\{u\},E,F`.
+These are positive structural reductions; none proves the required rooted
+model or a common colouring partition.
 
 The one-component residue still requires every remaining connected piece
 either to miss `I` or to contact at most three rooted bags.  The written,
@@ -788,12 +805,16 @@ is retained as a secondary specialization.  The new exceptional-vertex
 package forces at least seven exceptional degree-eight vertices, rigidifies
 the exact seven-vertex layer, proves independence number three in every
 exceptional neighbourhood, and identifies the exterior-component completion
-criterion for a rooted `K_5` model.  The new two-component reduction
-eliminates a common missed attachment, leaves 28 one-nonfull and seven
-both-full boundary types, forces the one-nonfull missed-vertex degree bound,
-and proves packet vector `(1,1,1)` in the both-full cell.  It also records
-why static shore counting cannot finish allocation.  The independent general
-separator theorem bounds disjoint boundary-full connected subgraphs and cut
+criterion for a rooted `K_5` model.  The new two-component theorem proves
+that the existence of two exterior components makes the whole host
+literal-`K_5`-free, forcing `n_7=0`, `m\ge4n`, and at least 25 exceptional
+degree-eight vertices.  Its one-nonfull specialization forces a six-fan and
+nested order-seven cuts in the tight case.  The distinct-miss common-six
+theorem eliminates one of 28 boundary types and forces packing-one structure
+on the other 27, while showing that independent-block coverage alone cannot
+force trace synchronization.  The both-full reduction leaves seven exact
+boundary types with packing vector `(1,1,1)`.  The independent general separator theorem
+bounds disjoint boundary-full connected subgraphs and cut
 components by four, proves two-connected interiors in the four-component
 case, and gives exact whole-component contraction criteria.  In the actual
 critical host, boundary-colouring reflection improves the capacity to three,
@@ -895,15 +916,19 @@ records the internal go/no-go assessment; it is not external peer review.
   exterior component completes to an explicit `K_7^-` model.  The upper
   bound `b<=6` remains an open finishing theorem; the static seven-root list
   reduction does not prove it.
-- **Two-component exceptional-centre reduction.** Two nonfull exterior
-  components cannot miss the same neighbourhood vertex.  The remaining
-  nonfull cases reduce to connected-rich `(1,2)` cuts or two overlapping
-  `(1,1)` cuts; the one-nonfull boundary has 28 possible types, and its
-  missed vertex has at most four boundary neighbours and at least two
-  neighbours in the full exterior component.  In the both-full case an
-  unbounded diamond-deletion lift and a retained census leave seven exact
-  boundary types, with full-packet vector `(1,1,1)`.  Static boundary labels
-  cannot finish allocation, and no one-shore rooted model is yet proved.
+- **Two-component exceptional-centre reduction.** If one exceptional centre
+  has two exterior components, the entire host is literal-`K_5`-free.  It
+  follows that `n_7=0`, `\delta\ge8`, `m\ge4n`, every degree-eight vertex is
+  exceptional, and there are at least 25 of them.  Two nonfull components
+  cannot miss the same neighbourhood vertex.  The one-nonfull case has 28
+  possible seven-vertex boundaries, a compulsory six-fan, and exact nested
+  order-seven cuts when the attachment inequality is tight.  In the
+  distinct nonadjacent-miss case the common-six trace theorem eliminates the
+  net and forces packing-one structure on the other 27 boundary types; a
+  parity-language barrier shows that actual operation compatibility is
+  still needed.  The both-full case leaves seven exact boundary types with
+  packing vector `(1,1,1)`.  No required rooted model or common trace is yet
+  proved.
 - **Seven-boundary connected-subgraph and descent obstruction.** In every
   seven-connected `K_7^-`-minor-free graph, an order-seven cut has at most
   four disjoint connected subgraphs outside it that are each adjacent to all

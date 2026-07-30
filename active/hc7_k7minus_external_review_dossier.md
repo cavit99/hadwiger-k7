@@ -14,8 +14,8 @@ The authoritative project status remains
 
 ## 1. Candidate paper thesis
 
-**Working title:** *Degree-seven rigidity, private-triangle allocation, and
-critical seven-cut reflection without a `K_7^-` minor*.
+**Working title:** *Degree-seven rigidity, two-component clique exclusion,
+and critical seven-cut reflection without a `K_7^-` minor*.
 
 The proposed note studies a hypothetical minor-minimal non-six-colourable
 `K_7^-`-minor-free graph.  Its central chain is:
@@ -63,12 +63,18 @@ The proposed note studies a hypothetical minor-minimal non-six-colourable
     For any resulting independent triple, a five-root `K_5` model that
     avoids one exterior component already completes to an explicit
     `K_7^-`-minor model.
-11. In the two-component exterior case, common missed attachments are
-    impossible.  The remaining nonfull cases reduce to exact order-seven
-    cut residues, while the both-full case reduces from 2,076 exceptional
-    neighbourhoods to seven boundary types with full-packet vector
-    `(1,1,1)`.  These last classifications are computer-assisted and do not
-    prove shore allocation.
+11. If an exceptional centre has two exterior components, then the entire
+    host is literal-`K_5`-free.  Consequently `n_7=0`, `\delta(G)\ge8`,
+    `m\ge4n`, every degree-eight vertex is exceptional, and there are at
+    least 25 of them.  In the one-nonfull case a compulsory six-fan and a
+    failed tight allocation produce two nested order-seven cuts.
+12. For distinct nonadjacent misses, common traces on the shared six-set
+    would glue.  The unique demand-one boundary is impossible, while the
+    remaining 27 types have exact packing-one restrictions.  An abstract
+    parity-language barrier proves that independent-block coverage alone
+    cannot synchronize actual responses.  In the both-full case the earlier
+    retained census leaves seven boundary types with packing vector
+    `(1,1,1)`.
 
 The note must not claim the global `4n-4` extremal target, a standalone bond
 or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
@@ -214,7 +220,63 @@ independently reproduces the 28-code digest and all reported spectra.  The
 host reduction is written; the finite census classifies possible literal
 boundaries and does not assert their host realisability.
 
-### Both-full shore and packet reduction
+### Two-component literal-clique exclusion and nested one-nonfull cuts
+
+- [Theorem](../results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md)
+- [Internal audit](../results/hc7_k7minus_one_nonfull_k5_and_nested_cut_audit.md)
+- Theorem SHA-256:
+  `e1b54acdd971831786c0d8912d5e4189aaeedd84184540ed438e594aadb9b2e4`
+
+For either exterior component `D`, five disjoint paths join any hypothetical
+literal `K_5` in `D\cup N_X(D)` to five of the at least six neighbourhood
+vertices met by both components.  Enlarging the five clique bags along
+these paths and adding `\{u\}` and the opposite component gives an explicit
+`K_7^-`-minor model.  Thus the whole host is literal-`K_5`-free, which gives
+
+\[
+ n_7=0,\qquad \delta(G)\ge8,\qquad m\ge4n,
+ \qquad n_8\ge25+\sum_{i\ge10}(i-9)n_i.
+\]
+
+The one-nonfull specialization forces a six-fan from the missed vertex.  In
+the tight failed-allocation case it produces two overlapping order-seven
+cuts with the exact component and packing conclusions stated in the
+theorem.  The non-tight attachment case and closing the nested-cut residues
+remain open.
+
+The adjacent
+[two-entrance barrier](../barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier.md)
+and [audit](../barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier_audit.md)
+show that the two known entrances alone do not supply the required third
+connected subgraph.  The witness has an explicit `K_7`-minor model and is
+only five-chromatic, so it does not refute the critical-host theorem.
+
+### Distinct-miss common-six trace synchronization
+
+- [Theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
+- [Internal audit](../results/hc7_k7minus_overlap_trace_synchronization_audit.md)
+- Theorem SHA-256:
+  `746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a`
+
+For distinct nonadjacent misses, two six-colourings with the same equality
+partition on the common six-set splice to a six-colouring of `G`.  Exact
+connected-subgraph reflection eliminates the unique demand-one boundary,
+the net.  A retained six-vertex census leaves 27 types: each triangular
+type forces common-six packing number one in both exterior components, and
+each triangle-free type forces packing number one in at least one.
+
+The [retained verifier](../results/hc7_k7minus_overlap_trace_synchronization_verify.py),
+at SHA-256
+`f491e0b6a2b16c7d796334005329c2830c047e281451e0fe1202c30961f3f2b1`,
+reproduces all 28 initial types, the demand distribution `1,26,1`, and the
+triangle split `16,12`.  The adjacent
+[three-matching barrier](../barriers/hc7_k7minus_overlap_trace_language_barrier.md)
+constructs two disjoint abstract trace languages with complete
+independent-block coverage.  It does not realize two critical exterior
+graphs, so it requires operation-coupled colourings rather than refuting
+synchronization in the host.
+
+### Both-full boundary and packing reduction
 
 - [Theorem](../results/hc7_k7minus_both_full_shore_reduction.md)
 - [Internal audit](../results/hc7_k7minus_both_full_shore_reduction_audit.md)
@@ -226,14 +288,15 @@ boundary to 15 types; the audited three-full-component theorem removes
 eight, leaving seven.  Their minimum reserve graphs are `P_5`,
 `P_3` disjoint-union `K_2`, or `2K_2` disjoint-union `K_1`.  Actual
 star-contraction responses on the six- and seven-demand types must remain
-mixed between the shores, and packet completions force each exterior
-full-subgraph packing number to equal one.
+mixed between the two sides, and the connected-subgraph completion theorems
+force each exterior full-subgraph packing number to equal one.
 
 The [retained verifier](../results/hc7_k7minus_both_full_shore_reduction_verify.py),
 at SHA-256
 `168c56fdeb52c9835f95796750c82a0c06dfcad7781ca4a9a07affdfab07eb2f`,
 reproduces the full census, both certificate digests and every reserve
-shape.  The result does not construct a shore-confined rooted `K_5^-`.
+shape.  The result does not construct a rooted `K_5^-` confined to one
+closed side.
 
 The adjacent [scoped barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
 and [audit](../barriers/hc7_k7minus_shore_allocation_barrier_audit.md), at
@@ -333,13 +396,25 @@ two exterior components + critical seven-cut capacity
 ├─ common missed attachment is impossible
 ├─ every nonfull attachment reduces to exact (1,2) or overlapping (1,1) cuts
 └─ one-nonfull boundary census: 28 possible types
+   + common-attachment five-linkage
+   ├─ the whole host is literal-K5-free
+   ├─ n7=0, minimum degree at least eight, and density at least 4n
+   ├─ at least 25 exceptional degree-eight vertices
+   └─ one-nonfull six-fan and tight nested order-seven cuts
+
+distinct nonadjacent misses + common-six connected-subgraph reflection
+├─ equal common-six traces glue to a six-colouring
+├─ the net boundary is impossible
+├─ 27 types remain with exact packing-one restrictions
+└─ three-matching parity languages block synchronization from
+   independent-block coverage alone
 
 two full exterior components + diamond-deletion lift
 └─ 15 boundary types
    + three-full-component theorem
    └─ seven exact types
-      + dynamic demand and packet completions
-      └─ full-packet vector (1,1,1)
+      + dynamic demand and connected-subgraph completions
+      └─ full-subgraph packing vector (1,1,1)
 
 seven-connectivity + elementary minor constructions + Mader bounds
 └─ capacity of boundary-full connected subgraphs at most four
@@ -427,23 +502,26 @@ a five-root `K_5` model that avoids one exterior component, or leave a
 connected residual subgraph adjacent to the independent-triple star and at
 least four rooted bags.
 
-The adjacent two-component attack has now completed the proposed split.
-The separately audited
-[nonfull reduction](../results/hc7_k7minus_nonfull_attachment_reduction.md)
-excludes a common missed neighbour and converts every other nonfull
-configuration into exact `(1,2)` or overlapping `(1,1)` seven-cut residues.
-In the one-nonfull cell it additionally bounds the missed vertex to at most
-four boundary neighbours and forces at least two neighbours in the full
-exterior component; a retained exact census leaves 28 boundary types.
-The separately audited written-and-computer-assisted
+The adjacent two-component attack has now completed the proposed structural
+split.  The separately audited
+[literal-clique and nested-cut theorem](../results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md)
+forces the global `K_5`-free, density-`4n`, 25-exceptional-vertex branch
+whenever one exceptional centre has two exterior components.  Its
+one-nonfull specialization stops at a non-tight attachment inequality or
+two exact nested order-seven cuts.  The two-entrance barrier rules out a
+proof from connectivity and packing data alone.
+
+For distinct nonadjacent misses, the separately audited
+[common-six trace theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
+eliminates the net and gives packing-one restrictions on the remaining 27
+types.  Its parity-language barrier identifies the exact next input:
+compatibility among colourings of named related proper minors.  The
+separately audited written-and-computer-assisted
 [both-full reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
-uses a retained verifier and an unbounded diamond-deletion lift to leave
-seven boundary types, each with exterior full-packet vector `(1,1)`.
-It does not prove a one-shore rooted model.  The exact next input is
-compatibility among changing proper-minor colourings or an additional
-residual contact inside one packet-one shore; the
-[scoped boundary barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
-rule out static demand counting as a proof.
+leaves seven boundary types, each with exterior full-subgraph packing vector
+`(1,1)`.  It does not prove a rooted model confined to one closed side; the
+[scoped static barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
+rule out demand counting as a proof.
 
 The alternative seven-root list calculation gives exact list sizes and
 anchored minimal uncolourable cores, but a single static colouring is not
@@ -542,10 +620,19 @@ longer the minimal extremal input required by the critical-host reduction.
 21. Is the scope stated sharply enough that no reader can infer a global
     `4n-4` extremal theorem, a bond theorem, or two full connected
     transversals?
-22. Are any of the exact neighbourhood, private-triangle, density,
+22. In the two-component clique exclusion, does
+    `W\cup\{u\}\cup(X-N_X(D))` block every possible exit from the linked
+    component and always have order at most six?
+23. Do the five common-attachment paths give all ten clique-bag adjacencies
+    and all contacts to both added branch sets, including when the original
+    clique meets the common attachment set?
+24. In the common-six theorem, does the repaired reflection-demand case
+    split always produce a minimizing partition with at most five blocks,
+    and do the two selected partial colourings account for every cross-edge?
+25. Are any of the exact neighbourhood, private-triangle, density,
     equality-structure, exceptional-neighbourhood, connected-subgraph-
-    capacity, or contraction conclusions already explicit or implicit in
-    the literature?
+    capacity, two-component clique-exclusion, common-trace, or contraction
+    conclusions already explicit or implicit in the literature?
 
 ## 7. Review and publication gate
 
@@ -554,12 +641,14 @@ specialists.  Before submission it still requires:
 
 - independent human proof review of the degree-seven, two-clique,
   private-triangle, density, equality-structure, exceptional-vertex,
-  exceptional-neighbourhood, connected-subgraph-capacity, critical
-  reflection, and contraction arguments;
+  exceptional-neighbourhood, two-component literal-clique, common-trace,
+  connected-subgraph-capacity, critical reflection, and contraction
+  arguments;
 - conventional novelty and priority searches, including forward citation
   chains of Niu--Zhang, Rolek--Song, Rolek--Song--Thomas, Albar, and
   Norin--Totschnig;
-- an independent rerun of the retained exceptional-neighbourhood verifier;
+- an independent rerun of the retained exceptional-neighbourhood,
+  one-nonfull, both-full, common-six, and two-entrance verifiers;
 - correction and renewed hashes for any mathematical change; and
 - a separate manuscript pass after the theorem package is stable.
 

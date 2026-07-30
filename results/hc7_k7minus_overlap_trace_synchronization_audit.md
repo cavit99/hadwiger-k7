@@ -7,14 +7,30 @@ It does not close the distinct nonadjacent-miss case.
 ## Audited revision
 
 - theorem SHA-256:
-  `4af8cd7ae468c989b38c7f22a400a49b75c5841d24605a69a128a92ee350b30e`;
+  `746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a`;
 - verifier SHA-256:
   `f491e0b6a2b16c7d796334005329c2830c047e281451e0fe1202c30961f3f2b1`;
 - barrier SHA-256:
   `8d6f2fe124d4e1e2d041b377fe900862f94a0c4223f32d1a97a3173cb0a01e34`.
 
 The audit checked the theorem text against the distinct-miss geometry in
-the audited nonfull-attachment reduction and reran the retained verifier.
+the audited nonfull-attachment reduction, reran the retained verifier, and
+independently reproduced its six-vertex census by a different minor test.
+
+## Correction history
+
+The previous theorem revision with SHA-256
+`4af8cd7ae468c989b38c7f22a400a49b75c5841d24605a69a128a92ee350b30e`
+incorrectly said that three-colourability of `G[Z]` implied the existence of
+a minimum-demand partition with at most three blocks.  The net disproves
+that sentence: its demand is one, its demand-one witness has four blocks,
+and every proper partition with at most three blocks has demand at least
+two.  The previous audit repeated this inference and therefore did not
+validly certify that revision.
+
+The current theorem replaces it with the clique-deletion case split checked
+in Section 2 below.  No theorem conclusion was weakened.  This audit
+supersedes the earlier verdict.
 
 ## 1. Common-trace gluing
 
@@ -49,15 +65,29 @@ and `U` form the claimed clique.
 
 The pullback expands only independent subsets of `Z` and discards the
 whole operated exterior component.  It never expands a contracted
-connected subgraph on its own side.  At least one boundary edge is
-contracted because `G[Z]` is not complete under the displayed
-`K_4`-minor exclusion, so the minor is proper.  Minor-criticality is used
+connected subgraph on its own side.  Here `m` cannot be zero: otherwise
+all blocks would be singleton vertices of the clique `U`, making the
+six-vertex graph `G[Z]` complete, contrary to its `K_4`-minor exclusion.
+For every `i`, `Z`-fullness supplies an actual edge joining `P_i` to every
+vertex of the nonempty block `B_i`.  Thus at least one edge is contracted
+and the operated graph is a proper minor.  Minor-criticality is used
 exactly here to obtain its six-colouring.
 
-The restriction to at most five trace blocks is harmless in the stated
-application.  A `K_4`-minor-free graph is three-colourable, so a partition
-attaining minimum reflection demand may be chosen with at most three
-blocks when needed in (6).
+The repaired five-block argument is valid.  The clique-deletion identity
+gives a clique `U` with
+
+\[
+                  \delta_Z=\chi(G[Z]-U).
+\]
+
+Because `G[Z]` is `K_4`-minor-free, `|U|\le3`; its three-colourability also
+gives `\delta_Z\le3`.  If `\delta_Z\le2`, the singleton blocks of `U` and
+the at most two colour classes of `G[Z]-U` give a minimizing partition with
+at most five blocks.  If its calculated demand were smaller, that would
+contradict the definition of `\delta_Z`.  If `\delta_Z=3`, any proper
+three-colouring of `G[Z]` has demand at most three and hence exactly three,
+so it is a minimizing partition with at most three blocks.  Lemma 2
+therefore applies in every case and proves (6).
 
 ## 3. Demand one and the triangle lift
 
@@ -96,11 +126,21 @@ matching_parity_languages=PASS
 PASS overlap_trace_synchronization_finite_checks
 ```
 
-The verifier enumerates all 156 unlabelled six-vertex graphs, tests `K_4`
-and `K_4^-` minors by independent deletion/contraction recursion, and
+The retained verifier enumerates all 156 unlabelled six-vertex graphs,
+tests `K_4` and `K_4^-` minors by deletion/contraction recursion, and
 computes reflection demand from the clique-deletion identity by direct
 colourability search.  It also exhausts every set partition needed for the
 three-matching parity-language barrier.
+
+For this re-audit, a separate short-lived checker decoded the same complete
+`geng` list but did not use the retained minor recursion.  It enumerated all
+four-tuples of pairwise disjoint nonempty connected vertex masks and tested
+their six or five required pairwise contacts directly.  It independently
+enumerated clique deletions and solved each residual chromatic number by
+backtracking.  It reproduced the exact 28 graph6 codes, demand distribution
+`1:1, 2:26, 3:1`, and count 16 of triangular survivors.  This independently
+checks both the retained minor encoding and its demand census on the finite
+domain.
 
 ## 5. Scope and unresolved obligation
 

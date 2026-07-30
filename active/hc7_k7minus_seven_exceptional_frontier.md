@@ -65,27 +65,62 @@ three of the five bags.
 These are positive host-level reductions.  They do not yet coordinate six
 or seven different centres.
 
-The focused two-component attack now goes substantially further.  Its
+The focused two-component attack now has a global consequence.  The
+[two-component literal-clique exclusion](../results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md)
+proves that if even one exceptional centre `u` has two exterior components,
+then the whole graph contains no literal `K_5`.  The proof links any
+hypothetical clique to five of the at least six neighbourhood vertices met
+by both components and completes those five branch sets with `\{u\}` and
+the opposite component.  Consequently
+
+\[
+ n_7=0,\qquad \delta(G)\ge8,\qquad |E(G)|\ge4|V(G)|,
+ \qquad n_8\ge25+\sum_{i\ge10}(i-9)n_i.                \tag{2}
+\]
+
+Every degree-eight vertex is then exceptional and `|V(G)|\ge25`.  Thus a
+surviving critical host obeys a sharp dichotomy: either every exceptional
+centre has connected exterior, or the host is globally literal-`K_5`-free
+and has at least 25 exceptional centres.
+
+The earlier
 [nonfull-attachment theorem](../results/hc7_k7minus_nonfull_attachment_reduction.md)
-proves that the two exterior components cannot miss the same neighbour of
-`u`.  If exactly one component is nonfull, deleting its unique missed
-neighbour from `X=N(u)` gives an order-seven cut with connected-subgraph
-packing vector exactly `(1,2)`.  Its boundary has independence number
-three, at most nine edges, connectivity at most three, no `K_5` minor, no
-vertex deletion with a `K_4^-` minor, and no robust independent triple.
-The audited uniform defect-two carrier theorem then forces the missed
-vertex to have at most four neighbours on that boundary and at least two
-neighbours entering the full exterior component.  A retained exact census
-leaves 28 possible seven-vertex boundary types; all are three-chromatic, 25
-have a clique odd-cycle transversal, and three do not.
-If the two components have distinct misses, the two overlapping
-order-seven cuts are connected-rich `(1,2)` cuts when the missed vertices
-are adjacent; when they are nonadjacent, each cut is `(1,1)` or `(1,2)`
-and their common six-vertex boundary satisfies the explicit `K_4` and
-`K_4^-` minor exclusions in that theorem.
+proves that two exterior components cannot miss the same neighbour of `u`.
+If exactly one component is nonfull, deleting its unique missed neighbour
+from `X=N(u)` gives an order-seven cut with connected-subgraph packing
+vector exactly `(1,2)`.  Its boundary has independence number three, at
+most nine edges, connectivity at most three, no `K_5` minor, no vertex
+deletion with a `K_4^-` minor, and no robust independent triple.  The
+audited uniform defect-two connected-subgraph reflection theorem forces the
+missed vertex to have at most four neighbours on that boundary and at least
+two neighbours entering the full exterior component.  A retained exact
+census leaves 28 possible seven-vertex boundary types.
+
+The new theorem goes further in this one-nonfull case.  It forces a six-fan
+from the missed vertex to the seven-vertex boundary, and every such fan
+meets every boundary-full connected subgraph of the full exterior
+component.  For any fixed full connected subgraph, a tight failed
+allocation produces two overlapping order-seven cuts; the remaining cases
+are the non-tight attachment inequality `|A|+|B|\ge7` and the exact nested
+packing-`(1,1)` or packing-`(1,2)` cuts.  The
+[two-entrance barrier](../barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier.md)
+shows why the two known entrance vertices alone cannot split off the third
+connected subgraph; its witness contains an explicit `K_7`-minor model and
+is only five-chromatic, so it does not refute the critical-host conclusion.
+
+When the two components have distinct nonadjacent misses, the
+[common-six trace theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
+proves that equal colouring partitions on their common six-set would glue
+to a six-colouring of `G`.  It eliminates the unique demand-one boundary
+(the net).  Of the 27 remaining six-vertex types, every triangular type
+forces both exterior components to have common-six full packing number one;
+for every triangle-free type at least one component has packing number one.
+The exact three-matching parity barrier shows that independent-block
+coverage alone need not synchronize the two trace languages, so the next
+step must use colourings of related proper minors or additional topology.
 
 In the both-full case, the
-[shore reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
+[boundary reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
 starts with all 2,076 exceptional order-eight neighbourhoods.  An
 unbounded diamond-deletion lift leaves 15 boundary types; the audited
 three-full-component theorem removes eight, leaving seven exact graph6
@@ -93,18 +128,12 @@ types.  Every surviving exterior component has `X`-full connected-subgraph
 packing number one, so the full packing vector outside `X` is exactly
 `(1,1,1)` for `\{u\},E,F`.  For the reserve types with six or seven
 missing root adjacencies, every fixed star-contraction colouring still
-supports at least two demands through each shore; concentration of all but
-one demand in one shore would already give a rooted `K_5^-` and hence a
-`K_7^-` model.
-
-These results are strict positive reductions, not shore allocation.  The
-[accompanying barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
-show that all 15 boundary types admit balanced abstract shore labels under
-every independent-triple rotation, and that fullness plus minor exclusion
-alone does not force a one-shore rooted model.  The latter witness is only
-three-connected and four-chromatic, so it does not refute the critical-host
-target; it identifies exactly where seven-connectivity and compatible
-proper-minor colouring responses must enter.
+supports at least two demands through each side; concentrating all but one
+demand in one side would already give a rooted `K_5^-` and hence a
+`K_7^-` model.  The
+[scoped static barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
+show that boundary counting, fullness, and independent-triple rotation do
+not by themselves force that concentration.
 
 ## 3. Seven-root list reduction
 
@@ -120,14 +149,14 @@ that `H` is `K_5`-free.  For each `v\in B`, let
  E_v&=N(v)-B,\\
  \rho(v)&=|E_v|-|\phi(E_v)|,\\
  L(v)&=[6]-\phi(E_v).
- \end{aligned}                                           \tag{2}
+ \end{aligned}                                           \tag{3}
 \]
 
 Then `G[B]` is not `L`-colourable; otherwise the colouring extends to all
 of `G`.  Since `|E_v|=8-d_H(v)`, the exact list identity is
 
 \[
-                         |L(v)|=d_H(v)+\rho(v)-2.         \tag{3}
+                         |L(v)|=d_H(v)+\rho(v)-2.         \tag{4}
 \]
 
 Let `C\subseteq B` be inclusion-minimal such that `G[C]` is not colourable
@@ -138,15 +167,15 @@ extend at `v` also gives `d_{H[C]}(v)>=|L(v)|`.  For `v\in C`, define
 \[
  c(v)=|N_H(v)-C|,
  \qquad
- \varepsilon(v)=d_{H[C]}(v)-|L(v)|.                     \tag{4}
+ \varepsilon(v)=d_{H[C]}(v)-|L(v)|.                     \tag{5}
 \]
 
-Minimality gives `\varepsilon(v)>=0`, and substitution in (3) gives the
+Minimality gives `\varepsilon(v)>=0`, and substitution in (4) gives the
 exact budget
 
 \[
                   \boxed{c(v)+\rho(v)+\varepsilon(v)=2}
-                  \qquad(v\in C).                        \tag{5}
+                  \qquad(v\in C).                        \tag{6}
 \]
 
 Thus each core vertex has exactly two units divided among contacts with the
@@ -182,7 +211,7 @@ differ; synchronizing them is the exact multi-centre colouring target.
 
 The most concrete current gate is the following allocation statement.
 
-> **Rooted shore-allocation target.** Among the at least seven exceptional
+> **Rooted exterior-allocation target.** Among the at least seven exceptional
 > centres, find `u`, an independent triple `I\subseteq N(u)`, and an
 > `(N(u)-I)`-rooted `K_5` model such that either:
 >
@@ -190,8 +219,8 @@ The most concrete current gate is the following allocation statement.
 > 2. a connected subgraph disjoint from the star and all five bags is
 >    adjacent to the star and to at least four bags.
 
-In the both-full two-component cell, a third accepted outcome is an
-`(N(u)-I)`-rooted `K_5^-` model confined to one closed shore; the unused
+In the both-full two-component case, a third accepted outcome is an
+`(N(u)-I)`-rooted `K_5^-` model confined to one closed side; the unused
 full component completes it to `K_7^-`.
 
 Each accepted outcome gives an explicit `K_7^-` model.  With one exterior
@@ -199,14 +228,15 @@ component, the residual-contact outcome is necessary: a model avoiding the
 whole component would be confined to its five roots and would make them a
 literal `K_5`, impossible at an exceptional centre.
 
-For two exterior components, the target is no longer an undifferentiated
-allocation problem.  The nonfull theorem eliminates the common-miss case
-and exposes only connected-rich `(1,2)` boundaries or a pair of overlapping
-cuts with packing vector `(1,1)`.  In the both-full case, the boundary is
-one of seven exact types and both exterior packing numbers are one.  On
-that cell a shore-confined rooted `K_5^-`, rather than a full rooted `K_5`,
-is already terminal.  These are the exact local obligations; none is
-presently closed.
+For two exterior components, the new literal-clique theorem first forces
+the global high-density branch (2).  The one-nonfull case then stops at the
+non-tight attachment inequality or the nested order-seven cuts described
+above.  The distinct nonadjacent-miss case stops at 27 common-six trace
+types whose actual response languages must be synchronized.  In the
+both-full case, the boundary is one of seven exact types and both exterior
+packing numbers are one.  A rooted `K_5^-` confined to one closed side is
+already terminal.  None of these exact local obligations is presently
+closed.
 
 The existing one-pair seven-path argument cannot supply this allocation;
 its exact failure is recorded in the
@@ -214,29 +244,28 @@ its exact failure is recorded in the
 
 ## 5. Recommended next attack
 
-Attack the two normalized local gates in this order.
+Attack the operation-coupled obligations in this order.
 
-1. **Nonfull carrier extraction and overlapping-cut synchronization.**
-   In the one-nonfull cell, the missed vertex has at most four boundary
-   neighbours and at least two neighbours entering the full exterior
-   component.  Use those entrances to split off a connected subgraph
-   missing at most two boundary vertices while preserving a disjoint full
-   packet; the audited defect-two carrier theorem would then six-colour the
-   host.  For distinct nonadjacent misses, use the two overlapping `(1,1)`
-   cuts simultaneously rather than reflecting either cut in isolation.
-2. **Dynamic allocation on the seven both-full types.**  For the six- and
-   seven-demand reserves, compare operation-related star-contraction
-   colourings until one shore supports all but one demand, or extract a
-   disjoint residual connected subgraph meeting the star and four rooted
-   bags.  The two eight-demand types require a separate conversion beyond
-   the six-demand Kriesell--Mohr theorem.  Any proof must use compatibility
-   of actual responses or packet-one topology; the balanced-label barrier
-   rules out static counting and independent-triple rotation alone.
+1. **Synchronize the distinct-miss common-six traces.**  Start with the
+   sharp `3K_2` parity obstruction.  Compare colourings returned by a named
+   deletion and contraction, rather than arbitrary independent-block
+   returns, and prove that the even/odd trace separation either breaks under
+   a Kempe exchange or yields an explicit `K_7^-`-minor model.  Then extend
+   the argument across the remaining 27 boundary types.
+2. **Resolve the one-nonfull nested cuts.**  Use two compatible proper-minor
+   responses to rule out the non-tight inequality `|A|+|B|\ge7` or one of
+   the two overlapping order-seven cuts.  The two-entrance barrier shows
+   that seven-connectivity and packing numbers alone cannot do this.
+3. **Return to the seven both-full types only with dynamic data.**  Compare
+   operation-related star-contraction colourings until one side supports
+   all but one demand, or extract a disjoint residual connected subgraph
+   meeting the star and four rooted bags.  The two eight-demand types need
+   a conversion beyond the six-demand Kriesell--Mohr theorem.
 
-In parallel, the multi-centre route should compare the seven list states
-coming from `G-x`, not arbitrary static lists.  Its first accepted outcome
-is a Kempe or explicit-minor exclusion of saturated singleton cores or
-common-two-colour odd-cycle cores.  If the two-component gates close, the
-remaining local problem is the one-component residual-contact theorem.
-Further enumeration is useful only when attached to an unbounded host lift;
-the relevant order-eight and order-seven boundary splits are now exact.
+In parallel, exploit the new global dichotomy.  If one exceptional centre
+has two exterior components, there are at least 25 exceptional centres and
+the whole host is literal-`K_5`-free; otherwise every exceptional centre has
+connected exterior.  A multi-centre proof should use this changing
+component structure and the anchored colourings of `G-x`, not arbitrary
+static lists.  Further finite enumeration is useful only when attached to
+an unbounded host lift; the relevant boundary classifications are now exact.

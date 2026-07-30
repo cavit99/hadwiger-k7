@@ -7791,14 +7791,14 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "0d1db45d2f5fa73680608bd6f8cdb587acc8bc3f158aa00327b9bc909ec044cd"
+expected_source_sha256 = "c875cca54270a5be2baf1baa763428523cc9977c7de416103e4537f287b9132b"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
   "each root list has size d_H(v)+rho(v)-2",
   "each vertex of a minimal uncolourable core satisfies c(v)+rho(v)+epsilon(v)=2",
   "the tight vertices induce a Gallai forest with clique blocks of order at most four",
-  "for each x in B, a six-colouring of G-x induces a state in which H-x is list-colourable and every minimal uncolourable core contains x",
+  "for each x in B, a six-colouring of G-x induces a list assignment in which H-x is list-colourable and every minimal uncolourable core contains x",
 ]
 does_not_prove = [
   "a contradiction from one static exterior colouring",
@@ -7809,7 +7809,7 @@ keywords = ["K7 minus", "seven roots", "list-critical core", "Gallai forest", "w
 
 [[claims]]
 id = "hc7.target.k7minus_rooted_shore_allocation"
-title = "Rooted shore allocation at one exceptional degree-eight centre"
+title = "Rooted exterior allocation at one exceptional degree-eight centre"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
@@ -7819,7 +7819,7 @@ scope = "one of at least seven exceptional centres in the critical K7-minus host
 label_fidelity = "the centre, an independent triple, five literal roots, every rooted branch set, and any residual connected subgraph remain explicit"
 allowed_exits = [
   "a five-root K5 model avoiding one exterior component",
-  "in the both-full two-component cell, a five-root K5-minus model confined to one closed shore",
+  "in the both-full two-component case, a five-root K5-minus model confined to one closed side",
   "a disjoint connected residual subgraph adjacent to the independent-triple star and at least four rooted bags",
 ]
 does_not_prove = [
@@ -7827,7 +7827,7 @@ does_not_prove = [
   "the one-component residual-contact theorem without further work",
   "HC7",
 ]
-keywords = ["K7 minus", "exceptional centre", "rooted K5", "shore allocation", "residual contact"]
+keywords = ["K7 minus", "exceptional centre", "rooted K5", "exterior allocation", "residual contact"]
 
 [[claims]]
 id = "hc7.target.k7minus_seven_exceptional_vertices"
@@ -8010,6 +8010,233 @@ does_not_prove = [
   "HC7",
 ]
 keywords = ["K7 minus", "distinct misses", "overlapping cuts", "packing (1,1)", "boundary minor exclusion"]
+
+[[claims]]
+id = "hc7.k7minus_two_component_literal_k5_exclusion"
+title = "Two exterior components at an exceptional centre exclude every literal K5"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md"
+source_heading = "Theorem 2 (global literal-`K_5` exclusion)"
+active = false
+audit = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut_audit.md"
+expected_source_sha256 = "e1b54acdd971831786c0d8912d5e4189aaeedd84184540ed438e594aadb9b2e4"
+scope = "an exceptional degree-eight centre with exactly two exterior components in the critical K7-minus host"
+label_fidelity = "the centre, both literal exterior components, their common neighbourhood attachments, five clique vertices, five linkage paths and seven final branch sets remain explicit"
+conclusions = [
+  "each exterior closed side contains no literal K5",
+  "the entire host contains no literal K5",
+  "the five-linkage completion gives an explicit K7-minus model from any forbidden clique",
+]
+does_not_prove = [
+  "that an exceptional centre cannot have two exterior components",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "exceptional vertex", "two exterior components", "literal K5", "five linkage"]
+
+[[claims]]
+id = "hc7.k7minus_two_component_density_jump"
+title = "A two-component exceptional centre forces critical-host density at least 4n"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md"
+source_heading = "Corollary 2.1 (degree and density jump)"
+active = false
+audit = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut_audit.md"
+expected_source_sha256 = "e1b54acdd971831786c0d8912d5e4189aaeedd84184540ed438e594aadb9b2e4"
+scope = "the critical K7-minus host when one exceptional degree-eight centre has exactly two exterior components"
+conclusions = [
+  "n7 is zero, minimum degree is at least eight, and m is at least 4n",
+  "every degree-eight vertex is exceptional",
+  "n8 is at least 25 plus the degree-above-nine defect, and n is at least twenty-five",
+]
+does_not_prove = [
+  "a density bound for the one-exterior-component branch",
+  "a bare seven-connected 4n extremal theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "two exterior components", "4n density", "twenty-five exceptional vertices"]
+
+[[claims]]
+id = "hc7.k7minus_one_nonfull_six_fan"
+title = "Every one-nonfull missed vertex has a six-fan meeting every full connected subgraph"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md"
+source_heading = "Lemma 3 (six-fan obstruction)"
+active = false
+audit = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut_audit.md"
+expected_source_sha256 = "e1b54acdd971831786c0d8912d5e4189aaeedd84184540ed438e594aadb9b2e4"
+scope = "the one-nonfull two-component case at an exceptional centre in the critical K7-minus host"
+label_fidelity = "the missed vertex, six distinct literal boundary ends, the open fan union and every full connected subgraph of the full exterior component remain fixed"
+conclusions = [
+  "six internally disjoint paths join the missed vertex to six distinct boundary vertices",
+  "the open fan union meets every boundary-full connected subgraph of the full exterior component",
+]
+does_not_prove = [
+  "a fan disjoint from a full connected subgraph",
+  "the remaining connected-subgraph allocation theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "one nonfull component", "six fan", "connected transversal"]
+
+[[claims]]
+id = "hc7.k7minus_one_nonfull_nested_cuts"
+title = "A tight failed one-nonfull allocation produces two nested order-seven cuts"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md"
+source_heading = "Theorem 4 (tight nested-cut reduction)"
+active = false
+audit = "results/hc7_k7minus_one_nonfull_k5_and_nested_cut_audit.md"
+expected_source_sha256 = "e1b54acdd971831786c0d8912d5e4189aaeedd84184540ed438e594aadb9b2e4"
+scope = "one fixed boundary-full connected subgraph in the full exterior component of the one-nonfull critical-host case"
+label_fidelity = "the missed vertex, fixed full connected subgraph, attachment sets A and B, component K and both literal order-seven cuts C and Z remain explicit"
+conclusions = [
+  "the failed component has at most four boundary contacts and at least six total contacts through the boundary and the fixed full subgraph",
+  "at equality its neighbourhood is an order-seven cut with packing vector (1,1) or (1,2)",
+  "deleting the second order-seven cut leaves two or three components with the stated exact three-component colouring conclusion",
+]
+does_not_prove = [
+  "exclusion of the non-tight attachment case",
+  "exclusion of either nested cut case",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "one nonfull component", "nested seven-cuts", "packing one"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_two_entrance_allocation"
+title = "Two full-component entrances do not force a disjoint defect-two connected subgraph"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier.md"
+source_heading = "1. The refuted shortcut"
+active = false
+audit = "barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier_audit.md"
+expected_source_sha256 = "b816e68468030122d96478c83f0e7152998241d12f4e266a2dda65aa0c0c003e"
+scope = "one explicit exactly seven-connected order-thirteen graph with the local one-nonfull boundary and packing data"
+conclusions = [
+  "the graph has packing vector (1,2), four boundary contacts at the missed vertex and two full-component entrances",
+  "no required two-full-plus-defect-two connected-subgraph allocation exists",
+  "the graph is five-chromatic and contains an explicit K7-minor model",
+]
+does_not_prove = [
+  "failure under K7-minus exclusion or proper-minor six-colour criticality",
+  "failure of the accepted allocation-or-explicit-minor disjunction",
+]
+keywords = ["K7 minus", "one nonfull component", "two entrances", "allocation barrier"]
+
+[[claims]]
+id = "hc7.k7minus_overlap_common_trace"
+title = "Equal common-six traces in the distinct-miss case glue to a six-colouring"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_overlap_trace_synchronization.md"
+source_heading = "Lemma 1 (common-trace gluing)"
+active = false
+audit = "results/hc7_k7minus_overlap_trace_synchronization_audit.md"
+expected_source_sha256 = "746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a"
+scope = "two exterior components with distinct nonadjacent missed neighbours at an exceptional centre"
+label_fidelity = "both missed vertices, the common six literal neighbours and the two closed-side colourings remain fixed"
+conclusions = [
+  "two six-colourings with the same equality partition on the common six-set splice to a six-colouring of the host",
+  "the two actual proper-minor trace languages are disjoint in a critical host",
+]
+does_not_prove = [
+  "that either trace language contains a prescribed partition",
+  "that the two actual trace languages intersect",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "distinct misses", "common trace", "colouring gluing"]
+
+[[claims]]
+id = "hc7.k7minus_overlap_reflection_demand"
+title = "Common-six full connected subgraphs impose a strict reflection-demand bound"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_overlap_trace_synchronization.md"
+source_heading = "Lemma 2 (common-boundary reflection)"
+active = false
+audit = "results/hc7_k7minus_overlap_trace_synchronization_audit.md"
+expected_source_sha256 = "746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a"
+scope = "the common six-vertex boundary in the distinct nonadjacent-miss critical-host case"
+conclusions = [
+  "any proper common-six partition whose reflection demand is at most both exterior packing numbers gives a six-colouring",
+  "the smaller common-six full-subgraph packing number is strictly less than the minimum reflection demand",
+]
+does_not_prove = [
+  "intersection of the remaining trace languages",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "common six-set", "reflection demand", "connected-subgraph packing"]
+
+[[claims]]
+id = "hc7.k7minus_overlap_triangle_packing"
+title = "A common-six triangle forces packing number one in both exterior components"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_overlap_trace_synchronization.md"
+source_heading = "Lemma 4 (triangle packing lift)"
+active = false
+audit = "results/hc7_k7minus_overlap_trace_synchronization_audit.md"
+expected_source_sha256 = "746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a"
+scope = "a triangular common six-vertex boundary in the distinct nonadjacent-miss case"
+label_fidelity = "the boundary triangle, two same-component full connected subgraphs and all seven K7 branch sets remain explicit"
+conclusions = [
+  "both exterior common-six full-subgraph packing numbers equal one",
+  "two such subgraphs in either component would give an explicit K7-minor model",
+]
+does_not_prove = [
+  "trace synchronization for triangular boundaries",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "common six-set", "triangle", "packing number one"]
+
+[[claims]]
+id = "hc7.k7minus_overlap_boundary_census"
+title = "The distinct-miss common-six residue has 28 exact boundary types"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_overlap_trace_synchronization.md"
+source_heading = "Corollary 4 (exact six-vertex residue)"
+active = false
+audit = "results/hc7_k7minus_overlap_trace_synchronization_audit.md"
+expected_source_sha256 = "746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a"
+scope = "all unlabelled six-vertex graphs satisfying the common-boundary independence and minor exclusions"
+conclusions = [
+  "exactly 28 types survive with reflection-demand distribution 1,26,1",
+  "the unique demand-one net is eliminated and the unique demand-three type is two disjoint triangles",
+  "15 surviving types are triangular and 12 are triangle-free",
+]
+does_not_prove = [
+  "host realisability of every boundary type",
+  "trace synchronization on the remaining 27 types",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "common six-set", "boundary census", "reflection demand"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_overlap_trace_parity"
+title = "Independent-block coverage does not force common-six trace synchronization"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_overlap_trace_language_barrier.md"
+source_heading = "2. Two disjoint complete response languages"
+active = false
+audit = "results/hc7_k7minus_overlap_trace_synchronization_audit.md"
+expected_source_sha256 = "8d6f2fe124d4e1e2d041b377fe900862f94a0c4223f32d1a97a3173cb0a01e34"
+scope = "two abstract even- and odd-block trace languages on the six-vertex matching 3K2"
+conclusions = [
+  "the two trace families are disjoint",
+  "each family contains a partition having every prescribed nonempty independent set as an exact block",
+  "both families satisfy the displayed central six-colour extension constraint",
+]
+does_not_prove = [
+  "realisation by two exterior graphs",
+  "failure of synchronization for operation-related critical-host colourings",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "common six-set", "trace languages", "parity barrier", "3K2"]
 
 [[claims]]
 id = "hc7.k7minus_both_full_boundary_reduction"
@@ -12083,6 +12310,90 @@ kind = "uses"
 note = "The two overlapping cuts have packing vectors constrained to (1,2) or (1,1)."
 
 [[relations]]
+source = "hc7.k7minus_two_component_literal_k5_exclusion"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+note = "Exceptionality supplies the K4-free literal neighbourhood needed to exclude a clique containing the centre."
+
+[[relations]]
+source = "hc7.k7minus_two_component_density_jump"
+target = "hc7.k7minus_two_component_literal_k5_exclusion"
+kind = "uses"
+note = "Global literal-K5 exclusion removes every degree-seven vertex and makes every degree-eight vertex exceptional."
+
+[[relations]]
+source = "hc7.k7minus_two_component_density_jump"
+target = "hc7.k7minus_density_order_rigidity"
+kind = "uses"
+note = "The audited Jakobsen defect inequality converts n7=0 into n8 at least 25 plus the high-degree defect."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_six_fan"
+target = "hc7.k7minus_one_nonfull_reduction"
+kind = "uses"
+note = "The one-nonfull reduction supplies the exact boundary, packing orientation and frozen residual."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_six_fan"
+target = "hc7.exact7_all_residual_defect2_carrier"
+kind = "uses"
+note = "Defect-two connected-subgraph reflection forces every six-fan union to meet every disjoint full connected subgraph."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_nested_cuts"
+target = "hc7.k7minus_two_component_density_jump"
+kind = "uses"
+note = "The density jump removes the singleton degree-seven terminal case."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_nested_cuts"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+note = "Critical seven-cut capacity bounds both nested cuts and gives the exact three-component colouring conclusion."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_nested_cuts"
+target = "hc7.barrier.k7minus_two_entrance_allocation"
+kind = "guarded_by"
+note = "Two entrance vertices and the static packing data do not by themselves yield the desired third connected subgraph."
+
+[[relations]]
+source = "hc7.k7minus_overlap_common_trace"
+target = "hc7.k7minus_distinct_miss_reduction"
+kind = "uses"
+note = "The distinct nonadjacent misses determine the exact splice and the shared six literal vertices."
+
+[[relations]]
+source = "hc7.k7minus_overlap_reflection_demand"
+target = "hc7.k7minus_overlap_common_trace"
+kind = "uses"
+note = "Connected-subgraph contractions force the same trace on both sides, which the common-trace lemma glues."
+
+[[relations]]
+source = "hc7.k7minus_overlap_triangle_packing"
+target = "hc7.k7minus_distinct_miss_reduction"
+kind = "uses"
+note = "The common six-set and both literal exterior attachment patterns complete the explicit K7 model."
+
+[[relations]]
+source = "hc7.k7minus_overlap_boundary_census"
+target = "hc7.k7minus_overlap_reflection_demand"
+kind = "uses"
+note = "The reflection inequality eliminates the unique demand-one type and orients packing on every remaining type."
+
+[[relations]]
+source = "hc7.k7minus_overlap_boundary_census"
+target = "hc7.k7minus_overlap_triangle_packing"
+kind = "uses"
+note = "The triangle lift forces packing number one on all 15 surviving triangular types."
+
+[[relations]]
+source = "hc7.k7minus_overlap_common_trace"
+target = "hc7.barrier.k7minus_overlap_trace_parity"
+kind = "guarded_by"
+note = "Complete static independent-block coverage can split into disjoint even- and odd-block trace languages."
+
+[[relations]]
 source = "hc7.k7minus_both_full_boundary_reduction"
 target = "hc7.k7minus_exceptional_independent_triples"
 kind = "uses"
@@ -12129,6 +12440,30 @@ source = "hc7.target.k7minus_rooted_shore_allocation"
 target = "hc7.k7minus_distinct_miss_reduction"
 kind = "uses"
 note = "The distinct-miss branch is normalized to connected-rich cuts or two overlapping packet-one cuts."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_two_component_density_jump"
+kind = "uses"
+note = "Any two-component exceptional centre now forces the global literal-K5-free density-4n branch with at least 25 exceptional vertices."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_one_nonfull_nested_cuts"
+kind = "uses"
+note = "The one-nonfull branch stops at the non-tight attachment inequality or two exact nested order-seven cuts."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_overlap_boundary_census"
+kind = "uses"
+note = "The distinct nonadjacent-miss branch has 27 remaining common-six types with exact packing-one restrictions."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.barrier.k7minus_overlap_trace_parity"
+kind = "guarded_by"
+note = "Static exact-block coverage does not synchronize the two common-six response languages."
 
 [[relations]]
 source = "hc7.target.k7minus_rooted_shore_allocation"
@@ -12964,6 +13299,35 @@ expected_stdout = [
   "edges 5:1 6:4 7:10 8:11 9:2; connectivity 0:9 1:15 2:4; chi3=28",
   "clique-OCT vertex:21 edge:4 none:3",
   "PASS K7-minus one-nonfull boundary census",
+]
+
+[[verifiers]]
+id = "k7minus-one-nonfull-two-entrance-barrier"
+path = "barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier_verify.py"
+sha256 = "f374c2993c2f0d9954a8a60192987a6d21dd4e577ec6099c48ea19c26a015462"
+timeout = 30
+expected_stdout = [
+  "PASS K7-minus one-nonfull two-entrance allocation barrier",
+  "order=13 edges=48 boundary=FCdeG alpha_Nu=3 K4_Nu=no",
+  "cuts_le6=4096 connectivity=7 packing=(1,2)",
+  "x_boundary_contacts=4 x_F_entrances=2 defect2_allocations=0",
+  "chromatic_number=5 explicit_K7_model=yes",
+  "scope=violates K7-minus exclusion and seven-chromatic criticality",
+]
+
+[[verifiers]]
+id = "k7minus-overlap-trace-synchronization"
+path = "results/hc7_k7minus_overlap_trace_synchronization_verify.py"
+sha256 = "f491e0b6a2b16c7d796334005329c2830c047e281451e0fe1202c30961f3f2b1"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "common_six_survivors=28 digest=9349e3f0c53068bdbdac7068c8fa347ac6658b5231c8abd3dc8e99804118bec9",
+  "reflection_demand_distribution=1:1,2:26,3:1",
+  "triangular=16 triangle_free=12",
+  "unique_demand_one=ECqg(net) unique_demand_three=EQhO(2K3)",
+  "matching_parity_languages=PASS",
+  "PASS overlap_trace_synchronization_finite_checks",
 ]
 
 [[verifiers]]
