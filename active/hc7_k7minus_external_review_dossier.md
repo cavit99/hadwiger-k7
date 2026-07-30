@@ -56,6 +56,13 @@ The proposed note studies a hypothetical minor-minimal non-six-colourable
    three, eliminating the four-component case.  With three components the
    boundary is exactly three-chromatic, and every proper three-colouring has
    colour-class sizes `3,2,2`.
+9. Combining the density defect with `n_7\le8` forces at least seven
+   exceptional degree-eight vertices.  If there are exactly seven, the
+   degree sequence, the two literal `K_5`s, parity, and order are rigid.
+10. Every exceptional neighbourhood has independence number exactly three.
+    For any resulting independent triple, a five-root `K_5` model that
+    avoids one exterior component already completes to an explicit
+    `K_7^-`-minor model.
 
 The note must not claim the global `4n-4` extremal target, a standalone bond
 or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
@@ -140,6 +147,44 @@ directly.  At equality the degree sequence is `7^8 8^{n-8}`; exactly two
 literal `K_5`s cover the degree-seven vertices, each contains four of them,
 the cliques are disjoint or share their degree-eight vertex, and `n>=21`.
 
+### Seven exceptional vertices and exact equality structure
+
+- [Theorem](../results/hc7_k7minus_seven_exceptional_vertices_corollary.md)
+- [Internal audit](../results/hc7_k7minus_seven_exceptional_vertices_corollary_audit.md)
+- Theorem SHA-256:
+  `5cf181ca631ba0e4f6f5235ca4357faac5bdcce3acde5ba8e83dde0e05e1a388`
+
+If `b` counts exceptional degree-eight vertices and
+`tau=sum_{i>=10}(i-9)n_i`, the theorem proves
+
+\[
+                         b\ge15-n_7+\tau\ge7+\tau.
+\]
+
+The exceptional-vertex subgraph is `K_5`-free.  At `b=7`, the exact degree
+sequence is `7^8 8^9 9^{n-17}`, the two literal `K_5`s are disjoint with
+degree pattern `7^4 8^1`, `2m=9n-25`, the order is odd, and `n>=21`.
+
+### Exceptional-neighbourhood independent triples and exterior completion
+
+- [Theorem](../results/hc7_k7minus_exceptional_neighbourhood_completion.md)
+- [Internal audit](../results/hc7_k7minus_exceptional_neighbourhood_completion_audit.md)
+- Theorem SHA-256:
+  `fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd`
+
+Every exceptional degree-eight vertex `u` has
+`alpha(G[N(u)])=3`.  The independence-number-at-most-two argument invokes
+Rolek--Song--Thomas Lemma 2.1 and then gives an explicit seven-bag
+`K_7^-` model for every possible missed exterior attachment.  If
+`I\subseteq N(u)` is an independent triple and `R=N(u)-I`, any
+`R`-rooted `K_5` model in `G-({u}\cup I)` that avoids a component of
+`G-N[u]` likewise completes to `K_7^-`.  A
+[retained finite verifier](../results/hc7_k7minus_exceptional_neighbourhood_completion_verify.py),
+at SHA-256
+`5eb316169563208269c887775376dea9d4b853201a2458f9b604b23ea6017ad0`,
+checks the order-eight input and all nine explicit near-full attachment
+models; it is an independent cross-check, not a proof dependency.
+
 ### Seven-boundary connected-subgraph capacity and contraction criteria
 
 - [Theorem](../results/hc7_k7minus_seven_boundary_component_descent.md)
@@ -210,6 +255,20 @@ exact neighbourhoods + two-K5 bound + private-triangle Kempe allocation
 ├─ no all-degree-seven literal K5
 ├─ at most eight degree-seven vertices
 └─ critical-host density at least 4n-4 with exact tight-layer structure
+
+density defect + at most eight degree-seven vertices
+└─ at least seven exceptional degree-eight vertices
+   └─ exact b=7 degree, clique, parity, and order structure
+
+proper-minor six-colourability + non-six-colourability
+└─ every exceptional neighbourhood has independence number at most three
+
+exceptionality + K7-minus exclusion + Rolek--Song--Thomas Lemma 2.1
++ order at least nineteen + seven-connectivity
+└─ explicit K7-minus model excludes independence number at most two
+   └─ every exceptional neighbourhood has an independent triple
+      + seven-connectivity + rooted K5 avoiding an exterior component
+      └─ explicit K7-minus exterior-completion model
 
 seven-connectivity + elementary minor constructions + Mader bounds
 └─ capacity of boundary-full connected subgraphs at most four
@@ -282,6 +341,34 @@ Counterexamples to intermediate lemmas are falsification checks and pivot
 signals, not a successful endpoint.  A normalized Norin--Totschnig
 near-`K_7` upgrade remains the higher-risk fallback.
 
+The parallel critical-host-specific finishing target is:
+
+> Every graph in the displayed critical package has at most six
+> exceptional degree-eight vertices.
+
+This would contradict the proved lower bound of seven and settle the same
+six-colour conjecture.  It is not proved.  The current
+[technical frontier](hc7_k7minus_seven_exceptional_frontier.md) reduces the
+positive route to exterior allocation: at an exceptional centre, construct
+a five-root `K_5` model that avoids one exterior component, or leave a
+connected residual subgraph adjacent to the independent-triple star and at
+least four rooted bags.  The next attack should first route every nonfull
+two-component shore through the existing order-seven-cut theorem, then
+treat two full shores by a one-shore rooted-model theorem.  An exploratory
+demand-graph census suggests that most local types fall within the
+six-demand Kriesell--Mohr range, with a small residue.  Exact counts should
+not be relied upon until they have a retained verifier and a written
+unbounded reduction.
+
+The alternative seven-root list calculation gives exact list sizes and
+anchored minimal uncolourable cores, but a single static colouring is not
+enough: the explicit
+[seven-root static-list barrier](../barriers/hc7_k7minus_seven_root_list_count_barrier.md)
+realises both singleton and full odd-cycle cores without the critical-host
+hypotheses.  Any list-based continuation must synchronize the seven
+different vertex-deletion responses rather than infer a contradiction from
+one core.
+
 These attacks are not prerequisites for external review of the proved
 package.  The stronger global `4n-5` statement remains open, but it is no
 longer the minimal extremal input required by the critical-host reduction.
@@ -305,7 +392,10 @@ longer the minimal extremal input required by the critical-host reduction.
    [Theorem 2 and Corollary 4](https://arxiv.org/abs/1402.2806).
 7. Fournier's cyclability theorem, in the traceable form of Gould Theorem 7
    or Saito--Yamashita Theorem D.
-8. Norin--Totschnig, Theorem 6 and Conjecture 21, for the precise public
+8. Martin Rolek, Zi-Xia Song, and Robin Thomas,
+   [Lemma 2.1](https://arxiv.org/abs/2208.07335), for the order-eight
+   `K_4`-free, independence-number-two classification.
+9. Norin--Totschnig, Theorem 6 and Conjecture 21, for the precise public
    density benchmark and priority context.
 
 ## 6. Review questions
@@ -352,12 +442,25 @@ longer the minimal extremal input required by the critical-host reduction.
 16. Does the hand proof cover every four-critical graph on at most seven
     vertices with at most nine edges, and hence justify the exact
     three-component chromatic conclusion without relying on enumeration?
-17. Is the scope stated sharply enough that no reader can infer a global
+17. Does the defect calculation give
+    `b>=15-n_7+tau>=7+tau`, and does equality `b=7` force every asserted
+    degree, clique, parity, and order conclusion?
+18. In the exceptional-neighbourhood theorem, is Rolek--Song--Thomas
+    Lemma 2.1 matched exactly, and do the seven displayed bags give at most
+    the one claimed missing adjacency for every exterior miss?
+19. In exterior completion, does seven-connectivity force the unused
+    component to meet the independent-triple star and at least four of the
+    five literal roots?
+20. Does the seven-root list barrier refute only a static one-colouring
+    inference, without purporting to satisfy the contraction-critical or
+    forbidden-minor hypotheses?
+21. Is the scope stated sharply enough that no reader can infer a global
     `4n-4` extremal theorem, a bond theorem, or two full connected
     transversals?
-18. Are any of the exact neighbourhood, private-triangle, density,
-    equality-structure, connected-subgraph-capacity, or contraction conclusions already
-    explicit or implicit in the literature?
+22. Are any of the exact neighbourhood, private-triangle, density,
+    equality-structure, exceptional-neighbourhood, connected-subgraph-
+    capacity, or contraction conclusions already explicit or implicit in
+    the literature?
 
 ## 7. Review and publication gate
 
@@ -365,10 +468,13 @@ The internal package is ready to send to graph-minor and colouring/Kempe
 specialists.  Before submission it still requires:
 
 - independent human proof review of the degree-seven, two-clique,
-  private-triangle, density, equality-structure, connected-subgraph capacity, and
-  critical reflection and contraction arguments;
+  private-triangle, density, equality-structure, exceptional-vertex,
+  exceptional-neighbourhood, connected-subgraph-capacity, critical
+  reflection, and contraction arguments;
 - conventional novelty and priority searches, including forward citation
-  chains of Niu--Zhang, Rolek--Song, Albar, and Norin--Totschnig;
+  chains of Niu--Zhang, Rolek--Song, Rolek--Song--Thomas, Albar, and
+  Norin--Totschnig;
+- an independent rerun of the retained exceptional-neighbourhood verifier;
 - correction and renewed hashes for any mathematical change; and
 - a separate manuscript pass after the theorem package is stable.
 

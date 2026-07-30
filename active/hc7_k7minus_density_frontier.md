@@ -5,8 +5,10 @@ six-colour conjecture or of `HC_7`.  The entrance reduction,
 private-triangle Kempe allocation, all-degree-seven clique exclusion, and
 seven-boundary connected-subgraph, critical-host capacity, and contraction
 theorems are written proofs with separate internal audits GREEN for their
-current revisions.  The displayed finishing target below remains
-conjectural.
+current revisions.  The two promoted seven-exceptional lower-bound and
+local-completion theorems are also written and separately audited GREEN.
+The live list-core derivation is not separately audited.  Both displayed
+finishing targets below remain conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -69,12 +71,41 @@ Exactly two literal `K_5`s cover the eight degree-seven vertices; each has
 four degree-seven vertices and one degree-eight vertex.  They are disjoint
 or meet in their common degree-eight vertex, and `|V(G)|\ge21`.
 
+There is a second direct consequence of the same count.  If `b` is the
+number of exceptional degree-eight vertices and
+
+\[
+                  \tau=\sum_{i\ge10}(i-9)n_i,
+\]
+
+then the proved
+[seven-exceptional-vertex theorem](../results/hc7_k7minus_seven_exceptional_vertices_corollary.md)
+gives
+
+\[
+                         b\ge15-n_7+\tau\ge7+\tau.       \tag{4}
+\]
+
+Their induced graph is `K_5`-free, so every selected seven contain at least
+three nonedges.  At `b=7`, the degree sequence is exactly
+
+\[
+                         7^8 8^9 9^{n-17},
+\]
+
+`2m=9n-25`, `n` is odd, and the two literal `K_5`s are disjoint copies with
+degree pattern `7^4 8^1`; in this exact branch, `n\ge21`.  The separately written
+[exceptional-neighbourhood theorem](../results/hc7_k7minus_exceptional_neighbourhood_completion.md)
+also proves that every exceptional neighbourhood has independence number
+exactly three and identifies the terminal exterior-component allocation
+condition.
+
 The first possible order now has only two degree patterns:
 
 \[
  7^6 8^{13},
- \qquad
- 7^7 8^{11}9^1.                                        \tag{4}
+\qquad
+ 7^7 8^{11}9^1.                                        \tag{5}
 \]
 
 In the second pattern, the two literal `K_5`s meet in one degree-seven
@@ -90,7 +121,7 @@ be `K_{3,4}` or `K_{3,3} dotcup K_1`.  The former anti-neighbourhood
 129-graph residual and aligned near-`K_7` theorem remain valid elsewhere in
 the repository but are not dependencies of this density or equality chain.
 
-## 2. Current density-only sufficient extremal target
+## 2. Two sufficient finishing targets
 
 The following statement is sufficient for the `K_7^-` six-colour
 conjecture:
@@ -101,11 +132,11 @@ conjecture:
 Equivalently, every seven-connected `K_7^-`-minor-free graph should satisfy
 
 \[
-                              m\le4n-5.                 \tag{5}
+                              m\le4n-5.                 \tag{6}
 \]
 
-This target is not proved.  It is nevertheless the right global statement
-to attack: it uses only seven-connectivity and density, while any
+This target is not proved.  It remains the clean global statement to
+attack: it uses only seven-connectivity and density, while any
 minor-minimal colouring counterexample automatically satisfies its
 hypotheses.
 
@@ -117,6 +148,19 @@ one possible proof is to use this surplus to recover one of the two missing
 adjacencies.  Their paper explicitly identifies a `K_7^-` strengthening as
 the missing extremal input for the six-colour conjecture:
 [Norin--Totschnig, Theorem 6 and Conjecture 21](https://arxiv.org/abs/2507.03244).
+
+The critical-host count supplies a second, less general but more structured
+finishing theorem:
+
+> **Seven-exceptional target.** Every seven-connected, seven-chromatic,
+> `K_7^-`-minor-free graph whose every proper minor is six-colourable has at
+> most six exceptional degree-eight vertices.
+
+This is also unproved.  It would contradict (4) directly and therefore
+settle the same six-colour conjecture while retaining all proper-minor
+colouring responses.  Its exact reductions, barriers, and next allocation
+gate are in the
+[seven-exceptional technical frontier](hc7_k7minus_seven_exceptional_frontier.md).
 
 The former `4n-5` target is a stronger open statement: it would force the
 minor one edge earlier.  It is no longer the current sufficient obligation,
@@ -134,7 +178,7 @@ be one of the two all-degree-seven literal `K_5`s.  The proved local
 classification gives five pairwise disjoint private triangles
 
 \[
-                         T_i=N(v_i)-V(L),               \tag{6}
+                         T_i=N(v_i)-V(L),               \tag{7}
 \]
 
 where `T_i` is anticomplete to `L-{v_i}`.  The
@@ -143,7 +187,7 @@ supplies the exact host for the Kempe argument.  Put `H=G-L`.  Then
 
 \[
  \kappa(H)\ge5,
- \qquad |E(H)|=4|V(H)|-10.                             \tag{7}
+ \qquad |E(H)|=4|V(H)|-10.                             \tag{8}
 \]
 
 Let `A,B` be the two degree-seven `K_5`s, put
@@ -152,7 +196,7 @@ Let `A,B` be the two degree-seven `K_5`s, put
 \[
  \kappa(R)\ge3,
  \qquad |E(R)|=4|V(R)|-15+k,
- \qquad k\le3,                                         \tag{8}
+ \qquad k\le3,                                         \tag{9}
 \]
 
 and, before the final exclusion, gives
@@ -160,7 +204,7 @@ and, before the final exclusion, gives
 \[
  |V(R)|\ge19,
  \qquad
- |V(G)|\ge29.                                          \tag{9}
+ |V(G)|\ge29.                                          \tag{10}
 \]
 
 It also proves an exact Hall and edge-critical Kempe fork.  In every
@@ -214,7 +258,7 @@ all of `S`.  Then
  \qquad
  N(C)=S\text{ for every component `C`},
  \qquad
- \kappa(G[S])\le6-\pi_S(G).                           \tag{10}
+ \kappa(G[S])\le6-\pi_S(G).                           \tag{11}
 \]
 
 For `r=2`, the boundary is `K_5`-minor-free; for `r=3`, it has at most nine
@@ -249,7 +293,7 @@ For a component `C_i`, put
  n_i=|V(C_i)|,\quad
  e_i=|E(C_i)|+|E(C_i,S)|,\quad
  \delta_i=e_i-4n_i,\quad
- q=|E(G)|-(4|V(G)|-4).                                \tag{11}
+ q=|E(G)|-(4|V(G)|-4).                                \tag{12}
 \]
 
 For a nonempty component set `X`, contracting every `C_i`, `i\in X`, gives
@@ -257,7 +301,7 @@ For a nonempty component set `X`, contracting every `C_i`, `i\in X`, gives
 
 \[
  |E(H_X)|-(4|V(H_X)|-4)
-   =q+\sum_{i\in X}(3-\delta_i).                      \tag{12}
+   =q+\sum_{i\in X}(3-\delta_i).                      \tag{13}
 \]
 
 The theorem also gives an exact, not merely sufficient, connectivity test:
@@ -270,7 +314,7 @@ nonsingleton component is density-eligible.  In particular,
 \[
  |V(C_i)|\ge2,\quad \delta_i\le3+q
  \quad\Longrightarrow\quad
- G-V(C_i)-Z\text{ is disconnected for some }|Z|\le5. \tag{13}
+ G-V(C_i)-Z\text{ is disconnected for some }|Z|\le5. \tag{14}
 \]
 
 The main structural step is therefore the following positive cut-reduction
@@ -304,7 +348,8 @@ language by the exact surplus and connectivity criteria above.  The
 critical-host reflection attack has now removed `r=4` altogether and
 normalized `r=3`.
 
-The next positive critical-host attack should therefore start from `r=3`.
+Within the critical seven-cut route, the next positive attack should
+therefore start from `r=3`.
 Each of its three components has boundary-full packing number one, while the
 boundary is three-chromatic and every proper three-colouring has class sizes
 `3,2,2`.  The objective is to use this exact boundary-colouring restriction
@@ -330,10 +375,19 @@ The normalized Norin--Totschnig near-`K_7` upgrade remains a higher-risk
 fallback because four global surplus edges need not occur at the deficient
 branch set.
 
+In parallel, the seven-exceptional target now has a sharper local entrance:
+all seven centres have independent triples.  The first concrete attack is
+the two-component shore-allocation lemma: construct, for one centre, a
+five-root `K_5` model confined to one closed shore.  Such a model completes
+immediately to `K_7^-` using the other exterior component.  The complementary
+multi-centre attack must synchronize the seven anchored list cores arising
+from six-colourings of `G-x`; a static list census is blocked by the explicit
+`C_7\vee C_6` mechanism witness.
+
 Further enumeration below order nineteen is obsolete globally, and the
 former critical-host equality layer is empty.  Enumeration is useful only
 if it exposes a lemma that survives at unbounded order.  Neither random
-tests nor finite host elimination may be promoted as a proof of (5).
+tests nor finite host elimination may be promoted as a proof of (6).
 Likewise, a smallest-counterexample assumption is a standard engine for a
 positive universal proof; constructing counterexamples to intermediate
 lemmas is only a falsification check.  A new barrier is a stop or pivot

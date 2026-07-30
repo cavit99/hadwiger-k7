@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 29 July 2026
+**Last updated:** 30 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 **Publication assessment:** the internally audited corpus is a credible
 partial-results manuscript candidate, but it is not submission-ready;
@@ -119,6 +119,25 @@ and the cliques are disjoint or share their degree-eight vertex; moreover
 degree-seven neighbourhoods and Jakobsen's upper bound.  The first possible
 order has degree sequence `7^6 8^13` or `7^7 8^11 9^1`.
 
+The separately written and internally audited
+[seven-exceptional-vertex theorem](results/hc7_k7minus_seven_exceptional_vertices_corollary.md)
+now sharpens the critical-host structure in a different direction.  If `b`
+counts degree-eight vertices with `K_4`-free neighbourhoods and
+`tau=sum_{i>=10}(i-9)n_i`, then
+
+\[
+                         b\ge15-n_7+\tau\ge7+\tau.
+\]
+
+Their induced graph is `K_5`-free.  If `b=7`, then the degree sequence is
+`7^8 8^9 9^{n-17}`, `2m=9n-25`, `n` is odd, and the two literal `K_5`s are
+disjoint with degree pattern `7^4 8^1`; moreover, `n\ge21` in this exact
+branch.  The adjacent
+[exceptional-neighbourhood and exterior-completion theorem](results/hc7_k7minus_exceptional_neighbourhood_completion.md)
+proves that every exceptional neighbourhood has independence number exactly
+three and that a five-root `K_5` model avoiding one exterior component is
+already terminal.
+
 The degree-seven entrance is now computation-free.  Contracting the star on
 `v` and any two nonadjacent neighbours, followed by one Kempe-chain argument
 and Kriesell--Mohr's five-root theorem, produces a rooted `K_5` on the other
@@ -127,7 +146,7 @@ gives exactly the two neighbourhoods used by the density proof.  The former
 anti-neighbourhood 129-graph residual and aligned near-`K_7` classification
 are no longer dependencies of this `K_7^-` proof spine.
 
-Thus the current density-only sufficient statement is:
+Thus one current sufficient statement is:
 
 > Every seven-connected `n`-vertex graph with at least `4n-4` edges
 > contains a `K_7^-` minor.
@@ -138,7 +157,15 @@ stronger open extremal benchmark, but it is no longer the exact threshold
 needed by the critical-host reduction.  The current proof obligations are
 recorded in the [density frontier](active/hc7_k7minus_density_frontier.md).
 
-### 3. Immediate structural laboratory: strict density and seven-cut contraction
+A second, critical-host-specific sufficient statement is that no seven
+exceptional degree-eight vertices coexist, equivalently that every graph
+under the displayed critical hypotheses has `b<=6`.  This target is also
+open, but it retains the proper-minor colouring responses discarded by the
+bare extremal theorem.  Its exact list-core and exterior-allocation residues
+are recorded in the
+[seven-exceptional technical frontier](active/hc7_k7minus_seven_exceptional_frontier.md).
+
+### 3. Immediate structural laboratory: seven exceptional centres and seven-cut contraction
 
 The private-triangle allocation reconstructs the decisive Kempe argument
 without density equality.  Starting from any all-degree-seven literal
@@ -147,6 +174,21 @@ private triangles and the other meeting at least four, and hence an explicit
 `K_7^-` model.  It does not prove the stronger standalone bond or two-full-
 transversal statement; that assertion is unnecessary because `K_7^-`
 permits one missing branch-set adjacency.
+
+At an exceptional degree-eight centre `u`, an independent triple
+`I\subseteq N(u)` is now always available.  The five remaining neighbours
+are the roots of the local model problem.  If a rooted `K_5` model avoids
+one component of `G-N[u]`, seven-connectivity supplies the seventh branch
+set and an explicit `K_7^-` model.  The two-component residue therefore
+requires every model to meet both components; the one-component residue
+requires every remaining connected piece either to miss `I` or to contact
+at most three rooted bags.  The written, not separately audited,
+[seven-root list reduction](active/hc7_k7minus_seven_exceptional_frontier.md#3-seven-root-list-reduction)
+from simultaneous deletion of seven exceptional vertices gives an exact
+two-unit list-core budget, but a concrete
+`C_7\vee C_6` witness shows that one static list state can leave a singleton
+core or a tight odd-cycle core.  The useful adaptive data are the seven
+anchored cores arising separately from colourings of `G-x`.
 
 Independently, the
 [seven-boundary connected-subgraph and component-descent theorem](results/hc7_k7minus_seven_boundary_component_descent.md)
@@ -197,8 +239,9 @@ seven-connected minor still at `4n-4`—remains open.  It is equivalent in
 strength to the bare global `4n-4` extremal theorem, not a routine auxiliary
 lemma.  The critical-host theorem closes `r=4` only by using proper-minor
 six-colourability; it does not remove `r=4` from an arbitrary extremal graph.
-Within the critical host, the next positive attack is therefore the exact
-`r=3` form above, followed by the likely hard `r=2` case.
+Within the critical seven-cut route, the next positive attack is therefore
+the exact `r=3` form above, followed by the likely hard `r=2` case.  The
+parallel exceptional-centre route has its own ordered attack below.
 
 ## Supporting `HC_7` refinements and decoder status
 
@@ -720,7 +763,11 @@ global two-`K_5` bound, the initial `4n-5` density and order reduction, and
 the generalized private-triangle allocation.  The latter excludes every
 all-degree-seven literal `K_5`, gives `n_7\le8` and `m\ge4n-4`, and describes
 the tight layer exactly.  The equality-specific connectivity and Kempe chain
-is retained as a secondary specialization.  The independent general
+is retained as a secondary specialization.  The new exceptional-vertex
+package forces at least seven exceptional degree-eight vertices, rigidifies
+the exact seven-vertex layer, proves independence number three in every
+exceptional neighbourhood, and identifies the exterior-component completion
+criterion for a rooted `K_5` model.  The independent general
 separator theorem bounds disjoint boundary-full connected subgraphs and cut
 components by four, proves two-connected interiors in the four-component
 case, and gives exact whole-component contraction criteria.  In the actual
@@ -812,6 +859,15 @@ records the internal go/no-go assessment; it is not external peer review.
   `7^8 8^{n-8}`, with two precisely constrained literal `K_5`s and
   `n>=21`.  This is an internally audited conditional reduction, not a bare
   extremal theorem or an `HC_7` result.
+- **Seven exceptional degree-eight vertices and local completion.** The
+  degree count now forces at least seven degree-eight vertices with
+  `K_4`-free neighbourhoods, more precisely
+  `b>=15-n_7+sum_{i>=10}(i-9)n_i`
+  `>=7+sum_{i>=10}(i-9)n_i`.  Every such neighbourhood has
+  independence number exactly three.  A five-root `K_5` model avoiding one
+  exterior component completes to an explicit `K_7^-` model.  The upper
+  bound `b<=6` remains an open finishing theorem; the static seven-root list
+  reduction does not prove it.
 - **Seven-boundary connected-subgraph and descent obstruction.** In every
   seven-connected `K_7^-`-minor-free graph, an order-seven cut has at most
   four disjoint connected subgraphs outside it that are each adjacent to all

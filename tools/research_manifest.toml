@@ -7528,12 +7528,168 @@ does_not_prove = [
 keywords = ["K7 minus", "seven-cut", "descent failure", "deletion certificate"]
 
 [[claims]]
+id = "hc7.k7minus_seven_exceptional_vertices"
+title = "A critical K7-minus host has at least seven exceptional degree-eight vertices"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_exceptional_vertices_corollary.md"
+source_heading = "Theorem 1 (seven exceptional vertices and the degree defect)"
+active = false
+audit = "results/hc7_k7minus_seven_exceptional_vertices_corollary_audit.md"
+expected_source_sha256 = "5cf181ca631ba0e4f6f5235ca4357faac5bdcce3acde5ba8e83dde0e05e1a388"
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
+label_fidelity = "all exceptional vertices are literal degree-eight vertices whose neighbourhoods contain no literal K4"
+conclusions = [
+  "if b is the exceptional count and tau is the degree-above-nine defect, then b is at least 15-n7+tau and at least 7+tau",
+  "the exceptional-vertex subgraph is K5-free and every seven exceptional vertices contain at least three nonedges",
+]
+does_not_prove = [
+  "an upper bound on exceptional degree-eight vertices",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "seven exceptional vertices", "degree eight", "degree defect"]
+
+[[claims]]
+id = "hc7.k7minus_seven_exceptional_rigidity"
+title = "Exactly seven exceptional vertices force a rigid degree and clique structure"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_exceptional_vertices_corollary.md"
+source_heading = "Theorem 2 (rigidity at exactly seven exceptional vertices)"
+active = false
+audit = "results/hc7_k7minus_seven_exceptional_vertices_corollary_audit.md"
+expected_source_sha256 = "5cf181ca631ba0e4f6f5235ca4357faac5bdcce3acde5ba8e83dde0e05e1a388"
+scope = "the exact b=7 branch of the critical K7-minus host"
+label_fidelity = "the seven exceptional vertices and both literal K5s retain their literal degrees and disjointness"
+conclusions = [
+  "the degree sequence is 7^8 8^9 9^(n-17) and 2m=9n-25",
+  "the order is odd and at least twenty-one",
+  "the only two literal K5s are disjoint and each has degree pattern 7^4 8^1",
+]
+does_not_prove = [
+  "that every critical host has exactly seven exceptional vertices",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "seven exceptional vertices", "rigidity", "degree sequence", "two K5s"]
+
+[[claims]]
+id = "hc7.k7minus_order8_ramsey_classification"
+title = "Every K4-free order-eight graph of independence number at most two contains a spanning cycle square"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_exceptional_neighbourhood_completion.md"
+source_heading = "Lemma 1 (the order-eight Ramsey classification)"
+active = false
+audit = "results/hc7_k7minus_exceptional_neighbourhood_completion_audit.md"
+expected_source_sha256 = "fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd"
+scope = "all simple graphs on eight vertices; established externally as Rolek-Song-Thomas Lemma 2.1"
+label_fidelity = "the spanning C8 square uses all eight literal vertices"
+conclusions = [
+  "a K4-free order-eight graph with independence number at most two contains a spanning C8 square",
+  "a retained independent finite verifier confirms all three unlabelled cases",
+]
+does_not_prove = [
+  "the exceptional-neighbourhood theorem without the critical-host exterior argument",
+  "any colouring conjecture",
+]
+keywords = ["order eight", "Ramsey classification", "cycle square", "Rolek Song Thomas"]
+
+[[claims]]
+id = "hc7.k7minus_exceptional_independent_triples"
+title = "Every exceptional degree-eight neighbourhood has independence number three"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_exceptional_neighbourhood_completion.md"
+source_heading = "Theorem 2 (every exceptional neighbourhood has an independent triple)"
+active = false
+audit = "results/hc7_k7minus_exceptional_neighbourhood_completion_audit.md"
+expected_source_sha256 = "fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd"
+scope = "exceptional degree-eight vertices in the critical K7-minus host"
+label_fidelity = "the exceptional centre, its eight literal neighbours, an exterior component, and all seven branch sets remain explicit"
+conclusions = [
+  "every exceptional neighbourhood has independence number exactly three",
+  "the independence-number-at-most-two branch gives an explicit K7-minus model from a spanning cycle square and any exterior component",
+]
+does_not_prove = [
+  "a rooted K5 model on the five neighbours outside an independent triple",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree eight", "independent triple", "cycle square", "explicit minor model"]
+
+[[claims]]
+id = "hc7.k7minus_exterior_component_completion"
+title = "A rooted K5 model avoiding one exterior component completes to K7-minus"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_exceptional_neighbourhood_completion.md"
+source_heading = "Lemma 3 (exterior-component completion)"
+active = false
+audit = "results/hc7_k7minus_exceptional_neighbourhood_completion_audit.md"
+expected_source_sha256 = "fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd"
+scope = "a degree-eight centre in a seven-connected graph, a three-neighbour star, and a five-root K5 model"
+label_fidelity = "the centre, three selected neighbours, five literal roots, rooted branch sets, and unused exterior component remain explicit"
+conclusions = [
+  "if the rooted K5 model avoids one component of the exterior then seven explicit branch sets form a K7-minus minor",
+]
+does_not_prove = [
+  "existence of a rooted K5 model avoiding an exterior component",
+  "the one-component residual-contact theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "rooted K5", "exterior component", "shore allocation", "explicit minor model"]
+
+[[claims]]
+id = "hc7.k7minus_exterior_allocation_conditions"
+title = "Every surviving rooted K5 model obeys exact exterior-allocation restrictions"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_exceptional_neighbourhood_completion.md"
+source_heading = "Corollary 4 (the exact surviving allocation conditions)"
+active = false
+audit = "results/hc7_k7minus_exceptional_neighbourhood_completion_audit.md"
+expected_source_sha256 = "fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd"
+scope = "an exceptional centre, an independent neighbour triple, and a rooted K5 model in the critical K7-minus host"
+label_fidelity = "each literal exterior component, rooted branch set, and selected neighbour remains fixed"
+conclusions = [
+  "every rooted model meets every exterior component and is bilateral in the two-component case",
+  "every residual exterior component either has no independent-triple neighbour or contacts at most three rooted branch sets",
+]
+does_not_prove = [
+  "existence of a one-shore rooted model",
+  "the one-component residual-contact theorem",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "rooted K5", "bilateral model", "residual contact"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_seven_root_static_lists"
+title = "One static seven-root list state does not force a colouring contradiction"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k7minus_seven_root_list_count_barrier.md"
+source_heading = "Refuted inference"
+active = false
+expected_source_sha256 = "2eb88ca965013ae152ff43ef55bd129d07ad3ffcaeef2f47cce5566712474e61"
+scope = "the explicit eight-connected five-chromatic join C7 join C6; not a contraction-critical or forbidden-minor host"
+label_fidelity = "the seven marked degree-eight vertices, their neighbourhoods, and both displayed colourings are literal"
+conclusions = [
+  "all seven marked vertices are exceptional with alpha-three neighbourhoods and induce a K5-free graph",
+  "one exterior colouring gives singleton uncolourable cores and another gives a full tight odd-cycle core",
+]
+does_not_prove = [
+  "failure of synchronized vertex-deletion responses in a critical host",
+  "failure of the seven-exceptional finishing theorem",
+  "the absence of a K7-minus minor",
+]
+keywords = ["K7 minus", "seven roots", "list colouring", "odd cycle", "barrier"]
+
+[[claims]]
 id = "hc7.target.k7minus_extremal_4n_minus_5"
 title = "Every seven-connected graph with m at least 4n-5 contains K7-minus"
 kind = "target"
 status = "frozen"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Current density-only sufficient extremal target"
+source_heading = "2. Two sufficient finishing targets"
 active = false
 scope = "all seven-connected graphs at the former, stronger 4n-5 density benchmark"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
@@ -7550,7 +7706,7 @@ title = "Every seven-connected graph with m at least 4n-4 contains K7-minus"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Current density-only sufficient extremal target"
+source_heading = "2. Two sufficient finishing targets"
 active = false
 scope = "all seven-connected graphs at the current density-only sufficient threshold for the K7-minus six-colour conjecture"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
@@ -7626,6 +7782,77 @@ does_not_prove = [
   "HC7",
 ]
 keywords = ["K7 minus", "seven-cut", "fragment descent", "density surplus"]
+
+[[claims]]
+id = "hc7.k7minus_seven_root_list_core"
+title = "Seven exceptional roots obey an exact two-unit list-critical budget"
+kind = "lemma"
+status = "written-unaudited"
+source = "active/hc7_k7minus_seven_exceptional_frontier.md"
+source_heading = "3. Seven-root list reduction"
+active = false
+expected_source_sha256 = "8d3a8305bb1bfd3a11480d8c6b74f7668323e09fc96e74669cdc12af344b778b"
+scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
+label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
+conclusions = [
+  "each root list has size d_H(v)+rho(v)-2",
+  "each vertex of a minimal uncolourable core satisfies c(v)+rho(v)+epsilon(v)=2",
+  "the tight vertices induce a Gallai forest with clique blocks of order at most four",
+  "for each x in B, a six-colouring of G-x induces a state in which H-x is list-colourable and every minimal uncolourable core contains x",
+]
+does_not_prove = [
+  "a contradiction from one static exterior colouring",
+  "synchronization of the seven deletion-anchored list cores",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "seven roots", "list-critical core", "Gallai forest", "written unaudited"]
+
+[[claims]]
+id = "hc7.target.k7minus_rooted_shore_allocation"
+title = "Rooted shore allocation at one exceptional degree-eight centre"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_seven_exceptional_frontier.md"
+source_heading = "4. Exact remaining obstruction"
+active = false
+scope = "one of at least seven exceptional centres in the critical K7-minus host"
+label_fidelity = "the centre, an independent triple, five literal roots, every rooted branch set, and any residual connected subgraph remain explicit"
+allowed_exits = [
+  "a five-root K5 model avoiding one exterior component",
+  "a disjoint connected residual subgraph adjacent to the independent-triple star and at least four rooted bags",
+]
+does_not_prove = [
+  "that an arbitrary rooted K5 model has either allocation property",
+  "the one-component residual-contact theorem without further work",
+  "HC7",
+]
+keywords = ["K7 minus", "exceptional centre", "rooted K5", "shore allocation", "residual contact"]
+
+[[claims]]
+id = "hc7.target.k7minus_seven_exceptional_vertices"
+title = "A critical K7-minus host has at most six exceptional degree-eight vertices"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_seven_exceptional_frontier.md"
+source_heading = "1. Exact finishing target"
+active = false
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
+label_fidelity = "the exceptional centres, selected independent triples, five literal roots, exterior components, and any final minor-model bags remain explicit"
+hypotheses = [
+  "kappa(G) is at least seven",
+  "chi(G) equals seven",
+  "every proper minor of G is six-colourable",
+  "G has no K7-minus minor",
+]
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "a contradiction to the full proper-minor colouring response system",
+]
+does_not_prove = [
+  "the bare seven-connected 4n-4 extremal theorem",
+  "HC7",
+]
+keywords = ["K7 minus", "seven exceptional vertices", "finishing target", "shore allocation", "anchored list cores"]
 
 [[claims]]
 id = "hc7.target.k7minus_five_exceptional_vertices"
@@ -7848,6 +8075,137 @@ kind = "uses"
 source = "hc7.k7minus_tight_layer_structure"
 target = "hc7.k7minus_degree7_neighbourhood_types"
 kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_five_exceptional_vertices_reduction"
+kind = "uses"
+note = "The earlier density defect and literal-K5 coverage give the sharpened exceptional-vertex inequality."
+
+[[relations]]
+source = "hc7.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_tight_layer_structure"
+kind = "uses"
+note = "The at-most-eight degree-seven theorem upgrades the defect inequality from five exceptional vertices to at least seven."
+
+[[relations]]
+source = "hc7.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_five_exceptional_vertices_reduction"
+kind = "strengthens"
+note = "It replaces the former lower bound of five exceptional vertices by at least seven plus the degree-above-nine defect."
+
+[[relations]]
+source = "hc7.k7minus_seven_exceptional_rigidity"
+target = "hc7.k7minus_seven_exceptional_vertices"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_seven_exceptional_rigidity"
+target = "hc7.k7minus_density_order_rigidity"
+kind = "uses"
+note = "Private-triangle capacity supplies the order-at-least-twenty-one conclusion in the exact b=7 branch."
+
+[[relations]]
+source = "hc7.k7minus_exceptional_independent_triples"
+target = "hc7.k7minus_density_order_rigidity"
+kind = "uses"
+note = "The minimum-order theorem ensures a nonempty exterior component for the explicit cycle-square minor model."
+
+[[relations]]
+source = "hc7.k7minus_exceptional_independent_triples"
+target = "hc7.k7minus_order8_ramsey_classification"
+kind = "uses"
+note = "Rolek-Song-Thomas Lemma 2.1 supplies the spanning cycle square in the independence-number-at-most-two branch."
+
+[[relations]]
+source = "hc7.k7minus_seven_exceptional_rigidity"
+target = "hc7.k7minus_all_degree7_k5_exclusion"
+kind = "uses"
+note = "The all-degree-seven clique exclusion forces a degree-eight vertex in each of the two literal K5s."
+
+[[relations]]
+source = "hc7.k7minus_exterior_allocation_conditions"
+target = "hc7.k7minus_exterior_component_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_exterior_allocation_conditions"
+target = "hc7.low_degree_exterior_component_bounds"
+kind = "uses"
+note = "The at-most-two exterior-component theorem gives the bilateral conclusion."
+
+[[relations]]
+source = "hc7.k7minus_seven_root_list_core"
+target = "hc7.boundary_list_critical_transfer"
+kind = "related_to"
+note = "The tight-block Gallai-forest conclusion repeats the audited degree-choosability argument from that theorem."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_seven_exceptional_vertices"
+kind = "uses"
+note = "The target searches among the at least seven exceptional centres supplied by the count theorem."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_exterior_component_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_exterior_allocation_conditions"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.target.k7minus_seven_exceptional_vertices"
+kind = "subproblem_of"
+note = "Either displayed allocation outcome at one of the forced exceptional centres yields the forbidden minor and finishes the upper-bound target."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_seven_exceptional_vertices"
+kind = "uses"
+note = "The proved lower bound makes the proposed upper bound of six a sufficient contradiction."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_exterior_component_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_seven_root_list_core"
+kind = "related_to"
+note = "The second live attack seeks to synchronize the seven deletion-anchored list-critical responses."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.target.k7minus_five_exceptional_vertices"
+kind = "supersedes"
+note = "The sharpened lower bound changes the exact sufficient upper-bound target from four to six exceptional vertices."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.barrier.k7minus_seven_root_static_lists"
+kind = "guarded_by"
+note = "One static exterior colouring can yield either singleton or tight odd-cycle cores; a successful list proof must synchronize the deletion-anchored responses."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.barrier.k7minus_bad_pair_seven_paths"
+kind = "guarded_by"
+note = "Ordinary seven-path linkage between one exceptional pair does not supply the required rooted shore allocation."
 
 [[relations]]
 source = "hc7.k7minus_seven_boundary_full_subgraph_capacity"
@@ -12252,4 +12610,15 @@ expected_stdout = [
   "internally_disjoint_u_v_paths=7",
   "tree_decomposition=yes max_bag_size=5 treewidth_upper_bound=4",
   "K7_minus_minor=no",
+]
+
+[[verifiers]]
+id = "k7minus-exceptional-neighbourhood-completion"
+path = "results/hc7_k7minus_exceptional_neighbourhood_completion_verify.py"
+sha256 = "5eb316169563208269c887775376dea9d4b853201a2458f9b604b23ea6017ad0"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "order-eight graphs=12346; K4-free alpha<=2=3; spanning C8^1,2=3",
+  "near-full exterior K7-minus certificates=9/9",
 ]
