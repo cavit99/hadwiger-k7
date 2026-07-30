@@ -1,10 +1,12 @@
 # Seven exceptional degree-eight vertices: live technical frontier
 
 **Status:** active conditional frontier.  The lower bound and the local
-neighbourhood and exterior-completion reductions in Sections 1--2 are
-written and separately audited GREEN.  The list-core calculation in Section
-3 is a written live derivation without a separate audit.  The upper bound is
-open.  This file is not a second status ledger.
+neighbourhood, exterior-completion, and two-component reductions in Sections
+1--2 are written and separately audited GREEN; the finite boundary claims
+have retained independently checked verifiers.  The accompanying scoped
+barriers are also separately audited GREEN.  The list-core calculation in
+Section 3 is a written live derivation without a separate audit.  The upper
+bound is open.  This file is not a second status ledger.
 
 ## 1. Exact finishing target
 
@@ -62,6 +64,47 @@ three of the five bags.
 
 These are positive host-level reductions.  They do not yet coordinate six
 or seven different centres.
+
+The focused two-component attack now goes substantially further.  Its
+[nonfull-attachment theorem](../results/hc7_k7minus_nonfull_attachment_reduction.md)
+proves that the two exterior components cannot miss the same neighbour of
+`u`.  If exactly one component is nonfull, deleting its unique missed
+neighbour from `X=N(u)` gives an order-seven cut with connected-subgraph
+packing vector exactly `(1,2)`.  Its boundary has independence number
+three, at most nine edges, connectivity at most three, no `K_5` minor, no
+vertex deletion with a `K_4^-` minor, and no robust independent triple.
+The audited uniform defect-two carrier theorem then forces the missed
+vertex to have at most four neighbours on that boundary and at least two
+neighbours entering the full exterior component.  A retained exact census
+leaves 28 possible seven-vertex boundary types; all are three-chromatic, 25
+have a clique odd-cycle transversal, and three do not.
+If the two components have distinct misses, the two overlapping
+order-seven cuts are connected-rich `(1,2)` cuts when the missed vertices
+are adjacent; when they are nonadjacent, each cut is `(1,1)` or `(1,2)`
+and their common six-vertex boundary satisfies the explicit `K_4` and
+`K_4^-` minor exclusions in that theorem.
+
+In the both-full case, the
+[shore reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
+starts with all 2,076 exceptional order-eight neighbourhoods.  An
+unbounded diamond-deletion lift leaves 15 boundary types; the audited
+three-full-component theorem removes eight, leaving seven exact graph6
+types.  Every surviving exterior component has `X`-full connected-subgraph
+packing number one, so the full packing vector outside `X` is exactly
+`(1,1,1)` for `\{u\},E,F`.  For the reserve types with six or seven
+missing root adjacencies, every fixed star-contraction colouring still
+supports at least two demands through each shore; concentration of all but
+one demand in one shore would already give a rooted `K_5^-` and hence a
+`K_7^-` model.
+
+These results are strict positive reductions, not shore allocation.  The
+[accompanying barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
+show that all 15 boundary types admit balanced abstract shore labels under
+every independent-triple rotation, and that fullness plus minor exclusion
+alone does not force a one-shore rooted model.  The latter witness is only
+three-connected and four-chromatic, so it does not refute the critical-host
+target; it identifies exactly where seven-connectivity and compatible
+proper-minor colouring responses must enter.
 
 ## 3. Seven-root list reduction
 
@@ -147,11 +190,23 @@ The most concrete current gate is the following allocation statement.
 > 2. a connected subgraph disjoint from the star and all five bags is
 >    adjacent to the star and to at least four bags.
 
-Either outcome gives an explicit `K_7^-` model.  With two exterior
-components, a one-shore rooted model is terminal.  With one component, the
-second residual-contact outcome is necessary: a model avoiding the whole
-component would be confined to its five roots and would make them a literal
-`K_5`, impossible at an exceptional centre.
+In the both-full two-component cell, a third accepted outcome is an
+`(N(u)-I)`-rooted `K_5^-` model confined to one closed shore; the unused
+full component completes it to `K_7^-`.
+
+Each accepted outcome gives an explicit `K_7^-` model.  With one exterior
+component, the residual-contact outcome is necessary: a model avoiding the
+whole component would be confined to its five roots and would make them a
+literal `K_5`, impossible at an exceptional centre.
+
+For two exterior components, the target is no longer an undifferentiated
+allocation problem.  The nonfull theorem eliminates the common-miss case
+and exposes only connected-rich `(1,2)` boundaries or a pair of overlapping
+cuts with packing vector `(1,1)`.  In the both-full case, the boundary is
+one of seven exact types and both exterior packing numbers are one.  On
+that cell a shore-confined rooted `K_5^-`, rather than a full rooted `K_5`,
+is already terminal.  These are the exact local obligations; none is
+presently closed.
 
 The existing one-pair seven-path argument cannot supply this allocation;
 its exact failure is recorded in the
@@ -159,41 +214,29 @@ its exact failure is recorded in the
 
 ## 5. Recommended next attack
 
-Attack two complementary gates in this order.
+Attack the two normalized local gates in this order.
 
-1. **Two-component shore allocation.**  Its win condition is sharply bounded:
-use the proper-minor colouring responses to construct one rooted `K_5`
-model confined to either closed shore.  The current bilateral
-`P_3\mathbin{\dot\cup}K_2` inputs are already audited in the
-[two-independent-triples theorem](../results/hc7_degree8_two_independent_triples.md),
-[polarized-response theorem](../results/hc7_degree8_p3k2_polarized_response.md),
-and [concentrated-reserve elimination](../results/hc7_low_degree_concentrated_reserve_elimination.md).
-What remains unproved is their shore-avoidance refinement.
-2. **Anchored-core synchronization.**  Compare the seven list states coming
-from `G-x`, not arbitrary static lists.  The first accepted outcome should
-eliminate either saturated singleton cores or common-two-colour odd-cycle
-cores by a Kempe swap or an explicit rooted minor.
+1. **Nonfull carrier extraction and overlapping-cut synchronization.**
+   In the one-nonfull cell, the missed vertex has at most four boundary
+   neighbours and at least two neighbours entering the full exterior
+   component.  Use those entrances to split off a connected subgraph
+   missing at most two boundary vertices while preserving a disjoint full
+   packet; the audited defect-two carrier theorem would then six-colour the
+   host.  For distinct nonadjacent misses, use the two overlapping `(1,1)`
+   cuts simultaneously rather than reflecting either cut in isolation.
+2. **Dynamic allocation on the seven both-full types.**  For the six- and
+   seven-demand reserves, compare operation-related star-contraction
+   colourings until one shore supports all but one demand, or extract a
+   disjoint residual connected subgraph meeting the star and four rooted
+   bags.  The two eight-demand types require a separate conversion beyond
+   the six-demand Kriesell--Mohr theorem.  Any proof must use compatibility
+   of actual responses or packet-one topology; the balanced-label barrier
+   rules out static counting and independent-triple rotation alone.
 
-If the shore lemma succeeds, isolate the one-component residual-contact
-theorem.  Further enumeration of arbitrary degree-compatible lists is
-blocked by the mechanism witness and should not be repeated.
-
-Before that attack, split the two-component case by its actual attachment
-type.  A nonfull exterior component misses exactly one boundary vertex `x`,
-and `S=N(u)-\{x\}` is an order-seven cut.  If both exterior components miss
-the same `x`, then `G-S` has the three components consisting of the two
-exterior components and `\{u,x\}`; the audited
-[critical seven-cut theorem](../results/hc7_k7minus_critical_seven_cut_capacity.md)
-therefore gives `chi(G[S])=3` and colour-class sizes `3,2,2`.  If the misses
-differ, or only one component is nonfull, the other component joins
-`\{u,x\}` and this is the structured two-component cut case.  Only the case
-in which both exterior components meet all eight neighbours belongs in the
-two-full-shore `P_3\mathbin{\dot\cup}K_2` analysis.
-
-An exploratory order-eight census suggests a useful second split: most
-`K_4`-free, independence-three neighbourhood types appear to admit an
-independent triple leaving at most six missing root adjacencies, within the
-range of Kriesell--Mohr Theorem 7, while a small residue remains.  This is
-not a promoted finite result and is not used above.  Before relying on exact
-counts, retain an independent verifier and write the unbounded host
-reduction explicitly.
+In parallel, the multi-centre route should compare the seven list states
+coming from `G-x`, not arbitrary static lists.  Its first accepted outcome
+is a Kempe or explicit-minor exclusion of saturated singleton cores or
+common-two-colour odd-cycle cores.  If the two-component gates close, the
+remaining local problem is the one-component residual-contact theorem.
+Further enumeration is useful only when attached to an unbounded host lift;
+the relevant order-eight and order-seven boundary splits are now exact.

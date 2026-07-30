@@ -63,6 +63,12 @@ The proposed note studies a hypothetical minor-minimal non-six-colourable
     For any resulting independent triple, a five-root `K_5` model that
     avoids one exterior component already completes to an explicit
     `K_7^-`-minor model.
+11. In the two-component exterior case, common missed attachments are
+    impossible.  The remaining nonfull cases reduce to exact order-seven
+    cut residues, while the both-full case reduces from 2,076 exceptional
+    neighbourhoods to seven boundary types with full-packet vector
+    `(1,1,1)`.  These last classifications are computer-assisted and do not
+    prove shore allocation.
 
 The note must not claim the global `4n-4` extremal target, a standalone bond
 or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
@@ -185,6 +191,59 @@ at SHA-256
 checks the order-eight input and all nine explicit near-full attachment
 models; it is an independent cross-check, not a proof dependency.
 
+### Nonfull two-component attachment reduction
+
+- [Theorem](../results/hc7_k7minus_nonfull_attachment_reduction.md)
+- [Internal audit](../results/hc7_k7minus_nonfull_attachment_reduction_audit.md)
+- Theorem SHA-256:
+  `2b269e7ecea09f695991689e2a6db64d928aedb141ea8cfbf85d14f84fc70617`
+
+Two exterior components cannot miss the same neighbour.  With exactly one
+nonfull component, the resulting order-seven cut has packing vector
+`(1,2)`; its boundary obeys the stated edge, connectivity, clique,
+independence and minor restrictions, while the missed vertex has at most
+four boundary neighbours and at least two neighbours in the full exterior
+component.  A retained exact census leaves 28 unlabelled boundary types.
+Distinct misses give two connected-rich `(1,2)` cuts or the exact pair of
+overlapping `(1,1)` cuts described in the theorem.
+
+The [retained verifier](../results/hc7_k7minus_nonfull_attachment_reduction_verify.py),
+at SHA-256
+`d0414ca3171f9a29e78030874eaa61c5c8b7f2e0d0650c0b866654d56e82bee3`,
+independently reproduces the 28-code digest and all reported spectra.  The
+host reduction is written; the finite census classifies possible literal
+boundaries and does not assert their host realisability.
+
+### Both-full shore and packet reduction
+
+- [Theorem](../results/hc7_k7minus_both_full_shore_reduction.md)
+- [Internal audit](../results/hc7_k7minus_both_full_shore_reduction_audit.md)
+- Theorem SHA-256:
+  `8aa99a023ae2247dd24835a158c17677d1e3da218c9a431be36891e54119b758`
+
+The written diamond-deletion lift reduces the exceptional order-eight
+boundary to 15 types; the audited three-full-component theorem removes
+eight, leaving seven.  Their minimum reserve graphs are `P_5`,
+`P_3` disjoint-union `K_2`, or `2K_2` disjoint-union `K_1`.  Actual
+star-contraction responses on the six- and seven-demand types must remain
+mixed between the shores, and packet completions force each exterior
+full-subgraph packing number to equal one.
+
+The [retained verifier](../results/hc7_k7minus_both_full_shore_reduction_verify.py),
+at SHA-256
+`168c56fdeb52c9835f95796750c82a0c06dfcad7781ca4a9a07affdfab07eb2f`,
+reproduces the full census, both certificate digests and every reserve
+shape.  The result does not construct a shore-confined rooted `K_5^-`.
+
+The adjacent [scoped barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
+and [audit](../barriers/hc7_k7minus_shore_allocation_barrier_audit.md), at
+source SHA-256
+`e6d3bf5c480ad3775de530014aa70f2bb1e32c880e64af45a3087e30d93acee9`,
+show that static boundary labels can remain balanced for all 15 types and
+that fullness plus minor exclusion alone is insufficient.  Their mechanism
+witness lacks seven-connectivity and criticality and therefore does not
+refute the host target.
+
 ### Seven-boundary connected-subgraph capacity and contraction criteria
 
 - [Theorem](../results/hc7_k7minus_seven_boundary_component_descent.md)
@@ -270,6 +329,18 @@ exceptionality + K7-minus exclusion + Rolek--Song--Thomas Lemma 2.1
       + seven-connectivity + rooted K5 avoiding an exterior component
       └─ explicit K7-minus exterior-completion model
 
+two exterior components + critical seven-cut capacity
+├─ common missed attachment is impossible
+├─ every nonfull attachment reduces to exact (1,2) or overlapping (1,1) cuts
+└─ one-nonfull boundary census: 28 possible types
+
+two full exterior components + diamond-deletion lift
+└─ 15 boundary types
+   + three-full-component theorem
+   └─ seven exact types
+      + dynamic demand and packet completions
+      └─ full-packet vector (1,1,1)
+
 seven-connectivity + elementary minor constructions + Mader bounds
 └─ capacity of boundary-full connected subgraphs at most four
    ├─ sharpened seven-cut boundary and interior restrictions
@@ -282,11 +353,13 @@ proper-minor six-colourability
    └─ three components: boundary chromatic number three, classes 3,2,2
 ```
 
-No computer-assisted finite classification is load-bearing in this chain.
-The audits are internal checks and must not be described as independent
-human review or external peer review.  The bond formulation in the equality theorem is an
-equivalent target inside the now-excluded equality host, not a proved
-standalone bond or two-full-transversal theorem.
+No computer-assisted finite classification is load-bearing in the central
+density chain through `m>=4n-4`.  The two-component shore reductions do use
+the separately identified order-seven and order-eight finite boundary
+classifications.  The audits are internal checks and must not be described
+as independent human review or external peer review.  The bond formulation
+in the equality theorem is an equivalent target inside the now-excluded
+equality host, not a proved standalone bond or two-full-transversal theorem.
 
 ## 4. Open statements and ordered next attacks
 
@@ -352,13 +425,25 @@ six-colour conjecture.  It is not proved.  The current
 positive route to exterior allocation: at an exceptional centre, construct
 a five-root `K_5` model that avoids one exterior component, or leave a
 connected residual subgraph adjacent to the independent-triple star and at
-least four rooted bags.  The next attack should first route every nonfull
-two-component shore through the existing order-seven-cut theorem, then
-treat two full shores by a one-shore rooted-model theorem.  An exploratory
-demand-graph census suggests that most local types fall within the
-six-demand Kriesell--Mohr range, with a small residue.  Exact counts should
-not be relied upon until they have a retained verifier and a written
-unbounded reduction.
+least four rooted bags.
+
+The adjacent two-component attack has now completed the proposed split.
+The separately audited
+[nonfull reduction](../results/hc7_k7minus_nonfull_attachment_reduction.md)
+excludes a common missed neighbour and converts every other nonfull
+configuration into exact `(1,2)` or overlapping `(1,1)` seven-cut residues.
+In the one-nonfull cell it additionally bounds the missed vertex to at most
+four boundary neighbours and forces at least two neighbours in the full
+exterior component; a retained exact census leaves 28 boundary types.
+The separately audited written-and-computer-assisted
+[both-full reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
+uses a retained verifier and an unbounded diamond-deletion lift to leave
+seven boundary types, each with exterior full-packet vector `(1,1)`.
+It does not prove a one-shore rooted model.  The exact next input is
+compatibility among changing proper-minor colourings or an additional
+residual contact inside one packet-one shore; the
+[scoped boundary barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md)
+rule out static demand counting as a proof.
 
 The alternative seven-root list calculation gives exact list sizes and
 anchored minimal uncolourable cores, but a single static colouring is not

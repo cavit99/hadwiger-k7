@@ -179,10 +179,31 @@ At an exceptional degree-eight centre `u`, an independent triple
 `I\subseteq N(u)` is now always available.  The five remaining neighbours
 are the roots of the local model problem.  If a rooted `K_5` model avoids
 one component of `G-N[u]`, seven-connectivity supplies the seventh branch
-set and an explicit `K_7^-` model.  The two-component residue therefore
-requires every model to meet both components; the one-component residue
-requires every remaining connected piece either to miss `I` or to contact
-at most three rooted bags.  The written, not separately audited,
+set and an explicit `K_7^-` model.
+
+The focused two-component attack now proves substantially more without
+closing allocation.  The
+[nonfull-attachment reduction](results/hc7_k7minus_nonfull_attachment_reduction.md)
+excludes two exterior components missing the same neighbour and converts
+every remaining nonfull configuration into exact connected-rich `(1,2)`
+seven-cuts or two overlapping `(1,1)` cuts with explicit boundary-minor
+exclusions.  In the one-nonfull cell, uniform defect-two reflection forces
+the missed vertex to have at most four boundary neighbours and at least two
+neighbours in the full exterior component; a retained exact census leaves
+28 possible boundary types.  When both exterior components are full, the
+[boundary and packet reduction](results/hc7_k7minus_both_full_shore_reduction.md)
+reduces 2,076 exceptional neighbourhoods to seven exact types and proves
+that each exterior component contains only one disjoint full packet.  For
+the six- and seven-demand reserve types, every fixed star-contraction
+colouring still has at least two demands supported through each shore.  The
+[scoped barriers](barriers/hc7_k7minus_shore_allocation_barrier.md)
+prove that boundary counting and rotation alone cannot concentrate the
+demands.  Thus this is a genuine structural reduction, not the one-shore
+rooted-model theorem.
+
+The one-component residue still requires every remaining connected piece
+either to miss `I` or to contact at most three rooted bags.  The written,
+not separately audited,
 [seven-root list reduction](active/hc7_k7minus_seven_exceptional_frontier.md#3-seven-root-list-reduction)
 from simultaneous deletion of seven exceptional vertices gives an exact
 two-unit list-core budget, but a concrete
@@ -767,7 +788,11 @@ is retained as a secondary specialization.  The new exceptional-vertex
 package forces at least seven exceptional degree-eight vertices, rigidifies
 the exact seven-vertex layer, proves independence number three in every
 exceptional neighbourhood, and identifies the exterior-component completion
-criterion for a rooted `K_5` model.  The independent general
+criterion for a rooted `K_5` model.  The new two-component reduction
+eliminates a common missed attachment, leaves 28 one-nonfull and seven
+both-full boundary types, forces the one-nonfull missed-vertex degree bound,
+and proves packet vector `(1,1,1)` in the both-full cell.  It also records
+why static shore counting cannot finish allocation.  The independent general
 separator theorem bounds disjoint boundary-full connected subgraphs and cut
 components by four, proves two-connected interiors in the four-component
 case, and gives exact whole-component contraction criteria.  In the actual
@@ -797,9 +822,11 @@ Before submission, the general `HC_7` package still needs a conventional
 literature and priority review, independent human audits by graph-minor and
 colouring/Kempe specialists, and independent reproduction of its
 load-bearing finite classifications.  The adjacent-`K_7^-` package needs
-the same source, priority, and human proof review, but its current proof
-spine has no load-bearing computation.  The extensive conditional
-order-eight/order-nine case tree should not lead the manuscript.  The
+the same source, priority, and human proof review.  Its central density spine
+through `m>=4n-4` has no load-bearing computation; the new two-component
+shore refinements do use the retained order-seven and order-eight boundary
+classifications.  The extensive conditional order-eight/order-nine case
+tree should not lead the manuscript.  The
 [external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md)
 defines the frozen package, review questions, reproducibility inventory and
 acceptance gate.  The earlier
@@ -868,6 +895,15 @@ records the internal go/no-go assessment; it is not external peer review.
   exterior component completes to an explicit `K_7^-` model.  The upper
   bound `b<=6` remains an open finishing theorem; the static seven-root list
   reduction does not prove it.
+- **Two-component exceptional-centre reduction.** Two nonfull exterior
+  components cannot miss the same neighbourhood vertex.  The remaining
+  nonfull cases reduce to connected-rich `(1,2)` cuts or two overlapping
+  `(1,1)` cuts; the one-nonfull boundary has 28 possible types, and its
+  missed vertex has at most four boundary neighbours and at least two
+  neighbours in the full exterior component.  In the both-full case an
+  unbounded diamond-deletion lift and a retained census leave seven exact
+  boundary types, with full-packet vector `(1,1,1)`.  Static boundary labels
+  cannot finish allocation, and no one-shore rooted model is yet proved.
 - **Seven-boundary connected-subgraph and descent obstruction.** In every
   seven-connected `K_7^-`-minor-free graph, an order-seven cut has at most
   four disjoint connected subgraphs outside it that are each adjacent to all

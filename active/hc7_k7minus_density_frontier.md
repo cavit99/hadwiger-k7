@@ -6,9 +6,11 @@ private-triangle Kempe allocation, all-degree-seven clique exclusion, and
 seven-boundary connected-subgraph, critical-host capacity, and contraction
 theorems are written proofs with separate internal audits GREEN for their
 current revisions.  The two promoted seven-exceptional lower-bound and
-local-completion theorems are also written and separately audited GREEN.
-The live list-core derivation is not separately audited.  Both displayed
-finishing targets below remain conjectural.
+local-completion theorems and the new two-component nonfull and both-full
+reductions are also written and separately audited GREEN; their finite
+boundary claims have retained independently checked verifiers.  The live
+list-core derivation is not separately audited.  Both displayed finishing
+targets below remain conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -375,14 +377,28 @@ The normalized Norin--Totschnig near-`K_7` upgrade remains a higher-risk
 fallback because four global surplus edges need not occur at the deficient
 branch set.
 
-In parallel, the seven-exceptional target now has a sharper local entrance:
-all seven centres have independent triples.  The first concrete attack is
-the two-component shore-allocation lemma: construct, for one centre, a
-five-root `K_5` model confined to one closed shore.  Such a model completes
-immediately to `K_7^-` using the other exterior component.  The complementary
-multi-centre attack must synchronize the seven anchored list cores arising
-from six-colourings of `G-x`; a static list census is blocked by the explicit
-`C_7\vee C_6` mechanism witness.
+In parallel, the seven-exceptional route has completed its first
+two-component attack.  The
+[nonfull-attachment reduction](../results/hc7_k7minus_nonfull_attachment_reduction.md)
+eliminates a common missed neighbour and reduces every other nonfull
+configuration to connected-rich `(1,2)` seven-cuts or two overlapping
+`(1,1)` cuts with explicit boundary-minor exclusions.  In the
+one-nonfull cell, uniform defect-two reflection also forces the missed
+vertex to have at most four boundary neighbours and at least two neighbours
+in the full exterior component; an exact retained census leaves 28 possible
+boundary types.  In the both-full case, the
+[finite boundary and packet reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
+leaves seven exact boundary types and forces both exterior full-subgraph
+packing numbers to equal one.  A fixed star-contraction colouring on the
+six- and seven-demand reserve types must support at least two demands
+through each shore.  This is a strict narrowing, not shore allocation:
+the next theorem must synchronize changing critical colourings or extract
+an additional residual contact inside a packet-one shore.  Static boundary
+labels are ruled out by the
+[balanced-label and mechanism barriers](../barriers/hc7_k7minus_shore_allocation_barrier.md).
+The complementary multi-centre attack still seeks to synchronize the seven
+anchored list cores arising from colourings of `G-x`; one static list census
+is blocked by the explicit `C_7\vee C_6` mechanism witness.
 
 Further enumeration below order nineteen is obsolete globally, and the
 former critical-host equality layer is empty.  Enumeration is useful only

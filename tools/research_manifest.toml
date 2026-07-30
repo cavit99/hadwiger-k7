@@ -7791,7 +7791,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "8d3a8305bb1bfd3a11480d8c6b74f7668323e09fc96e74669cdc12af344b778b"
+expected_source_sha256 = "0d1db45d2f5fa73680608bd6f8cdb587acc8bc3f158aa00327b9bc909ec044cd"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -7819,6 +7819,7 @@ scope = "one of at least seven exceptional centres in the critical K7-minus host
 label_fidelity = "the centre, an independent triple, five literal roots, every rooted branch set, and any residual connected subgraph remain explicit"
 allowed_exits = [
   "a five-root K5 model avoiding one exterior component",
+  "in the both-full two-component cell, a five-root K5-minus model confined to one closed shore",
   "a disjoint connected residual subgraph adjacent to the independent-triple star and at least four rooted bags",
 ]
 does_not_prove = [
@@ -7916,6 +7917,213 @@ does_not_prove = [
   "HC7",
 ]
 keywords = ["K7 minus", "bad pair", "seven paths", "treewidth four", "barrier"]
+
+[[claims]]
+id = "hc7.k7minus_nonfull_same_miss_exclusion"
+title = "Two nonfull exterior components cannot miss the same exceptional-neighbourhood vertex"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_nonfull_attachment_reduction.md"
+source_heading = "Theorem 2 (same-miss exclusion)"
+active = false
+audit = "results/hc7_k7minus_nonfull_attachment_reduction_audit.md"
+expected_source_sha256 = "2b269e7ecea09f695991689e2a6db64d928aedb141ea8cfbf85d14f84fc70617"
+scope = "an exceptional degree-eight centre in the critical K7-minus host whose exterior has exactly two components"
+label_fidelity = "the centre, both literal exterior components, their common missed neighbour and the resulting seven-vertex cut remain fixed"
+conclusions = [
+  "the two exterior components cannot have the same missed neighbourhood vertex",
+]
+does_not_prove = [
+  "that every exterior component is neighbourhood-full",
+  "shore allocation or the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "exceptional vertex", "nonfull component", "same miss", "seven-cut"]
+
+[[claims]]
+id = "hc7.k7minus_one_nonfull_reduction"
+title = "One nonfull exterior component gives a connected-rich order-seven reduction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_nonfull_attachment_reduction.md"
+source_heading = "Theorem 3 (one-nonfull reduction)"
+active = false
+audit = "results/hc7_k7minus_nonfull_attachment_reduction_audit.md"
+expected_source_sha256 = "2b269e7ecea09f695991689e2a6db64d928aedb141ea8cfbf85d14f84fc70617"
+scope = "the two-component exterior of an exceptional degree-eight centre in the critical K7-minus host, with exactly one neighbourhood-full component"
+label_fidelity = "the missed vertex, literal order-seven boundary, thin component, joined rich shore and its three named connected subgraphs remain fixed"
+conclusions = [
+  "the full-subgraph packing vector across the cut is exactly (1,2)",
+  "the boundary has at most nine edges, connectivity at most three, independence number three, no literal K4 and no K5 minor",
+  "every boundary vertex deletion is K4-minus-minor-free and no independent triple has a triangular complement",
+  "the missed vertex has at most four boundary neighbours and at least two neighbours in the full exterior component",
+]
+does_not_prove = [
+  "host realisability of every surviving boundary graph",
+  "the final carrier extraction or a shore-confined rooted K5-minus model",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "one nonfull component", "packing (1,2)", "defect-two carrier", "order-seven boundary"]
+
+[[claims]]
+id = "hc7.k7minus_one_nonfull_boundary_census"
+title = "Exactly 28 order-seven boundaries survive the one-nonfull predicates"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_nonfull_attachment_reduction.md"
+source_heading = "Corollary 3.1 (computer-assisted one-nonfull boundary census)"
+active = false
+audit = "results/hc7_k7minus_nonfull_attachment_reduction_audit.md"
+expected_source_sha256 = "2b269e7ecea09f695991689e2a6db64d928aedb141ea8cfbf85d14f84fc70617"
+scope = "all unlabelled simple graphs of order seven satisfying the literal boundary conclusions of the one-nonfull host reduction"
+conclusions = [
+  "exactly 28 isomorphism types survive and their graph6 digest is a045e1d21098d0789ea1c549ed00f380ab97df9120335ff24127f9c8a039eacd",
+  "all 28 are three-chromatic; 21 have a one-vertex clique odd-cycle transversal, four require a two-vertex clique and three have none",
+]
+does_not_prove = [
+  "that any of the 28 boundaries occurs in a critical host",
+  "an unbounded theorem without the written one-nonfull reduction",
+  "shore allocation or HC7",
+]
+keywords = ["K7 minus", "computer-assisted census", "order seven", "28 boundaries", "graph6"]
+
+[[claims]]
+id = "hc7.k7minus_distinct_miss_reduction"
+title = "Distinct missed attachments give overlapping exact seven-cut residues"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_nonfull_attachment_reduction.md"
+source_heading = "Theorem 4 (overlapping-cut reduction)"
+active = false
+audit = "results/hc7_k7minus_nonfull_attachment_reduction_audit.md"
+expected_source_sha256 = "2b269e7ecea09f695991689e2a6db64d928aedb141ea8cfbf85d14f84fc70617"
+scope = "two nonfull exterior components with distinct missed vertices at an exceptional degree-eight centre in the critical K7-minus host"
+label_fidelity = "both missed vertices, both overlapping order-seven cuts and the common six-vertex boundary remain literal"
+conclusions = [
+  "adjacent missed vertices give two connected-rich (1,2) cuts",
+  "nonadjacent missed vertices give a (1,2) cut or two overlapping (1,1) cuts",
+  "the common six-vertex boundary has no K4 minor and each vertex deletion has no K4-minus minor",
+]
+does_not_prove = [
+  "synchronization of the two overlapping (1,1) cuts",
+  "shore allocation or the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "distinct misses", "overlapping cuts", "packing (1,1)", "boundary minor exclusion"]
+
+[[claims]]
+id = "hc7.k7minus_both_full_boundary_reduction"
+title = "Two full exterior shores leave seven exact exceptional boundary types"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_both_full_shore_reduction.md"
+source_heading = "Theorem 3 (computer-assisted order-eight classification)"
+active = false
+audit = "results/hc7_k7minus_both_full_shore_reduction_audit.md"
+expected_source_sha256 = "8aa99a023ae2247dd24835a158c17677d1e3da218c9a431be36891e54119b758"
+scope = "the order-eight neighbourhood of an exceptional centre with exactly two neighbourhood-full exterior components in the critical K7-minus host"
+label_fidelity = "the centre, both literal full components, every independent triple and its five literal reserve roots remain fixed"
+conclusions = [
+  "every two-vertex boundary deletion is K4-minus-minor-free",
+  "15 of 2,076 exceptional order-eight boundaries survive diamond deletion and exactly seven survive the three-full-component clique-OCT theorem",
+  "every minimizing reserve in the seven types is P5, P3 disjoint-union K2, or 2K2 disjoint-union K1 according to demand six, seven, or eight",
+]
+does_not_prove = [
+  "host realisability of every surviving type",
+  "a shore-confined rooted K5-minus model",
+  "shore allocation, the K7-minus six-colour conjecture, or HC7",
+]
+keywords = ["K7 minus", "both full shores", "order-eight census", "seven boundary types", "diamond deletion"]
+
+[[claims]]
+id = "hc7.k7minus_both_full_dynamic_support"
+title = "Actual six- and seven-demand shore supports must remain mixed"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_both_full_shore_reduction.md"
+source_heading = "Lemma 4 (actual shore support must remain mixed)"
+active = false
+audit = "results/hc7_k7minus_both_full_shore_reduction_audit.md"
+expected_source_sha256 = "8aa99a023ae2247dd24835a158c17677d1e3da218c9a431be36891e54119b758"
+scope = "one fixed star-contraction six-colouring for a minimizing independent triple of a surviving both-full type with six or seven reserve nonedges"
+label_fidelity = "the independent triple, five rainbow reserve roots, both literal exterior components and each supported demand remain fixed"
+conclusions = [
+  "if one shore supports all but one demand then Kriesell-Mohr conversion gives a shore-confined rooted K5-minus and hence K7-minus",
+  "in every surviving fixed response each shore supports at least two and at most q-2 demands",
+]
+does_not_prove = [
+  "compatibility or coexistence of paths from different proper-minor colourings",
+  "the corresponding allocation for either eight-demand type",
+  "shore allocation or HC7",
+]
+keywords = ["K7 minus", "Kempe support", "rainbow roots", "demand graph", "mixed shores"]
+
+[[claims]]
+id = "hc7.k7minus_both_full_packet_residue"
+title = "Every surviving both-full exterior component has full-packet number one"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_both_full_shore_reduction.md"
+source_heading = "Corollary 7 (exact both-full packet residue)"
+active = false
+audit = "results/hc7_k7minus_both_full_shore_reduction_audit.md"
+expected_source_sha256 = "8aa99a023ae2247dd24835a158c17677d1e3da218c9a431be36891e54119b758"
+scope = "the seven surviving boundary types at an exceptional centre with two full exterior components in the critical K7-minus host"
+label_fidelity = "the centre and both literal exterior components remain separate, and every packed connected subgraph retains all eight boundary contacts"
+conclusions = [
+  "both exterior full-subgraph packing numbers equal one",
+  "including the centre singleton, the exact full-packet vector outside the boundary is (1,1,1)",
+]
+does_not_prove = [
+  "that a packet-one component supplies five partially attached rooted bags",
+  "a shore-confined rooted K5-minus model",
+  "shore allocation, the K7-minus six-colour conjecture, or HC7",
+]
+keywords = ["K7 minus", "full packet", "packing number one", "both-full exterior", "packet residue"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_balanced_shore_labels"
+title = "Balanced abstract shore labels survive every independent-triple rotation"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_shore_allocation_barrier.md"
+source_heading = "Theorem 1 (balanced labels survive every rotation)"
+active = false
+audit = "barriers/hc7_k7minus_shore_allocation_barrier_audit.md"
+expected_source_sha256 = "e6d3bf5c480ad3775de530014aa70f2bb1e32c880e64af45a3087e30d93acee9"
+scope = "abstract two-shore labellings of boundary nonedges on each of the 15 diamond-deletion order-eight types"
+conclusions = [
+  "every type has one fixed labelling for which every independent-triple reserve has at least two demands of each shore label",
+]
+does_not_prove = [
+  "simultaneous realisability of the abstract labels by critical Kempe paths",
+  "failure of dynamic response compatibility or packet-one topology",
+  "failure of shore allocation in the critical host",
+]
+keywords = ["K7 minus", "shore allocation barrier", "balanced labels", "independent-triple rotation", "static counting"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_two_full_shore_mechanism"
+title = "Fullness and K7-minus exclusion alone do not force one-shore allocation"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_shore_allocation_barrier.md"
+source_heading = "Theorem 2 (two-full-shore mechanism barrier)"
+active = false
+audit = "barriers/hc7_k7minus_shore_allocation_barrier_audit.md"
+expected_source_sha256 = "e6d3bf5c480ad3775de530014aa70f2bb1e32c880e64af45a3087e30d93acee9"
+scope = "the explicit eleven-vertex graph formed from K3 disjoint-union K3 disjoint-union K2 and three independent universal boundary apices"
+conclusions = [
+  "the exceptional boundary has independence number three and two full exterior singleton components",
+  "the graph has no K7-minus minor and neither shore has the required rooted K5-minus for any independent triple",
+  "the witness has connectivity three and chromatic number four",
+]
+does_not_prove = [
+  "failure under seven-connectivity or proper-minor six-colour-criticality",
+  "failure of the critical-host shore-allocation target",
+  "the absence of K7-minus in any denser augmentation",
+]
+keywords = ["K7 minus", "shore allocation barrier", "two full components", "mechanism witness", "K3 K3 K2"]
 
 [[relations]]
 source = "hc7.atomic_octahedral_frame_augmentation"
@@ -11826,6 +12034,126 @@ target = "hc7.barrier.degree7_single_edge_response_alignment"
 kind = "guarded_by"
 note = "Matching languages and common-host equality signatures alone do not select an aligned single-edge response."
 
+[[relations]]
+source = "hc7.k7minus_nonfull_same_miss_exclusion"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+note = "The common missed vertex creates a three-component order-seven cut whose componentwise packing numbers are one."
+
+[[relations]]
+source = "hc7.k7minus_nonfull_same_miss_exclusion"
+target = "hc7.k7minus_degree7_neighbourhood_types"
+kind = "uses"
+note = "The remaining degree-seven case forces a triangle among the six boundary neighbours and hence a forbidden literal K4."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_reduction"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+note = "Critical capacity forces the exact (1,2) packing vector and the basic boundary bounds."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_reduction"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+note = "The exceptional-neighbourhood theorem supplies alpha three on the original eight-vertex boundary."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_reduction"
+target = "hc7.exact7_adaptive_12_boundary_closure"
+kind = "uses"
+note = "Adaptive (1,2) reflection excludes robust independent blocks and pair deletions containing K4 minors."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_reduction"
+target = "hc7.exact7_all_residual_defect2_carrier"
+kind = "uses"
+note = "The frozen residual carrier theorem bounds the missed vertex to at most four boundary neighbours."
+
+[[relations]]
+source = "hc7.k7minus_one_nonfull_boundary_census"
+target = "hc7.k7minus_one_nonfull_reduction"
+kind = "uses"
+note = "The finite census enumerates exactly the literal boundary predicates proved by the unbounded host reduction."
+
+[[relations]]
+source = "hc7.k7minus_distinct_miss_reduction"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+note = "The two overlapping cuts have packing vectors constrained to (1,2) or (1,1)."
+
+[[relations]]
+source = "hc7.k7minus_both_full_boundary_reduction"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+note = "Every exceptional neighbourhood has independence number exactly three."
+
+[[relations]]
+source = "hc7.k7minus_both_full_boundary_reduction"
+target = "hc7.order8_three_component_boundary_classification"
+kind = "uses"
+note = "The clique odd-cycle-transversal theorem removes eight of the 15 diamond-deletion boundary types."
+
+[[relations]]
+source = "hc7.k7minus_both_full_dynamic_support"
+target = "hc7.k7minus_both_full_boundary_reduction"
+kind = "uses"
+note = "The demand count and reserve shape come from the seven-type boundary classification."
+
+[[relations]]
+source = "hc7.k7minus_both_full_dynamic_support"
+target = "hc7.k7minus_degree7_clique_incidence"
+kind = "uses"
+note = "The same Kriesell-Mohr five-root conversion turns at most six supported demands into a rooted minor model."
+
+[[relations]]
+source = "hc7.k7minus_both_full_packet_residue"
+target = "hc7.k7minus_both_full_boundary_reduction"
+kind = "uses"
+note = "The classified reserve paths and triangles drive the packet completions."
+
+[[relations]]
+source = "hc7.k7minus_both_full_packet_residue"
+target = "hc7.four_boundary_full_subgraphs_triangle_completion"
+kind = "uses"
+note = "Four full subgraphs together with a boundary triangle close the two eight-demand types."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_one_nonfull_reduction"
+kind = "uses"
+note = "The one-nonfull branch is normalized to 28 boundary types and a missed vertex with two full-shore entrances."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_distinct_miss_reduction"
+kind = "uses"
+note = "The distinct-miss branch is normalized to connected-rich cuts or two overlapping packet-one cuts."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_both_full_dynamic_support"
+kind = "uses"
+note = "Actual fixed critical responses on the six- and seven-demand types must keep both shores active."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_both_full_packet_residue"
+kind = "uses"
+note = "The remaining both-full branch has exactly one full packet in each exterior component."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.barrier.k7minus_balanced_shore_labels"
+kind = "guarded_by"
+note = "Static nonedge counts and independent-triple rotation cannot force one-shore demand concentration."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.barrier.k7minus_two_full_shore_mechanism"
+kind = "guarded_by"
+note = "Fullness and minor exclusion alone are insufficient without seven-connectivity and critical response compatibility."
+
 [[verifiers]]
 id = "degree8-nonedge-bipartition-classification"
 path = "results/hc7_degree8_nonedge_bipartition_classification_verify.py"
@@ -12621,4 +12949,50 @@ requires = ["nauty"]
 expected_stdout = [
   "order-eight graphs=12346; K4-free alpha<=2=3; spanning C8^1,2=3",
   "near-full exterior K7-minus certificates=9/9",
+]
+
+[[verifiers]]
+id = "k7minus-one-nonfull-boundary"
+path = "results/hc7_k7minus_nonfull_attachment_reduction_verify.py"
+sha256 = "d0414ca3171f9a29e78030874eaa61c5c8b7f2e0d0650c0b866654d56e82bee3"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "order-seven graphs=1044 alpha3=578 K4-free=353 sparse=103",
+  "diamond-deletion=29 one-nonfull-residue=28",
+  "residue sha256=a045e1d21098d0789ea1c549ed00f380ab97df9120335ff24127f9c8a039eacd",
+  "edges 5:1 6:4 7:10 8:11 9:2; connectivity 0:9 1:15 2:4; chi3=28",
+  "clique-OCT vertex:21 edge:4 none:3",
+  "PASS K7-minus one-nonfull boundary census",
+]
+
+[[verifiers]]
+id = "k7minus-both-full-shore-reduction"
+path = "results/hc7_k7minus_both_full_shore_reduction_verify.py"
+sha256 = "168c56fdeb52c9835f95796750c82a0c06dfcad7781ca4a9a07affdfab07eb2f"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "order-eight graphs=12346 exceptional-alpha3-K4-free=2076",
+  "diamond-deletion survivors=15 lambda=5:1,6:7,7:5,8:2",
+  "diamond-code sha256=6e2633b0f4999a1d09fb98f38f7c268044cada0095be8e84aa4b8fe72d879ebe",
+  "clique-OCT exclusions=8 critical-host survivors=7",
+  "critical-host codes=GCOcaO GCOcbO GCOcbW GCOe`W GCOebW GCQQV? GCQR@O",
+  "critical-host-code sha256=bf063de64c772c1c9c1c83cba7dc39d11bb9c214f3e101595889fe63f25861a0",
+  "minimum-reserve shapes P5=2 P3+K2=3 2K2+K1=2",
+  "PASS K7-minus both-full boundary reduction",
+]
+
+[[verifiers]]
+id = "k7minus-shore-allocation-barriers"
+path = "barriers/hc7_k7minus_shore_allocation_barrier_verify.py"
+sha256 = "b288f390ff8b0f1cb47a3fdf522cc7c0be769e2dcba707aeefe5b0f7de5a5b42"
+timeout = 30
+expected_stdout = [
+  "balanced global shore labels=15/15 every rotation keeps 2 demands per shore",
+  "balanced-witness sha256=325a008189de182c099d60990d72c94f02fe78709e4858bc5aa48ec8eba59367",
+  "mechanism graph vertices=11 connectivity=3 chromatic_number=4",
+  "mechanism independent triples=18 shore-rooted K5-minus=0",
+  "mechanism K7-minus minor=no",
+  "PASS K7-minus shore-allocation barriers",
 ]
