@@ -14,7 +14,7 @@ The authoritative project status remains
 
 ## 1. Candidate paper thesis
 
-**Working title:** *Degree-seven rigidity, two-component clique exclusion,
+**Working title:** *Degree-seven rigidity, exceptional-centre fan trees,
 and critical seven-cut reflection without a `K_7^-` minor*.
 
 The proposed note studies a hypothetical minor-minimal non-six-colourable
@@ -68,13 +68,15 @@ The proposed note studies a hypothetical minor-minimal non-six-colourable
     `m\ge4n`, every degree-eight vertex is exceptional, and there are at
     least 25 of them.  In the one-nonfull case a compulsory six-fan and a
     failed tight allocation produce two nested order-seven cuts.
-12. For distinct nonadjacent misses, common traces on the shared six-set
-    would glue.  The unique demand-one boundary is impossible, while the
-    remaining 27 types have exact packing-one restrictions.  An abstract
-    parity-language barrier proves that independent-block coverage alone
-    cannot synchronize actual responses.  In the both-full case the earlier
-    retained census leaves seven boundary types with packing vector
-    `(1,1,1)`.
+12. Distinct nonadjacent misses are impossible.  A reusable contracted-star
+    response rules out every common-six boundary with an independent triple,
+    including the exact `3K_2` parity obstruction.  The two remaining
+    boundary graphs are two disjoint triangles, with or without one joining
+    edge.  Paired shore-confined fan trees and a retained finite rooted-bag
+    certificate give an explicit `K_7^-` model in every portal and tree
+    configuration.  Distinct adjacent misses remain connected-rich `(1,2)`
+    cuts.  In the both-full case the earlier retained census leaves seven
+    boundary types with packing vector `(1,1,1)`.
 
 The note must not claim the global `4n-4` extremal target, a standalone bond
 or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
@@ -251,30 +253,46 @@ show that the two known entrances alone do not supply the required third
 connected subgraph.  The witness has an explicit `K_7`-minor model and is
 only five-chromatic, so it does not refute the critical-host theorem.
 
-### Distinct-miss common-six trace synchronization
+### Distinct nonadjacent-miss elimination
 
-- [Theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
-- [Internal audit](../results/hc7_k7minus_overlap_trace_synchronization_audit.md)
+- [Theorem](../results/hc7_k7minus_distinct_miss_fan_tree_elimination.md)
+- [Internal audit](../results/hc7_k7minus_distinct_miss_fan_tree_elimination_audit.md)
 - Theorem SHA-256:
-  `746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a`
+  `012e98da1403fb72e303c294e403b2b82a4cc8d2a411287268e8de08d505a5d2`
 
-For distinct nonadjacent misses, two six-colourings with the same equality
-partition on the common six-set splice to a six-colouring of `G`.  Exact
-connected-subgraph reflection eliminates the unique demand-one boundary,
-the net.  A retained six-vertex census leaves 27 types: each triangular
-type forces common-six packing number one in both exterior components, and
-each triangle-free type forces packing number one in at least one.
+The reusable contracted-star response lemma starts from a named proper
+minor colouring.  For an independent triple in the shared six-set, its
+Kempe consequence would force an `x`--`y` path through one exterior
+component, contradicting the two distinct missed attachments.  Hence the
+common six-set has independence number at most two; this dynamically
+eliminates the exact `3K_2` parity obstruction and all other
+independence-three boundaries.  A short analytic argument leaves only
+`2K_3` and `2K_3` plus one joining edge.
 
-The [retained verifier](../results/hc7_k7minus_overlap_trace_synchronization_verify.py),
+Six-connectivity of `G-u` supplies an `x`-fan and a `y`-fan.  Every
+nontrivial missing-end limb lies wholly in the appropriate exterior
+component.  Connectedness contracts those marked limbs to arbitrary
+labelled trees without merging them.  For every possible portal pattern,
+either contracting the two whole components already gives a certified
+`K_7^-`, or every pair of labelled fan trees has six connected bags rooted
+at the common six vertices with at least fourteen mutual adjacencies.
+The singleton `\{u\}` completes the latter to `K_7^-`.
+
+The [retained verifier](../results/hc7_k7minus_distinct_miss_fan_tree_completion_verify.py),
 at SHA-256
-`f491e0b6a2b16c7d796334005329c2830c047e281451e0fe1202c30961f3f2b1`,
-reproduces all 28 initial types, the demand distribution `1,26,1`, and the
-triangle split `16,12`.  The adjacent
-[three-matching barrier](../barriers/hc7_k7minus_overlap_trace_language_barrier.md)
-constructs two disjoint abstract trace languages with complete
-independent-block coverage.  It does not realize two critical exterior
-graphs, so it requires operation-coupled colourings rather than refuting
-synchronization in the host.
+`15c14433076527c173d7b12afe4c2ff88313236be38f16ee2e1f9a9a16889b0a`,
+regenerates `1,032` and `1,113` valid labelled portal patterns, reduces them
+to `21` and `109` orbits, and leaves only three and six quotient-survivor
+orbits.  It constructs and rechecks rooted certificates for all `7,536`
+labelled tree pairs.  A separate contraction-based checker reproduced all
+certificates without using its rooted side-state method.
+
+The earlier
+[common-trace theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
+and [three-matching barrier](../barriers/hc7_k7minus_overlap_trace_language_barrier.md)
+remain valid predecessor results.  The barrier still refutes synchronization
+from static independent-block coverage alone, but it is no longer a live
+host obstruction.
 
 ### Both-full boundary and packing reduction
 
@@ -402,12 +420,12 @@ two exterior components + critical seven-cut capacity
    ├─ at least 25 exceptional degree-eight vertices
    └─ one-nonfull six-fan and tight nested order-seven cuts
 
-distinct nonadjacent misses + common-six connected-subgraph reflection
-├─ equal common-six traces glue to a six-colouring
-├─ the net boundary is impossible
-├─ 27 types remain with exact packing-one restrictions
-└─ three-matching parity languages block synchronization from
-   independent-block coverage alone
+distinct nonadjacent misses + contracted-star response
+├─ every independent-triple common boundary is impossible
+│  └─ the exact 3K2 parity obstruction is eliminated dynamically
+├─ the common boundary is 2K3, with at most one joining edge
+└─ two shore-confined six-fans contract to marked trees
+   └─ quotient-or-rooted finite certificates give an explicit K7-minus
 
 two full exterior components + diamond-deletion lift
 └─ 15 boundary types
@@ -512,11 +530,12 @@ two exact nested order-seven cuts.  The two-entrance barrier rules out a
 proof from connectivity and packing data alone.
 
 For distinct nonadjacent misses, the separately audited
-[common-six trace theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
-eliminates the net and gives packing-one restrictions on the remaining 27
-types.  Its parity-language barrier identifies the exact next input:
-compatibility among colourings of named related proper minors.  The
-separately audited written-and-computer-assisted
+[contracted-star and fan-tree theorem](../results/hc7_k7minus_distinct_miss_fan_tree_elimination.md)
+closes the branch.  Its named star-contraction response eliminates the
+former `3K_2` parity obstruction, and its unbounded fan-tree reduction plus
+finite rooted certificates produce an explicit `K_7^-` for every remaining
+configuration.  Distinct adjacent misses remain among the connected-rich
+`(1,2)` cuts.  The separately audited written-and-computer-assisted
 [both-full reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
 leaves seven boundary types, each with exterior full-subgraph packing vector
 `(1,1)`.  It does not prove a rooted model confined to one closed side; the
@@ -626,13 +645,16 @@ longer the minimal extremal input required by the critical-host reduction.
 23. Do the five common-attachment paths give all ten clique-bag adjacencies
     and all contacts to both added branch sets, including when the original
     clique meets the common attachment set?
-24. In the common-six theorem, does the repaired reflection-demand case
-    split always produce a minimizing partition with at most five blocks,
-    and do the two selected partial colourings account for every cross-edge?
-25. Are any of the exact neighbourhood, private-triangle, density,
+24. In the contracted-star lemma, does the pulled-back colouring make the
+    five retained neighbours rainbow, and does a failed bichromatic
+    connection really free a colour at the centre?
+25. Is every missing-end fan limb, marked-tree contraction, and combined
+    two-shore rooted bag confined, connected, and disjoint exactly as
+    claimed; and do both finite exits lift to explicit `K_7^-` models?
+26. Are any of the exact neighbourhood, private-triangle, density,
     equality-structure, exceptional-neighbourhood, connected-subgraph-
-    capacity, two-component clique-exclusion, common-trace, or contraction
-    conclusions already explicit or implicit in the literature?
+    capacity, two-component clique-exclusion, contracted-star fan-tree, or
+    contraction conclusions already explicit or implicit in the literature?
 
 ## 7. Review and publication gate
 
@@ -642,13 +664,13 @@ specialists.  Before submission it still requires:
 - independent human proof review of the degree-seven, two-clique,
   private-triangle, density, equality-structure, exceptional-vertex,
   exceptional-neighbourhood, two-component literal-clique, common-trace,
-  connected-subgraph-capacity, critical reflection, and contraction
-  arguments;
+  fan-tree, connected-subgraph-capacity, critical reflection, and
+  contraction arguments;
 - conventional novelty and priority searches, including forward citation
   chains of Niu--Zhang, Rolek--Song, Rolek--Song--Thomas, Albar, and
   Norin--Totschnig;
 - an independent rerun of the retained exceptional-neighbourhood,
-  one-nonfull, both-full, common-six, and two-entrance verifiers;
+  one-nonfull, both-full, common-six, fan-tree, and two-entrance verifiers;
 - correction and renewed hashes for any mathematical change; and
 - a separate manuscript pass after the theorem package is stable.
 

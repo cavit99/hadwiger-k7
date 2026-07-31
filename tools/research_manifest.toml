@@ -7791,7 +7791,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "c875cca54270a5be2baf1baa763428523cc9977c7de416103e4537f287b9132b"
+expected_source_sha256 = "8e0f7808cba29552a80c017d72a242ceb02ce46c6f74ae2850768cbff68a5693"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8237,6 +8237,54 @@ does_not_prove = [
   "the K7-minus six-colour conjecture or HC7",
 ]
 keywords = ["K7 minus", "common six-set", "trace languages", "parity barrier", "3K2"]
+
+[[claims]]
+id = "hc7.k7minus_contracted_star_response"
+title = "A contracted independent star forces exterior bichromatic paths"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_distinct_miss_fan_tree_elimination.md"
+source_heading = "Lemma 1 (contracted-star response path)"
+active = false
+audit = "results/hc7_k7minus_distinct_miss_fan_tree_elimination_audit.md"
+expected_source_sha256 = "012e98da1403fb72e303c294e403b2b82a4cc8d2a411287268e8de08d505a5d2"
+scope = "any (q+1)-chromatic graph whose proper minors are q-colourable, at an independent nonempty star with exactly q-1 retained neighbours"
+label_fidelity = "the centre, contracted independent neighbours, retained rainbow neighbours, nonedge endpoints, bichromatic component and exterior path remain literal"
+conclusions = [
+  "every nonedge among the q-1 retained neighbours has a path whose open interior lies in one component outside the closed neighbourhood",
+  "the path follows from the named star-contraction colouring and one Kempe interchange",
+]
+does_not_prove = [
+  "simultaneous disjoint paths for several nonedges",
+  "a path through a prescribed exterior component",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["contracted star", "Kempe response", "bichromatic path", "critical colouring", "exterior component"]
+
+[[claims]]
+id = "hc7.k7minus_distinct_nonadjacent_miss_elimination"
+title = "Distinct nonadjacent missed attachments force an explicit K7-minus minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_distinct_miss_fan_tree_elimination.md"
+source_heading = "Theorem 7 (distinct nonadjacent misses are impossible)"
+active = false
+audit = "results/hc7_k7minus_distinct_miss_fan_tree_elimination_audit.md"
+expected_source_sha256 = "012e98da1403fb72e303c294e403b2b82a4cc8d2a411287268e8de08d505a5d2"
+scope = "exactly two nonfull exterior components with distinct nonadjacent missed neighbours at an exceptional degree-eight centre in the critical K7-minus host"
+label_fidelity = "the centre, two literal exterior components, two missed vertices, six common roots, both shore-confined fan trees and every final branch set remain explicit"
+conclusions = [
+  "the dynamic contracted-star response eliminates every independence-three common boundary, including the 3K2 parity obstruction",
+  "the only remaining common boundaries are two disjoint triangles with at most one joining edge",
+  "whole-component quotient certificates or paired fan-tree rooted certificates give an explicit K7-minus model in every portal configuration",
+  "the complete distinct nonadjacent-miss branch is impossible",
+]
+does_not_prove = [
+  "elimination of distinct adjacent misses",
+  "the one-nonfull, both-full, or one-exterior-component allocations",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "distinct nonadjacent misses", "3K2 parity", "six fan", "fan tree", "computer-assisted rooted certificate"]
 
 [[claims]]
 id = "hc7.k7minus_both_full_boundary_reduction"
@@ -12394,6 +12442,30 @@ kind = "guarded_by"
 note = "Complete static independent-block coverage can split into disjoint even- and odd-block trace languages."
 
 [[relations]]
+source = "hc7.k7minus_distinct_nonadjacent_miss_elimination"
+target = "hc7.k7minus_contracted_star_response"
+kind = "uses"
+note = "The named star-contraction response rules out every independent triple on the shared six-set, including the exact 3K2 parity boundary."
+
+[[relations]]
+source = "hc7.k7minus_distinct_nonadjacent_miss_elimination"
+target = "hc7.k7minus_distinct_miss_reduction"
+kind = "uses"
+note = "The earlier host reduction supplies the literal common boundary and its K4 and vertex-deleted K4-minus minor exclusions."
+
+[[relations]]
+source = "hc7.k7minus_distinct_nonadjacent_miss_elimination"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+note = "The exceptional-neighbourhood theorem supplies exact independence number three and literal K4-freeness on the eight neighbours."
+
+[[relations]]
+source = "hc7.k7minus_distinct_nonadjacent_miss_elimination"
+target = "hc7.k7minus_overlap_boundary_census"
+kind = "supersedes"
+note = "The dynamic lemma and analytic classification bypass the 28-type census, and the fan-tree completion closes the entire former 27-type residue."
+
+[[relations]]
 source = "hc7.k7minus_both_full_boundary_reduction"
 target = "hc7.k7minus_exceptional_independent_triples"
 kind = "uses"
@@ -12455,15 +12527,9 @@ note = "The one-nonfull branch stops at the non-tight attachment inequality or t
 
 [[relations]]
 source = "hc7.target.k7minus_rooted_shore_allocation"
-target = "hc7.k7minus_overlap_boundary_census"
+target = "hc7.k7minus_distinct_nonadjacent_miss_elimination"
 kind = "uses"
-note = "The distinct nonadjacent-miss branch has 27 remaining common-six types with exact packing-one restrictions."
-
-[[relations]]
-source = "hc7.target.k7minus_rooted_shore_allocation"
-target = "hc7.barrier.k7minus_overlap_trace_parity"
-kind = "guarded_by"
-note = "Static exact-block coverage does not synchronize the two common-six response languages."
+note = "The complete distinct nonadjacent-miss cell is eliminated by the dynamic star response and paired fan-tree construction; only adjacent-miss and other allocation cells remain."
 
 [[relations]]
 source = "hc7.target.k7minus_rooted_shore_allocation"
@@ -13328,6 +13394,20 @@ expected_stdout = [
   "unique_demand_one=ECqg(net) unique_demand_three=EQhO(2K3)",
   "matching_parity_languages=PASS",
   "PASS overlap_trace_synchronization_finite_checks",
+]
+
+[[verifiers]]
+id = "k7minus-distinct-miss-fan-tree-completion"
+path = "results/hc7_k7minus_distinct_miss_fan_tree_completion_verify.py"
+sha256 = "15c14433076527c173d7b12afe4c2ff88313236be38f16ee2e1f9a9a16889b0a"
+timeout = 120
+expected_stdout = [
+  "GREEN: distinct-miss fan-tree completion verified",
+  "bridge=0 labelled_valid=1032 valid_orbits=21 quotient_survivor_orbits=3 tree_pair_counts=(2000, 256, 256)",
+  "bridge=1 labelled_valid=1113 valid_orbits=109 quotient_survivor_orbits=6 tree_pair_counts=(2000, 2000, 256, 256, 256, 256)",
+  "mask_orbit_digest=1d653544a19aed2fac36589f1d113583fe29f7a2af58679e90b574558d9f3203",
+  "quotient_certificate_digest=cb251c5518e05b5b1ba79a9149600226777cee5e8677f6bf9a8af90b18b626c3",
+  "fan_tree_certificate_digest=5c19a21365f7380afef89b6164dcbee3752db001198cb04aa9270bc4aad33785",
 ]
 
 [[verifiers]]

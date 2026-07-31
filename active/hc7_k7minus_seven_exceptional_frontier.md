@@ -109,15 +109,17 @@ connected subgraph; its witness contains an explicit `K_7`-minor model and
 is only five-chromatic, so it does not refute the critical-host conclusion.
 
 When the two components have distinct nonadjacent misses, the
-[common-six trace theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
-proves that equal colouring partitions on their common six-set would glue
-to a six-colouring of `G`.  It eliminates the unique demand-one boundary
-(the net).  Of the 27 remaining six-vertex types, every triangular type
-forces both exterior components to have common-six full packing number one;
-for every triangle-free type at least one component has packing number one.
-The exact three-matching parity barrier shows that independent-block
-coverage alone need not synchronize the two trace languages, so the next
-step must use colourings of related proper minors or additional topology.
+[contracted-star and fan-tree theorem](../results/hc7_k7minus_distinct_miss_fan_tree_elimination.md)
+now eliminates the complete branch.  A star-contraction colouring and one
+Kempe response force the common six-set to have independence number at most
+two, dynamically excluding the exact `3K_2` parity obstruction and every
+other independence-three boundary.  The common boundary is then two
+disjoint triangles, with at most one joining edge.  Six-fans in `G-u`
+produce marked trees inside the two arbitrary exterior components, and the
+retained finite completion constructs an explicit `K_7^-` model for every
+portal-mask and labelled-tree configuration.  The earlier parity-language
+barrier remains a valid warning about static trace coverage, but is no
+longer a live obstruction.
 
 In the both-full case, the
 [boundary reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
@@ -229,14 +231,14 @@ whole component would be confined to its five roots and would make them a
 literal `K_5`, impossible at an exceptional centre.
 
 For two exterior components, the new literal-clique theorem first forces
-the global high-density branch (2).  The one-nonfull case then stops at the
+the global high-density branch (2).  The one-nonfull case stops at the
 non-tight attachment inequality or the nested order-seven cuts described
-above.  The distinct nonadjacent-miss case stops at 27 common-six trace
-types whose actual response languages must be synchronized.  In the
-both-full case, the boundary is one of seven exact types and both exterior
-packing numbers are one.  A rooted `K_5^-` confined to one closed side is
-already terminal.  None of these exact local obligations is presently
-closed.
+above.  Two nonfull components cannot have the same miss or distinct
+nonadjacent misses; distinct adjacent misses remain normalized to
+connected-rich `(1,2)` cuts.  In the both-full case, the boundary is one of
+seven exact types and both exterior packing numbers are one.  A rooted
+`K_5^-` confined to one closed side is already terminal.  These remaining
+one-nonfull, adjacent-miss, and both-full obligations are not closed.
 
 The existing one-pair seven-path argument cannot supply this allocation;
 its exact failure is recorded in the
@@ -244,23 +246,23 @@ its exact failure is recorded in the
 
 ## 5. Recommended next attack
 
-Attack the operation-coupled obligations in this order.
+Attack the remaining operation-coupled obligations in this order.
 
-1. **Synchronize the distinct-miss common-six traces.**  Start with the
-   sharp `3K_2` parity obstruction.  Compare colourings returned by a named
-   deletion and contraction, rather than arbitrary independent-block
-   returns, and prove that the even/odd trace separation either breaks under
-   a Kempe exchange or yields an explicit `K_7^-`-minor model.  Then extend
-   the argument across the remaining 27 boundary types.
-2. **Resolve the one-nonfull nested cuts.**  Use two compatible proper-minor
-   responses to rule out the non-tight inequality `|A|+|B|\ge7` or one of
-   the two overlapping order-seven cuts.  The two-entrance barrier shows
-   that seven-connectivity and packing numbers alone cannot do this.
-3. **Return to the seven both-full types only with dynamic data.**  Compare
+1. **Resolve the nonfull connected-rich cuts.**  Use two compatible
+   proper-minor responses to rule out the non-tight inequality
+   `|A|+|B|\ge7` or one of the two overlapping order-seven cuts in the
+   one-nonfull case, and include the distinct adjacent-miss `(1,2)` cuts in
+   the same framework.  The two-entrance barrier shows that
+   seven-connectivity and packing numbers alone cannot do this.
+2. **Return to the seven both-full types only with dynamic data.**  Compare
    operation-related star-contraction colourings until one side supports
    all but one demand, or extract a disjoint residual connected subgraph
    meeting the star and four rooted bags.  The two eight-demand types need
    a conversion beyond the six-demand Kriesell--Mohr theorem.
+3. **Synchronize the seven anchored list cores.**  Use the changing
+   deletion responses to eliminate saturated singleton cores and tight
+   odd-cycle cores; the static `C_7\vee C_6` witness does not couple those
+   seven operations.
 
 In parallel, exploit the new global dichotomy.  If one exceptional centre
 has two exterior components, there are at least 25 exceptional centres and

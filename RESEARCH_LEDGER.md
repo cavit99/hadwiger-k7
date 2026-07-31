@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 30 July 2026
+**Last updated:** 31 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 **Publication assessment:** the internally audited corpus is a credible
 partial-results manuscript candidate, but it is not submission-ready;
@@ -208,15 +208,20 @@ shows that the two known entrances alone are insufficient without using
 minor exclusion or compatible proper-minor colourings.
 
 For distinct nonadjacent misses, the
-[common-six trace theorem](results/hc7_k7minus_overlap_trace_synchronization.md)
-eliminates the unique demand-one boundary and forces common-six packing-one
-structure on the remaining 27 types, but an exact parity-language barrier
-shows that independent-block coverage alone cannot force synchronization.
+[contracted-star and fan-tree theorem](results/hc7_k7minus_distinct_miss_fan_tree_elimination.md)
+now eliminates the complete branch.  Its reusable dynamic-colouring lemma
+rules out every common-six boundary with an independent triple, including
+the exact `3K_2` parity obstruction.  The only two remaining common-six
+graphs are two disjoint triangles, with or without one joining edge.
+Six-connectivity of `G-u` then produces marked fan trees in the two arbitrary
+exterior components, and a retained finite certificate turns every portal
+and tree configuration into an explicit `K_7^-` model.  This does not
+eliminate distinct adjacent misses, which remain normalized to connected-
+rich `(1,2)` cuts.
 When both exterior components are full,
 the [boundary reduction](results/hc7_k7minus_both_full_shore_reduction.md)
 leaves seven exact types and packing vector `(1,1,1)` for `\{u\},E,F`.
-These are positive structural reductions; none proves the required rooted
-model or a common colouring partition.
+The one-nonfull, adjacent-miss, and both-full allocations remain open.
 
 The one-component residue still requires every remaining connected piece
 either to miss `I` or to contact at most three rooted bags.  The written,
@@ -809,10 +814,11 @@ criterion for a rooted `K_5` model.  The new two-component theorem proves
 that the existence of two exterior components makes the whole host
 literal-`K_5`-free, forcing `n_7=0`, `m\ge4n`, and at least 25 exceptional
 degree-eight vertices.  Its one-nonfull specialization forces a six-fan and
-nested order-seven cuts in the tight case.  The distinct-miss common-six
-theorem eliminates one of 28 boundary types and forces packing-one structure
-on the other 27, while showing that independent-block coverage alone cannot
-force trace synchronization.  The both-full reduction leaves seven exact
+nested order-seven cuts in the tight case.  The contracted-star response
+and two-shore fan-tree theorem now eliminate the complete distinct
+nonadjacent-miss branch, bypassing the former `3K_2` parity-language
+obstruction and producing explicit `K_7^-` models after an unbounded
+fan-tree reduction.  The both-full reduction leaves seven exact
 boundary types with packing vector `(1,1,1)`.  The independent general separator theorem
 bounds disjoint boundary-full connected subgraphs and cut
 components by four, proves two-connected interiors in the four-component
@@ -923,12 +929,13 @@ records the internal go/no-go assessment; it is not external peer review.
   cannot miss the same neighbourhood vertex.  The one-nonfull case has 28
   possible seven-vertex boundaries, a compulsory six-fan, and exact nested
   order-seven cuts when the attachment inequality is tight.  In the
-  distinct nonadjacent-miss case the common-six trace theorem eliminates the
-  net and forces packing-one structure on the other 27 boundary types; a
-  parity-language barrier shows that actual operation compatibility is
-  still needed.  The both-full case leaves seven exact boundary types with
-  packing vector `(1,1,1)`.  No required rooted model or common trace is yet
-  proved.
+  distinct nonadjacent-miss case is now impossible: a contracted-star Kempe
+  response eliminates every independent-triple boundary, and paired
+  shore-confined fan trees force an explicit `K_7^-` for the two remaining
+  boundary types.  Distinct adjacent misses remain connected-rich `(1,2)`
+  cuts.  The both-full case leaves seven exact boundary types with packing
+  vector `(1,1,1)`.  No required rooted model is yet proved in those
+  remaining cells.
 - **Seven-boundary connected-subgraph and descent obstruction.** In every
   seven-connected `K_7^-`-minor-free graph, an order-seven cut has at most
   four disjoint connected subgraphs outside it that are each adjacent to all

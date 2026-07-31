@@ -6,11 +6,12 @@ private-triangle Kempe allocation, all-degree-seven clique exclusion, and
 seven-boundary connected-subgraph, critical-host capacity, and contraction
 theorems are written proofs with separate internal audits GREEN for their
 current revisions.  The two promoted seven-exceptional lower-bound and
-local-completion theorems and the new two-component nonfull and both-full
-reductions are also written and separately audited GREEN; their finite
-boundary claims have retained independently checked verifiers.  The live
-list-core derivation is not separately audited.  Both displayed finishing
-targets below remain conjectural.
+local-completion theorems, the two-component nonfull and both-full
+reductions, and the distinct nonadjacent-miss fan-tree elimination are also
+written and separately audited GREEN; their finite boundary claims have
+retained independently checked verifiers.  The live list-core derivation is
+not separately audited.  Both displayed finishing targets below remain
+conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -386,7 +387,14 @@ configuration to connected-rich `(1,2)` seven-cuts or two overlapping
 one-nonfull cell, uniform defect-two reflection also forces the missed
 vertex to have at most four boundary neighbours and at least two neighbours
 in the full exterior component; an exact retained census leaves 28 possible
-boundary types.  In the both-full case, the
+boundary types.  The
+[contracted-star and fan-tree theorem](../results/hc7_k7minus_distinct_miss_fan_tree_elimination.md)
+now eliminates the complete distinct nonadjacent-miss cell: a reusable
+Kempe response removes the `3K_2` parity obstruction and every other
+independence-three boundary, while paired shore-confined fan trees produce
+an explicit `K_7^-` for the two remaining common-six graphs.  Distinct
+adjacent misses remain connected-rich `(1,2)` cuts.  In the both-full case,
+the
 [finite boundary and packet reduction](../results/hc7_k7minus_both_full_shore_reduction.md)
 leaves seven exact boundary types and forces both exterior full-subgraph
 packing numbers to equal one.  A fixed star-contraction colouring on the
