@@ -9,7 +9,10 @@ an internal mathematical and computational audit, not external peer review.
   `012e98da1403fb72e303c294e403b2b82a4cc8d2a411287268e8de08d505a5d2`;
 - [retained verifier](hc7_k7minus_distinct_miss_fan_tree_completion_verify.py),
   SHA-256
-  `15c14433076527c173d7b12afe4c2ff88313236be38f16ee2e1f9a9a16889b0a`;
+  `3be279d9fd322b8dfee9647156651bc6b32cd83b2a603d9d5acfa64236e3079a`;
+- [independent direct-contraction verifier](hc7_k7minus_distinct_miss_fan_tree_completion_independent_verify.py),
+  SHA-256
+  `a90337234cc340df6c21551532877f192c66b8adc8454011ae906f3ea99c7ce2`;
 - [exceptional-neighbourhood input](hc7_k7minus_exceptional_neighbourhood_completion.md),
   SHA-256
   `fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd`;
@@ -114,29 +117,38 @@ connectivity, disjointness, and contacts.  Its dominance pruning is safe:
 replacing a side state by a contact superset cannot invalidate a completion,
 and there is no bag-capacity constraint between the two disjoint shores.
 
-A separate deterministic checker did not use side states, rooted contact
-masks, dominance pruning, or their combination logic.  It built every full
-sparse fan-tree graph and contracted actual edges directly to seven
-spanning connected bags, then rechecked at least twenty quotient edges.
-It found models in all
+Running
+
+```text
+python3 results/hc7_k7minus_distinct_miss_fan_tree_completion_independent_verify.py
+```
+
+reproduced the mask and orbit counts and returned:
+
+```text
+GREEN: independent direct-contraction fan-tree check verified
+bridge=0 labelled_valid=1032 valid_orbits=21 quotient_survivor_orbits=3 tree_pair_counts=(2000, 256, 256)
+bridge=1 labelled_valid=1113 valid_orbits=109 quotient_survivor_orbits=6 tree_pair_counts=(2000, 2000, 256, 256, 256, 256)
+mask_orbit_digest=1d653544a19aed2fac36589f1d113583fe29f7a2af58679e90b574558d9f3203
+direct_contraction_certificate_digest=a75aae228f346587a12ab0821c1a1e735b4d25e7ad9181b161a6512bab5c4ce4
+```
+
+This retained independent implementation imports no code from the principal
+verifier and does not use its side states, rooted contact masks, dominance
+pruning, or combination logic.  It independently regenerates the mask
+orbits and nine quotient-survivor orbits, builds every full sparse fan-tree
+graph, contracts actual edges to seven spanning connected bags, and directly
+rechecks at least twenty quotient edges.  It finds models in all
 
 \[
  2{,}512+5{,}024=7{,}536
 \]
 
-labelled tree pairs, with zero failures.  Its independently serialized
-certificate stream has SHA-256
-
-```text
-339e124717b0ad46b2eca4374bb1dd61f20ae952e14a045152b726597e961bde
-```
-
-and a separate mask/orbit regeneration reproduced all nine survivor
-orbits.  The independent checker used symmetry-equivalent representatives
-in the bridged case, providing an additional convention check.
-
-The scripts rely on Python assertions; the documented ordinary invocation,
-not `python -O`, is the verification command.
+labelled tree pairs, with zero failures.  Its checks use explicit exceptions
+and remain active under `python -O`.  The principal verifier still uses
+assertions, but now refuses optimized execution before performing any work.
+These are independent internal implementations, not independent human
+review or external peer review.
 
 ## Scope
 

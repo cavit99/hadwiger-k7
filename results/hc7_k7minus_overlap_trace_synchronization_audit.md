@@ -9,13 +9,15 @@ It does not close the distinct nonadjacent-miss case.
 - theorem SHA-256:
   `746bb59b5e6eec7abd7f6cda40c9737d67a1bb37213da5c2a3351798f4904c4a`;
 - verifier SHA-256:
-  `f491e0b6a2b16c7d796334005329c2830c047e281451e0fe1202c30961f3f2b1`;
+  `300e8e0d2496dc540887261798c9bd675c298e6d6cfe4a85de221885d3834db4`;
 - barrier SHA-256:
   `8d6f2fe124d4e1e2d041b377fe900862f94a0c4223f32d1a97a3173cb0a01e34`.
 
 The audit checked the theorem text against the distinct-miss geometry in
 the audited nonfull-attachment reduction, reran the retained verifier, and
 independently reproduced its six-vertex census by a different minor test.
+The retained verifier refuses optimized Python execution, so its
+assertion-based checks cannot be silently disabled with `python -O`.
 
 ## Correction history
 

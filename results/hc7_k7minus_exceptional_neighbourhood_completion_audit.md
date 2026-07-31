@@ -29,7 +29,10 @@ external peer review.
 |---|---|
 | Minimum-order and density theorem | `604d11d4276ce6a3c57a8375d702624a1c364b5123f122b7e9e3dc18d11bf8f4` |
 | Low-degree exterior-component bound | `4ee48c6d71c994b166b29dcd969d64c3526e6b6b75fa8a849fae834cf95eea29` |
-| Retained finite verifier | `5eb316169563208269c887775376dea9d4b853201a2458f9b604b23ea6017ad0` |
+| Retained finite verifier | `6be5e7e36e3cfa899db9577354511a31653c843acc90ad0eb2b02a541384f03e` |
+
+The retained verifier refuses optimized Python execution, so its
+assertion-based checks cannot be silently disabled with `python -O`.
 
 The external order-eight input is Rolek--Song--Thomas, *Properties of
 8-contraction-critical graphs with no `K_7` minor*, arXiv:2208.07335v2,

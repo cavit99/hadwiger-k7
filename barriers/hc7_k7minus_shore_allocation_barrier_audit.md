@@ -12,8 +12,11 @@ e6d3bf5c480ad3775de530014aa70f2bb1e32c880e64af45a3087e30d93acee9
 Retained verifier SHA-256:
 
 ```text
-b288f390ff8b0f1cb47a3fdf522cc7c0be769e2dcba707aeefe5b0f7de5a5b42
+a41e5125738eab3cf2180d883f349f73f34c564b8568c8d62763d70173686643
 ```
+
+The retained verifier refuses optimized Python execution, so its
+assertion-based checks cannot be silently disabled with `python -O`.
 
 **Verdict:** **GREEN** for the exact revision.
 

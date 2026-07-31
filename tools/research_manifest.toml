@@ -13344,7 +13344,7 @@ expected_stdout = [
 [[verifiers]]
 id = "k7minus-exceptional-neighbourhood-completion"
 path = "results/hc7_k7minus_exceptional_neighbourhood_completion_verify.py"
-sha256 = "5eb316169563208269c887775376dea9d4b853201a2458f9b604b23ea6017ad0"
+sha256 = "6be5e7e36e3cfa899db9577354511a31653c843acc90ad0eb2b02a541384f03e"
 timeout = 30
 requires = ["nauty"]
 expected_stdout = [
@@ -13355,7 +13355,7 @@ expected_stdout = [
 [[verifiers]]
 id = "k7minus-one-nonfull-boundary"
 path = "results/hc7_k7minus_nonfull_attachment_reduction_verify.py"
-sha256 = "d0414ca3171f9a29e78030874eaa61c5c8b7f2e0d0650c0b866654d56e82bee3"
+sha256 = "e3109f45dabfcfb946a8fb852e011ab6041f3a7a1ca70ca142ce30c63b7d0a87"
 timeout = 30
 requires = ["nauty"]
 expected_stdout = [
@@ -13370,7 +13370,7 @@ expected_stdout = [
 [[verifiers]]
 id = "k7minus-one-nonfull-two-entrance-barrier"
 path = "barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier_verify.py"
-sha256 = "f374c2993c2f0d9954a8a60192987a6d21dd4e577ec6099c48ea19c26a015462"
+sha256 = "0764c36cb01ff9a4ba1f09b8c6cb3dded40cdb2bd93ed827c9017dd63b68b7cc"
 timeout = 30
 expected_stdout = [
   "PASS K7-minus one-nonfull two-entrance allocation barrier",
@@ -13384,7 +13384,7 @@ expected_stdout = [
 [[verifiers]]
 id = "k7minus-overlap-trace-synchronization"
 path = "results/hc7_k7minus_overlap_trace_synchronization_verify.py"
-sha256 = "f491e0b6a2b16c7d796334005329c2830c047e281451e0fe1202c30961f3f2b1"
+sha256 = "300e8e0d2496dc540887261798c9bd675c298e6d6cfe4a85de221885d3834db4"
 timeout = 30
 requires = ["nauty"]
 expected_stdout = [
@@ -13399,7 +13399,7 @@ expected_stdout = [
 [[verifiers]]
 id = "k7minus-distinct-miss-fan-tree-completion"
 path = "results/hc7_k7minus_distinct_miss_fan_tree_completion_verify.py"
-sha256 = "15c14433076527c173d7b12afe4c2ff88313236be38f16ee2e1f9a9a16889b0a"
+sha256 = "3be279d9fd322b8dfee9647156651bc6b32cd83b2a603d9d5acfa64236e3079a"
 timeout = 120
 expected_stdout = [
   "GREEN: distinct-miss fan-tree completion verified",
@@ -13411,9 +13411,22 @@ expected_stdout = [
 ]
 
 [[verifiers]]
+id = "k7minus-distinct-miss-fan-tree-direct-contraction"
+path = "results/hc7_k7minus_distinct_miss_fan_tree_completion_independent_verify.py"
+sha256 = "a90337234cc340df6c21551532877f192c66b8adc8454011ae906f3ea99c7ce2"
+timeout = 60
+expected_stdout = [
+  "GREEN: independent direct-contraction fan-tree check verified",
+  "bridge=0 labelled_valid=1032 valid_orbits=21 quotient_survivor_orbits=3 tree_pair_counts=(2000, 256, 256)",
+  "bridge=1 labelled_valid=1113 valid_orbits=109 quotient_survivor_orbits=6 tree_pair_counts=(2000, 2000, 256, 256, 256, 256)",
+  "mask_orbit_digest=1d653544a19aed2fac36589f1d113583fe29f7a2af58679e90b574558d9f3203",
+  "direct_contraction_certificate_digest=a75aae228f346587a12ab0821c1a1e735b4d25e7ad9181b161a6512bab5c4ce4",
+]
+
+[[verifiers]]
 id = "k7minus-both-full-shore-reduction"
 path = "results/hc7_k7minus_both_full_shore_reduction_verify.py"
-sha256 = "168c56fdeb52c9835f95796750c82a0c06dfcad7781ca4a9a07affdfab07eb2f"
+sha256 = "e82e9733cb71705cd5b7c0832385a305e2fa0e6349d4bf515690a4a52196a28d"
 timeout = 30
 requires = ["nauty"]
 expected_stdout = [
@@ -13430,7 +13443,7 @@ expected_stdout = [
 [[verifiers]]
 id = "k7minus-shore-allocation-barriers"
 path = "barriers/hc7_k7minus_shore_allocation_barrier_verify.py"
-sha256 = "b288f390ff8b0f1cb47a3fdf522cc7c0be769e2dcba707aeefe5b0f7de5a5b42"
+sha256 = "a41e5125738eab3cf2180d883f349f73f34c564b8568c8d62763d70173686643"
 timeout = 30
 expected_stdout = [
   "balanced global shore labels=15/15 every rotation keeps 2 demands per shore",

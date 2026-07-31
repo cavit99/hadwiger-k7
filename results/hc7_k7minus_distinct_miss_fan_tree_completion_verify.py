@@ -21,6 +21,9 @@ This script is deterministic and uses only the Python standard library.
 
 from __future__ import annotations
 
+if not __debug__:
+    raise SystemExit("verification requires assertions; do not run Python with -O")
+
 from dataclasses import dataclass
 from functools import lru_cache
 from hashlib import sha256

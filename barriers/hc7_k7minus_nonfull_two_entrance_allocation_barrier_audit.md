@@ -13,7 +13,10 @@ This is an internal audit, not external peer review.
 - retained verifier:
   [`hc7_k7minus_nonfull_two_entrance_allocation_barrier_verify.py`](hc7_k7minus_nonfull_two_entrance_allocation_barrier_verify.py)
 - verifier SHA-256:
-  `f374c2993c2f0d9954a8a60192987a6d21dd4e577ec6099c48ea19c26a015462`
+  `0764c36cb01ff9a4ba1f09b8c6cb3dded40cdb2bd93ed827c9017dd63b68b7cc`
+
+The retained verifier refuses optimized Python execution, so its
+assertion-based checks cannot be silently disabled with `python -O`.
 
 ## Verdict
 

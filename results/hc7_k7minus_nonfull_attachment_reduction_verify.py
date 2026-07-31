@@ -12,6 +12,9 @@ the unbounded host graph is proved in the adjacent theorem.
 
 from __future__ import annotations
 
+if not __debug__:
+    raise SystemExit("verification requires assertions; do not run Python with -O")
+
 import hashlib
 import itertools
 import shutil

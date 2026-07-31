@@ -84,6 +84,20 @@ or two-full-transversal theorem, the `K_7^-` six-colour conjecture, or
 branch-set adjacency; it does not prove that two disjoint connected
 subgraphs each meet all five private triangles.
 
+**Current-revision cautions.**  The strongest general order-seven-cut bound
+is `2<=r<=pi_S(G)<=4`; the `r<=5` statement retained in the manifest is an
+older, weaker audited theorem that the connected-subgraph-capacity theorem
+supersedes.  The critical host improves the bound to three.  In the
+whole-component contraction formula, component excess counts both internal
+and boundary edges:
+
+\[
+ e_i=|E(G[C_i])|+|E_G(C_i,S)|,
+ \qquad \delta_i=e_i-4|V(C_i)|.
+\]
+
+Using `|E(G[C_i])|-4|V(C_i)|` instead is incorrect.
+
 ## 2. Exact theorem package
 
 ### Uniform rooted `K_5` and exact degree-seven neighbourhoods
@@ -195,7 +209,7 @@ Rolek--Song--Thomas Lemma 2.1 and then gives an explicit seven-bag
 `G-N[u]` likewise completes to `K_7^-`.  A
 [retained finite verifier](../results/hc7_k7minus_exceptional_neighbourhood_completion_verify.py),
 at SHA-256
-`5eb316169563208269c887775376dea9d4b853201a2458f9b604b23ea6017ad0`,
+`6be5e7e36e3cfa899db9577354511a31653c843acc90ad0eb2b02a541384f03e`,
 checks the order-eight input and all nine explicit near-full attachment
 models; it is an independent cross-check, not a proof dependency.
 
@@ -217,7 +231,7 @@ overlapping `(1,1)` cuts described in the theorem.
 
 The [retained verifier](../results/hc7_k7minus_nonfull_attachment_reduction_verify.py),
 at SHA-256
-`d0414ca3171f9a29e78030874eaa61c5c8b7f2e0d0650c0b866654d56e82bee3`,
+`e3109f45dabfcfb946a8fb852e011ab6041f3a7a1ca70ca142ce30c63b7d0a87`,
 independently reproduces the 28-code digest and all reported spectra.  The
 host reduction is written; the finite census classifies possible literal
 boundaries and does not assert their host realisability.
@@ -280,12 +294,17 @@ The singleton `\{u\}` completes the latter to `K_7^-`.
 
 The [retained verifier](../results/hc7_k7minus_distinct_miss_fan_tree_completion_verify.py),
 at SHA-256
-`15c14433076527c173d7b12afe4c2ff88313236be38f16ee2e1f9a9a16889b0a`,
+`3be279d9fd322b8dfee9647156651bc6b32cd83b2a603d9d5acfa64236e3079a`,
 regenerates `1,032` and `1,113` valid labelled portal patterns, reduces them
 to `21` and `109` orbits, and leaves only three and six quotient-survivor
 orbits.  It constructs and rechecks rooted certificates for all `7,536`
-labelled tree pairs.  A separate contraction-based checker reproduced all
-certificates without using its rooted side-state method.
+labelled tree pairs.  The retained
+[independent direct-contraction verifier](../results/hc7_k7minus_distinct_miss_fan_tree_completion_independent_verify.py),
+at SHA-256
+`a90337234cc340df6c21551532877f192c66b8adc8454011ae906f3ea99c7ce2`,
+independently regenerates the nine survivor orbits and checks all `7,536`
+full sparse graphs by actual edge contractions, without using the principal
+verifier's side-state or dominance machinery.
 
 The earlier
 [common-trace theorem](../results/hc7_k7minus_overlap_trace_synchronization.md)
@@ -311,7 +330,7 @@ force each exterior full-subgraph packing number to equal one.
 
 The [retained verifier](../results/hc7_k7minus_both_full_shore_reduction_verify.py),
 at SHA-256
-`168c56fdeb52c9835f95796750c82a0c06dfcad7781ca4a9a07affdfab07eb2f`,
+`e82e9733cb71705cd5b7c0832385a305e2fa0e6349d4bf515690a4a52196a28d`,
 reproduces the full census, both certificate digests and every reserve
 shape.  The result does not construct a rooted `K_5^-` confined to one
 closed side.
@@ -670,7 +689,8 @@ specialists.  Before submission it still requires:
   chains of Niu--Zhang, Rolek--Song, Rolek--Song--Thomas, Albar, and
   Norin--Totschnig;
 - an independent rerun of the retained exceptional-neighbourhood,
-  one-nonfull, both-full, common-six, fan-tree, and two-entrance verifiers;
+  one-nonfull, both-full, common-six, both fan-tree, and two-entrance
+  verifiers;
 - correction and renewed hashes for any mathematical change; and
 - a separate manuscript pass after the theorem package is stable.
 

@@ -27,7 +27,10 @@ The audited dependency revisions are:
 - Kriesell--Mohr conversion as used in the degree-seven theorem:
   `04e085032a096ef3fd508ca4ee287ef82417a718ae3d95646ae4cbd0b911ed2e`; and
 - retained boundary verifier:
-  `168c56fdeb52c9835f95796750c82a0c06dfcad7781ca4a9a07affdfab07eb2f`.
+  `e82e9733cb71705cd5b7c0832385a305e2fa0e6349d4bf515690a4a52196a28d`.
+
+The retained boundary verifier refuses optimized Python execution, so its
+assertion-based checks cannot be silently disabled with `python -O`.
 
 ## Host lifts
 

@@ -27,7 +27,10 @@ external peer review.
 | Packet-demand identity | `33c613cf30a897bed843fac25563fef2d223cfb98eb57403d63dc885eb3d1b90` |
 | Uniform defect-two carrier theorem | `7957de3aeb635a9f48e1e1668e34f43abbba15cac270c0f716821b2925af3fd8` |
 | Exceptional-neighbourhood completion | `fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd` |
-| Retained boundary verifier | `d0414ca3171f9a29e78030874eaa61c5c8b7f2e0d0650c0b866654d56e82bee3` |
+| Retained boundary verifier | `e3109f45dabfcfb946a8fb852e011ab6041f3a7a1ca70ca142ce30c63b7d0a87` |
+
+The retained boundary verifier refuses optimized Python execution, so its
+assertion-based checks cannot be silently disabled with `python -O`.
 
 The separately retained carrier verifier has SHA-256
 `20ef45d8235dd6ad12b3688545473cc0bed98b4231945ef0be54c7d13c033a6b`.
