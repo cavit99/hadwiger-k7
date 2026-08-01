@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 31 July 2026
+**Last updated:** 1 August 2026
 **Authoritative status:** $HC_7$ is not proved here.
 **Publication assessment:** the internally audited corpus is a credible
 partial-results manuscript candidate, but it is not submission-ready;
@@ -236,23 +236,20 @@ alternative and a dense whole-component-contraction dichotomy reduce the
 problem to labelled near-model augmentation or a wide cutvertex-block
 configuration.
 
-There is also a new global minimum-shore reduction.  If `E` is chosen
+The global minimum-shore reduction is now terminal.  If `E` is chosen
 smallest among all components of disconnected exceptional
-anti-neighbourhoods, every degree-eight vertex of `E`, with at most one
-exception, has connected anti-neighbourhood.  The possible exception is an
-exact rotation across one common order-seven cut with packing vector
-`(1,2)` and two opposite vertex-deletion boundary responses.  Deleting the
-two private incident edges places all three permitted equality patterns in
-one common six-chromatic host; a double-contraction response supplies five
-colour-indexed locks into one connected middle subgraph, with three assigned
-to one fixed private edge.  Those locks force a second full two-shore
-separation of order seven or eight.  Its boundary is the join of the
-nonadjacent recentered pair with a matching and isolated vertices; in the
-order-seven case the two full-subgraph packing numbers are exactly `(1,1)`.
-This is an unbounded structural theorem, but the locks may overlap and the
-new interface is not eliminated by the existing transition theorems.  It
-does not prove exceptional-centre connectivity: one such rotation remains
-possible.
+anti-neighbourhoods, the audited
+[full-side vertex exclusion](results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md)
+proves that every degree-eight vertex of `E` has connected
+anti-neighbourhood.  The former unique recentering alternative would place
+an `S`-full singleton in the full component of a one-nonfull separation.
+The existing nested-cut theorem then forces at most four and at least five
+contacts with the common seven-set; its uniform defect-two reflection
+six-colours `G`.  Thus the complete exact order-seven/eight matching-core
+rotation is eliminated without another boundary census.  This does not yet
+prove exceptional-centre connectivity: the originally selected centre may
+remain disconnected while `E` contains no degree-eight vertex or only
+degree-eight vertices with connected anti-neighbourhoods.
 
 The one-component residue still requires every remaining connected piece
 either to miss `I` or to contact at most three rooted bags.  The written,

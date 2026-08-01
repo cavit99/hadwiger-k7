@@ -3,12 +3,13 @@
 **Audited source:** `hc7_k7minus_minimal_exterior_recentring.md`
 
 **SHA-256:**
-`5d732f339c30ba341601f50daf8652e72c48113b44bbb05a1daa2cc93f2bddb6`
+`5c4e98bd1ea25a22d2c96b1e8a2abcce39759191006fe250f5bbaf971f933e7a`
 
-**Verdict:** **GREEN.**  The new minimum-component and colouring deductions
-are written and unbounded.  They inherit the computer-assisted trust boundary
-of the degree-eight exterior-component bound; no new finite computation is
-used here.
+**Verdict:** **GREEN.**  The minimum-component and colouring deductions are
+written and unbounded.  The added terminal corollary correctly invokes the
+separately audited full-side vertex exclusion and eliminates the former
+recentring alternative.  The result inherits computer-assisted trust
+boundaries from cited inputs; no new finite computation is used here.
 This is a separate internal mathematical audit, not external peer review.
 
 ## Dependencies checked
@@ -22,6 +23,7 @@ This is a separate internal mathematical audit, not external peer review.
 | Two-singleton common-host theorem | `4abda28600ee5acb22bf56f1946e0ea2499d2bc5b2d90f65ad2ba1dd10b40c75` |
 | Common-host double-contraction and lock allocation | `753dbf0fc251584dac8a67d907988737ac8dda30daa3dcc24b6fbabd949cf467` |
 | Operation-coupled order-eight response | `be8fc118ab832ff9a24057873c815805539c0ab7cb1e4996c4d81202cf72b268` |
+| One-nonfull full-side vertex exclusion | `c13889297cbfafabc4056532ee86d49793cae2aa98e0c0c19b3f8759da4019bc` |
 
 Each dependency has an adjacent GREEN internal audit.  The exterior-component
 bound is the only computer-assisted input essential to the minimum-component
@@ -92,17 +94,20 @@ Finally, the count outside the nine-vertex closed neighbourhood and
 `R(5,3)=14` correctly yield an independent four-set of degree-eight
 exceptional vertices.
 
+The new terminal step is immediate and correctly oriented.  In the former
+recentring outcome, old `F` misses `y`, while old `E` is full to `X`: `v`
+sees `S=X-\{y\}` and the same-miss exclusion supplies an `E`--`y`
+attachment.  Thus `{v}` is an `S`-full singleton in the full component of
+a one-nonfull configuration.  The audited full-side vertex theorem excludes
+exactly this configuration through a six-colouring.  No matching-core path
+or boundary classification is needed.
+
 ## Exact limitations
 
-The theorem allows one recentering vertex in the selected minimum component.
-Lemma 6 places three proper-minor response types and five palette locks in
-one common host, but those locks may share vertices of their common colour.
-Corollary 7 reduces that residue to an exact order-seven `(1,1)` interface
-or an order-eight full two-shore interface with a matching boundary core.
-The existing order-eight theorem returns a fan or an order-seven response
-side, but does not identify that side as a smaller exceptional
-anti-neighbourhood component.  The result neither extracts five disjoint
-pairwise adjacent boundary-rooted branch sets nor returns the required
-same-host descent.  The independent four-set supplies candidate centre
-pairs only.  No exceptional-centre connectivity theorem or `K_7^-`
-six-colour theorem follows.
+The former recentering vertex and its exact order-seven/eight matching-core
+interfaces are now excluded.  The result still does not exclude the
+original disconnected centre `u`: its selected minimum component may
+contain no degree-eight vertex, or only degree-eight vertices with connected
+anti-neighbourhoods.  The general one-nonfull, adjacent-miss and both-full
+configurations remain open.  No global exceptional-centre connectivity
+theorem or `K_7^-` six-colour theorem follows.

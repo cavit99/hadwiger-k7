@@ -180,22 +180,18 @@ four unbounded reductions; none is an isolated graph-code elimination.
    structure.  The open residues are label-preserving augmentation of the
    unrooted near model and the wide cutvertex-block case.
 4. Globally, choose a smallest component `E` among all disconnected
-   exceptional anti-neighbourhoods.  The
-   [minimum-shore recentering theorem](hc7_k7minus_minimal_exterior_recentring.md)
-   proves that every degree-eight vertex of `E`, with at most one exception,
-   has connected anti-neighbourhood.  The possible exception is an exact
-   rotation across one common order-seven cut with packing vector `(1,2)`;
-   the two centres carry opposite vertex-deletion boundary responses.  After
-   deleting their two private incident edges, all three permitted equality
-   patterns occur in one common six-chromatic host.  A double-contraction
-   response gives five colour-indexed lock paths into one connected middle
-   subgraph, with at least three locks belonging to one fixed private edge.
-   These locks force an exact full two-shore separation of order seven or
-   eight.  Its boundary is `\overline{K_2}` joined to a matching and isolated
-   vertices; at order seven the two full-subgraph packing numbers are
-   exactly `(1,1)`.  This is the strongest global conclusion of the attack,
-   but the lock paths need not be disjoint and neither normalized interface
-   is yet contradictory.
+   exceptional anti-neighbourhoods.  The audited
+   [full-side vertex exclusion](../results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md)
+   proves that every degree-eight vertex of `E` has connected
+   anti-neighbourhood.  Indeed, the only possible recentering would make
+   that vertex adjacent to all seven common boundary vertices inside the
+   full exterior component.  The one-nonfull nested-cut theorem then gives
+   simultaneously at most four and at least five boundary contacts; its
+   defect-two reflection supplies a six-colouring.  This eliminates the
+   complete exact order-seven/eight matching-core rotation, not merely one
+   boundary graph.  It still does not eliminate the originally selected
+   disconnected centre `u`, since `E` may contain no degree-eight vertex or
+   only degree-eight vertices with connected anti-neighbourhoods.
 
 ## 3. Seven-root list reduction
 
@@ -298,9 +294,9 @@ fixed operation now supplies the required disjoint paths and a point-rooted
 one-nonfull residue, one fixed operation localizes all five two-colour paths
 but does not align them with the near-clique bags.  In the both-full residue,
 rooted diamonds and dense component contractions still lack compatible
-labels.  The minimum-shore theorem reduces repeated failures to at most one
-exact rotation, but does not eliminate it.  All three attachment regimes,
-and therefore exceptional-centre connectivity, remain open.
+labels.  The minimum-shore rotation is now eliminated by a six-colouring,
+but all three general attachment regimes, and therefore exceptional-centre
+connectivity, remain open.
 
 The existing one-pair seven-path argument cannot supply this allocation;
 its exact failure is recorded in the
@@ -310,22 +306,17 @@ its exact failure is recorded in the
 
 Attack the remaining operation-coupled obligations in this order.
 
-1. **Eliminate the unique minimum-shore rotation.**  Synchronize the two
-   opposite vertex-deletion partitions across its exact order-seven `(1,1)`
-   interface or its order-eight matching-core interface.  The only acceptable
-   exits are an explicit `K_7^-` model, a six-colouring, or a genuinely
-   smaller disconnected exceptional exterior in the unchanged host.
-2. **Add a second critical response in the adjacent-miss case.**  The
+1. **Add a second critical response in the adjacent-miss case.**  The
    point-rooted `K_4`, even with the full operated fans, does not by itself
    preserve whole path labels or return an order-seven cut.  Split according
    as the residual `G-{u,x,y}` is five- or six-chromatic and couple the fixed
    `G-xy` colouring to a second proper-minor colouring across the two
    overlapping critical order-seven separations.
-3. **Use the same absorption/uncrossing mechanism in the one-nonfull and
+2. **Use the same absorption/uncrossing mechanism in the one-nonfull and
    both-full cases.**  It must align operation colours with rooted bags or
    preserve them through an exact seven-separation.  More graph-code filters
    or static shore-demand counts are not progress on this gate.
-4. **Then synchronize the seven anchored list cores.**  Use the changing
+3. **Then synchronize the seven anchored list cores.**  Use the changing
    deletion responses to eliminate saturated singleton and tight odd-cycle
    cores; the static `C_7\vee C_6` witness does not couple those operations.
 

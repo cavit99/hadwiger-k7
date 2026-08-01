@@ -1,13 +1,14 @@
 # A minimum disconnected exceptional exterior and exact recentering
 
-**Status:** active written unbounded proof;
+**Status:** written unbounded reduction, now terminally closed by the
+[full-side vertex exclusion](../results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md);
 [separate internal audit GREEN](hc7_k7minus_minimal_exterior_recentring_audit.md).
 No new finite computation is used, but the deduction depends on audited inputs,
 including the computer-assisted degree-eight exterior-component bound.
-The results below do not prove that exceptional anti-neighbourhoods are
-connected or settle the `K_7^-` six-colour conjecture.  They identify the
-only way in which a second degree-eight centre inside a minimum exterior
-component can itself have disconnected anti-neighbourhood.
+The terminal corollary proves that every degree-eight vertex inside a
+selected minimum exterior component has connected anti-neighbourhood.  It
+does not prove that the originally selected exceptional centre has connected
+anti-neighbourhood or settle the `K_7^-` six-colour conjecture.
 
 Throughout, let `G` satisfy
 
@@ -216,7 +217,27 @@ vertices would be equal: in each case that vertex is the unique member of
 would give four pairwise disjoint connected `S`-full subgraphs, contrary
 to the critical seven-cut capacity bound of three. \(\square\)
 
-## 3. The exact proper-minor responses at the recentered pair
+### Corollary 4.1 (the recentering outcome is impossible)
+
+Every degree-eight vertex of `E` has connected anti-neighbourhood.
+
+#### Proof
+
+In outcome 2 of Theorem 2, put `S=X-\{y\}`.  Relative to `u`, the
+component `F` misses `y`, while `E` is adjacent to every vertex of `X`:
+the vertex `v\in E` sees all of `S`, and Corollary 3 gives an attachment
+of `E` at `y`.  Thus `E` is the full component in a one-nonfull
+configuration, and it contains the `S`-full singleton `{v}`.  This is
+forbidden by the audited
+[full-side vertex exclusion](../results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md#theorem-1-no-full-side-vertex-sees-the-common-seven-set),
+whose proof terminates with a six-colouring of `G`.  Hence outcome 2 cannot
+occur. \(\square\)
+
+## 3. Superseded response analysis of the recentered pair
+
+The remainder of this section records the stronger structure previously
+derived under outcome 2.  Corollary 4.1 now shows that its hypothesis cannot
+occur in a graph satisfying (H), so it is no longer a live obstruction.
 
 Retain outcome 2, and write
 
@@ -515,8 +536,9 @@ response side inside `C`.  That alternative is not terminal: the returned
 side need not be an anti-neighbourhood component of an exceptional vertex,
 so it does not contradict the minimum choice (1).  When `|T|=5`, the exact
 packing vector `(1,1)` likewise does not synchronize the two proper-minor
-boundary colourings.  Thus Corollary 7 is a strict unbounded reduction of
-the rotation residue, not its elimination.
+boundary colourings.  Thus Corollary 7 was a strict unbounded reduction of
+the rotation residue.  Corollary 4.1 now eliminates that residue earlier,
+before either normalized interface is needed.
 
 ## 4. What the global count adds
 
@@ -550,26 +572,24 @@ eliminate the original disconnected centre.
 
 ## 5. Exact scope
 
-Theorem 2 and Corollaries 4 and 7 form an unbounded minimum-component
-result.  They show that the global `25+tau` branch cannot contain
-uncontrolled repeated minimum-shore failures: within a selected minimum
-component, every degree-eight centre except possibly one has connected
-anti-neighbourhood,
-and the exception is the exact two-centre configuration of Corollary 3 and
-Lemmas 5--6.  Corollary 7 further reduces that exception to a full
-two-shore separation of order seven or eight whose remaining boundary
-graph is a matching plus isolated vertices.
+Theorem 2 and Corollary 4.1 form an unbounded minimum-component result:
+within a selected minimum component, every degree-eight centre has connected
+anti-neighbourhood.  The exact two-centre rotation of Corollary 3 and the
+order-seven/eight matching-core interfaces of Lemmas 5--7 are now excluded
+by the earlier one-nonfull full-side vertex theorem.  They are retained
+above only as audited proof history.
 
 This is not exceptional-centre connectivity.  A hypothetical host may
-still have one disconnected centre while its many other degree-eight
-centres have connected anti-neighbourhoods, and the current count theorem
-does not contradict that possibility.
+still have the originally selected disconnected centre while every
+degree-eight vertex inside its minimum exterior component has connected
+anti-neighbourhood.  The component may also contain no degree-eight vertex.
 
 ## Inputs
 
 - [two-component literal-clique exclusion and density jump](../results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md)
 - [degree-eight exterior-component bound](../results/hc7_low_degree_exterior_component_bounds.md)
 - [same-miss exclusion](../results/hc7_k7minus_nonfull_attachment_reduction.md)
+- [one-nonfull full-side vertex exclusion](../results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md)
 - [critical seven-cut capacity](../results/hc7_k7minus_critical_seven_cut_capacity.md)
 - [two nonadjacent singleton roots over a common host](../results/hc7_two_singleton_common_host.md)
 - [common-host double-contraction lock allocation](../results/hc7_common_host_double_contraction_lock_allocation.md)

@@ -7900,7 +7900,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "d0d8ea0fadeafb04a97874fe970368c0717f98b7e8714684c01e502129531717"
+expected_source_sha256 = "8e740dba63284a2668107749c799ff81954f7cb36e198353a666de91db4a4130"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8212,6 +8212,52 @@ does_not_prove = [
   "the K7-minus six-colour conjecture or HC7",
 ]
 keywords = ["K7 minus", "one nonfull component", "nested seven-cuts", "packing one"]
+
+[[claims]]
+id = "hc7.k7minus_one_nonfull_full_vertex_exclusion"
+title = "A full exterior component contains no vertex seeing the common seven-set"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md"
+source_heading = "Theorem 1 (no full-side vertex sees the common seven-set)"
+active = false
+audit = "results/hc7_k7minus_one_nonfull_full_vertex_exclusion_audit.md"
+expected_source_sha256 = "c13889297cbfafabc4056532ee86d49793cae2aa98e0c0c19b3f8759da4019bc"
+scope = "the one-nonfull two-component case at an exceptional degree-eight centre in the critical K7-minus host"
+label_fidelity = "the centre, missed vertex, common seven-set, full exterior component and proposed full-side vertex remain literal"
+conclusions = [
+  "no vertex in the full exterior component is adjacent to all seven vertices of the common boundary",
+  "the forbidden case terminates in a six-colouring through uniform defect-two reflection",
+]
+does_not_prove = [
+  "elimination of the general one-nonfull case",
+  "exceptional-centre connectivity",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "one nonfull component", "full-side vertex", "six-colouring", "defect-two reflection"]
+
+[[claims]]
+id = "hc7.k7minus_minimum_exterior_degree8_connectivity"
+title = "Every degree-eight vertex in a minimum exceptional exterior has connected anti-neighbourhood"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md"
+source_heading = "Theorem 2 (minimum exceptional exterior)"
+active = false
+audit = "results/hc7_k7minus_one_nonfull_full_vertex_exclusion_audit.md"
+expected_source_sha256 = "c13889297cbfafabc4056532ee86d49793cae2aa98e0c0c19b3f8759da4019bc"
+scope = "a minimum component selected over all disconnected exceptional degree-eight anti-neighbourhoods in the critical K7-minus host"
+strict_parameter = "order of the selected literal anti-neighbourhood component"
+conclusions = [
+  "every degree-eight vertex in the selected minimum component has connected anti-neighbourhood",
+  "the complete exact order-seven/eight minimum-shore rotation is eliminated by a six-colouring",
+]
+does_not_prove = [
+  "connectivity of the originally selected centre's anti-neighbourhood",
+  "existence of a degree-eight vertex in the selected component",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "minimum exterior component", "exceptional vertex", "connected anti-neighbourhood", "strict descent"]
 
 [[claims]]
 id = "hc7.barrier.k7minus_two_entrance_allocation"
@@ -12580,6 +12626,30 @@ kind = "guarded_by"
 note = "Two entrance vertices and the static packing data do not by themselves yield the desired third connected subgraph."
 
 [[relations]]
+source = "hc7.k7minus_one_nonfull_full_vertex_exclusion"
+target = "hc7.k7minus_one_nonfull_nested_cuts"
+kind = "uses"
+note = "Applying the attachment inequalities to a boundary-full singleton forces at most four and at least five common-boundary contacts, and the excluded branch six-colours the host."
+
+[[relations]]
+source = "hc7.k7minus_minimum_exterior_degree8_connectivity"
+target = "hc7.k7minus_one_nonfull_full_vertex_exclusion"
+kind = "uses"
+note = "The only minimum-component recentering would place a vertex seeing the common seven-set in the full exterior component."
+
+[[relations]]
+source = "hc7.k7minus_minimum_exterior_degree8_connectivity"
+target = "hc7.low_degree_exterior_component_bounds"
+kind = "uses"
+note = "A disconnected exceptional degree-eight anti-neighbourhood has exactly two exterior components."
+
+[[relations]]
+source = "hc7.k7minus_minimum_exterior_degree8_connectivity"
+target = "hc7.k7minus_nonfull_same_miss_exclusion"
+kind = "uses"
+note = "The opposite component's unique miss forces the selected minimum component to attach at that vertex and hence be full."
+
+[[relations]]
 source = "hc7.k7minus_overlap_common_trace"
 target = "hc7.k7minus_distinct_miss_reduction"
 kind = "uses"
@@ -12698,6 +12768,12 @@ source = "hc7.target.k7minus_rooted_shore_allocation"
 target = "hc7.k7minus_one_nonfull_nested_cuts"
 kind = "uses"
 note = "The one-nonfull branch stops at the non-tight attachment inequality or two exact nested order-seven cuts."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.k7minus_minimum_exterior_degree8_connectivity"
+kind = "uses"
+note = "Minimum-component recentering no longer creates an order-seven/eight matching-core residue: every degree-eight vertex in the selected component has connected anti-neighbourhood."
 
 [[relations]]
 source = "hc7.target.k7minus_rooted_shore_allocation"
