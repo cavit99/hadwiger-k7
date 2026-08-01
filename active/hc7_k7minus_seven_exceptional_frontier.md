@@ -198,12 +198,26 @@ five unbounded reductions; none is an isolated graph-code elimination.
    any two degree-eight vertices `a,b`, the graph `G-{a,b}` is
    five-connected and lies at or above the Norin--Totschnig `4n-8`
    threshold, so it has a spanning `K_7^\vee` model.  Target exclusion
-   sharply restricts how the two retained roots meet its seven branch sets.
-   The exact survivor concentrates both roots in the same four mutually
-   adjacent branch sets.  Closing it requires a label-preserving branch-set
-   transfer, or a returned separation whose boundary is literally the
-   neighbourhood of a named exceptional degree-eight vertex; ordinary
-   connectivity gives neither conclusion.
+   sharply restricts how the two retained roots meet its seven branch sets,
+   and absorbing the deficient branch set gives a spanning `K_6` model with
+   at most four contacts per root.  For a globally minimum surplus donor
+   over all root-contact-maximal spanning `K_6` models, every donor--target
+   portal belongs to every connected core retaining the root and four
+   protected adjacencies; all but at most four such portals are donor
+   cutvertices.  One fixed edge deletion gives
+   five colour-indexed Kempe paths, but their colours have not been aligned
+   with the target and owner branch-set labels.  Closing the residue still
+   requires that operation-to-recipient allocation, or a returned separation
+   whose boundary is literally the neighbourhood of a named exceptional
+   degree-eight vertex.
+
+The same note gives a global one-root strengthening.  For every exceptional
+`r`, the bounds `m>=4n-2` and `b>=17` put the six-connected graph `G-r`
+strictly above the same extremal threshold.  Thus `G-r` has an exact
+spanning `K_7^\vee` model, and the optimized forced-interface theorem
+applies at every exceptional centre.  Spanning contact-maximal `K_6` models
+in `G-r` already occur in the archive; the extra near-clique labels and
+their compatibility with the optimized model remain unspent.
 
 ## 3. Seven-root list reduction
 
@@ -314,16 +328,25 @@ The existing one-pair seven-path argument cannot supply this allocation;
 its exact failure is recorded in the
 [seven-path barrier](../barriers/hc7_k7minus_bad_pair_seven_paths_barrier.md).
 
+A second exact sufficient target is tailored to the new forced interface.
+Choose a minimum-order component `C_0` among `G-N[v]` over all exceptional
+vertices `v`.  At its centre, one named edge-deletion colouring must yield
+an explicit `K_7^-` model, a six-colouring, or an exceptional
+anti-neighbourhood component smaller than `C_0`.  This
+[one-operation terminal/descent target](hc7_k7minus_pair_deletion_k7vee_reduction.md#5-one-named-colouring-operation-and-its-exact-limit)
+would close the whole critical host, but the colour-to-branch-label
+allocation needed to prove it is open.
+
 ## 5. Recommended next attack
 
 Attack the remaining operation-coupled obligations in this order.
 
-1. **Prove the label-preserving transfer exposed by pair deletion.**  Starting
-   from the spanning `K_7^\vee` model and the two retained degree-eight
-   roots, split a contacted branch set into an uncontacted model position
-   while preserving the five required adjacencies, or return a separation
-   whose boundary is the literal neighbourhood of a named exceptional
-   centre.  An arbitrary smaller adhesion is not an accepted descent.
+1. **Prove the one-operation terminal/descent theorem at a minimum exterior
+   component.**  Preserve either the `P,B,C` labels of the exact spanning
+   near-clique or the second root of the pair-deletion model while converting
+   the five colour-indexed paths into literal target/owner pieces.  Failure
+   must return a smaller component of `G-N[z]` for a named exceptional `z`;
+   an arbitrary smaller adhesion is not an accepted descent.
 2. **Transport that transfer through the adjacent-miss, one-nonfull, and
    both-full responses.**  It must align operation colours with rooted bags
    or preserve them through an exact seven-separation.  More graph-code

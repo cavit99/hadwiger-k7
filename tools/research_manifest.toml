@@ -7900,7 +7900,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "9a502a08e9dccae32f7ad59432c616a518008f2b451c2a1a3b31e29f598ea420"
+expected_source_sha256 = "6a5390e2b60be75d8bb9e957d07ea68e8bd105757888aa4093cec6dccb94ad70"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8175,7 +8175,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 1 (a spanning near-clique model after deleting two centres)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "8852762aa81749443a92849606296401e3a21073c7f6d7245911fdd2058903ea"
+expected_source_sha256 = "fdfaf7e540cb36e23bac8f4327ec5632bc6555c7d1e375722ccaea2c182b1b07"
 scope = "two degree-eight vertices in the literal-K5-free density-4n branch forced by a disconnected exceptional anti-neighbourhood"
 label_fidelity = "both deleted roots and all seven labelled branch sets of the spanning K7-vee model remain explicit"
 conclusions = [
@@ -8190,6 +8190,75 @@ does_not_prove = [
   "exceptional anti-neighbourhood connectivity or the K7-minus six-colour conjecture",
 ]
 keywords = ["K7 minus", "degree eight", "pair deletion", "K7 vee", "branch-set contacts", "nonterminal reduction"]
+
+[[claims]]
+id = "hc7.k7minus_pair_deletion_forced_interface"
+title = "A minimum surplus donor has a forced target interface"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
+source_heading = "Theorem 3 (forced target interface)"
+active = false
+audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
+expected_source_sha256 = "fdfaf7e540cb36e23bac8f4327ec5632bc6555c7d1e375722ccaea2c182b1b07"
+scope = "one retained degree-eight root in a contact-maximal spanning K6 model, with a globally minimum branch set containing at least two root neighbours"
+label_fidelity = "the retained root, surplus donor, uncontacted target, four protected branch sets and every literal donor-target portal remain named"
+conclusions = [
+  "the deficient K7-vee branch set may be absorbed to give a spanning K6 model",
+  "every donor-target portal lies in every connected donor core retaining one root neighbour and all four protected adjacencies",
+  "all but at most four donor-target portals are cutvertices of the donor",
+]
+does_not_prove = [
+  "a bound on the order of the forced interface",
+  "an operation-to-recipient allocation of the five edge-deletion Kempe paths",
+  "a K7-minus model, six-colouring, or smaller exceptional anti-neighbourhood",
+]
+keywords = ["K7 minus", "pair deletion", "spanning K6", "surplus donor", "forced interface", "cutvertices"]
+
+[[claims]]
+id = "hc7.k7minus_exceptional_root_k7vee_interface"
+title = "Every exceptional-root deletion has an exact spanning near-clique and forced interface"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
+source_heading = "Theorem 4 (a spanning near-clique and forced interface at every exceptional centre)"
+active = false
+audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
+expected_source_sha256 = "fdfaf7e540cb36e23bac8f4327ec5632bc6555c7d1e375722ccaea2c182b1b07"
+scope = "any exceptional degree-eight vertex in the critical K7-minus host"
+label_fidelity = "the exceptional root and seven labelled branch sets of the spanning K7-vee model remain explicit; a separately optimized K6 model need not retain the P-B-C provenance"
+conclusions = [
+  "deleting the exceptional root leaves a six-connected graph with a spanning exact K7-vee model",
+  "absorbing the deficient branch set gives four spanning K6 normalizations",
+  "the root meets at most four bags of every spanning K6 model and some bag contains at least two root neighbours",
+  "the optimized forced-interface inclusion and cutvertex consequence hold at every exceptional centre",
+]
+does_not_prove = [
+  "alignment between the exact K7-vee labels and a globally optimized K6 donor",
+  "an operation-to-recipient allocation of the five edge-deletion Kempe paths",
+  "a K7-minus model, six-colouring, exceptional-component descent, or host closure",
+]
+keywords = ["K7 minus", "exceptional vertex", "single deletion", "K7 vee", "spanning K6", "forced interface"]
+
+[[claims]]
+id = "hc7.target.k7minus_one_operation_interface_closure"
+title = "One-operation terminal or exceptional-component descent"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
+source_heading = "5. One named colouring operation and its exact limit"
+active = false
+scope = "a globally minimum exceptional anti-neighbourhood component and the optimized forced interface at its centre"
+label_fidelity = "one named edge deletion and its six-colouring, the exceptional centre, K6 donor and target, and any returned exceptional component remain fixed"
+conclusions = [
+  "one fixed edge-deletion response yields an explicit K7-minus model, a six-colouring of G, or a strictly smaller exceptional anti-neighbourhood component",
+  "proving the target would eliminate the whole critical host and settle the K7-minus six-colour conjecture",
+]
+does_not_prove = [
+  "the operation-to-recipient allocation needed for any terminal outcome",
+  "Hadwiger's conjecture at t=7",
+]
+keywords = ["K7 minus", "one operation", "Kempe colouring", "forced interface", "same-host descent", "open target"]
 
 [[claims]]
 id = "hc7.k7minus_one_nonfull_six_fan"
@@ -8880,10 +8949,38 @@ kind = "uses"
 note = "The density-4n branch places every two-degree-eight-vertex deletion at the Norin--Totschnig 4n-8 threshold."
 
 [[relations]]
-source = "hc7.target.k7minus_seven_exceptional_vertices"
+source = "hc7.k7minus_pair_deletion_forced_interface"
 target = "hc7.k7minus_degree8_pair_deletion_k7vee"
 kind = "uses"
-note = "The pair-deletion model exposes the label-preserving branch-set transfer now sought in the disconnected exceptional-centre branch."
+
+[[relations]]
+source = "hc7.k7minus_exceptional_root_k7vee_interface"
+target = "hc7.k7minus_two_literal_k5_exclusion"
+kind = "uses"
+note = "The global 4n-2 density and seventeen-exceptional bounds put every exceptional-root deletion above the Norin--Totschnig threshold."
+
+[[relations]]
+source = "hc7.k7minus_exceptional_root_k7vee_interface"
+target = "hc7.k7minus_pair_deletion_forced_interface"
+kind = "uses"
+note = "The optimized forced-interface proof is independent of the second deleted root and applies to the global single-root model."
+
+[[relations]]
+source = "hc7.target.k7minus_one_operation_interface_closure"
+target = "hc7.k7minus_exceptional_root_k7vee_interface"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_one_operation_interface_closure"
+target = "hc7.target.k7minus_seven_exceptional_vertices"
+kind = "subproblem_of"
+note = "Any of the three terminal/descent outcomes contradicts the critical host and would prove the exceptional upper-bound target."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_pair_deletion_forced_interface"
+kind = "uses"
+note = "The optimized pair-deletion model reduces the model-only obstruction to a forced cutvertex interface; operation-to-recipient allocation remains open."
 
 [[relations]]
 source = "hc7.target.k7minus_rooted_shore_allocation"

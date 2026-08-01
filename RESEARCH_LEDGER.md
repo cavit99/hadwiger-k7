@@ -256,12 +256,41 @@ two degree-eight vertices `a,b` in this branch, `G-{a,b}` is five-connected
 and has at least `4|V(G-{a,b})|-8+[ab]` edges.  Norin--Totschnig therefore
 supplies a spanning `K_7^\vee` model.  `K_7^-` exclusion forces each retained
 root to meet at most four of the model's six mutually adjacent nondeficient
-bags and imposes further contacts at the deficient bag.  The remaining
-four-bag concentration is nonterminal: its elimination requires a
-label-preserving branch-set transfer or a separation whose boundary is the
-literal neighbourhood of a named exceptional degree-eight vertex.  The
-written reduction and its exact scope are recorded in the
+bags and imposes further contacts at the deficient bag.  Absorbing the
+deficient bag into any universal bag gives a spanning `K_6` model.  After
+maximizing one retained root's contacts and minimizing a surplus donor, the
+entire donor--target portal set lies in every connected donor core retaining
+one root neighbour and the four protected model adjacencies; all but at most
+four of those portals are donor cutvertices.
+
+One fixed edge-deletion colouring supplies five colour-indexed Kempe paths,
+but no proved implication aligns their colours with the target and owner
+branch-set labels.  This is the first unsupported step in this pair-deletion
+closure: an internal path
+separator need not be a host separator or the neighbourhood of a named
+exceptional centre.  Thus the four-bag concentration remains nonterminal
+and still requires a label-preserving transfer or a genuine exceptional
+anti-neighbourhood descent.  The written reduction and its exact scope are
+recorded in the
 [pair-deletion technical note](active/hc7_k7minus_pair_deletion_k7vee_reduction.md).
+
+The same note proves a stronger one-root entrance.  For every exceptional
+vertex `r`, the global `4n-2` density bound places the six-connected graph
+`G-r` two edges above the Norin--Totschnig threshold.  It therefore has an
+exact spanning `K_7^\vee` model and, after absorption, a spanning `K_6`
+model.  The optimized forced-interface theorem consequently applies at
+every exceptional centre, not only in the disconnected branch.  The
+spanning `K_6` contact framework itself has archived antecedents; the exact
+near-clique refinement does not yet align its `P,B,C` labels with the
+globally optimized donor.
+
+At this interface the route-level theorem that would close the whole
+critical host is now exact: choose a globally minimum component `C_0` among
+all exceptional anti-neighbourhoods, retain one named edge-deletion
+colouring, and force an explicit `K_7^-` model, a six-colouring of `G`, or
+an exceptional anti-neighbourhood component smaller than `C_0`.  This
+terminal/descent theorem is open.  “Smaller” necessarily refers to a
+component: every whole exceptional anti-neighbourhood has order `n-9`.
 
 The one-component residue still requires every remaining connected piece
 either to miss `I` or to contact at most three rooted bags.  The written,
