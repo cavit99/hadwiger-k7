@@ -353,7 +353,14 @@ configuration to connected-rich `(1,2)` seven-cuts or two overlapping
 one-nonfull cell, uniform defect-two reflection also forces the missed
 vertex to have at most four boundary neighbours and at least two neighbours
 in the full exterior component; an exact retained census leaves 28 possible
-boundary types.  The
+boundary types.  The new
+[full-side vertex exclusion](../results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md)
+shows that no vertex of the full component can see all seven common boundary
+vertices.  Consequently, in a smallest component among disconnected
+exceptional anti-neighbourhoods, every degree-eight vertex has connected
+anti-neighbourhood: the only exact recentering would violate that exclusion
+and hence return a six-colouring.  This closes the complete order-seven/eight
+matching-core rotation but not the general one-nonfull case.  The
 [contracted-star and fan-tree theorem](../results/hc7_k7minus_distinct_miss_fan_tree_elimination.md)
 now eliminates the complete distinct nonadjacent-miss cell: a reusable
 Kempe response removes the `3K_2` parity obstruction and every other
