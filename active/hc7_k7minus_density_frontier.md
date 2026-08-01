@@ -1,17 +1,16 @@
 # Density frontier for the `K_7^-` six-colour route
 
 **Status:** live conditional refinement; not a proof of the `K_7^-`
-six-colour conjecture or of `HC_7`.  The entrance reduction,
-private-triangle Kempe allocation, all-degree-seven clique exclusion, and
-seven-boundary connected-subgraph, critical-host capacity, and contraction
-theorems are written proofs with separate internal audits GREEN for their
-current revisions.  The two promoted seven-exceptional lower-bound and
-local-completion theorems, the two-component nonfull and both-full
-reductions, and the distinct nonadjacent-miss fan-tree elimination are also
-written and separately audited GREEN; their finite boundary claims have
-retained independently checked verifiers.  The live list-core derivation is
-not separately audited.  Both displayed finishing targets below remain
-conjectural.
+six-colour conjecture or of `HC_7`.  The six-connected two-clique theorem,
+critical-host degree and exceptional-vertex consequences, private-triangle
+allocation, and seven-boundary connected-subgraph, critical-host capacity,
+and contraction theorems are written proofs with separate internal audits
+GREEN for their current revisions.  The local-completion theorem,
+two-component nonfull and both-full reductions, and distinct
+nonadjacent-miss fan-tree elimination are also written and separately
+audited GREEN; their finite boundary claims have retained independently
+checked verifiers.  The live list-core derivation is not separately
+audited.  Both displayed finishing targets below remain conjectural.
 
 This frontier supersedes the five-exceptional-vertices target as the main
 laboratory for this side route.  It does not replace the primary all-degree
@@ -20,109 +19,76 @@ laboratory for this side route.  It does not replace the primary all-degree
 ## 1. Proved entrance reduction
 
 Let `G` be a hypothetical minor-minimal non-six-colourable graph with no
-`K_7^-` minor.  The updated
-[density and low-degree rigidity theorem](../results/hc7_k7minus_five_exceptional_vertices_reduction.md)
-first proves
+`K_7^-` minor.  The new
+[two-literal-`K_5` theorem](../results/hc7_k7minus_two_literal_k5_exclusion.md)
+proves, more generally, that every six-connected graph with two distinct
+literal `K_5` subgraphs contains a `K_7^-` minor.  Thus `G` has at most one
+literal `K_5`.
+
+Every degree-seven vertex lies in that clique, if it exists, and the
+audited
+[private-triangle theorem](../results/hc7_k7minus_all_degree7_k5_exclusion.md)
+excludes five degree-seven vertices in one clique.  Therefore
 
 \[
- |E(G)|\ge4|V(G)|-5,
+ n_7\le4,
  \qquad
- |V(G)|\ge19.                                           \tag{1}
+ |E(G)|\ge4|V(G)|-2.                                   \tag{1}
 \]
 
-The former
-[Kempe-component equality-exclusion theorem](../results/hc7_k7minus_equality_kempe_exclusion.md)
-rules out the case `|E(G)|=4|V(G)|-5`.  More generally, the new
-[all-degree-seven clique exclusion](../results/hc7_k7minus_all_degree7_k5_exclusion.md)
-proves that no literal `K_5` can have all five vertices of degree seven.
-Since every degree-seven vertex lies in one of at most two literal `K_5`s,
-the current proved entrance is
-
-\[
- n_7\le8,
- \qquad
- |E(G)|\ge4|V(G)|-4,
- \qquad
- |V(G)|\ge19.                                           \tag{2}
-\]
-
-If `n_i` counts the degree-`i` vertices and
-
-\[
- s=\sum_{i\ge9}(i-8)n_i,
- \qquad
- \varepsilon=10-n_7+s,
-\]
-
-then
-
-\[
- 2|E(G)|=(8|V(G)|-10)+\varepsilon,
- \qquad
- 2\le\varepsilon\le |V(G)|-15,                         \tag{3}
-\]
-
-with `epsilon` even.  At the tight value `|E(G)|=4|V(G)|-4`, equivalently
-`epsilon=2`, the new theorem gives
-
-\[
- n_7=8,\qquad s=0,\qquad
- \text{degree sequence }7^8 8^{|V(G)|-8}.
-\]
-
-Exactly two literal `K_5`s cover the eight degree-seven vertices; each has
-four degree-seven vertices and one degree-eight vertex.  They are disjoint
-or meet in their common degree-eight vertex, and `|V(G)|\ge21`.
-
-There is a second direct consequence of the same count.  If `b` is the
-number of exceptional degree-eight vertices and
+If `b` is the number of exceptional degree-eight vertices and
 
 \[
                   \tau=\sum_{i\ge10}(i-9)n_i,
 \]
 
-then the proved
-[seven-exceptional-vertex theorem](../results/hc7_k7minus_seven_exceptional_vertices_corollary.md)
-gives
+then all degree-seven and nonexceptional degree-eight vertices fit in the
+unique possible clique:
 
 \[
-                         b\ge15-n_7+\tau\ge7+\tau.       \tag{4}
+                         n_7+(n_8-b)\le5.                \tag{2}
 \]
 
-Their induced graph is `K_5`-free, so every selected seven contain at least
-three nonedges.  At `b=7`, the degree sequence is exactly
+Combining (2) with the audited Jakobsen defect gives
 
 \[
-                         7^8 8^9 9^{n-17},
+                         b\ge20-n_7+\tau.                \tag{3}
 \]
 
-`2m=9n-25`, `n` is odd, and the two literal `K_5`s are disjoint copies with
-degree pattern `7^4 8^1`; in this exact branch, `n\ge21`.  The separately written
+If `n_7<=3`, parity strengthens the edge bound to `m>=4n-1` and (3) gives
+`b>=17+tau`.  If `n_7=4`, contracting the unique mixed `K_5` gives a
+simple five-connected target-free minor outside the Jakobsen cockade
+family; hence
+
+\[
+ n\ge37,
+ \qquad n_8\ge33+\tau,
+ \qquad b\ge32+\tau.                                   \tag{4}
+\]
+
+Consequently every hypothetical host satisfies
+
+\[
+                         \boxed{b\ge17+\tau}.            \tag{5}
+\]
+
+The exceptional-vertex subgraph is `K_5`-free.  The separately written
 [exceptional-neighbourhood theorem](../results/hc7_k7minus_exceptional_neighbourhood_completion.md)
 also proves that every exceptional neighbourhood has independence number
 exactly three and identifies the terminal exterior-component allocation
 condition.
 
-The first possible order now has only two degree patterns:
+Exceptional anti-neighbourhood connectivity is now proved whenever
+`n_7>0`: degree-seven incidence supplies a literal `K_5`, while the audited
+two-component exceptional-centre theorem would exclude all literal `K_5`s.
+The disconnected case is therefore confined to `n_7=0`; there the same
+two-component theorem forces at least `25+tau` exceptional vertices.
 
-\[
- 7^6 8^{13},
-\qquad
- 7^7 8^{11}9^1.                                        \tag{5}
-\]
-
-In the second pattern, the two literal `K_5`s meet in one degree-seven
-vertex and one vertex of degree eight or nine; their six exclusive vertices
-all have degree seven.  This is a structural test case, not a finite
-reduction of the unbounded problem.
-
-The entrance proof is computation-free.  For every nonedge in a
-degree-seven neighbourhood, a star contraction, one fixed six-colouring,
-Kempe-chain connectivity, and Kriesell--Mohr Theorem 7 give a rooted `K_5`
-on the other five neighbours.  This forces the neighbourhood complement to
-be `K_{3,4}` or `K_{3,3} dotcup K_1`.  The former anti-neighbourhood
-129-graph residual and aligned near-`K_7` theorem remain valid elsewhere in
-the repository but are not dependencies of this density or equality chain.
+The entrance proof is computation-free.  The exact degree-seven
+neighbourhood theorem uses a star contraction, one fixed six-colouring,
+Kempe-chain connectivity, and Kriesell--Mohr Theorem 7.  The new
+two-clique theorem then uses only Menger linkage and explicit branch-set
+splitting; it removes the former two-clique tight layers entirely.
 
 ## 2. Two sufficient finishing targets
 
@@ -130,12 +96,12 @@ The following statement is sufficient for the `K_7^-` six-colour
 conjecture:
 
 > **Extremal target.** Every seven-connected `n`-vertex graph with at least
-> `4n-4` edges contains a `K_7^-` minor.
+> `4n-2` edges contains a `K_7^-` minor.
 
 Equivalently, every seven-connected `K_7^-`-minor-free graph should satisfy
 
 \[
-                              m\le4n-5.                 \tag{6}
+                              m\le4n-3.                 \tag{6}
 \]
 
 This target is not proved.  It remains the clean global statement to
@@ -143,7 +109,7 @@ attack: it uses only seven-connectivity and density, while any
 minor-minimal colouring counterexample automatically satisfies its
 hypotheses.
 
-Norin and Totschnig prove that a four-connected graph at the nearby
+Norin and Totschnig prove that a four-connected graph at the
 `4n-8` threshold contains the graph obtained from `K_7` by deleting two
 edges with a common end, apart from their explicit small exception.  Thus a
 graph at the target threshold has four edges of surplus over that benchmark;
@@ -155,19 +121,19 @@ the missing extremal input for the six-colour conjecture:
 The critical-host count supplies a second, less general but more structured
 finishing theorem:
 
-> **Seven-exceptional target.** Every seven-connected, seven-chromatic,
+> **Exceptional-count target.** Every seven-connected, seven-chromatic,
 > `K_7^-`-minor-free graph whose every proper minor is six-colourable has at
-> most six exceptional degree-eight vertices.
+> most sixteen exceptional degree-eight vertices.
 
-This is also unproved.  It would contradict (4) directly and therefore
+This is also unproved.  It would contradict (5) directly and therefore
 settle the same six-colour conjecture while retaining all proper-minor
 colouring responses.  Its exact reductions, barriers, and next allocation
 gate are in the
 [seven-exceptional technical frontier](hc7_k7minus_seven_exceptional_frontier.md).
 
-The former `4n-5` target is a stronger open statement: it would force the
-minor one edge earlier.  It is no longer the current sufficient obligation,
-because the critical equality layer at that density has been excluded.
+The former `4n-4` and `4n-5` targets are stronger open statements.  They
+are no longer the exact sufficient obligations because the critical-host
+density entrance has moved to `4n-2`.
 
 ## 3. Private-triangle Kempe allocation and the excluded `4n-5` layer
 
@@ -375,10 +341,10 @@ excess patterns in which every whole-component contraction loses too much
 density.  These are arithmetic patterns, not asserted graph examples.
 Internal component structure is therefore the load-bearing next input.
 The normalized Norin--Totschnig near-`K_7` upgrade remains a higher-risk
-fallback because four global surplus edges need not occur at the deficient
+fallback because six global surplus edges need not occur at the deficient
 branch set.
 
-In parallel, the seven-exceptional route has completed its first
+In parallel, the exceptional-centre route has completed its first
 two-component attack.  The
 [nonfull-attachment reduction](../results/hc7_k7minus_nonfull_attachment_reduction.md)
 eliminates a common missed neighbour and reduces every other nonfull
@@ -417,9 +383,9 @@ positive universal proof; constructing counterexamples to intermediate
 lemmas is only a falsification check.  A new barrier is a stop or pivot
 signal, not the success criterion for this route.
 
-The [current external-review dossier](hc7_k7minus_external_review_dossier.md)
-packages this computation-free density/equality spine for specialist
-checking.  The earlier
+The [external-review dossier](hc7_k7minus_external_review_dossier.md)
+records the reviewed computation-free density spine preceding the new
+two-clique theorem.  The earlier
 [global-count review record](hc7_k7minus_external_review_packet.md) remains a
 frozen record of the preceding five-exceptional-vertices route; its open
 target has not been proved.

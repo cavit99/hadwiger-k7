@@ -65,10 +65,16 @@ The main internally audited reductions currently establish that:
 
 Separately, a computation-free, internally audited route toward the adjacent
 `K_7^-` problem, where `K_7^-` is `K_7` with one edge deleted, proves that
-every minor-minimal non-six-colourable `K_7^-`-minor-free graph has at least
-`4n-4` edges and at most eight degree-seven vertices.  At equality it gives
-the exact degree sequence and two-clique structure.  It also gives exact
-degree-seven neighbourhoods and proves that outside every order-seven cut
+every six-connected `K_7^-`-minor-free graph has at most one literal `K_5`.
+Consequently, every hypothetical minor-minimal non-six-colourable host has
+at most four degree-seven vertices, at least `4n-2` edges, and at least
+`17+tau` exceptional degree-eight vertices, where `tau` is the excess
+degree above nine.  If all four possible degree-seven vertices occur, the
+host has order at least 37 and at least `32+tau` exceptional vertices.  The
+anti-neighbourhood of every exceptional vertex is connected whenever a
+degree-seven vertex exists.  The route also gives exact degree-seven
+neighbourhoods and proves that outside
+every order-seven cut
 there are at most four disjoint connected subgraphs each adjacent to every
 boundary vertex, with exact whole-component contraction criteria.  In the
 minor-minimal non-six-colourable host, exact boundary-colouring reflection
@@ -76,7 +82,7 @@ improves that bound to three and excludes four-component seven-cuts.  A
 three-component cut has a three-chromatic boundary, and every proper
 three-colouring has class sizes `3,2,2`.  These are structural theorems about
 a hypothetical critical graph and about seven-connected
-`K_7^-`-minor-free graphs; they are not the bare extremal `4n-4` theorem, the
+`K_7^-`-minor-free graphs; they are not the bare extremal `4n-2` theorem, the
 `K_7^-` six-colour conjecture, or `HC_7`.
 
 On the primary `HC_7` route, the remaining work is to synchronize branch-set
@@ -84,9 +90,9 @@ labels and boundary colourings: proper-minor colouring responses must yield
 an explicit $K_7$-minor model, a common complete boundary partition on the
 order-seven, -eight, or -nine separation, or a genuine same-host descent.
 On the adjacent `K_7^-` route, the separate remaining target is the bare
-`4n-4` extremal theorem, equivalently the full seven-cut dichotomy described
-in the technical frontier.  The new contraction criteria do not force that
-dichotomy by themselves.
+`4n-2` extremal theorem or, using criticality, an upper bound of sixteen on
+the exceptional degree-eight vertices.  The stronger `4n-4` extremal
+statement and full seven-cut dichotomy remain open benchmarks.
 
 The exact live theorem changes as new reductions are proved. Its
 authoritative status is maintained in the research ledger, and its full
@@ -106,8 +112,9 @@ degree-seven result is a possible secondary application, subject to a careful
 overlap review against the public unlabelled near-clique theorem.
 
 The adjacent `K_7^-` chain is a second, narrower manuscript candidate with no
-load-bearing finite classification.  Its current specialist-review dossier
-records the exact theorem revisions and the limits of the `4n-4` conclusion.
+load-bearing finite classification.  Its specialist-review dossier records
+the earlier reviewed theorem revisions; the new two-clique theorem
+and its `4n-2` consequences require the same conventional specialist review.
 
 This is not a proof of $HC_7$, evidence that completion is near, or a
 confirmed novelty claim.  In particular, Norin and Totschnig already prove
