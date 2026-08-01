@@ -1,6 +1,7 @@
 # Independent computational audit: finite \(K_7^-\) layer
 
-**Status:** archived external computational-reproducibility dossier.  
+**Status:** archived external computational-reproducibility dossier.
+
 This is **not** part of the live proof spine and does **not** advance the mathematical frontier.
 
 ## Scope
@@ -41,13 +42,18 @@ older degree-eight exterior-component bound.
 
 ## How to re-run the independent checker
 
-From a checkout with nauty’s `geng` on `PATH`:
+From a checkout with nauty’s `geng` on `PATH`, first create the historical
+temporary output directory used by the byte-preserved checker:
 
 ```bash
+mkdir -p /tmp/k7minus_audit_f4705983/independent
 python3 archive/k7minus_finite_computational_audit_f4705983/cross_check.py
 ```
 
 Expected terminal outcome: `ALL INDEPENDENT CROSS-CHECKS PASSED` (exit 0).
+The checker and `AUDIT_REPORT.md` remain byte-for-byte unchanged so their
+recorded SHA-256 hashes stay valid; this includes the report’s Markdown hard
+breaks.
 
 ## Applicability to later `main`
 
