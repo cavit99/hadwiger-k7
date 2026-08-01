@@ -223,6 +223,37 @@ the [boundary reduction](results/hc7_k7minus_both_full_shore_reduction.md)
 leaves seven exact types and packing vector `(1,1,1)` for `\{u\},E,F`.
 The one-nonfull, adjacent-miss, and both-full allocations remain open.
 
+The current operation-coupled connectivity attack has sharpened all three
+open regimes without closing them.  In the adjacent-miss case, one fixed
+`G-xy` colouring gives four internally disjoint operated `x`--`y` paths,
+full shore fans retaining their prescribed first edges, and a point-rooted
+`K_4` in the four-connected nonplanar residual.  The missing implication is
+set-rooted absorption, or an exact operation-labelled order-seven
+separation when absorption fails.  The one-nonfull case has an analogous
+shore-localized five-path response and two adjacent near-model bags, but no
+label-preserving enlargement.  In the both-full case, a rooted-diamond
+alternative and a dense whole-component-contraction dichotomy reduce the
+problem to labelled near-model augmentation or a wide cutvertex-block
+configuration.
+
+There is also a new global minimum-shore reduction.  If `E` is chosen
+smallest among all components of disconnected exceptional
+anti-neighbourhoods, every degree-eight vertex of `E`, with at most one
+exception, has connected anti-neighbourhood.  The possible exception is an
+exact rotation across one common order-seven cut with packing vector
+`(1,2)` and two opposite vertex-deletion boundary responses.  Deleting the
+two private incident edges places all three permitted equality patterns in
+one common six-chromatic host; a double-contraction response supplies five
+colour-indexed locks into one connected middle subgraph, with three assigned
+to one fixed private edge.  Those locks force a second full two-shore
+separation of order seven or eight.  Its boundary is the join of the
+nonadjacent recentered pair with a matching and isolated vertices; in the
+order-seven case the two full-subgraph packing numbers are exactly `(1,1)`.
+This is an unbounded structural theorem, but the locks may overlap and the
+new interface is not eliminated by the existing transition theorems.  It
+does not prove exceptional-centre connectivity: one such rotation remains
+possible.
+
 The one-component residue still requires every remaining connected piece
 either to miss `I` or to contact at most three rooted bags.  The written,
 not separately audited,

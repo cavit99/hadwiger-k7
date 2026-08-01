@@ -137,6 +137,59 @@ demand in one side would already give a rooted `K_5^-` and hence a
 show that boundary counting, fullness, and independent-triple rotation do
 not by themselves force that concentration.
 
+### Current operation-coupled connectivity attack
+
+The proposed theorem that `G-N[u]` is connected for every exceptional
+degree-eight vertex remains open.  The current attack nevertheless gives
+four unbounded reductions; none is an isolated graph-code elimination.
+
+1. In the one-nonfull case, the
+   [shore-localized edge response](hc7_k7minus_one_nonfull_nondouble_palette.md)
+   proves, conditional on the established computer-assisted bound
+   `|N_S(x)|<=4`, that `ux` is non-double-critical.  One fixed colouring of
+   `G-ux` supplies all five two-colour `u`--`x` paths inside the joined
+   shore.  In the five-core alternative, `K_7^-` exclusion forces two
+   adjacent model branch sets wholly into that shore.  What is missing is a
+   label-preserving way to make those sets boundary-full, or an actual
+   order-seven separation when that enlargement fails.
+2. For distinct adjacent misses `x,y`, the
+   [fixed-response path and descent theorem](hc7_k7minus_adjacent_miss_operation_descent.md)
+   proves that `xy` is non-double-critical.  One colouring of `G-xy`
+   yields four internally disjoint operated `x`--`y` paths, together with
+   `xuy`, and full six-fans on both shores retaining the four operated first
+   edges.  The residual graph `G-{u,x,y}` is four-connected and nonplanar,
+   so any four nominated path hits root a `K_4` model.  The point-rooted
+   model may meet foreign operated paths; a set-rooted absorption theorem,
+   or an exact operation-labelled seven-separation when absorption fails,
+   is still required.
+3. In the both-full case, the
+   [rooted-diamond alternative](hc7_k7minus_both_full_diamond_or_exact7.md)
+   converts two disjoint near-full connected supports into an explicit
+   `K_7^-` model or a strict actual order-seven separation in the opposite
+   shore.  Independently, the
+   [whole-component contraction dichotomy](hc7_k7minus_both_full_component_contraction_dichotomy.md)
+   puts one proper contraction above `4n-6`; it either yields a
+   `K_7^\vee` model by Norin--Totschnig or has an exact cutvertex-block
+   structure.  The open residues are label-preserving augmentation of the
+   unrooted near model and the wide cutvertex-block case.
+4. Globally, choose a smallest component `E` among all disconnected
+   exceptional anti-neighbourhoods.  The
+   [minimum-shore recentering theorem](hc7_k7minus_minimal_exterior_recentring.md)
+   proves that every degree-eight vertex of `E`, with at most one exception,
+   has connected anti-neighbourhood.  The possible exception is an exact
+   rotation across one common order-seven cut with packing vector `(1,2)`;
+   the two centres carry opposite vertex-deletion boundary responses.  After
+   deleting their two private incident edges, all three permitted equality
+   patterns occur in one common six-chromatic host.  A double-contraction
+   response gives five colour-indexed lock paths into one connected middle
+   subgraph, with at least three locks belonging to one fixed private edge.
+   These locks force an exact full two-shore separation of order seven or
+   eight.  Its boundary is `\overline{K_2}` joined to a matching and isolated
+   vertices; at order seven the two full-subgraph packing numbers are
+   exactly `(1,1)`.  This is the strongest global conclusion of the attack,
+   but the lock paths need not be disjoint and neither normalized interface
+   is yet contradictory.
+
 ## 3. Seven-root list reduction
 
 **Status:** written live derivation; not separately audited or promoted to
@@ -230,15 +283,17 @@ component, the residual-contact outcome is necessary: a model avoiding the
 whole component would be confined to its five roots and would make them a
 literal `K_5`, impossible at an exceptional centre.
 
-For two exterior components, the new literal-clique theorem first forces
-the global high-density branch (2).  The one-nonfull case stops at the
-non-tight attachment inequality or the nested order-seven cuts described
-above.  Two nonfull components cannot have the same miss or distinct
-nonadjacent misses; distinct adjacent misses remain normalized to
-connected-rich `(1,2)` cuts.  In the both-full case, the boundary is one of
-seven exact types and both exterior packing numbers are one.  A rooted
-`K_5^-` confined to one closed side is already terminal.  These remaining
-one-nonfull, adjacent-miss, and both-full obligations are not closed.
+For two exterior components, the literal-clique theorem first forces the
+global high-density branch (2).  Two nonfull components cannot have the
+same miss or distinct nonadjacent misses.  In the adjacent-miss residue, one
+fixed operation now supplies the required disjoint paths and a point-rooted
+`K_4`; set-rooted absorption is the remaining obstruction.  In the
+one-nonfull residue, one fixed operation localizes all five two-colour paths
+but does not align them with the near-clique bags.  In the both-full residue,
+rooted diamonds and dense component contractions still lack compatible
+labels.  The minimum-shore theorem reduces repeated failures to at most one
+exact rotation, but does not eliminate it.  All three attachment regimes,
+and therefore exceptional-centre connectivity, remain open.
 
 The existing one-pair seven-path argument cannot supply this allocation;
 its exact failure is recorded in the
@@ -248,26 +303,25 @@ its exact failure is recorded in the
 
 Attack the remaining operation-coupled obligations in this order.
 
-1. **Resolve the nonfull connected-rich cuts.**  Use two compatible
-   proper-minor responses to rule out the non-tight inequality
-   `|A|+|B|\ge7` or one of the two overlapping order-seven cuts in the
-   one-nonfull case, and include the distinct adjacent-miss `(1,2)` cuts in
-   the same framework.  The two-entrance barrier shows that
-   seven-connectivity and packing numbers alone cannot do this.
-2. **Return to the seven both-full types only with dynamic data.**  Compare
-   operation-related star-contraction colourings until one side supports
-   all but one demand, or extract a disjoint residual connected subgraph
-   meeting the star and four rooted bags.  The two eight-demand types need
-   a conversion beyond the six-demand Kriesell--Mohr theorem.
-3. **Synchronize the seven anchored list cores.**  Use the changing
-   deletion responses to eliminate saturated singleton cores and tight
-   odd-cycle cores; the static `C_7\vee C_6` witness does not couple those
-   seven operations.
+1. **Eliminate the unique minimum-shore rotation.**  Synchronize the two
+   opposite vertex-deletion partitions across its exact order-seven `(1,1)`
+   interface or its order-eight matching-core interface.  The only acceptable
+   exits are an explicit `K_7^-` model, a six-colouring, or a genuinely
+   smaller disconnected exceptional exterior in the unchanged host.
+2. **Add a second critical response in the adjacent-miss case.**  The
+   point-rooted `K_4`, even with the full operated fans, does not by itself
+   preserve whole path labels or return an order-seven cut.  Split according
+   as the residual `G-{u,x,y}` is five- or six-chromatic and couple the fixed
+   `G-xy` colouring to a second proper-minor colouring across the two
+   overlapping critical order-seven separations.
+3. **Use the same absorption/uncrossing mechanism in the one-nonfull and
+   both-full cases.**  It must align operation colours with rooted bags or
+   preserve them through an exact seven-separation.  More graph-code filters
+   or static shore-demand counts are not progress on this gate.
+4. **Then synchronize the seven anchored list cores.**  Use the changing
+   deletion responses to eliminate saturated singleton and tight odd-cycle
+   cores; the static `C_7\vee C_6` witness does not couple those operations.
 
-In parallel, exploit the new global dichotomy.  If one exceptional centre
-has two exterior components, there are at least 25 exceptional centres and
-the whole host is literal-`K_5`-free; otherwise every exceptional centre has
-connected exterior.  A multi-centre proof should use this changing
-component structure and the anchored colourings of `G-x`, not arbitrary
-static lists.  Further finite enumeration is useful only when attached to
-an unbounded host lift; the relevant boundary classifications are now exact.
+Further finite enumeration is useful only when attached to one of these
+unbounded lifts.  The present bottleneck is label-preserving synchronization,
+not an incomplete boundary census.
