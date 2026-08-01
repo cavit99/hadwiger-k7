@@ -1,0 +1,24 @@
+# Computational audit provenance
+
+audit_target_commit=f4705983bd5de40661236943f80be80a5a2c961a
+audit_date=2026-07-31
+preservation_date=2026-08-01
+repo_path=archive/k7minus_finite_computational_audit_f4705983/
+
+# Host environment used for the reproduction
+os=Darwin 25.5.0 (macOS 26.5.2) arm64
+python=CPython 3.14.3
+nauty=Homebrew 2.9.3
+geng=/opt/homebrew/bin/geng
+
+# Artifact SHA-256 (of the files in this directory)
+# AUDIT_REPORT.md
+# 7d58b8b6130b708901597f10d1252209773091308e47f10be2a55dd0b13695f6
+# cross_check.py
+# 800b9c76f36c3f9e106c7339204220c9653c20ef6e9674c66bbff02cc6ddf275
+
+# Principal verifier sources were unchanged from f4705983 through main at
+# preservation time (594840160181a4def673f7cb87c3d9d055319d0c).
+
+# Scope: finite K7-minus verifiers only. Does not prove unbounded host
+# reductions, external theorem applications, Conjecture 21, or HC7.

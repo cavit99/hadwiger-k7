@@ -1,0 +1,46 @@
+cross_check.py running under 3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]
+geng=/opt/homebrew/bin/geng
+=== CONTROLS: minor predicates ===
+controls: PASS
+=== graph6 + catalogue cross-check ===
+  n=6 sample E??? degrees=[0, 0, 0, 0, 0, 0] edges=0
+  geng n=6: 156 graphs, encode roundtrip OK (sampled)
+  n=7 sample F???? degrees=[0, 0, 0, 0, 0, 0, 0] edges=0
+  geng n=7: 1044 graphs, encode roundtrip OK (sampled)
+  geng n=8: 12346 graphs, encode roundtrip OK (sampled)
+graph6 catalogue: PASS
+=== exceptional neighbourhood (independent) ===
+  three survivors: ['GQyurg', 'GQyurw', 'GQyuzw']
+  certificate missed=None: missing_pairs=1 OK
+  certificate missed=0: missing_pairs=1 OK
+  certificate missed=1: missing_pairs=1 OK
+  certificate missed=2: missing_pairs=1 OK
+  certificate missed=3: missing_pairs=1 OK
+  certificate missed=4: missing_pairs=1 OK
+  certificate missed=5: missing_pairs=1 OK
+  certificate missed=6: missing_pairs=1 OK
+  certificate missed=7: missing_pairs=1 OK
+exceptional neighbourhood: PASS
+=== one-nonfull order-7 chain (independent) ===
+  residue=28 digest=a045e1d21098d0789ea1c549ed00f380ab97df9120335ff24127f9c8a039eacd
+one-nonfull: PASS
+=== common-six catalogue (independent) ===
+  common_six=28 digest=9349e3f0c53068bdbdac7068c8fa347ac6658b5231c8abd3dc8e99804118bec9
+common-six: PASS
+=== both-full shore reduction (independent) ===
+  2076 -> 15 diamond digest=6e2633b0f4999a1d09fb98f38f7c268044cada0095be8e84aa4b8fe72d879ebe
+  15 -> 7 host digest=bf063de64c772c1c9c1c83cba7dc39d11bb9c214f3e101595889fe63f25861a0 (clique-OCT exclusions=8)
+both-full: PASS
+=== barrier: nonfull two-entrance (independent rebuild) ===
+  scope: chi=5, explicit K7 model, NOT a K7-minus-free critical host
+barrier nonfull: PASS
+=== barrier: shore allocation (independent) ===
+  balanced witnesses 15/15 digest=325a008189de182c099d60990d72c94f02fe78709e4858bc5aa48ec8eba59367
+  mechanism κ=3, no K7- minor
+barrier shore: PASS
+=== fan-tree independent orbit + certificates ===
+  labelled pairs total=7536
+  mask_orbit_digest=1d653544a19aed2fac36589f1d113583fe29f7a2af58679e90b574558d9f3203
+  direct_contraction_certificate_digest=a75aae228f346587a12ab0821c1a1e735b4d25e7ad9181b161a6512bab5c4ce4
+fan-tree: PASS
+=== ALL INDEPENDENT CROSS-CHECKS PASSED ===
