@@ -1,8 +1,16 @@
 # External-review dossier: the computation-free `K_7^-` density spine
 
-**Status:** current specialist-review dossier; not a manuscript, novelty
-claim, external peer review, proof of the `K_7^-` six-colour conjecture, or
-proof of `HC_7`.
+**Status:** specialist-review snapshot for the source hashes in Section 2;
+not a manuscript, novelty claim, proof of the `K_7^-` six-colour conjecture,
+or proof of `HC_7`.
+
+**Supersession note:** an external review found no serious gap in this
+snapshot's computation-free chain.  The later audited
+[two-literal-`K_5` theorem](../results/hc7_k7minus_two_literal_k5_exclusion.md)
+strictly strengthens its live conclusions to at most one literal `K_5`,
+`n_7<=4`, `m>=4n-2`, and `b>=17+tau`.  Use the
+[density frontier](hc7_k7minus_density_frontier.md) for current status; the
+body below remains pinned review provenance.
 
 **Mathematical revision:** the exact audited source hashes in Section 2.
 Any mathematical change requires renewed audits and replacement hashes.

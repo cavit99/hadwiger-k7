@@ -1,4 +1,4 @@
-# Seven exceptional degree-eight vertices: live technical frontier
+# Exceptional degree-eight vertices: live technical frontier
 
 **Status:** active conditional frontier.  The lower bound and the local
 neighbourhood, exterior-completion, and two-component reductions in Sections
@@ -21,25 +21,25 @@ Let `G` satisfy
 
 Call a degree-eight vertex exceptional when its neighbourhood is
 `K_4`-free.  The proved
-[degree-defect theorem](../results/hc7_k7minus_seven_exceptional_vertices_corollary.md)
+[two-literal-`K_5` exclusion and sharpened defect theorem](../results/hc7_k7minus_two_literal_k5_exclusion.md)
 gives
 
 \[
- b\ge15-n_7+\sum_{i\ge10}(i-9)n_i
-  \ge7+\sum_{i\ge10}(i-9)n_i,                           \tag{1}
+ b\ge17+\sum_{i\ge10}(i-9)n_i,                          \tag{1}
 \]
 
-where `b` is the number of exceptional vertices.  Therefore the theorem
+where `b` is the number of exceptional vertices; write `tau` for the
+displayed sum.  Therefore the theorem
 
-> every graph satisfying (H) has at most six exceptional vertices
+> every graph satisfying (H) has at most sixteen exceptional vertices
 
 would prove that every `K_7^-`-minor-free graph is six-colourable.  It is a
 headline-equivalent finishing theorem, not a routine intermediate lemma.
 
-The equality `b=7` branch is already rigid: `n_7=8`, `n_8=9`, all other
-vertices have degree nine, `2m=9n-25`, and the two literal `K_5`s are
-disjoint copies with degree pattern `7^4 8^1`.  Parity gives odd order, and
-private-triangle capacity gives `n\ge21` in this exact branch.
+The same theorem proves `n_7<=4`, `m>=4n-2`, and at most one literal
+`K_5`.  If `n_7=4`, the host has order at least 37 and at least
+`32+tau` exceptional vertices.  Thus the former exact `b=7` layer and all
+two-clique tight layers are now excluded.
 
 ## 2. What the present attack proved
 
@@ -48,7 +48,7 @@ The new
 proves two facts.
 
 1. Every exceptional vertex `u` has `alpha(G[N(u)])=3`.  Thus every one of
-   the at least seven centres has an independent triple; the former
+   the at least seventeen centres has an independent triple; the former
    independence-number-two branch is absent.
 2. For an independent triple `I\subseteq N(u)` and
    `R=N(u)-I`, any `R`-rooted `K_5` model in `G-({u}\cup I)` that avoids an
@@ -82,6 +82,12 @@ Every degree-eight vertex is then exceptional and `|V(G)|\ge25`.  Thus a
 surviving critical host obeys a sharp dichotomy: either every exceptional
 centre has connected exterior, or the host is globally literal-`K_5`-free
 and has at least 25 exceptional centres.
+
+The sharpened clique theorem closes the positive-degree-seven side of this
+dichotomy completely.  If `n_7>0`, degree-seven incidence supplies a
+literal `K_5`, so every exceptional anti-neighbourhood is connected.  The
+remaining connectivity target lies entirely in the `n_7=0`,
+literal-`K_5`-free branch described by (2).
 
 The earlier
 [nonfull-attachment theorem](../results/hc7_k7minus_nonfull_attachment_reduction.md)
@@ -140,7 +146,8 @@ not by themselves force that concentration.
 ### Current operation-coupled connectivity attack
 
 The proposed theorem that `G-N[u]` is connected for every exceptional
-degree-eight vertex remains open.  The current attack nevertheless gives
+degree-eight vertex is proved when `n_7>0` and remains open only when
+`n_7=0`.  Within that literal-`K_5`-free branch, the current attack gives
 four unbounded reductions; none is an isolated graph-code elimination.
 
 1. In the one-nonfull case, the
@@ -195,7 +202,7 @@ four unbounded reductions; none is an isolated graph-code elimination.
 **Status:** written live derivation; not separately audited or promoted to
 `results/`.
 
-Choose seven exceptional vertices and call their set `B`.  Six-colour
+Choose any seven exceptional vertices and call their set `B`.  Six-colour
 `G-B` with a colouring `phi`.  Put `H=G[B]`; the degree-defect theorem gives
 that `H` is `K_5`-free.  For each `v\in B`, let
 
@@ -266,7 +273,7 @@ differ; synchronizing them is the exact multi-centre colouring target.
 
 The most concrete current gate is the following allocation statement.
 
-> **Rooted exterior-allocation target.** Among the at least seven exceptional
+> **Rooted exterior-allocation target.** Among the at least seventeen exceptional
 > centres, find `u`, an independent triple `I\subseteq N(u)`, and an
 > `(N(u)-I)`-rooted `K_5` model such that either:
 >
