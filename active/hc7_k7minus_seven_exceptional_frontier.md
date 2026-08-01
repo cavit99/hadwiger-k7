@@ -148,7 +148,7 @@ not by themselves force that concentration.
 The proposed theorem that `G-N[u]` is connected for every exceptional
 degree-eight vertex is proved when `n_7>0` and remains open only when
 `n_7=0`.  Within that literal-`K_5`-free branch, the current attack gives
-four unbounded reductions; none is an isolated graph-code elimination.
+five unbounded reductions; none is an isolated graph-code elimination.
 
 1. In the one-nonfull case, the
    [shore-localized edge response](hc7_k7minus_one_nonfull_nondouble_palette.md)
@@ -192,6 +192,18 @@ four unbounded reductions; none is an isolated graph-code elimination.
    boundary graph.  It still does not eliminate the originally selected
    disconnected centre `u`, since `E` may contain no degree-eight vertex or
    only degree-eight vertices with connected anti-neighbourhoods.
+5. The
+   [degree-eight pair-deletion reduction](hc7_k7minus_pair_deletion_k7vee_reduction.md)
+   uses the full density jump rather than one local attachment pattern.  For
+   any two degree-eight vertices `a,b`, the graph `G-{a,b}` is
+   five-connected and lies at or above the Norin--Totschnig `4n-8`
+   threshold, so it has a spanning `K_7^\vee` model.  Target exclusion
+   sharply restricts how the two retained roots meet its seven branch sets.
+   The exact survivor concentrates both roots in the same four mutually
+   adjacent branch sets.  Closing it requires a label-preserving branch-set
+   transfer, or a returned separation whose boundary is literally the
+   neighbourhood of a named exceptional degree-eight vertex; ordinary
+   connectivity gives neither conclusion.
 
 ## 3. Seven-root list reduction
 
@@ -306,19 +318,20 @@ its exact failure is recorded in the
 
 Attack the remaining operation-coupled obligations in this order.
 
-1. **Add a second critical response in the adjacent-miss case.**  The
-   point-rooted `K_4`, even with the full operated fans, does not by itself
-   preserve whole path labels or return an order-seven cut.  Split according
-   as the residual `G-{u,x,y}` is five- or six-chromatic and couple the fixed
-   `G-xy` colouring to a second proper-minor colouring across the two
-   overlapping critical order-seven separations.
-2. **Use the same absorption/uncrossing mechanism in the one-nonfull and
-   both-full cases.**  It must align operation colours with rooted bags or
-   preserve them through an exact seven-separation.  More graph-code filters
-   or static shore-demand counts are not progress on this gate.
-3. **Then synchronize the seven anchored list cores.**  Use the changing
-   deletion responses to eliminate saturated singleton and tight odd-cycle
-   cores; the static `C_7\vee C_6` witness does not couple those operations.
+1. **Prove the label-preserving transfer exposed by pair deletion.**  Starting
+   from the spanning `K_7^\vee` model and the two retained degree-eight
+   roots, split a contacted branch set into an uncontacted model position
+   while preserving the five required adjacencies, or return a separation
+   whose boundary is the literal neighbourhood of a named exceptional
+   centre.  An arbitrary smaller adhesion is not an accepted descent.
+2. **Transport that transfer through the adjacent-miss, one-nonfull, and
+   both-full responses.**  It must align operation colours with rooted bags
+   or preserve them through an exact seven-separation.  More graph-code
+   filters or static shore-demand counts are not progress on this gate.
+3. **Synchronize anchored list cores only with their path geometry retained.**
+   The response-specific defect budgets cannot be summed, and a common tight
+   odd-cycle core can survive every anchor when the exterior Kempe paths are
+   forgotten.
 
 Further finite enumeration is useful only when attached to one of these
 unbounded lifts.  The present bottleneck is label-preserving synchronization,

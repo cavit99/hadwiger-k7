@@ -251,6 +251,18 @@ prove exceptional-centre connectivity: the originally selected centre may
 remain disconnected while `E` contains no degree-eight vertex or only
 degree-eight vertices with connected anti-neighbourhoods.
 
+The density jump also gives a reusable pair-deletion reduction.  For any
+two degree-eight vertices `a,b` in this branch, `G-{a,b}` is five-connected
+and has at least `4|V(G-{a,b})|-8+[ab]` edges.  Norin--Totschnig therefore
+supplies a spanning `K_7^\vee` model.  `K_7^-` exclusion forces each retained
+root to meet at most four of the model's six mutually adjacent nondeficient
+bags and imposes further contacts at the deficient bag.  The remaining
+four-bag concentration is nonterminal: its elimination requires a
+label-preserving branch-set transfer or a separation whose boundary is the
+literal neighbourhood of a named exceptional degree-eight vertex.  The
+written reduction and its exact scope are recorded in the
+[pair-deletion technical note](active/hc7_k7minus_pair_deletion_k7vee_reduction.md).
+
 The one-component residue still requires every remaining connected piece
 either to miss `I` or to contact at most three rooted bags.  The written,
 not separately audited,
