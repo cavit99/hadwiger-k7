@@ -230,6 +230,20 @@ five unbounded reductions; none is an isolated graph-code elimination.
    is nonterminal: the separator may have order greater than seven, the two
    deleted endpoints need not lie on opposite open shores, and the boundary
    need not be `N_G(z)` for a named exceptional vertex.
+6. In the exact packing-`(1,2)` branch, the
+   [three-full-subgraph completion theorem](../results/hc7_k7minus_exact7_three_full_subgraph_completion.md)
+   exactly characterizes the `K_7^-` models visible after contracting the
+   three full connected subgraphs.  More importantly, in the paired
+   `2+1+1+3` boundary response it gives an explicit terminal model whenever
+   an operation-generated connected subgraph meets one of the four
+   nontriangle vertices and at least two vertices of the retained boundary
+   triangle.
+   Target exclusion therefore forces every such connected subgraph to miss
+   at least two common triangle vertices.  Seven-connectivity can replace
+   those missing boundary contacts by several attachments to the two rich
+   full subgraphs, so the surviving case is an operation-labelled
+   full-subgraph splitting problem rather than an incomplete boundary
+   census.
 
 The same note gives a global one-root strengthening.  For every exceptional
 `r`, the bounds `m>=4n-2` and `b>=17` put the six-connected graph `G-r`
@@ -378,7 +392,14 @@ Attack the remaining operation-coupled obligations in this order.
    double-deletion trace is legal there.  Otherwise a named single-edge
    response gives a legal one-sided trace, and the first exact unsupported
    step is its conversion into the last partition-specific connected
-   subgraph, a terminal minor, or a named descent.
+   subgraph, a terminal minor, or a named descent.  In the paired
+   packing-`(1,2)` residue, prove an operation-labelled full-subgraph
+   splitting lemma: retain one full connected remainder while separating a
+   connected piece with one nontriangle boundary contact and two named
+   triangle contacts.
+   The displayed completion theorem then gives `K_7^-`; failure must instead
+   return a common boundary partition or the literal anti-neighbourhood of a
+   named exceptional centre.
 2. **Eliminate the low-contact residue if terminalization returns to the
    absorbed model family.**  In the
    notation of the pair-deletion reduction this is `p=1,k<=2`.  Keep the

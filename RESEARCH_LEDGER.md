@@ -344,6 +344,19 @@ the literal boundary.  Thus the exact residues are now double-boundary
 placement, or a legal trace lacking the final partition-specific connected
 subgraph required for reflection.
 
+The packing-`(1,2)` branch now has an explicit final-model test.  The
+[three-full-subgraph completion theorem](results/hc7_k7minus_exact7_three_full_subgraph_completion.md)
+characterizes both static contracted quotients and proves that, in the
+paired `2+1+1+3` response, any operation-generated connected subgraph with
+one nontriangle boundary contact and two contacts in the boundary triangle completes an
+explicit `K_7^-` model.  Hence every survivor has two common missing
+triangle contacts.  This does not close the branch: seven-connectivity may
+route all compensating attachments through the two rich full connected
+subgraphs.  The exact remaining inference is an operation-preserving split
+of one of those subgraphs which retains a full connected remainder and the
+two named triangle contacts, or instead returns a common boundary partition
+or a named smaller exceptional anti-neighbourhood.
+
 The same note proves a stronger one-root entrance.  For every exceptional
 vertex `r`, the global `4n-2` density bound places the six-connected graph
 `G-r` two edges above the Norin--Totschnig threshold.  It therefore has an

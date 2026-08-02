@@ -7924,7 +7924,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "0ddb80b864b5717b83fb51887c3a944085e2457427c471d0a8601af0b49d1199"
+expected_source_sha256 = "7f41daed115f22ddf8d3369b172ddbf4841a3bd896fcee123bdb278b7910a9d5"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8459,6 +8459,54 @@ does_not_prove = [
   "Hadwiger's conjecture at t=7",
 ]
 keywords = ["K7 minus", "one operation", "Kempe colouring", "nested separator", "boundary saturation", "same-host descent", "open target"]
+
+[[claims]]
+id = "hc7.k7minus_three_full_subgraph_quotient"
+title = "Three universal boundary vertices admit an exact K7-minus quotient characterization"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_exact7_three_full_subgraph_completion.md"
+source_heading = "1. Exact static characterization"
+active = false
+audit = "results/hc7_k7minus_exact7_three_full_subgraph_completion_audit.md"
+expected_source_sha256 = "a393e41b5dcea0d9e165f2bc8ef7335d410b6e7f4c4f35b1934de8e003a8c80e"
+scope = "a graph on a literal seven-set together with three new universal vertices, either independent or with exactly one edge"
+label_fidelity = "the literal boundary, the three added universal vertices, the avoided boundary anchors and every branch set of the reduced K4-minus model remain explicit"
+conclusions = [
+  "with three independent universal vertices, K7-minus occurs exactly when deleting two boundary vertices leaves a K4-minus minor",
+  "with one edge among the universal vertices, K7-minus occurs exactly when deleting one boundary vertex leaves a K4-minus minor",
+  "both quotient models lift literally to three disjoint connected subgraphs adjacent to every boundary vertex, with the one-edge form requiring the corresponding two subgraphs to be joined in their open component",
+]
+does_not_prove = [
+  "that a residual exact packing-(1,2) separation is impossible",
+  "a six-colouring or exceptional anti-neighbourhood descent",
+  "that operation-generated paths split either rich full connected subgraph",
+]
+keywords = ["K7 minus", "seven-vertex boundary", "full connected subgraphs", "K4 minus", "exact quotient"]
+
+[[claims]]
+id = "hc7.k7minus_exact7_nontriangle_triangle_completion"
+title = "One nontriangle contact and two boundary-triangle contacts complete K7-minus"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_exact7_three_full_subgraph_completion.md"
+source_heading = "3. A terminal one-defect construction"
+active = false
+audit = "results/hc7_k7minus_exact7_three_full_subgraph_completion_audit.md"
+expected_source_sha256 = "a393e41b5dcea0d9e165f2bc8ef7335d410b6e7f4c4f35b1934de8e003a8c80e"
+scope = "the paired 2+1+1+3 response at an exact seven-boundary with three disjoint full connected subgraphs and one additional operated connected subgraph"
+label_fidelity = "the four nontriangle boundary vertices, boundary triangle, three full connected subgraphs and operation-generated connected support remain individually named"
+conclusions = [
+  "a connected support meeting one nontriangle boundary vertex and at least two triangle vertices gives seven explicit branch sets of a K7-minus model",
+  "an operated x-y support with at least two triangle contacts gives the analogous explicit model",
+  "in a target-free host every such support misses at least two common triangle vertices",
+]
+does_not_prove = [
+  "that every fixed proper-minor response supplies two named triangle contacts",
+  "that seven-connectivity splits a rich full connected subgraph while retaining a full remainder",
+  "elimination of exact packing-(1,2), a six-colouring, or named exceptional anti-neighbourhood descent",
+]
+keywords = ["K7 minus", "exact seven-cut", "fixed operation", "connected support", "boundary triangle", "explicit minor model"]
 
 [[claims]]
 id = "hc7.k7minus_one_nonfull_six_fan"
@@ -13282,6 +13330,30 @@ source = "hc7.target.k7minus_one_operation_interface_closure"
 target = "hc7.exact7_selected_partition_preservation"
 kind = "related_to"
 note = "At exact order seven, a partition-specific carrier system would preserve the selected response and six-colour the host; the near-clique frame does not yet force that carrier."
+
+[[relations]]
+source = "hc7.k7minus_three_full_subgraph_quotient"
+target = "hc7.exact7_adaptive_12_boundary_closure"
+kind = "strengthens"
+note = "The new characterization gives the one-edge-deficient analogue of the adaptive exact-seven theorem's static K7/K4 full-subgraph lifts."
+
+[[relations]]
+source = "hc7.k7minus_three_full_subgraph_quotient"
+target = "hc7.k7minus_one_nonfull_reduction"
+kind = "related_to"
+note = "The earlier connected-rich diamond-deletion lemma is the host-level forward implication; the new theorem proves exactness of the contracted quotient."
+
+[[relations]]
+source = "hc7.k7minus_exact7_nontriangle_triangle_completion"
+target = "hc7.exact7_selected_partition_preservation"
+kind = "strengthens"
+note = "In the paired two-owner/triangle response, two triangle contacts give an explicit K7-minus model rather than only a partition-reflection certificate."
+
+[[relations]]
+source = "hc7.target.k7minus_one_operation_interface_closure"
+target = "hc7.k7minus_exact7_nontriangle_triangle_completion"
+kind = "uses"
+note = "At exact packing (1,2), the open target reduces to producing the named nontriangle-plus-two-triangle connected support, a common partition, or a named exceptional anti-neighbourhood descent."
 
 [[verifiers]]
 id = "degree8-nonedge-bipartition-classification"
