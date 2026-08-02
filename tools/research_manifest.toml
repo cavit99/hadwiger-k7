@@ -8175,7 +8175,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 1 (a spanning near-clique model after deleting two centres)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
+expected_source_sha256 = "aca10eb92f3901207db70abc397c7aa317924220705c014632054e303169eb88"
 scope = "two degree-eight vertices in the literal-K5-free density-4n branch forced by a disconnected exceptional anti-neighbourhood"
 label_fidelity = "both deleted roots and all seven labelled branch sets of the spanning K7-vee model remain explicit"
 conclusions = [
@@ -8200,7 +8200,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 3 (forced target interface)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
+expected_source_sha256 = "aca10eb92f3901207db70abc397c7aa317924220705c014632054e303169eb88"
 scope = "one retained degree-eight root in a contact-maximal spanning K6 model, with a globally minimum branch set containing at least two root neighbours"
 label_fidelity = "the retained root, surplus donor, uncontacted target, four protected branch sets and every literal donor-target portal remain named"
 conclusions = [
@@ -8224,7 +8224,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 4 (a spanning near-clique and forced interface at every exceptional centre)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
+expected_source_sha256 = "aca10eb92f3901207db70abc397c7aa317924220705c014632054e303169eb88"
 scope = "any exceptional degree-eight vertex in the critical K7-minus host"
 label_fidelity = "the exceptional root and seven labelled branch sets of the spanning K7-vee model remain explicit; a separately optimized K6 model need not retain the P-B-C provenance"
 conclusions = [
@@ -8249,7 +8249,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 6 (two-hole persistence and a deficient-bag response)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
+expected_source_sha256 = "aca10eb92f3901207db70abc397c7aa317924220705c014632054e303169eb88"
 scope = "an exceptional degree-eight root added to a contacted bag of an exact spanning labelled K7-vee model"
 label_fidelity = "the exceptional root, the deficient P-B-C labels, the minimized contacted bag, every persistent incident edge, and one two-edge contraction colouring remain explicit"
 conclusions = [
@@ -8259,10 +8259,12 @@ conclusions = [
 ]
 does_not_prove = [
   "that minimizing the contacted bag preserves the original root-contact pattern",
+  "that a minimum rooted deficient bag contacts at least three universal bags",
+  "exchange closure between the fixed two-edge-star response and donor-minimizing K6 transfers",
   "an assignment of the five alternate colours to the five required branch-set roles",
   "a K7-minus model, six-colouring of G, exceptional-component descent, or host closure",
 ]
-keywords = ["K7 minus", "K7 vee", "persistent edges", "joint deletion", "star contraction", "deficient bag"]
+keywords = ["K7 minus", "K7 vee", "persistent edges", "joint deletion", "star contraction", "deficient bag", "low contact", "exchange closure"]
 
 [[claims]]
 id = "hc7.target.k7minus_one_operation_interface_closure"
@@ -8279,10 +8281,12 @@ conclusions = [
   "proving the target would eliminate the whole critical host and settle the K7-minus six-colour conjecture",
 ]
 does_not_prove = [
+  "alignment of an absolute minimum rooted deficient bag with a globally contact-maximal K6 model",
+  "exchange closure preserving the fixed operation while the surplus donor is minimized",
   "the operation-to-recipient allocation needed for any terminal outcome",
   "Hadwiger's conjecture at t=7",
 ]
-keywords = ["K7 minus", "one operation", "Kempe colouring", "forced interface", "same-host descent", "open target"]
+keywords = ["K7 minus", "one operation", "Kempe colouring", "forced interface", "same-host descent", "open target", "quantifier mismatch", "exchange closure"]
 
 [[claims]]
 id = "hc7.k7minus_one_nonfull_six_fan"

@@ -529,6 +529,55 @@ from named ends to clean named first hits is the first unsupported
 operation-level inference; neither the forced-interface theorem nor one
 fixed proper-minor colouring supplies it.
 
+### Recorded negative finding: the two optimizations cannot yet be coupled
+
+**Status:** recorded negative finding / route nonclosure; not a
+counterexample to the open target.
+
+The minimum deficient-bag response of Proposition 6 and the forced
+interface of Theorem 4 arise from different optimizations, and no proved
+exchange principle makes them simultaneous.
+
+First, applying Proposition 6 with `D=P` requires `p=1` in Proposition 5.
+By (A1), one of the four labelled absorptions has the globally maximal four
+root contacts only when `k>=3`.  The minimum rooted `P`-bag construction
+does not exclude the surviving low-contact case
+
+\[
+                              p=1,\qquad k\le2.          \tag{13a}
+\]
+
+Thus the absorbed model carrying the fixed two-edge-star response need not
+even be contact-maximal among spanning `K_6` models.
+
+Second, suppose `k>=3`, so that a labelled absorption is contact-maximal.
+The donor minimum in Theorem 4 is nevertheless taken over all
+contact-maximal spanning `K_6` models.  A contact-preserving branch-set
+transfer can retain adjacency to the fused bag `P union U_h` while losing
+the separate `P` or `U_h` contact or connectivity needed to recover the
+labelled `K_7^\vee` model.  It can also move an endpoint or support class
+needed by the jointly persistent edge pair.  Hence the family consisting
+of an absolute minimum rooted `P`-bag, its fixed pair and colouring, and a
+labelled absorption is not known to be exchange-closed.  A lexicographic
+potential over those objects therefore cannot be invoked.
+
+The two smallest repair statements are now explicit:
+
+1. eliminate (13a) by proving that a minimum rooted `P`-bag with at most two
+   contacted universal bags already gives a `K_7^-` model, a six-colouring,
+   or a smaller exceptional anti-neighbourhood component; and
+2. in the remaining contact-four case, prove that every donor-reducing
+   transfer either lifts to another absolute minimum rooted `P`-bag model
+   preserving the same operation response, or gives one of those terminal
+   outcomes directly.
+
+Ordinary first-hit linkage, a gammoid rank, or a block--cutvertex
+decomposition does not supply either repair: those tools do not preserve
+simultaneously the fixed colouring operation, the separate near-clique
+labels, and a residual branch set.  This is the first exact unsupported
+inference in the attempted joint model--colouring optimization and should
+be checked before any future use of that route.
+
 Choose `(r,C_0)` so that `r` is exceptional and `C_0` has minimum order
 among all components of `G-N[v]` over all exceptional vertices `v`.  Put
 `J=G-r`.  A sufficient certificate for a genuine same-graph descent is a

@@ -289,6 +289,19 @@ the same labelled `K_7^\vee` model survives.  The unresolved step is now
 strictly the assignment of those palette colours to the required branch-set
 roles, or a same-host exceptional anti-neighbourhood descent.
 
+A bounded attempt to combine that fixed response with the optimized
+forced interface exposed an earlier quantifier obstruction.  A minimum
+rooted deficient bag need not contact three universal bags, so none of its
+labelled absorptions is known to attain the global four-contact maximum.
+Even when one does, donor-minimizing transfers are not proved to preserve
+the separate deficient/universal labels or the persistent edge pair.  The
+joint model--colouring family is therefore not known to be exchange-closed,
+and a lexicographic optimization over it is invalid.  The exact next repair
+is to eliminate the at-most-two-universal-contact residue, followed by an
+operation-preserving absorbed-family exchange theorem.  This negative
+finding and its precise scope are recorded in the pair-deletion technical
+note to prevent the same optimization from being assumed again.
+
 The same note proves a stronger one-root entrance.  For every exceptional
 vertex `r`, the global `4n-2` density bound places the six-connected graph
 `G-r` two edges above the Norin--Totschnig threshold.  It therefore has an
