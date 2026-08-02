@@ -3,14 +3,14 @@
 **Verdict:** GREEN for the pair- and single-deletion model reductions, the
 optimized forced-interface theorem, the exact labelled-absorption contact
 formula, the two-hole persistence count and deficient-bag response, the
-one-operation Kempe conclusion, the root-removal split proposition, and the
-two-owner portal collapse, terminal two-shore colouring, and sufficient
-same-host descent test.
+one-operation Kempe conclusion, the root-removal split proposition, the
+two-owner portal collapse and terminal two-shore colouring, the fixed-response
+nested-separator reduction, the connected two-loss atomic reduction, and the
+minimum-separator normal form, and the sufficient same-host descent test.
 Label-preserving donor optimization, operation-to-recipient allocation, and
-the global terminal/descent target are correctly left open; the
-two-component residue itself reaches the colouring terminal.  The recorded failed
-joint-optimization route correctly identifies its three ordered quantifier
-gaps and does not present them as a counterexample.
+the global terminal/descent target are correctly left open.  The recorded
+separator-terminalization and joint-optimization failures identify exact
+unsupported inferences and do not present them as counterexamples.
 
 **Audited source:**
 `active/hc7_k7minus_pair_deletion_k7vee_reduction.md`
@@ -18,7 +18,7 @@ gaps and does not present them as a counterexample.
 **SHA-256:**
 
 ```text
-bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef
+64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -382,33 +382,140 @@ make `r,t` distinct, so one palette permutation aligns the ordered pair and
 the colourings glue across `\{r,t\}`.  This verifies the terminal
 six-colouring contradiction and the conclusion `h<=1`.
 
-## 7D. Joint-optimization negative finding
+## 7D. Fixed-response nested separator
 
-The split case of root-removal compatibility is now eliminated.  The
-remaining gap is that Proposition 6 minimizes a rooted model in `G`, whereas
-Proposition 5 requires a nonempty deficient bag in `G-r` retaining all four
-universal adjacencies.  The minimum bag may still be `{r}`, or its connected
-remainder may lose an adjacency supported only at `r`.  Only after those
-possibilities are excluded does one have `p=1` for the same model and
-response.  The count then forces `k<=2`.
-The contact formula in (A1) makes every labelled absorption have at most
-three contacts, below the global upper bound four.  Thus the failed attack
-cannot legitimately start the optimized forced-interface argument on the
-same model and response.
+The minimum rooted deficient bag `R` is anticomplete to the two missed twin
+bags, so its open neighbourhood lies in the four universal bags and is an
+actual separator of order at least seven.  Removing the two persistent
+incident edges deletes at most two boundary vertices.  Joint persistence
+retains at least one `H`-edge from `R` to each universal bag, hence at least
+five surviving boundary vertices distributed over four bags.
 
-Reaching a contact-four model requires leaving the minimum rooted family.
-Theorem 4 then minimizes the donor over all contact-maximal spanning `K_6`
-models.  Its transfer proof preserves the six fused branch sets, not
-necessarily the separate `P,U_h` refinement or the support of the fixed
-jointly persistent pair.  The source therefore correctly rejects a
-lexicographic potential combining these choices: the relevant family has
-not been proved exchange-closed.
+The separately audited exact-`K_7^\vee` separator dichotomy applies to two
+surviving portals in one bag.  It produces either a `K_7^-` model using no
+deleted edge or a proper connected donor piece with connected complement
+and an actual separator in `G`.  Under (H) the first outcome is impossible.
+The construction does not recolour `H`, so the named two-edge-star response
+remains fixed.  This verifies Proposition 9.
 
-The three stated repair lemmas address these gaps in their logical order.
-The note claims neither that they hold nor that their failure is realized
-by a graph satisfying the critical-host hypotheses.  This is a scoped
-negative finding about an unsupported proof mechanism, not a barrier or a
-mathematical disproof of the one-operation target.
+The separator conclusion is deliberately nonterminal.  Its order need not
+be seven, the deleted endpoints need not occupy opposite open shores, and
+the separator need not be the neighbourhood of an exceptional vertex.
+
+## 7E. Connected two-loss atomic reduction
+
+Suppose `Z=R-r` is connected and exactly two universal adjacencies are lost.
+The other two owner portal sets and the root-neighbour set in `Z` are
+nonempty.  A two-owner Rado--Menger linkage would split `Z` into two
+connected pieces and reduce the rooted bag.  Failure therefore gives one
+vertex separating the root-neighbour set from both owner portal sets.
+
+If both owner portal sets are that singleton, seven-connectivity forces
+`Z` itself to be the singleton.  Otherwise the portal-side component is
+root-free and the two one-owner transfer orientations force it to contain
+both complete owner portal sets.  A second, inclusion-minimal two-owner
+application collapses its retaining lobe to a singleton `t` with one open
+neighbour `q` in the rooted bag.  Any nontrivial remainder would have all
+host neighbours in `{q,t}`, contradicting seven-connectivity.
+
+Thus `t` is a leaf of `G[Z]`.  The connected set `Q=Z-t` and the union `J`
+of the six foreign branch sets are nonempty, connected and anticomplete.
+Both meet the nonadjacent vertices `r,t`: `Q` through the root-neighbour set
+and `q`, and `J` through the two lost-owner contacts at `r` and the two
+retained owner contacts at `t`.  Contracting either open side together with
+`r` gives the corresponding exact proper minor with `rt` added.  Their
+six-colourings align on the ordered boundary `(r,t)` and glue.  This checks
+Proposition 10.  In fact `{r,t}` is already a two-vertex cut; the colouring
+splice explicitly realizes the requested terminal.
+
+The only survivor is the atomic bag `R={r,s}` with the exact `2+2` owner
+split.  This is an adaptation of Proposition 8, not a new general gluing
+method, and it does not use the fixed two-edge-star colouring.
+
+## 7F. Minimum-separator normal form
+
+Proposition 9 makes the family of all connected sets with a nonempty far side
+nonempty.  Seven-connectivity bounds every boundary in this unrestricted
+family below by seven, so a global minimum exists.  At boundary order seven,
+the audited
+critical capacity theorem and three-component exclusion give exactly two
+components, packing vector `(1,1)`, `(1,2)`, or `(2,1)`, and a boundary
+edge.  The general seven-cut capacity theorem also excludes a boundary
+`K_5` minor, and the established `t=5` case gives four-colourability.
+
+At minimum boundary order at least eight, the selected set is eligible for
+the audited minimum-positive-separator theorem.  Its exact-seven alternative
+would itself be a member of the minimizing family with smaller boundary, so
+the full-component alternative is forced.  That theorem gives exactly two
+or three components.
+
+For an `a`-set `F` of boundary vertices, augment `a` full components with
+the distinct members of `F` and contract one additional component without a
+boundary vertex.  The `a+1` images form a clique complete to the retained
+boundary.  Proper-minor six-colourability gives
+`chi(G[S-F])<=5-a`; a `K_{6-a}^-` model there would complete a literal
+`K_7^-` model.  The constructed minor is proper by deletion of another
+component when `a=0`, and by an augmented component--boundary contraction
+when `a>0`.
+
+Using two unaugmented components instead makes their mutual adjacency the
+only missing pair.  A `K_{5-a}` model in the retained boundary would again
+complete a `K_7^-` model.  At `a=0` this excludes a `K_5` minor from the
+whole boundary, and the established `t=5` case of Hadwiger's conjecture
+gives four-colourability.
+
+The lower chromatic bounds use direct contractions, not the order-seven-only
+reflection lemma.  With two components, an independent boundary can be
+contracted into the opposite full component on each shore.  With three
+components, at most two independent boundary classes can be assigned to
+the other two full components on each shore.  In both cases the exact
+boundary partitions align and the closed-shore colourings glue, contradicting
+`chi(G)=7`.  No finite enumeration enters these arguments.
+
+The fixed colouring is not changed by selecting another separator, but the
+global minimizer need not be nested in the Proposition 9 side or retain any
+near-clique label.  The colouring need not be proper on either closed side
+after the deleted edges are restored, and its endpoints need not avoid the
+new boundary.  Proposition 11 therefore does not claim a terminal outcome or
+operation-to-shore alignment.
+
+## 7G. Recorded route nonclosures
+
+For an exact-seven separator returned by Proposition 9, its connected side
+is a component and the three-component exclusion leaves one opposite
+component.  The root lies outside the returned side.  Since `rx,ry` are the
+only edges absent from the fixed response graph, the stated closed-shore
+legality conditions follow exactly from endpoint placement.  If an endpoint
+`z` is outside the boundary, the edge `rz` lies wholly in one closed shore;
+a colouring of `G-rz` is therefore proper on the opposite one.  Its ends
+must be equal, and joint persistence keeps the same labelled model.  If both
+endpoints lie in the boundary, a colouring of the double deletion proper on
+the literal boundary would colour both restored edges and hence all of `G`.
+This verifies the endpoint normalization and its exceptional placement.
+
+The legal one-sided trace obtained from a single-edge response need not be
+the trace of the original double-deletion colouring.  More importantly, the
+packing vector supplies too few partition-specific connected subgraphs to
+invoke selected-response preservation automatically.  The normalization is
+therefore a proved reduction inside the recorded nonclosure, not a terminal
+claim.
+
+For the nested-separator route, even endpoint alignment only proves that
+two boundary-avoiding Kempe components would six-colour `G`; failure may
+leave one endpoint five-colour saturated through the boundary vertex `r`.
+No audited theorem turns that saturation into a labelled transfer, common
+boundary partition, or named exceptional anti-neighbourhood descent.
+The cited nested full-neighbourhood theorem can reduce separator excess but
+does not preserve the operation or a named centre.  The exact-seven selected
+response theorem closes only after a partition-specific carrier system is
+supplied; the present frame does not provide one.
+
+The separate absorption route retains its older quantifier mismatch.
+Proposition 6 minimizes a rooted labelled model, whereas Theorem 4 globally
+optimizes a spanning `K_6` model.  A donor transfer in the latter can lose
+the separate `P,U_h` refinement or the support of the fixed persistent pair.
+The source therefore correctly rejects exchange closure.  Both statements
+are scoped negative findings, not counterexamples to the open target.
 
 ## 8. Same-host descent test
 

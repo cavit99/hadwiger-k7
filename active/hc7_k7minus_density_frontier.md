@@ -317,21 +317,32 @@ nonsingleton component when `r=4`, and replaced informal contraction
 language by the exact surplus and connectivity criteria above.  The
 critical-host reflection and planar-extension attack has now removed
 `r=3,4` altogether.  Every critical order-seven cut is a two-shore cut with
-packing vector `(1,1)`, `(1,2)`, or `(2,1)`.  The bounded deficient-`P`
-attack found that root removal precedes the old low-contact question: the
-minimum rooted bag may be empty after deleting the root, lose a required
-universal adjacency, or split into an exact `2+2` ownership pair.  The
-large side of that split now collapses to one vertex owning both adjacencies
-to its two universal bags.  This exposes an exact two-separation whose
-nonadjacent boundary vertices are full to both connected open sides.
-Contracting opposite sides adds the missing boundary edge in two proper
-minors; their six-colourings align and glue.  Hence the whole `2+2` split is
-impossible and the minimum rooted bag minus its root has at most one
-component.  The immediate exceptional-centre attack is therefore the two
-remaining root-removal cases: exclude the singleton bag and preserve every
-universal adjacency through the one connected remainder.  Any exact
-order-seven obstruction returned there must be decoded in the two-shore
-normal form; a three-shore return would already six-colour the host.
+packing vector `(1,1)`, `(1,2)`, or `(2,1)`.  The deficient-`P` attack first
+eliminates the split remainder by a two-boundary colouring argument.  In a
+connected remainder with exactly two lost universal adjacencies, every
+nonconcentrated case is eliminated by a two-cut contradiction or a
+two-boundary six-colouring; only the atomic bag `R={r,s}` with a `2+2`
+support split survives.
+
+The stronger model-level result applies before those cases.  In any exact
+spanning `K_7^\vee` frame in a seven-connected host, either there is an
+explicit `K_7^-` model or a nonempty proper connected part `Y` of one
+universal bag has connected complement in that bag and `N_G(Y)` is an
+actual separator of order at least seven.  The fixed two-edge response
+retains at least five portals across the four universal bags, so this
+dichotomy preserves the same named six-colouring.  It therefore bypasses
+generic root-removal compatibility.  Globally minimizing boundary order now
+gives either an exact two-shore seven-cut, or a boundary of order at least
+eight with exactly two or three full complementary components and the
+strengthened residual-boundary profile: the boundary is `K_5`-minor-free
+and four-colourable, and its small vertex deletions satisfy the sharper
+colouring and `K_t^-` exclusions in Proposition 11.
+The global minimizer need not retain the nested labels or align the deleted
+endpoints with its shores.  The immediate exceptional-centre attack is
+therefore operation-labelled separator terminalization: force a common
+boundary partition, an explicit `K_7^-` model, or a smaller component of
+`G-N[z]` for a named exceptional `z`.  An arbitrary global minimum
+separator is not an exceptional neighbourhood boundary.
 
 For the bare extremal theorem, `r=4` remains open because an arbitrary
 seven-connected graph at the density threshold has no proper-minor
