@@ -273,6 +273,21 @@ and still requires a label-preserving transfer or a genuine exceptional
 anti-neighbourhood descent.  The written reduction and its exact scope are
 recorded in the
 [pair-deletion technical note](active/hc7_k7minus_pair_deletion_k7vee_reduction.md).
+That note now gives the exact contact count for all four labelled
+absorptions.  A prescribed-spoke fan can retain the five first edges from
+one operation and end once in five named branch sets, but it does not force
+the corresponding clean first-hit labels; this is the precise remaining
+operation-to-branch-set inference.
+
+A two-missing-edge extension of the rooted persistence argument gives a
+stronger response when an exceptional root contacts the deficient `P`-bag:
+after minimizing that rooted bag, two jointly model-preserving incident
+edges have nonadjacent outer endpoints.  Contracting their two-edge star
+produces one six-colouring in which the root and both endpoints share a
+colour, all five alternate colours occur at the other six neighbours, and
+the same labelled `K_7^\vee` model survives.  The unresolved step is now
+strictly the assignment of those palette colours to the required branch-set
+roles, or a same-host exceptional anti-neighbourhood descent.
 
 The same note proves a stronger one-root entrance.  For every exceptional
 vertex `r`, the global `4n-2` density bound places the six-connected graph

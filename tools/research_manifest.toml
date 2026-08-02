@@ -8175,7 +8175,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 1 (a spanning near-clique model after deleting two centres)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "fdfaf7e540cb36e23bac8f4327ec5632bc6555c7d1e375722ccaea2c182b1b07"
+expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
 scope = "two degree-eight vertices in the literal-K5-free density-4n branch forced by a disconnected exceptional anti-neighbourhood"
 label_fidelity = "both deleted roots and all seven labelled branch sets of the spanning K7-vee model remain explicit"
 conclusions = [
@@ -8200,7 +8200,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 3 (forced target interface)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "fdfaf7e540cb36e23bac8f4327ec5632bc6555c7d1e375722ccaea2c182b1b07"
+expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
 scope = "one retained degree-eight root in a contact-maximal spanning K6 model, with a globally minimum branch set containing at least two root neighbours"
 label_fidelity = "the retained root, surplus donor, uncontacted target, four protected branch sets and every literal donor-target portal remain named"
 conclusions = [
@@ -8224,7 +8224,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 4 (a spanning near-clique and forced interface at every exceptional centre)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "fdfaf7e540cb36e23bac8f4327ec5632bc6555c7d1e375722ccaea2c182b1b07"
+expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
 scope = "any exceptional degree-eight vertex in the critical K7-minus host"
 label_fidelity = "the exceptional root and seven labelled branch sets of the spanning K7-vee model remain explicit; a separately optimized K6 model need not retain the P-B-C provenance"
 conclusions = [
@@ -8239,6 +8239,30 @@ does_not_prove = [
   "a K7-minus model, six-colouring, exceptional-component descent, or host closure",
 ]
 keywords = ["K7 minus", "exceptional vertex", "single deletion", "K7 vee", "spanning K6", "forced interface"]
+
+[[claims]]
+id = "hc7.k7minus_two_hole_rooted_persistence"
+title = "Two-hole rooted persistence and the deficient-bag response"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
+source_heading = "Proposition 6 (two-hole persistence and a deficient-bag response)"
+active = false
+audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
+expected_source_sha256 = "033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b"
+scope = "an exceptional degree-eight root added to a contacted bag of an exact spanning labelled K7-vee model"
+label_fidelity = "the exceptional root, the deficient P-B-C labels, the minimized contacted bag, every persistent incident edge, and one two-edge contraction colouring remain explicit"
+conclusions = [
+  "a contacted bag of K7-vee degree m has at least 9-m individually persistent incident root edges, and non-joint pairs form a matching",
+  "when the root contacts the deficient P-bag, two jointly persistent edges have nonadjacent outer endpoints",
+  "one two-edge star-contraction colouring retains the same labelled model and uses all five alternate colours at the remaining root neighbours",
+]
+does_not_prove = [
+  "that minimizing the contacted bag preserves the original root-contact pattern",
+  "an assignment of the five alternate colours to the five required branch-set roles",
+  "a K7-minus model, six-colouring of G, exceptional-component descent, or host closure",
+]
+keywords = ["K7 minus", "K7 vee", "persistent edges", "joint deletion", "star contraction", "deficient bag"]
 
 [[claims]]
 id = "hc7.target.k7minus_one_operation_interface_closure"
@@ -12938,6 +12962,12 @@ source = "hc7.target.k7minus_rooted_shore_allocation"
 target = "hc7.barrier.k7minus_two_full_shore_mechanism"
 kind = "guarded_by"
 note = "Fullness and minor exclusion alone are insufficient without seven-connectivity and critical response compatibility."
+
+[[relations]]
+source = "hc7.target.k7minus_one_operation_interface_closure"
+target = "hc7.k7minus_two_hole_rooted_persistence"
+kind = "uses"
+note = "When the exceptional root contacts the deficient bag, the two-hole persistence lemma supplies one nonadjacent jointly persistent edge pair and its exact star-contraction colouring response."
 
 [[verifiers]]
 id = "degree8-nonedge-bipartition-classification"

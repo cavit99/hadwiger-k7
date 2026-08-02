@@ -1,9 +1,11 @@
 # Internal audit: exceptional-root deletion and `K_7^\vee`
 
 **Verdict:** GREEN for the pair- and single-deletion model reductions, the
-optimized forced-interface theorem, the one-operation Kempe conclusion, and
-the sufficient same-host descent test.  The operation-to-recipient
-allocation and terminal/descent target are correctly left open.
+optimized forced-interface theorem, the exact labelled-absorption contact
+formula, the two-hole persistence count and deficient-bag response, the
+one-operation Kempe conclusion, and the sufficient same-host descent test.
+Label-preserving donor optimization, operation-to-recipient allocation, and
+the terminal/descent target are correctly left open.
 
 **Audited source:**
 `active/hc7_k7minus_pair_deletion_k7vee_reduction.md`
@@ -11,7 +13,7 @@ allocation and terminal/descent target are correctly left open.
 **SHA-256:**
 
 ```text
-fdfaf7e540cb36e23bac8f4327ec5632bc6555c7d1e375722ccaea2c182b1b07
+033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -169,6 +171,25 @@ are the new deductions.  The audit also checks the stated limitation: a
 globally optimized `K_6` model need not retain the `P,B,C` provenance of one
 selected near-clique model.
 
+## 6A. Exact labelled-absorption contact formula
+
+If `p=0`, merging `P` with `U_h` preserves the old contact count `k`.  If
+`p=1`, the merged bag is contacted regardless of `U_h`, so the new count is
+`k` or `k+1` according as `U_h` was contacted or missed.  When `p=1`, target
+exclusion makes `r` miss `B,C`; hence `k` counts only contacted universal
+bags.  The cases attaining four contacts and the two unresolved regions in
+(A2)--(A3) follow exactly.
+
+Four is the unrestricted upper bound for every spanning `K_6` model, so an
+absorption attaining four is globally contact-maximal.  This does not make
+the four-absorption family exchange-closed.  A transfer only preserves a
+contact with the fused bag and may lose its separate `P` or `U_h` portal.
+For donors `B,C`, anticompleteness to `P` forces that contact to use `U_h`,
+which verifies the stated safe class.  No analogous conclusion is claimed
+for a universal donor.  A fused-donor transfer can also destroy the
+connectivity or nonemptiness required to recover the original two branch
+sets, and the source now records this separately.
+
 ## 7. One fixed edge-deletion response
 
 In every six-colouring of `G-rx`, the endpoints `r,x` have one common
@@ -181,9 +202,57 @@ from the same named operation.
 
 This conclusion carries colour labels, not branch-set labels.  The source
 correctly does not infer pairwise disjoint target and owner pieces.  Existing
-first-hit and Rado--Menger results likewise do not turn an internal
-separator into a bounded host separator or identify it with `N(z)`.  The
-first unsupported inference is therefore stated at the right point.
+prescribed-spoke machinery does extend the five distinct first edges in the
+six-connected graph `G-r` to any chosen five-set, including one vertex in
+each named target or protected bag.  It does not prescribe the pairing and
+does not stop a path from first entering a differently labelled bag.  The
+rerouting retains operation-generated first edges, not bichromatic paths.
+Thus it supplies named ends, not clean named first hits.  Existing first-hit
+and Rado--Menger results likewise do not turn an internal separator into a
+bounded host separator or identify it with `N(z)`.  The first unsupported
+operation-level inference is therefore stated at the right point.
+
+## 7A. Two-hole persistence and the deficient-bag response
+
+Proposition 6 is a genuine two-missing-edge adaptation of the cited rooted
+persistence theorem, rather than an application of that theorem verbatim.
+Target exclusion makes every reselected labelled `K_7^\vee` model exact:
+filling either `PB` or `PC` gives `K_7^-`.  For every component of `R-r`,
+the same reassignment argument therefore forces at least two exclusive
+required labels.  The private-label count and exact degree identity give
+
+\[
+ \rho=8-m+k_0+2k_1+q+\sigma\ge9-m.
+\]
+
+Support classes have independent deletion effects.  A non-joint pair can
+only be an entire class of order two, so the non-joint pairs form a
+matching.  If all joint pairs have adjacent outer endpoints, `K_4`-freeness
+of `G[N(r)]` gives exactly `K_5-2K_2` at `rho=5`, exactly `K_6-3K_2` at
+`rho=6`, and excludes `rho>=7`.
+
+For `D=P`, the lower bound is five.  Equality `rho=5` forces
+`k_0=k_1=sigma=0` and `q=1`; all five persistent edges then form one
+external support class.  Their outer endpoints would be a `K_5` under the
+no-good-pair assumption, contradicting `K_4`-freeness.  At `rho=6`, a
+six-fan in `G-r` from a remaining neighbour to all six endpoints gives a
+connected set `T` disjoint from and adjacent to those endpoints.  If the
+three possible missing pairs are `a_i b_i`, then
+
+\[
+ \{a_1,a_2\},\{b_1\},\{b_2\},\{a_3\},\{b_3\},\{r\},T
+\]
+
+are seven disjoint connected branch sets with only `a_3b_3` possibly
+nonadjacent.  This verifies the explicit `K_7^-` contradiction and hence
+the nonadjacent jointly persistent pair for every minimum `P`-bag.
+
+Contracting its two-edge star is a proper minor.  Pullback gives the exact
+three-vertex common colour class on the deleted incident edges; a missing
+alternate colour at the other six neighbours would extend to a
+six-colouring of `G`.  Joint persistence keeps the same labelled model.
+The audit separately confirms the stated limit: no palette colour has yet
+been assigned to a required branch-set role.
 
 ## 8. Same-host descent test
 
