@@ -285,47 +285,64 @@ after minimizing that rooted bag, two jointly model-preserving incident
 edges have nonadjacent outer endpoints.  Contracting their two-edge star
 produces one six-colouring in which the root and both endpoints share a
 colour, all five alternate colours occur at the other six neighbours, and
-the same labelled `K_7^\vee` model survives.  The unresolved step is now
-strictly the assignment of those palette colours to the required branch-set
-roles, or a same-host exceptional anti-neighbourhood descent.
+the same labelled `K_7^\vee` model survives.  At the model level this feeds
+the separator dichotomy below; terminal use still requires assigning those
+palette colours to branch-set roles or obtaining a same-host exceptional
+anti-neighbourhood descent.
 
-A bounded attempt to combine that fixed response with the optimized
-forced interface exposed an earlier quantifier obstruction.  The minimum
-rooted deficient bag is a bag in a labelled model of `G`; after deleting the
-root it may be empty, lose a required universal adjacency, or split into two
-components.  In the split case those components own the four universal
-labels in an exact `2+2` partition; all eight root neighbours lie in them,
-with one root-neighbour side a clique of order at most three and the other
-of order at least five and independence number two.
+The audited
+[exact spanning-`K_7^\vee` separator dichotomy](results/hc7_k7minus_exact_k7vee_separator_dichotomy.md)
+now closes the model-level alternative.  In a seven-connected host, if the
+deficient bag `X` is anticomplete to its two nonneighbours and meets all
+four universal bags,
+then either there is an explicit `K_7^-` model or some universal bag `U_i`
+contains a nonempty proper connected set `Y` such that `U_i-Y` is connected
+and `N_G(Y)` is an actual separator of order at least seven.  Applying this
+to the fixed two-edge response loses at most two boundary vertices, leaves
+at least five surviving `X`-portals across the four universal bags, and
+retains the same named six-colouring.  Thus, in the target-free host, every
+root-removal form now returns an operation-preserving actual nested
+separator.
 
-The new large-side attack collapses the formerly thick two-owner interface
-to one literal vertex `t`.  Inside the minimum deficient bag, `t` has one
-bag-neighbour, owns every endpoint of both adjacencies to its two universal
-bags, and has no other foreign neighbours.  Removing `t` leaves one
-connected open side; the other root-removal component together with the six
-foreign bags is the other.  These sides are anticomplete and both are
-adjacent to the nonadjacent boundary vertices `r,t`.  Contracting either
-side together with `r` gives the opposite closed shore with the edge `rt`
-added.  Both proper minors are six-colourable; their boundary colour pairs
-are distinct and can be aligned by a palette permutation, so the two
-colourings glue to a six-colouring of `G`.  This contradiction eliminates
-the entire two-component `2+2` root-removal residue.  It is an unbounded
-terminal colouring argument, not a finite boundary elimination.
+Two finer root-removal branches are also terminal.  The exact two-component
+`2+2` split six-colours `G` by gluing two proper-minor colourings across a
+nonadjacent two-vertex boundary.  If `R-r` is connected and exactly two
+universal adjacencies are lost, the same two-owner reduction eliminates
+every nonconcentrated residue by either a two-cut contradiction or a
+two-boundary six-colouring; the only survivor is the atomic bag
+`R={r,s}`, with `s` supporting precisely the two retained adjacencies and
+`r` the two lost ones.  Singleton, atomic two-loss, and one-loss geometries
+remain possible, but they are no longer the immediate model-level gate.
 
-Only after proving root-removal compatibility can one assign the contact
-parameters of the labelled absorption to the same model and response.  A
-compatible minimum deficient bag may still contact at most two universal
-bags, so no labelled absorption is known to attain the global four-contact
-maximum.  Even when one does, donor-minimizing transfers are not proved to
-preserve the separate deficient/universal labels or the persistent edge
-pair.  The joint model--colouring family is therefore not known to be
-exchange-closed, and a lexicographic optimization over it is invalid.  The
-remaining root-removal gap is now only `R={r}`, or a connected `R-r` which
-loses a required universal adjacency formerly supported at `r`.  After
-those cases, the ordered repairs are low-contact elimination and
-operation-preserving absorbed-family exchange.  The proved terminal and the
-remaining quantifier nonclosure are recorded in the pair-deletion technical
-note.
+The existence of that separator also yields a global minimum-separator
+normal form.  Either there is an exact order-seven cut with exactly two
+shores and packing vector `(1,1)` or `(1,2)` up to orientation, or a
+globally minimum boundary of order at least eight has exactly two or three
+full complementary components.  Every such boundary is `K_5`-minor-free
+and hence four-colourable.  More precisely, with `m` components, deleting
+any `a<=m-1` boundary vertices leaves a `(5-a)`-colourable graph with no
+`K_{6-a}^-` minor; for `a<=m-2` it has no `K_{5-a}` minor.
+
+This global minimization does not retain the nested near-clique labels or
+align the fixed deleted edges with the new shores.  Its boundary need not
+equal `N_G(z)` for any named exceptional vertex `z`.  Even with endpoint
+alignment, one fixed response may stop at five-colour boundary saturation,
+and no proved theorem turns that saturation into a labelled branch-set
+transfer, a common boundary partition, or a smaller exceptional
+anti-neighbourhood.  The immediate target is therefore
+**operation-labelled separator terminalization**, not generic root-removal
+compatibility.  Low-contact elimination and operation-preserving exchange
+remain later obligations if the separator route returns to the absorbed
+model family.  The proved dichotomy, atomic residue, and exact nonclosure
+are recorded in the pair-deletion technical note.
+
+At an operation-preserving exact seven-cut, endpoint placement can also be
+normalized.  Unless both deleted endpoints lie in the boundary, a named
+single-edge response gives a legal colouring of one closed shore.  If both
+lie in the boundary, no colouring of the double deletion can be proper on
+the literal boundary.  Thus the exact residues are now double-boundary
+placement, or a legal trace lacking the final partition-specific connected
+subgraph required for reflection.
 
 The same note proves a stronger one-root entrance.  For every exceptional
 vertex `r`, the global `4n-2` density bound places the six-connected graph

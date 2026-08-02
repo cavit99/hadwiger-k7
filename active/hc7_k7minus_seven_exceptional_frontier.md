@@ -215,7 +215,21 @@ five unbounded reductions; none is an isolated graph-code elimination.
    anticomplete, and both adjacent to the same two nonadjacent boundary
    vertices.  Two proper-minor colourings therefore glue across that
    boundary and six-colour `G`.  This eliminates the entire `2+2`
-   root-removal residue.
+   root-removal residue.  In the connected two-loss case, the same
+   two-owner argument eliminates every nonconcentrated residue by a two-cut
+   contradiction or a two-boundary six-colouring; only the atomic bag
+   `R={r,s}` with a `2+2` split of the universal adjacencies can survive.
+
+   More generally, the audited
+   [exact spanning-`K_7^\vee` separator dichotomy](../results/hc7_k7minus_exact_k7vee_separator_dichotomy.md)
+   bypasses the remaining root-removal forms at the model level.  The fixed
+   two-edge response either gives an explicit `K_7^-` model or preserves
+   its named colouring on an actual nested separator `N_G(Y)` of order at
+   least seven, where `Y` is a nonempty proper connected part of one
+   universal bag and its complement in that bag remains connected.  This
+   is nonterminal: the separator may have order greater than seven, the two
+   deleted endpoints need not lie on opposite open shores, and the boundary
+   need not be `N_G(z)` for a named exceptional vertex.
 
 The same note gives a global one-root strengthening.  For every exceptional
 `r`, the bounds `m>=4n-2` and `b>=17` put the six-connected graph `G-r`
@@ -340,24 +354,39 @@ vertices `v`.  At its centre, one named edge-deletion colouring must yield
 an explicit `K_7^-` model, a six-colouring, or an exceptional
 anti-neighbourhood component smaller than `C_0`.  This
 [one-operation terminal/descent target](hc7_k7minus_pair_deletion_k7vee_reduction.md#5-one-named-colouring-operation-and-its-exact-limit)
-would close the whole critical host, but the colour-to-branch-label
-allocation needed to prove it is open.
+would close the whole critical host.  The new model-level dichotomy returns
+an operation-preserving actual separator.  A separate global minimization
+reduces the host to an exact two-shore seven-cut or to a minimum boundary of
+order at least eight with two or three full complementary components and a
+`K_5`-minor-free four-colourable boundary satisfying a stronger
+vertex-deletion profile.  That minimization loses
+the near-clique labels and operation-to-shore alignment.  Recovering those
+data and converting the normalized interface into one of the three stated
+terminals is the immediate open step.
 
 ## 5. Recommended next attack
 
 Attack the remaining operation-coupled obligations in this order.
 
-1. **Complete root-removal compatibility for the minimum deficient
-   `P`-bag.**  The two-component split is eliminated.  Exclude the remaining
-   singleton bag `R={r}` and preserve every universal adjacency through the
-   one connected remainder, while retaining the fixed operation.
-2. **Eliminate the low-contact residue once compatibility holds.**  In the
+1. **Terminalize the normalized separator with operation data restored.**
+   In the exact-seven branch begin with packing `(1,2)`, then `(1,1)`; in
+   the higher-order branch use the two-/three-full-component contraction
+   profile.  Retain the fixed two-edge-star colouring and force a common
+   boundary equality partition, an explicit `K_7^-` model, or a component
+   of `G-N[z]` smaller than the chosen minimum for a named exceptional `z`.
+   If both deleted endpoints lie in an exact-seven boundary, no fixed
+   double-deletion trace is legal there.  Otherwise a named single-edge
+   response gives a legal one-sided trace, and the first exact unsupported
+   step is its conversion into the last partition-specific connected
+   subgraph, a terminal minor, or a named descent.
+2. **Eliminate the low-contact residue if terminalization returns to the
+   absorbed model family.**  In the
    notation of the pair-deletion reduction this is `p=1,k<=2`.  Keep the
    fixed colouring and labelled near-clique model simultaneous.
 3. **Prove operation-preserving exchange in the contact-four absorbed
    family.**  A donor-reducing transfer must retain the separate `P,U_h`
    labels and the fixed response, or give one of the same terminal outcomes.
-4. **Decode every returned exact seven-separation as a two-shore response.**
+4. **Decode an order-seven return as a two-shore response.**
    The audited `3,2,2` theorem now eliminates all three-component cuts, so
    only packing `(1,2)` (first) and `(1,1)` remain.  An arbitrary smaller
    adhesion is not an exceptional anti-neighbourhood descent.
