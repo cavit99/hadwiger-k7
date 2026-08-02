@@ -2,9 +2,10 @@
 
 **Status:** written proof; separately internally audited in the adjacent
 [`_audit.md`](hc7_k7minus_exact7_three_full_subgraph_completion_audit.md) note.
-The quotient characterization is computation-free.  The final section gives
-an explicit host-level terminal construction, but the hypotheses of that
-construction are not yet forced in every exact `(1,2)` separation.
+The quotient characterization is computation-free.  The host-level section
+gives explicit terminal constructions and reduces every detached complete
+support in the first paired response to a minor or an actual separator.
+Such a support is not yet forced in every exact `(1,2)` separation.
 
 Write `K_4^-` for the graph obtained from `K_4` by deleting one edge.  Let
 `H` be a graph on a literal seven-set `S`.  Form `J_0(H)` by adjoining three
@@ -253,7 +254,67 @@ singletons in `K` are adjacent, and at most one adjacency from the fourth
 or fifth set to those singletons is absent.  Thus (12) is a `K_7^-` model.
 \(\square\)
 
-## 4. Exact scope and remaining inference
+## 4. Complete supports with several missing clique contacts
+
+The preceding lemmas give a minor immediately when enough retained-clique
+contacts are present.  The opposite contact extreme does not require a
+three-target linkage.
+
+### Lemma 6 (a complete support gives a minor or a nested separator)
+
+Assume `G` is seven-connected and retain the `2+1+1+3` setting (8).  If a
+connected subgraph `W` satisfies the hypotheses of Lemma 4 apart from its
+two-contact requirement, then either `G` contains a `K_7^-` minor or there
+is a nonempty proper connected part of a branch set in a spanning extension
+of the displayed model whose complement in that branch set is connected
+and whose open neighbourhood is an actual separator of `G`.
+
+#### Proof
+
+Put
+
+\[
+ A_0=Q\cup\{m_1\},\qquad A_1=P_1\cup\{m_2\},\qquad A_2=P_2,
+ \qquad X=W\cup\{x,y\}.                               \tag{13}
+\]
+
+The six sets `A_0,A_1,A_2` and the three singleton members of `K` form a
+`K_6`-minor model.  The set `X` is adjacent to each `A_i`.  If it is
+adjacent to at least two members of `K`, Lemma 4 applies.
+
+Otherwise enlarge these seven branch sets to a spanning model, assigning
+each unused connected component to an adjacent branch set.  If this fills
+all but at most one missing `X`--`K` adjacency, the resulting seven sets
+are themselves a `K_7^-` model.  If at least two remain absent, apply the
+audited
+[multiple-missing-adjacency separator dichotomy](hc7_k7minus_multiple_missing_adjacencies_separator_dichotomy.md),
+Theorem 1.  It gives exactly the asserted alternative. \(\square\)
+
+### Lemma 7 (one complete support in the retained-edge response)
+
+Assume `G` is seven-connected and retain the `3+1+1+2` setting (11).  If
+one of `X union {x}` and `Y union {y}` is adjacent to both members of `K`,
+then `G` contains a `K_7^-` minor or the nested-separator outcome of Lemma 6
+holds.
+
+#### Proof
+
+Suppose `Y union {y}` is adjacent to both members of `K`.  If
+`X union {x}` meets either one, Lemma 5 gives `K_7^-`.  Otherwise use
+`X union {x}` as the centre and use
+
+\[
+ Q\cup\{m_1\},\quad P_1\cup\{m_2\},\quad P_2\cup\{m_3\},
+ \quad Y\cup\{y\},\quad\{k\}\ (k\in K)               \tag{14}
+\]
+
+as the six pairwise adjacent foreign branch sets.  The centre is adjacent
+to the first four sets and misses the two `K` singletons.  Extend the model
+to span `G`.  It either acquires all but at most one missing adjacency or
+Theorem 1 of the cited multiple-missing-adjacency dichotomy applies.
+\(\square\)
+
+## 5. Exact scope and remaining inference
 
 Lemmas 3--5 are explicit terminal constructions, not connectivity
 heuristics.  In a `K_7^-`-minor-free host they imply, respectively,
@@ -261,7 +322,7 @@ heuristics.  In a `K_7^-`-minor-free host they imply, respectively,
 \[
  |N_K(X\cup\{o\})|\le1,
  \qquad
- |N_K(W\cup\{x,y\})|\le1.                            \tag{13}
+ |N_K(W\cup\{x,y\})|\le1.                            \tag{15}
 \]
 
 Lemma 5 gives the corresponding conclusion for the `3+1+1+2` response:
@@ -273,24 +334,35 @@ Thus an operation-generated support which meets one of the four vertices in
 stronger than the earlier conclusion allowing only one unspecified missing
 boundary contact.
 
-The present operation-specific path theorems do not contradict (11).
-Seven-connectivity can force additional attachments of `X` or `W` to
-`P_1 union P_2`, but it does not force two named contacts in `K`.  In the
-direct-entry case there may be no connected subgraph disjoint from the two
-rich full subgraphs at all.  The first unsupported inference is therefore:
+Lemmas 6--7 remove the former need to force two named contacts in `K` once
+a complete operated support has been separated from the two rich full
+subgraphs.  In the `2+1+1+3` response every such support now gives either
+`K_7^-` or an actual nested separator.  In the `3+1+1+2` response the same
+holds whenever one support has both retained-edge contacts; the crossed
+one-miss-at-each orientation remains outside that near-clique reduction.
+
+The separator is not yet terminal: its boundary need not be the
+neighbourhood of a named exceptional vertex, and the fixed colouring need
+not be proper on either new closed shore.  In the direct-entry case there
+may also be no complete operated support disjoint from the two rich full
+subgraphs at all.  The first unsupported inference is therefore:
 
 > split one rich full subgraph, while retaining one full connected
-> remainder and the fixed proper-minor colouring, so that the separated
-> connected subgraph or adjacent pair of connected subgraphs satisfies
-> Lemma 3 or Lemma 5.
+> remainder and the fixed proper-minor colouring, so that either a complete
+> operated support is disjoint from both retained full subgraphs or the
+> returned separator carries a legal common trace or is literally
+> `N_G(z)` for a named exceptional degree-eight vertex `z`.
 
-A valid replacement must use the same named edge-deletion or star-
-contraction colouring and must return either the split required by Lemma 3,
-a six-colouring, or a component of `G-N[z]` strictly smaller than the
-selected component for a named exceptional degree-eight vertex `z`.
-Neither ordinary connectivity nor the current unlabelled full-subgraph rotations
-supplies this operation-preserving conclusion.  Accordingly this theorem
-does not eliminate every exact `(1,2)` separation.
+A gate-edge deletion supplies five bichromatic bypasses, but their colours
+belong to that second operation, not to the original attained duties.
+Treating them as duty labels is an unsupported operation-provenance swap.
+The required two-operation trace-alignment theorem must instead return a
+complete support, a common exact boundary partition, an explicit `K_7^-`
+model, or a component of `G-N[z]` strictly smaller than the selected
+component for a named exceptional degree-eight vertex `z`.  Neither
+ordinary connectivity nor the current unlabelled full-subgraph rotations
+supplies this conclusion.  Accordingly this theorem does not eliminate
+every exact `(1,2)` separation.
 
 ## Dependencies and antecedents
 
@@ -299,3 +371,4 @@ does not eliminate every exact `(1,2)` separation.
 - [critical seven-cut capacity](hc7_k7minus_critical_seven_cut_capacity.md)
 - [connected-subgraph capacity at a seven-vertex boundary](hc7_k7minus_seven_boundary_component_descent.md)
 - [selected-response preservation and partition-specific connected-subgraph criterion](hc7_exact7_selected_response_preservation.md)
+- [multiple missing centre adjacencies give a minor or separator](hc7_k7minus_multiple_missing_adjacencies_separator_dichotomy.md)

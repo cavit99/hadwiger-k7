@@ -7,7 +7,9 @@ constructions; the result is nonterminal for the full exact `(1,2)` host.
 [`hc7_k7minus_exact7_three_full_subgraph_completion.md`](hc7_k7minus_exact7_three_full_subgraph_completion.md)
 
 **SHA-256:**
-`7c791436c697f4cbc04dd6f1881dee2b159a9bb63efa18c2a46606da9257a793`
+`57d05838dfa92fa7ebd12ede1946f84b13e1a4839cd67a2359ae39b649e4f8c1`
+
+This is a separate internal mathematical audit, not external peer review.
 
 ## 1. Static quotient equivalences
 
@@ -83,15 +85,44 @@ the first three branch sets.  The hypotheses supply the support--support
 edge, the edge inside `K`, and all but at most one support--`K` adjacency.
 The seven displayed sets therefore form a `K_7^-` model.
 
-## 4. Scope and unresolved point
+## 4. Multiple-missing-adjacency lift
 
-The audit found no proof that an operation-generated support must have the
-two named triangle contacts required by Lemma 3 or Lemma 4.  Seven-
-connectivity may instead route all additional attachments through the two
-rich full subgraphs.  Nor does a returned small separation automatically
-identify the neighbourhood of a named exceptional degree-eight vertex.
+For Lemma 6, the three full-derived sets and the three triangle singletons
+are six pairwise adjacent connected sets.  The complete operated support is
+connected, disjoint from them, and adjacent to all three full-derived sets.
+After assigning every unused complementary component to a branch set it
+meets, these seven sets form a spanning model whose only possible missing
+edges are incident with the operated support.  At most one missing edge is
+already `K_7^-`; two or three invoke the separately audited
+multiple-missing-adjacency dichotomy.
+
+For Lemma 7, a support adjacent to both members of the retained edge joins
+the three full-derived sets and those two singletons to make the foreign
+`K_6` model.  The other support is the centre.  If it meets either retained
+singleton, Lemma 5 applies; otherwise it has exactly the two missing centre
+adjacencies needed by the same dichotomy.  Every displayed set is connected
+and every claimed foreign adjacency is literal.
+
+These lemmas return a genuine host separator, but not a colouring or a
+named exceptional anti-neighbourhood.
+
+## 5. Scope and unresolved point
+
+The audit found no proof that a complete operation-generated support can
+always be detached from the two rich full subgraphs while one full
+connected remainder survives.  Seven-connectivity may route all relevant
+attachments through those subgraphs.  Nor does the returned separator
+automatically identify the neighbourhood of a named exceptional
+degree-eight vertex or carry a legal common boundary trace.
+
+Deleting an internal gate edge gives a second response with five
+bichromatic bypasses, but its boundary colours are not the duty labels of
+the original attained partition.  Equating them would be an invalid
+cross-operation provenance step.  A two-operation trace-alignment theorem
+is an additional unproved input.
 
 Accordingly the result may be cited for the two exact quotient
-characterizations, their literal lift, and the two terminal constructions.
+characterizations, their literal lift, the three terminal constructions,
+and the complete-support-to-separator reductions.
 It may not be cited as an elimination of exact `(1,2)`, a six-colouring of
 the general host, or an exceptional anti-neighbourhood descent.

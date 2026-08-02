@@ -347,16 +347,26 @@ subgraph required for reflection.
 The packing-`(1,2)` branch now has an explicit final-model test.  The
 [three-full-subgraph completion theorem](results/hc7_k7minus_exact7_three_full_subgraph_completion.md)
 characterizes both static contracted quotients and proves explicit final
-models for both paired responses.  In the `2+1+1+3` response, one operated
-connected subgraph with a nontriangle boundary contact and two triangle
-contacts completes `K_7^-`; in the `3+1+1+2` response, two adjacent operated
-connected subgraphs close when all but at most one contact with the retained
-boundary edge is present.  This does not close the branch: seven-connectivity may
-route all compensating attachments through the two rich full connected
-subgraphs.  The exact remaining inference is an operation-preserving split
-of one of those subgraphs which retains a full connected remainder and
-produces one of the two displayed contact configurations, or instead returns
-a common boundary partition or a named smaller exceptional anti-neighbourhood.
+models for both paired responses.  The computation-free
+[multiple-missing-adjacency dichotomy](results/hc7_k7minus_multiple_missing_adjacencies_separator_dichotomy.md)
+now removes the contact-count obstruction from the first response: every
+complete operated `x`--`y` support disjoint from the two rich full connected
+subgraphs gives `K_7^-` or an actual nested separator, even with no retained
+triangle contact.  In the second response the same is true when one support
+meets both ends of the retained boundary edge; the crossed one-miss-at-each
+orientation remains.
+
+This does not close the branch.  The direct-entry geometry may put every
+complete support through a retained full connected subgraph, while the new
+separator can have order greater than seven, need not carry a legal common
+trace, and need not be `N_G(z)` for an exceptional vertex.  Deleting an
+internal attained-gate edge supplies five bichromatic bypasses but labels
+them by a different proper-minor response; identifying those colours with
+the original attained duties is the first unsupported inference.  The exact
+remaining theorem is therefore two-operation trace alignment: detach a
+complete support while retaining one full connected remainder, or return a
+common boundary partition, `K_7^-`, or a named smaller exceptional
+anti-neighbourhood.
 
 The same note proves a stronger one-root entrance.  For every exceptional
 vertex `r`, the global `4n-2` density bound places the six-connected graph
