@@ -5,7 +5,9 @@ optimized forced-interface theorem, the exact labelled-absorption contact
 formula, the two-hole persistence count and deficient-bag response, the
 one-operation Kempe conclusion, and the sufficient same-host descent test.
 Label-preserving donor optimization, operation-to-recipient allocation, and
-the terminal/descent target are correctly left open.
+the terminal/descent target are correctly left open.  The recorded failed
+joint-optimization route correctly identifies its two ordered quantifier
+gaps and does not present them as a counterexample.
 
 **Audited source:**
 `active/hc7_k7minus_pair_deletion_k7vee_reduction.md`
@@ -13,7 +15,7 @@ the terminal/descent target are correctly left open.
 **SHA-256:**
 
 ```text
-033edc45460dfc020efa657809f2a7a0863121bb14d2c84128d20e559ad6455b
+aca10eb92f3901207db70abc397c7aa317924220705c014632054e303169eb88
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -253,6 +255,28 @@ alternate colour at the other six neighbours would extend to a
 six-colouring of `G`.  Joint persistence keeps the same labelled model.
 The audit separately confirms the stated limit: no palette colour has yet
 been assigned to a required branch-set role.
+
+## 7B. Joint-optimization negative finding
+
+For the deficient-bag application of Proposition 6 one has `p=1`.  The
+contact formula in (A1) then makes a labelled absorption globally
+contact-maximal only when `k>=3`; no proved statement excludes `k<=2` in
+the absolute minimum rooted `P`-bag family.  Thus the failed attack cannot
+legitimately start the optimized forced-interface argument on the same
+model and response.
+
+Even conditional on `k>=3`, Theorem 4 minimizes the donor over all
+contact-maximal spanning `K_6` models.  Its transfer proof preserves the
+six fused branch sets, not necessarily the separate `P,U_h` refinement or
+the support of the fixed jointly persistent pair.  The source therefore
+correctly rejects a lexicographic potential combining these choices: the
+relevant family has not been proved exchange-closed.
+
+The two stated repair lemmas address these gaps in their logical order.
+The note claims neither that they hold nor that their failure is realized
+by a graph satisfying the critical-host hypotheses.  This is a scoped
+negative finding about an unsupported proof mechanism, not a barrier or a
+mathematical disproof of the one-operation target.
 
 ## 8. Same-host descent test
 

@@ -111,6 +111,7 @@ Label every substantive claim with one or more applicable statuses:
 - separate internal audit;
 - computer-assisted finite result;
 - conjectural target; or
+- recorded negative finding / route nonclosure (not a counterexample); or
 - barrier/counterexample to an intermediate claim.
 
 Never describe an internal agent audit as external peer review.  Never infer
@@ -141,6 +142,15 @@ a traceable source.
   practical.
 - Record counterexamples to proposed lemmas in `barriers/`, including the
   exact statement they refute and the scope they do not refute.
+- Record material negative findings even when they are not counterexamples:
+  failed proof mechanisms, incompatible quantifier choices, and first
+  unsupported inferences which another agent might otherwise repeat.  Put a
+  live finding in the designated technical frontier, including its exact
+  hypotheses, attempted inference, failure point, what it does not refute,
+  and the smallest repair lemma; summarize it in `RESEARCH_LEDGER.md` only
+  when it changes the current understanding.
+  Archive it when the route is frozen.  Do not classify it as a barrier
+  unless an explicit construction actually refutes a stated claim.
 - Preserve historical work in `archive/`; use Git history and archive notes
   rather than deleting or rewriting provenance.
 
