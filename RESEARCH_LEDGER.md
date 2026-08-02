@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 1 August 2026
+**Last updated:** 2 August 2026
 **Authoritative status:** $HC_7$ is not proved here.
 **Publication assessment:** the internally audited corpus is a credible
 partial-results manuscript candidate, but it is not submission-ready;
@@ -290,17 +290,42 @@ strictly the assignment of those palette colours to the required branch-set
 roles, or a same-host exceptional anti-neighbourhood descent.
 
 A bounded attempt to combine that fixed response with the optimized
-forced interface exposed an earlier quantifier obstruction.  A minimum
-rooted deficient bag need not contact three universal bags, so none of its
-labelled absorptions is known to attain the global four-contact maximum.
-Even when one does, donor-minimizing transfers are not proved to preserve
-the separate deficient/universal labels or the persistent edge pair.  The
-joint model--colouring family is therefore not known to be exchange-closed,
-and a lexicographic optimization over it is invalid.  The exact next repair
-is to eliminate the at-most-two-universal-contact residue, followed by an
-operation-preserving absorbed-family exchange theorem.  This negative
-finding and its precise scope are recorded in the pair-deletion technical
-note to prevent the same optimization from being assumed again.
+forced interface exposed an earlier quantifier obstruction.  The minimum
+rooted deficient bag is a bag in a labelled model of `G`; after deleting the
+root it may be empty, lose a required universal adjacency, or split into two
+components.  In the split case those components own the four universal
+labels in an exact `2+2` partition; all eight root neighbours lie in them,
+with one root-neighbour side a clique of order at most three and the other
+of order at least five and independence number two.
+
+The new large-side attack collapses the formerly thick two-owner interface
+to one literal vertex `t`.  Inside the minimum deficient bag, `t` has one
+bag-neighbour, owns every endpoint of both adjacencies to its two universal
+bags, and has no other foreign neighbours.  Removing `t` leaves one
+connected open side; the other root-removal component together with the six
+foreign bags is the other.  These sides are anticomplete and both are
+adjacent to the nonadjacent boundary vertices `r,t`.  Contracting either
+side together with `r` gives the opposite closed shore with the edge `rt`
+added.  Both proper minors are six-colourable; their boundary colour pairs
+are distinct and can be aligned by a palette permutation, so the two
+colourings glue to a six-colouring of `G`.  This contradiction eliminates
+the entire two-component `2+2` root-removal residue.  It is an unbounded
+terminal colouring argument, not a finite boundary elimination.
+
+Only after proving root-removal compatibility can one assign the contact
+parameters of the labelled absorption to the same model and response.  A
+compatible minimum deficient bag may still contact at most two universal
+bags, so no labelled absorption is known to attain the global four-contact
+maximum.  Even when one does, donor-minimizing transfers are not proved to
+preserve the separate deficient/universal labels or the persistent edge
+pair.  The joint model--colouring family is therefore not known to be
+exchange-closed, and a lexicographic optimization over it is invalid.  The
+remaining root-removal gap is now only `R={r}`, or a connected `R-r` which
+loses a required universal adjacency formerly supported at `r`.  After
+those cases, the ordered repairs are low-contact elimination and
+operation-preserving absorbed-family exchange.  The proved terminal and the
+remaining quantifier nonclosure are recorded in the pair-deletion technical
+note.
 
 The same note proves a stronger one-root entrance.  For every exceptional
 vertex `r`, the global `4n-2` density bound places the six-connected graph
@@ -346,7 +371,7 @@ two components, has at most nine edges for three, and has maximum degree one
 for four.  In the four-component case every nonsingleton component is
 two-connected.
 
-For the actual minor-minimal non-six-colourable host, the new
+For the actual minor-minimal non-six-colourable host, the
 [critical seven-cut capacity theorem](results/hc7_k7minus_critical_seven_cut_capacity.md)
 uses exact boundary-colouring reflection to sharpen this to
 
@@ -354,15 +379,15 @@ uses exact boundary-colouring reflection to sharpen this to
  2\le r\le\pi_S(G)\le3.
 \]
 
-Thus four components are impossible in the critical host.  If `r=3`, each
-component contains exactly one member of a maximum boundary-full connected-
-subgraph family, `\chi(G[S])=3`, and every proper three-colouring of `G[S]`
-has colour-class sizes `3,2,2`.  If `r=2`, one component has packing number
-one, the two packing numbers sum to at most three, and `G[S]` has an edge.
-The capacity-three conclusion and four-component exclusion were already
-implicit in older audited exact-seven reflection results; the genuinely new
-consequence of the current `K_7^-` boundary theorem is the exact
-three-component chromatic normal form.
+The separately audited
+[three-component `3,2,2` cut theorem](results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+now combines the exact boundary partition with two crossless-shore web
+completions and planar precolouring extension to six-colour the host.
+Therefore every order-seven cut in the critical host has exactly two
+components.  One component has packing number one, the two packing numbers
+sum to at most three, and `G[S]` has an edge.  The proof is computation-free;
+it uses proper-minor colourings and therefore does not eliminate the
+three- or four-component cases in an arbitrary dense seven-connected graph.
 
 The general component-descent theorem gives the exact density change and an
 if-and-only-if seven-connectivity test for contracting any collection of
@@ -374,14 +399,14 @@ Boundary arithmetic alone still permits formal excess patterns in which no
 whole-component contraction preserves the threshold.  These are arithmetic
 patterns, not asserted graph examples.
 
-The full seven-cut dichotomy—an explicit `K_7^-` model or a proper
+The full *bare extremal* seven-cut dichotomy—an explicit `K_7^-` model or a proper
 seven-connected minor still at `4n-4`—remains open.  It is equivalent in
 strength to the bare global `4n-4` extremal theorem, not a routine auxiliary
-lemma.  The critical-host theorem closes `r=4` only by using proper-minor
-six-colourability; it does not remove `r=4` from an arbitrary extremal graph.
-Within the critical seven-cut route, the next positive attack is therefore
-the exact `r=3` form above, followed by the likely hard `r=2` case.  The
-parallel exceptional-centre route has its own ordered attack below.
+lemma.  The critical-host theorems close `r=3,4` only by using proper-minor
+six-colourability; they do not remove those cases from an arbitrary extremal
+graph.  Any exact order-seven separation returned by the exceptional-centre
+programme is now necessarily a two-shore separation, with packing vector
+`(1,1)`, `(1,2)`, or `(2,1)`.
 
 ## Supporting `HC_7` refinements and decoder status
 

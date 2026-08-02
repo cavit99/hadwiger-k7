@@ -3,10 +3,13 @@
 **Verdict:** GREEN for the pair- and single-deletion model reductions, the
 optimized forced-interface theorem, the exact labelled-absorption contact
 formula, the two-hole persistence count and deficient-bag response, the
-one-operation Kempe conclusion, and the sufficient same-host descent test.
+one-operation Kempe conclusion, the root-removal split proposition, and the
+two-owner portal collapse, terminal two-shore colouring, and sufficient
+same-host descent test.
 Label-preserving donor optimization, operation-to-recipient allocation, and
-the terminal/descent target are correctly left open.  The recorded failed
-joint-optimization route correctly identifies its two ordered quantifier
+the global terminal/descent target are correctly left open; the
+two-component residue itself reaches the colouring terminal.  The recorded failed
+joint-optimization route correctly identifies its three ordered quantifier
 gaps and does not present them as a counterexample.
 
 **Audited source:**
@@ -15,7 +18,7 @@ gaps and does not present them as a counterexample.
 **SHA-256:**
 
 ```text
-aca10eb92f3901207db70abc397c7aa317924220705c014632054e303169eb88
+bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -256,23 +259,152 @@ six-colouring of `G`.  Joint persistence keeps the same labelled model.
 The audit separately confirms the stated limit: no palette colour has yet
 been assigned to a required branch-set role.
 
-## 7B. Joint-optimization negative finding
+## 7B. Root-removal compatibility and the split residue
 
-For the deficient-bag application of Proposition 6 one has `p=1`.  The
-contact formula in (A1) then makes a labelled absorption globally
-contact-maximal only when `k>=3`; no proved statement excludes `k<=2` in
-the absolute minimum rooted `P`-bag family.  Thus the failed attack cannot
-legitimately start the optimized forced-interface argument on the same
-model and response.
+For `D=P`, the protected label set has order four.  Proposition 6 proves
+that the monopoly sets of the components of `R-r` are disjoint and each
+has order at least two.  A universal label directly contacted by `r` is
+counted either by its unique nonpersistent edge in `ell`, or once in `q`
+when a persistent edge exists.  Any second `R-U_i` edge would preserve the
+required adjacency after deletion, so a nonpersistent contact is unique;
+conversely every `ell` edge and `q` label is a direct universal contact.
+Thus `k_R=ell+q`, and (B4) gives the sharper
 
-Even conditional on `k>=3`, Theorem 4 minimizes the donor over all
-contact-maximal spanning `K_6` models.  Its transfer proof preserves the
-six fused branch sets, not necessarily the separate `P,U_h` refinement or
-the support of the fixed jointly persistent pair.  The source therefore
-correctly rejects a lexicographic potential combining these choices: the
-relevant family has not been proved exchange-closed.
+\[
+                             2h+k_R\le4.
+\]
 
-The two stated repair lemmas address these gaps in their logical order.
+This yields at most two components and at most two direct universal
+contacts whenever the rooted bag is nonsingleton.  If the bag is the
+singleton `{r}`, all four required universal adjacencies are direct.
+
+If there are two, both monopoly sets have order two and partition the four
+universal labels.  Exactness gives no edge from `R` to either missed twin.
+For an owned universal label, every endpoint in `R` lies in its owning
+component; hence the opposite component has no edge to that bag.  If `r`
+met a universal bag, that label's endpoint set in `R` would not be contained
+in either component and the label could not occur in the asserted
+partition.  Thus `r` has no foreign-bag neighbour.  Spanningness then puts
+all eight neighbours of `r` in the two components and proves the two
+neighbourhood inclusions in (B8).
+
+Both root-neighbour sets are nonempty and anticomplete.  The audited
+exceptional-neighbourhood theorem, at SHA-256
+
+```text
+fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd
+```
+
+gives both `alpha(G[N(r)])=3` and `K_4`-freeness.  Additivity across the
+anticomplete partition makes the two independence numbers one and two.
+The independence-one side is a clique of order at most three, leaving at
+least five root neighbours on the other side.  This verifies (B9).
+
+The larger side has at least five incident root edges.  Each is persistent,
+and any two are jointly persistent because other edges still attach that
+component to `r`.  Its endpoints cannot form a clique in the `K_4`-free
+neighbourhood, so the nonadjacent persistent pair may be selected wholly
+inside this component.  This verifies the strengthened response statement
+and (B9).
+
+For one two-owner component, disjoint paths from the two owner portal sets
+to distinct root portals would partition the component into two connected
+pieces.  Moving those pieces into their corresponding owners leaves
+`{r}` plus the other component as a connected deficient bag; the root
+edges to the distinct terminal vertices restore the two lost universal
+adjacencies.  This is a smaller spanning rooted model, contradicting the
+minimum.  Hence the audited two-owner Rado--Menger theorem, at SHA-256
+
+```text
+4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b
+```
+
+gives one vertex meeting every path from the root portals to the union of
+the two owner portal sets.  If the owners are not both concentrated at that
+vertex, a component behind it contains an owner portal but no root portal.
+The exact `2+2` ownership makes its whole host neighbourhood lie in the
+separator vertex and the two owner bags.  This is an actual separator from
+the surviving root, so seven-connectivity gives order at least seven; the
+two bags then contribute at least six literal neighbours in total and one
+contributes at least three.  This checks (B10).
+
+On the large root-neighbour side, deleting any prospective common owner
+portal `s` leaves vertices of the component.  Their only possible external
+neighbours are `r` and `s`: exact ownership excludes all other branch bags.
+This would make `{r,s}` a separator, contradicting seven-connectivity.
+Hence the large side necessarily gives the thick host separator outcome,
+as claimed.
+
+The source correctly does not infer compatibility merely from having at
+most one component.  To become the deficient bag of a model in `G-r`, the
+remainder must be nonempty and connected and every one of the four required
+universal adjacencies must have a surviving endpoint outside `r`.
+Proposition 6 does not exclude failure of any of these requirements.
+
+## 7C. Two-owner portal collapse and terminal colouring
+
+The connected set in (B10) is detachable from the minimum rooted `P`-bag:
+its complement remains connected, it has one attachment inside that bag,
+and it has foreign neighbours only in its two owner bags.  If it contacts
+one owner while a portal to the other owner remains outside, moving the set
+into the contacted owner preserves every labelled adjacency and strictly
+shrinks the rooted bag.  Applying this in both directions proves that the
+set monopolizes both owner adjacencies.
+
+Choose an inclusion-minimal connected lobe with that property.  A full
+two-owner linkage to two distinct residual attachment vertices would split
+the lobe between the owners and shrink the rooted bag.  Its Rado--Menger
+failure therefore gives one vertex meeting every attachment-to-owner path.
+If either owner portal is not concentrated there, a component behind that
+vertex avoids the residual attachment set.  The same one-owner transfer
+argument makes this smaller component monopolize both owners, contradicting
+the lobe minimum.  Both owner portal sets are consequently the same
+singleton.  Any remaining component of the lobe minus that singleton has
+all host neighbours in the singleton and the unique parent vertex, contrary
+to seven-connectivity.  This verifies (B11), including the exact single
+`P`-neighbour and both portal monopolies.
+
+Let `Q=Z_2-\{t\}`.  It is nonempty because it contains `W_2`.  The unique
+`R`-neighbour of `t` makes `t` a leaf of the connected graph `G[Z_2]`, so
+`Q` is connected.  Spanningness identifies the complementary open side
+`H` as `Z_1` together with the six foreign branch sets.  Those branch sets
+form a connected `K_6` contact graph and `Z_1` meets its two owner bags, so
+`H` is connected.
+
+Exact ownership and portal monopoly give no edge between `Q` and `H`.
+Both sides see both `r,t`: `W_2` and the parent `p` do so on the `Q` side,
+while `W_1` and the two owner bags do so on the `H` side.  Also `rt` is
+absent.  Contracting `H union \{r\}` therefore gives exactly
+`G[Q union \{r,t\}]+rt`, and the
+symmetric contraction of `Q union \{r\}` gives exactly
+`G[H union \{r,t\}]+rt`.  Both are proper minors.  Their six-colourings
+make `r,t` distinct, so one palette permutation aligns the ordered pair and
+the colourings glue across `\{r,t\}`.  This verifies the terminal
+six-colouring contradiction and the conclusion `h<=1`.
+
+## 7D. Joint-optimization negative finding
+
+The split case of root-removal compatibility is now eliminated.  The
+remaining gap is that Proposition 6 minimizes a rooted model in `G`, whereas
+Proposition 5 requires a nonempty deficient bag in `G-r` retaining all four
+universal adjacencies.  The minimum bag may still be `{r}`, or its connected
+remainder may lose an adjacency supported only at `r`.  Only after those
+possibilities are excluded does one have `p=1` for the same model and
+response.  The count then forces `k<=2`.
+The contact formula in (A1) makes every labelled absorption have at most
+three contacts, below the global upper bound four.  Thus the failed attack
+cannot legitimately start the optimized forced-interface argument on the
+same model and response.
+
+Reaching a contact-four model requires leaving the minimum rooted family.
+Theorem 4 then minimizes the donor over all contact-maximal spanning `K_6`
+models.  Its transfer proof preserves the six fused branch sets, not
+necessarily the separate `P,U_h` refinement or the support of the fixed
+jointly persistent pair.  The source therefore correctly rejects a
+lexicographic potential combining these choices: the relevant family has
+not been proved exchange-closed.
+
+The three stated repair lemmas address these gaps in their logical order.
 The note claims neither that they hold nor that their failure is realized
 by a graph satisfying the critical-host hypotheses.  This is a scoped
 negative finding about an unsupported proof mechanism, not a barrier or a

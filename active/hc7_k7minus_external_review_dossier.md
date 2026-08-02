@@ -10,7 +10,10 @@ snapshot's computation-free chain.  The later audited
 strictly strengthens its live conclusions to at most one literal `K_5`,
 `n_7<=4`, `m>=4n-2`, and `b>=17+tau`.  Use the
 [density frontier](hc7_k7minus_density_frontier.md) for current status; the
-body below remains pinned review provenance.
+body below remains pinned review provenance.  A later audited
+[three-component `3,2,2` cut theorem](../results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+also eliminates the three-component critical order-seven-cut branch, so
+every such cut in the current host has exactly two components.
 
 **Mathematical revision:** the exact audited source hashes in Section 2.
 Any mathematical change requires renewed audits and replacement hashes.
