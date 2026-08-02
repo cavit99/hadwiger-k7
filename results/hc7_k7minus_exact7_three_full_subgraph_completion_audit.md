@@ -7,7 +7,7 @@ constructions; the result is nonterminal for the full exact `(1,2)` host.
 [`hc7_k7minus_exact7_three_full_subgraph_completion.md`](hc7_k7minus_exact7_three_full_subgraph_completion.md)
 
 **SHA-256:**
-`a393e41b5dcea0d9e165f2bc8ef7335d410b6e7f4c4f35b1934de8e003a8c80e`
+`7c791436c697f4cbc04dd6f1881dee2b159a9bb63efa18c2a46606da9257a793`
 
 ## 1. Static quotient equivalences
 
@@ -73,8 +73,15 @@ may be absent.
 For Lemma 4, the sets `Q union {m_1}`, `P_1 union {m_2}`, and `P_2` are
 mutually adjacent and each is adjacent to `W union {x,y}` by boundary
 fullness.  All three meet every triangle singleton.  Again only one
-adjacency from the operated support to the triangle may be absent.  Both
-constructions are explicit `K_7^-` models.
+adjacency from the operated support to the triangle may be absent.  These
+first two constructions are explicit `K_7^-` models.
+
+Lemma 5 uses three full connected subgraphs anchored at the three vertices
+of `M`, two adjacent operated supports anchored at `x,y`, and the two
+vertices of `K` as singletons.  Fullness supplies every adjacency involving
+the first three branch sets.  The hypotheses supply the support--support
+edge, the edge inside `K`, and all but at most one support--`K` adjacency.
+The seven displayed sets therefore form a `K_7^-` model.
 
 ## 4. Scope and unresolved point
 

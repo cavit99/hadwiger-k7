@@ -7924,7 +7924,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "7f41daed115f22ddf8d3369b172ddbf4841a3bd896fcee123bdb278b7910a9d5"
+expected_source_sha256 = "f34461053eca1f60e74041e3edfcae54f1f83d9ab050f059e1b5c18a350763d5"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8469,7 +8469,7 @@ source = "results/hc7_k7minus_exact7_three_full_subgraph_completion.md"
 source_heading = "1. Exact static characterization"
 active = false
 audit = "results/hc7_k7minus_exact7_three_full_subgraph_completion_audit.md"
-expected_source_sha256 = "a393e41b5dcea0d9e165f2bc8ef7335d410b6e7f4c4f35b1934de8e003a8c80e"
+expected_source_sha256 = "7c791436c697f4cbc04dd6f1881dee2b159a9bb63efa18c2a46606da9257a793"
 scope = "a graph on a literal seven-set together with three new universal vertices, either independent or with exactly one edge"
 label_fidelity = "the literal boundary, the three added universal vertices, the avoided boundary anchors and every branch set of the reduced K4-minus model remain explicit"
 conclusions = [
@@ -8493,12 +8493,13 @@ source = "results/hc7_k7minus_exact7_three_full_subgraph_completion.md"
 source_heading = "3. A terminal one-defect construction"
 active = false
 audit = "results/hc7_k7minus_exact7_three_full_subgraph_completion_audit.md"
-expected_source_sha256 = "a393e41b5dcea0d9e165f2bc8ef7335d410b6e7f4c4f35b1934de8e003a8c80e"
+expected_source_sha256 = "7c791436c697f4cbc04dd6f1881dee2b159a9bb63efa18c2a46606da9257a793"
 scope = "the paired 2+1+1+3 response at an exact seven-boundary with three disjoint full connected subgraphs and one additional operated connected subgraph"
 label_fidelity = "the four nontriangle boundary vertices, boundary triangle, three full connected subgraphs and operation-generated connected support remain individually named"
 conclusions = [
   "a connected support meeting one nontriangle boundary vertex and at least two triangle vertices gives seven explicit branch sets of a K7-minus model",
   "an operated x-y support with at least two triangle contacts gives the analogous explicit model",
+  "in the 3+1+1+2 response, two adjacent operated supports give K7-minus when at most one of their four contacts to the retained boundary edge is absent",
   "in a target-free host every such support misses at least two common triangle vertices",
 ]
 does_not_prove = [

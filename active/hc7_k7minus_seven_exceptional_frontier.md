@@ -237,9 +237,10 @@ five unbounded reductions; none is an isolated graph-code elimination.
    `2+1+1+3` boundary response it gives an explicit terminal model whenever
    an operation-generated connected subgraph meets one of the four
    nontriangle vertices and at least two vertices of the retained boundary
-   triangle.
-   Target exclusion therefore forces every such connected subgraph to miss
-   at least two common triangle vertices.  Seven-connectivity can replace
+   triangle.  In the `3+1+1+2` response, two adjacent operated connected
+   subgraphs give the model when all but at most one of their four contacts
+   with the retained boundary edge are present.  Target exclusion therefore
+   forces the corresponding contact deficits.  Seven-connectivity can replace
    those missing boundary contacts by several attachments to the two rich
    full subgraphs, so the surviving case is an operation-labelled
    full-subgraph splitting problem rather than an incomplete boundary
@@ -395,8 +396,8 @@ Attack the remaining operation-coupled obligations in this order.
    subgraph, a terminal minor, or a named descent.  In the paired
    packing-`(1,2)` residue, prove an operation-labelled full-subgraph
    splitting lemma: retain one full connected remainder while separating a
-   connected piece with one nontriangle boundary contact and two named
-   triangle contacts.
+   connected subgraph, or adjacent pair of connected subgraphs, satisfying
+   one of the two explicit completion lemmas.
    The displayed completion theorem then gives `K_7^-`; failure must instead
    return a common boundary partition or the literal anti-neighbourhood of a
    named exceptional centre.

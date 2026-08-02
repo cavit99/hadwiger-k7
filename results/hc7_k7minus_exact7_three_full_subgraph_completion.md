@@ -221,16 +221,52 @@ through `x` or `y`, and to every singleton in `K`.  The fourth set is
 adjacent to at least two of those singletons, which are mutually adjacent.
 Again at most one adjacency is absent. \(\square\)
 
+### Lemma 5 (two operated supports when the retained clique has order two)
+
+Suppose instead that
+
+\[
+ S=M\mathbin{\dot\cup}\{x,y\}\mathbin{\dot\cup}K,
+ \qquad M=\{m_1,m_2,m_3\},
+ \qquad G[K]\cong K_2.                               \tag{11}
+\]
+
+Let `X,Y` be disjoint connected subgraphs, also disjoint from
+`S,Q,P_1,P_2`, such that `X` is adjacent to `x`, `Y` is adjacent to `y`,
+and `X` is adjacent to `Y`.  If at most one of the four possible
+adjacencies from `X union {x}` and `Y union {y}` to the two vertices of
+`K` is absent, then `G` contains a `K_7^-` minor.
+
+#### Proof
+
+Use the seven branch sets
+
+\[
+ Q\cup\{m_1\},\quad P_1\cup\{m_2\},\quad
+ P_2\cup\{m_3\},\quad X\cup\{x\},\quad Y\cup\{y\},
+ \quad\{k\}\ (k\in K).                              \tag{12}
+\]
+
+Boundary fullness supplies every adjacency involving one of the first
+three sets.  The fourth and fifth sets are adjacent by hypothesis, the two
+singletons in `K` are adjacent, and at most one adjacency from the fourth
+or fifth set to those singletons is absent.  Thus (12) is a `K_7^-` model.
+\(\square\)
+
 ## 4. Exact scope and remaining inference
 
-Lemmas 3 and 4 are explicit terminal constructions, not connectivity
+Lemmas 3--5 are explicit terminal constructions, not connectivity
 heuristics.  In a `K_7^-`-minor-free host they imply, respectively,
 
 \[
  |N_K(X\cup\{o\})|\le1,
  \qquad
- |N_K(W\cup\{x,y\})|\le1.                            \tag{11}
+ |N_K(W\cup\{x,y\})|\le1.                            \tag{13}
 \]
+
+Lemma 5 gives the corresponding conclusion for the `3+1+1+2` response:
+any two adjacent operated supports rooted at `x,y` have at least two
+missing adjacencies to the retained boundary edge.
 
 Thus an operation-generated support which meets one of the four vertices in
 `M union {x,y}` must miss at least two common vertices of `K`.  This is
@@ -245,8 +281,8 @@ rich full subgraphs at all.  The first unsupported inference is therefore:
 
 > split one rich full subgraph, while retaining one full connected
 > remainder and the fixed proper-minor colouring, so that the separated
-> connected piece has one contact in `M union {x,y}` and two named contacts
-> in `K`.
+> connected subgraph or adjacent pair of connected subgraphs satisfies
+> Lemma 3 or Lemma 5.
 
 A valid replacement must use the same named edge-deletion or star-
 contraction colouring and must return either the split required by Lemma 3,
