@@ -332,11 +332,25 @@ actual separator of order at least seven.  The fixed two-edge response
 retains at least five portals across the four universal bags, so this
 dichotomy preserves the same named six-colouring.  It therefore bypasses
 generic root-removal compatibility.  Globally minimizing boundary order now
-gives either an exact two-shore seven-cut, or a boundary of order at least
-eight with exactly two or three full complementary components and the
+gives either an exact two-shore seven-cut, or an order-eight boundary with
+exactly two or three full complementary components and the
 strengthened residual-boundary profile: the boundary is `K_5`-minor-free
 and four-colourable, and its small vertex deletions satisfy the sharper
 colouring and `K_t^-` exclusions in Proposition 11.
+The minimum boundary order is `kappa(G)`.  In the order-eight branch,
+`kappa(G)=delta(G)=8`, `n_7=0`, `|E(G)|>=4|V(G)|`,
+`n_8>=25+tau`, and `b>=20+tau`.  Every degree-eight neighbourhood is a
+minimum cut, so a disconnected exceptional anti-neighbourhood has exactly
+two nonsingleton components, both full to the neighbourhood.  The fixed
+double-star response also yields a persistent single-edge-deletion
+colouring with exactly the same trace away from its root.  Eight-connectivity
+forces every crossing-edge order-eight response into its clean-fan branch;
+on a smallest two-shore side, the paired seven-column response has a
+contact graph of minimum degree at most three.  If the fixed exceptional
+root has connected anti-neighbourhood, the persistent single-edge response
+forces that paired-column system directly at `N(r)`: the operation,
+colouring trace, and surviving labelled near-clique model are all retained,
+although the near-clique and column labels are not identified.
 The global minimizer need not retain the nested labels or align the deleted
 endpoints with its shores.  The immediate exceptional-centre attack is
 therefore operation-labelled separator terminalization: force a common

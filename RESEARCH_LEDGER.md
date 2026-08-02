@@ -317,11 +317,41 @@ remain possible, but they are no longer the immediate model-level gate.
 The existence of that separator also yields a global minimum-separator
 normal form.  Either there is an exact order-seven cut with exactly two
 shores and packing vector `(1,1)` or `(1,2)` up to orientation, or a
-globally minimum boundary of order at least eight has exactly two or three
-full complementary components.  Every such boundary is `K_5`-minor-free
+globally minimum order-eight boundary has exactly two or three full
+complementary components.  The minimum boundary order equals `kappa(G)`,
+so these are the only two possibilities.  In the order-eight branch,
+
+\[
+ \kappa(G)=\delta(G)=8,\qquad n_7=0,\qquad
+ |E(G)|\ge4|V(G)|,\qquad n_8\ge25+\tau,\qquad b\ge20+\tau.
+\]
+
+Every degree-eight neighbourhood is then a minimum cut, and every
+disconnected exceptional anti-neighbourhood has exactly two nonsingleton
+components, both full to that neighbourhood.  Thus all nonfull and
+miss-pattern cases are confined to the seven-connected branch.  Every
+minimum boundary is `K_5`-minor-free
 and hence four-colourable.  More precisely, with `m` components, deleting
 any `a<=m-1` boundary vertices leaves a `(5-a)`-colourable graph with no
 `K_{6-a}^-` minor; for `a<=m-2` it has no `K_{5-a}` minor.
+
+The same fixed two-edge-star response also contains a persistent edge `rz`
+whose single-edge-deletion colouring agrees with the fixed response away
+from `r`.  This removes a trace-selection mismatch but does not assign the
+five colours to the required near-clique branch-set labels.
+At any full order-eight cut, every crossing-edge response is forced into
+the clean five-path fan branch because an order-seven return would contradict
+eight-connectivity.  In a smallest two-shore side, every arbitrary-edge
+response is forced into the paired seven-column branch, and its column
+contact graph has minimum degree at most three: the alternative pentagonal
+bipyramid already contains a `K_5^-` minor.  If the fixed exceptional root
+has connected anti-neighbourhood, the persistent edge `rz` forces this
+paired-column response directly on the singleton root side.  The same
+edge, colouring, exact `2,2,1,1,1,1` boundary trace, and surviving labelled
+near-clique model are then retained.  The low-degree column need not
+be the operated target, and a response path may meet an old root or column
+before its target; the paired-column labels are still not identified with
+the near-clique labels, preventing the required label-preserving transfer.
 
 This global minimization does not retain the nested near-clique labels or
 align the fixed deleted edges with the new shores.  Its boundary need not
