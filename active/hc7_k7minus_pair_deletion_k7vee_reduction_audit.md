@@ -3,10 +3,11 @@
 **Verdict:** GREEN for the pair- and single-deletion model reductions, the
 optimized forced-interface theorem, the exact labelled-absorption contact
 formula, the two-hole persistence count and deficient-bag response, the
-one-operation Kempe conclusion, and the sufficient same-host descent test.
+one-operation Kempe conclusion, the root-removal split proposition, and the
+sufficient same-host descent test.
 Label-preserving donor optimization, operation-to-recipient allocation, and
 the terminal/descent target are correctly left open.  The recorded failed
-joint-optimization route correctly identifies its two ordered quantifier
+joint-optimization route correctly identifies its three ordered quantifier
 gaps and does not present them as a counterexample.
 
 **Audited source:**
@@ -15,7 +16,7 @@ gaps and does not present them as a counterexample.
 **SHA-256:**
 
 ```text
-aca10eb92f3901207db70abc397c7aa317924220705c014632054e303169eb88
+ec0d640adef871759dc191c2509ff1c2d43a16c07ec4caac79ee960a1be221c1
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -256,27 +257,118 @@ six-colouring of `G`.  Joint persistence keeps the same labelled model.
 The audit separately confirms the stated limit: no palette colour has yet
 been assigned to a required branch-set role.
 
-## 7B. Joint-optimization negative finding
+## 7B. Root-removal compatibility and the split residue
 
-For the deficient-bag application of Proposition 6 one has `p=1`.  The
-contact formula in (A1) then makes a labelled absorption globally
-contact-maximal only when `k>=3`; no proved statement excludes `k<=2` in
-the absolute minimum rooted `P`-bag family.  Thus the failed attack cannot
-legitimately start the optimized forced-interface argument on the same
-model and response.
+For `D=P`, the protected label set has order four.  Proposition 6 proves
+that the monopoly sets of the components of `R-r` are disjoint and each
+has order at least two.  A universal label directly contacted by `r` is
+counted either by its unique nonpersistent edge in `ell`, or once in `q`
+when a persistent edge exists.  Any second `R-U_i` edge would preserve the
+required adjacency after deletion, so a nonpersistent contact is unique;
+conversely every `ell` edge and `q` label is a direct universal contact.
+Thus `k_R=ell+q`, and (B4) gives the sharper
 
-Even conditional on `k>=3`, Theorem 4 minimizes the donor over all
-contact-maximal spanning `K_6` models.  Its transfer proof preserves the
-six fused branch sets, not necessarily the separate `P,U_h` refinement or
-the support of the fixed jointly persistent pair.  The source therefore
-correctly rejects a lexicographic potential combining these choices: the
-relevant family has not been proved exchange-closed.
+\[
+                             2h+k_R\le4.
+\]
 
-The two stated repair lemmas address these gaps in their logical order.
+This yields at most two components and at most two direct universal
+contacts whenever the rooted bag is nonsingleton.  If the bag is the
+singleton `{r}`, all four required universal adjacencies are direct.
+
+If there are two, both monopoly sets have order two and partition the four
+universal labels.  Exactness gives no edge from `R` to either missed twin.
+For an owned universal label, every endpoint in `R` lies in its owning
+component; hence the opposite component has no edge to that bag.  If `r`
+met a universal bag, that label's endpoint set in `R` would not be contained
+in either component and the label could not occur in the asserted
+partition.  Thus `r` has no foreign-bag neighbour.  Spanningness then puts
+all eight neighbours of `r` in the two components and proves the two
+neighbourhood inclusions in (B8).
+
+Both root-neighbour sets are nonempty and anticomplete.  The audited
+exceptional-neighbourhood theorem, at SHA-256
+
+```text
+fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd
+```
+
+gives both `alpha(G[N(r)])=3` and `K_4`-freeness.  Additivity across the
+anticomplete partition makes the two independence numbers one and two.
+The independence-one side is a clique of order at most three, leaving at
+least five root neighbours on the other side.  This verifies (B9).
+
+The larger side has at least five incident root edges.  Each is persistent,
+and any two are jointly persistent because other edges still attach that
+component to `r`.  Its endpoints cannot form a clique in the `K_4`-free
+neighbourhood, so the nonadjacent persistent pair may be selected wholly
+inside this component.  This verifies the strengthened response statement
+and (B9).
+
+For one two-owner component, disjoint paths from the two owner portal sets
+to distinct root portals would partition the component into two connected
+pieces.  Moving those pieces into their corresponding owners leaves
+`{r}` plus the other component as a connected deficient bag; the root
+edges to the distinct terminal vertices restore the two lost universal
+adjacencies.  This is a smaller spanning rooted model, contradicting the
+minimum.  Hence the audited two-owner Rado--Menger theorem, at SHA-256
+
+```text
+4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b
+```
+
+gives one vertex meeting every path from the root portals to the union of
+the two owner portal sets.  If the owners are not both concentrated at that
+vertex, a component behind it contains an owner portal but no root portal.
+The exact `2+2` ownership makes its whole host neighbourhood lie in the
+separator vertex and the two owner bags.  This is an actual separator from
+the surviving root, so seven-connectivity gives order at least seven; the
+two bags then contribute at least six literal neighbours in total and one
+contributes at least three.  This checks (B10).
+
+On the large root-neighbour side, deleting any prospective common owner
+portal `s` leaves vertices of the component.  Their only possible external
+neighbours are `r` and `s`: exact ownership excludes all other branch bags.
+This would make `{r,s}` a separator, contradicting seven-connectivity.
+Hence the large side necessarily gives the thick host separator outcome,
+as claimed.
+
+The source correctly does not infer compatibility merely from having at
+most one component.  To become the deficient bag of a model in `G-r`, the
+remainder must be nonempty and connected and every one of the four required
+universal adjacencies must have a surviving endpoint outside `r`.
+Proposition 6 does not exclude failure of any of these requirements.
+
+## 7C. Joint-optimization negative finding
+
+The first gap is root-removal compatibility: Proposition 6 minimizes a
+rooted model in `G`, whereas Proposition 5 requires a model in `G-r`.
+Only after the compatibility requirements of Section 7B hold does one have
+`p=1` for the same model and response.  The new count then forces `k<=2`.
+The contact formula in (A1) makes every labelled absorption have at most
+three contacts, below the global upper bound four.  Thus the failed attack
+cannot legitimately start the optimized forced-interface argument on the
+same model and response.
+
+Reaching a contact-four model requires leaving the minimum rooted family.
+Theorem 4 then minimizes the donor over all contact-maximal spanning `K_6`
+models.  Its transfer proof preserves the six fused branch sets, not
+necessarily the separate `P,U_h` refinement or the support of the fixed
+jointly persistent pair.  The source therefore correctly rejects a
+lexicographic potential combining these choices: the relevant family has
+not been proved exchange-closed.
+
+The three stated repair lemmas address these gaps in their logical order.
 The note claims neither that they hold nor that their failure is realized
 by a graph satisfying the critical-host hypotheses.  This is a scoped
 negative finding about an unsupported proof mechanism, not a barrier or a
 mathematical disproof of the one-operation target.
+
+The audited three-component `3,2,2` theorem does not change this conclusion.
+In the split residue, seven-connectivity supplies only a lower bound of
+seven on each displayed neighbourhood; it supplies neither order exactly
+seven nor a third open shore.  A returned equality case would still require
+the operation-labelled two-shore theorem which the source leaves open.
 
 ## 8. Same-host descent test
 

@@ -501,7 +501,168 @@ colours were absent from the remaining six neighbours of `r`, recolouring
 `r` with it and restoring `rx,ry` would six-colour `G`.  Joint persistence
 keeps the same labelled model after the two deletions.  \(\square\)
 
-This proposition is a two-missing-edge adaptation of the existing rooted
+### Proposition 7 (root-removal compatibility and the exact split residue)
+
+Use Proposition 6 with `D=P`, and retain its minimum rooted `P`-bag `R`.
+Let `h` be the number of components of `G[R]-r`, and let `k_R` be the
+number of universal bags met directly by `r` in this reselected model.
+Then
+
+\[
+                             2h+k_R\le4.                \tag{B6}
+\]
+
+In particular, `h<=2`.  If `h=0`, then `R={r}` and `k_R=4`; if `h>=1`,
+then `k_R<=2`.
+
+If it has exactly two components `Z_1,Z_2`, then, after relabelling the
+universal bags,
+
+\[
+ \Lambda(Z_1)=\{U_1,U_2\},\qquad
+ \Lambda(Z_2)=\{U_3,U_4\}.                              \tag{B7}
+\]
+
+Moreover,
+
+\[
+ N_G(Z_1)\subseteq \{r\}\cup U_1\cup U_2,
+ \qquad
+ N_G(Z_2)\subseteq \{r\}\cup U_3\cup U_4,              \tag{B8}
+\]
+
+and `r` has no neighbour in any foreign branch set.  Thus all eight
+neighbours of `r` lie in `Z_1\cup Z_2`.  Writing
+
+\[
+                         W_i=N(r)\cap Z_i,
+\]
+
+both sets are nonempty and, after possibly interchanging their names,
+
+\[
+                 \alpha(G[W_1])=1,\quad |W_1|\le3,
+                 \qquad
+                 \alpha(G[W_2])=2,\quad |W_2|\ge5.       \tag{B9}
+\]
+
+The jointly persistent nonadjacent pair in Proposition 6 may then be
+chosen with both outer endpoints in `W_2`.
+
+For either `i`, let `U_a,U_b` be the two universal bags owned by `Z_i`,
+and put
+
+\[
+ T_i=N(r)\cap Z_i,qquad
+ A_a=N_G(U_a)\cap Z_i,qquad A_b=N_G(U_b)\cap Z_i.
+\]
+
+Then one of the following holds:
+
+1. `A_a=A_b={s}` for one vertex `s\in Z_i`; or
+2. there are `s\in Z_i` and a nonempty connected component `C` of
+   `G[Z_i-s]` such that
+
+   \[
+    C\cap T_i=\varnothing,qquad
+    N_G(C)\subseteq\{s\}\cup U_a\cup U_b,qquad
+    |N_G(C)|\ge7.                                      \tag{B10}
+   \]
+
+   In this outcome one of `U_a,U_b` contains at least three literal
+   neighbours of `C`.
+
+For the large component `Z_2` in (B9), only outcome 2 is possible.
+
+If `G[R]-r` is connected and every `P-U_i` adjacency has an edge with its
+`P`-endpoint outside `r`, then replacing `R` by `R-r` gives the exact
+spanning labelled `K_7^\vee` model in `G-r` needed for Proposition 5.
+Neither connectedness nor survival of all four adjacencies is presently
+forced by the preceding results.  If they do hold, the parameters of that
+model in Proposition 5 satisfy `p=1` and `k=k_R<=2`.
+
+#### Proof
+
+For `D=P`, the required-label set `Gamma(P)` consists of the four universal
+labels.  Proposition 6 proves that the sets `Lambda(Z)` over the components
+of `G[R]-r` are pairwise disjoint and each has order at least two.  Every
+universal label met directly by `r` contributes either its unique
+nonpersistent external edge to `ell` or its label to `q`.  If another
+`R-U_i` edge existed, deleting the selected root edge would retain both
+bag connectivity and the required adjacency; in particular, two root edges
+to one universal bag would each be individually persistent.  Conversely
+every `ell` edge and every label counted by `q` is a direct universal
+contact here.  Hence `k_R=ell+q`, and (B4) gives
+
+\[
+                         2h+k_R\le2h+\ell+q\le4.
+\]
+
+If `h=0`, spanningness gives `R={r}`, and all four required universal
+adjacencies must be direct contacts.  If there are two components, equality
+throughout forces (B7).
+
+Exactness makes `R` anticomplete to `B` and `C`.  By the definition of
+`Lambda`, every `R-U_j` edge has its `R`-endpoint in the component which
+owns `U_j`; this proves (B8) and excludes all cross-ownership contacts.
+If `r` met some `U_j`, then `N_G(U_j)\cap R` would not be contained in
+either `Z_i`, contradicting that the four labels occur in the disjoint
+union in (B7).  Since the model is spanning, every neighbour of `r` is
+therefore in `Z_1\cup Z_2`.
+
+Connectedness of `R` makes both `W_i` nonempty.  The sets are anticomplete,
+so the audited identity `\alpha(G[N(r)])=3` gives
+
+\[
+                 \alpha(G[W_1])+\alpha(G[W_2])=3.
+\]
+
+Each summand is positive.  One is therefore one and the other two.  The
+first set is a clique of order at most three because `G[N(r)]` is
+`K_4`-free; the other contains the remaining at least five neighbours.
+This proves (B9).  Every edge from `r` to `W_2` is individually persistent,
+and any two are jointly persistent because at least three other such edges
+keep `Z_2` attached to `r`.  Since `W_2` is not a clique, two have
+nonadjacent outer endpoints.  The final assertions are immediate from the
+definition of a labelled model after deleting `r` and the count above.
+
+It remains to prove the last dichotomy.  If `G[Z_i]` contained disjoint
+paths from `A_a,A_b` to two distinct vertices of `T_i`, enlarge their
+vertex sets to a connected partition `Z_i=L_a\dot\cup L_b`.  Replace
+
+\[
+ R\longmapsto R-Z_i,qquad
+ U_a\longmapsto U_a\cup L_a,qquad
+ U_b\longmapsto U_b\cup L_b.
+\]
+
+The other component of `R-r` keeps the new `P`-bag connected and retains
+the other two universal adjacencies.  The two distinct `r-T_i` edges
+restore the adjacencies to the enlarged owner bags.  Every other labelled
+adjacency persists.  This is a spanning labelled model with a smaller
+rooted `P`-bag, a contradiction.
+
+The audited
+[strict-gammoid Rado--Menger criterion](../results/hc7_multi_owner_portal_linkage_transfer.md#3-exact-local-failure-certificate)
+for the two nonempty owner sets
+therefore gives a vertex `s` meeting every
+`T_i-(A_a\cup A_b)` path in `G[Z_i]`.  If both owner portal sets lie in
+`{s}`, they both equal `{s}`.  Otherwise choose a component `C` of
+`G[Z_i-s]` containing an owner portal outside `s`.  It contains no vertex
+of `T_i`, while all its neighbours within `Z_i` lie at `s`.  The exact
+ownership relation (B8) gives the displayed host-neighbourhood inclusion.
+That neighbourhood separates `C` from `r`, so seven-connectivity gives
+its lower bound.  Apart from `s`, all its vertices lie in the two owner
+bags; hence one owner supplies at least three of them.  This proves (B10)
+and the dichotomy.  Finally, `Z_2-s` is nonempty for every `s`, because
+`Z_2` contains at least five root neighbours.  In outcome 1, every
+component of `G[Z_2-s]` would have all its external neighbours in
+`{r,s}`: the two owner portal sets equal `{s}`, and (B8) excludes every
+other foreign bag.  Deleting `{r,s}` would disconnect `G`, contrary to
+seven-connectivity.  Thus `Z_2` has outcome 2, completing the proof.
+\(\square\)
+
+Proposition 6 is a two-missing-edge adaptation of the existing rooted
 persistence argument; the one-missing-edge theorem does not apply
 verbatim.  Reselecting `R` can change the original contact pattern.  Even
 the exact deficient-bag response (B3) does not identify its five alternate
@@ -524,24 +685,33 @@ rerouting, paths of different secondary colours may share
 `alpha`-coloured vertices; after rerouting, their first exits may have
 repeated branch-set labels.  A small separator for these paths inside `D`
 is not automatically a small separator of `G` and does not identify the
-neighbourhood of an exceptional degree-eight vertex.  Thus the passage
-from named ends to clean named first hits is the first unsupported
-operation-level inference; neither the forced-interface theorem nor one
-fixed proper-minor colouring supplies it.
+neighbourhood of an exceptional degree-eight vertex.  Within an already
+aligned donor model, the passage from named ends to clean named first hits
+is the first unsupported operation-level inference; neither the forced-
+interface theorem nor one fixed proper-minor colouring supplies it.  The
+root-removal compatibility gap below occurs earlier when trying to align
+that donor model with the minimum deficient-bag response.
 
-### Recorded negative finding: the two optimizations cannot yet be coupled
+### Recorded negative finding: root removal and the two optimizations cannot yet be coupled
 
 **Status:** recorded negative finding / route nonclosure; not a
 counterexample to the open target.
 
-The minimum deficient-bag response of Proposition 6 and the forced
-interface of Theorem 4 arise from different optimizations, and no proved
-exchange principle makes them simultaneous.
+The minimum deficient-bag response of Proposition 6 and the labelled
+absorption formula of Proposition 5 do not yet apply to the same model.
+Proposition 6 minimizes a rooted `P`-bag in `G`; Proposition 5 begins with a
+labelled model in `G-r`.  Proposition 7 leaves three possibilities: `R` may
+equal `{r}`, `R-r` may be connected while some required `P-U_i` adjacency
+is supported only at `r`, or `R-r` may have the exact two-component residue
+(B7)--(B9).  Thus it is not yet legitimate to assign the parameters `p,k`
+of Proposition 5 to the minimized rooted model carrying the fixed
+two-edge-star response.
 
-First, applying Proposition 6 with `D=P` requires `p=1` in Proposition 5.
-By (A1), one of the four labelled absorptions has the globally maximal four
-root contacts only when `k>=3`.  The minimum rooted `P`-bag construction
-does not exclude the surviving low-contact case
+Even after root-removal compatibility is supplied, applying Proposition 6
+with `D=P` gives `p=1` in Proposition 5.  By (A1), one of the four labelled
+absorptions has the globally maximal four root contacts only when `k>=3`.
+But (B6) forces every compatible nonsingleton minimum rooted model into
+the low-contact case
 
 \[
                               p=1,\qquad k\le2.          \tag{13a}
@@ -550,33 +720,45 @@ does not exclude the surviving low-contact case
 Thus the absorbed model carrying the fixed two-edge-star response need not
 even be contact-maximal among spanning `K_6` models.
 
-Second, suppose `k>=3`, so that a labelled absorption is contact-maximal.
-The donor minimum in Theorem 4 is nevertheless taken over all
-contact-maximal spanning `K_6` models.  A contact-preserving branch-set
-transfer can retain adjacency to the fused bag `P union U_h` while losing
-the separate `P` or `U_h` contact or connectivity needed to recover the
-labelled `K_7^\vee` model.  It can also move an endpoint or support class
-needed by the jointly persistent edge pair.  Hence the family consisting
-of an absolute minimum rooted `P`-bag, its fixed pair and colouring, and a
-labelled absorption is not known to be exchange-closed.  A lexicographic
-potential over those objects therefore cannot be invoked.
+Reaching a contact-four absorption therefore requires leaving that minimum
+rooted family.  In any such alternative model, the donor minimum in
+Theorem 4 is taken over all contact-maximal spanning `K_6` models.  A
+contact-preserving branch-set transfer can retain adjacency to the fused
+bag `P union U_h` while losing the separate `P` or `U_h` contact or
+connectivity needed to recover the labelled `K_7^\vee` model.  It can also
+move an endpoint or support class needed by the jointly persistent edge
+pair.  Hence the family consisting of a minimum rooted `P`-bag, its fixed
+pair and colouring, and a contact-four labelled absorption is not known to
+be exchange-closed.  A lexicographic potential over those objects therefore
+cannot be invoked.
 
-The two smallest repair statements are now explicit:
+The three repair statements, in their logical order, are now explicit:
 
-1. eliminate (13a) by proving that a minimum rooted `P`-bag with at most two
-   contacted universal bags already gives a `K_7^-` model, a six-colouring,
-   or a smaller exceptional anti-neighbourhood component; and
-2. in the remaining contact-four case, prove that every donor-reducing
+1. prove root-removal compatibility: `R-r` is a nonempty connected
+   deficient bag retaining all four universal adjacencies, or obtain a
+   `K_7^-` model, a six-colouring, or a smaller exceptional
+   anti-neighbourhood component;
+2. eliminate (13a) by proving that the resulting rooted `P`-bag with at
+   most two contacted universal bags already gives a `K_7^-` model, a
+   six-colouring, or a smaller exceptional anti-neighbourhood component;
+   and
+3. in the remaining contact-four case, prove that every donor-reducing
    transfer either lifts to another absolute minimum rooted `P`-bag model
    preserving the same operation response, or gives one of those terminal
    outcomes directly.
 
 Ordinary first-hit linkage, a gammoid rank, or a block--cutvertex
-decomposition does not supply either repair: those tools do not preserve
+decomposition does not supply these repairs: those tools do not preserve
 simultaneously the fixed colouring operation, the separate near-clique
 labels, and a residual branch set.  This is the first exact unsupported
 inference in the attempted joint model--colouring optimization and should
 be checked before any future use of that route.
+
+The newly proved three-component `3,2,2` seven-cut exclusion does not close
+the split residue (B7).  Seven-connectivity gives only
+`|N_G(Z_i)|>=7`; it gives no upper bound, and (B8) naturally separates two
+shores rather than three.  Even equality would require an operation-labelled
+two-shore colouring or descent theorem.
 
 Choose `(r,C_0)` so that `r` is exceptional and `C_0` has minimum order
 among all components of `G-N[v]` over all exceptional vertices `v`.  Put

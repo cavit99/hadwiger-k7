@@ -341,17 +341,31 @@ allocation needed to prove it is open.
 
 Attack the remaining operation-coupled obligations in this order.
 
-1. **Prove the one-operation terminal/descent theorem at a minimum exterior
-   component.**  Preserve either the `P,B,C` labels of the exact spanning
-   near-clique or the second root of the pair-deletion model while converting
-   the five colour-indexed paths into literal target/owner pieces.  Failure
-   must return a smaller component of `G-N[z]` for a named exceptional `z`;
-   an arbitrary smaller adhesion is not an accepted descent.
-2. **Transport that transfer through the adjacent-miss, one-nonfull, and
-   both-full responses.**  It must align operation colours with rooted bags
-   or preserve them through an exact seven-separation.  More graph-code
-   filters or static shore-demand counts are not progress on this gate.
-3. **Synchronize anchored list cores only with their path geometry retained.**
+1. **Prove root-removal compatibility for the minimum deficient `P`-bag.**
+   After deleting the exceptional root, the bag must remain nonempty and
+   connected and retain all four universal adjacencies, or the same fixed
+   two-edge-star response must give a `K_7^-` model, a six-colouring, or a
+   smaller exceptional anti-neighbourhood component.  The exact surviving
+   split residue is a thick `2+2` ownership interface: its large side has a
+   connected subset whose neighbourhood lies in one bottleneck vertex plus
+   two universal bags and has order at least seven.  This is not a
+   three-shore cut, and the boundary size is not known to be exactly seven.
+2. **Eliminate the low-contact residue once compatibility holds.**  In the
+   notation of the pair-deletion reduction this is `p=1,k<=2`.  Keep the
+   fixed colouring and labelled near-clique model simultaneous.
+3. **Prove operation-preserving exchange in the contact-four absorbed
+   family.**  A donor-reducing transfer must retain the separate `P,U_h`
+   labels and the fixed response, or give one of the same terminal outcomes.
+4. **Decode every returned exact seven-separation as a two-shore response.**
+   The audited `3,2,2` theorem now eliminates all three-component cuts, so
+   only packing `(1,2)` (first) and `(1,1)` remain.  An arbitrary smaller
+   adhesion is not an exceptional anti-neighbourhood descent.
+5. **Transport the resulting transfer through the adjacent-miss,
+   one-nonfull, and both-full responses.**  It must align operation colours
+   with rooted bags or preserve them through an exact seven-separation.
+   More graph-code filters or static shore-demand counts are not progress on
+   this gate.
+6. **Synchronize anchored list cores only with their path geometry retained.**
    The response-specific defect budgets cannot be summed, and a common tight
    odd-cycle core can survive every anchor when the exterior Kempe paths are
    forgotten.

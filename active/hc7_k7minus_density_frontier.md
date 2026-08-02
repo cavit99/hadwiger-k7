@@ -4,7 +4,8 @@
 six-colour conjecture or of `HC_7`.  The six-connected two-clique theorem,
 critical-host degree and exceptional-vertex consequences, private-triangle
 allocation, and seven-boundary connected-subgraph, critical-host capacity,
-and contraction theorems are written proofs with separate internal audits
+three-component exclusion, and contraction theorems are written proofs with
+separate internal audits
 GREEN for their current revisions.  The local-completion theorem,
 two-component nonfull and both-full reductions, and distinct
 nonadjacent-miss fan-tree elimination are also written and separately
@@ -112,7 +113,7 @@ hypotheses.
 Norin and Totschnig prove that a four-connected graph at the
 `4n-8` threshold contains the graph obtained from `K_7` by deleting two
 edges with a common end, apart from their explicit small exception.  Thus a
-graph at the target threshold has four edges of surplus over that benchmark;
+graph at the target threshold has six edges of surplus over that benchmark;
 one possible proof is to use this surplus to recover one of the two missing
 adjacencies.  Their paper explicitly identifies a `K_7^-` strengthening as
 the missing extremal input for the six-colour conjecture:
@@ -246,15 +247,15 @@ host and obtains the strict bound
                          2\le r\le\pi_S(G)\le3.
 \]
 
-It follows that the critical host has no four-component seven-cut.  More
-precisely, if `r=3`, then every component has boundary-full connected-
-subgraph packing number one, `\chi(G[S])=3`, and every proper three-colouring
-of `G[S]` has class sizes `3,2,2`.  If `r=2`, one component has packing
-number one, the two packing numbers sum to at most three, and `G[S]` has an
-edge.  The capacity-three and four-component conclusions were already
-implicit in older audited exact-seven reflection machinery.  The new use of
-the present `K_7^-` boundary theorem is the exact three-component chromatic
-normal form.
+The separately audited
+[three-component `3,2,2` cut theorem](../results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+uses that exact partition, two crossless-shore web completions, and planar
+precolouring extension to eliminate the three-component case.  Hence every
+order-seven cut in the critical host has exactly two components.  One
+component has packing number one, the two packing numbers sum to at most
+three, and `G[S]` has an edge.  These conclusions depend essentially on
+proper-minor six-colourability and do not apply to an arbitrary dense
+seven-connected graph.
 
 For a component `C_i`, put
 
@@ -314,19 +315,16 @@ removed `r=5`, strengthened the boundary statement to the maximum boundary-
 full connected-subgraph packing number, proved two-connectivity of every
 nonsingleton component when `r=4`, and replaced informal contraction
 language by the exact surplus and connectivity criteria above.  The
-critical-host reflection attack has now removed `r=4` altogether and
-normalized `r=3`.
-
-Within the critical seven-cut route, the next positive attack should
-therefore start from `r=3`.
-Each of its three components has boundary-full packing number one, while the
-boundary is three-chromatic and every proper three-colouring has class sizes
-`3,2,2`.  The objective is to use this exact boundary-colouring restriction
-and the packing-one component structure to produce an explicit `K_7^-`
-model or compatible six-colourings of the component sides, contradicting
-`\chi(G)=7`.  The `r=2` case, with one component of boundary-full packing
-number one and a `K_5`-minor-free nonempty boundary, follows and is likely
-harder.
+critical-host reflection and planar-extension attack has now removed
+`r=3,4` altogether.  Every critical order-seven cut is a two-shore cut with
+packing vector `(1,1)`, `(1,2)`, or `(2,1)`.  The bounded deficient-`P`
+attack found that root removal precedes the old low-contact question: the
+minimum rooted bag may be empty after deleting the root, lose a required
+universal adjacency, or split into an exact `2+2` ownership pair.  The
+immediate exceptional-centre attack is therefore root-removal compatibility
+under the one fixed two-edge-star colouring.  Any exact order-seven
+obstruction returned there must be decoded in the two-shore normal form; a
+three-shore return would already six-colour the host.
 
 For the bare extremal theorem, `r=4` remains open because an arbitrary
 seven-connected graph at the density threshold has no proper-minor
