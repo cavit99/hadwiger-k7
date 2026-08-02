@@ -7924,7 +7924,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "f34461053eca1f60e74041e3edfcae54f1f83d9ab050f059e1b5c18a350763d5"
+expected_source_sha256 = "6b1fac39ba6b3e80f2a906ec5761110c06d81967d3ac8f4baeb45b971be98fa7"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8365,6 +8365,30 @@ does_not_prove = [
 keywords = ["K7 minus", "exact K7 vee", "branch-set transfer", "nested separator", "seven-connectivity"]
 
 [[claims]]
+id = "hc7.k7minus_multiple_missing_adjacencies_separator"
+title = "Multiple missing centre adjacencies give K7-minus or a nested separator"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_multiple_missing_adjacencies_separator_dichotomy.md"
+source_heading = "1. The structural dichotomy"
+active = false
+audit = "results/hc7_k7minus_multiple_missing_adjacencies_separator_dichotomy_audit.md"
+expected_source_sha256 = "b9c02238a4142647005745b96b7d94377fb897c3d589081388dca0a6718edad2"
+scope = "a seven-connected graph partitioned into one connected centre set and six pairwise adjacent connected branch sets, with at least two centre-to-branch-set adjacencies absent"
+label_fidelity = "the centre, six foreign branch sets, two distinct donor portals, retaining core, transferred connected piece and returned actual separator remain explicit"
+conclusions = [
+  "the spanning model gives an explicit K7-minus minor or a nonempty proper connected donor part whose donor complement is connected and whose open neighbourhood is an actual separator",
+  "the separator has order at least seven and is full at exact order seven",
+  "a surviving fixed edge-star response retains the same named colouring in the separator outcome",
+]
+does_not_prove = [
+  "that the returned separator has order seven or carries a legal common boundary partition",
+  "that its boundary is the neighbourhood of a named exceptional degree-eight vertex",
+  "a six-colouring, exceptional anti-neighbourhood descent, or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "multiple missing adjacencies", "branch-set absorption", "retaining core", "nested separator"]
+
+[[claims]]
 id = "hc7.k7minus_fixed_response_nested_separator"
 title = "The fixed two-edge response yields an operation-preserving nested separator"
 kind = "lemma"
@@ -8469,7 +8493,7 @@ source = "results/hc7_k7minus_exact7_three_full_subgraph_completion.md"
 source_heading = "1. Exact static characterization"
 active = false
 audit = "results/hc7_k7minus_exact7_three_full_subgraph_completion_audit.md"
-expected_source_sha256 = "7c791436c697f4cbc04dd6f1881dee2b159a9bb63efa18c2a46606da9257a793"
+expected_source_sha256 = "57d05838dfa92fa7ebd12ede1946f84b13e1a4839cd67a2359ae39b649e4f8c1"
 scope = "a graph on a literal seven-set together with three new universal vertices, either independent or with exactly one edge"
 label_fidelity = "the literal boundary, the three added universal vertices, the avoided boundary anchors and every branch set of the reduced K4-minus model remain explicit"
 conclusions = [
@@ -8493,18 +8517,20 @@ source = "results/hc7_k7minus_exact7_three_full_subgraph_completion.md"
 source_heading = "3. A terminal one-defect construction"
 active = false
 audit = "results/hc7_k7minus_exact7_three_full_subgraph_completion_audit.md"
-expected_source_sha256 = "7c791436c697f4cbc04dd6f1881dee2b159a9bb63efa18c2a46606da9257a793"
+expected_source_sha256 = "57d05838dfa92fa7ebd12ede1946f84b13e1a4839cd67a2359ae39b649e4f8c1"
 scope = "the paired 2+1+1+3 response at an exact seven-boundary with three disjoint full connected subgraphs and one additional operated connected subgraph"
 label_fidelity = "the four nontriangle boundary vertices, boundary triangle, three full connected subgraphs and operation-generated connected support remain individually named"
 conclusions = [
   "a connected support meeting one nontriangle boundary vertex and at least two triangle vertices gives seven explicit branch sets of a K7-minus model",
   "an operated x-y support with at least two triangle contacts gives the analogous explicit model",
   "in the 3+1+1+2 response, two adjacent operated supports give K7-minus when at most one of their four contacts to the retained boundary edge is absent",
+  "every complete operated x-y support in the 2+1+1+3 response gives K7-minus or an actual nested separator regardless of its retained-triangle contacts",
+  "the analogous conclusion holds in the 3+1+1+2 response when one support meets both ends of the retained boundary edge",
   "in a target-free host every such support misses at least two common triangle vertices",
 ]
 does_not_prove = [
-  "that every fixed proper-minor response supplies two named triangle contacts",
-  "that seven-connectivity splits a rich full connected subgraph while retaining a full remainder",
+  "that a complete operated support detaches from the two rich full connected subgraphs while retaining a full remainder",
+  "that the nested separator carries a legal trace or is the neighbourhood of a named exceptional vertex",
   "elimination of exact packing-(1,2), a six-colouring, or named exceptional anti-neighbourhood descent",
 ]
 keywords = ["K7 minus", "exact seven-cut", "fixed operation", "connected support", "boundary triangle", "explicit minor model"]
@@ -13255,6 +13281,12 @@ kind = "uses"
 note = "Five surviving universal-bag portals in the fixed two-edge response satisfy the separator dichotomy's duplicate-portal hypothesis."
 
 [[relations]]
+source = "hc7.k7minus_multiple_missing_adjacencies_separator"
+target = "hc7.k7minus_exact_k7vee_separator_dichotomy"
+kind = "strengthens"
+note = "The retaining-core argument now permits any two or more missing centre adjacencies; unavoidable opposite cores already expose an actual separator."
+
+[[relations]]
 source = "hc7.k7minus_fixed_response_nested_separator"
 target = "hc7.k7minus_two_hole_rooted_persistence"
 kind = "uses"
@@ -13351,10 +13383,16 @@ kind = "strengthens"
 note = "In the paired two-owner/triangle response, two triangle contacts give an explicit K7-minus model rather than only a partition-reflection certificate."
 
 [[relations]]
+source = "hc7.k7minus_exact7_nontriangle_triangle_completion"
+target = "hc7.k7minus_multiple_missing_adjacencies_separator"
+kind = "uses"
+note = "Once a complete operated support is disjoint from the rich full connected subgraphs, all remaining missing retained-clique contacts yield a K7-minus model or an actual nested separator."
+
+[[relations]]
 source = "hc7.target.k7minus_one_operation_interface_closure"
 target = "hc7.k7minus_exact7_nontriangle_triangle_completion"
 kind = "uses"
-note = "At exact packing (1,2), the open target reduces to producing the named nontriangle-plus-two-triangle connected support, a common partition, or a named exceptional anti-neighbourhood descent."
+note = "At exact packing (1,2), the open target reduces to detaching a complete operated support with a full remainder and terminalizing its separator, or producing a common partition or named exceptional anti-neighbourhood descent."
 
 [[verifiers]]
 id = "degree8-nonedge-bipartition-classification"

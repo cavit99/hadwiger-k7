@@ -233,18 +233,33 @@ five unbounded reductions; none is an isolated graph-code elimination.
 6. In the exact packing-`(1,2)` branch, the
    [three-full-subgraph completion theorem](../results/hc7_k7minus_exact7_three_full_subgraph_completion.md)
    exactly characterizes the `K_7^-` models visible after contracting the
-   three full connected subgraphs.  More importantly, in the paired
-   `2+1+1+3` boundary response it gives an explicit terminal model whenever
-   an operation-generated connected subgraph meets one of the four
-   nontriangle vertices and at least two vertices of the retained boundary
-   triangle.  In the `3+1+1+2` response, two adjacent operated connected
-   subgraphs give the model when all but at most one of their four contacts
-   with the retained boundary edge are present.  Target exclusion therefore
-   forces the corresponding contact deficits.  Seven-connectivity can replace
-   those missing boundary contacts by several attachments to the two rich
-   full subgraphs, so the surviving case is an operation-labelled
-   full-subgraph splitting problem rather than an incomplete boundary
-   census.
+   three full connected subgraphs.  The new
+   [multiple-missing-adjacency dichotomy](../results/hc7_k7minus_multiple_missing_adjacencies_separator_dichotomy.md)
+   removes the remaining contact count in the `2+1+1+3` response: every
+   complete operated `x`--`y` support disjoint from the two rich full
+   subgraphs gives either an explicit `K_7^-` model or an actual nested
+   separator, even when it meets none of the retained boundary triangle.
+   In the `3+1+1+2` response the same conclusion holds when either operated
+   support meets both ends of the retained boundary edge.  The crossed
+   one-miss-at-each orientation remains open.
+
+   This is an unbounded structural reduction, but its separator is not a
+   terminal: its boundary may have order greater than seven, need not equal
+   `N_G(z)` for an exceptional vertex, and need not carry a legal trace of
+   the fixed colouring.  The direct-entry case can also put every complete
+   support through one of the retained full subgraphs.  Thus the surviving
+   problem is operation-labelled support detachment and separator
+   terminalization, not a missing boundary-contact estimate.
+
+   A fixed deletion of an internal edge of an attained-duty gate was also
+   tested.  Its five bichromatic bypasses are labelled by the new edge
+   response, whereas the three duties are labelled by the original
+   proper-minor response.  No proved transition aligns those partitions;
+   treating the bypass colours as duty labels is the first unsupported
+   inference.  This does not refute a dynamic split.  The smallest repair
+   is a two-operation trace-alignment theorem producing a complete detached
+   support, a common boundary partition, `K_7^-`, or `N_G(z)` with a smaller
+   exceptional anti-neighbourhood component.
 
 The same note gives a global one-root strengthening.  For every exceptional
 `r`, the bounds `m>=4n-2` and `b>=17` put the six-connected graph `G-r`
@@ -394,13 +409,11 @@ Attack the remaining operation-coupled obligations in this order.
    response gives a legal one-sided trace, and the first exact unsupported
    step is its conversion into the last partition-specific connected
    subgraph, a terminal minor, or a named descent.  In the paired
-   packing-`(1,2)` residue, prove an operation-labelled full-subgraph
-   splitting lemma: retain one full connected remainder while separating a
-   connected subgraph, or adjacent pair of connected subgraphs, satisfying
-   one of the two explicit completion lemmas.
-   The displayed completion theorem then gives `K_7^-`; failure must instead
-   return a common boundary partition or the literal anti-neighbourhood of a
-   named exceptional centre.
+   packing-`(1,2)` residue, prove the two-operation trace-alignment lemma:
+   retain one full connected remainder while detaching a complete operated
+   support, or instead return a common boundary partition or the literal
+   anti-neighbourhood of a named exceptional centre.  No additional
+   retained-clique contact hypothesis is needed in the `2+1+1+3` response.
 2. **Eliminate the low-contact residue if terminalization returns to the
    absorbed model family.**  In the
    notation of the pair-deletion reduction this is `p=1,k<=2`.  Keep the
