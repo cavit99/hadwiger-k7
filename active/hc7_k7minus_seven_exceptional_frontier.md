@@ -209,7 +209,13 @@ five unbounded reductions; none is an isolated graph-code elimination.
    with the target and owner branch-set labels.  Closing the residue still
    requires that operation-to-recipient allocation, or a returned separation
    whose boundary is literally the neighbourhood of a named exceptional
-   degree-eight vertex.
+   degree-eight vertex.  In the exact `2+2` root-removal split, the thick
+   two-owner side now collapses to one literal portal vertex.  The remaining
+   vertices on that side and the complementary labelled side are connected,
+   anticomplete, and both adjacent to the same two nonadjacent boundary
+   vertices.  Two proper-minor colourings therefore glue across that
+   boundary and six-colour `G`.  This eliminates the entire `2+2`
+   root-removal residue.
 
 The same note gives a global one-root strengthening.  For every exceptional
 `r`, the bounds `m>=4n-2` and `b>=17` put the six-connected graph `G-r`
@@ -341,15 +347,10 @@ allocation needed to prove it is open.
 
 Attack the remaining operation-coupled obligations in this order.
 
-1. **Prove root-removal compatibility for the minimum deficient `P`-bag.**
-   After deleting the exceptional root, the bag must remain nonempty and
-   connected and retain all four universal adjacencies, or the same fixed
-   two-edge-star response must give a `K_7^-` model, a six-colouring, or a
-   smaller exceptional anti-neighbourhood component.  The exact surviving
-   split residue is a thick `2+2` ownership interface: its large side has a
-   connected subset whose neighbourhood lies in one bottleneck vertex plus
-   two universal bags and has order at least seven.  This is not a
-   three-shore cut, and the boundary size is not known to be exactly seven.
+1. **Complete root-removal compatibility for the minimum deficient
+   `P`-bag.**  The two-component split is eliminated.  Exclude the remaining
+   singleton bag `R={r}` and preserve every universal adjacency through the
+   one connected remainder, while retaining the fixed operation.
 2. **Eliminate the low-contact residue once compatibility holds.**  In the
    notation of the pair-deletion reduction this is `p=1,k<=2`.  Keep the
    fixed colouring and labelled near-clique model simultaneous.

@@ -296,12 +296,21 @@ root it may be empty, lose a required universal adjacency, or split into two
 components.  In the split case those components own the four universal
 labels in an exact `2+2` partition; all eight root neighbours lie in them,
 with one root-neighbour side a clique of order at most three and the other
-of order at least five and independence number two.  This is a thick
-two-shore interface, not the eliminated three-shore seven-cut.  A
-two-owner linkage transfer further forces the large side to contain a
-connected set whose entire neighbourhood has order at least seven and lies
-in one internal bottleneck vertex plus two universal bags.  The bound is
-only a lower bound; equality gives an allowed two-shore order-seven cut.
+of order at least five and independence number two.
+
+The new large-side attack collapses the formerly thick two-owner interface
+to one literal vertex `t`.  Inside the minimum deficient bag, `t` has one
+bag-neighbour, owns every endpoint of both adjacencies to its two universal
+bags, and has no other foreign neighbours.  Removing `t` leaves one
+connected open side; the other root-removal component together with the six
+foreign bags is the other.  These sides are anticomplete and both are
+adjacent to the nonadjacent boundary vertices `r,t`.  Contracting either
+side together with `r` gives the opposite closed shore with the edge `rt`
+added.  Both proper minors are six-colourable; their boundary colour pairs
+are distinct and can be aligned by a palette permutation, so the two
+colourings glue to a six-colouring of `G`.  This contradiction eliminates
+the entire two-component `2+2` root-removal residue.  It is an unbounded
+terminal colouring argument, not a finite boundary elimination.
 
 Only after proving root-removal compatibility can one assign the contact
 parameters of the labelled absorption to the same model and response.  A
@@ -311,10 +320,12 @@ maximum.  Even when one does, donor-minimizing transfers are not proved to
 preserve the separate deficient/universal labels or the persistent edge
 pair.  The joint model--colouring family is therefore not known to be
 exchange-closed, and a lexicographic optimization over it is invalid.  The
-three ordered repairs are root-removal compatibility, low-contact
-elimination, and operation-preserving absorbed-family exchange.  The proved
-split structure and exact nonclosure are recorded in the pair-deletion
-technical note to prevent the same optimization from being assumed again.
+remaining root-removal gap is now only `R={r}`, or a connected `R-r` which
+loses a required universal adjacency formerly supported at `r`.  After
+those cases, the ordered repairs are low-contact elimination and
+operation-preserving absorbed-family exchange.  The proved terminal and the
+remaining quantifier nonclosure are recorded in the pair-deletion technical
+note.
 
 The same note proves a stronger one-root entrance.  For every exceptional
 vertex `r`, the global `4n-2` density bound places the six-connected graph

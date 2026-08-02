@@ -321,10 +321,17 @@ packing vector `(1,1)`, `(1,2)`, or `(2,1)`.  The bounded deficient-`P`
 attack found that root removal precedes the old low-contact question: the
 minimum rooted bag may be empty after deleting the root, lose a required
 universal adjacency, or split into an exact `2+2` ownership pair.  The
-immediate exceptional-centre attack is therefore root-removal compatibility
-under the one fixed two-edge-star colouring.  Any exact order-seven
-obstruction returned there must be decoded in the two-shore normal form; a
-three-shore return would already six-colour the host.
+large side of that split now collapses to one vertex owning both adjacencies
+to its two universal bags.  This exposes an exact two-separation whose
+nonadjacent boundary vertices are full to both connected open sides.
+Contracting opposite sides adds the missing boundary edge in two proper
+minors; their six-colourings align and glue.  Hence the whole `2+2` split is
+impossible and the minimum rooted bag minus its root has at most one
+component.  The immediate exceptional-centre attack is therefore the two
+remaining root-removal cases: exclude the singleton bag and preserve every
+universal adjacency through the one connected remainder.  Any exact
+order-seven obstruction returned there must be decoded in the two-shore
+normal form; a three-shore return would already six-colour the host.
 
 For the bare extremal theorem, `r=4` remains open because an arbitrary
 seven-connected graph at the density threshold has no proper-minor

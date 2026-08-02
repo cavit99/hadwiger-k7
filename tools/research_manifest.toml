@@ -7924,7 +7924,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "ed9399ffaa54ff6c2f6220867ab08a57f3f288fd7b69a5b04ca5f34e1d033cdc"
+expected_source_sha256 = "1d2de3ca36a05bbc4db15376df569a236f9f11d2d7a0e2fd3a004407e418c8df"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8199,7 +8199,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 1 (a spanning near-clique model after deleting two centres)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "ec0d640adef871759dc191c2509ff1c2d43a16c07ec4caac79ee960a1be221c1"
+expected_source_sha256 = "bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef"
 scope = "two degree-eight vertices in the literal-K5-free density-4n branch forced by a disconnected exceptional anti-neighbourhood"
 label_fidelity = "both deleted roots and all seven labelled branch sets of the spanning K7-vee model remain explicit"
 conclusions = [
@@ -8224,7 +8224,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 3 (forced target interface)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "ec0d640adef871759dc191c2509ff1c2d43a16c07ec4caac79ee960a1be221c1"
+expected_source_sha256 = "bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef"
 scope = "one retained degree-eight root in a contact-maximal spanning K6 model, with a globally minimum branch set containing at least two root neighbours"
 label_fidelity = "the retained root, surplus donor, uncontacted target, four protected branch sets and every literal donor-target portal remain named"
 conclusions = [
@@ -8248,7 +8248,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 4 (a spanning near-clique and forced interface at every exceptional centre)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "ec0d640adef871759dc191c2509ff1c2d43a16c07ec4caac79ee960a1be221c1"
+expected_source_sha256 = "bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef"
 scope = "any exceptional degree-eight vertex in the critical K7-minus host"
 label_fidelity = "the exceptional root and seven labelled branch sets of the spanning K7-vee model remain explicit; a separately optimized K6 model need not retain the P-B-C provenance"
 conclusions = [
@@ -8273,7 +8273,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 6 (two-hole persistence and a deficient-bag response)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "ec0d640adef871759dc191c2509ff1c2d43a16c07ec4caac79ee960a1be221c1"
+expected_source_sha256 = "bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef"
 scope = "an exceptional degree-eight root added to a contacted bag of an exact spanning labelled K7-vee model"
 label_fidelity = "the exceptional root, the deficient P-B-C labels, the minimized contacted bag, every persistent incident edge, and one two-edge contraction colouring remain explicit"
 conclusions = [
@@ -8292,14 +8292,14 @@ keywords = ["K7 minus", "K7 vee", "persistent edges", "joint deletion", "star co
 
 [[claims]]
 id = "hc7.k7minus_rooted_deficient_bag_removal"
-title = "Deleting an exceptional root leaves a compatible deficient bag or an exact 2+2 split residue"
+title = "Root removal has at most two components, with an exact 2+2 split structure"
 kind = "lemma"
 status = "audited-green"
 source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 7 (root-removal compatibility and the exact split residue)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "ec0d640adef871759dc191c2509ff1c2d43a16c07ec4caac79ee960a1be221c1"
+expected_source_sha256 = "bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef"
 scope = "the minimum rooted deficient P-bag in the two-hole persistence construction at an exceptional degree-eight root"
 label_fidelity = "the root, deficient P-B-C labels, four universal labels, components after root removal, and their literal portal ownership remain fixed"
 conclusions = [
@@ -8317,6 +8317,31 @@ does_not_prove = [
 keywords = ["K7 minus", "K7 vee", "deficient bag", "root removal", "2+2 ownership", "two shores"]
 
 [[claims]]
+id = "hc7.k7minus_two_component_root_removal_exclusion"
+title = "The two-component rooted deficient-bag residue six-colours the host"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
+source_heading = "Proposition 8 (the two-component root-removal residue is impossible)"
+active = false
+audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
+expected_source_sha256 = "bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef"
+scope = "the exact 2+2 split of a minimum rooted deficient P-bag when an exceptional degree-eight root contacts the P-bag of a spanning exact K7-vee model"
+label_fidelity = "the exceptional root, deficient P-B-C model, both root-removal components, two owner labels, singleton portal and both literal closed shores remain named"
+conclusions = [
+  "a minimum detachable two-owner lobe is one vertex with one P-neighbour and all P-ends of both owner adjacencies",
+  "the remaining vertices on that side and the complementary labelled side are connected, anticomplete and both full to the same nonadjacent two-vertex boundary",
+  "contracting either opposite side produces a proper minor with the boundary edge added, and their six-colourings glue to six-colour G",
+  "therefore a minimum rooted deficient P-bag minus its exceptional root has at most one component",
+]
+does_not_prove = [
+  "that the minimum rooted deficient bag is larger than its root",
+  "that all four universal adjacencies survive in its connected root-deletion remainder",
+  "exceptional anti-neighbourhood connectivity, a six-colouring of every hypothetical host, or host closure",
+]
+keywords = ["K7 minus", "deficient bag", "root removal", "two-owner interface", "two-separation", "colour gluing"]
+
+[[claims]]
 id = "hc7.target.k7minus_one_operation_interface_closure"
 title = "One-operation terminal or exceptional-component descent"
 kind = "target"
@@ -8331,7 +8356,8 @@ conclusions = [
   "proving the target would eliminate the whole critical host and settle the K7-minus six-colour conjecture",
 ]
 does_not_prove = [
-  "root-removal compatibility for the minimum rooted deficient bag",
+  "exclusion of the singleton rooted bag R={r}",
+  "restoration of universal adjacencies lost through a connected root-deletion remainder",
   "alignment of an absolute minimum rooted deficient bag with a globally contact-maximal K6 model",
   "exchange closure preserving the fixed operation while the surplus donor is minimized",
   "the operation-to-recipient allocation needed for any terminal outcome",
@@ -13049,10 +13075,28 @@ kind = "uses"
 note = "Independence number three and K4-freeness split the eight root neighbours into the 3-versus-5 structure in the two-component residue."
 
 [[relations]]
+source = "hc7.k7minus_two_component_root_removal_exclusion"
+target = "hc7.k7minus_rooted_deficient_bag_removal"
+kind = "uses"
+note = "The exact 2+2 split and its thick two-owner lobe are the input to the singleton reduction."
+
+[[relations]]
+source = "hc7.k7minus_two_component_root_removal_exclusion"
+target = "hc7.multi_owner_portal_linkage_transfer"
+kind = "uses"
+note = "The two-owner Rado--Menger certificate drives the recursive lobe collapse."
+
+[[relations]]
 source = "hc7.target.k7minus_one_operation_interface_closure"
 target = "hc7.k7minus_rooted_deficient_bag_removal"
 kind = "uses"
 note = "The one-operation route must first make the rooted deficient bag compatible with deletion of its exceptional root."
+
+[[relations]]
+source = "hc7.target.k7minus_one_operation_interface_closure"
+target = "hc7.k7minus_two_component_root_removal_exclusion"
+kind = "uses"
+note = "The two-component root-removal branch is eliminated; the target now needs only exclude the singleton bag and preserve every universal adjacency through the connected remainder."
 
 [[verifiers]]
 id = "degree8-nonedge-bipartition-classification"

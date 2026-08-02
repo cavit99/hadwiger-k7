@@ -4,9 +4,11 @@
 optimized forced-interface theorem, the exact labelled-absorption contact
 formula, the two-hole persistence count and deficient-bag response, the
 one-operation Kempe conclusion, the root-removal split proposition, and the
-sufficient same-host descent test.
+two-owner portal collapse, terminal two-shore colouring, and sufficient
+same-host descent test.
 Label-preserving donor optimization, operation-to-recipient allocation, and
-the terminal/descent target are correctly left open.  The recorded failed
+the global terminal/descent target are correctly left open; the
+two-component residue itself reaches the colouring terminal.  The recorded failed
 joint-optimization route correctly identifies its three ordered quantifier
 gaps and does not present them as a counterexample.
 
@@ -16,7 +18,7 @@ gaps and does not present them as a counterexample.
 **SHA-256:**
 
 ```text
-ec0d640adef871759dc191c2509ff1c2d43a16c07ec4caac79ee960a1be221c1
+bdca3344b5c0087b935abdb9fa0caa9e68235aa5c00c3511f0afbb87b2ebe6ef
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -339,12 +341,56 @@ remainder must be nonempty and connected and every one of the four required
 universal adjacencies must have a surviving endpoint outside `r`.
 Proposition 6 does not exclude failure of any of these requirements.
 
-## 7C. Joint-optimization negative finding
+## 7C. Two-owner portal collapse and terminal colouring
 
-The first gap is root-removal compatibility: Proposition 6 minimizes a
-rooted model in `G`, whereas Proposition 5 requires a model in `G-r`.
-Only after the compatibility requirements of Section 7B hold does one have
-`p=1` for the same model and response.  The new count then forces `k<=2`.
+The connected set in (B10) is detachable from the minimum rooted `P`-bag:
+its complement remains connected, it has one attachment inside that bag,
+and it has foreign neighbours only in its two owner bags.  If it contacts
+one owner while a portal to the other owner remains outside, moving the set
+into the contacted owner preserves every labelled adjacency and strictly
+shrinks the rooted bag.  Applying this in both directions proves that the
+set monopolizes both owner adjacencies.
+
+Choose an inclusion-minimal connected lobe with that property.  A full
+two-owner linkage to two distinct residual attachment vertices would split
+the lobe between the owners and shrink the rooted bag.  Its Rado--Menger
+failure therefore gives one vertex meeting every attachment-to-owner path.
+If either owner portal is not concentrated there, a component behind that
+vertex avoids the residual attachment set.  The same one-owner transfer
+argument makes this smaller component monopolize both owners, contradicting
+the lobe minimum.  Both owner portal sets are consequently the same
+singleton.  Any remaining component of the lobe minus that singleton has
+all host neighbours in the singleton and the unique parent vertex, contrary
+to seven-connectivity.  This verifies (B11), including the exact single
+`P`-neighbour and both portal monopolies.
+
+Let `Q=Z_2-\{t\}`.  It is nonempty because it contains `W_2`.  The unique
+`R`-neighbour of `t` makes `t` a leaf of the connected graph `G[Z_2]`, so
+`Q` is connected.  Spanningness identifies the complementary open side
+`H` as `Z_1` together with the six foreign branch sets.  Those branch sets
+form a connected `K_6` contact graph and `Z_1` meets its two owner bags, so
+`H` is connected.
+
+Exact ownership and portal monopoly give no edge between `Q` and `H`.
+Both sides see both `r,t`: `W_2` and the parent `p` do so on the `Q` side,
+while `W_1` and the two owner bags do so on the `H` side.  Also `rt` is
+absent.  Contracting `H union \{r\}` therefore gives exactly
+`G[Q union \{r,t\}]+rt`, and the
+symmetric contraction of `Q union \{r\}` gives exactly
+`G[H union \{r,t\}]+rt`.  Both are proper minors.  Their six-colourings
+make `r,t` distinct, so one palette permutation aligns the ordered pair and
+the colourings glue across `\{r,t\}`.  This verifies the terminal
+six-colouring contradiction and the conclusion `h<=1`.
+
+## 7D. Joint-optimization negative finding
+
+The split case of root-removal compatibility is now eliminated.  The
+remaining gap is that Proposition 6 minimizes a rooted model in `G`, whereas
+Proposition 5 requires a nonempty deficient bag in `G-r` retaining all four
+universal adjacencies.  The minimum bag may still be `{r}`, or its connected
+remainder may lose an adjacency supported only at `r`.  Only after those
+possibilities are excluded does one have `p=1` for the same model and
+response.  The count then forces `k<=2`.
 The contact formula in (A1) makes every labelled absorption have at most
 three contacts, below the global upper bound four.  Thus the failed attack
 cannot legitimately start the optimized forced-interface argument on the
@@ -363,12 +409,6 @@ The note claims neither that they hold nor that their failure is realized
 by a graph satisfying the critical-host hypotheses.  This is a scoped
 negative finding about an unsupported proof mechanism, not a barrier or a
 mathematical disproof of the one-operation target.
-
-The audited three-component `3,2,2` theorem does not change this conclusion.
-In the split residue, seven-connectivity supplies only a lower bound of
-seven on each displayed neighbourhood; it supplies neither order exactly
-seven nor a third open shore.  A returned equality case would still require
-the operation-labelled two-shore theorem which the source leaves open.
 
 ## 8. Same-host descent test
 

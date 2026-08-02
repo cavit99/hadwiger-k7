@@ -5,9 +5,12 @@
 This note records the two-root consequence of the disconnected
 exceptional-centre branch, the corresponding one-root reduction available
 at every exceptional centre, and the exact target interface forced by a
-spanning-`K_6` model's optimality.  It does not construct a `K_7^-` minor,
-produce a six-colouring, or prove exceptional anti-neighbourhood
-connectivity.
+spanning-`K_6` model's optimality.  It also eliminates the exact
+two-component root-removal residue: a two-owner transfer concentrates the
+interface at one vertex, after which two proper-minor colourings glue across
+a literal two-vertex boundary.  It does not construct a `K_7^-` minor,
+prove exceptional anti-neighbourhood connectivity, or close the remaining
+singleton and connected root-removal cases.
 
 ## 1. Setting
 
@@ -662,6 +665,134 @@ other foreign bag.  Deleting `{r,s}` would disconnect `G`, contrary to
 seven-connectivity.  Thus `Z_2` has outcome 2, completing the proof.
 \(\square\)
 
+### Proposition 8 (the two-component root-removal residue is impossible)
+
+Under (H), let `r` be exceptional and fix an exact spanning labelled
+`K_7^vee` model in `G-r` whose deficient `P`-bag is adjacent to `r`.  Use
+Proposition 6 with `D=P` and its minimum rooted `P`-bag `R`.  Then
+`G[R]-r` has at most one component.  In particular, the exact `2+2` split
+in Proposition 7 cannot occur.
+
+More precisely, assume that split and let `Z_2` be the component with
+root-neighbour set `W_2` in (B9).  After relabelling its two owners as
+`U_a,U_b`, the minimum-bag transfer first gives vertices
+
+\[
+                         t\in Z_2-W_2,\qquad p\in R-t
+\]
+
+such that
+
+\[
+ N_{G[R]}(t)=\{p\},\qquad
+ N_G(t)\subseteq\{p\}\cup U_a\cup U_b,                 \tag{B11}
+\]
+
+and every edge from the `P`-bag `R` to either `U_a` or `U_b` has
+`P`-endpoint `t`.  In particular both owner-neighbour sets of `t` are
+nonempty.  These conclusions yield two proper minors whose six-colourings
+glue to a six-colouring of `G`, a contradiction.
+
+#### Proof
+
+Start with the connected set `C` supplied by outcome 2 of Proposition 7
+inside `Z_2-s_0`.  It is disjoint from `W_2`, has only `s_0` as a neighbour
+inside `R-C`, and has foreign neighbours only in `U_a,U_b`.
+
+Suppose `C` meets `U_a` and some `R-U_b` edge has its `R`-endpoint outside
+`C`.  Move `C` from `R` into `U_a`.  The residual `P`-bag is connected;
+the enlarged `U_a`-bag is connected; an edge across
+`C | (R-C)` restores their mutual adjacency; and the outside portal retains
+the `P-U_b` adjacency.  Every other labelled adjacency survives.  This is
+a spanning model with a smaller rooted `P`-bag, contrary to the choice of
+`R`.  Interchanging the owners gives the same conclusion.  Since `C`
+contains at least one owner portal and both model adjacencies are nonempty,
+`C` consequently contains every `P`-endpoint of both owner adjacencies.
+
+Among all nonempty connected sets `L\subseteq C` such that `R-L` is
+connected, `L` has exactly one neighbour in `R-L`, and `L` contains all
+`P`-endpoints of both owner adjacencies, choose one of minimum order.  Let
+`q` be its unique neighbour in `R-L`, and put
+
+\[
+ B=N_L(q),\qquad A_i=N_L(U_i)\quad(i\in\{a,b\}).
+\]
+
+If `G[L]` had vertex-disjoint paths from `A_a,A_b` to two distinct vertices
+of `B`, enlarge those paths to a connected partition
+`L=L_a\mathbin{\dot\cup}L_b` and move `L_a,L_b` into their respective
+owners.  The two distinct `q-L` edges restore both owner adjacencies, again
+shrinking the rooted `P`-bag.  The two-owner Rado--Menger criterion
+therefore gives a vertex `w\in L` meeting every path in `G[L]` from `B` to
+`A_a\cup A_b`.
+
+If the two owner portal sets are not both contained in `\{w\}`, choose a
+component `L'` of `G[L-w]` containing an owner portal outside `w`.  It
+contains no vertex of `B`, so it has only `w` as a neighbour in `R-L'`.
+The preceding one-owner transfer argument, applied to `L'`, forces `L'` to
+contain all `P`-endpoints of both owner adjacencies.  This contradicts the
+minimum choice of `L`.  Hence
+
+\[
+    A_a=A_b=\{w\}.                                 \tag{B12}
+\]
+
+If `L-w` were nonempty, a component of `G[L-w]` would have all its host
+neighbours in `\{q,w\}`: (B12) excludes the owners, and the exact ownership
+relations exclude every other branch set.  This would contradict
+seven-connectivity.  Thus `L=\{w\}`.  Set `t=w` and `p=q`.  This proves
+(B11) and the portal assertion.
+
+Put `Q=Z_2-\{t\}` and let
+
+\[
+                    H=V(G)-(Q\cup\{r,t\}).             \tag{B13}
+\]
+
+The set `Q` is nonempty because `W_2\subseteq Q` and `|W_2|\ge5`.
+Since `t\notin W_2`, the edge `rt` is absent; hence `p\ne r`.  Componenthood
+of `Z_2` in `G[R]-r` then puts `p` in `Z_2`.  Thus `t` is a leaf of the
+connected graph `G[Z_2]`, and `G[Q]` is connected.  The six foreign branch
+sets induce a connected subgraph, and `Z_1` attaches to its two owner bags;
+hence `G[H]` is connected.
+
+The exact ownership inclusion (B8), componenthood of `Z_2` in `G[R]-r`,
+and the portal assertion give no edge between `Q` and `H`.  Both open sides
+meet both boundary vertices: `Q` meets `r` through `W_2` and meets `t`
+through `p`; `H` meets `r` through `W_1` and meets `t` through either owner
+bag.  Finally `rt` is absent because `t\notin W_2`.
+
+Contract the connected set `H\cup\{r\}` to `r`.  Because `Q` is
+anticomplete to `H`, and because `H` meets `t`, the resulting proper minor
+is exactly
+
+\[
+                       G[Q\cup\{r,t\}]+rt.             \tag{B14}
+\]
+
+Similarly, contracting the connected set `Q\cup\{r\}` to `r` gives the
+proper minor
+
+\[
+                       G[H\cup\{r,t\}]+rt.             \tag{B15}
+\]
+
+Both minors have six-colourings by (H).  In each colouring `r` and `t`
+have different colours because the edge `rt` is present.  Permute the
+palette of one colouring so that the ordered colours on `r,t` agree in the
+two colourings.  Their restrictions then glue across `\{r,t\}`; there is
+no edge between `Q` and `H`.  This gives a six-colouring of `G`, contrary
+to (H).  Thus the two-component outcome is impossible.  \(\square\)
+
+### Continuation gate
+
+Proposition 8 satisfies the colouring terminal: the two-component split
+would six-colour `G`.  Thus the minimum rooted deficient bag has only two
+remaining root-removal behaviours.  Either `R=\{r\}`, or `R-r` is connected
+but one or more required `P-U_i` adjacencies may be supported only at `r`.
+The immediate target is to eliminate those losses while retaining the
+fixed response from Proposition 6.
+
 Proposition 6 is a two-missing-edge adaptation of the existing rooted
 persistence argument; the one-missing-edge theorem does not apply
 verbatim.  Reselecting `R` can change the original contact pattern.  Even
@@ -690,7 +821,9 @@ aligned donor model, the passage from named ends to clean named first hits
 is the first unsupported operation-level inference; neither the forced-
 interface theorem nor one fixed proper-minor colouring supplies it.  The
 root-removal compatibility gap below occurs earlier when trying to align
-that donor model with the minimum deficient-bag response.
+that donor model with the minimum deficient-bag response.  Proposition 8
+eliminates the two-component branch, but does not exclude the singleton bag
+or restore universal adjacencies lost from the one connected remainder.
 
 ### Recorded negative finding: root removal and the two optimizations cannot yet be coupled
 
@@ -700,12 +833,12 @@ counterexample to the open target.
 The minimum deficient-bag response of Proposition 6 and the labelled
 absorption formula of Proposition 5 do not yet apply to the same model.
 Proposition 6 minimizes a rooted `P`-bag in `G`; Proposition 5 begins with a
-labelled model in `G-r`.  Proposition 7 leaves three possibilities: `R` may
-equal `{r}`, `R-r` may be connected while some required `P-U_i` adjacency
-is supported only at `r`, or `R-r` may have the exact two-component residue
-(B7)--(B9).  Thus it is not yet legitimate to assign the parameters `p,k`
-of Proposition 5 to the minimized rooted model carrying the fixed
-two-edge-star response.
+labelled model in `G-r`.  Proposition 8 eliminates the two-component
+residue.  The remaining minimum bag may equal `{r}`, or `R-r` may be
+connected while some required `P-U_i` adjacency is supported only at `r`.
+Thus it is still not legitimate to assign the parameters `p,k` of
+Proposition 5 to the minimized rooted model carrying the fixed two-edge-star
+response.
 
 Even after root-removal compatibility is supplied, applying Proposition 6
 with `D=P` gives `p=1` in Proposition 5.  By (A1), one of the four labelled
@@ -734,10 +867,10 @@ cannot be invoked.
 
 The three repair statements, in their logical order, are now explicit:
 
-1. prove root-removal compatibility: `R-r` is a nonempty connected
-   deficient bag retaining all four universal adjacencies, or obtain a
-   `K_7^-` model, a six-colouring, or a smaller exceptional
-   anti-neighbourhood component;
+1. prove root-removal compatibility in the two surviving cases: exclude
+   `R={r}` and ensure that the connected bag `R-r` retains all four
+   universal adjacencies, or obtain a `K_7^-` model, a six-colouring, or a
+   smaller exceptional anti-neighbourhood component;
 2. eliminate (13a) by proving that the resulting rooted `P`-bag with at
    most two contacted universal bags already gives a `K_7^-` model, a
    six-colouring, or a smaller exceptional anti-neighbourhood component;
@@ -753,12 +886,6 @@ simultaneously the fixed colouring operation, the separate near-clique
 labels, and a residual branch set.  This is the first exact unsupported
 inference in the attempted joint model--colouring optimization and should
 be checked before any future use of that route.
-
-The newly proved three-component `3,2,2` seven-cut exclusion does not close
-the split residue (B7).  Seven-connectivity gives only
-`|N_G(Z_i)|>=7`; it gives no upper bound, and (B8) naturally separates two
-shores rather than three.  Even equality would require an operation-labelled
-two-shore colouring or descent theorem.
 
 Choose `(r,C_0)` so that `r` is exceptional and `C_0` has minimum order
 among all components of `G-N[v]` over all exceptional vertices `v`.  Put
@@ -842,11 +969,14 @@ is the remaining operation-specific gap.
 - [deficient-singleton joint persistence](../results/hc7_deficient_singleton_joint_persistence.md),
   for the deletion-capacity and fan-model templates;
 - [prescribed first edges and an arbitrary target set](../results/hc7_order8_prescribed_spoke_reduction.md#1-a-prescribed-spoke-fan-lemma);
+- [two-owner Rado--Menger transfer](../results/hc7_multi_owner_portal_linkage_transfer.md);
 - seven-connectivity from contraction-criticality.
 
 The note may be cited for the pair-deletion and single-deletion spanning
 `K_7^\vee` models, their `K_6` normalizations, the displayed root-contact
 restrictions, the forced-interface inclusion (9), the two-hole persistence
-count, and the deficient-bag response (B3).  It may not be cited as an
-operation-to-branch-set allocation, a same-host exceptional-component
-descent, or an elimination of any remaining attachment regime.
+count, the deficient-bag response (B3), the two-owner singleton reduction,
+and the six-colouring exclusion of the two-component root-removal residue.
+It may not be cited as an operation-to-branch-set allocation, a same-host
+exceptional-component descent, complete root-removal compatibility, or host
+closure.
