@@ -63,7 +63,7 @@ The main internally audited reductions currently establish that:
   into actual full-neighbourhood separations or smaller list-critical
   subgraphs.
 
-Separately, a computation-free, internally audited route toward the adjacent
+Separately, a computation-free, internally audited route towards the adjacent
 `K_7^-` problem, where `K_7^-` is `K_7` with one edge deleted, proves that
 every six-connected `K_7^-`-minor-free graph has at most one literal `K_5`.
 Consequently, every hypothetical minor-minimal non-six-colourable host has
@@ -111,10 +111,13 @@ and the multi-component colouring-response theorem.  The boundary-labelled
 degree-seven result is a possible secondary application, subject to a careful
 overlap review against the public unlabelled near-clique theorem.
 
-The adjacent `K_7^-` chain is a second, narrower manuscript candidate with no
-load-bearing finite classification.  Its specialist-review dossier records
-the earlier reviewed theorem revisions; the new two-clique theorem
-and its `4n-2` consequences require the same conventional specialist review.
+The adjacent `K_7^-` chain has been distilled into a concise,
+computation-free [paper](paper/k7minus-low-degree/main.pdf), with
+[LaTeX source](paper/k7minus-low-degree/main.tex).  It contains the
+exact degree-seven neighbourhood classification, the private-triangle
+Kempe argument, the `4n-2` consequences, and a direct uniform linked-clique
+theorem used in the reduction.  The manuscript has separate mathematical
+and citation audits, but these are not peer review.
 
 This is not a proof of $HC_7$, evidence that completion is near, or a
 confirmed novelty claim.  In particular, Norin and Totschnig already prove
@@ -122,7 +125,7 @@ the global unlabelled result that every non-six-colourable graph contains a
 minor isomorphic to
 [$K_7^\vee$](https://arxiv.org/abs/2507.03244), obtained from $K_7$ by
 deleting two adjacent edges.  The repository's possible contribution is the
-bounded-interface localization, component-uniform responses, component
+bounded-interface localisation, component-uniform responses, component
 bounds, packing restrictions, and retained boundary labels.  Submission
 should wait for a conventional literature and priority review, independent
 human audits by graph-minor and colouring specialists, and independent
@@ -147,6 +150,7 @@ current.
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [`K_7^-` strict-density frontier](active/hc7_k7minus_density_frontier.md) | Live adjacent route, exact proved entrance, and positive finishing targets |
 | [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Current theorem hashes, dependency map, review questions, and publication gate |
+| [`K_7^-` degree-seven rigidity paper](paper/k7minus-low-degree/main.pdf) | Concise computation-free manuscript containing the low-degree structural theorem chain |
 | [Critical seven-cut capacity](results/hc7_k7minus_critical_seven_cut_capacity.md) | Excludes four-component seven-cuts in the critical host and normalizes the three-component boundary |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
