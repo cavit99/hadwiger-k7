@@ -105,10 +105,10 @@ keywords = ["weak immersion", "binary collision", "landing star", "dirty bridge"
 id = "hc7.target.bounded_interface_bridge"
 title = "Bounded-interface pole-free bridge composition"
 kind = "target"
-status = "active-target"
+status = "frozen"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
-active = true
+active = false
 expected_source_sha256 = "562fe1c68fdd150db8dc3a2735dd5d88ecefe9623644da3326b6d2d37a3b5d50"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
@@ -220,7 +220,7 @@ title = "Low-degree adjacent pair and bounded full separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_adjacent_pair_alignment.md"
-active = true
+active = false
 audit = "results/hc7_low_degree_adjacent_pair_alignment_audit.md"
 expected_source_sha256 = "263611a40dc7829788967250e031a3f3170e1c7a6c8c9a3fbfbb358231b1f9ca"
 
@@ -242,7 +242,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_component_uniform_boundary_alignment.md"
 source_heading = "Theorem 1 (component-uniform boundary alignment)"
-active = true
+active = false
 audit = "results/hc7_component_uniform_boundary_alignment_audit.md"
 expected_source_sha256 = "a6046ab5538b8468bdc211d40b537dec5fca909d47ab9c30acb197d74767410e"
 scope = "every component outside the closed neighbourhood of the same degree-seven-through-nine vertex in a hypothetical minor-minimal HC7 counterexample"
@@ -257,7 +257,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_exterior_component_bounds.md"
 source_heading = "Theorem 1 (sharp current component bounds)"
-active = true
+active = false
 audit = "results/hc7_low_degree_exterior_component_bounds_audit.md"
 expected_source_sha256 = "4ee48c6d71c994b166b29dcd969d64c3526e6b6b75fa8a849fae834cf95eea29"
 scope = "the literal components outside the closed neighbourhood of a degree-seven-through-nine vertex in a hypothetical minor-minimal HC7 counterexample"
@@ -280,7 +280,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_component_deletion_kempe_exchange.md"
 source_heading = "Theorem 1 (common-neighbourhood component exchange)"
-active = true
+active = false
 audit = "results/hc7_component_deletion_kempe_exchange_audit.md"
 expected_source_sha256 = "e659b2765053c34415cad0c6e9dcec78a250e751dd80d79f8e077d064d24835f"
 scope = "a degree-seven-through-nine neighbourhood with at least two literal exterior components in a hypothetical minor-minimal HC7 counterexample"
@@ -306,7 +306,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_full_exterior_component_common_root_exchange.md"
 source_heading = "Theorem 1 (lower boundary or common-root exchange)"
-active = true
+active = false
 audit = "results/hc7_full_exterior_component_common_root_exchange_audit.md"
 expected_source_sha256 = "11f7c6433687847edc3635f3284a074fa2f6157c304035ea9fc42e6a224fbc2f"
 scope = "the singleton-rejection branch of a degree-eight or degree-nine neighbourhood with at least two exterior components"
@@ -331,7 +331,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_common_root_flip_cube_fork.md"
 source_heading = "Theorem 1 (exclusive crossing and antipodal flip-cube fork)"
-active = true
+active = false
 audit = "results/hc7_common_root_flip_cube_fork_audit.md"
 expected_source_sha256 = "e433cb80afc350252674a15f98ab85dd6e879c8f25f842bbeeca79bafcacc48e"
 scope = "the exact two-full-component singleton-rejection common-root residue at a degree-eight or degree-nine neighbourhood"
@@ -357,7 +357,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_common_root_alternating_trace_cycle.md"
 source_heading = "Theorem 3.1 (affine incompatibility is exactly a cyclic edge)"
-active = true
+active = false
 audit = "results/hc7_common_root_alternating_trace_cycle_audit.md"
 expected_source_sha256 = "79d4b4ab1ea7c1b696f2978bb8616988667ceb0454dfc4af1297e53112c7d7ee"
 scope = "two fixed opposite-shore extensions on the two sides of one rejector-changing two-colour boundary switch"
@@ -383,7 +383,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_common_root_short_trace_classification.md"
 source_heading = "Theorem 1 (short-trace classification)"
-active = true
+active = false
 audit = "results/hc7_common_root_short_trace_classification_audit.md"
 expected_source_sha256 = "dc57ab0da71b46cf0e6e878f0f0612aa7ed2698b5227a527a806ec9091a83670"
 scope = "the exact two-full-component singleton-rejection common-root residue at a degree-eight or degree-nine neighbourhood"
@@ -412,7 +412,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_common_root_parallel_two_cycle_normalization.md"
 source_heading = "Theorem 2.1 (minimal parallel-pair geometry)"
-active = true
+active = false
 audit = "results/hc7_common_root_parallel_two_cycle_normalization_audit.md"
 expected_source_sha256 = "3717920f83ab38a59ed0a9486795b657cdc872ca7034781fba8f931bdee59d22"
 scope = "a parallel two-edge cycle in the two fixed shore extensions of the degree-eight or degree-nine common-root residue"
@@ -440,7 +440,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_nonedge_bipartition_classification.md"
 source_heading = "Theorem 1 (nonedge bipartition classification)"
-active = true
+active = false
 audit = "results/hc7_degree8_nonedge_bipartition_classification_audit.md"
 expected_source_sha256 = "e2483c23f73e786ce5a32693ef13810f9e3657511c6b178f5d5a1572e5adad9a"
 scope = "eight-vertex boundary graphs with independence number at most three and no K4 minor after any two-vertex deletion, including the full two-component common-root boundary"
@@ -466,7 +466,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_aligned_pair_bilateral_cycle.md"
 source_heading = "Theorem 2.1 (aligned bilateral response cycle)"
-active = true
+active = false
 audit = "results/hc7_degree8_aligned_pair_bilateral_cycle_audit.md"
 expected_source_sha256 = "cdb813d84a9eb980f1310f0d941c8c349e79988f965ea9a81b45d85d8ca4c8d9"
 scope = "the non-wheel degree-eight two-full-component boundary with an aligned nonedge and two independent triples"
@@ -492,7 +492,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_two_defect_component_closure.md"
 source_heading = "Theorem 4.1"
-active = true
+active = false
 audit = "results/hc7_degree8_two_defect_component_closure_audit.md"
 expected_source_sha256 = "85e4f2d55545254f8a0bedc5e190f9299cf2f69afc960c0a4c186c9f00819857"
 scope = "the non-wheel degree-eight two-full-component aligned bilateral residue after deleting the two named path interiors"
@@ -520,7 +520,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_four_portal_reduction.md"
 source_heading = "Theorem 2.1 (portal reduction)"
-active = true
+active = false
 audit = "results/hc7_degree8_four_portal_reduction_audit.md"
 expected_source_sha256 = "f619a3166654e3fb2f07b7448c317b026aa04d73322c21377f4dd858bdb43a3e"
 scope = "the aligned non-wheel degree-eight two-full-shore residue with independent triples I,T and one operation-compatible boundary-clean path in each shore"
@@ -602,7 +602,7 @@ kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_degree8_portal_role_erasure_barrier.md"
 source_heading = "Lemma 1.1 (terminal-free role erasure)"
-active = true
+active = false
 audit = "barriers/hc7_degree8_portal_role_erasure_barrier_audit.md"
 expected_source_sha256 = "f384c2666d7d805184abf119a270bfeb8596403429551c074259dfec36d05c95"
 scope = "a compact aligned degree-eight local two-shore interface retaining the bilateral paths, four incidence splits, universal entanglement and both five-terminal completion cuts, but not seven-connectivity or contraction-criticality"
@@ -625,7 +625,7 @@ kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_degree8_independent_two_defect_four_bag_barrier.md"
 source_heading = "2. A thirteen-vertex counterexample"
-active = true
+active = false
 audit = "barriers/hc7_degree8_independent_two_defect_four_bag_barrier_audit.md"
 expected_source_sha256 = "2135ac4c04ee8a592c997237be0dd103207761de95638b47c632b8f9577e5696"
 scope = "a compact order-eight boundary, one universal vertex and four singleton bags, each with its own two-vertex defect"
@@ -647,7 +647,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_common_root_star_response.md"
 source_heading = "Theorem 2.1 (three positive response signatures)"
-active = true
+active = false
 audit = "results/hc7_degree8_common_root_star_response_audit.md"
 expected_source_sha256 = "a732fe236dd247070425edd7c19c744934e49dca378555055f468120fc98be94"
 scope = "the exact degree-eight two-full-component singleton-rejection common-root residue with the original singleton trace retained"
@@ -672,7 +672,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_minimal_root_star_response_reduction.md"
 source_heading = "Theorem 4.1 (clean aligned fan or strict generic exact-seven restart)"
-active = true
+active = false
 audit = "results/hc7_degree8_minimal_root_star_response_reduction_audit.md"
 expected_source_sha256 = "8378f08308ce6fd7b4b701f76a925c61c0d3f15e09965ac185ce60e39b06a580"
 scope = "an inclusion-minimal aligned root-star deletion response at the full two-component degree-eight interface"
@@ -699,7 +699,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_common_root_five_reserve_kempe_packet.md"
 source_heading = "Theorem 2.1 (five-reserve Kempe packet)"
-active = true
+active = false
 audit = "results/hc7_common_root_five_reserve_kempe_packet_audit.md"
 expected_source_sha256 = "8471ee1cd4e82cf6e6906a4be0762c75df69ca0e09be76034c810d17e0f101cf"
 scope = "the atomic degree-eight three-trace case and the exact degree-nine four-trace case"
@@ -755,7 +755,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_concentrated_reserve_elimination.md"
 source_heading = "Theorem 4.1"
-active = true
+active = false
 audit = "results/hc7_low_degree_concentrated_reserve_elimination_audit.md"
 expected_source_sha256 = "55b2d8fb8c3732d25a81da541b0752580e6bee467b5090788c5071cabda2c930"
 scope = "the degree-eight and degree-nine tight atomic common-root cases when at least seven reserve demands are exclusive to one exterior component"
@@ -857,7 +857,7 @@ title = "Boundary-only contraction does not close the common-root fork"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_common_root_boundary_only_fork_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_common_root_boundary_only_fork_barrier_audit.md"
 expected_source_sha256 = "e774fb867c13e8bd75c07f22cf959de0ce3867878b3978e5fc96787d2bf800df"
 refutes = [
@@ -893,7 +893,7 @@ title = "Split-boundary colour synchronization"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_split_boundary_synchronization.md"
-active = true
+active = false
 audit = "results/hc7_split_boundary_synchronization_audit.md"
 expected_source_sha256 = "3e3030d6e206fd81b3a79256be2d94cb4a4aac5ad5985fb95008488d9412edf8"
 
@@ -903,7 +903,7 @@ title = "Two-connected boundary-core completion"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_connected_boundary_completion.md"
-active = true
+active = false
 audit = "results/hc7_two_connected_boundary_completion_audit.md"
 expected_source_sha256 = "8b12881cebb2df2bc17917367173aa047a64f990530da695a73e7fed68c31a2d"
 
@@ -913,7 +913,7 @@ title = "Exact-block Kempe reduction and pole-free bridge"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_bounded_interface_exact_block_kempe_reduction.md"
-active = true
+active = false
 audit = "results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md"
 expected_source_sha256 = "19382ff7bc0065bc18a7caaeffd5c5fff46cf4ddc226d40036c751081a9853ff"
 
@@ -924,7 +924,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_bounded_interface_pole_move_normal_form.md"
 source_heading = "2. Pole-move normal form"
-active = true
+active = false
 audit = "results/hc7_bounded_interface_pole_move_normal_form_audit.md"
 expected_source_sha256 = "01fa19f3a58a232a92a7479877b786d55341990cd3dd81af92a384231d99794f"
 scope = "the last move of a shortest exact-block transition at the bounded interface"
@@ -947,7 +947,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_bounded_interface_two_transition_disjoint_response.md"
 source_heading = "2. The two-transition reduction"
-active = true
+active = false
 audit = "results/hc7_bounded_interface_two_transition_disjoint_response_audit.md"
 expected_source_sha256 = "5b4a03822ba54efba3a71a3cdabb9f9a8a227d72bed4293ea24081d5cc5d549a"
 scope = "the order-seven through nine bounded interface in a hypothetical minor-minimal HC7 counterexample"
@@ -2159,7 +2159,7 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_four_colour_parity_language_barrier.md"
 source_heading = "3. Consequence"
-active = true
+active = false
 expected_source_sha256 = "961011d6a52b82fbec9016c6846188a5bfa05db40dfb2f5c2f2397598f21ede5"
 refutes = ["a common six-colour boundary equality partition from four-colourability, a target-free two-shore quotient, and exact private-block responses alone"]
 satisfies = ["four-colourable boundary", "target-free two-full-shore join quotient", "exact private-block response for every independent boundary set"]
@@ -2185,7 +2185,7 @@ kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md"
 source_heading = "1. Statement"
-active = true
+active = false
 audit = "barriers/hc7_opposite_shore_shortest_transition_pole_barrier_audit.md"
 expected_source_sha256 = "afc736d98452dc260354a35b3a3db5cdcb90b2332a4516fc7ddf5a8d6f7d15f0"
 refutes = [
@@ -7802,7 +7802,7 @@ title = "Every seven-connected graph with m at least 4n-5 contains K7-minus"
 kind = "target"
 status = "frozen"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Two sufficient finishing targets"
+source_heading = "2. Primary extremal target"
 active = false
 scope = "all seven-connected graphs at the former, stronger 4n-5 density benchmark"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
@@ -7819,7 +7819,7 @@ title = "Every seven-connected graph with m at least 4n-4 contains K7-minus"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Two sufficient finishing targets"
+source_heading = "2. Primary extremal target"
 active = false
 scope = "all seven-connected graphs at a stronger density benchmark than the current 4n-2 sufficient threshold"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
@@ -7837,10 +7837,10 @@ keywords = ["K7 minus", "extremal target", "4n-4", "seven connectivity"]
 id = "hc7.target.k7minus_extremal_4n_minus_2"
 title = "Every seven-connected graph with m at least 4n-2 contains K7-minus"
 kind = "target"
-status = "conditional-target"
+status = "active-target"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Two sufficient finishing targets"
-active = false
+source_heading = "2. Primary extremal target"
+active = true
 scope = "all seven-connected graphs at the current density-only sufficient threshold for the K7-minus six-colour conjecture"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
 allowed_exits = [
@@ -7852,6 +7852,134 @@ does_not_prove = [
   "HC7",
 ]
 keywords = ["K7 minus", "extremal target", "4n-2", "seven connectivity"]
+
+[[claims]]
+id = "hc7.k7minus_seven_cut_three_component_bound"
+title = "An order-seven cut has at most three complementary components"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_cut_three_component_bound.md"
+source_heading = "Theorem"
+active = false
+audit = "results/hc7_k7minus_seven_cut_three_component_bound_audit.md"
+expected_source_sha256 = "cbd3ecb73bea0530797ad58080ae6db6052bfbf69f90af558283e3f250772ef8"
+scope = "every order-seven cut in a seven-connected K7-minus-minor-free graph"
+conclusions = [
+  "the complementary component count is at most three",
+  "a three-component boundary graph has maximum degree at most three",
+]
+does_not_prove = ["elimination of two or three components", "the 4n-2 extremal target", "HC7"]
+keywords = ["K7 minus", "seven-cut", "three components", "subcubic boundary"]
+
+[[claims]]
+id = "hc7.k7minus_degree7_safe_contraction"
+title = "A degree-seven vertex has a density-preserving incident contraction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_degree7_safe_contraction.md"
+source_heading = "Theorem 1 (safe incident contraction)"
+active = true
+audit = "results/hc7_k7minus_degree7_safe_contraction_audit.md"
+expected_source_sha256 = "f69c7eefc74c6074173e5d4e0396e3c2a2a2635f0aba58c7b54f3559c2c16896"
+scope = "degree-seven vertices in seven-connected K7-minus-minor-free graphs at the 4n-2 threshold"
+conclusions = [
+  "some incident edge has at most three common neighbours",
+  "contracting it does not decrease the 4n-2 surplus",
+  "in a minimum enemy contraction failure returns an exact order-seven cut",
+]
+does_not_prove = ["that the contraction remains seven-connected", "the 4n-2 extremal target", "HC7"]
+keywords = ["K7 minus", "degree seven", "safe contraction", "exact seven-cut"]
+
+[[claims]]
+id = "hc7.k7minus_root_swap_nonclosure"
+title = "A trace-one fragment can survive as a nested root-swap separation"
+kind = "laboratory"
+status = "audited-green"
+source = "results/hc7_k7minus_degree7_safe_contraction.md"
+source_heading = "Theorem 3 (the exact two-exterior fragment residue)"
+active = true
+audit = "results/hc7_k7minus_degree7_safe_contraction_audit.md"
+expected_source_sha256 = "f69c7eefc74c6074173e5d4e0396e3c2a2a2635f0aba58c7b54f3559c2c16896"
+scope = "a degree-seven vertex with two anti-neighbourhood components in a minimum 4n-2 enemy"
+conclusions = [
+  "Yuan fragment uncrossing returns two nested exact seven-cuts",
+  "the current hypotheses do not force the trace-one fragment to be a singleton",
+]
+does_not_prove = ["existence of a counterexample", "failure of a stronger cut-uncrossing theorem"]
+keywords = ["recorded nonclosure", "root swap", "fragment", "exact seven-cut"]
+
+[[claims]]
+id = "hc7.k7minus_strict_surplus_minimal_enemy"
+title = "A strict-surplus minimum enemy has a majority of degree-seven vertices"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_strict_surplus_minimal_enemy.md"
+source_heading = "Theorem"
+active = true
+audit = "results/hc7_k7minus_strict_surplus_minimal_enemy_audit.md"
+expected_source_sha256 = "1a8531ffaec27ff17673b53798169c0952a3cf156e8c6a55763eb633ec13227e"
+scope = "a minimum counterexample to the 4n-2 target with positive surplus"
+conclusions = [
+  "the graph is minimally seven-connected",
+  "vertices of degree greater than seven induce a forest",
+  "degree-seven vertices form a strict majority",
+  "many density-preserving noncontractible edges are certified by exact seven-cuts",
+  "the safe edges include a low-degree edge or a two-edge star with low-degree leaves",
+]
+does_not_prove = ["the equality-surplus case", "uncrossing of the exact cuts", "the 4n-2 extremal target"]
+keywords = ["K7 minus", "minimal connectivity", "degree seven", "forest", "exact seven-cut"]
+
+[[claims]]
+id = "hc7.k7minus_strict_surplus_cut_uncrossing_nonclosure"
+title = "The Mader-Schmidt forest does not uncross the safe-edge cuts by itself"
+kind = "laboratory"
+status = "audited-green"
+source = "results/hc7_k7minus_strict_surplus_minimal_enemy.md"
+source_heading = "Scope"
+active = true
+audit = "results/hc7_k7minus_strict_surplus_minimal_enemy_audit.md"
+expected_source_sha256 = "1a8531ffaec27ff17673b53798169c0952a3cf156e8c6a55763eb633ec13227e"
+scope = "the positive-surplus minimum-enemy reduction"
+conclusions = [
+  "the forest components and low-degree edges are not automatically disjoint mutually adjacent branch sets",
+  "no proved theorem makes one safe edge seven-contractible",
+]
+does_not_prove = ["existence of a counterexample", "failure of an operation-independent uncrossing theorem"]
+keywords = ["recorded nonclosure", "contractible edge", "cut uncrossing", "Mader forest"]
+
+[[claims]]
+id = "hc7.k7minus_essential_edge_six_separation"
+title = "Every essential edge exposes an exact full two-shore six-separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_essential_edge_six_separation.md"
+source_heading = "Theorem"
+active = true
+audit = "results/hc7_k7minus_essential_edge_six_separation_audit.md"
+expected_source_sha256 = "0a652b431e9e0bd92fcc0aa76fa120c4ffcbc7c61a0d0198b2cc475a3ce79b92"
+scope = "every edge of an edge-minimal seven-connected K7-minus-minor-free graph"
+conclusions = [
+  "edge deletion leaves a six-connected graph with two full shores behind a six-cut",
+  "the deleted edge is the sole shore-crossing edge",
+  "the boundary is K5-minus-minor-free and both shore surpluses are exact",
+]
+does_not_prove = ["a density-preserving seven-connected shore contraction", "the 4n-2 extremal target"]
+keywords = ["essential edge", "six-separation", "shore contraction", "density surplus"]
+
+[[claims]]
+id = "hc7.k7minus_essential_sixsep_seventh_bag_nonclosure"
+title = "The rooted-diamond construction at an essential edge has only six bags"
+kind = "laboratory"
+status = "audited-green"
+source = "results/hc7_k7minus_essential_edge_six_separation.md"
+source_heading = "Scope"
+active = true
+audit = "results/hc7_k7minus_essential_edge_six_separation_audit.md"
+expected_source_sha256 = "0a652b431e9e0bd92fcc0aa76fa120c4ffcbc7c61a0d0198b2cc475a3ce79b92"
+scope = "the rooted four-bag construction inside one shore of the essential-edge six-separation"
+conclusions = ["four rooted bags, the opposite shore and one boundary singleton give only six branch sets"]
+does_not_prove = ["failure of a fifth rooted-bag theorem", "existence of a counterexample"]
+keywords = ["recorded nonclosure", "six-separation", "rooted diamond", "seventh branch set"]
 
 [[claims]]
 id = "hc7.target.k7minus_two_transversals"
@@ -9157,8 +9285,8 @@ note = "The 4n-4 statement forces the target at a lower density and therefore im
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.k7minus_sharpened_critical_density"
-kind = "uses"
-note = "Every hypothetical critical host meets the 4n-2 density threshold."
+kind = "related_to"
+note = "This application bridge shows that the extremal target would settle the K7-minus six-colour conjecture; it is not a proof prerequisite of the extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_two_transversals"
@@ -14385,3 +14513,51 @@ expected_stdout = [
   "mechanism K7-minus minor=no",
   "PASS K7-minus shore-allocation barriers",
 ]
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.k7minus_degree7_safe_contraction"
+kind = "uses"
+note = "A minimum enemy has a degree-seven entrance whose density-preserving contraction either closes the target or returns an exact seven-cut."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.k7minus_strict_surplus_minimal_enemy"
+kind = "uses"
+note = "The positive-surplus branch is reduced to a strict majority of degree-seven vertices and many exact cut certificates."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.k7minus_essential_edge_six_separation"
+kind = "uses"
+note = "Every edge in the positive-surplus minimum enemy has an exact two-shore six-separation and exact contraction accounting."
+
+[[relations]]
+source = "hc7.k7minus_degree7_safe_contraction"
+target = "hc7.k7minus_seven_cut_three_component_bound"
+kind = "uses"
+note = "The safe contraction and its pulled-back cut use the universal three-component bound."
+
+[[relations]]
+source = "hc7.k7minus_strict_surplus_minimal_enemy"
+target = "hc7.k7minus_degree7_safe_contraction"
+kind = "uses"
+note = "The strict-surplus theorem applies the safe contraction independently at every degree-seven vertex."
+
+[[relations]]
+source = "hc7.k7minus_root_swap_nonclosure"
+target = "hc7.k7minus_degree7_safe_contraction"
+kind = "related_to"
+note = "The root-swap residue is the exact nonterminal branch of the two-exterior safe-contraction theorem."
+
+[[relations]]
+source = "hc7.k7minus_strict_surplus_cut_uncrossing_nonclosure"
+target = "hc7.k7minus_strict_surplus_minimal_enemy"
+kind = "related_to"
+note = "The forest and edge-cover identities do not themselves align the returned exact seven-cuts."
+
+[[relations]]
+source = "hc7.k7minus_essential_sixsep_seventh_bag_nonclosure"
+target = "hc7.k7minus_essential_edge_six_separation"
+kind = "related_to"
+note = "The rooted-diamond construction stops one branch set short inside the exact six-separation."

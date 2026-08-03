@@ -1,0 +1,1407 @@
+# $HC_7$ research ledger
+
+**Last updated:** 2 August 2026
+**Authoritative status:** $HC_7$ is not proved here.
+**Publication assessment:** the internally audited corpus is a credible
+partial-results manuscript candidate, but it is not submission-ready;
+novelty, priority, and proof correctness still require conventional
+literature review and independent human validation.
+**Current programme mode:** the primary `HC_7` proof search remains frozen
+at tag `mathematical-freeze-2026-07-27` for
+[external review and manuscript planning](active/hc7_partial_results_external_review_blueprint.md).
+The adjacent `K_7^-` density route remains a focused conditional programme,
+with its live status in the
+[density frontier](active/hc7_k7minus_density_frontier.md) and its current
+[external-review dossier](active/hc7_k7minus_external_review_dossier.md).
+This does not alter the primary all-degree `HC_7` target.
+
+This is the sole authority for the current status of the project. Exact
+theorem statements and proofs live in the linked frontier and result files;
+historical programme snapshots are archived rather than appended here.
+
+## Current frontier at a glance
+
+### 1. Exhaustive global obligation
+
+Let `G` be a hypothetical minor-minimal counterexample to `HC_7`. The
+[audited low-degree reduction](results/hc7_low_degree_adjacent_pair_alignment.md)
+and the
+[component-uniform strengthening](results/hc7_component_uniform_boundary_alignment.md)
+give a vertex `u` with `7<=d_G(u)<=9` such that every component `C` of
+`G-N[u]` has a vertex
+
+\[
+ z_C\in S:=N_G(C)\subseteq N(u),
+ \qquad \chi(G-\{u,z_C\})=6.
+\]
+
+For any selected `C`,
+
+\[
+ 7\le |S|\le d_G(u)\le9.
+\]
+
+The pair
+
+\[
+ A=G[C\cup S],\qquad B=G-C
+\]
+
+is an actual separation with nonempty open sides. The connected set `C`
+and the singleton `{u}` are each adjacent to every vertex of `S`, and
+$\chi(G[S])\le4$. For every nonempty independent set `I` of `G[S]`, each
+closed shore separately has a six-colouring in which `I` is exactly one
+boundary colour class. These two colourings need not induce the same
+partition on `S-I`.
+
+At the same low-degree vertex, the audited component upper bounds give
+
+\[
+ \#\operatorname{comp}(G-N[u])\le
+ \begin{cases}
+ 1,&d_G(u)=7,\\
+ 2,&d_G(u)=8,\\
+ 3,&d_G(u)=9.
+ \end{cases}
+\]
+
+Thus the multi-component branch is globally bounded before any local path
+taxonomy is attempted.
+
+The exhaustive case map stops at the following
+[pole-free bridge-composition theorem](active/hc7_bounded_interface_synchronization_frontier.md#4-primary-open-theorem).
+The operation-specific paths forced by failed exact-block Kempe lifts must
+produce at least one of:
+
+1. an explicit `K_7`-minor model in `G`;
+2. one complete equality partition of `S` induced by six-colourings of both
+   closed shores; or
+3. another full bounded-interface instance in the same graph on a strictly
+   smaller literal anti-neighbourhood component, using that component's own
+   named edge-deletion response.
+
+This theorem is unproved. Relative to the audited entry reduction, it is
+sufficient for `HC_7` and is the sole exhaustive all-degree obligation.
+
+### 2. Principal conditional refinement: the `K_7^-` density route
+
+For a hypothetical minor-minimal non-six-colourable `K_7^-`-minor-free
+graph, the new computation-free and internally audited
+[two-literal-`K_5` exclusion](results/hc7_k7minus_two_literal_k5_exclusion.md)
+proves the unconditional theorem that every six-connected graph containing
+two distinct literal `K_5` subgraphs has a `K_7^-` minor.  The hypothetical
+host therefore has at most one literal `K_5`.
+
+Every degree-seven vertex lies in that one possible clique, while the
+audited
+[private-triangle allocation](results/hc7_k7minus_all_degree7_k5_exclusion.md)
+excludes five degree-seven vertices in a literal `K_5`.  Consequently
+
+\[
+ n_7\le4,
+ \qquad
+ |E(G)|\ge4|V(G)|-2.                                  \tag{K1}
+\]
+
+If `b` counts degree-eight vertices with `K_4`-free neighbourhoods and
+
+\[
+                    \tau=\sum_{i\ge10}(i-9)n_i,
+\]
+
+the unique-clique coverage inequality and Jakobsen defect give
+
+\[
+ b\ge20-n_7+\tau.
+\]
+
+The remaining `n_7=4` branch admits a clean clique contraction.  Its
+contracted graph is five-connected and is not a Jakobsen cockade, which
+forces `n\ge37` and `b\ge32+\tau`.  Splitting on `n_7<=3` and `n_7=4`
+therefore yields the global bound
+
+\[
+                              b\ge17+\tau.              \tag{K2}
+\]
+
+The older `n_7\le8`, `m\ge4n-4`, and seven-exceptional theorems remain
+valid audited waypoints but are strictly superseded in the live proof
+spine.  The adjacent
+[exceptional-neighbourhood and exterior-completion theorem](results/hc7_k7minus_exceptional_neighbourhood_completion.md)
+proves that every exceptional neighbourhood has independence number exactly
+three and that a five-root `K_5` model avoiding one exterior component is
+already terminal.
+
+The same audited package now proves exceptional anti-neighbourhood
+connectivity whenever `n_7>0`: degree-seven incidence supplies a literal
+`K_5`, whereas a disconnected exceptional anti-neighbourhood would invoke
+the two-component theorem and exclude every literal `K_5`.  The full
+connectivity target is therefore confined to the `n_7=0`, literal-`K_5`-free
+branch.
+
+The degree-seven entrance is now computation-free.  Contracting the star on
+`v` and any two nonadjacent neighbours, followed by one Kempe-chain argument
+and Kriesell--Mohr's five-root theorem, produces a rooted `K_5` on the other
+five neighbours.  An elementary triangle-free complement argument then
+gives exactly the two neighbourhoods used by the density proof.  The former
+anti-neighbourhood 129-graph residual and aligned near-`K_7` classification
+are no longer dependencies of this `K_7^-` proof spine.
+
+Thus one current sufficient statement is:
+
+> Every seven-connected `n`-vertex graph with at least `4n-2` edges
+> contains a `K_7^-` minor.
+
+This extremal statement is open.  It would prove the `K_7^-` six-colour
+conjecture, not by itself `HC_7`.  The `4n-4` and `4n-5` targets remain
+stronger open extremal benchmarks, but neither is the exact threshold now
+needed by the critical-host reduction.  The current proof obligations are
+recorded in the [density frontier](active/hc7_k7minus_density_frontier.md).
+
+A second, critical-host-specific sufficient statement is that every graph
+under the displayed critical hypotheses has `b<=16`.  This target is also
+open, but it retains the proper-minor colouring responses discarded by the
+bare extremal theorem.  The exact list-core and exterior-allocation residues
+for selected exceptional centres are recorded in the
+[seven-exceptional technical frontier](active/hc7_k7minus_seven_exceptional_frontier.md).
+
+### 3. Immediate structural laboratory: exceptional centres and seven-cut contraction
+
+The private-triangle allocation reconstructs the decisive Kempe argument
+without density equality.  Starting from any all-degree-seven literal
+`K_5`, it produces two disjoint connected branch sets, one meeting all five
+private triangles and the other meeting at least four, and hence an explicit
+`K_7^-` model.  It does not prove the stronger standalone bond or two-full-
+transversal statement; that assertion is unnecessary because `K_7^-`
+permits one missing branch-set adjacency.
+
+At an exceptional degree-eight centre `u`, an independent triple
+`I\subseteq N(u)` is now always available.  The five remaining neighbours
+are the roots of the local model problem.  If a rooted `K_5` model avoids
+one component of `G-N[u]`, seven-connectivity supplies the seventh branch
+set and an explicit `K_7^-` model.
+
+The focused two-component attack now has a global consequence.  The
+[two-component literal-clique exclusion](results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md)
+proves that if an exceptional centre has two exterior components, then the
+whole host is literal-`K_5`-free.  Hence
+
+\[
+ n_7=0,\qquad \delta(G)\ge8,\qquad |E(G)|\ge4|V(G)|,
+ \qquad n_8\ge25+\sum_{i\ge10}(i-9)n_i,
+\]
+
+so every degree-eight vertex is exceptional and `n\ge25`.  Thus either all
+exceptional centres have connected exterior, or the host enters this
+globally `K_5`-free branch with at least 25 exceptional centres.
+
+Within the two-component branch, the
+[nonfull-attachment reduction](results/hc7_k7minus_nonfull_attachment_reduction.md)
+excludes a common missed neighbour and gives exact packing-`(1,2)` or
+overlapping packing-`(1,1)` order-seven cuts.  In the one-nonfull case the
+missed vertex has at most four boundary neighbours and at least two
+neighbours in the full exterior component.  The new theorem forces a
+six-fan and converts a tight failed allocation into two nested order-seven
+cuts; the non-tight attachment case remains.  The
+[two-entrance barrier](barriers/hc7_k7minus_nonfull_two_entrance_allocation_barrier.md)
+shows that the two known entrances alone are insufficient without using
+minor exclusion or compatible proper-minor colourings.
+
+For distinct nonadjacent misses, the
+[contracted-star and fan-tree theorem](results/hc7_k7minus_distinct_miss_fan_tree_elimination.md)
+now eliminates the complete branch.  Its reusable dynamic-colouring lemma
+rules out every common-six boundary with an independent triple, including
+the exact `3K_2` parity obstruction.  The only two remaining common-six
+graphs are two disjoint triangles, with or without one joining edge.
+Six-connectivity of `G-u` then produces marked fan trees in the two arbitrary
+exterior components, and a retained finite certificate turns every portal
+and tree configuration into an explicit `K_7^-` model.  This does not
+eliminate distinct adjacent misses, which remain normalized to connected-
+rich `(1,2)` cuts.
+When both exterior components are full,
+the [boundary reduction](results/hc7_k7minus_both_full_shore_reduction.md)
+leaves seven exact types and packing vector `(1,1,1)` for `\{u\},E,F`.
+The one-nonfull, adjacent-miss, and both-full allocations remain open.
+
+The current operation-coupled connectivity attack has sharpened all three
+open regimes without closing them.  In the adjacent-miss case, one fixed
+`G-xy` colouring gives four internally disjoint operated `x`--`y` paths,
+full shore fans retaining their prescribed first edges, and a point-rooted
+`K_4` in the four-connected nonplanar residual.  The missing implication is
+set-rooted absorption, or an exact operation-labelled order-seven
+separation when absorption fails.  The one-nonfull case has an analogous
+shore-localized five-path response and two adjacent near-model bags, but no
+label-preserving enlargement.  In the both-full case, a rooted-diamond
+alternative and a dense whole-component-contraction dichotomy reduce the
+problem to labelled near-model augmentation or a wide cutvertex-block
+configuration.
+
+The global minimum-shore reduction is now terminal.  If `E` is chosen
+smallest among all components of disconnected exceptional
+anti-neighbourhoods, the audited
+[full-side vertex exclusion](results/hc7_k7minus_one_nonfull_full_vertex_exclusion.md)
+proves that every degree-eight vertex of `E` has connected
+anti-neighbourhood.  The former unique recentering alternative would place
+an `S`-full singleton in the full component of a one-nonfull separation.
+The existing nested-cut theorem then forces at most four and at least five
+contacts with the common seven-set; its uniform defect-two reflection
+six-colours `G`.  Thus the complete exact order-seven/eight matching-core
+rotation is eliminated without another boundary census.  This does not yet
+prove exceptional-centre connectivity: the originally selected centre may
+remain disconnected while `E` contains no degree-eight vertex or only
+degree-eight vertices with connected anti-neighbourhoods.
+
+The density jump also gives a reusable pair-deletion reduction.  For any
+two degree-eight vertices `a,b` in this branch, `G-{a,b}` is five-connected
+and has at least `4|V(G-{a,b})|-8+[ab]` edges.  Norin--Totschnig therefore
+supplies a spanning `K_7^\vee` model.  `K_7^-` exclusion forces each retained
+root to meet at most four of the model's six mutually adjacent nondeficient
+bags and imposes further contacts at the deficient bag.  Absorbing the
+deficient bag into any universal bag gives a spanning `K_6` model.  After
+maximizing one retained root's contacts and minimizing a surplus donor, the
+entire donor--target portal set lies in every connected donor core retaining
+one root neighbour and the four protected model adjacencies; all but at most
+four of those portals are donor cutvertices.
+
+One fixed edge-deletion colouring supplies five colour-indexed Kempe paths,
+but no proved implication aligns their colours with the target and owner
+branch-set labels.  This is the first unsupported step in this pair-deletion
+closure: an internal path
+separator need not be a host separator or the neighbourhood of a named
+exceptional centre.  Thus the four-bag concentration remains nonterminal
+and still requires a label-preserving transfer or a genuine exceptional
+anti-neighbourhood descent.  The written reduction and its exact scope are
+recorded in the
+[pair-deletion technical note](active/hc7_k7minus_pair_deletion_k7vee_reduction.md).
+That note now gives the exact contact count for all four labelled
+absorptions.  A prescribed-spoke fan can retain the five first edges from
+one operation and end once in five named branch sets, but it does not force
+the corresponding clean first-hit labels; this is the precise remaining
+operation-to-branch-set inference.
+
+A two-missing-edge extension of the rooted persistence argument gives a
+stronger response when an exceptional root contacts the deficient `P`-bag:
+after minimizing that rooted bag, two jointly model-preserving incident
+edges have nonadjacent outer endpoints.  Contracting their two-edge star
+produces one six-colouring in which the root and both endpoints share a
+colour, all five alternate colours occur at the other six neighbours, and
+the same labelled `K_7^\vee` model survives.  At the model level this feeds
+the separator dichotomy below; terminal use still requires assigning those
+palette colours to branch-set roles or obtaining a same-host exceptional
+anti-neighbourhood descent.
+
+The audited
+[exact spanning-`K_7^\vee` separator dichotomy](results/hc7_k7minus_exact_k7vee_separator_dichotomy.md)
+now closes the model-level alternative.  In a seven-connected host, if the
+deficient bag `X` is anticomplete to its two nonneighbours and meets all
+four universal bags,
+then either there is an explicit `K_7^-` model or some universal bag `U_i`
+contains a nonempty proper connected set `Y` such that `U_i-Y` is connected
+and `N_G(Y)` is an actual separator of order at least seven.  Applying this
+to the fixed two-edge response loses at most two boundary vertices, leaves
+at least five surviving `X`-portals across the four universal bags, and
+retains the same named six-colouring.  Thus, in the target-free host, every
+root-removal form now returns an operation-preserving actual nested
+separator.
+
+Two finer root-removal branches are also terminal.  The exact two-component
+`2+2` split six-colours `G` by gluing two proper-minor colourings across a
+nonadjacent two-vertex boundary.  If `R-r` is connected and exactly two
+universal adjacencies are lost, the same two-owner reduction eliminates
+every nonconcentrated residue by either a two-cut contradiction or a
+two-boundary six-colouring; the only survivor is the atomic bag
+`R={r,s}`, with `s` supporting precisely the two retained adjacencies and
+`r` the two lost ones.  Singleton, atomic two-loss, and one-loss geometries
+remain possible, but they are no longer the immediate model-level gate.
+
+The existence of that separator also yields a global minimum-separator
+normal form.  Either there is an exact order-seven cut with exactly two
+shores and packing vector `(1,1)` or `(1,2)` up to orientation, or a
+globally minimum order-eight boundary has exactly two or three full
+complementary components.  The minimum boundary order equals `kappa(G)`,
+so these are the only two possibilities.  In the order-eight branch,
+
+\[
+ \kappa(G)=\delta(G)=8,\qquad n_7=0,\qquad
+ |E(G)|\ge4|V(G)|,\qquad n_8\ge25+\tau,\qquad b\ge20+\tau.
+\]
+
+Every degree-eight neighbourhood is then a minimum cut, and every
+disconnected exceptional anti-neighbourhood has exactly two nonsingleton
+components, both full to that neighbourhood.  Thus all nonfull and
+miss-pattern cases are confined to the seven-connected branch.  Every
+minimum boundary is `K_5`-minor-free
+and hence four-colourable.  More precisely, with `m` components, deleting
+any `a<=m-1` boundary vertices leaves a `(5-a)`-colourable graph with no
+`K_{6-a}^-` minor; for `a<=m-2` it has no `K_{5-a}` minor.
+
+The same fixed two-edge-star response also contains a persistent edge `rz`
+whose single-edge-deletion colouring agrees with the fixed response away
+from `r`.  This removes a trace-selection mismatch but does not assign the
+five colours to the required near-clique branch-set labels.
+At any full order-eight cut, every crossing-edge response is forced into
+the clean five-path fan branch because an order-seven return would contradict
+eight-connectivity.  In a smallest two-shore side, every arbitrary-edge
+response is forced into the paired seven-column branch, and its column
+contact graph has minimum degree at most three: the alternative pentagonal
+bipyramid already contains a `K_5^-` minor.  If the fixed exceptional root
+has connected anti-neighbourhood, the persistent edge `rz` forces this
+paired-column response directly on the singleton root side.  The same
+edge, colouring, exact `2,2,1,1,1,1` boundary trace, and surviving labelled
+near-clique model are then retained.  The low-degree column need not
+be the operated target, and a response path may meet an old root or column
+before its target; the paired-column labels are still not identified with
+the near-clique labels, preventing the required label-preserving transfer.
+
+This global minimization does not retain the nested near-clique labels or
+align the fixed deleted edges with the new shores.  Its boundary need not
+equal `N_G(z)` for any named exceptional vertex `z`.  Even with endpoint
+alignment, one fixed response may stop at five-colour boundary saturation,
+and no proved theorem turns that saturation into a labelled branch-set
+transfer, a common boundary partition, or a smaller exceptional
+anti-neighbourhood.  The immediate target is therefore
+**operation-labelled separator terminalization**, not generic root-removal
+compatibility.  Low-contact elimination and operation-preserving exchange
+remain later obligations if the separator route returns to the absorbed
+model family.  The proved dichotomy, atomic residue, and exact nonclosure
+are recorded in the pair-deletion technical note.
+
+At an operation-preserving exact seven-cut, endpoint placement can also be
+normalized.  Unless both deleted endpoints lie in the boundary, a named
+single-edge response gives a legal colouring of one closed shore.  If both
+lie in the boundary, no colouring of the double deletion can be proper on
+the literal boundary.  Thus the exact residues are now double-boundary
+placement, or a legal trace lacking the final partition-specific connected
+subgraph required for reflection.
+
+The packing-`(1,2)` branch now has an explicit final-model test.  The
+[three-full-subgraph completion theorem](results/hc7_k7minus_exact7_three_full_subgraph_completion.md)
+characterizes both static contracted quotients and proves explicit final
+models for both paired responses.  The computation-free
+[multiple-missing-adjacency dichotomy](results/hc7_k7minus_multiple_missing_adjacencies_separator_dichotomy.md)
+now removes the contact-count obstruction from the first response: every
+complete operated `x`--`y` support disjoint from the two rich full connected
+subgraphs gives `K_7^-` or an actual nested separator, even with no retained
+triangle contact.  In the second response the same is true when one support
+meets both ends of the retained boundary edge; the crossed one-miss-at-each
+orientation remains.
+
+This does not close the branch.  The direct-entry geometry may put every
+complete support through a retained full connected subgraph, while the new
+separator can have order greater than seven, need not carry a legal common
+trace, and need not be `N_G(z)` for an exceptional vertex.  Deleting an
+internal attained-gate edge supplies five bichromatic bypasses but labels
+them by a different proper-minor response; identifying those colours with
+the original attained duties is the first unsupported inference.  The exact
+remaining theorem is therefore two-operation trace alignment: detach a
+complete support while retaining one full connected remainder, or return a
+common boundary partition, `K_7^-`, or a named smaller exceptional
+anti-neighbourhood.
+
+The same note proves a stronger one-root entrance.  For every exceptional
+vertex `r`, the global `4n-2` density bound places the six-connected graph
+`G-r` two edges above the Norin--Totschnig threshold.  It therefore has an
+exact spanning `K_7^\vee` model and, after absorption, a spanning `K_6`
+model.  The optimized forced-interface theorem consequently applies at
+every exceptional centre, not only in the disconnected branch.  The
+spanning `K_6` contact framework itself has archived antecedents; the exact
+near-clique refinement does not yet align its `P,B,C` labels with the
+globally optimized donor.
+
+At this interface the route-level theorem that would close the whole
+critical host is now exact: choose a globally minimum component `C_0` among
+all exceptional anti-neighbourhoods, retain one named edge-deletion
+colouring, and force an explicit `K_7^-` model, a six-colouring of `G`, or
+an exceptional anti-neighbourhood component smaller than `C_0`.  This
+terminal/descent theorem is open.  “Smaller” necessarily refers to a
+component: every whole exceptional anti-neighbourhood has order `n-9`.
+
+The one-component residue still requires every remaining connected piece
+either to miss `I` or to contact at most three rooted bags.  The written,
+not separately audited,
+[seven-root list reduction](active/hc7_k7minus_seven_exceptional_frontier.md#3-seven-root-list-reduction)
+from simultaneous deletion of seven exceptional vertices gives an exact
+two-unit list-core budget, but a concrete
+`C_7\vee C_6` witness shows that one static list state can leave a singleton
+core or a tight odd-cycle core.  The useful adaptive data are the seven
+anchored cores arising separately from colourings of `G-x`.
+
+Independently, the
+[seven-boundary connected-subgraph and component-descent theorem](results/hc7_k7minus_seven_boundary_component_descent.md)
+proves that, for an order-seven cut `S`,
+
+\[
+ 2\le r\le\pi_S(G)\le4,
+ \qquad \kappa(G[S])\le6-\pi_S(G),
+\]
+
+where `\pi_S(G)` is the maximum number of disjoint connected subgraphs
+outside `S` adjacent to all seven boundary vertices.  Thus the former
+five-component case is impossible.  The boundary is `K_5`-minor-free for
+two components, has at most nine edges for three, and has maximum degree one
+for four.  In the four-component case every nonsingleton component is
+two-connected.
+
+For the actual minor-minimal non-six-colourable host, the
+[critical seven-cut capacity theorem](results/hc7_k7minus_critical_seven_cut_capacity.md)
+uses exact boundary-colouring reflection to sharpen this to
+
+\[
+ 2\le r\le\pi_S(G)\le3.
+\]
+
+The separately audited
+[three-component `3,2,2` cut theorem](results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+now combines the exact boundary partition with two crossless-shore web
+completions and planar precolouring extension to six-colour the host.
+Therefore every order-seven cut in the critical host has exactly two
+components.  One component has packing number one, the two packing numbers
+sum to at most three, and `G[S]` has an edge.  The proof is computation-free;
+it uses proper-minor colourings and therefore does not eliminate the
+three- or four-component cases in an arbitrary dense seven-connected graph.
+
+The general component-descent theorem gives the exact density change and an
+if-and-only-if seven-connectivity test for contracting any collection of
+whole components.
+In a descent-minimal graph, every density-eligible nonsingleton component
+whose contraction fails therefore has a set `Z` of at most five external
+vertices such that deleting the component and `Z` disconnects the graph.
+Boundary arithmetic alone still permits formal excess patterns in which no
+whole-component contraction preserves the threshold.  These are arithmetic
+patterns, not asserted graph examples.
+
+The full *bare extremal* seven-cut dichotomy—an explicit `K_7^-` model or a proper
+seven-connected minor still at `4n-4`—remains open.  It is equivalent in
+strength to the bare global `4n-4` extremal theorem, not a routine auxiliary
+lemma.  The critical-host theorems close `r=3,4` only by using proper-minor
+six-colourability; they do not remove those cases from an arbitrary extremal
+graph.  Any exact order-seven separation returned by the exceptional-centre
+programme is now necessarily a two-shore separation, with packing vector
+`(1,1)`, `(1,2)`, or `(2,1)`.
+
+## Supporting `HC_7` refinements and decoder status
+
+### Degree-seven structural refinement
+
+When `d_G(u)=7`, the boundary is `S=N(u)` and the exterior `G-N[u]` is
+connected. Audited reductions give an exact matching description of the
+boundary colourings and a boundary-labelled model of `K_7` with either one
+missing edge or two adjacent missing edges.
+
+The [generic exact-seven restart](results/hc7_generic_exact7_response_restart.md)
+reduces this branch to a minimum-order selected-response interface. The
+[degree-seven frontier](active/hc7_degree7_model_separator_frontier.md#generic-exact-seven-restart-and-the-remaining-terminal-theorem)
+asks for the same three terminal outcomes—an explicit `K_7` model, one
+common complete boundary partition, or a strictly smaller same-host
+interface—in each of the remaining singleton, positive-separator-excess,
+and shore-filling modes. This is a sharper conditional laboratory, not an
+exhaustive replacement for the global obligation above.
+
+The audited
+[degree-seven tight-pole localization](results/hc7_degree7_tight_pole_edge_localization.md)
+removes the pole itself as a transition-selection mystery.  In two
+vertex-disjoint matching layers, each selected bichromatic component either
+has two internally vertex-disjoint root-to-root routes or an internal
+articulation with a connected side strictly smaller than the original
+exterior.  Boundary order seven on that side is a strict generic restart;
+otherwise its boundary has order at least eight.  A separating-edge witness
+additionally retains the exact named matching response.  In the doubled-
+route subcase, the
+[route-cycle response theorem](results/hc7_degree7_route_cycle_model_persistence.md)
+now identifies the exact next obstruction.  A minimal root-separating edge
+bond always has a simultaneous response with the prescribed boundary pairs;
+either a minimal aligned subset is one nonseparating edge, or it has at
+least two edges and every single-edge response at an edge of that subset
+omits `e_0` or `e_i`.  Relative to the fixed rooted `K_5`, a route-cycle
+edge may preserve the same labelled model while still returning the wrong
+matching; if no cycle edge preserves it, one layer reduces to a literal
+`C_3`, `C_4` or `C_5` of bridge sectors joined by unique bag contacts.
+Even an aligned persistent response does not identify palette colours with
+bag labels.  This is a genuine narrowing rather than a proof of the
+degree-seven branch.
+
+One particularly reusable input is the
+[exact-seven full-connected-subgraph packing theorem](results/hc7_exact_seven_packet_packing.md).
+If `nu_i` is the maximum number of pairwise vertex-disjoint connected
+subgraphs in open shore `i` that are adjacent to every boundary vertex,
+then
+
+\[
+ \nu_1+\nu_2\le4,
+ \qquad \min\{\nu_1,\nu_2\}=1,
+ \qquad \omega(G[S])\le6-(\nu_1+\nu_2).
+\]
+
+Thus the packing vector is, up to orientation, `(1,1)`, `(1,2)`, or
+`(1,3)`. The theorem combines an explicit clique-minor construction with
+independent-block contraction and colour gluing. It does **not** supply a
+small transversal, an apex pair, or a common boundary partition in the
+remaining cases.
+
+### Immediate global terminal-decoder laboratory
+
+The audited
+[last-pole normal form](results/hc7_bounded_interface_pole_move_normal_form.md)
+proves that a shortest exact-block transition has a pole-free last path
+unless it ends in one precise six-block-to-five-block move: a singleton
+merges into a nonsingleton independent block, and after deleting `u` its
+two-colour component cannot reach another boundary vertex in any final
+opposite-shore extension.
+
+The audited
+[two-transition theorem](results/hc7_bounded_interface_two_transition_disjoint_response.md)
+then bypasses the former same-transition and endpoint-family bottleneck.
+The endpoint nonedge `e` of a first failed lift in `C` is used as the exact
+block for a second transition.  Unless a common boundary partition, the
+strict smaller-component restart, or the tight pole residue occurs,
+this gives vertex-disjoint paths in opposite open shores with disjoint
+boundary nonedges `e,f`.  Moreover,
+
+\[
+                         K_6\not\preccurlyeq G[S]+e+f,
+\]
+
+because a `K_6` model in the augmented boundary would lift through the two
+paths and join the singleton `{u}` to form an explicit `K_7` model.  The two
+paths may come from different colouring operations; this is no obstacle to
+the proved literal path construction, but compatible paths remain
+nonterminal.
+
+The earlier audited endpoint-pair and robust-independent-triple theorems
+remain valid supporting results, but they are no longer direct inputs to the
+live reduction.  The exact remaining
+[terminal decoder](active/hc7_bounded_interface_synchronization_frontier.md#7-immediate-terminal-decoder)
+must close the connected-exterior `K_6`-minor-free augmented-boundary path
+case or tight pole case by an explicit `K_7` model, one common complete
+boundary partition, or the exact strict component restart.  The
+multi-component branch now has the separate audited preprocessing below.
+
+The audited
+[component-deletion exchange theorem](results/hc7_component_deletion_kempe_exchange.md)
+supersedes the failed equal-order reinterpretation attempt whenever
+`G-N[u]` has at least two components.  The common neighbourhood is
+four-degenerate, every exterior component has a private rejected boundary
+colouring, and one supported nonedge can be chosen through every component
+simultaneously.  Adding all those nonedges to `G[N(u)]` remains
+`K_6`-minor-free.  The rejection map then gives either one boundary trace
+rejected by at least two literal components or one Kempe interchange whose
+unique rejector switches between two components.
+
+In the singleton-rejection branch, the audited
+[full-component common-root theorem](results/hc7_full_exterior_component_common_root_exchange.md)
+gives a sharper dichotomy.  A non-full component returns a separator of
+strictly lower boundary order, though not necessarily smaller component
+order.  If every component is full to `N(u)`, there are exactly two; their
+failed lifts share one literal root `x`, `chi(G-x)=6`, and completion by
+`{x}` is reduced to a `K_6` model in `G-x` whose six bags all meet `N(x)`.
+The known `HC_6` supplies only an unrooted model.  This is a genuine rooted
+completion problem, not a solved terminal step.
+
+The audited
+[common-root flip-cube theorem](results/hc7_common_root_flip_cube_fork.md)
+now adds a synchronized invariant inside that exact residue.  The spliced
+six-colouring has exclusive opposite-side contacts in the two exchanged
+colours, and criticality forces an induced odd cycle through `x` whose
+remaining path crosses between the two literal exterior components.
+Complement symmetry of the rejection map on the two-colour flip cube forces
+one boundary colouring with rejector-changing moves in two distinct
+coordinates.  In one fixed accepted extension, the two operated boundary
+components therefore lie either in one common two-colour component or in
+two disjoint two-colour components supporting two disjoint paths.  One path
+through the opposite exterior component yields either three distinct
+supported nonedges or a bilateral realization of one nonedge together with
+the other fixed-extension path.  The corresponding two- or three-edge
+augmentation remains `K_6`-minor-free.
+
+The separately audited
+[alternating trace-cycle theorem](results/hc7_common_root_alternating_trace_cycle.md)
+turns each rejector-changing coordinate into one coherent cyclic object.
+Fix an accepted extension on each shore, one before and one after the
+boundary switch.  Their full two-colour components define two partitions of
+the boundary two-colour components.  The independently switchable block
+unions are linear subspaces over `F_2`.  These two switch spaces cannot meet
+after translation by the operated coordinate, because an intersection would
+give the same labelled boundary colouring on both shores and six-colour
+`G`.  In the bipartite block-intersection multigraph, the operated coordinate
+is therefore not a bridge and lies on a cycle.  A two-edge cycle is one
+bilateral pair of full trace components; a longer cycle is an alternating
+sequence of literal full two-colour components from the two fixed shore
+extensions.  Same-shore members are disjoint and anticomplete, and a shortest
+cycle controls every nonconsecutive overlap.
+
+The new separately audited
+[short-trace classification](results/hc7_common_root_short_trace_classification.md)
+spends the sharp neighbourhood independence bound on this cycle.  There are
+at most three boundary two-colour components in degree eight and at most
+four in degree nine.  Hence every shortest trace cycle is bilateral, except
+for one possible exact four-cycle in degree nine.  At the synchronized fork,
+degree eight always puts the two operated traces in one common component of
+the fixed accepted extension; the residual is either a bilateral pair or an
+atomic three-trace configuration.  The fork may be chosen so that one of
+those traces is the original singleton root `{x}`.  In degree nine, two
+distinct fixed components force an exact `2+2` partition, and each
+opposite-shore response is either bilateral or a transverse four-cycle.  In
+the four-cycle case all four traces are `K_1` or `K_2`; the literal shore
+paths form an odd cycle with two crossing same-shore connectors, giving an
+`N(u)`-meeting `K_4` model and hence a `K_5` model after adding `{u}`.
+
+The separately audited
+[parallel-cycle normalization](results/hc7_common_root_parallel_two_cycle_normalization.md)
+now compresses the dirty-path ambiguity inside every bilateral trace pair.
+Choosing the partner and the two fixed-extension connectors lexicographically
+gives one literal odd cycle using both shores.  Its open-shore sectors are
+induced and pairwise anticomplete; there are at most three in degree eight
+and four in degree nine.  Thus one degree-eight connector is boundary-clean,
+and the root-retaining choice makes the cycle contain the literal common
+root `x`.
+
+The separately audited
+[degree-eight boundary classification](results/hc7_degree8_nonedge_bipartition_classification.md)
+now removes the static alignment ambiguity in that degree.  Every admissible
+eight-vertex common-root boundary either is the single odd wheel
+`K_1 vee C_7`, or has a nonedge `pq` whose deletion leaves two independent
+triples `I,T`, with all required root contacts.
+
+In the non-wheel case, the separately audited
+[aligned bilateral response-cycle theorem](results/hc7_degree8_aligned_pair_bilateral_cycle.md)
+couples this pair to the colouring operations.  The two exact `I,T`
+responses have opposite equality types on `p,q`; one singleton boundary
+interchange therefore fails in both directions and gives boundary-clean
+`p`--`q` paths in the two literal shores.  Together they form an odd cycle
+with one fixed operation provenance.  In either shore its full two-colour
+component has a separating bridge, yielding an aligned one-edge
+deletion/contraction response, or has two edge-disjoint `p`--`q` routes.
+
+A carrier disjoint from either aligned path for either independent triple
+would six-colour `G`.  Thus every surviving non-wheel instance has four
+incidence splits: both `I` and `T` split after deleting the path interior in
+each shore.
+
+The separately audited
+[two-defect component closure](results/hc7_degree8_two_defect_component_closure.md)
+now makes this quantitative.  Every literal `p`--`q` connector meets every
+carrier for either independent triple, so each carrier is a root separator.
+In one shore, all residual components missing exactly two boundary vertices
+miss the same one vertex of `I` and the same one vertex of `T`.  The finite
+four-anchor allocation is now stronger than that application: for every one
+of the `185` compact order-eight boundaries, including the odd wheel, and
+every ordered pair of arbitrary boundary-defect sets of order at most two,
+it returns an explicit `K_7`-minor certificate.  All `253,265` instances
+pass.  In particular, two two-defect components in each aligned shore give
+an explicit `K_7`-minor model.  Hence a surviving counterexample has an
+oriented shore with at most one two-defect residual component; every other
+residual component there misses at least three boundary vertices.
+
+This is a terminal closure of a real subcase, not a finite-size heuristic.
+It does not bound path attachments or turn a post-path residual component
+into a component of `G-N[u]`.  Explicit barriers show that the cycle and four
+incidence splits alone may fill both shores, while seven-connectivity plus
+the named local responses can still retain arbitrarily long attachment data
+when `K_7`-minor exclusion is omitted.  The separately audited
+[four-portal reduction](results/hc7_degree8_four_portal_reduction.md) now
+performs the next non-wheel composition.  Applying the five-terminal
+two--three linkage theorem to each shore and each of `I,T`, universal
+entanglement forbids its positive packing.  What remains is a fresh
+exact-seven response, a shore of order at most six, a strict order-eight
+lobe, or four selected (possibly repeated) confined positive-excess lobes.
+Each lobe lies behind at most five internal vertices, has boundary order
+between nine and thirteen, misses at most four old boundary vertices,
+retains its shore and completed-cut terminal form, and has a full-separator
+edge-deletion response incompatible with the fixed aligned shore colouring.
+Global minimum-boundary normalization then gives either an exact-seven
+response or a boundary of order eight through thirteen with exactly two or
+three boundary-full components, the universal contraction profile, and
+operation-specific mutually exclusive response partitions.
+
+The block label is not always structural.  The audited
+[portal role-erasure barrier](barriers/hc7_degree8_portal_role_erasure_barrier.md)
+shows that the `I`- and `T`-applications can return the identical
+terminal-free lobe while preserving the compact boundary, bilateral path,
+four incidence splits and universal entanglement.  The audited
+[independent-defect barrier](barriers/hc7_degree8_independent_two_defect_four_bag_barrier.md)
+also proves that allowing the two bags in one shore to miss different
+two-sets is insufficient.  Thus the former plan of independently minimizing
+two tagged lobes was not justified.
+
+The primary next theorem is the block-blind minimum-boundary
+response-coupling case, beginning with an order-eight boundary and exactly
+two full components.  It must produce an explicit `K_7` model, one common
+complete boundary partition, or an exact-seven response on a strictly
+smaller literal connected shore.
+
+The audited arbitrary-edge response construction and its dual-free-root
+refinement now give the right local object without changing colouring
+quantifiers.  For one fixed edge `e` and one fixed six-colouring of `G-e`,
+they retain two adjacent roots, eight latent boundary-labelled columns, one
+target, five operation-specific sources and all five same-colouring
+source-to-target paths.  Consuming either of the two nonresponse columns
+gives a seven-column contact graph.  The newly audited
+[dual-root contact-overlap theorem](results/hc7_order8_dual_root_contact_overlap_closure.md)
+shows that the two choices cannot both be pentagonal bipyramids: their common
+eight-column graph would already yield an explicit `K_7`-minor model.
+Therefore one root choice has a column of contact degree at most three.
+
+The exact surviving laboratory is the
+[low-degree response-column frontier](active/hc7_order8_low_degree_response_column_frontier.md).
+The low-degree column need not initially carry a response label.  The
+audited six-vertex rooted-minor lemma shows that when the target contacts all
+five sources, a response source has contact degree at most three.  The
+written unified incident-pair theorem now removes the former split between
+this case and an exposed source--target noncontact.  In every survivor, two
+noncontacting response columns are represented by two literal edges incident
+with the same vertex.  Their common deletion has the exact signature table
+`(=,not equal)`, `(not equal,=)`, `(=,=)` and gives either universal
+bichromatic saturation or one dirty bypass with two coupled one-edge
+responses.
+
+Two further written deductions make the host geometry sharper.  An
+eight-latent-column contact/coverage maximum spans `G` outside the two fixed
+fan centres, and changing the consumed nonresponse label converts every
+first root hit except the opposite centre into a latent-column hit.  More
+substantively, the common two-edge deletion is six-connected unless the
+operated vertex has degree exactly seven; in that exception its singleton
+shore is already a strict generic exact-seven response restart.  Thus every
+nonrecursive dirty bypass now lives in one six-connected common deletion.
+Every root-first encounter reduces to a latent-column encounter unless the
+named bypass uses the single opposite fan centre.  Six-connectivity then
+supplies a centre-free path, but not one retaining the named switch
+provenance.
+The separately audited
+[incident-bypass conflict theorem](results/hc7_order8_incident_bypass_conflict_split.md)
+now removes the remaining path-level ambiguity.  Whether or not the two
+named bichromatic components intersect, their coupled switches isolate one
+nonempty bipartite conflict edge set `F`.  The conflict deletion `G-F`
+realizes the all-edge signature, full minor-criticality realizes every
+singleton signature and forbids the empty signature.  Every singleton response is
+locked in all five alternate colours; unit edges on opposite shores with
+one boundary partition would already glue.  One induced conflict
+component splits into two adjacent connected sides which both see all five
+alternate colours in the same colouring.  The accompanying
+[compression barrier](barriers/hc7_incident_bypass_conflict_compression_barrier.md)
+shows that shortestness and central-colouring Kempe normalization alone
+cannot simplify `F`: every nonempty bipartite graph occurs, even in a
+seven-connected example which is already terminal through a `K_7` minor.
+An exhaustive conditional contact theorem identifies a labelled
+`K_7`-minus-one-edge model whenever the seven-column graph is abstractly
+edge-maximal, but realizable exchange-maximality does not imply that abstract
+hypothesis.
+
+The focused next target in the bypass branch is therefore palette-to-column
+alignment: use the all-edge, singleton and five-colour-lock responses on
+`F` to construct the required labelled `K_5` model from the bilateral
+palette contacts and the latent columns, or return an explicit `K_7` model,
+a common boundary partition, an exact-seven
+response, or a response-preserving proper nested same-form order-eight
+continuation which strictly decreases the literal operated shore.  A
+conflict component, a new colouring, or a contact rotation alone is not an acceptable
+exit.  Universal saturation separately reduces to a named one-edge response
+or a joint five-colour triad fan, whose palette paths are not yet assigned to
+column labels.  The two-shore list dichotomy and incidence cycle remain
+secondary until their colouring operation is aligned with this fixed response.
+Genuinely split-terminal
+`I,T` cuts remain a conditional fast route; the other small-shore and
+odd-wheel alternatives remain separate.
+
+A promoted
+[near-full edge-component closure](results/hc7_order8_nearfull_edge_triangle_closure.md)
+now settles the exact two-vertex small-shore case in the original aligned
+three-component host whenever each endpoint misses at most one boundary
+vertex.  Its written contraction argument handles every compatible
+bipartition.  A separately checked finite theorem tests the actual `185`
+compact boundary types and all `13,505` full/full, one-miss and ordered
+distinct-two-miss profiles.  Exactly `258` two-miss profiles are
+incompatible, and every one contains a boundary triangle away from the two
+misses.  That triangle, the open-shore edge, the opposite full component
+and the singleton `{u}` give an explicit seven-branch-set `K_7`-minor model.
+Thus the whole displayed near-full edge subcase is terminal; no operation
+provenance or abstract rooted-`K_4` selection is needed.
+
+The separately audited
+[defect-two rerooting closure](results/hc7_order8_defect2_edge_reroot_closure.md)
+eliminates the remaining endpoint profiles without another census.  An
+endpoint missing two boundary vertices has degree seven.  Rerooting there
+moves the two misses into its anti-neighbourhood and exhibits two disjoint
+connected subgraphs full to the new seven-vertex boundary, contradicting
+the promoted singleton packing-one theorem.  Combined with the preceding
+near-full theorem, this eliminates every aligned two-vertex exterior
+component.
+
+This still does not force either aligned component to have order two.  The
+earlier
+[near-full census](active/hc7_p2_nearfull_bipartition_census.md) remains a
+reproducible diagnostic for a broader static `K_4`-minor-free universe, but
+its `520` configurations are no longer the live obstruction in the exact
+three-component host above.  The audited
+[relative-seven quotient closure](active/hc7_relative7_planar_deficit_closure.md)
+still closes all `48` sharp marker quotients, while no theorem sends every
+other live residue to that family.  The checked
+[three-colourful-set assessment](active/hc7_three_colourful_sets_route_assessment.md)
+remains relevant only beyond the closed edge subcase.  The principal live
+obligation is still minimum-boundary response coupling with exactly two
+full components, followed by the other small-shore shapes.
+
+Audited response theorems now strengthen the tight cases.  In degree eight,
+the retained root `x` has nonempty opposite-shore leaf sets whose
+union is an induced star.  Three of the four proper/monochromatic deletion
+signatures are realized.  An inclusion-minimal aligned deletion response is
+either one edge, which enters the existing clean-five-path or exact-seven
+restart theorem, or a genuinely multi-edge obstruction in which every
+deleted edge is forced monochromatic.  The multi-edge case is no longer
+opaque: every one of its leaves has five aligned colour-indexed paths.
+For each leaf these give either a strict generic exact-seven shore decrease
+or a clean fan, and in all cases they reroute within the same exterior
+component to a clean six-fan with six distinct boundary ends.  The rerouted
+ends do not retain their colour labels, and fans from different leaves need
+not be disjoint.
+
+In either tight atomic case, one representative per trace is a maximum
+independent set `I`, leaving five reserve vertices `R`.  One fixed colouring
+of `G-u` simultaneously joins every pair of `R` in its two colour classes;
+every boundary nonedge thereby has a literal path in one named shore.  After
+deleting the colour class containing `I`, the remaining graph is
+five-chromatic and `R` is rainbow in every five-colouring.  If the reserve
+nonedge graph has at most six edges, this packet yields an `R`-rooted `K_5`.
+If that model is confined to one shore, the other full shore, `I`, and
+`{u}` complete an explicit `K_7` model.  More generally, failure even to
+assemble a two-shore rooted `K_5` forces at least seven reserve nonedges to
+be exclusively supported in one shore.  Any other maximum independent set
+of order `d(u)-5` can replace `I` and generate a rotated packet with the
+same conclusions.
+
+Static reserve rotation is not a descent, as the audited
+[rotation barrier](barriers/hc7_degree8_static_reserve_rotation_barrier.md)
+shows, but it is no longer needed to treat the degree-eight concentration.
+The audited
+[concentrated-reserve elimination](results/hc7_low_degree_concentrated_reserve_elimination.md)
+selects an independent reserve triple, a disjoint fixed-colouring connector,
+and a carrier for that triple.  Proper-minor contractions force both the
+merged and split complementary-pair responses on one shore; one matches a
+response on the other shore and six-colours `G`.
+
+This eliminates every concentration in both degrees eight and nine.  Nine
+reserve nonedges are impossible; with eight the reserve is
+`2K_2` disjoint-union `K_1`; with seven it is
+`P_3` disjoint-union `K_2`.  In the latter two cases the connector/carrier
+can avoid every nonexclusive demand.  Consequently the five-reserve
+dichotomy always gives an `R`-rooted `K_5` in both tight atomic cases.  It
+may still use both exterior components, so a connected remainder adjacent
+to all five rooted bags and to `{u}` is not yet reserved as the seventh
+branch set.
+
+This is a genuine host-level compression, but not a terminal decoder.
+The audited
+[boundary-only fork barrier](barriers/hc7_common_root_boundary_only_fork_barrier.md)
+is a connected order-nine boundary satisfying all compact boundary
+conditions, with a singleton root component and even two crossing
+shore-labelled matchings, whose four-edge augmentation is still
+`K_4`-minor-free.  The remaining lemma now has only three shapes to close:
+the degree-eight bilateral/atomic-three-trace case, the degree-nine bilateral
+case, and the degree-nine crossed four-cycle carrying the rooted `K_4`.
+It must use proper-minor colouring responses or literal bridge attachments
+to finish the branch.  In degree eight the remaining issue is now the
+simultaneous allocation of the separately clean, distinctly ended fans;
+the one-colouring proof does not make different leaf-fans disjoint or keep
+their rerouted endpoint colours.  In both tight atomic packets, the exact
+obstruction is now an `R`-rooted `K_5` whose bags use both shores, leaving
+no disjoint seventh bag; the concentrated alternative has been eliminated.
+The immediate target is to choose that model while preserving an
+`I`-connected seventh bag adjacent to `{u}` and all five rooted bags, or
+make failure return a response-preserving separator of order at most nine
+or a strict literal component descent.  A connectivity-only completion
+would be open-problem strength and is not an acceptable substitute.
+Further classification of the contracted boundary edge pattern cannot close
+this branch.
+
+The multi-rejected-trace alternative still needs a label-preserving
+allocation of its simultaneous list-critical kernels or supported
+nonedges.  The connected-exterior branch, including degree seven, still
+uses the two-transition/tight-pole decoder above.  These are now the three
+high-leverage residues; further finite local boundary taxonomy is not the
+current strategy.
+
+A gated marked-edge experiment has now been completed. The audited
+[response-coupling theorem](results/hc7_marked_edge_response_coupling.md)
+shows that deletion and contraction of one endpoint edge have identical
+colouring responses. Simultaneously contracting the two anticomplete path
+interiors gives one common six-colouring with a full five-colour split on at
+least one interior, but the audited
+[bilateral-exposure barrier](barriers/hc7_simultaneous_bipartite_bilateral_exposure_barrier.md)
+shows that both interiors need not be blocked. A weighted marked-edge cut
+does produce literal separators of order seven through nine with the deletion
+operations on their correct shores, but it need not produce a separator
+different from the original or expose an actual smaller component of
+`G-N[u]`.  Component-uniform alignment repairs the response label only after
+such a component is found, so the declared gate still blocks any
+order-eight/nine or tight-pole taxonomy from this weighted cut alone.
+
+The audited
+[pole-star barrier](barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
+shows that exact-block attainability, every independent pole-star response,
+shortest-transition minimality, seven-connectivity and the sharp order-eight
+independence bound do not remove the tight pole residue.  Its host is not
+asserted `K_7`-minor-free or fully minor-critical.  The next proof must
+therefore use global minor exclusion or proper-minor colouring while
+preserving the path or pole labels; more local transition taxonomy is not a
+credible next step.
+
+A gated return to the archived dominating-edge sink programme has also
+completed its first cycle. The
+[all-double-critical terminal-cycle theorem](results/hc7_double_critical_terminal_cycle_deletion_language.md)
+gives an exact unbounded invariant: for each nonempty proper $S\subsetneq V(C)$,
+`chi(G-S)=6` exactly when `S` is independent and `chi(G-S)=5` exactly when
+`S` contains an edge. An even cycle has a fixed five-chromatic exterior
+and one fixed dominating `K_5` model outside it. An odd cycle has either
+the same outcome or a four-chromatic exterior with singleton-rooted
+`K_5` models at each cycle vertex. Every cycle edge is a two-vertex
+transversal of all six-cores, while those cores rotate so that no cycle
+vertex is a common transversal.
+
+This whole-cycle structure does not prove a six-residual successor.
+Composing the exterior model with two cycle pieces, or aligning consecutive
+singleton-rooted models, is the paired-rooted branch-set allocation problem
+already open elsewhere. The
+[equal-extremum frame barrier](barriers/hc7_six_residual_frame_selection_barrier.md)
+also shows that minimum model order and shortest cycle length can select an
+all-double-critical frame when an equally extremal frame has a
+six-residual terminal edge. Its host deliberately has a `K_7` minor, so
+it shows why global minor exclusion is indispensable rather than refuting
+the full theorem. The closure gate failed and whole-sink classification
+was not started.
+
+## Standalone-results and publication status
+
+There are now two distinct partial-results packages.  The frozen general
+`HC_7` package is about necessary structure in a hypothetical minor-minimal
+counterexample, rather than completion of the conjecture.  Its proposed core
+is:
+
+- the
+  [bounded full-separation entry](results/hc7_low_degree_adjacent_pair_alignment.md)
+  of order seven to nine, including exact independent-block colour responses
+  on both closed shores;
+- the
+  [component-uniform alignment](results/hc7_component_uniform_boundary_alignment.md),
+  which assigns every component `D` of `G-N[u]` its own
+  `z_D in N(D)` with `chi(G-{u,z_D})=6`;
+- the proved
+  [one/two/three exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md)
+  in degrees seven, eight and nine;
+- the
+  [exact order-seven packing restrictions](results/hc7_exact_seven_packet_packing.md)
+  for disjoint connected subgraphs adjacent to every boundary vertex; and
+- the
+  [component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md)
+  as the principal multi-component application.
+
+The narrower adjacent-`K_7^-` package is now the cleaner theorem chain.  Its
+new computation-free clique theorem says that every six-connected graph
+with two distinct literal `K_5` subgraphs contains a `K_7^-` minor.  With
+the exact degree-seven neighbourhood theorem and generalized
+private-triangle allocation, this gives `n_7<=4`, `m>=4n-2`, and at least
+`17+tau` exceptional degree-eight vertices in a hypothetical critical host.
+The `n_7=4` branch is further forced to have order at least 37 and at least
+`32+tau` exceptional vertices.  The earlier two-clique, `4n-4`, and
+seven-exceptional layers remain valid audited precursors but are no longer
+the live numerical frontier.  The exceptional-neighbourhood theorem proves
+independence number three and identifies the exterior-component completion
+criterion for a rooted `K_5` model.  The two-component theorem proves
+that the existence of two exterior components makes the whole host
+literal-`K_5`-free, forcing `n_7=0`, `m\ge4n`, and at least 25 exceptional
+degree-eight vertices.  Its one-nonfull specialization forces a six-fan and
+nested order-seven cuts in the tight case.  The contracted-star response
+and two-shore fan-tree theorem now eliminate the complete distinct
+nonadjacent-miss branch, bypassing the former `3K_2` parity-language
+obstruction and producing explicit `K_7^-` models after an unbounded
+fan-tree reduction.  The both-full reduction leaves seven exact
+boundary types with packing vector `(1,1,1)`.  The independent general separator theorem
+bounds disjoint boundary-full connected subgraphs and cut
+components by four, proves two-connected interiors in the four-component
+case, and gives exact whole-component contraction criteria.  In the actual
+critical host, boundary-colouring reflection improves the capacity to three,
+excludes four components, and forces every three-component boundary to be
+three-chromatic with colour-class sizes `3,2,2`.  Its
+  [external-review snapshot](active/hc7_k7minus_external_review_dossier.md)
+records the earlier reviewed source hashes and questions.  This package still proves
+neither the `K_7^-` six-colour conjecture nor `HC_7`.
+
+The
+[boundary-labelled degree-seven near-clique model](results/hc7_degree7_aligned_near_k7_model.md)
+is a possible secondary application, subject to a particularly careful
+overlap review against the public unlabelled near-`K_7` theorem.
+
+This is a credible partial-results package, not a claim that `HC_7` is close
+or that the listed results are novel in their present form.  The public
+benchmark already includes Norin and Totschnig's theorem that every
+non-six-colourable graph contains a
+[$K_7^\vee$ minor](https://arxiv.org/abs/2507.03244), where $K_7^\vee$ is
+$K_7$ with two adjacent edges deleted.  The possible new contribution here
+is the literal bounded-interface localization, component-uniform responses,
+proved component bounds, packing restrictions, and retained labels—not the
+unlabelled near-`K_7` guarantee itself.
+
+Before submission, the general `HC_7` package still needs a conventional
+literature and priority review, independent human audits by graph-minor and
+colouring/Kempe specialists, and independent reproduction of its
+load-bearing finite classifications.  The adjacent-`K_7^-` package needs
+the same source, priority, and human proof review.  Its central density spine
+through `m>=4n-4` has no load-bearing computation; the new two-component
+shore refinements do use the retained order-seven and order-eight boundary
+classifications.  The extensive conditional order-eight/order-nine case
+tree should not lead the manuscript.  The
+[external-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md)
+defines the frozen package, review questions, reproducibility inventory and
+acceptance gate.  The earlier
+[verification-gate report](active/hc7_verification_gate_report.md#partial-results-paper-blueprint-only-until-the-external-review-gates-pass)
+records the internal go/no-go assessment; it is not external peer review.
+
+## Headline audited advances
+
+- **Bounded full interface.** Every hypothetical counterexample admits the
+  order-`7`, `8`, or `9` full separation described above, with a
+  four-colourable boundary and exact independent-block responses on both
+  closed shores.
+- **Component-uniform alignment.** At one low-degree vertex, every component
+  outside the closed neighbourhood has its own boundary vertex `z_D` with
+  `chi(G-{u,z_D})=6`.  Any actual smaller component is therefore a strict
+  same-form restart without preserving the old boundary label.
+- **Exterior-component upper bounds.** At degrees seven, eight and nine,
+  the numbers of components outside the closed neighbourhood are at most
+  one, two and three, respectively.  The degree-eight and degree-nine
+  endpoints use retained, independently rerun finite boundary certificates.
+- **Multi-component exchange.** With at least two exterior components, all
+  component-supported nonedges can be retained simultaneously in one
+  `K_6`-minor-free neighbourhood augmentation.  Either one trace is rejected
+  by several components, or the unique rejector switches.  In the full
+  singleton-rejection case there are exactly two components and the switch
+  has one common root `x`, reducing singleton completion to an
+  `N(x)`-meeting `K_6` model in the six-chromatic graph `G-x`.  Antipodal
+  flip-cube symmetry now forces two rejector-changing coordinates at one
+  boundary colouring and hence a common-trace or disjoint-path fork in one
+  fixed extension.  Each changing coordinate now lies on a canonical
+  alternating cycle of literal full two-colour components from two fixed
+  shore extensions; boundary-edge augmentation alone is provably
+  insufficient.
+- **Two-transition opposite-shore geometry.** Audited pole normalization
+  and a second exact-block transition give two vertex-disjoint paths in
+  opposite open shores with disjoint boundary nonedges, unless the exact
+  tight pole residue occurs.  A `K_6` minor after adding those two nonedges
+  lifts to an explicit `K_7` model.  The surviving augmented boundary is
+  therefore `K_6`-minor-free, and terminal decoding remains open.
+- **Exact-seven packing.** In the hypothetical counterexample setup, the
+  displayed inequalities orient every exact order-seven interface toward
+  one shore with packing number one.
+- **Unbounded cycle completion.** The
+  [cycle-boundary theorem](results/hc7_cycle_boundary_completion.md) closes
+  the induced-cycle family under its displayed universal adjacent pair,
+  exactly two connected full shores, and `K_5`-minor-after-pair-deletion
+  hypotheses, by an explicit `K_7` model or a planar gluing contradiction.
+- **Boundary-labelled near-clique structure.** The
+  [degree-seven aligned model theorem](results/hc7_degree7_aligned_near_k7_model.md)
+  retains the literal boundary labels needed for branch-set surgery.
+- **Adjacent `K_7^-` degree rigidity and strict density.** A direct
+  contraction--Kempe proof gives the exact degree-seven neighbourhood types
+  without the earlier finite residual.  The six-connected two-clique
+  theorem confines all degree-seven vertices to one literal `K_5`, while
+  the generalized private-triangle allocation excludes five such vertices.
+  Hence `n_7<=4` and `m>=4n-2`.  This is an internally audited conditional
+  reduction, not the bare extremal theorem or an `HC_7` result.
+- **Seventeen exceptional degree-eight vertices and local completion.** The
+  unique-clique coverage and defect count force
+  `b>=17+sum_{i>=10}(i-9)n_i`.  If `n_7=4`, the stronger clean-contraction
+  branch gives order at least 37 and at least `32+tau` exceptional vertices.
+  Every exceptional neighbourhood has
+  independence number exactly three.  A five-root `K_5` model avoiding one
+  exterior component completes to an explicit `K_7^-` model.  The upper
+  bound `b<=16` remains an open finishing theorem; the static seven-root
+  list reduction does not prove it.
+- **Two-component exceptional-centre reduction.** If one exceptional centre
+  has two exterior components, the entire host is literal-`K_5`-free.  It
+  follows that `n_7=0`, `\delta\ge8`, `m\ge4n`, every degree-eight vertex is
+  exceptional, and there are at least 25 of them.  Two nonfull components
+  cannot miss the same neighbourhood vertex.  The one-nonfull case has 28
+  possible seven-vertex boundaries, a compulsory six-fan, and exact nested
+  order-seven cuts when the attachment inequality is tight.  In the
+  distinct nonadjacent-miss case is now impossible: a contracted-star Kempe
+  response eliminates every independent-triple boundary, and paired
+  shore-confined fan trees force an explicit `K_7^-` for the two remaining
+  boundary types.  Distinct adjacent misses remain connected-rich `(1,2)`
+  cuts.  The both-full case leaves seven exact boundary types with packing
+  vector `(1,1,1)`.  No required rooted model is yet proved in those
+  remaining cells.
+- **Seven-boundary connected-subgraph and descent obstruction.** In every
+  seven-connected `K_7^-`-minor-free graph, an order-seven cut has at most
+  four disjoint connected subgraphs outside it that are each adjacent to all
+  seven boundary vertices, and hence at most four components.  The three- and
+  four-component boundaries have at most nine and three edges, respectively;
+  every nonsingleton four-component interior is two-connected.  In a
+  minor-minimal non-six-colourable host, exact boundary-colouring reflection
+  improves the capacity to three and excludes four components.  With three
+  components the boundary is exactly three-chromatic, and every proper
+  three-colouring has class sizes `3,2,2`.  Exact density and connectivity
+  formulas still characterize whole-component contractions and their failure
+  certificates without forcing the global seven-cut descent.
+- **First-hit reductions.** Rado--gammoid and transfer results convert much
+  of the palette-to-label problem into literal first-hit geometry, but the
+  final response-coupling step remains open.
+- **Atomic weak-immersion classification.** The
+  [atomic rounding theorem](results/hc7_atomic_weak_k7_immersion_rounding.md)
+  classifies a weak `K_7` immersion having exactly one binary collision.
+  This frozen conditional direction and one exact two-bridge large
+  one-star descendant are summarized in the
+  [atomic frontier](active/hc7_atomic_weak_immersion_frontier.md).
+  The common-end case gives an explicit `K_7` minor; every other case gives
+  a spanning exact `K_7`-minus-one-edge model with singleton deficient
+  roots.  In the disjoint-demand case it also retains a common frame with an
+  octahedral residual quotient, and a collision vertex of degree at most
+  nine exposes a bounded full interface.  The
+  [icosahedral barrier example](barriers/hc7_atomic_weak_immersion_icosahedral_guardrail.md)
+  shows sharply that collision avoidance can relocate the collision at
+  equal potential, the deficient pairs need not identify the terminal pair,
+  and the proposed paired linkage can fail.  The audited
+  [octahedral-frame augmentation result](results/hc7_atomic_octahedral_frame_augmentation.md)
+  proves that the exact quotient is `K_8-3K_2` and any one of its three
+  absent adjacencies gives an explicit `K_7` model.  A clean missing-pair
+  path and a noncofacial four-connected remainder also close, as do every
+  nontrivial complete substitution and every monotone augmentation of the
+  icosahedral example by at most seven vertices.  The audited
+  [bridge normal form](results/hc7_atomic_h0_bridge_quadrant_normal_form.md)
+  gives the exact 488-case classification for one added `T`-path and
+  confines every whole `T`-bridge to one of four attachment regions.  In a
+  seven-connected host, the residue with at most one internal subdivision
+  vertex gives an explicit `K_7` model or an exact order-seven separator;
+  under strong seven-contraction-criticality that separator has the named
+  proper-minor responses.  It also proves that `K_{3,2,2,2}` cannot occur as
+  a subgraph of a seven-connected `K_7`-minor-free host.  The audited
+  [clean-root attachment theorem](results/hc7_atomic_h0_clean_three_arm_closure.md)
+  now closes every connected collision-side piece whose attachments admit
+  three disjoint arms from `e,f,g`; equivalently, every surviving component
+  bridge has a Hall-deficient clean-support incidence graph.  In particular,
+  one contact at the third clean root and two distinct ordered contacts on
+  the opposite clean--clean segment are terminal.  The audited
+  [exact-quotient forest theorem](results/hc7_atomic_exact_j_minimal_forest_landing.md)
+  also closes a spanning common-frame contraction when every proper
+  subforest quotient remains seven-connected: only the two universal fibres
+  can be nontrivial, and the host has an explicit `K_7` model or an exact
+  order-seven separator with the standard proper-minor responses.  Its
+  [partial-contraction barrier](barriers/hc7_atomic_exact_j_partial_contraction_lift_barrier.md)
+  proves why an earlier first loss cannot be lifted by connectivity alone:
+  the quotient six-cut expands to a boundary of order `6+|F_0|`, unbounded
+  in the original host.  The barrier family is itself six-colourable and has
+  a displayed `K_7`, so it does not survive the full hypotheses.  The audited
+  [attachment-hull theorem](results/hc7_partial_loss_attachment_hull.md)
+  now extracts the exact literal information which does survive that lift:
+  every lifted component's attachment set spans each forest fibre, so every
+  fibre leaf is adjacent to every lifted component.  It gives one exact-block
+  colouring response automatically and the reverse response when another
+  component has comparable attachment sets.  With one induced bipartite fibre,
+  the bad quotient is exactly six-chromatic and both fibre sides meet all five
+  other colour classes.  The audited
+  [one-tree attachment-set classification](results/hc7_partial_loss_attachment_set_classification.md)
+  makes this residue exact.  The hull condition is precisely a common-leaf
+  condition.  An inclusion-minimal attachment set either lies inside another
+  component's attachment set, giving the second full shore, or belongs to an
+  antichain of disconnected attachment sets with private internal contacts in
+  both directions.  Boundary order seven is exactly the path-fibre case with
+  the two leaves as the selected attachment set, when comparison is automatic.
+  Three distinctly supported common leaves close by the clean-arm theorem;
+  otherwise Hall deficiency remains.  A realization theorem produces arbitrary
+  such antichains under seven-connectivity and first-loss minimality alone, but
+  deliberately contains a `K_7`; hence the next inference must use `K_7`-free
+  labelled geometry or contraction-critical colouring.  The
+  [adjacent barrier](barriers/hc7_partial_loss_chromatic_lift_barriers.md)
+  shows sharply that a chorded fibre defeats the naive colour lift and that
+  arbitrarily many common contacts may still occupy only two clean-support
+  classes.  The adjacent
+  [shared-hub defect-rotation barrier](barriers/hc7_atomic_shared_hub_defect_rotation_barrier.md)
+  is an exact finite obstruction to a different shortcut: moving a common
+  connector/provenance vertex changes the three absent quotient pairs, but
+  need not lift to another labelled strong immersion or decrease the global
+  collision potential.  Its thirteen-vertex host is only three-connected and
+  three-colourable.  The audited
+  [seven-fan closure](results/hc7_atomic_shared_hub_seven_fan_closure.md)
+  now proves that this exact labelled obstruction is terminal in every
+  seven-connected supergraph, even with arbitrarily many added vertices.
+  Five checked one-edge `K_7` certificates at each of two subdivision
+  vertices saturate the possible fan endpoints, force two clean paths to the
+  common hub, and yield an explicit `K_7` model by a first-intersection split.
+  This reusable fan-saturation mechanism does not yet reduce an arbitrary
+  dirty replacement path to that thirteen-vertex labelled subgraph.  The audited
+  [two-apex exclusion](results/hc7_atomic_shared_hub_two_apex_exclusion.md)
+  gives an independent unbounded restriction: deleting any two vertex or edge
+  objects from the exact thirteen-vertex graph leaves a checked Kuratowski
+  subdivision, so no subdivision of that graph occurs in any two-apex host.
+  In particular, the standard `K_2`-joined planar guardrails cannot falsify the
+  exact shared-hub extension; a counterexample must weaken its literal
+  subdivision structure or leave the two-apex class.  The audited
+  [arbitrary-subdivision first-hit theorem](results/hc7_atomic_subdivision_first_hit_boundary.md)
+  now advances that less literal case.  The two marked first-hit regions are
+  anticomplete, have at least seven attachments in complementary quadrants,
+  and expose an actual order-seven separator at equality.  Contacts from both
+  regions inside the common `fg` route give an explicit `K_7`, as does any
+  single `T`-bridge joining the open `f`- and `g`-incident route stars.  Hence
+  every surviving bridge is one-sided.  A missing branch-avoiding path returns
+  a separator of order eight or nine; an existing path has a normalized trace
+  meeting each elementary route interval in at most one connected subpath and
+  first returns outside `T_fg`.  The remaining configuration is therefore a
+  genuinely multi-bridge chain through intervening route intervals, not an
+  arbitrary dirty path.  The audited
+  [path-absence response theorem](results/hc7_atomic_path_absence_response_boundary.md)
+  now upgrades the missing-path branch: an inclusion-minimal separator in
+  the nine named vertices is full on both distinguished sides, has order
+  seven, eight or nine and a four-colourable boundary, realizes every
+  independent boundary set as an exact block on each closed shore, and
+  retains a selected edge-deletion response.  It is a bounded response
+  interface, but not yet a strict same-form descent.
+
+  The adjacent
+  [dirty two-bridge-chain barrier](barriers/hc7_atomic_dirty_two_bridge_chain_barrier.md)
+  refutes the bare inference that two one-sided bridges composed through one
+  route interval already give a `K_7` minor.  Its exact thirteen-vertex graph
+  is three-connected and four-chromatic.  The strengthened audited finite
+  theorem checks that deleting any two vertex-or-edge objects leaves a
+  Kuratowski subdivision; consequently no subdivision of this graph occurs
+  in any two-apex host, not only in the standard joined-planar guardrail.  The
+  audited
+  [exact-core seven-fan theorem](results/hc7_atomic_two_bridge_exact_core_seven_fan_closure.md)
+  nevertheless closes that same unsplit core in every seven-connected host:
+  five terminal endpoint certificates force clean fan paths to `e,x` and an
+  explicit `K_7` model.  For an arbitrary subdivision, the same certificates
+  confine every surviving first hit to the subdivision of the eight-vertex
+  graph with edges
+
+  \[
+   qa,qg,qs,ar,rs,sc,ae,ax,ce,cg,cx,eg.
+  \]
+
+  The audited
+  [landing-star theorem](results/hc7_atomic_two_bridge_subdivision_landing_stars.md)
+  now closes much of that route skeleton without requiring disjoint exterior
+  paths.  If the common first-hit component meets both the open subdivided
+  stars at `e` and `x`, their possibly intersecting paths belong to one branch
+  set and give an explicit `K_7` model.  Thus a `K_7`-minor-free survivor
+  avoids one entire open star.  In a hypothetical minor-minimal counterexample,
+  a minimum `q`--`b` separator contained in the first-hit boundary either has
+  order seven to nine and carries the full audited exact-block and selected-edge
+  responses, or every such literal separator has order at least ten.
+
+  The adjacent
+  [forced-hub transit-label barrier](barriers/hc7_atomic_two_safe_transit_label_barrier.md)
+  closes off the most direct small-boundary continuation: among all eleven
+  retained labels in the exact core, only `p` can be absorbed into the
+  prescribed `q,x` branch set while the other clean connection is retained.
+  Hence there are not two distinct safe labels under that ownership rule.
+  The exact remaining gate in this two-bridge descendant is therefore an
+  unbounded large-boundary one-star-avoidance configuration.  Closing it
+  requires a label-preserving
+  dirty-path/bridge-composition theorem that either reroutes into the avoided
+  star, produces a response boundary, or gives strict component descent;
+  further finite local enumeration does not address that inference.  The earlier
+  [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
+  shows that individually two-apex bridge certificates need not share an
+  apex pair and that normalized dominating `K_5` models may regenerate
+  after every two-vertex deletion without yielding the needed exchange.
+  The wider remaining inference is still the interaction of dirty replacement
+  paths and Hall-deficient high-attachment quadrant bridges with the first bad
+  partial quotient, retaining named ownership throughout.
+
+## Exact trust boundary
+
+- Exact attainment of every independent boundary block is separate on the
+  two shores; it does not synchronize the rest of either colouring.
+- Component-uniform alignment regenerates the named response at every actual
+  anti-neighbourhood component.  Component deletion now couples all literal
+  components at the common neighbourhood, but its common-trace kernels and
+  its special common-root rooted-`K_6` residue are not terminal.  The
+  common-root flip-cube theorem synchronizes two moves in one accepted
+  extension, and affine switch-space incompatibility closes each changing
+  coordinate into a literal alternating trace cycle.  The explicit
+  compact-boundary barrier rules out closure from the resulting added edges
+  alone, and the cycle is not yet a branch-set allocation.  None of these
+  theorems addresses the
+  connected-exterior tight pole residue.
+- The two-transition theorem now gives vertex-disjoint paths in opposite
+  open shores with disjoint boundary endpoints.  They may arise from
+  different colouring operations, and when `G[S]+e+f` is `K_6`-minor-free
+  their existence alone does not give a terminal model, common partition or
+  strict restart.
+- The tight pole residue survives all local exact-block and pole-star
+  response axioms in an audited seven-connected seven-chromatic barrier.
+  That barrier lacks global `K_7`-minor exclusion and full proper-minor
+  six-colourability, so it does not refute the live theorem.
+- A colour name is not a branch-set label. Any claimed minor construction
+  must use literal first-hit vertices or another explicit label-preserving
+  lift.
+- The detailed order-eight and order-nine results are conditional
+  refinements. They do not form an exhaustive fine-grained case chain for
+  every original low-degree entry.
+- The pentagonal-bipyramid theorems close several unbounded families, not
+  all compatible cyclic-order expansions.
+- The minimum-degree weak-immersion theorem does not force an atomic
+  immersion or a collision vertex of degree at most nine.
+  Contact-preserving singletonization also shows that the missed-bag
+  paired-linkage formulation requires a new label-preserving ownership
+  theorem.  The octahedral-frame and bridge refinements classify one path,
+  confine each whole bridge, close the one-internal-vertex residue and
+  exclude the multipartite saturation at seven-connectivity.  They do not
+  yet combine arbitrary high-attachment quadrant bridges while retaining
+  an `xe`, `ab`, or `cd` ownership augmentation, or return a strictly
+  smaller full component with its named proper-minor response.  A saturating
+  clean-root attachment matching is now terminal, but Hall deficiency alone
+  has not been decoded.  Likewise the exact-`J` all-subsets forest landing is
+  closed, but an earlier partial connectivity loss can have an unbounded
+  literal lift and needs bridge ownership or chromatic response to control
+  it.  Its attachment sets nevertheless span every contracted fibre tree and
+  share all fibre leaves.  In the one-tree case, an inclusion-minimal set is
+  either contained in another attachment set or sits in an antichain of
+  disconnected sets with two-way private internal contacts; no stronger
+  interval or comparison conclusion follows from connectivity and first-loss
+  minimality alone.  This supplies only one closed-shore response unless a
+  second component is literally full to the same boundary, and common leaves
+  need not have three distinct clean-root supports.  The induced-bipartite
+  one-fibre case has a stronger six-colour contact condition, but its
+  label-preserving conversion remains open.  Bare reassignment of a shared
+  connector/provenance vertex also fails:
+  the rotated near-clique quotient need not have a labelled strong-immersion
+  lift or improve the lexicographic collision potential.  The exact sparse
+  example is nevertheless excluded from every seven-connected `K_7`-minor-free
+  host by the new fan-saturation theorem, and no subdivision of it occurs in a
+  two-apex host.  In an arbitrary subdivision, the first-hit theorem closes
+  two-sided `fg` contacts and every single bridge spanning the two clean route
+  stars.  The path-absence alternative now carries complete separate
+  exact-block responses and a selected edge-deletion response, although it
+  need not synchronize the shore colourings or give strict descent.  In the
+  existing-path alternative, the exact two-bridge core closes at
+  seven-connectivity and every surviving first hit is confined to the displayed
+  eight-vertex skeleton.  A common first-hit component meeting both complete
+  landing stars now gives an explicit model even when its two paths intersect.
+  A minimum-cardinality contained `q`--`b` separator carries the full response
+  when its order is at most nine; otherwise every such literal separator has
+  order at least ten and the boundary avoids one whole open star.  The
+  one-label forced-hub census
+  supplies only `p`, so the proposed two-label shortcut cannot close it.  The
+  order-ten assertion concerns separators contained in `Omega_q`; it is not a
+  global ten-path linkage statement.  The
+  six-connected barrier also rules out intersecting individual two-apex
+  certificates or invoking bare dominating-model regeneration.  The
+  single-collision gate therefore remains open, and this route does not
+  replace the primary bounded-interface obligation.
+- Internal audits establish the repository's current trust status; they are
+  not external peer review.
+
+## Navigation
+
+| Document | Role |
+|---|---|
+| [`active/hc7_live_case_dag.md`](active/hc7_live_case_dag.md) | Exhaustive global chain and exact missing arrow |
+| [`active/hc7_bounded_interface_synchronization_frontier.md`](active/hc7_bounded_interface_synchronization_frontier.md) | Full all-degree theorem and guardrails |
+| [`active/hc7_k7minus_density_frontier.md`](active/hc7_k7minus_density_frontier.md) | Live conditional `K_7^-` density and rooted-minor route |
+| [`active/hc7_degree7_model_separator_frontier.md`](active/hc7_degree7_model_separator_frontier.md) | Conditional degree-seven terminal theorem |
+| [`active/hc7_atomic_weak_immersion_frontier.md`](active/hc7_atomic_weak_immersion_frontier.md) | Frozen conditional one-collision laboratory |
+| [`active/hc7_pentagonal_bipyramid_paired_rooted_target.md`](active/hc7_pentagonal_bipyramid_paired_rooted_target.md) | Frozen conditional structural laboratory |
+| [`active/INDEX.md`](active/INDEX.md) | Concise live navigation only |
+| [`README.md`](README.md) | Durable public overview |
+
+The complete previous ledger is preserved as the dated
+[20 July 2026 archive snapshot](archive/RESEARCH_LEDGER_2026-07-20.md).
+If that snapshot or any other archived file conflicts with this ledger, this
+ledger governs the current programme.

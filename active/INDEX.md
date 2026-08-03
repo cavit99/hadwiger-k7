@@ -1,71 +1,41 @@
 # Current proof work
 
-**Role:** concise navigation only. The authoritative status is
-[`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md). Exact hypotheses and
-residual cases belong in the linked technical frontiers; transitive
-dependencies and historical connections belong in the generated research
-index.
+**Role:** concise navigation only.  The authoritative status is
+[`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md); exact hypotheses and
+residues are recorded in the linked technical frontier.
 
-## Verification map
+## Primary target
 
-- [Exhaustive global chain and conditional refinements](hc7_live_case_dag.md)
-- [Verification-gate cold audit](hc7_verification_gate_report.md)
+[The seven-connected `4n-2` extremal theorem](hc7_k7minus_density_frontier.md#2-primary-extremal-target)
 
-## Primary all-degree target
+> Every seven-connected graph `G` with
+> `|E(G)|>=4|V(G)|-2` contains a `K_7^-` minor.
 
-[Pole-free bridge composition for the bounded interface](hc7_bounded_interface_synchronization_frontier.md#4-primary-open-theorem)
+This is the sole active target.  It would settle Norin--Totschnig
+Conjecture 21, but not `HC_7`.
 
 Selected audited inputs:
 
-- [low-degree adjacent pair and bounded full separation](../results/hc7_low_degree_adjacent_pair_alignment.md)
-- [component-uniform boundary alignment](../results/hc7_component_uniform_boundary_alignment.md)
-- [low-degree exterior-component upper bounds](../results/hc7_low_degree_exterior_component_bounds.md)
-- [component-deletion Kempe exchange](../results/hc7_component_deletion_kempe_exchange.md)
-- [full-component common-root exchange](../results/hc7_full_exterior_component_common_root_exchange.md)
-- [common-root antipodal flip-cube fork](../results/hc7_common_root_flip_cube_fork.md)
-- [rejection-cut edges force alternating full-component cycles](../results/hc7_common_root_alternating_trace_cycle.md)
-- [low-degree classification of common-root trace cycles](../results/hc7_common_root_short_trace_classification.md)
-- [parallel common-root trace-cycle normalization](../results/hc7_common_root_parallel_two_cycle_normalization.md)
-- [degree-eight nonedge bipartition outside the odd wheel](../results/hc7_degree8_nonedge_bipartition_classification.md)
-- [operation-compatible bilateral cycle for an aligned degree-eight pair](../results/hc7_degree8_aligned_pair_bilateral_cycle.md)
-- [arbitrary two-defect four-bag allocation and aligned component closure](../results/hc7_degree8_two_defect_component_closure.md)
-- [four portal reductions to tagged confined lobes](../results/hc7_degree8_four_portal_reduction.md)
-- [degree-eight aligned root-star response](../results/hc7_degree8_common_root_star_response.md)
-- [minimal degree-eight root-star response reduction](../results/hc7_degree8_minimal_root_star_response_reduction.md)
-- [tight common-root five-reserve Kempe packet](../results/hc7_common_root_five_reserve_kempe_packet.md)
-- [elimination of every concentrated degree-eight or degree-nine reserve](../results/hc7_low_degree_concentrated_reserve_elimination.md)
-- [split-boundary colour synchronization](../results/hc7_split_boundary_synchronization.md)
-- [exact-block Kempe reduction and pole-free path](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
-- [last-pole move normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
-- [two-transition disjoint opposite-shore response](../results/hc7_bounded_interface_two_transition_disjoint_response.md)
-- [two-connected boundary-core completion](../results/hc7_two_connected_boundary_completion.md)
+- [density-preserving contraction at every degree-seven entrance](../results/hc7_k7minus_degree7_safe_contraction.md)
+- [strict-surplus Mader--Schmidt structure and many exact seven-cuts](../results/hc7_k7minus_strict_surplus_minimal_enemy.md)
+- [essential-edge exact six-separation and shore accounting](../results/hc7_k7minus_essential_edge_six_separation.md)
 
 Immediate barriers:
 
-- [static four-colour boundary languages need not synchronize](../barriers/hc7_four_colour_parity_language_barrier.md)
-- [all local exact-block and pole-star responses can still force a last pole move](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
-- [common-root forked paths do not close after boundary-only contraction](../barriers/hc7_common_root_boundary_only_fork_barrier.md)
-- [terminal-free portal cuts can erase the independent-block role](../barriers/hc7_degree8_portal_role_erasure_barrier.md)
-- [independent two-defect bags need not force a `K_7` minor](../barriers/hc7_degree8_independent_two_defect_four_bag_barrier.md)
+These are audited route nonclosures, not constructional counterexamples:
 
-## Conditional refinements and frozen laboratories
+- [the nested root-swap residue](../results/hc7_k7minus_degree7_safe_contraction.md#theorem-3-the-exact-two-exterior-fragment-residue)
+- [the missing seventh branch set at an essential-edge separation](../results/hc7_k7minus_essential_edge_six_separation.md#scope)
+- [the unproved uncrossing of the degree-seven cut family](../results/hc7_k7minus_strict_surplus_minimal_enemy.md#scope)
 
-- [`K_7^-` two-clique exclusion, strict-density, exceptional-centre, and seven-boundary frontiers](hc7_k7minus_density_frontier.md)
-- [same-operation low-degree response-column frontier at an order-eight boundary](hc7_order8_low_degree_response_column_frontier.md)
-- [generic exact-seven degree-seven terminal theorem](hc7_degree7_model_separator_frontier.md#generic-exact-seven-restart-and-the-remaining-terminal-theorem)
-- [exact-seven full-connected-subgraph packing theorem](../results/hc7_exact_seven_packet_packing.md)
-- [earlier endpoint-pair selection](../results/hc7_bounded_interface_endpoint_pair_selection.md)
-- [earlier robust independent-triple response](../results/hc7_bounded_interface_robust_triple_response.md)
-- [static order-eight transition barrier](../barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md)
-- [fixed-colouring degree-eight `P_5` stress test](../results/hc7_degree8_simultaneous_p5_certificate.md)
-- [dirty-path local-uncrossing barrier](../barriers/hc7_degree8_dirty_path_local_uncrossing_barrier.md)
-- [prescribed deleted-colour contact barrier](../barriers/hc7_degree8_deleted_colour_k4_contact_barrier.md)
-- [failed six-residual sink-closure gate: exact terminal-cycle deletion language](../results/hc7_double_critical_terminal_cycle_deletion_language.md)
-- [minimum-frame and shortest-cycle selection barrier](../barriers/hc7_six_residual_frame_selection_barrier.md)
-- [atomic one-collision weak-immersion frontier](hc7_atomic_weak_immersion_frontier.md)
-- [pentagonal-bipyramid paired-rooted `K_5` or four-colouring target](hc7_pentagonal_bipyramid_paired_rooted_target.md#3-exact-no-four-cut-target)
+## Conditional refinements and frozen programmes
 
-These laboratories are not substitutes for the primary all-degree target.
-Other frozen programmes and superseded proof spines remain searchable in
-[`../archive/`](../archive/); they are not part of this live navigation
-view.
+- [critical-host `4n-2` entrance showing why the target settles Conjecture 21](../results/hc7_k7minus_two_literal_k5_exclusion.md#corollary-3-critical-host-consequences)
+- [critical-host exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md)
+- [bounded-interface `HC_7` composition frontier](hc7_bounded_interface_synchronization_frontier.md)
+- [exhaustive historical `HC_7` case map](hc7_live_case_dag.md)
+- [verification-gate report](hc7_verification_gate_report.md)
+
+These programmes remain relevant sources of proved tools, but they are not
+parallel active targets.  Superseded work is preserved in
+[`../archive/`](../archive/).
