@@ -295,10 +295,12 @@ theorem, not a density recount:
 > either `G` contains a `K_7^-` minor, or `G` has a proper minor `H` that is
 > seven-connected and satisfies `|E(H)|>=4|V(H)|-4`.
 
-This target is open.  It is equivalent in strength to the global extremal
-statement in Section 2, rather than being an ordinary preliminary lemma.
-That global statement trivially gives the first outcome.  Conversely, choose
-a proper-minor-minimal counterexample to it.  If it were eight-connected,
+This target is open.  It is equivalent in strength to the former bare global
+`4n-4` extremal statement, which is strictly stronger than the current
+`4n-2` sufficient target in Section 2; it is not an ordinary preliminary
+lemma.  The global `4n-4` statement trivially gives the first outcome.
+Conversely, choose a proper-minor-minimal counterexample to that same-threshold
+statement.  If it were eight-connected,
 then `G-e` would be seven-connected for every edge `e`, while minimum degree
 eight would give `|E(G-e)|>=4|V(G)|-1`; hence `G-e` would be a smaller
 counterexample.  Thus the chosen graph has an order-seven cut, and either
