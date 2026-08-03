@@ -7911,6 +7911,28 @@ does_not_prove = [
 keywords = ["rooted K6", "five roots", "density descent", "five-cut"]
 
 [[claims]]
+id = "hc7.k7minus_e5_coarse_reserve_nonclosure"
+title = "Coarse rooted-lobe data do not force a five-root K6 reserve"
+kind = "laboratory"
+status = "written-unaudited"
+source = "active/hc7_k7minus_e5_frontier.md"
+source_heading = "4. Recorded nonclosures"
+active = false
+scope = "attempts to derive the five-root reserve from internal five-connectivity, lobe excess, an unrooted K6 model, or coefficient-four massed-pair machinery alone"
+conclusions = [
+  "K4,2,2 with the specified five roots has relative excess four and no five-root K6 reserve",
+  "K3,2,1,1,1 has near-Mader density and no reserve but already contains an explicit K7-minus model",
+  "Wollan Theorem 2.2 requires coefficient at least five for K5 and cannot be invoked at coefficient four",
+  "an unrooted K6 model plus a five-fan does not presently preserve five distinct root labels",
+]
+does_not_prove = [
+  "failure of the reserve-or-descent theorem under the full minimum-E5-enemy hypotheses",
+  "existence of an E5 counterexample",
+  "failure of the seven-connected 4n-2 target",
+]
+keywords = ["recorded nonclosure", "rooted K6", "five roots", "Wollan", "first hit"]
+
+[[claims]]
 id = "hc7.k7minus_degree7_safe_contraction"
 title = "A degree-seven vertex has a density-preserving incident contraction"
 kind = "theorem"
@@ -14604,6 +14626,12 @@ source = "hc7.target.k7minus_five_root_reserve_descent"
 target = "hc7.target.k7minus_e5_extremal"
 kind = "subproblem_of"
 note = "The proved minimum-enemy reduction isolates this rooted reserve-or-descent statement as the common unresolved obligation."
+
+[[relations]]
+source = "hc7.k7minus_e5_coarse_reserve_nonclosure"
+target = "hc7.target.k7minus_five_root_reserve_descent"
+kind = "related_to"
+note = "The recorded constructions and coefficient mismatch delimit which coarse hypotheses cannot prove the labelled reserve; they do not refute the full minimum-enemy target."
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
