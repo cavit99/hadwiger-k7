@@ -104,7 +104,9 @@ existence of some `K_6` minor, is the unresolved content.
 
 ## 4. Recorded nonclosures
 
-Two tempting continuations are exhausted and must not be repeated.
+The following continuations are exhausted or require hypotheses stronger
+than their tempting formulations.  They must not be repeated without a new
+ingredient.
 
 - [Ordinary two--three linkage](hc7_k7minus_e5_two_component_rooted_reduction.md#the-two--three-linkage-route-is-sharp-at-lobe-excess-one)
   closes the relevant row when the low lobe has excess at least two, but is
@@ -114,11 +116,76 @@ Two tempting continuations are exhausted and must not be repeated.
   can return a smaller component, but neither construction preserves the
   high-excess inequality.  It therefore does not give a well-founded
   descent.
+- **Bare relative connectivity and excess do not force the reserve.**  Let
+  `H=K_{4,2,2}`.  Take as the five roots the four vertices in the part of
+  order four and one vertex in a part of order two.  The three nonroots
+  induce `P_3`, completing the roots makes `H` isomorphic to
+  `K_8-2K_2`, and the open-side excess is
 
-These findings do not refute the five-root reserve-or-descent target.  They
-show that its proof must couple the low interface to the opposite dense
-lobe or establish a sharp equality structure.  Further isolated boundary
-codes or unrooted minor models are not accepted terminal outcomes.
+  ```text
+  2+14-4(3)=4.
+  ```
+
+  Thus the rooted pair is internally five-connected and has exactly the
+  coarse excess used in the laboratory.  It nevertheless has no `K_6`
+  model with the five roots in distinct bags and a root-free sixth bag.
+  The sixth bag consumes one of the three nonroots; at least three of the
+  remaining nonroots would be needed to make the four mutually
+  nonadjacent roots pairwise adjacent as rooted bags.
+
+  Adding one vertex adjacent precisely to the five roots gives the
+  five-connected target-free graph `K_{4,2,3}-e`, of order nine and size
+  25.  It lies below the `E5` threshold 29.  Target-freeness follows
+  already for `K_{4,2,3}`: among seven bags with at most one missing
+  adjacency, at most four bags can lie wholly in individual multipartite
+  parts, so at least three bags must meet two parts and hence require at
+  least ten vertices in total.  This construction therefore refutes only
+  the coarse local reserve inference, not `(E5)` or the minimum-enemy
+  reserve-or-descent target.
+- **A reserve-only conclusion is also wrong at near-Mader density.**  Let
+  `H=K_{3,2,1,1,1}` and take the parts of orders three and two as the five
+  roots.  Then
+
+  ```text
+  |E(H)|=24=4|V(H)|-8,
+  ```
+
+  and completing the roots gives `K_8`.  A root-free sixth bag leaves only
+  two of the three singleton-part vertices for the root bags.  Two are
+  needed to repair the three mutually nonadjacent roots, and a third is
+  needed to repair the two mutually nonadjacent roots, so the requested
+  reserve does not exist.  On the other hand `H` itself contains the
+  explicit `K_7^-` model
+
+  ```text
+  {a_1,b_1}, {a_2}, {a_3}, {b_2}, {c_1}, {c_2}, {c_3},
+  ```
+
+  whose only missing adjacency is `{a_2}{a_3}`.  Hence an abstract lobe
+  theorem must allow an explicit target outcome; the target-free
+  minimum-enemy hypothesis is doing real work in the live statement.
+- **Wollan's coefficient-four minimal-pair machinery does not apply.**  A
+  minimum high-excess lobe suggests a `4`-massed pair, but Theorem 2.2 of
+  Wollan's *Extremal functions for rooted minors* assumes
+  `alpha>=|V(F)|`.  With `F=K_5` this requires `alpha>=5`, whereas the
+  present excess supplies only the coefficient four.  The degree-eight
+  vertex and four-common-neighbour conclusions from that theorem therefore
+  cannot be imported here.  See
+  <https://doi.org/10.1002/jgt.20301>.
+- **An unrooted `K_6` cannot simply be rerooted.**  Mader's ordinary
+  threshold supplies six unlabelled branch sets.  A five-fan from the
+  prescribed roots to their union need not first meet five distinct bags.
+  Splitting a repeatedly hit bag can destroy its connectivity or one of
+  its five model adjacencies.  No current transfer theorem preserves all
+  five root labels, so this first-hit step remains an unsupported
+  inference rather than a standard consequence of five-connectivity.
+
+These findings do not refute the five-root reserve-or-descent target under
+the full minimum-enemy hypotheses.  They show that its proof must use
+target-freeness and the opposite lobe, or establish a sharp equality
+structure with a genuine high-excess descent.  Further isolated boundary
+codes, unrooted minor models, or coefficient-four appeals to Wollan's
+minimal-pair theorem are not accepted terminal outcomes.
 
 ## 5. Relation to the direct `4n-2` route
 

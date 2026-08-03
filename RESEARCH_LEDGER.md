@@ -144,8 +144,11 @@ The four exact nonclosures to overcome are:
   seven-cut certificates may coincide or nest without a smaller safe shore.
 - **rooted reserve:** ordinary two--three linkage is sharp at lobe excess
   one, while an unrooted `K_6` model may consume every useful residual
-  vertex.  A smaller arbitrary side is not enough unless it retains the
-  high-excess inequality.
+  vertex.  Bare internal five-connectivity and excess four do not force the
+  labelled reserve, and Wollan's small-neighbourhood theorem cannot be used
+  at coefficient four because its `K_5` specialization requires coefficient
+  at least five.  A smaller arbitrary side is not enough unless it retains
+  the high-excess inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its
