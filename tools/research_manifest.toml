@@ -7924,7 +7924,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "6b1fac39ba6b3e80f2a906ec5761110c06d81967d3ac8f4baeb45b971be98fa7"
+expected_source_sha256 = "303fcee5f91693b0649f48309b33a8aabd71c92225b0d7384dc04670b73ed9e4"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8199,7 +8199,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 1 (a spanning near-clique model after deleting two centres)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "two degree-eight vertices in the literal-K5-free density-4n branch forced by a disconnected exceptional anti-neighbourhood"
 label_fidelity = "both deleted roots and all seven labelled branch sets of the spanning K7-vee model remain explicit"
 conclusions = [
@@ -8224,7 +8224,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 3 (forced target interface)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "one retained degree-eight root in a contact-maximal spanning K6 model, with a globally minimum branch set containing at least two root neighbours"
 label_fidelity = "the retained root, surplus donor, uncontacted target, four protected branch sets and every literal donor-target portal remain named"
 conclusions = [
@@ -8248,7 +8248,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Theorem 4 (a spanning near-clique and forced interface at every exceptional centre)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "any exceptional degree-eight vertex in the critical K7-minus host"
 label_fidelity = "the exceptional root and seven labelled branch sets of the spanning K7-vee model remain explicit; a separately optimized K6 model need not retain the P-B-C provenance"
 conclusions = [
@@ -8273,7 +8273,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 6 (two-hole persistence and a deficient-bag response)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "an exceptional degree-eight root added to a contacted bag of an exact spanning labelled K7-vee model"
 label_fidelity = "the exceptional root, the deficient P-B-C labels, the minimized contacted bag, every persistent incident edge, and one two-edge contraction colouring remain explicit"
 conclusions = [
@@ -8299,7 +8299,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 7 (root-removal compatibility and the exact split residue)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "the minimum rooted deficient P-bag in the two-hole persistence construction at an exceptional degree-eight root"
 label_fidelity = "the root, deficient P-B-C labels, four universal labels, components after root removal, and their literal portal ownership remain fixed"
 conclusions = [
@@ -8325,7 +8325,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 8 (the two-component root-removal residue is impossible)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "the exact 2+2 split of a minimum rooted deficient P-bag when an exceptional degree-eight root contacts the P-bag of a spanning exact K7-vee model"
 label_fidelity = "the exceptional root, deficient P-B-C model, both root-removal components, two owner labels, singleton portal and both literal closed shores remain named"
 conclusions = [
@@ -8397,7 +8397,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 9 (the fixed response yields a nested actual separator)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "the minimum rooted deficient bag and fixed jointly persistent two-edge-star colouring from the exact spanning K7-vee response"
 label_fidelity = "the exceptional root, deleted edge pair, fixed six-colouring, labelled near-clique model and returned connected separator side remain attached to one operation"
 conclusions = [
@@ -8420,7 +8420,7 @@ source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 10 (two lost adjacencies reduce to one atomic bag)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "a minimum rooted deficient bag whose root-deletion remainder is connected and loses exactly two universal adjacencies"
 label_fidelity = "the root, connected remainder, two retained and two lost universal labels, owner portals and the two closed colouring sides remain explicit"
 conclusions = [
@@ -8436,20 +8436,22 @@ keywords = ["K7 minus", "deficient bag", "two lost adjacencies", "atomic residue
 
 [[claims]]
 id = "hc7.k7minus_global_minimum_separator_normal_form"
-title = "A globally minimum separator has exact-seven or full two-/three-component form"
+title = "A globally minimum separator has exact order seven or eight"
 kind = "lemma"
 status = "audited-green"
 source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
 source_heading = "Proposition 11 (global minimum-separator normal form)"
 active = false
 audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
-expected_source_sha256 = "64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
 scope = "the critical K7-minus host after existence of one actual separator; the boundary is minimized globally over all connected sets with a nonempty far side"
 label_fidelity = "the minimum literal boundary and every literal complementary component are retained; the earlier near-clique labels and operation-to-shore alignment are not retained"
 conclusions = [
   "at boundary order seven there are exactly two components, with packing vector 1,1 or 1,2 up to orientation, and the boundary is K5-minor-free with chromatic number between two and four",
-  "at boundary order at least eight there are exactly two or three components and each is adjacent to every boundary vertex",
-  "every higher-order minimum boundary is K5-minor-free and four-colourable",
+  "the globally minimum boundary order equals the vertex-connectivity and is exactly seven or eight",
+  "at boundary order eight there are exactly two or three components, each adjacent to every boundary vertex, and the boundary is K5-minor-free and four-colourable",
+  "in the order-eight branch kappa and minimum degree equal eight, n7 is zero, m is at least 4n, n8 is at least 25+tau, and b is at least 20+tau",
+  "every degree-eight neighbourhood in the order-eight branch is a minimum cut; its anti-neighbourhood is connected or has two nonsingleton full components",
   "after deleting any a boundary vertices with a at most one less than the component count, the residual boundary is (5-a)-colourable and has no K_(6-a)-minus minor",
   "with a at most two less than the component count, the same residual boundary has no K_(5-a) minor",
 ]
@@ -8459,7 +8461,56 @@ does_not_prove = [
   "the partition-specific connected subgraphs required to reflect a legal one-sided trace",
   "a common boundary partition, a six-colouring, or a named exceptional anti-neighbourhood descent",
 ]
-keywords = ["K7 minus", "minimum separator", "full components", "contraction profile", "fixed response"]
+keywords = ["K7 minus", "minimum separator", "seven connectivity", "eight connectivity", "full components", "contraction profile", "fixed response"]
+
+[[claims]]
+id = "hc7.k7minus_persistent_same_trace_single_edge"
+title = "A fixed double-star response contains a persistent same-trace single-edge response"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
+source_heading = "Proposition 12 (a persistent same-trace single-edge response)"
+active = false
+audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
+scope = "the minimum rooted deficient bag and fixed jointly persistent two-edge-star colouring from the exact spanning K7-vee response"
+label_fidelity = "the exceptional root, deleted double-star, selected persistent edge, six-colouring trace and same labelled near-clique model remain fixed"
+conclusions = [
+  "one persistent incident edge rz has an outer endpoint whose secondary colour is unique among the six residual neighbours",
+  "recolouring only the root gives a six-colouring of G-rz that agrees with the fixed double-star response away from the root",
+  "deleting rz retains the same labelled near-clique model",
+]
+does_not_prove = [
+  "that the selected edge avoids a normalized separator or has endpoints on prescribed shores",
+  "an assignment of palette colours to the required branch-set labels",
+  "a common boundary partition, a K7-minus model, or exceptional anti-neighbourhood descent",
+]
+keywords = ["K7 minus", "persistent edge", "double-star response", "single-edge deletion", "same colouring trace", "operation provenance"]
+
+[[claims]]
+id = "hc7.k7minus_forced_order8_operation_responses"
+title = "Eight-connectivity forces clean fans and a low-degree paired column system"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_k7minus_pair_deletion_k7vee_reduction.md"
+source_heading = "Proposition 13 (forced order-eight operation responses)"
+active = false
+audit = "active/hc7_k7minus_pair_deletion_k7vee_reduction_audit.md"
+expected_source_sha256 = "7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e"
+scope = "the full order-eight outcome of the global minimum-separator theorem, with secondary side-order minimization in the two-component case and a direct singleton-root specialization when the fixed exceptional root has connected anti-neighbourhood"
+label_fidelity = "each crossing edge and its proper-minor colouring retain their five first edges; in the singleton-root specialization the persistent edge, exact boundary trace and surviving labelled near-clique model also remain fixed, but near-clique labels are not identified with column labels"
+conclusions = [
+  "every crossing-edge response at a full minimum eight-cut yields a clean five-path fan retaining its five prescribed first edges",
+  "on a smallest two-shore side every arbitrary-edge response yields adjacent roots and seven full columns",
+  "the seven-column contact graph has minimum degree at most three",
+  "when the fixed exceptional root has connected anti-neighbourhood, its persistent single-edge response directly yields the paired-column system with boundary class sizes 2,2,1,1,1,1 and retains the same labelled near-clique model",
+]
+does_not_prove = [
+  "that the low-degree column is the operated target",
+  "a label-preserving exchange along an operation-generated path which first meets an old root or column",
+  "a common boundary partition, a K7-minus model, or exceptional anti-neighbourhood descent",
+]
+keywords = ["K7 minus", "eight connectivity", "clean fan", "paired columns", "low-degree contact graph", "path intersection"]
 
 [[claims]]
 id = "hc7.target.k7minus_one_operation_interface_closure"
@@ -13324,9 +13375,15 @@ note = "The operation-preserving nested separator proves that the unrestricted f
 
 [[relations]]
 source = "hc7.k7minus_global_minimum_separator_normal_form"
+target = "hc7.k7minus_sharpened_critical_density"
+kind = "uses"
+note = "The audited critical-host density source supplies the Jakobsen defect bound used to exclude connectivity at least nine and derive the order-eight degree counts."
+
+[[relations]]
+source = "hc7.k7minus_global_minimum_separator_normal_form"
 target = "hc7.minimum_positive_separator_normal_form"
 kind = "uses"
-note = "At globally minimum boundary order at least eight, the exact-seven restart is impossible and the full two-/three-component alternative is forced."
+note = "At globally minimum boundary order eight, the exact-seven restart is impossible and the full two-/three-component alternative is forced."
 
 [[relations]]
 source = "hc7.k7minus_global_minimum_separator_normal_form"
@@ -13350,7 +13407,43 @@ note = "The general two-component seven-cut theorem excludes a K5 minor from the
 source = "hc7.target.k7minus_one_operation_interface_closure"
 target = "hc7.k7minus_global_minimum_separator_normal_form"
 kind = "uses"
-note = "The remaining operation-level task may be attacked in the exact two-shore order-seven form or the full two-/three-component higher-order form, but must recover operation alignment or a named centre."
+note = "The remaining operation-level task may be attacked in the exact two-shore order-seven form or the full two-/three-component order-eight form, but must recover operation alignment or a named centre."
+
+[[relations]]
+source = "hc7.target.k7minus_one_operation_interface_closure"
+target = "hc7.k7minus_persistent_same_trace_single_edge"
+kind = "uses"
+note = "The persistent single-edge response removes the change-of-trace ambiguity but does not align palette colours with the required branch-set labels."
+
+[[relations]]
+source = "hc7.k7minus_forced_order8_operation_responses"
+target = "hc7.k7minus_global_minimum_separator_normal_form"
+kind = "uses"
+note = "Exact order eight and secondary side-order minimization eliminate the order-seven and strict order-eight response returns."
+
+[[relations]]
+source = "hc7.k7minus_forced_order8_operation_responses"
+target = "hc7.operation_coupled_order8_fan"
+kind = "uses"
+note = "The operation-coupled response theorem supplies the clean fan or an order-seven separation."
+
+[[relations]]
+source = "hc7.k7minus_forced_order8_operation_responses"
+target = "hc7.order8_arbitrary_edge_response_star"
+kind = "uses"
+note = "The arbitrary-edge response theorem supplies the paired roots and seven columns after both descent alternatives are excluded."
+
+[[relations]]
+source = "hc7.k7minus_forced_order8_operation_responses"
+target = "hc7.seven_column_contact_structure"
+kind = "uses"
+note = "The seven-column theorem leaves low degree or a pentagonal bipyramid; K7-minus exclusion removes the latter."
+
+[[relations]]
+source = "hc7.target.k7minus_one_operation_interface_closure"
+target = "hc7.k7minus_forced_order8_operation_responses"
+kind = "uses"
+note = "The order-eight branch is reduced to low-degree column contact and dirty-path label transfer."
 
 [[relations]]
 source = "hc7.target.k7minus_one_operation_interface_closure"

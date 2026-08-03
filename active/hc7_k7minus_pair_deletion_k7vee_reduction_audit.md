@@ -6,7 +6,11 @@ formula, the two-hole persistence count and deficient-bag response, the
 one-operation Kempe conclusion, the root-removal split proposition, the
 two-owner portal collapse and terminal two-shore colouring, the fixed-response
 nested-separator reduction, the connected two-loss atomic reduction, and the
-minimum-separator normal form, and the sufficient same-host descent test.
+exact order-seven/eight minimum-separator normal form with its order-eight
+centred consequences, the persistent same-trace single-edge response, the
+forced clean-fan and low-degree seven-column order-eight responses, their
+connected-exterior root-aligned specialization, and the sufficient
+same-host descent test.
 Label-preserving donor optimization, operation-to-recipient allocation, and
 the global terminal/descent target are correctly left open.  The recorded
 separator-terminalization and joint-optimization failures identify exact
@@ -18,7 +22,7 @@ unsupported inferences and do not present them as counterexamples.
 **SHA-256:**
 
 ```text
-64800458c33a7145153ccb8de644587c3849ddef62a4edeb8ef398a8a1aa88af
+7541a7f0f20ad1f407acd9158cfef5f76eb48d39ea528e57d943c1d1fec8b17e
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -435,15 +439,19 @@ method, and it does not use the fixed two-edge-star colouring.
 ## 7F. Minimum-separator normal form
 
 Proposition 9 makes the family of all connected sets with a nonempty far side
-nonempty.  Seven-connectivity bounds every boundary in this unrestricted
-family below by seven, so a global minimum exists.  At boundary order seven,
+nonempty.  Its minimum boundary order `s` equals `kappa(G)`: every member
+has a separating boundary, while a component behind a minimum vertex cut
+belongs to the family and has that cut as its full neighbourhood.  The
+audited Jakobsen bound `2|E(G)|<=9|V(G)|-25` and
+`delta(G)>=kappa(G)=s` exclude `s>=9`.  Thus the minimum order is exactly
+seven or eight.  At boundary order seven,
 the audited
 critical capacity theorem and three-component exclusion give exactly two
 components, packing vector `(1,1)`, `(1,2)`, or `(2,1)`, and a boundary
 edge.  The general seven-cut capacity theorem also excludes a boundary
 `K_5` minor, and the established `t=5` case gives four-colourability.
 
-At minimum boundary order at least eight, the selected set is eligible for
+At minimum boundary order eight, the selected set is eligible for
 the audited minimum-positive-separator theorem.  Its exact-seven alternative
 would itself be a member of the minimizing family with smaller boundary, so
 the full-component alternative is forced.  That theorem gives exactly two
@@ -472,14 +480,90 @@ the other two full components on each shore.  In both cases the exact
 boundary partitions align and the closed-shore colourings glue, contradicting
 `chi(G)=7`.  No finite enumeration enters these arguments.
 
+In the order-eight outcome, `kappa(G)=8` and the defect identity gives
+
+\[
+ 25\le9|V(G)|-2|E(G)|=n_8-\tau.
+\]
+
+Hence `delta(G)=8`, `n_7=0`, `|E(G)|>=4|V(G)|`, and
+`n_8>=25+tau`.  At most one literal `K_5` exists and it contains every
+nonexceptional degree-eight vertex, so `b>=20+tau`.
+
+Every degree-eight singleton `{z}` is another member of the minimizing
+family: `n_8>=25` leaves a nonempty far side and `|N(z)|=8`.  Repeating the
+same arbitrary-minimizer argument shows that `G-N[z]` is connected or has
+two components, all full to `N(z)`.  Two singleton components behind a
+full eight-cut would be nonadjacent false twins; a six-colouring after
+deleting one extends by the colour of the other.  Thus there is at most one
+singleton component, and both exterior components in the disconnected
+centred case are nonsingleton.
+
 The fixed colouring is not changed by selecting another separator, but the
 global minimizer need not be nested in the Proposition 9 side or retain any
 near-clique label.  The colouring need not be proper on either closed side
 after the deleted edges are restored, and its endpoints need not avoid the
 new boundary.  Proposition 11 therefore does not claim a terminal outcome or
-operation-to-shore alignment.
+operation-to-shore alignment.  These additional consequences likewise do
+not supply a terminal outcome.
 
-## 7G. Recorded route nonclosures
+## 7G. Persistent same-trace single-edge response
+
+The pulled-back two-edge-star colouring gives `r,x,y` one colour and uses
+all five other colours on the remaining six neighbours of `r`.  Exactly
+four of those six vertices therefore have a unique residual colour.
+Proposition 6 supplies at least five persistent incident edges, including
+`rx,ry`; the four unique-colour vertices and five persistent endpoints in
+the eight-set `N(r)` must intersect.
+
+For a vertex `z` in the intersection, recolour only `r` with `c(z)`.
+The edges `rx,ry` become proper and `rz` is the sole new monochromatic
+edge, so deleting it gives a six-colouring of `G-rz` agreeing with the
+fixed response away from `r`.  Individual persistence of `rz` retains the
+same labelled model.  This improves trace compatibility but does not assign
+the five colours to the required branch-set roles.
+
+## 7H. Forced order-eight operation responses
+
+In the order-eight branch, the order-seven outcome of the audited
+operation-coupled response theorem contradicts `kappa(G)=8`; its clean
+five-path fan is therefore forced for every crossing-edge response.
+
+For the two-component case, minimize the selected open side after boundary
+order.  The arbitrary-edge response-star theorem then has neither an
+order-seven outcome nor a strict order-eight response-side descent, so its
+paired-root seven-column outcome is forced.  A `K_5^-` minor in the column
+contact graph, joined to the two adjacent roots which are complete to all
+columns, would lift to a `K_7^-` minor.  The contact graph is therefore
+`K_5^-`-minor-free.  The seven-column theorem leaves low degree or the
+pentagonal bipyramid; contracting two disjoint rim edges of the latter
+gives a triangle complete to two nonadjacent poles, an explicit `K_5^-`
+model.  Hence the contact graph has minimum degree at most three.
+
+For the connected-exterior specialization, `S=N(r)` is a minimum
+order-eight cut and `G-S` has the two full components `{r}` and `G-N[r]`.
+The arbitrary-edge theorem applies with operated side `{r}` and edge `rz`.
+Eight-connectivity excludes its order-seven outcome, and its strict
+response-side descent cannot be a nonempty proper subset of a singleton.
+Thus the paired-column outcome is forced without replacing the root, edge,
+or colouring from Proposition 12.  The target contains `z`, and the same
+five Kempe components generate the source paths.  The preceding
+contact-graph argument again gives minimum degree at most three.
+
+On `N(r)`, the vertices `x,y` retain their common old root colour.  The
+other six vertices use all five remaining colours, so their multiplicities
+are `2,1,1,1,1`; Proposition 12 chooses `z` in a singleton class.  The
+full boundary partition is therefore `2,2,1,1,1,1`, with `z` singleton.
+The surviving labelled near-clique model and paired columns are tied to the
+same deleted edge and colouring, but no inference identifies their two
+label systems.  The source correctly leaves that allocation open.
+
+This is still nonterminal.  The low-degree column need not be the operated
+target, and an operation-generated path may meet a root or another column
+before its intended target.  The result neither performs a label-preserving
+dirty-path exchange nor identifies a smaller exceptional anti-neighbourhood.
+
+## 7I. Recorded route nonclosures
 
 For an exact-seven separator returned by Proposition 9, its connected side
 is a component and the three-component exclusion leaves one opposite

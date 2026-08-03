@@ -386,13 +386,24 @@ anti-neighbourhood component smaller than `C_0`.  This
 [one-operation terminal/descent target](hc7_k7minus_pair_deletion_k7vee_reduction.md#5-one-named-colouring-operation-and-its-exact-limit)
 would close the whole critical host.  The new model-level dichotomy returns
 an operation-preserving actual separator.  A separate global minimization
-reduces the host to an exact two-shore seven-cut or to a minimum boundary of
-order at least eight with two or three full complementary components and a
+reduces the host to an exact two-shore seven-cut or to a minimum order-eight
+boundary with two or three full complementary components and a
 `K_5`-minor-free four-colourable boundary satisfying a stronger
-vertex-deletion profile.  That minimization loses
-the near-clique labels and operation-to-shore alignment.  Recovering those
-data and converting the normalized interface into one of the three stated
-terminals is the immediate open step.
+vertex-deletion profile.  In the order-eight branch,
+`kappa(G)=delta(G)=8`, `n_7=0`, `|E(G)|>=4|V(G)|`,
+`n_8>=25+tau`, and `b>=20+tau`; every disconnected exceptional
+anti-neighbourhood is automatically a two-shore both-full interface.  The
+fixed double-star response also has a persistent single-edge-deletion
+colouring with the same trace away from its root.  Eight-connectivity forces
+the order-eight operation machinery into clean fans and, on a smallest
+two-shore side, a paired seven-column system whose contact graph has minimum
+degree at most three.  At a fixed exceptional root with connected
+anti-neighbourhood, the persistent single-edge response forces the same
+system directly on the singleton root side, with boundary trace
+`2,2,1,1,1,1` and the original labelled near-clique model still present.
+The operation is then aligned, but the near-clique and column labels are
+not.  Producing that label transfer, or a terminal when it fails, is the
+immediate open step.
 
 ## 5. Recommended next attack
 
@@ -400,7 +411,7 @@ Attack the remaining operation-coupled obligations in this order.
 
 1. **Terminalize the normalized separator with operation data restored.**
    In the exact-seven branch begin with packing `(1,2)`, then `(1,1)`; in
-   the higher-order branch use the two-/three-full-component contraction
+   the order-eight branch use the two-/three-full-component contraction
    profile.  Retain the fixed two-edge-star colouring and force a common
    boundary equality partition, an explicit `K_7^-` model, or a component
    of `G-N[z]` smaller than the chosen minimum for a named exceptional `z`.
