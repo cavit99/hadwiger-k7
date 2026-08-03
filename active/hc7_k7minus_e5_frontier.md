@@ -62,6 +62,17 @@ then with minimum size.  The following chain is now proved.
    close several complete families.  They reduce the unresolved case to a
    low-excess lobe and an opposite lobe which must retain five prescribed
    roots and one additional branch set.
+7. In the exact three-component residue with two singleton lobes, the
+   [singleton-contraction uncrossing theorem](hc7_k7minus_e5_singleton_contraction_uncrossing.md)
+   produces five overlapping rooted three-cuts in the dense shore.  If
+   none yields a strict high-excess descent, their small sides have order
+   at most two and consist entirely of boundary roots.  Boundary
+   classification and Yuan's fragment theorem then leave only
+   `G[S]=P_3` disjoint union `K_2`, with at least three of its four
+   degree-one roots having degree five in `G`.  Their two-vertex neighbour
+   sets in the dense component have distinct representatives, the dense
+   component has order at least seven, and every resulting leaf--neighbour
+   edge belongs to a further exact five-cut.
 
 Consequently one may choose, with minimum order, a component `C` behind a
 five-cut `S` such that
@@ -75,6 +86,15 @@ to a smaller high-excess component, and every seven-edge two-component row
 is closed by the four complement-type theorems; a triangle-free
 three-component boundary has at most six edges.  This minimum high-excess
 lobe is the strongest coherent endpoint of the present reduction.
+
+For the two-singleton three-component branch, the stronger endpoint in
+item 7 supersedes the generic description: the remaining local object is
+three or four degree-five leaf roots with distinct representatives in the
+dense component.  Each has one neighbour in `G[S]` and exactly two
+neighbours in the dense component, and its three neighbours in the closed
+shore form a separator.  The `P_5` and `C_5` possibilities force a strict
+high-excess descent; the other discarded boundary types contradict the
+exact small-side structure and five-connectivity.
 
 The shared [degree-six cut-capacity and exact-excess theorem](hc7_k7minus_degree6_cut_capacity_excess.md)
 supplies the rooted models and density identities used in several of these
@@ -102,6 +122,15 @@ The ordinary extremal theorem for an unrooted `K_6` does not control which
 bags meet the five prescribed roots.  That distinction, rather than the
 existence of some `K_6` minor, is the unresolved content.
 
+In the exact two-singleton branch this target has narrowed further.  It is
+enough to prove the **distinct leaf-pair repair**: when the boundary is
+`P_3` disjoint union `K_2`, choose distinct dense-component representatives
+for the two-vertex neighbour sets of the degree-five leaf roots.  The
+resulting connected leaf pairs and their exact five-cuts must force an
+`S`-rooted `K_5` model or a strictly smaller high-excess component.  The
+rooted model, together with the two singleton lobes, is an explicit
+`K_7^-` model.
+
 ## 4. Recorded nonclosures
 
 The following continuations are exhausted or require hypotheses stronger
@@ -116,6 +145,12 @@ ingredient.
   can return a smaller component, but neither construction preserves the
   high-excess inequality.  It therefore does not give a well-founded
   descent.
+- [Singleton-contraction fragment uncrossing](hc7_k7minus_e5_singleton_contraction_uncrossing.md)
+  gives pairwise disjoint boundary traces, not pairwise disjoint fragments.
+  In the sole surviving `P_3` disjoint union `K_2` row, Hall's condition
+  gives distinct dense-component representatives, but the corresponding
+  exact five-cuts do not give simultaneous disjoint extensions or all ten
+  adjacencies of an `S`-rooted `K_5` model.
 - **Bare relative connectivity and excess do not force the reserve.**  Let
   `H=K_{4,2,2}`.  Take as the five roots the four vertices in the part of
   order four and one vertex in a part of order two.  The three nonroots

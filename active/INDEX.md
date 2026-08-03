@@ -32,7 +32,10 @@ These are audited route nonclosures, not constructional counterexamples:
 
 - [Auxiliary five-connected extremal reduction](hc7_k7minus_e5_frontier.md):
   a minimum enemy to the stronger `4n-7` statement is reduced to one
-  five-root reserve-or-high-excess-descent lemma.  The auxiliary statement
+  five-root reserve-or-high-excess-descent lemma.  In its exact
+  two-singleton branch, the remaining boundary is `P_3` disjoint union
+  `K_2`, with at least three degree-five leaf roots having distinct
+  representatives in the dense component.  The auxiliary statement
   remains unproved and is not a second primary target.
 
 ## Conditional refinements and frozen programmes

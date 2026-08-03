@@ -115,12 +115,26 @@ all seven-edge, sparse three-component, and several complete two-component
 families are eliminated.  This is a substantial reduction, not a proof of
 the auxiliary statement.
 
-The next exact theorem is a five-root reserve-or-descent lemma: a dense,
+The common next theorem is a five-root reserve-or-descent lemma: a dense,
 internally five-connected lobe with five prescribed boundary roots must
 contain a `K_6` model with five distinct root bags and a root-free sixth
 bag, or return a strictly smaller five-cut component which retains the
 required high excess.  The full chain and exact surviving rows are in the
 [auxiliary technical frontier](active/hc7_k7minus_e5_frontier.md).
+
+The exact three-component branch with two singleton lobes is now much
+sharper.  Contracting each singleton-to-boundary edge gives five rooted
+three-cuts in the dense shore.  If no cut yields a strict high-excess
+descent, their small sides contain only one or two roots.  Exact uncrossing
+and Yuan's fragment theorem eliminate every boundary graph except
+`P_3` disjoint union `K_2`; at least three of its four degree-one roots
+then have degree five in the original graph.  Their two-vertex neighbour
+sets in the dense component have distinct representatives, the component
+has order at least seven, and each resulting leaf--neighbour edge lies in
+another exact five-cut.  The immediate repair is to extend those distinct
+leaf pairs simultaneously to an `S`-rooted `K_5` model, or uncross their
+cuts to a strict high-excess descent.  This is an unbounded
+computation-free reduction, not a proof of `(E5)`.
 
 An accepted result must prove at least one of:
 
@@ -129,7 +143,8 @@ An accepted result must prove at least one of:
    explicit `K_7^-` model; or
 3. one shore of an essential-edge six-separation contracts to a smaller
    seven-connected graph still at the `4n-2` threshold; or
-4. the five-root reserve-or-descent target holds.
+4. the five-root reserve-or-descent target holds, or its distinct
+   leaf-pair specialisation closes the exact two-singleton branch.
 
 The four exact nonclosures to overcome are:
 
@@ -146,9 +161,12 @@ The four exact nonclosures to overcome are:
   one, while an unrooted `K_6` model may consume every useful residual
   vertex.  Bare internal five-connectivity and excess four do not force the
   labelled reserve, and Wollan's small-neighbourhood theorem cannot be used
-  at coefficient four because its `K_5` specialization requires coefficient
-  at least five.  A smaller arbitrary side is not enough unless it retains
-  the high-excess inequality.
+  at coefficient four because its `K_5` specialisation requires coefficient
+  at least five.  In the exact two-singleton branch, fragment uncrossing
+  and Hall's theorem give distinct leaf--neighbour pairs, but their exact
+  five-cuts do not supply simultaneous disjoint extensions to a rooted
+  model.  A smaller arbitrary side is not enough unless it retains the
+  high-excess inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its

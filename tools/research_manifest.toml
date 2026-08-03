@@ -7911,6 +7911,33 @@ does_not_prove = [
 keywords = ["rooted K6", "five roots", "density descent", "five-cut"]
 
 [[claims]]
+id = "hc7.k7minus_e5_singleton_contraction_uncrossing"
+title = "Singleton-contraction cuts force distinct degree-five leaf pairs"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_singleton_contraction_uncrossing.md"
+source_heading = "Theorem 7 (distinct leaf representatives and further exact cuts)"
+active = false
+audit = "active/hc7_k7minus_e5_singleton_contraction_uncrossing_audit.md"
+expected_source_sha256 = "e4720b2641033396aabf333cc97d9f401df4577f8a6f337a44d7ca6aba0ac1c2"
+scope = "the exact three-component minimum-high-excess E5 residue with two singleton components full to the same five-cut"
+label_fidelity = "the five boundary roots, both singleton components, every lifted five-cut, all rooted three-separations and the three degree-five leaf roots remain literal host objects"
+conclusions = [
+  "contracting each singleton-to-boundary edge returns an exact five-cut and a rooted three-separation in the dense shore",
+  "absence of a strict high-excess descent makes every small side a one- or two-vertex set of boundary roots",
+  "the boundary graph is P3 disjoint union K2 and at least three of its four degree-one roots have degree five",
+  "the dense component has order at least seven, the leaf-neighbour two-sets have distinct representatives, and every resulting leaf edge belongs to a further exact five-cut",
+]
+does_not_prove = [
+  "the distinct leaf-pair repair",
+  "an S-rooted K5 model in the dense shore",
+  "the auxiliary E5 statement",
+  "the active seven-connected 4n-2 target",
+  "HC7",
+]
+keywords = ["K7 minus", "E5", "singleton contraction", "three-cut", "Yuan fragments", "degree-five roots", "P3 plus K2"]
+
+[[claims]]
 id = "hc7.k7minus_e5_coarse_reserve_nonclosure"
 title = "Coarse rooted-lobe data do not force a five-root K6 reserve"
 kind = "laboratory"
@@ -14626,6 +14653,12 @@ source = "hc7.target.k7minus_five_root_reserve_descent"
 target = "hc7.target.k7minus_e5_extremal"
 kind = "subproblem_of"
 note = "The proved minimum-enemy reduction isolates this rooted reserve-or-descent statement as the common unresolved obligation."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_singleton_contraction_uncrossing"
+kind = "uses"
+note = "The exact two-singleton branch reduces to distinct degree-five leaf pairs and their exact five-cuts over the sole boundary P3 disjoint union K2."
 
 [[relations]]
 source = "hc7.k7minus_e5_coarse_reserve_nonclosure"
