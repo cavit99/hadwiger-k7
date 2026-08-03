@@ -7872,6 +7872,45 @@ does_not_prove = ["elimination of two or three components", "the 4n-2 extremal t
 keywords = ["K7 minus", "seven-cut", "three components", "subcubic boundary"]
 
 [[claims]]
+id = "hc7.target.k7minus_e5_extremal"
+title = "Every five-connected graph with m at least 4n-7 contains K7-minus"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_e5_frontier.md"
+source_heading = "1. Auxiliary target"
+active = false
+scope = "an auxiliary theorem strictly stronger than the active seven-connected 4n-2 target"
+label_fidelity = "the conclusion must be an explicit K7-minus minor model"
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "a complete structural classification with every exception excluded",
+]
+does_not_prove = ["HC7"]
+keywords = ["K7 minus", "five connectivity", "4n-7", "auxiliary extremal target"]
+
+[[claims]]
+id = "hc7.target.k7minus_five_root_reserve_descent"
+title = "Five-root K6 reserve or high-excess descent"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_e5_frontier.md"
+source_heading = "3. Exact remaining lemma"
+active = false
+scope = "a dense internally five-connected lobe with five prescribed boundary roots in a minimum auxiliary enemy"
+label_fidelity = "five distinct K6 branch sets must contain the prescribed roots and the sixth bag must avoid all roots"
+strict_parameter = "order of a component behind a five-cut which retains the required high-excess inequality"
+allowed_exits = [
+  "a five-rooted K6 model with a root-free sixth bag",
+  "a strictly smaller high-excess component behind a five-cut in the same minimum enemy",
+]
+does_not_prove = [
+  "the auxiliary five-connected extremal theorem without the established reduction",
+  "the active 4n-2 target without the auxiliary theorem",
+  "HC7",
+]
+keywords = ["rooted K6", "five roots", "density descent", "five-cut"]
+
+[[claims]]
 id = "hc7.k7minus_degree7_safe_contraction"
 title = "A degree-seven vertex has a density-preserving incident contraction"
 kind = "theorem"
@@ -14514,11 +14553,57 @@ expected_stdout = [
   "PASS K7-minus shore-allocation barriers",
 ]
 
+[[verifiers]]
+id = "k7minus-degree7-saturated-quotient"
+path = "active/hc7_k7minus_degree7_quotient_verify.py"
+sha256 = "ac0c37438d802930a0aa80bfd1d6491101da3df9a55fac1e1cf3db5ae1b7e445"
+timeout = 30
+expected_stdout = [
+  "complement types: 29",
+  "full-or-one-missed attachment cases: 232",
+  "model support orders: {7: 67, 8: 102, 9: 63}",
+  "certificate digest: b98ac56930aa7044c3a6a7c029b75cd85feb39f4dabd8476a0ba7f08ccdb7306",
+  "GREEN: every quotient contains a certified K_7^- minor",
+]
+
+[[verifiers]]
+id = "k7minus-four-distinct-miss-p3-atom"
+path = "active/hc7_k7minus_p3_atom_yuan_verify.py"
+sha256 = "0be573df800d1c35d3ea740ea08ab0e5d30335bcfccf363b1c725a2655d257cf"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "networkx_version=3.6.1",
+  "atlas_boundaries=1044",
+  "role_assignments_per_boundary=840",
+  "two_packet_target_free_boundaries=700",
+  "non_good_distribution=(451944, 121820, 14128, 108)",
+  "three_non_good_cases=108",
+  "three_non_good_graph6=FD^Ww",
+  "expanded_P3_K7minus_certificates=108",
+  "expanded_P3_survivors=0",
+  "triangle_q1_static_survivors=('J???B}~r~{?', 'J???B}nr~{?')",
+  "exceptional_digest=3945e33ab729bfd1c709fcc3a326620f222de6a178a93dec60bae6cbdcd183ec",
+  "certificate_digest=1538af1f3ad9c958dc6411c2bbfb346b762ddacbaa8115f0478a90bf1a8e03d4",
+]
+
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.k7minus_degree7_safe_contraction"
 kind = "uses"
 note = "A minimum enemy has a degree-seven entrance whose density-preserving contraction either closes the target or returns an exact seven-cut."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.target.k7minus_extremal_4n_minus_2"
+kind = "strengthens"
+note = "The auxiliary statement applies at lower connectivity and a lower density threshold, so it would imply the active seven-connected target."
+
+[[relations]]
+source = "hc7.target.k7minus_five_root_reserve_descent"
+target = "hc7.target.k7minus_e5_extremal"
+kind = "subproblem_of"
+note = "The proved minimum-enemy reduction isolates this rooted reserve-or-descent statement as the common unresolved obligation."
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"

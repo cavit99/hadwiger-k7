@@ -360,7 +360,33 @@ Further isolated boundary classifications, small graph-code
 eliminations, or exceptional-count increments are frozen unless they
 resolve one of the three displayed outcomes.
 
-## 6. Frozen prior laboratories
+The positive-surplus atom route gives an additional, independently audited
+reduction.  The
+[generalised safe-atom theorem](hc7_k7minus_generalised_safe_atom_reduction.md)
+leaves only singleton, edge, three-vertex path and triangle atoms behind
+two-sided order-seven cuts.  The
+[low-endpoint refinement](hc7_k7minus_low_endpoint_safe_atom_reduction.md)
+isolates a five-rooted `K_6` problem, and the computer-assisted
+[four-distinct-miss path theorem](hc7_k7minus_p3_atom_yuan_draft.md)
+eliminates one complete path case.  These statements require `q(G)>0` and
+do not address the exact-surplus layer.
+
+## 6. Auxiliary five-connected laboratory
+
+The current bounded laboratory is the stronger auxiliary statement
+
+\[
+ \kappa(G)\ge5,\qquad |E(G)|\ge4|V(G)|-7
+ \quad\Longrightarrow\quad K_7^-\preccurlyeq G.
+\]
+
+It is not proved and is not a second primary target.  Its value is that a
+minimum enemy is now reduced to exact density, connectivity five, and one
+five-root reserve-or-high-excess-descent lemma.  The full audited chain,
+recorded nonclosures, and exact survivor are in the
+[auxiliary five-connected frontier](hc7_k7minus_e5_frontier.md).
+
+## 7. Frozen prior laboratories
 
 The previous exceptional-centre and direct `HC_7` programmes are preserved
 in the [archived ledger](../archive/RESEARCH_LEDGER_2026-08-02.md), the
