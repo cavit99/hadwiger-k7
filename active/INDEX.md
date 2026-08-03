@@ -28,6 +28,13 @@ These are audited route nonclosures, not constructional counterexamples:
 - [the missing seventh branch set at an essential-edge separation](../results/hc7_k7minus_essential_edge_six_separation.md#scope)
 - [the unproved uncrossing of the degree-seven cut family](../results/hc7_k7minus_strict_surplus_minimal_enemy.md#scope)
 
+## Current structural laboratory
+
+- [Auxiliary five-connected extremal reduction](hc7_k7minus_e5_frontier.md):
+  a minimum enemy to the stronger `4n-7` statement is reduced to one
+  five-root reserve-or-high-excess-descent lemma.  The auxiliary statement
+  remains unproved and is not a second primary target.
+
 ## Conditional refinements and frozen programmes
 
 - [critical-host `4n-2` entrance showing why the target settles Conjecture 21](../results/hc7_k7minus_two_literal_k5_exclusion.md#corollary-3-critical-host-consequences)

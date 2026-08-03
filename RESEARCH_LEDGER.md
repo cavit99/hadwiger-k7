@@ -93,16 +93,45 @@ of exact six- and seven-separations with exact density accounting.
 
 ### 3. Immediate structural laboratory
 
-The next theorem must resolve those separations.  An accepted result
-must prove at least one of:
+Two bounded attacks now meet at the same rooted obstruction.
+
+The direct positive-surplus attack uses Mader's generalised atoms.  It
+reduces every nonsingleton atom to an edge, a three-vertex path, or a
+triangle behind an exact seven-cut; one complete four-distinct-miss path
+case is eliminated by a separately checked finite boundary lemma.  This
+does not reach the exact-surplus layer.
+
+The auxiliary five-connected statement
+
+\[
+ \kappa(G)\ge5,\qquad |E(G)|\ge4|V(G)|-7
+ \quad\Longrightarrow\quad K_7^-\preccurlyeq G
+\]
+
+would imply the primary target.  A minimum auxiliary enemy is now proved
+to have exact density `4n-7`, connectivity exactly five, and an actual
+five-cut with two or three boundary-full components.  Dense, four-component,
+all seven-edge, sparse three-component, and several complete two-component
+families are eliminated.  This is a substantial reduction, not a proof of
+the auxiliary statement.
+
+The next exact theorem is a five-root reserve-or-descent lemma: a dense,
+internally five-connected lobe with five prescribed boundary roots must
+contain a `K_6` model with five distinct root bags and a root-free sixth
+bag, or return a strictly smaller five-cut component which retains the
+required high excess.  The full chain and exact surviving rows are in the
+[auxiliary technical frontier](active/hc7_k7minus_e5_frontier.md).
+
+An accepted result must prove at least one of:
 
 1. one density-preserving degree-seven edge is seven-contractible;
 2. the exact seven-cuts covering the degree-seven vertices uncross to an
    explicit `K_7^-` model; or
 3. one shore of an essential-edge six-separation contracts to a smaller
-   seven-connected graph still at the `4n-2` threshold.
+   seven-connected graph still at the `4n-2` threshold; or
+4. the five-root reserve-or-descent target holds.
 
-The three exact nonclosures to overcome are:
+The four exact nonclosures to overcome are:
 
 - **root swap:** a trace-one fragment can support nested exact seven-cuts
   without being a singleton;
@@ -113,6 +142,10 @@ The three exact nonclosures to overcome are:
 - **safe-star uncrossing:** the positive-surplus count forces a safe edge
   inside the degree-seven set or a safe two-edge star, but their exact
   seven-cut certificates may coincide or nest without a smaller safe shore.
+- **rooted reserve:** ordinary two--three linkage is sharp at lobe excess
+  one, while an unrooted `K_6` model may consume every useful residual
+  vertex.  A smaller arbitrary side is not enough unless it retains the
+  high-excess inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its
@@ -158,8 +191,11 @@ specialist validation before publication.
 
 ## Trust boundary
 
-- The four new extremal reductions are written, computation-free results
-  with adjacent hash-pinned GREEN internal audits.
+- The direct-extremal and auxiliary reductions are written results with
+  adjacent hash-pinned GREEN internal audits.  The saturated degree-seven
+  quotient and the four-distinct-miss path theorem have explicit finite
+  computational trust boundaries; the remaining new reductions are
+  computation-free.
 - External inputs include Mader, Halin, Jakobsen, Jørgensen, Yuan and
   Schmidt; exact statements and citations are recorded beside the results
   that use them.
@@ -174,6 +210,8 @@ specialist validation before publication.
 - [`active/INDEX.md`](active/INDEX.md): concise live navigation.
 - [`active/hc7_k7minus_density_frontier.md`](active/hc7_k7minus_density_frontier.md):
   exact technical frontier and recorded nonclosures.
+- [`active/hc7_k7minus_e5_frontier.md`](active/hc7_k7minus_e5_frontier.md):
+  auxiliary five-connected reduction and five-root reserve target.
 - [`results/hc7_k7minus_seven_cut_three_component_bound.md`](results/hc7_k7minus_seven_cut_three_component_bound.md):
   at most three components behind a seven-cut.
 - [`results/hc7_k7minus_degree7_safe_contraction.md`](results/hc7_k7minus_degree7_safe_contraction.md):
