@@ -8063,6 +8063,241 @@ lacks = ["the live 4n-9 closed-shore density", "the P3 disjoint-union K2 termina
 keywords = ["three--two linkage", "rooted K5", "octahedral graph", "four-connectivity", "barrier"]
 
 [[claims]]
+id = "hc7.k7minus_e5_six_boundary_atomic_reduction"
+title = "Atomic reduction of the s=3 six-boundary singleton row"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_six_boundary_atomic_reduction.md"
+source_heading = "7. Exact endpoint and nonclosures"
+active = false
+audit = "active/hc7_k7minus_e5_six_boundary_atomic_reduction_audit.md"
+expected_source_sha256 = "3f2084f172183f38b91aa5a9ef402d2c60095579dda915fa6fcadaabfe94edff"
+scope = "the s=3 q_t-singleton orientation in the exact two-singleton P3 disjoint-union K2 minimum-E5 residue"
+label_fidelity = "the four surviving boundary roots, selected dense neighbours, singleton lobes, lifted cuts and rooted model bags remain literal host objects"
+conclusions = [
+  "the natural six-boundary graph has exactly 4v-8 edges and is internally five-connected relative to its six boundary vertices",
+  "failure before the rooted model gives a lifted order-three atom with low side {p} or {p,b}",
+  "failure of fifth-root augmentation gives a unique target-free order-four normal form consisting of an excess-two helper edge with one portal in each root bag",
+  "the same six bags give a synchronised rooted K4 and reduce the remaining root contacts to six explicit rows",
+  "the published rooted K3,3 theorem supplies no placement clause for the two additional K2 roots",
+]
+does_not_prove = [
+  "elimination of the two order-three atoms",
+  "the auxiliary E5 statement",
+  "the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "six boundary", "atomic separator", "rooted K4", "helper placement", "P3 plus K2"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_companion_cut_elimination"
+title = "A companion cut eliminates the s=3 four-separator atom"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_companion_cut_elimination.md"
+source_heading = "Theorem 4"
+active = false
+audit = "active/hc7_k7minus_e5_s3_companion_cut_elimination_audit.md"
+expected_source_sha256 = "6acfe24187c99c5da3439e72ebdee4c72b32a38eeae0df08116689237d6bc22e"
+scope = "the excess-two order-four normal form in the s=3 q_t-singleton row, with the minimum high-excess lobe choice refined by maximum excess"
+strict_parameter = "lexicographic pair consisting of lobe order and negative lobe excess"
+conclusions = [
+  "contracting bq is density-safe and lifts a cut forced to {b,c,q,x,y}",
+  "the low side of the companion cut is exactly the K2 component of the original boundary and has excess two",
+  "the opposite component has the original lobe order and excess nine rather than eight",
+  "the maximum-excess tie-break eliminates the entire order-four normal form",
+  "only the order-three atoms {p} and {p,b} remain in the s=3 singleton row",
+]
+does_not_prove = [
+  "elimination of either order-three atom",
+  "the other singleton or two-vertex low orientations",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "companion cut", "density-safe contraction", "maximum excess", "lexicographic descent"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_edge_atom_elimination"
+title = "The s=3 three-separator edge atom reduces to the singleton atom or K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_edge_atom_elimination.md"
+source_heading = "Theorem"
+active = false
+audit = "active/hc7_k7minus_e5_s3_edge_atom_elimination_audit.md"
+expected_source_sha256 = "63e9087752b66a0334d28ea555e40dbde9a7f4dad60d016c04329470e89e9a3a"
+scope = "the order-three edge atom {p,b} in the s=3 q_t-singleton row, with the minimum-lobe choice refined by maximum excess"
+label_fidelity = "the singleton lobes, boundary roots, edge atom, companion cut, high shore and seven final branch sets remain literal host objects"
+conclusions = [
+  "an excess-one edge atom is a singleton atom after changing its three-vertex adhesion",
+  "contracting bq in the excess-two edge atom forces a cut whose only difficult low side is the K2 component of the original boundary",
+  "the exceptional low side containing t either gives a same-order lobe of excess nine or an explicit seven-bag K7-minus model",
+  "the sole order-three obstruction remaining in the s=3 row is a singleton atom",
+]
+does_not_prove = [
+  "elimination of the singleton atom",
+  "the other singleton or two-vertex low orientations",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "three-separator edge atom", "rooted six-bag model", "maximum excess", "K7 minus"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_three_separator_contraction_nonclosure"
+title = "The safe contraction of an s=3 three-separator atom returns the inherited four-cut"
+kind = "laboratory"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_three_separator_contraction_nonclosure.md"
+source_heading = "Proposition 1 (the safe contraction returns the old cut)"
+active = false
+audit = "active/hc7_k7minus_e5_s3_three_separator_contraction_nonclosure_audit.md"
+expected_source_sha256 = "4f4a5658b061841e6a8318b469b51bc5f9dbe6ad31709d4bef35ad57b53d32b8"
+scope = "the pt-contraction route for the order-three atoms in the s=3 q_t-singleton row; the subsequent edge-atom theorem leaves its repair relevant only to {p}"
+conclusions = [
+  "contracting pt gives a four-connected graph with at least 4v-6 edges",
+  "the image of N(q_t) is already an exact order-four cut, so minimum-counterexample reasoning yields no new separator",
+  "Norin--Totschnig Theorem 6 gives only an unrooted K7-vee model with no contracted-vertex placement clause",
+  "the edge atom is subsequently eliminated or reclassified, so this nonclosure remains live only for the singleton atom",
+  "the exact repair is a labelled split of that near-clique model or a distinct cut yielding lexicographic high-excess descent",
+]
+does_not_prove = [
+  "that every K7-vee model in the quotient lifts to K7-minus",
+  "elimination of the singleton atom",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "three-separator atom", "inherited four-cut", "K7 vee", "recorded nonclosure"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_triangle_contraction_reduction"
+title = "Contracting the s=3 singleton triangle exposes a new six-separation"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_triangle_contraction_reduction.md"
+source_heading = "Theorem 3 (new exact four-cut and lifted six-separation)"
+active = false
+audit = "active/hc7_k7minus_e5_s3_triangle_contraction_reduction_audit.md"
+expected_source_sha256 = "52e321c3c46a267663de3584d1a628f8a3c9044369071328f619df704129d242"
+scope = "the sole singleton order-three atom in the s=3 q_t-singleton row after elimination of the edge atom"
+label_fidelity = "the triangle p,t,q_t, the contracted vertex, every quotient four-cut and its lifted order-six separation remain explicitly identified"
+conclusions = [
+  "the two singleton adhesions around p and q_t are distinct",
+  "contracting the triangle p,t,q_t loses at most six edges and leaves at least 4v-5 edges",
+  "the quotient is four-connected but not five-connected and every four-cut contains the contracted vertex",
+  "each such cut lifts to an order-six cut whose components meet the other three cut vertices and the triangle in aggregate",
+  "Norin--Totschnig Theorem 6 supplies an unrooted K7-vee minor in the quotient",
+]
+does_not_prove = [
+  "that the contracted-vertex bag of the K7-vee model splits with at most one lost adjacency",
+  "that aggregate triangle contact at the lifted six-separation gives K7-minus or high-excess descent",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "triangle contraction", "four-connected quotient", "six-separation", "K7 vee", "labelled split"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_triangle_cut_refinement"
+title = "The lifted singleton-triangle cut has bounded components and exact high-misser normal forms"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_triangle_cut_refinement.md"
+source_heading = "Theorem 3 (tiny misser, rigid high misser, or a six-full component)"
+active = false
+audit = "active/hc7_k7minus_e5_s3_triangle_cut_refinement_audit.md"
+expected_source_sha256 = "870e6d41c3d0f0e0e69c2a410ff6543bb2127ead3fd6cc371a1a1f148a123495"
+scope = "every four-cut through the contracted vertex in the singleton-triangle quotient of the exact s=3 minimum-E5 residue"
+label_fidelity = "the triangle p,t,q, the three other cut vertices, every complementary component, the original singleton adhesions and all exchanged vertices remain literal host objects"
+conclusions = [
+  "every complementary component meets all three nontriangle cut vertices and at least two vertices of the triangle",
+  "the lifted six-cut has at most four complementary components",
+  "a triangle-missing component has order at most two and excess at most three, or has the original dense-shore order with a singleton opposite component",
+  "if no high triangle-missing component occurs, some component is adjacent to all six cut vertices",
+  "high misses at p or q are exact one-vertex adhesion swaps with a low K2 of excess one or two",
+  "a high miss at t is either an exact reorientation of the two-singleton residue or an edge-low-side normal form satisfying exact contact inequalities",
+]
+does_not_prove = [
+  "that a six-full component can be split into enough labelled branch sets",
+  "strict descent from any high-misser normal form",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "triangle contraction", "six-cut", "two-of-three contact", "high misser", "adhesion swap", "six-full component"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_high_misser_elimination"
+title = "A boundary-complement potential eliminates every high triangle-missing component"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_high_misser_elimination.md"
+source_heading = "Theorem 7 (high-misser elimination)"
+active = false
+audit = "active/hc7_k7minus_e5_s3_high_misser_elimination_audit.md"
+expected_source_sha256 = "6c881f87026f3116fa01749a1dc665dd93642a482a90ba37d404b83e2976db8e"
+scope = "the exact s=3 singleton-triangle residue after globally selecting a minimum-order high lobe, then maximum boundary-complement potential, then minimum number of other components"
+strict_parameter = "the lexicographic triple consisting of component order, negative boundary-complement potential Phi, and number of other components"
+conclusions = [
+  "the revised selection replays the companion-cut and edge-atom eliminations",
+  "high components missing p or q and the adjacent high t-misser strictly improve the selected potential or component count",
+  "the nonadjacent high t-misser exposes a five-cut with a strictly smaller component of excess at least four",
+  "every lifted singleton-triangle cut consequently has a component adjacent to all six cut vertices",
+]
+does_not_prove = [
+  "a labelled split inside a six-full component",
+  "strict descent from the six-full-component class",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "boundary-complement potential", "high misser", "five-cut", "strict descent", "six-full component"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_six_full_contraction_reduction"
+title = "Six-full triangle attachments force singleton returned cuts"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_six_full_contraction_reduction.md"
+source_heading = "Proposition 5 (returned-cut order normal form)"
+active = false
+audit = "active/hc7_k7minus_e5_s3_six_full_contraction_reduction_audit.md"
+expected_source_sha256 = "4ab5afe3d8e8cee4f41577ec5e571b033a792a61babfe5e8e795d0961904b991"
+scope = "the post-high-misser singleton-triangle residue with a component adjacent to all six lifted-cut vertices"
+label_fidelity = "the triangle, six-full component, comparison component, selected attachment edge, contracted image and every lifted five-cut remain literal host objects"
+conclusions = [
+  "the lifted six-cut has exactly two or three complementary components",
+  "an attachment edge from a shared triangle vertex into a six-full component has at most three common neighbours",
+  "contracting any such edge preserves the E5 density threshold and gives a four-connected but not five-connected proper minor",
+  "every quotient four-cut contains the contracted image and lifts to an exact five-cut through both original edge ends",
+  "a non-six-full component has order at most two and supplies a companion five-cut obtained by deleting its missed triangle vertex",
+  "every returned cut has one singleton component and one high-excess component of order exactly one above the selected lobe",
+]
+does_not_prove = [
+  "elimination of the order-a+1 singleton connected-exterior form",
+  "a density-sensitive labelled split when the lifted cut has two six-full components",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "six-full component", "safe contraction", "singleton returned cut", "companion five-cut", "corner localisation"]
+
+[[claims]]
+id = "hc7.barrier.e5_triangle_lift_contact"
+title = "Two full components do not close the lifted triangle contact quotient"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_e5_triangle_lift_contact_barrier.md"
+source_heading = "Refuted intermediate claim"
+active = false
+audit = "barriers/hc7_e5_triangle_lift_contact_barrier_audit.md"
+expected_source_sha256 = "cf0fef6c5fb1824f08683bb7451745499dabce9fcd87702ce800d1046ad28d83"
+refutes = ["two nonadjacent components complete to all six lifted-cut vertices, together with the displayed boundary contacts, force a K7-minus minor from contacts alone"]
+lacks = ["host five-connectivity", "the E5 density threshold", "the internal structure and excess of the complementary components", "the full minimum-enemy exact-cut family"]
+keywords = ["K7 minus", "E5", "triangle lift", "six-cut", "contact quotient", "barrier"]
+
+[[claims]]
+id = "hc7.barrier.e5_six_full_local_structure"
+title = "Five-connected six-full local structure does not force K7-minus without density"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_e5_six_full_local_structure_barrier.md"
+source_heading = "Refuted intermediate claim"
+active = false
+audit = "barriers/hc7_e5_six_full_local_structure_barrier_audit.md"
+expected_source_sha256 = "3de230304dcbe9e9aafcc585200d4eab07db7e2fa0e0bf67c52d2852f41f0a90"
+refutes = ["five-connectivity, exact triangle degree capacities, two boundary triangles, one six-full component and one component missing one triangle vertex force K7-minus without a density hypothesis"]
+lacks = ["the E5 density threshold", "seven-connectivity", "a minimum-enemy origin", "internal density in a nonsingleton six-full component"]
+keywords = ["K7 minus", "E5", "six-full component", "complement of P8", "five-connectivity", "density barrier"]
+
+[[claims]]
 id = "hc7.barrier.e5_six_boundary_quotient"
 title = "Six-boundary quotient contacts do not force K7-minus"
 kind = "barrier"
@@ -14753,6 +14988,19 @@ expected_stdout = [
 ]
 
 [[verifiers]]
+id = "k7minus-e5-s3-atomic-portal-concentration"
+path = "active/hc7_k7minus_e5_s3_atomic_portal_concentration_verify.py"
+sha256 = "e6a57e3efd140d9e7c143fe87467142fc6609d6758b25758fb985e3cd8db9263"
+timeout = 30
+expected_stdout = [
+  "T3-singleton-p vertices=11 edges=28 partitions_by_used_order=(330, 4620, 25410, 64680, 63987) connected_by_used_order=(330, 2352, 7728, 13002, 9127) minimum_defect=2",
+  "T3-edge-pb vertices=12 edges=31 partitions_by_used_order=(792, 13860, 101640, 388080, 767844, 627396) connected_by_used_order=(792, 6510, 26264, 61140, 79303, 44945) minimum_defect=2",
+  "T4-singleton-b vertices=11 edges=27 partitions_by_used_order=(330, 4620, 25410, 64680, 63987) connected_by_used_order=(330, 2268, 7231, 11772, 7964) minimum_defect=2",
+  "T4-edge-bc vertices=12 edges=29 partitions_by_used_order=(792, 13860, 101640, 388080, 767844, 627396) connected_by_used_order=(792, 6090, 23268, 51125, 62187, 32850) minimum_defect=2",
+  "VERIFIED: all four atomic portal-concentration quotients exclude K_7^-",
+]
+
+[[verifiers]]
 id = "k7minus-e5-six-boundary-quotient-barrier"
 path = "barriers/hc7_e5_six_boundary_quotient_barrier_verify.py"
 sha256 = "86bfb088112389651e3f81bd71dc4a406a337fb3cb2a8e2f932c4ea1273fc0eb"
@@ -14802,6 +15050,120 @@ source = "hc7.target.k7minus_e5_extremal"
 target = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"
 kind = "uses"
 note = "The four-root q_t-singleton orientation of the further leaf cut returns a strict smaller high-excess component and is eliminated."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_s3_companion_cut_elimination"
+kind = "uses"
+note = "In the first surviving s=3 singleton row, the atomic reduction and density-safe companion cut eliminate the internally four-connected helper-edge normal form."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_s3_edge_atom_elimination"
+kind = "uses"
+note = "The remaining two-vertex order-three atom is either reclassified as the singleton atom or gives an explicit K7-minus model."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_s3_triangle_contraction_reduction"
+kind = "uses"
+note = "The sole s=3 singleton atom contracts to a four-connected graph of density 4v-5 with a new lifted order-six separation and an unrooted K7-vee model."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_s3_triangle_cut_refinement"
+kind = "uses"
+note = "Five-connectivity sharpens every lifted order-six separation to at most four components and exact six-full or high-misser normal forms."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_triangle_cut_refinement"
+target = "hc7.k7minus_e5_s3_triangle_contraction_reduction"
+kind = "uses"
+note = "The triangle contraction supplies the four-cut, its lifted six-cut and the exact three-neighbour capacity used in the refinement."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_s3_high_misser_elimination"
+kind = "uses"
+note = "The revised global lobe potential eliminates every high triangle-missing component while preserving the route to the singleton triangle."
+
+[[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_s3_six_full_contraction_reduction"
+kind = "uses"
+note = "The sole singleton-triangle residue has a six-full component and yields a new family of density-safe contractions and exact five-cuts."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_high_misser_elimination"
+target = "hc7.k7minus_e5_s3_triangle_cut_refinement"
+kind = "uses"
+note = "The refinement supplies the exact p-, q- and t-misser normal forms discharged by the new selection and central five-cut."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_six_full_contraction_reduction"
+target = "hc7.k7minus_e5_s3_high_misser_elimination"
+kind = "uses"
+note = "Eliminating every high misser forces a six-full component before the contraction argument begins."
+
+[[relations]]
+source = "hc7.barrier.e5_triangle_lift_contact"
+target = "hc7.k7minus_e5_s3_triangle_cut_refinement"
+kind = "related_to"
+note = "The eight-vertex quotient shows that even two components complete to all six cut vertices cannot close the model from contacts alone; internal density or labelled splitting is necessary."
+
+[[relations]]
+source = "hc7.barrier.e5_six_full_local_structure"
+target = "hc7.k7minus_e5_s3_six_full_contraction_reduction"
+kind = "related_to"
+note = "The complement-of-P8 barrier retains five-connectivity and the exact local contact pattern but misses E5 density, showing that the contraction family must exploit density rather than local contacts alone."
+
+[[relations]]
+source = "hc7.k7minus_e5_six_boundary_atomic_reduction"
+target = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"
+kind = "uses"
+note = "The six-boundary setup is the first q_t-singleton orientation not already closed by the four-root replacement cut."
+
+[[relations]]
+source = "hc7.k7minus_e5_six_boundary_atomic_reduction"
+target = "hc7.k7minus_e5_anchored_four_root_reduction"
+kind = "uses"
+note = "The exact 4v-8 four-root graph and rooted K*4,2 supply come from the anchored reduction."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_companion_cut_elimination"
+target = "hc7.k7minus_e5_six_boundary_atomic_reduction"
+kind = "uses"
+note = "The companion contraction starts from the unique excess-two helper edge isolated by the atomic reduction."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_edge_atom_elimination"
+target = "hc7.k7minus_e5_s3_companion_cut_elimination"
+kind = "uses"
+note = "The proof uses the maximum-excess lobe choice and companion-cut accounting established while eliminating the four-separator atom."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_edge_atom_elimination"
+target = "hc7.k7minus_e5_six_boundary_atomic_reduction"
+kind = "uses"
+note = "The atomic reduction supplies the exact two-vertex normal form and rooted six-bag model used in the edge-atom argument."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_triangle_contraction_reduction"
+target = "hc7.k7minus_e5_s3_edge_atom_elimination"
+kind = "uses"
+note = "The edge-atom theorem leaves the exact singleton neighbourhoods forming the triangle p,t,q_t."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_triangle_contraction_reduction"
+target = "hc7.k7minus_e5_s3_three_separator_contraction_nonclosure"
+kind = "related_to"
+note = "Contracting the whole triangle absorbs the inherited cuts that make the earlier pt-contraction route nonterminal and returns a genuinely new six-separation."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_three_separator_contraction_nonclosure"
+target = "hc7.k7minus_e5_s3_companion_cut_elimination"
+kind = "related_to"
+note = "After the four-separator branch is eliminated, contracting pt returns the inherited four-cut and only an unrooted K7-vee model; the later edge-atom theorem restricts this live failure to the singleton atom."
 
 [[relations]]
 source = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"

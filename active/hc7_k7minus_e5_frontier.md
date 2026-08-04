@@ -99,8 +99,82 @@ then with minimum size.  The following chain is now proved.
    natural boundary orders `9-s` equal to six, seven or eight.  The
    two-vertex low orientation still yields a density-preserving minor whose
    five-connectivity is unproved.
+10. The audited
+    [atomic six-boundary reduction](hc7_k7minus_e5_six_boundary_atomic_reduction.md)
+    treats the first surviving row `s=3`.  It reduces failure of the
+    four-root model to either a lifted order-three atom `{p}` or `{p,b}`, or
+    one excess-two helper edge `{b,c}` behind an order-four separation.  A
+    second density-safe contraction then gives the
+    [companion-cut elimination](hc7_k7minus_e5_s3_companion_cut_elimination.md):
+    after refining the minimum-lobe choice by maximum excess, the helper-edge
+    branch produces a same-order lobe of excess nine, whereas the selected
+    lobe has excess eight.  That branch is impossible.  The `s=3` row is
+    therefore confined to the two order-three atoms, and deleting either
+    leaves at least `4|V|-7` edges in the residual graph.
+11. The audited
+    [three-separator edge-atom elimination](hc7_k7minus_e5_s3_edge_atom_elimination.md)
+    shows that the two-vertex outcome is not terminal.  If its excess is
+    one, the degree-five vertex `p` itself defines another exact five-cut
+    with singleton low side.  If its excess is two, a density-safe
+    contraction and a rooted six-bag model in the returned high shore give
+    an explicit `K_7^-` model.  Thus the sole remaining order-three
+    obstruction in the `s=3` singleton row is the singleton `{p}`.
+12. The audited
+    [singleton-triangle contraction](hc7_k7minus_e5_s3_triangle_contraction_reduction.md)
+    absorbs both exact singleton cuts at once.  Contracting the triangle
+    `{p,t,q_t}` loses at most six edges and gives a proper target-free graph
+    `J` with
 
-Consequently one may choose, with minimum order, a component `C` behind a
+    ```text
+    kappa(J)=4,                    |E(J)|>=4|V(J)|-5.
+    ```
+    Every four-cut of `J` contains the contracted vertex.  Lifting it gives
+    a genuinely new order-six cut in `G`; each complementary component is
+    adjacent to the other three cut vertices and meets the triangle in
+    aggregate.  Norin--Totschnig's theorem gives a `K_7^vee` minor in `J`,
+    but does not prescribe how its contracted-vertex bag splits over the
+    triangle.
+13. The
+    [lifted triangle-cut refinement](hc7_k7minus_e5_s3_triangle_cut_refinement.md)
+    uses five-connectivity and the three exact exterior neighbours of each
+    triangle vertex.  Every complementary component meets at least two
+    triangle vertices, and there are at most four components.  A component
+    missing one triangle vertex either has order at most two, or has order
+    exactly `|A|` and is accompanied by one singleton.  If no such high
+    component occurs, some component is adjacent to all six cut vertices.
+    For a high component missing `p` or `q`, the cut differs from the
+    corresponding singleton adhesion by exactly one exchanged vertex and
+    yields a two-vertex low component of excess one or two.  A high
+    component missing `t` either exactly reorients the original
+    two-singleton residue, with the same order and excess, or leaves the
+    singleton `u_t` and an explicit boundary edge-count normal form.
+14. The audited
+    [high-misser elimination](hc7_k7minus_e5_s3_high_misser_elimination.md)
+    replaces the former maximum-excess secondary choice by maximising
+    `Phi(Q,C)=delta_Q(C)+|E(G[Q])|` and then minimising the number of other
+    components.  This replays the companion- and edge-atom eliminations.
+    It excludes the `p`-, `q`-, and adjacent-`t` high missers by a strict
+    potential improvement.  The nonadjacent `t` reorientation has another
+    five-cut with a high-excess component of order below `|A|`, so it too
+    is impossible.  Every lifted cut therefore has a six-full component.
+15. The audited
+    [six-full contraction reduction](hc7_k7minus_e5_s3_six_full_contraction_reduction.md)
+    first excludes four complementary components.  If `C` is six-full,
+    `D` is another component, `u` is a triangle vertex met by `D`, and
+    `v in C` is adjacent to `u`, then `uv` has at most three common
+    neighbours.  Contracting `uv` is density-safe and produces a
+    four-connected but not five-connected proper minor.  Every four-cut
+    contains the contracted vertex and lifts to an exact five-cut through
+    `u,v` in `G`.  A non-six-full component misses a unique triangle
+    vertex, has order at most two, and lies behind the companion five-cut
+    obtained by deleting that vertex from the six-cut.  Such a component
+    exists whenever there are three complementary components.  Finally,
+    every returned five-cut has exactly two components: one singleton
+    whose neighbourhood is the cut, and one high-excess component of
+    order `|A|+1`.  The degree-five triangle count and the central
+    five-cut eliminate every order-`|A|` alternative.
+
+Consequently one may choose with minimum order a component `C` behind a
 five-cut `S` such that
 
 \[
@@ -114,7 +188,7 @@ three-component boundary has at most six edges.  This minimum high-excess
 lobe is the strongest coherent endpoint of the present reduction.
 
 For the two-singleton three-component branch, the stronger endpoints in
-items 7--9 supersede the generic description: the remaining local
+items 7--15 supersede the generic description: the remaining local
 object is three or four degree-five leaf roots with distinct representatives
 in the dense component.  Each has one neighbour in `G[S]` and exactly two
 neighbours in the dense component, and its three neighbours in the closed
@@ -166,12 +240,45 @@ descent.  The audited anchored reduction supplies the two relevant rooted
 models and all three--two carriers separately, but does not synchronise
 them.
 
-Within the crossing `q_t`-singleton route, item 9 removes its former
-smallest boundary.  The next exact row has `s=3`: the strict intersection
-lies behind at most six vertices, but the second dense-side member of
-`B=A intersect Q` may join the low exterior back to `X`.  Dropping that
-one extra boundary vertex while retaining either the anchored model or
-excess four is the smallest current boundary-reduction problem.
+Within the crossing `q_t`-singleton route, items 9--15 remove the four-root
+row and the only internally four-connected obstruction in the next row
+`s=3`.  They also eliminate or reclassify its two-vertex order-three atom.
+In the exact residue put `F=G-{x,y,t,q_t}` and `Z=S-{t}`.  After changing
+the adhesion when necessary, the remaining low component is the singleton
+`{p}` and has
+
+```text
+N_F(p)=T,                         |T|=3,
+T union {t,q_t} is an exact five-cut,
+N_G(p)=T union {t,q_t}.
+```
+
+It has excess one and `F-p` has exactly `4|V(F-p)|-7` edges.  Contracting
+`pt` alone is an audited nonclosure: it returns the inherited image of
+`N(q_t)`.  The stronger singleton-triangle contraction absorbs both known
+singleton cuts.  It gives a four-connected graph `J` of density at least
+`4|V(J)|-5`, an unrooted `K_7^vee` minor, and a new exact four-cut through
+the contracted vertex whose lift is an order-six separation in `G`.
+
+The lifted cut is now sharper.  Every component meets at least two triangle
+vertices.  The boundary-complement selection and the central five-cut
+exclude every high triangle-missing component, so some component is
+six-full; the original singleton twins then exclude four complementary
+components.  There are exactly two or three.
+
+For every other component and each triangle vertex which it meets, an edge
+from that triangle vertex into a chosen six-full component is
+density-safe.  Its contraction gives a four-connected proper minor and
+each returned four-cut lifts to an exact five-cut through the two ends.
+Every returned cut is now forced into the exact normal form consisting of
+a singleton and a high-excess component of order `|A|+1`; an equal-order
+high component is impossible.  If a non-six-full component exists, its
+unique missed triangle vertex also gives a five-cut with a side of order
+at most two.  The smallest current repair is to uncross these two
+five-cuts with the six-cut so that some safe contraction returns an
+order-`|A|` high side, which is already excluded.  The exceptional
+two-component, both-six-full branch instead needs a density-sensitive
+labelled split.  Aggregate contact alone is not enough.
 
 ## 4. Recorded nonclosures
 
@@ -200,11 +307,10 @@ ingredient.
   anchored target.
 - [Fully contracted leaf-cut quotients](hc7_k7minus_e5_leaf_cut_quotient_nonclosure.md)
   have too few edges for target-freeness to impose any restriction.  In
-  the crossing singleton orientation, the four-root row now collapses by
-  strict descent.  The smallest open repair is the analogous `s=3`
-  reduction from six possible boundary vertices to an order-five
-  high-excess component, unless the anchored model already exists.  The
-  alternative two-vertex orientation needs a near-universal
+  the crossing singleton orientation, the four-root row collapses by
+  strict descent and the internally four-connected branch of the `s=3`
+  row collapses by a same-order, higher-excess companion cut.  The
+  alternative two-vertex orientation still needs a near-universal
   edge-completion lemma preserving five-connectivity or returning the same
   strict descent.
 - Retaining a [six-vertex boundary contact quotient](../barriers/hc7_e5_six_boundary_quotient_barrier.md)
@@ -216,6 +322,34 @@ ingredient.
   remains a valid contact-only barrier, not an obstruction to the now
   closed host row; it is not an `E5` enemy and does not encode the internal
   high-side structure or simultaneous exact-cut family.
+- [Atomic portal concentration](hc7_k7minus_e5_six_boundary_atomic_reduction.md)
+  is a real obstruction for a generic residual rooted model: the finite
+  verifier finds minimum defect two for both surviving order-three atoms.
+  It is not a host counterexample.  The host companion cut eliminates the
+  order-four atom, and a further host argument eliminates or reclassifies
+  the two-vertex order-three atom.  For the sole singleton atom,
+  contraction of `pt` returns the already known four-cut and only the
+  published unrooted `K_7^vee` conclusion.  Repeating that contraction is
+  therefore exhausted.  Contracting the whole singleton triangle instead
+  produces a new exact six-separation.  Five-connectivity upgrades its
+  components to two-of-three triangle contact.  The later potential
+  argument eliminates every high misser, and the twin path excludes four
+  components, leaving two or three and at least one six-full component.
+  Safe triangle-to-full contractions then force returned cuts with one
+  singleton side and an order-`|A|+1` high side; all equal-order returned
+  sides are eliminated.  A non-six-full component supplies a second exact
+  five-cut with a side of order at most two, sharpening the live task to a
+  three-cut corner-localisation problem.
+  The
+  [contact barrier](../barriers/hc7_e5_triangle_lift_contact_barrier.md)
+  shows that even two components complete to all six boundary vertices do
+  not force `K_7^-` in the contracted abstraction.  A labelled split or a
+  density-sensitive descent at the refined cut remains necessary.  The
+  stronger
+  [five-connected local barrier](../barriers/hc7_e5_six_full_local_structure_barrier.md)
+  retains the exact triangle degrees and one six-full component, but lies
+  four edges below the `E5` threshold.  Thus even local five-connectivity
+  does not replace the missing density argument.
 - **Bare relative connectivity and excess do not force the reserve.**  Let
   `H=K_{4,2,2}`.  Take as the five roots the four vertices in the part of
   order four and one vertex in a part of order two.  The three nonroots

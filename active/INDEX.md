@@ -38,11 +38,28 @@ These are audited route nonclosures, not constructional counterexamples:
   representatives in a dense component of order at least eight.  Deleting
   one such leaf gives an internally four-connected four-root graph; the
   crossing singleton row with four roots in the further cut now gives
-  strict high-excess descent.  The next such row has three roots and a
-  six-vertex natural boundary; globally, the unresolved step remains to
-  synchronise the rooted clique model with a selected dense neighbour, or
-  retain high excess under strict descent.  The auxiliary statement remains
-  unproved and is not a second primary target.
+  strict high-excess descent.  In the next row, with three roots and a
+  six-vertex natural boundary, an atomic reduction and companion cut
+  eliminate the internally four-connected obstruction by replacing it with
+  a same-order lobe of larger excess.  A further exact-cut argument
+  eliminates the excess-two edge atom and reclassifies its excess-one form.
+  The exact local residue is now one degree-five singleton behind a rooted
+  three-separation.  Contracting its whole triangle gives a four-connected
+  graph of density at least `4|V|-5`, an unrooted `K_7^vee` model, and a new
+  exact four-cut whose lift is an order-six separation.  That separation
+  has at most three components, each with two-of-three triangle contact,
+  and contains a six-full component.  A boundary-complement potential and
+  a new five-cut eliminate every high-misser pattern.  Density-safe edges
+  from the triangle into the six-full component yield four-connected
+  quotients and a fresh family of exact five-cuts.  Every returned cut is
+  now forced to have one singleton side and a high-excess side of order
+  exactly one above the selected lobe; all equal-order alternatives are
+  eliminated.  A non-six-full component also gives a small-side companion
+  five-cut.  The unresolved step is to eliminate that larger singleton
+  exterior for one safe contraction, or split the two-six-full branch by
+  a density-sensitive labelled model.
+  The auxiliary statement remains unproved and is not a second primary
+  target.
 
 ## Conditional refinements and frozen programmes
 

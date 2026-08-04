@@ -159,15 +159,78 @@ Its component `{x,y,t,q_t}` has excess one, so the universal five-cut
 lemma forces excess at least four in a component strictly inside
 `A-{p,q_t}`.  This contradicts the minimum choice of `A`.  The surviving
 `q_t`-singleton rows therefore have at most three roots in the further cut
-and natural boundary orders six, seven or eight.  The first unsupported
-row is `s=3`, where one additional dense-side boundary vertex can reconnect
-the low exterior to the strict intersection.
+and natural boundary orders six, seven or eight.
 
-A separately checked ten-vertex, 27-edge quotient still shows that the
-correct six-boundary contact pattern alone does not force `K_7^-`.  The
-new host proof succeeds because it retains the high-excess conclusion
-erased by contraction.  The quotient is not an `E5` enemy.  This is an
-audited strict reduction, not a proof of `(E5)`.
+The first of these rows, `s=3`, is now reduced exactly.  In the natural
+six-boundary graph `F` one has `|E(F)|=4|V(F)|-8`.  An audited atomic
+reduction shows that target-freeness leaves either a low component `{p}`
+or `{p,b}` behind a rooted three-separation, or a unique excess-two helper
+edge `{b,c}` behind a rooted four-separation.  Contracting the density-safe
+edge `bq_t` in the latter case forces the companion five-cut
+
+```text
+{b,c,q_t,x,y}.
+```
+
+Its low side is exactly the `K_2` component of the original boundary and
+has excess two.  The opposite side has the same order as the selected dense
+lobe.  Under the current boundary-complement selection, this companion
+pair ties the original value of `Phi` but has one other component rather
+than two, eliminating the entire four-separator branch.  This replays the
+earlier maximum-excess proof under the selection used below.
+
+The two-vertex rooted three-separator atom is now eliminated as a distinct
+outcome.  In its excess-one form, the degree-five vertex `p` defines a new
+exact five-cut with singleton low side.  In its excess-two form, contracting
+`bq_t` and applying the rooted six-bag supply in the returned high shore
+gives an explicit `K_7^-` model.  Hence the sole obstruction in the `s=3`
+singleton row is
+
+```text
+N_G(p)=T union {t,q_t},             |T|=3,
+|E(F-p)|=4|V(F-p)|-7.
+```
+
+Contracting `pt` alone gives a four-connected graph with at least
+`4|V|-6` edges, but its order-four cut is merely the image of the already
+known cut `N(q_t)`.  Contracting the whole triangle `{p,t,q_t}` is stronger:
+it loses at most six edges and gives a proper graph `J` with
+
+```text
+kappa(J)=4,                        |E(J)|>=4|V(J)|-5.
+```
+
+Every four-cut of `J` contains the contracted vertex and lifts to a new
+order-six cut in `G`; every complementary component meets its three other
+vertices and the triangle in aggregate.  Norin--Totschnig's density theorem
+also supplies an unrooted `K_7^vee` model in `J`.  The exact remaining
+cut structure is stronger: every component meets at least two triangle
+vertices, and a triangle-missing component is either of order at most two
+or has order `|A|` with one singleton opposite it.  A new global
+boundary-complement potential preserves the companion- and edge-atom
+reductions and eliminates every high triangle-missing component.  The
+apparently neutral `t`-reorientation instead exposes a five-cut with a
+strictly smaller high-excess component.
+
+Consequently every lifted cut has at most three components and contains a
+component adjacent to all six cut vertices.  For any other component, an
+edge from a shared triangle vertex into this six-full component has at most
+three common neighbours.  Contracting it is `E5`-density-safe, produces a
+four-connected but not five-connected graph, and returns another exact
+five-cut on lifting.  Exact order accounting and the global potential now
+classify every returned cut: it has one singleton side with neighbourhood
+exactly the cut and one high-excess side of order `|A|+1`.  All possible
+order-`|A|` high sides are excluded by the degree-five triangle count and
+the already eliminated nonadjacent-`t` reorientation.  Moreover every
+non-six-full component has order at most two and supplies the companion
+five-cut obtained by deleting its unique missed triangle vertex from the
+six-cut; such a component necessarily exists in the three-component case.
+The remaining repair is to eliminate the order-`|A|+1` singleton-exterior
+form for at least one safe contraction, or handle the two-six-full branch
+by a density-sensitive labelled split.  Computation-free eight-vertex
+barriers show that neither contracted contacts nor even the
+five-connected local pattern suffices without density.  None of these
+statements proves `(E5)`.
 
 An accepted result must prove at least one of:
 
@@ -200,12 +263,23 @@ The four exact nonclosures to overcome are:
   three--two boundary split has disjoint carriers, but neither fact
   synchronises a rooted clique model.  Contracting both sides of the new
   leaf cuts erases the root traces and makes target-freeness vacuous.  The
-  former five-boundary crossing row now descends strictly.  The smallest
-  live repair is its `s=3` analogue: remove one of six possible boundary
-  vertices while controlling the second dense-side boundary member, or
-  prove the anchored model.  The alternative is a near-universal
-  edge-completion lemma which preserves five-connectivity.  A smaller
-  arbitrary side is not enough unless it retains the high-excess inequality.
+  former five-boundary crossing row now descends strictly.  In the `s=3`
+  row, a companion cut eliminates the internally four-connected atom and a
+  second argument reduces the two-vertex three-separator atom to the
+  singleton case.  Its safe `pt` contraction returns the old four-cut, but
+  contracting the full singleton triangle gives a denser four-connected
+  quotient and a genuinely new lifted six-separation.  Its components have
+  two-of-three triangle contact.  A boundary-complement potential and one
+  further exact five-cut eliminate all high-misser patterns; four
+  complementary components are also impossible.  Thus a lifted cut has
+  two or three components and one is six-full.  Density-safe contractions
+  from the triangle into that component return a new family of exact
+  five-cuts.  The live repair is to uncross this family into a labelled
+  split of the resulting `K_7^vee` model, an explicit `K_7^-` model, or
+  strict lexicographic high-excess descent.  The
+  alternative low-side rows still require a near-universal edge-completion
+  lemma preserving five-connectivity.  A smaller arbitrary side is not
+  enough unless it retains the high-excess inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its
