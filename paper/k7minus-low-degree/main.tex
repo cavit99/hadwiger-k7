@@ -23,7 +23,7 @@
 \title{Degree-Seven Rigidity under $K_7^{-}$-Minor Exclusion}
 \author{Cavit Erginsoy}
 \thanks{With substantial mathematical contributions from GPT-5.6 Sol, an OpenAI model.}
-\date{3 August 2026}
+\date{4 August 2026}
 
 \subjclass[2020]{05C15, 05C40}
 \keywords{Hadwiger's conjecture, graph minors, contraction-critical graphs, Kempe chains}
@@ -697,8 +697,28 @@ $b\geq17+\tau$.  If $n_7=4$, Proposition~\ref{prop:n7-four} gives the
 second alternative.  The three displayed global conclusions follow.
 \end{proof}
 
-Theorem~\ref{thm:package-intro} gives necessary conditions for a
-counterexample to the Norin--Totschnig conjecture.  It does not prove that
+Theorem~\ref{thm:package-intro} gives the following reduction of the
+Norin--Totschnig conjecture to an extremal minor problem.
+
+\begin{corollary}[Extremal reduction]\label{cor:extremal-reduction}
+Suppose that every seven-connected graph $H$ satisfying
+\[
+        |E(H)|\geq4|V(H)|-2
+\]
+contains a $K_7^{-}$ minor.  Then every $K_7^{-}$-minor-free graph is
+six-colourable.
+\end{corollary}
+
+\begin{proof}
+Otherwise, choose a minor-minimal non-six-colourable
+$K_7^{-}$-minor-free graph $G$.  By
+Theorem~\ref{thm:package-intro}, the graph $G$ is seven-connected and
+$|E(G)|\geq4|V(G)|-2$.  The assumed extremal statement therefore gives
+$K_7^{-}\minor G$, a contradiction.
+\end{proof}
+
+The extremal statement in Corollary~\ref{cor:extremal-reduction} remains
+open.  Thus the present paper does not prove the Norin--Totschnig
 conjecture, and it does not settle Hadwiger's conjecture for chromatic
 number seven.
 
