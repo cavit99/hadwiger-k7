@@ -35,8 +35,12 @@ These are audited route nonclosures, not constructional counterexamples:
   five-root reserve-or-high-excess-descent lemma.  In its exact
   two-singleton branch, the remaining boundary is `P_3` disjoint union
   `K_2`, with at least three degree-five leaf roots having distinct
-  representatives in the dense component.  The auxiliary statement
-  remains unproved and is not a second primary target.
+  representatives in a dense component of order at least eight.  Deleting
+  one such leaf gives an internally four-connected four-root graph; the
+  exact unresolved step is to synchronise its rooted clique model with a
+  selected dense neighbour, or retain high excess under strict descent.
+  The auxiliary statement remains unproved and is not a second primary
+  target.
 
 ## Conditional refinements and frozen programmes
 

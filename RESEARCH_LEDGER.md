@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 3 August 2026
+**Last updated:** 4 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.
@@ -130,11 +130,28 @@ and Yuan's fragment theorem eliminate every boundary graph except
 `P_3` disjoint union `K_2`; at least three of its four degree-one roots
 then have degree five in the original graph.  Their two-vertex neighbour
 sets in the dense component have distinct representatives, the component
-has order at least seven, and each resulting leaf--neighbour edge lies in
-another exact five-cut.  The immediate repair is to extend those distinct
-leaf pairs simultaneously to an `S`-rooted `K_5` model, or uncross their
-cuts to a strict high-excess descent.  This is an unbounded
-computation-free reduction, not a proof of `(E5)`.
+has order at least eight, and each resulting leaf--neighbour edge lies in
+another exact five-cut.  Deleting a degree-five leaf leaves an internally
+four-connected four-root graph of exact size `4|V|-8`.  Published rooted
+minor bounds supply separately a rooted `K_4` and a two-helper rooted model;
+the helper containing the deleted leaf must also meet one of its two dense
+neighbours.  A published linkage theorem also gives disjoint connected
+carriers for every three--two split of the boundary roots.
+
+Those supplies do not yet share one branch-set system.  The exact repair is
+an anchored four-root `K_5`-or-descent theorem: for some leaf `t` and dense
+neighbour `p`, the graph after deleting `t` must contain four pairwise
+adjacent boundary-root bags and a disjoint `p`-bag adjacent to all four, or
+uncross to a component of order below `|A|` retaining excess at least four.
+The first outcome gives an explicit `K_7^-` model with the two singleton
+lobes.  Further leaf-cut quotients do not close the gap: their fully
+contracted seven-vertex form has at most eighteen edges, so target-freeness
+is automatic.  Even retaining a six-vertex boundary and one selected
+high-side component does not force the target: a separately checked finite
+barrier has ten vertices and 27 edges but no `K_7^-` minor.  That quotient
+is not an `E5` enemy and omits the internal high-side and simultaneous-cut
+structure.  This is an audited reduction and route nonclosure, not a proof
+of `(E5)`.
 
 An accepted result must prove at least one of:
 
@@ -143,8 +160,8 @@ An accepted result must prove at least one of:
    explicit `K_7^-` model; or
 3. one shore of an essential-edge six-separation contracts to a smaller
    seven-connected graph still at the `4n-2` threshold; or
-4. the five-root reserve-or-descent target holds, or its distinct
-   leaf-pair specialisation closes the exact two-singleton branch.
+4. the five-root reserve-or-descent target holds, or its anchored
+   four-root specialisation closes the exact two-singleton branch.
 
 The four exact nonclosures to overcome are:
 
@@ -163,10 +180,14 @@ The four exact nonclosures to overcome are:
   labelled reserve, and Wollan's small-neighbourhood theorem cannot be used
   at coefficient four because its `K_5` specialisation requires coefficient
   at least five.  In the exact two-singleton branch, fragment uncrossing
-  and Hall's theorem give distinct leaf--neighbour pairs, but their exact
-  five-cuts do not supply simultaneous disjoint extensions to a rooted
-  model.  A smaller arbitrary side is not enough unless it retains the
-  high-excess inequality.
+  and Hall's theorem give distinct leaf--neighbour pairs, and every
+  three--two boundary split has disjoint carriers, but neither fact
+  synchronises a rooted clique model.  Contracting both sides of the new
+  leaf cuts erases the root traces and makes target-freeness vacuous.  The
+  smallest live repair is a boundary-collapse lemma for the strict
+  high-potential crossing intersection, or a near-universal edge-completion
+  lemma which preserves five-connectivity.  A smaller arbitrary side is
+  not enough unless it retains the high-excess inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its
@@ -214,12 +235,12 @@ specialist validation before publication.
 
 - The direct-extremal and auxiliary reductions are written results with
   adjacent hash-pinned GREEN internal audits.  The saturated degree-seven
-  quotient and the four-distinct-miss path theorem have explicit finite
-  computational trust boundaries; the remaining new reductions are
-  computation-free.
-- External inputs include Mader, Halin, Jakobsen, Jørgensen, Yuan and
-  Schmidt; exact statements and citations are recorded beside the results
-  that use them.
+  quotient, the four-distinct-miss path theorem and the six-boundary
+  quotient barrier have explicit finite computational trust boundaries;
+  the remaining new reductions are computation-free.
+- External inputs include Mader, Halin, Jakobsen, Jørgensen, Yuan, Schmidt,
+  Norin--Totschnig and Du--Li--Xie--Yu; exact statements and citations are
+  recorded beside the results that use them.
 - No robust `K_6`-model transversal theorem or two-root dominating-model
   augmentation theorem is claimed.  Both bounded attacks have been frozen
   as principal mechanisms.  The first loses common labels and connectivity

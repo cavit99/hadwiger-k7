@@ -70,9 +70,25 @@ then with minimum size.  The following chain is now proved.
    classification and Yuan's fragment theorem then leave only
    `G[S]=P_3` disjoint union `K_2`, with at least three of its four
    degree-one roots having degree five in `G`.  Their two-vertex neighbour
-   sets in the dense component have distinct representatives, the dense
-   component has order at least seven, and every resulting leaf--neighbour
-   edge belongs to a further exact five-cut.
+   sets in the dense component have distinct representatives, and every
+   resulting leaf--neighbour edge belongs to a further exact five-cut.
+   The audited
+   [anchored four-root reduction](hc7_k7minus_e5_anchored_four_root_reduction.md)
+   strengthens the dense-component order bound to eight.  Deleting any
+   degree-five leaf leaves an internally four-connected four-root graph
+   with exactly `4|V|-8` edges.  It has separately a rooted `K_4` model
+   and a rooted `K^*_{4,2}` supply whose augmented helper meets the leaf
+   and one of its two dense neighbours.  Every three--two partition of
+   the five boundary roots also has disjoint connected carriers.
+8. The audited
+   [leaf-cut quotient classification](hc7_k7minus_e5_leaf_cut_quotient_nonclosure.md)
+   proves that each further exact five-cut has one high component and
+   exactly one low component of order at most two.  Contracting both
+   components gives a seven-vertex quotient with at most eighteen edges,
+   so its `K_7^-`-minor-freeness is automatic and supplies no synchronising
+   information.  Keeping the high component uncontracted gives exact
+   crossing identities, but currently leaves either a boundary of order
+   six or a density-preserving minor whose five-connectivity is unproved.
 
 Consequently one may choose, with minimum order, a component `C` behind a
 five-cut `S` such that
@@ -87,10 +103,10 @@ is closed by the four complement-type theorems; a triangle-free
 three-component boundary has at most six edges.  This minimum high-excess
 lobe is the strongest coherent endpoint of the present reduction.
 
-For the two-singleton three-component branch, the stronger endpoint in
-item 7 supersedes the generic description: the remaining local object is
-three or four degree-five leaf roots with distinct representatives in the
-dense component.  Each has one neighbour in `G[S]` and exactly two
+For the two-singleton three-component branch, the stronger endpoints in
+items 7 and 8 supersede the generic description: the remaining local
+object is three or four degree-five leaf roots with distinct representatives
+in the dense component.  Each has one neighbour in `G[S]` and exactly two
 neighbours in the dense component, and its three neighbours in the closed
 shore form a separator.  The `P_5` and `C_5` possibilities force a strict
 high-excess descent; the other discarded boundary types contradict the
@@ -122,14 +138,23 @@ The ordinary extremal theorem for an unrooted `K_6` does not control which
 bags meet the five prescribed roots.  That distinction, rather than the
 existence of some `K_6` minor, is the unresolved content.
 
-In the exact two-singleton branch this target has narrowed further.  It is
-enough to prove the **distinct leaf-pair repair**: when the boundary is
-`P_3` disjoint union `K_2`, choose distinct dense-component representatives
-for the two-vertex neighbour sets of the degree-five leaf roots.  The
-resulting connected leaf pairs and their exact five-cuts must force an
-`S`-rooted `K_5` model or a strictly smaller high-excess component.  The
-rooted model, together with the two singleton lobes, is an explicit
-`K_7^-` model.
+In the exact two-singleton branch this target has narrowed further.  Fix a
+degree-five leaf root `t`, put `Z=S-{t}`, and choose `p` among the two
+dense-component neighbours of `t`.  It is enough to prove the **anchored
+four-root `K_5`-or-descent target**: for some such `t,p`, either `H-t`
+has four pairwise adjacent bags rooted at `Z` and a disjoint fifth bag
+containing `p` and adjacent to all four, or there is a component of order
+below `|A|` behind a five-cut which retains excess at least four.  In the
+first outcome
+
+```text
+{x,t}, {y}, the four Z-root bags, the p-bag
+```
+
+is an explicit `K_7^-` model; the second is the required well-founded
+descent.  The audited anchored reduction supplies the two relevant rooted
+models and all three--two carriers separately, but does not synchronise
+them.
 
 ## 4. Recorded nonclosures
 
@@ -151,6 +176,26 @@ ingredient.
   gives distinct dense-component representatives, but the corresponding
   exact five-cuts do not give simultaneous disjoint extensions or all ten
   adjacencies of an `S`-rooted `K_5` model.
+- [All three--two terminal splits may have disjoint carriers](../barriers/hc7_three_two_carriers_do_not_force_rooted_k5.md)
+  without a rooted `K_5`, even in a four-connected graph.  The octahedral
+  example is three edges below the live closed-shore density and therefore
+  refutes only direct carrier synchronisation, not the density-sensitive
+  anchored target.
+- [Fully contracted leaf-cut quotients](hc7_k7minus_e5_leaf_cut_quotient_nonclosure.md)
+  have too few edges for target-freeness to impose any restriction.  In
+  the crossing singleton orientation, the smallest open repair is a
+  boundary-collapse lemma which turns a strict high-potential intersection
+  behind at most six vertices into an order-five high-excess component,
+  unless the anchored model already exists.  The alternative two-vertex
+  orientation needs a near-universal edge-completion lemma preserving
+  five-connectivity or returning the same strict descent.
+- Retaining a [six-vertex boundary contact quotient](../barriers/hc7_e5_six_boundary_quotient_barrier.md)
+  also does not force the target.  A dependency-free finite verifier gives
+  a ten-vertex, 27-edge quotient in which the selected component sees the
+  anchor and all five roots, yet every seven-bag model has at least two
+  missing adjacencies.  This refutes only the quotient abstraction: it is
+  not an `E5` enemy and does not encode the internal high-side structure or
+  simultaneous exact-cut family.
 - **Bare relative connectivity and excess do not force the reserve.**  Let
   `H=K_{4,2,2}`.  Take as the five roots the four vertices in the part of
   order four and one vertex in a part of order two.  The three nonroots
