@@ -146,12 +146,28 @@ uncross to a component of order below `|A|` retaining excess at least four.
 The first outcome gives an explicit `K_7^-` model with the two singleton
 lobes.  Further leaf-cut quotients do not close the gap: their fully
 contracted seven-vertex form has at most eighteen edges, so target-freeness
-is automatic.  Even retaining a six-vertex boundary and one selected
-high-side component does not force the target: a separately checked finite
-barrier has ten vertices and 27 edges but no `K_7^-` minor.  That quotient
-is not an `E5` enemy and omits the internal high-side and simultaneous-cut
-structure.  This is an audited reduction and route nonclosure, not a proof
-of `(E5)`.
+is automatic.  One crossing orientation is now eliminated, however.  If
+the low side is the singleton dense neighbour `q_t` and the further cut
+contains four roots, replacing `t` by the other dense neighbour `p` gives
+the five-cut
+
+```text
+(S-{t}) union {p}.
+```
+
+Its component `{x,y,t,q_t}` has excess one, so the universal five-cut
+lemma forces excess at least four in a component strictly inside
+`A-{p,q_t}`.  This contradicts the minimum choice of `A`.  The surviving
+`q_t`-singleton rows therefore have at most three roots in the further cut
+and natural boundary orders six, seven or eight.  The first unsupported
+row is `s=3`, where one additional dense-side boundary vertex can reconnect
+the low exterior to the strict intersection.
+
+A separately checked ten-vertex, 27-edge quotient still shows that the
+correct six-boundary contact pattern alone does not force `K_7^-`.  The
+new host proof succeeds because it retains the high-excess conclusion
+erased by contraction.  The quotient is not an `E5` enemy.  This is an
+audited strict reduction, not a proof of `(E5)`.
 
 An accepted result must prove at least one of:
 
@@ -184,10 +200,12 @@ The four exact nonclosures to overcome are:
   three--two boundary split has disjoint carriers, but neither fact
   synchronises a rooted clique model.  Contracting both sides of the new
   leaf cuts erases the root traces and makes target-freeness vacuous.  The
-  smallest live repair is a boundary-collapse lemma for the strict
-  high-potential crossing intersection, or a near-universal edge-completion
-  lemma which preserves five-connectivity.  A smaller arbitrary side is
-  not enough unless it retains the high-excess inequality.
+  former five-boundary crossing row now descends strictly.  The smallest
+  live repair is its `s=3` analogue: remove one of six possible boundary
+  vertices while controlling the second dense-side boundary member, or
+  prove the anchored model.  The alternative is a near-universal
+  edge-completion lemma which preserves five-connectivity.  A smaller
+  arbitrary side is not enough unless it retains the high-excess inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its

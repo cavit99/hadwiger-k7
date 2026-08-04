@@ -15,15 +15,16 @@ The following quotient-level claim is false.
 > Let \(S\) induce \(P_3\mathbin{\dot\cup}K_2\), put
 > \(W=S\cup\{p\}\), and let \(x,y,q,c\) be pairwise nonadjacent vertices
 > outside \(W\).  Suppose that \(x,y\) are adjacent to every vertex of
-> \(S\) and not to \(p\); for some \(z\in S\), the vertex \(q\) is
-> adjacent to \(p\) and every vertex of \(S-\{z\}\); and \(c\) is
-> adjacent to \(p,z\) and at least five vertices of \(W\).  Then these
-> contact conditions force an explicit `K_7^-`-minor model in the
-> quotient.
+> \(S\) and not to \(p\).  Let \(t,z\in S\) be distinct, with \(t\) of
+> degree one in the graph induced by \(S\).  Suppose that \(pt\) is an
+> edge, \(q\) is adjacent precisely to \(p\) and the vertices of
+> \(S-\{z\}\), and \(c\) is adjacent precisely to the vertices of
+> \(W-\{t\}\).  Then these contact conditions force an explicit
+> `K_7^-`-minor model in the quotient.
 
 This is the local abstraction arising when the selected component behind
-the six-vertex boundary contains a neighbour of `p`.  The counterexample
-below even makes `c` adjacent to every vertex of `W`.
+the six-vertex boundary contains a neighbour of `p`.  The missing contact
+`ct` is forced in the host by the equality \(N_A(t)=\{p,q\}\).
 
 ## 2. Counterexample
 
@@ -41,22 +42,24 @@ and put
 \]
 
 Thus `Q[S]` is the disjoint union of the path `s_0s_1s_2` and the edge
-`s_3s_4`.  Take `z=s_1`.  Add four pairwise nonadjacent vertices
+`s_3s_4`.  Take `t=s_3` and `z=s_1`.  Add four pairwise nonadjacent vertices
 `x,y,q,c`, and use exactly the following contacts:
 
 \[
 \begin{aligned}
- N_Q(p)\cap S&=\{s_0,s_2,s_3\},\\
+ N_Q(p)\cap S&=\{s_0,s_2,s_3,s_4\},\\
  N_Q(x)&=N_Q(y)=S,\\
  N_Q(q)&=\{p,s_0,s_2,s_3,s_4\},\\
- N_Q(c)&=W.
+ N_Q(c)&=W-\{s_3\}.
 \end{aligned}
 \tag{2.2}
 \]
 
-Equations (2.1)--(2.2) specify all edges.  In particular, `c` sees both
-`p` and `z`, as required for the selected component containing a
-`p`-neighbour.  The graph has ten vertices and 27 edges.
+Equations (2.1)--(2.2) specify all edges.  The vertex `t=s_3` has degree
+one in `Q[S]`, `p` is adjacent to `t`, and `c` sees both `p` and `z` while
+missing `t` exactly.  Thus the example has the contact pattern forced by
+the host relation \(N_A(t)=\{p,q\}\).  The graph has ten vertices and 27
+edges.
 
 ## 3. Exclusion of a `K_7^-` minor
 
@@ -76,9 +79,10 @@ nonempty unlabelled parts.  The number examined is
 \]
 
 where `S(k,7)` is a Stirling number of the second kind.  Of these
-partitions, 4,912 have all seven parts connected.  Among those, the
-minimum number of nonadjacent branch-set pairs is two.  Hence none is a
-`K_7^-`-minor model.
+partitions, 4,873 have all seven parts connected: respectively 120, 756,
+1,988, and 2,009 for used vertex sets of orders seven, eight, nine, and
+ten.  Among those, the minimum number of nonadjacent branch-set pairs is
+two.  Hence none is a `K_7^-`-minor model.
 
 One partition attaining the minimum is
 
@@ -88,11 +92,11 @@ One partition attaining the minimum is
 \tag{3.2}
 \]
 
-Its two nonadjacent pairs are `({s_4},{p})` and `({q},{c})`.  The
+Its two nonadjacent pairs are `({s_3},{c})` and `({q},{c})`.  The
 exhaustive record, including disconnected candidates, has SHA-256 digest
 
 ```text
-e6f4284228d49e3143df81b07c311cb5a23a77014ac86124a3a2e3d8bb653ded
+3f94261a42cdadf57a2b55576d9cd2ce9bd3a173eceebe5fef0d553cf294ff67
 ```
 
 under the canonical encoding documented by the verifier.
@@ -113,9 +117,14 @@ quotient contacts to a `K_7^-` minor.  It shows that contracting the four
 relevant components to `x,y,q,c` loses too much information to close the
 `s=4` case by this contact pattern alone.
 
+The host-level theorem nevertheless closes the `s=4` case: it uses the
+high-excess information retained inside the component represented by `c`,
+not merely that component's contacts with `W`.  That information is absent
+from this quotient, so the theorem and this barrier are compatible.
+
 The graph `Q` is not an `E5` enemy and is not asserted to arise as the
 quotient of one.  The example does not encode the internal structure of
-the contracted components, the simultaneous family of exact cuts,
-seven-connectivity, or the contraction-critical colouring hypotheses.
-It therefore does not refute `E5`, `HC_7`, or a host-level argument using
-any of those additional inputs.
+the contracted components or their excess, the simultaneous family of
+exact cuts, seven-connectivity, or the contraction-critical colouring
+hypotheses.  It therefore does not refute `E5`, `HC_7`, or the host-level
+`s=4` theorem.

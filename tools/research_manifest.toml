@@ -8009,20 +8009,45 @@ status = "audited-green"
 source = "active/hc7_k7minus_e5_leaf_cut_quotient_nonclosure.md"
 active = false
 audit = "active/hc7_k7minus_e5_leaf_cut_quotient_nonclosure_audit.md"
-expected_source_sha256 = "cd86151b6526af8be0bfc82f92e1cfb998ca6184d8328f62a4a3829d02a2ef49"
+expected_source_sha256 = "cd69a799e80385f0182b08eb6bed3d5e6954d3169ec8437378dfd1e490cb2edd"
 scope = "the further exact five-cuts through a degree-five boundary leaf and one selected dense neighbour"
 conclusions = [
   "each cut has exactly one high component and one low component of order at most two",
   "contracting both components gives a seven-vertex quotient with at most eighteen edges, whose target-freeness is automatic",
-  "the singleton crossing orientation yields an exact strict-intersection potential behind at most six boundary vertices",
+  "the singleton crossing orientation yields an exact strict-intersection potential and the four-root row collapses by strict descent",
+  "the remaining singleton rows have at most three roots in the further cut and natural boundary order 9-s",
   "the two-vertex orientation yields a density-preserving near-universal edge completion under an explicit cut-degree inequality",
 ]
 does_not_prove = [
-  "boundary collapse from six vertices to a five-cut retaining excess four",
+  "boundary reduction from 9-s vertices to a five-cut retaining excess four when s is at most three",
   "five-connectivity of the near-universal edge-completion minor",
   "the anchored target or E5",
 ]
 keywords = ["E5", "leaf cut", "seven-vertex quotient", "boundary collapse", "edge completion", "recorded nonclosure"]
+
+[[claims]]
+id = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"
+title = "Four-root singleton-neighbour orientation forces strict descent"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_singleton_neighbour_boundary_collapse.md"
+active = false
+audit = "active/hc7_k7minus_e5_singleton_neighbour_boundary_collapse_audit.md"
+expected_source_sha256 = "32091e0beb5cad0721f2a4ae826bac80b9a5f1c4bbc8e21247ef8b8820f90345"
+scope = "the q_t-singleton orientation of a further leaf-edge five-cut containing exactly four original boundary roots"
+strict_parameter = "order of the minimum high-excess component behind a five-cut"
+conclusions = [
+  "replacing t by the selected dense neighbour p gives an exact five-cut",
+  "the exterior component {x,y,t,q_t} has excess exactly one",
+  "the universal five-cut lemma forces a component of excess at least four strictly inside A-{p,q_t}",
+  "the s=4 q_t-singleton orientation is impossible in a minimum E5 enemy",
+]
+does_not_prove = [
+  "the q_t-singleton rows with at most three roots in the further cut",
+  "the u_t-singleton or two-vertex low orientations",
+  "the anchored target or E5",
+]
+keywords = ["E5", "singleton neighbour", "five-cut", "strict descent", "excess one", "boundary collapse"]
 
 [[claims]]
 id = "hc7.barrier.three_two_carriers_rooted_k5"
@@ -8045,9 +8070,9 @@ status = "audited-green"
 source = "barriers/hc7_e5_six_boundary_quotient_barrier.md"
 active = false
 audit = "barriers/hc7_e5_six_boundary_quotient_barrier_audit.md"
-expected_source_sha256 = "980b0190866dde07591ecc04115268fc9c10778ff0ea479e19cc0a9060487797"
+expected_source_sha256 = "d7a7b3bd8ea57498d6005e8c0ed9bbf1f6dc418467c1c2ae1423320e7d1243ce"
 refutes = ["the six-boundary contact quotient in the s=4 singleton orientation forces a K7-minus minor"]
-lacks = ["an E5 enemy", "internal high-component structure", "the simultaneous exact-cut family", "host five-connectivity"]
+lacks = ["an E5 enemy", "internal high-component excess", "the universal five-cut descent conclusion", "the simultaneous exact-cut family", "host five-connectivity"]
 keywords = ["K7 minus", "E5", "six-boundary quotient", "finite barrier", "branch-set enumeration"]
 
 [[claims]]
@@ -14730,15 +14755,15 @@ expected_stdout = [
 [[verifiers]]
 id = "k7minus-e5-six-boundary-quotient-barrier"
 path = "barriers/hc7_e5_six_boundary_quotient_barrier_verify.py"
-sha256 = "d63881647a019b47dc62adac8d5f461c4dafb421f16368158d8bdb6e1131bd84"
+sha256 = "86bfb088112389651e3f81bd71dc4a406a337fb3cb2a8e2f932c4ea1273fc0eb"
 timeout = 30
 expected_stdout = [
   "vertices 10 edges 27",
   "partitions_by_used_order {7: 120, 8: 1260, 9: 4620, 10: 5880}",
-  "connected_branch_partitions 4912",
+  "connected_branch_partitions 4873",
   "minimum_missing_branch_pairs 2",
   "closest_partition {s0,x} | {s2,y} | {s3} | {s4} | {p} | {q} | {c}",
-  "search_digest e6f4284228d49e3143df81b07c311cb5a23a77014ac86124a3a2e3d8bb653ded",
+  "search_digest 3f94261a42cdadf57a2b55576d9cd2ce9bd3a173eceebe5fef0d553cf294ff67",
   "VERIFIED: the quotient has no K_7^- minor",
 ]
 
@@ -14773,6 +14798,30 @@ kind = "uses"
 note = "The surviving two-singleton row has an internally four-connected exact-density four-root graph, all three--two carriers, and dense-component order at least eight."
 
 [[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"
+kind = "uses"
+note = "The four-root q_t-singleton orientation of the further leaf cut returns a strict smaller high-excess component and is eliminated."
+
+[[relations]]
+source = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"
+target = "hc7.k7minus_e5_singleton_contraction_uncrossing"
+kind = "uses"
+note = "The proof invokes the universal five-cut high-excess lemma, the minimum-order lobe choice and the exact leaf-edge cut."
+
+[[relations]]
+source = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"
+target = "hc7.k7minus_e5_leaf_cut_quotient_nonclosure"
+kind = "uses"
+note = "The singleton orientation supplies Q=N(q_t), the crossing sets and the s=4 root count used by the replacement cut."
+
+[[relations]]
+source = "hc7.k7minus_e5_singleton_neighbour_boundary_collapse"
+target = "hc7.k7minus_e5_anchored_four_root_reduction"
+kind = "uses"
+note = "The degree-five leaf neighbourhood and nonempty strict dense-side remainder come from the anchored exact-residue reduction."
+
+[[relations]]
 source = "hc7.target.k7minus_e5_anchored_four_root_descent"
 target = "hc7.target.k7minus_e5_extremal"
 kind = "subproblem_of"
@@ -14788,7 +14837,7 @@ note = "The reduction supplies the separate rooted models, selected leaf anchor 
 source = "hc7.k7minus_e5_leaf_cut_quotient_nonclosure"
 target = "hc7.target.k7minus_e5_anchored_four_root_descent"
 kind = "related_to"
-note = "Full contraction loses the root traces; the uncontracted orientations isolate boundary collapse and five-connectivity-preserving edge completion as the smallest repairs."
+note = "Full contraction loses the root traces; after the s=4 collapse, the uncontracted orientations isolate s=3 boundary reduction and five-connectivity-preserving edge completion as the smallest repairs."
 
 [[relations]]
 source = "hc7.barrier.three_two_carriers_rooted_k5"
@@ -14800,7 +14849,7 @@ note = "The octahedral construction shows why the published three--two carrier c
 source = "hc7.barrier.e5_six_boundary_quotient"
 target = "hc7.k7minus_e5_leaf_cut_quotient_nonclosure"
 kind = "related_to"
-note = "Even the finer six-boundary contact abstraction has a 27-edge target-free quotient; a repair must retain internal high-side or simultaneous-cut information."
+note = "Even the corrected six-boundary contact abstraction has a 27-edge target-free quotient; the host s=4 proof succeeds only by retaining the universal high-excess descent information."
 
 [[relations]]
 source = "hc7.k7minus_e5_coarse_reserve_nonclosure"

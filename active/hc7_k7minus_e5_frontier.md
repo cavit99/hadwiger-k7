@@ -87,8 +87,18 @@ then with minimum size.  The following chain is now proved.
    components gives a seven-vertex quotient with at most eighteen edges,
    so its `K_7^-`-minor-freeness is automatic and supplies no synchronising
    information.  Keeping the high component uncontracted gives exact
-   crossing identities, but currently leaves either a boundary of order
-   six or a density-preserving minor whose five-connectivity is unproved.
+   crossing identities and a strict intersection inside `A`.
+9. The audited
+   [singleton-neighbour boundary-collapse theorem](hc7_k7minus_e5_singleton_neighbour_boundary_collapse.md)
+   eliminates the crossing singleton orientation in which four roots lie
+   in the further cut.  Replacing one root of the original cut by the
+   selected dense neighbour leaves the four-vertex component
+   `{x,y,t,q_t}` with excess one; the universal five-cut lemma therefore
+   forces strict high-excess descent inside `A-{p,q_t}`.  The surviving
+   `q_t`-singleton rows have at most three roots in the further cut and
+   natural boundary orders `9-s` equal to six, seven or eight.  The
+   two-vertex low orientation still yields a density-preserving minor whose
+   five-connectivity is unproved.
 
 Consequently one may choose, with minimum order, a component `C` behind a
 five-cut `S` such that
@@ -104,7 +114,7 @@ three-component boundary has at most six edges.  This minimum high-excess
 lobe is the strongest coherent endpoint of the present reduction.
 
 For the two-singleton three-component branch, the stronger endpoints in
-items 7 and 8 supersede the generic description: the remaining local
+items 7--9 supersede the generic description: the remaining local
 object is three or four degree-five leaf roots with distinct representatives
 in the dense component.  Each has one neighbour in `G[S]` and exactly two
 neighbours in the dense component, and its three neighbours in the closed
@@ -156,6 +166,13 @@ descent.  The audited anchored reduction supplies the two relevant rooted
 models and all three--two carriers separately, but does not synchronise
 them.
 
+Within the crossing `q_t`-singleton route, item 9 removes its former
+smallest boundary.  The next exact row has `s=3`: the strict intersection
+lies behind at most six vertices, but the second dense-side member of
+`B=A intersect Q` may join the low exterior back to `X`.  Dropping that
+one extra boundary vertex while retaining either the anchored model or
+excess four is the smallest current boundary-reduction problem.
+
 ## 4. Recorded nonclosures
 
 The following continuations are exhausted or require hypotheses stronger
@@ -183,19 +200,22 @@ ingredient.
   anchored target.
 - [Fully contracted leaf-cut quotients](hc7_k7minus_e5_leaf_cut_quotient_nonclosure.md)
   have too few edges for target-freeness to impose any restriction.  In
-  the crossing singleton orientation, the smallest open repair is a
-  boundary-collapse lemma which turns a strict high-potential intersection
-  behind at most six vertices into an order-five high-excess component,
-  unless the anchored model already exists.  The alternative two-vertex
-  orientation needs a near-universal edge-completion lemma preserving
-  five-connectivity or returning the same strict descent.
+  the crossing singleton orientation, the four-root row now collapses by
+  strict descent.  The smallest open repair is the analogous `s=3`
+  reduction from six possible boundary vertices to an order-five
+  high-excess component, unless the anchored model already exists.  The
+  alternative two-vertex orientation needs a near-universal
+  edge-completion lemma preserving five-connectivity or returning the same
+  strict descent.
 - Retaining a [six-vertex boundary contact quotient](../barriers/hc7_e5_six_boundary_quotient_barrier.md)
   also does not force the target.  A dependency-free finite verifier gives
-  a ten-vertex, 27-edge quotient in which the selected component sees the
-  anchor and all five roots, yet every seven-bag model has at least two
-  missing adjacencies.  This refutes only the quotient abstraction: it is
-  not an `E5` enemy and does not encode the internal high-side structure or
-  simultaneous exact-cut family.
+  a ten-vertex, 27-edge quotient respecting the selected component's
+  nonadjacency to `t`, yet every seven-bag model has at least two missing
+  adjacencies.  The host-level `s=4` theorem bypasses this barrier by using
+  the high-excess conclusion erased by contraction.  Thus the construction
+  remains a valid contact-only barrier, not an obstruction to the now
+  closed host row; it is not an `E5` enemy and does not encode the internal
+  high-side structure or simultaneous exact-cut family.
 - **Bare relative connectivity and excess do not force the reserve.**  Let
   `H=K_{4,2,2}`.  Take as the five roots the four vertices in the part of
   order four and one vertex in a part of order two.  The three nonroots

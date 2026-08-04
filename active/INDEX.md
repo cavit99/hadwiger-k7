@@ -37,10 +37,12 @@ These are audited route nonclosures, not constructional counterexamples:
   `K_2`, with at least three degree-five leaf roots having distinct
   representatives in a dense component of order at least eight.  Deleting
   one such leaf gives an internally four-connected four-root graph; the
-  exact unresolved step is to synchronise its rooted clique model with a
-  selected dense neighbour, or retain high excess under strict descent.
-  The auxiliary statement remains unproved and is not a second primary
-  target.
+  crossing singleton row with four roots in the further cut now gives
+  strict high-excess descent.  The next such row has three roots and a
+  six-vertex natural boundary; globally, the unresolved step remains to
+  synchronise the rooted clique model with a selected dense neighbour, or
+  retain high excess under strict descent.  The auxiliary statement remains
+  unproved and is not a second primary target.
 
 ## Conditional refinements and frozen programmes
 

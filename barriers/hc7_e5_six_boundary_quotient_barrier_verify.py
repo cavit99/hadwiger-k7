@@ -8,7 +8,7 @@ from itertools import combinations
 VERTICES = ("s0", "s1", "s2", "s3", "s4", "p", "x", "y", "q", "c")
 INDEX = {vertex: index for index, vertex in enumerate(VERTICES)}
 S = frozenset(range(5))
-EXPECTED_DIGEST = "e6f4284228d49e3143df81b07c311cb5a23a77014ac86124a3a2e3d8bb653ded"
+EXPECTED_DIGEST = "3f94261a42cdadf57a2b55576d9cd2ce9bd3a173eceebe5fef0d553cf294ff67"
 
 
 def require(condition, message):
@@ -26,10 +26,10 @@ EDGES = {
     pair("s1", "s2"),
     pair("s3", "s4"),
 }
-EDGES.update(pair("p", vertex) for vertex in ("s0", "s2", "s3"))
+EDGES.update(pair("p", vertex) for vertex in ("s0", "s2", "s3", "s4"))
 EDGES.update(pair(vertex, root) for vertex in ("x", "y") for root in VERTICES[:5])
 EDGES.update(pair("q", vertex) for vertex in ("p", "s0", "s2", "s3", "s4"))
-EDGES.update(pair("c", vertex) for vertex in VERTICES[:6])
+EDGES.update(pair("c", vertex) for vertex in ("s0", "s1", "s2", "s4", "p"))
 
 ADJACENCY = [set() for _ in VERTICES]
 for left, right in EDGES:
@@ -50,13 +50,20 @@ def check_construction():
         "wrong graph induced by S",
     )
     require(
-        named_neighbours("p") & set(VERTICES[:5]) == {"s0", "s2", "s3"},
+        named_neighbours("p") & set(VERTICES[:5]) == {"s0", "s2", "s3", "s4"},
         "wrong p contacts",
     )
     require(named_neighbours("x") == set(VERTICES[:5]), "wrong x contacts")
     require(named_neighbours("y") == set(VERTICES[:5]), "wrong y contacts")
     require(named_neighbours("q") == {"p", "s0", "s2", "s3", "s4"}, "wrong q contacts")
-    require(named_neighbours("c") == set(VERTICES[:6]), "wrong c contacts")
+    require(named_neighbours("c") == {"s0", "s1", "s2", "s4", "p"}, "wrong c contacts")
+    require(
+        named_neighbours("s3") & set(VERTICES[:5]) == {"s4"},
+        "t=s3 does not have degree one in Q[S]",
+    )
+    require(INDEX["s3"] in ADJACENCY[INDEX["p"]], "p is not adjacent to t=s3")
+    require(INDEX["s3"] not in ADJACENCY[INDEX["c"]], "c does not miss t=s3")
+    require(INDEX["s1"] in ADJACENCY[INDEX["c"]], "c does not see z=s1")
     exterior = {INDEX[vertex] for vertex in ("x", "y", "q", "c")}
     require(
         not any(set(edge) <= exterior for edge in EDGES),
@@ -148,7 +155,7 @@ def verify_minor_exclusion():
     actual_digest = digest.hexdigest()
     require(totals == {7: 120, 8: 1260, 9: 4620, 10: 5880}, "partition count mismatch")
     require(
-        connected_totals == {7: 120, 8: 756, 9: 2002, 10: 2034},
+        connected_totals == {7: 120, 8: 756, 9: 1988, 10: 2009},
         "connected-partition count mismatch",
     )
     require(minimum_missing == 2, "unexpected minimum number of missing branch pairs")

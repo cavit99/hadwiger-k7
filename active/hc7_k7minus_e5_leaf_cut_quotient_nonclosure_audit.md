@@ -7,7 +7,7 @@ internal mathematical audit, not external peer review.
 `active/hc7_k7minus_e5_leaf_cut_quotient_nonclosure.md`
 
 **SHA-256:**
-`cd86151b6526af8be0bfc82f92e1cfb998ca6184d8328f62a4a3829d02a2ef49`
+`cd69a799e80385f0182b08eb6bed3d5e6954d3169ec8437378dfd1e490cb2edd`
 
 No mathematical correction is required at this revision.
 
@@ -103,25 +103,54 @@ Moreover, the cross-corner edges are exactly
 `E_G(B,S-Q)`: vertices of `A` miss `x,y`, and `q_t` has no neighbour
 outside `Q`.  Substitution yields equation (10) of the source.
 
-When `s=4`, `B={p}` and
+## 5. Closure of the four-root singleton row
+
+When `s=4`, the cut has the form
 
 ```text
-epsilon(X)=11-d_S(p)>=6.
+Q=R union {p},                    |R|=4,
 ```
 
-The connectedness of `A` forces `p` to meet `X`, since `p,q_t` are
-adjacent and `q_t` has no neighbour in `X`.  The source correctly stops
-here: a component of `X` need not have an order-five boundary while
-retaining excess at least four.
+and `B={p}`.  Since `tq_t` is an edge and `Q=N_G(q_t)`, the root `t`
+belongs to `R`.  The singleton-neighbour boundary-collapse theorem is
+therefore applicable with
 
-The companion observation is also valid.  If its low side is `{p}`, then
-`p,q_t` are adjacent degree-five vertices.  Four common neighbours would
-form a four-cut isolating their edge, so they have at most three common
-neighbours.  Contracting their edge consequently loses at most four edges,
-retains the `E5` density, and the standard minimum-enemy argument supplies
-another exact five-cut.  No descent is inferred from that cut.
+```text
+Q^*=(S-{t}) union {p},
+E={x,y,t,q_t},
+X=A-{p,q_t}.
+```
 
-## 5. Two-vertex orientation and contraction density
+The absence of edges between `E` and `X` follows from the exact
+neighbourhoods of `x,y,t,q_t`.  The set `E` is connected through
+`xt,yt,tq_t`.  Its three internal edges and fourteen incidences with
+`Q^*` give
+
+```text
+delta_{Q^*}(E)=3+14-16=1.
+```
+
+Every component of `G[X]` has neighbourhood contained in `Q^*`; by
+five-connectivity it is full to that five-set.  The universal five-cut
+excess lemma cannot select `E`, so it supplies a component of `X` with
+excess at least four and order below `a`.  This contradicts the chosen
+minimum high-excess lobe.  The revised source is therefore correct to
+discard `s=4`.
+
+For every survivor, `1<=s<=3`.  The only neighbours of `t` in `A` are
+`p,q_t`, both outside `X`; hence `t` has no neighbour in `X`.  Equation
+(11) consequently sharpens to
+
+```text
+N_G(X) subseteq (S-{t}) union B,
+|(S-{t}) union B|=4+(5-s)=9-s.
+```
+
+The three container orders are six, seven and eight for `s=3,2,1`,
+respectively.  This is an upper bound on the actual neighbourhood order,
+not an assertion that every possible boundary vertex is used.
+
+## 6. Two-vertex orientation and contraction density
 
 If `x` belonged to the two-vertex low edge, its mate would be the fifth
 root outside `Q`, while the other four members of `Q` apart from
@@ -147,9 +176,9 @@ edges on `|D|+5` vertices.  Thus `mu_Q(z)>=delta_Q(L)` is exactly the
 condition for the `4v-7` threshold.  The source does not assert the
 unproved five-connectivity of this minor.
 
-## 6. Dependency, nonclosure and scope
+## 7. Dependency order, nonclosure and first gap
 
-The following source revisions were used:
+The source revisions used were:
 
 ```text
 singleton-contraction theorem:
@@ -158,17 +187,32 @@ e4720b2641033396aabf333cc97d9f401df4577f8a6f337a44d7ca6aba0ac1c2
 anchored four-root reduction:
 b22556c8dc6fa22bbd950d53356c6dc46826e755173ca4a36b3fb5425c0995d8
 
+singleton-neighbour boundary collapse:
+32091e0beb5cad0721f2a4ae826bac80b9a5f1c4bbc8e21247ef8b8820f90345
+
 E5 frontier consulted for the minimum-lobe endpoint:
-588c6bdccacff21d8c95ff14375dc97d3eb289626467f4c4d79209b6ad5bbb28
+2b70e6d2a890b4145106ee42e21be5b8afde34d05373d8f108062c92d2c1c24a
 ```
 
-The singleton theorem has an adjacent hash-pinned GREEN audit.  The
-present note uses the anchored reduction only for notation and for the
-statement of the desired endpoint; the anchored proof does not depend on
-this quotient classification, so there is no circular inference.
+The apparent file-level cycle with the boundary-collapse theorem is not a
+mathematical cycle.  That theorem uses only Theorems 3 and 4 and equations
+(8)--(11) of the earlier quotient revision
 
-The result is a recorded route nonclosure, not a counterexample to the
-anchored target or `(E5)`.  It proves that target-freeness of the fully
-contracted seven-vertex quotient supplies no extra restriction.  The two
-proposed boundary-collapse and edge-completion statements remain open and
-are correctly labelled as repairs rather than conclusions.
+```text
+cd86151b6526af8be0bfc82f92e1cfb998ca6184d8328f62a4a3829d02a2ef49,
+```
+
+all of which are unchanged in the present source.  The present revision
+then invokes the collapse only after those proofs to eliminate `s=4`.
+Thus the theorem-level dependency order is base classification, boundary
+collapse, revised survivor statement.
+
+The result remains a route nonclosure, not a counterexample to the
+anchored target or `(E5)`.  The first exact unsupported inference is now
+the multi-neighbour boundary reduction for `s<=3`.  At `s=3`, the set
+`X` is contained behind six possible boundary vertices and `B` has two
+members.  Removing either dense-side member to obtain a five-set leaves
+the other outside that set, where it may join the low exterior to `X`.
+No proved argument both removes this sixth boundary vertex and preserves
+excess at least four.  The `u_t` singleton and two-vertex low-side
+orientations also remain open exactly as stated.

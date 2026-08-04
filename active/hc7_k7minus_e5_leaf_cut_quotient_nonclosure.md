@@ -281,12 +281,29 @@ epsilon(X)=11-d_S(p)>=6,                 N_G(X) subseteq S union {p}.  (14)
 
 Moreover `p` has a neighbour in `X`: otherwise the connected graph `A`
 would split into the nonempty set `X` and the adjacent pair `{p,q}`, since
-`q` has no neighbour in `X`.  Thus (14) reaches a strict smaller set with
-large incident-edge excess behind a boundary of order at most six.  What
-is not proved is that one component of `X` has an order-five boundary and
-retains excess at least four.
+`q` has no neighbour in `X`.  The subsequent
+[singleton-neighbour boundary-collapse theorem](hc7_k7minus_e5_singleton_neighbour_boundary_collapse.md)
+closes this row.  It deletes the five-set
 
-The companion cut through `tq` does not presently remove this obstruction.
+```text
+(S-{t}) union {p}
+```
+
+and finds the connected component `{x,y,t,q}` with excess one.  The
+universal five-cut excess lemma then puts excess at least four in a strict
+component of `X`, contradicting the choice of `A`.
+
+Consequently every surviving `q_t`-singleton orientation has `1<=s<=3`.
+Since `t` has no neighbour in `X`, equation (11) sharpens in these rows to
+
+```text
+N_G(X) subseteq (S-{t}) union B,        |(S-{t}) union B|=9-s,
+```
+
+whose boundary orders are six, seven or eight.
+
+For these remaining orientations, the companion cut through `tq` does not
+presently remove the obstruction.
 If its low component is the singleton `{p}`, then `p,q` are adjacent
 degree-five vertices.  They have at most three common neighbours: four
 common neighbours would form a four-cut isolating the edge `pq`.  Thus
@@ -380,29 +397,35 @@ is the following.
 > at least four.
 
 The two nontrivial orientations left by Theorem 3 are the
-`q_t`-singleton cut `Q=N_G(q_t)`, which excludes `x,y` and crosses the
-original cut, and the two-vertex low edge with its explicit two-by-five
-incidence pattern.  The sparse `u_t`-singleton row still requires the same
-trace-compatible rooted model; its quotient supplies no such model.
+`q_t`-singleton cut `Q=N_G(q_t)` with at most three roots, which excludes
+`x,y` and crosses the original cut, and the two-vertex low edge with its
+explicit two-by-five incidence pattern.  The sparse `u_t`-singleton row
+still requires the same trace-compatible rooted model; its quotient
+supplies no such model.
 
 More specifically, the two smallest missing statements are:
 
-1. a **singleton-neighbour boundary-collapse lemma** which turns one
-   component of the strict set `X` in Theorem 4 into an order-five shore
-   of excess at least four, unless an anchored four-root model already
-   exists; and
+1. a **multi-neighbour boundary-reduction lemma** for `s<=3` which turns
+   one component of the strict set `X` in Theorem 4, currently behind at
+   most `9-s` vertices, into an order-five shore of excess at least four,
+   unless an anchored four-root model already exists; and
 2. a **near-universal edge-completion lemma** which says that a minor
    `M_z` satisfying (16) is five-connected, or that its first cut of
    order at most four lifts to a strict smaller high-excess component in
    `D`.
 
-The first is the sharper route: the strict smaller set and the exact
-potential (10) are already present, and only boundary order remains to be
-controlled.
+The first remains the sharper route.  At `s=3` the strict smaller set is
+already behind only six possible boundary vertices; unlike the closed
+`s=4` row, however, the second member of `B` survives outside every
+five-set obtained by dropping one of them and may join the low exterior to
+`X`.  Controlling that extra dense-side boundary vertex is the first exact
+unsupported inference.
 
 ## Dependencies
 
 - The [singleton-contraction uncrossing theorem](hc7_k7minus_e5_singleton_contraction_uncrossing.md),
   especially Theorems 6 and 7.
+- The [singleton-neighbour boundary-collapse theorem](hc7_k7minus_e5_singleton_neighbour_boundary_collapse.md),
+  which closes the `s=4` orientation described after Theorem 4.
 - The minimum high-excess lobe reduction in the
   [auxiliary `E5` frontier](hc7_k7minus_e5_frontier.md).
