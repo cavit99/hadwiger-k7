@@ -8321,6 +8321,91 @@ does_not_prove = [
 keywords = ["E5", "second contraction", "returned singleton", "six-boundary kernel", "high-excess descent", "self-similar quotient"]
 
 [[claims]]
+id = "hc7.k7minus_e5_six_boundary_mass_bounds"
+title = "Missed-root mass and both-endpoints boundary bounds"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_e5_six_boundary_mass_bounds.md"
+source_heading = "Missed-root mass and both-endpoints boundary bounds"
+active = false
+audit = "results/hc7_k7minus_e5_six_boundary_mass_bounds_audit.md"
+expected_source_sha256 = "3311e4640584e8223fc9c71c2cd22d7e06aabd7f65efa6ebd017fc1adc4d29e8"
+scope = "the selected minimum-E5 K2, P3 and K3 six-boundary kernel configurations, together with the preceding both-endpoints lifted separation"
+label_fidelity = "the six boundary roots, missed roots, low kernel, original contraction endpoints and returned degree-five singleton remain literal host objects"
+conclusions = [
+  "all opposite components missing a fixed boundary root have total order at most two",
+  "every kernel shore has a six-full component, with multiplicity at most two for K2, one in the favourable P3 or K3 orientation, and three in the other orientation",
+  "the both-endpoints six-boundary has at most eleven edges",
+  "equality in the boundary bound gives a literal K4 core, one boundary neighbour in the three-set for each degree-five endpoint, and exact total opposite excess six",
+]
+does_not_prove = [
+  "control of the order or internal structure of a six-full component",
+  "elimination of the single- or multiple-six-full residues",
+  "the auxiliary E5 statement",
+  "the active seven-connected 4n-2 target",
+  "HC7",
+]
+keywords = ["K7 minus", "E5", "six boundary", "missed-root mass", "six-full component", "both-endpoints separation"]
+
+[[claims]]
+id = "hc7.k7minus_e5_six_boundary_extension_screen"
+title = "Exact extension screens for the labelled six-boundary kernels"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_e5_six_boundary_extension_screen.md"
+source_heading = "Exact extension screens for the labelled six-boundary kernels"
+active = false
+audit = "results/hc7_k7minus_e5_six_boundary_extension_screen_audit.md"
+expected_source_sha256 = "bfe0a330bbcefe655f8a7c853be4944a39adbadf810991cb0d4185552ae9094f"
+scope = "computer-assisted exhaustive labelled hosts formed from a six-vertex boundary, one K2, P3 or K3 low kernel, six-full representatives, full singleton or edge extensions, and the specified split-contact representatives"
+label_fidelity = "all boundary labels, low-kernel contacts, missed roots, representative multiplicities and split-component portal types are explicit"
+conclusions = [
+  "the favourable P3 and K3 singleton-exterior thresholds and maximum target-free boundary masks are exact",
+  "the K2 one-six-full/full-edge survivors are exactly four sparse boundary graphs, while the two-six-full family has at most seven boundary edges with one labelled equality graph",
+  "three six-full P3 or K3 representatives always force K7-minus, and the target-free two-representative boundaries are exactly sixteen sparse graphs",
+  "the split-contact screens classify target-freeness exactly by concentration of the specified portal roots in one split part",
+  "an independent exhaustive implementation checks all 145034 finite hosts with complete seven-branch-set model universes",
+]
+does_not_prove = [
+  "that a negative finite host lifts to an E5 enemy",
+  "an unbounded split or density-localisation theorem",
+  "termination of repeated singleton deletion",
+  "the auxiliary E5 statement",
+  "the active seven-connected 4n-2 target",
+  "HC7",
+]
+keywords = ["K7 minus", "E5", "six-boundary kernel", "finite extension screen", "split contacts", "independent exhaustive checker"]
+
+[[claims]]
+id = "hc7.k7minus_e5_six_boundary_localisation"
+title = "Density localisation across the labelled six-boundary kernels"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_six_boundary_localisation.md"
+source_heading = "Density localisation across the labelled six-boundary kernels"
+active = false
+audit = "active/hc7_k7minus_e5_six_boundary_localisation_audit.md"
+expected_source_sha256 = "7d3c5a9cb2e7e952cd026a5a104fe48d6ca504e7fcc89ba1bcc461ecc9978c50"
+scope = "the selected minimum-E5 second-contraction endpoint with one labelled K2, P3 or K3 low kernel behind a six-vertex boundary"
+label_fidelity = "the original endpoints, returned singleton, low kernel, all six boundary roots, missed roots, six-full components and selected lobe potential remain host objects"
+conclusions = [
+  "every target-free P3 or K3 kernel shore has exactly one six-full component",
+  "a target-free P3 or K3 opposite shore is either that component alone or a five-cut with one degree-five singleton exterior and one connected central component",
+  "the target-free K2 cases reduce to one six-full component, one singleton exterior, one exact one-six-full/full-edge equality family, or one two-six-full family with at most seven boundary edges",
+  "all shores containing no six-full component and all P3 or K3 shores with multiple six-full components are eliminated",
+]
+does_not_prove = [
+  "localisation of internal density inside one unbounded six-full component",
+  "closure of the K2 one-six-full/full-edge equality or two-six-full family",
+  "a label-preserving termination theorem for the self-similar singleton quotient",
+  "closure of the both-endpoints rows with boundary size at most eleven",
+  "the auxiliary E5 statement",
+  "the active seven-connected 4n-2 target",
+  "HC7",
+]
+keywords = ["K7 minus", "E5", "six-boundary localisation", "K2", "P3", "K3", "six-full component", "singleton exterior"]
+
+[[claims]]
 id = "hc7.barrier.e5_triangle_lift_contact"
 title = "Two full components do not close the lifted triangle contact quotient"
 kind = "barrier"
@@ -15090,6 +15175,19 @@ expected_stdout = [
   "PASS independent six-boundary kernel certificate check",
 ]
 
+[[verifiers]]
+id = "k7minus-e5-six-boundary-extension-independent"
+path = "active/experiments/e5_six_boundary_localisation_advance/e5_six_boundary_extension_screen_check.py"
+sha256 = "c4569fa25afef7ae1d410d12d6bd1eb94077df3ab5563f3fbb2d717e8aa8db1b"
+timeout = 240
+expected_stdout = [
+  "PASS independent E5 six-boundary extension check",
+  "ordinary hosts checked: 140498",
+  "portal hosts checked: 4536",
+  "total finite hosts checked: 145034",
+  "model universes: n=10 11880; n=11 159027; n=12 1899612",
+]
+
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.k7minus_degree7_safe_contraction"
@@ -15175,6 +15273,12 @@ kind = "uses"
 note = "The returned-singleton endpoint yields three labelled six-boundary kernels in the connectivity-drop and endpoint-missing cases and closes every connected non-six-full opposite shore."
 
 [[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_six_boundary_localisation"
+kind = "uses"
+note = "The returned-singleton laboratory now eliminates every no-six-full shore and every P3 or K3 shore with multiple six-full components, leaving the exact single-full, K2 residual, self-similar and both-endpoints cases."
+
+[[relations]]
 source = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
 target = "hc7.k7minus_e5_s3_six_full_contraction_reduction"
 kind = "uses"
@@ -15185,6 +15289,30 @@ source = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
 target = "hc7.k7minus_e5_six_boundary_kernel_screen"
 kind = "uses"
 note = "The six sharp finite thresholds convert every connected non-six-full kernel shore into a K7-minus model or strict high-excess descent."
+
+[[relations]]
+source = "hc7.k7minus_e5_six_boundary_mass_bounds"
+target = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+kind = "uses"
+note = "The second-contraction theorem supplies the labelled kernels, component classification, selected-lobe order and degree-five endpoint used by the mass and boundary counts."
+
+[[relations]]
+source = "hc7.k7minus_e5_six_boundary_localisation"
+target = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+kind = "uses"
+note = "The imported endpoint supplies the three labelled kernels, exact excess identities and componentwise full-singleton/full-edge classification."
+
+[[relations]]
+source = "hc7.k7minus_e5_six_boundary_localisation"
+target = "hc7.k7minus_e5_six_boundary_mass_bounds"
+kind = "uses"
+note = "The aggregate missed-root bound and degree-five multiplicity bounds force a six-full component and bound its possible multiplicity."
+
+[[relations]]
+source = "hc7.k7minus_e5_six_boundary_localisation"
+target = "hc7.k7minus_e5_six_boundary_extension_screen"
+kind = "uses"
+note = "The exact ordinary and split-contact screens eliminate all P3 or K3 multiple-six-full cases and classify the surviving K2 extensions."
 
 [[relations]]
 source = "hc7.k7minus_e5_s3_high_misser_elimination"

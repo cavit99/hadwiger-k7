@@ -237,14 +237,19 @@ every kernel configuration whose opposite shore is one connected component
 missing a boundary root.  In a split shore, every non-six-full component is
 now a full singleton or full edge of order at most two.
 
-This is not an exhaustive kernel reduction.  Three branches remain: the
-four-connected quotient may repeat the singleton-plus-connected-remainder
-normal form; a first nontrivial cut may have both original endpoints meeting
-both sides; and one or more six-full components may remain large.  The last
-case includes the genuine two-six-full density-sensitive labelled split.
-Computation-free eight-vertex barriers show that neither contracted contacts
-nor even the five-connected local pattern suffices without density.  None of
-these statements proves `(E5)`.
+The subsequent six-boundary localisation sharpens, but does not close, this
+kernel reduction.  Aggregate missed-root mass is at most two, every kernel
+shore has a six-full component, and every multiple-six-full `P_3,K_3` shore
+is eliminated.  The remaining kernel cases are one unbounded six-full
+component, a self-similar singleton exterior, the `K_2`
+one-six-full/full-edge equality, and the `K_2` two-six-full family with at
+most seven boundary edges.  Before the kernel construction, the anchored
+singleton quotient may repeat, or both original endpoints may meet both
+sides of every eligible separation; the latter six-boundary has at most
+eleven edges, with a `K_4` core only at equality.  Computation-free
+eight-vertex barriers show that neither contracted contacts nor even the
+five-connected local pattern suffices without density.  None of these
+statements proves `(E5)`.
 
 An accepted result must prove at least one of:
 
@@ -290,16 +295,25 @@ The four exact nonclosures to overcome are:
   from the triangle into that component return a new family of exact
   five-cuts.  A second contraction from the returned singleton produces the
   labelled `K_2`, `P_3`, or `K_3` six-boundary kernels whenever connectivity
-  drops or a nontrivial cut has an endpoint-missing side.  The sharp finite
-  screen and exact excess identities close every connected non-six-full
-  opposite shore and bound every non-six-full component of a split shore by
-  two vertices.  The live repair is now to eliminate the self-similar
-  anchored quotient, handle a first cut met on both sides by both original
-  endpoints, or localise density across the remaining large six-full
-  components.  The alternative low-side cases still require a
-  near-universal edge-completion lemma preserving five-connectivity.  A
-  smaller arbitrary side is not enough unless it retains the high-excess
-  inequality.
+  drops or a nontrivial cut has an endpoint-missing side.  Exact missed-root
+  mass is now at most two, so every kernel shore contains a six-full
+  component.  A separately implemented exhaustive screen of 145,034 finite
+  hosts, combined with a host-level portal-splitting argument, eliminates
+  every multiple-six-full `P_3,K_3` shore.  The sole multi-six-full kernel
+  survivor is `K_2` with two six-full components and at most seven boundary
+  edges.  Another exact `K_2` family has one six-full component and one full
+  edge missing the degree-five endpoint.  The both-endpoints branch now has
+  boundary size at most eleven edges, with a literal `K_4` core only at
+  equality.
+
+  The live repair is therefore to control one unbounded six-full component,
+  the self-similar anchored quotient, the two exact `K_2` residual families,
+  or a both-endpoints separation with at most eleven boundary edges.  In
+  particular, the one-six-full-only `K_2,P_3,K_3` rows remain open; they must
+  not be omitted from the endpoint.  The alternative low-side cases still
+  require a near-universal edge-completion lemma preserving
+  five-connectivity.  A smaller arbitrary side is not enough unless it
+  retains the high-excess inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its

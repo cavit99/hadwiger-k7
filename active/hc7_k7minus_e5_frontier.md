@@ -189,6 +189,22 @@ then with minimum size.  The following chain is now proved.
     non-six-full opposite component.  In a split opposite shore, every
     non-six-full component is a full singleton or full edge of order at most
     two.  This does not bound the six-full components.
+17. The audited
+    [six-boundary localisation](hc7_k7minus_e5_six_boundary_localisation.md)
+    combines exact missed-root mass with a separately implemented exhaustive
+    [extension screen](../results/hc7_k7minus_e5_six_boundary_extension_screen.md).
+    All components missing any fixed root have aggregate order at most two,
+    so every kernel shore contains a six-full component.  Multiple six-full
+    components are impossible for the `P_3,K_3` kernels.  Either their
+    opposite shore is one six-full component, or deleting five boundary
+    roots exposes one degree-five singleton and one connected central
+    component.  The only
+    multi-six-full kernel survivor is `K_2` with exactly two six-full
+    components and at most seven boundary edges.  A second `K_2` equality
+    family has one six-full component and one full edge missing the
+    degree-five endpoint.  In the both-endpoints branch the lifted
+    six-boundary has at most eleven edges; only equality forces the displayed
+    `K_4` core.
 
 Consequently one may choose with minimum order a component `C` behind a
 five-cut `S` such that
@@ -204,7 +220,7 @@ three-component boundary has at most six edges.  This minimum high-excess
 lobe is the strongest coherent endpoint of the present reduction.
 
 For the two-singleton three-component branch, the stronger endpoints in
-items 7--16 supersede the generic description: the remaining local
+items 7--17 supersede the generic description: the remaining local
 object is three or four degree-five leaf roots with distinct representatives
 in the dense component.  Each has one neighbour in `G[S]` and exactly two
 neighbours in the dense component, and its three neighbours in the closed
@@ -295,14 +311,19 @@ in the four-connected quotient gives the labelled `P_3` or `K_3` kernel.
 The sharp finite screen and the exact excess identities eliminate every
 connected opposite component missing one of the six new boundary vertices.
 In a split opposite shore, each component missing a boundary vertex is a
-full singleton or full edge of order at most two.
+full singleton or full edge of order at most two.  The aggregate missed-root
+bound then forces at least one six-full component and bounds their
+multiplicity.  The exact extension screen and a host-level portal-splitting
+argument eliminate every multiple-six-full `P_3,K_3` shore.
 
 The exact surviving alternatives are now: the second quotient repeats the
 anchored singleton-cut normal form; every eligible nontrivial cut is met on
-both sides by both original contraction endpoints; or the kernel's opposite
-shore has several bounded non-six-full components, one or more large
-six-full components, or both.  The genuine two-six-full case remains a
-density-sensitive labelled split.  Aggregate contact alone is not enough.
+both sides by both original contraction endpoints; or a kernel has one
+unbounded six-full component, a self-similar singleton exterior, the
+`K_2` one-six-full/full-edge equality, or the `K_2` two-six-full family with
+at most seven boundary edges.  The both-endpoints boundary has at most
+eleven edges, but the `K_4` core occurs only at equality.  Aggregate contact
+alone is not enough.
 
 ## 4. Recorded nonclosures
 
@@ -364,10 +385,14 @@ ingredient.
   sides are eliminated.  The later second-contraction theorem converts a
   connectivity drop or an endpoint-missing nontrivial cut into one of three
   sharp labelled kernels and closes the connected non-six-full opposite
-  shore.  It does not justify iteration through a larger contracted anchor,
+  shore.  The later audited localisation bounds the aggregate missed-root
+  mass, forces a six-full component, and eliminates every multiple-six-full
+  `P_3,K_3` shore.  Among multiple-six-full shores only the exact `K_2`
+  family recorded above remains; the one-six-full `P_3,K_3` rows and their
+  singleton-exterior five-cuts are still open.
+  It still does not justify iteration through a larger contracted anchor,
   handle a cut met on both sides by both original endpoints, or localise
-  density across several opposite components.  Only each individual
-  non-six-full component has bounded labelled structure.
+  density inside a single unbounded six-full component.
   The
   [contact barrier](../barriers/hc7_e5_triangle_lift_contact_barrier.md)
   shows that even two components complete to all six boundary vertices do

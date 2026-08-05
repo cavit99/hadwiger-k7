@@ -55,9 +55,18 @@ These are audited route nonclosures, not constructional counterexamples:
   now forced to have one singleton side and a high-excess side of order
   exactly one above the selected lobe; all equal-order alternatives are
   eliminated.  A non-six-full component also gives a small-side companion
-  five-cut.  The unresolved step is to eliminate that larger singleton
-  exterior for one safe contraction, or split the two-six-full branch by
-  a density-sensitive labelled model.
+  five-cut.  Exact missed-root mass is at most two, so every labelled
+  `K_2,P_3,K_3` kernel shore contains a six-full component.  An independently
+  checked finite extension screen and an unbounded portal-splitting argument
+  eliminate every multiple-six-full `P_3,K_3` shore.  The remaining kernel
+  cases are one unbounded six-full component, a self-similar singleton
+  exterior, the `K_2` one-six-full/full-edge equality, and the `K_2`
+  two-six-full family with at most seven boundary edges.  Before the kernel
+  construction, the anchored singleton quotient may repeat, or both original
+  endpoints may meet both sides of every eligible separation; that boundary
+  has at most eleven edges, with a `K_4` core only at equality.  The next
+  step must use internal density or preserve the original endpoint-incidence
+  history through a singleton reduction.
   The auxiliary statement remains unproved and is not a second primary
   target.
 

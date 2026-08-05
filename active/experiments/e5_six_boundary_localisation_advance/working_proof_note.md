@@ -1,9 +1,15 @@
 # E5 six-boundary density localisation after `ff363c1`
 
-**Status:** new working reduction, not yet independently audited and not yet
-committed.  The finite statements below are exact exhaustive screens, but the
-new unbounded deductions still require a separate mathematical audit before
-promotion.  This note does not prove `(E5)`.
+**Status:** imported working artefact, preserved from commit `756ccf9`.  It is
+not part of the authoritative proof spine.  Its sound finite statements and
+unbounded deductions have been restated, independently checked and audited in
+the promoted
+[finite screen](../../../results/hc7_k7minus_e5_six_boundary_extension_screen.md)
+and the corrected
+[localisation reduction](../../hc7_k7minus_e5_six_boundary_localisation.md).
+Section 10 below is not exhaustive: it omits the one-six-full kernel rows and
+the both-endpoints cases with at most ten boundary edges.  This note does not
+prove `(E5)` and must not be cited instead of the corrected reduction.
 
 This note starts from the promoted six-boundary kernel reduction and finite
 kernel theorem at commit
@@ -686,4 +692,4 @@ recorded output:
 ```
 
 The compiled binary hash is environment-specific; the source and exact
-stdout are the durable artifacts.
+stdout are the durable artefacts.
