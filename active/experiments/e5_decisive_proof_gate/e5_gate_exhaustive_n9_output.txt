@@ -1,0 +1,1 @@
+n=9 m=29 total=8347680 target_free=0 five_connected_target_free=0 seconds=4.28178

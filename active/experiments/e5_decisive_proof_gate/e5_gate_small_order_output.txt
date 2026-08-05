@@ -1,0 +1,1 @@
+n8 exact total=3276 5conn=2996 negative=0

@@ -1,0 +1,2 @@
+K2-one-full trials=12000 built=307 five=210 pos=210 unk=0 neg=0 maxnodes=1989880
+K2-two-full trials=12000 built=65 five=44 pos=44 unk=0 neg=0 maxnodes=114964

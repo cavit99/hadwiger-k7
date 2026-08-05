@@ -1,0 +1,20 @@
+#include <array>
+#include <algorithm>
+#include <bit>
+#include <cstdint>
+#include <iostream>
+#include <map>
+#include <set>
+#include <vector>
+using U=uint16_t;struct G{int n;std::vector<U>a;};void add(G&g,int x,int y){g.a[x]|=U(1)<<y;g.a[y]|=U(1)<<x;}int pc(U x){return std::popcount((unsigned)x);}struct Search{const G&g;U all;std::vector<char>co;std::vector<U>ex;std::array<U,7>b{};Search(const G&x):g(x),all((U(1)<<x.n)-1),co(U(1)<<x.n),ex(U(1)<<x.n){for(U s=1;s<=all;s++){U q=s&-s;int v=std::countr_zero((unsigned)q);ex[s]=ex[s^q]|g.a[v];U seen=q,fr=q;while(fr){U z=fr&-fr;fr^=z;int w=std::countr_zero((unsigned)z);U nx=g.a[w]&s&~seen;seen|=nx;fr|=nx;}co[s]=seen==s;}}bool dfs(U r,int k,int m){if(k==7)return true;if(pc(r)<7-k)return false;U p=r&-r,rest=r^p;int maxsz=pc(r)-(7-k)+1;for(int sz=1;sz<=maxsz;sz++){for(U s=rest;;s=(s-1)&rest){if(pc(s)==sz-1){U q=s|p;if(co[q]){int mm=m;for(int i=0;i<k;i++)if(!(ex[q]&b[i])){if(++mm>1)break;}if(mm<=1){b[k]=q;if(dfs(r^q,k+1,mm))return true;}}}if(!s)break;}}return dfs(r^p,k,m);}bool run(){return dfs(all,0,0);}};
+std::vector<std::pair<int,int>> be(){std::vector<std::pair<int,int>>e;for(int i=0;i<6;i++)for(int j=i+1;j<6;j++)e.push_back({i,j});return e;}
+G host(int mask,int code){G g{11,std::vector<U>(11)};auto e=be();for(int i=0;i<15;i++)if(mask>>i&1)add(g,e[i].first,e[i].second);add(g,6,7);for(int r:{0,1,2,3})add(g,6,r);for(int r:{0,1,4,5})add(g,7,r);int A=8,B=9,D=10;add(g,A,B);add(g,A,0);for(int r=0;r<6;r++)add(g,D,r);int z=code;for(int r=1;r<6;r++){int t=1+z%3;z/=3;if(t&1)add(g,A,r);if(t&2)add(g,B,r);}return g;}
+G quotient(int mask){G g{10,std::vector<U>(10)};auto e=be();for(int i=0;i<15;i++)if(mask>>i&1)add(g,e[i].first,e[i].second);add(g,6,7);for(int r:{0,1,2,3})add(g,6,r);for(int r:{0,1,4,5})add(g,7,r);for(int x:{8,9})for(int r=0;r<6;r++)add(g,x,r);return g;}
+int main(){auto e=be();std::vector<int>masks;for(int m=0;m<(1<<15);m++){if(!(m&1))continue;bool bad=false;for(int i=1;i<5;i++)if(m>>i&1)bad=true;if(bad)continue;Search s(quotient(m));if(!s.run())masks.push_back(m);}std::cout<<"negative quotient masks="<<masks.size()<<"\n";uint64_t neg=0;std::map<int,int> second_size, first_size, bothcount;std::set<int> codes;int max_second=0,min_second=9;std::map<int,int> maskneg;
+for(int m:masks){for(int code=0;code<243;code++){Search s(host(m,code));if(!s.run()){neg++;codes.insert(code);maskneg[m]++;int z=code,sa=1,sb=0,bo=0;for(int r=1;r<6;r++){int t=1+z%3;z/=3;if(t&1)sa++;if(t&2)sb++;if(t==3)bo++;}second_size[sb]++;first_size[sa]++;bothcount[bo]++;max_second=std::max(max_second,sb);min_second=std::min(min_second,sb);}}}
+std::cout<<"negative split hosts="<<neg<<" distinct codes="<<codes.size()<<" second size range="<<min_second<<".."<<max_second<<"\nsecond sizes:";for(auto[a,b]:second_size)std::cout<<' '<<a<<':'<<b;std::cout<<"\nfirst sizes:";for(auto[a,b]:first_size)std::cout<<' '<<a<<':'<<b;std::cout<<"\nboth counts:";for(auto[a,b]:bothcount)std::cout<<' '<<a<<':'<<b;std::cout<<"\n";
+// Check candidate structural properties.
+for(int prop=0;prop<8;prop++){int bad=0;for(int code:codes){int z=code;std::array<int,6>c{};c[0]=1;for(int r=1;r<6;r++){c[r]=1+z%3;z/=3;}bool ok=true;switch(prop){case 0: ok=std::count_if(c.begin(),c.end(),[](int x){return x&2;})<=3;break;case 1:ok=std::count_if(c.begin(),c.end(),[](int x){return x==3;})<=1;break;case 2:ok=(c[2]==2||c[3]==2||c[4]==2||c[5]==2);break;case 3:ok=!(c[2]&2)||!(c[3]&2);break;case 4:ok=!(c[4]&2)||!(c[5]&2);break;case 5:ok=((c[2]&2)+(c[3]&2)<=2)||((c[4]&2)+(c[5]&2)<=2);break;case 6:ok=std::count_if(c.begin(),c.end(),[](int x){return x&2;})<=4;break;case 7:ok=std::count_if(c.begin()+1,c.end(),[](int x){return x==2;})>=1;break;}if(!ok)bad++;}std::cout<<"prop"<<prop<<" badcodes="<<bad<<"\n";}
+// list codes with max second contacts
+for(int code:codes){int z=code,sb=0;std::array<int,6>c{};c[0]=1;for(int r=1;r<6;r++){c[r]=1+z%3;z/=3;if(c[r]&2)sb++;}if(sb==max_second){std::cout<<"max code "<<code<<" contacts";for(int r=0;r<6;r++)std::cout<<' '<<c[r];std::cout<<"\n";}}
+}

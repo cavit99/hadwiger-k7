@@ -1,0 +1,2 @@
+negative quotient masks k5-7=69
+total=5718 struct=4896 negative=0 5conn_negative=0 maxnodes=3802 sec=0.690625

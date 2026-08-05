@@ -1,0 +1,4 @@
+P3 orient=0 built=17 five=17 pos=17 unk=0 neg=0 maxnodes=325083
+P3 orient=1 built=1166 five=1026 pos=1026 unk=0 neg=0 maxnodes=1569882
+K3 orient=0 built=24 five=22 pos=22 unk=0 neg=0 maxnodes=319353
+K3 orient=1 built=1318 five=1079 pos=1079 unk=0 neg=0 maxnodes=1470289

@@ -1,0 +1,5 @@
+boundary_mask 0 k=1 missing_variable=2
+boundary_mask 1 k=2 missing_variable=3
+boundary_mask 2 k=2 missing_variable=3
+boundary_mask 3 k=3 missing_variable=4
+total=35960 struct=2268 5conn=2268 minor=2268 negative=0 sec=1.32158

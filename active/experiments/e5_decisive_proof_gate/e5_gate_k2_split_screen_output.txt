@@ -1,0 +1,36 @@
+negative quotient masks=181
+negative split hosts=16840 distinct codes=194 second size range=0..5
+second sizes: 0:181 1:1810 2:4710 3:5464 4:3717 5:958
+first sizes: 1:181 2:1226 3:3208 4:4836 5:4825 6:2564
+both counts: 0:4610 1:7670 2:4014 3:532 4:14
+prop0 badcodes=79
+prop1 badcodes=86
+prop2 badcodes=39
+prop3 badcodes=87
+prop4 badcodes=87
+prop5 badcodes=39
+prop6 badcodes=23
+prop7 badcodes=23
+max code 121 contacts 1 2 2 2 2 2
+max code 122 contacts 1 3 2 2 2 2
+max code 124 contacts 1 2 3 2 2 2
+max code 125 contacts 1 3 3 2 2 2
+max code 130 contacts 1 2 2 3 2 2
+max code 131 contacts 1 3 2 3 2 2
+max code 133 contacts 1 2 3 3 2 2
+max code 134 contacts 1 3 3 3 2 2
+max code 148 contacts 1 2 2 2 3 2
+max code 149 contacts 1 3 2 2 3 2
+max code 151 contacts 1 2 3 2 3 2
+max code 157 contacts 1 2 2 3 3 2
+max code 160 contacts 1 2 3 3 3 2
+max code 202 contacts 1 2 2 2 2 3
+max code 203 contacts 1 3 2 2 2 3
+max code 205 contacts 1 2 3 2 2 3
+max code 211 contacts 1 2 2 3 2 3
+max code 214 contacts 1 2 3 3 2 3
+max code 229 contacts 1 2 2 2 3 3
+max code 230 contacts 1 3 2 2 3 3
+max code 232 contacts 1 2 3 2 3 3
+max code 238 contacts 1 2 2 3 3 3
+max code 241 contacts 1 2 3 3 3 3
