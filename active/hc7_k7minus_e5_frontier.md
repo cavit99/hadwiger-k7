@@ -173,6 +173,22 @@ then with minimum size.  The following chain is now proved.
     whose neighbourhood is the cut, and one high-excess component of
     order `|A|+1`.  The degree-five triangle count and the central
     five-cut eliminate every order-`|A|` alternative.
+16. The audited
+    [second-contraction kernel reduction](hc7_k7minus_e5_s3_second_contraction_kernel_reduction.md)
+    starts from the returned singleton.  Contracting it to the common
+    anchor loses at most four edges.  If this drops four-connectivity, an
+    adjacent returned singleton gives an exact labelled `K_2` kernel behind
+    a six-set.  If four-connectivity survives and a nontrivial four-cut has
+    a side missing an original contraction endpoint, the selected-lobe
+    potential gives a labelled `P_3` or `K_3` kernel.  The promoted
+    computer-assisted
+    [six-boundary screen](../results/hc7_k7minus_e5_six_boundary_kernel_screen.md)
+    has 11,914 independently checked certificates and sharp thresholds for
+    all six five-full and six-full cases.  Combined with the exact excess
+    identities, it eliminates every kernel configuration with one connected
+    non-six-full opposite component.  In a split opposite shore, every
+    non-six-full component is a full singleton or full edge of order at most
+    two.  This does not bound the six-full components.
 
 Consequently one may choose with minimum order a component `C` behind a
 five-cut `S` such that
@@ -188,7 +204,7 @@ three-component boundary has at most six edges.  This minimum high-excess
 lobe is the strongest coherent endpoint of the present reduction.
 
 For the two-singleton three-component branch, the stronger endpoints in
-items 7--15 supersede the generic description: the remaining local
+items 7--16 supersede the generic description: the remaining local
 object is three or four degree-five leaf roots with distinct representatives
 in the dense component.  Each has one neighbour in `G[S]` and exactly two
 neighbours in the dense component, and its three neighbours in the closed
@@ -240,7 +256,7 @@ descent.  The audited anchored reduction supplies the two relevant rooted
 models and all three--two carriers separately, but does not synchronise
 them.
 
-Within the crossing `q_t`-singleton route, items 9--15 remove the four-root
+Within the crossing `q_t`-singleton route, items 9--16 remove the four-root
 row and the only internally four-connected obstruction in the next row
 `s=3`.  They also eliminate or reclassify its two-vertex order-three atom.
 In the exact residue put `F=G-{x,y,t,q_t}` and `Z=S-{t}`.  After changing
@@ -267,18 +283,26 @@ six-full; the original singleton twins then exclude four complementary
 components.  There are exactly two or three.
 
 For every other component and each triangle vertex which it meets, an edge
-from that triangle vertex into a chosen six-full component is
-density-safe.  Its contraction gives a four-connected proper minor and
-each returned four-cut lifts to an exact five-cut through the two ends.
-Every returned cut is now forced into the exact normal form consisting of
-a singleton and a high-excess component of order `|A|+1`; an equal-order
-high component is impossible.  If a non-six-full component exists, its
-unique missed triangle vertex also gives a five-cut with a side of order
-at most two.  The smallest current repair is to uncross these two
-five-cuts with the six-cut so that some safe contraction returns an
-order-`|A|` high side, which is already excluded.  The exceptional
-two-component, both-six-full branch instead needs a density-sensitive
-labelled split.  Aggregate contact alone is not enough.
+from that triangle vertex into a chosen six-full component is density-safe.
+Its contraction gives a four-connected proper minor and each returned
+four-cut lifts to an exact five-cut through the two ends.  Every returned
+cut has a singleton and a high-excess component of order `|A|+1`; an
+equal-order high component is impossible.
+
+The returned singleton permits one further contraction.  Connectivity
+failure gives the labelled `K_2` kernel; an endpoint-missing nontrivial cut
+in the four-connected quotient gives the labelled `P_3` or `K_3` kernel.
+The sharp finite screen and the exact excess identities eliminate every
+connected opposite component missing one of the six new boundary vertices.
+In a split opposite shore, each component missing a boundary vertex is a
+full singleton or full edge of order at most two.
+
+The exact surviving alternatives are now: the second quotient repeats the
+anchored singleton-cut normal form; every eligible nontrivial cut is met on
+both sides by both original contraction endpoints; or the kernel's opposite
+shore has several bounded non-six-full components, one or more large
+six-full components, or both.  The genuine two-six-full case remains a
+density-sensitive labelled split.  Aggregate contact alone is not enough.
 
 ## 4. Recorded nonclosures
 
@@ -337,9 +361,13 @@ ingredient.
   components, leaving two or three and at least one six-full component.
   Safe triangle-to-full contractions then force returned cuts with one
   singleton side and an order-`|A|+1` high side; all equal-order returned
-  sides are eliminated.  A non-six-full component supplies a second exact
-  five-cut with a side of order at most two, sharpening the live task to a
-  three-cut corner-localisation problem.
+  sides are eliminated.  The later second-contraction theorem converts a
+  connectivity drop or an endpoint-missing nontrivial cut into one of three
+  sharp labelled kernels and closes the connected non-six-full opposite
+  shore.  It does not justify iteration through a larger contracted anchor,
+  handle a cut met on both sides by both original endpoints, or localise
+  density across several opposite components.  Only each individual
+  non-six-full component has bounded labelled structure.
   The
   [contact barrier](../barriers/hc7_e5_triangle_lift_contact_barrier.md)
   shows that even two components complete to all six boundary vertices do

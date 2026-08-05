@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 4 August 2026
+**Last updated:** 5 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.
@@ -225,12 +225,26 @@ the already eliminated nonadjacent-`t` reorientation.  Moreover every
 non-six-full component has order at most two and supplies the companion
 five-cut obtained by deleting its unique missed triangle vertex from the
 six-cut; such a component necessarily exists in the three-component case.
-The remaining repair is to eliminate the order-`|A|+1` singleton-exterior
-form for at least one safe contraction, or handle the two-six-full branch
-by a density-sensitive labelled split.  Computation-free eight-vertex
-barriers show that neither contracted contacts nor even the
-five-connected local pattern suffices without density.  None of these
-statements proves `(E5)`.
+The returned singleton now supports a second density-safe contraction.
+If contracting it to the common anchor drops four-connectivity, an adjacent
+returned singleton gives an exact labelled `K_2` kernel behind a six-set.
+If four-connectivity survives and a nontrivial four-cut has a side missing
+one original contraction endpoint, exact potential accounting instead gives
+a labelled `P_3` or `K_3` kernel.  A promoted, independently checked finite
+screen gives sharp boundary thresholds for all six five-full and six-full
+kernel cases.  Together with the exact excess identities, it eliminates
+every kernel configuration whose opposite shore is one connected component
+missing a boundary root.  In a split shore, every non-six-full component is
+now a full singleton or full edge of order at most two.
+
+This is not an exhaustive kernel reduction.  Three branches remain: the
+four-connected quotient may repeat the singleton-plus-connected-remainder
+normal form; a first nontrivial cut may have both original endpoints meeting
+both sides; and one or more six-full components may remain large.  The last
+case includes the genuine two-six-full density-sensitive labelled split.
+Computation-free eight-vertex barriers show that neither contracted contacts
+nor even the five-connected local pattern suffices without density.  None of
+these statements proves `(E5)`.
 
 An accepted result must prove at least one of:
 
@@ -274,12 +288,18 @@ The four exact nonclosures to overcome are:
   complementary components are also impossible.  Thus a lifted cut has
   two or three components and one is six-full.  Density-safe contractions
   from the triangle into that component return a new family of exact
-  five-cuts.  The live repair is to uncross this family into a labelled
-  split of the resulting `K_7^vee` model, an explicit `K_7^-` model, or
-  strict lexicographic high-excess descent.  The
-  alternative low-side rows still require a near-universal edge-completion
-  lemma preserving five-connectivity.  A smaller arbitrary side is not
-  enough unless it retains the high-excess inequality.
+  five-cuts.  A second contraction from the returned singleton produces the
+  labelled `K_2`, `P_3`, or `K_3` six-boundary kernels whenever connectivity
+  drops or a nontrivial cut has an endpoint-missing side.  The sharp finite
+  screen and exact excess identities close every connected non-six-full
+  opposite shore and bound every non-six-full component of a split shore by
+  two vertices.  The live repair is now to eliminate the self-similar
+  anchored quotient, handle a first cut met on both sides by both original
+  endpoints, or localise density across the remaining large six-full
+  components.  The alternative low-side cases still require a
+  near-universal edge-completion lemma preserving five-connectivity.  A
+  smaller arbitrary side is not enough unless it retains the high-excess
+  inequality.
 
 Kawarabayashi's contractible-edge theorem for odd connectivity and
 `K_4^-`-free graphs supplies a relevant proof architecture, but its

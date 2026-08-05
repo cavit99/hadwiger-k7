@@ -8270,6 +8270,57 @@ does_not_prove = [
 keywords = ["E5", "six-full component", "safe contraction", "singleton returned cut", "companion five-cut", "corner localisation"]
 
 [[claims]]
+id = "hc7.k7minus_e5_six_boundary_kernel_screen"
+title = "Sharp finite screen for three labelled six-boundary kernels"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_e5_six_boundary_kernel_screen.md"
+source_heading = "Theorem 2.1 (labelled six-boundary kernel screen)"
+active = false
+audit = "results/hc7_k7minus_e5_six_boundary_kernel_screen_audit.md"
+expected_source_sha256 = "8d88540972595703378926f57b99270603d51ec1123976e9d7a024a6f3535ea1"
+scope = "computer-assisted exhaustive labelled hosts of order nine or ten formed from a six-vertex boundary, one K2, P3 or K3 low kernel, and one five-full or six-full representative"
+label_fidelity = "all six boundary labels, low-kernel contacts, missed-root choices and branch-set masks are explicit"
+conclusions = [
+  "the five-full K2, P3 and K3 cases force K7-minus at boundary edge thresholds 13, 13 and 12",
+  "the six-full K2, P3 and K3 cases force K7-minus at boundary edge thresholds 13, 11 and 10",
+  "all six thresholds are sharp within their labelled families",
+  "11914 positive cases have explicit independently checked seven-branch-set certificates",
+]
+does_not_prove = [
+  "that every live E5 configuration reduces to one of the three kernels",
+  "an unbounded contraction or density-localisation theorem",
+  "E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["K7 minus", "E5", "six-boundary kernel", "K2", "P3", "K3", "computer-assisted certificates", "sharp threshold"]
+
+[[claims]]
+id = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+title = "Second contractions expose three labelled six-boundary kernels"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_e5_s3_second_contraction_kernel_reduction.md"
+source_heading = "Second contractions and labelled six-boundary kernels"
+active = false
+audit = "active/hc7_k7minus_e5_s3_second_contraction_kernel_reduction_audit.md"
+expected_source_sha256 = "3218c292213fbf7e9cf6e7e6a38b2c3cef0c05801a4359cbd956a28daf3ef93e"
+scope = "the Proposition 5 returned-singleton endpoint inside the selected minimum-E5 s=3 residue"
+label_fidelity = "the original contraction endpoints, common anchor, returned degree-five singletons, six-boundary labels and selected lobe potential remain host objects"
+conclusions = [
+  "a connectivity drop at the returned-singleton contraction exposes the labelled K2 kernel",
+  "an eligible endpoint-missing nontrivial four-separation exposes the labelled P3 or K3 kernel",
+  "the exact excess identities and finite screen eliminate every connected opposite component missing one boundary root",
+  "every non-six-full component in a split opposite shore is a full singleton or full edge of order at most two",
+]
+does_not_prove = [
+  "termination of the self-similar anchored singleton quotient",
+  "the case in which every eligible nontrivial separation is met on both sides by both original endpoints",
+  "density localisation across several bounded non-six-full components or arbitrarily large six-full components",
+  "the kernel-localisation target, E5 or the active seven-connected 4n-2 target",
+]
+keywords = ["E5", "second contraction", "returned singleton", "six-boundary kernel", "high-excess descent", "self-similar quotient"]
+
+[[claims]]
 id = "hc7.barrier.e5_triangle_lift_contact"
 title = "Two full components do not close the lifted triangle contact quotient"
 kind = "barrier"
@@ -15015,6 +15066,30 @@ expected_stdout = [
   "VERIFIED: the quotient has no K_7^- minor",
 ]
 
+[[verifiers]]
+id = "k7minus-e5-six-boundary-kernel-certificates"
+path = "results/hc7_k7minus_e5_six_boundary_kernel_certificate_check.py"
+sha256 = "05e9ddc3254d14745118cc2dc98b029e3e402e27ff40b7e39ee4b4356fb3e3c2"
+timeout = 30
+expected_stdout = [
+  "records=11914",
+  "adjacent_singletons_k2_five_full=726",
+  "crossing_twins_p3_five_full=726",
+  "crossing_edge_k3_five_full=3456",
+  "adjacent_singletons_k2_six_full=121",
+  "crossing_twins_p3_six_full=1941",
+  "crossing_edge_k3_six_full=4944",
+  "quotient_K7=452 quotient_exact_K7minus=11462",
+  "sharpness_adjacent_singletons_k2_five_full: mask=4095 missed_root=3 partitions=750 target_free",
+  "sharpness_crossing_twins_p3_five_full: mask=29439 missed_root=5 partitions=11880 target_free",
+  "sharpness_crossing_edge_k3_five_full: mask=13055 missed_root=5 partitions=11880 target_free",
+  "sharpness_adjacent_singletons_k2_six_full: mask=23550 missed_root=6 partitions=750 target_free",
+  "sharpness_crossing_twins_p3_six_full: mask=12927 missed_root=6 partitions=11880 target_free",
+  "sharpness_crossing_edge_k3_six_full: mask=6463 missed_root=6 partitions=11880 target_free",
+  "certificate_sha256=4b148b7a4bd2845e1311e5e67a1d6706048c3791d6cd29bf12676cb37e5fd905",
+  "PASS independent six-boundary kernel certificate check",
+]
+
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.k7minus_degree7_safe_contraction"
@@ -15094,6 +15169,24 @@ kind = "uses"
 note = "The sole singleton-triangle residue has a six-full component and yields a new family of density-safe contractions and exact five-cuts."
 
 [[relations]]
+source = "hc7.target.k7minus_e5_extremal"
+target = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+kind = "uses"
+note = "The returned-singleton endpoint yields three labelled six-boundary kernels in the connectivity-drop and endpoint-missing cases and closes every connected non-six-full opposite shore."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+target = "hc7.k7minus_e5_s3_six_full_contraction_reduction"
+kind = "uses"
+note = "Proposition 5 supplies the common-anchor four-connected quotient, every returned degree-five singleton and the exact selected-lobe potential."
+
+[[relations]]
+source = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+target = "hc7.k7minus_e5_six_boundary_kernel_screen"
+kind = "uses"
+note = "The six sharp finite thresholds convert every connected non-six-full kernel shore into a K7-minus model or strict high-excess descent."
+
+[[relations]]
 source = "hc7.k7minus_e5_s3_high_misser_elimination"
 target = "hc7.k7minus_e5_s3_triangle_cut_refinement"
 kind = "uses"
@@ -15116,6 +15209,18 @@ source = "hc7.barrier.e5_six_full_local_structure"
 target = "hc7.k7minus_e5_s3_six_full_contraction_reduction"
 kind = "related_to"
 note = "The complement-of-P8 barrier retains five-connectivity and the exact local contact pattern but misses E5 density, showing that the contraction family must exploit density rather than local contacts alone."
+
+[[relations]]
+source = "hc7.barrier.e5_triangle_lift_contact"
+target = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+kind = "related_to"
+note = "The contact-only barrier explains why the surviving both-endpoints and six-full cases require uncontracted density rather than boundary incidence alone."
+
+[[relations]]
+source = "hc7.barrier.e5_six_full_local_structure"
+target = "hc7.k7minus_e5_s3_second_contraction_kernel_reduction"
+kind = "related_to"
+note = "The complement-of-P8 host retains the local five-connectivity pattern but not E5 density, delimiting the finite kernel screen's scope."
 
 [[relations]]
 source = "hc7.k7minus_e5_six_boundary_atomic_reduction"
