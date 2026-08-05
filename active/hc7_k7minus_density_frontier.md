@@ -318,12 +318,33 @@ then each shore contraction has exact surplus
                          q(G/X)=q(G)+2-\delta_X.
 \]
 
+The audited
+[`K_4`-reserve inequality](../results/hc7_k7minus_six_cut_k4_reserve_inequality.md)
+now adds a direct boundary restriction.  If the six-boundary contains a
+literal clique `Z` of order four and `S-Z=\{r,s\}`, then
+
+\[
+                 d_G(r)+d_G(s)
+                 \ge15+q(G)+\mathbf1_{rs\in E(G)}.    \tag{12}
+\]
+
+Thus the two vertices outside a boundary `K_4` cannot both have degree
+seven.  This is an unbounded theorem on the primary proof spine; it does
+not prove that every relevant boundary contains such a clique.
+
 The next theorem must therefore prove one of the following:
 
 1. one safe degree-seven edge is seven-contractible;
 2. the family of exact seven-cuts uncrosses to an explicit `K_7^-` model;
 3. an essential-edge shore is both density-eligible and contractible while
    retaining seven-connectivity.
+
+The immediate campaign is the strict-surplus `K_4`-reserve aggregation
+problem.  Combine (12) with the audited safe-edge cover and the exact
+essential-edge cuts to force either a boundary `K_4` with two degree-seven
+complementary vertices, an explicit `K_7^-` model from crossing cuts, or
+the shore contraction in outcome 3.  Success would eliminate `q(G)>0` and
+reduce the target to its exact-density layer.
 
 The live obstruction is precise.  A trace-one fragment may support a
 nested root swap rather than collapse to a singleton.  At an essential-edge
@@ -385,6 +406,14 @@ minimum enemy is now reduced to exact density, connectivity five, and one
 five-root reserve-or-high-excess-descent lemma.  The full audited chain,
 recorded nonclosures, and exact survivor are in the
 [auxiliary five-connected frontier](hc7_k7minus_e5_frontier.md).
+
+The decisive E5 gate found neither a proof nor a counterexample.  It did
+produce the direct inequality (12) and an audited
+[protected rooted-equality peel](../results/hc7_protected_rooted_k42_equality_peel.md).
+The latter preserves labels inside an exact rooted pair but has no proved
+host-reinsertion theorem.  Further E5-specific boundary enumeration is
+therefore frozen; only an unbounded transferable theorem or a genuine E5
+counterexample reopens it.
 
 ## 7. Frozen prior laboratories
 

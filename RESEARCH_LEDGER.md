@@ -86,6 +86,13 @@ GREEN internal audits.
   the sole cross-edge.  The boundary is `K_5^-`-minor-free, every closed
   shore is internally rooted-connected, and the shore contraction surplus
   is known exactly.
+- If such a six-boundary contains a literal `K_4` on `Z`, with remaining
+  vertices `r,s`, then the new audited reserve inequality gives
+  \[
+  d_G(r)+d_G(s)\ge15+q(G)+\mathbf1_{rs\in E(G)}.
+  \]
+  In particular, in the `4n-2` range the two complementary boundary
+  vertices cannot both have degree seven.
 
 These results replace the informal instruction to “place six surplus
 edges”.  A smallest enemy is now forced into a large, operation-free family
@@ -93,7 +100,21 @@ of exact six- and seven-separations with exact density accounting.
 
 ### 3. Immediate structural laboratory
 
-Two bounded attacks now meet at the same rooted obstruction.
+A six-round decisive gate has ended the open-ended E5 campaign.  It found
+neither a proof nor a counterexample, but it met the declared transfer
+criterion: the `K_4`-reserve inequality above is an unbounded theorem on the
+primary proof spine.  The immediate attack is now to aggregate this
+inequality over the essential-edge six-separations in a strict-surplus
+minimum `4n-2` enemy.  The target is to force either a boundary `K_4` whose
+two complementary vertices both have degree seven, an explicit `K_7^-`
+model from crossing cuts, or a density-eligible shore contraction which
+retains seven-connectivity.  Success would eliminate the positive-surplus
+layer and leave the exact `q(G)=0` case.
+
+The E5 and direct attacks still meet at the same rooted obstruction, but
+E5-specific boundary enumeration is frozen unless it proves an unbounded
+theorem transferable to the primary target or finds a genuine E5
+counterexample.
 
 The direct positive-surplus attack uses Mader's generalised atoms.  It
 reduces every nonsingleton atom to an edge, a three-vertex path, or a
@@ -251,6 +272,14 @@ eight-vertex barriers show that neither contracted contacts nor even the
 five-connected local pattern suffices without density.  None of these
 statements proves `(E5)`.
 
+The decisive gate also gives an audited protected peel for an internally
+four-connected rooted pair on the exact `4|V|-10` line with no rooted
+`K^*_{4,2}` model.  The peel preserves any specified labels and strictly
+decreases order while retaining equality.  It does not yet reduce an E5
+host: reinserting the smaller pair need not preserve the host's
+five-connectivity or external incidences.  The proposed four-root `K_6`
+placement theorem and terminal equality classification remain conjectural.
+
 An accepted result must prove at least one of:
 
 1. one density-preserving degree-seven edge is seven-contractible;
@@ -260,6 +289,10 @@ An accepted result must prove at least one of:
    seven-connected graph still at the `4n-2` threshold; or
 4. the five-root reserve-or-descent target holds, or its anchored
    four-root specialisation closes the exact two-singleton branch.
+
+The current preferred form of outcomes 1--3 is a `K_4`-reserve aggregation
+theorem for the strict-surplus safe-edge cover.  Outcome 4 remains a valid
+auxiliary route, but is not the immediate campaign.
 
 The four exact nonclosures to overcome are:
 

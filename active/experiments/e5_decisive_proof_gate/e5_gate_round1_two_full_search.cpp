@@ -9,7 +9,7 @@
 using U=uint32_t;
 struct Graph{int n;std::vector<U>adj;};
 void add(Graph&g,int a,int b){g.adj[a]|=U(1)<<b;g.adj[b]|=U(1)<<a;}
-int pc(U x){return std::popcount(x);} 
+int pc(U x){return std::popcount(x);}
 struct MinorSearch{
  const Graph&g;U all;std::vector<uint8_t>conn;std::vector<U>ext;std::array<U,7>bags{};uint64_t nodes=0;
  MinorSearch(const Graph&x):g(x),all((U(1)<<x.n)-1),conn(U(1)<<x.n),ext(U(1)<<x.n){
@@ -27,7 +27,7 @@ Graph base_actual(int mask,int uc,int ud){Graph g{13,std::vector<U>(13)};auto e=
  add(g,8,9);for(int i=10;i<13;i++)for(int j=i+1;j<13;j++)add(g,i,j);
  for(int x=8;x<13;x++)for(int r=1;r<6;r++)add(g,x,r);add(g,uc,0);add(g,ud,0);return g;}
 std::vector<std::pair<int,int>> maxvar(int uc,int ud){std::vector<std::pair<int,int>>e; e.push_back({8,9});for(int i=10;i<13;i++)for(int j=i+1;j<13;j++)e.push_back({i,j});for(int x=8;x<13;x++)for(int r=1;r<6;r++)e.push_back({x,r});e.push_back({uc,0});e.push_back({ud,0});return e;}
-void rem(Graph&g,int a,int b){g.adj[a]&=~(U(1)<<b);g.adj[b]&=~(U(1)<<a);} 
+void rem(Graph&g,int a,int b){g.adj[a]&=~(U(1)<<b);g.adj[b]&=~(U(1)<<a);}
 bool comp_conn_full(const Graph&g,int lo,int hi){U cm=0;for(int x=lo;x<hi;x++)cm|=U(1)<<x;U seen=cm&-cm,fr=seen;while(fr){U b=fr&-fr;fr^=b;int v=std::countr_zero(b);U nx=g.adj[v]&cm&~seen;seen|=nx;fr|=nx;}if(seen!=cm)return false;for(int r=0;r<6;r++)if(!(g.adj[r]&cm))return false;return true;}
 bool conn_del(const Graph&g,U del){U remm=((U(1)<<g.n)-1)&~del;U seen=remm&-remm,fr=seen;while(fr){U b=fr&-fr;fr^=b;int v=std::countr_zero(b);U nx=g.adj[v]&remm&~seen;seen|=nx;fr|=nx;}return seen==remm;}
 bool conn5(const Graph&g){for(int v=0;v<g.n;v++)if(pc(g.adj[v])<5)return false;U all=(U(1)<<g.n)-1;for(U s=0;s<=all;s++){int k=pc(s);if(k<=4&&!conn_del(g,s))return false;}return true;}

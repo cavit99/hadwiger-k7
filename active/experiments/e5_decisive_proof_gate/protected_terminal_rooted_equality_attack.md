@@ -221,7 +221,7 @@ This classification was not promoted because the exact primary-source equality t
 
 The classification would be completed by the following unbounded placement statement.
 
-> **Four-root `K_6`-placement theorem.**  
+> **Four-root `K_6`-placement theorem.**
 > Let `J` be four-connected and let `Z` induce `K_4`. If `J` has a `K_6` minor, then `J` has a `Z`-rooted `K_{4,2}` model.
 
 No counterexample appeared in small-order and random probes, but no unbounded proof was obtained.

@@ -14,7 +14,7 @@ struct Graph {
  int n; std::vector<U> adj;
 };
 void add(Graph&g,int a,int b){g.adj[a]|=U(1)<<b; g.adj[b]|=U(1)<<a;}
-int pc(U x){return std::popcount(x);} 
+int pc(U x){return std::popcount(x);}
 
 bool connected_after_delete(const Graph&g,U del){
  U rem=((U(1)<<g.n)-1)&~del; if(!rem) return true;
@@ -66,7 +66,7 @@ struct MinorSearch {
   // pivot unused
   return dfs(rem^pivot,nb,miss);
  }
- bool run(){return dfs(all,0,0);} 
+ bool run(){return dfs(all,0,0);}
 };
 
 std::vector<std::pair<int,int>> var_edges(int c){
@@ -97,7 +97,7 @@ bool C_connected_sixfull(const Graph&g,int c){
 
 int main(){
  auto start=std::chrono::steady_clock::now();
- uint64_t total=0,structok=0,connok=0,minorpos=0,negative=0; 
+ uint64_t total=0,structok=0,connok=0,minorpos=0,negative=0;
  for(int bmask=0;bmask<4;bmask++){
   int k=1+pc(bmask); int c=4; auto ve=var_edges(c); int maxe=ve.size(); int required=4*c+13-k; int missing=maxe-required;
   std::cout<<"boundary_mask "<<bmask<<" k="<<k<<" missing_variable="<<missing<<"\n";
@@ -114,7 +114,7 @@ int main(){
     else {negative++; std::cout<<"NEGATIVE candidate bmask="<<bmask<<" missing:";for(int x:choose)std::cout<<' '<<x;std::cout<<" nodes="<<ms.nodes<<"\n";}
     return;
    }
-   for(int i=st;i<=maxe-(missing-pos);i++){choose[pos]=i;rec(pos+1,i+1);} 
+   for(int i=st;i<=maxe-(missing-pos);i++){choose[pos]=i;rec(pos+1,i+1);}
   };
   rec(0,0);
  }

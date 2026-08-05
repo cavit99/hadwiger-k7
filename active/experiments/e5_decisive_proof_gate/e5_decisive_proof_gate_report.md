@@ -1,7 +1,7 @@
 # Decisive E5 proof gate
 
-**Repository baseline:** `2af5d1c2c0080acece7a71f976f6456f273bdf66`  
-**Gate length:** six focused rounds  
+**Repository baseline:** `2af5d1c2c0080acece7a71f976f6456f273bdf66`
+**Gate length:** six focused rounds
 **Status:** E5 is not proved; no counterexample was found. The gate nevertheless produced two unbounded coefficient-four theorems, one of which applies directly to the primary seven-connected `4n-2` target. The new deductions below have a written proof but have not yet received an independent repository audit.
 
 Throughout, `K_7^-` denotes `K_7` with one edge deleted.
@@ -45,13 +45,13 @@ Thus every labelled graph at the exact E5 density on eight or nine vertices alre
 The minimum live lobe has `a>=8`, so the smallest kernel hosts have order fifteen. Targeted generation retained the exact kernel contacts, exact total size, five-connectivity, and the current boundary restrictions.
 
 ```text
-K2-one-full: trials=12000 built=307 five=210 pos=210 unk=0 neg=0
-K2-two-full: trials=12000 built=65 five=44 pos=44 unk=0 neg=0
+K2-one-full: trials=12000 built=290 five=199 pos=199 unk=0 neg=0
+K2-two-full: trials=12000 built=56 five=37 pos=37 unk=0 neg=0
 
-P3 favourable:   built=17   five=17   pos=17   neg=0
-P3 other:         built=1166 five=1026 pos=1026 neg=0
-K3 favourable:   built=24   five=22   pos=22   neg=0
-K3 other:         built=1318 five=1079 pos=1079 neg=0
+P3 favourable:   built=18   five=18   pos=18   neg=0
+P3 other:         built=1094 five=957  pos=957  neg=0
+K3 favourable:   built=25   five=22   pos=22   neg=0
+K3 other:         built=1324 five=1089 pos=1089 neg=0
 ```
 
 These are stochastic falsification screens, not unbounded evidence.

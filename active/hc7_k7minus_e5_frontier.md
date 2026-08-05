@@ -205,6 +205,15 @@ then with minimum size.  The following chain is now proved.
     degree-five endpoint.  In the both-endpoints branch the lifted
     six-boundary has at most eleven edges; only equality forces the displayed
     `K_4` core.
+18. The decisive proof gate gives the audited
+    [protected rooted-equality peel](../results/hc7_protected_rooted_k42_equality_peel.md).
+    An internally four-connected four-root pair on the exact `4|V|-10`
+    line with no rooted `K^*_{4,2}` model either has no rooted `K_{4,2}`
+    model, has one whose helper meets a nominated protected set, or has a
+    strictly smaller equality minor preserving every protected label.
+    This makes the rooted equality reduction well founded, but does not
+    preserve five-connectivity or external incidences after reinsertion
+    into the E5 host.  The same gate found no E5 counterexample.
 
 Consequently one may choose with minimum order a component `C` behind a
 five-cut `S` such that
@@ -324,6 +333,12 @@ unbounded six-full component, a self-similar singleton exterior, the
 at most seven boundary edges.  The both-endpoints boundary has at most
 eleven edges, but the `K_4` core occurs only at equality.  Aggregate contact
 alone is not enough.
+
+The protected equality peel organises the exact one-six-full/full-edge and
+boundary-eleven rows but does not close them: a smaller rooted pair is not
+automatically a valid replacement inside the five-connected host.  The
+proposed four-root `K_6`-placement theorem remains conjectural and, even if
+proved, would still require this host-reinsertion step.
 
 ## 4. Recorded nonclosures
 
@@ -488,3 +503,11 @@ eliminates one complete path case.  These results require positive
 Thus the two programmes now meet at one mathematical issue: turn a dense,
 internally five-connected lobe with five prescribed boundary roots into a
 rooted six-bag model, or preserve enough density under a strict descent.
+
+The gate also produced a direct theorem for the primary programme.  At an
+essential-edge six-separation whose boundary contains a literal `K_4`, the
+two remaining boundary vertices have degree sum at least
+`15+q+\mathbf1_{rs}`.  The immediate campaign now aggregates that inequality
+over the strict-surplus safe-edge cover.  Further E5-only boundary census is
+frozen unless it yields an unbounded theorem transferable to that campaign
+or a genuine E5 counterexample.

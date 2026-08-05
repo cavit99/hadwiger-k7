@@ -19,6 +19,7 @@ Selected audited inputs:
 - [density-preserving contraction at every degree-seven entrance](../results/hc7_k7minus_degree7_safe_contraction.md)
 - [strict-surplus Mader--Schmidt structure and many exact seven-cuts](../results/hc7_k7minus_strict_surplus_minimal_enemy.md)
 - [essential-edge exact six-separation and shore accounting](../results/hc7_k7minus_essential_edge_six_separation.md)
+- [`K_4`-reserve inequality on an essential-edge six-boundary](../results/hc7_k7minus_six_cut_k4_reserve_inequality.md)
 
 Immediate barriers:
 
@@ -67,6 +68,13 @@ These are audited route nonclosures, not constructional counterexamples:
   has at most eleven edges, with a `K_4` core only at equality.  The next
   step must use internal density or preserve the original endpoint-incidence
   history through a singleton reduction.
+  A decisive proof gate found neither an E5 proof nor a counterexample.  It
+  did produce an audited protected equality peel, but reinserting the peeled
+  rooted pair need not preserve host five-connectivity.  Further E5-specific
+  boundary enumeration is therefore frozen.  The direct next attack is to
+  aggregate the new `K_4`-reserve inequality over the essential-edge cuts of
+  a strict-surplus minimum enemy; the four-root `K_6` placement conjecture
+  receives only a short secondary falsification/literature pass.
   The auxiliary statement remains unproved and is not a second primary
   target.
 

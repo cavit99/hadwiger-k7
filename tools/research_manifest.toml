@@ -8542,6 +8542,57 @@ does_not_prove = ["a density-preserving seven-connected shore contraction", "the
 keywords = ["essential edge", "six-separation", "shore contraction", "density surplus"]
 
 [[claims]]
+id = "hc7.k7minus_six_cut_k4_reserve_inequality"
+title = "A boundary K4 forces reserve on the other two vertices of an essential-edge six-cut"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_six_cut_k4_reserve_inequality.md"
+source_heading = "Theorem 1 (six-connected `K_4`-reserve inequality)"
+active = true
+audit = "results/hc7_k7minus_six_cut_k4_reserve_inequality_audit.md"
+expected_source_sha256 = "997dd39a178d7b8e3f528aa25d5c7db8b4cfd0eeb61619b0e5a427124f9ff929"
+scope = "a six-connected K7-minus-minor-free graph with a two-shore full six-separation whose boundary contains a literal K4, and its essential-edge specialization in the 4n-2 programme"
+label_fidelity = "the four clique vertices, two complementary boundary vertices and both full shores remain literal host objects"
+conclusions = [
+  "each shore excess is at most its number of contacts with the two vertices outside the boundary K4",
+  "in an essential-edge separation the two complementary boundary vertices have degree sum at least 15+q plus their adjacency indicator",
+  "the two complementary vertices cannot both have degree seven in the 4n-2 range",
+]
+does_not_prove = [
+  "that an arbitrary essential-edge boundary contains a literal K4",
+  "a global aggregation of the inequalities from different essential edges",
+  "a density-preserving seven-connected shore contraction",
+  "the 4n-2 extremal target or E5",
+]
+keywords = ["K7 minus", "essential edge", "six-separation", "boundary K4", "degree sum", "reserve inequality"]
+
+[[claims]]
+id = "hc7.protected_rooted_k42_equality_peel"
+title = "Protected labels survive a rooted K4,2 equality peel"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_protected_rooted_k42_equality_peel.md"
+source_heading = "Theorem (protected rooted-equality peel)"
+active = false
+audit = "results/hc7_protected_rooted_k42_equality_peel_audit.md"
+expected_source_sha256 = "c473a584ef855077f550608b02e615ea5aaa9251447efac92588eba45ff3618b"
+scope = "an internally four-connected four-root pair on the exact 4v-10 line with no rooted K-star-4,2 model and an arbitrary protected label set"
+label_fidelity = "all four roots and every nominated protected vertex survive distinctly in the smaller equality minor"
+strict_parameter = "order of the rooted pair"
+conclusions = [
+  "either there is no rooted K4,2 model, a helper meets the protected set, or a strictly smaller equality minor preserves every protected label",
+  "the smaller pair remains internally four-connected and excludes the rooted K-star-4,2 model",
+  "iteration terminates at a smaller pair with no rooted K4,2 model if no helper ever captures a protected label",
+]
+does_not_prove = [
+  "preservation of ambient five- or seven-connectivity after host reinsertion",
+  "preservation of unspecified external incidences",
+  "classification of the terminal equality pair",
+  "E5 or the 4n-2 extremal target",
+]
+keywords = ["rooted K4,2", "protected labels", "equality peel", "internally four-connected", "Norin Totschnig Lemma 12"]
+
+[[claims]]
 id = "hc7.k7minus_essential_sixsep_seventh_bag_nonclosure"
 title = "The rooted-diamond construction at an essential edge has only six bags"
 kind = "laboratory"
@@ -15463,6 +15514,24 @@ source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.k7minus_essential_edge_six_separation"
 kind = "uses"
 note = "Every edge in the positive-surplus minimum enemy has an exact two-shore six-separation and exact contraction accounting."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.k7minus_six_cut_k4_reserve_inequality"
+kind = "uses"
+note = "A literal K4 in an essential-edge six-boundary forces a degree-sum reserve on its two complementary vertices; the next direct attack aggregates this restriction over the strict-surplus cut family."
+
+[[relations]]
+source = "hc7.k7minus_six_cut_k4_reserve_inequality"
+target = "hc7.k7minus_essential_edge_six_separation"
+kind = "uses"
+note = "The primary degree-sum corollary uses the exact shore-excess identity and full two-shore structure of the essential-edge theorem."
+
+[[relations]]
+source = "hc7.protected_rooted_k42_equality_peel"
+target = "hc7.target.k7minus_e5_extremal"
+kind = "related_to"
+note = "The peel makes exact rooted equality reduction well founded, but no theorem currently reinserts the smaller pair while preserving the five-connected E5 host."
 
 [[relations]]
 source = "hc7.k7minus_degree7_safe_contraction"
