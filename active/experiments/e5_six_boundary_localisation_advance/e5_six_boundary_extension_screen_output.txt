@@ -1,0 +1,96 @@
+partition counts: n=10 11880; n=11 159027; n=12 1899612
+
+P3: one six-full component plus one singleton missing root 0
+  tested: 1024
+  negative by boundary edges: 1:1 2:7 3:9 4:3
+  maximum negative boundary size: 4
+  maximum negative masks: [01,12,15,34] [01,12,14,35] [01,12,13,45]
+P3: one six-full component plus two tied singletons missing root 0
+  tested: 30
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+P3: one six-full component plus one full edge missing root 0
+  tested: 1024
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+K3: one six-full component plus one singleton missing root 0
+  tested: 1024
+  negative by boundary edges: 1:1 2:4 3:3
+  maximum negative boundary size: 3
+  maximum negative masks: [01,12,34] [01,12,35] [01,12,45]
+K3: one six-full component plus two tied singletons missing root 0
+  tested: 30
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+K3: one six-full component plus one full edge missing root 0
+  tested: 1024
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+P3: every degree-compatible pair of full singleton extras in the one-six-full unfavourable row is positive
+
+K3: every degree-compatible pair of full singleton extras in the one-six-full unfavourable row is positive
+
+K2: one six-full representative plus tied twin singletons
+  tested: 150
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+K2: one six-full representative plus one full edge missing root 0
+  tested: 5120
+  negative by boundary edges: 1:1 2:2 3:1
+  maximum negative boundary size: 3
+  maximum negative masks: [01,23,45]
+K2: exactly two six-full representatives
+  tested: 1024
+  negative by boundary edges: 1:1 2:10 3:37 4:64 5:54 6:14 7:1
+  maximum negative boundary size: 7
+  maximum negative masks: [01,12,13,14,15,23,45]
+K2: two six-full representatives plus one singleton missing root 0
+  tested: 1024
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+P3: three six-full representatives
+  tested: 32768
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+P3: two six-full representatives, degree(root 1)<=2
+  tested: 5120
+  negative by boundary edges: 1:1 2:5 3:7 4:3
+  maximum negative boundary size: 4
+  maximum negative masks: [01,02,12,34] [01,02,12,35] [01,02,12,45]
+  exact degree-two negative masks (8): [01,12] [01,02,12] [01,12,34] [01,02,12,34] [01,12,35] [01,02,12,35] [01,12,45] [01,02,12,45]
+P3: two six-full representatives plus singleton missing root 1
+  tested: 5120
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+P3: every one-singleton extra allowed by the degree-five root is positive
+
+K3: three six-full representatives
+  tested: 32768
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+K3: two six-full representatives, degree(root 1)<=2
+  tested: 5120
+  negative by boundary edges: 1:1 2:5 3:7 4:3
+  maximum negative boundary size: 4
+  maximum negative masks: [01,02,12,34] [01,02,12,35] [01,02,12,45]
+  exact degree-two negative masks (8): [01,12] [01,02,12] [01,12,34] [01,02,12,34] [01,12,35] [01,02,12,35] [01,12,45] [01,02,12,45]
+K3: two six-full representatives plus singleton missing root 1
+  tested: 5120
+  negative by boundary edges: none
+  maximum negative boundary size: -1
+K3: every one-singleton extra allowed by the degree-five root is positive
+
+P3: all eight degree-one-boundary split screens have exactly the 18 concentrated-portal survivors
+K3: all eight degree-one-boundary split screens have exactly the 18 concentrated-portal survivors
+
+K3 split-contact equality screen: boundary triangle, universal root 0
+  patterns: 162; target-free: 12; exactly the concentrated-portal patterns
+K3 split-contact equality screen: boundary triangle, universal root 2
+  patterns: 162; target-free: 12; exactly the concentrated-portal patterns
+K3 split-contact equality screen: boundary U-edge, universal root 3
+  patterns: 162; target-free: 6; exactly the concentrated-portal patterns
+K3 split-contact equality screen: boundary U-edge, universal root 4
+  patterns: 162; target-free: 6; exactly the concentrated-portal patterns
+
+ALL CHECKS PASSED
+wall_seconds: 31.3617
