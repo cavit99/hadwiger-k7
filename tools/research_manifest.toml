@@ -8490,7 +8490,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_strict_surplus_minimal_enemy.md"
 source_heading = "Theorem"
-active = true
+active = false
 audit = "results/hc7_k7minus_strict_surplus_minimal_enemy_audit.md"
 expected_source_sha256 = "1a8531ffaec27ff17673b53798169c0952a3cf156e8c6a55763eb633ec13227e"
 scope = "a minimum counterexample to the 4n-2 target with positive surplus"
@@ -8511,7 +8511,7 @@ kind = "laboratory"
 status = "audited-green"
 source = "results/hc7_k7minus_strict_surplus_minimal_enemy.md"
 source_heading = "Scope"
-active = true
+active = false
 audit = "results/hc7_k7minus_strict_surplus_minimal_enemy_audit.md"
 expected_source_sha256 = "1a8531ffaec27ff17673b53798169c0952a3cf156e8c6a55763eb633ec13227e"
 scope = "the positive-surplus minimum-enemy reduction"
@@ -8529,7 +8529,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_essential_edge_six_separation.md"
 source_heading = "Theorem"
-active = true
+active = false
 audit = "results/hc7_k7minus_essential_edge_six_separation_audit.md"
 expected_source_sha256 = "0a652b431e9e0bd92fcc0aa76fa120c4ffcbc7c61a0d0198b2cc475a3ce79b92"
 scope = "every edge of an edge-minimal seven-connected K7-minus-minor-free graph"
@@ -8548,7 +8548,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_six_cut_k4_reserve_inequality.md"
 source_heading = "Theorem 1 (six-connected `K_4`-reserve inequality)"
-active = true
+active = false
 audit = "results/hc7_k7minus_six_cut_k4_reserve_inequality_audit.md"
 expected_source_sha256 = "997dd39a178d7b8e3f528aa25d5c7db8b4cfd0eeb61619b0e5a427124f9ff929"
 scope = "a six-connected K7-minus-minor-free graph with a two-shore full six-separation whose boundary contains a literal K4, and its essential-edge specialization in the 4n-2 programme"
@@ -8565,6 +8565,51 @@ does_not_prove = [
   "the 4n-2 extremal target or E5",
 ]
 keywords = ["K7 minus", "essential edge", "six-separation", "boundary K4", "degree sum", "reserve inequality"]
+
+[[claims]]
+id = "hc7.k7minus_strict_surplus_canonical_six_boundary"
+title = "Strict surplus forces many canonical sparse six-boundaries"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_strict_surplus_canonical_six_boundary.md"
+source_heading = "Theorem 2 (reserve blindness and the canonical six-boundary)"
+active = true
+audit = "results/hc7_k7minus_strict_surplus_canonical_six_boundary_audit.md"
+expected_source_sha256 = "b1fdb62070dda275a9f2e6ddd1bc1642f16b7d55df4ab5de7565375a0d7db5d8"
+scope = "a minimum counterexample to the seven-connected 4n-2 target with positive surplus"
+label_fidelity = "the degree-seven vertex, each of its seven incident-edge choices, the resulting literal six-boundary, connected high shore and boundary contacts remain in the original host"
+conclusions = [
+  "at least eight degree-seven vertices have K4-free neighbourhoods",
+  "each of their seven incident-edge deletions gives a canonical K4-free and K5-minus-minor-free six-boundary with at most ten boundary edges",
+  "the connected high shore has excess at least 9+q and the deleted-vertex graph is internally six-connected at the boundary",
+  "the deleted-vertex graph has a spanning K6 model but every K6 model meets the boundary in at most four bags",
+]
+does_not_prove = [
+  "a K6 model with five boundary-meeting bags",
+  "a strictly smaller canonical high shore",
+  "uncrossing of two canonical cuts",
+  "elimination of positive surplus or the 4n-2 target",
+]
+keywords = ["K7 minus", "strict surplus", "degree seven", "six-boundary", "K4-free", "K6 model", "terminal concentration"]
+
+[[claims]]
+id = "hc7.k7minus_canonical_six_boundary_contact_nonclosure"
+title = "Canonical six-boundary terminals may concentrate in four K6 bags"
+kind = "laboratory"
+status = "audited-green"
+source = "results/hc7_k7minus_strict_surplus_canonical_six_boundary.md"
+source_heading = "Scope and next obligation"
+active = true
+audit = "results/hc7_k7minus_strict_surplus_canonical_six_boundary_audit.md"
+expected_source_sha256 = "b1fdb62070dda275a9f2e6ddd1bc1642f16b7d55df4ab5de7565375a0d7db5d8"
+scope = "the seven overlapping sparse six-boundaries belonging to one reserve-blind degree-seven vertex in a strict-surplus minimum counterexample"
+conclusions = [
+  "an unrooted spanning K6 model already exists",
+  "target exclusion concentrates all terminal contacts into at most four bags of every K6 model",
+  "the smallest repair is a five-contact model, canonical smaller-shore descent, or crossing-cut minor theorem",
+]
+does_not_prove = ["existence of a counterexample", "failure of a bag-splitting theorem", "the 4n-2 target"]
+keywords = ["recorded nonclosure", "K6 branch sets", "terminal contacts", "canonical cut", "model-or-descent"]
 
 [[claims]]
 id = "hc7.protected_rooted_k42_equality_peel"
@@ -8599,7 +8644,7 @@ kind = "laboratory"
 status = "audited-green"
 source = "results/hc7_k7minus_essential_edge_six_separation.md"
 source_heading = "Scope"
-active = true
+active = false
 audit = "results/hc7_k7minus_essential_edge_six_separation_audit.md"
 expected_source_sha256 = "0a652b431e9e0bd92fcc0aa76fa120c4ffcbc7c61a0d0198b2cc475a3ce79b92"
 scope = "the rooted four-bag construction inside one shore of the essential-edge six-separation"
@@ -15505,21 +15550,39 @@ note = "The recorded constructions and coefficient mismatch delimit which coarse
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.k7minus_strict_surplus_canonical_six_boundary"
+kind = "uses"
+note = "The positive-surplus branch is reduced to at least eight reserve-blind degree-seven vertices, each with seven canonical sparse six-boundaries and an existing K6 model whose terminal contacts occupy at most four bags."
+
+[[relations]]
+source = "hc7.k7minus_strict_surplus_canonical_six_boundary"
 target = "hc7.k7minus_strict_surplus_minimal_enemy"
 kind = "uses"
-note = "The positive-surplus branch is reduced to a strict majority of degree-seven vertices and many exact cut certificates."
+note = "The canonical theorem uses minimal seven-connectivity, the degree-seven majority and the exact strict-surplus order bound."
 
 [[relations]]
-source = "hc7.target.k7minus_extremal_4n_minus_2"
+source = "hc7.k7minus_strict_surplus_canonical_six_boundary"
 target = "hc7.k7minus_essential_edge_six_separation"
 kind = "uses"
-note = "Every edge in the positive-surplus minimum enemy has an exact two-shore six-separation and exact contraction accounting."
+note = "Essential-edge deletion supplies six-connectivity; the prescribed canonical cut and its exact shore count are then proved directly."
 
 [[relations]]
-source = "hc7.target.k7minus_extremal_4n_minus_2"
+source = "hc7.k7minus_strict_surplus_canonical_six_boundary"
 target = "hc7.k7minus_six_cut_k4_reserve_inequality"
 kind = "uses"
-note = "A literal K4 in an essential-edge six-boundary forces a degree-sum reserve on its two complementary vertices; the next direct attack aggregates this restriction over the strict-surplus cut family."
+note = "The visible unique-K5 stratum uses the general full-six-cut reserve theorem; the K4-free canonical obstruction does not."
+
+[[relations]]
+source = "hc7.k7minus_strict_surplus_canonical_six_boundary"
+target = "hc7.k7minus_two_literal_k5_exclusion"
+kind = "uses"
+note = "Uniqueness of a literal K5 confines neighbourhood K4s to at most five degree-seven vertices."
+
+[[relations]]
+source = "hc7.k7minus_canonical_six_boundary_contact_nonclosure"
+target = "hc7.k7minus_strict_surplus_canonical_six_boundary"
+kind = "related_to"
+note = "The theorem supplies a spanning K6 but target exclusion limits every model to four boundary-meeting bags; five bags or a canonical descent is the exact next obligation."
 
 [[relations]]
 source = "hc7.k7minus_six_cut_k4_reserve_inequality"

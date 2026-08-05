@@ -93,23 +93,40 @@ GREEN internal audits.
   \]
   In particular, in the `4n-2` range the two complementary boundary
   vertices cannot both have degree seven.
+- In a strict-surplus minimum enemy there are at least thirteen
+  degree-seven vertices and at most five lie in the unique possible literal
+  `K_5`.  For each of the other at least eight vertices `x`, and every
+  `y in N(x)`, the canonical set `T_y=N(x)-{y}` is a `K_4`-free
+  six-boundary with at most ten edges.  Its connected high shore has excess
+  at least `9+q(G)`, while `G-x` is internally six-connected at `T_y` and
+  has exact density `4|V(G-x)|-5+q(G)`.  Norin--Totschnig already supplies
+  a spanning `K_6` model there, but target exclusion forces every such
+  model to meet `T_y` in at most four branch sets.
 
 These results replace the informal instruction to “place six surplus
-edges”.  A smallest enemy is now forced into a large, operation-free family
-of exact six- and seven-separations with exact density accounting.
+edges”.  The positive-surplus obstruction now supplies at least fifty-six
+canonical rooted six-boundary instances in which an existing spanning
+`K_6` model concentrates all terminal contacts into at most four bags.
 
 ### 3. Immediate structural laboratory
 
-A six-round decisive gate has ended the open-ended E5 campaign.  It found
-neither a proof nor a counterexample, but it met the declared transfer
-criterion: the `K_4`-reserve inequality above is an unbounded theorem on the
-primary proof spine.  The immediate attack is now to aggregate this
-inequality over the essential-edge six-separations in a strict-surplus
-minimum `4n-2` enemy.  The target is to force either a boundary `K_4` whose
-two complementary vertices both have degree seven, an explicit `K_7^-`
-model from crossing cuts, or a density-eligible shore contraction which
-retains seven-connectivity.  Success would eliminate the positive-surplus
-layer and leave the exact `q(G)=0` case.
+The proposed canonical vertexwise `K_4`-reserve aggregation has now been
+decisively assessed.  It is directly visible only at degree-seven vertices
+inside the unique possible literal `K_5`, hence at no more than five
+vertices; every strict-surplus enemy has at least eight degree-seven
+vertices outside that stratum.  This closes that direct mechanism, not
+every possible indirect use of the reserve inequality.
+
+The immediate attack is the canonical six-boundary contact-concentration
+problem.  Fix one reserve-blind degree-seven vertex `x` and use all seven
+overlapping sets `T_y=N(x)-{y}` in the common graph `G-x`.  The required
+theorem should produce either a `K_6` model with five bags meeting one
+`T_y`, a strictly smaller canonical high shore with the endpoint labels and
+coefficient-four excess retained, or two crossing canonical cuts yielding
+`K_7^-` or a density-preserving seven-connected proper minor.  The first
+outcome already gives `K_7^-` with the singleton `{x}`.  Pair-deletion and
+two-root donor transfers are secondary tools only after this one-root,
+seven-choice interface has been exhausted.
 
 The E5 and direct attacks still meet at the same rooted obstruction, but
 E5-specific boundary enumeration is frozen unless it proves an unbounded
@@ -282,26 +299,27 @@ placement theorem and terminal equality classification remain conjectural.
 
 An accepted result must prove at least one of:
 
-1. one density-preserving degree-seven edge is seven-contractible;
-2. the exact seven-cuts covering the degree-seven vertices uncross to an
-   explicit `K_7^-` model; or
-3. one shore of an essential-edge six-separation contracts to a smaller
+1. the canonical six-boundary five-contact model-or-descent theorem,
+   eliminating `q(G)>0`;
+2. one density-preserving degree-seven edge is seven-contractible, or its
+   exact seven-cut gives an explicit `K_7^-` model, in the equality layer;
+3. one canonical or essential-edge shore contracts to a smaller
    seven-connected graph still at the `4n-2` threshold; or
 4. the five-root reserve-or-descent target holds, or its anchored
-   four-root specialisation closes the exact two-singleton branch.
+   four-root specialisation closes the exact E5 two-singleton branch.
 
-The current preferred form of outcomes 1--3 is a `K_4`-reserve aggregation
-theorem for the strict-surplus safe-edge cover.  Outcome 4 remains a valid
-auxiliary route, but is not the immediate campaign.
+Outcome 1 is the immediate campaign.  Outcome 4 remains a valid auxiliary
+route, but E5-specific case enumeration is frozen.
 
 The four exact nonclosures to overcome are:
 
 - **root swap:** a trace-one fragment can support nested exact seven-cuts
   without being a singleton;
-- **missing seventh bag:** four rooted bags in one shore of an essential-edge
-  six-separation, the opposite shore, and one boundary singleton give only
-  six branch sets.  The remaining boundary vertex is not automatically a
-  valid seventh bag.
+- **terminal-contact concentration:** every canonical graph `G-x` already
+  has a spanning `K_6` model, but all seven neighbours of `x` can be
+  concentrated in at most four bags.  The missing theorem must split a bag
+  while preserving five contacts, or convert the obstruction into a
+  smaller canonical shore or crossing-cut minor.
 - **safe-star uncrossing:** the positive-surplus count forces a safe edge
   inside the degree-seven set or a safe two-edge star, but their exact
   seven-cut certificates may coincide or nest without a smaller safe shore.
@@ -421,4 +439,6 @@ specialist validation before publication.
   Mader--Schmidt structure at positive surplus.
 - [`results/hc7_k7minus_essential_edge_six_separation.md`](results/hc7_k7minus_essential_edge_six_separation.md):
   essential-edge separation and shore accounting.
+- [`results/hc7_k7minus_strict_surplus_canonical_six_boundary.md`](results/hc7_k7minus_strict_surplus_canonical_six_boundary.md):
+  reserve blindness and the canonical sparse six-boundary obstruction.
 - [`archive/`](archive/): superseded proof spines and the previous ledger.

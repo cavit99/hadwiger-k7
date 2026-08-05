@@ -17,17 +17,14 @@ Conjecture 21, but not `HC_7`.
 Selected audited inputs:
 
 - [density-preserving contraction at every degree-seven entrance](../results/hc7_k7minus_degree7_safe_contraction.md)
-- [strict-surplus Mader--Schmidt structure and many exact seven-cuts](../results/hc7_k7minus_strict_surplus_minimal_enemy.md)
-- [essential-edge exact six-separation and shore accounting](../results/hc7_k7minus_essential_edge_six_separation.md)
-- [`K_4`-reserve inequality on an essential-edge six-boundary](../results/hc7_k7minus_six_cut_k4_reserve_inequality.md)
+- [canonical sparse six-boundaries at strict surplus](../results/hc7_k7minus_strict_surplus_canonical_six_boundary.md)
 
 Immediate barriers:
 
 These are audited route nonclosures, not constructional counterexamples:
 
 - [the nested root-swap residue](../results/hc7_k7minus_degree7_safe_contraction.md#theorem-3-the-exact-two-exterior-fragment-residue)
-- [the missing seventh branch set at an essential-edge separation](../results/hc7_k7minus_essential_edge_six_separation.md#scope)
-- [the unproved uncrossing of the degree-seven cut family](../results/hc7_k7minus_strict_surplus_minimal_enemy.md#scope)
+- [terminal concentration of six-boundary contacts in at most four model bags](../results/hc7_k7minus_strict_surplus_canonical_six_boundary.md#scope-and-next-obligation)
 
 ## Current structural laboratory
 
@@ -71,10 +68,11 @@ These are audited route nonclosures, not constructional counterexamples:
   A decisive proof gate found neither an E5 proof nor a counterexample.  It
   did produce an audited protected equality peel, but reinserting the peeled
   rooted pair need not preserve host five-connectivity.  Further E5-specific
-  boundary enumeration is therefore frozen.  The direct next attack is to
-  aggregate the new `K_4`-reserve inequality over the essential-edge cuts of
-  a strict-surplus minimum enemy; the four-root `K_6` placement conjecture
-  receives only a short secondary falsification/literature pass.
+  boundary enumeration is therefore frozen.  The direct next attack uses
+  all seven canonical sparse six-boundaries belonging to one reserve-blind
+  degree-seven vertex.  It seeks a `K_6` model with five boundary-meeting
+  bags, a strictly smaller canonical high shore, or an explicit minor from
+  two crossing canonical cuts.
   The auxiliary statement remains unproved and is not a second primary
   target.
 

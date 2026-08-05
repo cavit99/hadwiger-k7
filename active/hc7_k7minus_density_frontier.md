@@ -3,10 +3,10 @@
 **Status:** sole active research frontier; not a proof of the `K_7^-`
 six-colour conjecture or of `HC_7`.  The `4n-2` extremal theorem below is
 the sole active target.  Its computation-free critical-host entrance,
-seven-cut reduction, safe degree-seven contraction, strict-surplus
-minimal-enemy structure, and essential-edge six-separation theorem have
-written proofs with separate GREEN internal audits.  The exceptional-centre
-and direct `HC_7` programmes remain frozen conditional refinements.
+seven-cut reduction, safe degree-seven contraction, and strict-surplus
+canonical six-boundary theorem have written proofs with separate GREEN
+internal audits.  The exceptional-centre and direct `HC_7` programmes
+remain frozen conditional refinements.
 
 ## 1. Proved entrance reduction
 
@@ -291,72 +291,67 @@ complementary components.  In the two-exterior case every incident edge is
 density-preserving, and Yuan's fragment theorem yields the exact nested
 root-swap residue recorded in Theorem 3 of that result.
 
-If `q(G)>0`, minimality also makes `G` minimally seven-connected.  The
-audited
-[strict-surplus theorem](../results/hc7_k7minus_strict_surplus_minimal_enemy.md)
-then combines Mader's forest structure with Schmidt's exact count.  More
-than half the vertices have degree seven, the remaining induced graph is a
-forest, and at least `ceil(n_7/2)` distinct density-preserving
-noncontractible edges cover all degree-seven vertices.  Each is certified
-by an exact order-seven cut.  Moreover, those edges contain either an edge
-joining two degree-seven vertices or a two-edge star whose two leaves have
-degree seven.
+If `q(G)>0`, the audited strict-surplus and essential-edge theorems make
+`G` minimally seven-connected and expose a full two-shore six-separation
+at every edge.  The new audited
+[canonical six-boundary theorem](../results/hc7_k7minus_strict_surplus_canonical_six_boundary.md)
+localises these separations at the degree-seven vertices.  There is at most
+one literal `K_5`, there are at least thirteen degree-seven vertices, and
+at least eight of them have `K_4`-free neighbourhoods.
 
-The audited
-[essential-edge theorem](../results/hc7_k7minus_essential_edge_six_separation.md)
-gives a second exact view.  Deleting any essential edge leaves a
-six-connected graph with two boundary-full shores behind an order-six cut;
-the deleted edge is the sole cross-edge.  If
+For each such vertex `x` and every `y in N_G(x)`, put
 
 \[
- \delta_X=|E(G[X])|+|E_G(X,S)|-4|X|,
+ T_y=N_G(x)-\{y\},\qquad J_x=G-x.
 \]
 
-then each shore contraction has exact surplus
+Then `T_y` is a canonical six-boundary in `G-xy`: its two complementary
+components are the singleton `{x}` and one connected boundary-full shore
+`B_y`.  Moreover
 
 \[
-                         q(G/X)=q(G)+2-\delta_X.
+ |E(G[T_y])|\le10,
+ \qquad
+ \delta_{B_y}=19+q(G)-|E(G[T_y])|\ge9+q(G),          \tag{12}
 \]
 
-The audited
-[`K_4`-reserve inequality](../results/hc7_k7minus_six_cut_k4_reserve_inequality.md)
-now adds a direct boundary restriction.  If the six-boundary contains a
-literal clique `Z` of order four and `S-Z=\{r,s\}`, then
+and
 
 \[
-                 d_G(r)+d_G(s)
-                 \ge15+q(G)+\mathbf1_{rs\in E(G)}.    \tag{12}
+ (J_x,T_y)\text{ is internally six-connected},
+ \qquad
+ |E(J_x)|=4|V(J_x)|-5+q(G).                          \tag{13}
 \]
 
-Thus the two vertices outside a boundary `K_4` cannot both have degree
-seven.  This is an unbounded theorem on the primary proof spine; it does
-not prove that every relevant boundary contains such a clique.
+Norin--Totschnig's theorem already gives a spanning `K_7^vee` and hence a
+spanning `K_6` model in `J_x`.  Target exclusion forces every `K_6` model
+in `J_x` to have at most four branch sets meeting `T_y`: five such bags,
+together with `{x}`, would be a `K_7^-` model.  Thus the strict-surplus
+obstruction is terminal concentration in an existing clique model, not the
+absence of an unrooted `K_6`.
 
-The next theorem must therefore prove one of the following:
+This also ends the proposed canonical vertexwise `K_4`-reserve aggregation
+as the immediate campaign.  The reserve inequality is directly visible
+only at degree-seven vertices in the unique possible `K_5`, at most five
+vertices, while at least eight vertices lie outside it.  This is a route
+nonclosure, not a claim that no indirect use of the reserve inequality can
+succeed.
 
-1. one safe degree-seven edge is seven-contractible;
-2. the family of exact seven-cuts uncrosses to an explicit `K_7^-` model;
-3. an essential-edge shore is both density-eligible and contractible while
-   retaining seven-connectivity.
+The immediate target is now a **five-contact model-or-canonical-descent
+lemma** for the seven overlapping boundaries `T_y` belonging to one fixed
+`x`.  It should yield one of:
 
-The immediate campaign is the strict-surplus `K_4`-reserve aggregation
-problem.  Combine (12) with the audited safe-edge cover and the exact
-essential-edge cuts to force either a boundary `K_4` with two degree-seven
-complementary vertices, an explicit `K_7^-` model from crossing cuts, or
-the shore contraction in outcome 3.  Success would eliminate `q(G)>0` and
-reduce the target to its exact-density layer.
+1. a `K_6` model with five bags meeting some `T_y`, which gives `K_7^-`;
+2. a canonical connected shore of smaller order with the coefficient-four
+   excess and original endpoint labels retained; or
+3. two canonical cuts whose crossing gives an explicit `K_7^-` model or a
+   density-preserving seven-connected proper minor.
 
-The live obstruction is precise.  A trace-one fragment may support a
-nested root swap rather than collapse to a singleton.  At an essential-edge
-six-separation, the rooted-diamond construction supplies only six of the
-seven required branch sets.  Kawarabayashi's odd-connectivity
-contractible-edge argument is a relevant architecture, but its
-`K_4^-`-free hypothesis supplies a triangle-free edge and hence a lower
-bound on both shores behind every failed contraction.  A density-safe edge
-here can have three common neighbours.  Its cut can therefore end in the
-nested root-swap residue, and neither the safe star nor the global forest
-count forces a strictly smaller safe shore.  This is the first unsupported
-inference in that attempted adaptation.
+The proof should first exploit all seven choices of `y` in the common graph
+`J_x`.  Pair-deletion models and two-root donor transfers are secondary
+tools only if this one-root interface does not descend.  An ordinary
+unrooted `K_6` theorem, including the available bipartite theorem, is
+insufficient because the required model already exists.
 
 The robust `K_6`-model transversal has also been tested and frozen as a
 principal mechanism.  If `F` is a minimum edge set meeting every `K_6`
@@ -377,9 +372,9 @@ of order at least seven.  In a critical host this proposed dichotomy would
 already settle the whole conjecture, so it is not being treated as a
 smaller fallback lemma.
 
-Further isolated boundary classifications, small graph-code
-eliminations, or exceptional-count increments are frozen unless they
-resolve one of the three displayed outcomes.
+Further isolated boundary classifications, small graph-code eliminations,
+or exceptional-count increments are frozen unless they resolve one of the
+three displayed outcomes above.
 
 The positive-surplus atom route gives an additional, independently audited
 reduction.  The
