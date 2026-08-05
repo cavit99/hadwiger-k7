@@ -6,6 +6,15 @@ hostile independent audit before any promotion.  They do not prove the
 seven-connected `4n-2` extremal theorem, the auxiliary statement `(E5)`,
 Conjecture 21, or `HC_7`.
 
+**Integration note (5 August 2026):** the computation-free canonical-cut
+core of Sections 1--4 has been rewritten, strengthened by the five-contact
+`K_6` observation, and promoted with a separate hash-pinned internal audit
+as
+[`results/hc7_k7minus_strict_surplus_canonical_six_boundary.md`](../../../results/hc7_k7minus_strict_surplus_canonical_six_boundary.md).
+The aggregate inequalities and secondary routes below remain experimental
+provenance.  In particular, the finite searches in Section 8 have no
+retained verifier or certificates and are not promoted claims.
+
 Throughout, `K_7^-` denotes `K_7` with one edge deleted.  Let `G` be a
 counterexample of minimum order and then minimum size to
 
