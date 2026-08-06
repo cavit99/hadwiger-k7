@@ -9,8 +9,10 @@ Let
 \mathcal M=(D,Q_1,\ldots,Q_5)
 \]
 
-be a contact-maximal `K_6` model in `G-x`.  Fix an uncontacted foreign bag
-`U`, and suppose a one-root blocker has been obtained:
+be a spanning contact-maximal `K_6` model in `G-x`.  Choose the multiply
+rooted donor `D` with minimum order among all spanning contact-maximal
+models.  Fix an uncontacted foreign bag `U`, and suppose a one-root blocker
+has been obtained:
 
 \[
 y\in C\subseteq D,
@@ -20,10 +22,7 @@ y\in C\subseteq D,
 \]
 
 Choose `C` with minimum order among all blockers satisfying (1.1) for the
-fixed model, donor root and missed bag.  Assume also the standard
-transfer-minimality: no root-free connected part can be deleted from `D`
-or moved into one foreign bag while preserving the `K_6` model and
-strictly shrinking `D`.
+fixed model, donor root and missed bag.
 
 ## 1. Exact form of a minimum blocker
 
@@ -95,15 +94,20 @@ Consequently
 The complement `D-A_i` is connected: it consists of `y`, the retained
 component `A_0`, and all other arms, each joined through `y`.
 
-If `A_i` owns no duty, delete it from the donor bag.  All five donor duties
-survive and all roots survive because the arm is root-free.  This is a
-smaller model, contrary to transfer minimality.
+Suppose first that `A_i` owns no duty.  Seven-connectivity implies that the
+arm meets at least one foreign bag; otherwise its neighbourhood would be
+contained in `{y}`.  Move the entire arm into any foreign bag which it
+meets.  The target bag remains connected, an `A_i-y` edge restores its
+adjacency to the residual donor, and every old donor duty survives.
 
 If `A_i` owns exactly `Q_j`, move it into `Q_j`.  An actual `A_i-Q_j`
 edge makes the enlarged target bag connected; an `A_i-y` edge restores the
 adjacency between the target and the residual donor; and every other donor
-duty survives.  Again all roots and contacts survive, contradicting
-transfer minimality.  This proves (2.2).
+duty survives.
+
+In either case the model remains spanning and contact-maximal, all roots
+survive, and the multiply rooted donor `D-A_i` is strictly smaller.  This
+contradicts the choice of `D`, proving (2.2).
 
 A nonempty model duty cannot be owned by two disjoint arms, so their owner
 sets are disjoint.  The arms lie in `C`, which is anticomplete to `U`, and
@@ -124,7 +128,13 @@ If `m=2`, then after relabelling
 and the four sets exhaust all foreign duties other than `U`.
 Consequently every `D-Q_1,D-Q_2` edge has its `D`-end in `A_1`, every
 `D-Q_3,D-Q_4` edge has its `D`-end in `A_2`, and every `D-U` edge has its
-`D`-end in `A_0`.
+`D`-end in `A_0`.  In particular,
+
+\[
+E(A_1,Q_3\cup Q_4\cup U)=\varnothing,
+\qquad
+E(A_2,Q_1\cup Q_2\cup U)=\varnothing.                 \tag{2.5}
+\]
 
 ## 3. Seven-connectivity gives literal portal surplus
 
@@ -136,8 +146,8 @@ N_G(A_i)\subseteq\{y\}\cup
 \]
 
 The root-free arm has no edge to `x`, no edge to another component of
-`D-y`, and no edge to `U`.  Since another model bag survives outside
-`A_i union N(A_i)`, the displayed set is an actual separator.
+`D-y`, and no edge to `U`.  The bag `U` survives outside
+`A_i union N(A_i)`, so the displayed set is an actual separator.
 Seven-connectivity therefore gives
 
 \[
@@ -145,10 +155,18 @@ Seven-connectivity therefore gives
 \]
 
 Thus every arm has at least six actual portal vertices distributed among
-four foreign bags.  Some foreign bag contains at least two arm portals.
-In the two-arm equality state, each arm has at least one repeated portal
-inside one of the two duties which it owns or one of the two opposite
-foreign bags.
+four foreign bags.
+
+In the two-arm equality state, (2.5) strengthens this to
+
+\[
+|N_{Q_1}(A_1)|+|N_{Q_2}(A_1)|\ge6,
+\qquad
+|N_{Q_3}(A_2)|+|N_{Q_4}(A_2)|\ge6.                    \tag{3.3}
+\]
+
+Hence one owned bag of each arm contains at least three distinct literal
+arm portals.
 
 ## 4. Exact terminal
 
@@ -159,11 +177,12 @@ unbounded structural forms.
 2. `m=1`: one root-free arm owns at least two of the four accessible
    duties and has at least six literal portal vertices.
 3. `m=2`: two root-free arms own complementary duty pairs as in (2.4),
-   each with at least six literal portals; the remaining component `A_0`
-   carries every other root of `D` and the entire `U` duty.
+   each has at least six literal portals across its own two bags, and the
+   remaining component `A_0` carries every other root of `D` and the entire
+   `U` duty.
 
 This is a host-level classification, not a quotient contact list.  The
-remaining closure must use the repeated literal portals in (3.2) to split
-a foreign carrier, or combine the safe contraction of `xy` with the exact
-one- or two-arm gate.  Static duty ownership alone admits reversible
+remaining closure must use the repeated literal portals in (3.2)--(3.3) to
+split a foreign carrier, or combine the safe contraction of `xy` with the
+exact one- or two-arm gate.  Static duty ownership alone admits reversible
 `K_3 join C_4`-type rotations and is not terminal.
