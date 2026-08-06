@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 5 August 2026
+**Last updated:** 6 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.
@@ -102,11 +102,24 @@ GREEN internal audits.
   has exact density `4|V(G-x)|-5+q(G)`.  Norin--Totschnig already supplies
   a spanning `K_6` model there, but target exclusion forces every such
   model to meet `T_y` in at most four branch sets.
+- The static model-splitting step is now proved.  For each fixed `x`, every
+  spanning `K_6` model in `G-x` has a multiply rooted branch set containing
+  a strict connected separator shore
+  \[
+  C\subsetneq B_y,\qquad C\cap N(x)=\{y\},
+  \]
+  whose complement in that branch set is connected and whose neighbourhood
+  has order at least seven.  Writing `k=|N(C)|` and
+  `eta=e(C)+e(C,N(C))-4|C|`, either `eta>q+k-4`, or a non-singleton `C`
+  contracts to a proper minor still meeting the `4n-2` threshold.  Failure
+  of seven-connectivity in that minor returns a labelled cut certificate
+  through `C`.
 
 These results replace the informal instruction to “place six surplus
 edges”.  The positive-surplus obstruction now supplies at least fifty-six
-canonical rooted six-boundary instances in which an existing spanning
-`K_6` model concentrates all terminal contacts into at most four bags.
+canonical rooted six-boundary instances and converts every spanning-model
+contact concentration at a fixed `x` into a strict same-host separator
+shore with exact density accounting.
 
 ### 3. Immediate structural laboratory
 
@@ -117,16 +130,14 @@ vertices; every strict-surplus enemy has at least eight degree-seven
 vertices outside that stratum.  This closes that direct mechanism, not
 every possible indirect use of the reserve inequality.
 
-The immediate attack is the canonical six-boundary contact-concentration
-problem.  Fix one reserve-blind degree-seven vertex `x` and use all seven
-overlapping sets `T_y=N(x)-{y}` in the common graph `G-x`.  The required
-theorem should produce either a `K_6` model with five bags meeting one
-`T_y`, a strictly smaller canonical high shore with the endpoint labels and
-coefficient-four excess retained, or two crossing canonical cuts yielding
-`K_7^-` or a density-preserving seven-connected proper minor.  The first
-outcome already gives `K_7^-` with the singleton `{x}`.  Pair-deletion and
-two-root donor transfers are secondary tools only after this one-root,
-seven-choice interface has been exhausted.
+The immediate attack is now terminalisation of the strict labelled
+separator shore.  There are three exact cases: a high shore which need not
+inherit the canonical six-boundary hypotheses; a singleton `{y}` for which
+`d_G(y)=7` is not known; and a non-singleton eligible shore whose
+density-preserving contraction loses seven-connectivity.  In the last case
+an exact local separator supplies one order-seven cut, but it may be nested
+with the existing cuts; otherwise a label-preserving rooted linkage theorem
+is still needed.  Pair deletion and two-root transfers remain secondary.
 
 The E5 and direct attacks still meet at the same rooted obstruction, but
 E5-specific boundary enumeration is frozen unless it proves an unbounded
@@ -299,8 +310,8 @@ placement theorem and terminal equality classification remain conjectural.
 
 An accepted result must prove at least one of:
 
-1. the canonical six-boundary five-contact model-or-descent theorem,
-   eliminating `q(G)>0`;
+1. terminalisation of the strict labelled separator shore, eliminating
+   `q(G)>0`;
 2. one density-preserving degree-seven edge is seven-contractible, or its
    exact seven-cut gives an explicit `K_7^-` model, in the equality layer;
 3. one canonical or essential-edge shore contracts to a smaller
@@ -315,11 +326,11 @@ The four exact nonclosures to overcome are:
 
 - **root swap:** a trace-one fragment can support nested exact seven-cuts
   without being a singleton;
-- **terminal-contact concentration:** every canonical graph `G-x` already
-  has a spanning `K_6` model, but all seven neighbours of `x` can be
-  concentrated in at most four bags.  The missing theorem must split a bag
-  while preserving five contacts, or convert the obstruction into a
-  smaller canonical shore or crossing-cut minor.
+- **labelled-separator terminalisation:** the spanning-model split now
+  returns a strict connected separator shore with exact density accounting.
+  A high shore need not re-enter the canonical setting; a singleton shore
+  need not have degree seven; and an eligible contraction failure returns a
+  possibly nested exact cut or a still-unplaced rooted linkage.
 - **safe-star uncrossing:** the positive-surplus count forces a safe edge
   inside the degree-seven set or a safe two-edge star, but their exact
   seven-cut certificates may coincide or nest without a smaller safe shore.

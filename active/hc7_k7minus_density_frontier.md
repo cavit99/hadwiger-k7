@@ -4,7 +4,7 @@
 six-colour conjecture or of `HC_7`.  The `4n-2` extremal theorem below is
 the sole active target.  Its computation-free critical-host entrance,
 seven-cut reduction, safe degree-seven contraction, and strict-surplus
-canonical six-boundary theorem have written proofs with separate GREEN
+labelled-separator-shore theorem have written proofs with separate GREEN
 internal audits.  The exceptional-centre and direct `HC_7` programmes
 remain frozen conditional refinements.
 
@@ -324,11 +324,39 @@ and
 \]
 
 Norin--Totschnig's theorem already gives a spanning `K_7^vee` and hence a
-spanning `K_6` model in `J_x`.  Target exclusion forces every `K_6` model
-in `J_x` to have at most four branch sets meeting `T_y`: five such bags,
-together with `{x}`, would be a `K_7^-` model.  Thus the strict-surplus
-obstruction is terminal concentration in an existing clique model, not the
-absence of an unrooted `K_6`.
+spanning `K_6` model in `J_x`.  The new audited
+[labelled-separator-shore theorem](../results/hc7_k7minus_strict_surplus_labelled_separator_shore.md)
+uses all seven choices of `y` simultaneously.  All seven neighbours of `x`
+occupy at most four branch sets in every spanning model.  A multiply rooted
+branch set can then be split: either it gives `K_7^-`, or it contains a
+strict connected set
+
+\[
+ C\subsetneq B_y,\qquad C\cap N(x)=\{y\},
+\]
+
+whose complement in that branch set is connected, which is anticomplete to
+an uncontacted branch set, and whose literal neighbourhood is an actual
+separator of order at least seven.
+
+Writing
+
+\[
+ k=|N_G(C)|,
+ \qquad
+ \eta=|E(G[C])|+|E_G(C,N_G(C))|-4|C|,
+\]
+
+either `eta>q(G)+k-4`, or a non-singleton `C` contracts to a proper minor
+with
+
+\[
+ q(G/C)=q(G)+k-4-\eta\ge0.                              \tag{14}
+\]
+
+If this minor loses seven-connectivity, the failure lifts to a labelled cut
+certificate through `C`.  This solves the static branch-set splitting
+problem, but not the returned separator problem.
 
 This also ends the proposed canonical vertexwise `K_4`-reserve aggregation
 as the immediate campaign.  The reserve inequality is directly visible
@@ -337,20 +365,19 @@ vertices, while at least eight vertices lie outside it.  This is a route
 nonclosure, not a claim that no indirect use of the reserve inequality can
 succeed.
 
-The immediate target is now a **five-contact model-or-canonical-descent
-lemma** for the seven overlapping boundaries `T_y` belonging to one fixed
-`x`.  It should yield one of:
+The immediate target is now a **labelled separator-shore terminalisation
+lemma**.  It must close three exact cases:
 
-1. a `K_6` model with five bags meeting some `T_y`, which gives `K_7^-`;
-2. a canonical connected shore of smaller order with the coefficient-four
-   excess and original endpoint labels retained; or
-3. two canonical cuts whose crossing gives an explicit `K_7^-` model or a
-   density-preserving seven-connected proper minor.
+1. a high `C`, which need not inherit the canonical six-boundary hypotheses;
+2. a singleton `C={y}`, for which `d_G(y)=7` is not known; or
+3. a non-singleton eligible `C` whose contraction loses
+   seven-connectivity.
 
-The proof should first exploit all seven choices of `y` in the common graph
-`J_x`.  Pair-deletion models and two-root donor transfers are secondary
-tools only if this one-root interface does not descend.  An ordinary
-unrooted `K_6` theorem, including the available bipartite theorem, is
+In the third case, an exact local separator yields one order-seven cut, but
+that cut may be nested with the existing canonical cuts.  If the exact
+local separator does not exist, a label-preserving rooted linkage argument
+inside `C` is still required.  Pair-deletion models and two-root transfers
+are secondary tools.  An ordinary unrooted `K_6` theorem remains
 insufficient because the required model already exists.
 
 The robust `K_6`-model transversal has also been tested and frozen as a

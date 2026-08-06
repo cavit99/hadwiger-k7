@@ -8573,7 +8573,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_strict_surplus_canonical_six_boundary.md"
 source_heading = "Theorem 2 (reserve blindness and the canonical six-boundary)"
-active = true
+active = false
 audit = "results/hc7_k7minus_strict_surplus_canonical_six_boundary_audit.md"
 expected_source_sha256 = "b1fdb62070dda275a9f2e6ddd1bc1642f16b7d55df4ab5de7565375a0d7db5d8"
 scope = "a minimum counterexample to the seven-connected 4n-2 target with positive surplus"
@@ -8599,7 +8599,7 @@ kind = "laboratory"
 status = "audited-green"
 source = "results/hc7_k7minus_strict_surplus_canonical_six_boundary.md"
 source_heading = "Scope and next obligation"
-active = true
+active = false
 audit = "results/hc7_k7minus_strict_surplus_canonical_six_boundary_audit.md"
 expected_source_sha256 = "b1fdb62070dda275a9f2e6ddd1bc1642f16b7d55df4ab5de7565375a0d7db5d8"
 scope = "the seven overlapping sparse six-boundaries belonging to one reserve-blind degree-seven vertex in a strict-surplus minimum counterexample"
@@ -8610,6 +8610,53 @@ conclusions = [
 ]
 does_not_prove = ["existence of a counterexample", "failure of a bag-splitting theorem", "the 4n-2 target"]
 keywords = ["recorded nonclosure", "K6 branch sets", "terminal contacts", "canonical cut", "model-or-descent"]
+
+[[claims]]
+id = "hc7.k7minus_strict_surplus_labelled_separator_shore"
+title = "Spanning-model concentration yields a strict labelled separator shore"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_strict_surplus_labelled_separator_shore.md"
+source_heading = "Theorem 4 (model concentration yields a strict separator shore)"
+active = true
+audit = "results/hc7_k7minus_strict_surplus_labelled_separator_shore_audit.md"
+expected_source_sha256 = "8579527fb6abc6fe1f36948ac277a0997d170f0af473fa557cf643593a5c41c0"
+scope = "the seven overlapping canonical six-boundaries at one reserve-blind degree-seven vertex in a positive-surplus minimum counterexample"
+label_fidelity = "the degree-seven vertex x, incident root y, strict separator shore C, donor branch set and anticomplete uncontacted branch set all remain literal objects in the original host"
+strict_parameter = "order of the connected separator shore inside the original canonical shore"
+conclusions = [
+  "all seven neighbours of x occupy at most four branch sets in every spanning K6 model of G-x",
+  "a multiply rooted branch set contains a strict one-root connected separator shore with connected donor complement and neighbourhood of order at least seven",
+  "the shore is either high or has an exact coefficient-four density-preserving contraction",
+  "failure of seven-connectivity after an eligible contraction returns a labelled cut certificate through the shore",
+]
+does_not_prove = [
+  "that the returned neighbourhood has order exactly seven",
+  "canonical re-entry for a high shore",
+  "terminalisation of a singleton shore",
+  "that two returned exact cuts cross",
+  "elimination of positive surplus or the 4n-2 target",
+]
+keywords = ["K7 minus", "strict surplus", "K6 model", "branch-set split", "labelled separator", "density-preserving contraction"]
+
+[[claims]]
+id = "hc7.k7minus_labelled_separator_terminalisation_residue"
+title = "The strict labelled separator shore has three nonterminal forms"
+kind = "laboratory"
+status = "audited-green"
+source = "results/hc7_k7minus_strict_surplus_labelled_separator_shore.md"
+source_heading = "5. Scope"
+active = true
+audit = "results/hc7_k7minus_strict_surplus_labelled_separator_shore_audit.md"
+expected_source_sha256 = "8579527fb6abc6fe1f36948ac277a0997d170f0af473fa557cf643593a5c41c0"
+scope = "terminalisation of the labelled separator shore returned by a spanning K6 model at positive surplus"
+conclusions = [
+  "a high shore need not inherit the canonical six-boundary hypotheses",
+  "a singleton shore need not have degree seven",
+  "an eligible contraction failure may give a nested exact cut or require a new label-preserving rooted linkage",
+]
+does_not_prove = ["existence of a counterexample", "failure of a terminalisation theorem", "the 4n-2 target"]
+keywords = ["recorded nonclosure", "labelled separator", "high shore", "singleton shore", "nested cut", "rooted linkage"]
 
 [[claims]]
 id = "hc7.protected_rooted_k42_equality_peel"
@@ -15550,9 +15597,21 @@ note = "The recorded constructions and coefficient mismatch delimit which coarse
 
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.k7minus_strict_surplus_labelled_separator_shore"
+kind = "uses"
+note = "The positive-surplus branch is reduced to a strict same-host labelled separator shore with exact coefficient-four contraction accounting."
+
+[[relations]]
+source = "hc7.k7minus_strict_surplus_labelled_separator_shore"
 target = "hc7.k7minus_strict_surplus_canonical_six_boundary"
 kind = "uses"
-note = "The positive-surplus branch is reduced to at least eight reserve-blind degree-seven vertices, each with seven canonical sparse six-boundaries and an existing K6 model whose terminal contacts occupy at most four bags."
+note = "The canonical theorem supplies the seven overlapping sparse boundaries, their common spanning K6 model and the fixed-boundary four-contact bound."
+
+[[relations]]
+source = "hc7.k7minus_labelled_separator_terminalisation_residue"
+target = "hc7.k7minus_strict_surplus_labelled_separator_shore"
+kind = "related_to"
+note = "The three nonterminal forms are exactly the high, singleton and failed eligible-contraction outcomes left by the labelled-shore theorem."
 
 [[relations]]
 source = "hc7.k7minus_strict_surplus_canonical_six_boundary"
