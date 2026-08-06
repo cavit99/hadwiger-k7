@@ -49,32 +49,59 @@ so `|E(H)|<=14`.
 
 Equality is impossible.  If `|E(H)|=14`, every `H-s` has ten edges and
 `H` is four-regular.  Its complement is a two-regular graph, hence `C_7`
-or `C_3 dotcup C_4`.  In the first case delete one complementary-cycle
-vertex and contract an edge joining two vertices at cyclic distance three;
-in the second delete one vertex of the complementary four-cycle and
-contract an edge joining a complementary-triangle vertex to the opposite
-four-cycle vertex.  In either case the contracted edge has no common
-neighbour in the remaining six-vertex graph, so the contraction produces a
-five-vertex graph with nine edges, a `K_5^-` minor in some `H-s`.  Thus
-`|E(H)|<=13`.
+or `C_3 dotcup C_4`.
 
-Suppose that three vertices `a,b,c` have degree at least five.  Since `H`
-is `K_4`-free, they cannot form a triangle.  They cannot span at most one
-edge either: an isolated member would require five neighbours among the
-four remaining vertices.  Hence they form a path, with ends `a,c`.  Each
-end is complete to the remaining four-set `W`, and the middle vertex has
-at least three neighbours in `W`.  The set `W` is independent, since an
-edge there together with `a` and the middle path vertex would make a
-`K_4`.  The edge count is therefore at least thirteen.  Since the total is
-at most thirteen, equality holds, the middle vertex has exactly three
-neighbours in `W`, and the fourth member `w of W` has degree two.  Then
+- If the complement is `C_7`, delete one cycle vertex.  In the resulting
+  complementary path `1-2-3-4-5-6`, contract the edge `25` of `H`.
+  The ends have no common neighbour in `H`, so contraction changes a
+  ten-edge graph on six vertices into a nine-edge graph on five vertices.
+- If the complement is `C_3 dotcup C_4`, delete one vertex of the
+  four-cycle.  Write the remaining complement as the triangle `abc` and
+  the path `d-e-f`.  Contract the edge `ae` of `H`; again its ends have no
+  common neighbour.
+
+Either contraction gives a `K_5^-` minor in some `H-s`, a contradiction.
+Thus `|E(H)|<=13`.
+
+Suppose that three vertices `a,b,c` have degree at least five.  They cannot
+span a triangle: each would then have at least three neighbours in the
+remaining four-set, giving at least nine incidences into a set whose
+vertices can each see at most two members of the triangle in a `K_4`-free
+graph.  They cannot span at most one edge either, because an isolated one
+would need five neighbours in a four-set.  Hence they induce the path
 
 \[
-|E(H-w)|=11,
+                         a-b-c.
 \]
 
-contrary to the six-vertex boundary bound.  Thus at most two vertices have
-degree at least five.
+Put `W=V(H)-{a,b,c}`.  The ends `a,c` are complete to `W`, and the middle
+vertex `b` has either three or four neighbours in `W`.
+
+If `b` is complete to `W`, then `W` is independent: an edge of `W`
+together with `a,b` would form a `K_4`.  The graph therefore has fourteen
+edges, while every member of `W` has degree three; deleting any such vertex
+leaves eleven edges, contrary to the six-vertex bound.
+
+Otherwise let `w_0` be the unique member of `W` missed by `b`, and put
+`B=W-{w_0}`.  The set `B` is independent, for the same `K_4` reason.  Every
+edge in `H[W]` is consequently incident with `w_0`.  If
+
+\[
+t=d_{H[W]}(w_0),
+\]
+
+then
+
+\[
+|E(H)|=13+t.
+\]
+
+For `t=0`, the vertex `w_0` has degree two and its deletion leaves eleven
+edges.  For `t=1,2`, choose a member of `B` not adjacent to `w_0`; it has
+degree three and its deletion leaves at least eleven edges.  For `t=3`,
+every member of `B` has degree four and deleting one leaves twelve edges.
+All cases contradict `|E(H-s)|<=10`.  Thus at most two vertices have degree
+at least five.
 
 For `q>=2`, every root of boundary degree at most five is safe; for `q=1`,
 every root of degree at most four is safe.  The preceding conclusion gives
@@ -134,6 +161,16 @@ Assume outcome 1 fails.  Every safe leaf is then open, so Lemma 2.1 gives
 at most one safe leaf.  Lemma 1.1 gives at most two unsafe roots in all of
 `N`, and every other leaf is unsafe.  Therefore `R` has at most three
 leaves and the stated refinements follow.  `\square`
+
+### Corollary 2.3 (surplus at least three always has a safe blocked leaf)
+
+If `q>=3`, outcome 1 of Theorem 2.2 always holds.
+
+### Proof
+
+Every root is safe because `d_H(s)<=6<=q+3`.  The root subtree has at least
+two leaves, while Lemma 2.1 permits at most one open leaf.  Hence some leaf
+is both safe and blocked.  `\square`
 
 ## 3. Scope
 
