@@ -2,11 +2,11 @@
 
 **Baseline:** `b5e69a700bb1378c18df07a5ce1c12f37b54423e`  
 **Branch:** `agent/canonical-seven-boundary-five-contact`  
-**Status:** computation-free working theorem and exact nonclosure.  The
-five-contact split has been proved, and every blocked split is converted into
-a strict label-preserving one-root separator with exact coefficient-four
-accounting.  The final conversion of every density-eligible separator into a
-seven-connected proper minor or a terminal pair of crossing exact-seven cuts
+**Status:** experimental source note.  The computation-free core in Sections
+2--6 is incorporated, with corrected scope, in the
+[promoted labelled-separator-shore theorem](../../../results/hc7_k7minus_strict_surplus_labelled_separator_shore.md).
+Section 7 is an unpromoted fallback.  The final conversion of every returned
+separator side into a seven-connected proper minor or a terminal minor model
 is not proved here.  Thus this note does not prove the `4n-2` extremal target.
 
 Throughout, `K_7^-` denotes `K_7` with one edge deleted.
@@ -104,14 +104,14 @@ This contradicts the imported four-contact bound for `T_y`. \(\square\)
 Thus every spanning model has a multiply rooted bag.  No bipartite
 reconstruction of an unrooted `K_6` is needed.
 
-For the remainder of Sections 3--5, choose a spanning `K_6` model maximizing
-its number of `N`-contacted bags.  Lemma 2.1 says that this maximum is at
-most four.  A foreign bag is called **contacted** when it contains a member
-of `N`, and **uncontacted** otherwise.
+For the remainder of Sections 3--5, choose any spanning `K_6` model.  A branch
+set is called **contacted** when it contains a member of `N`, and
+**uncontacted** otherwise.  Lemma 2.1 says that at most four branch sets are
+contacted.
 
 ---
 
-## 3. A near-clique split decoder
+## 3. Near-clique completion after a connected split
 
 The following elementary use of the one-missing-edge allowance is the key
 new observation.
@@ -172,7 +172,7 @@ vertices of `N` contained in the two halves.
 
 ---
 
-## 4. Two one-root leaf pieces in a multiply rooted bag
+## 4. Two one-root connected sides in a multiply rooted branch set
 
 ### Lemma 4.1 (two disjoint one-root leaves)
 
@@ -245,12 +245,12 @@ which proves (4.3). \(\square\)
 
 This is the promised simultaneous use of all seven canonical boundaries.
 The result is not a finite boundary list.  It converts every failure of the
-five-contact model into one strict, literal, endpoint-labelled separator
+five-contact model into one strict, literal, endpoint-labelled separator side
 inside one of the original shores.
 
 ---
 
-## 5. Exact coefficient-four accounting on the descended cell
+## 5. Exact coefficient-four accounting on the separator shore
 
 For a connected set `C`, put
 
@@ -260,9 +260,9 @@ For a connected set `C`, put
  \eta(C)=|E(G[C])|+|E_G(C,N_G(C))|-4|C|.              \tag{5.1}
 \]
 
-When `C` is supplied by Theorem 4.2, call `(x,y,C)` an
-**edge-labelled canonical cell**.  It retains the original endpoint edge
-`xy`, has `C\cap N(x)={y}`, and is a strict subset of `B_y`.
+When `C` is supplied by Theorem 4.2, call it a **labelled separator shore**.
+It retains the original endpoint edge `xy`, has `C\cap N(x)={y}`, and is a
+strict subset of `B_y`.
 
 ### Lemma 5.1 (the seven original shores are strongly high)
 
@@ -281,7 +281,7 @@ The boundary of `B_y` in `G` is `T_y\cup\{x\}`.  The only edge from `x`
 to `B_y` is `xy`.  Thus (5.2) is the imported excess identity with that
 one edge restored. \(\square\)
 
-A cell is called **high** when
+Such a separator shore is called **high** when
 
 \[
                          \eta(C)>q+k(C)-4.              \tag{5.3}
@@ -292,8 +292,8 @@ the global `4n-2` density.
 
 ### Theorem 5.2 (high descent or density-preserving contraction)
 
-Let `(x,y,C)` be the strict cell from Theorem 4.2.  Then exactly one of the
-following numerical alternatives holds.
+Let `C` be the strict labelled separator shore from Theorem 4.2.  Then
+exactly one of the following numerical alternatives holds.
 
 1. `C` is high.  It is a strictly smaller coefficient-four high shore which
    retains the literal labels `x,y` and the unique edge from `x` into the
@@ -324,10 +324,12 @@ labelled vertex `y` to `N_G(C)`.  Substituting
 `|E(G)|=4|V(G)|-2+q` gives (5.5). \(\square\)
 
 Thus the split never loses the coefficient-four bookkeeping.  It returns
-either the requested strict high-shore localization or a proper
-threshold-preserving contraction candidate.
+either a strict labelled high-shore localisation or a proper
+threshold-preserving contraction candidate.  The high shore is not known to
+be another canonical six-boundary instance.
 
-The only degenerate density-eligible cell is a singleton.  If `C={y}`,
+The only degenerate density-eligible separator shore is a singleton.  If
+`C={y}`,
 then
 
 \[
@@ -335,8 +337,8 @@ then
 \]
 
 so (5.4) is always strict by the positive amount `q`, but contracting the
-cell performs no operation.  This singleton gate is one of the two exact
-residues recorded in Section 8.
+shore performs no operation.  Its boundary has order `d_G(y)>=7`; equality
+is not known.  This is one of the residues recorded in Section 8.
 
 ---
 
@@ -371,9 +373,7 @@ Moreover, if two sides of (6.2) admit an `A-B` separator
                          Z\cup K                       \tag{6.4}
 \]
 
-is an actual order-seven cut of `G`.  Distinct component bipartitions with
-distinct such minimum separators give literal crossing exact-seven cuts
-through the operated cell.
+is an actual order-seven cut of `G`.
 
 ### Proof
 
@@ -390,15 +390,13 @@ For a component `A` of (6.2), every neighbour outside `A` lies in
 
 Finally, in `G-Z` the set `C` separates two different components `A,B` of
 (6.2).  If `K subseteq C` is an `A-B` separator of order `7-|Z|`, then
-`Z\cup K` separates the same sides in `G` and has order seven.  The last
-sentence is literal separation uncrossing, not a virtual-boundary claim.
+`Z\cup K` separates the same sides in `G` and has order seven.
 \(\square\)
 
-If the local `A-B` connectivity through `C` is larger than `7-|Z|`, Menger
-gives a correspondingly larger family of disjoint traversals through `C`.
-The present argument does not yet convert that portal-rich alternative into
-the minor.  This is the first unsupported implication in the requested
-full three-way closure.
+Distinct order-seven cuts obtained in this way need not cross; they may be
+nested.  If no separator `K` of the displayed order exists, an additional
+capacitated linkage statement inside `C` would be needed.  Neither outcome
+is terminal here.
 
 ---
 
@@ -420,8 +418,9 @@ of `N`.  Put
  \qquad |R|=u+1.
 \]
 
-Run vertex-disjoint model-avoiding paths from distinct roots in `R` to
-distinct uncontacted bags.
+Run vertex-disjoint **root-clean model-avoiding paths** from distinct roots
+in `R` to distinct uncontacted branch sets: apart from its initial root and
+terminal vertex, each path avoids the model and every unused root.
 
 Then either:
 
@@ -484,8 +483,9 @@ from every uncontacted bag.  Seven-connectivity gives
 
 Every component of `W` contains at least one root.  If one contains several,
 a leaf-root tree split gives a strict one-root connected subset; if it
-contains one, use the whole component.  In either case one obtains another
-cell of the form in Theorem 4.2, anticomplete to every uncontacted bag.
+contains one, use the whole component.  This gives a labelled one-root
+separator side anticomplete to every uncontacted branch set.  It need not
+satisfy the donor-branch-set and connected-complement clauses of Theorem 4.2.
 
 ### Corollary 7.2 (the four-contact exact `K_7^vee` refinement)
 
@@ -499,8 +499,7 @@ In outcome 2 of Theorem 7.1, if `c'=4` and `u'=2`, then either `G` contains
 
 can be enlarged to a spanning exact `K_7^vee` model whose deficient centre
 is `\{x\}\cup W`.  The audited exact-`K_7^vee` separator dichotomy then
-returns an operation-preserving actual nested separator inside one of the
-four universal bags.
+returns an actual nested separator inside one of the four universal bags.
 
 ### Proof
 
@@ -526,17 +525,17 @@ need pair deletion, a bipartite reconstruction, or a finite portal census.
 
 The campaign proves the following unbounded theorem.
 
-> **Five-contact model-or-labelled-cell theorem.**  For one reserve-blind
+> **Five-contact model-or-labelled-shore theorem.**  For one reserve-blind
 > degree-seven vertex `x`, every spanning `K_6` model in the common graph
 > `G-x` either yields an explicit `K_7^-` model, or yields a root
-> `y in N(x)` and a strict connected cell
+> `y in N(x)` and a strict connected separator shore
 > \[
 > C\subsetneq B_y,
 > \qquad C\cap N(x)=\{y\},
 > \]
 > whose literal neighbourhood is an actual separator, with `x` in that
-> neighbourhood and `xy` the unique edge from `x` into the cell.
-> The cell is either coefficient-four high, or its contraction onto `y`
+> neighbourhood and `xy` the unique edge from `x` into the shore.
+> The shore is either coefficient-four high, or its contraction onto `y`
 > preserves the `4n-2` density.
 
 This closes the model-splitting part requested in the attack.  It is
@@ -548,30 +547,34 @@ are retained exactly.
 The full positive-surplus elimination would additionally require the
 following final statement.
 
-> **Remaining contraction/crossing theorem.**  Let `(x,y,C)` be a strict
-> density-eligible cell supplied above.  If `C` is non-singleton, then the
+> **Remaining terminalisation theorem.**  Let `C` be a strict labelled
+> separator shore supplied above.  If `C` is non-singleton and
+> density-eligible, then the
 > density-preserving contraction `G/C` is seven-connected, or the
-> contraction-failure certificate in Theorem 6.1 contains two exact
-> order-seven cuts whose uncrossing produces `K_7^-` or another proper
-> density-preserving seven-connected minor.  The singleton cell must either
-> be absorbed by a second model split or paired with a density-safe incident
-> contraction.
+> contraction-failure certificate in Theorem 6.1 produces `K_7^-`, a proper
+> density-preserving seven-connected minor, or a strictly improved labelled
+> separator shore.  A separate re-entry theorem is required for the high
+> shore, and a singleton shore must first be shown to have degree seven or
+> be replaced by an exact labelled order-seven cut.
 
-Two exact residues prevent claiming this theorem here.
+Three residues prevent claiming this theorem here.
 
-1. **Singleton gate.**  The strict cell may be `{y}`.  It is always
-   density-eligible but has no proper whole-cell contraction.
-2. **Portal-rich contraction failure.**  In Theorem 6.1 the minimum local
-   separator inside `C` can have order strictly greater than `7-|Z|`.
-   Then there are extra disjoint traversals through `C`, but the current
-   proof does not place them into the six named clique bags while preserving
-   the endpoint labels.
+1. **High separator shore.**  A strict high `C` need not inherit the
+   canonical six-boundary or spanning-model hypotheses, so strict containment
+   alone does not permit iteration.
+2. **Singleton separator shore.**  The strict shore may be `{y}`.  It is
+   always density-eligible but has no proper whole-shore contraction, and
+   `d_G(y)=7` is not known.
+3. **Failed eligible contraction.**  An exact local separator supplies one
+   order-seven cut, but it may be nested with the existing cuts.  If the
+   exact local separator does not exist, the required label-preserving
+   capacitated linkage statement is also open.
 
 Pair deletion and two-root transfer were checked only as fallbacks.  They
-reproduce the same portal-placement issue and do not remove these two
+reproduce the same portal-placement issue and do not remove these three
 residues without an additional label-preserving co-connected split theorem.
 
 Accordingly this note is substantial progress, but it is not a proof of the
 strict-surplus layer or of the headline `4n-2` theorem.  The next accepted
-step must close the two displayed residues; another finite boundary list
+step must close the three displayed residues; another finite boundary list
 would not do so.
