@@ -63,6 +63,42 @@ at most three.  This atom rank will be used only when it can be coupled
 literally to the labelled-shore state; an unrelated atom or certifying cut
 does not close the shore recursion.
 
+## Round 1: hostile audit of the prior terminalisation
+
+The proposed six-cut exclusion in the unpromoted source is not valid as
+written.  If `X` is a six-cut and `A_1,A_2` are full components of
+`G-X`, fullness gives each boundary vertex **at least** one neighbour in
+each component.  Together with six-connectivity this does not imply
+
+\[
+\delta(G[X])\ge4.
+\]
+
+A boundary vertex may have many neighbours in the open components, so its
+internal boundary degree can be small.  The same reversed inference occurs
+in the three-component row.  Therefore the deductions
+
+\[
+G[X]\cong K_6-3K_2
+\]
+
+and “`G[X]` is cubic” are unsupported, and the claimed contradiction from
+rooted-`K_4` density cannot be used.
+
+Consequences:
+
+- a density-eligible labelled-shore contraction may still fail at a genuine
+  six-cut;
+- the later assertion that every portal-rich failure supplies at least four
+  disjoint traversals is not established in the six-cut row;
+- the global recursive class must retain a six-boundary state or replace
+  that step by a different theorem.
+
+The safe statements surviving from that source are the neighbourhood
+bounds `|E(G[N(x)])|<=13`, the existence of at least five density-safe
+edges incident with a reserve-blind `x`, and the elementary transfer when a
+root-free detachable path owns at most one foreign model duty.
+
 ## Trust boundary
 
 No claim in this file is promoted until it is separately audited.  Every
