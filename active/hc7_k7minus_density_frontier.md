@@ -5,7 +5,8 @@ six-colour conjecture or of `HC_7`.  The `4n-2` extremal theorem below is
 the sole active target.  Its computation-free critical-host entrance,
 seven-cut reduction, safe degree-seven contraction, and strict-surplus
 labelled-separator-shore theorem have written proofs with separate GREEN
-internal audits.  The exceptional-centre and direct `HC_7` programmes
+internal audits.  The same is true of the order-six-cut localisation after
+a safe contraction.  The exceptional-centre and direct `HC_7` programmes
 remain frozen conditional refinements.
 
 ## 1. Proved entrance reduction
@@ -290,6 +291,39 @@ returns an exact order-seven cut containing `v,s`, with at most three
 complementary components.  In the two-exterior case every incident edge is
 density-preserving, and Yuan's fragment theorem yields the exact nested
 root-swap residue recorded in Theorem 3 of that result.
+
+The quotient is always six-connected: a cut of order at most five either
+lifts unchanged or, if it contains the contracted vertex, lifts to a cut of
+order at most six in `G`.  The new audited
+[order-six-cut localisation](../results/hc7_k7minus_exact_six_cut_localisation.md)
+therefore applies to any minimum cut of a quotient whose connectivity has
+dropped to six.  If `S` is such a cut, put
+
+\[
+ \delta_i=|E(H[C_i])|+|E_H(C_i,S)|-4|C_i|,
+ \qquad q_H=|E(H)|-(4|V(H)|-2).
+\]
+
+Then only the following cases remain:
+
+\[
+\begin{array}{c|c|c}
+|\mathcal C(H-S)|&H[S]&\text{required component excess}\\
+\hline
+2&|E(H[S])|\le11&\delta_1+\delta_2\ge q_H+11,\\
+3&\Delta(H[S])\le3,\ |E(H[S])|\le8&\sum_i\delta_i\ge q_H+14.
+\end{array}                                             \tag{12a}
+\]
+
+This is the sound part of the proposed exact-six closure.  The stronger
+claim that every six-connected graph at this density already contains
+`K_7^-` remains unproved.  The rejected argument inferred
+`d_{H[S]}(s)>=6-r` from minimum degree six and `r` full components.  In
+fact fullness gives only a lower bound on the number of exterior neighbours,
+so the subtraction has the wrong direction; the associated finite verifier
+assumed the missing boundary-degree bounds.  This is a route nonclosure,
+not a counterexample.  The smallest repair is a rooted-minor or
+density-preserving shore theorem bounding the component excesses in (12a).
 
 If `q(G)>0`, the audited strict-surplus and essential-edge theorems make
 `G` minimally seven-connected and expose a full two-shore six-separation
