@@ -3,8 +3,9 @@
 **Status:** closed by a written proof with a separate internal **GREEN**
 audit.  Internal audit is not external peer review.  `HC_7` remains open.
 
-The former detailed frontier is preserved at
-[`../archive/hc7_k7minus_density_frontier_pre_exact6_closure.md`](../archive/hc7_k7minus_density_frontier_pre_exact6_closure.md).
+The former detailed frontier remains available in the immutable pre-closure
+revision
+[`93079280`](https://github.com/cavit99/hadwiger-k7/blob/93079280ceedd5754105446e27bb76985ad8ffc0/active/hc7_k7minus_density_frontier.md).
 
 ## 1. Closed extremal target
 
@@ -54,7 +55,8 @@ every `K_7^-`-minor-free graph is six-colourable.
 
 It does not prove `HC_7`.  The remaining open upgrade is from the guaranteed
 near-clique minor `K_7^-` to a complete `K_7` minor in a hypothetical
-seven-contraction-critical host.
+seven-contraction-critical host.  That is now the sole active target in the
+[labelled missing-edge upgrade frontier](hc7_k7minus_to_k7_upgrade_frontier.md).
 
 ## 4. Verification
 
