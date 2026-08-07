@@ -1,178 +1,165 @@
-# Hadwiger's Conjecture for $K_7$-minor-free graphs
+# Hadwiger's Conjecture for `K_7`-minor-free graphs
 
-> **Research status:** $HC_7$ is not proved in this repository.
+> **Research status:** this repository now contains a written, internally
+> audited proof that every `K_7^-`-minor-free graph is six-colourable.
+> `HC_7` is not proved and remains open.  Internal audits are not external peer review.
 
 This repository is an open research workspace on the first unresolved case
-of Hadwiger's Conjecture. It contains written partial results, conjectural
-proof targets, computer-assisted finite results, internal audits, and
-counterexamples to intermediate claims. Internal audits are not external
-peer review.
+of Hadwiger's Conjecture.  It contains written theorems, conjectural proof
+targets, computer-assisted finite results, internal audits, and explicit
+counterexamples to intermediate claims.
 
-The notation `$HC_7$` used in historical filenames and internal claim IDs
-indexes the excluded clique `K_7`. In Seymour's convention, where `HC(t)`
-means that every `K_{t+1}`-minor-free graph is `t`-colourable, this is
-`HC(6)`.
+Here `K_7^-` means `K_7` with one edge deleted.  The notation `HC_7` in
+historical filenames refers to the excluded clique `K_7`; in Seymour's
+indexing convention this is `HC(6)`.
 
-## The problem
+## The two statements
 
-A $K_t$-minor model in a graph $G$ consists of $t$ pairwise disjoint
-connected branch sets, with an edge between every pair. Hadwiger's
-Conjecture asserts
+Hadwiger's Conjecture at `t=7` is
 
-$$
-K_t\not\preccurlyeq G\quad\Longrightarrow\quad \chi(G)\le t-1.
-$$
+\[
+                         K_7\npreccurlyeq G
+ \quad\Longrightarrow\quad \chi(G)\le6.
+\]
 
-The conjecture is known for $t\le6$; the $t=6$ case is due to
-[Robertson, Seymour, and Thomas](https://doi.org/10.1007/BF01202354),
-building on the Four-Colour Theorem. This repository studies
+That remains unproved.
 
-$$
-HC_7:\qquad K_7\not\preccurlyeq G\quad\Longrightarrow\quad\chi(G)\le6.
-$$
+The adjacent near-clique statement is now proved in the repository:
 
-## Scope and headline progress
+\[
+                         K_7^-\npreccurlyeq G
+ \quad\Longrightarrow\quad \chi(G)\le6.
+\]
 
-The current research focus is the unconditional statement that every
-seven-connected `n`-vertex graph with at least `4n-2` edges contains a
-`K_7^-` minor.  This would settle the Norin--Totschnig `K_7^-` six-colour
-conjecture, but not `HC_7`.
+The key extremal theorem is stronger and purely structural:
 
-The project works from a hypothetical minor-minimal counterexample. Such a
-graph is seven-connected, is seven-chromatic, has no $K_7$ minor, and every
-proper minor is six-colourable.
+\[
+ \boxed{
+ \kappa(G)\ge7,
+ \qquad |E(G)|\ge4|V(G)|-2
+ \quad\Longrightarrow\quad K_7^-\preccurlyeq G.}
+\]
 
-The frozen direct `HC_7` programme contains audited bounded-separation,
-colouring-response, exterior-component and labelled near-clique theorems.
-Its unresolved task is to synchronise branch-set labels and proper-minor
-colourings into an explicit `K_7` model, a common boundary partition, or a
-strict same-host descent.  The [bounded-interface frontier](active/hc7_bounded_interface_synchronization_frontier.md)
-records that conditional programme; it is not a parallel active target.
+## Decisive proof
 
-Separately, a computation-free, internally audited route towards the adjacent
-`K_7^-` problem, where `K_7^-` is `K_7` with one edge deleted, proves that
-every six-connected `K_7^-`-minor-free graph has at most one literal `K_5`.
-Consequently, every hypothetical minor-minimal non-six-colourable host has
-at most four degree-seven vertices, at least `4n-2` edges, and at least
-`17+tau` exceptional degree-eight vertices, where `tau` is the excess
-degree above nine.  If all four possible degree-seven vertices occur, the
-host has order at least 37 and at least `32+tau` exceptional vertices.  The
-anti-neighbourhood of every exceptional vertex is connected whenever a
-degree-seven vertex exists.  The route also gives exact degree-seven
-neighbourhoods and proves that outside
-every order-seven cut there are at most four disjoint connected subgraphs
-each adjacent to every boundary vertex, with exact whole-component
-contraction criteria; the number of complementary components is at most
-three, and a three-component boundary is subcubic.  In the
-minor-minimal non-six-colourable host, exact boundary-colouring reflection
-first restricts a possible three-component cut to colour classes of sizes
-`3,2,2`; the audited three-shore planar-extension theorem then six-colours
-that configuration.  Thus every order-seven cut in the critical host has
-exactly two complementary components.  These are structural theorems about
-a hypothetical critical graph and about seven-connected
-`K_7^-`-minor-free graphs; they are not the bare extremal `4n-2` theorem, the
-`K_7^-` six-colour conjecture, or `HC_7`.
+The proof is in
+[`results/hc7_k7minus_exact_six_connectivity_closure.md`](results/hc7_k7minus_exact_six_connectivity_closure.md),
+with an adjacent hostile internal audit in
+[`results/hc7_k7minus_exact_six_connectivity_closure_audit.md`](results/hc7_k7minus_exact_six_connectivity_closure_audit.md).
 
-The unproved critical-host target of at most sixteen exceptional
-degree-eight vertices and the stronger `4n-4` extremal statement remain
-frozen conditional refinements.
+Its central intermediate theorem is:
 
-The exact live theorem changes as new reductions are proved. Its
-authoritative status is maintained in the research ledger, and its full
-hypotheses and trust boundary are stated in the technical frontier rather
-than duplicated here.
+> Every graph `H` with
+> \[
+>                         \kappa(H)=6,
+> \qquad |E(H)|\ge4|V(H)|-2
+> \]
+> contains a `K_7^-` minor.
 
-### Partial-results manuscript status
+For a six-cut, every complementary component is full to the boundary.
+Explicit branch-set templates leave only two or three components.
 
-The adjacent `K_7^-` chain has been distilled into a concise,
-computation-free [paper](paper/k7minus-low-degree/main.pdf), with
-[LaTeX source](paper/k7minus-low-degree/main.tex).  It has separate
-mathematical and citation audits, but these are internal checks rather than
-peer review or a priority certificate.  The broader
-[external-review blueprint](active/hc7_partial_results_external_review_blueprint.md)
-is frozen.  Neither manuscript proves the `K_7^-` six-colour conjecture or
-`HC_7`.
+- In the two-component case, the boundary is forced to be `K_6-3K_2`.
+  Three sharp rooted-`K_4` inequalities make the available component excess
+  far too small for the global density.
+- In the three-component case, the boundary is forced to be cubic.  Summing
+  the same rooted inequality over its twelve ordered nonedges gives the same
+  contradiction.
+
+A minimum seven-connected enemy has a degree-seven vertex with a
+coefficient-four density-safe incident contraction.  The quotient remains at
+least six-connected.  If it is seven-connected it is a smaller enemy; if its
+connectivity is exactly six, the theorem above applies.
+
+The six-colour consequence then uses the audited critical-host facts that all
+degree-seven vertices lie in the unique possible literal `K_5`, while that
+clique cannot contain five degree-seven vertices.  Hence a hypothetical
+minor-minimal non-six-colourable target-free graph has at least `4n-2` edges
+and is covered by the extremal theorem.
+
+## Verification and trust boundary
+
+The dependency-free verifier
+[`results/hc7_k7minus_exact_six_connectivity_verify.py`](results/hc7_k7minus_exact_six_connectivity_verify.py)
+exhausts all `2^15` labelled graphs on the six-vertex boundary and checks the
+finite classification and incidence coefficients:
+
+```bash
+python3 results/hc7_k7minus_exact_six_connectivity_verify.py
+```
+
+Expected final line:
+
+```text
+ALL CHECKS PASSED
+```
+
+The finite verifier does not establish the unbounded theorem.  The rooted
+minor and connectivity arguments are written out in the theorem and checked
+line by line in the audit.
+
+The current claims have not yet been externally peer reviewed or published.
+No novelty or priority claim should be inferred from repository timestamps or
+internal GREEN labels.
+
+## What remains
+
+A hypothetical minor-minimal `HC_7` counterexample now has a guaranteed
+`K_7^-` minor.  The remaining problem is to repair the model's single missing
+adjacency—or use its labelled branch-set structure and proper-minor colouring
+responses to derive a contradiction.
+
+The historical bounded-interface, exact-seven, degree-seven, and labelled
+near-clique programmes remain available as toolkits for that upgrade.  The
+former E5 and strict-surplus density laboratories are preserved for
+provenance but are no longer required for the `K_7^-` theorem.
 
 ## Start here
 
 | Document | Purpose |
 |---|---|
-| [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current research status |
-| [`active/INDEX.md`](active/INDEX.md) | Concise navigation to live proof work |
-| [`K_7^-` strict-density frontier](active/hc7_k7minus_density_frontier.md) | Sole active target, minimal-enemy reductions, and exact nonclosures |
-| [External-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md) | Frozen theorem package, review questions, reproduction plan, and restart criteria |
-| [Live case verification map](active/hc7_live_case_dag.md) | Exhaustive global chain, conditional refinements, and every missing descent arrow |
-| [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Frozen all-degree target, direct inputs, and trust boundary |
-| [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
-| [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Current theorem hashes, dependency map, review questions, and publication gate |
-| [`K_7^-` degree-seven rigidity paper](paper/k7minus-low-degree/main.pdf) | Concise computation-free manuscript containing the low-degree structural theorem chain |
-| [Critical seven-cut capacity](results/hc7_k7minus_critical_seven_cut_capacity.md) | Excludes four-component seven-cuts in the critical host and normalises the three-component boundary |
-| [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
-| [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
-| [Exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
-| [Exact order-seven packing restrictions](results/hc7_exact_seven_packet_packing.md) | Limits disjoint connected subgraphs adjacent to every vertex of an order-seven boundary |
-| [Component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md) | Simultaneous component-supported augmentation and rejection-map dichotomy |
-| [Full-component common-root exchange](results/hc7_full_exterior_component_common_root_exchange.md) | Exact two-component rooted residue in the full unique-rejector case |
-| [Degree-seven boundary-labelled near-clique model](results/hc7_degree7_aligned_near_k7_model.md) | Principal degree-seven structural compression |
-| [Research integrity tools](tools/README.md) | Search, curated dependency metadata, audit hashes, and CI checks |
+| [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current status and trust boundary |
+| [`active/INDEX.md`](active/INDEX.md) | Concise navigation to current work |
+| [Exact-six-connectivity theorem](results/hc7_k7minus_exact_six_connectivity_closure.md) | Proof of the `4n-2` extremal theorem and six-colour corollary |
+| [Adjacent internal audit](results/hc7_k7minus_exact_six_connectivity_closure_audit.md) | Pinned hostile verification of every proof step |
+| [Finite boundary verifier](results/hc7_k7minus_exact_six_connectivity_verify.py) | Deterministic check of the six-vertex arithmetic |
+| [Closed density frontier](active/hc7_k7minus_density_frontier.md) | Short record of the completed proof spine |
+| [Bounded-interface frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Frozen toolkit for the remaining `K_7^-` to `K_7` upgrade |
+| [Degree-seven frontier](active/hc7_degree7_model_separator_frontier.md) | Labelled exact-seven and model/separator tools |
+| [Research integrity tools](tools/README.md) | Search, audit hashes, dependency metadata, and CI checks |
 
 Read a theorem in [`results/`](results/) together with its adjacent
-`_audit.md` file. Refuted intermediate principles and their exact scope are
-kept in [`barriers/`](barriers/). Superseded work remains in
-[`archive/`](archive/) for provenance.
+`_audit.md` file.  Refuted intermediate principles are retained in
+[`barriers/`](barriers/), and superseded work in [`archive/`](archive/).
 
 ## Claim labels
 
-- **Written proof:** a proof with explicit hypotheses and conclusion.
-- **Separate internal audit:** an independent agent checked that revision;
-  this is not peer review.
+- **Written proof:** explicit hypotheses, statement, and proof.
+- **Separate internal audit:** an independent hostile check of a pinned
+  revision; not external peer review.
 - **Computer-assisted finite result:** an exact finite reduction with
-  retained code and, where practical, checkable certificates.
+  retained code and reproducible output.
 - **Conjectural target:** an unproved next theorem.
-- **Recorded negative finding / route nonclosure:** a failed mechanism or
-  unsupported inference, not a counterexample.
 - **Barrier:** a counterexample to an intermediate claim, not to Hadwiger's
   Conjecture.
-
-Finite computation is used to test conjectured lemmas and settle explicitly
-finite subproblems. It is never substituted for an unbounded proof.
-
-## Research memory and integrity
-
-Every tracked Markdown file, including archived work, is searchable through
-a disposable SQLite/FTS index:
-
-```bash
-python3 tools/research_index.py build
-python3 tools/research_index.py search '"bounded interface"'
-python3 tools/research_index.py context hc7.target.k7minus_extremal_4n_minus_2
-python3 tools/research_index.py check
-python3 tools/research_index.py report
-```
-
-The generated index and reports are retrieval and integrity aids. Markdown
-proofs remain authoritative, `RESEARCH_LEDGER.md` is the sole status
-authority, and the curated dependency graph is not presumed complete.
 
 ## Repository layout
 
 ```text
 .
-├── README.md            # durable public overview
-├── RESEARCH_LEDGER.md   # authoritative current research status
+├── README.md            # public overview
+├── RESEARCH_LEDGER.md   # authoritative current status
 ├── AGENTS.md            # workflow and proof-integrity rules
-├── tools/               # generated index and integrity checks
+├── tools/               # research index and integrity checks
 ├── results/             # written claims and adjacent audits
-├── active/              # current proof targets and live scripts
+├── active/              # current frontiers and live scripts
 ├── barriers/            # counterexamples to intermediate claims
 └── archive/             # superseded work retained for provenance
 ```
 
-See [`AGENTS.md`](AGENTS.md) before contributing. Prefer standard
-graph-theoretic language, state exact trust boundaries, and do not modify an
-audited theorem without renewing its audit.
+See [`AGENTS.md`](AGENTS.md) before contributing.
 
 ## Licence
 
-Repository materials are available under the [MIT License](LICENSE). The
+Repository materials are available under the [MIT License](LICENSE).  The
 licence permits reuse; it does not certify the mathematical claims.
