@@ -8484,6 +8484,30 @@ does_not_prove = ["existence of a counterexample", "failure of a stronger cut-un
 keywords = ["recorded nonclosure", "root swap", "fragment", "exact seven-cut"]
 
 [[claims]]
+id = "hc7.k7minus_exact_six_cut_localisation"
+title = "Order-six cuts localise to two sparse high-excess cases"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_exact_six_cut_localisation.md"
+source_heading = "Theorem"
+active = true
+audit = "results/hc7_k7minus_exact_six_cut_localisation_audit.md"
+expected_source_sha256 = "f2a4480d27556996620117a68a8a7924dd61cf37bf5ec9e8cce4c953dfcc88af"
+scope = "order-six cuts in six-connected K7-minus-minor-free graphs, with coefficient-four sharpenings at density 4n-2"
+conclusions = [
+  "every order-six cut has exactly two or three complementary components",
+  "at density 4n-2 the two-component boundary has at most eleven edges and requires total component excess at least q+11",
+  "at density 4n-2 the three-component boundary is subcubic with at most eight edges and requires total component excess at least q+14",
+]
+does_not_prove = [
+  "elimination of either residual component-interior problem",
+  "the seven-connected 4n-2 extremal target",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "six-cut", "boundary localisation", "component excess", "rooted K4"]
+
+[[claims]]
 id = "hc7.k7minus_strict_surplus_minimal_enemy"
 title = "A strict-surplus minimum enemy has a majority of degree-seven vertices"
 kind = "theorem"
@@ -10005,6 +10029,12 @@ source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.k7minus_sharpened_critical_density"
 kind = "related_to"
 note = "This application bridge shows that the extremal target would settle the K7-minus six-colour conjecture; it is not a proof prerequisite of the extremal theorem."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.k7minus_exact_six_cut_localisation"
+kind = "uses"
+note = "After the density-safe contraction, a connectivity-six quotient is confined to the two exact sparse-boundary high-excess residues."
 
 [[relations]]
 source = "hc7.target.k7minus_two_transversals"
@@ -15273,9 +15303,13 @@ sha256 = "e6a57e3efd140d9e7c143fe87467142fc6609d6758b25758fb985e3cd8db9263"
 timeout = 30
 expected_stdout = [
   "T3-singleton-p vertices=11 edges=28 partitions_by_used_order=(330, 4620, 25410, 64680, 63987) connected_by_used_order=(330, 2352, 7728, 13002, 9127) minimum_defect=2",
+  "closest {r0} | {r1,q} | {r2,x} | {r3,y} | {U} | {V} | {t}",
   "T3-edge-pb vertices=12 edges=31 partitions_by_used_order=(792, 13860, 101640, 388080, 767844, 627396) connected_by_used_order=(792, 6510, 26264, 61140, 79303, 44945) minimum_defect=2",
+  "closest {r0} | {r1,q} | {r2,x} | {r3,y} | {U} | {V} | {t}",
   "T4-singleton-b vertices=11 edges=27 partitions_by_used_order=(330, 4620, 25410, 64680, 63987) connected_by_used_order=(330, 2268, 7231, 11772, 7964) minimum_defect=2",
+  "closest {r0} | {r1,q} | {r2,x} | {r3,y} | {U} | {V} | {t}",
   "T4-edge-bc vertices=12 edges=29 partitions_by_used_order=(792, 13860, 101640, 388080, 767844, 627396) connected_by_used_order=(792, 6090, 23268, 51125, 62187, 32850) minimum_defect=2",
+  "closest {r0} | {r1,q} | {r2,x} | {r3,y} | {U} | {V} | {t}",
   "VERIFIED: all four atomic portal-concentration quotients exclude K_7^-",
 ]
 

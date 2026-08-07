@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 6 August 2026
+**Last updated:** 7 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.
@@ -66,6 +66,12 @@ GREEN internal audits.
   The contraction cannot remain seven-connected.  Its failure pulls back
   to an exact order-seven cut containing `v,s`, with at most three
   complementary components.
+- The contracted graph is nevertheless six-connected.  A new audited
+  arbitrary-six-cut localisation shows that every order-six cut in it has
+  exactly two or three boundary-full components.  At the `4n-2` threshold,
+  the two-component boundary has at most eleven edges and total component
+  excess at least `q+11`; the three-component boundary is subcubic with at
+  most eight edges and total component excess at least `q+14`.
 - If `G-N[v]` has two components, every incident contraction is
   density-preserving.  Yuan's fragment theorem then yields a connected
   fragment with a single surviving root and two nested exact seven-cuts.
@@ -130,9 +136,22 @@ vertices; every strict-surplus enemy has at least eight degree-seven
 vertices outside that stratum.  This closes that direct mechanism, not
 every possible indirect use of the reserve inequality.
 
-The immediate attack is now terminalisation of the strict labelled
-separator shore.  There are three exact cases: a high shore which need not
-inherit the canonical six-boundary hypotheses; a singleton `{y}` for which
+The safe-contraction quotient now supplies a second, potentially shorter
+direct laboratory.  The full claim that every six-connected graph at the
+`4n-2` threshold contains `K_7^-` is still open.  A proposed proof was
+rejected because boundary fullness gives a lower bound on exterior degree,
+not the upper bound needed to infer minimum degree inside the six-vertex
+separator; its finite checker assumed those unsupported internal-degree
+bounds.  This is a recorded route nonclosure, not a counterexample to the
+six-connected statement.  What survives is the audited localisation above.
+The efficient order is to close the subcubic three-component row first and
+then attack the two-component high-excess row by a synchronised rooted-minor
+or density-preserving shore argument.
+
+The existing positive-surplus attack remains terminalisation of the strict
+labelled separator shore.  There are three exact cases: a high shore which
+need not inherit the canonical six-boundary hypotheses; a singleton `{y}`
+for which
 `d_G(y)=7` is not known; and a non-singleton eligible shore whose
 density-preserving contraction loses seven-connectivity.  In the last case
 an exact local separator supplies one order-seven cut, but it may be nested

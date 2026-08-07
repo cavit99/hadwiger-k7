@@ -17,6 +17,7 @@ Conjecture 21, but not `HC_7`.
 Selected audited inputs:
 
 - [density-preserving contraction at every degree-seven entrance](../results/hc7_k7minus_degree7_safe_contraction.md)
+- [localisation of every connectivity-six quotient to two sparse order-six-cut residues](../results/hc7_k7minus_exact_six_cut_localisation.md)
 - [strict labelled separator shores at positive surplus](../results/hc7_k7minus_strict_surplus_labelled_separator_shore.md)
 
 Immediate barriers:
@@ -24,6 +25,7 @@ Immediate barriers:
 These are audited route nonclosures, not constructional counterexamples:
 
 - [the nested root-swap residue](../results/hc7_k7minus_degree7_safe_contraction.md#theorem-3-the-exact-two-exterior-fragment-residue)
+- [the two- and three-component high-excess residues at an order-six cut](../results/hc7_k7minus_exact_six_cut_localisation.md#scope)
 - [high, singleton and failed-contraction separator-shore residues](../results/hc7_k7minus_strict_surplus_labelled_separator_shore.md#5-scope)
 
 ## Current structural laboratory
