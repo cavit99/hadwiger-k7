@@ -1,0 +1,28 @@
+name: Exact-six branch verification
+
+on:
+  push:
+    branches:
+      - agent/exact-six-connectivity-closure
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Run infrastructure tests
+        run: python -m unittest discover -s tools/tests -p 'test_*.py' -v
+      - name: Validate current proof spine and run registered verifier
+        run: python tools/research_index.py ci
+      - name: Run exact-six verifier directly
+        run: python results/hc7_k7minus_exact_six_connectivity_verify.py
