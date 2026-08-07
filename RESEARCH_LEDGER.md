@@ -154,9 +154,11 @@ not the historical E5 or labelled-shore laboratories.
 
 The new theorem guarantees a `K_7^-` minor in every hypothetical
 minor-minimal `HC_7` counterexample, but one missing adjacency still has to
-be repaired.  The frozen bounded-interface, exact-seven, and labelled
-near-clique programmes remain sources of tools for that final upgrade.
-They should not be represented as part of the now-closed `K_7^-` proof.
+be repaired.  The sole active target is the
+[labelled `K_7^-`-to-`K_7` upgrade](active/hc7_k7minus_to_k7_upgrade_frontier.md).
+The frozen bounded-interface, exact-seven, and labelled near-clique
+programmes remain sources of tools for that final upgrade.  They should not
+be represented as part of the now-closed `K_7^-` proof.
 
 The immediate repository task is external mathematical review and manuscript
 consolidation of the exact-six-connectivity proof.  New local case analysis
@@ -170,5 +172,8 @@ exceptional-count programme, and reserve-aggregation campaign are preserved
 for provenance.  They are no longer needed for the `K_7^-` six-colour
 conjecture.
 
-The former detailed density frontier is archived at
-[`archive/hc7_k7minus_density_frontier_pre_exact6_closure.md`](archive/hc7_k7minus_density_frontier_pre_exact6_closure.md).
+The former detailed density frontier remains available in the immutable
+pre-closure revision
+[`93079280`](https://github.com/cavit99/hadwiger-k7/blob/93079280ceedd5754105446e27bb76985ad8ffc0/active/hc7_k7minus_density_frontier.md).
+The former curated claim manifest is preserved verbatim at
+[`archive/research_manifest_2026-08-06_before_exact6_closure.toml`](archive/research_manifest_2026-08-06_before_exact6_closure.toml).
