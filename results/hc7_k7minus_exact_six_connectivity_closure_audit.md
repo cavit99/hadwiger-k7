@@ -1,6 +1,10 @@
 # Audit of the exact-six-connectivity closure
 
-**Audit verdict:** **GREEN** for the theorem file with SHA-256
+## Verdict
+
+GREEN.
+
+The audit is GREEN for the theorem file with SHA-256
 
 ```text
 c17ea01e3d4f1aad159ca66a75c2b1f0ab7bc589b3473d302dba0c31d4712be0
