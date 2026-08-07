@@ -84,7 +84,9 @@ expected_stdout = [
   "six_vertex_graphs=32768",
   "four_component_survivors=0",
   "two_component_boundaries=15",
+  "two_component_edge_counts=[12]",
   "three_component_cubic_boundaries=70",
   "ordered_nonedge_checks=PASS",
+  "summary_sha256=2282b0fa6a51fd9318bd67126defec4a41e27957e32cdc0381a53c571945280c",
   "ALL CHECKS PASSED",
 ]
