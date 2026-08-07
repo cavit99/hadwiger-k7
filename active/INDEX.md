@@ -20,8 +20,10 @@ Read:
 
 - [exact-six-connectivity closure](../results/hc7_k7minus_exact_six_connectivity_closure.md);
 - [independent internal audit](../results/hc7_k7minus_exact_six_connectivity_closure_audit.md);
-- [dependency-free finite verifier](../results/hc7_k7minus_exact_six_connectivity_verify.py);
 - [closed density frontier](hc7_k7minus_density_frontier.md).
+
+The dependency-free checker is
+`../results/hc7_k7minus_exact_six_connectivity_verify.py`.
 
 ## Sole active target
 
