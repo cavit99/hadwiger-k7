@@ -208,14 +208,10 @@ effort = "high"
             with redirect_stdout(output):
                 labs.setup_runtime(lab_id, "grok")
 
-        self.assertEqual(run.call_count, 2)
+        self.assertEqual(run.call_count, 1)
         self.assertEqual(
             run.call_args_list[0].args[0],
-            [labs.sys.executable, "-m", "venv", str(workspace / ".venv")],
-        )
-        self.assertEqual(
-            run.call_args_list[1].args[0][0],
-            str(workspace / ".venv" / "bin" / "python"),
+            ["uv", "sync", "--locked"],
         )
         self.assertIn(str(workspace / ".venv"), output.getvalue())
 

@@ -16,9 +16,10 @@ MANIFEST = "tools/research_manifest.toml"
 MATH_DIRECTORIES = {"active", "barriers", "results"}
 FULL_VERIFIER_INPUTS = {
     ".github/workflows/research-integrity.yml",
+    "pyproject.toml",
     "tools/ci_scope.py",
-    "tools/requirements-verifiers.txt",
     "tools/research_index.py",
+    "uv.lock",
 }
 
 

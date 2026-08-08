@@ -160,6 +160,8 @@ written theorem to `results/` with its required audit, move refuted claims to
 
 ## Computational work
 
+- Python dependencies are declared in `pyproject.toml` and locked by `uv.lock`;
+  use `uv add`, `uv sync`, and `uv run`. NetworkX 3.6.1 is pinned there.
 - Prefer deterministic, dependency-light scripts with documented invocation
   and expected output.
 - Keep generated bulk data out of Git unless it is essential for independent

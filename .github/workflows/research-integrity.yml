@@ -27,21 +27,25 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v9.0.0
+      - name: Install locked dependencies
+        run: uv sync --locked
       - name: Classify changes
         id: scope
         env:
           CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
         run: >-
-          python tools/ci_scope.py
+          uv run --locked python tools/ci_scope.py
           --event "$GITHUB_EVENT_NAME"
           --base "$CI_BASE_SHA"
           --selection-file .cache/ci-verifier-ids.txt
           >> "$GITHUB_OUTPUT"
       - name: Run infrastructure tests
         if: steps.scope.outputs.run_tool_tests == 'true'
-        run: python -m unittest discover -s tools/tests -p 'test_*.py' -v
+        run: uv run --locked python -m unittest discover -s tools/tests -p 'test_*.py' -v
       - name: Validate the current spine and build the tracked-document index
-        run: python tools/research_index.py ci --skip-verifiers
+        run: uv run --locked python tools/research_index.py ci --skip-verifiers
 
   fast-verifiers:
     runs-on: ubuntu-latest
@@ -53,14 +57,16 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-          cache: pip
-          cache-dependency-path: tools/requirements-verifiers.txt
+      - name: Install uv
+        uses: astral-sh/setup-uv@v9.0.0
+      - name: Install locked dependencies
+        run: uv sync --locked
       - name: Classify changes
         id: scope
         env:
           CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
         run: >-
-          python tools/ci_scope.py
+          uv run --locked python tools/ci_scope.py
           --event "$GITHUB_EVENT_NAME"
           --base "$CI_BASE_SHA"
           --selection-file .cache/ci-verifier-ids.txt
@@ -73,15 +79,12 @@ jobs:
           if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
             sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
           fi
-      - name: Install pinned verifier dependency
-        if: steps.scope.outputs.verifier_mode != 'none'
-        run: python -m pip install -r tools/requirements-verifiers.txt
       - name: Run complete deterministic verifier suite
         if: steps.scope.outputs.verifier_mode == 'full'
-        run: python tools/research_index.py verify
+        run: uv run --locked python tools/research_index.py verify
       - name: Run changed deterministic verifiers
         if: steps.scope.outputs.verifier_mode == 'selected'
-        run: python tools/research_index.py verify --ids-file .cache/ci-verifier-ids.txt
+        run: uv run --locked python tools/research_index.py verify --ids-file .cache/ci-verifier-ids.txt
       - name: No verifier inputs changed
         if: steps.scope.outputs.verifier_mode == 'none'
         run: echo "No verifier scripts, records, dependencies or runner code changed."

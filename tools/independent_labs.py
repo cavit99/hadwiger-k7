@@ -137,8 +137,8 @@ The research objective is persistent across turns.  Read and maintain
 `{GOAL}` as the live objective and evidence log.  An unresolved inference is a
 checkpoint, not by itself a reason to stop.  Use native web tools, subagents,
 retained verifiers, and Python experiments when they can test a concrete
-mechanism.  Use `.venv/bin/python` when the laboratory runtime has been
-prepared.  Keep every nontrivial new experiment script and record its command,
+mechanism.  Use `uv run python` when the laboratory runtime has been prepared.
+Keep every nontrivial new experiment script and record its command,
 output, and exact finite scope.
 
 Before returning `no_result`, complete every evidence gate in `{GOAL}` with
@@ -480,26 +480,13 @@ def setup_runtime(lab_id: str, provider: str) -> None:
         raise LabError(f"{provider} laboratory is not provisioned")
     workspace = root / manifest["lanes"][provider]["workspace"]
     runtime = workspace / ".venv"
-    requirements = workspace / "tools" / "requirements-verifiers.txt"
     try:
         subprocess.run(
-            [sys.executable, "-m", "venv", str(runtime)],
+            ["uv", "sync", "--locked"],
             cwd=workspace,
             check=True,
         )
-        subprocess.run(
-            [
-                str(runtime / "bin" / "python"),
-                "-m",
-                "pip",
-                "install",
-                "-r",
-                str(requirements),
-            ],
-            cwd=workspace,
-            check=True,
-        )
-    except subprocess.CalledProcessError as exc:
+    except (OSError, subprocess.CalledProcessError) as exc:
         raise LabError(f"could not prepare {provider} Python runtime") from exc
     print(runtime)
 

@@ -69,17 +69,17 @@ concurrent report commands. When an active target disappears, the generator
 removes only stale `context_*.md` files bearing its own marker; unrelated cache
 files are not swept.
 
-The verifier whitelist is intentionally small and deterministic.  Install
-its one pinned dependency with
+The verifier whitelist is intentionally small and deterministic. Install its
+locked dependency with
 
 ```bash
-python3 -m pip install -r tools/requirements-verifiers.txt
+uv sync --locked
 ```
 
 Run the infrastructure tests with
 
 ```bash
-python3 -m unittest discover -s tools/tests -p 'test_*.py' -v
+uv run python -m unittest discover -s tools/tests -p 'test_*.py' -v
 ```
 
 ## Independent Codex and Grok laboratories
@@ -195,14 +195,12 @@ cd hadwiger-k7
 git switch main
 git pull --ff-only
 
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r tools/requirements-verifiers.txt
-python -m unittest discover -s tools/tests -p 'test_*.py' -v
-python tools/research_index.py ci
+uv sync --locked
+uv run python -m unittest discover -s tools/tests -p 'test_*.py' -v
+uv run python tools/research_index.py ci
 ```
 
-Python 3.11 or newer is required.  Authenticate each provider interactively;
+`uv` and Python 3.11 or newer are required. Authenticate each provider interactively;
 do not put tokens in this repository, a command line, or a committed `.env`.
 
 ```bash
