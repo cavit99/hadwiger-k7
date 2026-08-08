@@ -78,7 +78,7 @@ These are audited route nonclosures, not constructional counterexamples:
 
 ## Conditional refinements and frozen programmes
 
-- [critical-host `4n-2` entrance showing why the target settles Conjecture 21](../results/hc7_k7minus_two_literal_k5_exclusion.md#corollary-3-critical-host-consequences)
+- [critical-host reduction to a literal-`K_5`-free host with at least 25 exceptional degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
 - [critical-host exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md)
 - [bounded-interface `HC_7` composition frontier](hc7_bounded_interface_synchronization_frontier.md)
 - [exhaustive historical `HC_7` case map](hc7_live_case_dag.md)

@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 7 August 2026
+**Last updated:** 8 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.
@@ -407,18 +407,22 @@ outcome.
 
 ## Established context retained from the previous programme
 
-The audited computation-free critical-host package remains valid:
+The strengthened audited computation-free critical-host package now gives:
 
 \[
-n_7\le4,
-\qquad |E(G)|\ge4|V(G)|-2,
-\qquad b\ge17+\sum_{i\ge10}(i-9)n_i,
+n_7=0,
+\qquad \delta(G)\ge8,
+\qquad |E(G)|\ge4|V(G)|,
+\qquad b=n_8\ge25+\sum_{i\ge10}(i-9)n_i.
 \]
 
-where `b` counts degree-eight vertices contained in no literal `K_5`.
-If `n_7=4`, then `|V(G)|>=37` and the stronger exceptional-vertex bound is
-`b>=32+tau`.  These are necessary conditions on a hypothetical
-counterexample, not a colouring theorem.
+Here the host contains no literal `K_5`, and `b` counts its exceptional
+degree-eight vertices.  The new rooted-helper theorem eliminates every
+degree-seven vertex; applying it at all five vertices of a hypothetical
+literal `K_5` then contradicts the exact degree surplus.  Jakobsen's defect
+inequality supplies the displayed lower bound on `n_8`.  These are necessary
+conditions on a hypothetical counterexample, not a colouring theorem, and
+they do not apply to an arbitrary enemy to the unconditional `4n-2` target.
 
 Every order-seven cut in that critical host has exactly two complementary
 components.  The earlier capacity theorem restricts a possible
@@ -445,6 +449,12 @@ specialist validation before publication.
   quotient, the four-distinct-miss path theorem and the six-boundary
   quotient barrier have explicit finite computational trust boundaries;
   the remaining new reductions are computation-free.
+- The promoted both-full exceptional-boundary reduction has been rerun and
+  independently rechecked at its pinned revision: `2,076` boundaries reduce
+  to `15` and then `7`.  A separate Rolek--Song matching augmentation closes
+  none of those seven and is recorded only as a finite route nonclosure.  A
+  previously quoted list of `197` one-full boundaries has no retained
+  predicate, digest, verifier or audit and is not part of the proof spine.
 - External inputs include Mader, Halin, Jakobsen, Jørgensen, Yuan, Schmidt,
   Norin--Totschnig and Du--Li--Xie--Yu; exact statements and citations are
   recorded beside the results that use them.

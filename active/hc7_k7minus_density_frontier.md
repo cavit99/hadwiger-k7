@@ -12,76 +12,50 @@ remain frozen conditional refinements.
 ## 1. Proved entrance reduction
 
 Let `G` be a hypothetical minor-minimal non-six-colourable graph with no
-`K_7^-` minor.  The new
-[two-literal-`K_5` theorem](../results/hc7_k7minus_two_literal_k5_exclusion.md)
-proves, more generally, that every six-connected graph with two distinct
-literal `K_5` subgraphs contains a `K_7^-` minor.  Thus `G` has at most one
-literal `K_5`.
-
-Every degree-seven vertex lies in that clique, if it exists, and the
-audited
-[private-triangle theorem](../results/hc7_k7minus_all_degree7_k5_exclusion.md)
-excludes five degree-seven vertices in one clique.  Therefore
+`K_7^-` minor.  The audited
+[degree-seven rooted-helper closure](../results/hc7_k7minus_degree7_rooted_helper_closure.md)
+combines the earlier critical-host density theorem with Norin--Totschnig's
+rooted two-helper bound.  It proves
 
 \[
- n_7\le4,
- \qquad
- |E(G)|\ge4|V(G)|-2.                                   \tag{1}
+ n_7=0,
+ \qquad \delta(G)\ge8,
+ \qquad |E(G)|\ge4|V(G)|,                               \tag{1}
 \]
 
-If `b` is the number of exceptional degree-eight vertices and
+and excludes every literal `K_5` in `G`.  If `b` is the number of
+exceptional degree-eight vertices and
 
 \[
-                  \tau=\sum_{i\ge10}(i-9)n_i,
+                   \tau=\sum_{i\ge10}(i-9)n_i,
 \]
 
-then all degree-seven and nonexceptional degree-eight vertices fit in the
-unique possible clique:
+then every degree-eight vertex is exceptional and the audited Jakobsen
+defect gives
 
 \[
-                         n_7+(n_8-b)\le5.                \tag{2}
+                         b=n_8\ge25+\tau.                \tag{2}
 \]
 
-Combining (2) with the audited Jakobsen defect gives
+The proof first eliminates degree seven using the exact degree-seven
+clique-incidence theorem.  If a literal `K_5` remained and
+`q=|E(G)|-4|V(G)|`, the same rooted-helper theorem would force each of its
+five vertices to have degree at least `q+14`; those vertices alone would
+exceed the exact total degree surplus `2q`.  This argument is
+computation-free and does not apply to an arbitrary enemy to the
+unconditional extremal target.
 
-\[
-                         b\ge20-n_7+\tau.                \tag{3}
-\]
-
-If `n_7<=3`, parity strengthens the edge bound to `m>=4n-1` and (3) gives
-`b>=17+tau`.  If `n_7=4`, contracting the unique mixed `K_5` gives a
-simple five-connected target-free minor outside the Jakobsen cockade
-family; hence
-
-\[
- n\ge37,
- \qquad n_8\ge33+\tau,
- \qquad b\ge32+\tau.                                   \tag{4}
-\]
-
-Consequently every hypothetical host satisfies
-
-\[
-                         \boxed{b\ge17+\tau}.            \tag{5}
-\]
-
-The exceptional-vertex subgraph is `K_5`-free.  The separately written
+The separately written
 [exceptional-neighbourhood theorem](../results/hc7_k7minus_exceptional_neighbourhood_completion.md)
 also proves that every exceptional neighbourhood has independence number
 exactly three and identifies the terminal exterior-component allocation
 condition.
 
-Exceptional anti-neighbourhood connectivity is now proved whenever
-`n_7>0`: degree-seven incidence supplies a literal `K_5`, while the audited
-two-component exceptional-centre theorem would exclude all literal `K_5`s.
-The disconnected case is therefore confined to `n_7=0`; there the same
-two-component theorem forces at least `25+tau` exceptional vertices.
-
-The entrance proof is computation-free.  The exact degree-seven
-neighbourhood theorem uses a star contraction, one fixed six-colouring,
-Kempe-chain connectivity, and Kriesell--Mohr Theorem 7.  The new
-two-clique theorem then uses only Menger linkage and explicit branch-set
-splitting; it removes the former two-clique tight layers entirely.
+The audited low-degree exterior-component theorem leaves at most two
+components of `G-N[u]` for each of the at least 25 exceptional centres.
+Connectivity of every such anti-neighbourhood is still open; when there are
+two components, the retained two-component reductions apply in the global
+literal-`K_5`-free branch above.
 
 ## 2. Primary extremal target
 
@@ -116,10 +90,10 @@ The critical-host count also leaves the following sufficient statement:
 
 > **Exceptional-count target.** Every seven-connected, seven-chromatic,
 > `K_7^-`-minor-free graph whose every proper minor is six-colourable has at
-> most sixteen exceptional degree-eight vertices.
+> most 24 exceptional degree-eight vertices.
 
 This is unproved and is no longer a parallel active target.  It is retained
-as a conditional refinement because it would contradict (5) while keeping
+as a conditional refinement because it would contradict (2) while keeping
 the proper-minor colouring responses.  Its exact reductions and barriers
 are in the
 [seven-exceptional technical frontier](hc7_k7minus_seven_exceptional_frontier.md).

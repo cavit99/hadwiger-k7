@@ -7107,6 +7107,76 @@ does_not_prove = [
 keywords = ["K7 minus", "degree seven", "literal K5", "rooted K5"]
 
 [[claims]]
+id = "hc7.k7minus_low_degree_rooted_helper_closure"
+title = "A neighbourhood K4 and coefficient-four density force K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_degree7_rooted_helper_closure.md"
+source_heading = "Theorem 2 (low-degree rooted-helper closure)"
+active = false
+audit = "results/hc7_k7minus_degree7_rooted_helper_closure_audit.md"
+expected_source_sha256 = "6ffee04cf9ff66275f9674c24bc2b9c669b1e108b76e5b1d2a18ec7d0106fe67"
+scope = "six-connected graphs with a named vertex whose neighbourhood contains a literal K4"
+label_fidelity = "the named vertex, four literal clique neighbours, fifth neighbour and six rooted-model branch sets remain explicit"
+conclusions = [
+  "if the named vertex has degree d and the graph has at least 4n+d-13 edges, then it contains a K7-minus minor",
+  "the fifth named neighbour can be placed in one helper bag of the rooted two-helper model",
+]
+does_not_prove = [
+  "the bare seven-connected 4n-2 extremal theorem",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "degree seven", "rooted K4", "two helpers", "Norin Totschnig"]
+
+[[claims]]
+id = "hc7.k7minus_critical_host_degree7_closure"
+title = "A critical K7-minus host is K5-free and has at least 25 exceptional vertices"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_degree7_rooted_helper_closure.md"
+source_heading = "Corollary 3 (the critical host is `K_5`-free and has many degree-eight vertices)"
+active = false
+audit = "results/hc7_k7minus_degree7_rooted_helper_closure_audit.md"
+expected_source_sha256 = "6ffee04cf9ff66275f9674c24bc2b9c669b1e108b76e5b1d2a18ec7d0106fe67"
+scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
+label_fidelity = "all degrees, every literal K5 and every exceptional degree-eight centre remain literal host objects"
+conclusions = [
+  "the host has minimum degree at least eight and at least 4n edges",
+  "the host contains no literal K5",
+  "if tau is the degree-above-nine defect, then every degree-eight vertex is exceptional and n8 is at least 25+tau",
+]
+does_not_prove = [
+  "the bare seven-connected 4n-2 extremal theorem",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "degree seven", "literal K5", "exceptional degree eight", "Jakobsen defect"]
+
+[[claims]]
+id = "hc7.k7minus_false_twin_triangle_closure"
+title = "A triangle in a six-vertex full false-twin boundary forces K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_false_twin_triangle_closure.md"
+source_heading = "Theorem 1 (false-twin triangle closure)"
+active = false
+audit = "results/hc7_k7minus_false_twin_triangle_closure_audit.md"
+expected_source_sha256 = "55c70b8922f75bdbcbae96fadfa60bb72cccc232db386d3065d95e323a1417fd"
+scope = "six-connected 4n-7-density graphs with two nonadjacent vertices having the same six-element neighbourhood"
+label_fidelity = "the false-twin pair, boundary triangle and six rooted two-helper branch sets remain explicit"
+conclusions = [
+  "a boundary triangle gives an explicit K7-minus model",
+  "the corresponding seven-connected seven-boundary false-twin configuration is triangle-free in a target-free graph at 4n-2 density",
+]
+does_not_prove = [
+  "closure of the triangle-free false-twin boundary",
+  "the six-connected or seven-connected density theorem",
+  "HC7",
+]
+keywords = ["K7 minus", "false twins", "boundary triangle", "rooted two-helper model"]
+
+[[claims]]
 id = "hc7.k7minus_three_clique_bound"
 title = "A K7-minus-free seven-connected non-two-apex graph has at most two literal K5s"
 kind = "theorem"
@@ -8794,7 +8864,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "303fcee5f91693b0649f48309b33a8aabd71c92225b0d7384dc04670b73ed9e4"
+expected_source_sha256 = "f7a4a4084fe21e67329b0efed97eafe7ba5108acd79db2efb514592b031c0b95"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -15365,6 +15435,21 @@ expected_stdout = [
   "model universes: n=10 11880; n=11 159027; n=12 1899612",
 ]
 
+[[verifiers]]
+id = "k7minus-degree8-rolek-matching-nonclosure"
+path = "active/hc7_k7minus_degree8_rolek_matching_nonclosure_verify.py"
+sha256 = "b411d2fe2add93caa2c67b06108a03d12de63f9bee1e65c508ac495511ee124b"
+timeout = 120
+requires = ["nauty"]
+expected_stdout = [
+  "partitions=462",
+  "candidates=2076 closed=773 failures=1303",
+  "matching_sizes=0:73,1:281,2:419",
+  "failure-code sha256=38666b7761e7ca1eff8174e3165b972ed114e4d4de2b2bf89e9ecb49e86636a6",
+  "audited-both-full-seven closed=0 failures=7",
+  "PASS Rolek-Song matching augmentation nonclosure",
+]
+
 [[relations]]
 source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.k7minus_degree7_safe_contraction"
@@ -15718,3 +15803,33 @@ source = "hc7.k7minus_essential_sixsep_seventh_bag_nonclosure"
 target = "hc7.k7minus_essential_edge_six_separation"
 kind = "related_to"
 note = "The rooted-diamond construction stops one branch set short inside the exact six-separation."
+
+[[relations]]
+source = "hc7.k7minus_critical_host_degree7_closure"
+target = "hc7.k7minus_low_degree_rooted_helper_closure"
+kind = "uses"
+note = "The critical-host corollary applies the rooted-helper theorem first at degree seven and then at every vertex of a hypothetical literal K5."
+
+[[relations]]
+source = "hc7.k7minus_critical_host_degree7_closure"
+target = "hc7.k7minus_degree7_clique_incidence"
+kind = "uses"
+note = "Every degree-seven vertex lies in a literal K5 and therefore has a neighbourhood K4."
+
+[[relations]]
+source = "hc7.k7minus_critical_host_degree7_closure"
+target = "hc7.k7minus_sharpened_critical_density"
+kind = "uses"
+note = "The earlier audited critical-host package supplies the initial 4n-2 density and the Jakobsen defect inequality."
+
+[[relations]]
+source = "hc7.k7minus_critical_host_degree7_closure"
+target = "hc7.k7minus_seventeen_exceptional_vertices"
+kind = "strengthens"
+note = "The new theorem eliminates degree seven and literal K5s entirely and raises the exceptional-centre lower bound from 17+tau to 25+tau."
+
+[[relations]]
+source = "hc7.k7minus_critical_host_degree7_closure"
+target = "hc7.k7minus_two_component_density_jump"
+kind = "strengthens"
+note = "The same no-degree-seven, no-literal-K5 and 25-centre conclusion now holds without assuming a disconnected exceptional anti-neighbourhood."

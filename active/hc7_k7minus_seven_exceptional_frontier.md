@@ -20,26 +20,26 @@ Let `G` satisfy
 \]
 
 Call a degree-eight vertex exceptional when its neighbourhood is
-`K_4`-free.  The proved
-[two-literal-`K_5` exclusion and sharpened defect theorem](../results/hc7_k7minus_two_literal_k5_exclusion.md)
-gives
+`K_4`-free.  The audited
+[degree-seven rooted-helper closure](../results/hc7_k7minus_degree7_rooted_helper_closure.md)
+now gives
 
 \[
- b\ge17+\sum_{i\ge10}(i-9)n_i,                          \tag{1}
+ n_7=0,\qquad G\text{ contains no literal }K_5,
+ \qquad b=n_8\ge25+\sum_{i\ge10}(i-9)n_i.               \tag{1}
 \]
 
 where `b` is the number of exceptional vertices; write `tau` for the
 displayed sum.  Therefore the theorem
 
-> every graph satisfying (H) has at most sixteen exceptional vertices
+> every graph satisfying (H) has at most 24 exceptional vertices
 
 would prove that every `K_7^-`-minor-free graph is six-colourable.  It is a
 headline-equivalent finishing theorem, not a routine intermediate lemma.
 
-The same theorem proves `n_7<=4`, `m>=4n-2`, and at most one literal
-`K_5`.  If `n_7=4`, the host has order at least 37 and at least
-`32+tau` exceptional vertices.  Thus the former exact `b=7` layer and all
-two-clique tight layers are now excluded.
+The same theorem proves `delta(G)>=8` and `m>=4n`.  Thus the former
+positive-degree-seven and literal-clique branches, the exact `b=7` layer,
+and all two-clique tight layers are excluded.
 
 ## 2. What the present attack proved
 
@@ -48,7 +48,7 @@ The new
 proves two facts.
 
 1. Every exceptional vertex `u` has `alpha(G[N(u)])=3`.  Thus every one of
-   the at least seventeen centres has an independent triple; the former
+   the at least 25 centres has an independent triple; the former
    independence-number-two branch is absent.
 2. For an independent triple `I\subseteq N(u)` and
    `R=N(u)-I`, any `R`-rooted `K_5` model in `G-({u}\cup I)` that avoids an
@@ -65,29 +65,25 @@ three of the five bags.
 These are positive host-level reductions.  They do not yet coordinate six
 or seven different centres.
 
-The focused two-component attack now has a global consequence.  The
+The earlier focused two-component attack has a compatible local
+consequence.  The
 [two-component literal-clique exclusion](../results/hc7_k7minus_one_nonfull_k5_and_nested_cut.md)
 proves that if even one exceptional centre `u` has two exterior components,
 then the whole graph contains no literal `K_5`.  The proof links any
 hypothetical clique to five of the at least six neighbourhood vertices met
 by both components and completes those five branch sets with `\{u\}` and
-the opposite component.  Consequently
+the opposite component.  The rooted-helper closure now supplies its former
+conclusion globally, whether the exterior is connected or not:
 
 \[
  n_7=0,\qquad \delta(G)\ge8,\qquad |E(G)|\ge4|V(G)|,
  \qquad n_8\ge25+\sum_{i\ge10}(i-9)n_i.                \tag{2}
 \]
 
-Every degree-eight vertex is then exceptional and `|V(G)|\ge25`.  Thus a
-surviving critical host obeys a sharp dichotomy: either every exceptional
-centre has connected exterior, or the host is globally literal-`K_5`-free
-and has at least 25 exceptional centres.
-
-The sharpened clique theorem closes the positive-degree-seven side of this
-dichotomy completely.  If `n_7>0`, degree-seven incidence supplies a
-literal `K_5`, so every exceptional anti-neighbourhood is connected.  The
-remaining connectivity target lies entirely in the `n_7=0`,
-literal-`K_5`-free branch described by (2).
+Every degree-eight vertex is therefore exceptional and `|V(G)|\ge25`.
+There is no longer a positive-degree-seven side of the dichotomy.  The
+remaining connectivity target lies entirely in the branch described by
+(2), with at least 25 exceptional centres available simultaneously.
 
 The earlier
 [nonfull-attachment theorem](../results/hc7_k7minus_nonfull_attachment_reduction.md)
@@ -143,12 +139,25 @@ demand in one side would already give a rooted `K_5^-` and hence a
 show that boundary counting, fullness, and independent-triple rotation do
 not by themselves force that concentration.
 
+Two census claims must not be confused with this promoted reduction.  A
+[deterministic Rolek--Song matching-augmentation screen](hc7_k7minus_degree8_rolek_matching_nonclosure_verify.py)
+closes 773 of the 2,076 exceptional boundaries but leaves 1,303, including
+all seven promoted both-full types.  The published disjoint-path input and
+the branch-set lift are sound; the first unsupported inference was treating
+these 1,303 matching failures as the seven output by the independent
+diamond-deletion and clique-odd-cycle-transversal filters.  This is a
+computer-assisted finite route nonclosure, not an unbounded theorem.  A
+separate provisional list of “197 one-full survivors” has no retained
+defining predicate, digest, verifier, audit, or manifest entry and is not
+part of the proof spine.
+
 ### Current operation-coupled connectivity attack
 
 The proposed theorem that `G-N[u]` is connected for every exceptional
-degree-eight vertex is proved when `n_7>0` and remains open only when
-`n_7=0`.  Within that literal-`K_5`-free branch, the current attack gives
-five unbounded reductions; none is an isolated graph-code elimination.
+degree-eight vertex remains open.  The critical host is now unconditionally
+in the `n_7=0`, literal-`K_5`-free branch.  Within that branch, the current
+attack gives several unbounded reductions; none is an isolated graph-code
+elimination.
 
 1. In the one-nonfull case, the
    [shore-localized edge response](hc7_k7minus_one_nonfull_nondouble_palette.md)
@@ -262,7 +271,7 @@ five unbounded reductions; none is an isolated graph-code elimination.
    exceptional anti-neighbourhood component.
 
 The same note gives a global one-root strengthening.  For every exceptional
-`r`, the bounds `m>=4n-2` and `b>=17` put the six-connected graph `G-r`
+`r`, the bounds `m>=4n` and `b>=25` put the six-connected graph `G-r`
 strictly above the same extremal threshold.  Thus `G-r` has an exact
 spanning `K_7^\vee` model, and the optimized forced-interface theorem
 applies at every exceptional centre.  Spanning contact-maximal `K_6` models
@@ -345,7 +354,7 @@ differ; synchronizing them is the exact multi-centre colouring target.
 
 The most concrete current gate is the following allocation statement.
 
-> **Rooted exterior-allocation target.** Among the at least seventeen exceptional
+> **Rooted exterior-allocation target.** Among the at least 25 exceptional
 > centres, find `u`, an independent triple `I\subseteq N(u)`, and an
 > `(N(u)-I)`-rooted `K_5` model such that either:
 >
