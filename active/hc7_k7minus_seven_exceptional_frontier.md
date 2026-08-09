@@ -272,15 +272,16 @@ elimination.
    problem is operation-labelled support detachment and separator
    terminalization, not a missing boundary-contact estimate.
 
-   A fixed deletion of an internal edge of an attained-duty gate was also
-   tested.  Its five bichromatic bypasses are labelled by the new edge
-   response, whereas the three duties are labelled by the original
-   proper-minor response.  No proved transition aligns those partitions;
-   treating the bypass colours as duty labels is the first unsupported
-   inference.  This does not refute a dynamic split.  The smallest repair
-   is a two-operation trace-alignment theorem producing a complete detached
-   support, a common boundary partition, `K_7^-`, or `N_G(z)` with a smaller
-   exceptional anti-neighbourhood component.
+   Deleting an internal edge of a connected subgraph realizing the original
+   boundary partition was also tested.  Its five bichromatic bypasses are
+   labelled by the new edge response, whereas the three required connected
+   subgraphs are labelled by the original proper-minor response.  No proved
+   transition aligns those partitions; identifying the bypass colours with
+   the old boundary blocks is the first unsupported inference.  This does
+   not refute a dynamic split.  The smallest repair is a two-operation
+   trace-alignment theorem producing a complete detached support, a common
+   boundary partition, `K_7^-`, or `N_G(z)` with a smaller exceptional
+   anti-neighbourhood component.
 
 The same note gives a global one-root strengthening.  For every exceptional
 `r`, the bounds `m>=4n` and `b>=25` put the six-connected graph `G-r`
@@ -458,24 +459,65 @@ attempt to deduce the required subgraphs from tri-inseparability and degree
 conditions.  A proof for the critical host must use its proper-minor
 six-colourings or the exclusion of a `K_7^-` minor.
 
-Here is the precise remaining web-side theorem.  Let `Pi` be the partition
-of `S=U\dot\cup T` into colour classes under the fixed proper colouring of
-the selected closed side.  Let `Q` be a largest clique whose vertices are
-singleton blocks of `Pi`, and list the other blocks as `B_1,...,B_k`.
-Prove one of the following:
+The audited
+[exact-boundary reduction](../results/hc7_k7minus_four_centre_exact_u_bridge_reduction.md)
+now uses the proper-minor colourings on the actual minimum side.  Exact
+colourings of its two closed shores put `U` in one colour class.  On `C`, a
+paired trace gives three same-end bichromatic paths; otherwise an
+all-distinct trace gives one such path for the paired trace accepted on
+`D`.  A connected support can be chosen so that all centre-free components
+are absorbed.  At most eight components remain, at most two see all four
+centres, and at most two have one attachment to the support.
 
-1. there are pairwise disjoint nonempty connected subgraphs
-   `P_1,...,P_k` of `C` such that every `P_i\cup B_i` is connected, these
-   unions are pairwise adjacent, and each is adjacent to every vertex of
-   `Q`;
-2. a nontrivial tri-separation below the reduced cut splits `C`; or
-3. `G` contains a `K_7^-` minor.
+In the paired case, the audited
+[clean-fan theorem](../results/hc7_k7minus_four_centre_paired_trace_fan.md)
+replaces the uncontrolled intersection of the three Kempe paths by one
+`p`--`p'` path and two `p`--`q` paths whose interiors are pairwise disjoint.
+The alternative in the fan argument is already a strict trace-admissible
+descent.
 
 The audited
-[boundary-colouring reflection theorem](../results/hc7_exact7_selected_response_preservation.md)
-makes the first outcome a six-colouring of `G`; trace minimality excludes
-the second.  This leaves a direct minor construction as the only outcome in
-a hypothetical counterexample.
+[common-colouring theorem](../results/hc7_k7minus_common_colouring_centre_change.md)
+controls the opposite side.  Recolouring the four selected classes gives a
+single six-colouring of `H` saturated at another centre.  Every exact
+four-centre cut obtained there is either the old cut or has a component
+`B` with `emptyset != B subsetneq D`.  Inclusion-minimal such components
+are disjoint.  Their interaction graph `Gamma` satisfies
+
+\[
+             \Delta(\Gamma)\le3,
+             \qquad \alpha(\Gamma)\le2,
+             \qquad |V(\Gamma)|\le4.                 \tag{4.1}
+\]
+
+The order bound follows from explicit `K_7^-` models.  In the equality
+case `Gamma` is `2K_2`, `P_4`, or `C_4`.  The five resulting exact
+components force at least eleven distinct cuts obtained by simultaneously
+replacing nonempty sets of uniquely attached centres by their unique
+neighbours.  Together with the five original four-centre cuts, this gives
+at least sixteen distinct exact order-seven cuts.  For each component, its
+replacement cuts form a Boolean sublattice of the separation lattice, and
+one six-colouring of the original closed side gives a coherent boundary
+partition at every cut.  At least one sublattice contains a four-element
+square.  Its cuts do not share one fixed centre set, so the existing
+fixed-anchor uncrossing theorem does not compare their boundary partitions.
+
+The remaining web-side theorem is now precise.  Use the clean fan and the
+at most eight centre-bearing components on `C`, together with the at most
+four minimal regions on `D`, to obtain one of the following:
+
+1. disjoint connected subgraphs realizing the same boundary colour
+   partition on the other shore;
+2. the prescribed `(U union P)`-rooted `K_6^-` minor in the selected side;
+3. a strict exact-cut descent retaining the fixed centres, colouring and
+   named vertices; or
+4. in the four-region case, propagation of a common boundary partition
+   around a replacement square, yielding one of the first three outcomes.
+
+The audited boundary-colouring reflection theorem makes the first outcome
+a six-colouring of `G`; the opposite component completes the second outcome
+to a `K_7^-` minor.  Trace minimality excludes the third in a hypothetical
+counterexample.
 
 There is also an exact rooted-minor formulation.  The audited
 [boundary-completion theorem](../results/hc7_k7minus_four_centre_completed_side.md)
@@ -570,25 +612,20 @@ remaining open step in this secondary route.
 
 Pursue one global exceptional-centre terminal theorem.
 
-1. In the rooted-model outcome, use the three unused centres to extend the
-   rooted `K_5` model by two additional disjoint branch sets, or use the
-   first unavoidable support conflict to force the rooted-web outcome.
-2. In the rooted-web outcome, minimize the trace-admissible selected
-   component.  Boundary replacement and any tri-separation below the reduced
-   cut that splits it already give strict descent.  In the canonical branch
-   the selected component is tri-inseparable.  In the generalized-wheel
-   branch it is one leaf, `H[T]` contains an edge, and neither component
-   contains two disjoint connected subgraphs adjacent to the whole boundary.
-3. For the fixed boundary colour classes, construct the disjoint connected
-   subgraphs specified above or, using the forced boundary edge, construct
-   the prescribed six-terminal `K_6^-` minor in the actual selected side.
-   Use the named Kempe component and the three unused centres: the two new
-   barriers rule out arguments based only on tri-inseparability or internal
-   connectivity.  A returned strict cut is terminal only if it retains `U`,
-   the named vertices and the same one-sided colouring trace.
+1. In the rooted-model outcome, extend the colour-anchored `K_5` model by
+   two disjoint branch sets, or turn the first support conflict into the
+   exact-cut outcome.
+2. In the paired exact-cut outcome, combine the clean `2+1` fan with the at
+   most eight centre-bearing components.  The accepted conclusions are the
+   same boundary partition on both shores, the prescribed six-terminal
+   `K_6^-` model, or a strict trace-preserving descent.
+3. Compare the at most four minimal opposite-side regions.  If four survive,
+   propagate the common closed-side colouring around a Boolean replacement
+   square to obtain a descent or an explicit `K_7^-` model.  Merely counting
+   the eleven replacement cuts is not terminal.
 
 The earlier one-centre operation and rooted-allocation lemmas remain tools
 only when they feed this global argument.  Further graph-code filters,
 isolated boundary classifications, or another nonterminal separation are not
-accepted progress.  The bottleneck is simultaneous label and support
-allocation across the family of exceptional centres.
+accepted progress.  The bottleneck is now boundary-partition propagation
+around a replacement square, coupled to the clean fan on the minimum side.

@@ -84,73 +84,65 @@ an exact meet/join lattice.  If three cuts have all eight sign regions
 nonempty, those regions already saturate all eight neighbours of every
 centre; four cuts cannot have all sixteen sign regions nonempty.
 
-The remaining obligation is dynamic label and support allocation.  In the
-first outcome one must extend the rooted `K_5` model to an explicit
-`K_7^-`-minor model by finding two additional disjoint branch sets.  In the
-second, the retained colouring trace and the forced Kempe linkage through
-another named centre must give the same colour-class partition on both
-closed sides, an explicit `K_7^-`-minor model, or a strict descent in the cut
-lattice.  Static boundary density and the two-shore quotient alone are
-provably insufficient.
-
-The separately audited
-[operation-coupled refinement](results/hc7_k7minus_four_centre_operation_cut_reduction.md)
-now normalizes that second outcome further.  The selected cross-edge gives
-either a colour-indexed five-spoke packing or a strict smaller actual
-order-seven component carrying a common exact colour block.  The
-distinct-ended fan has at least two missing limb contacts.  In the only
-case where a component contains two disjoint connected subgraphs adjacent
-to the whole boundary, `T` is independent and one fixed component colouring
-carries all three pairwise `T` Kempe paths.  Independently, each of the other
-three centres repairs the rooted-web obstruction.  The strict cut need not
-retain all four centres, and the paths need not avoid the rooted branch sets
-or the two boundary-full connected subgraphs.
-
-The new audited
-[tri-separation normalization](results/hc7_k7minus_four_centre_tri_separation_reduction.md)
-places every original four-centre exact cut in one of two standard
-structures.  Its Carmesin--Kurkofka reduction is strong, nontrivial and
-connected on both open sides; it is either a canonical mixed adhesion or it
-heavily interlaces a unique generalized-wheel torso.  Crossing reductions
-have one central vertex and four one-element links.  The reduction does not
-preserve the original boundary endpoint, colouring trace or named Kempe
-contact: the
-[trace-loss counterexample](barriers/hc7_k7minus_tri_separation_boundary_trace_loss.md)
-shows that two distinct ordinary three-separations can have the same mixed
-reduction.
+Minimize the selected component `C` among cuts retaining the fixed trace.
+The audited trace descent and generalized-wheel reduction then give three
+facts: every vertex of `T` has at least two neighbours in `C`; no lower
+tri-separation splits `C`; and `C` lies in one canonical leaf.  Moreover,
+`H[T]` has an edge, while neither complementary component contains two
+vertex-disjoint connected subgraphs that are each adjacent to every vertex
+of `U\dot\cup T`.
 
 The audited
-[trace-preserving descent](results/hc7_k7minus_four_centre_trace_descent.md)
-now retains those data.  For a trace-admissible cut with selected component
-`C` of minimum order, every vertex of `T` has at least two neighbours in
-`C`; any nontrivial tri-separation below the reduced cut that splits `C`
-yields a strictly smaller trace-admissible exact cut.  Thus no nontrivial
-tri-separation splits `C` in the canonical-adhesion case.  In the
-generalized-wheel case, the audited
-[leaf descent](results/hc7_k7minus_four_centre_wheel_leaf_descent.md)
-puts `C` wholly in one canonical leaf.  The graph `H[T]` has an edge, and
-neither complementary component contains two vertex-disjoint connected
-subgraphs that are each adjacent to every vertex of `U\dot\cup T`.
+[exact-boundary reduction](results/hc7_k7minus_four_centre_exact_u_bridge_reduction.md)
+brings the critical colourings into this minimum side.  Each closed shore
+has a six-colouring in which `U` is one exact colour class.  On `C`, either
+a paired boundary trace forces three same-end bichromatic paths, or an
+all-distinct trace forces one path for a paired trace accepted on the other
+shore.  A connected support `Y` can be chosen so that every component `K`
+of `C-Y` satisfies
 
-The audited
-[Fano-plane barrier](barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier.md)
-shows that these structural facts alone are insufficient: its
-seven-connected, `K_5`-free graph has minimum degree eight and no mixed
-separation of order at most three splitting `C`, but still lacks the two
-connected subgraphs.  The witness contains a `K_7` minor, so it is not a
-counterexample to the target.  It proves that the remaining step must use
-proper-minor colouring responses or the exclusion of a `K_7^-` minor.
+\[
+ |N_C(K)\cap Y|\ge
+ \bigl(4-|N_G(K)\cap U|\bigr)
+ +\bigl(3-|N_G(K)\cap T|\bigr),                       \tag{2}
+\]
 
-The exact web-side target is now partition-specific.  Let `Pi` be the
-partition of `S=U\dot\cup T` into colour classes under the fixed one-sided
-six-colouring.  Choose a largest clique `Q` consisting of singleton blocks
-of `Pi`, and list the other blocks as `B_1,...,B_k`.  One must construct a
-`K_7^-` minor, or find pairwise disjoint connected subgraphs
-`P_1,...,P_k` in `C` such that every `P_i\cup B_i` is connected, these
-unions are pairwise adjacent, and each is adjacent to every vertex of `Q`.
-The latter certificate reflects the same boundary colouring through the
-opposite side and six-colours `G`.  Minimum choice of `C` has already
-excluded the remaining tri-separation alternative.
+with a strict additional attachment when `K` sees all four centres.  No
+component sees all of the centre block and the relevant singleton boundary
+vertices, since that would reflect the accepted partition and six-colour
+`G`.  All centre-free components can be absorbed into `Y`.  At most eight
+components remain; at most two see all four centres, and at most two have
+one attachment to `Y`.
+
+In the paired case, the audited
+[clean-fan theorem](results/hc7_k7minus_four_centre_paired_trace_fan.md)
+replaces the arbitrary intersections of the three Kempe paths by one
+`p`--`p'` path and two `p`--`q` paths with pairwise disjoint interiors.
+Failure of this fan would itself give a smaller trace-admissible cut.
+
+There is now also a global bound on the cuts returned by changing the
+deleted centre.  The audited
+[common-colouring and cut-family theorem](results/hc7_k7minus_common_colouring_centre_change.md)
+constructs one six-colouring of `H` saturated at another centre.  Every
+resulting exact four-centre cut is either the old cut or cuts off a proper
+connected subset of `D`.  The inclusion-minimal such subsets form an
+interaction graph `Gamma` with
+
+\[
+             \Delta(\Gamma)\le3,
+             \qquad \alpha(\Gamma)\le2,
+             \qquad |V(\Gamma)|\le4.                 \tag{3}
+\]
+
+The last inequality uses explicit `K_7^-` models, not enumeration.  If
+equality holds, `Gamma` is one of `2K_2,P_4,C_4`.  Degree eight then forces
+all simultaneous replacements of uniquely attached centres: the five exact
+components yield at least eleven further exact order-seven cuts, all
+distinct, and hence at least sixteen exact cuts in total.  For each exact
+component, its simultaneous replacements form a Boolean sublattice of
+minimum separations, and one six-colouring of the original closed side
+induces one coherent boundary partition at each cut.  At least one such
+sublattice contains a four-element square.
 
 The audited
 [boundary-completion theorem](results/hc7_k7minus_four_centre_completed_side.md)
@@ -167,10 +159,16 @@ is four-connected.  For any two vertices `P subseteq T`, the actual graph
 be the endpoints of the forced edge in `H[T]`.  The audited
 [nine-vertex barrier](barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier.md)
 shows that internal six-connectivity, that edge and even a rooted `K_4` do
-not suffice.  Any proof of the prescribed rooted `K_6^-` minor or a
-trace-preserving exact-cut descent must use the critical-host colouring
-responses and the restriction on two disjoint connected subgraphs adjacent
-to the whole boundary.
+not suffice.
+
+The web-side residue is therefore finite at the level that matters: a clean
+three-path fan, at most eight centre-bearing components on `C`, and at most
+four minimal exact-cut regions in `D`; the four-region case carries a
+coherently coloured replacement square inside a family of at least sixteen
+exact cuts.  The next theorem must propagate one boundary partition around
+that square, construct the prescribed rooted `K_6^-` model, or give a strict
+trace-admissible descent.  Another unlabelled separator or boundary census
+is not closure.
 
 ## Sufficient but non-primary extremal route
 
