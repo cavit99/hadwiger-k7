@@ -47,7 +47,7 @@ def classify_changes(
     )
 
     if event in {"schedule", "workflow_dispatch"}:
-        return Scope(run_tool_tests, "full", reasons=(f"{event} full run",))
+        return Scope(True, "full", reasons=(f"{event} full run",))
     if event not in {"pull_request", "push"}:
         return Scope(True, "full", reasons=(f"unknown event {event!r}",))
     if base_manifest is None:

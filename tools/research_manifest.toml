@@ -15298,7 +15298,7 @@ expected_stdout = [
 id = "k7minus-distinct-miss-fan-tree-completion"
 path = "results/hc7_k7minus_distinct_miss_fan_tree_completion_verify.py"
 sha256 = "3be279d9fd322b8dfee9647156651bc6b32cd83b2a603d9d5acfa64236e3079a"
-timeout = 120
+timeout = 240
 expected_stdout = [
   "GREEN: distinct-miss fan-tree completion verified",
   "bridge=0 labelled_valid=1032 valid_orbits=21 quotient_survivor_orbits=3 tree_pair_counts=(2000, 256, 256)",

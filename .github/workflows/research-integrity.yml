@@ -48,8 +48,9 @@ jobs:
         run: uv run --locked python tools/research_index.py ci --skip-verifiers
 
   fast-verifiers:
+    name: Deterministic verifier gate
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
         with:

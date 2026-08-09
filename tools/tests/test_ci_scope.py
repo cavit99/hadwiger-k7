@@ -93,6 +93,7 @@ class ScopeClassificationTests(unittest.TestCase):
                 scope = ci_scope.classify_changes(
                     event, set(), manifest(ONE), manifest(ONE)
                 )
+                self.assertTrue(scope.run_tool_tests)
                 self.assertEqual("full", scope.verifier_mode)
 
 
