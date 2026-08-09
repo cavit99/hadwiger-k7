@@ -18,11 +18,13 @@ Selected audited inputs:
 - [the critical host is `K_5`-free and has at least 25 degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
 - [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
 - [the web cut gives a response-carrying strict descent or a deficient colour-indexed fan](../results/hc7_k7minus_four_centre_operation_cut_reduction.md)
+- [the rooted-web cut reduces canonically to an adhesion or a generalized-wheel torso](../results/hc7_k7minus_four_centre_tri_separation_reduction.md)
 
 Immediate barriers:
 
 - [fullness and local root contacts alone do not force one-shore allocation](../barriers/hc7_k7minus_shore_allocation_barrier.md#theorem-2-two-full-shore-mechanism-barrier)
 - [the nontriangular exact-cut trace and label-allocation residue](../results/hc7_k7minus_four_centre_web_cut_lattice.md#5-exact-static-limit-of-the-two-shore-quotient)
+- [an undecorated mixed reduction does not retain the original boundary endpoint](../barriers/hc7_k7minus_tri_separation_boundary_trace_loss.md)
 
 ## Active finishing route
 
@@ -37,12 +39,14 @@ the other centres or a nontriangular two-shore order-seven cut in an exact
 fixed-anchor lattice, with a retained one-sided trace and a Kempe linkage
 through another named centre.  On the web side, the selected edge now gives
 either a response-carrying smaller order-seven component or a five-spoke fan
-with at least two missing limb contacts.  A packet-rich survivor has
-independent auxiliary boundary and all three pairwise boundary Kempe paths
-in one fixed colouring.  The finishing step must allocate two helper branch
-sets in the rooted outcome, make the strict cut retain all four centres, or
-compose the deficient fan/Kempe paths with the rooted bags.  Another isolated
-boundary census is not an accepted endpoint.
+with at least two missing limb contacts.  The original web cut now reduces
+either to a canonical mixed adhesion or to a uniquely determined
+generalized-wheel torso.  The finishing step must allocate two additional
+branch sets in the rooted outcome, or return from one of those structural
+branches with a common boundary colouring, a rooted augmentation, or a
+strictly smaller ordinary three-separation retaining the four selected
+vertices and the one-sided colouring trace.  Another isolated boundary
+census is not an accepted endpoint.
 
 ## Conditional and frozen routes
 

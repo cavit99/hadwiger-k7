@@ -103,6 +103,20 @@ centres repairs the rooted-web obstruction.  The strict cut need not retain
 all four centres and the paths need not avoid the rooted bags or full
 packets.  That exact label-preservation problem is the current frontier.
 
+The new audited
+[tri-separation normalization](results/hc7_k7minus_four_centre_tri_separation_reduction.md)
+places every original four-centre exact cut in one of two standard
+structures.  Its Carmesin--Kurkofka reduction is strong, nontrivial and
+connected on both open sides; it is either a canonical mixed adhesion or it
+heavily interlaces a unique generalized-wheel torso.  Crossing reductions
+have one central vertex and four one-element links.  This removes the
+unlabelled crossing case as a free-form residue.  It does not preserve the
+original boundary endpoint, colouring trace or named Kempe contact: the
+[trace-loss counterexample](barriers/hc7_k7minus_tri_separation_boundary_trace_loss.md)
+shows that two distinct ordinary three-separations can have the same mixed
+reduction.  The live task is now a label-preserving return from the canonical
+adhesion and generalized-wheel branches.
+
 ## Sufficient but non-primary extremal route
 
 ### A smallest `4n-2` enemy

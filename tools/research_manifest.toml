@@ -7207,6 +7207,54 @@ does_not_prove = [
 keywords = ["K7 minus", "four centres", "critical edge", "exact seven-cut", "fan descent", "packet reflection", "Kempe paths"]
 
 [[claims]]
+id = "hc7.k7minus_four_centre_tri_separation_reduction"
+title = "A rooted-web order-seven cut is a canonical adhesion or lies in a generalized-wheel torso"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_four_centre_tri_separation_reduction.md"
+active = true
+audit = "results/hc7_k7minus_four_centre_tri_separation_reduction_audit.md"
+expected_source_sha256 = "b5b0ff71e8942d4b16674a25362c9459523c4c7460f15176892d4ded8a82b682"
+scope = "the rooted-web exact order-seven cut after deleting four independent degree-eight vertices from the critical K7-minus host"
+label_fidelity = "the original boundary is recoverable only through the inverse boundary map; the canonical torso theorem itself does not preserve the fixed colouring, rooted terminals or named Kempe contact"
+separator_order = "ordinary order three in H, reduced mixed order three in H, and lifted mixed order seven in G"
+conclusions = [
+  "the exact cut reduces uniquely to a strong nontrivial tri-separation with both open sides connected",
+  "the reduction is induced by the canonical mixed-tree-decomposition or heavily interlaces a unique generalized-wheel torso",
+  "two crossing reductions have a one-vertex centre and four one-element links",
+]
+does_not_prove = [
+  "a label-preserving return from a canonical adhesion",
+  "a rooted or colouring-compatible lift through the generalized-wheel torso",
+  "elimination of the rooted-web outcome",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "tri-separation", "canonical decomposition", "generalized wheel", "order-seven cut", "boundary provenance"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_tri_separation_boundary_trace_loss"
+title = "An undecorated tri-separation reduction does not determine its original boundary"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_tri_separation_boundary_trace_loss.md"
+active = true
+audit = "barriers/hc7_k7minus_tri_separation_boundary_trace_loss_audit.md"
+expected_source_sha256 = "08f89cfcfdd097044a00c6b5969e90ea8a2e1337c7614020d0899affa9797f19"
+scope = "an explicit eleven-vertex three-connected graph of minimum degree four with two distinct nontrivial ordinary three-separations"
+label_fidelity = "the two original boundary choices differ across the same replacement edge and therefore may carry different colouring or root labels"
+conclusions = [
+  "two distinct ordinary three-separations have the same strong nontrivial mixed reduction",
+  "the original boundary endpoint of a replacement edge must be retained as provenance",
+]
+does_not_prove = [
+  "that the witness occurs in a seven-connected contraction-critical host",
+  "failure of the Carmesin-Kurkofka reduction or canonical decomposition",
+  "failure of a boundary-labelled return theorem",
+]
+keywords = ["tri-separation", "boundary trace", "provenance", "counterexample", "mixed separator"]
+
+[[claims]]
 id = "hc7.k7minus_false_twin_triangle_closure"
 title = "A triangle in a six-vertex full false-twin boundary forces K7-minus"
 kind = "theorem"
@@ -8937,7 +8985,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "9b9b7a10782fc41bd61f84304c492631e946911a78860b7c4e478d4bbbfb1a3b"
+expected_source_sha256 = "900499a574ae5371ccac757afcfbfea1a5b5ca075a0c47608ea74ad4f4ec8858"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -15989,6 +16037,34 @@ kind = "uses"
 source = "hc7.k7minus_four_centre_operation_cut_reduction"
 target = "hc7.exact7_adaptive_12_boundary_closure"
 kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_four_centre_tri_separation_reduction"
+kind = "uses"
+note = "This is the direct canonical adhesion/generalized-wheel normalization of the exact-cut branch."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_four_centre_tri_separation_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_centre_tri_separation_reduction"
+target = "hc7.k7minus_four_centre_web_cut_lattice"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_centre_tri_separation_reduction"
+target = "hc7.barrier.k7minus_tri_separation_boundary_trace_loss"
+kind = "guarded_by"
+note = "The counterexample requires every label-preserving use of the mixed reduction to retain the original boundary endpoint of each separator edge."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_tri_separation_boundary_trace_loss"
+kind = "guarded_by"
+note = "The active tri-separation route must retain boundary provenance before it can return a colouring-compatible cut or rooted minor model."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"

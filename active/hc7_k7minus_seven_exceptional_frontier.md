@@ -5,8 +5,9 @@ Conjecture 21.  The lower bound and the local neighbourhood,
 exterior-completion, and two-component reductions in Sections 1--2 are
 written and separately audited GREEN; the finite boundary claims have
 retained independently checked verifiers.  The four-centre theorem in
-Section 4 and its operation-coupled continuation are also separately
-audited GREEN.  The accompanying scoped
+Section 4, its operation-coupled continuation, and its canonical
+tri-separation normalization are also separately audited GREEN.  The
+accompanying scoped
 barriers are separately audited GREEN, while the list-core calculation in
 Section 3 remains a written live derivation without a separate audit.  The
 upper bound is open.  This file is not a second status ledger.
@@ -414,6 +415,25 @@ the uncoloured graph.  The smaller cut need not contain `U`, and the paths
 need not avoid the rooted bags or the two full subgraphs; neither output is
 yet terminal.
 
+The audited
+[tri-separation normalization](../results/hc7_k7minus_four_centre_tri_separation_reduction.md)
+now identifies the unlabelled geometry of the original four-centre cut.
+After deleting `U`, its ordinary three-separation has a unique strong
+nontrivial Carmesin--Kurkofka reduction with both open sides connected.
+That reduction is either induced by a canonical mixed-tree-decomposition
+edge or heavily interlaces a unique splitting star whose compressed torso is
+a wheel and whose expanded torso is a generalized wheel.  Two crossing
+reductions have a one-vertex centre and four one-element links.
+
+This is a genuine nested-or-wheel normalization, but it is not yet the
+coloured closure.  An explicit
+[boundary-trace counterexample](../barriers/hc7_k7minus_tri_separation_boundary_trace_loss.md)
+shows that the mixed reduction alone does not identify the original endpoint
+of a separator edge.  The current cut must therefore carry its inverse
+boundary map, fixed colouring, ordered rooted terminals and named Kempe
+contact.  Canonical adhesions and generalized-wheel torsos require separate
+label-preserving return theorems.
+
 ### Secondary sufficient one-centre routes
 
 The earlier one-centre allocation statement remains a sufficient target,
@@ -486,17 +506,16 @@ Pursue one global exceptional-centre terminal theorem.
 1. In the rooted-model outcome, allocate two disjoint helper branch sets from
    the three unused centres, or use the first unavoidable support conflict to
    force the rooted-web outcome.
-2. In the rooted-web outcome, use a minimum selected-response component.
-   Promote the strict generic cut returned by the fan theorem to a
-   four-centre cut, or allocate the deficient five-limb packing to the
-   rooted bags.
-3. In the packet-rich subcase, combine the three fixed-colouring `T` paths
-   with the three one-centre crossing repairs; in the `(1,1)` subcase, use
-   the exact-cut lattice and crossing-region degree bound across choices of
-   root and deletion-colouring.
-4. Finish with one of the accepted terminal outcomes: a common boundary
-   partition, a rooted augmentation to `K_7^-`, or strict descent to a
-   smaller four-centre cut.
+2. In the rooted-web outcome, attach the inverse boundary map and colouring
+   data to the reduced tri-separation.  At a canonical adhesion, either use
+   the original cut to synchronize the two shores or return a different
+   adhesion strictly inside the selected shore.
+3. In the generalized-wheel branch, lift the fixed rooted terminals and the
+   named bichromatic contact through the expanded torso.  The wheel apex is
+   a vertex of `H` and is not automatically the named centre in `U`.
+4. In either branch require a common boundary partition, a label-preserving
+   rooted augmentation, or a strictly smaller ordinary three-separation
+   whose order-seven lift retains `U` and the same one-sided colouring trace.
 
 The earlier one-centre operation and rooted-allocation lemmas remain tools
 only when they feed this global argument.  Further graph-code filters,
