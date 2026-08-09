@@ -497,9 +497,14 @@ and E5 remains a stronger frozen laboratory.  Direct `HC_7` bridge
 composition is also frozen: Conjecture 21 is the cleaner setting in which to
 develop the missing branch-set transfer and separator-resolution machinery.
 
-The concise computation-free manuscript in [`paper/k7minus-low-degree/`](paper/k7minus-low-degree/)
-is preserved but is not the active task.  Its proofs still require normal
-specialist validation before publication.
+The concise computation-free manuscript in
+[`paper/k7minus-low-degree/`](paper/k7minus-low-degree/) now contains the
+rooted-helper closure and the full current low-degree/density critical-host
+package.  Its exact source revision has an adjacent internal mathematical audit and a separate
+internal citation/novelty review.  These are not external peer review or a
+priority certificate; independent human specialist validation is still
+required before publication.  Manuscript preparation is not the active
+research target.
 
 ## Trust boundary
 
@@ -526,10 +531,12 @@ specialist validation before publication.
 ## Navigation
 
 - [`active/INDEX.md`](active/INDEX.md): concise live navigation.
+- [`active/hc7_k7minus_seven_exceptional_frontier.md`](active/hc7_k7minus_seven_exceptional_frontier.md):
+  active critical-host finishing reduction and support-allocation obstruction.
 - [`active/hc7_k7minus_density_frontier.md`](active/hc7_k7minus_density_frontier.md):
-  exact technical frontier and recorded nonclosures.
+  stronger conditional `4n-2` frontier and recorded nonclosures.
 - [`active/hc7_k7minus_e5_frontier.md`](active/hc7_k7minus_e5_frontier.md):
-  auxiliary five-connected reduction and five-root reserve target.
+  frozen auxiliary five-connected reduction and five-root reserve target.
 - [`results/hc7_k7minus_seven_cut_three_component_bound.md`](results/hc7_k7minus_seven_cut_three_component_bound.md):
   at most three components behind a seven-cut.
 - [`results/hc7_k7minus_degree7_safe_contraction.md`](results/hc7_k7minus_degree7_safe_contraction.md):

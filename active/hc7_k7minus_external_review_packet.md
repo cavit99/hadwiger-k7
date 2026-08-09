@@ -5,8 +5,12 @@ proof of the `K_7^-` six-colour conjecture, or proof of `HC_7`.
 
 **Historical note:** the statements and hashes below are frozen at tag
 `k7minus-global-count-review-2026-07-28`.  The linked density result has
-since been strengthened; use the
-[current density frontier](hc7_k7minus_density_frontier.md) for live status.
+since been superseded by the audited
+[rooted-helper closure](../results/hc7_k7minus_degree7_rooted_helper_closure.md),
+which gives `n_7=0`, no literal `K_5`, `m>=4n`, and `n_8>=25+tau` in the
+critical host.  Use the
+[critical-host frontier](hc7_k7minus_seven_exceptional_frontier.md) and the
+[revised manuscript](../paper/k7minus-low-degree/main.pdf) for live status.
 
 **Review branch:** `experiment/k7minus-global-count-gate`
 

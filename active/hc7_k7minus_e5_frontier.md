@@ -1,9 +1,10 @@
 # Auxiliary five-connected extremal laboratory
 
-**Status:** current structural laboratory for the seven-connected `4n-2`
-target.  The auxiliary theorem below is conjectural.  The reductions listed
-here have written proofs and separate internal audits; those audits are not
-external peer review.
+**Status:** frozen auxiliary laboratory.  The auxiliary theorem below is
+conjectural.  The reductions listed here have written proofs and separate
+internal audits; those audits are not external peer review.  Further
+E5-specific casework is not part of the current concise manuscript or the
+active exceptional-centre route.
 
 ## 1. Auxiliary target
 
@@ -15,10 +16,11 @@ Write `K_7^-` for `K_7` with one edge deleted.  The auxiliary statement is
 > \]
 > contains a `K_7^-` minor.
 
-This is deliberately stronger than the sole primary target: `(E5)` would
-imply the seven-connected `4n-2` theorem, but it is not needed in its full
-generality to settle Norin--Totschnig Conjecture 21.  No counterexample to
-`(E5)` is known here, and `(E5)` is not proved.
+This is stronger than the conditional extremal statement now needed for the
+critical host, namely the seven-connected `4n` theorem.  It would also imply
+the older seven-connected `4n-2` theorem, but neither stronger assertion is
+needed in full generality to settle Norin--Totschnig Conjecture 21.  No
+counterexample to `(E5)` is known here, and `(E5)` is not proved.
 
 ## 2. Proved minimum-enemy reduction
 
