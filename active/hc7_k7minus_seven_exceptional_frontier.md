@@ -1,14 +1,22 @@
 # Exceptional degree-eight vertices: live technical frontier
 
-**Status:** active conditional frontier.  The lower bound and the local
-neighbourhood, exterior-completion, and two-component reductions in Sections
+**Status:** active primary technical frontier for Norin--Totschnig
+Conjecture 21.  The lower bound and the local neighbourhood,
+exterior-completion, and two-component reductions in Sections
 1--2 are written and separately audited GREEN; the finite boundary claims
 have retained independently checked verifiers.  The accompanying scoped
 barriers are also separately audited GREEN.  The list-core calculation in
 Section 3 is a written live derivation without a separate audit.  The upper
 bound is open.  This file is not a second status ledger.
 
-## 1. Exact finishing target
+## 1. Primary target and exact finishing reduction
+
+The primary target is:
+
+> **Norin--Totschnig Conjecture 21.** Every graph with no `K_7^-` minor is
+> six-colourable.
+
+This is open and does not imply `HC_7`.
 
 Let `G` satisfy
 
@@ -34,12 +42,12 @@ displayed sum.  Therefore the theorem
 
 > every graph satisfying (H) has at most 24 exceptional vertices
 
-would prove that every `K_7^-`-minor-free graph is six-colourable.  It is a
-headline-equivalent finishing theorem, not a routine intermediate lemma.
+would prove Conjecture 21.  It is a headline-equivalent finishing theorem,
+not a routine intermediate lemma.
 
-The same theorem proves `delta(G)>=8` and `m>=4n`.  Thus the former
-positive-degree-seven and literal-clique branches, the exact `b=7` layer,
-and all two-clique tight layers are excluded.
+The audited rooted-helper closure also proves `delta(G)>=8` and `m>=4n`.
+Thus the former positive-degree-seven and literal-clique branches, the exact
+`b=7` layer, and all two-clique tight layers are excluded.
 
 ## 2. What the present attack proved
 
@@ -350,9 +358,39 @@ for which `H-x` is list-colourable but `H` is not.  Consequently every
 minimal core for that response contains `x`.  The seven anchored cores may
 differ; synchronizing them is the exact multi-centre colouring target.
 
-## 4. Exact remaining obstruction
+## 4. Current global finishing obstruction
 
-The most concrete current gate is the following allocation statement.
+**Status of this subsection:** unaudited working derivation; no theorem in
+this subsection is promoted to `results/`.
+
+Since `R(5,4)=25` and `G` has no literal `K_5`, the at least 25 exceptional
+vertices contain an independent four-set `U`.  The graph `G-U` is exactly
+six-chromatic: it is six-colourable as a proper minor, while a five-colouring
+would extend to `G` by assigning one new colour to the independent set `U`.
+It therefore has a spanning `K_6` minor model.
+
+The present campaign retains all four labels through a two-shore order-seven
+separation.  In the first unequal packing case, one shore contains one and
+the other contains two pairwise disjoint connected subgraphs adjacent to all
+seven boundary vertices.  A fixed quotient colouring, followed by the strong
+Hadwiger theorem for four colours, gives four mutually adjacent branch sets
+containing the four prescribed labels and a fifth branch set adjacent to at
+least three of them.  This closes the model unless the four rooted branch
+sets use vertices in one or both of the two connected subgraphs on the other
+shore which are required as the last two branch sets.
+
+That support-allocation failure is the exact current obstruction.  The next
+global theorem must turn unavoidable use of the opposite shore into a second
+interacting order-seven cut and then show that the resulting cut family
+cannot occur around 25 exceptional centres.  The current working derivation
+excludes a wheel crossing with a common centre and excludes a purely nested
+interval family.  It does not yet exclude crossing-match configurations,
+smaller returned cuts, or concentration of all other exceptional centres in
+one shore.  These deductions require a written entrance proof and hostile
+audit before promotion.
+
+The earlier one-centre allocation statement remains a sufficient target,
+but it is no longer the preferred endpoint:
 
 > **Rooted exterior-allocation target.** Among the at least 25 exceptional
 > centres, find `u`, an independent triple `I\subseteq N(u)`, and an
@@ -416,45 +454,21 @@ immediate open step.
 
 ## 5. Recommended next attack
 
-Attack the remaining operation-coupled obligations in this order.
+Pursue one global exceptional-centre terminal theorem.
 
-1. **Terminalize the normalized separator with operation data restored.**
-   In the exact-seven branch begin with packing `(1,2)`, then `(1,1)`; in
-   the order-eight branch use the two-/three-full-component contraction
-   profile.  Retain the fixed two-edge-star colouring and force a common
-   boundary equality partition, an explicit `K_7^-` model, or a component
-   of `G-N[z]` smaller than the chosen minimum for a named exceptional `z`.
-   If both deleted endpoints lie in an exact-seven boundary, no fixed
-   double-deletion trace is legal there.  Otherwise a named single-edge
-   response gives a legal one-sided trace, and the first exact unsupported
-   step is its conversion into the last partition-specific connected
-   subgraph, a terminal minor, or a named descent.  In the paired
-   packing-`(1,2)` residue, prove the two-operation trace-alignment lemma:
-   retain one full connected remainder while detaching a complete operated
-   support, or instead return a common boundary partition or the literal
-   anti-neighbourhood of a named exceptional centre.  No additional
-   retained-clique contact hypothesis is needed in the `2+1+1+3` response.
-2. **Eliminate the low-contact residue if terminalization returns to the
-   absorbed model family.**  In the
-   notation of the pair-deletion reduction this is `p=1,k<=2`.  Keep the
-   fixed colouring and labelled near-clique model simultaneous.
-3. **Prove operation-preserving exchange in the contact-four absorbed
-   family.**  A donor-reducing transfer must retain the separate `P,U_h`
-   labels and the fixed response, or give one of the same terminal outcomes.
-4. **Decode an order-seven return as a two-shore response.**
-   The audited `3,2,2` theorem now eliminates all three-component cuts, so
-   only packing `(1,2)` (first) and `(1,1)` remain.  An arbitrary smaller
-   adhesion is not an exceptional anti-neighbourhood descent.
-5. **Transport the resulting transfer through the adjacent-miss,
-   one-nonfull, and both-full responses.**  It must align operation colours
-   with rooted bags or preserve them through an exact seven-separation.
-   More graph-code filters or static shore-demand counts are not progress on
-   this gate.
-6. **Synchronize anchored list cores only with their path geometry retained.**
-   The response-specific defect budgets cannot be summed, and a common tight
-   odd-cycle core can survive every anchor when the exterior Kempe paths are
-   forgotten.
+1. Minimise, over the rooted four-colour models in the fixed quotient, the
+   number of vertices used from the two opposite boundary-full connected
+   subgraphs.
+2. Convert the first unavoidable use into a named second minimum cut while
+   retaining the four prescribed centres and the fixed six-colouring.
+3. Prove the cut-family theorem: with the wheel and purely nested cases
+   excluded, eliminate crossing-match configurations, smaller returned cuts,
+   and concentration of all other exceptional centres in one shore.
+4. Deduce that a critical host has at most 24 degree-eight vertices,
+   contradicting (1).
 
-Further finite enumeration is useful only when attached to one of these
-unbounded lifts.  The present bottleneck is label-preserving synchronization,
-not an incomplete boundary census.
+The earlier one-centre operation and rooted-allocation lemmas remain tools
+only when they feed this global argument.  Further graph-code filters,
+isolated boundary classifications, or another nonterminal separation are not
+accepted progress.  The bottleneck is simultaneous label and support
+allocation across the family of exceptional centres.

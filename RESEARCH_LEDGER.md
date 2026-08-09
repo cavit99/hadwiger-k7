@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 8 August 2026
+**Last updated:** 9 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.
@@ -13,29 +13,87 @@ This file is the sole authority for the present research frontier.
 
 ### 1. Exhaustive global obligation
 
-The sole active research target is the following unconditional extremal
-theorem.
+The sole active research target is Norin--Totschnig Conjecture 21.
 
-> **`4n-2` extremal target.** Every seven-connected graph `G` with
-> \[
-> |E(G)|\ge4|V(G)|-2
-> \]
-> contains a `K_7^-` minor.
+> **`K_7^-` six-colour conjecture.** Every graph with no `K_7^-` minor is
+> six-colourable.
 
-This statement is open.  It is exactly sufficient for Norin--Totschnig
-Conjecture 21: the audited computation-free critical-host chain proves that
-any minor-minimal non-six-colourable `K_7^-`-minor-free graph is
-seven-connected and meets this density threshold.  Proving the target would
-settle that conjecture, but would not prove `HC_7`.
+This statement is open.  It is weaker than `HC_7`: proving that every
+seven-chromatic graph contains `K_7^-` does not prove that it contains
+`K_7`.
 
-The global six-edge difference from Norin and Totschnig's `4n-8` threshold
-does not identify six edges near a chosen deficient branch set.  Surplus
-localisation is therefore not being treated as a proved mechanism.
+The formerly primary density statement
 
-### 2. Principal conditional refinement: a smallest extremal enemy
+\[
+ \kappa(G)\ge7,\qquad |E(G)|\ge4|V(G)|-2
+ \quad\Longrightarrow\quad K_7^-\preccurlyeq G
+\]
 
-Assume the target false, choose a counterexample `G` first with minimum
-order and then with minimum size, and put
+remains a sufficient open theorem, but it quantifies over arbitrary dense
+seven-connected graphs and discards the proper-minor colouring responses of
+a hypothetical counterexample.  It is therefore retained as a conditional
+extremal route rather than the active primary target.
+
+### 2. Principal conditional refinement: the critical host
+
+Assume Conjecture 21 false and let `G` be minor-minimal subject to being
+non-six-colourable and `K_7^-`-minor-free.  The audited computation-free
+critical-host chain now gives
+
+\[
+ \kappa(G)\ge7,\qquad n_7=0,\qquad \delta(G)\ge8,
+ \qquad |E(G)|\ge4|V(G)|,
+\]
+
+excludes every literal `K_5`, and gives
+
+\[
+ n_8\ge25+\sum_{i\ge10}(i-9)n_i.                     \tag{1}
+\]
+
+Every degree-eight vertex has a `K_4`-free neighbourhood.  Every order-seven
+cut has exactly two complementary components.  Consequently the following
+is a headline-equivalent finishing theorem, not a routine local lemma:
+
+> **Exceptional-centre finishing target.** Every graph satisfying the
+> critical-host hypotheses has at most 24 degree-eight vertices.
+
+This would contradict (1) and prove Conjecture 21 directly.  The active
+technical statement, proved inputs and exact surviving allocation problem
+are recorded in the
+[critical-host frontier](active/hc7_k7minus_seven_exceptional_frontier.md).
+
+### 3. Immediate structural laboratory
+
+Because `R(5,4)=25` and the critical host contains no `K_5`, its degree-eight
+vertices contain four independent centres.  Deleting those four vertices
+leaves an exactly six-chromatic graph and hence a spanning `K_6` minor model.
+The present working attack combines the four retained labels, proper-minor
+six-colourings and the exact two-shore order-seven separations.
+
+In the first nontrivial two-shore case, a fixed quotient colouring and the
+strong Hadwiger theorem for four colours produce four mutually adjacent
+branch sets containing the four prescribed labels, together with a fifth
+branch set adjacent to at least three of them.  The exact unsupported step is
+support allocation: those four rooted branch sets may use one or both of the
+two disjoint connected subgraphs on the opposite shore which are needed as
+the final two branch sets.  Neither an unrooted clique model nor an additional
+path repairs this loss of disjointness.
+
+The proposed global repair is to show that unavoidable use of those two
+subgraphs produces a second interacting exact order-seven cut, and that the
+resulting cut family cannot coexist around at least 25 degree-eight centres.
+Wheel-type crossing and a purely nested interval family have been excluded in
+the current working derivation; crossing-match, smaller-cut and one-shore
+concentration configurations remain.  These newest deductions are unaudited
+working mathematics and are not promoted results.
+
+## Sufficient but non-primary extremal route
+
+### A smallest `4n-2` enemy
+
+Assume the `4n-2` theorem false, choose a counterexample `G` first with
+minimum order and then with minimum size, and put
 
 \[
 q(G)=|E(G)|-(4|V(G)|-2).
@@ -127,7 +185,7 @@ canonical rooted six-boundary instances and converts every spanning-model
 contact concentration at a fixed `x` into a strict same-host separator
 shore with exact density accounting.
 
-### 3. Immediate structural laboratory
+### Current density-route laboratory
 
 The proposed canonical vertexwise `K_4`-reserve aggregation has now been
 decisively assessed.  It is directly visible only at degree-seven vertices
@@ -158,10 +216,9 @@ an exact local separator supplies one order-seven cut, but it may be nested
 with the existing cuts; otherwise a label-preserving rooted linkage theorem
 is still needed.  Pair deletion and two-root transfers remain secondary.
 
-The E5 and direct attacks still meet at the same rooted obstruction, but
+The E5 and density attacks still meet at the same rooted obstruction, but
 E5-specific boundary enumeration is frozen unless it proves an unbounded
-theorem transferable to the primary target or finds a genuine E5
-counterexample.
+theorem transferable to Conjecture 21 or finds a genuine E5 counterexample.
 
 The direct positive-surplus attack uses Mader's generalised atoms.  It
 reduces every nonsingleton atom to an edge, a three-vertex path, or a
@@ -176,8 +233,9 @@ The auxiliary five-connected statement
  \quad\Longrightarrow\quad K_7^-\preccurlyeq G
 \]
 
-would imply the primary target.  A minimum auxiliary enemy is now proved
-to have exact density `4n-7`, connectivity exactly five, and an actual
+would imply the `4n-2` theorem and hence Conjecture 21.  A minimum auxiliary
+enemy is now proved to have exact density `4n-7`, connectivity exactly five,
+and an actual
 five-cut with two or three boundary-full components.  Dense, four-component,
 all seven-edge, sparse three-component, and several complete two-component
 families are eliminated.  This is a substantial reduction, not a proof of
@@ -338,8 +396,9 @@ An accepted result must prove at least one of:
 4. the five-root reserve-or-descent target holds, or its anchored
    four-root specialisation closes the exact E5 two-singleton branch.
 
-Outcome 1 is the immediate campaign.  Outcome 4 remains a valid auxiliary
-route, but E5-specific case enumeration is frozen.
+These remain valid exits for the conditional density route, but none is the
+immediate campaign while the critical-host route is active.  E5-specific
+case enumeration remains frozen.
 
 The four exact nonclosures to overcome are:
 
@@ -405,7 +464,7 @@ current uncrossing problem.  Another boundary census, isolated graph-code
 elimination, or noncritical static barrier is not an accepted principal
 outcome.
 
-## Established context retained from the previous programme
+## Durable critical-host context
 
 The strengthened audited computation-free critical-host package now gives:
 
@@ -421,8 +480,9 @@ degree-eight vertices.  The new rooted-helper theorem eliminates every
 degree-seven vertex; applying it at all five vertices of a hypothetical
 literal `K_5` then contradicts the exact degree surplus.  Jakobsen's defect
 inequality supplies the displayed lower bound on `n_8`.  These are necessary
-conditions on a hypothetical counterexample, not a colouring theorem, and
-they do not apply to an arbitrary enemy to the unconditional `4n-2` target.
+conditions on a hypothetical counterexample, not yet a colouring theorem,
+and they do not apply to an arbitrary enemy to the unconditional `4n-2`
+target.
 
 Every order-seven cut in that critical host has exactly two complementary
 components.  The earlier capacity theorem restricts a possible
@@ -431,12 +491,11 @@ audited
 [three-shore planar-extension theorem](results/hc7_k7minus_three_component_seven_cut_exclusion.md)
 six-colours that configuration.
 
-The exceptional-centre and bounded-interface programmes remain available as
-conditional refinements and sources of techniques.  They are frozen as
-principal search directions while the unconditional `4n-2` target is
-attacked.  Direct `HC_7` bridge composition is also frozen: Conjecture 21
-is the cleaner setting in which to develop the same missing branch-set
-transfer and separator-resolution machinery.
+The exceptional-centre programme is now the active proof route to Conjecture
+21.  The universal `4n-2` theorem remains a sufficient conditional route,
+and E5 remains a stronger frozen laboratory.  Direct `HC_7` bridge
+composition is also frozen: Conjecture 21 is the cleaner setting in which to
+develop the missing branch-set transfer and separator-resolution machinery.
 
 The concise computation-free manuscript in [`paper/k7minus-low-degree/`](paper/k7minus-low-degree/)
 is preserved but is not the active task.  Its proofs still require normal

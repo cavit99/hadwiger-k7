@@ -1,13 +1,13 @@
 # Density frontier for the `K_7^-` six-colour route
 
-**Status:** sole active research frontier; not a proof of the `K_7^-`
-six-colour conjecture or of `HC_7`.  The `4n-2` extremal theorem below is
-the sole active target.  Its computation-free critical-host entrance,
+**Status:** conditional sufficient frontier; not a proof of the `K_7^-`
+six-colour conjecture or of `HC_7`.  The `4n-2` extremal theorem below remains
+open and would settle Conjecture 21, but the direct critical-host programme is
+the active route.  Its computation-free critical-host entrance,
 seven-cut reduction, safe degree-seven contraction, and strict-surplus
 labelled-separator-shore theorem have written proofs with separate GREEN
 internal audits.  The same is true of the order-six-cut localisation after
-a safe contraction.  The exceptional-centre and direct `HC_7` programmes
-remain frozen conditional refinements.
+a safe contraction.  Direct `HC_7` composition remains frozen.
 
 ## 1. Proved entrance reduction
 
@@ -57,7 +57,7 @@ Connectivity of every such anti-neighbourhood is still open; when there are
 two components, the retained two-component reductions apply in the global
 literal-`K_5`-free branch above.
 
-## 2. Primary extremal target
+## 2. Conditional extremal target
 
 The following statement is sufficient for the `K_7^-` six-colour
 conjecture:
@@ -71,10 +71,10 @@ Equivalently, every seven-connected `K_7^-`-minor-free graph should satisfy
                               m\le4n-3.                 \tag{6}
 \]
 
-This target is not proved.  It remains the clean global statement to
-attack: it uses only seven-connectivity and density, while any
-minor-minimal colouring counterexample automatically satisfies its
-hypotheses.
+This target is not proved.  It remains a clean sufficient statement, but it
+uses only seven-connectivity and density, whereas the active direct route
+also retains proper-minor six-colourings.  Any minor-minimal colouring
+counterexample automatically satisfies its hypotheses.
 
 Norin and Totschnig prove that a four-connected graph at the
 `4n-8` threshold contains the graph obtained from `K_7` by deleting two
@@ -92,10 +92,9 @@ The critical-host count also leaves the following sufficient statement:
 > `K_7^-`-minor-free graph whose every proper minor is six-colourable has at
 > most 24 exceptional degree-eight vertices.
 
-This is unproved and is no longer a parallel active target.  It is retained
-as a conditional refinement because it would contradict (2) while keeping
-the proper-minor colouring responses.  Its exact reductions and barriers
-are in the
+This is unproved and is the active headline-equivalent finishing refinement:
+it would contradict (2) while keeping the proper-minor colouring responses.
+Its exact reductions and barriers are in the
 [seven-exceptional technical frontier](hc7_k7minus_seven_exceptional_frontier.md).
 
 The former `4n-4` and `4n-5` targets are stronger open statements.  They
@@ -373,8 +372,8 @@ vertices, while at least eight vertices lie outside it.  This is a route
 nonclosure, not a claim that no indirect use of the reserve inequality can
 succeed.
 
-The immediate target is now a **labelled separator-shore terminalisation
-lemma**.  It must close three exact cases:
+Within this conditional density route, the next target is a **labelled
+separator-shore terminalisation lemma**.  It must close three exact cases:
 
 1. a high `C`, which need not inherit the canonical six-boundary hypotheses;
 2. a singleton `C={y}`, for which `d_G(y)=7` is not known; or
@@ -445,13 +444,14 @@ host-reinsertion theorem.  Further E5-specific boundary enumeration is
 therefore frozen; only an unbounded transferable theorem or a genuine E5
 counterexample reopens it.
 
-## 7. Frozen prior laboratories
+## 7. Relationship to the active programme
 
-The previous exceptional-centre and direct `HC_7` programmes are preserved
-in the [archived ledger](../archive/RESEARCH_LEDGER_2026-08-02.md), the
-[exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md),
-and the [bounded-interface frontier](hc7_bounded_interface_synchronization_frontier.md).
-They remain sources of audited tools but are not parallel active targets.
+The [exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md)
+is the active direct route to Conjecture 21.  The direct `HC_7` programme is
+preserved in the [archived ledger](../archive/RESEARCH_LEDGER_2026-08-02.md)
+and the
+[bounded-interface frontier](hc7_bounded_interface_synchronization_frontier.md),
+but remains frozen.
 The universal seven-cut theorem above supersedes the former four-component
 residue; in an arbitrary extremal enemy only the two- and three-component
 cases remain, while every critical-host order-seven cut has exactly two

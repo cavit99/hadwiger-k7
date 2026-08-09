@@ -257,7 +257,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_exterior_component_bounds.md"
 source_heading = "Theorem 1 (sharp current component bounds)"
-active = false
+active = true
 audit = "results/hc7_low_degree_exterior_component_bounds_audit.md"
 expected_source_sha256 = "4ee48c6d71c994b166b29dcd969d64c3526e6b6b75fa8a849fae834cf95eea29"
 scope = "the literal components outside the closed neighbourhood of a degree-seven-through-nine vertex in a hypothetical minor-minimal HC7 counterexample"
@@ -7136,7 +7136,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_degree7_rooted_helper_closure.md"
 source_heading = "Corollary 3 (the critical host is `K_5`-free and has many degree-eight vertices)"
-active = false
+active = true
 audit = "results/hc7_k7minus_degree7_rooted_helper_closure_audit.md"
 expected_source_sha256 = "6ffee04cf9ff66275f9674c24bc2b9c669b1e108b76e5b1d2a18ec7d0106fe67"
 scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
@@ -7603,7 +7603,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_three_component_seven_cut_exclusion.md"
 source_heading = "Theorem 1 (three-component `3,2,2` cut)"
-active = false
+active = true
 audit = "results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md"
 expected_source_sha256 = "1041988a33b749bef5802dd21d3cd9419b5afc754735a20174bf5a13c0a56c96"
 scope = "seven-connected graphs whose every proper minor is six-colourable, with an order-seven cut leaving exactly three components and a proper 3,2,2 boundary colouring; the corollary applies to the current critical K7-minus host"
@@ -7784,7 +7784,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_exceptional_neighbourhood_completion.md"
 source_heading = "Theorem 2 (every exceptional neighbourhood has an independent triple)"
-active = false
+active = true
 audit = "results/hc7_k7minus_exceptional_neighbourhood_completion_audit.md"
 expected_source_sha256 = "fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd"
 scope = "exceptional degree-eight vertices in the critical K7-minus host"
@@ -7867,12 +7867,32 @@ does_not_prove = [
 keywords = ["K7 minus", "seven roots", "list colouring", "odd cycle", "barrier"]
 
 [[claims]]
+id = "hc7.target.k7minus_six_colour_conjecture"
+title = "Every K7-minus-minor-free graph is six-colourable"
+kind = "target"
+status = "active-target"
+source = "active/hc7_k7minus_seven_exceptional_frontier.md"
+source_heading = "1. Primary target and exact finishing reduction"
+active = true
+scope = "all finite graphs"
+label_fidelity = "the conclusion may be a six-colouring or, in a hypothetical minor-minimal counterexample, an explicit K7-minus minor model"
+allowed_exits = [
+  "a proof that every K7-minus-minor-free graph is six-colourable",
+  "a contradiction to the existence of a minor-minimal non-six-colourable K7-minus-minor-free graph",
+]
+does_not_prove = [
+  "the seven-connected 4n-2 extremal theorem",
+  "HC7",
+]
+keywords = ["K7 minus", "Norin Totschnig Conjecture 21", "six-colour conjecture", "critical host"]
+
+[[claims]]
 id = "hc7.target.k7minus_extremal_4n_minus_5"
 title = "Every seven-connected graph with m at least 4n-5 contains K7-minus"
 kind = "target"
 status = "frozen"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Primary extremal target"
+source_heading = "2. Conditional extremal target"
 active = false
 scope = "all seven-connected graphs at the former, stronger 4n-5 density benchmark"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
@@ -7889,7 +7909,7 @@ title = "Every seven-connected graph with m at least 4n-4 contains K7-minus"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Primary extremal target"
+source_heading = "2. Conditional extremal target"
 active = false
 scope = "all seven-connected graphs at a stronger density benchmark than the current 4n-2 sufficient threshold"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
@@ -7907,11 +7927,11 @@ keywords = ["K7 minus", "extremal target", "4n-4", "seven connectivity"]
 id = "hc7.target.k7minus_extremal_4n_minus_2"
 title = "Every seven-connected graph with m at least 4n-2 contains K7-minus"
 kind = "target"
-status = "active-target"
+status = "conditional-target"
 source = "active/hc7_k7minus_density_frontier.md"
-source_heading = "2. Primary extremal target"
-active = true
-scope = "all seven-connected graphs at the current density-only sufficient threshold for the K7-minus six-colour conjecture"
+source_heading = "2. Conditional extremal target"
+active = false
+scope = "all seven-connected graphs at the density-only sufficient threshold for the K7-minus six-colour conjecture"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model; small exceptions require a separate exclusion from the critical host"
 allowed_exits = [
   "an explicit K7-minus minor model",
@@ -7949,7 +7969,7 @@ status = "conditional-target"
 source = "active/hc7_k7minus_e5_frontier.md"
 source_heading = "1. Auxiliary target"
 active = false
-scope = "an auxiliary theorem strictly stronger than the active seven-connected 4n-2 target"
+scope = "an auxiliary theorem strictly stronger than the conditional seven-connected 4n-2 target"
 label_fidelity = "the conclusion must be an explicit K7-minus minor model"
 allowed_exits = [
   "an explicit K7-minus minor model",
@@ -7975,7 +7995,7 @@ allowed_exits = [
 ]
 does_not_prove = [
   "the auxiliary five-connected extremal theorem without the established reduction",
-  "the active 4n-2 target without the auxiliary theorem",
+  "the conditional 4n-2 target without the auxiliary theorem",
   "HC7",
 ]
 keywords = ["rooted K6", "five roots", "density descent", "five-cut"]
@@ -8002,7 +8022,7 @@ does_not_prove = [
   "the distinct leaf-pair repair",
   "an S-rooted K5 model in the dense shore",
   "the auxiliary E5 statement",
-  "the active seven-connected 4n-2 target",
+  "the conditional seven-connected 4n-2 target",
   "HC7",
 ]
 keywords = ["K7 minus", "E5", "singleton contraction", "three-cut", "Yuan fragments", "degree-five roots", "P3 plus K2"]
@@ -8049,7 +8069,7 @@ conclusions = [
 does_not_prove = [
   "synchronisation of the rooted K4 bags with a selected dense-neighbour helper",
   "the anchored four-root K5-or-descent target",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["K7 minus", "E5", "four roots", "anchored K5", "internally four-connected", "three--two linkage"]
 
@@ -8154,7 +8174,7 @@ conclusions = [
 does_not_prove = [
   "elimination of the two order-three atoms",
   "the auxiliary E5 statement",
-  "the active seven-connected 4n-2 target",
+  "the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "six boundary", "atomic separator", "rooted K4", "helper placement", "P3 plus K2"]
 
@@ -8180,7 +8200,7 @@ conclusions = [
 does_not_prove = [
   "elimination of either order-three atom",
   "the other singleton or two-vertex low orientations",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "companion cut", "density-safe contraction", "maximum excess", "lexicographic descent"]
 
@@ -8205,7 +8225,7 @@ conclusions = [
 does_not_prove = [
   "elimination of the singleton atom",
   "the other singleton or two-vertex low orientations",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "three-separator edge atom", "rooted six-bag model", "maximum excess", "K7 minus"]
 
@@ -8230,7 +8250,7 @@ conclusions = [
 does_not_prove = [
   "that every K7-vee model in the quotient lifts to K7-minus",
   "elimination of the singleton atom",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "three-separator atom", "inherited four-cut", "K7 vee", "recorded nonclosure"]
 
@@ -8256,7 +8276,7 @@ conclusions = [
 does_not_prove = [
   "that the contracted-vertex bag of the K7-vee model splits with at most one lost adjacency",
   "that aggregate triangle contact at the lifted six-separation gives K7-minus or high-excess descent",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "triangle contraction", "four-connected quotient", "six-separation", "K7 vee", "labelled split"]
 
@@ -8283,7 +8303,7 @@ conclusions = [
 does_not_prove = [
   "that a six-full component can be split into enough labelled branch sets",
   "strict descent from any high-misser normal form",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "triangle contraction", "six-cut", "two-of-three contact", "high misser", "adhesion swap", "six-full component"]
 
@@ -8308,7 +8328,7 @@ conclusions = [
 does_not_prove = [
   "a labelled split inside a six-full component",
   "strict descent from the six-full-component class",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "boundary-complement potential", "high misser", "five-cut", "strict descent", "six-full component"]
 
@@ -8335,7 +8355,7 @@ conclusions = [
 does_not_prove = [
   "elimination of the order-a+1 singleton connected-exterior form",
   "a density-sensitive labelled split when the lifted cut has two six-full components",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "six-full component", "safe contraction", "singleton returned cut", "companion five-cut", "corner localisation"]
 
@@ -8360,7 +8380,7 @@ conclusions = [
 does_not_prove = [
   "that every live E5 configuration reduces to one of the three kernels",
   "an unbounded contraction or density-localisation theorem",
-  "E5 or the active seven-connected 4n-2 target",
+  "E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["K7 minus", "E5", "six-boundary kernel", "K2", "P3", "K3", "computer-assisted certificates", "sharp threshold"]
 
@@ -8386,7 +8406,7 @@ does_not_prove = [
   "termination of the self-similar anchored singleton quotient",
   "the case in which every eligible nontrivial separation is met on both sides by both original endpoints",
   "density localisation across several bounded non-six-full components or arbitrarily large six-full components",
-  "the kernel-localisation target, E5 or the active seven-connected 4n-2 target",
+  "the kernel-localisation target, E5 or the conditional seven-connected 4n-2 target",
 ]
 keywords = ["E5", "second contraction", "returned singleton", "six-boundary kernel", "high-excess descent", "self-similar quotient"]
 
@@ -8412,7 +8432,7 @@ does_not_prove = [
   "control of the order or internal structure of a six-full component",
   "elimination of the single- or multiple-six-full residues",
   "the auxiliary E5 statement",
-  "the active seven-connected 4n-2 target",
+  "the conditional seven-connected 4n-2 target",
   "HC7",
 ]
 keywords = ["K7 minus", "E5", "six boundary", "missed-root mass", "six-full component", "both-endpoints separation"]
@@ -8441,7 +8461,7 @@ does_not_prove = [
   "an unbounded split or density-localisation theorem",
   "termination of repeated singleton deletion",
   "the auxiliary E5 statement",
-  "the active seven-connected 4n-2 target",
+  "the conditional seven-connected 4n-2 target",
   "HC7",
 ]
 keywords = ["K7 minus", "E5", "six-boundary kernel", "finite extension screen", "split contacts", "independent exhaustive checker"]
@@ -8470,7 +8490,7 @@ does_not_prove = [
   "a label-preserving termination theorem for the self-similar singleton quotient",
   "closure of the both-endpoints rows with boundary size at most eleven",
   "the auxiliary E5 statement",
-  "the active seven-connected 4n-2 target",
+  "the conditional seven-connected 4n-2 target",
   "HC7",
 ]
 keywords = ["K7 minus", "E5", "six-boundary localisation", "K2", "P3", "K3", "six-full component", "singleton exterior"]
@@ -8523,7 +8543,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_degree7_safe_contraction.md"
 source_heading = "Theorem 1 (safe incident contraction)"
-active = true
+active = false
 audit = "results/hc7_k7minus_degree7_safe_contraction_audit.md"
 expected_source_sha256 = "f69c7eefc74c6074173e5d4e0396e3c2a2a2635f0aba58c7b54f3559c2c16896"
 scope = "degree-seven vertices in seven-connected K7-minus-minor-free graphs at the 4n-2 threshold"
@@ -8542,7 +8562,7 @@ kind = "laboratory"
 status = "audited-green"
 source = "results/hc7_k7minus_degree7_safe_contraction.md"
 source_heading = "Theorem 3 (the exact two-exterior fragment residue)"
-active = true
+active = false
 audit = "results/hc7_k7minus_degree7_safe_contraction_audit.md"
 expected_source_sha256 = "f69c7eefc74c6074173e5d4e0396e3c2a2a2635f0aba58c7b54f3559c2c16896"
 scope = "a degree-seven vertex with two anti-neighbourhood components in a minimum 4n-2 enemy"
@@ -8560,7 +8580,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_exact_six_cut_localisation.md"
 source_heading = "Theorem"
-active = true
+active = false
 audit = "results/hc7_k7minus_exact_six_cut_localisation_audit.md"
 expected_source_sha256 = "f2a4480d27556996620117a68a8a7924dd61cf37bf5ec9e8cce4c953dfcc88af"
 scope = "order-six cuts in six-connected K7-minus-minor-free graphs, with coefficient-four sharpenings at density 4n-2"
@@ -8712,7 +8732,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_strict_surplus_labelled_separator_shore.md"
 source_heading = "Theorem 4 (model concentration yields a strict separator shore)"
-active = true
+active = false
 audit = "results/hc7_k7minus_strict_surplus_labelled_separator_shore_audit.md"
 expected_source_sha256 = "8579527fb6abc6fe1f36948ac277a0997d170f0af473fa557cf643593a5c41c0"
 scope = "the seven overlapping canonical six-boundaries at one reserve-blind degree-seven vertex in a positive-surplus minimum counterexample"
@@ -8740,7 +8760,7 @@ kind = "laboratory"
 status = "audited-green"
 source = "results/hc7_k7minus_strict_surplus_labelled_separator_shore.md"
 source_heading = "5. Scope"
-active = true
+active = false
 audit = "results/hc7_k7minus_strict_surplus_labelled_separator_shore_audit.md"
 expected_source_sha256 = "8579527fb6abc6fe1f36948ac277a0997d170f0af473fa557cf643593a5c41c0"
 scope = "terminalisation of the labelled separator shore returned by a spanning K6 model at positive surplus"
@@ -8864,7 +8884,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "f7a4a4084fe21e67329b0efed97eafe7ba5108acd79db2efb514592b031c0b95"
+expected_source_sha256 = "3e0853942a43e2cf8a8c88ba79f5ea34ac667264c7467b63cab13ccbc538be35"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -8886,9 +8906,9 @@ title = "Rooted exterior allocation at one exceptional degree-eight centre"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
-source_heading = "4. Exact remaining obstruction"
+source_heading = "4. Current global finishing obstruction"
 active = false
-scope = "one of at least seventeen exceptional centres in the critical K7-minus host"
+scope = "one of at least 25 exceptional centres in the critical K7-minus host"
 label_fidelity = "the centre, an independent triple, five literal roots, every rooted branch set, and any residual connected subgraph remain explicit"
 allowed_exits = [
   "a five-root K5 model avoiding one exterior component",
@@ -8904,11 +8924,11 @@ keywords = ["K7 minus", "exceptional centre", "rooted K5", "exterior allocation"
 
 [[claims]]
 id = "hc7.target.k7minus_seven_exceptional_vertices"
-title = "A critical K7-minus host has at most sixteen exceptional degree-eight vertices"
+title = "A critical K7-minus host has at most 24 exceptional degree-eight vertices"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
-source_heading = "1. Exact finishing target"
+source_heading = "1. Primary target and exact finishing reduction"
 active = false
 scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
 label_fidelity = "the exceptional centres, selected independent triples, five literal roots, exterior components, and any final minor-model bags remain explicit"
@@ -8926,7 +8946,7 @@ does_not_prove = [
   "the bare seven-connected 4n-2 extremal theorem",
   "HC7",
 ]
-keywords = ["K7 minus", "seventeen exceptional vertices", "finishing target", "shore allocation", "anchored list cores"]
+keywords = ["K7 minus", "25 exceptional vertices", "finishing target", "shore allocation", "anchored list cores"]
 
 [[claims]]
 id = "hc7.target.k7minus_five_exceptional_vertices"
@@ -9899,7 +9919,7 @@ kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_shore_allocation_barrier.md"
 source_heading = "Theorem 2 (two-full-shore mechanism barrier)"
-active = false
+active = true
 audit = "barriers/hc7_k7minus_shore_allocation_barrier_audit.md"
 expected_source_sha256 = "e6d3bf5c480ad3775de530014aa70f2bb1e32c880e64af45a3087e30d93acee9"
 scope = "the explicit eleven-vertex graph formed from K3 disjoint-union K3 disjoint-union K2 and three independent universal boundary apices"
@@ -10229,7 +10249,7 @@ kind = "uses"
 source = "hc7.k7minus_exceptional_root_k7vee_interface"
 target = "hc7.k7minus_two_literal_k5_exclusion"
 kind = "uses"
-note = "The global 4n-2 density and seventeen-exceptional bounds put every exceptional-root deletion above the Norin--Totschnig threshold."
+note = "The critical-host 4n density and 25-exceptional bound put every exceptional-root deletion above the Norin--Totschnig threshold."
 
 [[relations]]
 source = "hc7.k7minus_exceptional_root_k7vee_interface"
@@ -10256,9 +10276,9 @@ note = "The optimized pair-deletion model reduces the model-only obstruction to 
 
 [[relations]]
 source = "hc7.target.k7minus_rooted_shore_allocation"
-target = "hc7.k7minus_seventeen_exceptional_vertices"
+target = "hc7.k7minus_critical_host_degree7_closure"
 kind = "uses"
-note = "The target searches among the at least seventeen exceptional centres supplied by the sharpened count theorem."
+note = "The target searches among the at least 25 exceptional centres supplied by the rooted-helper closure."
 
 [[relations]]
 source = "hc7.target.k7minus_rooted_shore_allocation"
@@ -10278,9 +10298,9 @@ note = "Either displayed allocation outcome at one of the forced exceptional cen
 
 [[relations]]
 source = "hc7.target.k7minus_seven_exceptional_vertices"
-target = "hc7.k7minus_seventeen_exceptional_vertices"
+target = "hc7.k7minus_critical_host_degree7_closure"
 kind = "uses"
-note = "The proved lower bound makes the proposed upper bound of sixteen a sufficient contradiction."
+note = "The proved lower bound of 25 makes the proposed upper bound of 24 a sufficient contradiction."
 
 [[relations]]
 source = "hc7.target.k7minus_seven_exceptional_vertices"
@@ -10302,7 +10322,7 @@ note = "The second live attack seeks to synchronize the seven deletion-anchored 
 source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.target.k7minus_five_exceptional_vertices"
 kind = "supersedes"
-note = "Successive lower bounds change the exact sufficient upper-bound target from four, then six, to sixteen exceptional vertices."
+note = "Successive lower bounds change the exact sufficient upper-bound target from four, then six and sixteen, to 24 exceptional vertices."
 
 [[relations]]
 source = "hc7.target.k7minus_seven_exceptional_vertices"
@@ -15460,7 +15480,7 @@ note = "A minimum enemy has a degree-seven entrance whose density-preserving con
 source = "hc7.target.k7minus_e5_extremal"
 target = "hc7.target.k7minus_extremal_4n_minus_2"
 kind = "strengthens"
-note = "The auxiliary statement applies at lower connectivity and a lower density threshold, so it would imply the active seven-connected target."
+note = "The auxiliary statement applies at lower connectivity and a lower density threshold, so it would imply the conditional seven-connected target."
 
 [[relations]]
 source = "hc7.target.k7minus_five_root_reserve_descent"
@@ -15833,3 +15853,45 @@ source = "hc7.k7minus_critical_host_degree7_closure"
 target = "hc7.k7minus_two_component_density_jump"
 kind = "strengthens"
 note = "The same no-degree-seven, no-literal-K5 and 25-centre conclusion now holds without assuming a disconnected exceptional anti-neighbourhood."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "uses"
+note = "The audited critical-host reduction eliminates degree seven and every literal K5 and forces at least 25 exceptional degree-eight vertices."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+note = "Every one of the forced degree-eight neighbourhoods contains the independent triple used by the rooted allocation programme."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.low_degree_exterior_component_bounds"
+kind = "uses"
+note = "The degree-eight case has at most two components outside the closed neighbourhood."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "Every order-seven cut in the critical host is reduced to exactly two complementary components."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_two_full_shore_mechanism"
+kind = "guarded_by"
+note = "The scoped witness shows that local fullness and root contacts alone cannot supply the required one-shore rooted allocation."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.target.k7minus_six_colour_conjecture"
+kind = "subproblem_of"
+note = "The critical-host lower bound is at least 25, so an upper bound of 24 proves the conjecture."
+
+[[relations]]
+source = "hc7.target.k7minus_extremal_4n_minus_2"
+target = "hc7.target.k7minus_six_colour_conjecture"
+kind = "strengthens"
+note = "The audited critical-host entrance shows that the universal extremal theorem would settle Conjecture 21, although it is not required by the direct route."
