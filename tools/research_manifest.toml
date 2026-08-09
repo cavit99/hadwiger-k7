@@ -3491,7 +3491,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_selected_response_preservation.md"
 source_heading = "Theorem 1.1 (exact response reflection)"
-active = false
+active = true
 audit = "results/hc7_exact7_selected_response_preservation_audit.md"
 expected_source_sha256 = "94c154ce0d8d9bebaaff2ff97df66beb3e2381bb242378df38d9620ed8ec36e0"
 scope = "an actual seven-vertex separator and one selected boundary equality partition"
@@ -7189,12 +7189,12 @@ active = true
 audit = "results/hc7_k7minus_four_centre_operation_cut_reduction_audit.md"
 expected_source_sha256 = "4d4ca474cb9d9f28632077f0a89d79c0fc36840f3eb2600c745e0ea2150f2f98"
 scope = "the rooted-web exact-cut outcome for four independent degree-eight centres in the critical K7-minus host"
-label_fidelity = "the four centres, selected root, fixed edge-deletion colouring, five colour-indexed first edges, literal cut, and packet-rich boundary remain explicit"
+label_fidelity = "the four centres, selected root, fixed edge-deletion colouring, five colour-indexed first edges, literal cut, and boundary-full connected subgraphs remain explicit"
 strict_parameter = "order of the selected response-carrying open component"
 conclusions = [
   "a colour-indexed five-spoke packing or a strict actual order-seven shore descent retaining a common exact colour block",
   "the five limbs of the distinct-ended fan have at least two missing mutual contacts",
-  "a packet-rich survivor has independent auxiliary boundary and one fixed colouring with all three pairwise auxiliary-boundary Kempe paths",
+  "if one component contains two disjoint connected subgraphs adjacent to every boundary vertex, the auxiliary boundary is independent and one fixed colouring contains all three pairwise auxiliary-boundary Kempe paths",
   "each unused centre individually repairs the rooted-web obstruction",
 ]
 does_not_prove = [
@@ -7204,7 +7204,7 @@ does_not_prove = [
   "the K7-minus six-colour conjecture",
   "HC7",
 ]
-keywords = ["K7 minus", "four centres", "critical edge", "exact seven-cut", "fan descent", "packet reflection", "Kempe paths"]
+keywords = ["K7 minus", "four centres", "critical edge", "exact seven-cut", "fan descent", "boundary colouring", "Kempe paths"]
 
 [[claims]]
 id = "hc7.k7minus_four_centre_tri_separation_reduction"
@@ -7233,6 +7233,85 @@ does_not_prove = [
 keywords = ["K7 minus", "tri-separation", "canonical decomposition", "generalized wheel", "order-seven cut", "boundary provenance"]
 
 [[claims]]
+id = "hc7.k7minus_four_centre_trace_descent"
+title = "A minimum four-centre cut admits boundary and anchored tri-separation descent"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_four_centre_trace_descent.md"
+active = true
+audit = "results/hc7_k7minus_four_centre_trace_descent_audit.md"
+expected_source_sha256 = "04d4585b25ce9fbd8f3392b715eb28caa7e4b008e45072ede2b08cbbf0bfecff"
+scope = "trace-admissible exact four-centre cuts in the rooted-web outcome"
+label_fidelity = "the four centres, selected root, fixed deletion colouring, ordered rooted terminals, selected-side colour trace, named Kempe datum, and inverse boundary map remain explicit"
+strict_parameter = "order of the selected component"
+conclusions = [
+  "a boundary vertex with one selected-side neighbour gives a strict trace-preserving exact-cut descent",
+  "at a minimum cut every auxiliary boundary vertex has at least two selected-side neighbours and the reduced selected side is unchanged",
+  "any nontrivial tri-separation below the reduced cut that splits the selected component gives a strict trace-preserving descent by anchored uncrossing",
+  "in the totally nested case no nontrivial tri-separation splits the selected component",
+]
+does_not_prove = [
+  "a common boundary colouring in the remaining canonical region",
+  "an explicit K7-minus model extending the rooted branch sets in the remaining canonical region",
+  "elimination of the rooted-web outcome",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "four centres", "trace preservation", "tri-separation", "anchored uncrossing", "strict descent"]
+
+[[claims]]
+id = "hc7.k7minus_four_centre_wheel_leaf_descent"
+title = "A minimum generalized-wheel cut is one canonical leaf without two boundary-adjacent connected subgraphs"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_four_centre_wheel_leaf_descent.md"
+active = true
+audit = "results/hc7_k7minus_four_centre_wheel_leaf_descent_audit.md"
+expected_source_sha256 = "c04236752495ec7ff6e57b54cc498423be1b621c5ba3547739cec72b045db176"
+scope = "the heavily interlacing generalized-wheel outcome for a minimum trace-admissible four-centre cut"
+label_fidelity = "the original boundary, four centres, fixed colouring, ordered rooted terminals, selected-side trace, and named Kempe datum remain literal"
+strict_parameter = "order of the selected component"
+conclusions = [
+  "the selected component is disjoint from the expanded generalized-wheel torso",
+  "the selected component is exactly the open side of one canonical leaf and expanding that leaf recovers the original ordinary separation",
+  "the three-vertex auxiliary boundary contains an edge",
+  "neither complementary component contains two vertex-disjoint connected subgraphs each adjacent to every vertex of the seven-vertex boundary",
+]
+does_not_prove = [
+  "a common boundary colouring in the canonical leaf",
+  "an explicit K7-minus model extending the rooted branch sets through the canonical leaf",
+  "elimination of the rooted-web outcome",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "four centres", "generalized wheel", "canonical leaf", "boundary colouring", "connected subgraphs"]
+
+[[claims]]
+id = "hc7.k7minus_four_centre_completed_side"
+title = "Completing a minimum four-centre exact-cut side gives a four-connected graph"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_four_centre_completed_side.md"
+active = true
+audit = "results/hc7_k7minus_four_centre_completed_side_audit.md"
+expected_source_sha256 = "ae424dc24a95ab8afe9b6ea93dd850b727dcd4bf8f00ee72a8fd11eaf312e846"
+scope = "a minimum trace-admissible exact cut in the four-centre rooted-web outcome"
+label_fidelity = "the four centres, fixed colouring, nominated rooted terminals, selected component, and opposite full component remain literal"
+strict_parameter = "order of the selected component"
+conclusions = [
+  "completing the three auxiliary boundary vertices to a triangle makes the selected closed side four-connected",
+  "every actual selected-side graph rooted at the four centres and any two auxiliary boundary vertices is internally six-connected",
+  "a prescribed rooted K6-minus minor in that actual graph extends with the opposite component to an explicit K7-minus model",
+]
+does_not_prove = [
+  "existence of the prescribed rooted K6-minus minor",
+  "that a minor model using auxiliary completion edges lifts to the host",
+  "elimination of the rooted-web outcome",
+  "the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "four centres", "four-connected", "boundary completion", "rooted K6 minus", "exact cut"]
+
+[[claims]]
 id = "hc7.barrier.k7minus_tri_separation_boundary_trace_loss"
 title = "An undecorated tri-separation reduction does not determine its original boundary"
 kind = "barrier"
@@ -7253,6 +7332,52 @@ does_not_prove = [
   "failure of a boundary-labelled return theorem",
 ]
 keywords = ["tri-separation", "boundary trace", "provenance", "counterexample", "mixed separator"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_tri_inseparable_full_subgraph"
+title = "A tri-inseparable exact-cut side need not contain two disjoint connected subgraphs adjacent to the whole boundary"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier.md"
+active = true
+audit = "barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier_audit.md"
+expected_source_sha256 = "2b5eed9089f00aee00b4271febf7a16a8ee986b246610ee1fc9eaf268d1648ad"
+scope = "an explicit nineteen-vertex seven-connected K5-free graph of minimum degree eight with an exact seven-cut and a tri-inseparable selected component"
+label_fidelity = "the four deleted centres, three remaining boundary vertices, two complementary components, and Fano-plane incidence pattern are explicit"
+conclusions = [
+  "no mixed separation of order at most three splits the selected component",
+  "the selected component has no two disjoint vertex sets each adjacent to every boundary vertex",
+  "the graph nevertheless contains an explicit K7 minor",
+]
+does_not_prove = [
+  "that the obstruction occurs in a minor-minimal non-six-colourable graph",
+  "failure of the partition-specific boundary-colouring certificate",
+  "failure of a trace-preserving descent or direct K7-minus construction",
+]
+keywords = ["tri-separation", "Fano plane", "boundary adjacency", "connected subgraphs", "barrier", "K7 minor"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_internal_six_rooted_k6minus"
+title = "Internal six-connectivity and a rooted K4 do not force a prescribed rooted K6-minus minor"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier.md"
+active = true
+audit = "barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier_audit.md"
+expected_source_sha256 = "a0f223ff50443990a4b5055cd118f4ee826787d51f51af544d857c8144d38e6f"
+scope = "an explicit nine-vertex rooted graph, together with its seven-boundary completed-side extension"
+label_fidelity = "the six nominated roots, the edge between two roots, the four-root clique model, and the three nonroot vertices are explicit"
+conclusions = [
+  "the rooted pair is internally six-connected and has a rooted K4 minor",
+  "it has no K6-minus minor rooted at all six nominated vertices",
+  "the seven-boundary extension has a four-connected completed side but two disjoint singleton subgraphs adjacent to every boundary vertex",
+]
+does_not_prove = [
+  "failure under the generalized-wheel restriction on disjoint boundary-adjacent connected subgraphs",
+  "failure in a seven-connected contraction-critical host",
+  "failure of a theorem forcing the rooted K6-minus minor or trace-preserving exact-cut descent using proper-minor colouring responses",
+]
+keywords = ["rooted K6 minus", "internal connectivity", "rooted K4", "boundary completion", "barrier"]
 
 [[claims]]
 id = "hc7.k7minus_false_twin_triangle_closure"
@@ -8985,7 +9110,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "900499a574ae5371ccac757afcfbfea1a5b5ca075a0c47608ea74ad4f4ec8858"
+expected_source_sha256 = "684f98e83965096d57e9ec4c3970fade3f485b5755d862a71665f66505a2e342"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16062,9 +16187,111 @@ note = "The counterexample requires every label-preserving use of the mixed redu
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_four_centre_trace_descent"
+kind = "uses"
+note = "This is the direct label-preserving descent theorem for the minimum four-centre cut."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_trace_descent"
+target = "hc7.k7minus_four_centre_web_cut_lattice"
+kind = "uses"
+note = "The rooted-web theorem supplies the exact cut, fixed colouring trace, named vertices and anchored cut lattice."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_trace_descent"
+target = "hc7.k7minus_four_centre_tri_separation_reduction"
+kind = "uses"
+note = "The canonical reduction supplies the mixed tri-separation and inverse boundary map."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_trace_descent"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "The two-component normal form makes every returned selected side connected and exact."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_trace_descent"
+target = "hc7.barrier.k7minus_tri_separation_boundary_trace_loss"
+kind = "guarded_by"
+note = "Every strict descent receives its own inverse boundary map, as required by the trace-loss counterexample."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_four_centre_wheel_leaf_descent"
+kind = "uses"
+note = "This is the direct reduction of the generalized-wheel outcome to one canonical leaf with fixed trace data."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_wheel_leaf_descent"
+target = "hc7.k7minus_four_centre_trace_descent"
+kind = "uses"
+note = "Trace minimality supplies every strict leaf descent and the boundary degree condition."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_wheel_leaf_descent"
+target = "hc7.k7minus_four_centre_tri_separation_reduction"
+kind = "uses"
+note = "The heavily interlacing branch supplies the splitting star and generalized-wheel torso."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_wheel_leaf_descent"
+target = "hc7.k7minus_four_centre_operation_cut_reduction"
+kind = "uses"
+note = "The exact component-capacity refinement and the forced boundary edge show that neither component contains two disjoint connected subgraphs adjacent to every boundary vertex."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_wheel_leaf_descent"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "The two-component normal form makes each strict leaf return an exact connected cut."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_four_centre_completed_side"
+kind = "uses"
+note = "This is the direct four-connectivity and six-terminal rooted-minor reduction for a minimum exact-cut side."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_completed_side"
+target = "hc7.k7minus_four_centre_trace_descent"
+kind = "uses"
+note = "Trace minimality turns every separator of the completed side of order at most three into a forbidden smaller exact cut."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_completed_side"
+target = "hc7.k7minus_four_centre_wheel_leaf_descent"
+kind = "uses"
+note = "The generalized-wheel branch supplies an actual edge between the two additional roots and the restriction on disjoint connected subgraphs adjacent to the boundary."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_completed_side"
+target = "hc7.barrier.k7minus_internal_six_rooted_k6minus"
+kind = "guarded_by"
+note = "The explicit rooted graph shows that internal six-connectivity, the boundary edge and a rooted K4 alone do not force the prescribed rooted K6-minus minor."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.barrier.k7minus_tri_separation_boundary_trace_loss"
 kind = "guarded_by"
 note = "The active tri-separation route must retain boundary provenance before it can return a colouring-compatible cut or rooted minor model."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.exact7_selected_partition_preservation"
+kind = "uses"
+note = "This theorem turns the remaining partition-specific connected-subgraph certificate into matching colourings of the two closed sides."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_tri_inseparable_full_subgraph"
+kind = "guarded_by"
+note = "The Fano-plane example shows that the final connected-subgraph certificate must use proper-minor colourings or K7-minus exclusion, not tri-inseparability and degree conditions alone."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_internal_six_rooted_k6minus"
+kind = "guarded_by"
+note = "The prescribed six-terminal minor must use the full canonical-region or minor-critical data, not internal connectivity alone."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"

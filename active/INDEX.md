@@ -19,12 +19,18 @@ Selected audited inputs:
 - [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
 - [the web cut gives a response-carrying strict descent or a deficient colour-indexed fan](../results/hc7_k7minus_four_centre_operation_cut_reduction.md)
 - [the rooted-web cut reduces canonically to an adhesion or a generalized-wheel torso](../results/hc7_k7minus_four_centre_tri_separation_reduction.md)
+- [boundary replacement and anchored uncrossing give trace-preserving strict descent](../results/hc7_k7minus_four_centre_trace_descent.md)
+- [the generalized-wheel outcome reduces to one canonical leaf with no two disjoint connected subgraphs adjacent to the whole boundary](../results/hc7_k7minus_four_centre_wheel_leaf_descent.md)
+- [completing the boundary of a minimum exact-cut side gives a four-connected graph and an exact six-terminal rooted-minor criterion](../results/hc7_k7minus_four_centre_completed_side.md)
+- [a partition-specific family of connected subgraphs reflects the fixed boundary colouring through an exact seven-cut](../results/hc7_exact7_selected_response_preservation.md)
 
 Immediate barriers:
 
 - [fullness and local root contacts alone do not force one-shore allocation](../barriers/hc7_k7minus_shore_allocation_barrier.md#theorem-2-two-full-shore-mechanism-barrier)
 - [the nontriangular exact-cut trace and label-allocation residue](../results/hc7_k7minus_four_centre_web_cut_lattice.md#5-exact-static-limit-of-the-two-shore-quotient)
 - [an undecorated mixed reduction does not retain the original boundary endpoint](../barriers/hc7_k7minus_tri_separation_boundary_trace_loss.md)
+- [tri-inseparability and local degree conditions alone do not force two connected subgraphs adjacent to the whole boundary](../barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier.md)
+- [internal six-connectivity, a boundary edge and a rooted `K_4` do not force the prescribed `K_6^-` minor](../barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier.md)
 
 ## Active finishing route
 
@@ -39,14 +45,24 @@ the other centres or a nontriangular two-shore order-seven cut in an exact
 fixed-anchor lattice, with a retained one-sided trace and a Kempe linkage
 through another named centre.  On the web side, the selected edge now gives
 either a response-carrying smaller order-seven component or a five-spoke fan
-with at least two missing limb contacts.  The original web cut now reduces
-either to a canonical mixed adhesion or to a uniquely determined
-generalized-wheel torso.  The finishing step must allocate two additional
-branch sets in the rooted outcome, or return from one of those structural
-branches with a common boundary colouring, a rooted augmentation, or a
-strictly smaller ordinary three-separation retaining the four selected
-vertices and the one-sided colouring trace.  Another isolated boundary
-census is not an accepted endpoint.
+with at least two missing limb contacts.  After minimizing the selected
+component, every boundary replacement and every tri-separation below the
+reduced cut that splits that component gives a smaller exact cut retaining
+the fixed colouring and named vertices.  The canonical outcome is therefore
+tri-inseparable on the selected component.  In the generalized-wheel
+outcome, that component is exactly one canonical leaf; its three-vertex
+boundary has an edge, and both
+components lack two disjoint connected subgraphs adjacent to every boundary
+vertex.  A Fano-plane construction shows that this conclusion cannot be
+strengthened from tri-inseparability and degree conditions alone.  The
+finishing step must allocate two additional branch sets in the rooted
+outcome or, in the exact-cut outcome, realize the fixed boundary colour
+classes by disjoint connected branch sets in the canonical region or build
+the `K_7^-` minor directly.  Completing the selected boundary gives a
+four-connected graph and reduces the wheel branch further to a prescribed
+six-terminal `K_6^-` minor.  The small rooted obstruction shows that this
+last step must use the full critical-host and component hypotheses.  Another
+unlabelled separation or boundary census is not an accepted endpoint.
 
 ## Conditional and frozen routes
 

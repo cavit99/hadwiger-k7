@@ -3,7 +3,8 @@
 **Last updated:** 9 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
-review.
+review.  Hadwiger's conjecture is known for `t<=6` and remains open for
+every `t>=7`; `HC_7` is the first open case, not the only open case.
 
 The previous live ledger is preserved at
 [`archive/RESEARCH_LEDGER_2026-08-02.md`](archive/RESEARCH_LEDGER_2026-08-02.md).
@@ -84,12 +85,13 @@ nonempty, those regions already saturate all eight neighbours of every
 centre; four cuts cannot have all sixteen sign regions nonempty.
 
 The remaining obligation is dynamic label and support allocation.  In the
-first outcome one must augment the rooted `K_5` with two disjoint helper
-branch sets.  In the second, the retained colouring trace and the forced
-Kempe linkage through another named centre must yield a common boundary
-partition, a rooted augmentation, or a strict descent in the cut lattice.
-Static boundary density and the two-shore quotient alone are provably
-insufficient.
+first outcome one must extend the rooted `K_5` model to an explicit
+`K_7^-`-minor model by finding two additional disjoint branch sets.  In the
+second, the retained colouring trace and the forced Kempe linkage through
+another named centre must give the same colour-class partition on both
+closed sides, an explicit `K_7^-`-minor model, or a strict descent in the cut
+lattice.  Static boundary density and the two-shore quotient alone are
+provably insufficient.
 
 The separately audited
 [operation-coupled refinement](results/hc7_k7minus_four_centre_operation_cut_reduction.md)
@@ -97,11 +99,12 @@ now normalizes that second outcome further.  The selected cross-edge gives
 either a colour-indexed five-spoke packing or a strict smaller actual
 order-seven component carrying a common exact colour block.  The
 distinct-ended fan has at least two missing limb contacts.  In the only
-packet-rich case, `T` is independent and one fixed shore colouring carries
-all three pairwise `T` Kempe paths; independently, each of the other three
-centres repairs the rooted-web obstruction.  The strict cut need not retain
-all four centres and the paths need not avoid the rooted bags or full
-packets.  That exact label-preservation problem is the current frontier.
+case where a component contains two disjoint connected subgraphs adjacent
+to the whole boundary, `T` is independent and one fixed component colouring
+carries all three pairwise `T` Kempe paths.  Independently, each of the other
+three centres repairs the rooted-web obstruction.  The strict cut need not
+retain all four centres, and the paths need not avoid the rooted branch sets
+or the two boundary-full connected subgraphs.
 
 The new audited
 [tri-separation normalization](results/hc7_k7minus_four_centre_tri_separation_reduction.md)
@@ -109,13 +112,65 @@ places every original four-centre exact cut in one of two standard
 structures.  Its Carmesin--Kurkofka reduction is strong, nontrivial and
 connected on both open sides; it is either a canonical mixed adhesion or it
 heavily interlaces a unique generalized-wheel torso.  Crossing reductions
-have one central vertex and four one-element links.  This removes the
-unlabelled crossing case as a free-form residue.  It does not preserve the
-original boundary endpoint, colouring trace or named Kempe contact: the
+have one central vertex and four one-element links.  The reduction does not
+preserve the original boundary endpoint, colouring trace or named Kempe
+contact: the
 [trace-loss counterexample](barriers/hc7_k7minus_tri_separation_boundary_trace_loss.md)
 shows that two distinct ordinary three-separations can have the same mixed
-reduction.  The live task is now a label-preserving return from the canonical
-adhesion and generalized-wheel branches.
+reduction.
+
+The audited
+[trace-preserving descent](results/hc7_k7minus_four_centre_trace_descent.md)
+now retains those data.  For a trace-admissible cut with selected component
+`C` of minimum order, every vertex of `T` has at least two neighbours in
+`C`; any nontrivial tri-separation below the reduced cut that splits `C`
+yields a strictly smaller trace-admissible exact cut.  Thus no nontrivial
+tri-separation splits `C` in the canonical-adhesion case.  In the
+generalized-wheel case, the audited
+[leaf descent](results/hc7_k7minus_four_centre_wheel_leaf_descent.md)
+puts `C` wholly in one canonical leaf.  The graph `H[T]` has an edge, and
+neither complementary component contains two vertex-disjoint connected
+subgraphs that are each adjacent to every vertex of `U\dot\cup T`.
+
+The audited
+[Fano-plane barrier](barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier.md)
+shows that these structural facts alone are insufficient: its
+seven-connected, `K_5`-free graph has minimum degree eight and no mixed
+separation of order at most three splitting `C`, but still lacks the two
+connected subgraphs.  The witness contains a `K_7` minor, so it is not a
+counterexample to the target.  It proves that the remaining step must use
+proper-minor colouring responses or the exclusion of a `K_7^-` minor.
+
+The exact web-side target is now partition-specific.  Let `Pi` be the
+partition of `S=U\dot\cup T` into colour classes under the fixed one-sided
+six-colouring.  Choose a largest clique `Q` consisting of singleton blocks
+of `Pi`, and list the other blocks as `B_1,...,B_k`.  One must construct a
+`K_7^-` minor, or find pairwise disjoint connected subgraphs
+`P_1,...,P_k` in `C` such that every `P_i\cup B_i` is connected, these
+unions are pairwise adjacent, and each is adjacent to every vertex of `Q`.
+The latter certificate reflects the same boundary colouring through the
+opposite side and six-colours `G`.  Minimum choice of `C` has already
+excluded the remaining tri-separation alternative.
+
+The audited
+[boundary-completion theorem](results/hc7_k7minus_four_centre_completed_side.md)
+gives a complementary rooted-minor formulation.  The graph
+
+\[
+                         H[C\cup T]+\binom{T}{2}
+\]
+
+is four-connected.  For any two vertices `P subseteq T`, the actual graph
+`G[C union U union P]` is internally six-connected; a
+`(U union P)`-rooted `K_6^-` minor there, together with `D`, is an explicit
+`K_7^-`-minor model.  In the generalized-wheel branch one may take `P` to
+be the endpoints of the forced edge in `H[T]`.  The audited
+[nine-vertex barrier](barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier.md)
+shows that internal six-connectivity, that edge and even a rooted `K_4` do
+not suffice.  Any proof of the prescribed rooted `K_6^-` minor or a
+trace-preserving exact-cut descent must use the critical-host colouring
+responses and the restriction on two disjoint connected subgraphs adjacent
+to the whole boundary.
 
 ## Sufficient but non-primary extremal route
 
@@ -529,7 +584,8 @@ Its audited
 [operation-coupled continuation](results/hc7_k7minus_four_centre_operation_cut_reduction.md)
 reduces the web branch to a response-carrying strict cut or a deficient
 five-limb packing, and gives the exact independent-boundary normal form in
-the packet-rich case.
+the case where one component contains two disjoint connected subgraphs
+adjacent to the whole boundary.
 
 The exceptional-centre programme is now the active proof route to Conjecture
 21.  The universal `4n-2` theorem remains a sufficient conditional route,
