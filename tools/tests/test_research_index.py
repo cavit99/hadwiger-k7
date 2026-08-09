@@ -993,6 +993,23 @@ Exact statement.
 
 
 class VerifierRunnerTests(unittest.TestCase):
+    def test_balanced_shards_are_deterministic_disjoint_and_complete(self) -> None:
+        manifest = {
+            "verifiers": [
+                {"id": "small-b", "timeout": 1},
+                {"id": "large", "timeout": 5},
+                {"id": "small-a", "timeout": 1},
+                {"id": "medium", "timeout": 3},
+            ]
+        }
+        shards = index.balanced_verifier_shards(manifest, 3)
+        self.assertEqual(shards, index.balanced_verifier_shards(manifest, 3))
+        flattened = [verifier_id for shard in shards for verifier_id in shard]
+        self.assertEqual(
+            sorted(flattened), sorted({"small-a", "small-b", "medium", "large"})
+        )
+        self.assertEqual(len(flattened), len(set(flattened)))
+
     def test_output_match_and_no_shell_interpretation(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -2122,6 +2122,27 @@ def run_verifiers(root: Path, manifest: dict, selected: set[str] | None = None) 
         print(f"PASS {verifier['id']} ({elapsed:.2f}s)")
 
 
+def balanced_verifier_shards(
+    manifest: dict, shard_count: int
+) -> tuple[tuple[str, ...], ...]:
+    """Partition verifiers deterministically by their registered time budgets."""
+    if shard_count < 1:
+        raise IntegrityError("verifier shard count must be positive")
+    shards: list[list[str]] = [[] for _ in range(shard_count)]
+    loads = [0] * shard_count
+    ordered = sorted(
+        manifest["verifiers"],
+        key=lambda verifier: (-verifier["timeout"], verifier["id"]),
+    )
+    for verifier in ordered:
+        index = min(
+            range(shard_count), key=lambda candidate: (loads[candidate], candidate)
+        )
+        shards[index].append(verifier["id"])
+        loads[index] += verifier["timeout"]
+    return tuple(tuple(sorted(shard)) for shard in shards)
+
+
 def print_errors(errors: Sequence[str]) -> int:
     if not errors:
         print("Research integrity check: PASS")
@@ -2151,6 +2172,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     verifier_parser = subparsers.add_parser("verify", help="run the small deterministic verifier whitelist")
     verifier_parser.add_argument("--id", action="append", dest="ids")
     verifier_parser.add_argument("--ids-file", type=Path)
+    verifier_parser.add_argument("--shard-index", type=int)
+    verifier_parser.add_argument("--shard-count", type=int)
     ci_parser = subparsers.add_parser("ci", help="run check, temporary index/report build, and verifiers")
     ci_parser.add_argument("--skip-verifiers", action="store_true")
     args = parser.parse_args(argv)
@@ -2181,6 +2204,13 @@ def main(argv: Sequence[str] | None = None) -> int:
             errors = validate_repository()
             if errors:
                 return print_errors(errors)
+            sharding = args.shard_index is not None or args.shard_count is not None
+            if sharding and (args.shard_index is None or args.shard_count is None):
+                parser.error("--shard-index and --shard-count must be supplied together")
+            if sharding and (args.ids or args.ids_file):
+                parser.error("verifier selection cannot be combined with sharding")
+            if sharding and not 0 <= args.shard_index < args.shard_count:
+                parser.error("--shard-index must lie in [0, --shard-count)")
             selected = set(args.ids or [])
             if args.ids_file:
                 selected.update(
@@ -2188,10 +2218,14 @@ def main(argv: Sequence[str] | None = None) -> int:
                     for line in args.ids_file.read_text(encoding="utf-8").splitlines()
                     if line.strip()
                 )
+            if sharding:
+                selected = set(
+                    balanced_verifier_shards(manifest, args.shard_count)[args.shard_index]
+                )
             run_verifiers(
                 ROOT,
                 manifest,
-                selected if args.ids or args.ids_file else None,
+                selected if args.ids or args.ids_file or sharding else None,
             )
             return 0
         if args.command == "ci":

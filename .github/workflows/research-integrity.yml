@@ -17,7 +17,34 @@ permissions:
   contents: read
 
 jobs:
+  scope:
+    name: Classify CI scope
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      run_tool_tests: ${{ steps.scope.outputs.run_tool_tests }}
+      verifier_mode: ${{ steps.scope.outputs.verifier_mode }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Classify changes
+        id: scope
+        env:
+          CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
+        run: >-
+          python tools/ci_scope.py
+          --event "$GITHUB_EVENT_NAME"
+          --base "$CI_BASE_SHA"
+          --selection-file .cache/ci-verifier-ids.txt
+          >> "$GITHUB_OUTPUT"
+
   integrity:
+    name: Research integrity and infrastructure
+    needs: scope
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -31,26 +58,18 @@ jobs:
         uses: astral-sh/setup-uv@v9.0.0
       - name: Install locked dependencies
         run: uv sync --locked
-      - name: Classify changes
-        id: scope
-        env:
-          CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
-        run: >-
-          uv run --locked python tools/ci_scope.py
-          --event "$GITHUB_EVENT_NAME"
-          --base "$CI_BASE_SHA"
-          --selection-file .cache/ci-verifier-ids.txt
-          >> "$GITHUB_OUTPUT"
       - name: Run infrastructure tests
-        if: steps.scope.outputs.run_tool_tests == 'true'
+        if: needs.scope.outputs.run_tool_tests == 'true'
         run: uv run --locked python -m unittest discover -s tools/tests -p 'test_*.py' -v
       - name: Validate the current spine and build the tracked-document index
         run: uv run --locked python tools/research_index.py ci --skip-verifiers
 
-  fast-verifiers:
-    name: Deterministic verifier gate
+  selected-verifiers:
+    name: Changed deterministic verifiers
+    needs: scope
+    if: needs.scope.outputs.verifier_mode == 'selected'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
         with:
@@ -73,19 +92,43 @@ jobs:
           --selection-file .cache/ci-verifier-ids.txt
           >> "$GITHUB_OUTPUT"
       - name: Install nauty for the degree-nine finite verifier
-        if: steps.scope.outputs.verifier_mode != 'none'
         run: |
           sudo apt-get update
           sudo apt-get install -y nauty
           if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
             sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
           fi
-      - name: Run complete deterministic verifier suite
-        if: steps.scope.outputs.verifier_mode == 'full'
-        run: uv run --locked python tools/research_index.py verify
       - name: Run changed deterministic verifiers
-        if: steps.scope.outputs.verifier_mode == 'selected'
         run: uv run --locked python tools/research_index.py verify --ids-file .cache/ci-verifier-ids.txt
-      - name: No verifier inputs changed
-        if: steps.scope.outputs.verifier_mode == 'none'
-        run: echo "No verifier scripts, records, dependencies or runner code changed."
+
+  full-verifiers:
+    name: Deterministic verifier shard ${{ matrix.shard }} of 0-4
+    needs: scope
+    if: needs.scope.outputs.verifier_mode == 'full'
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v9.0.0
+      - name: Install locked dependencies
+        run: uv sync --locked
+      - name: Install nauty for the degree-nine finite verifier
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nauty
+          if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
+            sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
+          fi
+      - name: Run deterministic verifier shard
+        run: >-
+          uv run --locked python tools/research_index.py verify
+          --shard-index "${{ matrix.shard }}"
+          --shard-count 5

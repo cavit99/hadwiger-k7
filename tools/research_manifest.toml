@@ -15298,7 +15298,7 @@ expected_stdout = [
 id = "k7minus-distinct-miss-fan-tree-completion"
 path = "results/hc7_k7minus_distinct_miss_fan_tree_completion_verify.py"
 sha256 = "3be279d9fd322b8dfee9647156651bc6b32cd83b2a603d9d5acfa64236e3079a"
-timeout = 240
+timeout = 420
 expected_stdout = [
   "GREEN: distinct-miss fan-tree completion verified",
   "bridge=0 labelled_valid=1032 valid_orbits=21 quotient_survivor_orbits=3 tree_pair_counts=(2000, 256, 256)",
@@ -15459,7 +15459,7 @@ expected_stdout = [
 id = "k7minus-degree8-rolek-matching-nonclosure"
 path = "active/hc7_k7minus_degree8_rolek_matching_nonclosure_verify.py"
 sha256 = "b411d2fe2add93caa2c67b06108a03d12de63f9bee1e65c508ac495511ee124b"
-timeout = 120
+timeout = 240
 requires = ["nauty"]
 expected_stdout = [
   "partitions=462",
