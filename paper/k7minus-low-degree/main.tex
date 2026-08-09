@@ -8,7 +8,7 @@
   linkcolor=blue,
   citecolor=blue,
   urlcolor=blue,
-  pdftitle={Degree-Seven Rigidity under K7-minus Minor Exclusion},
+  pdftitle={Minimum Degree Eight in K7-minus-Minor-Free Contraction-Critical Graphs},
   pdfauthor={Cavit Erginsoy}
 ]{hyperref}
 \setlength{\emergencystretch}{1em}
@@ -20,10 +20,10 @@
 \newcommand{\minor}{\preccurlyeq}
 \newcommand{\N}{N}
 
-\title{Degree-Seven Rigidity under $K_7^{-}$-Minor Exclusion}
+\title{Minimum Degree Eight in $K_7^{-}$-Minor-Free Contraction-Critical Graphs}
 \author{Cavit Erginsoy}
 \thanks{With substantial mathematical contributions from GPT-5.6 Sol, an OpenAI model.}
-\date{4 August 2026}
+\date{9 August 2026}
 
 \subjclass[2020]{05C15, 05C40}
 \keywords{Hadwiger's conjecture, graph minors, contraction-critical graphs, Kempe chains}
@@ -31,19 +31,18 @@
 \begin{document}
 
 \begin{abstract}
-Let $G$ be a minor-minimal non-six-colourable graph with no $K_7^{-}$
-minor.  We prove that $G$ contains at most one $K_5$ subgraph and that
-every degree-seven vertex $v$ satisfies
-$G[N(v)]\cong K_4\mathbin{\dot\cup}K_3$.  A private-triangle Kempe-chain
-argument further shows that no $K_5$ contains five degree-seven vertices.
-Consequently, if $n_i$ counts the vertices of degree $i$, $b$ counts the
-degree-eight vertices contained in no $K_5$, and
-$\tau=\sum_{i\geq10}(i-9)n_i$, then
-$n_7\leq4$, $|E(G)|\geq4|V(G)|-2$, and $b\geq17+\tau$.  More precisely,
-if $n_7\leq3$, then $|E(G)|\geq4|V(G)|-1$, while if $n_7=4$, then
-$|V(G)|\geq37$ and $b\geq32+\tau$.  As a preliminary tool, we give a
-direct uniform proof that, for every $r\geq2$, an $(r+1)$-connected graph
-containing two distinct $K_r$ subgraphs has a $K_{r+2}^{-}$ minor.
+Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph,
+with $n$ vertices and $m$ edges.  We prove that $n_7=0$,
+$\delta(G)\geq8$, $m\geq4n$, and $G$ has no $K_5$ subgraph.  If $n_i$
+counts the vertices of degree $i$ and
+$\tau=\sum_{i\geq10}(i-9)n_i$, then $n_8\geq25+\tau$; in particular,
+$G$ has at least twenty-five degree-eight vertices, each with a
+$K_4$-free neighbourhood.  The capstone is a rooted-minor closure: a
+six-connected $n$-vertex graph with a degree-$d$ vertex whose neighbourhood
+contains $K_4$ and with at least $4n+d-13$ edges contains a $K_7^{-}$
+minor.  We also give a direct uniform proof that, for
+every $r\geq2$, an $(r+1)$-connected graph containing two distinct $K_r$
+subgraphs has a $K_{r+2}^{-}$ minor.  All proofs are computation-free.
 \end{abstract}
 
 \maketitle
@@ -70,8 +69,9 @@ graphs~\cite{Mayer1993}.  In the minor-minimal
 $K_7^{\vee}$-minor-free setting, Norin and Totschnig proved that every
 degree-seven vertex belongs to a $K_5$ contained in its closed
 neighbourhood~\cite[Claim~4.4]{NorinTotschnig2025}.  Here a rooted-minor
-argument determines the entire neighbourhood and, after the linked-clique
-reduction below, leaves only $K_4\mathbin{\dot\cup}K_3$.
+argument first determines the entire neighbourhood.  A second rooted
+argument, using their $K^*_{4,2}$ bound, then shows that no
+degree-seven vertex can occur at all.
 
 We first state the unconditional linkage theorem used in that reduction.
 Rolek and Song proved its case $r=6$~\cite[Lemma~1.9]{RolekSong2017}; the
@@ -96,40 +96,46 @@ Lemma~\ref{lem:disjoint-cliques}.  The connectivity hypothesis is sharp:
 $K_{r+1}$ is $r$-connected and contains two distinct $K_r$ subgraphs, but
 has no $K_{r+2}^{-}$ minor.
 
-Our second result describes the low-degree structure of a hypothetical
-counterexample to the Norin--Totschnig question.  A graph is
+The following rooted closure is the main local tool.  A graph is
 \emph{minor-minimal non-six-colourable} if it is not six-colourable and
 every proper minor is six-colourable.
 
+\begin{theorem}\label{thm:rooted-helper-intro}
+Let $G$ be a six-connected graph of order $n$, let $v\in V(G)$ have degree
+$d\geq5$, and suppose that $G[N(v)]$ contains a $K_4$ subgraph.  If
+\[
+        |E(G)|\geq4n+d-13,
+\]
+then $K_7^{-}\minor G$.
+\end{theorem}
+
+Our principal result gives the resulting critical-host structure.
+
 \begin{theorem}\label{thm:package-intro}
 Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph.
-For each $i$, let $n_i$ denote the number of vertices of degree $i$.  Let
-$b$ denote the number of degree-eight vertices contained in no $K_5$
-subgraph; equivalently, $b$ counts the degree-eight vertices $v$ for which
-$G[N(v)]$ contains no $K_4$.  Put
+For each $i$, let $n_i$ denote the number of vertices of degree $i$, and put
 \[
         \tau=\sum_{i\geq10}(i-9)n_i.
 \]
-Then $G$ is seven-connected, contains at most one $K_5$ subgraph, and
+Then $G$ is seven-connected and
 \[
-        G[\N(v)]\cong K_4\mathbin{\dot\cup}K_3
-        \qquad\text{for every vertex $v$ of degree seven.}
+        n_7=0,
+        \qquad \delta(G)\geq8,
+        \qquad |E(G)|\geq4|V(G)|.
 \]
-No $K_5$ subgraph contains five degree-seven vertices.  Moreover, one of
-the following holds:
-\begin{enumerate}
-\item $n_7\leq3$, $|E(G)|\geq4|V(G)|-1$, and $b\geq17+\tau$;
-\item $n_7=4$, $|V(G)|\geq37$, and $b\geq32+\tau$.
-\end{enumerate}
-In particular,
+Moreover, $G$ contains no $K_5$ subgraph and
 \[
-        n_7\leq4,
-        \qquad |E(G)|\geq4|V(G)|-2,
-        \qquad b\geq17+\tau.
+        n_8\geq25+\tau.
 \]
+Every degree-eight vertex of $G$ has a $K_4$-free neighbourhood.
 \end{theorem}
 
-All proofs below are computation-free.
+Albar proved the analogous lower bound of twenty-five degree-eight
+vertices for a hypothetical minor-minimal non-seven-colourable
+$K_7^{-}$-minor-free graph~\cite[Lemma~6]{Albar2014}.  Theorem
+\ref{thm:package-intro} concerns criticality one level lower: the rooted
+closure eliminates degree seven and gives the defect-sensitive bound
+$n_8\geq25+\tau$.
 
 A \emph{minor model} of a graph $H$ in $G$ is a family
 $(B_x:x\in V(H))$ of pairwise disjoint connected vertex sets such that
@@ -226,19 +232,19 @@ subgraph.
 
 We use two standard facts about contraction-critical graphs.  A
 noncomplete $k$-contraction-critical graph is seven-connected when
-$k\geq7$~\cite{Mader1968Connectivity}; see also
+$k\geq7$~\cite[Satz~6]{Mader1968Connectivity}; see also
 \cite[Theorem~1.8]{RolekSong2017}.  Also, if $G$ is $k$-contraction-critical
 and $v\in V(G)$, then
 \[
         \alpha(G[\N(v)])\leq d(v)-k+2;
                                                         \tag{3.1}
 \]
-This is a standard consequence of contraction-criticality; see
-Dirac~\cite{Dirac1960} and the formulation in
-\cite[Lemma~1.6(i)]{RolekSong2017}.
+This inequality goes back to Dirac~\cite{Dirac1960}; we use the exact
+formulation in \cite[Lemma~1.6(i)]{RolekSong2017}.
 
-We shall also use the following specialization of a theorem of Kriesell
-and Mohr~\cite[Theorem~7]{KriesellMohr2019}.  Let a graph $J$ be properly
+The following is an immediate specialization of Theorem~7 and the
+definition of property $(*)$ in Kriesell and
+Mohr~\cite[Theorem~7]{KriesellMohr2019}.  Let a graph $J$ be properly
 coloured with five colours, and choose one root from each colour class.
 Let $D$ be a graph on the five roots with at most six edges.  If the ends
 of every edge $xy\in E(D)$ lie in the same bichromatic component of $J$
@@ -321,8 +327,8 @@ Taking complements gives (3.2).
 
 For a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph, Albar's
 theorem gives $\chi(G)=7$, while Mader's theorem gives seven-connectivity.
-Corollary~\ref{cor:unique-k5} and Theorem~\ref{thm:local-classification}
-then give the sharper conclusion below.
+Corollary~\ref{cor:unique-k5}, together with
+Theorem~\ref{thm:local-classification}, gives the sharper conclusion below.
 
 \begin{corollary}\label{cor:critical-local}
 Let $G$ be as in Theorem~\ref{thm:package-intro}.  Then $G$ contains at
@@ -338,372 +344,187 @@ The only point not already stated is the exclusion of the second graph in
 contradicts Corollary~\ref{cor:unique-k5}.
 \end{proof}
 
-\section{Private triangles}
+\section{Rooted two-helper closure}
 
-The next lemma is the only substantial colouring argument in the paper.
-Its conclusion is deliberately stated in terms of a $K_7^{-}$ model: one
-of the two nonsingleton branch sets may miss one of the five triangles.
+For a graph $F$ and $S\subseteq V(F)$, say that $(F,S)$ is
+\emph{internally $k$-connected} if there is no separation $(A,B)$ of $F$
+with $S\subseteq A$, $B\setminus A\ne\varnothing$, and
+$|A\cap B|<k$.  A $Z$-rooted $K^*_{4,2}$ model consists of four pairwise
+disjoint connected root bags, one containing each member of the four-set
+$Z$, and two further disjoint connected helper bags.  Each helper is
+adjacent to all four root bags, and the helpers are adjacent to one another;
+no adjacency between distinct root bags is required.
 
-\begin{lemma}[Private-triangle allocation]
-\label{lem:private-triangles}
-Let $G$ be a seven-chromatic graph such that every proper minor of $G$ is
-six-colourable.  Let $A$ be a $K_5$ subgraph of $G$.  Suppose that, for
-each $a\in A$,
+We use the following rooted bound of Norin and
+Totschnig~\cite[Lemma~12]{NorinTotschnig2025}.
+
+\begin{theorem}[Norin--Totschnig]
+\label{thm:rooted-two-helper-bound}
+Let $F$ be a graph and let $Z\subseteq V(F)$ have order four.  If $(F,Z)$
+is internally four-connected and $F$ has no $Z$-rooted $K^*_{4,2}$ model,
+then
 \[
-        T_a=\N_G(a)\setminus A
+        |E(F)|\leq4|V(F)|-10.                            \tag{4.1}
 \]
-is a triangle, that the triangles $T_a$ are pairwise disjoint, that $T_a$
-is anticomplete to $A\setminus\{a\}$, and that $G-A$ is connected.  Then
-$K_7^{-}\minor G$.
+\end{theorem}
+
+The next elementary augmentation places one additional prescribed vertex
+in a helper bag.
+
+\begin{lemma}\label{lem:fifth-root-helper}
+Let $F$ be a graph and let $S=Z\mathbin{\dot\cup}\{x\}$, where $|Z|=4$.
+Suppose that $(F,S)$ is internally five-connected.  If $F$ has a
+$Z$-rooted $K^*_{4,2}$ model, then it has one in which $x$ belongs to a
+helper bag.
 \end{lemma}
 
-The proof fixes one edge-deletion colouring.  It first forces two colours
-onto the three private triangles indexed by $J$ and records the resulting
-Kempe reach.  A palette obstruction then gives two alternatives; in either
-one, two disjoint connected sets are allocated so that one meets all five
-private triangles and the other meets at least four.
-
 \begin{proof}
-Put $H=G-A$.  Fix $a_i\in A$ and $x\in T_{a_i}$.  Let $G-a_ix$ denote
-deletion of the edge $a_ix$, and take a six-colouring $\varphi$ of this
-graph.  The vertices $a_i$ and $x$ have the same colour, say $p$, since
-otherwise $\varphi$ would colour $G$.  The
-clique $A$ uses five colours.  Denote by $q$ the colour absent from $A$.
-The colour $q$ occurs on $T_{a_i}$, since otherwise $a_i$ could be
-recoloured $q$.  Thus
+Choose a $Z$-rooted model whose helper bags $U,V$ have maximum total order
+and, subject to that, whose root bags $R_1,\ldots,R_4$ have minimum total
+order.  Write $z_i$ for the root in $R_i$, and put
 \[
-        \varphi(T_{a_i})=\{p,q,r\}.
+        P_i=\{r\in R_i:r\text{ has a neighbour in }U\cup V\}.
 \]
-Let $a_h$ be the vertex of $A\setminus\{a_i\}$ coloured $r$, put
-\[
-        J=A\setminus\{a_i,a_h\},
-        \qquad c_j=\varphi(a_j)\quad(a_j\in J),
-\]
-and write $p_a,q_a$ for the uniquely $p$-coloured and $q$-coloured
-vertices of $T_a$, whenever those colours occur there.  In particular,
-$p_{a_i}=x$.  For colours $\alpha,\beta$, let $H[\alpha,\beta]$ denote
-the subgraph of $H$ induced by the vertices of those two colours.
+We claim that $|P_i|=1$.  Both helpers meet $R_i$, so $P_i$ is nonempty.
+If it had at least two vertices, there would be distinct $u,w\in R_i$
+such that $u$ meets $U$ and $w$ meets $V$; otherwise both helper-contact
+sets would be the same singleton.  Take a minimal tree in $F[R_i]$
+containing $z_i,u,w$.  By the minimal choice of the root bags, this tree
+spans $R_i$.  One of $u,w$, say $u$, is a leaf different from $z_i$.
+Moving $u$ from $R_i$ into $U$ preserves connectivity of both altered
+bags.  The former tree edge from $u$ to $R_i\setminus\{u\}$ preserves the
+$R_i$--$U$ contact, while $w$ preserves the $R_i$--$V$ contact.  Every
+other required adjacency is unchanged, contradicting maximality of the
+helper union.  Hence $|P_i|=1$.
 
-For $a_j\in J$, both $p$ and $q$ occur on $T_{a_j}$.  Indeed, if
-$\gamma\in\{p,q\}$ were absent from $T_{a_j}$, then assigning $c_j$ to
-$a_i$, assigning $\gamma$ to $a_j$, and retaining the colours on the
-other three vertices of $A$ would colour $G$.  The five assigned colours
-are distinct, $c_j$ is absent from $T_{a_i}$, $\gamma$ is absent from
-$T_{a_j}$, and the restored edge $a_ix$ has colours $c_j,p$.
-
-For $\gamma\in\{p,q\}$, let $C_j^\gamma$ be the component of
-$H[\gamma,c_j]$ containing $\gamma_{a_i}$.  Then
+No component outside the six model bags can meet $U\cup V$, since it could
+be absorbed into a helper that it meets.  It follows that
 \[
-        \gamma_{a_j}\in C_j^\gamma.                 \tag{4.1}
+        |N_F(U\cup V)\setminus(U\cup V)|\leq4,           \tag{4.2}
 \]
-Suppose otherwise and interchange $\gamma,c_j$ on $C_j^\gamma$.  If
-$\gamma=p$, this changes $x$ from $p$ to $c_j$, so $a_i$ may be assigned
-$p$.  If $\gamma=q$, it removes $q$ from $T_{a_i}$, so $a_i$ may be
-assigned $q$, while $x$ remains coloured $p$.  In either case $a_j$
-retains $c_j$: initially $c_j\notin\varphi(T_{a_j})$, and the component
-misses $T_{a_j}$.  All other retained clique colours lie outside
-$\{\gamma,c_j\}$.  Hence the interchange extends to a six-colouring of
-$G$, proving (4.1).
-
-Write
-\[
-        \varphi(T_{a_j})=\{p,q,s_{a_j}\}\qquad(a_j\in J).
-\]
-If $T_{a_h}$ omits some $\gamma\in\{p,q\}$ and $s_{a_j}\ne r$ for some
-$a_j\in J$, then $\gamma$ is available at $a_h$ and $r$ is available at
-$a_j$.  Assigning
-\[
-        a_h\mapsto\gamma,
-        \qquad a_j\mapsto r,
-        \qquad a_i\mapsto c_j
-\]
-and retaining the other two clique colours again colours $G$.  Thus one
-of the following holds:
-\begin{align}
-&\varphi(T_a)\supseteq\{p,q\}
-        &&\text{for every $a\in A$};                   \tag{4.2}\\
-&\varphi(T_{a_j})=\{p,q,r\}
-        &&\text{for every $a_j\in J$}.                 \tag{4.3}
-\end{align}
-
-Assume first that (4.3) holds.  For $a_j\in J$,
-$\gamma\in\{p,q\}$, and $a_t\in J\setminus\{a_j\}$, we have
-\[
-        \gamma_{a_t}\in C_j^\gamma.                  \tag{4.4}
-\]
-Otherwise the component $D$ of $H[\gamma,c_j]$ containing
-$\gamma_{a_t}$ differs from $C_j^\gamma$.  Since $C_j^\gamma$ contains
-the unique $\gamma$-coloured vertices of $T_{a_i}$ and $T_{a_j}$, while
-neither triangle contains $c_j$, the component $D$ misses both triangles.
-Moreover $T_{a_t}$ contains no $c_j$.  Interchange $\gamma,c_j$ on $D$,
-assign $\gamma$ to $a_t$ and $c_t$ to $a_i$, and retain the other clique
-colours.  The interchange removes $\gamma$ from $T_{a_t}$, protects the
-retained colour $c_j$ at $a_j$, and leaves $x$ coloured $p$.  This gives a
-six-colouring of $G$, proving (4.4).
-
-Choose distinct $a_j,a_\ell\in J$, and put
-\[
-        X=C_j^p,
-        \qquad Y=C_\ell^q.
-\]
-The sets $X$ and $Y$ are connected and disjoint, since their colour sets
-$\{p,c_j\}$ and $\{q,c_\ell\}$ are disjoint.  By (4.1) and (4.4), each
-meets $T_{a_i}$ and every $T_{a_t}$ with $a_t\in J$.  On each of these
-four triangles their intersections contain $p_a$ and $q_a$, respectively,
-so $X$ and $Y$ are adjacent.  If $T_{a_h}$ misses $X\cup Y$, take in $H$
-a shortest path from $T_{a_h}$ to $X\cup Y$, stopped at its first vertex
-in that union, and add the path except for its final vertex to the set
-containing that final vertex.  If $T_{a_h}$ already meets the union,
-enlarge nothing.  We obtain disjoint connected sets $X',Y'$, one meeting
-all five triangles and the other meeting at least four, with $X'$ adjacent
-to $Y'$.  Together with the five singleton branch sets $\{a\}$,
-$a\in A$, they form a $K_7^{-}$ model: only the adjacency between $a_h$
-and the set missing $T_{a_h}$ may be absent.
-
-It remains to assume (4.2) and that (4.3) does not hold.  Write
-\[
-        \varphi(T_a)=\{p,q,s_a\}\qquad(a\in A).
-\]
-Then
-\[
-        s_{a_i}=r,
-        \qquad s_{a_h}\in\{c_j:a_j\in J\},
-        \qquad s_{a_j}\ne c_j\quad(a_j\in J).          \tag{4.5}
-\]
-The first equality is the definition of $r$.  Every
-$a\in A\setminus\{a_i\}$ remains adjacent to all three vertices of $T_a$
-in $G-a_ix$, so its colour is absent from $\varphi(T_a)$.  Applied to
-$a_h$ and to the vertices $a_j\in J$, this proves the other two assertions
-in (4.5).  Since (4.3) fails, choose $a_u\in J$ with $s_{a_u}\ne r$.
-
-We claim that, for $a_j\in J$, $\gamma\in\{p,q\}$, and $a_t\in A$,
-\[
-        s_{a_t}\ne c_j
-        \quad\Longrightarrow\quad
-        \gamma_{a_t}\in C_j^\gamma.                  \tag{4.6}
-\]
-The cases $a_t=a_i,a_j$ follow from the definition and (4.1).  If
-$a_t\in J\setminus\{a_j\}$, a contrary component $D$ misses
-$T_{a_i}$ and $T_{a_j}$, while $s_{a_t}\ne c_j$ makes $T_{a_t}$ free of
-$c_j$.  Interchanging $\gamma,c_j$ on $D$, assigning $\gamma$ to $a_t$
-and $c_t$ to $a_i$, and retaining the other clique colours gives the same
-contradiction as in the proof of (4.4).
-
-It remains to check $a_t=a_h$.  Let $D$ be the
-$H[\gamma,c_j]$-component containing $\gamma_{a_h}$, and suppose
-$D\ne C_j^\gamma$.  Then $D$ misses $T_{a_i}$ and $T_{a_j}$, and
-$s_{a_h}\ne c_j$ makes $T_{a_h}$ free of $c_j$.  After interchanging
-$\gamma,c_j$ on $D$, assign
-\[
-        a_h\mapsto\gamma,
-        \qquad a_i\mapsto c_u,
-        \qquad a_u\mapsto r,                           \tag{4.7}
-\]
-and retain the original colours on $J\setminus\{a_u\}$.  The interchange
-removes $\gamma$ from $T_{a_h}$; the choice $s_{a_u}\ne r$ makes $r$
-available at $a_u$; and $c_u$ is available at $a_i$.  The five clique
-colours in (4.7) and on the two retained vertices are distinct.  If
-$a_u=a_j$, no clique vertex retains $c_j$; if $a_u\ne a_j$, the fact that
-$D$ misses $T_{a_j}$ protects the retained colour $c_j$.  Every other
-retained colour lies outside $\{\gamma,c_j\}$.  Finally, $D$ misses
-$T_{a_i}$, so $x$ retains colour $p$ and the restored edge has colours
-$c_u,p$.  This proves (4.6), including the exceptional recolouring.
-
-For $a_j\in J$, let
-\[
-        m_j=|\{a\in A:s_a=c_j\}|.
-\]
-Since $s_{a_i}=r$, we have $\sum_{a_j\in J}m_j\leq4$.  Choose
-$a_\ell\in J$ with $m_\ell\leq1$, and write
-$J=\{a_j,a_k,a_\ell\}$.  Set
-\[
-        X=C_j^p\cup C_k^p,
-        \qquad Y=C_\ell^q.
-\]
-The set $X$ is connected because both components contain $x$, and $Y$ is
-connected.  They are disjoint because their colour sets are contained in
-$\{p,c_j,c_k\}$ and $\{q,c_\ell\}$, respectively.  For every $a\in A$,
-the value $s_a$ cannot equal both $c_j$ and $c_k$, so (4.6) places $p_a$
-in $X$.  Thus $X$ meets all five triangles.  The same claim places $q_a$
-in $Y$ unless $s_a=c_\ell$, which occurs for at most one $a$.  Every
-other triangle supplies the edge $p_aq_a$ between $X$ and $Y$.  Therefore
-$X,Y$, together with the five singleton sets $\{a\}$, form a $K_7^{-}$
-model.
+with at most one external neighbour in each root bag.  If $x$ were outside
+the helper bags, (4.2) would give a separation of $(F,S)$ of order at most
+four whose second open side is the nonempty set $U\cup V$.  This
+contradicts internal five-connectivity.  Thus $x\in U\cup V$.
 \end{proof}
 
-\begin{corollary}\label{cor:no-all-seven-k5}
-Let $G$ be as in Theorem~\ref{thm:package-intro}.  No $K_5$ subgraph of
-$G$ has all five vertices of degree seven.
-\end{corollary}
+\begin{proof}[Proof of Theorem~\ref{thm:rooted-helper-intro}]
+Choose a four-set $Z\subseteq N_G(v)$ inducing $K_4$, choose
+$x\in N_G(v)\setminus Z$, and put $F=G-v$.  Deleting one vertex from a
+six-connected graph leaves a five-connected graph.  In particular,
+$(F,Z)$ is internally four-connected and
+$(F,Z\cup\{x\})$ is internally five-connected.  Moreover,
+\[
+ \begin{aligned}
+ |E(F)|&=|E(G)|-d\\
+       &\geq4n-13
+        =4|V(F)|-9.
+ \end{aligned}                                           \tag{4.3}
+\]
+Theorem~\ref{thm:rooted-two-helper-bound} supplies a $Z$-rooted
+$K^*_{4,2}$ model in $F$, and Lemma~\ref{lem:fifth-root-helper} lets us
+choose it with $x$ in one helper bag.
 
-\begin{proof}
-Suppose that $A\cong K_5$ and every vertex of $A$ has degree seven.
-Corollary~\ref{cor:unique-k5} makes $A$ the unique $K_5$ subgraph.
-Corollary~\ref{cor:critical-local} shows that, for each $a\in A$,
-$T_a=\N(a)\setminus A$ is a triangle anticomplete to
-$A\setminus\{a\}$.  The triangles are pairwise disjoint: a vertex in
-$T_a\cap T_b$ would be adjacent to $b$ by its membership in $T_b$ and
-nonadjacent to $b$ by the defining property of $T_a$.  Finally, $G-A$ is
-connected because $G$ is seven-connected and $|A|=5$.
-Lemma~\ref{lem:private-triangles} gives the forbidden $K_7^{-}$ minor.
+The four root bags are pairwise adjacent through the literal edges of
+$G[Z]=K_4$.  Together with the two adjacent helpers they form a $K_6$
+model.  The singleton bag $\{v\}$ is adjacent to all four root bags and to
+the helper containing $x$; it may miss only the other helper.  These seven
+bags form a $K_7^{-}$ model in $G$.
 \end{proof}
 
-\section{Numerical consequences}
+\section{Critical-host consequences}
 
 We first record the density input.  Jakobsen proved that an $n$-vertex
 graph with $n\geq7$ and at least $\frac92n-12$ edges contains a
 $K_7^{-}$ minor or is a $(K_{2,2,2,2},K_6,4)$-cockade
-\cite{Jakobsen1983}; see also \cite[Theorem~2]{Albar2014}.
+\cite[Theorem~4]{Jakobsen1983}; see also \cite[Theorem~2]{Albar2014}.
 
 \begin{lemma}\label{lem:jakobsen-defect}
 If $G$ is as in Theorem~\ref{thm:package-intro}, with $n=|V(G)|$ and
 $m=|E(G)|$, then
 \[
-        2m\leq9n-25.                                  \tag{5.1}
+        2m\leq9n-25.                                    \tag{5.1}
 \]
 \end{lemma}
 
 \begin{proof}
 The graph $G$ is not either base graph of the cockade family, since both
 $K_6$ and $K_{2,2,2,2}$ are six-colourable.  A nontrivial cockade has a
-vertex cut of order four, whereas $G$ is seven-connected.  Thus $G$ is
-not an exceptional cockade.  Since it has no $K_7^{-}$ minor, Jakobsen's
+vertex cut of order four, whereas $G$ is seven-connected.  Thus $G$ is not
+an exceptional cockade.  Since it has no $K_7^{-}$ minor, Jakobsen's
 theorem gives $m<\frac92n-12$.  Integrality yields (5.1).
 \end{proof}
 
-\begin{proposition}\label{prop:basic-count}
+The first density bound uses only the linked-clique and neighbourhood
+results above.
+
+\begin{proposition}\label{prop:preliminary-density}
 Let $G$ be as in Theorem~\ref{thm:package-intro}.  Then
 \[
-        n_7\leq4,
-        \qquad |E(G)|\geq4|V(G)|-2,                   \tag{5.2}
-\]
-and
-\[
-        b\geq20-n_7+\tau.                             \tag{5.3}
+        n_7\leq5,
+        \qquad |E(G)|\geq4|V(G)|-2.                     \tag{5.2}
 \]
 \end{proposition}
 
 \begin{proof}
-Every degree-seven vertex lies in the unique possible $K_5$ by
-Corollary~\ref{cor:critical-local}, and
-Corollary~\ref{cor:no-all-seven-k5} permits at most four such vertices.
-Every other vertex has degree at least eight, so
+By Corollary~\ref{cor:critical-local}, every degree-seven vertex lies in
+the unique possible $K_5$, so $n_7\leq5$.  Seven-connectivity gives
+minimum degree at least seven, and every vertex not counted by $n_7$ has
+degree at least eight.  Hence
 \[
         2|E(G)|\geq7n_7+8(|V(G)|-n_7)
-                  =8|V(G)|-n_7,
+                  =8|V(G)|-n_7
+                  \geq8|V(G)|-5.
 \]
-which proves (5.2).
-
-Every degree-seven vertex and every degree-eight vertex not counted by
-$b$ lies in the unique possible $K_5$.  Hence
-\[
-        n_7+(n_8-b)\leq5.                             \tag{5.4}
-\]
-The exact degree identity and Lemma~\ref{lem:jakobsen-defect} give
-\[
-        25\leq9|V(G)|-2|E(G)|
-             =2n_7+n_8-\tau.                         \tag{5.5}
-\]
-Combining (5.4) and (5.5) gives (5.3).
-\end{proof}
-
-The bound (5.3) gives only $16+\tau$ when $n_7=4$.  In that case,
-contracting the unique clique improves the upper density bound enough to
-remove this loss.
-
-\begin{proposition}\label{prop:n7-four}
-If $G$ is as in Theorem~\ref{thm:package-intro} and $n_7=4$, then
-\[
-        2|E(G)|\leq9|V(G)|-41,
-        \qquad |V(G)|\geq37,
-        \qquad n_8\geq33+\tau,
-        \qquad b\geq32+\tau.                         \tag{5.6}
-\]
-\end{proposition}
-
-\begin{proof}
-All four degree-seven vertices lie in the unique $K_5$ subgraph.  Write
-it as
-\[
-        A=\{a_1,a_2,a_3,a_4,z\}.
-\]
-For $1\leq i\leq4$, Corollary~\ref{cor:critical-local} gives
-\[
-        \N(a_i)=(A\setminus\{a_i\})
-                 \mathbin{\dot\cup}T_i,              \tag{5.7}
-\]
-where $T_i$ is a triangle.  These four triangles are pairwise disjoint,
-and $z$ is anticomplete to all of them.
-
-Put $H=G-A$.  We claim that $H$ is four-connected.  Suppose that
-$S\subseteq V(H)$, with $|S|\leq3$, leaves components
-$C_1,\ldots,C_q$, where $q\geq2$.  Seven-connectivity gives
-\[
-        |\N_A(C_j)|\geq7-|S|
-        \qquad(1\leq j\leq q).                       \tag{5.8}
-\]
-Each $a_i$ has neighbours in at most one component, since $T_i-S$ is
-connected whenever it is nonempty.  The vertex $z$ has neighbours in at
-most all $q$ components.  Counting incidences between $A$ and the
-components in (5.8) gives
-\[
-        q(7-|S|)\leq4+q,
-\]
-which is impossible for $q\geq2$ and $|S|\leq3$.  This proves the claim.
-
-Contract $A$ to one vertex, and call the resulting graph $J$.  No vertex
-outside $A$ has two neighbours in $A$: any outside neighbour of $a_i$
-lies in $T_i$ and is anticomplete to $A\setminus\{a_i\}$.  Thus the
-contraction creates no parallel edges, and
-\[
-        |V(J)|=|V(G)|-4,
-        \qquad |E(J)|=|E(G)|-10.                      \tag{5.9}
-\]
-The graph $J$ is five-connected.  A cut of order at most four avoiding the
-contracted vertex would also separate $G$; a cut containing it would leave
-$H$ minus at most three vertices disconnected.
-
-The four disjoint triangles imply $|V(J)|\geq13$.  Hence $J$ is neither
-$K_6$ nor $K_{2,2,2,2}$.  It is not a nontrivial
-$(K_{2,2,2,2},K_6,4)$-cockade, since such a graph has a cut of order four.
-It is also $K_7^{-}$-minor-free, being a minor of $G$.  Jakobsen's theorem
-and integrality give
-\[
-        2|E(J)|\leq9|V(J)|-25.
-\]
-Substituting (5.9) proves the first inequality in (5.6).  Proposition
-\ref{prop:basic-count} gives $2|E(G)|\geq8|V(G)|-4$, so $|V(G)|\geq37$.
-
-Finally, (5.5) with its improved left side gives
-\[
-        41\leq9|V(G)|-2|E(G)|=8+n_8-\tau.
-\]
-Thus $n_8\geq33+\tau$.  Inequality (5.4) and $n_7=4$ show that at most one
-degree-eight vertex is not counted by $b$, so $b\geq32+\tau$.
+The left side is even, so it is at least $8|V(G)|-4$, proving (5.2).
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:package-intro}]
 Albar's theorem gives $\chi(G)=7$, and every proper minor is
 six-colourable by the choice of $G$.  The graph is noncomplete because it
 has no $K_7^{-}$ minor, so Mader's theorem gives seven-connectivity.
-Corollaries~\ref{cor:unique-k5} and \ref{cor:critical-local} give the
-clique and neighbourhood conclusions, and
-Corollary~\ref{cor:no-all-seven-k5} excludes five degree-seven vertices in
-the clique.
 
-If $n_7\leq3$, the degree sum is an even integer at least
-$8|V(G)|-3$, so $|E(G)|\geq4|V(G)|-1$; (5.3) gives
-$b\geq17+\tau$.  If $n_7=4$, Proposition~\ref{prop:n7-four} gives the
-second alternative.  The three displayed global conclusions follow.
+Suppose that $v$ has degree seven.  Corollary~\ref{cor:critical-local}
+shows that $G[N(v)]$ contains a $K_4$.  Proposition
+\ref{prop:preliminary-density} gives
+\[
+        |E(G)|\geq4|V(G)|-2>4|V(G)|-6,
+\]
+which is more than the threshold in Theorem
+\ref{thm:rooted-helper-intro} when $d_G(v)=7$.  That theorem gives the
+forbidden $K_7^{-}$ minor.  Thus $n_7=0$.  Seven-connectivity now gives
+$\delta(G)\geq8$, and degree summation gives
+$|E(G)|\geq4|V(G)|$.
+
+Put $q=|E(G)|-4|V(G)|$, so $q\geq0$.  Suppose that a $K_5$ subgraph has
+vertex set $K$.  For each $w\in K$, the neighbourhood of $w$ contains the
+$K_4$ on $K\setminus\{w\}$.  Since $G$ has no $K_7^{-}$ minor, the
+contrapositive of Theorem~\ref{thm:rooted-helper-intro} gives
+\[
+        4|V(G)|+q<4|V(G)|+d_G(w)-13,
+\]
+and hence $d_G(w)\geq q+14$.  The five vertices of $K$ would contribute at
+least $5(q+6)$ to
+\[
+        \sum_{z\in V(G)}(d_G(z)-8)=2q,
+\]
+which is impossible.  Thus $G$ contains no $K_5$ subgraph.
+
+Finally, Lemma~\ref{lem:jakobsen-defect} and the exact degree identity give
+\[
+        25\leq9|V(G)|-2|E(G)|=n_8-\tau.
+\]
+Therefore $n_8\geq25+\tau$.  If a degree-eight vertex had a $K_4$ in its
+neighbourhood, it would belong to a $K_5$, which has just been excluded.
 \end{proof}
 
-Theorem~\ref{thm:package-intro} gives the following reduction of the
-Norin--Totschnig conjecture to an extremal minor problem.
+Theorem~\ref{thm:package-intro} reduces the Norin--Totschnig conjecture to
+an extremal statement only in the $4n$ range.
 
 \begin{corollary}[Extremal reduction]\label{cor:extremal-reduction}
 Suppose that every seven-connected graph $H$ satisfying
 \[
-        |E(H)|\geq4|V(H)|-2
+        |E(H)|\geq4|V(H)|
 \]
 contains a $K_7^{-}$ minor.  Then every $K_7^{-}$-minor-free graph is
 six-colourable.
@@ -711,10 +532,9 @@ six-colourable.
 
 \begin{proof}
 Otherwise, choose a minor-minimal non-six-colourable
-$K_7^{-}$-minor-free graph $G$.  By
-Theorem~\ref{thm:package-intro}, the graph $G$ is seven-connected and
-$|E(G)|\geq4|V(G)|-2$.  The assumed extremal statement therefore gives
-$K_7^{-}\minor G$, a contradiction.
+$K_7^{-}$-minor-free graph $G$.  By Theorem~\ref{thm:package-intro}, the
+graph $G$ is seven-connected and $|E(G)|\geq4|V(G)|$.  The assumed
+extremal statement therefore gives $K_7^{-}\minor G$, a contradiction.
 \end{proof}
 
 The extremal statement in Corollary~\ref{cor:extremal-reduction} remains
