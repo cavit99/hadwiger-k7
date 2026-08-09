@@ -16,14 +16,13 @@ yield a `K_7` minor.
 Selected audited inputs:
 
 - [the critical host is `K_5`-free and has at least 25 degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
-- [every exceptional neighbourhood contains an independent triple](../results/hc7_k7minus_exceptional_neighbourhood_completion.md#theorem-2-every-exceptional-neighbourhood-has-an-independent-triple)
-- [a degree-eight centre has at most two exterior components](../results/hc7_low_degree_exterior_component_bounds.md#theorem-1-sharp-current-component-bounds)
-- [every order-seven cut in the critical host has exactly two components](../results/hc7_k7minus_three_component_seven_cut_exclusion.md#corollary-2-two-component-normal-form-in-the-critical-host)
+- [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
+- [the web cut gives a response-carrying strict descent or a deficient colour-indexed fan](../results/hc7_k7minus_four_centre_operation_cut_reduction.md)
 
 Immediate barriers:
 
 - [fullness and local root contacts alone do not force one-shore allocation](../barriers/hc7_k7minus_shore_allocation_barrier.md#theorem-2-two-full-shore-mechanism-barrier)
-- [the exact support-allocation and cut-family nonclosure](hc7_k7minus_seven_exceptional_frontier.md#4-current-global-finishing-obstruction)
+- [the nontriangular exact-cut trace and label-allocation residue](../results/hc7_k7minus_four_centre_web_cut_lattice.md#5-exact-static-limit-of-the-two-shore-quotient)
 
 ## Active finishing route
 
@@ -32,11 +31,18 @@ Immediate barriers:
 A hypothetical counterexample has no degree-seven vertices, no literal
 `K_5`, and at least 25 degree-eight vertices.  Thus proving that such a host
 has at most 24 degree-eight vertices settles Conjecture 21.  The current
-global attack selects four independent centres, retains their proper-minor
-colouring data through an exact two-shore order-seven separation, and seeks
-to turn unavoidable branch-set use of the opposite shore into a second cut.
-The final theorem must eliminate the resulting cut family globally; another
-isolated boundary census is not an accepted endpoint.
+global theorem selects four independent centres.  For each selected root and
+deletion-colouring, it returns either a colour-anchored rooted `K_5` avoiding
+the other centres or a nontriangular two-shore order-seven cut in an exact
+fixed-anchor lattice, with a retained one-sided trace and a Kempe linkage
+through another named centre.  On the web side, the selected edge now gives
+either a response-carrying smaller order-seven component or a five-spoke fan
+with at least two missing limb contacts.  A packet-rich survivor has
+independent auxiliary boundary and all three pairwise boundary Kempe paths
+in one fixed colouring.  The finishing step must allocate two helper branch
+sets in the rooted outcome, make the strict cut retain all four centres, or
+compose the deficient fan/Kempe paths with the rooted bags.  Another isolated
+boundary census is not an accepted endpoint.
 
 ## Conditional and frozen routes
 

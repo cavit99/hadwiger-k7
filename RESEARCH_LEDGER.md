@@ -65,28 +65,43 @@ are recorded in the
 
 ### 3. Immediate structural laboratory
 
-Because `R(5,4)=25` and the critical host contains no `K_5`, its degree-eight
-vertices contain four independent centres.  Deleting those four vertices
-leaves an exactly six-chromatic graph and hence a spanning `K_6` minor model.
-The present working attack combines the four retained labels, proper-minor
-six-colourings and the exact two-shore order-seven separations.
+Because `R(4,5)=25` and the critical host contains no `K_5`, its degree-eight
+vertices contain four independent centres `U`.  Put `H=G-U`.  The audited
+[four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
+shows that `H` is three-connected, nonplanar and exactly six-chromatic.  For
+every selected root in `U` and every fixed six-colouring after deleting that
+root, it gives exactly one of the following outcomes:
 
-In the first nontrivial two-shore case, a fixed quotient colouring and the
-strong Hadwiger theorem for four colours produce four mutually adjacent
-branch sets containing the four prescribed labels, together with a fifth
-branch set adjacent to at least three of them.  The exact unsupported step is
-support allocation: those four rooted branch sets may use one or both of the
-two disjoint connected subgraphs on the opposite shore which are needed as
-the final two branch sets.  Neither an unrooted clique model nor an additional
-path repairs this loss of disjointness.
+1. a fixed-colouring-anchored `K_5` minor model avoiding the other three
+   centres; or
+2. an exact order-seven cut `U\dot\cup T`, with two full complementary
+   components, a retained one-sided colouring trace, and nontriangular `T`.
 
-The proposed global repair is to show that unavoidable use of those two
-subgraphs produces a second interacting exact order-seven cut, and that the
-resulting cut family cannot coexist around at least 25 degree-eight centres.
-Wheel-type crossing and a purely nested interval family have been excluded in
-the current working derivation; crossing-match, smaller-cut and one-shore
-concentration configurations remain.  These newest deductions are unaudited
-working mathematics and are not promoted results.
+If the host is eight-connected, only the rooted-model outcome occurs.  In the
+seven-connected branch, fixed-anchor cuts returned by the second outcome form
+an exact meet/join lattice.  If three cuts have all eight sign regions
+nonempty, those regions already saturate all eight neighbours of every
+centre; four cuts cannot have all sixteen sign regions nonempty.
+
+The remaining obligation is dynamic label and support allocation.  In the
+first outcome one must augment the rooted `K_5` with two disjoint helper
+branch sets.  In the second, the retained colouring trace and the forced
+Kempe linkage through another named centre must yield a common boundary
+partition, a rooted augmentation, or a strict descent in the cut lattice.
+Static boundary density and the two-shore quotient alone are provably
+insufficient.
+
+The separately audited
+[operation-coupled refinement](results/hc7_k7minus_four_centre_operation_cut_reduction.md)
+now normalizes that second outcome further.  The selected cross-edge gives
+either a colour-indexed five-spoke packing or a strict smaller actual
+order-seven component carrying a common exact colour block.  The
+distinct-ended fan has at least two missing limb contacts.  In the only
+packet-rich case, `T` is independent and one fixed shore colouring carries
+all three pairwise `T` Kempe paths; independently, each of the other three
+centres repairs the rooted-web obstruction.  The strict cut need not retain
+all four centres and the paths need not avoid the rooted bags or full
+packets.  That exact label-preservation problem is the current frontier.
 
 ## Sufficient but non-primary extremal route
 
@@ -491,6 +506,17 @@ audited
 [three-shore planar-extension theorem](results/hc7_k7minus_three_component_seven_cut_exclusion.md)
 six-colours that configuration.
 
+The audited
+[four-centre rooted-web theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
+is the current computation-free reduction: it returns either a labelled
+rooted model or a nontriangular exact-cut lattice while preserving the
+proper-minor colouring trace needed for the next operation.
+Its audited
+[operation-coupled continuation](results/hc7_k7minus_four_centre_operation_cut_reduction.md)
+reduces the web branch to a response-carrying strict cut or a deficient
+five-limb packing, and gives the exact independent-boundary normal form in
+the packet-rich case.
+
 The exceptional-centre programme is now the active proof route to Conjecture
 21.  The universal `4n-2` theorem remains a sufficient conditional route,
 and E5 remains a stronger frozen laboratory.  Direct `HC_7` bridge
@@ -520,8 +546,9 @@ research target.
   previously quoted list of `197` one-full boundaries has no retained
   predicate, digest, verifier or audit and is not part of the proof spine.
 - External inputs include Mader, Halin, Jakobsen, Jørgensen, Yuan, Schmidt,
-  Norin--Totschnig and Du--Li--Xie--Yu; exact statements and citations are
-  recorded beside the results that use them.
+  McKay--Radziszowski, Fabila-Monroy--Wood, Norin--Totschnig and
+  Du--Li--Xie--Yu; exact statements and citations are recorded beside the
+  results that use them.
 - No robust `K_6`-model transversal theorem or two-root dominating-model
   augmentation theorem is claimed.  Both bounded attacks have been frozen
   as principal mechanisms.  The first loses common labels and connectivity
@@ -532,7 +559,7 @@ research target.
 
 - [`active/INDEX.md`](active/INDEX.md): concise live navigation.
 - [`active/hc7_k7minus_seven_exceptional_frontier.md`](active/hc7_k7minus_seven_exceptional_frontier.md):
-  active critical-host finishing reduction and support-allocation obstruction.
+  four-centre rooted-web dichotomy and nontriangular exact-cut residue.
 - [`active/hc7_k7minus_density_frontier.md`](active/hc7_k7minus_density_frontier.md):
   stronger conditional `4n-2` frontier and recorded nonclosures.
 - [`active/hc7_k7minus_e5_frontier.md`](active/hc7_k7minus_e5_frontier.md):

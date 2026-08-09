@@ -2,12 +2,14 @@
 
 **Status:** active primary technical frontier for Norin--Totschnig
 Conjecture 21.  The lower bound and the local neighbourhood,
-exterior-completion, and two-component reductions in Sections
-1--2 are written and separately audited GREEN; the finite boundary claims
-have retained independently checked verifiers.  The accompanying scoped
-barriers are also separately audited GREEN.  The list-core calculation in
-Section 3 is a written live derivation without a separate audit.  The upper
-bound is open.  This file is not a second status ledger.
+exterior-completion, and two-component reductions in Sections 1--2 are
+written and separately audited GREEN; the finite boundary claims have
+retained independently checked verifiers.  The four-centre theorem in
+Section 4 and its operation-coupled continuation are also separately
+audited GREEN.  The accompanying scoped
+barriers are separately audited GREEN, while the list-core calculation in
+Section 3 remains a written live derivation without a separate audit.  The
+upper bound is open.  This file is not a second status ledger.
 
 ## 1. Primary target and exact finishing reduction
 
@@ -360,34 +362,59 @@ differ; synchronizing them is the exact multi-centre colouring target.
 
 ## 4. Current global finishing obstruction
 
-**Status of this subsection:** unaudited working derivation; no theorem in
-this subsection is promoted to `results/`.
+**Status of the four-centre reduction:** written proof; separate internal
+audit GREEN in the
+[promoted theorem](../results/hc7_k7minus_four_centre_web_cut_lattice.md).
+The terminal augmentation/descent step remains open.
 
-Since `R(5,4)=25` and `G` has no literal `K_5`, the at least 25 exceptional
-vertices contain an independent four-set `U`.  The graph `G-U` is exactly
-six-chromatic: it is six-colourable as a proper minor, while a five-colouring
-would extend to `G` by assigning one new colour to the independent set `U`.
-It therefore has a spanning `K_6` minor model.
+Since `R(4,5)=25` and `G` has no literal `K_5`, its exceptional vertices
+contain an independent four-set `U`.  Put `H=G-U`.  Then `H` is
+three-connected, nonplanar and exactly six-chromatic.  Fix `r in U`, a
+six-colouring of `G-r`, and four colours occurring once on `N(r)`, with
+literal representatives `x_1,x_2,x_3,x_4 in H`.  The promoted theorem gives
+exactly one of two outcomes:
 
-The present campaign retains all four labels through a two-shore order-seven
-separation.  In the first unequal packing case, one shore contains one and
-the other contains two pairwise disjoint connected subgraphs adjacent to all
-seven boundary vertices.  A fixed quotient colouring, followed by the strong
-Hadwiger theorem for four colours, gives four mutually adjacent branch sets
-containing the four prescribed labels and a fifth branch set adjacent to at
-least three of them.  This closes the model unless the four rooted branch
-sets use vertices in one or both of the two connected subgraphs on the other
-shore which are required as the last two branch sets.
+1. `H` contains an `\{x_1,x_2,x_3,x_4\}`-rooted `K_4` model.  Together
+   with `r` this is a fixed-colouring-anchored `K_5` model avoiding the
+   other three centres.
+2. `H` is contained in a rooted web and returns a three-set `T` and two full
+   components `C,D` of `G-(U dotcup T)`.  Thus `U dotcup T` is an actual
+   order-seven cut.  The set `T` is not a literal triangle.  One closed
+   shore retains a proper six-colouring after restoring `r`, and an
+   alternating linkage forced by the web uses another named centre in
+   `U-r`.
 
-That support-allocation failure is the exact current obstruction.  The next
-global theorem must turn unavoidable use of the opposite shore into a second
-interacting order-seven cut and then show that the resulting cut family
-cannot occur around 25 exceptional centres.  The current working derivation
-excludes a wheel crossing with a common centre and excludes a purely nested
-interval family.  It does not yet exclude crossing-match configurations,
-smaller returned cuts, or concentration of all other exceptional centres in
-one shore.  These deductions require a written entrance proof and hostile
-audit before promotion.
+The second outcome cannot occur when `G` is eight-connected.  When
+`kappa(G)=7`, the exact lift-order function on separations of `H` is symmetric
+and submodular.  For fixed opposite anchors, its minimum separations form an
+exact meet/join lattice.  If three cuts have all eight sign regions nonempty,
+each centre has exactly one neighbour in every region; four cuts cannot have
+all sixteen sign regions nonempty.
+
+This reduces the global obstruction to one dynamic step.  In the rooted
+outcome, allocate two disjoint helper branch sets from the unused centres or
+force the web outcome.  In the web outcome, combine the retained one-sided
+trace and the centre-supported Kempe linkage across the exact-cut lattice to
+obtain a common boundary partition, a rooted augmentation, or a strict
+smaller cut.  The exact static two-shore quotient is insufficient: even
+maximum centre-to-boundary incidence and two full shores admit a
+target-free mechanism.
+
+The audited
+[operation-coupled reduction](../results/hc7_k7minus_four_centre_operation_cut_reduction.md)
+sharpens the web side.  For a selected cross-edge it gives either a
+colour-indexed five-spoke packing or a strictly smaller actual order-seven
+component retaining a common exact colour block.  The always-available
+distinct-ended fan has at least two missing limb contacts.  If one shore
+contains two disjoint boundary-full connected subgraphs, then `T` is
+independent, every independent four-set in the boundary has independent
+complement, and one fixed shore colouring carries all three pairwise `T`
+Kempe paths.  Each unused centre also repairs the rooted-web obstruction in
+the uncoloured graph.  The smaller cut need not contain `U`, and the paths
+need not avoid the rooted bags or the two full subgraphs; neither output is
+yet terminal.
+
+### Secondary sufficient one-centre routes
 
 The earlier one-centre allocation statement remains a sufficient target,
 but it is no longer the preferred endpoint:
@@ -450,22 +477,26 @@ system directly on the singleton root side, with boundary trace
 `2,2,1,1,1,1` and the original labelled near-clique model still present.
 The operation is then aligned, but the near-clique and column labels are
 not.  Producing that label transfer, or a terminal when it fails, is the
-immediate open step.
+remaining open step in this secondary route.
 
 ## 5. Recommended next attack
 
 Pursue one global exceptional-centre terminal theorem.
 
-1. Minimise, over the rooted four-colour models in the fixed quotient, the
-   number of vertices used from the two opposite boundary-full connected
-   subgraphs.
-2. Convert the first unavoidable use into a named second minimum cut while
-   retaining the four prescribed centres and the fixed six-colouring.
-3. Prove the cut-family theorem: with the wheel and purely nested cases
-   excluded, eliminate crossing-match configurations, smaller returned cuts,
-   and concentration of all other exceptional centres in one shore.
-4. Deduce that a critical host has at most 24 degree-eight vertices,
-   contradicting (1).
+1. In the rooted-model outcome, allocate two disjoint helper branch sets from
+   the three unused centres, or use the first unavoidable support conflict to
+   force the rooted-web outcome.
+2. In the rooted-web outcome, use a minimum selected-response component.
+   Promote the strict generic cut returned by the fan theorem to a
+   four-centre cut, or allocate the deficient five-limb packing to the
+   rooted bags.
+3. In the packet-rich subcase, combine the three fixed-colouring `T` paths
+   with the three one-centre crossing repairs; in the `(1,1)` subcase, use
+   the exact-cut lattice and crossing-region degree bound across choices of
+   root and deletion-colouring.
+4. Finish with one of the accepted terminal outcomes: a common boundary
+   partition, a rooted augmentation to `K_7^-`, or strict descent to a
+   smaller four-centre cut.
 
 The earlier one-centre operation and rooted-allocation lemmas remain tools
 only when they feed this global argument.  Further graph-code filters,

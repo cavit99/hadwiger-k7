@@ -257,7 +257,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_exterior_component_bounds.md"
 source_heading = "Theorem 1 (sharp current component bounds)"
-active = true
+active = false
 audit = "results/hc7_low_degree_exterior_component_bounds_audit.md"
 expected_source_sha256 = "4ee48c6d71c994b166b29dcd969d64c3526e6b6b75fa8a849fae834cf95eea29"
 scope = "the literal components outside the closed neighbourhood of a degree-seven-through-nine vertex in a hypothetical minor-minimal HC7 counterexample"
@@ -7154,6 +7154,59 @@ does_not_prove = [
 keywords = ["K7 minus", "degree seven", "literal K5", "exceptional degree eight", "Jakobsen defect"]
 
 [[claims]]
+id = "hc7.k7minus_four_centre_web_cut_lattice"
+title = "Four independent degree-eight centres yield a rooted K5 or an exact-cut lattice"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_four_centre_web_cut_lattice.md"
+active = true
+audit = "results/hc7_k7minus_four_centre_web_cut_lattice_audit.md"
+expected_source_sha256 = "e7fcf00c9bdbd2fcbab78bb13d4244a659f4f7db0ae45a97cfbd9a8d599a0ee3"
+scope = "the critical K7-minus host with four independent degree-eight centres"
+label_fidelity = "the four centres, selected root, fixed deletion colouring, four singleton-colour neighbours, and returned exact cut remain literal"
+conclusions = [
+  "a fixed-colouring-anchored K5 avoiding the other centres or an exact two-shore order-seven cut U disjoint-union T",
+  "the eight-connected branch always has the rooted-model outcome",
+  "fixed-anchor four-centre cuts form an exact lattice with a crossing-region degree bound",
+  "the web outcome retains a one-sided colouring trace and forces a Kempe linkage through another named centre",
+  "the returned T is nontriangular and its boundary satisfies the stated K5 and vertex-deleted K5-minus exclusions",
+]
+does_not_prove = [
+  "elimination of the nontriangular exact-cut outcome",
+  "colour-label preservation under uncrossing",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "four independent centres", "rooted K5", "rooted K4 web", "exact order-seven cut", "lifted-order lattice"]
+
+[[claims]]
+id = "hc7.k7minus_four_centre_operation_cut_reduction"
+title = "The four-centre web cut gives a response descent or a deficient colour-indexed fan"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_four_centre_operation_cut_reduction.md"
+active = true
+audit = "results/hc7_k7minus_four_centre_operation_cut_reduction_audit.md"
+expected_source_sha256 = "4d4ca474cb9d9f28632077f0a89d79c0fc36840f3eb2600c745e0ea2150f2f98"
+scope = "the rooted-web exact-cut outcome for four independent degree-eight centres in the critical K7-minus host"
+label_fidelity = "the four centres, selected root, fixed edge-deletion colouring, five colour-indexed first edges, literal cut, and packet-rich boundary remain explicit"
+strict_parameter = "order of the selected response-carrying open component"
+conclusions = [
+  "a colour-indexed five-spoke packing or a strict actual order-seven shore descent retaining a common exact colour block",
+  "the five limbs of the distinct-ended fan have at least two missing mutual contacts",
+  "a packet-rich survivor has independent auxiliary boundary and one fixed colouring with all three pairwise auxiliary-boundary Kempe paths",
+  "each unused centre individually repairs the rooted-web obstruction",
+]
+does_not_prove = [
+  "that the strict returned cut retains all four centres",
+  "allocation of the fan limbs or Kempe paths to the rooted-model bags",
+  "elimination of the (1,1) or independent-boundary (1,2) web residue",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "four centres", "critical edge", "exact seven-cut", "fan descent", "packet reflection", "Kempe paths"]
+
+[[claims]]
 id = "hc7.k7minus_false_twin_triangle_closure"
 title = "A triangle in a six-vertex full false-twin boundary forces K7-minus"
 kind = "theorem"
@@ -7603,7 +7656,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_three_component_seven_cut_exclusion.md"
 source_heading = "Theorem 1 (three-component `3,2,2` cut)"
-active = true
+active = false
 audit = "results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md"
 expected_source_sha256 = "1041988a33b749bef5802dd21d3cd9419b5afc754735a20174bf5a13c0a56c96"
 scope = "seven-connected graphs whose every proper minor is six-colourable, with an order-seven cut leaving exactly three components and a proper 3,2,2 boundary colouring; the corollary applies to the current critical K7-minus host"
@@ -7784,7 +7837,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_exceptional_neighbourhood_completion.md"
 source_heading = "Theorem 2 (every exceptional neighbourhood has an independent triple)"
-active = true
+active = false
 audit = "results/hc7_k7minus_exceptional_neighbourhood_completion_audit.md"
 expected_source_sha256 = "fc1e88c28b1f4d0dc7a1cbdeefa19fecfd5e969b986c64e11eb1990615f5dfbd"
 scope = "exceptional degree-eight vertices in the critical K7-minus host"
@@ -8884,7 +8937,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "3e0853942a43e2cf8a8c88ba79f5ea34ac667264c7467b63cab13ccbc538be35"
+expected_source_sha256 = "9b9b7a10782fc41bd61f84304c492631e946911a78860b7c4e478d4bbbfb1a3b"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -15863,20 +15916,79 @@ note = "The audited critical-host reduction eliminates degree seven and every li
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_exceptional_independent_triples"
-kind = "uses"
-note = "Every one of the forced degree-eight neighbourhoods contains the independent triple used by the rooted allocation programme."
+kind = "related_to"
+note = "This remains an audited input to the secondary one-centre allocation route, not a direct input to the current four-centre spine."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.low_degree_exterior_component_bounds"
-kind = "uses"
-note = "The degree-eight case has at most two components outside the closed neighbourhood."
+kind = "related_to"
+note = "This remains an audited input to the secondary one-centre allocation route, not a direct input to the current four-centre spine."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "related_to"
+note = "The two-component theorem is now consumed through the audited four-centre reduction rather than listed as a separate direct input."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_four_centre_web_cut_lattice"
 kind = "uses"
-note = "Every order-seven cut in the critical host is reduced to exactly two complementary components."
+note = "The audited four-centre theorem is the direct rooted-model/exact-cut reduction for the current finishing route."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_four_centre_web_cut_lattice"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_centre_web_cut_lattice"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "uses"
+note = "The critical-host theorem supplies the four independent degree-eight centres and the density and clique exclusions."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_web_cut_lattice"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "The exact order-seven cut returned by the web has exactly two complementary components."
+
+[[relations]]
+source = "hc7.k7minus_four_centre_web_cut_lattice"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_four_centre_operation_cut_reduction"
+kind = "uses"
+note = "This is the direct selected-response normalization of the web branch in the active four-centre route."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_four_centre_operation_cut_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_centre_operation_cut_reduction"
+target = "hc7.k7minus_four_centre_web_cut_lattice"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_centre_operation_cut_reduction"
+target = "hc7.exact7_critical_edge_fan_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_centre_operation_cut_reduction"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_four_centre_operation_cut_reduction"
+target = "hc7.exact7_adaptive_12_boundary_closure"
+kind = "uses"
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
