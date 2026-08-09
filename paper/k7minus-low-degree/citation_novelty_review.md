@@ -1,98 +1,87 @@
 # Internal specialist-style citation and novelty review
 
-**Citation verdict:** GREEN for the pinned source revision.
+**Citation verdict:** GREEN.
 
-**Novelty verdict:** QUALIFIED.  Targeted primary-source and literature
-searches found no prior statement matching the new theorem package, but this
-is not an external review or a priority certificate.
+**Novelty verdict:** QUALIFIED GREEN. Targeted primary-source and literature
+searches found no earlier statement matching the combined theorem package.
+This is not external peer review or a priority certificate.
 
 **Reviewed manuscript SHA-256:**
-`b1828c016bad15a096b1000096018ce0ee6b22b3943ffd9ce890fa8502b36e7d`
+`453fc248f4192e5e5f1487c364ae71610b68013effc6e3983575c63de5a4fcd7`
 
 **Reviewed bibliography SHA-256:**
-`75031e4826eddb423cbac2297295753c83e999672b05842afbd5579e2d0b7c85`
+`e4bc442048d7894ef46ae3200802c3e68fa85baedef3a87ef9debb6b2c9a5e35`
+
+**Reviewed PDF SHA-256:**
+`1de1eae5b8b6376de58f23ec621cba098142370bcb902e0a70569c0ff97a87e7`
 
 **Search cut-off:** 9 August 2026.
 
-This was a separate internal specialist-style citation and novelty pass.  It
-is not external peer review and should not be represented as human
-specialist endorsement.
+## Citation review
 
-## 1. Exact citation anchors
+All twelve bibliography entries are cited, every key resolves, and the build
+has no citation or reference warning.
 
-- [Norin--Totschnig, arXiv:2507.03244](https://arxiv.org/html/2507.03244):
-  Theorem 4 proves six-colourability under `K_7^vee` exclusion; Lemma 12 is
-  exactly the internally four-connected rooted `K^*_{4,2}` bound
-  `e<=4v-10`; Claim 4.4 supplies the contextual degree-seven `K_5`
-  statement; Conjecture 21 is the `K_7^-` six-colour conjecture.  The
-  manuscript uses the exact Lemma 12 threshold and does not call it sharp.
-- [Albar, arXiv:1402.2806](https://arxiv.org/pdf/1402.2806): Theorem 1 is the
-  cited seven-colourability theorem and Theorem 2 is the modern restatement
-  of Jakobsen's extremal theorem.  Lemma 6 gives the important prior analogue
-  of at least 25 degree-eight vertices in a hypothetical eight-chromatic
-  critical host.  The manuscript now distinguishes that setting from its
-  seven-chromatic host and its stronger defect-sensitive `25+tau` bound.
-- [Rolek--Song, JCTB 127 (2017)](https://www.sciencedirect.com/science/article/pii/S0095895617300424):
-  Lemma 1.9 is exactly the seven-connected, two-`K_6` implication to a
-  `K_8^-` minor.  Lemma 1.6(i) is the exact modern source used for the
-  neighbourhood-independence inequality.
-- [Kriesell--Mohr, arXiv:1911.09998v2](https://arxiv.org/abs/1911.09998):
-  Theorem 7, together with the definition of property `(*)`, gives the
-  five-root, at-most-six-demand-edge specialization stated in the
-  manuscript.
-- [Jakobsen, Mathematica Scandinavica 52 (1983)](https://eudml.org/doc/166842):
-  Theorem 4 is the original `9n/2-12` density theorem with the stated
-  cockade exception.
-- [Mader, Mathematische Annalen 175 (1968)](https://eudml.org/doc/161665):
-  Satz 6 is the contraction-critical connectivity theorem used here.
-- [Mayer, Discrete Mathematics 111 (1993)](https://www.sciencedirect.com/science/article/pii/0012365X9390174R)
-  supports the contextual finite catalogue of degree-seven neighbourhoods.
-  Dirac is cited only for historical attribution; the exact inequality is
-  anchored to Rolek--Song.
+- [Robertson, Seymour and Thomas](https://doi.org/10.1007/BF01202354)
+  is the appropriate primary source for the last known case of Hadwiger's
+  conjecture. The manuscript now correctly says that the conjecture is known
+  for `t<=6` and open for every `t>=7`.
+- [Norin and Totschnig](https://arxiv.org/abs/2507.03244) supports the
+  `K_7^vee` six-colour theorem, the rooted `K^*_{4,2}` density bound, the
+  contextual degree-seven claim, and Conjecture 21.
+- [Albar](https://arxiv.org/abs/1402.2806) supports seven-colourability and
+  the earlier analogue with twenty-five degree-eight vertices. The paper
+  distinguishes that eight-chromatic setting from its seven-chromatic,
+  defect-sensitive bound `n_8>=25+tau`.
+- Rolek and Song's Lemmas 1.9 and 1.6(i), Kriesell and Mohr's Theorem 7,
+  Jakobsen's Theorem 4, and Mader's Satz 6 match their stated uses.
+- Fabila-Monroy and Wood's rooted-`K_4`/web results support the alternative,
+  the alternating-linkage obstruction, and the restoration of one vertex of
+  `U`. McKay and Radziszowski support `R(4,5)=25`. Mayer and Dirac are used
+  only for the historical statements identified in the text.
 
-The bibliography metadata and DOI data checked in this pass are consistent
-with these sources.  Albar and Kriesell--Mohr remain cited as arXiv
-preprints, as appropriate.
+The bibliography metadata, theorem numbering, and mathematical direction of
+each citation are consistent with the primary sources checked in this pass.
 
-## 2. Targeted novelty comparison
+## Novelty assessment
 
-Exact-phrase, theorem-shape and topic searches across arXiv and publisher
-records found no prior formulation of any of the following:
+No earlier formulation was found for the following contributions in their
+present form:
 
-1. the fifth-root placement into a helper bag of a rooted `K^*_{4,2}` model;
-2. the six-connected `4n+d-13` neighbourhood closure;
-3. the combined seven-chromatic critical-host package
-   `n_7=0`, `delta>=8`, no literal `K_5`, `m>=4n`, and `n_8>=25+tau`; or
-4. the all-`r` two-clique theorem with `(r+1)`-connectivity.
+1. the all-`r` two-clique theorem with sharp `(r+1)`-connectivity;
+2. placement of a fifth prescribed vertex in a non-root branch set of a
+   rooted `K^*_{4,2}` model, and the resulting `4n+d-13` closure;
+3. the combined critical-graph consequences
+   `n_7=0`, `delta>=8`, no `K_5`, `m>=4n`, and `n_8>=25+tau`;
+4. the four-vertex rooted-`K_4`/web reduction, minimum lift-order lattice,
+   sign-region bounds, Kempe obstruction, and exclusion of `G[T]=K_3`; and
+5. the selected-edge theorem coupling five prescribed first edges with
+   controlled paths or a smaller separated component, preservation of a
+   boundary colour class, and the independent fan contact bound.
 
-The bare number 25 is not by itself new: Albar's Lemma 6 proves an analogous
-count one criticality level higher.  The apparently new content is the
-degree-seven elimination, literal-`K_5` exclusion, defect-sensitive count,
-and their common rooted-closure mechanism.
+The number twenty-five is not itself new, and cut submodularity, Kempe
+exchanges, Menger's theorem, and contraction pullbacks are established tools.
+The novelty lies in their coupling. The restoration corollary is best viewed
+as a clean application of the rooted-`K_4` theorem, not a new general rooted
+theorem.
 
-Two recent related papers were checked and do not overlap the claims:
+Accordingly, “apparently new” or “we are not aware of an earlier
+formulation” is supportable. An unconditional priority claim is not. The
+contact bound should not be called sharp without an equality construction.
 
-- [Lafferty--Liu--Rolek--Yu, arXiv:2509.07144](https://arxiv.org/abs/2509.07144)
-  improves contraction-critical connectivity only for chromatic number at
-  least 17.
-- [Kawarabayashi--Yu, arXiv:2606.01586](https://arxiv.org/abs/2606.01586)
-  proves a general knittedness theorem and a different connectivity bound
-  for minimal Hadwiger counterexamples; at chromatic number seven it neither
-  improves Mader's input nor addresses `K_7^-`, the low-degree structure, or
-  the rooted closure.
+## Benchmark and limitation
 
-Subject to the limitations below, “apparently new” or “we are not aware of
-a prior formulation” is supportable.  An unconditional priority claim is
-not.
+The manuscript is comparable to the Norin and Totschnig paper in technical
+scale: it is compact, self-contained, and contains several structural
+theorems joined by a dynamic rooted-web reduction. It does not yet match
+their theorem-level consequence. They prove a global six-colourability
+theorem under `K_7^vee` exclusion; this paper leaves both the rooted-web
+residue and the seven-connected `m>=4n` extremal hypothesis open.
 
-## 3. Significance and limitations
+The manuscript is ready for external specialist review as a structural
+reduction paper. Crossing the stated significance benchmark still requires
+either a label-preserving elimination of the rooted-web residue or the
+seven-connected `K_7^-` extremal theorem at the `4n` threshold.
 
-The manuscript is a substantial, plausibly novel structural advance toward
-Norin--Totschnig Conjecture 21.  It is not yet comparable in theorem scope
-to the Norin--Totschnig paper, which proves a global six-colourability
-theorem under `K_7^vee` exclusion.  Here the corresponding `K_7^-`
-six-colour conjecture remains conditional on an open extremal statement.
-
-The search was targeted rather than a complete MathSciNet/Zentralblatt
-priority search.  A graph-minors specialist should independently verify the
-proofs, terminology, and prior-art comparison before submission.
+This search was targeted rather than a complete MathSciNet or Zentralblatt
+priority search. Independent human specialist review remains necessary.

@@ -8,7 +8,7 @@
   linkcolor=blue,
   citecolor=blue,
   urlcolor=blue,
-  pdftitle={Minimum Degree Eight in K7-minus-Minor-Free Contraction-Critical Graphs},
+  pdftitle={Minimum Degree Eight and a Rooted-Web Reduction in K7-minus-Minor-Free Contraction-Critical Graphs},
   pdfauthor={Cavit Erginsoy}
 ]{hyperref}
 \setlength{\emergencystretch}{1em}
@@ -20,9 +20,10 @@
 \newcommand{\minor}{\preccurlyeq}
 \newcommand{\N}{N}
 
-\title{Minimum Degree Eight in $K_7^{-}$-Minor-Free Contraction-Critical Graphs}
+\title[Minimum Degree Eight and a Rooted-Web Reduction]
+{Minimum Degree Eight and a Rooted-Web Reduction in
+$K_7^{-}$-Minor-Free Contraction-Critical Graphs}
 \author{Cavit Erginsoy}
-\thanks{With substantial mathematical contributions from GPT-5.6 Sol, an OpenAI model.}
 \date{9 August 2026}
 
 \subjclass[2020]{05C15, 05C40}
@@ -32,17 +33,29 @@
 
 \begin{abstract}
 Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph,
-with $n$ vertices and $m$ edges.  We prove that $n_7=0$,
-$\delta(G)\geq8$, $m\geq4n$, and $G$ has no $K_5$ subgraph.  If $n_i$
-counts the vertices of degree $i$ and
-$\tau=\sum_{i\geq10}(i-9)n_i$, then $n_8\geq25+\tau$; in particular,
-$G$ has at least twenty-five degree-eight vertices, each with a
-$K_4$-free neighbourhood.  The capstone is a rooted-minor closure: a
+with $n_i$ vertices of degree $i$, and put
+$\tau=\sum_{i\geq10}(i-9)n_i$.  We prove
+\[
+ n_7=0,\qquad \delta(G)\geq8,\qquad |E(G)|\geq4|V(G)|,
+ \qquad n_8\geq25+\tau,
+\]
+and show that $G$ has no $K_5$ subgraph.  Moreover, $G$ has an independent
+four-set $U$ of degree-eight vertices such that $G-U$ is three-connected,
+nonplanar, and six-chromatic.  For $r\in U$ and a six-colouring of $G-r$,
+choose four colours occurring exactly once on $N_G(r)$.  Either their
+representatives root a $K_4$ minor in $G-U$, or $G-U$ is a spanning subgraph
+of a web rooted at them with a seven-vertex separator
+$U\mathbin{\dot\cup}T$.  In the web case, the
+three-separations form a lattice after two vertices are fixed on opposite
+sides, one of two alternating bichromatic components meets $U-\{r\}$, and
+$G[T]\ne K_3$.  Deleting a selected edge yields either five controlled paths
+or a smaller component behind another seven-vertex separator, with a boundary
+colour class preserved in the latter case.  In either edge-deletion outcome,
+there is also a six-ended fan whose residual paths, after removal of its
+centre, include at least two pairs with no edge between them.  We also prove that a
 six-connected $n$-vertex graph with a degree-$d$ vertex whose neighbourhood
-contains $K_4$ and with at least $4n+d-13$ edges contains a $K_7^{-}$
-minor.  We also give a direct uniform proof that, for
-every $r\geq2$, an $(r+1)$-connected graph containing two distinct $K_r$
-subgraphs has a $K_{r+2}^{-}$ minor.  All proofs are computation-free.
+contains $K_4$ and at least $4n+d-13$ edges contains a $K_7^{-}$ minor.  The
+proofs are computation-free apart from the cited determination of $R(4,5)$.
 \end{abstract}
 
 \maketitle
@@ -50,8 +63,10 @@ subgraphs has a $K_{r+2}^{-}$ minor.  All proofs are computation-free.
 \section{Introduction}
 
 Hadwiger's conjecture states that every graph of chromatic number $t$
-contains a $K_t$ minor~\cite{Hadwiger1943}.  The conjecture is open for
-$t=7$.  Write $K_t^{-}$
+contains a $K_t$ minor~\cite{Hadwiger1943}.  It is known for $t\leq6$, with
+the last case due to Robertson, Seymour and Thomas
+\cite{RobertsonSeymourThomas1993}, and is open for every $t\geq7$.
+Write $K_t^{-}$
 for the graph obtained from $K_t$ by deleting one edge, and write
 $K_7^{\vee}$ for the graph obtained from $K_7$ by deleting two incident
 edges.  Every $K_7^{-}$-minor-free graph is
@@ -73,30 +88,19 @@ argument first determines the entire neighbourhood.  A second rooted
 argument, using their $K^*_{4,2}$ bound, then shows that no
 degree-seven vertex can occur at all.
 
-We first state the unconditional linkage theorem used in that reduction.
-Rolek and Song proved its case $r=6$~\cite[Lemma~1.9]{RolekSong2017}; the
-argument below gives a direct uniform proof.
+Rolek and Song proved the next theorem for $r=6$
+\cite[Lemma~1.9]{RolekSong2017}.  We prove it for every $r\geq2$.
 
 \begin{theorem}\label{thm:two-cliques-intro}
 For every $r\geq2$, every $(r+1)$-connected graph containing two distinct
 $K_r$ subgraphs contains a $K_{r+2}^{-}$ minor.
 \end{theorem}
 
-For $2\leq r\leq6$, Theorem~\ref{thm:two-cliques-intro} also follows from
-Rolek and Song's result.  Adjoin a universal clique of order $6-r$.  The
-resulting graph is seven-connected and contains two distinct $K_6$
-subgraphs: deleting at most six vertices either leaves an added universal
-vertex or removes the whole added clique and at most $r$ vertices of the
-original graph.  Their lemma therefore gives a $K_8^{-}$ model.  Since the
-model bags are disjoint, at most $6-r$ of them meet the added clique.
-Discard those bags and retain any $r+2$ of the remaining bags; they form a
-$K_{r+2}^{-}$ model.  We include the direct proof because it applies for
-every $r\geq2$ and gives the localisation in
-Lemma~\ref{lem:disjoint-cliques}.  The connectivity hypothesis is sharp:
+The connectivity hypothesis is sharp:
 $K_{r+1}$ is $r$-connected and contains two distinct $K_r$ subgraphs, but
 has no $K_{r+2}^{-}$ minor.
 
-The following rooted closure is the main local tool.  A graph is
+The rooted closure below is the main local tool.  A graph is
 \emph{minor-minimal non-six-colourable} if it is not six-colourable and
 every proper minor is six-colourable.
 
@@ -109,7 +113,7 @@ $d\geq5$, and suppose that $G[N(v)]$ contains a $K_4$ subgraph.  If
 then $K_7^{-}\minor G$.
 \end{theorem}
 
-Our principal result gives the resulting critical-host structure.
+The closure gives the following consequences for a critical graph.
 
 \begin{theorem}\label{thm:package-intro}
 Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph.
@@ -130,6 +134,47 @@ Moreover, $G$ contains no $K_5$ subgraph and
 Every degree-eight vertex of $G$ has a $K_4$-free neighbourhood.
 \end{theorem}
 
+Four independent degree-eight vertices yield a simultaneous reduction.  A
+minor model is \emph{rooted} at nominated vertices when its
+branch sets contain them one-to-one.
+
+\begin{theorem}\label{thm:four-centre-intro}
+Let $G$ be as in Theorem~\ref{thm:package-intro}.  There is an independent
+four-set $U$ of degree-eight vertices.  Put $H=G-U$.  Then $H$ is
+three-connected, nonplanar, and six-chromatic, and
+$\kappa(G)\in\{7,8\}$.
+
+Fix $r\in U$, a six-colouring $\varphi$ of $G-r$, and four colours which
+occur exactly once on $N_G(r)$, with representatives
+$x_1,x_2,x_3,x_4$.  Exactly one of the following holds.
+
+\begin{enumerate}
+\item The graph $H$ has a $K_4$ minor rooted at
+      $x_1,x_2,x_3,x_4$.  Together with the singleton branch set $\{r\}$,
+      this is a $K_5$ minor in $G-(U-\{r\})$ with branch sets containing
+      $r,x_1,x_2,x_3,x_4$, respectively.
+\item The graph $H$ is a spanning subgraph of a web rooted at
+      $x_1,x_2,x_3,x_4$.  A facial three-set $T$ of the containing web has
+      a nonempty connected set $C$ behind it such that
+      \[
+             N_H(C)=T,\qquad
+             N_G(C)=U\mathbin{\dot\cup}T.              \tag{1.1}
+      \]
+      Here $T$ is not asserted to be a triangle in $G$; in fact it is not.
+\end{enumerate}
+
+If $\kappa(G)=8$, only the first outcome occurs.  If $\kappa(G)=7$, every
+proper three-separation of $H$ lifts to an order-seven separation whose
+separator consists of $U$ together with its three-vertex separator in $H$.
+Oriented between
+two fixed vertices lying on opposite open sides of every separation, these
+separations form a meet/join lattice.  If three such separations have all eight
+sign regions nonempty, each member of $U$ has exactly one neighbour in each
+region; four separations cannot have all sixteen sign regions nonempty.  Moreover,
+in the web outcome an alternating bichromatic component passes through a
+member of $U-\{r\}$.
+\end{theorem}
+
 Albar proved the analogous lower bound of twenty-five degree-eight
 vertices for a hypothetical minor-minimal non-seven-colourable
 $K_7^{-}$-minor-free graph~\cite[Lemma~6]{Albar2014}.  Theorem
@@ -144,8 +189,6 @@ $H\minor G$ to denote that $H$ is a minor of $G$.  All graphs are finite
 and simple.
 
 \section{Two linked cliques}
-
-We begin with the disjoint case.
 
 \begin{lemma}\label{lem:disjoint-cliques}
 Let $r\geq2$.  If an $(r+1)$-connected graph $H$ contains two
@@ -220,8 +263,7 @@ $r$.  Thus $C$ is adjacent to every vertex of $X$.  The vertices of $X$
 as singleton branch sets, together with $C$, form a $K_{r+2}^{-}$ model.
 \end{proof}
 
-The case $r=5$ gives the following form used throughout the
-paper.
+We use the case $r=5$ throughout the paper.
 
 \begin{corollary}\label{cor:unique-k5}
 Every six-connected $K_7^{-}$-minor-free graph contains at most one $K_5$
@@ -230,20 +272,22 @@ subgraph.
 
 \section{Degree-seven neighbourhoods}
 
-We use two standard facts about contraction-critical graphs.  A
-noncomplete $k$-contraction-critical graph is seven-connected when
+We use two standard facts about contraction-critical graphs.  A graph is
+\emph{$k$-contraction-critical} if it has chromatic number $k$ and every
+proper minor is $(k-1)$-colourable.  A noncomplete
+$k$-contraction-critical graph is seven-connected when
 $k\geq7$~\cite[Satz~6]{Mader1968Connectivity}; see also
 \cite[Theorem~1.8]{RolekSong2017}.  Also, if $G$ is $k$-contraction-critical
 and $v\in V(G)$, then
 \[
-        \alpha(G[\N(v)])\leq d(v)-k+2;
+        \alpha(G[\N(v)])\leq d(v)-k+2.
                                                         \tag{3.1}
 \]
 This inequality goes back to Dirac~\cite{Dirac1960}; we use the exact
 formulation in \cite[Lemma~1.6(i)]{RolekSong2017}.
 
-The following is an immediate specialization of Theorem~7 and the
-definition of property $(*)$ in Kriesell and
+We use an immediate specialization of Theorem~7 and property $(*)$ in
+Kriesell and
 Mohr~\cite[Theorem~7]{KriesellMohr2019}.  Let a graph $J$ be properly
 coloured with five colours, and choose one root from each colour class.
 Let $D$ be a graph on the five roots with at most six edges.  If the ends
@@ -278,7 +322,7 @@ at $v$.
 Delete the colour-$0$ class from $G-v$.  The resulting graph is properly
 five-coloured, with $R$ a transversal of its colour classes.  By Mantel's
 theorem, the triangle-free graph $F[R]$ has at most six edges.  The
-Kriesell--Mohr result, applied with demand graph $F[R]$, gives five
+Kriesell and Mohr result, applied with demand graph $F[R]$, gives five
 disjoint connected sets rooted at $R$ and adjacent for every nonedge of
 $H[R]$.  Every other pair is joined by its edge in $H[R]$, so the five
 sets form the required rooted $K_5$ model.
@@ -320,7 +364,7 @@ degree at least five: its independent neighbourhood would contain a
 vertex of degree at most two.  Thus every degree is three or four.  The
 degree sum is even, so some vertex $z$ has degree four.  Its four
 neighbours are independent.  Each is adjacent to both vertices outside
-$\N_F[z]$ in order to have degree at least three, and those two outside
+$\N_F[z]$ to have degree at least three, and those two outside
 vertices are nonadjacent by triangle-freeness.  Hence $F\cong K_{3,4}$.
 Taking complements gives (3.2).
 \end{proof}
@@ -344,21 +388,22 @@ The only point not already stated is the exclusion of the second graph in
 contradicts Corollary~\ref{cor:unique-k5}.
 \end{proof}
 
-\section{Rooted two-helper closure}
+\section[Rooted-model closure]{Rooted
+\texorpdfstring{$K^*_{4,2}$}{K-star(4,2)} closure}
 
 For a graph $F$ and $S\subseteq V(F)$, say that $(F,S)$ is
 \emph{internally $k$-connected} if there is no separation $(A,B)$ of $F$
 with $S\subseteq A$, $B\setminus A\ne\varnothing$, and
 $|A\cap B|<k$.  A $Z$-rooted $K^*_{4,2}$ model consists of four pairwise
-disjoint connected root bags, one containing each member of the four-set
-$Z$, and two further disjoint connected helper bags.  Each helper is
-adjacent to all four root bags, and the helpers are adjacent to one another;
-no adjacency between distinct root bags is required.
+disjoint connected branch sets, one containing each member of the four-set
+$Z$, and two further branch sets $U,V$.  Each of $U,V$ is adjacent to all
+four rooted branch sets and to the other; no adjacency between distinct
+rooted branch sets is required.
 
-We use the following rooted bound of Norin and
+We use the rooted bound of Norin and
 Totschnig~\cite[Lemma~12]{NorinTotschnig2025}.
 
-\begin{theorem}[Norin--Totschnig]
+\begin{theorem}[Norin and Totschnig]
 \label{thm:rooted-two-helper-bound}
 Let $F$ be a graph and let $Z\subseteq V(F)$ have order four.  If $(F,Z)$
 is internally four-connected and $F$ has no $Z$-rooted $K^*_{4,2}$ model,
@@ -369,41 +414,43 @@ then
 \end{theorem}
 
 The next elementary augmentation places one additional prescribed vertex
-in a helper bag.
+in a non-root branch set.
 
 \begin{lemma}\label{lem:fifth-root-helper}
 Let $F$ be a graph and let $S=Z\mathbin{\dot\cup}\{x\}$, where $|Z|=4$.
 Suppose that $(F,S)$ is internally five-connected.  If $F$ has a
 $Z$-rooted $K^*_{4,2}$ model, then it has one in which $x$ belongs to a
-helper bag.
+non-root branch set.
 \end{lemma}
 
 \begin{proof}
-Choose a $Z$-rooted model whose helper bags $U,V$ have maximum total order
-and, subject to that, whose root bags $R_1,\ldots,R_4$ have minimum total
-order.  Write $z_i$ for the root in $R_i$, and put
+Choose a $Z$-rooted model that maximizes $|U|+|V|$ over its two non-root
+branch sets $U,V$ and, subject to that, minimizes
+$\sum_{i=1}^4|R_i|$ over its rooted branch sets $R_1,\ldots,R_4$.
+Write $z_i$ for the root in $R_i$, and put
 \[
         P_i=\{r\in R_i:r\text{ has a neighbour in }U\cup V\}.
 \]
-We claim that $|P_i|=1$.  Both helpers meet $R_i$, so $P_i$ is nonempty.
+We claim that $|P_i|=1$.  Both $U$ and $V$ meet $R_i$, so $P_i$ is nonempty.
 If it had at least two vertices, there would be distinct $u,w\in R_i$
-such that $u$ meets $U$ and $w$ meets $V$; otherwise both helper-contact
-sets would be the same singleton.  Take a minimal tree in $F[R_i]$
-containing $z_i,u,w$.  By the minimal choice of the root bags, this tree
+such that $u$ meets $U$ and $w$ meets $V$; otherwise the two contact sets
+would be the same singleton.  Take a minimal tree in $F[R_i]$
+containing $z_i,u,w$.  By the minimal choice of the rooted branch sets, this tree
 spans $R_i$.  One of $u,w$, say $u$, is a leaf different from $z_i$.
 Moving $u$ from $R_i$ into $U$ preserves connectivity of both altered
-bags.  The former tree edge from $u$ to $R_i\setminus\{u\}$ preserves the
-$R_i$--$U$ contact, while $w$ preserves the $R_i$--$V$ contact.  Every
-other required adjacency is unchanged, contradicting maximality of the
-helper union.  Hence $|P_i|=1$.
+branch sets.  The former tree edge from $u$ to $R_i\setminus\{u\}$ preserves the
+contact between $R_i$ and $U$, while $w$ preserves the contact between
+$R_i$ and $V$.  Every
+other required adjacency is unchanged, contradicting the maximality of
+$|U|+|V|$.  Hence $|P_i|=1$.
 
-No component outside the six model bags can meet $U\cup V$, since it could
-be absorbed into a helper that it meets.  It follows that
+No component outside the six branch sets can meet $U\cup V$, since it could
+be absorbed into whichever of $U,V$ it meets.  It follows that
 \[
         |N_F(U\cup V)\setminus(U\cup V)|\leq4,           \tag{4.2}
 \]
-with at most one external neighbour in each root bag.  If $x$ were outside
-the helper bags, (4.2) would give a separation of $(F,S)$ of order at most
+with at most one external neighbour in each rooted branch set.  If
+$x\notin U\cup V$, (4.2) would give a separation of $(F,S)$ of order at most
 four whose second open side is the nonempty set $U\cup V$.  This
 contradicts internal five-connectivity.  Thus $x\in U\cup V$.
 \end{proof}
@@ -423,18 +470,18 @@ $(F,Z\cup\{x\})$ is internally five-connected.  Moreover,
 \]
 Theorem~\ref{thm:rooted-two-helper-bound} supplies a $Z$-rooted
 $K^*_{4,2}$ model in $F$, and Lemma~\ref{lem:fifth-root-helper} lets us
-choose it with $x$ in one helper bag.
+choose it with $x$ in one non-root branch set.
 
-The four root bags are pairwise adjacent through the literal edges of
-$G[Z]=K_4$.  Together with the two adjacent helpers they form a $K_6$
-model.  The singleton bag $\{v\}$ is adjacent to all four root bags and to
-the helper containing $x$; it may miss only the other helper.  These seven
-bags form a $K_7^{-}$ model in $G$.
+The four rooted branch sets are pairwise adjacent through the edges of
+$G[Z]=K_4$.  Together with the two non-root branch sets they form a $K_6$
+model.  The singleton branch set $\{v\}$ is adjacent to all four rooted
+branch sets and to the one containing $x$; it may miss only the other.
+These seven branch sets form a $K_7^{-}$ model in $G$.
 \end{proof}
 
-\section{Critical-host consequences}
+\section{Consequences for a critical graph}
 
-We first record the density input.  Jakobsen proved that an $n$-vertex
+Jakobsen proved that an $n$-vertex
 graph with $n\geq7$ and at least $\frac92n-12$ edges contains a
 $K_7^{-}$ minor or is a $(K_{2,2,2,2},K_6,4)$-cockade
 \cite[Theorem~4]{Jakobsen1983}; see also \cite[Theorem~2]{Albar2014}.
@@ -448,7 +495,7 @@ $m=|E(G)|$, then
 \end{lemma}
 
 \begin{proof}
-The graph $G$ is not either base graph of the cockade family, since both
+The graph $G$ is neither base graph of the cockade family, since both
 $K_6$ and $K_{2,2,2,2}$ are six-colourable.  A nontrivial cockade has a
 vertex cut of order four, whereas $G$ is seven-connected.  Thus $G$ is not
 an exceptional cockade.  Since it has no $K_7^{-}$ minor, Jakobsen's
@@ -518,8 +565,466 @@ Therefore $n_8\geq25+\tau$.  If a degree-eight vertex had a $K_4$ in its
 neighbourhood, it would belong to a $K_5$, which has just been excluded.
 \end{proof}
 
-Theorem~\ref{thm:package-intro} reduces the Norin--Totschnig conjecture to
-an extremal statement only in the $4n$ range.
+\section{Four independent degree-eight vertices}
+
+We prove Theorem~\ref{thm:four-centre-intro} using $R(5,4)=25$, which
+follows by complement symmetry from the theorem of McKay and
+Radziszowski~\cite{McKayRadziszowski1995}, and the rooted $K_4$ theorem of
+Fabila-Monroy and Wood~\cite{FabilaMonroyWood2013}.
+
+\begin{lemma}\label{lem:deleted-four-centres}
+Let $G$ be as in Theorem~\ref{thm:package-intro}.  Then $G$ contains an
+independent four-set $U$ of degree-eight
+vertices.  For every such set, $H=G-U$ is three-connected, nonplanar, and
+six-chromatic.  Moreover $\kappa(G)\in\{7,8\}$, and if $\kappa(G)=8$ then
+$H$ is four-connected.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:package-intro}, at least twenty-five vertices have
+degree eight and $G$ contains no $K_5$ subgraph.  The Ramsey equality
+$R(5,4)=25$ therefore supplies the required independent set $U$.
+
+Deleting four vertices lowers connectivity by at most four, so $H$ is
+three-connected, and is four-connected when $G$ is eight-connected.  For
+each $u\in U$, the set $N_G(u)$ separates $u$ from the other members of
+$U$, whence $\kappa(G)\leq8$.
+
+The independence and degrees of the four vertices give
+\[
+ |E(H)|=|E(G)|-32\geq4|V(H)|-16.
+\]
+Since $|V(H)|\geq21$, this exceeds $3|V(H)|-6$, so $H$ is nonplanar.
+It is six-colourable as a proper minor of $G$.  A five-colouring of $H$
+would extend to a six-colouring of $G$ by assigning one new colour to all
+of $U$.  Thus $\chi(H)=6$.
+\end{proof}
+
+For the rest of this section, let $G$ be as in
+Theorem~\ref{thm:package-intro}, let $U$ be an independent four-set of
+degree-eight vertices, and put $H=G-U$.  Statements involving
+$r,\varphi,x_1,x_2,x_3,x_4$ use the choices in
+Theorem~\ref{thm:four-centre-web}; in its web outcome, $T,C$, and
+$S=U\mathbin{\dot\cup}T$ have the meanings fixed there.
+
+\subsection{The rooted-web alternative}
+
+A web
+rooted at four nominated vertices has a plane skeleton with the roots on
+its outer face; additional clique sets may be placed behind facial
+triangles and joined to all three vertices of the corresponding triangle.
+We call the three vertices of such a triangle a \emph{facial three-set};
+they need not induce a triangle in a spanning subgraph of the web.
+Fabila-Monroy and Wood proved that a three-connected graph has a $K_4$
+minor rooted at four nominated vertices if and only if it is not a spanning
+subgraph of a web rooted at those vertices
+\cite[Theorem~8]{FabilaMonroyWood2013}.  Edges of a facial triangle in the
+containing web need not be edges of the spanning subgraph.
+
+\begin{theorem}\label{thm:four-centre-web}
+Fix $r\in U$ and a proper six-colouring $\varphi$ of $G-r$.  Choose four
+colours occurring exactly once on $N_G(r)$, and let
+$x_1,x_2,x_3,x_4$ be their unique representatives.  Exactly one of the
+following holds.
+
+\begin{enumerate}
+\item $H$ contains a $K_4$ model rooted at $x_1,x_2,x_3,x_4$.
+      Together with $\{r\}$, this is a $K_5$ model in
+      $G-(U-\{r\})$.
+\item $H$ is a spanning subgraph of a web rooted at
+      $x_1,x_2,x_3,x_4$.  Some facial three-set $T$ and some nonempty
+      connected set $C\subseteq V(H)-T$ satisfy
+      \[
+             N_H(C)=T,\qquad
+             N_G(C)=S:=U\mathbin{\dot\cup}T.           \tag{6.1}
+      \]
+      No $x_i$ belongs to $C$, and at least one $x_i$ belongs to a component
+      of $G-S$ other than $C$.  Every component $D$ of $G-S$ satisfies
+      $N_G(D)=S$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Every colour occurs on $N_G(r)$, since otherwise $\varphi$ extends to
+$r$.  Six positive multiplicities summing to eight include at least four
+ones.  Since $U$ is independent, the corresponding representatives lie in
+$H$.
+
+Apply the rooted theorem quoted above to $H$.  Its rooted-model outcome
+gives item 1 because $r$ is adjacent to the nominated vertex in every rooted
+branch set.  All five branch sets avoid $U-\{r\}$.
+
+Otherwise $H$ is a spanning subgraph of the stated web.  Since $H$ is
+nonplanar, some clique set $X_T$ behind a facial three-set $T$ is nonempty
+in $H$.  Let $C$ be a component of $H[X_T]$.  Web containment gives
+$N_H(C)\subseteq T$.
+At least one outer root lies outside $T$, so three-connectivity forces
+$N_H(C)=T$.
+
+In $G$, every neighbour of $C$ lies in $T\cup U$.  The outer root chosen
+outside $T$ also lies outside $C\cup T\cup U$, so $N_G(C)$ separates it
+from $C$.  Seven-connectivity therefore forces $N_G(C)=T\cup U$, proving
+(6.1).  The vertices added behind $T$ are disjoint from the skeleton, so no
+$x_i$ belongs to $C$, and one lies outside the three-set $T$.  Finally, any
+component of $G-S$ whose
+neighbourhood were a proper subset of $S$ would contradict
+seven-connectivity.  Thus every component $D$ of $G-S$ has $N_G(D)=S$.
+\end{proof}
+
+\begin{corollary}\label{cor:eight-connected-four-centre}
+If $\kappa(G)=8$, item 1 of Theorem~\ref{thm:four-centre-web} holds for
+every choice of $r$, $\varphi$, and the four singleton-colour neighbours.
+\end{corollary}
+
+\begin{proof}
+Item 2 gives a seven-vertex separator.
+\end{proof}
+
+\subsection{Minimum lift order}
+
+For $u\in U$, write $N_H(u)=N_G(u)\cap V(H)$.  For a separation
+$p=(A,B)$ of $H$, write
+\[
+ L_p=A-B,\qquad R_p=B-A,\qquad S_p=A\cap B,
+\]
+and say that $u$ \emph{crosses} $p$ if it has a neighbour in both $L_p$
+and $R_p$.  Define
+\begin{align}
+ C_U(p)&=\{u\in U:N_H(u)\cap L_p\ne\varnothing\ne
+                         N_H(u)\cap R_p\},\notag\\
+ \lambda_U(p)&=|S_p|+|C_U(p)|.                         \tag{6.2}
+\end{align}
+A lift of $p$ is \emph{trace-preserving} if its intersections with $H$ are
+exactly $A$ and $B$.
+
+\begin{theorem}\label{thm:lift-order}
+For every separation $p$ of $H$, the number $\lambda_U(p)$ is the minimum
+order of a trace-preserving lift to $G$.  The function $\lambda_U$ is
+symmetric and submodular.  More precisely, for separations $p=(A,B)$ and
+$q=(C,D)$, put
+\[
+ p\wedge q=(A\cap C,B\cup D),\qquad
+ p\vee q=(A\cup C,B\cap D).
+\]
+Then
+\[
+ \lambda_U(p\wedge q)+\lambda_U(p\vee q)
+       \leq\lambda_U(p)+\lambda_U(q).                  \tag{6.3}
+\]
+If equality holds, equality holds separately for the crossing indicator
+of every $u\in U$.  If $G$ is $k$-connected and $p$ is proper, then
+$\lambda_U(p)\geq k$.
+\end{theorem}
+
+\begin{proof}
+Every lift must put $S_p$ and every member of $C_U(p)$ in its separator.
+Conversely, put precisely those vertices there; put each remaining member
+of $U$ on a side containing all its neighbours outside $S_p$.
+The independence of $U$ creates no crossing edge.  This proves the minimum
+formula and also symmetry.
+
+The ordinary separator terms satisfy the modular identity
+\[
+ |S_p|+|S_q|=|S_{p\wedge q}|+|S_{p\vee q}|.            \tag{6.4}
+\]
+For one fixed $u$, its crossing indicator is submodular.  Indeed,
+\[
+\begin{aligned}
+ L_{p\wedge q}&=L_p\cap L_q,&R_{p\wedge q}&=R_p\cup R_q,\\
+ L_{p\vee q}&=L_p\cup L_q,&R_{p\vee q}&=R_p\cap R_q.
+\end{aligned}
+\]
+If $u$ crosses both corners it crosses both inputs; if it crosses only one
+corner it crosses at least one input.  Summing over $U$ and using (6.4)
+proves (6.3), and equality in the sum implies equality for each $u\in U$.
+A proper separation of $H$ has a proper minimum lift, so $k$-connectivity
+gives the last assertion.
+\end{proof}
+
+For a family of oriented separations, fix vertices $a,b$ such that
+$a\in L_p$ and $b\in R_p$ for every separation $p$ in the family.
+
+\begin{corollary}\label{cor:four-centre-lattice}
+Assume $\kappa(G)=7$.  Every proper three-separation $p$ of $H$ is crossed
+by all four members of $U$ and lifts to an order-seven separation with
+separator $U\mathbin{\dot\cup}S_p$, where $S_p$ is its three-vertex
+separator in $H$.  Conversely, the trace of every order-seven separation of
+this form is a proper three-separation of $H$ crossed by all four members of
+$U$.
+
+For fixed $a,b$ as above, these oriented separations form a finite meet/join
+lattice.  Its inclusion-minimum open side containing $a$ is connected.
+\end{corollary}
+
+\begin{proof}
+For a proper three-separation, Theorem~\ref{thm:lift-order} gives
+$3+|C_U(p)|\geq7$, so all four members of $U$ cross and equality holds.
+Conversely, every vertex in the separator of an order-seven separation of a
+seven-connected graph has a neighbour in both open sides; otherwise the
+other six separator vertices would still separate one side.
+
+If two order-seven separations have the same fixed vertices $a,b$, their
+meet and join are proper.  Connectivity bounds each corner order below by
+seven, while submodularity bounds their sum above by fourteen.  Both corners
+therefore have order seven.  Equality in (6.3), together with the pointwise
+equality clause of Theorem~\ref{thm:lift-order}, makes every member of $U$
+cross both corners.  Hence each corner has $H$-separator order $7-4=3$, so
+repeated meets stay in the stated family and give the minimum open side.  If
+that side were disconnected, the component containing $a$ would have
+neighbourhood contained in the same seven-set.  Seven-connectivity makes
+that neighbourhood the whole separator, producing a smaller open side
+containing $a$, a contradiction.
+\end{proof}
+
+\begin{corollary}\label{cor:crossing-regions}
+Let $p_1,\ldots,p_m$ be proper three-separations of $H$ whose
+trace-preserving lifts have order seven as in
+Corollary~\ref{cor:four-centre-lattice}.  For
+$\sigma\in\{+,-\}^m$, let $R_\sigma$ be the intersection of the open
+sides selected by its signs.  If both $R_\sigma$ and $R_{-\sigma}$ are
+nonempty, then every $u\in U$ has a neighbour in $R_\sigma$.
+
+Consequently at most eight sign regions whose antipodal regions are also
+nonempty can occur.  If all four regions of two separations are nonempty,
+every member of $U$ meets all four.  If all eight regions of three
+separations are nonempty, every member of $U$ has exactly one neighbour in
+each region and no separator neighbour.  Four separations cannot have all
+sixteen sign regions nonempty.
+\end{corollary}
+
+\begin{proof}
+Choose $a\in R_\sigma$ and $b\in R_{-\sigma}$, orient the separations
+accordingly, and take repeated meets.  Corollary
+\ref{cor:four-centre-lattice} gives another order-seven separation whose
+selected open side is $R_\sigma$; every member of $U$ crosses it.  Distinct
+regions are disjoint and every member of $U$ has degree eight, giving all
+the conclusions.
+\end{proof}
+
+\subsection{The colour-labelled web obstruction}
+
+\begin{theorem}\label{thm:centre-kempe}
+Assume the web outcome and list $x_1,x_2,x_3,x_4$ in their cyclic order on
+the outer face.  Put $c_i=\varphi(x_i)$.  Every pair $x_i,x_j$ lies in the
+same $(c_i,c_j)$-component of $G-r$.  Let $K_{13}$ be the
+$(c_1,c_3)$-component
+containing $x_1,x_3$, and define $K_{24}$ analogously.  Then $K_{13}$ and
+$K_{24}$ are vertex-disjoint, and at least one contains a member of
+$U-\{r\}$.
+
+If $\Delta$ is the set of two unselected colours, some
+$s\in U-\{r\}$ sees both colours of $\Delta$ in $H$.
+\end{theorem}
+
+\begin{proof}
+If $x_i,x_j$ were in different $(c_i,c_j)$-components, interchange the two
+colours on the component containing $x_i$.  Since $x_i$ and $x_j$ are the
+unique neighbours of $r$ in their respective colours, colour $c_i$ would
+then be absent from $N_G(r)$, and could be assigned to $r$.  This is
+impossible.
+
+The two components $K_{13}$ and $K_{24}$ use disjoint colour pairs and
+hence are vertex-disjoint.  If both avoided $U-\{r\}$, they would give in
+$H$ two disjoint paths joining alternating outer pairs, contrary to the
+Two Paths description of a web
+\cite[Lemma~2 and the first proof of Lemma~4]{FabilaMonroyWood2013}.
+
+Suppose finally that every $s\in U-\{r\}$ missed in $N_H(s)$ some colour
+$\delta_s\in\Delta$.  Recolour each $s$ with $\delta_s$.  These changes
+are simultaneous and proper because $U$ is independent, and they do not
+change the colours on $N_G(r)$.  Repeating the preceding argument, both
+alternating components now avoid $U-\{r\}$, the same contradiction.
+\end{proof}
+
+\subsection{The facial three-set}
+
+\begin{corollary}\label{cor:web-boundary-residue}
+In the web outcome, $G[T]$ is not a triangle.
+\end{corollary}
+
+\begin{proof}
+Suppose that $G[T]$ is a triangle, say $T=\{t_1,t_2,t_3\}$.  Let
+$R=V(G)-(C\cup S)$.  Since $G$ is seven-connected, every component of
+$G-S$ has neighbourhood $S$, so both $C\cup U$ and $R\cup U$ are connected.
+Contract a spanning tree of $C\cup U$, six-colour the proper minor, and pull
+the colouring back only to $G[R\cup S]$.  Its colour classes on $S$ are
+\[
+                         U\mid\{t_1\}\mid\{t_2\}
+                           \mid\{t_3\}.                \tag{6.5}
+\]
+Contracting $R\cup U$ instead produces the same colour classes on
+$G[C\cup S]$.  A permutation of colour names aligns the two colourings,
+which then glue to a six-colouring of $G$, a contradiction.
+\end{proof}
+
+\subsection{A colouring response to an edge deletion at the web separator}
+
+\begin{theorem}[Controlled paths or a smaller component]
+\label{thm:web-edge-response}
+Assume outcome 2 of Theorem~\ref{thm:four-centre-web}.  Choose $x=x_j$ in
+a component $D$ of $G-S$ distinct from $C$, put
+$\gamma=\varphi(x)$, and let $e=rx$.  Thus
+$S=U\mathbin{\dot\cup}T$ and $N_G(C)=N_G(D)=S$.
+Extend $\varphi$ to $r$ by assigning colour $\gamma$ to $r$, and call the
+resulting map $d$.  Then $d$ is a proper six-colouring of $G-e$.
+
+For every colour $\beta\ne\gamma$, the vertices $x$ and $r$ lie in the same
+$(\gamma,\beta)$-component of $G-e$.  Choose a simple path from $x$ to $r$
+in this component, orient it from $x$, and stop it at its first vertex
+$q_\beta\in S$.  Write $xy_\beta$ for its first edge; the stopped path has
+all internal vertices in $D$.  Put
+\[
+ Q_0=\{r\}\cup\{q_\beta:\beta\ne\gamma\}.
+\]
+The five vertices $y_\beta$ are distinct.  At least one of the following
+holds.
+
+\begin{enumerate}
+\item There is a set $Q\subseteq S$ with $Q_0\subseteq Q$ and $|Q|\leq6$,
+      and five paths from $x$ to $Q$ which begin with the prescribed edges
+      $xy_\beta$ and are pairwise vertex-disjoint outside
+      $\{x\}\cup Q$.  Their ends in $Q$ need not be distinct.
+\item One has $|Q_0|\leq5$, and there are a five-set $Q\subseteq S$
+      containing $Q_0$, a four-set $Z\subseteq D-\{x\}$, and a nonempty
+      connected set $A\subseteq D-(\{x\}\cup Z)$ such that
+      \[
+        N_G(A)=(S-Q)\mathbin{\dot\cup}\{x\}
+                         \mathbin{\dot\cup}Z.            \tag{6.6}
+      \]
+      In particular, $N_G(A)$ is a seven-vertex separator and
+      $|A|<|D|$.  The restriction of $d$ to
+      $G[A\cup N_G(A)]$ is a proper six-colouring.  If
+      \[
+          J=\{z\in N_G(A):d(z)=\gamma\},
+      \]
+      then $|J|\geq2$.  In this colouring, and also in some proper
+      six-colouring of $G-A$, the set $J$ is exactly one colour class on
+      $N_G(A)$.
+\end{enumerate}
+
+Independently of which alternative occurs, there is a fan from $x$ to six
+distinct vertices of $S$, consisting of the edge $xr$ and five paths
+beginning with the prescribed edges $xy_\beta$.  Delete $x$ from the five
+non-direct paths and denote the resulting disjoint connected sets by
+$L_\beta$.  The contact graph of these five sets, in which two are
+adjacent when they have an edge between them in $G$, has at most eight
+edges.
+\end{theorem}
+
+\begin{proof}
+The vertex $x$ is the unique $\gamma$-coloured neighbour of $r$.
+Consequently $rx$ is the only monochromatic edge after restoring $r$, so
+$d$ is proper on $G-e$.
+
+Fix $\beta\ne\gamma$.  If $x$ and $r$ belonged to different
+$(\gamma,\beta)$-components, interchange the two colours on the component
+containing $x$.  Every $\beta$-coloured neighbour of $r$ lies in the
+component containing $r$, and $x$ is its only $\gamma$-coloured neighbour.
+The interchange would therefore repair $rx$ without creating another
+conflict at $r$, giving a six-colouring of $G$.  This contradiction proves
+the claimed connection.  Since $d(x)=\gamma$, each $y_\beta$ has colour
+$\beta$; hence the five vertices $y_\beta$, and the five prescribed edges,
+are distinct.
+
+Let $I=\{\beta:y_\beta=q_\beta\}$ be the colours whose prescribed path is
+already a boundary edge, and put $q=|I|$.
+
+Suppose first that $|Q_0|\leq5$, and enlarge $Q_0$ to a five-set
+$Q\subseteq S$.  Retain the $q$ direct paths.  In
+\[
+                    G[(D-\{x\})\cup Q]
+\]
+seek paths from the other $5-q$ vertices $y_\beta$ to $Q$, using every
+source, with unit vertex capacity in $D-\{x\}$ and unrestricted capacity
+at $Q$.  If such a routing exists, prepending the prescribed first edges
+gives outcome 1.
+
+Otherwise, the capacitated form of Menger's theorem gives a set
+$Z\subseteq D-\{x\}$ with $|Z|\leq4-q$ meeting every such path.  Some
+remaining source avoids $Z$; let $A$ be its component in
+$G[D-(\{x\}\cup Z)]$.  It has no neighbour in $Q$, and therefore
+\[
+             N_G(A)\subseteq(S-Q)\cup\{x\}\cup Z.
+\]
+The right side has order at most $7-q$.  The nonempty component $C$ lies
+on the other side, so this is a genuine separation.  Seven-connectivity
+forces $q=0$, $|Z|=4$, and equality throughout, proving (6.6).
+
+For each $\beta\ne\gamma$, the original stopped path with $x$ deleted
+joins $y_\beta$ to $Q$, and hence meets $Z$.  Choose one such intersection
+vertex $z_\beta$.  Five choices in the four-set $Z$ give
+$z_\beta=z_{\beta'}$ for two distinct colours $\beta,\beta'$.  A common
+vertex of a $\gamma,\beta$ path and a $\gamma,\beta'$ path has colour
+$\gamma$.  Thus $J$ contains both this vertex and $x$, so $|J|\geq2$.
+
+The only edge on which $d$ is improper in $G$ is $rx$.  Since $r\in Q$,
+this edge is absent from $G[A\cup N_G(A)]$, so the restriction of $d$ to
+that graph is proper.  The set $A\cup J$ is connected, and $J$ is independent.
+Contract a spanning tree of $G[A\cup J]$ and six-colour the resulting
+proper minor.  Pull the colouring back to $G-A$, assigning every member of
+$J$ the colour of the contraction image.  That image is adjacent to every
+vertex of $N_G(A)-J$, so $J$ is exactly one colour class on $N_G(A)$.
+
+It remains to treat $|Q_0|=6$.  Set $Q=Q_0$ and retain the $q$ direct
+paths as above.  Failure to route the remaining sources to $Q$ would give
+a set $Z$ of order at most $4-q$ and a nonempty connected set
+$A\subseteq D-\{x\}$ satisfying
+\[
+             N_G(A)\subseteq(S-Q)\cup\{x\}\cup Z.
+\]
+This set has order at most $1+1+(4-q)\leq6$, again separates $A$ from
+$C$, and contradicts seven-connectivity.  Outcome 1 therefore holds.
+
+For the distinct-ended fan, again retain the $q$ prescribed edges which
+already end in $S$.  Put
+\[
+        W=S-\bigl(\{r\}\cup\{y_\beta:\beta\in I\}\bigr).
+\]
+Working in $G[(D-\{x\})\cup W]$, route the remaining $5-q$ vertices
+$y_\beta$ to distinct members of $W$.  If this routing failed, Menger's theorem would
+give a separator of order at most $4-q$.  Since there are $5-q$ sources
+and $6-q$ targets, at least one of each survives.  A surviving source
+component would then have its
+neighbourhood contained in that separator together with $x$, $r$, and the
+$q$ retained boundary ends, a set of order at most six.  A surviving
+target lies on the other side, contradicting seven-connectivity.
+Prepending the prescribed first edges and adjoining $xr$ gives the fan.
+
+Finally suppose that the contact graph of the five sets $L_\beta$ had at
+least nine edges.  The seven disjoint connected branch sets
+\[
+             \{x\},\qquad C\cup\{r\},\qquad
+             L_\beta\quad(\beta\ne\gamma)
+\]
+would form a $K_7^{-}$ model.  The first set meets every $L_\beta$ through
+its prescribed first edge.  The set $C\cup\{r\}$ is connected, meets
+$\{x\}$ through $rx$, and meets every $L_\beta$ through its distinct end
+in $S-\{r\}$ because $N_G(C)=S$.  Among the five remaining
+branch sets at most one adjacency is missing.  This contradicts the choice
+of $G$, and proves the contact bound.
+\end{proof}
+
+\begin{corollary}[Restoring one vertex of $U$]\label{cor:named-centre-repair}
+In the web outcome, for every $s\in U-\{r\}$ the graph
+$G-(U-\{s\})$ contains a $K_4$ model rooted at
+$x_1,x_2,x_3,x_4$, and every such model uses $s$.
+\end{corollary}
+
+\begin{proof}
+Deleting the three vertices of $U-\{s\}$ from the seven-connected graph
+$G$ leaves the four-connected graph $G-(U-\{s\})$.  It is nonplanar because
+it contains $H$.  The four-connected rooted-$K_4$ theorem of
+Fabila-Monroy and Wood~\cite[Theorem~6]{FabilaMonroyWood2013} therefore
+supplies the rooted model.  The graph $H$ has no such model in the web
+outcome, so every model in $G-(U-\{s\})$ must use $s$.
+\end{proof}
+
+The web case remains open: the smaller separator in
+Theorem~\ref{thm:web-edge-response} need not contain $U$, and the fan paths
+are not assigned to prescribed branch sets.  One must retain $U$ when passing
+to the smaller component or absorb the paths into one rooted model.
+
+\section{Extremal reduction and scope}
 
 \begin{corollary}[Extremal reduction]\label{cor:extremal-reduction}
 Suppose that every seven-connected graph $H$ satisfying
@@ -537,19 +1042,15 @@ graph $G$ is seven-connected and $|E(G)|\geq4|V(G)|$.  The assumed
 extremal statement therefore gives $K_7^{-}\minor G$, a contradiction.
 \end{proof}
 
-The extremal statement in Corollary~\ref{cor:extremal-reduction} remains
-open.  Thus the present paper does not prove the Norin--Totschnig
-conjecture, and it does not settle Hadwiger's conjecture for chromatic
-number seven.
+The extremal hypothesis remains open, so this paper proves neither the Norin
+and Totschnig conjecture nor Hadwiger's conjecture for $t=7$.
 
 \section*{Statement on AI use and independence}
 
-This research was conducted independently by Cavit Erginsoy using GPT-5.6
-Sol, a model developed by OpenAI.  GPT-5.6 Sol contributed substantially to
-theorem discovery, proof development, verification, and manuscript
-preparation.  Erginsoy directed and curated the research programme.  Erginsoy
-has no affiliation with OpenAI; OpenAI did not sponsor, supervise, endorse, or
-verify this work.
+GPT-5.6 Sol, an OpenAI model, contributed to theorem discovery, proofs,
+verification, and drafting.  Cavit Erginsoy directed the work and made the
+final decisions.  Erginsoy is not affiliated with OpenAI, and OpenAI neither
+sponsored nor verified the work.
 
 {\hbadness=2000
 \bibliographystyle{amsplain}

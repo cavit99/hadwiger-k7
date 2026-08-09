@@ -25,7 +25,8 @@ $$
 
 The conjecture is known for $t\le6$; the $t=6$ case is due to
 [Robertson, Seymour, and Thomas](https://doi.org/10.1007/BF01202354),
-building on the Four-Colour Theorem. This repository studies
+building on the Four-Colour Theorem. It remains open for every $t\ge7$.
+This repository studies
 
 $$
 HC_7:\qquad K_7\not\preccurlyeq G\quad\Longrightarrow\quad\chi(G)\le6.
@@ -50,9 +51,9 @@ G has no K_5 subgraph,  and  n_8 >= 25 + tau,
 ```
 
 where `tau` is the degree excess above nine.  Every degree-eight
-neighbourhood is `K_4`-free, and every order-seven cut has exactly two
-complementary components.  Thus the exact critical-host finishing target is
-to prove `n_8 <= 24`.  These are necessary structural conditions on a
+neighbourhood is `K_4`-free, and every seven-vertex separator leaves exactly
+two components.  Thus the remaining target for the critical graph is to
+prove `n_8 <= 24`.  These are necessary structural conditions on a
 hypothetical counterexample; they do not prove Conjecture 21 or `HC_7`.
 
 The direct `HC_7` programme is frozen.  Its audited bounded-separation,
@@ -71,13 +72,16 @@ than duplicated here.
 
 The adjacent `K_7^-` chain has been distilled into the concise,
 computation-free paper
-[Minimum Degree Eight in `K_7^-`-Minor-Free Contraction-Critical Graphs](paper/k7minus-low-degree/main.pdf),
+[Minimum Degree Eight and a Rooted-Web Reduction in `K_7^-`-Minor-Free
+Contraction-Critical Graphs](paper/k7minus-low-degree/main.pdf),
 with [LaTeX source](paper/k7minus-low-degree/main.tex), a
 [hash-pinned composed-manuscript audit](paper/k7minus-low-degree/main_audit.md),
 and a separate
 [internal citation and novelty review](paper/k7minus-low-degree/citation_novelty_review.md).
 Both reviews are internal checks, not external peer review or a priority
-certificate.  The broader
+certificate.  The manuscript includes the rooted `K_4`/web alternative for
+four independent degree-eight vertices and its edge-deletion reduction to
+controlled paths or a smaller separated component.  The broader
 [external-review blueprint](active/hc7_partial_results_external_review_blueprint.md)
 is frozen.  This manuscript proves neither the `K_7^-` six-colour conjecture
 nor `HC_7`.
@@ -88,15 +92,15 @@ nor `HC_7`.
 |---|---|
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current research status |
 | [`active/INDEX.md`](active/INDEX.md) | Concise navigation to live proof work |
-| [Critical-host exceptional-centre frontier](active/hc7_k7minus_seven_exceptional_frontier.md) | Sole active route, exact finishing reduction, and current support-allocation obstruction |
+| [Degree-eight finishing frontier](active/hc7_k7minus_seven_exceptional_frontier.md) | Sole active route, finishing reduction, and current support-allocation obstruction |
 | [`K_7^-` strict-density frontier](active/hc7_k7minus_density_frontier.md) | Stronger conditional `4n-2` route, minimal-enemy reductions, and exact nonclosures |
 | [External-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md) | Frozen theorem package, review questions, reproduction plan, and restart criteria |
 | [Live case verification map](active/hc7_live_case_dag.md) | Exhaustive global chain, conditional refinements, and every missing descent arrow |
 | [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Frozen all-degree target, direct inputs, and trust boundary |
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
-| [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Frozen hash-pinned review provenance predating the rooted-helper closure |
-| [`K_7^-` minimum-degree-eight paper](paper/k7minus-low-degree/main.pdf) | Concise computation-free manuscript containing the current low-degree/density critical-host theorem chain |
-| [Critical seven-cut capacity](results/hc7_k7minus_critical_seven_cut_capacity.md) | Excludes four-component seven-cuts in the critical host and normalises the three-component boundary |
+| [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Frozen hash-pinned review provenance predating the rooted `K^*_{4,2}` closure |
+| [`K_7^-` minimum-degree-eight and rooted-web paper](paper/k7minus-low-degree/main.pdf) | Concise computation-free manuscript containing the low-degree/density chain and the controlled-path or smaller-component reduction |
+| [Order-seven separator component bound](results/hc7_k7minus_critical_seven_cut_capacity.md) | Excludes four-component seven-vertex separators in the critical graph and normalises the three-component boundary |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
 | [Exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
