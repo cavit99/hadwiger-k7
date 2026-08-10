@@ -7154,6 +7154,30 @@ does_not_prove = [
 keywords = ["K7 minus", "degree seven", "literal K5", "exceptional degree eight", "Jakobsen defect"]
 
 [[claims]]
+id = "hc7.k7minus_alpha4_regular_ramsey_elimination"
+title = "The independence-four exceptional-centre branch is impossible"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_alpha4_regular_ramsey_elimination.md"
+active = true
+audit = "results/hc7_k7minus_alpha4_regular_ramsey_elimination_audit.md"
+expected_source_sha256 = "8838868b67a46aa611ee3f7c3a2b522c7ba559e5bc320d4ff1b0284bce8988de"
+scope = "the degree-eight vertices of a seven-connected seven-chromatic K7-minus-minor-free graph whose every proper minor is six-colourable"
+label_fidelity = "the independent four-set, all centre-incidence masks, and every degree-eight vertex remain literal"
+conclusions = [
+  "no 25-vertex 8-regular graph has independence number four and clique number at most four",
+  "the finite conclusion is certified by 40 independently checked DRAT refutations covering all 505 incidence vectors",
+  "the degree-eight subgraph of a critical K7-minus host cannot have independence number four",
+  "every hypothetical critical host contains five independent degree-eight centres",
+]
+does_not_prove = [
+  "elimination of the rooted-model or exact-separator outcomes from five centres",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "five independent centres", "regular Ramsey graph", "computer-assisted", "DRAT"]
+
+[[claims]]
 id = "hc7.k7minus_four_centre_web_cut_lattice"
 title = "Four independent degree-eight centres yield a rooted K5 or an exact-cut lattice"
 kind = "theorem"
@@ -9295,7 +9319,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "1dbd4b2a65de06f4ec47b15a316411e6dbdf468964ab4cc26eaccf51af55b8cd"
+expected_source_sha256 = "5edae6a14e860541eff512a886c4266d8c1b0ffaac095988399e92c5a4702668"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16270,6 +16294,24 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_critical_host_degree7_closure"
 kind = "uses"
 note = "The audited critical-host reduction eliminates degree seven and every literal K5 and forces at least 25 exceptional degree-eight vertices."
+
+[[relations]]
+source = "hc7.k7minus_alpha4_regular_ramsey_elimination"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "uses"
+note = "The critical-host theorem supplies K5-freeness, at least 25 degree-eight vertices and proper-minor six-colourability."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_alpha4_regular_ramsey_elimination"
+kind = "uses"
+note = "The audited finite theorem terminally eliminates independence number four and supplies five independent degree-eight centres for the active finishing route."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_alpha4_regular_ramsey_elimination"
+kind = "uses"
+note = "The exceptional-centre finishing target may now choose five of the forced degree-eight vertices independently."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"

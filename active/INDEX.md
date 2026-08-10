@@ -16,6 +16,7 @@ yield a `K_7` minor.
 Selected audited inputs:
 
 - [the critical host is `K_5`-free and has at least 25 degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
+- [the independence-four branch is impossible, so five degree-eight centres can be chosen independently](../results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)
 - [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
 - [boundary replacement and anchored uncrossing give trace-preserving strict descent](../results/hc7_k7minus_four_centre_trace_descent.md)
 - [the generalized-wheel outcome reduces to one canonical leaf with no two disjoint connected subgraphs adjacent to the whole boundary](../results/hc7_k7minus_four_centre_wheel_leaf_descent.md)
@@ -40,12 +41,14 @@ Immediate barriers:
 [Critical-host exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md)
 
 A hypothetical counterexample has no degree-seven vertices, no literal
-`K_5`, and at least 25 degree-eight vertices.  Four independent centres give
-either a colour-anchored rooted `K_5` or a nontriangular exact order-seven
-cut with a retained colouring trace.  On a minimum selected side `C`, exact
-boundary colourings leave one connected support and at most eight components
-that meet a centre.  In the paired case, the three Kempe connections sharpen
-to one `p`--`p'` path and two `p`--`q` paths with disjoint interiors.
+`K_5`, and at least 25 degree-eight vertices.  The complete
+independence-four branch is now eliminated, so five of those vertices can
+be chosen independently.  Any four of the five give either a
+colour-anchored rooted `K_5` or a nontriangular exact order-seven cut with a
+retained colouring trace.  On a minimum selected side `C`, exact boundary
+colourings leave one connected support and at most eight components that
+meet a centre.  In the paired case, the three Kempe connections sharpen to
+one `p`--`p'` path and two `p`--`q` paths with disjoint interiors.
 
 Changing the deleted centre now gives at most four inclusion-minimal regions
 inside the opposite component `D`.  Their interaction graph has maximum
@@ -71,16 +74,17 @@ with the first beginning at the literal replacement edge.  Rejection at the
 replacement-vertex cut already implies rejection at the centre cut, so the
 two rejections are one endpoint-language condition, not independent data.
 
-The unresolved task is fixed-trace synchronization in the remaining
-`2K_2` case and the internal-region squares of `P_4`.  A direct audit shows
-why one coordinate is insufficient: after fixing the old `C`-shore trace,
-rejection becomes a list obstruction in `D`, and a minimal obstruction can
-avoid the replacement vertex entirely.  The coordinate then disappears and
-the resulting separators stay nested on the wrong side of `C`.  The next
-accepted theorem must localize the two marked list changes of a whole square
-and return a fixed-trace colouring, an explicit `K_7^-` model, or an exact
-separator entering and strictly splitting `C`.  Another unlabelled cut or
-attachment census is not an accepted endpoint.
+Fixed-trace synchronization remains unresolved in the `2K_2` case and the
+internal-region squares of `P_4`; a minimal list obstruction can avoid a
+marked replacement vertex and stay nested on the wrong side of `C`.
+However, the preferred next theorem now uses all five independent centres.
+For `F=G-Z`, it must eliminate either a two-cut by combining its exact
+seven-vertex boundary, four-colour reserve, and rooted `5+2` connector, or
+the three-connected branch by composing the five rooted-model/web
+rotations.  Its only accepted exits are a six-colouring, an explicit
+`K_7^-` model, or strict descent retaining a common trace at the minimum
+side.  Another unlabelled cut or attachment census is not an accepted
+endpoint.
 
 ## Conditional and frozen routes
 

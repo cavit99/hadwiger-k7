@@ -64,12 +64,23 @@ technical statement, proved inputs and exact surviving allocation problem
 are recorded in the
 [critical-host frontier](active/hc7_k7minus_seven_exceptional_frontier.md).
 
+The audited
+[independence-four elimination](results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)
+now closes one exhaustive branch.  There is no 25-vertex 8-regular graph
+with independence number four and clique number at most four; the finite
+part is certified by 40 checked DRAT refutations.  Applied to the critical
+host, this rules out independence number four in the graph induced by its
+degree-eight vertices.  Since `R(4,5)=25` and the host has no literal
+`K_5`, every hypothetical counterexample therefore contains five
+independent degree-eight centres.
+
 ### 3. Immediate structural laboratory
 
-Because `R(4,5)=25` and the critical host contains no `K_5`, its degree-eight
-vertices contain four independent centres `U`.  Put `H=G-U`.  The audited
+Fix five independent degree-eight centres `Z`.  Any four-set `U subset Z`
+may be used in the audited
 [four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
-shows that `H` is three-connected, nonplanar and exactly six-chromatic.  For
+after putting `H=G-U`.  It shows that `H` is three-connected, nonplanar and
+exactly six-chromatic.  For
 every selected root in `U` and every fixed six-colouring after deleting that
 root, it gives exactly one of the following outcomes:
 
@@ -236,13 +247,19 @@ this branch.  Consequently the proposed one-coordinate transfer trichotomy
 does not follow from the existing package; this is a route nonclosure, not a
 counterexample under the full critical-host hypotheses.
 
-The immediate target is now square-level fixed-trace kernel localization.
-For the two marked list changes of a surviving `2K_2` square or
-internal-region `P_4` square, it must give a fixed-trace colouring and
-aligned endpoint repair, an explicit `K_7^-` model, or an exact fixed-trace
-or one-missing-centre separation entering and strictly splitting `C`.
-Kernels avoiding a marked endpoint must be included.  The `C_4` case is
-closed; another unlabelled separator or boundary census is not closure.
+The fifth independent centre changes the preferred next theorem.  The
+square-level fixed-trace kernel problem remains a valid conditional
+laboratory, but another theorem confined to one chosen four-set would not
+use the new global gain.  The immediate attack is a five-centre terminal
+composition.  Put `F=G-Z`.  In the two-cut branch, an exact separator
+`Z dotcup {p,q}` should be closed by the four-colour reserve left by the
+monochromatic-`Z`, equal-`p,q` boundary trace and a disjoint rooted `5+2`
+connector, or directly by an explicit `K_7^-` model.  In the three-connected
+branch, rotate the rooted-model/web outcome through all five choices of the
+omitted centre.  The accepted conclusion is a six-colouring of `G`, an
+explicit `K_7^-` model, or strict descent preserving one common trace and
+minimum-side anchor.  A further unlabelled separator, attachment census, or
+single-rotation sharpening is not an accepted endpoint.
 
 ## Sufficient but non-primary extremal route
 
