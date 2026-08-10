@@ -7,7 +7,8 @@ written and separately audited GREEN; the finite boundary claims have
 retained independently checked verifiers.  The four-centre theorem and its
 operation-coupled, tri-separation, trace-preserving, and generalized-wheel
 leaf refinements in Section 4 are also separately audited GREEN.  The
-accompanying scoped
+Boolean minimum-separator linkage and its exact one-coordinate response
+language in Section 4 are separately audited GREEN.  The accompanying scoped
 barriers are separately audited GREEN, while the list-core calculation in
 Section 3 remains a written live derivation without a separate audit.  The
 upper bound is open.  This file is not a second status ledger.
@@ -542,23 +543,67 @@ need not be related.  In the four-region case, if `Gamma` is `P_4` or
 would give an explicit `K_7^-` model.  This does not eliminate either
 interaction graph, and it gives no conclusion for `2K_2`.
 
-The remaining web-side theorem is now one-dimensional.  Across two adjacent
-cuts differing by `u` versus `x_{uP}`, rejection of the coherent boundary
-partitions on both sides must force one of the following:
+The audited
+[minimum-separator linkage theorem](../results/hc7_k7minus_boolean_minimum_separator_linkage.md)
+now anchors this geometry.  If `P subset D`, every coordinate path crosses
+the old minimum boundary at its named centre `u`; its suffix after `u` lies
+wholly in `C`.  Truncating one common linkage between the Boolean and old
+separators fixes every replaced coordinate as the literal edge
+`x_{uP}u`, every unreplaced centre as a trivial path, and bijects `T_P`
+with `T`.  The `u`--`C` suffix may be stopped at the interior of the clean
+fan's `p`--`p'` path.  Thus the old base-point and path-permutation
+ambiguities are gone.  This is path anchoring, not a replacement cut based
+at `C`; in particular, it does not prove `u in W_C`.
 
-1. disjoint connected subgraphs realizing the same boundary colour
-   partition on the other shore;
-2. the prescribed six-terminal rooted `K_6^-` minor in the selected side;
-3. a strict exact-cut descent retaining the fixed centres, colouring and
-   named vertices.
+For one coordinate, the same theorem gives an exact response-language
+normal form.  Write `Q` for the six-vertex separator of `G-ux`.  Rejection
+at the cut containing `x` already implies rejection at the cut containing
+`u`, because the coherent intact-side types of `x,u` are compatible.
+Hence “simultaneous rejection” is only one constraint.  Starting from any
+six-colouring `kappa` of `G-ux`, for which `kappa(u)=kappa(x)`, recolour
+only `u` on the original closed `P`-side.  At most four neighbour colours
+are forbidden there.  The resulting coherent colouring agrees with
+`kappa` on `Q`, removes the empty-language alternative, and forces one
+two-colour lock through each open shore.  The `P`-side lock begins with the
+literal edge `ux`.  Concatenating it with the anchored suffix produces one
+path whose colour-labelled prefix reaches the clean-fan support through
+the named centre; no colour conclusion holds on its `C`-tail.
 
-The audited boundary-colouring reflection theorem makes the first outcome
-a six-colouring of `G`; the opposite component completes the second outcome
-to a `K_7^-` minor.  Trace minimality excludes the third in a hypothetical
-counterexample.  The resulting coordinate must then be connected to the
-clean fan on the minimum side `C`.  The present square may be based at a
-different exact component, and linkage geometry alone does not align the
-proper-minor colourings.
+There is also an exact terminal criterion for separator transport.  If a
+proper order-four separation of `H=G-U`, crossed by exactly three centres,
+enters and splits `C` while retaining `x_j` in the opposite open side,
+fixed-anchor uncrossing with the old cut yields either a strict
+trace-admissible exact-`U` descent or an exact one-missing-centre cut
+strictly below the old separation.  The present Boolean cuts based in `D`
+are nested above the old cut and do not split `C`, so this criterion does
+not yet fire.
+
+The first unsupported inference is now fixed-trace synchronization.  The
+normalization uses an arbitrary colouring of `G-ux`, whereas the minimum
+side and clean fan use one fixed exact-`U` trace.  No proved step makes
+these the same witness.  The
+[odd-wheel mechanism barrier](../barriers/hc7_k7minus_local_coordinate_synchronization_barrier.md)
+has an exact lower-order cut, both adjacent lifted cuts, the common lower-cut
+partition, endpoint equality, coherent normalization, two-sided Kempe locks
+and a simultaneous literal coordinate linkage, but neither lifted cut has
+a partition realized by both shores.  It is not a critical host and has no
+fixed minimum-side trace, so it does not refute the desired theorem.  It
+does rule out deriving synchronization from the local package alone.
+
+The smallest repair is therefore fixed-trace and composable:
+
+> Let `Pi_C` be the fixed paired exact-`U` partition on the minimum boundary
+> `U dotcup T`, and let `e=ux_{uP}` with `P subset D`.  Either `G-e` has a
+> six-colouring inducing `Pi_C` on `U dotcup T`, or the prescribed rooted
+> `K_6^-` model or a strict trace-admissible descent occurs inside `C`.
+
+In the colouring outcome, the clean fan can be reconstructed in the same
+witness and `u,x` are forced equal.  A subsequent aligned endpoint step
+must use that equality and the anchored coordinate path to give compatible
+shore types, the rooted minor, or descent.  Stating two existential
+coordinate transfers is not enough for the Boolean square: the two
+edge-deletion colourings may be unrelated.  The fixed trace is the common
+invariant needed for composition.
 
 There is also an exact rooted-minor formulation.  The audited
 [boundary-completion theorem](../results/hc7_k7minus_four_centre_completed_side.md)

@@ -162,6 +162,30 @@ any such square are nonadjacent; an edge between them would give an explicit
 `K_7^-` model.
 
 The audited
+[minimum-separator linkage theorem](results/hc7_k7minus_boolean_minimum_separator_linkage.md)
+now removes the geometric anchoring ambiguity.  For every Boolean component
+`P subset D`, one common seven-path family truncates to a centre-fixed
+linkage between its replacement cut and the old minimum cut: each replaced
+vertex is joined to its named centre by the literal replacement edge, each
+unreplaced centre is fixed, and the remaining three paths biject the two
+auxiliary boundaries.  Every coordinate path then continues from its named
+centre wholly inside `C` and can be stopped on the clean-fan support.
+
+The same theorem puts the one-coordinate colouring obstruction in normal
+form.  On the six-boundary of `G-ux`, rejection at the cut containing `x`
+already implies rejection at the cut containing `u`; the two rejections are
+not independent.  Starting with any six-colouring of `G-ux`, recolouring
+only `u` on the intact `P`-side aligns the two shores on the six-boundary
+and forces one bichromatic lock in each shore.  The `P`-side lock begins
+with the literal edge `ux`, so its reverse concatenates with the anchored
+suffix to reach the clean fan through `u`.  The suffix in `C` remains
+uncoloured.  Moreover, any one-missing-centre order-four separation which
+actually enters and splits `C`, while retaining the fixed opposite anchor,
+is terminal under exact uncrossing: it gives strict fixed-trace descent or
+an exact transported one-missing-centre cut below the minimum separator.
+The present opposite-region cuts are nested and do not split `C`.
+
+The audited
 [boundary-completion theorem](results/hc7_k7minus_four_centre_completed_side.md)
 gives a complementary rooted-minor formulation.  The graph
 
@@ -178,14 +202,31 @@ be the endpoints of the forced edge in `H[T]`.  The audited
 shows that internal six-connectivity, that edge and even a rooted `K_4` do
 not suffice.
 
-The square's linkage geometry is therefore settled.  The unresolved step is
-colour alignment across one coordinate edge.  The proper-minor colourings
-for different endpoint signatures may be unrelated, and the square need not
-be based at the minimum component `C`.  The next theorem must turn the
-forced endpoint type across adjacent cuts into connected subgraphs realizing
-the required boundary partition, the prescribed rooted `K_6^-` model, or a
-strict trace-admissible descent, and then connect that coordinate to the
-clean fan on `C`.  The `2K_2` interaction graph also remains open.  Another
+The square's linkage geometry and its local one-edge language are therefore
+settled.  The unresolved step is fixed-trace colour synchronization.  The
+normalization above uses an arbitrary colouring of `G-ux`; it need not
+induce the exact-`U` trace used to choose `C` and construct the clean fan.
+The scoped
+[odd-wheel barrier](barriers/hc7_k7minus_local_coordinate_synchronization_barrier.md)
+realizes the exact lower cut, adjacent lifted cuts, common lower partition,
+endpoint lock and literal linkage coordinate without realizing a common
+partition on either lifted cut.  It is not a critical host and does not
+refute a fixed-trace theorem, but it excludes a proof from those local data
+alone.
+
+The immediate repair theorem is now:
+
+> Let `Pi_C` be the fixed paired exact-`U` partition on the minimum boundary
+> and let `e=ux_{uP}` with `P subset D`.  Either `G-e` has a six-colouring
+> inducing `Pi_C` on the old boundary, or the prescribed rooted `K_6^-`
+> minor or a strict trace-admissible descent occurs inside `C`.
+
+In the colouring outcome, the fan can be rebuilt in the same witness and
+`u,x` are forced equal; an aligned endpoint step must then spend the anchored
+coordinate path.  This fixed trace is also the invariant needed to compose
+two coordinates around the square, since the edge-deletion colourings for
+different signatures may otherwise be unrelated.  The `2K_2` interaction
+graph and the terminal treatment of `P_4,C_4` remain open.  Another
 unlabelled separator or boundary census is not closure.
 
 ## Sufficient but non-primary extremal route
