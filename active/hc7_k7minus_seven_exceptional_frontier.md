@@ -54,6 +54,21 @@ The audited rooted-helper closure also proves `delta(G)>=8` and `m>=4n`.
 Thus the former positive-degree-seven and literal-clique branches, the exact
 `b=7` layer, and all two-clique tight layers are excluded.
 
+The audited
+[independence-four elimination](../results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)
+adds a terminal global branch closure.  A 505-case incidence enumeration,
+reduced to 40 symmetry classes, and independently checked DRAT
+refutations prove that no 25-vertex 8-regular graph has independence number
+four and clique number at most four.  The accompanying written reduction
+shows that `alpha(G[B])=4` would force the entire host to be such a graph.
+Since `R(4,5)=25`, (1) and the absence of a literal `K_5` now give
+
+\[
+             \alpha(G[B])\ge5.                         \tag{1.1}
+\]
+
+Thus five independent exceptional centres are available simultaneously.
+
 ## 2. What the present attack proved
 
 The new
@@ -372,8 +387,8 @@ refinements cited in this section have separate GREEN internal audits.  The
 theorem forcing either the required rooted minor or a strict
 trace-preserving exact-cut descent remains open.
 
-Since `R(4,5)=25` and `G` has no literal `K_5`, its exceptional vertices
-contain an independent four-set `U`.  Put `H=G-U`.  Then `H` is
+Choose five independent exceptional vertices `Z`.  For any four-set
+`U subset Z`, put `H=G-U`.  Then `H` is
 three-connected, nonplanar and exactly six-chromatic.  Fix `r in U`, a
 six-colouring of `G-r`, and four colours occurring once on `N(r)`, with
 literal representatives `x_1,x_2,x_3,x_4 in H`.  The promoted theorem gives
@@ -396,15 +411,16 @@ exact meet/join lattice.  If three cuts have all eight sign regions nonempty,
 each centre has exactly one neighbour in every region; four cuts cannot have
 all sixteen sign regions nonempty.
 
-This reduces the global obstruction to one dynamic step.  In the rooted
-outcome, use the unused centres to extend the rooted `K_5` model to an
-explicit `K_7^-`-minor model or force the web outcome.  In the web outcome,
-combine the retained one-sided trace and the centre-supported Kempe linkage
-across the exact-cut lattice to obtain the same partition into colour
-classes on both closed sides, an explicit `K_7^-`-minor model, or a strictly
-smaller cut.  The exact static two-shore quotient is insufficient: even
-maximum centre-to-boundary incidence and two full components admit a
-target-free mechanism.
+This reduces the global obstruction to one dynamic step, now with five
+overlapping choices of `U`.  In the rooted outcome, use the omitted centre
+and the unused centres to extend the rooted `K_5` model to an explicit
+`K_7^-`-minor model or force a compatible web outcome.  In the web outcome,
+combine the retained one-sided traces and centre-supported Kempe linkages
+across rotations to obtain the same partition into colour classes on both
+closed sides, an explicit `K_7^-`-minor model, or a strictly smaller cut
+with one common anchor.  The exact static two-shore quotient is
+insufficient: even maximum centre-to-boundary incidence and two full
+components admit a target-free mechanism.
 
 The audited
 [operation-coupled reduction](../results/hc7_k7minus_four_centre_operation_cut_reduction.md)
