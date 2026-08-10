@@ -23,6 +23,7 @@ Selected audited inputs:
 - [a paired exact trace forces a clean `2+1` fan](../results/hc7_k7minus_four_centre_paired_trace_fan.md)
 - [a common colouring bounds the minimal opposite-side cut family by four and forces at least sixteen cuts in the equality case](../results/hc7_k7minus_common_colouring_centre_change.md)
 - [replacement edges are common linkage coordinates whose one-edge and two-edge deletions expose exact order-six and order-five separations](../results/hc7_k7minus_boolean_replacement_edge_coupling.md)
+- [every opposite-region coordinate has a centre-fixed linkage to the minimum cut, while one normalized edge-deletion colouring yields an exact endpoint language and two-sided Kempe lock](../results/hc7_k7minus_boolean_minimum_separator_linkage.md)
 - [completing the boundary of a minimum exact-cut side gives a four-connected graph and an exact six-terminal rooted-minor criterion](../results/hc7_k7minus_four_centre_completed_side.md)
 - [a partition-specific family of connected subgraphs reflects the fixed boundary colouring through an exact seven-cut](../results/hc7_exact7_selected_response_preservation.md)
 
@@ -31,6 +32,7 @@ Immediate barriers:
 - [fullness and local root contacts alone do not force one-shore allocation](../barriers/hc7_k7minus_shore_allocation_barrier.md#theorem-2-two-full-shore-mechanism-barrier)
 - [tri-inseparability and local degree conditions alone do not force two connected subgraphs adjacent to the whole boundary](../barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier.md)
 - [internal six-connectivity, a boundary edge and a rooted `K_4` do not force the prescribed `K_6^-` minor](../barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier.md)
+- [an exact lower cut, adjacent lifted cuts, endpoint locks and a literal linkage coordinate do not alone synchronize a lifted boundary partition](../barriers/hc7_k7minus_local_coordinate_synchronization_barrier.md)
 
 ## Active finishing route
 
@@ -54,15 +56,28 @@ induces a coherent boundary partition at each cut.  At least one sublattice
 contains a square.  The new direct input below identifies the graph structure
 of that square.
 
-The replacement edges are now fixed, disjoint coordinates of one common
-seven-path linkage.  Deleting one coordinate gives an exact order-six
-separation and a complete classification of the endpoint-type obstruction;
+The replacement edges are fixed, disjoint coordinates of one common
+seven-path linkage.  Deleting one gives an exact order-six separation;
 deleting two gives an exact order-five separation with a spanning `K_6`
-model.  The unresolved task is to align the two shore colourings across one
-coordinate edge, then connect that transfer to the minimum-side fan.
-Different endpoint signatures may still come from unrelated colourings, and
-the square need not be based at the minimum side.  Another unlabelled cut or
-attachment census is not an accepted endpoint.
+model.  Every opposite-region coordinate now has a centre-fixed linkage to
+the old minimum separator: its literal replacement edge ends at its named
+centre, and the remaining suffix lies in `C` and can be stopped on the clean
+fan.  A normalized colouring of the one-edge deletion aligns the two shores
+on the six-vertex boundary and forces one bichromatic lock on each shore,
+with the first beginning at the literal replacement edge.  Rejection at the
+replacement-vertex cut already implies rejection at the centre cut, so the
+two rejections are one endpoint-language condition, not independent data.
+
+The unresolved task is fixed-trace synchronization.  The normalized
+edge-deletion colouring need not induce the exact-`U` trace used to choose
+`C`, the suffix inside `C` is uncoloured, and the result does not prove that
+the centre has a unique neighbour in `C`.  If a returned one-missing-centre
+separator actually splits `C`, exact uncrossing is terminal; the present
+opposite-region cuts are nested and do not do so.  The new odd-wheel barrier
+shows that the local lower-cut, endpoint-lock and linkage package alone
+cannot force a common lifted-boundary partition.  A next theorem must retain
+the fixed minimum-side trace and be composable across two coordinates.
+Another unlabelled cut or attachment census is not an accepted endpoint.
 
 ## Conditional and frozen routes
 

@@ -7391,6 +7391,37 @@ does_not_prove = [
 keywords = ["K7 minus", "four centres", "Boolean separations", "replacement edge", "seven-path linkage", "endpoint colouring", "exact order-six cut", "exact order-five cut"]
 
 [[claims]]
+id = "hc7.k7minus_boolean_minimum_separator_linkage"
+title = "Boolean coordinates link centrewise to the minimum exact cut"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_boolean_minimum_separator_linkage.md"
+active = true
+audit = "results/hc7_k7minus_boolean_minimum_separator_linkage_audit.md"
+expected_source_sha256 = "271549bf40b825aee557bfcaf47ee713215030dfe1ea55870340c22e14b7a024"
+scope = "the four-region Boolean replacement family relative to the minimum trace-admissible four-centre cut"
+label_fidelity = "every centre, replacement vertex, coordinate edge, old boundary vertex, fixed trace anchor and clean-fan support remains literal"
+separator_order = "order seven in the host, order six after one coordinate-edge deletion, and a conditional order-four one-missing-centre trace in G-U"
+strict_parameter = "order of the selected component inside the fixed minimum trace-admissible side"
+conclusions = [
+  "every opposite-region Boolean coordinate has a centre-fixed linkage to the old minimum separator and continues through its named centre wholly inside the minimum side",
+  "a one-missing-centre order-four separation which enters and splits the minimum side gives fixed-trace descent or an exact transported one-missing-centre cut below the old separation",
+  "rejection at the replacement-vertex cut already implies rejection at the adjacent centre cut, with the remaining response language classified by endpoint type",
+  "one normalized edge-deletion colouring aligns the order-six boundary partition and forces bichromatic locks in both shores, the first beginning with the literal replacement edge",
+  "the colour-labelled prefix and uncoloured minimum-side suffix concatenate to reach a selected clean-fan support through the named centre",
+]
+does_not_prove = [
+  "that the normalized edge-deletion colouring preserves the fixed exact-U minimum-side trace",
+  "that a centre has a unique neighbour in the minimum side or that the Boolean cut itself is based there",
+  "a prescribed rooted K6-minus minor or an oriented use of the component excess",
+  "coherence of the colourings for two different coordinate deletions",
+  "elimination of 2K2, P4 or C4 in the four-region interaction graph",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "Boolean coordinate", "minimum exact cut", "fixed trace", "endpoint language", "Kempe lock", "anchored linkage"]
+
+[[claims]]
 id = "hc7.k7minus_four_centre_completed_side"
 title = "Completing a minimum four-centre exact-cut side gives a four-connected graph"
 kind = "theorem"
@@ -7482,6 +7513,31 @@ does_not_prove = [
   "failure of a theorem forcing the rooted K6-minus minor or trace-preserving exact-cut descent using proper-minor colouring responses",
 ]
 keywords = ["rooted K6 minus", "internal connectivity", "rooted K4", "boundary completion", "barrier"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_local_coordinate_synchronization"
+title = "Local coordinate cuts, endpoint locks and linkage do not synchronize lifted partitions"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_local_coordinate_synchronization_barrier.md"
+active = true
+audit = "barriers/hc7_k7minus_local_coordinate_synchronization_barrier_audit.md"
+expected_source_sha256 = "14477f337d656592c489efba2ceb0c45f42c16f56fd194c8952152df4bcf9c91"
+scope = "the explicit odd wheel K1 join C5 as a low-order analogue of one Boolean replacement coordinate"
+label_fidelity = "the deleted edge, lower separator, two lifted cuts, endpoint types, two Kempe locks and three-path coordinate linkage remain literal"
+conclusions = [
+  "the edge deletion has an exact lower-order cut and forces equal endpoint colours in every minimum-palette colouring",
+  "both adjacent lifted cuts are exact and neither has a boundary partition realised by both closed shores",
+  "one normalized intact-shore colouring yields the literal-edge Kempe lock and the opposite shore yields the second lock",
+  "one simultaneous path family identifies the literal coordinate across both lifted cuts",
+]
+does_not_prove = [
+  "failure in a seven-connected minor-critical K7-minus-free host",
+  "failure with a Boolean replacement square or a fixed minimum-side colouring trace",
+  "failure of the rooted-minor or trace-descent alternatives",
+  "failure of the proposed fixed-trace coordinate-transfer theorem",
+]
+keywords = ["K7 minus", "odd wheel", "coordinate linkage", "Kempe lock", "boundary partition", "mechanism barrier"]
 
 [[claims]]
 id = "hc7.k7minus_false_twin_triangle_closure"
@@ -9214,7 +9270,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "f0a62f32d4ee38ebbbaf075bd99d7769927fdcc8537cc130e22c2132d84f7751"
+expected_source_sha256 = "ea76321eafb884b7630a81163ed90f355c803fcb01bff05b69e8f9cf4d4f894f"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16461,6 +16517,59 @@ note = "The non-double-critical replacement edge inherits the adjacent-pair bich
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_boolean_minimum_separator_linkage"
+kind = "uses"
+note = "This is the direct centre-fixed anchoring and one-coordinate reduction to fixed-trace synchronization for the four-region Boolean family."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_boolean_minimum_separator_linkage"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_boolean_minimum_separator_linkage"
+target = "hc7.k7minus_boolean_replacement_edge_coupling"
+kind = "uses"
+note = "The Boolean theorem supplies the common seven-linkage, exact one-edge deletion and endpoint obstruction."
+
+[[relations]]
+source = "hc7.k7minus_boolean_minimum_separator_linkage"
+target = "hc7.k7minus_common_colouring_centre_change"
+kind = "uses"
+note = "The exact-cut comparison places every minimal opposite-side component in D and C in its opposite component."
+
+[[relations]]
+source = "hc7.k7minus_boolean_minimum_separator_linkage"
+target = "hc7.k7minus_four_centre_trace_descent"
+kind = "uses"
+note = "The old cut is selected by the fixed trace and minimum-side parameter."
+
+[[relations]]
+source = "hc7.k7minus_boolean_minimum_separator_linkage"
+target = "hc7.k7minus_four_centre_web_cut_lattice"
+kind = "uses"
+note = "Lifted-order submodularity and fixed-anchor uncrossing prove the entering-separator criterion."
+
+[[relations]]
+source = "hc7.k7minus_boolean_minimum_separator_linkage"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "The critical-host two-component theorem makes both order-seven corner lifts exact."
+
+[[relations]]
+source = "hc7.k7minus_boolean_minimum_separator_linkage"
+target = "hc7.k7minus_four_centre_paired_trace_fan"
+kind = "uses"
+note = "The interior of the clean p--p' path is the selected support reached by the anchored coordinate."
+
+[[relations]]
+source = "hc7.k7minus_boolean_minimum_separator_linkage"
+target = "hc7.barrier.k7minus_local_coordinate_synchronization"
+kind = "guarded_by"
+note = "The odd wheel shows that the exact lower cut, endpoint locks and literal linkage coordinate alone cannot synchronize either lifted boundary."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_four_centre_completed_side"
 kind = "uses"
 note = "This is the direct four-connectivity and six-terminal rooted-minor reduction for a minimum exact-cut side."
@@ -16500,6 +16609,12 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.barrier.k7minus_internal_six_rooted_k6minus"
 kind = "guarded_by"
 note = "The prescribed six-terminal minor must use the full canonical-region or minor-critical data, not internal connectivity alone."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_local_coordinate_synchronization"
+kind = "guarded_by"
+note = "A fixed minimum-side trace or another global critical-host input is necessary; the local coordinate package is insufficient."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
