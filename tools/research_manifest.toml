@@ -7363,6 +7363,31 @@ does_not_prove = [
 keywords = ["K7 minus", "four centres", "common colouring", "exact cuts", "interaction graph", "simultaneous centre replacement"]
 
 [[claims]]
+id = "hc7.k7minus_cyclic_four_region_elimination"
+title = "A rooted-triangle construction eliminates the cyclic four-region interaction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_cyclic_four_region_elimination.md"
+active = true
+audit = "results/hc7_k7minus_cyclic_four_region_elimination_audit.md"
+expected_source_sha256 = "f5794395173655892c55c1d2965eb816e36c0532a493b4dc212f7734dcb16156"
+scope = "the four-region equality case of the critical-host four-centre exact-cut family"
+label_fidelity = "the five exact components, four centres, unique replacement neighbours and seven explicit minor-model bags remain literal"
+conclusions = [
+  "the C4 interaction graph is impossible because every Boolean square yields an explicit K7-minus model",
+  "in the P4 interaction graph no Boolean square is based at the minimum component or either endpoint region",
+  "the two internal P4 regions carry at least five unique-centre incidences between them, so both are used and one has at least three",
+]
+does_not_prove = [
+  "elimination of Boolean squares based at the two internal P4 regions",
+  "elimination of the 2K2 interaction graph",
+  "synchronization of proper-minor colourings",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "four centres", "interaction graph", "C4", "P4", "rooted triangle", "Boolean replacement"]
+
+[[claims]]
 id = "hc7.k7minus_boolean_replacement_edge_coupling"
 title = "Boolean replacement cuts share linkage coordinates and critical-edge colouring signatures"
 kind = "theorem"
@@ -9270,7 +9295,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "ea76321eafb884b7630a81163ed90f355c803fcb01bff05b69e8f9cf4d4f894f"
+expected_source_sha256 = "1dbd4b2a65de06f4ec47b15a316411e6dbdf468964ab4cc26eaccf51af55b8cd"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16485,6 +16510,23 @@ source = "hc7.k7minus_common_colouring_centre_change"
 target = "hc7.k7minus_exceptional_independent_triples"
 kind = "uses"
 note = "The degree-eight neighbourhood independence bound controls the interaction graph."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_cyclic_four_region_elimination"
+kind = "uses"
+note = "This terminally removes the C4 four-region interaction and confines every surviving P4 replacement square to an internal region."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_cyclic_four_region_elimination"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_cyclic_four_region_elimination"
+target = "hc7.k7minus_common_colouring_centre_change"
+kind = "uses"
+note = "The common-colouring theorem supplies the four exact regions, the interaction graph and every simultaneous replacement cut used by the rooted-triangle construction."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
