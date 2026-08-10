@@ -7178,6 +7178,109 @@ does_not_prove = [
 keywords = ["K7 minus", "five independent centres", "regular Ramsey graph", "computer-assisted", "DRAT"]
 
 [[claims]]
+id = "hc7.k7minus_order_seven_k5minus_component_elimination"
+title = "A five-vertex K5-minus component behind an order-seven cut forces K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_order_seven_k5minus_component_elimination.md"
+source_heading = "Theorem 1.1"
+active = false
+audit = "results/hc7_k7minus_order_seven_k5minus_component_elimination_audit.md"
+expected_source_sha256 = "39fbb29038292795bcdf5eb46ddbb1710efd46a9529b5495e8d9292d94f29517"
+scope = "a seven-connected minimum-degree-eight K5-free graph with an order-seven cut and a five-vertex K5-minus component"
+label_fidelity = "the five core vertices, seven literal boundary vertices, opposite component and all seven minor-model branch sets remain explicit"
+conclusions = [
+  "Hall matching assigns the five core vertices to five distinct boundary neighbours while repairing the missing core edge",
+  "a sixth boundary vertex and the opposite component complete an explicit K7-minus minor model",
+]
+does_not_prove = [
+  "that an arbitrary order-seven-cut component has order five or induces K5-minus",
+  "elimination of the larger five-centre two-cut shore",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "order-seven cut", "K5 minus", "Hall matching", "explicit minor model"]
+
+[[claims]]
+id = "hc7.k7minus_five_centre_two_cut_reduction"
+title = "Five independent centres reduce every two-cut to a larger response-oriented shore"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_five_centre_two_cut_reduction.md"
+source_heading = "Theorem 1.1 (unconditional two-cut reduction)"
+active = true
+audit = "results/hc7_k7minus_five_centre_two_cut_reduction_audit.md"
+expected_source_sha256 = "1917b5e3d183d44a2d905d2628272d10e4bc6f7ae0768b43cab0e9462b83332a"
+scope = "the two-cut branch after deleting five independent degree-eight vertices from the critical K7-minus host"
+label_fidelity = "the five centres, two poles, two full components, response orientation, rooted terminals and critical-edge paths remain literal"
+separator_order = "the two-cut in G-Z lifts to an exact order-seven boundary in G"
+colour_compatibility = "the two closed shores have nonempty opposite singleton responses; common response is terminal by gluing"
+conclusions = [
+  "the boundary has exactly two full complementary components, the pole edge is absent and a centre-pole edge is present",
+  "the equality side has chromatic number at least four, rooted (2,5)-infeasibility and full-packing number one",
+  "the distinct side has chromatic number at least five and a bichromatic pole path in every permitted colouring",
+  "the equality side contains four colour-distinguished pole paths and satisfies e(C)+e(C,S) at most 6|C|+1",
+  "the equality side has order at least six because the order-five K5-minus row is terminal",
+]
+does_not_prove = [
+  "elimination of equality sides of order at least six",
+  "terminal composition in the three-connected branch of G-Z",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "five independent centres", "two-cut", "opposite colouring responses", "rooted linkage", "DLY edge bound"]
+
+[[claims]]
+id = "hc7.k7minus_order_six_equality_shore_elimination"
+title = "An order-six equality shore forces K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_order_six_equality_shore_elimination.md"
+source_heading = "Theorem 1.1"
+active = true
+audit = "results/hc7_k7minus_order_six_equality_shore_elimination_audit.md"
+expected_source_sha256 = "96e7b99fda8c2e4584066fd3855f412072a4d6513962cf05e4e842f62e0a7983"
+scope = "a six-vertex four-chromatic component behind an order-seven cut in a seven-connected minimum-degree-eight K5-free graph"
+label_fidelity = "the six core vertices, seven literal boundary vertices, opposite component, incidence matching and all seven minor-model branch sets remain explicit"
+conclusions = [
+  "ten complement orbits and their exact boundary-incidence formulas are UNSAT by independently checked DRAT refutations",
+  "an incidence-respecting injection repairs all but at most one missing core edge and yields an explicit K7-minus minor model",
+  "the equality-response component in the five-centre two-cut reduction has order at least seven",
+]
+does_not_prove = [
+  "elimination of equality shores of order at least seven",
+  "terminal composition in the three-connected branch of G-Z",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "order-six component", "computer-assisted", "finite incidence", "DRAT", "explicit minor model"]
+
+[[claims]]
+id = "hc7.k7minus_order_seven_equality_shore_elimination"
+title = "An order-seven equality shore forces K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_order_seven_equality_shore_elimination.md"
+source_heading = "Theorem 1.1"
+active = true
+audit = "results/hc7_k7minus_order_seven_equality_shore_elimination_audit.md"
+expected_source_sha256 = "986194fa7953241f3bf8de084be45848cb40861566829635d6c78b0f14a5ac10"
+scope = "a seven-vertex four-chromatic component behind an order-seven cut, with the five-root closed-shore edge bound, in a seven-connected minimum-degree-eight K5-free graph"
+label_fidelity = "one literal core edge is contracted, six distinct literal boundary vertices enlarge the six core bags, and the opposite component with the unused boundary vertex is the seventh bag"
+conclusions = [
+  "an exact 149-orbit lazy-SMT search finds a terminal edge-contraction allocation for every admissible incidence system",
+  "six enlarged core bags miss at most one mutual adjacency and the opposite full component supplies a universal seventh bag",
+  "the equality-response component in the five-centre two-cut reduction has order at least eight",
+]
+does_not_prove = [
+  "elimination of equality shores of order at least eight",
+  "terminal composition in the three-connected branch of G-Z",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "order-seven component", "computer-assisted", "edge contraction", "boundary allocation", "Z3", "cold rerun", "explicit minor model"]
+
+[[claims]]
 id = "hc7.k7minus_four_centre_web_cut_lattice"
 title = "Four independent degree-eight centres yield a rooted K5 or an exact-cut lattice"
 kind = "theorem"
@@ -7587,6 +7690,29 @@ does_not_prove = [
   "failure of the proposed fixed-trace coordinate-transfer theorem",
 ]
 keywords = ["K7 minus", "odd wheel", "coordinate linkage", "Kempe lock", "boundary partition", "mechanism barrier"]
+
+[[claims]]
+id = "hc7.barrier.wagner_eight_terminal_kernel"
+title = "Local eight-terminal irreducibility does not force K6-minus"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_wagner_eight_terminal_kernel_barrier.md"
+active = false
+audit = "barriers/hc7_wagner_eight_terminal_kernel_barrier_audit.md"
+expected_source_sha256 = "7e496ab79efebb1356492f256953ec9d3d1c91bd772fa647fc2402767d9cf9d9"
+scope = "the false local claim that a three-connected irreducible eight-terminal K4-free graph of independence number three must contain K6-minus"
+label_fidelity = "all eight Wagner-graph vertices are the literal terminal set"
+conclusions = [
+  "the Wagner graph is three-connected, terminal-irreducible, triangle-free and has independence number three",
+  "its twelve-edge count excludes a K6-minus minor",
+  "coning the Wagner graph gives a degree-eight centre with the same local neighbourhood constraints and no K7-minus minor",
+]
+does_not_prove = [
+  "failure of a multi-centre composition retaining exterior contacts",
+  "failure under the global critical-host colouring hypotheses",
+  "the K7-minus six-colour conjecture is false",
+]
+keywords = ["Wagner graph", "eight terminals", "irreducible kernel", "K6 minus", "one-centre barrier"]
 
 [[claims]]
 id = "hc7.k7minus_false_twin_triangle_closure"
@@ -9319,7 +9445,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "5edae6a14e860541eff512a886c4266d8c1b0ffaac095988399e92c5a4702668"
+expected_source_sha256 = "0ce2ce24567c312bcb0e02ad60fdbd8e844c0ccb9b246ad507fdf2a636ab2060"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16315,6 +16441,84 @@ note = "The exceptional-centre finishing target may now choose five of the force
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "uses"
+note = "This is the direct five-centre reduction of the entire two-cut branch to a larger response-oriented rooted-infeasible shore."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_order_six_equality_shore_elimination"
+kind = "uses"
+note = "This directly eliminates the order-six row of the five-centre two-cut branch and raises its surviving equality shore to order at least seven."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_order_seven_equality_shore_elimination"
+kind = "uses"
+note = "This directly eliminates the order-seven row of the five-centre two-cut branch and raises its surviving equality shore to order at least eight."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "uses"
+note = "Five independent exceptional centres expose the exact two-cut response system."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_order_six_equality_shore_elimination"
+kind = "uses"
+note = "The finite incidence theorem terminally removes the order-six equality shore in the exceptional-centre route."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_order_seven_equality_shore_elimination"
+kind = "uses"
+note = "The edge-contraction allocation theorem terminally removes the order-seven equality shore in the exceptional-centre route."
+
+[[relations]]
+source = "hc7.k7minus_order_six_equality_shore_elimination"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "uses"
+note = "The unbounded reduction supplies the four-chromatic six-vertex core and its eleven-edge lower bound."
+
+[[relations]]
+source = "hc7.k7minus_order_seven_equality_shore_elimination"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "uses"
+note = "The unbounded reduction supplies the four-chromatic seven-vertex core, its thirteen-edge lower bound and the closed-shore incidence cap."
+
+[[relations]]
+source = "hc7.k7minus_order_seven_equality_shore_elimination"
+target = "hc7.k7minus_order_six_equality_shore_elimination"
+kind = "uses"
+note = "The corollary uses the prior order-five and order-six eliminations before applying the order-seven theorem."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_two_cut_reduction"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "uses"
+note = "The critical-host theorem supplies seven-connectivity, minimum degree eight, K5-freeness and the five degree-eight centres."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_two_cut_reduction"
+target = "hc7.k7minus_alpha4_regular_ramsey_elimination"
+kind = "uses"
+note = "The Ramsey elimination supplies five independent degree-eight centres."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_two_cut_reduction"
+target = "hc7.k7minus_critical_seven_cut_capacity"
+kind = "uses"
+note = "Critical seven-cut capacity supplies exactly two full components, a boundary edge and the exact reflection argument."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_two_cut_reduction"
+target = "hc7.k7minus_order_seven_k5minus_component_elimination"
+kind = "uses"
+note = "The explicit component theorem terminally eliminates the sharp order-five equality shore."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_exceptional_independent_triples"
 kind = "related_to"
 note = "This remains an audited input to the secondary one-centre allocation route, not a direct input to the current four-centre spine."
@@ -16705,6 +16909,12 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.barrier.k7minus_two_full_shore_mechanism"
 kind = "guarded_by"
 note = "The scoped witness shows that local fullness and root contacts alone cannot supply the required one-shore rooted allocation."
+
+[[relations]]
+source = "hc7.target.k7minus_rooted_shore_allocation"
+target = "hc7.barrier.wagner_eight_terminal_kernel"
+kind = "guarded_by"
+note = "The Wagner graph shows that one-centre terminal irreducibility and the local exceptional-neighbourhood constraints do not force the needed near-clique minor."
 
 [[relations]]
 source = "hc7.target.k7minus_seven_exceptional_vertices"
