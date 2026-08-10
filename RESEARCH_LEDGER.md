@@ -76,8 +76,38 @@ independent degree-eight centres.
 
 ### 3. Immediate structural laboratory
 
-Fix five independent degree-eight centres `Z`.  Any four-set `U subset Z`
-may be used in the audited
+Fix five independent degree-eight centres `Z`, and put `F=G-Z`.  The
+audited
+[five-centre two-cut reduction](results/hc7_k7minus_five_centre_two_cut_reduction.md)
+now handles an arbitrary two-cut `{p,q}` of `F` without assuming a
+support-five normal form.  The boundary `S=Z dotcup {p,q}` has exactly two
+full complementary components, `pq` is absent, and a centre--pole boundary
+edge is present.  The two closed shores have opposite singleton responses:
+after orientation, `C` accepts only `p=q` and `D` only `p!=q`.  Moreover,
+
+\[
+ \chi(G[C])\ge4,\quad \chi(G[D])\ge5,\quad
+ \mu_S(C)=1,\quad |C|\ge8,
+ \quad e(C)+e(C,S)\le6|C|+1.
+\]
+
+The equality shore is rooted-`(2,5)`-infeasible and contains four
+colour-distinguished `p`--`q` paths; the opposite shore contains a
+bichromatic `p`--`q` path.  The order-five row is terminal: minimum degree
+forces `G[C]=K_5^-`, and the separately audited
+[order-seven component theorem](results/hc7_k7minus_order_seven_k5minus_component_elimination.md)
+constructs an explicit `K_7^-` minor.  The order-six row is also terminal:
+the separately audited
+[finite incidence theorem](results/hc7_k7minus_order_six_equality_shore_elimination.md)
+reduces the row to ten complement orbits and uses independently checked
+DRAT refutations to construct the required explicit model.  The separately
+audited
+[order-seven allocation theorem](results/hc7_k7minus_order_seven_equality_shore_elimination.md)
+closes the next row by an exact 149-orbit incidence search and a cold full
+rerun, again reconstructing seven explicit branch sets.  Components of
+order at least eight remain open.
+
+Any four-set `U subset Z` may also be used in the audited
 [four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
 after putting `H=G-U`.  It shows that `H` is three-connected, nonplanar and
 exactly six-chromatic.  For
@@ -247,19 +277,19 @@ this branch.  Consequently the proposed one-coordinate transfer trichotomy
 does not follow from the existing package; this is a route nonclosure, not a
 counterexample under the full critical-host hypotheses.
 
-The fifth independent centre changes the preferred next theorem.  The
-square-level fixed-trace kernel problem remains a valid conditional
-laboratory, but another theorem confined to one chosen four-set would not
-use the new global gain.  The immediate attack is a five-centre terminal
-composition.  Put `F=G-Z`.  In the two-cut branch, an exact separator
-`Z dotcup {p,q}` should be closed by the four-colour reserve left by the
-monochromatic-`Z`, equal-`p,q` boundary trace and a disjoint rooted `5+2`
-connector, or directly by an explicit `K_7^-` model.  In the three-connected
-branch, rotate the rooted-model/web outcome through all five choices of the
-omitted centre.  The accepted conclusion is a six-colouring of `G`, an
-explicit `K_7^-` model, or strict descent preserving one common trace and
-minimum-side anchor.  A further unlabelled separator, attachment census, or
-single-rotation sharpening is not an accepted endpoint.
+The fifth independent centre has now produced a genuine unbounded reduction
+in the two-cut branch.  Its exact remaining case is a response-oriented
+component `C` of order at least eight satisfying the displayed bounds,
+rooted infeasibility, and the four colour-distinguished critical-edge paths,
+coupled to the opposite shore's bichromatic pole path.  Eliminating that
+larger-shore case would close every two-cut of `F`.  The other exhaustive
+branch is that `F` is
+three-connected; there the five rooted-model/web outcomes must still be
+composed across the five choices of omitted centre.  The four-centre
+square-level fixed-trace kernel problem remains a conditional laboratory,
+not the immediate global target.  The accepted conclusion is a
+six-colouring of `G`, an explicit `K_7^-` model, or strict descent preserving
+one common trace and minimum-side anchor.
 
 ## Sufficient but non-primary extremal route
 

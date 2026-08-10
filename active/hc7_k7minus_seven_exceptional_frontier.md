@@ -9,10 +9,15 @@ operation-coupled, tri-separation, trace-preserving, and generalized-wheel
 leaf refinements in Section 4 are also separately audited GREEN.  The
 Boolean minimum-separator linkage, the cyclic four-region elimination, and
 the exact one-coordinate response language in Section 4 are separately
-audited GREEN.  The accompanying scoped
-barriers are separately audited GREEN, while the list-core calculation in
-Section 3 remains a written live derivation without a separate audit.  The
-upper bound is open.  This file is not a second status ledger.
+audited GREEN.  The five-centre two-cut response reduction and its terminal
+order-five, order-six, and order-seven component cases are separately
+audited GREEN.  The order-six case has independently checked DRAT
+certificates; the order-seven case has an exact 149-orbit Z3 search and a
+separate cold full rerun, with the absence of DRAT stated in its trust
+boundary.  The accompanying scoped barriers are separately audited GREEN,
+while the list-core calculation in Section 3 remains a written live
+derivation without a separate audit.  The upper bound is open.  This file
+is not a second status ledger.
 
 ## 1. Primary target and exact finishing reduction
 
@@ -404,6 +409,48 @@ exactly one of two outcomes:
    alternating linkage forced by the web uses another named centre in
    `U-r`.
 
+The fifth centre also gives a separate reduction before choosing a
+four-set.  Put `F=G-Z`.  The audited
+[five-centre two-cut theorem](../results/hc7_k7minus_five_centre_two_cut_reduction.md)
+proves that any two-cut `{p,q}` of `F` lifts to the exact boundary
+
+\[
+                         S=Z\mathbin{\dot\cup}\{p,q\}
+\]
+
+with exactly two full complementary components and with `pq` absent but a
+centre--pole edge present.  Their permitted boundary responses are opposite
+singletons.  Orient the components so that `C` accepts only `p=q` and `D`
+only `p!=q`.  Then
+
+\[
+ \chi(G[C])\ge4,\qquad \chi(G[D])\ge5,\qquad
+ \mu_S(C)=1,
+\]
+
+the rooted graph `(G[C union S],Z,p,q)` is infeasible, and
+
+\[
+ e(G[C])+e_G(C,S)\le6|C|+1,\qquad
+ e(G[C])\ge2|C|-1,\qquad |C|\ge8.
+\]
+
+The equality side contains four colour-distinguished `p`--`q` paths arising
+from a critical edge, while every permitted colouring of the distinct side
+contains a bichromatic `p`--`q` path.  The separately audited
+[order-five component theorem](../results/hc7_k7minus_order_seven_k5minus_component_elimination.md)
+is terminal: if `|C|=5`, the degree bound forces `G[C]=K_5^-` and an
+explicit `K_7^-` model.  The separately audited
+[order-six finite incidence theorem](../results/hc7_k7minus_order_six_equality_shore_elimination.md)
+constructs the same forbidden minor for `|C|=6`; its ten complement-orbit
+formulas have independently checked DRAT refutations.  The separately
+audited
+[order-seven allocation theorem](../results/hc7_k7minus_order_seven_equality_shore_elimination.md)
+contracts one core edge and assigns six distinct boundary vertices so that
+the resulting six bags miss at most one adjacency.  Its exact 149-orbit
+search and cold full rerun close `|C|=7`.  Thus only equality shores of order
+at least eight remain in the two-cut branch.
+
 The second outcome cannot occur when `G` is eight-connected.  When
 `kappa(G)=7`, the exact lift-order function on separations of `H` is symmetric
 and submodular.  For fixed opposite anchors, its minimum separations form an
@@ -650,8 +697,9 @@ noncolouring exits were required inside `C`.  This is a recorded route
 nonclosure, not a counterexample to such a theorem under the full critical-
 host hypotheses.
 
-The next accepted target is therefore a square-level fixed-trace kernel
-localization theorem.  For the two marked list enlargements of a surviving
+For the four-centre laboratory, the next accepted target is a square-level
+fixed-trace kernel localization theorem.  For the two marked list
+enlargements of a surviving
 `2K_2` square or internal-region `P_4` square, it must force one of:
 
 1. a one- or two-coordinate colouring attaining `Pi_C`, followed by an
@@ -760,21 +808,20 @@ remaining open step in this secondary route.
 
 Pursue one global exceptional-centre terminal theorem.
 
-1. In the rooted-model outcome, extend the colour-anchored `K_5` model by
-   two disjoint branch sets, or turn the first support conflict into the
-   exact-cut outcome.
-2. In the paired exact-cut outcome, combine the clean `2+1` fan with the at
-   most eight centre-bearing components.  The accepted conclusions are the
-   same boundary partition on both shores, the prescribed six-terminal
-   `K_6^-` model, or a strict trace-preserving descent.
-3. Compare the at most four minimal opposite-side regions.  If four survive,
-   prove the one-coordinate boundary-partition transfer across a replacement
-   edge, then connect that coordinate to the clean fan.  The accepted exits
-   are matching shore partitions, the prescribed rooted `K_6^-` model, or
-   strict trace-preserving descent.
+1. Close the larger two-cut shore from the five-centre theorem.  The input is
+   the rooted-infeasible, packing-one equality side of order at least eight,
+   its sharp edge bound and four colour-distinguished pole paths, coupled to
+   the opposite side's bichromatic pole path.  The conclusion must be a
+   common boundary partition or an explicit `K_7^-` model.
+2. In the exhaustive three-connected branch of `F=G-Z`, compose the five
+   rooted-model/web outcomes obtained by omitting each centre in turn.  A
+   rooted outcome must acquire two disjoint completing branch sets; a web
+   outcome must feed a common trace or strict anchored descent.
+3. Retain the surviving `2K_2` and internal-`P_4` square problem as a
+   conditional laboratory for the web branch, with fixed-trace kernel
+   localization rather than one-coordinate rejection as the required
+   invariant.
 
 The earlier one-centre operation and rooted-allocation lemmas remain tools
-only when they feed this global argument.  Further graph-code filters,
-isolated boundary classifications, or another nonterminal separation are not
-accepted progress.  The bottleneck is the one-coordinate colour alignment,
-followed by its coupling to the clean fan on the minimum side.
+only when they feed this global argument.  Another unlabelled separation or
+attachment census is not an accepted endpoint.

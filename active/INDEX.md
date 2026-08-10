@@ -17,6 +17,9 @@ Selected audited inputs:
 
 - [the critical host is `K_5`-free and has at least 25 degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
 - [the independence-four branch is impossible, so five degree-eight centres can be chosen independently](../results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)
+- [an arbitrary two-cut after deleting five independent centres has opposite singleton shore responses and a sharp rooted-linkage bound](../results/hc7_k7minus_five_centre_two_cut_reduction.md)
+- [the order-six equality-response component is terminal by a ten-orbit DRAT-certified incidence theorem](../results/hc7_k7minus_order_six_equality_shore_elimination.md)
+- [the order-seven equality-response component is terminal by a cold-rerun 149-orbit allocation theorem](../results/hc7_k7minus_order_seven_equality_shore_elimination.md)
 - [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
 - [boundary replacement and anchored uncrossing give trace-preserving strict descent](../results/hc7_k7minus_four_centre_trace_descent.md)
 - [the generalized-wheel outcome reduces to one canonical leaf with no two disjoint connected subgraphs adjacent to the whole boundary](../results/hc7_k7minus_four_centre_wheel_leaf_descent.md)
@@ -77,14 +80,22 @@ two rejections are one endpoint-language condition, not independent data.
 Fixed-trace synchronization remains unresolved in the `2K_2` case and the
 internal-region squares of `P_4`; a minimal list obstruction can avoid a
 marked replacement vertex and stay nested on the wrong side of `C`.
-However, the preferred next theorem now uses all five independent centres.
-For `F=G-Z`, it must eliminate either a two-cut by combining its exact
-seven-vertex boundary, four-colour reserve, and rooted `5+2` connector, or
-the three-connected branch by composing the five rooted-model/web
-rotations.  Its only accepted exits are a six-colouring, an explicit
-`K_7^-` model, or strict descent retaining a common trace at the minimum
-side.  Another unlabelled cut or attachment census is not an accepted
-endpoint.
+
+The five-centre attack now gives an independent global reduction.  Put
+`F=G-Z`.  If `F` has a two-cut `{p,q}`, its exact seven-vertex boundary has
+two full components with opposite singleton colouring responses.  The
+equality-response component is rooted-`(2,5)`-infeasible, has full-packing
+number one, contains four colour-distinguished critical-edge paths, satisfies
+`e(C)+e(C,S)<=6|C|+1`, and has order at least eight.  The order-five row is
+terminal by an explicit `K_7^-` model, and the order-six row is terminal by
+an independently checked ten-orbit DRAT certificate.  The order-seven row
+is terminal by an exact 149-orbit allocation search with a separate cold
+full rerun.  The immediate two-cut target is therefore the larger-shore
+case, coupled to the bichromatic `p`--`q` path on the opposite side.  If `F`
+is three-connected, the five
+rooted-model/web rotations still require terminal composition.  Accepted
+exits remain a six-colouring, an explicit `K_7^-` model, or strict descent
+retaining a common trace at the minimum side.
 
 ## Conditional and frozen routes
 
