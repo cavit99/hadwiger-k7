@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 9 August 2026
+**Last updated:** 10 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -145,6 +145,23 @@ induces one coherent boundary partition at each cut.  At least one such
 sublattice contains a four-element square.
 
 The audited
+[Boolean replacement theorem](results/hc7_k7minus_boolean_replacement_edge_coupling.md)
+identifies the graph structure behind that square.  All replacement edges
+at one exact component lie on distinct paths of a common seven-path
+linkage.  Proper-minor colourings realize every nonempty set of
+endpoint-equalities and forbid the all-unequal set, with exact rules for
+which closed shore each colouring fits.  Deleting one replacement edge
+exposes an exact order-six separation in a six-connected, exactly
+six-chromatic graph; its boundary has at most eleven edges and its two
+component excesses sum to at least `sigma+12`, where
+`sigma=|E(G)|-4|V(G)|`.  The endpoint edge is not
+double-critical.  Deleting two coordinates exposes an exact order-five
+separation in a five-connected, exactly six-chromatic graph with a spanning
+`K_6` model.  If `Gamma` is `P_4` or `C_4`, the two replacement vertices in
+any such square are nonadjacent; an edge between them would give an explicit
+`K_7^-` model.
+
+The audited
 [boundary-completion theorem](results/hc7_k7minus_four_centre_completed_side.md)
 gives a complementary rooted-minor formulation.  The graph
 
@@ -161,14 +178,15 @@ be the endpoints of the forced edge in `H[T]`.  The audited
 shows that internal six-connectivity, that edge and even a rooted `K_4` do
 not suffice.
 
-The web-side residue is therefore finite at the level that matters: a clean
-three-path fan, at most eight centre-bearing components on `C`, and at most
-four minimal exact-cut regions in `D`; the four-region case carries a
-coherently coloured replacement square inside a family of at least sixteen
-exact cuts.  The next theorem must propagate one boundary partition around
-that square, construct the prescribed rooted `K_6^-` model, or give a strict
-trace-admissible descent.  Another unlabelled separator or boundary census
-is not closure.
+The square's linkage geometry is therefore settled.  The unresolved step is
+colour alignment across one coordinate edge.  The proper-minor colourings
+for different endpoint signatures may be unrelated, and the square need not
+be based at the minimum component `C`.  The next theorem must turn the
+forced endpoint type across adjacent cuts into connected subgraphs realizing
+the required boundary partition, the prescribed rooted `K_6^-` model, or a
+strict trace-admissible descent, and then connect that coordinate to the
+clean fan on `C`.  The `2K_2` interaction graph also remains open.  Another
+unlabelled separator or boundary census is not closure.
 
 ## Sufficient but non-primary extremal route
 

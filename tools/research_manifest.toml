@@ -7363,6 +7363,34 @@ does_not_prove = [
 keywords = ["K7 minus", "four centres", "common colouring", "exact cuts", "interaction graph", "simultaneous centre replacement"]
 
 [[claims]]
+id = "hc7.k7minus_boolean_replacement_edge_coupling"
+title = "Boolean replacement cuts share linkage coordinates and critical-edge colouring signatures"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_boolean_replacement_edge_coupling.md"
+active = true
+audit = "results/hc7_k7minus_boolean_replacement_edge_coupling_audit.md"
+expected_source_sha256 = "c155030145a46a70c789302188a3220af2bf8ca5c537ad1c78d2325fa33946da"
+scope = "the four-region equality case of the critical-host four-centre exact-cut family"
+label_fidelity = "each centre, unique replacement neighbour, replacement edge, separator coordinate and endpoint pair remains a literal host object"
+separator_order = "order seven in the host, order six after one replacement-edge deletion, and order five after two such deletions"
+conclusions = [
+  "all replacement edges at one exact component lie on distinct paths of a common seven-path linkage through the Boolean cut family",
+  "proper-minor colourings realize every nonempty endpoint-equality signature, forbid the all-unequal signature and obey exact closed-shore restriction rules",
+  "one replacement-edge deletion gives an exact order-six separation in a six-connected exactly six-chromatic graph, with boundary size and component-excess bounds and a non-double-critical endpoint pair",
+  "two replacement-edge deletions give an exact order-five separation in a five-connected exactly six-chromatic graph with a spanning K6 model",
+  "when the four-region interaction graph is P4 or C4, the two replacement vertices of any square are nonadjacent",
+]
+does_not_prove = [
+  "alignment of the colourings that realize different endpoint signatures",
+  "that a replacement square is based at the minimum selected component or is coupled to its clean fan",
+  "elimination of the 2K2 case or of the P4 and C4 interaction graphs",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["K7 minus", "four centres", "Boolean separations", "replacement edge", "seven-path linkage", "endpoint colouring", "exact order-six cut", "exact order-five cut"]
+
+[[claims]]
 id = "hc7.k7minus_four_centre_completed_side"
 title = "Completing a minimum four-centre exact-cut side gives a four-connected graph"
 kind = "theorem"
@@ -9186,7 +9214,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "a5468ebd89c3e7b68417efa7aa5306a961813faa1c1ce0d2e8067528aa379b82"
+expected_source_sha256 = "f0a62f32d4ee38ebbbaf075bd99d7769927fdcc8537cc130e22c2132d84f7751"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16401,6 +16429,35 @@ source = "hc7.k7minus_common_colouring_centre_change"
 target = "hc7.k7minus_exceptional_independent_triples"
 kind = "uses"
 note = "The degree-eight neighbourhood independence bound controls the interaction graph."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_boolean_replacement_edge_coupling"
+kind = "uses"
+note = "This is the direct linkage and endpoint-colouring reduction for the four-region replacement family."
+
+[[relations]]
+source = "hc7.target.k7minus_seven_exceptional_vertices"
+target = "hc7.k7minus_boolean_replacement_edge_coupling"
+kind = "uses"
+
+[[relations]]
+source = "hc7.k7minus_boolean_replacement_edge_coupling"
+target = "hc7.k7minus_common_colouring_centre_change"
+kind = "uses"
+note = "The common-colouring theorem supplies the four-region interaction graph and the Boolean family of exact replacement cuts."
+
+[[relations]]
+source = "hc7.k7minus_boolean_replacement_edge_coupling"
+target = "hc7.k7minus_exact_six_cut_localisation"
+kind = "uses"
+note = "The one-edge deletion frame uses exact order-six boundary localisation and component-excess accounting."
+
+[[relations]]
+source = "hc7.k7minus_boolean_replacement_edge_coupling"
+target = "hc7.adjacent_pair_palette_linkage"
+kind = "uses"
+note = "The non-double-critical replacement edge inherits the adjacent-pair bichromatic connectivity and palette linkage."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"

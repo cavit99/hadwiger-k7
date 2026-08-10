@@ -22,6 +22,7 @@ Selected audited inputs:
 - [exact boundary colourings reduce the minimum side to one support and at most eight centre-bearing components](../results/hc7_k7minus_four_centre_exact_u_bridge_reduction.md)
 - [a paired exact trace forces a clean `2+1` fan](../results/hc7_k7minus_four_centre_paired_trace_fan.md)
 - [a common colouring bounds the minimal opposite-side cut family by four and forces at least sixteen cuts in the equality case](../results/hc7_k7minus_common_colouring_centre_change.md)
+- [replacement edges are common linkage coordinates whose one-edge and two-edge deletions expose exact order-six and order-five separations](../results/hc7_k7minus_boolean_replacement_edge_coupling.md)
 - [completing the boundary of a minimum exact-cut side gives a four-connected graph and an exact six-terminal rooted-minor criterion](../results/hc7_k7minus_four_centre_completed_side.md)
 - [a partition-specific family of connected subgraphs reflects the fixed boundary colouring through an exact seven-cut](../results/hc7_exact7_selected_response_preservation.md)
 
@@ -50,11 +51,18 @@ force one of `2K_2,P_4,C_4` and at least sixteen distinct exact order-seven
 cuts through simultaneous centre replacement.  For each exact component
 these cuts form a Boolean sublattice, and one closed-side six-colouring
 induces a coherent boundary partition at each cut.  At least one sublattice
-contains a square.  The finishing theorem must propagate a partition around
-that square and combine it with the clean fan to reflect the partition,
-construct the prescribed rooted `K_6^-` minor, or give a strict
-trace-preserving descent.  Another unlabelled cut or attachment census is
-not an accepted endpoint.
+contains a square.  The new direct input below identifies the graph structure
+of that square.
+
+The replacement edges are now fixed, disjoint coordinates of one common
+seven-path linkage.  Deleting one coordinate gives an exact order-six
+separation and a complete classification of the endpoint-type obstruction;
+deleting two gives an exact order-five separation with a spanning `K_6`
+model.  The unresolved task is to align the two shore colourings across one
+coordinate edge, then connect that transfer to the minimum-side fan.
+Different endpoint signatures may still come from unrelated colourings, and
+the square need not be based at the minimum side.  Another unlabelled cut or
+attachment census is not an accepted endpoint.
 
 ## Conditional and frozen routes
 

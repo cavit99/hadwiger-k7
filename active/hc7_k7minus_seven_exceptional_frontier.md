@@ -365,10 +365,9 @@ differ; synchronizing them is the exact multi-centre colouring target.
 
 ## 4. Current global finishing obstruction
 
-**Status of the four-centre reduction:** written proof; separate internal
-audit GREEN in the
-[promoted theorem](../results/hc7_k7minus_four_centre_web_cut_lattice.md).
-The theorem forcing either the required rooted minor or a strict
+**Status of the four-centre reduction:** the promoted theorem and the
+refinements cited in this section have separate GREEN internal audits.  The
+theorem forcing either the required rooted minor or a strict
 trace-preserving exact-cut descent remains open.
 
 Since `R(4,5)=25` and `G` has no literal `K_5`, its exceptional vertices
@@ -502,22 +501,64 @@ partition at every cut.  At least one sublattice contains a four-element
 square.  Its cuts do not share one fixed centre set, so the existing
 fixed-anchor uncrossing theorem does not compare their boundary partitions.
 
-The remaining web-side theorem is now precise.  Use the clean fan and the
-at most eight centre-bearing components on `C`, together with the at most
-four minimal regions on `D`, to obtain one of the following:
+The audited
+[Boolean replacement theorem](../results/hc7_k7minus_boolean_replacement_edge_coupling.md)
+supplies the missing graph structure.  Fix one exact component `P`.  In any
+seven-path linkage across its replacement family, each edge
+`u x_{uP}`, `u in W_P`, is a fixed coordinate edge on a distinct path.
+Proper-minor colourings of the graph with these edges deleted realize every
+nonempty set of endpoint-equalities, while the all-unequal set is
+impossible.  A colouring restricts properly to a closed side exactly when
+its equal endpoint pairs lie on the side prescribed by the corresponding
+Boolean coordinate.
+
+Deleting one coordinate edge `ux` gives an exact order-six separation in
+the six-connected, exactly six-chromatic graph `H=G-ux`.  Its boundary has at most
+eleven edges.  If `L,R'` are its open sides and
+
+\[
+ \delta_Z=|E(H[Z])|+|E_H(Z,Q)|-4|Z|,
+ \qquad \sigma=|E(G)|-4|V(G)|,
+\]
+
+then
+
+\[
+             \delta_L+\delta_{R'}
+              =\sigma+23-|E(G[Q])|\ge\sigma+12.     \tag{4.2}
+\]
+
+The coordinate edge is not double-critical.  If colourings of the two
+closed shores induce the same partition on `Q`, then they combine unless
+the endpoints have the same named boundary colour, or `Q` uses five colours
+and both endpoints use the sole missing colour.  In the latter case the
+boundary partition has shape `2+1+1+1+1`.
+
+Deleting two coordinate edges gives an exact order-five separation in a
+five-connected, exactly six-chromatic graph with a spanning `K_6` model.
+The three nonempty endpoint-equality signatures occur, but their colourings
+need not be related.  In the four-region case, if `Gamma` is `P_4` or
+`C_4`, the two replacement vertices are nonadjacent; an edge between them
+would give an explicit `K_7^-` model.  This does not eliminate either
+interaction graph, and it gives no conclusion for `2K_2`.
+
+The remaining web-side theorem is now one-dimensional.  Across two adjacent
+cuts differing by `u` versus `x_{uP}`, rejection of the coherent boundary
+partitions on both sides must force one of the following:
 
 1. disjoint connected subgraphs realizing the same boundary colour
    partition on the other shore;
-2. the prescribed `(U union P)`-rooted `K_6^-` minor in the selected side;
+2. the prescribed six-terminal rooted `K_6^-` minor in the selected side;
 3. a strict exact-cut descent retaining the fixed centres, colouring and
-   named vertices; or
-4. in the four-region case, propagation of a common boundary partition
-   around a replacement square, yielding one of the first three outcomes.
+   named vertices.
 
 The audited boundary-colouring reflection theorem makes the first outcome
 a six-colouring of `G`; the opposite component completes the second outcome
 to a `K_7^-` minor.  Trace minimality excludes the third in a hypothetical
-counterexample.
+counterexample.  The resulting coordinate must then be connected to the
+clean fan on the minimum side `C`.  The present square may be based at a
+different exact component, and linkage geometry alone does not align the
+proper-minor colourings.
 
 There is also an exact rooted-minor formulation.  The audited
 [boundary-completion theorem](../results/hc7_k7minus_four_centre_completed_side.md)
@@ -620,12 +661,13 @@ Pursue one global exceptional-centre terminal theorem.
    same boundary partition on both shores, the prescribed six-terminal
    `K_6^-` model, or a strict trace-preserving descent.
 3. Compare the at most four minimal opposite-side regions.  If four survive,
-   propagate the common closed-side colouring around a Boolean replacement
-   square to obtain a descent or an explicit `K_7^-` model.  Merely counting
-   the eleven replacement cuts is not terminal.
+   prove the one-coordinate boundary-partition transfer across a replacement
+   edge, then connect that coordinate to the clean fan.  The accepted exits
+   are matching shore partitions, the prescribed rooted `K_6^-` model, or
+   strict trace-preserving descent.
 
 The earlier one-centre operation and rooted-allocation lemmas remain tools
 only when they feed this global argument.  Further graph-code filters,
 isolated boundary classifications, or another nonterminal separation are not
-accepted progress.  The bottleneck is now boundary-partition propagation
-around a replacement square, coupled to the clean fan on the minimum side.
+accepted progress.  The bottleneck is the one-coordinate colour alignment,
+followed by its coupling to the clean fan on the minimum side.
