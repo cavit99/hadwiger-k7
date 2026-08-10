@@ -7,8 +7,9 @@ written and separately audited GREEN; the finite boundary claims have
 retained independently checked verifiers.  The four-centre theorem and its
 operation-coupled, tri-separation, trace-preserving, and generalized-wheel
 leaf refinements in Section 4 are also separately audited GREEN.  The
-Boolean minimum-separator linkage and its exact one-coordinate response
-language in Section 4 are separately audited GREEN.  The accompanying scoped
+Boolean minimum-separator linkage, the cyclic four-region elimination, and
+the exact one-coordinate response language in Section 4 are separately
+audited GREEN.  The accompanying scoped
 barriers are separately audited GREEN, while the list-core calculation in
 Section 3 remains a written live derivation without a separate audit.  The
 upper bound is open.  This file is not a second status ledger.
@@ -491,7 +492,7 @@ are disjoint.  Their interaction graph `Gamma` satisfies
 \]
 
 The order bound follows from explicit `K_7^-` models.  In the equality
-case `Gamma` is `2K_2`, `P_4`, or `C_4`.  The five resulting exact
+case `Gamma` is initially `2K_2`, `P_4`, or `C_4`.  The five resulting exact
 components force at least eleven distinct cuts obtained by simultaneously
 replacing nonempty sets of uniquely attached centres by their unique
 neighbours.  Together with the five original four-centre cuts, this gives
@@ -540,8 +541,26 @@ five-connected, exactly six-chromatic graph with a spanning `K_6` model.
 The three nonempty endpoint-equality signatures occur, but their colourings
 need not be related.  In the four-region case, if `Gamma` is `P_4` or
 `C_4`, the two replacement vertices are nonadjacent; an edge between them
-would give an explicit `K_7^-` model.  This does not eliminate either
-interaction graph, and it gives no conclusion for `2K_2`.
+would give an explicit `K_7^-` model.  That adjacency argument alone does
+not eliminate either interaction graph and gives no conclusion for `2K_2`.
+
+The audited
+[cyclic four-region elimination](../results/hc7_k7minus_cyclic_four_region_elimination.md)
+uses the full simultaneous-replacement geometry to close one of those
+graphs.  Inside a doubly replaced component, internal rooted connectivity
+and the rooted-triangle obstruction produce three pairwise adjacent bags
+rooted at the two replacement vertices and one remaining centre.  If
+`Gamma=C_4`, the four other exact components form a `K_4^-` after the last
+centre is absorbed, so the seven bags give an explicit `K_7^-` model.
+Thus
+
+\[
+                         \Gamma\in\{2K_2,P_4\}.       \tag{4.3}
+\]
+
+In the `P_4` case, no Boolean square is based at `C` or at an endpoint
+region.  Its two internal regions carry at least five unique-centre
+incidences between them; both carry one, and one carries at least three.
 
 The audited
 [minimum-separator linkage theorem](../results/hc7_k7minus_boolean_minimum_separator_linkage.md)
@@ -590,20 +609,47 @@ a partition realized by both shores.  It is not a critical host and has no
 fixed minimum-side trace, so it does not refute the desired theorem.  It
 does rule out deriving synchronization from the local package alone.
 
-The smallest repair is therefore fixed-trace and composable:
+A direct fixed-trace audit exposes a sharper localization failure in that
+one-coordinate formulation.  Fix a literal colouring `c` of the old closed
+`C`-shore inducing the selected partition `Pi_C`.  For `z in D`, define
 
-> Let `Pi_C` be the fixed paired exact-`U` partition on the minimum boundary
-> `U dotcup T`, and let `e=ux_{uP}` with `P subset D`.  Either `G-e` has a
-> six-colouring inducing `Pi_C` on `U dotcup T`, or the prescribed rooted
-> `K_6^-` model or a strict trace-admissible descent occurs inside `C`.
+\[
+              L_e(z)=[6]-c(N_{G-e}(z)\cap(U\cup T)),                \tag{4.4}
+\]
 
-In the colouring outcome, the clean fan can be reconstructed in the same
-witness and `u,x` are forced equal.  A subsequent aligned endpoint step
-must use that equality and the anchored coordinate path to give compatible
-shore types, the rooted minor, or descent.  Stating two existential
-coordinate transfers is not enough for the Boolean square: the two
-edge-deletion colourings may be unrelated.  The fixed trace is the common
-invariant needed for composition.
+where `e=ux_{uP}` and `x=x_{uP}`.  Then `G-e` has a six-colouring inducing
+`Pi_C` on the old boundary if and only if `G[D]` is `L_e`-colourable.
+Deleting `e` can enlarge only the list at `x`, and it does so only when `x`
+has no second neighbour in `U`.
+
+If `G[D]` is not `L_e`-colourable, a vertex-minimal induced rejection
+kernel can avoid `x`.  No proved result excludes that possibility.  In
+that branch the coordinate edge is absent from the obstruction, and every
+separator naturally exposed by the kernel is nested inside `D`, on the
+wrong side of the minimum choice of `C`.  Even a kernel containing `x`
+does not presently produce a separation which enters `C`.  Thus the
+proposed one-coordinate trichotomy does not follow from the current
+package: its hypothesis is opposite-side list rejection, while its two
+noncolouring exits were required inside `C`.  This is a recorded route
+nonclosure, not a counterexample to such a theorem under the full critical-
+host hypotheses.
+
+The next accepted target is therefore a square-level fixed-trace kernel
+localization theorem.  For the two marked list enlargements of a surviving
+`2K_2` square or internal-region `P_4` square, it must force one of:
+
+1. a one- or two-coordinate colouring attaining `Pi_C`, followed by an
+   aligned endpoint repair;
+2. an explicit `K_7^-`-minor model; or
+3. an exact fixed-trace or one-missing-centre separation which enters and
+   strictly splits `C`.
+
+In particular, the theorem must handle kernels avoiding one marked endpoint;
+merely applying the one-extra-colour critical-kernel trichotomy after
+assuming attainment is circular.  The fixed trace remains the common
+invariant needed for composition, while the square supplies two marked list
+changes rather than one coordinate which may disappear from its own
+obstruction.
 
 There is also an exact rooted-minor formulation.  The audited
 [boundary-completion theorem](../results/hc7_k7minus_four_centre_completed_side.md)

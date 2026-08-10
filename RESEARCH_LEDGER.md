@@ -162,6 +162,18 @@ any such square are nonadjacent; an edge between them would give an explicit
 `K_7^-` model.
 
 The audited
+[cyclic four-region elimination](results/hc7_k7minus_cyclic_four_region_elimination.md)
+now makes part of that interaction classification terminal.  A doubly
+replaced component contains a rooted triangle on its two replacement
+vertices and either remaining centre.  The other four exact components can
+then be completed to a `K_4^-` model whenever `Gamma=C_4`, giving an
+explicit `K_7^-` model.  Hence `C_4` is impossible.  If `Gamma=P_4`, the
+same construction excludes every Boolean square based at `C` or at an
+endpoint region.  The two internal regions therefore carry at least five
+unique-centre incidences between them, so both carry an incidence and one
+carries at least three.
+
+The audited
 [minimum-separator linkage theorem](results/hc7_k7minus_boolean_minimum_separator_linkage.md)
 now removes the geometric anchoring ambiguity.  For every Boolean component
 `P subset D`, one common seven-path family truncates to a centre-fixed
@@ -214,20 +226,23 @@ partition on either lifted cut.  It is not a critical host and does not
 refute a fixed-trace theorem, but it excludes a proof from those local data
 alone.
 
-The immediate repair theorem is now:
+A direct fixed-trace audit also changes the proposed next lemma.  Fixing the
+selected colouring on the old `C`-shore turns deletion of `ux` into a list
+change at `x` on `D`.  If that fixed trace is rejected, a vertex-minimal
+list obstruction can avoid `x` entirely.  The coordinate then disappears
+from its own obstruction, and any separator exposed by that kernel is nested
+inside `D`, not inside the minimum side `C`.  No current theorem excludes
+this branch.  Consequently the proposed one-coordinate transfer trichotomy
+does not follow from the existing package; this is a route nonclosure, not a
+counterexample under the full critical-host hypotheses.
 
-> Let `Pi_C` be the fixed paired exact-`U` partition on the minimum boundary
-> and let `e=ux_{uP}` with `P subset D`.  Either `G-e` has a six-colouring
-> inducing `Pi_C` on the old boundary, or the prescribed rooted `K_6^-`
-> minor or a strict trace-admissible descent occurs inside `C`.
-
-In the colouring outcome, the fan can be rebuilt in the same witness and
-`u,x` are forced equal; an aligned endpoint step must then spend the anchored
-coordinate path.  This fixed trace is also the invariant needed to compose
-two coordinates around the square, since the edge-deletion colourings for
-different signatures may otherwise be unrelated.  The `2K_2` interaction
-graph and the terminal treatment of `P_4,C_4` remain open.  Another
-unlabelled separator or boundary census is not closure.
+The immediate target is now square-level fixed-trace kernel localization.
+For the two marked list changes of a surviving `2K_2` square or
+internal-region `P_4` square, it must give a fixed-trace colouring and
+aligned endpoint repair, an explicit `K_7^-` model, or an exact fixed-trace
+or one-missing-centre separation entering and strictly splitting `C`.
+Kernels avoiding a marked endpoint must be included.  The `C_4` case is
+closed; another unlabelled separator or boundary census is not closure.
 
 ## Sufficient but non-primary extremal route
 

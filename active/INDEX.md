@@ -23,6 +23,7 @@ Selected audited inputs:
 - [a paired exact trace forces a clean `2+1` fan](../results/hc7_k7minus_four_centre_paired_trace_fan.md)
 - [a common colouring bounds the minimal opposite-side cut family by four and forces at least sixteen cuts in the equality case](../results/hc7_k7minus_common_colouring_centre_change.md)
 - [replacement edges are common linkage coordinates whose one-edge and two-edge deletions expose exact order-six and order-five separations](../results/hc7_k7minus_boolean_replacement_edge_coupling.md)
+- [a rooted-triangle construction eliminates the `C_4` four-region interaction and confines every surviving `P_4` replacement square to an internal region](../results/hc7_k7minus_cyclic_four_region_elimination.md)
 - [every opposite-region coordinate has a centre-fixed linkage to the minimum cut, while one normalized edge-deletion colouring yields an exact endpoint language and two-sided Kempe lock](../results/hc7_k7minus_boolean_minimum_separator_linkage.md)
 - [completing the boundary of a minimum exact-cut side gives a four-connected graph and an exact six-terminal rooted-minor criterion](../results/hc7_k7minus_four_centre_completed_side.md)
 - [a partition-specific family of connected subgraphs reflects the fixed boundary colouring through an exact seven-cut](../results/hc7_exact7_selected_response_preservation.md)
@@ -49,12 +50,14 @@ to one `p`--`p'` path and two `p`--`q` paths with disjoint interiors.
 Changing the deleted centre now gives at most four inclusion-minimal regions
 inside the opposite component `D`.  Their interaction graph has maximum
 degree at most three and independence number at most two.  Four regions
-force one of `2K_2,P_4,C_4` and at least sixteen distinct exact order-seven
-cuts through simultaneous centre replacement.  For each exact component
-these cuts form a Boolean sublattice, and one closed-side six-colouring
-induces a coherent boundary partition at each cut.  At least one sublattice
-contains a square.  The new direct input below identifies the graph structure
-of that square.
+initially force one of `2K_2,P_4,C_4` and at least sixteen distinct exact
+order-seven cuts through simultaneous centre replacement.  A terminal
+rooted-triangle construction now eliminates `C_4`.  In a surviving `P_4`,
+every Boolean square is based at an internal region, and those two regions
+carry at least five unique-centre incidences between them.  For each exact
+component the replacement cuts form a Boolean sublattice, and one
+closed-side six-colouring induces a coherent boundary partition at each
+cut.
 
 The replacement edges are fixed, disjoint coordinates of one common
 seven-path linkage.  Deleting one gives an exact order-six separation;
@@ -68,16 +71,16 @@ with the first beginning at the literal replacement edge.  Rejection at the
 replacement-vertex cut already implies rejection at the centre cut, so the
 two rejections are one endpoint-language condition, not independent data.
 
-The unresolved task is fixed-trace synchronization.  The normalized
-edge-deletion colouring need not induce the exact-`U` trace used to choose
-`C`, the suffix inside `C` is uncoloured, and the result does not prove that
-the centre has a unique neighbour in `C`.  If a returned one-missing-centre
-separator actually splits `C`, exact uncrossing is terminal; the present
-opposite-region cuts are nested and do not do so.  The new odd-wheel barrier
-shows that the local lower-cut, endpoint-lock and linkage package alone
-cannot force a common lifted-boundary partition.  A next theorem must retain
-the fixed minimum-side trace and be composable across two coordinates.
-Another unlabelled cut or attachment census is not an accepted endpoint.
+The unresolved task is fixed-trace synchronization in the remaining
+`2K_2` case and the internal-region squares of `P_4`.  A direct audit shows
+why one coordinate is insufficient: after fixing the old `C`-shore trace,
+rejection becomes a list obstruction in `D`, and a minimal obstruction can
+avoid the replacement vertex entirely.  The coordinate then disappears and
+the resulting separators stay nested on the wrong side of `C`.  The next
+accepted theorem must localize the two marked list changes of a whole square
+and return a fixed-trace colouring, an explicit `K_7^-` model, or an exact
+separator entering and strictly splitting `C`.  Another unlabelled cut or
+attachment census is not an accepted endpoint.
 
 ## Conditional and frozen routes
 
