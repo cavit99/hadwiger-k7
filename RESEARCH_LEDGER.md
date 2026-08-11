@@ -748,14 +748,16 @@ and E5 remains a stronger frozen laboratory.  Direct `HC_7` bridge
 composition is also frozen: Conjecture 21 is the cleaner setting in which to
 develop the missing branch-set transfer and separator-resolution machinery.
 
-The concise computation-free manuscript in
-[`paper/k7minus-low-degree/`](paper/k7minus-low-degree/) now contains the
-rooted-helper closure and the full current low-degree/density critical-host
-package.  Its exact source revision has an adjacent internal mathematical audit and a separate
-internal citation/novelty review.  These are not external peer review or a
-priority certificate; independent human specialist validation is still
-required before publication.  Manuscript preparation is not the active
-research target.
+The eight-page computation-free DRAFT in
+[`paper/k7minus-low-degree/`](paper/k7minus-low-degree/) contains the
+linked-cliques theorem, rooted-helper closure and the full low-degree and
+density critical-host package.  Its exact source revision has an adjacent
+internal mathematical audit and a separate internal citation and novelty
+review.  The former rooted-web manuscript is retained as a labelled
+[historical draft](archive/manuscripts/k7minus-rooted-web-2026-08-09/).
+These checks are not external peer review or a priority certificate;
+independent specialist validation is still required before publication.
+Manuscript preparation is separate from the active proof target.
 
 ## Trust boundary
 

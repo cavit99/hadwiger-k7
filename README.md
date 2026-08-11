@@ -70,18 +70,19 @@ than duplicated here.
 
 ### Partial-results manuscript status
 
-The adjacent `K_7^-` chain has been distilled into the concise,
-computation-free paper
-[Minimum Degree Eight and a Rooted-Web Reduction in `K_7^-`-Minor-Free
-Contraction-Critical Graphs](paper/k7minus-low-degree/main.pdf),
+The current manuscript is the eight-page, computation-free draft
+[Minimum degree eight in `K_7^-`-minor-free contraction-critical
+graphs](paper/k7minus-low-degree/main.pdf),
 with [LaTeX source](paper/k7minus-low-degree/main.tex), a
-[hash-pinned composed-manuscript audit](paper/k7minus-low-degree/main_audit.md),
+[hash-pinned internal audit](paper/k7minus-low-degree/main_audit.md),
 and a separate
 [internal citation and novelty review](paper/k7minus-low-degree/citation_novelty_review.md).
 Both reviews are internal checks, not external peer review or a priority
-certificate.  The manuscript includes the rooted `K_4`/web alternative for
-four independent degree-eight vertices and its edge-deletion reduction to
-controlled paths or a smaller separated component.  The broader
+certificate.  The manuscript proves the linked-cliques theorem, excludes
+degree seven, and derives the current low-degree and density package.  The
+former rooted-web manuscript is retained as a clearly labelled
+[historical draft](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf).
+The broader
 [external-review blueprint](active/hc7_partial_results_external_review_blueprint.md)
 is frozen.  This manuscript proves neither the `K_7^-` six-colour conjecture
 nor `HC_7`.
@@ -99,7 +100,7 @@ nor `HC_7`.
 | [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Frozen all-degree target, direct inputs, and trust boundary |
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Frozen hash-pinned review provenance predating the rooted `K^*_{4,2}` closure |
-| [`K_7^-` minimum-degree-eight and rooted-web paper](paper/k7minus-low-degree/main.pdf) | Concise computation-free manuscript containing the low-degree/density chain and the controlled-path or smaller-component reduction |
+| [`K_7^-` minimum-degree-eight draft](paper/k7minus-low-degree/main.pdf) | Eight-page computation-free paper containing the linked-cliques theorem, degree-seven exclusion and the low-degree critical-host package |
 | [Order-seven separator component bound](results/hc7_k7minus_critical_seven_cut_capacity.md) | Excludes four-component seven-vertex separators in the critical graph and normalises the three-component boundary |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
