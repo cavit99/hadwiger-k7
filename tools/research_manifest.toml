@@ -7363,6 +7363,62 @@ does_not_prove = [
 keywords = ["K7 minus", "five independent centres", "minimal donor", "list-critical core", "boundary inflation", "route nonclosure"]
 
 [[claims]]
+id = "hc7.k7minus_five_centre_paired_donor_gate"
+title = "A single cross-edge aligns two donor traces but does not force overlap descent"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_five_centre_paired_donor_gate.md"
+source_heading = "Theorem 1.1 (cross-edge paired response)"
+active = false
+audit = "active/hc7_k7minus_five_centre_paired_donor_gate_audit.md"
+expected_source_sha256 = "a5be155bf2ab3278727fbcbcb1e37190395aa747e48283308befe586a8625206"
+scope = "the single-edge paired-donor continuation of the target-free unique-owner five-centre two-cut residue"
+strict_parameter = "lexicographic union of the two donor boundaries, followed by total donor order, with model, operation, colouring and labelled duties fixed"
+label_fidelity = "a genuine common response forces the deleted edge to join the two donors; its one colouring aligns both boundary traces and the fixed joint list obstruction"
+separator_order = "a supplied compatible pair gives K7-minus or an actual joint separator of order at least seven, full at equality; no upper bound is proved"
+colour_compatibility = "both individual traces and the joint trace come from one literal colouring of G-e, but that colouring need not induce the original equal/distinct pq response"
+conclusions = [
+  "one single-edge-deletion colouring gives two genuine donor traces only across the deleted edge",
+  "every minimal fixed-boundary joint list obstruction contains both ends of that edge",
+  "the joint boundary order subtracts external overlap and both cross-incidence sets exactly",
+  "joint minimisation permits a private same-bag boundary inflation rather than forcing overlap",
+  "a supplied compatible near-clique pair gives an explicit K7-minus minor or one response-bearing joint separator",
+  "the current unique-owner theorem does not supply the required cross-edge pair",
+]
+does_not_prove = [
+  "a host-level cross-edge paired-donor supply theorem",
+  "any conclusion for a common deletion of two or more edges",
+  "preservation of the original equal/distinct pq response",
+  "closure of the five-centre two-cut branch",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "five independent centres", "paired donor", "cross-edge", "fixed trace", "boundary overlap", "private inflation", "route nonclosure"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_paired_donor_overlap"
+title = "Boundary overlap and one cross-edge do not synchronize two donor traces"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_paired_donor_overlap_barrier.md"
+source_heading = "1. The false local principle"
+active = false
+audit = "barriers/hc7_k7minus_paired_donor_overlap_barrier_audit.md"
+expected_source_sha256 = "342ae58dc8a87ed89b4528d527241c6c844e4c35260a44286fd94accb1f10024"
+scope = "a sixteen-vertex local paired-donor configuration with two order-seven traces, five shared boundary vertices and five protected contacts per smaller donor"
+conclusions = [
+  "both donors undergo trace-losing boundary inflation from order seven to order eight under one fixed edge-deletion colouring",
+  "the fixed cross-edge remains a minimal rejected core on the joint order-seven boundary",
+  "an explicit width-four tree decomposition excludes a K7-minus minor",
+  "the graph is exactly three-connected and four-chromatic",
+]
+does_not_prove = [
+  "failure under seven-connectivity or proper-minor six-colour-criticality",
+  "failure with the exact five-centre equal/distinct response and unique-owner duties",
+  "failure of a full host-level paired-donor supply theorem",
+]
+keywords = ["K7 minus", "paired donor barrier", "boundary overlap", "trace loss", "private inflation", "treewidth four"]
+
+[[claims]]
 id = "hc7.k7minus_four_centre_web_cut_lattice"
 title = "Four independent degree-eight centres yield a rooted K5 or an exact-cut lattice"
 kind = "theorem"
@@ -9527,7 +9583,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "8980b1b3a91c257c812748ab715e33521c4f966ada3e519e17dfd412c9b412d3"
+expected_source_sha256 = "6d576b022bc5a5e47f8bbb0fc12be8dc1e0b209e16ff894a626c8181632ad3d9"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16556,6 +16612,30 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_five_centre_minimal_donor_gate"
 kind = "related_to"
 note = "The boundary-first one-donor continuation is now an audited route nonclosure; it identifies a compatible two-donor theorem as the smallest repair."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_five_centre_paired_donor_gate"
+kind = "related_to"
+note = "The single-edge paired continuation is an audited route nonclosure: a supplied compatible pair would be useful, but the unique-owner theorem does not supply it and overlap minimisation permits private inflation."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_paired_donor_gate"
+target = "hc7.k7minus_five_centre_unique_owner_nested_separator"
+kind = "uses"
+note = "The application audits exactly what the spanning unique-owner model and its one returned donor do and do not supply."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_paired_donor_gate"
+target = "hc7.k7minus_five_centre_minimal_donor_gate"
+kind = "related_to"
+note = "The paired theorem preserves one cross-edge trace but reproduces the one-donor boundary-inflation obstruction in private same-bag form."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_paired_donor_gate"
+target = "hc7.barrier.k7minus_paired_donor_overlap"
+kind = "guarded_by"
+note = "The explicit target-free local graph refutes the inference that overlap, a common cross-edge and five anonymous contacts force synchronization."
 
 [[relations]]
 source = "hc7.k7minus_five_centre_minimal_donor_gate"
