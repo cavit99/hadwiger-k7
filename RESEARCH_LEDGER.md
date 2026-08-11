@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 10 August 2026
+**Last updated:** 11 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -130,18 +130,38 @@ a nonempty proper connected donor piece, with connected complement in its
 model bag, whose open neighbourhood is an actual separator of order at
 least seven.
 
-This does not close the two-cut branch.  The returned separator can have
-order greater than seven, can miss four of the five centres, and retains no
-known boundary-colouring response.  The original `pq` critical completion
-supplies a colouring constraint on `S=Z dotcup {p,q}`; it does not supply an
-opposite-shore proper operation realizing the same labelled partition on
-the new literal separator.  Thus the exact remaining theorem is a
-response-preserving donor alternative: the quotient absorption must give
-the forbidden minor, return an exact separator `Z dotcup {r,s}` carrying
-the equal/distinct response needed for strict descent, or produce one
-identical labelled partition of the returned boundary from proper
-operations supported on its two open shores.  The last outcome glues
-directly and does not require the new boundary to equal the old one.
+The proposed boundary-first
+[minimal-donor gate](active/hc7_k7minus_five_centre_minimal_donor_gate.md)
+has now been run and is decisively nonterminal.  A fixed proper-minor
+colouring yields a vertex-minimal one-extra-colour core inside the donor.
+Either that core is the whole donor, or the geometry exposes a smaller
+donor-eligible set.  In a comparison class closed under that replacement,
+the smaller set has strictly larger open neighbourhood and need not retain
+the trace; if the class is not closed, no lexicographic comparison is
+available.  Thus fixed-trace descent runs against, rather than with, the
+primary boundary-order minimisation.
+
+There is an exact quantifier fork.  Restricting the comparison to donors
+which retain the near-clique labels and chosen operation gives no proved
+upper bound on the new separator, and above order seven the output need not
+have two full shores.  Enlarging the comparison to all geometric model
+donors bounds the minimum by eight: the minimum is seven, or the second
+coordinate selects a degree-eight singleton.  The latter exposes an
+exceptional neighbourhood but need not retain the labelled model and
+operation data; its two
+unmodified shore languages are separated by using at most five versus
+exactly six boundary blocks.  At order seven, split boundaries glue, so the
+survivor is a nonsplit full boundary.  Its core either fills the donor or
+leads to the same boundary-inflation/trace-loss fork.  Existing audited
+parity and separator-excess barriers show why
+ordinary boundary operations and model geometry do not eliminate these
+endpoints.
+
+This is a route nonclosure, not a counterexample and not a closure of the
+two-cut branch.  Repeating an unlabelled one-donor minimisation is now
+frozen.  The smallest live repair is a compatible two-donor theorem which
+retains prescribed near-clique contacts and one fixed proper-minor response,
+or a host-level theorem eliminating the nonsplit exact-seven endpoint.
 
 Any four-set `U subset Z` may also be used in the audited
 [four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
