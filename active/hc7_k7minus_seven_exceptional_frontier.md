@@ -17,8 +17,10 @@ separate cold full rerun, with the absence of DRAT stated in its trust
 boundary.  The universal four-boundary rooted-`K_4` theorem and the
 unique-owner critical-completion minor-or-separator reduction are also
 separately audited GREEN.  The boundary-first donor-gate theorem and its
-scoped route nonclosure are separately audited GREEN.  The accompanying
-scoped barriers are separately audited GREEN,
+scoped route nonclosure are separately audited GREEN.  The five-edge
+common-host theorem, its signed four-crossing and omitted-coordinate
+reductions, the two-shore rooted-minor theorem, the dense-branch visibility
+theorem, and the palette-intersection barrier are separately audited GREEN,
 while the list-core calculation in Section 3 remains a written live
 derivation without a separate audit.  The upper bound is open.  This file
 is not a second status ledger.
@@ -694,8 +696,177 @@ One operation normalizes to the standard distinct response exactly when
 
 Hence every fixed-root packet in the three-connected branch has a
 rooted-model outcome or two web shores sharing one literal extension vertex
-and colour.  Composing these alternatives across the five roots, or forcing
-the displayed common missing colour, is the remaining rotation problem.
+and colour.  The separately audited
+[palette-intersection barrier](../barriers/hc7_k7minus_five_rotation_palette_intersection_barrier.md)
+shows that the five singleton-saturation rows alone do not force the
+displayed common missing colour or its common-partition fallback.  It is a
+palette-level barrier, not a critical-host counterexample.
+
+The audited
+[common five-edge response theorem](../results/hc7_k7minus_five_centre_common_matching_reduction.md)
+now provides a stronger literal synchronization without that inference.
+For every `z in Z`, a star-contraction colouring gives an independent triple
+`I_z` and five singleton-colour neighbours `R_z`.  Hall's theorem selects
+distinct `x_z in R_z`; hence
+
+\[
+ M=\{zx_z:z\in Z\},\qquad H=G-M
+\]
+
+with `M` a matching.  The exact matching-signature language on `H` is
+
+\[
+                         2^M-\{\varnothing\}.        \tag{4.0}
+\]
+
+For every nonempty `J subseteq M`, both `G-J` and `G/J` are exactly
+six-chromatic.  Expanding a colouring of `G/J` gives a signature-`J`
+colouring whose restriction `theta_J` to `F` satisfies
+
+\[
+ \varnothing\ne\operatorname{Sat}(\theta_J)
+                 \subseteq\{z:zx_z\in J\}.          \tag{4.0a}
+\]
+
+The same two graphs supply spanning `K_6` models: one in `G-J`, and one in
+`G` with every pair indexed by `J` in a common branch set.  Applying the
+minimal contraction-bag theorem to each singleton coordinate also gives
+five actual separators of order at least seven, each carrying its literal
+exterior-realised, interior-rejected precolouring.  Their orders and boundary
+partitions need not agree.
+
+This one graph gives the following exhaustive connectivity alternatives.
+
+1. If `kappa(H)=2`, every minimum cut has two components joined by all five
+   deleted matching edges.  All 32 endpoint transversals are exact
+   order-seven cuts with two full sides.  The same pair is a two-cut of
+   `F`; every centre has its selected representative as its unique contact
+   with one open shore and all seven other neighbours in the opposite
+   closed shore.
+2. If `kappa(H)=3`, every minimum cut has two components joined by four or
+   five matching edges.  Four crossings give 16 exact order-seven cuts.
+   Five crossings give 32 proper order-eight cuts; every mixed transversal
+   gives an exact order-seven descent or two full order-eight sides.  The
+   cut with its centres removed separates `F`; when `kappa(F)>=3`, the cut
+   avoids `Z` and is a three-cut of `F`.
+3. If `kappa(H)>=4`, density and Norin--Totschnig give a spanning
+   `K_7^vee` model.  The exact near-clique dichotomy gives the target or a
+   connected, co-connected model-bag piece `Y` with an actual boundary of
+   order at least seven.  If `M_Y=\{e in M:e cap Y ne emptyset\}`, then
+   every nonempty `J subseteq M_Y` gives an exterior-realised,
+   interior-rejected trace on `N_G(Y)`.  These `2^{|M_Y|}-1` traces need not
+   induce distinct boundary partitions.
+
+The common-host theorem replaces five unrelated operations by one punctured
+five-dimensional Boolean response family.  It does not yet terminalize the
+three connectivity rows.  In the two-cut row, the existing singleton-shift
+theorem applies to every centre whose singleton lies on the equality shore,
+but its scalar identities repeat and do not compose; if at most one does,
+four singleton anchors lie on the distinct shore and root unrelated `K_4`
+models there.  The 31 signatures give rejected traces, not 31 distinct
+boundary partitions.  In the four-connected row, a returned piece disjoint
+from all ten matching ends is invisible to the raw signature family; a
+piece meeting the matching has traces but still lacks a partition-specific
+carrier or terminal descent.
+
+The audited
+[two-shore rooted-minor theorem](../results/hc7_k7minus_five_centre_two_shore_rooted_k4.md)
+sharpens the first row.  Orient the components as `C` (equal response) and
+`D` (distinct response), and put
+
+\[
+                         U=\{z\in Z:x_z\in C\}.
+\]
+
+For every four-set `Q` of the seven-vertex boundary, `G[D union Q]` has a
+`Q`-rooted `K_4` minor.  If `U` is nonempty, one centre has a singleton
+contact with `C`; the singleton-shift density bound and the rooted `K_4`
+obstruction theorem then give the same universal conclusion in
+`G[C union Q]`.  Merging two such models at one common boundary root gives
+seven bags, but the remaining `3`-by-`3` cross-shore matrix needs at least
+eight adjacencies.  Fullness contacts may all enter the merged bag and do
+not force a specified matrix entry.  If `U` is empty, all five selected
+neighbours are singleton contacts with `D`, and the equality-shore rooted
+model is not yet supplied.
+
+The audited
+[signed four-crossing theorem](../results/hc7_k7minus_four_crossing_signed_boolean_reduction.md)
+now resolves the connectivity and linkage geometry of the first three-cut
+row.  Write its four crossing matching edges as `E`.  For every nonempty
+`R subseteq E`, and every endpoint choice on `E-R`, the graph `G-R` has two
+full complementary shores at a separator of order `7-|R|`, and
+
+\[
+ \kappa(G-R)=7-|R|,
+ \qquad
+ \Sigma_R(G-R)=2^R-\{\varnothing\}.                \tag{4.0b}
+\]
+
+One fixed family of seven disjoint paths contains the four crossing edges
+as consecutive edges on four distinct paths.  This is a signed statement:
+the centre end of a coordinate may lie on either shore.  For
+`1<=|R|<=3`, the dense minor theorem gives a spanning `K_7^vee` model, so
+target exclusion returns an actual nested model-bag separator.  A returned
+piece meeting `r` deleted coordinates carries all `2^r-1` corresponding
+rejected traces.  The first unsupported case is again a piece disjoint from
+the coordinate ends, or one whose traces repeat the same boundary
+partition.  Thus (4.0b) is not yet a terminal elimination of the
+four-crossing row.
+
+For the five-crossing row, either a mixed order-eight transversal exposes an
+exact order-seven component, or all thirty mixed transversals have exactly
+two full shores.  The audited
+[omitted-coordinate linkage theorem](../results/hc7_k7minus_five_crossing_omitted_coordinate_linkage.md)
+removes the apparent one-unit slack in the latter case.  For every selected
+edge `e_i=z_ix_i`, at least one of the useful alternatives holds:
+
+1. `G-e_i` exposes an exact order-seven response with one end of `e_i` in
+   the boundary and the other in the rejected component; or
+2. `G-e_i` is seven-connected and has seven disjoint `z_i`--`x_i` paths
+   which place the other four matching edges consecutively on four paths
+   and the three vertices of the original cut on the other three.
+
+In the second outcome, restoring `e_i` gives eight disjoint paths and the
+rooted minor
+
+\[
+                  K_2\vee G[N_G(z_i)-\{x_i\}].      \tag{4.0c}
+\]
+
+Thus the displayed seven-vertex neighbourhood graph has no `K_5^-` minor.
+If the response outcome fails for all five coordinates, all five complete
+path packets exist, but only with quantifiers `for every i there exists
+P_i`.  The packets lie in different one-edge deletion graphs and may
+intersect arbitrarily.  Simultaneous packet composition is now the first
+unsupported inference.
+
+The audited
+[dense-branch visibility theorem](../results/hc7_k7minus_dense_branch_rotation_visibility.md)
+sharpens the four-connected row.  For each centre, let `K_z` be the
+intersection of all independent triples in its neighbourhood, and put
+
+\[
+                  W=Z\cup\bigcup_{z\in Z}(N_G(z)-K_z).             \tag{4.0d}
+\]
+
+Every connected set meeting `W` has a direct rejected trace from a centre
+deletion or star contraction.  If one universal bag of the exact
+`K_7^vee` model contains two `P`-neighbours in `W`, the near-clique proof
+returns the target or a nested separator containing one of them.  Hence a
+trace-invisible residue has at most one supported `P`-neighbour in each of
+the four universal bags, at least three `P`-neighbours outside `W`, and at
+most two vertices in each exceptional neighbourhood.  If the returned
+boundary has order seven and its selected piece avoids `Z`, it is already a
+labelled two-cut or a four-centre order-three separation of `F` when the
+boundary contains respectively five or four centres.
+
+Accordingly the immediate target is a **common-matching terminalization
+theorem**: solve the two-shore `3`-by-`3` allocation or the all-five-on-`D`
+orientation; terminalize the signed four-crossing separator or compose the
+five omitted-coordinate linkage packets; or eliminate the
+response-support-sparse dense model.  The rotation theorem remains
+available for the labelled three-cut rows; direct palette intersection is
+no longer the immediate target.
 
 The audited
 [operation-coupled reduction](../results/hc7_k7minus_four_centre_operation_cut_reduction.md)
@@ -1034,26 +1205,38 @@ remaining open step in this secondary route.
 
 ## 5. Recommended next attack
 
-Prove the five-packet composition theorem.
+Prove the five omitted-coordinate packet composition theorem.
 
-1. For each root, retain the proved alternative: one rooted `K_5` outcome,
-   or two web outcomes with the same literal extension vertex and colour.
-   Show that five such alternatives force an explicit `K_7^-` model or a
-   two-cut carrying compatible operations.
-2. When the maximal packet returns a two-cut, exploit its additional
-   coupled one-edge operations.  Force one of their two colours into every
-   other centre's missing-colour set, or derive a terminal from the failure
-   of that intersection across the five fixed roots.  Do not discard the
-   return as an arbitrary two-cut.
-3. Use the two-edge completion square only when the rotation supplies two
-   suitable cross-edges.  Do not enlarge it to three donors or more deleted
-   edges without a new host-level supply theorem.
-4. If the rotation returns a two-cut with compatible operations, feed it
-   into the existing response and completion machinery.  Otherwise keep the
-   order-at-least-eight two-cut residue as the independent receiver branch.
-5. Retain the surviving `2K_2` and internal-`P_4` square problem as a
-   conditional laboratory, not the immediate target.
+1. Work in the five-crossing, no-descent row and assume that every selected
+   edge has the complete-linkage outcome.  Retain the original three-cut,
+   all five matching coordinates, the seven paths in each `G-e_i`, and the
+   five rooted neighbourhood-join minors (4.0c).
+2. Use the local exclusions
 
-The earlier one-centre operation and rooted-allocation lemmas remain tools
-only when they feed this global argument.  Another unlabelled separation or
-attachment census is not an accepted endpoint.
+   \[
+                    K_5^-\npreccurlyeq G[N_G(z_i)-\{x_i\}]
+   \]
+
+   before attempting arbitrary path uncrossing.  A short structural
+   classification of these seven-vertex neighbourhoods is justified if it
+   identifies a common host-level invariant; another component-order census
+   is not.
+3. Compare packets only through literal shared objects: the three vertices
+   of the original cut, the four common matching edges in each pair of
+   packets, and the five exceptional neighbourhoods.  The required exit is
+   an explicit `K_7^-` model or one common boundary partition which closes
+   the corresponding exact response.  Five unrelated path families or
+   rejected traces are not an endpoint.
+4. Keep the two-cut row as the first receiver.  In its mixed orientation,
+   solve the exact `3`-by-`3` cross-bag allocation; in the all-five-on-`D`
+   orientation, first force the equality-shore rooted model or exploit the
+   five singleton contacts directly.  Do not restart donor minimisation.
+5. Keep the response-support-sparse near-clique model as the other
+   exhaustive residue.  Its next lemma is a model-optimised portal-coverage
+   alternative: the target, a labelled low cut, or two supported portals in
+   one universal bag.
+
+The rotation theorem remains a source of labelled three-cut geometry, not
+the primary synchronization mechanism.  The common matching host has
+already supplied the common operation that the five-packet palette route
+could not force.

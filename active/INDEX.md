@@ -21,6 +21,11 @@ Selected audited inputs:
 - [the order-six equality-response component is terminal by a ten-orbit DRAT-certified incidence theorem](../results/hc7_k7minus_order_six_equality_shore_elimination.md)
 - [the order-seven equality-response component is terminal by a cold-rerun 149-orbit allocation theorem](../results/hc7_k7minus_order_seven_equality_shore_elimination.md)
 - [every four boundary vertices root a `K_4` on the distinct-response shore](../results/hc7_k7minus_five_centre_universal_boundary_rooted_k4.md)
+- [five distinct centre edges can be deleted to put all 31 nonempty equality signatures on one six-chromatic host, whose cuts have an exact connectivity trichotomy](../results/hc7_k7minus_five_centre_common_matching_reduction.md)
+- [in the two-cut row the distinct-response shore always has universal four-boundary rooted `K_4` models, and one equality-shore singleton gives the same property on both shores](../results/hc7_k7minus_five_centre_two_shore_rooted_k4.md)
+- [four crossing response edges form a tight signed Boolean cube with exact connectivity, all punctured signatures and one common seven-path coordinate linkage](../results/hc7_k7minus_four_crossing_signed_boolean_reduction.md)
+- [in the five-crossing row each omitted coordinate gives an exact centre-edge response or a seven-connected complete linkage packet with a rooted neighbourhood-join minor](../results/hc7_k7minus_five_crossing_omitted_coordinate_linkage.md)
+- [two response-support portals in one universal near-clique bag force the target or a trace-bearing separator; every invisible dense residue has at least three unsupported portals](../results/hc7_k7minus_dense_branch_rotation_visibility.md)
 - [the five centre-deletion colourings give singleton saturation witnesses on one common core; every fixed-root packet in the three-connected branch has a rooted model or a common literal extension colour, while the rigid alternative returns a labelled two-cut](../results/hc7_k7minus_five_centre_rotation_reduction.md)
 - [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
 - [boundary replacement and anchored uncrossing give trace-preserving strict descent](../results/hc7_k7minus_four_centre_trace_descent.md)
@@ -36,6 +41,7 @@ Selected audited inputs:
 
 Immediate barriers:
 
+- [five singleton-saturation palettes alone do not force a common missing colour or the common-partition fallback](../barriers/hc7_k7minus_five_rotation_palette_intersection_barrier.md)
 - [fullness and local root contacts alone do not force one-shore allocation](../barriers/hc7_k7minus_shore_allocation_barrier.md#theorem-2-two-full-shore-mechanism-barrier)
 - [tri-inseparability and local degree conditions alone do not force two connected subgraphs adjacent to the whole boundary](../barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier.md)
 - [internal six-connectivity, a boundary edge and a rooted `K_4` do not force the prescribed `K_6^-` minor](../barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier.md)
@@ -130,32 +136,57 @@ not being enlarged.  The exact-seven backup still needs the new boundary to
 contain all five centres with the equality orientation.  The singleton
 six-arm, order-four, all-rainbow, and `b=2` rows remain open.
 
-The three-connected campaign is now open through the audited
-[global rotation reduction](../results/hc7_k7minus_five_centre_rotation_reduction.md).
-The common core `F` is nonplanar and exactly six-chromatic, and the five
-centre-deletion colourings have five distinct singleton saturation sets.
-Across the twenty ordered rooted-model/web applications, a web outcome
-returns a two-cut immediately or an order-three separation crossed by the
-four non-omitted centres.  Labelled uncrossing gives a two-cut or a `3+3`
-split of the omitted labels; absent anchors it exposes an original component
-of order three or four.  At fixed root, either two selected shores share one
-literal extension colour or the four boundaries are exactly
-`(Z-z_i) union (X-x_i)`.  The latter packet itself forces the exact cut
-`Z union (X-{x_i,x_j})`, and hence a two-cut of `F`; one returned shore also
-lets the same literal colouring extend over the fixed root with either of
-two distinct colours.  The maximal packet is therefore absent when `F` is
-three-connected.  Those two extensions are coupled colourings of
-`G-rx_i` and `G-rx_j` agreeing on `G-r`; normalization to the standard
-distinct response is equivalent to one of their two colours being absent
-from the neighbourhoods of all four other centres.
+The new immediate laboratory is the audited
+[common five-edge response host](../results/hc7_k7minus_five_centre_common_matching_reduction.md).
+For each centre, a star-contraction colouring supplies five
+singleton-colour neighbours.  Hall's theorem selects distinct neighbours,
+giving a matching `M` of five centre edges.  On `H=G-M`, every nonempty
+subset of `M` is the exact monochromatic-edge set of a six-colouring; the
+empty signature would colour `G`.  Each singleton coordinate also yields an
+actual separator carrying that literal rejected boundary precolouring.
 
-Consequently every fixed-root packet in the three-connected branch has a
-rooted-model outcome or two web outcomes sharing one literal extension
-vertex and colour.  The immediate theorem must compose these five packet
-alternatives into an explicit `K_7^-` model or a two-cut carrying compatible
-operations.  The exact colour-intersection condition above is the first
-normalization target.  The proposed Five-Centre Global Alternative is the
-capstone, not a proved input.
+The connectivity of `H` is exhaustive.  A two-cut is crossed by all five
+matching edges and gives 32 exact order-seven cuts; it is also a two-cut of
+`F=G-Z`, with all five centres having simultaneous singleton shore
+contacts.  A three-cut is crossed by four or five matching edges.  The
+four-crossing row gives 16 exact order-seven cuts; in the five-crossing row,
+each of 30 mixed order-eight cuts gives exact-seven descent or two full
+sides.  If `H` is four-connected, Norin--Totschnig supplies a spanning
+`K_7^vee`; the exact near-clique theorem returns the target or a nested
+model-bag separator.  A returned set meeting `r` matching edges carries all
+`2^r-1` nonempty rejected traces supported there, although their boundary
+partitions may repeat.
+
+The four-crossing three-cut row is now geometrically exact.  Deleting any
+nonempty set `R` of its four crossing edges gives connectivity and a
+two-full-shore separator of order `7-|R|`, realizes every nonempty signature
+on `R`, and retains the four edges as distinct coordinates of one common
+seven-path linkage.  The dense deletion rows return a `K_7^vee` model and
+hence the target or a nested response-bearing separator.  This does not yet
+force that nested piece to meet a coordinate end or synchronize its boundary
+partitions.
+
+The other rows have sharper endpoints as well.  In the two-cut row, the
+distinct shore always has a rooted `K_4` on every four boundary vertices;
+if one selected singleton lies on the equality shore, both shores have that
+universal property, leaving an exact `3`-by-`3` cross-bag allocation.  In
+the five-crossing row, omitting any coordinate gives an exact centre-edge
+response or a seven-connected complete linkage packet; if all five packets
+occur, their simultaneous composition is the unsupported step.  In the
+dense row, two response-support portals in one universal bag force the
+target or a trace-bearing separator.  The invisible residue has at most one
+such portal per universal bag and at least three portals outside the full
+five-centre response support.
+
+The immediate target is to terminalize this trichotomy: eliminate the five
+simultaneous-singleton two-cut row through its cross-bag allocation, or
+handle the all-five-on-one-shore orientation; compose the five complete
+omitted-coordinate packets or terminalize the signed four-crossing
+separator; or eliminate the response-support-sparse near-clique model.  The
+audited
+[rotation theorem](../results/hc7_k7minus_five_centre_rotation_reduction.md)
+remains available for labelled three-cut geometry.  Direct palette
+intersection is frozen by the scoped barrier above.
 
 ## Conditional and frozen routes
 
