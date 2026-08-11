@@ -20,6 +20,7 @@ Selected audited inputs:
 - [an arbitrary two-cut after deleting five independent centres has opposite singleton shore responses and a sharp rooted-linkage bound](../results/hc7_k7minus_five_centre_two_cut_reduction.md)
 - [the order-six equality-response component is terminal by a ten-orbit DRAT-certified incidence theorem](../results/hc7_k7minus_order_six_equality_shore_elimination.md)
 - [the order-seven equality-response component is terminal by a cold-rerun 149-orbit allocation theorem](../results/hc7_k7minus_order_seven_equality_shore_elimination.md)
+- [every four boundary vertices root a `K_4` on the distinct-response shore](../results/hc7_k7minus_five_centre_universal_boundary_rooted_k4.md)
 - [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
 - [boundary replacement and anchored uncrossing give trace-preserving strict descent](../results/hc7_k7minus_four_centre_trace_descent.md)
 - [the generalized-wheel outcome reduces to one canonical leaf with no two disjoint connected subgraphs adjacent to the whole boundary](../results/hc7_k7minus_four_centre_wheel_leaf_descent.md)
@@ -90,9 +91,25 @@ number one, contains four colour-distinguished critical-edge paths, satisfies
 terminal by an explicit `K_7^-` model, and the order-six row is terminal by
 an independently checked ten-orbit DRAT certificate.  The order-seven row
 is terminal by an exact 149-orbit allocation search with a separate cold
-full rerun.  The immediate two-cut target is therefore the larger-shore
-case, coupled to the bichromatic `p`--`q` path on the opposite side.  If `F`
-is three-connected, the five
+full rerun.
+
+For the unbounded row, every four boundary vertices root a `K_4` on the
+distinct-response shore.  In the completion obtained by contracting
+`D union Z` and adding `pq`, all distinct-pole models lift and the sole
+survivor has five bijectively owned bags and one owner--owner nonedge.  The
+audited
+[unique-owner reduction](hc7_k7minus_five_centre_owner_nonedge_connector.md)
+now eliminates every quotient pattern: it gives an explicit `K_7^-` minor
+or a genuine nested separator.  In a target-free host that separator may
+have order greater than seven, may miss four centres, and carries no known
+boundary partition.  The immediate two-cut target is therefore a
+response-preserving donor theorem returning the forbidden minor, an exact
+separator `Z dotcup {r,s}` with the equal/distinct trace retained, or the
+same labelled partition on the returned boundary from proper operations on
+its two open shores.  The singleton six-arm, order-four, all-rainbow, and
+`b=2` rows remain open.
+
+If `F` is three-connected, the five
 rooted-model/web rotations still require terminal composition.  Accepted
 exits remain a six-colouring, an explicit `K_7^-` model, or strict descent
 retaining a common trace at the minimum side.

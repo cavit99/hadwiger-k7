@@ -105,7 +105,43 @@ audited
 [order-seven allocation theorem](results/hc7_k7minus_order_seven_equality_shore_elimination.md)
 closes the next row by an exact 149-orbit incidence search and a cold full
 rerun, again reconstructing seven explicit branch sets.  Components of
-order at least eight remain open.
+order at least eight remain open, but their unbounded structure is now much
+sharper.  In the singleton-contact case, the audited
+[six-arm completion criterion](active/hc7_k7minus_five_centre_singleton_six_arm_completion.md)
+is terminal whenever the arm-contact graph contains a `K_5^-` minor; the
+available density inequalities do not yet force that contact minor.  In the
+no-singleton case, the minimal bad-root row of order three is eliminated,
+the order-four row has an exact three-outcome reduction, and the order-five
+row is forced into one all-rainbow colouring.  In that last row the equality
+shore has order at least fifteen.  The `b=2` common-hole orbit has further
+rooted-model and Kempe-component structure, but remains nonterminal.
+
+There is also a complete quotient-level reduction for a different
+completion: contract `D union Z` and add the absent edge `pq`.  The audited
+[completion-model lift](active/hc7_k7minus_five_centre_completion_model_lift.md)
+reduces it to five branch sets with bijective centre ownership and one
+owner--owner nonedge.  On the distinct-response shore, the promoted
+[universal rooted-minor theorem](results/hc7_k7minus_five_centre_universal_boundary_rooted_k4.md)
+gives a rooted `K_4` on every four boundary vertices.  Combining that model
+with the exact pole-incidence classification proves the audited
+[unique-owner separator reduction](active/hc7_k7minus_five_centre_owner_nonedge_connector.md):
+every unique-owner configuration gives either an explicit `K_7^-` minor or
+a nonempty proper connected donor piece, with connected complement in its
+model bag, whose open neighbourhood is an actual separator of order at
+least seven.
+
+This does not close the two-cut branch.  The returned separator can have
+order greater than seven, can miss four of the five centres, and retains no
+known boundary-colouring response.  The original `pq` critical completion
+supplies a colouring constraint on `S=Z dotcup {p,q}`; it does not supply an
+opposite-shore proper operation realizing the same labelled partition on
+the new literal separator.  Thus the exact remaining theorem is a
+response-preserving donor alternative: the quotient absorption must give
+the forbidden minor, return an exact separator `Z dotcup {r,s}` carrying
+the equal/distinct response needed for strict descent, or produce one
+identical labelled partition of the returned boundary from proper
+operations supported on its two open shores.  The last outcome glues
+directly and does not require the new boundary to equal the old one.
 
 Any four-set `U subset Z` may also be used in the audited
 [four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
