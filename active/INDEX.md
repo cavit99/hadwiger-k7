@@ -102,12 +102,18 @@ audited
 now eliminates every quotient pattern: it gives an explicit `K_7^-` minor
 or a genuine nested separator.  In a target-free host that separator may
 have order greater than seven, may miss four centres, and carries no known
-boundary partition.  The immediate two-cut target is therefore a
-response-preserving donor theorem returning the forbidden minor, an exact
-separator `Z dotcup {r,s}` with the equal/distinct trace retained, or the
-same labelled partition on the returned boundary from proper operations on
-its two open shores.  The singleton six-arm, order-four, all-rainbow, and
-`b=2` rows remain open.
+boundary partition.  The
+[boundary-first donor gate](hc7_k7minus_five_centre_minimal_donor_gate.md)
+is now a recorded decisive route nonclosure: a proper fixed-trace core
+either fills the selected donor or exposes a smaller geometric donor which
+inflates the boundary when the comparison class is closed and may lose the
+trace.  Enlarging the donor class instead is not proved to retain the model
+and response labels at a degree-eight singleton.  The one-donor minimisation is
+therefore frozen.
+The immediate two-cut repair is a compatible two-donor theorem retaining
+one fixed operation and the prescribed near-clique contacts, or a
+host-level elimination of the nonsplit exact-seven endpoint.  The
+singleton six-arm, order-four, all-rainbow, and `b=2` rows remain open.
 
 If `F` is three-connected, the five
 rooted-model/web rotations still require terminal composition.  Accepted

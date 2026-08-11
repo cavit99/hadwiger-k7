@@ -16,8 +16,9 @@ certificates; the order-seven case has an exact 149-orbit Z3 search and a
 separate cold full rerun, with the absence of DRAT stated in its trust
 boundary.  The universal four-boundary rooted-`K_4` theorem and the
 unique-owner critical-completion minor-or-separator reduction are also
-separately audited GREEN.  The accompanying scoped barriers are separately
-audited GREEN,
+separately audited GREEN.  The boundary-first donor-gate theorem and its
+scoped route nonclosure are separately audited GREEN.  The accompanying
+scoped barriers are separately audited GREEN,
 while the list-core calculation in Section 3 remains a written live
 derivation without a separate audit.  The upper bound is open.  This file
 is not a second status ledger.
@@ -554,16 +555,28 @@ therefore forces every surviving such `G[T]` to be nonsplit.  This is still
 nonterminal: nonsplit boundaries admit the sharp abstract parity separation
 of the two response languages.
 
-There is also a concrete limit to ordinary-donor relocation.  The
-near-clique proof permits its two portals in
-`U_i=R_i union {z_i}` to be `z_i` and a vertex of `R_i`, while `R_i`
-retains every protected bag contact.  Its returned piece can then be the
-singleton `{z_i}`, exposing only the familiar order-eight separator
-`N_G(z_i)`, which contains no other centre.  This is a recorded route
-nonclosure, not an asserted host construction: the quotient hypotheses do
-not exclude the singleton donor, and their missing-pair count does not make
-it terminal.  Thus forcing every donor to relocate to
-`Z dotcup {r,s}` would require a genuinely new host-level theorem.
+The
+[boundary-first donor-gate theorem](hc7_k7minus_five_centre_minimal_donor_gate.md)
+now makes the limit of ordinary-donor relocation exact.  A vertex-minimal
+fixed-trace core either fills the whole donor or exposes a smaller
+donor-eligible set.  In a comparison class closed under that replacement,
+the smaller set has strictly larger open neighbourhood and may lose the
+trace; without closure there is no lexicographic comparison.  Replacing
+the donor by a co-connected singleton does not repair this: its degree can
+exceed the old separator order, so it is worse in the first lexicographic
+coordinate.
+
+If the comparison class is broadened from labelled gate donors to all
+geometric model donors, the ordinary bags
+`U_i=R_i union {z_i}` do supply the singleton candidates `{z_i}`.  The
+minimum boundary is then seven or eight; in the order-eight case the second
+coordinate forces a degree-eight singleton.  This recovers the familiar
+separator `N_G(v)`, but not the model trace: its singleton shore uses at
+most five boundary colours, whereas every six-colouring of `G-v` uses all
+six on `N_G(v)`.  Restricting the class retains the labelled model and
+operation data but loses the bound; broadening it recovers the bound but
+does not preserve those data as an invariant.  This quantifier fork is the
+decisive nonclosure of the proposed gate.
 
 The second outcome cannot occur when `G` is eight-connected.  When
 `kappa(G)=7`, the exact lift-order function on separations of `H` is symmetric
@@ -922,20 +935,18 @@ remaining open step in this secondary route.
 
 Pursue one global exceptional-centre terminal theorem.
 
-1. Close the larger two-cut shore from the five-centre theorem.  The input is
-   the rooted-infeasible, packing-one equality side of order at least eight,
-   its sharp edge bound and four colour-distinguished pole paths, coupled to
-   the opposite side's bichromatic pole path.  In the unique-owner
-   completion row, every quotient pattern now gives a forbidden minor or an
-   actual nested separator.  Prove the response-preserving donor alternative:
-   either the near-clique absorption is terminal, it returns an exact
-   separator `Z dotcup {r,s}` with the equal/distinct boundary partition
-   retained, or proper operations on the two new open shores realize one
-   identical labelled partition of the literal returned boundary.  The
-   other live rows are the singleton six-arm contact problem, the order-four
+1. Do not repeat the one-donor minimisation.  In the two-cut branch, prove a
+   compatible two-donor theorem retaining prescribed repair contacts and
+   one fixed proper-minor response, or eliminate the full nonsplit
+   exact-seven fork, including both its shore-filling core and trace-loss
+   alternatives.  The finite two-exterior diagnostics favour the first
+   statement but do not prove it.  The other
+   live rows are the singleton six-arm contact problem, the order-four
    trichotomy, the all-rainbow order-at-least-fifteen row, and its
    concentrated `b=2` model-bag split.
-2. In the exhaustive three-connected branch of `F=G-Z`, compose the five
+2. Do not open the exhaustive three-connected branch of `F=G-Z` until the
+   compatible two-donor statement has been formulated with exact host-level
+   hypotheses.  When opened, compose the five
    rooted-model/web outcomes obtained by omitting each centre in turn.  A
    rooted outcome must acquire two disjoint completing branch sets; a web
    outcome must feed a common trace or strict anchored descent.

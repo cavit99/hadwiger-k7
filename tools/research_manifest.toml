@@ -7331,6 +7331,38 @@ does_not_prove = [
 keywords = ["K7 minus", "five independent centres", "critical completion", "unique ownership", "nested separator", "colour synchronization"]
 
 [[claims]]
+id = "hc7.k7minus_five_centre_minimal_donor_gate"
+title = "Boundary-first donor minimisation has an exact fixed-trace nonclosure"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_five_centre_minimal_donor_gate.md"
+source_heading = "Theorem 3.1 (fixed-trace core inflation)"
+active = false
+audit = "active/hc7_k7minus_five_centre_minimal_donor_gate_audit.md"
+expected_source_sha256 = "0b95d7134c96821db1279c905571b03272c3665eca6eaf18fc8fa91f236efba7"
+scope = "the boundary-first donor continuation of the target-free unique-owner five-centre two-cut residue"
+strict_parameter = "lexicographic boundary order, donor order and missed protected contacts"
+label_fidelity = "the restricted comparison retains one model bag, a named anticomplete far bag, a selected boundary edge and one fixed edge-deletion colouring; broad geometric minimisation need not retain those labels"
+separator_order = "a proper list-critical core exposes a smaller geometric donor whose boundary strictly increases when the comparison class is closed; broad geometric minimisation has boundary order seven or eight"
+colour_compatibility = "the fixed exterior partition is rejected by the intact list-critical core; at the broad order-eight singleton the two unmodified shore languages use at most five versus exactly six boundary blocks"
+conclusions = [
+  "singletonisation need not improve a boundary-first donor choice",
+  "a fixed edge-deletion colouring yields a connected one-extra-colour list-critical core inside the donor",
+  "if that core is proper, a smaller donor-eligible set exists but either lies outside the labelled comparison or has strictly larger boundary",
+  "an exact order-seven survivor has a nonsplit four-colourable boundary",
+  "enlarging to all geometric model donors gives minimum boundary order seven or eight, with a degree-eight singleton at order eight",
+  "the boundary-first one-donor connector-or-trace mechanism is decisively nonterminal",
+]
+does_not_prove = [
+  "closure of the labelled donor class under the smaller geometric donor",
+  "preservation of the original equal/distinct response",
+  "a common operated partition at the returned separator",
+  "closure of the five-centre two-cut branch",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "five independent centres", "minimal donor", "list-critical core", "boundary inflation", "route nonclosure"]
+
+[[claims]]
 id = "hc7.k7minus_four_centre_web_cut_lattice"
 title = "Four independent degree-eight centres yield a rooted K5 or an exact-cut lattice"
 kind = "theorem"
@@ -9495,7 +9527,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "f5e9f86b0e6d8009a74491b6f3fba058fed108c448e54e444b065f82b45f85f9"
+expected_source_sha256 = "8980b1b3a91c257c812748ab715e33521c4f966ada3e519e17dfd412c9b412d3"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16518,6 +16550,30 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_five_centre_unique_owner_nested_separator"
 kind = "related_to"
 note = "This is the current quotient-level laboratory: every unique-owner placement is reduced to a forbidden minor or a non-trace-preserving nested separator."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_five_centre_minimal_donor_gate"
+kind = "related_to"
+note = "The boundary-first one-donor continuation is now an audited route nonclosure; it identifies a compatible two-donor theorem as the smallest repair."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_minimal_donor_gate"
+target = "hc7.k7minus_five_centre_unique_owner_nested_separator"
+kind = "uses"
+note = "The unique-owner theorem supplies the spanning model bag, named far bag and actual donor separator."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_minimal_donor_gate"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "Its critical-host corollary gives exactly two complementary components at the order-seven endpoint."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_minimal_donor_gate"
+target = "hc7.split_boundary_synchronization"
+kind = "uses"
+note = "Exact-block coverage on both full shores glues every split order-seven boundary."
 
 [[relations]]
 source = "hc7.k7minus_five_centre_universal_boundary_rooted_k4"
