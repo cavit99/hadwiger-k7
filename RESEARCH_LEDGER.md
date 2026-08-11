@@ -158,10 +158,46 @@ ordinary boundary operations and model geometry do not eliminate these
 endpoints.
 
 This is a route nonclosure, not a counterexample and not a closure of the
-two-cut branch.  Repeating an unlabelled one-donor minimisation is now
-frozen.  The smallest live repair is a compatible two-donor theorem which
-retains prescribed near-clique contacts and one fixed proper-minor response,
-or a host-level theorem eliminating the nonsplit exact-seven endpoint.
+two-cut branch.  Repeating an unlabelled one-donor minimisation is frozen.
+
+The proposed single-edge
+[paired-donor gate](active/hc7_k7minus_five_centre_paired_donor_gate.md)
+has now also been run.  One colouring of `G-e` gives two genuine donor
+traces only when the donors contain the two ends of `e`.  The resulting
+cross-edge aligns the traces literally, yields one fixed-boundary joint
+list-critical core containing both ends, and gives the exact boundary law
+
+\[
+ |N(Y_1\cup Y_2)|=|T_1|+|T_2|-|T_1\cap T_2|
+                   -|T_1\cap Y_2|-|T_2\cap Y_1|.
+\]
+
+A supplied compatible pair would therefore give an explicit `K_7^-`
+minor or one joint response-bearing separator.  The unique-owner theorem
+does not supply such a pair: its only simultaneous canonical sets lie in
+one bag, with no guaranteed joining edge, common far bag, jointly connected
+complement, or colouring normalized to the original `pq` response.
+Moreover, joint lexicographic minimisation forces either a shore-filling
+core, loss of a prescribed duty, or a new boundary vertex private to the
+same old bag; it does not force inflation into overlap.
+
+The separately verified
+[paired-overlap barrier](barriers/hc7_k7minus_paired_donor_overlap_barrier.md)
+shows this is a genuine local obstruction.  It has two order-seven rejected
+traces under one edge deletion, overlap of order five, the forced cross-edge,
+five retained contacts per smaller donor, simultaneous trace-losing
+inflation to order eight, and a rejected joint trace, while an explicit
+width-four tree decomposition excludes a `K_7^-` minor.  The graph is only
+three-connected and four-chromatic, so it does not refute a full host-level
+supply theorem; it rules out overlap minimisation as that theorem's engine.
+
+Thus the one-donor and single-edge two-donor minimisation mechanisms are
+both frozen.  A common deletion of two or more edges has not been eliminated,
+but it would require a new joint-response theorem rather than a repair of
+the present proof.  The exact-seven backup reaches the same label-placement
+failure: the new boundary need not contain the five centres or inherit the
+original equality-response orientation.  The two-cut branch remains open,
+and the three-connected campaign has not been opened.
 
 Any four-set `U subset Z` may also be used in the audited
 [four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)

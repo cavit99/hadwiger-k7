@@ -578,6 +578,52 @@ operation data but loses the bound; broadening it recovers the bound but
 does not preserve those data as an invariant.  This quantifier fork is the
 decisive nonclosure of the proposed gate.
 
+The proposed single-edge
+[paired-donor continuation](hc7_k7minus_five_centre_paired_donor_gate.md)
+has now been run as well.  If one colouring of `G-e` gives a genuine
+accepted-exterior/rejected-interior trace at each of two disjoint donors,
+the donors contain the two ends of `e`.  Their traces are therefore
+restrictions of one literal colouring, and their joint boundary satisfies
+
+\[
+ |N(Y_1\cup Y_2)|=|N(Y_1)|+|N(Y_2)|
+  -|N(Y_1)\cap N(Y_2)|-|N(Y_1)\cap Y_2|-|N(Y_2)\cap Y_1|.
+\]
+
+With lists kept on that fixed joint boundary, every minimal joint
+list-critical core contains both ends of `e`.  A compatible pair supplied
+inside the spanning near-clique would give an explicit `K_7^-` minor or an
+actual joint separator retaining this one response.
+
+The supply step is absent.  The unique-owner theorem gives one donor; its
+two canonical simultaneous pieces lie in one bag and need not be adjacent,
+have a connected joint complement, or share a far bag.  An arbitrary
+interbag edge need not have ends in donor-eligible pieces retaining the
+named duties, and its deletion colouring need not induce the old `pq`
+partition.  Joint minimisation does not repair this: a proper
+operation-preserving core hull either leaves the fixed comparison class or
+creates a new boundary vertex in the discarded part of the same bag which
+is anticomplete to the other donor.
+
+The explicit
+[paired-overlap barrier](../barriers/hc7_k7minus_paired_donor_overlap_barrier.md)
+shows that the hoped-for local overlap inference is false even with two
+order-seven rejected traces, overlap of order five, one cross-edge, and
+five protected contacts on each smaller donor.  A width-four tree
+decomposition excludes `K_7^-`, while both boundaries inflate to order
+eight, lose their traces, and leave the joint trace rejected.  The witness
+is only three-connected and four-chromatic; it does not refute a full
+host-level supply theorem.  It does rule out overlap-weighted minimisation
+as the missing engine.
+
+Accordingly both the one-donor gate and its single-edge paired variant are
+frozen.  A common deletion of two or more edges remains logically open but
+would be a genuinely new joint-response mechanism.  At the exact-seven
+backup, the remaining issue is likewise literal label capture: to invoke
+minimum-side descent one must recover a boundary `Z union {r,s}` and make
+the new proper subcomponent the equality-response side.  Fullness,
+nonsplitness and further boundary queries do not supply that orientation.
+
 The second outcome cannot occur when `G` is eight-connected.  When
 `kappa(G)=7`, the exact lift-order function on separations of `H` is symmetric
 and submodular.  For fixed opposite anchors, its minimum separations form an

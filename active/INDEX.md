@@ -108,12 +108,19 @@ is now a recorded decisive route nonclosure: a proper fixed-trace core
 either fills the selected donor or exposes a smaller geometric donor which
 inflates the boundary when the comparison class is closed and may lose the
 trace.  Enlarging the donor class instead is not proved to retain the model
-and response labels at a degree-eight singleton.  The one-donor minimisation is
-therefore frozen.
-The immediate two-cut repair is a compatible two-donor theorem retaining
-one fixed operation and the prescribed near-clique contacts, or a
-host-level elimination of the nonsplit exact-seven endpoint.  The
-singleton six-arm, order-four, all-rainbow, and `b=2` rows remain open.
+and response labels at a degree-eight singleton.  The one-donor minimisation
+is therefore frozen.  The
+[single-edge paired-donor gate](hc7_k7minus_five_centre_paired_donor_gate.md)
+aligns two traces only across the deleted edge and conditionally returns a
+`K_7^-` model or a joint response-bearing separator.  The unique-owner
+reduction does not supply the required compatible pair, joint minimisation
+permits private same-bag inflation, and an explicit target-free local
+barrier rules out boundary overlap as the missing mechanism.  This variant
+is also frozen.  A genuinely joint multi-edge response or a host-level
+label-capture theorem would be new input.  The exact-seven backup still
+needs the new boundary to contain all five centres with the equality
+orientation.  The singleton six-arm, order-four, all-rainbow, and `b=2`
+rows remain open.
 
 If `F` is three-connected, the five
 rooted-model/web rotations still require terminal composition.  Accepted
