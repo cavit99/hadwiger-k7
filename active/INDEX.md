@@ -21,6 +21,7 @@ Selected audited inputs:
 - [the order-six equality-response component is terminal by a ten-orbit DRAT-certified incidence theorem](../results/hc7_k7minus_order_six_equality_shore_elimination.md)
 - [the order-seven equality-response component is terminal by a cold-rerun 149-orbit allocation theorem](../results/hc7_k7minus_order_seven_equality_shore_elimination.md)
 - [every four boundary vertices root a `K_4` on the distinct-response shore](../results/hc7_k7minus_five_centre_universal_boundary_rooted_k4.md)
+- [the five centre-deletion colourings give singleton saturation witnesses on one common core; every fixed-root packet in the three-connected branch has a rooted model or a common literal extension colour, while the rigid alternative returns a labelled two-cut](../results/hc7_k7minus_five_centre_rotation_reduction.md)
 - [four independent centres give a rooted `K_5` model or an exact-cut lattice](../results/hc7_k7minus_four_centre_web_cut_lattice.md)
 - [boundary replacement and anchored uncrossing give trace-preserving strict descent](../results/hc7_k7minus_four_centre_trace_descent.md)
 - [the generalized-wheel outcome reduces to one canonical leaf with no two disjoint connected subgraphs adjacent to the whole boundary](../results/hc7_k7minus_four_centre_wheel_leaf_descent.md)
@@ -116,16 +117,45 @@ aligns two traces only across the deleted edge and conditionally returns a
 reduction does not supply the required compatible pair, joint minimisation
 permits private same-bag inflation, and an explicit target-free local
 barrier rules out boundary overlap as the missing mechanism.  This variant
-is also frozen.  A genuinely joint multi-edge response or a host-level
-label-capture theorem would be new input.  The exact-seven backup still
-needs the new boundary to contain all five centres with the equality
-orientation.  The singleton six-arm, order-four, all-rainbow, and `b=2`
-rows remain open.
+is also frozen.  The audited
+[two-edge response reduction](hc7_k7minus_five_centre_two_edge_response_reduction.md)
+shows that a common double deletion can retain the literal five-centre
+boundary and reverse the pole response after both singleton contractions
+remain stable.  Otherwise a singleton already flips, or the three stable
+completions contain `K_7^-` models with the prescribed co-bagging.  No
+current theorem supplies the required induced cross-edge pair or lifts all
+stable same-pole-bag models.  Three simultaneous disjoint donor traces are
+impossible for one fixed deletion colouring, so this bounded operation is
+not being enlarged.  The exact-seven backup still needs the new boundary to
+contain all five centres with the equality orientation.  The singleton
+six-arm, order-four, all-rainbow, and `b=2` rows remain open.
 
-If `F` is three-connected, the five
-rooted-model/web rotations still require terminal composition.  Accepted
-exits remain a six-colouring, an explicit `K_7^-` model, or strict descent
-retaining a common trace at the minimum side.
+The three-connected campaign is now open through the audited
+[global rotation reduction](../results/hc7_k7minus_five_centre_rotation_reduction.md).
+The common core `F` is nonplanar and exactly six-chromatic, and the five
+centre-deletion colourings have five distinct singleton saturation sets.
+Across the twenty ordered rooted-model/web applications, a web outcome
+returns a two-cut immediately or an order-three separation crossed by the
+four non-omitted centres.  Labelled uncrossing gives a two-cut or a `3+3`
+split of the omitted labels; absent anchors it exposes an original component
+of order three or four.  At fixed root, either two selected shores share one
+literal extension colour or the four boundaries are exactly
+`(Z-z_i) union (X-x_i)`.  The latter packet itself forces the exact cut
+`Z union (X-{x_i,x_j})`, and hence a two-cut of `F`; one returned shore also
+lets the same literal colouring extend over the fixed root with either of
+two distinct colours.  The maximal packet is therefore absent when `F` is
+three-connected.  Those two extensions are coupled colourings of
+`G-rx_i` and `G-rx_j` agreeing on `G-r`; normalization to the standard
+distinct response is equivalent to one of their two colours being absent
+from the neighbourhoods of all four other centres.
+
+Consequently every fixed-root packet in the three-connected branch has a
+rooted-model outcome or two web outcomes sharing one literal extension
+vertex and colour.  The immediate theorem must compose these five packet
+alternatives into an explicit `K_7^-` model or a two-cut carrying compatible
+operations.  The exact colour-intersection condition above is the first
+normalization target.  The proposed Five-Centre Global Alternative is the
+capstone, not a proved input.
 
 ## Conditional and frozen routes
 
