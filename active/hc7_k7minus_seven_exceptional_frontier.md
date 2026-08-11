@@ -14,7 +14,10 @@ order-five, order-six, and order-seven component cases are separately
 audited GREEN.  The order-six case has independently checked DRAT
 certificates; the order-seven case has an exact 149-orbit Z3 search and a
 separate cold full rerun, with the absence of DRAT stated in its trust
-boundary.  The accompanying scoped barriers are separately audited GREEN,
+boundary.  The universal four-boundary rooted-`K_4` theorem and the
+unique-owner critical-completion minor-or-separator reduction are also
+separately audited GREEN.  The accompanying scoped barriers are separately
+audited GREEN,
 while the list-core calculation in Section 3 remains a written live
 derivation without a separate audit.  The upper bound is open.  This file
 is not a second status ledger.
@@ -451,6 +454,117 @@ the resulting six bags miss at most one adjacency.  Its exact 149-orbit
 search and cold full rerun close `|C|=7`.  Thus only equality shores of order
 at least eight remain in the two-cut branch.
 
+The audited unbounded attack on those larger shores has the following exact
+hierarchy.
+
+1. If a centre has one contact on a shore, the
+   [singleton shift](hc7_k7minus_five_centre_singleton_shift.md) produces six
+   equality-shore arms.  A `K_5^-` minor in their contact graph completes an
+   explicit `K_7^-` model by the audited
+   [six-arm criterion](hc7_k7minus_five_centre_singleton_six_arm_completion.md).
+   The current scalar inequalities do not force that contact minor.
+2. With no singleton contact, a minimal bad-root set of order three is
+   eliminated by
+   [contraction-colouring gluing](hc7_k7minus_five_centre_t3_palette_gluing.md).
+   Order four has the audited
+   [atom/exchange trichotomy](hc7_k7minus_five_centre_t4_atom_exchange.md):
+   high contacts on `C`, the unbounded density threshold
+   `e(C)>=3|C|-2`, or a forced induced-path contact table.  None of the
+   three outcomes is terminal yet.
+3. At order five, the
+   [global palette theorem](hc7_k7minus_five_centre_t5_global_palette.md)
+   and the audited
+   [critical-completion elimination](hc7_k7minus_five_centre_critical_completion_nested_cut.md)
+   force all five `D`-contact sets to be rainbow triangles in one fixed
+   colouring.  The audited
+   [atom-slack theorem](hc7_k7minus_five_centre_t5_atom_slack.md) gives
+   `|C|>=15`; the audited
+   [crossed-overlap theorem](hc7_k7minus_five_centre_t5_atom_overlap_budget.md)
+   can expose an exact order-seven cut, but the general all-rainbow row
+   remains open.  In its `b=2` subcase, the
+   common-hole and rooted-model reductions localize the missing composition
+   to a split inside a concentrated model bag.
+
+The supporting audited chain is also part of this laboratory.  In the
+all-rainbow row it consists of the
+[common-triangle reduction](hc7_k7minus_five_centre_common_rainbow_triangle_elimination.md),
+the [synchronized-path theorem](hc7_k7minus_five_centre_distance_one_paths.md),
+the [common-component simultaneity barrier](../barriers/hc7_all_rainbow_common_components_multiroot_barrier.md),
+the [rooted `K_{1,1,3}` scheme reduction](hc7_k7minus_five_centre_rolek_scheme_reduction.md)
+and its exact
+[second-triangle reservation barrier](../barriers/hc7_k113_second_triangle_reservation_barrier.md),
+the [shore-confined rooted-`K_5` theorem](hc7_k7minus_five_centre_rainbow_triangle_rooted_k5.md),
+and the [private-contact theorem](hc7_k7minus_five_centre_two_private_contacts.md).
+For `b=2`, the live chain is the
+[Hall-rectangle reduction](hc7_k7minus_five_centre_b2_rectangle_locks.md),
+[common-hole transition](hc7_k7minus_five_centre_b2_common_hole_transition.md),
+[four-colour projection](hc7_k7minus_five_centre_b2_four_colour_projection.md),
+[pairwise Kempe-contact theorem](hc7_k7minus_five_centre_b2_pairwise_kempe_touch.md),
+[stable-bag concentration](hc7_k7minus_five_centre_b2_stable_bag_concentration.md),
+and the [terminal bag-split criterion](hc7_k7minus_five_centre_b2_model_bag_split.md).
+
+An independent completion argument gives a second unbounded reduction.
+Contract `D union Z` to `x` and add the absent edge `pq`.  The resulting
+proper completion is seven-chromatic.  The audited
+[model lift](hc7_k7minus_five_centre_completion_model_lift.md) makes every
+distinct-pole placement terminal and reduces the same-bag placement to a
+spanning model
+
+\[
+                         B,\{x\},R_1,\ldots,R_5,
+\]
+
+where `B` contains both poles, the sole model nonedge is `R_aR_b`, and
+\(N_G(R_i)\cap Z=\{z_i\}\) after relabelling.  Splitting `B-pq` gives exactly
+three pole-incidence codes and at least three opposite-side-deficient
+owners.
+
+The promoted
+[four-boundary rooted-`K_4` theorem](../results/hc7_k7minus_five_centre_universal_boundary_rooted_k4.md)
+holds simultaneously at the level of existence: every four-set in
+\(S=Z\mathbin{\dot\cup}\{p,q\}\) roots a `K_4` on the closed `D`-shore.
+Using the roots `p,q,z_a,z_b` repairs the artificial pole edge and the owner
+nonedge in one spanning seven-bag model.  The audited
+[near-clique donor reduction](hc7_k7minus_five_centre_owner_nonedge_connector.md)
+then removes every pole-incidence and deficiency-pattern exception: either
+`G` contains a `K_7^-` minor, or some nonempty proper connected set `Y` has
+connected complement in its model bag and `N_G(Y)` is an actual separator
+of order at least seven.
+
+In a target-free host only the separator outcome survives.  It is not yet
+a legal descent.  Its order has no upper bound, it need not contain the five
+centres, and no equality/distinct boundary response is retained.  Indeed,
+if `Y` lies in an ordinary owner bag \(R_i\cup\{z_i\}\), then unique ownership
+gives \(N_G(Y)\cap Z\subseteq\{z_i\}\).  The original `pq` completion also
+cannot instantiate the existing partition-reflection theorem: it supplies a
+response on the original boundary `S`, not an opposite-shore proper
+operation realizing the same labelled partition on the new literal
+separator.  This quantifier mismatch is the exact nonclosure, not a missing
+quotient case.
+
+The exact-order-seven subcase has one further consequence.  If
+`T=N_G(Y)` has order seven, every component of `G-T` is `T`-full and
+`G[T]` has no `K_5` minor: a `K_5` model in `T`, together with any two
+components of `G-T`, would be a `K_7^-` model.  Hence `G[T]` is
+four-colourable.  Contracting a full component together with any prescribed
+nonempty independent set in `T` shows that each of the two grouped shore
+languages meets every exact-block cylinder.  The audited
+[split-boundary synchronization theorem](../results/hc7_split_boundary_synchronization.md)
+therefore forces every surviving such `G[T]` to be nonsplit.  This is still
+nonterminal: nonsplit boundaries admit the sharp abstract parity separation
+of the two response languages.
+
+There is also a concrete limit to ordinary-donor relocation.  The
+near-clique proof permits its two portals in
+`U_i=R_i union {z_i}` to be `z_i` and a vertex of `R_i`, while `R_i`
+retains every protected bag contact.  Its returned piece can then be the
+singleton `{z_i}`, exposing only the familiar order-eight separator
+`N_G(z_i)`, which contains no other centre.  This is a recorded route
+nonclosure, not an asserted host construction: the quotient hypotheses do
+not exclude the singleton donor, and their missing-pair count does not make
+it terminal.  Thus forcing every donor to relocate to
+`Z dotcup {r,s}` would require a genuinely new host-level theorem.
+
 The second outcome cannot occur when `G` is eight-connected.  When
 `kappa(G)=7`, the exact lift-order function on separations of `H` is symmetric
 and submodular.  For fixed opposite anchors, its minimum separations form an
@@ -811,8 +925,16 @@ Pursue one global exceptional-centre terminal theorem.
 1. Close the larger two-cut shore from the five-centre theorem.  The input is
    the rooted-infeasible, packing-one equality side of order at least eight,
    its sharp edge bound and four colour-distinguished pole paths, coupled to
-   the opposite side's bichromatic pole path.  The conclusion must be a
-   common boundary partition or an explicit `K_7^-` model.
+   the opposite side's bichromatic pole path.  In the unique-owner
+   completion row, every quotient pattern now gives a forbidden minor or an
+   actual nested separator.  Prove the response-preserving donor alternative:
+   either the near-clique absorption is terminal, it returns an exact
+   separator `Z dotcup {r,s}` with the equal/distinct boundary partition
+   retained, or proper operations on the two new open shores realize one
+   identical labelled partition of the literal returned boundary.  The
+   other live rows are the singleton six-arm contact problem, the order-four
+   trichotomy, the all-rainbow order-at-least-fifteen row, and its
+   concentrated `b=2` model-bag split.
 2. In the exhaustive three-connected branch of `F=G-Z`, compose the five
    rooted-model/web outcomes obtained by omitting each centre in turn.  A
    rooted outcome must acquire two disjoint completing branch sets; a web

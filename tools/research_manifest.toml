@@ -7281,6 +7281,56 @@ does_not_prove = [
 keywords = ["K7 minus", "order-seven component", "computer-assisted", "edge contraction", "boundary allocation", "Z3", "cold rerun", "explicit minor model"]
 
 [[claims]]
+id = "hc7.k7minus_five_centre_universal_boundary_rooted_k4"
+title = "Every four boundary vertices root a K4 on the distinct-response shore"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_five_centre_universal_boundary_rooted_k4.md"
+source_heading = "Theorem"
+active = true
+audit = "results/hc7_k7minus_five_centre_universal_boundary_rooted_k4_audit.md"
+expected_source_sha256 = "0a2511508c313e06c47cf7837e823299be4dc665d0572a4a3b53fdde4a44191f"
+scope = "every four-set in the seven-vertex boundary of the distinct-response shore in the five-centre two-cut reduction"
+label_fidelity = "the chosen four literal boundary vertices are the four roots; the model lies in their closed distinct-response shore"
+conclusions = [
+  "every four boundary vertices root a K4 minor on the closed distinct-response shore",
+  "the conclusion is unbounded and applies throughout the surviving order-at-least-eight branch",
+]
+does_not_prove = [
+  "compatibility of rooted models for different four-sets",
+  "a five-boundary-rooted K5 minor",
+  "closure of the larger five-centre two-cut shore",
+  "the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "five independent centres", "two-cut", "rooted K4", "distinct-response shore"]
+
+[[claims]]
+id = "hc7.k7minus_five_centre_unique_owner_nested_separator"
+title = "The unique-owner completion residue gives K7-minus or a nested separator"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_five_centre_owner_nonedge_connector.md"
+source_heading = "Theorem 3.7 (universal nested-separator reduction)"
+active = false
+audit = "active/hc7_k7minus_five_centre_owner_nonedge_connector_audit.md"
+expected_source_sha256 = "338babb0b0a7ac1ed61756e150c653d7888ae9a67d01b86407cde5f1d0a80fdb"
+scope = "the spanning unique-owner placement of a K7-minus model in the five-centre critical completion"
+label_fidelity = "the two literal poles, five centres, five owner bags, sole owner nonedge and three exact pole-incidence codes are retained"
+separator_order = "the returned open neighbourhood has order at least seven, with fullness when its order is seven"
+conclusions = [
+  "the pole split has exactly three target-free incidence codes and at least three opposite-side-deficient owners",
+  "all deficiency-pattern exceptions are removed by one spanning four-rooted K4 and a near-clique donor dichotomy",
+  "every unique-owner configuration gives an explicit K7-minus minor or an actual nested separator",
+]
+does_not_prove = [
+  "that the separator has order seven",
+  "that the separator contains all five centres",
+  "preservation of either boundary-colouring response",
+  "closure of the order-at-least-eight five-centre two-cut branch",
+]
+keywords = ["K7 minus", "five independent centres", "critical completion", "unique ownership", "nested separator", "colour synchronization"]
+
+[[claims]]
 id = "hc7.k7minus_four_centre_web_cut_lattice"
 title = "Four independent degree-eight centres yield a rooted K5 or an exact-cut lattice"
 kind = "theorem"
@@ -9445,7 +9495,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "0ce2ce24567c312bcb0e02ad60fdbd8e844c0ccb9b246ad507fdf2a636ab2060"
+expected_source_sha256 = "f5e9f86b0e6d8009a74491b6f3fba058fed108c448e54e444b065f82b45f85f9"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16456,6 +16506,36 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_order_seven_equality_shore_elimination"
 kind = "uses"
 note = "This directly eliminates the order-seven row of the five-centre two-cut branch and raises its surviving equality shore to order at least eight."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_five_centre_universal_boundary_rooted_k4"
+kind = "uses"
+note = "This supplies a rooted K4 on every selected four-set of the distinct-response boundary throughout the unbounded five-centre two-cut branch."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_five_centre_unique_owner_nested_separator"
+kind = "related_to"
+note = "This is the current quotient-level laboratory: every unique-owner placement is reduced to a forbidden minor or a non-trace-preserving nested separator."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_universal_boundary_rooted_k4"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "uses"
+note = "The two-cut reduction supplies seven-connectivity, the two full shores and chromatic number at least five on the distinct-response component."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_unique_owner_nested_separator"
+target = "hc7.k7minus_five_centre_universal_boundary_rooted_k4"
+kind = "uses"
+note = "The four roots p, q, z_a and z_b repair the artificial pole edge and the sole owner-bag nonedge in one spanning model."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_unique_owner_nested_separator"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "uses"
+note = "The two-cut theorem supplies the exact boundary, opposite responses, full shores and critical completion used by the unique-owner reduction."
 
 [[relations]]
 source = "hc7.target.k7minus_seven_exceptional_vertices"
