@@ -7395,6 +7395,66 @@ does_not_prove = [
 keywords = ["K7 minus", "five independent centres", "paired donor", "cross-edge", "fixed trace", "boundary overlap", "private inflation", "route nonclosure"]
 
 [[claims]]
+id = "hc7.k7minus_five_centre_two_edge_response_reduction"
+title = "Two-edge contractions give an exact labelled response square"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_five_centre_two_edge_response_reduction.md"
+active = false
+audit = "active/hc7_k7minus_five_centre_two_edge_response_reduction_audit.md"
+expected_source_sha256 = "4092d11254dde49f17961ac091f1a479fb4f719babebe0eb271d9fba6fb32b68"
+scope = "one fixed two-edge deletion, specialized to two suitable edges in the equality-response component of the five-centre two-cut state"
+label_fidelity = "the five centres remain one literal colour block, the two poles retain the distinct orientation, and every selected edge and contraction image remains named"
+colour_compatibility = "a flip is equivalent to one full-host six-colouring of the common two-edge deletion with the exact prescribed monochromatic-edge signature"
+conclusions = [
+  "disjoint simultaneous traces under one deletion colouring are exactly disjoint vertex covers of the monochromatic deleted edges",
+  "three disjoint traces are impossible for one fixed deletion colouring",
+  "the two singleton contractions and the double contraction form an upward-closed labelled response square",
+  "the genuinely joint case has two stable singleton contractions and one double response flip",
+  "every stable entry contains a spanning K7-minus completion model with the corresponding contracted endpoints co-bagged",
+]
+does_not_prove = [
+  "existence of a suitable induced two-edge cross-pair in the unique-owner residue",
+  "lifting every stable same-pole-bag completion model to G",
+  "closure of the five-centre two-cut branch",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "five independent centres", "two-edge deletion", "Boolean response square", "pole response", "co-bagging"]
+
+[[claims]]
+id = "hc7.k7minus_five_centre_rotation_reduction"
+title = "Five centre-deletion responses reduce to labelled rotations on one common core"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_five_centre_rotation_reduction.md"
+active = true
+audit = "results/hc7_k7minus_five_centre_rotation_reduction_audit.md"
+expected_source_sha256 = "aff5e5a4c5900c4bc126df728126d7bf91db879123e9b16ac05285b5af5705b3"
+scope = "the critical K7-minus host with five independent degree-eight centres, across all twenty ordered root and omitted-centre applications"
+label_fidelity = "the five centres, common core, five singleton saturation sets, fixed-root colourings, singleton-colour neighbours and every returned separator remain literal"
+separator_order = "a web application returns a two-cut or an order-three separation crossed by the four non-omitted centres; compatible corners have ordinary orders 2+4 or 3+3"
+colour_compatibility = "within a fixed-root packet, intersecting opposite-root sets give the same literal extension vertex and named colour; a maximal packet returns two coupled critical-edge operations with an exact common-missing-colour normalization criterion"
+conclusions = [
+  "the common core is two-connected, nonplanar and exactly six-chromatic, with five singleton saturation witnesses",
+  "there are twenty labelled rooted-model or web applications on the five overlapping four-centre hosts",
+  "anchor-compatible labelled web separations return a two-cut or split their two omitted labels across exact order-three corners",
+  "absence of compatible anchors exposes an original exact-cut component of order three or four",
+  "a fixed-root packet has a common literal extension colour or four exact boundaries (Z-z_i) union (X-x_i)",
+  "the maximal packet forces an exact five-centre two-cut and cannot survive when the common core is three-connected",
+  "the returned cut carries two coupled singleton edge-deletion signatures and a standard distinct response exactly when one restoration colour is missing at all four other centres",
+  "in the three-connected branch every fixed-root packet has a rooted-model outcome or two web outcomes with one common literal extension vertex and colour",
+]
+does_not_prove = [
+  "completion of a rooted K5 outcome to K7-minus",
+  "composition of the five fixed-root rooted or common-trace alternatives",
+  "the common missing-colour normalization condition for every returned two-cut",
+  "elimination of the order-three or order-four component endpoint",
+  "closure of either branch of G-Z",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "five independent centres", "common core", "saturation", "rooted web", "labelled uncrossing", "maximal packet"]
+
+[[claims]]
 id = "hc7.barrier.k7minus_paired_donor_overlap"
 title = "Boundary overlap and one cross-edge do not synchronize two donor traces"
 kind = "barrier"
@@ -9583,7 +9643,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "6d576b022bc5a5e47f8bbb0fc12be8dc1e0b209e16ff894a626c8181632ad3d9"
+expected_source_sha256 = "2d5911697eabee2394bf198cc5cb55946ea2ebc854e5a487473b6f90b6143473"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -16618,6 +16678,54 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_five_centre_paired_donor_gate"
 kind = "related_to"
 note = "The single-edge paired continuation is an audited route nonclosure: a supplied compatible pair would be useful, but the unique-owner theorem does not supply it and overlap minimisation permits private inflation."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_five_centre_rotation_reduction"
+kind = "uses"
+note = "This reduces each fixed-root packet in the three-connected branch to a rooted-model outcome or two web shores with one common literal extension colour; the rigid maximal packet returns to the two-cut branch with coupled operations."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_five_centre_two_edge_response_reduction"
+kind = "related_to"
+note = "The bounded two-edge square preserves the five-centre pole response but does not supply its required cross-edge pair or lift every stable completion model."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_rotation_reduction"
+target = "hc7.k7minus_four_centre_web_cut_lattice"
+kind = "uses"
+note = "Each of the twenty ordered applications is the audited four-centre rooted-model or web theorem on F plus one omitted centre."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_rotation_reduction"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "uses"
+note = "The critical-host theorem supplies density, minimum degree, K5-freeness and the degree-eight neighbourhood consequence used at the small-component endpoint."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_rotation_reduction"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "related_to"
+note = "An order-two corner or maximal fixed-root packet returns to the audited two-cut branch; the latter retains two coupled operations but needs the stated common-missing-colour condition for standard response normalization."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_rotation_reduction"
+target = "hc7.k7minus_five_centre_two_edge_response_reduction"
+kind = "related_to"
+note = "The rotation manufactures two coupled boundary-to-shore edge operations; the completion square treats interior equality-shore edges, so the two mechanisms meet only after response normalization."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_two_edge_response_reduction"
+target = "hc7.k7minus_five_centre_two_cut_reduction"
+kind = "uses"
+note = "The equal and distinct closed-shore responses and the seven-chromatic completion M_C+pq define the labelled contraction square."
+
+[[relations]]
+source = "hc7.k7minus_five_centre_two_edge_response_reduction"
+target = "hc7.k7minus_five_centre_paired_donor_gate"
+kind = "strengthens"
+note = "The vertex-cover criterion generalizes the single cross-edge trace law and proves that a fixed operation cannot serve three disjoint donors."
 
 [[relations]]
 source = "hc7.k7minus_five_centre_paired_donor_gate"

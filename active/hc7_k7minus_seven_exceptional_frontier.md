@@ -617,12 +617,24 @@ host-level supply theorem.  It does rule out overlap-weighted minimisation
 as the missing engine.
 
 Accordingly both the one-donor gate and its single-edge paired variant are
-frozen.  A common deletion of two or more edges remains logically open but
-would be a genuinely new joint-response mechanism.  At the exact-seven
-backup, the remaining issue is likewise literal label capture: to invoke
-minimum-side descent one must recover a boundary `Z union {r,s}` and make
-the new proper subcomponent the equality-response side.  Fullness,
-nonsplitness and further boundary queries do not supply that orientation.
+frozen.  The audited
+[two-edge response reduction](hc7_k7minus_five_centre_two_edge_response_reduction.md)
+tests the sole natural multi-edge extension.  Under one fixed deletion
+colouring, two disjoint sets carry genuine traces exactly when every
+monochromatic deleted edge crosses between them; three disjoint sets cannot
+all carry such traces.  In the equality completion, contracting either or
+both of two suitable edges gives exactly one of three patterns: a singleton
+pole-response flip, a genuinely joint double flip, or three stable
+seven-chromatic completions containing `K_7^-` models with the corresponding
+co-bagging.  The double operation retains the literal boundary partition
+`Z|{p}|{q}`, but no theorem supplies the required edge pair or lifts every
+stable same-pole-bag model.  The bounded test therefore stops there.
+
+At the exact-seven backup, the remaining issue is likewise literal label
+capture: to invoke minimum-side descent one must recover a boundary
+`Z union {r,s}` and make the new proper subcomponent the equality-response
+side.  Fullness, nonsplitness and further boundary queries do not supply
+that orientation.
 
 The second outcome cannot occur when `G` is eight-connected.  When
 `kappa(G)=7`, the exact lift-order function on separations of `H` is symmetric
@@ -631,16 +643,59 @@ exact meet/join lattice.  If three cuts have all eight sign regions nonempty,
 each centre has exactly one neighbour in every region; four cuts cannot have
 all sixteen sign regions nonempty.
 
-This reduces the global obstruction to one dynamic step, now with five
-overlapping choices of `U`.  In the rooted outcome, use the omitted centre
-and the unused centres to extend the rooted `K_5` model to an explicit
-`K_7^-`-minor model or force a compatible web outcome.  In the web outcome,
-combine the retained one-sided traces and centre-supported Kempe linkages
-across rotations to obtain the same partition into colour classes on both
-closed sides, an explicit `K_7^-`-minor model, or a strictly smaller cut
-with one common anchor.  The exact static two-shore quotient is
-insufficient: even maximum centre-to-boundary incidence and two full
-components admit a target-free mechanism.
+The exhaustive three-connected branch is now open through the audited
+[global five-centre rotation
+reduction](../results/hc7_k7minus_five_centre_rotation_reduction.md).  The common core
+`F=G-Z` is nonplanar and exactly six-chromatic.  Every six-colouring of `F`
+saturates at least one centre, and a colouring of `G-r` restricts to a
+colouring of `F` whose saturation set is exactly `{r}`.  These five
+singleton sets are invariant under colour permutation.
+
+For each ordered pair of distinct centres, the four-centre theorem applies
+on `F+z_i`, giving twenty labelled applications.  A web outcome returns a
+two-cut immediately or an order-three separation crossed by the four
+non-omitted centres.  Two anchor-compatible web separations uncross to an
+order-two/order-four pair if their omitted labels cross the same corner,
+and otherwise to an order-three/order-three label rotation.  If no
+orientation has compatible anchors, an original exact-cut component has
+order three or four.
+
+At one fixed root, either two selected shores share the same literal
+extension vertex and colour, or the four web cuts have the exact form
+
+\[
+ N_G(C_i)=(Z-\{z_i\})\mathbin{\dot\cup}(X-\{x_i\}).
+\]
+
+The maximal packet is no longer a three-connected obstruction.  At least
+two omitted centres lie in their own selected components, and the meet of
+those two exact separations has boundary
+
+\[
+                         Z\mathbin{\dot\cup}(X-\{x_i,x_j\}).
+\]
+
+It returns a two-cut of `F`.  On one closed shore the same literal colouring
+extends over the fixed root with either of the two distinct colours of
+`x_i,x_j`.  The corresponding colourings of `G-rx_i` and `G-rx_j` agree
+on `G-r` and give opposite singleton signatures.  For
+`theta=phi_r|F`, put
+
+\[
+ L_z=[6]\setminus\theta(N_G(z))\qquad(z\in Z-\{r\}).
+\]
+
+One operation normalizes to the standard distinct response exactly when
+
+\[
+ \{\theta(x_i),\theta(x_j)\}\cap\bigcap_{z\ne r}L_z
+                         \ne\varnothing.
+\]
+
+Hence every fixed-root packet in the three-connected branch has a
+rooted-model outcome or two web shores sharing one literal extension vertex
+and colour.  Composing these alternatives across the five roots, or forcing
+the displayed common missing colour, is the remaining rotation problem.
 
 The audited
 [operation-coupled reduction](../results/hc7_k7minus_four_centre_operation_cut_reduction.md)
@@ -979,27 +1034,25 @@ remaining open step in this secondary route.
 
 ## 5. Recommended next attack
 
-Pursue one global exceptional-centre terminal theorem.
+Prove the five-packet composition theorem.
 
-1. Do not repeat the one-donor minimisation.  In the two-cut branch, prove a
-   compatible two-donor theorem retaining prescribed repair contacts and
-   one fixed proper-minor response, or eliminate the full nonsplit
-   exact-seven fork, including both its shore-filling core and trace-loss
-   alternatives.  The finite two-exterior diagnostics favour the first
-   statement but do not prove it.  The other
-   live rows are the singleton six-arm contact problem, the order-four
-   trichotomy, the all-rainbow order-at-least-fifteen row, and its
-   concentrated `b=2` model-bag split.
-2. Do not open the exhaustive three-connected branch of `F=G-Z` until the
-   compatible two-donor statement has been formulated with exact host-level
-   hypotheses.  When opened, compose the five
-   rooted-model/web outcomes obtained by omitting each centre in turn.  A
-   rooted outcome must acquire two disjoint completing branch sets; a web
-   outcome must feed a common trace or strict anchored descent.
-3. Retain the surviving `2K_2` and internal-`P_4` square problem as a
-   conditional laboratory for the web branch, with fixed-trace kernel
-   localization rather than one-coordinate rejection as the required
-   invariant.
+1. For each root, retain the proved alternative: one rooted `K_5` outcome,
+   or two web outcomes with the same literal extension vertex and colour.
+   Show that five such alternatives force an explicit `K_7^-` model or a
+   two-cut carrying compatible operations.
+2. When the maximal packet returns a two-cut, exploit its additional
+   coupled one-edge operations.  Force one of their two colours into every
+   other centre's missing-colour set, or derive a terminal from the failure
+   of that intersection across the five fixed roots.  Do not discard the
+   return as an arbitrary two-cut.
+3. Use the two-edge completion square only when the rotation supplies two
+   suitable cross-edges.  Do not enlarge it to three donors or more deleted
+   edges without a new host-level supply theorem.
+4. If the rotation returns a two-cut with compatible operations, feed it
+   into the existing response and completion machinery.  Otherwise keep the
+   order-at-least-eight two-cut residue as the independent receiver branch.
+5. Retain the surviving `2K_2` and internal-`P_4` square problem as a
+   conditional laboratory, not the immediate target.
 
 The earlier one-centre operation and rooted-allocation lemmas remain tools
 only when they feed this global argument.  Another unlabelled separation or

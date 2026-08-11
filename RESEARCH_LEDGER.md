@@ -192,12 +192,88 @@ three-connected and four-chromatic, so it does not refute a full host-level
 supply theorem; it rules out overlap minimisation as that theorem's engine.
 
 Thus the one-donor and single-edge two-donor minimisation mechanisms are
-both frozen.  A common deletion of two or more edges has not been eliminated,
-but it would require a new joint-response theorem rather than a repair of
-the present proof.  The exact-seven backup reaches the same label-placement
-failure: the new boundary need not contain the five centres or inherit the
-original equality-response orientation.  The two-cut branch remains open,
-and the three-connected campaign has not been opened.
+both frozen.  The bounded
+[two-edge response reduction](active/hc7_k7minus_five_centre_two_edge_response_reduction.md)
+has now tested the only natural next operation.  For one colouring of a
+two-edge deletion, two disjoint traces exist exactly when every
+monochromatic deleted edge crosses between the two sets; three disjoint
+traces are impossible.  In the five-centre equality completion, the three
+nonempty contraction choices form an exact Boolean alternative: a
+single-edge pole-response flip, a genuinely joint double flip after both
+single contractions remain seven-chromatic, or three seven-chromatic
+stable completions carrying `K_7^-` models with the prescribed co-bagging.
+This operation retains the literal block `Z` and the distinct `p,q`
+response, but the current structure supplies neither the required pair of
+cross-edges nor a lift of every stable completion model through the
+artificial pole edge.  The bounded test is therefore complete and
+nonterminal; it is not a reason to pass to three donors or larger edge
+sets.
+
+The exact-seven backup reaches the same label-placement failure: the new
+boundary need not contain the five centres or inherit the original
+equality-response orientation.  The two-cut branch remains open.
+
+The three-connected campaign is now open through the audited
+[global rotation reduction](results/hc7_k7minus_five_centre_rotation_reduction.md).
+The literal common core `F` is nonplanar and exactly six-chromatic.  Every
+six-colouring of `F` saturates at least one centre, while the restriction of
+a colouring of `G-z_i` saturates exactly `z_i`.  These five singleton sets
+are colour-permutation-invariant response data.
+
+For every ordered pair of distinct centres, the four-centre theorem applies
+on `F+z_i`; there are twenty such applications, in five fixed-root packets.
+A web outcome either returns a two-cut of `F` immediately or gives an
+order-three separation of `F` crossed by exactly the four non-omitted
+centres.  Two anchor-compatible labelled separations uncross to either an
+order-two/order-four pair, with all five centres crossing the two-cut, or an
+order-three/order-three pair in which the two omitted labels split.  Without
+compatible anchors, an original exact-cut component has order three or
+four.
+
+Within one fixed-root packet, either two shores use the same literal
+extension vertex and colour, or the four cuts have the rigid form
+
+\[
+ N_G(C_i)=(Z-\{z_i\})\mathbin{\dot\cup}(X-\{x_i\}).
+\]
+
+The maximal packet is now eliminated from the three-connected branch.
+At least two omitted centres lie in their own selected components; meeting
+those two exact separations gives the literal cut
+
+\[
+ Q=Z\mathbin{\dot\cup}(X-\{x_i,x_j\}).
+\]
+
+Thus `X-\{x_i,x_j\}` is a two-cut of `F`.  On one returned closed shore,
+the same literal colouring extends over the fixed root with either of the
+two distinct colours of `x_i,x_j`.  This is extra common-colouring data,
+although it is not automatically the standard `Z`-monochromatic response.
+
+The return also supplies two coupled proper-minor operations.  Restoring the
+root with those colours gives colourings of `G-rx_i` and `G-rx_j` which
+agree literally on `G-r` and have opposite singleton signatures on the
+common two-edge deletion.  If `x_ix_j` is absent, contraction of the induced
+path `x_i r x_j` supplies the double signature; if it is present, that
+signature is impossible.  With `theta` the common colouring of `F` and
+
+\[
+ L_z=[6]\setminus\theta(N_G(z))\qquad(z\in Z-\{r\}),
+\]
+
+one operation has the standard distinct boundary response exactly when
+
+\[
+ \{\theta(x_i),\theta(x_j)\}\cap
+                  \bigcap_{z\ne r}L_z\ne\varnothing.  \tag{2}
+\]
+
+Thus (2), or a terminal consequence of its failure across all five roots,
+is the exact normalization problem.  In the three-connected branch, every
+fixed-root packet contains a rooted outcome or two web outcomes sharing one
+literal extension vertex and colour.  This is the first exact global
+synchronization reduction for all five centres; composing those five
+fixed-root alternatives is the remaining step.
 
 Any four-set `U subset Z` may also be used in the audited
 [four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
@@ -375,13 +451,20 @@ component `C` of order at least eight satisfying the displayed bounds,
 rooted infeasibility, and the four colour-distinguished critical-edge paths,
 coupled to the opposite shore's bichromatic pole path.  Eliminating that
 larger-shore case would close every two-cut of `F`.  The other exhaustive
-branch is that `F` is
-three-connected; there the five rooted-model/web outcomes must still be
-composed across the five choices of omitted centre.  The four-centre
-square-level fixed-trace kernel problem remains a conditional laboratory,
-not the immediate global target.  The accepted conclusion is a
-six-colouring of `G`, an explicit `K_7^-` model, or strict descent preserving
-one common trace and minimum-side anchor.
+branch is that `F` is three-connected.  It is now reduced to the twenty
+labelled rooted-model/web applications above.  Anchor-compatible web pairs
+return a two-cut unless their omitted labels split across a `3+3` corner;
+the maximal fixed-root packet itself now returns an exact five-centre
+two-cut and is impossible in the three-connected branch.  Hence each of the
+five fixed-root packets has a rooted-model outcome or two web outcomes with
+one common literal extension vertex and colour.  In the returned two-cut
+case those two colours already give coupled one-edge operations; their exact
+missing normalization is (2).  The immediate target is to compose the five
+packet alternatives, or force (2), into a six-colouring, an explicit
+`K_7^-` model, or a two-cut carrying compatible operations.  The proposed
+global alternative is a capstone formulation, not yet a proved theorem.
+The four-centre square-level fixed-trace kernel problem remains a
+conditional laboratory rather than the immediate global target.
 
 ## Sufficient but non-primary extremal route
 
