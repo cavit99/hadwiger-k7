@@ -24,6 +24,9 @@ Selected audited inputs:
 - [two opposite matching coordinates have one exact response square, one
   common co-bagged `K_6` model and, after bounded responses are excluded,
   one seven-connected exact-model host](../results/hc7_k7minus_matching_square_common_state.md)
+- [splitting the co-bagged root along the selected equality edge gives
+  `K_7^-` or an actual separator retaining that edge and its rejected
+  boundary partition](../results/hc7_k7minus_selected_edge_root_bag_response.md)
 - [large actual response boundaries descend numerically to orders seven
   through nine via fresh singleton responses, while an all-lock response
   has five dominating three-chromatic components or a bounded response
@@ -35,20 +38,17 @@ Selected audited inputs:
   three-coordinate model and an exact triple-split obstruction](../results/hc7_k7minus_p3_opposite_coordinate_common_model.md)
 - [the seven-connected row either grows to eight coordinates or has a
   feedback vertex set of order at most fourteen](../results/hc7_k7minus_six_coordinate_growth_or_feedback.md)
-- [the feedback forest has exactly three structural outcomes: a full
-  order-seven shore, a `7,6,7` three-piece path, or six large-contact
-  components](../results/hc7_k7minus_feedback_forest_component_reduction.md)
-- [a full order-seven separator cannot have a forest component, eliminating
-  the first feedback outcome](../results/hc7_k7minus_forest_shore_four_colour_extension.md)
-- [four-of-five incidence with one `K_5` model terminally closes the
-  three-piece outcome](../results/hc7_k7minus_three_piece_k5_composition.md)
+- [degree counting eliminates every feedback set of order at most fourteen
+  whose induced graph is at least five-chromatic](../results/hc7_k7minus_bounded_feedback_degree_elimination.md)
 - [a portal edge and all six coordinates reduce to two cycles or an
   order-seven separation](../results/hc7_k7minus_portal_edge_cycle_threshold.md)
 
 Immediate barriers:
 
-- [contact data in a five-chromatic boundary do not alone force a two-set-
-  transversal rooted `K_5` model](../barriers/hc7_feedback_boundary_rooted_k5_transversal_barrier.md)
+The first item is a recorded route nonclosure, not a counterexample.
+
+- [one fixed all-lock colouring cannot convert a blocked branch-set
+  transfer into the required labelled response](hc7_k7minus_all_lock_branch_transfer_gate.md)
 - [three full components and ordinary boundary colouring do not force the
   adjacent-pair partition needed for four-colour gluing](../barriers/hc7_k7minus_three_full_component_partition_barrier.md)
 
@@ -75,23 +75,31 @@ strict responses leaves only boundary order eight or nine.  In the
 order-nine matching row, two opposite distinguished coordinates now share
 the complete nonempty response square, a co-bagged `K_6` model and, after
 bounded responses are excluded, a seven-connected exact `K_7^vee` host.
+Splitting the selected equality edge in that common root bag already gives
+`K_7^-` or an actual response separator retaining the edge, model split and
+rejected boundary partition; only the numerical descent to orders seven
+through nine loses those labels.
 The missing all-proper signature forces either a projected boundary
 transition, a response of order at most nine, or five dominating
 three-chromatic lock components.  The immediate gap is to allocate one of
 those objects to four foreign model bags while preserving its labels.  In
+particular, the audited fixed-lock transfer gate shows that minimising and
+absorbing pieces of one lock component cannot supply the colouring labels:
+a proper lock prefix is not switchable, while the whole-component switch
+leaves the selected edge monochromatic.  A matching-row continuation must
+therefore compare different realised signatures or use target exclusion,
+not repeat fixed-colouring branch-set transfer.  In
 the induced-`P_3` row, one common model co-bags the crossing coordinate and
 the entire path; the exact gap is to make four foreign bags meet all three
 split pieces, or return a labelled order-seven response.
 
 If `kappa(X)>=7`, either an eight-coordinate exact-model host exists or a
-feedback set `T` of order at most fourteen does.  In the feedback row the
-six centre edges can all be chosen across `T`; the forest reduction then
-returns a full order-seven shore, a `7,6,7` three-piece path, or six
-components each with at least eight neighbours in `T`.  The first outcome
-is now impossible.  The three-piece case is terminal as soon as one `K_5`
-model in `G[T]` meets each piece in at least four branch bags.  The remaining
-work is to force that incidence, or to compose the six large-contact
-components using the common cycle and the co-bagged `K_6` model.
+feedback set `T` of order at most fourteen does.  The new degree-elimination
+theorem rules out the latter alternative directly from the critical-host
+degree defect and the forest identity.  Thus this row now consists only of
+the eight-coordinate seven-connected deletion host with its complete
+punctured response cube and exact spanning `K_7^vee` model.  The former
+full-shore, `7,6,7` and six-component cases are no longer live obligations.
 
 In the direct exact-model row, one portal edge and all six coordinates lie
 on at most two disjoint cycles.  The narrow composition target is to merge

@@ -137,6 +137,13 @@ The target has two exhaustive connectivity rows.
      then spends the absent all-proper signature: an unlocked palette gives
      a crossed response transition, while otherwise all five alternate
      palettes are locked.  The audited
+     [selected-edge root-bag response theorem](results/hc7_k7minus_selected_edge_root_bag_response.md)
+     splits the common model bag along the selected equality edge and gives
+     either `K_7^-` or an actual separator retaining that edge and its
+     rejected boundary partition.  Its direct boundary has order at least
+     seven; reducing a large boundary numerically to order seven, eight or
+     nine uses fresh singleton responses and can lose the original edge,
+     model and shore labels.  The audited
      [boundary-reduction theorem](results/hc7_k7minus_matching_lock_boundary_reduction.md)
      sends every large actual response boundary numerically to order seven,
      eight or nine via fresh singleton responses; the matching and model
@@ -150,6 +157,15 @@ The target has two exhaustive connectivity rows.
      opposite-shore components.  If no bounded response is available, each
      all-lock component is connected, dominating and three-chromatic, with
      a four- or five-chromatic `K_6`-minor-free complement.
+     The separately audited
+     [all-lock branch-set transfer gate](active/hc7_k7minus_all_lock_branch_transfer_gate.md)
+     records a precise route nonclosure: a proper initial segment of one
+     connected lock component is not a valid Kempe interchange, while
+     switching the whole component leaves the selected equality edge
+     monochromatic.  Thus blocked branch-set absorption in one fixed lock
+     colouring does not produce an original-labelled response separator or
+     a common shore partition.  Any continuation must compare different
+     realised signatures, or spend target exclusion in a genuinely new way.
    * In the induced-`P_3` case, the audited
      [common-model theorem](results/hc7_k7minus_p3_opposite_coordinate_common_model.md)
      puts each leaf response on a seven-connected two-edge host and puts
@@ -172,23 +188,16 @@ The target has two exhaustive connectivity rows.
    componentwise-induced forest whose deletion is seven-connected and
    still has an exact spanning `K_7^vee` model, or `G` has a feedback
    vertex set `T` of order at most fourteen with `chi(G[T])>=5`.  In the
-   latter case the audited
-   [six-centre feedback theorem](results/hc7_k7minus_feedback_six_centre_common_matching.md)
-   gives six independent degree-eight centres outside `T`, with their six
-   selected neighbours all in `T`, all 63 nonempty signatures and a
-   spanning `K_6` model co-bagging all six pairs.  The audited
-   [forest-component reduction](results/hc7_k7minus_feedback_forest_component_reduction.md)
-   adds one common cycle through all six centre edges and returns exactly
-   one of: a full order-seven forest shore; a three-piece
-   forest path with `T`-contact bounds `7,6,7`; or six distinct forest
-   components, each with at least eight neighbours in `T`.  The audited
-   [forest-shore theorem](results/hc7_k7minus_forest_shore_four_colour_extension.md)
-   terminally eliminates the first outcome.  In the three-piece outcome,
-   the audited
-   [four-of-five composition theorem](results/hc7_k7minus_three_piece_k5_composition.md)
-   gives `K_7^-` as soon as one `K_5` model in `G[T]` has at least four
-   branch bags adjacent to each piece.  Thus only that incidence theorem
-   and the six-component composition remain in the bounded-feedback row.
+   latter alternative is now impossible.  The separately audited
+   [bounded-feedback degree elimination](results/hc7_k7minus_bounded_feedback_degree_elimination.md)
+   combines the exact degree defect from (1), the forest identity for
+   `G-T`, and a sharp edge bound for a `K_5`-free five-critical subgraph of
+   `G[T]`.  It first forces `|T|=14` and `25<=|V(G)|<=27`, then uses the
+   degree-eight vertices inside `T` to contradict the same defect
+   inequality.  This argument is unbounded and computation-free.  Hence
+   `kappa(X)>=7` now forces the eight-coordinate exact-model host.  The
+   earlier full-shore, `7,6,7` and six-component feedback reductions remain
+   proved infrastructure, but none is a live residue.
 
 In the seven-connected exact-model row, the audited
 [portal-cycle threshold reduction](results/hc7_k7minus_portal_edge_cycle_threshold.md)
@@ -201,13 +210,13 @@ labelled order-seven separation.  Thus the proposed common co-bagged-`K_6`
 split is not the first gate: Chu's matching does not supply that model, and
 contact-only quotient splitting already has explicit obstructions.
 
-This is genuine progress inside two global rows: a full order-seven forest
-shore is impossible, and the six-cut row now has common response hosts and
-models rather than separately existential fans and minor models.  It does
-not close Conjecture 21.  The exact live residues are the matching
-lock/transition-to-model allocation, the induced-path triple split, the
-feedback `7,6,7` incidence and six-component compositions, the
-eight-coordinate dense host, and the two-cycle exact-model row.
+This is genuine progress inside both global rows: the entire
+bounded-feedback alternative is impossible, and the six-cut row now has
+common response hosts and models rather than separately existential fans
+and minor models.  It does not close Conjecture 21.  The exact live
+residues are the matching cross-signature/model allocation, the
+induced-path triple split, the eight-coordinate exact-model host, and the
+two-cycle exact-model composition.
 
 #### Secondary centre-labelled route
 
