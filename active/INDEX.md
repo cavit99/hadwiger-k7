@@ -21,8 +21,18 @@ Selected audited inputs:
   exact spanning `K_7^vee` model and one cycle through all coordinates](../results/hc7_k7minus_six_coordinate_forest_reduction.md)
 - [coordinate localisation reduces the six-cut row to a strict response or
   an order-eight or order-nine boundary with two or three full components](../results/hc7_k7minus_six_cut_coordinate_localisation.md)
-- [the final six-cut shores have full-boundary fans and coordinate-specific
-  six-fans; only their labels remain unaligned with the minor models](../results/hc7_k7minus_six_cut_fan_model_alignment.md)
+- [two opposite matching coordinates have one exact response square, one
+  common co-bagged `K_6` model and, after bounded responses are excluded,
+  one seven-connected exact-model host](../results/hc7_k7minus_matching_square_common_state.md)
+- [large actual response boundaries descend numerically to orders seven
+  through nine via fresh singleton responses, while an all-lock response
+  has five dominating three-chromatic components or a bounded response
+  endpoint](../results/hc7_k7minus_matching_lock_boundary_reduction.md)
+- [an unlocked order-nine transition is supported on at most four original
+  boundary vertices and returns either a doubly rejected trace or one
+  opposite-shore boundary interchange](../results/hc7_k7minus_order9_crossed_transition_projection.md)
+- [the induced-path row has two seven-connected response hosts, one common
+  three-coordinate model and an exact triple-split obstruction](../results/hc7_k7minus_p3_opposite_coordinate_common_model.md)
 - [the seven-connected row either grows to eight coordinates or has a
   feedback vertex set of order at most fourteen](../results/hc7_k7minus_six_coordinate_growth_or_feedback.md)
 - [the feedback forest has exactly three structural outcomes: a full
@@ -61,13 +71,17 @@ exact spanning `K_7^vee` model.  The immediate target is the
 
 If `kappa(X)=6`, each lifted coordinate either gives a strict
 response-bearing separator or lies in a full component.  Excluding all
-strict responses leaves only a boundary of order eight or nine and exactly
-two or three full components.  Every completed shore has a full-boundary
-fan, and every singleton coordinate supplies a shore-confined six-fan that
-retains five prescribed Kempe first edges.  The immediate gap is one
-boundary-respecting fan-to-model exchange: assign those paths to an
-edge-rooted `K_6` model, glue the response, or return strict labelled
-descent.
+strict responses leaves only boundary order eight or nine.  In the
+order-nine matching row, two opposite distinguished coordinates now share
+the complete nonempty response square, a co-bagged `K_6` model and, after
+bounded responses are excluded, a seven-connected exact `K_7^vee` host.
+The missing all-proper signature forces either a projected boundary
+transition, a response of order at most nine, or five dominating
+three-chromatic lock components.  The immediate gap is to allocate one of
+those objects to four foreign model bags while preserving its labels.  In
+the induced-`P_3` row, one common model co-bags the crossing coordinate and
+the entire path; the exact gap is to make four foreign bags meet all three
+split pieces, or return a labelled order-seven response.
 
 If `kappa(X)>=7`, either an eight-coordinate exact-model host exists or a
 feedback set `T` of order at most fourteen does.  In the feedback row the
