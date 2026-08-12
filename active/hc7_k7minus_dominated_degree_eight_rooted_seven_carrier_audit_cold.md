@@ -17,7 +17,7 @@ It is an internal cold audit, not external peer review.
 79fb33eacad3591c6f89c0bf1758475287feb462999927241daf8a83a3961927  active/experiments/dominated_singleton_rooted_seven_carrier/verify.py
 7f062d12451b751d71789144b85bf09ff5a2ee29306702385eb4e0416c4e6cc2  active/experiments/dominated_singleton_rooted_seven_carrier/README.md
 ab9df3d879e53784f8afcc77dfc7f37137a5e1a370caee95df01fc905b00cfb7  active/experiments/dominated_singleton_complete_seven_terminal_kernel/verify.py
-a2ccef4f3fc2718c2f79dd461c540f2b3483b805c034596dfc3838ec4d7ec228  active/experiments/dominated_singleton_complete_seven_terminal_kernel/README.md
+53eebed6d60ddef759c0fca021c4c9b2955752b7e4510aae930474edd4b36fab  active/experiments/dominated_singleton_complete_seven_terminal_kernel/README.md
 81980e29daba936ace8e599a1147ffad233a227718247cce8872cadbbe9d4495  active/experiments/dominated_singleton_low_degree_completion/verify.py
 91097a5185909dd69684783b3175f4e57e9ec84b9b973c26442069f55e6e9a25  results/hc7_seven_terminal_irreducible_kernel_classification.md
 925b390b35a22f54db30f6b0608ff55bea6f5b971578fb3aa4394bfd308f1744  results/hc7_seven_terminal_irreducible_kernel_classification_audit.md
@@ -39,6 +39,10 @@ complete order-eight templates=30600, failures=89, fixed-Q orbits=13
 four-contact refinement: order-seven 0/735 failures
 four-contact refinement: order-eight 0/3115 failures
 ```
+
+The README pin above was refreshed after the final trust-boundary wording
+was added.  The current verifier was rerun and reproduces every displayed
+count; the theorem and finite encoding are unchanged.
 
 As an independent check, I enumerated every partition of every subset of
 the seven quotient vertices into five nonempty connected branch sets and

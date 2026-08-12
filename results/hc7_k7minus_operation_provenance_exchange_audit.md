@@ -175,11 +175,16 @@ terminalisation, Conjecture 21 or `HC_7`.
 The direct local dependencies and their current source hashes are
 
 ```text
-aefcb5164c4122bfb142b7cbbbc31f4d4154cb5c632fe454510e358a510843d8  active/hc7_k7minus_model_anchored_appendage_ownership.md
-90c1a84a934ca2848c35152b3a0d0b089da55f308fa829f2add24addbcba8749  active/hc7_k7minus_singleton_coordinate_localisation.md
-e19576b6b5e42cb7fda761e4c920de1f7db2574b6acf7ffe7461893426d2ed2b  active/hc7_k7minus_model_anchored_response_hull.md
+aefcb5164c4122bfb142b7cbbbc31f4d4154cb5c632fe454510e358a510843d8  results/hc7_k7minus_model_anchored_appendage_ownership.md
+90c1a84a934ca2848c35152b3a0d0b089da55f308fa829f2add24addbcba8749  results/hc7_k7minus_singleton_coordinate_localisation.md
+7cc1da7567f05e10bb7089c4b6dcd0706e9a0daa406063e7ba986d3d283c9512  results/hc7_k7minus_model_anchored_response_hull.md
 8ad949ac4d3cb831e9cffa26115f955e98feaca9cef4a238d240eaa113e4f11d  results/hc7_k7minus_eight_coordinate_endpoint_visibility.md
 ```
 
 Each has an adjacent GREEN internal audit.  This audit does not elevate
 those internal checks to external peer review.
+
+The first three paths were updated when those theorems were promoted from
+`active/` to `results/`.  The response-hull audit records that its current
+revision differs from the originally checked mathematical text only by its
+status link.
