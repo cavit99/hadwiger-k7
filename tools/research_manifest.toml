@@ -10391,7 +10391,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "83d3dc5355729d06d111c988137d8dffb78247b08de7e95bf43d4ac93afc3d75"
+expected_source_sha256 = "adc9f31cbaf9e040467633d0f044c073a08ac19ec6e16680ad3547b0ce10593a"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -11291,7 +11291,7 @@ title = "A fixed coordinate response descends to a boundary-list-critical side"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_fixed_coordinate_response_core_reduction.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_fixed_coordinate_response_core_reduction_audit.md"
 expected_source_sha256 = "0473dc5826585e87935d3acf04c9c9579f8ecf52d92f076a9a44e7907c8b2da1"
 scope = "one actual response side, one fixed deleted edge and one fixed proper six-colouring of that edge-deleted host"
@@ -11333,6 +11333,190 @@ does_not_prove = [
   "failure of a compression theorem whose alternatives include the target minor",
 ]
 keywords = ["K7 minus", "anchored compression", "singleton response", "unbounded boundary", "target-rich barrier"]
+
+[[claims]]
+id = "hc7.k7minus_model_anchored_response_hull"
+title = "A fixed response has a model-anchored hull"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_model_anchored_response_hull.md"
+active = false
+audit = "results/hc7_k7minus_model_anchored_response_hull_audit.md"
+expected_source_sha256 = "7cc1da7567f05e10bb7089c4b6dcd0706e9a0daa406063e7ba986d3d283c9512"
+scope = "one fixed coordinate response inside one named branch set of an exact K7-vee model"
+label_fidelity = "the coordinate, colouring, containing bag, connected bag complement and named anticomplete bag remain fixed"
+conclusions = [
+  "the hull is connected and has connected complement in the containing branch set",
+  "the same deleted edge, exterior colouring and rejected boundary trace survive",
+  "the hull is strict exactly when the exterior component meets the complement of the critical core",
+]
+does_not_prove = [
+  "that every proper critical core gives a proper hull",
+  "boundary-order compression",
+  "closure of the eight-coordinate branch or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "model-anchored hull", "fixed response", "connected complement"]
+
+[[claims]]
+id = "hc7.k7minus_model_anchored_appendage_ownership"
+title = "A minimum model-anchored side has at most two model-owning appendages"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_model_anchored_appendage_ownership.md"
+active = true
+audit = "results/hc7_k7minus_model_anchored_appendage_ownership_audit.md"
+expected_source_sha256 = "aefcb5164c4122bfb142b7cbbbc31f4d4154cb5c632fe454510e358a510843d8"
+scope = "globally minimum model-anchored response sides over all eight forest coordinates and ordinary exact K7-vee models"
+label_fidelity = "the fixed forest edge, colouring, exact model, containing bag and far bag remain named"
+conclusions = [
+  "every appendage monopolises at least two foreign model adjacencies",
+  "different monopoly sets are disjoint and avoid the far label, so at most two appendages survive",
+  "every surviving appendage is disjoint from all eight coordinate endpoints",
+]
+does_not_prove = [
+  "elimination of the one- or two-appendage ownership patterns",
+  "exchange of an attachment-edge response with the retained forest response",
+  "closure of the eight-coordinate branch or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "model ownership", "appendage", "eight coordinates", "response side"]
+
+[[claims]]
+id = "hc7.k7minus_singleton_coordinate_localisation"
+title = "A singleton response localises to an induced path or a dominated coordinate"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_singleton_coordinate_localisation.md"
+active = true
+audit = "results/hc7_k7minus_singleton_coordinate_localisation_audit.md"
+expected_source_sha256 = "90c1a84a934ca2848c35152b3a0d0b089da55f308fa829f2add24addbcba8749"
+scope = "a singleton response side carrying one edge of the eight-coordinate forest"
+label_fidelity = "the original forest edge and singleton-signature colouring remain literal; any second edge is a named incident edge"
+colour_compatibility = "the singleton carries exactly those equality signatures whose deleted edges it covers"
+conclusions = [
+  "the exterior-colouring condition is exactly a vertex-cover condition on monochromatic deleted edges",
+  "either an incident edge gives an induced-P3 common deletion with all three nonempty signatures or the forest mate dominates the remaining neighbourhood",
+  "the dominated common-neighbour graph is triangle-free and K5-minus-minor-free",
+]
+does_not_prove = [
+  "that the fresh incident edge belongs to the eight-coordinate forest",
+  "alignment of the induced-path colourings with one exact model",
+  "closure of the dominated or induced-path outcomes",
+]
+keywords = ["K7 minus", "singleton response", "induced path", "dominated edge", "vertex cover"]
+
+[[claims]]
+id = "hc7.k7minus_singleton_induced_path_common_deletion"
+title = "The singleton induced-path deletion is seven-connected or returns a labelled small boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_singleton_induced_path_common_deletion.md"
+active = false
+audit = "results/hc7_k7minus_singleton_induced_path_common_deletion_audit.md"
+expected_source_sha256 = "55c636ad3f47310fc467daf8ad464e8162cc4343281dc612837117f76b1aef87"
+scope = "the fresh induced-path alternative at a singleton coordinate response"
+label_fidelity = "both incident edges and all three equality signatures remain on one deletion host and one actual response boundary"
+separator_order = "a failure of seven-connectivity returns an actual boundary of order seven or eight"
+conclusions = [
+  "the common deletion is seven-connected or an actual order-seven/eight separation retains the full response square",
+  "path contraction saturates the centre and one leaf with all five alternate colours",
+]
+does_not_prove = [
+  "four foreign K6-model bags meet all three pieces of the split path bag",
+  "closure of the induced-path case or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "singleton", "induced path", "common deletion", "small boundary"]
+
+[[claims]]
+id = "hc7.k7minus_operation_provenance_exchange"
+title = "A fresh attachment response does not automatically inherit forest-coordinate provenance"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_operation_provenance_exchange.md"
+active = false
+audit = "results/hc7_k7minus_operation_provenance_exchange_audit.md"
+expected_source_sha256 = "d485f6735b11414170bd1eee9d3cb5a84b196e34c501078dd321b8f56f40bef8"
+scope = "a terminal model-anchored side with a coordinate-free appendage and one fresh attachment edge"
+label_fidelity = "the original forest edge, fresh attachment edge, their equality signatures, core, appendage and exact-model labels remain explicit"
+conclusions = [
+  "the common deletion has the exact disjoint-edge, induced-path or triangle signature language stated",
+  "either both forest-edge ends lie on the appendage boundary or the two relevant boundary-partition languages are nonempty and disjoint",
+  "the equality-on-both-edges colouring alone does not exchange operation provenance",
+]
+does_not_prove = [
+  "a counterexample to a response-sensitive model transfer",
+  "elimination of either model-owning appendage",
+  "closure of the eight-coordinate branch or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "operation provenance", "appendage", "boundary partition", "route nonclosure"]
+
+[[claims]]
+id = "hc7.k7minus_dominated_singleton_twocut_response"
+title = "A dominated singleton exposes opposite responses across a common-neighbour cut"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_dominated_singleton_twocut_response.md"
+active = false
+audit = "results/hc7_k7minus_dominated_singleton_twocut_response_audit.md"
+expected_source_sha256 = "204365dd5d68e9b80d84b346fe0b796cd3bb817ac10f34c718de884b882b19d0"
+scope = "the dominated outcome of the singleton-coordinate theorem with one fixed exact K7-vee model"
+label_fidelity = "the original forest edge, fresh incident edges, common-neighbour cut, response components and fixed model remain named"
+conclusions = [
+  "the triangle-free K5-minus-minor-free common-neighbour graph has a cut of order at most two",
+  "two cut components carry opposite responses of one induced two-edge star",
+  "some exclusive switch between the original edge and a fresh edge preserves the fixed exact model",
+]
+does_not_prove = [
+  "that the persistent endpoint avoids the common-neighbour cut in degrees eight or nine",
+  "that the returned response component lies in one named branch bag",
+  "closure of the dominated singleton or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "dominated singleton", "two-cut", "model persistence", "opposite responses"]
+
+[[claims]]
+id = "hc7.k7minus_dominated_singleton_low_degree_terminal"
+title = "The dominated singleton is model-aligned in every degree"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_dominated_singleton_low_degree_terminal.md"
+active = true
+audit = "results/hc7_k7minus_dominated_singleton_low_degree_terminal_audit.md"
+expected_source_sha256 = "d5c3fa4bcfb43af83d617d4022fa151bdb445240c2a152df74fb5bf178f7f779"
+scope = "the dominated singleton outcome at every degree at least eight, with one fixed exact K7-vee model"
+label_fidelity = "the original coordinate colouring, fixed exact model, fresh exclusive response and actual response component are all retained on one graph"
+conclusions = [
+  "degrees eight and nine admit a model-persistent endpoint beyond a common-neighbour cut unless an explicit finite quotient already contains K7-minus",
+  "the exact marked-neighbourhood computation has two order-seven and one order-eight survivor, all eliminated by exterior-component contraction",
+  "together with the high-degree count, every dominated singleton is model-aligned",
+]
+does_not_prove = [
+  "that the response component is contained in one model branch bag",
+  "a bounded boundary or one common shore partition",
+  "closure of the eight-coordinate branch or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "dominated singleton", "low degree", "computer-assisted", "model alignment"]
+
+[[claims]]
+id = "hc7.k7minus_dominated_two_protected_centres_kernel"
+title = "Two protected exceptional centres leave at most one nonterminal kernel vertex"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_dominated_two_protected_centres_kernel.md"
+active = false
+audit = "active/hc7_k7minus_dominated_two_protected_centres_kernel_audit.md"
+expected_source_sha256 = "0cc512a6f8a686db7c0568e1b183912ea8e5395ec2cde7e83e6abd57e41e948b"
+scope = "the connected dominated degree-eight centre case with the seven common neighbours and two other exceptional centres protected in one five-connected remainder"
+label_fidelity = "the seven literal common-neighbour roots and two literal exceptional centres survive one terminal-legal contraction process"
+conclusions = [
+  "the rooted irreducible kernel has order nine or ten, so at most one nonterminal branch set remains",
+  "the order-eleven charge-complete and one-uncharged normal forms both compose to K7-minus",
+  "one usable centre-to-root contact closes every order-ten occurrence and two close every order-nine survivor, conditionally on those contacts",
+]
+does_not_prove = [
+  "that a selected centre edge leaves its centre-rooted bag",
+  "that a swallowed edge supplies an operation-labelled movable split",
+  "closure of the dominated centre, eight-coordinate branch or K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "protected centres", "terminal kernel", "operation-labelled contact", "route nonclosure"]
 
 [[claims]]
 id = "hc7.k7minus_overlap_triangle_packing"
@@ -17593,8 +17777,44 @@ note = "This terminalises endpoint placement in the forced eight-coordinate exac
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_fixed_coordinate_response_core_reduction"
+kind = "related_to"
+note = "This is consumed by the sharper model-anchored hull and appendage-ownership normal form."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_model_anchored_appendage_ownership"
 kind = "uses"
-note = "This preserves one original forest coordinate and exterior colouring while reducing the returned side to a connected boundary-list-critical core."
+note = "This gives the direct nonsingleton terminal normal form: one list-critical core and at most two coordinate-free appendages with disjoint model ownership."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_singleton_coordinate_localisation"
+kind = "uses"
+note = "This gives the exhaustive singleton fork into one common induced-path response host or a dominated forest coordinate."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_dominated_singleton_low_degree_terminal"
+kind = "uses"
+note = "This aligns the dominated singleton in every degree while retaining the original exact model, coordinate colouring, a fresh exclusive response and an actual response component."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_dominated_two_protected_centres_kernel"
+kind = "related_to"
+note = "This reduces the dominated degree-eight endpoint to a common rooted kernel with two literal exceptional centres and at most one nonterminal; the missing direct input is an operation-labelled contact or split."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_singleton_induced_path_common_deletion"
+kind = "related_to"
+note = "This terminalises low connectivity in the singleton induced-path outcome and identifies the shared triple-split allocation gap."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_operation_provenance_exchange"
+kind = "related_to"
+note = "This records the exact operation-provenance mismatch in the one- or two-appendage nonsingleton normal form."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
@@ -18594,6 +18814,18 @@ source = "hc7.target.k7minus_extremal_4n_minus_2"
 target = "hc7.target.k7minus_six_colour_conjecture"
 kind = "strengthens"
 note = "The audited critical-host entrance shows that the universal extremal theorem would settle Conjecture 21, although it is not required by the direct route."
+
+[[verifiers]]
+id = "k7minus-dominated-singleton-low-degree-completion"
+path = "active/experiments/dominated_singleton_low_degree_completion/verify.py"
+sha256 = "81980e29daba936ace8e599a1147ffad233a227718247cce8872cadbbe9d4495"
+timeout = 30
+requires = ["geng"]
+expected_stdout = [
+  "GREEN dominated-singleton low-degree completion",
+  "order7 eligible=9 marked=63 survivors=2 graph6=FCxv? exterior_profiles=9",
+  "order8 eligible=158 marked=4424 survivors=1 graph6=G?rF`w exterior_profiles=46",
+]
 
 [[verifiers]]
 id = "k7minus-three-piece-767-quotient-barrier"
