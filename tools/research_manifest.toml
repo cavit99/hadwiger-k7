@@ -7536,7 +7536,7 @@ title = "Coordinate localisation leaves only full order-eight or order-nine shor
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_six_cut_coordinate_localisation.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_six_cut_coordinate_localisation_audit.md"
 expected_source_sha256 = "b2803d6cabf6684aaa0af8487be66ab7ac738909719028fd304f29b1b9682555"
 scope = "the lifted six-cut separators supplied by the six-coordinate induced-forest host"
@@ -7589,7 +7589,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_matching_square_common_state.md"
 source_heading = "Theorem 2.1 (opposite-coordinate common state)"
-active = true
+active = false
 audit = "results/hc7_k7minus_matching_square_common_state_audit.md"
 expected_source_sha256 = "ca291c23674c11832159301af0c9d1bd7bfd5302495359bbfe81b4f8a5f55e14"
 scope = "the order-nine matching six-cut row with two opposite distinguished coordinates and a spanning six-connected common subgraph"
@@ -7617,7 +7617,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_selected_edge_root_bag_response.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_k7minus_selected_edge_root_bag_response_audit.md"
 expected_source_sha256 = "403070aaa16845f167e1111e77fdf8dfbe72d08434d6c1246c732906cbfd083b"
 scope = "a selected equality edge co-bagged in a spanning K6 model of its contraction in the critical host"
@@ -7670,7 +7670,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_matching_lock_boundary_reduction.md"
 source_heading = "Theorem 2.1 (large actual-boundary singleton descent)"
-active = true
+active = false
 audit = "results/hc7_k7minus_matching_lock_boundary_reduction_audit.md"
 expected_source_sha256 = "d95c459737f7d94e8c212e8f3d90e2b5fbf762f46567d70e6e6d9dfb386dd244"
 scope = "a seven-connected seven-chromatic proper-minor-critical K7-free graph and, for the lock normal form, two disjoint critical matching edges"
@@ -7698,7 +7698,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_order9_crossed_transition_projection.md"
 source_heading = "Theorem 2.1 (order-nine projection)"
-active = true
+active = false
 audit = "results/hc7_k7minus_order9_crossed_transition_projection_audit.md"
 expected_source_sha256 = "27b91fc459a81ba2b0d2002b281bb992151f82faafa013c496067bd43778052e"
 scope = "the order-nine opposite-shore matching response with one unlocked equal coordinate"
@@ -7725,7 +7725,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_p3_opposite_coordinate_common_model.md"
 source_heading = "Theorem 3.1 (one model for the whole induced path)"
-active = true
+active = false
 audit = "results/hc7_k7minus_p3_opposite_coordinate_common_model_audit.md"
 expected_source_sha256 = "3a2ded6ee2bbbe1e9735dd43f30bb7b0dcb193395ffc69fc64056ab7964a1cf7"
 scope = "the induced-P3 six-cut row with one crossing fixed matching coordinate and the two distinguished path restorers"
@@ -7751,7 +7751,7 @@ title = "A seven-connected six-coordinate host grows or has bounded feedback"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_six_coordinate_growth_or_feedback.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_six_coordinate_growth_or_feedback_audit.md"
 expected_source_sha256 = "c49b8b736475c9a71410fb9e4a79dad0de862ed6304d2e71b472a07b791c7422"
 scope = "the seven-connected row of the audited six-coordinate induced-forest host"
@@ -7800,7 +7800,7 @@ kind = "theorem"
 status = "audited-green"
 source = "active/hc7_k7minus_all_lock_branch_transfer_gate.md"
 source_heading = "5. Route verdict and smallest repair"
-active = true
+active = false
 audit = "active/hc7_k7minus_all_lock_branch_transfer_gate_audit.md"
 expected_source_sha256 = "a1e0664404c2dc7c0ce25f93147fdead53a24295dfd0087c419a2aab27940295"
 scope = "the all-lock outcome of the seven-connected opposite-coordinate matching common host"
@@ -7923,7 +7923,7 @@ title = "A portal edge and six coordinates reduce to two cycles or an order-seve
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_portal_edge_cycle_threshold.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_portal_edge_cycle_threshold_audit.md"
 expected_source_sha256 = "0a4c9046015984e9701c1c8911d2552ad669fbc6f792b309a679973d09808a54"
 scope = "the seven-connected row of the six-coordinate induced-forest host with a clean exact-model portal edge"
@@ -7995,7 +7995,7 @@ title = "Three full components do not force the adjacent-pair boundary partition
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_three_full_component_partition_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_three_full_component_partition_barrier_audit.md"
 expected_source_sha256 = "d8ff6502d4da17e26d65685e2a7751f18440f90571a8f65a9b1510c0996cfafe"
 scope = "the proposed boundary-allocation lemma for three full components behind an order-eight nonsplit K5-minor-free boundary"
@@ -10391,7 +10391,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "d1f019062ade42c24143b9c252dcfae317e95794c9e4246607f1b83b834308ab"
+expected_source_sha256 = "83d3dc5355729d06d111c988137d8dffb78247b08de7e95bf43d4ac93afc3d75"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -11211,6 +11211,128 @@ does_not_prove = [
   "the K7-minus six-colour conjecture or HC7",
 ]
 keywords = ["K7 minus", "common six-set", "reflection demand", "connected-subgraph packing"]
+
+[[claims]]
+id = "hc7.k7minus_cross_signature_pivot_gate"
+title = "A shared equal-equal pivot forces literal interaction but not model allocation"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_cross_signature_pivot_gate.md"
+active = false
+audit = "active/hc7_k7minus_cross_signature_pivot_gate_audit.md"
+expected_source_sha256 = "99bb8de11862040c14d884f6f3f53c6fb1276795d9a85a61c4f16e11c98be21f"
+scope = "the seven-connected opposite-coordinate matching host with one fixed co-bagged K6 model"
+label_fidelity = "both matching edges, the three realised signatures, the forbidden all-proper signature and the fixed branch-set split remain literal"
+colour_compatibility = "the positive interaction theorem assumes one equal-equal colouring adjacent by whole Kempe interchanges to both singleton signatures"
+conclusions = [
+  "the static foreign-bag deficiency profile is independent of the selected signature colouring",
+  "at a shared equal-equal pivot the two switching palettes share exactly one colour",
+  "the two Kempe components meet in the shared colour or have an edge between their two other colour classes",
+  "the response square alone supplies neither the shared-pivot quantifier nor incidence with a deficient model label",
+]
+does_not_prove = [
+  "existence of one shared equal-equal pivot",
+  "a model-monotone branch-set exchange",
+  "closure of the matching row or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "cross signature", "Kempe pivot", "co-bagged model", "route nonclosure"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_static_two_split_profile"
+title = "Static two-split branch-set profiles do not force a four-contact split"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_static_two_split_profile_barrier.md"
+active = false
+audit = "barriers/hc7_k7minus_static_two_split_profile_barrier_audit.md"
+expected_source_sha256 = "3c331150a4b95a814c7ef5f6aa35bba049996470d22cf75ad28ffa81a3185117"
+scope = "the uncoloured eight-set quotient of two co-bagged coordinate edges and four singleton foreign bags"
+label_fidelity = "both split coordinate bags, all four foreign bags and every quotient contact remain explicit"
+conclusions = [
+  "K2,2,2,2 has a labelled K6 model in which both coordinate splits have only three double-contacting foreign bags",
+  "the graph has no literal K5 and no K7-minus minor",
+  "exhaustive enumeration leaves 30652 target-free clique-number-at-most-four blocked profiles",
+]
+does_not_prove = [
+  "a counterexample with the forbidden all-proper signature absent",
+  "a seven-connected contraction-critical host",
+  "failure of a Kempe-valid model exchange or of the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "static branch-set profile", "K2,2,2,2", "co-bagged split", "finite barrier"]
+
+[[claims]]
+id = "hc7.k7minus_eight_coordinate_endpoint_visibility"
+title = "Eight coordinate endpoints force a bounded response interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_eight_coordinate_endpoint_visibility.md"
+active = true
+audit = "results/hc7_k7minus_eight_coordinate_endpoint_visibility_audit.md"
+expected_source_sha256 = "8ad949ac4d3cb831e9cffa26115f955e98feaca9cef4a238d240eaa113e4f11d"
+scope = "the forced seven-connected eight-coordinate host with its full punctured signature cube and exact spanning K7-vee model"
+label_fidelity = "the eight forest edges, their endpoints, the deficient and universal branch sets and the first returned coordinate response remain literal"
+separator_order = "the coordinate-preserving separator has arbitrary order at least seven; generic descent gives order seven, eight or nine with possible coordinate and model label loss"
+colour_compatibility = "every set meeting a forest endpoint carries the corresponding singleton-signature exterior colouring and a rejected intact-side partition"
+conclusions = [
+  "a branch-set transfer constructs K7-minus, returns an original-coordinate response separator or strictly increases endpoint visibility",
+  "maximising endpoint visibility and applying the exact-model dichotomy forces K7-minus or an original-coordinate response separator",
+  "generic large-boundary descent reduces the separator numerically to order seven, eight or nine",
+]
+does_not_prove = [
+  "label-preserving compression to order seven or eight",
+  "synchronisation of the bounded response interface",
+  "closure of the eight-coordinate branch or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "eight coordinates", "endpoint visibility", "exact K7 vee", "response separator", "boundary compression"]
+
+[[claims]]
+id = "hc7.k7minus_fixed_coordinate_response_core_reduction"
+title = "A fixed coordinate response descends to a boundary-list-critical side"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_fixed_coordinate_response_core_reduction.md"
+active = true
+audit = "results/hc7_k7minus_fixed_coordinate_response_core_reduction_audit.md"
+expected_source_sha256 = "0473dc5826585e87935d3acf04c9c9579f8ecf52d92f076a9a44e7907c8b2da1"
+scope = "one actual response side, one fixed deleted edge and one fixed proper six-colouring of that edge-deleted host"
+label_fidelity = "the deleted edge, its relevant endpoint or endpoints and the exterior colouring remain fixed throughout"
+separator_order = "seven-connectivity gives only the lower bound seven; the boundary can increase during side reduction"
+conclusions = [
+  "every connected actual subset containing a relevant endpoint inherits the same rejected response",
+  "a vertex-minimal boundary-list obstruction is connected and retains the relevant endpoint set",
+  "proper critical-core replacement strictly decreases side order and terminates at a fixed-coordinate boundary-list-critical side",
+]
+does_not_prove = [
+  "a decrease in boundary order",
+  "compression to boundary order seven or eight",
+  "closure of the eight-coordinate branch or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "fixed coordinate", "response inheritance", "list-critical core", "side descent", "route nonclosure"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_anchored_coordinate_compression"
+title = "A fixed coordinate response can be a singleton with unbounded boundary"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md"
+active = true
+audit = "barriers/hc7_k7minus_anchored_coordinate_compression_barrier_audit.md"
+expected_source_sha256 = "2e09b181eb0afc95cee6c68ef7ebfb7ede99c39f0337f0f77675d6599a4c2a17"
+scope = "the infinite family K4 join (K_m,m plus one same-part edge), for every m at least four"
+label_fidelity = "the deleted edge, its unique monochromatic restoration and the singleton endpoint side remain explicit"
+separator_order = "the singleton response boundary has unbounded order m+5"
+conclusions = [
+  "the graph is seven-chromatic, (m+4)-connected and has minimum degree m+4",
+  "deleting uv gives a six-colouring in which uv is the unique restored conflict",
+  "the singleton endpoint side is an actual rejected response with no proper rooted subset",
+  "the construction contains a literal K7",
+]
+does_not_prove = [
+  "failure under K7-minus-minor exclusion",
+  "failure in a contraction-critical host",
+  "failure of a compression theorem whose alternatives include the target minor",
+]
+keywords = ["K7 minus", "anchored compression", "singleton response", "unbounded boundary", "target-rich barrier"]
 
 [[claims]]
 id = "hc7.k7minus_overlap_triangle_packing"
@@ -15961,6 +16083,23 @@ kind = "uses"
 note = "At exact packing (1,2), the open target reduces to detaching a complete operated support with a full remainder and terminalizing its separator, or producing a common partition or named exceptional anti-neighbourhood descent."
 
 [[verifiers]]
+id = "k7minus-static-two-split-profile-barrier"
+path = "barriers/hc7_k7minus_static_two_split_profile_barrier_verify.py"
+sha256 = "b2b65ccf1a47a7e9baeeccec68babc08a08845a45cd27222fd690b3f2d33f991"
+timeout = 30
+expected_stdout = [
+  "GREEN static two-split profile barrier",
+  "graph=K_8-4K_2 connectivity=6 omega=4 split_scores=(3,3)",
+  "K7_minus_minor=false PP_signature=true",
+  "total=98415",
+  "blocked=84928",
+  "target_free=79768",
+  "omega_at_most_four=30652",
+  "maximal_blocked_omega_four=384",
+  "degree_six_maximal=24",
+]
+
+[[verifiers]]
 id = "degree8-nonedge-bipartition-classification"
 path = "results/hc7_degree8_nonedge_bipartition_classification_verify.py"
 sha256 = "c01f145349831eb34f3af0ef772c6fe07d82b4b00f9630cabe9ba557eb0be8a9"
@@ -17388,7 +17527,7 @@ note = "This is consumed by the direct coordinate-localisation theorem."
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_six_cut_coordinate_localisation"
-kind = "uses"
+kind = "related_to"
 note = "This reduces the six-cut row to a strict response or an order-eight or order-nine boundary with two or three full components."
 
 [[relations]]
@@ -17400,19 +17539,19 @@ note = "Its fan existence is consumed by the sharper matching and induced-path c
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_matching_square_common_state"
-kind = "uses"
+kind = "related_to"
 note = "This puts two opposite distinguished matching coordinates, the exact response square, a co-bagged K6 model and the exact K7-vee model on one host."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_selected_edge_root_bag_response"
-kind = "uses"
+kind = "related_to"
 note = "This turns the selected co-bagged edge split into K7-minus or an original-labelled actual response, while identifying the precise loss in numerical descent."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_matching_lock_boundary_reduction"
-kind = "uses"
+kind = "related_to"
 note = "This reduces every large actual response boundary numerically through fresh singleton operations and gives the dominating all-lock normal form."
 
 [[relations]]
@@ -17424,19 +17563,19 @@ note = "This records why one fixed all-lock colouring cannot turn blocked branch
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_order9_crossed_transition_projection"
-kind = "uses"
+kind = "related_to"
 note = "This projects every unlocked order-nine transition onto a bounded portion of the original boundary and two explicit shore-extension outcomes."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_p3_opposite_coordinate_common_model"
-kind = "uses"
+kind = "related_to"
 note = "This gives the exact common-model and triple-split normal forms for the induced-path six-cut row."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_six_coordinate_growth_or_feedback"
-kind = "uses"
+kind = "related_to"
 note = "This gives the exhaustive growth-to-eight-coordinates or bounded-feedback alternative in the seven-connected row."
 
 [[relations]]
@@ -17444,6 +17583,30 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_bounded_feedback_degree_elimination"
 kind = "uses"
 note = "This eliminates the entire bounded-feedback alternative, so the seven-connected row now forces the eight-coordinate exact-model host."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_eight_coordinate_endpoint_visibility"
+kind = "uses"
+note = "This terminalises endpoint placement in the forced eight-coordinate exact model and reduces that row to a bounded response interface with an explicit coordinate-label-loss alternative."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_fixed_coordinate_response_core_reduction"
+kind = "uses"
+note = "This preserves one original forest coordinate and exterior colouring while reducing the returned side to a connected boundary-list-critical core."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_anchored_coordinate_compression"
+kind = "guarded_by"
+note = "This target-rich family proves that the immediate compression step must spend K7-minus-minor exclusion rather than connectivity, degree and the fixed colouring trace alone."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_cross_signature_pivot_gate"
+kind = "related_to"
+note = "This is the hard-gate theorem and route nonclosure for the deferred six-cut matching row."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
@@ -17472,7 +17635,7 @@ note = "This remains a valid conditional composition theorem inside the now-elim
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_portal_edge_cycle_threshold"
-kind = "uses"
+kind = "related_to"
 note = "This reduces the clean portal-edge placement to a two-cycle composition or an order-seven cut."
 
 [[relations]]
@@ -17482,16 +17645,58 @@ kind = "related_to"
 note = "This historical barrier explains why the superseded feedback reductions could not use contact cardinalities alone; the degree theorem bypasses that route completely."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
-target = "hc7.barrier.k7minus_three_full_component_partition"
-kind = "guarded_by"
-note = "This prevents closing the three-full-component six-cut residue from fullness and ordinary boundary colouring alone."
-
-[[relations]]
 source = "hc7.k7minus_six_cut_coordinate_localisation"
 target = "hc7.k7minus_six_cut_complementary_cube_lift"
 kind = "uses"
 note = "The lifted bounded separators and their two complementary response families are the localisation theorem's input."
+
+[[relations]]
+source = "hc7.k7minus_cross_signature_pivot_gate"
+target = "hc7.k7minus_matching_square_common_state"
+kind = "uses"
+note = "The common matching host supplies the three realised signatures, the forbidden all-proper signature and one fixed co-bagged K6 model."
+
+[[relations]]
+source = "hc7.k7minus_cross_signature_pivot_gate"
+target = "hc7.k7minus_all_lock_branch_transfer_gate"
+kind = "related_to"
+note = "The cross-signature comparison begins where the fixed-colouring transfer gate stops."
+
+[[relations]]
+source = "hc7.k7minus_cross_signature_pivot_gate"
+target = "hc7.barrier.k7minus_static_two_split_profile"
+kind = "guarded_by"
+note = "The explicit target-free quotient shows that static split deficiencies cannot replace the missing Kempe-valid model incidence."
+
+[[relations]]
+source = "hc7.k7minus_eight_coordinate_endpoint_visibility"
+target = "hc7.k7minus_bounded_feedback_degree_elimination"
+kind = "uses"
+note = "The degree theorem forces the seven-connected eight-coordinate host with the full response cube and exact model."
+
+[[relations]]
+source = "hc7.k7minus_eight_coordinate_endpoint_visibility"
+target = "hc7.k7minus_exact_k7vee_separator_dichotomy"
+kind = "uses"
+note = "The exact-model dichotomy captures two coordinate endpoint portals in one universal branch set."
+
+[[relations]]
+source = "hc7.k7minus_eight_coordinate_endpoint_visibility"
+target = "hc7.k7minus_matching_lock_boundary_reduction"
+kind = "uses"
+note = "Its general large actual-boundary theorem compresses the coordinate separator numerically to order seven, eight or nine, with explicit label loss."
+
+[[relations]]
+source = "hc7.k7minus_fixed_coordinate_response_core_reduction"
+target = "hc7.k7minus_eight_coordinate_endpoint_visibility"
+kind = "uses"
+note = "The endpoint theorem supplies the actual singleton-coordinate response side to which fixed-colouring list-core descent is applied."
+
+[[relations]]
+source = "hc7.k7minus_fixed_coordinate_response_core_reduction"
+target = "hc7.barrier.k7minus_anchored_coordinate_compression"
+kind = "guarded_by"
+note = "The infinite singleton family shows that the proved side-order descent cannot be promoted to boundary-order descent without using target exclusion."
 
 [[relations]]
 source = "hc7.k7minus_six_cut_fan_model_alignment"

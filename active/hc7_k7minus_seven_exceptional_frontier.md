@@ -566,7 +566,7 @@ therefore forces every surviving such `G[T]` to be nonsplit.  This is still
 nonterminal: nonsplit boundaries admit the sharp abstract parity separation
 of the two response languages.
 
-The
+The separately audited
 [boundary-first donor-gate theorem](hc7_k7minus_five_centre_minimal_donor_gate.md)
 now makes the limit of ordinary-donor relocation exact.  A vertex-minimal
 fixed-trace core either fills the whole donor or exposes a smaller
@@ -810,6 +810,20 @@ This is a recorded route nonclosure, not a counterexample to a
 response-sensitive split theorem.  A successful matching repair must
 compare different realised signatures while retaining one model, or use a
 new consequence of target exclusion.
+The audited
+[cross-signature pivot gate](hc7_k7minus_cross_signature_pivot_gate.md)
+performs that comparison as far as the present data permit.  The fixed
+foreign-bag deficiency profile is colouring-independent.  At a supplied
+common `EE` pivot, the two singleton-producing Kempe components must share
+one palette colour and either meet in that colour or have an edge between
+their other colour classes; otherwise their switches produce the forbidden
+`PP` signature.  The response square does not itself supply one common
+`EE` pivot, and the resulting interaction need not meet a deficient model
+label.  The audited
+[static two-split barrier](../barriers/hc7_k7minus_static_two_split_profile_barrier.md)
+shows that target exclusion and `K_5`-free quotient contacts do not repair
+this second gap.  The matching route is therefore deferred until a
+Kempe-valid model-monotone exchange is available.
 The induced-path repair is the corresponding triple split: four foreign
 bags must meet all three connected pieces of the path bag, or the failed
 allocation must return a labelled order-seven response.  The finite
@@ -842,6 +856,35 @@ remain inside `T` then strengthens the internal edge bound and contradicts
 the same defect inequality.  The proof is unbounded and computation-free.
 Consequently `kappa(X)>=7` forces the eight-coordinate exact-model outcome.
 
+The audited
+[endpoint-visibility theorem](../results/hc7_k7minus_eight_coordinate_endpoint_visibility.md)
+now spends the full punctured eight-cube on that one model.  Choose an
+exact model maximising the number of coordinate endpoints in the closed
+neighbourhood of its deficient bag.  A connected branch transfer either
+constructs `K_7^-`, returns an actual separator retaining a singleton
+coordinate response, or strictly increases that score.  The last outcome
+is impossible at the maximum.  Pigeonhole over the `15` or `16` endpoints
+then puts two endpoint portals in one universal bag, so the exact-model
+dichotomy returns the target or such a response separator.  Generic
+density descent bounds the latter separator by nine, but can replace the
+forest coordinate by a fresh singleton operation.  Thus the former
+unlocalised dense fallback has been reduced to one bounded response
+synchronisation problem with an exact label-loss alternative.
+
+The
+[fixed-coordinate response-core reduction](../results/hc7_k7minus_fixed_coordinate_response_core_reduction.md)
+gives a rigorous descent without losing the coordinate.  The
+same edge and colouring survive on every connected actual subset containing
+a relevant endpoint.  A minimal boundary-list obstruction is connected,
+retains the endpoint set, and gives strict side-order descent whenever it is
+proper.  The process ends at a fixed-coordinate boundary-list-critical
+side, but its boundary need not decrease.  The separately audited
+[anchored-compression barrier](../barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md)
+has arbitrarily high connectivity and minimum degree and an unbounded
+singleton response boundary.  It contains a literal `K_7`, so it does not
+refute target-free compression; it proves that `K_7^-`-minor exclusion must
+be used at the terminal list-critical or singleton side.
+
 The audited six-centre feedback theorem, forest-component reduction,
 forest-shore extension and four-of-five composition theorem remain valid
 proof infrastructure for the now-impossible alternative.  Their full-shore,
@@ -857,18 +900,21 @@ one-cycle upgrade: this is precisely the unresolved Lovasz--Woodall
 threshold.  The smallest repair is a two-cycle composition using the exact
 seven branch bags and critical colouring responses.
 
-The immediate theorem is therefore:
+The immediate theorem inside the forced eight-coordinate case is therefore:
 
-> **Six-coordinate induced-forest terminalization.**  A critical host
-> satisfying (H) cannot contain the forest (4.F1) with its two
-> seven-connected restorations.
+> **Anchored coordinate-response compression.**  An actual response side
+> carrying one original edge of the eight-coordinate forest either yields
+> `K_7^-`, has a compatible boundary partition on its two shores, or admits
+> a reduction to boundary order seven or eight which retains that edge and
+> its exterior colouring.
 
 Unlike the punctured response cube, which is automatic for every
 componentwise-induced forest in a minor-critical graph, the connectivity,
 common-cycle and model-placement conclusions are genuine structural data.
-The complete bounded-feedback alternative is now terminally eliminated.
-This is an unbounded branch closure, but the terminalization theorem itself
-remains open.
+The complete bounded-feedback alternative is terminally eliminated and
+endpoint placement in the forced exact model is terminal.  The displayed
+compression theorem remains open precisely at a boundary-list-critical or
+singleton response side.
 
 ### Seven-removable matching entrance
 
@@ -1458,29 +1504,30 @@ remaining open step in this secondary route.
 Prove the six-coordinate induced-forest terminalization theorem, in this
 order.
 
-1. Close `kappa(X)=6` with its two exact allocation theorems.  In the
-   order-nine matching row, compare the three realised signatures while
-   retaining the common co-bagged model.  The accepted outcomes remain:
-   four foreign bags meet both sides of one split; an original-labelled
-   order-seven or order-eight response; or one partition extends through
-   both shores.  Do not repeat the fixed-lock absorption argument: its exact
-   model/colouring mismatch is now an audited route nonclosure.  In the
-   induced-path row, make
-   four foreign bags meet all three pieces of the common path bag, or turn
-   the blocked exchange into a labelled order-seven response.  Do not
-   return to an unlabelled fan-to-model statement: the common models,
-   response hosts and bounded endpoint alternatives are already proved.
+1. In the forced eight-coordinate host, terminalise the bounded response
+   returned by the endpoint-visibility theorem.  Prefer a one-coordinate
+   anchored compression: preserve one `F_8` edge and its exterior
+   colouring while decreasing boundary order to seven or eight, or produce
+   `K_7^-` or a boundary partition extending through both shores.  A
+   coordinate-minimal list-critical side can increase its boundary, while
+   generic density descent can lose the coordinate; do not identify those
+   two existential choices.
 2. In the seven-connected exact-model row, use the two-cycle portal theorem.
    Either merge the two cycles while retaining the six coordinates and the
    portal edge, or turn the failed rerouting into an order-seven separation
    carrying those labels.  Do not assume the unresolved one-cycle
    Lovasz--Woodall conclusion.
-3. Treat the forced eight-coordinate host as the dense fallback.  Its exact
-   model and seven-connectivity are retained, but the response cube alone
-   does not locate coordinate ends in its branch bags.
+3. Return to `kappa(X)=6` only with new exchange technology.  In the
+   matching row, a valid proof must supply one deficiency-aware common
+   `EE` pivot or another Kempe-valid model-monotone exchange; the three
+   realised signatures, fixed deficiencies and target exclusion do not do
+   this statically.  In the induced-path row, four foreign bags must meet
+   all three pieces of the common path bag, or the blocked exchange must
+   return a labelled order-seven response.
 
 The common co-bagged-`K_6` split proposed for the original removable
 matching is not available in the eight-coordinate host and is obstructed at
 quotient level.  In the six-cut matching row where a common model is
 available, one fixed all-lock colouring cannot label a branch-set transfer;
-any further split theorem must use the full response square.
+the full response square has now been spent up to the exact shared-pivot
+quantifier and model-incidence gaps.
