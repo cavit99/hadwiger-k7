@@ -3491,7 +3491,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_selected_response_preservation.md"
 source_heading = "Theorem 1.1 (exact response reflection)"
-active = true
+active = false
 audit = "results/hc7_exact7_selected_response_preservation_audit.md"
 expected_source_sha256 = "94c154ce0d8d9bebaaff2ff97df66beb3e2381bb242378df38d9620ed8ec36e0"
 scope = "an actual seven-vertex separator and one selected boundary equality partition"
@@ -7159,7 +7159,7 @@ title = "The independence-four exceptional-centre branch is impossible"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_alpha4_regular_ramsey_elimination.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_alpha4_regular_ramsey_elimination_audit.md"
 expected_source_sha256 = "8838868b67a46aa611ee3f7c3a2b522c7ba559e5bc320d4ff1b0284bce8988de"
 scope = "the degree-eight vertices of a seven-connected seven-chromatic K7-minus-minor-free graph whose every proper minor is six-colourable"
@@ -7208,7 +7208,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_centre_two_cut_reduction.md"
 source_heading = "Theorem 1.1 (unconditional two-cut reduction)"
-active = true
+active = false
 audit = "results/hc7_k7minus_five_centre_two_cut_reduction_audit.md"
 expected_source_sha256 = "1917b5e3d183d44a2d905d2628272d10e4bc6f7ae0768b43cab0e9462b83332a"
 scope = "the two-cut branch after deleting five independent degree-eight vertices from the critical K7-minus host"
@@ -7237,7 +7237,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_order_six_equality_shore_elimination.md"
 source_heading = "Theorem 1.1"
-active = true
+active = false
 audit = "results/hc7_k7minus_order_six_equality_shore_elimination_audit.md"
 expected_source_sha256 = "96e7b99fda8c2e4584066fd3855f412072a4d6513962cf05e4e842f62e0a7983"
 scope = "a six-vertex four-chromatic component behind an order-seven cut in a seven-connected minimum-degree-eight K5-free graph"
@@ -7262,7 +7262,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_order_seven_equality_shore_elimination.md"
 source_heading = "Theorem 1.1"
-active = true
+active = false
 audit = "results/hc7_k7minus_order_seven_equality_shore_elimination_audit.md"
 expected_source_sha256 = "986194fa7953241f3bf8de084be45848cb40861566829635d6c78b0f14a5ac10"
 scope = "a seven-vertex four-chromatic component behind an order-seven cut, with the five-root closed-shore edge bound, in a seven-connected minimum-degree-eight K5-free graph"
@@ -7287,7 +7287,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_centre_universal_boundary_rooted_k4.md"
 source_heading = "Theorem"
-active = true
+active = false
 audit = "results/hc7_k7minus_five_centre_universal_boundary_rooted_k4_audit.md"
 expected_source_sha256 = "0a2511508c313e06c47cf7837e823299be4dc665d0572a4a3b53fdde4a44191f"
 scope = "every four-set in the seven-vertex boundary of the distinct-response shore in the five-centre two-cut reduction"
@@ -7422,12 +7422,366 @@ does_not_prove = [
 keywords = ["K7 minus", "five independent centres", "two-edge deletion", "Boolean response square", "pole response", "co-bagging"]
 
 [[claims]]
+id = "hc7.k7minus_seven_removable_matching_reduction"
+title = "A removable five-matching puts the punctured response cube on a seven-connected common host"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_seven_removable_matching_reduction.md"
+active = false
+audit = "results/hc7_k7minus_seven_removable_matching_reduction_audit.md"
+expected_source_sha256 = "d62491aad7d9a5474a6eeed355f4a6f31977c7bd1ce9a05bc1231d00a0a23e13"
+scope = "a minor-minimal non-six-colourable K7-minus-minor-free graph with the audited critical-host connectivity, degree, density and order bounds"
+label_fidelity = "the five matching edges, every exact equality signature, the exact spanning K7-vee bags, matching endpoints and returned separators remain literal"
+separator_order = "the common deletion host is seven-connected; the exact-model outcome returns an actual separator of order at least seven"
+colour_compatibility = "all 31 nonempty matching signatures occur on one host; every set meeting a matching endpoint carries a singleton-signature rejected boundary partition"
+conclusions = [
+  "there is a five-edge matching whose common deletion remains seven-connected and has at least 4n-5 edges",
+  "the common host realizes exactly the punctured five-dimensional Boolean signature cube",
+  "each singleton deletion and contraction is exactly six-chromatic and gives an actual response-bearing separator",
+  "the common host has a spanning exact K7-vee model in the target-free graph",
+  "two supported portals in one universal bag give K7-minus or a trace-bearing separator",
+  "the remaining exact model has at least three deficient-bag neighbours outside the matching endpoint support, or outside the stronger hybrid five-centre support",
+]
+does_not_prove = [
+  "that the matching uses the five exceptional centres",
+  "exact six-chromaticity after contracting more than one matching edge",
+  "a common K6 model co-bagging all five pairs",
+  "a bounded or colour-compatible returned separator",
+  "elimination of the support-sparse exact model or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "removable matching", "seven-connected common host", "Boolean equality signatures", "exact K7 vee", "response support"]
+
+[[claims]]
+id = "hc7.k7minus_removable_matching_rotation_abundance"
+title = "Removable-matching replacements force a four-way common core"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_removable_matching_rotation_abundance.md"
+active = false
+audit = "results/hc7_k7minus_removable_matching_rotation_abundance_audit.md"
+expected_source_sha256 = "2f71bdf4f0510b7bb996d54403b505dc1b55fad4e3fcb249f064d172d9726dfa"
+scope = "the minor-minimal critical K7-minus host and one seven-removable matching of order five"
+label_fidelity = "the five original matching coordinates, at least twenty literal replacement edges, five overlapping common cores and every displayed equality signature remain explicit"
+conclusions = [
+  "the replacement edges for every coordinate meet all cycles of the corresponding full-degree induced subgraph",
+  "there are at least twenty distinct replacement edges and one coordinate has four alternatives",
+  "five overlapping four-connected common cores each carry an exact spanning K7-vee model and at least 79 signatures",
+  "either two alternatives are disjoint and give a six-coordinate matching host, or all five alternatives form one star",
+]
+does_not_prove = [
+  "that all alternatives are pairwise disjoint",
+  "a full eight-coordinate signature cube",
+  "terminalisation of the six-coordinate host",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "removable matching", "replacement edge", "critical cycle", "common core", "six coordinates"]
+
+[[claims]]
+id = "hc7.k7minus_six_coordinate_forest_reduction"
+title = "A six-coordinate induced forest has a common cycle and exact cut structure"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_six_coordinate_forest_reduction.md"
+active = true
+audit = "results/hc7_k7minus_six_coordinate_forest_reduction_audit.md"
+expected_source_sha256 = "cc2b56362d52a3ef23559a4a0e5cbf5eded5abbe7d54b57e73f66f74f1dd3405"
+scope = "the critical K7-minus host with the five replacement alternatives supplied by the rotation-abundance theorem"
+label_fidelity = "the four fixed matching edges, two selected alternative edges, all 63 signatures, the common cycle, exact six-cuts and model portals remain literal"
+separator_order = "the deletion host is six-connected; every six-cut has two full components crossed by both distinguished restorers"
+colour_compatibility = "all 63 nonempty forest signatures occur on one graph; the singleton six-cut row has the exact 2,2,1,1,1,1 neighbourhood response"
+conclusions = [
+  "the star alternative also gives a six-edge componentwise-induced forest, either 6K2 or 4K2 plus an induced P3",
+  "the forest deletion is six-connected, both distinguished restorations are seven-connected and the host has an exact spanning K7-vee model",
+  "one literal cycle contains all six forest coordinates and any one prescribed vertex can be inserted",
+  "six-cuts have exactly two full components and the theorem isolates the sole degree-eight singleton geometry",
+  "in the seven-connected row one exact-model portal lies on a common coordinate cycle",
+]
+does_not_prove = [
+  "all remaining six-cut crossing allocations",
+  "that the common cycle uses the selected portal edge",
+  "alignment of the response signatures with the exact model bags",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "componentwise-induced forest", "six coordinates", "common cycle", "six-cut", "exact K7 vee"]
+
+[[claims]]
+id = "hc7.k7minus_six_cut_complementary_cube_lift"
+title = "Every remaining six-cut row has complementary rejected response families"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_six_cut_complementary_cube_lift.md"
+active = false
+audit = "results/hc7_k7minus_six_cut_complementary_cube_lift_audit.md"
+expected_source_sha256 = "007ee9ce7aaced1564fae9ada9b0e33dd65ef29cf12f0adc396d278653189f74"
+scope = "the exact six-cut row of the six-coordinate componentwise-induced forest host"
+label_fidelity = "the six-cut, two full components, every crossing forest edge, selected endpoint boundary and both complementary response subcubes remain literal"
+separator_order = "the matching rows return actual separators of order nine through twelve; the induced-P3 rows return order eight through eleven"
+colour_compatibility = "each shore rejects its displayed realised boundary partitions, and the two complementary realised families are disjoint because a common partition would six-colour the host"
+conclusions = [
+  "every matching row with at least three crossing coordinates has one common bounded separator carrying two complementary nonempty response families",
+  "every nonsingleton induced-P3 row with a crossing fixed matching edge has the analogous path-versus-matching response separator",
+  "the two realised partition families are disjoint by an exact gluing argument",
+]
+does_not_prove = [
+  "injectivity from cube signatures to boundary partitions",
+  "that the two realised partition families must intersect",
+  "elimination of the degree-eight singleton path-centre row",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "six-cut", "complementary response cube", "boundary partition", "colour gluing", "bounded separator"]
+
+[[claims]]
+id = "hc7.k7minus_six_cut_coordinate_localisation"
+title = "Coordinate localisation leaves only full order-eight or order-nine shores"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_six_cut_coordinate_localisation.md"
+active = true
+audit = "results/hc7_k7minus_six_cut_coordinate_localisation_audit.md"
+expected_source_sha256 = "b2803d6cabf6684aaa0af8487be66ab7ac738909719028fd304f29b1b9682555"
+scope = "the lifted six-cut separators supplied by the six-coordinate induced-forest host"
+label_fidelity = "each selected forest coordinate, lifted boundary, full component and rejected proper-minor boundary partition remains literal"
+separator_order = "a selected coordinate gives a strict response separator unless it lies in a full component; excluding every strict response leaves boundary order eight or nine"
+colour_compatibility = "every returned separator carries an exterior-realised boundary partition rejected by its intact shore"
+conclusions = [
+  "each selected coordinate localises to a strict response-bearing separator or a full component",
+  "a full fallback has a K5-minor-free four-colourable nonsplit boundary",
+  "boundary order at least ten gives a fresh strict singleton-side response",
+  "excluding all strict responses leaves exactly two or three full components behind an order-eight or order-nine boundary",
+]
+does_not_prove = [
+  "a well-founded label-preserving descent among the returned separators",
+  "closure of the two- or three-full-component residues",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "six-cut", "coordinate localisation", "full component", "order eight", "order nine"]
+
+[[claims]]
+id = "hc7.k7minus_six_cut_fan_model_alignment"
+title = "The final six-cut shores have full-boundary response fans"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_six_cut_fan_model_alignment.md"
+active = true
+audit = "results/hc7_k7minus_six_cut_fan_model_alignment_audit.md"
+expected_source_sha256 = "f50587a8d481379da4b0d7851878555500ba75b51d3e3cfa818cc3d09297f56c"
+scope = "the order-eight or order-nine full-component residue after every strict six-cut response is excluded"
+label_fidelity = "the literal boundary, chosen component, selected coordinate edge, five Kempe first edges and edge-rooted model remain named"
+separator_order = "prescribing arbitrary model representatives can return an order-|T| separator, so connectivity alone does not align the fan and model labels"
+colour_compatibility = "the coordinate-specific six-fan retains the five first edges prescribed by one singleton-signature colouring"
+conclusions = [
+  "each completed full shore has a full-boundary fan from every connected shore piece",
+  "one coordinate response has a shore-confined six-fan retaining five prescribed Kempe first edges",
+  "a target-free split edge-rooted K6 model has at most three foreign bags contacting both split sides",
+  "the exact remaining repair is a boundary-respecting fan-to-model exchange",
+]
+does_not_prove = [
+  "that boundary vertices represent distinct exact-model branch bags",
+  "alignment between the exact K7-vee model in G-F and the edge-rooted K6 model in G/e",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "full-boundary fan", "Kempe first edge", "edge-rooted K6", "model alignment", "route nonclosure"]
+
+[[claims]]
+id = "hc7.k7minus_six_coordinate_growth_or_feedback"
+title = "A seven-connected six-coordinate host grows or has bounded feedback"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_six_coordinate_growth_or_feedback.md"
+active = true
+audit = "results/hc7_k7minus_six_coordinate_growth_or_feedback_audit.md"
+expected_source_sha256 = "c49b8b736475c9a71410fb9e4a79dad0de862ed6304d2e71b472a07b791c7422"
+scope = "the seven-connected row of the audited six-coordinate induced-forest host"
+label_fidelity = "the original six forest coordinates, every added disjoint edge, all equality signatures and the bounded feedback set remain explicit"
+conclusions = [
+  "a seventh and then an eighth disjoint forest coordinate can be added while preserving seven-connectivity whenever a cycle remains outside the endpoints",
+  "the eight-coordinate deletion host retains density 4n-8, all 255 nonempty signatures and an exact spanning K7-vee model",
+  "otherwise the graph has a feedback vertex set of order at most fourteen, at most thirteen in the induced-path case, whose induced graph is at least five-chromatic",
+]
+does_not_prove = [
+  "terminalisation of the eight-coordinate exact-model host",
+  "impossibility of the bounded-feedback branch",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "coordinate growth", "feedback vertex set", "critical cycle", "eight coordinates", "exact K7 vee"]
+
+[[claims]]
+id = "hc7.k7minus_feedback_six_centre_common_matching"
+title = "Bounded feedback forces six exceptional centres on one response host"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_feedback_six_centre_common_matching.md"
+active = false
+audit = "results/hc7_k7minus_feedback_six_centre_common_matching_audit.md"
+expected_source_sha256 = "400a3ecedfbff8dbed58fe1ccdb380a443452828753195ca1b08eaf09fd9cc06"
+scope = "the critical K7-minus host with a feedback vertex set of order at most fourteen"
+label_fidelity = "the feedback set, six independent degree-eight centres, the chosen representative family, centre matching and co-bagged K6 models remain literal"
+colour_compatibility = "every nonempty subset of the six centre edges is an exact equality signature and has nonempty centre-saturation support"
+conclusions = [
+  "six independent degree-eight centres lie outside the feedback set",
+  "Hall failure would give an explicit K7-minus model in a K6,5 subgraph, so six distinct representatives exist",
+  "the common deletion host has all 63 nonempty signatures and every nonempty deletion and contraction is exactly six-chromatic",
+  "one spanning K6 model co-bags all six selected pairs",
+  "all six representatives can be chosen in the feedback set, so the selected matching crosses the feedback boundary",
+  "selected edges outside the feedback set split its forest components by an exact count",
+]
+does_not_prove = [
+  "that the feedback-crossing representatives retain the independent-triple rainbow-five construction",
+  "six- or seven-connectivity of the centre-edge deletion host",
+  "alignment of the co-bagged K6 model with the forest components",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "feedback vertex set", "six exceptional centres", "Hall matching", "Boolean response cube", "co-bagged K6"]
+
+[[claims]]
+id = "hc7.k7minus_feedback_forest_component_reduction"
+title = "The bounded-feedback forest has three exact component outcomes"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_feedback_forest_component_reduction.md"
+active = true
+audit = "results/hc7_k7minus_feedback_forest_component_reduction_audit.md"
+expected_source_sha256 = "71350698ced99eb0976c0f4d0bc64345d8cc243fad41fd9971f5f6ae50f58ff3"
+scope = "the critical K7-minus host with a feedback set of order at most fourteen and the six boundary-crossing centre edges"
+label_fidelity = "the feedback set, forest pieces, six centres and crossing matching edges, common cycle and co-bagged model remain literal"
+separator_order = "the first alternative is an actual full order-seven separator with a forest component"
+conclusions = [
+  "the forest has a full order-seven shore, a three-piece path with contact bounds 7,6,7, or six centre components each with at least eight feedback-set neighbours",
+  "one cycle contains all six boundary-crossing centre edges and any one prescribed vertex",
+  "splitting any assigned edge in the common K6 model leaves at most three foreign bags contacting both sides in a target-free host",
+]
+does_not_prove = [
+  "four-of-five K5-model incidence for the three forest pieces",
+  "composition of the six large-contact components",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "feedback forest", "three-piece path", "six components", "common cycle", "co-bagged K6"]
+
+[[claims]]
+id = "hc7.k7minus_forest_shore_four_colour_extension"
+title = "A full order-seven separator cannot have a forest component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_forest_shore_four_colour_extension.md"
+active = true
+audit = "results/hc7_k7minus_forest_shore_four_colour_extension_audit.md"
+expected_source_sha256 = "bf0dfec2649c6c7fb6e3db784586e71ca38fc02523238129ecad56bde5e8ecec"
+scope = "a seven-connected minor-minimal non-six-colourable K7-minus-minor-free host and one full order-seven cut"
+label_fidelity = "the literal separator, forest component, its two full leaves and opposite full component remain fixed"
+colour_compatibility = "every boundary colouring using at most four colours extends through the forest shore using the two unused colours"
+conclusions = [
+  "four boundary colours always extend through a forest shore",
+  "disjoint connected carriers for a four-block boundary partition close the cut",
+  "two full tree leaves and the critical seven-cut capacity force a K7 minor or a six-colouring",
+  "the full order-seven outcome of the feedback forest reduction is terminally impossible",
+]
+does_not_prove = [
+  "closure of the three-piece or six-component feedback alternatives",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "forest shore", "order-seven separator", "four-colour extension", "terminal branch"]
+
+[[claims]]
+id = "hc7.k7minus_three_piece_k5_composition"
+title = "Four-of-five K5-model incidence closes the three-piece forest path"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_three_piece_k5_composition.md"
+active = true
+audit = "results/hc7_k7minus_three_piece_k5_composition_audit.md"
+expected_source_sha256 = "9790e806b1ece317808670efd0219497b77b00a30cf1db466e800622c8f7bb41"
+scope = "three connected forest pieces forming a path and a K5-minor model disjoint from them"
+label_fidelity = "the three pieces and all five model branch bags remain explicit"
+conclusions = [
+  "if every forest piece contacts at least four of the five model bags then their union contains an explicit K7-minus minor model",
+  "the 7,6,7 feedback outcome is terminal once that one incidence condition is forced",
+]
+does_not_prove = [
+  "existence of the required well-distributed K5 model from boundary contact cardinalities alone",
+  "closure of the six-component feedback alternative",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "three forest pieces", "K5 model", "four-of-five incidence", "explicit minor composition"]
+
+[[claims]]
+id = "hc7.k7minus_portal_edge_cycle_threshold"
+title = "A portal edge and six coordinates reduce to two cycles or an order-seven cut"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_portal_edge_cycle_threshold.md"
+active = true
+audit = "results/hc7_k7minus_portal_edge_cycle_threshold_audit.md"
+expected_source_sha256 = "0a4c9046015984e9701c1c8911d2552ad669fbc6f792b309a679973d09808a54"
+scope = "the seven-connected row of the six-coordinate induced-forest host with a clean exact-model portal edge"
+label_fidelity = "the six forest coordinates and the literal portal edge remain on the displayed one- or two-cycle cover"
+separator_order = "every edge-cut obstruction of order at most seven gives a proper order-seven vertex separation, without a guaranteed coordinate label"
+conclusions = [
+  "the portal edge and all six forest coordinates lie on one cycle or on two vertex-disjoint cycles",
+  "specified six-edge subfamilies and one nominated endpoint lie on a single cycle",
+  "every edge cut of order at most seven is a seven-edge matching across a proper order-seven separation",
+  "connectivity alone reaches exactly the unresolved Lovasz-Woodall one-cycle threshold",
+]
+does_not_prove = [
+  "that one cycle contains the portal edge and all six coordinates",
+  "that the returned order-seven separation retains a selected coordinate",
+  "composition of the two cycles with the exact K7-vee model",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "portal edge", "two cycles", "Lovasz Woodall", "order-seven separation", "route nonclosure"]
+
+[[claims]]
+id = "hc7.barrier.feedback_boundary_rooted_k5_transversal"
+title = "A five-chromatic boundary need not have a two-set-transversal rooted K5 model"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_feedback_boundary_rooted_k5_transversal_barrier.md"
+active = true
+audit = "barriers/hc7_feedback_boundary_rooted_k5_transversal_barrier_audit.md"
+expected_source_sha256 = "4fb8f0a7480181b386ed5a99d914003cd2f23994f8bc31e26f9e36edc57fd4a8"
+scope = "a boundary-only proposed lemma with a K5-free five-chromatic graph of order at most fourteen and two named seven-sets"
+label_fidelity = "the two named boundary sets and every branch bag of the proposed K5 model remain explicit"
+conclusions = [
+  "the graph (K2 join C5) disjoint union K1 refutes the two-set-transversal rooted K5 claim",
+  "every K5 model in the nontrivial component has the two apex vertices as forced singleton bags",
+  "the natural two-exterior augmentation nevertheless has an explicit K7-minus model",
+]
+does_not_prove = [
+  "a counterexample to a theorem retaining the full forest-bridge system",
+  "a counterexample to the bounded-feedback branch conclusion",
+  "the failure of the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "feedback boundary", "rooted K5", "transversal model", "explicit barrier", "forest bridge"]
+
+[[claims]]
+id = "hc7.barrier.k7minus_three_full_component_partition"
+title = "Three full components do not force the adjacent-pair boundary partition"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_three_full_component_partition_barrier.md"
+active = true
+audit = "barriers/hc7_k7minus_three_full_component_partition_barrier_audit.md"
+expected_source_sha256 = "d8ff6502d4da17e26d65685e2a7751f18440f90571a8f65a9b1510c0996cfafe"
+scope = "the proposed boundary-allocation lemma for three full components behind an order-eight nonsplit K5-minor-free boundary"
+label_fidelity = "the three full components, literal boundary and every candidate boundary edge remain explicit"
+conclusions = [
+  "the join of three independent full vertices with 2K3 disjoint union 2K1 has no K7-minus minor",
+  "deleting the ends of any boundary edge leaves a nonbipartite graph",
+  "component fullness, target exclusion and ordinary boundary colouring do not force the proposed four-block synchronization",
+]
+does_not_prove = [
+  "a counterexample using minor-criticality or seven-connectivity",
+  "failure of a theorem using the exact coordinate responses or two seven-connected restorations",
+  "the failure of the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "three full components", "boundary partition", "order eight", "explicit barrier"]
+
+[[claims]]
 id = "hc7.k7minus_five_centre_common_matching_reduction"
 title = "Five centre edges put every nonempty equality signature on one common host"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_centre_common_matching_reduction.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_five_centre_common_matching_reduction_audit.md"
 expected_source_sha256 = "d0d3aa3574d747a3164f29febff1fa8fd6f37b0899415cd97a515005c5de5f43"
 scope = "the critical K7-minus host with five independent degree-eight centres"
@@ -7456,7 +7810,7 @@ title = "A selected equality-shore singleton gives universal rooted K4 models on
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_centre_two_shore_rooted_k4.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_five_centre_two_shore_rooted_k4_audit.md"
 expected_source_sha256 = "f2178d7bd01b1b59a72f74a9cae9c253eac7eca87856c5c0c9f48875bb89c144"
 scope = "the two-cut outcome of the five-centre common matching host"
@@ -7480,7 +7834,7 @@ title = "Four crossing response edges form a tight signed Boolean separator cube
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_four_crossing_signed_boolean_reduction.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_four_crossing_signed_boolean_reduction_audit.md"
 expected_source_sha256 = "26bae59cab6b6023207dd5400c093e5a54e4e30b9abff91f3f5ab78bf039c41f"
 scope = "the four-crossing three-cut row of the five-centre common matching host"
@@ -7507,7 +7861,7 @@ title = "Each omitted coordinate gives an exact response or a complete seven-pat
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_crossing_omitted_coordinate_linkage.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_five_crossing_omitted_coordinate_linkage_audit.md"
 expected_source_sha256 = "43a42468dc9616936971300ca5869988bc7f1de4019b5956d5a23d105e286315"
 scope = "the five-crossing no-descent three-cut row of the five-centre common matching host"
@@ -7534,7 +7888,7 @@ title = "Five-centre star responses capture supported portals in the dense near-
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_dense_branch_rotation_visibility.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_dense_branch_rotation_visibility_audit.md"
 expected_source_sha256 = "c81a3f7d656a4ef02a69ab88b311acc3601d9103aedbf6b6380c54cee350a3c3"
 scope = "five independent degree-eight centres and the exact spanning K7-vee model in the four-connected common-host branch"
@@ -7561,7 +7915,7 @@ title = "Five singleton-saturation palettes do not force one common missing colo
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_five_rotation_palette_intersection_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_five_rotation_palette_intersection_barrier_audit.md"
 expected_source_sha256 = "97602ce40a1f5d7f8816a0b89b71e177fd8f4787331ecb11cb250c72680c9b76"
 scope = "five abstract six-colour neighbour-palette rows; not one graph and not the full critical-host setting"
@@ -7584,7 +7938,7 @@ title = "Five centre-deletion responses reduce to labelled rotations on one comm
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_five_centre_rotation_reduction.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_five_centre_rotation_reduction_audit.md"
 expected_source_sha256 = "aff5e5a4c5900c4bc126df728126d7bf91db879123e9b16ac05285b5af5705b3"
 scope = "the critical K7-minus host with five independent degree-eight centres, across all twenty ordered root and omitted-centre applications"
@@ -7641,7 +7995,7 @@ title = "Four independent degree-eight centres yield a rooted K5 or an exact-cut
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_four_centre_web_cut_lattice.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_four_centre_web_cut_lattice_audit.md"
 expected_source_sha256 = "e7fcf00c9bdbd2fcbab78bb13d4244a659f4f7db0ae45a97cfbd9a8d599a0ee3"
 scope = "the critical K7-minus host with four independent degree-eight centres"
@@ -7720,7 +8074,7 @@ title = "A minimum four-centre cut admits boundary and anchored tri-separation d
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_four_centre_trace_descent.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_four_centre_trace_descent_audit.md"
 expected_source_sha256 = "04d4585b25ce9fbd8f3392b715eb28caa7e4b008e45072ede2b08cbbf0bfecff"
 scope = "trace-admissible exact four-centre cuts in the rooted-web outcome"
@@ -7747,7 +8101,7 @@ title = "A minimum generalized-wheel cut is one canonical leaf without two bound
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_four_centre_wheel_leaf_descent.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_four_centre_wheel_leaf_descent_audit.md"
 expected_source_sha256 = "c04236752495ec7ff6e57b54cc498423be1b621c5ba3547739cec72b045db176"
 scope = "the heavily interlacing generalized-wheel outcome for a minimum trace-admissible four-centre cut"
@@ -7774,7 +8128,7 @@ title = "Exact boundary colourings reduce the minimum side to one support and at
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_four_centre_exact_u_bridge_reduction.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_four_centre_exact_u_bridge_reduction_audit.md"
 expected_source_sha256 = "eca904897e1d32126be1399034966d3304d724ae746fcb83a7b1c56e1b561b0a"
 scope = "the minimum trace-admissible side of a four-centre exact cut in the critical K7-minus host"
@@ -7799,7 +8153,7 @@ title = "A paired exact boundary trace forces a clean two-plus-one fan"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_four_centre_paired_trace_fan.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_four_centre_paired_trace_fan_audit.md"
 expected_source_sha256 = "ad8a30f5e316fccdbc9319aa8788a00096c599656310ab10498246cdb2c0043c"
 scope = "the paired-trace alternative on the minimum trace-admissible four-centre cut side"
@@ -7824,7 +8178,7 @@ title = "A common colouring bounds the minimal opposite-side cut family and ampl
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_common_colouring_centre_change.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_common_colouring_centre_change_audit.md"
 expected_source_sha256 = "8c1c27b99edbd5b73ccc6254eafb10dfddeed62d3b271e4e8ba527783a08412a"
 scope = "the four-centre critical-host setting with a minimum trace-admissible exact cut"
@@ -7850,7 +8204,7 @@ title = "A rooted-triangle construction eliminates the cyclic four-region intera
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_cyclic_four_region_elimination.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_cyclic_four_region_elimination_audit.md"
 expected_source_sha256 = "f5794395173655892c55c1d2965eb816e36c0532a493b4dc212f7734dcb16156"
 scope = "the four-region equality case of the critical-host four-centre exact-cut family"
@@ -7875,7 +8229,7 @@ title = "Boolean replacement cuts share linkage coordinates and critical-edge co
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_boolean_replacement_edge_coupling.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_boolean_replacement_edge_coupling_audit.md"
 expected_source_sha256 = "c155030145a46a70c789302188a3220af2bf8ca5c537ad1c78d2325fa33946da"
 scope = "the four-region equality case of the critical-host four-centre exact-cut family"
@@ -7903,7 +8257,7 @@ title = "Boolean coordinates link centrewise to the minimum exact cut"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_boolean_minimum_separator_linkage.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_boolean_minimum_separator_linkage_audit.md"
 expected_source_sha256 = "271549bf40b825aee557bfcaf47ee713215030dfe1ea55870340c22e14b7a024"
 scope = "the four-region Boolean replacement family relative to the minimum trace-admissible four-centre cut"
@@ -7934,7 +8288,7 @@ title = "Completing a minimum four-centre exact-cut side gives a four-connected 
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_four_centre_completed_side.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_four_centre_completed_side_audit.md"
 expected_source_sha256 = "ae424dc24a95ab8afe9b6ea93dd850b727dcd4bf8f00ee72a8fd11eaf312e846"
 scope = "a minimum trace-admissible exact cut in the four-centre rooted-web outcome"
@@ -7981,7 +8335,7 @@ title = "A tri-inseparable exact-cut side need not contain two disjoint connecte
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_tri_inseparable_full_subgraph_barrier_audit.md"
 expected_source_sha256 = "2b5eed9089f00aee00b4271febf7a16a8ee986b246610ee1fc9eaf268d1648ad"
 scope = "an explicit nineteen-vertex seven-connected K5-free graph of minimum degree eight with an exact seven-cut and a tri-inseparable selected component"
@@ -8004,7 +8358,7 @@ title = "Internal six-connectivity and a rooted K4 do not force a prescribed roo
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_internal_six_rooted_k6minus_barrier_audit.md"
 expected_source_sha256 = "a0f223ff50443990a4b5055cd118f4ee826787d51f51af544d857c8144d38e6f"
 scope = "an explicit nine-vertex rooted graph, together with its seven-boundary completed-side extension"
@@ -8027,7 +8381,7 @@ title = "Local coordinate cuts, endpoint locks and linkage do not synchronize li
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_local_coordinate_synchronization_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_local_coordinate_synchronization_barrier_audit.md"
 expected_source_sha256 = "14477f337d656592c489efba2ceb0c45f42c16f56fd194c8952152df4bcf9c91"
 scope = "the explicit odd wheel K1 join C5 as a low-order analogue of one Boolean replacement coordinate"
@@ -9800,7 +10154,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "c9efd4eec33409bad64c8f2cfbcbe1f38fdbbfa9f184e04386c06e1abd1f2fd0"
+expected_source_sha256 = "aa412e23a6592284f9ef2e078401b9f89d043cbd02b98e27e9b5e6359d11e4c1"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -10835,7 +11189,7 @@ kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_shore_allocation_barrier.md"
 source_heading = "Theorem 2 (two-full-shore mechanism barrier)"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_shore_allocation_barrier_audit.md"
 expected_source_sha256 = "e6d3bf5c480ad3775de530014aa70f2bb1e32c880e64af45a3087e30d93acee9"
 scope = "the explicit eleven-vertex graph formed from K3 disjoint-union K3 disjoint-union K2 and three independent universal boundary apices"
@@ -16777,6 +17131,114 @@ kind = "uses"
 note = "The audited critical-host reduction eliminates degree seven and every literal K5 and forces at least 25 exceptional degree-eight vertices."
 
 [[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_removable_matching_rotation_abundance"
+kind = "related_to"
+note = "Replacement abundance is consumed by the direct six-coordinate componentwise-induced forest theorem."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_six_coordinate_forest_reduction"
+kind = "uses"
+note = "This is the active exhaustive six-coordinate host reduction, including its exact six-cut and exact-model rows."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_six_cut_complementary_cube_lift"
+kind = "related_to"
+note = "This is consumed by the direct coordinate-localisation theorem."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_six_cut_coordinate_localisation"
+kind = "uses"
+note = "This reduces the six-cut row to a strict response or an order-eight or order-nine boundary with two or three full components."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_six_cut_fan_model_alignment"
+kind = "uses"
+note = "This supplies the full-boundary and coordinate-response fans in the final six-cut residue and isolates model-label exchange as the exact gap."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_six_coordinate_growth_or_feedback"
+kind = "uses"
+note = "This gives the exhaustive growth-to-eight-coordinates or bounded-feedback alternative in the seven-connected row."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_feedback_six_centre_common_matching"
+kind = "related_to"
+note = "This is consumed by the direct feedback forest-component reduction."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_feedback_forest_component_reduction"
+kind = "uses"
+note = "This reduces the bounded-feedback row to a full order-seven forest shore, a 7,6,7 three-piece path, or six large-contact components."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_forest_shore_four_colour_extension"
+kind = "uses"
+note = "This terminally eliminates the full order-seven forest-shore outcome."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_three_piece_k5_composition"
+kind = "uses"
+note = "This terminally closes the 7,6,7 three-piece outcome once four-of-five K5-model incidence is forced."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_portal_edge_cycle_threshold"
+kind = "uses"
+note = "This reduces the clean portal-edge placement to a two-cycle composition or an order-seven cut."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.feedback_boundary_rooted_k5_transversal"
+kind = "guarded_by"
+note = "This prevents discarding the forest bridges and replacing them by two large boundary-neighbour sets."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_three_full_component_partition"
+kind = "guarded_by"
+note = "This prevents closing the three-full-component six-cut residue from fullness and ordinary boundary colouring alone."
+
+[[relations]]
+source = "hc7.k7minus_six_cut_coordinate_localisation"
+target = "hc7.k7minus_six_cut_complementary_cube_lift"
+kind = "uses"
+note = "The lifted bounded separators and their two complementary response families are the localisation theorem's input."
+
+[[relations]]
+source = "hc7.k7minus_six_cut_fan_model_alignment"
+target = "hc7.k7minus_six_cut_coordinate_localisation"
+kind = "uses"
+note = "The localisation theorem supplies the exact order-eight and order-nine full-component residue."
+
+[[relations]]
+source = "hc7.k7minus_feedback_forest_component_reduction"
+target = "hc7.k7minus_feedback_six_centre_common_matching"
+kind = "uses"
+note = "The six-centre theorem supplies the T-crossing centre matching, response cube and co-bagged K6 model."
+
+[[relations]]
+source = "hc7.k7minus_forest_shore_four_colour_extension"
+target = "hc7.k7minus_feedback_forest_component_reduction"
+kind = "uses"
+note = "The terminal theorem eliminates the reduction's full order-seven forest-shore alternative."
+
+[[relations]]
+source = "hc7.k7minus_three_piece_k5_composition"
+target = "hc7.k7minus_feedback_forest_component_reduction"
+kind = "uses"
+note = "The reduction supplies the three connected forest pieces and their exact 7,6,7 contact bounds."
+
+[[relations]]
 source = "hc7.k7minus_alpha4_regular_ramsey_elimination"
 target = "hc7.k7minus_critical_host_degree7_closure"
 kind = "uses"
@@ -16785,8 +17247,8 @@ note = "The critical-host theorem supplies K5-freeness, at least 25 degree-eight
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_alpha4_regular_ramsey_elimination"
-kind = "uses"
-note = "The audited finite theorem terminally eliminates independence number four and supplies five independent degree-eight centres for the active finishing route."
+kind = "related_to"
+note = "The audited finite theorem supplies five independent degree-eight centres for secondary centre-labelled routes."
 
 [[relations]]
 source = "hc7.target.k7minus_seven_exceptional_vertices"
@@ -16795,25 +17257,25 @@ kind = "uses"
 note = "The exceptional-centre finishing target may now choose five of the forced degree-eight vertices independently."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_five_centre_two_cut_reduction"
 kind = "uses"
 note = "This is the direct five-centre reduction of the entire two-cut branch to a larger response-oriented rooted-infeasible shore."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_order_six_equality_shore_elimination"
 kind = "uses"
 note = "This directly eliminates the order-six row of the five-centre two-cut branch and raises its surviving equality shore to order at least seven."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_order_seven_equality_shore_elimination"
 kind = "uses"
 note = "This directly eliminates the order-seven row of the five-centre two-cut branch and raises its surviving equality shore to order at least eight."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_five_centre_universal_boundary_rooted_k4"
 kind = "uses"
 note = "This supplies a rooted K4 on every selected four-set of the distinct-response boundary throughout the unbounded five-centre two-cut branch."
@@ -16839,23 +17301,29 @@ note = "The single-edge paired continuation is an audited route nonclosure: a su
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_five_centre_common_matching_reduction"
-kind = "uses"
-note = "Five selected centre edges put all 31 nonempty equality signatures on one common six-chromatic host and reduce its cuts to an exhaustive connectivity trichotomy."
+kind = "related_to"
+note = "The earlier centre-labelled matching retains saturation and multi-edge contraction data, but its common host has unresolved two- and three-cut rows."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_seven_removable_matching_reduction"
+kind = "related_to"
+note = "This is the entrance consumed by the active replacement-abundance and six-coordinate induced-forest reductions."
+
+[[relations]]
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_five_centre_two_shore_rooted_k4"
 kind = "uses"
 note = "This reduces the mixed two-cut orientation to universal rooted K4 models on both shores and an exact three-by-three cross-bag allocation."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_four_crossing_signed_boolean_reduction"
 kind = "uses"
 note = "This directly resolves the connectivity, separator and common-linkage geometry of the four-crossing three-cut row in the common host."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_five_crossing_omitted_coordinate_linkage"
 kind = "uses"
 note = "This removes the local connectivity slack in the five-crossing row and isolates simultaneous composition of five complete omitted-coordinate path packets."
@@ -16863,17 +17331,17 @@ note = "This removes the local connectivity slack in the five-crossing row and i
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_dense_branch_rotation_visibility"
-kind = "uses"
-note = "This makes the dense near-clique alternative sensitive to all five centre-star responses and isolates the response-support-sparse model residue."
+kind = "related_to"
+note = "This remains a secondary centre-labelled exact-model refinement."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.barrier.k7minus_five_rotation_palette_intersection"
 kind = "guarded_by"
 note = "This scoped barrier prevents replacing common-host synchronization by an unsupported intersection of five abstract singleton-saturation palettes."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.k7minus_five_centre_rotation_reduction"
 kind = "uses"
 note = "This reduces each fixed-root packet in the three-connected branch to a rooted-model outcome or two web shores with one common literal extension colour; the rigid maximal packet returns to the two-cut branch with coupled operations."
@@ -16907,6 +17375,30 @@ source = "hc7.k7minus_five_centre_rotation_reduction"
 target = "hc7.k7minus_five_centre_two_edge_response_reduction"
 kind = "related_to"
 note = "The rotation manufactures two coupled boundary-to-shore edge operations; the completion square treats interior equality-shore edges, so the two mechanisms meet only after response normalization."
+
+[[relations]]
+source = "hc7.k7minus_seven_removable_matching_reduction"
+target = "hc7.contracted_edge_k6_model_normalization"
+kind = "uses"
+note = "Each singleton matching contraction gives the one-end connected side and its actual response-bearing separator."
+
+[[relations]]
+source = "hc7.k7minus_seven_removable_matching_reduction"
+target = "hc7.k7minus_exact_k7vee_separator_dichotomy"
+kind = "uses"
+note = "The spanning exact near-clique model yields K7-minus or one connected, co-connected model-bag side with an actual separator."
+
+[[relations]]
+source = "hc7.k7minus_seven_removable_matching_reduction"
+target = "hc7.k7minus_dense_branch_rotation_visibility"
+kind = "uses"
+note = "The centre-star support theorem combines with the removable-matching endpoints to give the stronger hybrid support residue."
+
+[[relations]]
+source = "hc7.k7minus_seven_removable_matching_reduction"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "related_to"
+note = "The critical-host theorem supplies the connectivity, minimum degree, density and order hypotheses in a hypothetical counterexample."
 
 [[relations]]
 source = "hc7.k7minus_five_centre_common_matching_reduction"
@@ -17155,7 +17647,7 @@ kind = "related_to"
 note = "The two-component theorem is now consumed through the audited four-centre reduction rather than listed as a separate direct input."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_four_centre_web_cut_lattice"
 kind = "uses"
 note = "The audited four-centre theorem is the direct rooted-model/exact-cut reduction for the current finishing route."
@@ -17236,7 +17728,7 @@ kind = "guarded_by"
 note = "The counterexample requires every label-preserving use of the mixed reduction to retain the original boundary endpoint of each separator edge."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_four_centre_trace_descent"
 kind = "uses"
 note = "This is the direct label-preserving descent theorem for the minimum four-centre cut."
@@ -17266,7 +17758,7 @@ kind = "guarded_by"
 note = "Every strict descent receives its own inverse boundary map, as required by the trace-loss counterexample."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_four_centre_wheel_leaf_descent"
 kind = "uses"
 note = "This is the direct reduction of the generalized-wheel outcome to one canonical leaf with fixed trace data."
@@ -17296,7 +17788,7 @@ kind = "uses"
 note = "The two-component normal form makes each strict leaf return an exact connected cut."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_four_centre_exact_u_bridge_reduction"
 kind = "uses"
 note = "This is the direct exact-colouring reduction to one support and at most eight centre-bearing components on the minimum side."
@@ -17325,7 +17817,7 @@ kind = "uses"
 note = "A forbidden full component would supply the connected supports that reflect the selected boundary partition."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_four_centre_paired_trace_fan"
 kind = "uses"
 note = "This is the direct clean-path reduction in the paired exact-trace branch."
@@ -17348,7 +17840,7 @@ kind = "uses"
 note = "The Menger separator alternative becomes a strict cut with the same fixed trace."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_common_colouring_centre_change"
 kind = "uses"
 note = "This directly bounds the minimal opposite-side cut family and amplifies the four-member equality case to at least sixteen exact cuts."
@@ -17377,7 +17869,7 @@ kind = "uses"
 note = "The degree-eight neighbourhood independence bound controls the interaction graph."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_cyclic_four_region_elimination"
 kind = "uses"
 note = "This terminally removes the C4 four-region interaction and confines every surviving P4 replacement square to an internal region."
@@ -17394,7 +17886,7 @@ kind = "uses"
 note = "The common-colouring theorem supplies the four exact regions, the interaction graph and every simultaneous replacement cut used by the rooted-triangle construction."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_boolean_replacement_edge_coupling"
 kind = "uses"
 note = "This is the direct linkage and endpoint-colouring reduction for the four-region replacement family."
@@ -17423,7 +17915,7 @@ kind = "uses"
 note = "The non-double-critical replacement edge inherits the adjacent-pair bichromatic connectivity and palette linkage."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_boolean_minimum_separator_linkage"
 kind = "uses"
 note = "This is the direct centre-fixed anchoring and one-coordinate reduction to fixed-trace synchronization for the four-region Boolean family."
@@ -17476,7 +17968,7 @@ kind = "guarded_by"
 note = "The odd wheel shows that the exact lower cut, endpoint locks and literal linkage coordinate alone cannot synchronize either lifted boundary."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.k7minus_four_centre_completed_side"
 kind = "uses"
 note = "This is the direct four-connectivity and six-terminal rooted-minor reduction for a minimum exact-cut side."
@@ -17500,31 +17992,31 @@ kind = "guarded_by"
 note = "The explicit rooted graph shows that internal six-connectivity, the boundary edge and a rooted K4 alone do not force the prescribed rooted K6-minus minor."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.exact7_selected_partition_preservation"
 kind = "uses"
 note = "This theorem turns the remaining partition-specific connected-subgraph certificate into matching colourings of the two closed sides."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.barrier.k7minus_tri_inseparable_full_subgraph"
 kind = "guarded_by"
 note = "The Fano-plane example shows that the final connected-subgraph certificate must use proper-minor colourings or K7-minus exclusion, not tri-inseparability and degree conditions alone."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.barrier.k7minus_internal_six_rooted_k6minus"
 kind = "guarded_by"
 note = "The prescribed six-terminal minor must use the full canonical-region or minor-critical data, not internal connectivity alone."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_seven_exceptional_vertices"
 target = "hc7.barrier.k7minus_local_coordinate_synchronization"
 kind = "guarded_by"
 note = "A fixed minimum-side trace or another global critical-host input is necessary; the local coordinate package is insufficient."
 
 [[relations]]
-source = "hc7.target.k7minus_six_colour_conjecture"
+source = "hc7.target.k7minus_five_exceptional_vertices"
 target = "hc7.barrier.k7minus_two_full_shore_mechanism"
 kind = "guarded_by"
 note = "The scoped witness shows that local fullness and root contacts alone cannot supply the required one-shore rooted allocation."
