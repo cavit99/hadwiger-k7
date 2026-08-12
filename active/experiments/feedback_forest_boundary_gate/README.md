@@ -70,3 +70,17 @@ GREEN_TARGETED_REPAIR_SCREEN
 
 This last outcome is evidence for retaining a middle forest piece; it is not
 a screen of all three-piece configurations, even at orders seven and eight.
+
+The full contact-only `7,6,7` quotient claim is false.  Run
+
+```text
+python3 -B \
+  active/experiments/feedback_forest_boundary_gate/probe_three_piece_terminal.py
+```
+
+to reproduce a connected five-chromatic boundary of order eleven whose
+three added path vertices have exact contact sequence `7,6,7`, while the
+fourteen-vertex augmented graph is `K_5`-subgraph-free and has a certified
+tree decomposition of width four.  It therefore has no `K_7^-` minor.  The
+exact construction and its scope are recorded in the
+[`7,6,7` quotient barrier](../../../barriers/hc7_k7minus_three_piece_767_quotient_barrier.md).

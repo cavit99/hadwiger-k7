@@ -10,11 +10,14 @@ leaf refinements in Section 4 are also separately audited GREEN.  The
 Boolean minimum-separator linkage, the cyclic four-region elimination, and
 the exact one-coordinate response language in Section 4 are separately
 audited GREEN.  The removable-matching, replacement-abundance,
-six-coordinate induced-forest, growth-or-feedback, six-centre feedback and
-portal-cycle threshold reductions are separately audited GREEN.  The
+six-coordinate induced-forest, growth-or-feedback, bounded-feedback degree
+elimination, six-centre feedback and portal-cycle threshold reductions are
+separately audited GREEN.  The
 matching common-state, large-boundary lock reduction, order-nine transition
 projection and induced-path common-model theorems are separately audited
-GREEN.  The five-centre
+GREEN.  The selected-edge root-bag response theorem and the all-lock
+branch-set transfer note with its precisely scoped route nonclosure are
+separately audited GREEN.  The five-centre
 two-cut response reduction and its terminal
 order-five, order-six, and order-seven component cases are separately
 audited GREEN.  The order-six case has independently checked DRAT
@@ -757,8 +760,12 @@ seven-connected and has an exact spanning `K_7^vee` model.  An unlocked
 palette gives two crossed Kempe components and an actual response
 separator; the both-dominating alternative gives an explicit `K_7` minor.
 
-Two audited refinements prevent that separator from remaining an amorphous
-unbounded object.  The
+The audited
+[selected-edge root-bag response theorem](../results/hc7_k7minus_selected_edge_root_bag_response.md)
+splits the co-bagged root along the selected equality edge.  It gives
+`K_7^-` or an actual separator retaining that edge, the common model split
+and the boundary partition rejected by the intact shore.  Its order is at
+least seven.  The
 [boundary-reduction theorem](../results/hc7_k7minus_matching_lock_boundary_reduction.md)
 strictly reduces every actual boundary of order at least ten numerically by
 a fresh singleton response and iterates to order seven, eight or nine; the
@@ -792,6 +799,17 @@ unbounded unlocked separator as the first gaps.  They do not allocate
 palette components or transition paths to model bags.  The matching repair
 is to make one dominating lock or one projected transition meet both sides
 of four foreign bags, or to preserve its labels through a bounded response.
+The audited
+[all-lock branch-set transfer gate](hc7_k7minus_all_lock_branch_transfer_gate.md)
+shows that this cannot be obtained by absorbing an initial segment of one
+lock component in one fixed colouring: a proper segment is not a Kempe
+component, whereas switching the whole connected lock leaves the selected
+edge monochromatic.  Blocked model ownership therefore does not itself
+produce an original-labelled response separator or common shore partition.
+This is a recorded route nonclosure, not a counterexample to a
+response-sensitive split theorem.  A successful matching repair must
+compare different realised signatures while retaining one model, or use a
+new consequence of target exclusion.
 The induced-path repair is the corresponding triple split: four foreign
 bags must meet all three connected pieces of the path bag, or the failed
 allocation must return a labelled order-seven response.  The finite
@@ -809,36 +827,26 @@ exact-model deletion host, or a feedback vertex set `T` satisfying
                        |T|\le14,qquad\chi(G[T])\ge5. \tag{4.F2}
 \]
 
-In outcome (4.F2), the audited
-[six-centre feedback theorem](../results/hc7_k7minus_feedback_six_centre_common_matching.md)
-gives six independent degree-eight centres outside `T`, and the selected
-neighbours can all be chosen literally in `T`.  Thus the six centre edges
-cross the feedback boundary and retain the complete punctured response
-family, centre saturation and one spanning `K_6` model co-bagging all six
-pairs.  The audited
-[forest-component reduction](../results/hc7_k7minus_feedback_forest_component_reduction.md)
-now gives exactly three host-level alternatives:
+Outcome (4.F2) is now empty.  The audited
+[bounded-feedback degree elimination](../results/hc7_k7minus_bounded_feedback_degree_elimination.md)
+uses the exact degree defect
 
-1. a full order-seven separator with a forest component;
-2. a three-piece forest path `(A,B,C)` with `T`-contact bounds `7,6,7`;
-3. six distinct forest components containing the centres, each with at
-   least eight neighbours in `T`.
+\[
+                       2|E(G)|\le9|V(G)|-25,
+\]
 
-The audited
-[forest-shore extension theorem](../results/hc7_k7minus_forest_shore_four_colour_extension.md)
-terminally eliminates the first outcome.  Its two full tree leaves, the
-critical seven-cut capacity bound and four-colour extension force a `K_7`
-minor or a six-colouring.  In the second outcome, the audited
-[four-of-five composition theorem](../results/hc7_k7minus_three_piece_k5_composition.md)
-is terminal whenever one `K_5` model in `G[T]` has at least four bags
-adjacent to each of `A,B,C`.  The recent dominating-`K_5` theorem supplies
-a stronger model normal form in the five-chromatic boundary, but does not
-prescribe its contacts with the exterior pieces.  The explicit
-[boundary-only barrier](../barriers/hc7_feedback_boundary_rooted_k5_transversal_barrier.md)
-confirms that boundary contact cardinalities alone cannot do so.  The exact
-feedback residues are therefore the `7,6,7` incidence theorem and the
-six-component composition; both retain one common cycle through all six
-crossing centre edges and the common co-bagged `K_6` model.
+the forest identity for `G-T`, and a sharp edge bound for a `K_5`-free
+five-critical subgraph of `G[T]`.  These first force
+`|T|=14` and `25<=|V(G)|<=27`.  Counting the degree-eight vertices that
+remain inside `T` then strengthens the internal edge bound and contradicts
+the same defect inequality.  The proof is unbounded and computation-free.
+Consequently `kappa(X)>=7` forces the eight-coordinate exact-model outcome.
+
+The audited six-centre feedback theorem, forest-component reduction,
+forest-shore extension and four-of-five composition theorem remain valid
+proof infrastructure for the now-impossible alternative.  Their full-shore,
+`7,6,7` and six-component cases are superseded reductions, not live global
+residues.
 
 Finally, the audited
 [portal-cycle threshold reduction](../results/hc7_k7minus_portal_edge_cycle_threshold.md)
@@ -858,9 +866,9 @@ The immediate theorem is therefore:
 Unlike the punctured response cube, which is automatic for every
 componentwise-induced forest in a minor-critical graph, the connectivity,
 common-cycle and model-placement conclusions are genuine structural data.
-One feedback alternative—the full order-seven forest shore—is now
-terminally eliminated.  This is an unbounded branch closure, but the
-terminalization theorem itself remains open.
+The complete bounded-feedback alternative is now terminally eliminated.
+This is an unbounded branch closure, but the terminalization theorem itself
+remains open.
 
 ### Seven-removable matching entrance
 
@@ -1451,30 +1459,28 @@ Prove the six-coordinate induced-forest terminalization theorem, in this
 order.
 
 1. Close `kappa(X)=6` with its two exact allocation theorems.  In the
-   order-nine matching row, use one dominating lock component or one
-   projected boundary transition to make four foreign bags meet both sides
-   of the common co-bagged split; failure must preserve the matching/model
-   labels through the order-nine response.  In the induced-path row, make
+   order-nine matching row, compare the three realised signatures while
+   retaining the common co-bagged model.  The accepted outcomes remain:
+   four foreign bags meet both sides of one split; an original-labelled
+   order-seven or order-eight response; or one partition extends through
+   both shores.  Do not repeat the fixed-lock absorption argument: its exact
+   model/colouring mismatch is now an audited route nonclosure.  In the
+   induced-path row, make
    four foreign bags meet all three pieces of the common path bag, or turn
    the blocked exchange into a labelled order-seven response.  Do not
    return to an unlabelled fan-to-model statement: the common models,
    response hosts and bounded endpoint alternatives are already proved.
-2. In the feedback row, first force the four-of-five `K_5`-model incidence
-   for the `7,6,7` forest path.  This is the shortest remaining terminal
-   implication and the boundary has order at most fourteen.  If the
-   incidence fails, use the common cycle and co-bagged `K_6` model to return
-   a labelled separation.  Then address the six-component outcome with the
-   same two global objects; ordinary contact counts are insufficient.
-3. In the seven-connected exact-model row, use the two-cycle portal theorem.
+2. In the seven-connected exact-model row, use the two-cycle portal theorem.
    Either merge the two cycles while retaining the six coordinates and the
    portal edge, or turn the failed rerouting into an order-seven separation
    carrying those labels.  Do not assume the unresolved one-cycle
    Lovasz--Woodall conclusion.
-4. Treat the eight-coordinate host as the dense fallback.  Its exact model
-   and seven-connectivity are retained, but the response cube alone does
-   not locate coordinate ends in its branch bags.
+3. Treat the forced eight-coordinate host as the dense fallback.  Its exact
+   model and seven-connectivity are retained, but the response cube alone
+   does not locate coordinate ends in its branch bags.
 
 The common co-bagged-`K_6` split proposed for the original removable
-matching is not available there and is obstructed at quotient level.  It is
-legitimate only in the bounded-feedback branch, where the six-centre
-theorem actually supplies it and the forest adds the missing geometry.
+matching is not available in the eight-coordinate host and is obstructed at
+quotient level.  In the six-cut matching row where a common model is
+available, one fixed all-lock colouring cannot label a branch-set transfer;
+any further split theorem must use the full response square.
