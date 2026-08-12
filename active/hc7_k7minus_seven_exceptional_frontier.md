@@ -878,12 +878,99 @@ same edge and colouring survive on every connected actual subset containing
 a relevant endpoint.  A minimal boundary-list obstruction is connected,
 retains the endpoint set, and gives strict side-order descent whenever it is
 proper.  The process ends at a fixed-coordinate boundary-list-critical
-side, but its boundary need not decrease.  The separately audited
+side, but its boundary need not decrease.
+
+The audited
+[model-anchored hull theorem](../results/hc7_k7minus_model_anchored_response_hull.md)
+now keeps the exact-model bag, a connected complement within that bag and a
+named anticomplete bag throughout the side-order descent.  Global
+minimisation over all eight coordinate responses and all ordinary exact
+models gives the audited
+[appendage-ownership theorem](../results/hc7_k7minus_model_anchored_appendage_ownership.md).
+A nonsingleton terminal side consists of a boundary-list-critical core and
+at most two coordinate-free appendages.  Each appendage monopolises at
+least two foreign model labels, and different appendages have disjoint
+monopoly sets.
+
+Every appendage has a fresh attachment-edge response.  The audited
+[operation-provenance theorem](../results/hc7_k7minus_operation_provenance_exchange.md)
+puts that response and the retained forest response on one deletion host
+and determines its equality signatures.  It does not exchange their
+provenance: the core retains the forest coordinate but disconnects the
+branch-bag complement, while the appendage retains the model geometry but
+only for the fresh operation.  The exact static
+[appendage quotient screen](experiments/model_anchored_appendage_quotient_gate/README.md)
+leaves target-free profiles for every ownership order.  Thus another
+uncoloured ownership analysis cannot close this case.
+
+At a singleton, the audited
+[coordinate-localisation theorem](../results/hc7_k7minus_singleton_coordinate_localisation.md)
+gives an exhaustive fork.  A nonadjacent neighbour supplies one induced
+path with all three nonempty equality signatures.  The audited
+[common-deletion theorem](../results/hc7_k7minus_singleton_induced_path_common_deletion.md)
+then gives a seven-connected common host or an actual order-seven/eight
+response retaining the entire square.  The seven-connected outcome is the
+same response-sensitive three-piece model-allocation problem already
+isolated in the six-cut path case.
+
+In the other singleton outcome, the forest mate dominates the remaining
+neighbourhood.  The audited
+[dominated common-neighbour theorem](../results/hc7_k7minus_dominated_singleton_twocut_response.md)
+finds a vertex cut of order at most two, actual response components on its
+two sides, and an exact exclusive switch between the original edge and
+each fresh incident edge.  The audited
+[low-degree completion](../results/hc7_k7minus_dominated_singleton_low_degree_terminal.md)
+uses an exact marked-neighbourhood enumeration to eliminate the only
+degree-eight and degree-nine placements which could trap every
+model-persistent edge in the cut.  Together with the high-degree count,
+the dominated case is aligned at every degree: one common deletion graph
+retains the original exact model, the forest colouring, a fresh exclusive
+response and an actual response component.
+
+The centre-preserving visibility and bounded-interface theorems now bypass
+that unbounded component.  At an original degree-eight centre `u`, the
+exterior of `N[u]` is connected and the exact boundary has the form
+
+\[
+                    N(u)=Q\mathbin{\dot\cup}\{v\},
+\]
+
+where `v` is complete to `Q` and `Q` is `C_5\dot\cup K_2`, a five-cycle
+with a pendant two-edge path, or `C_7`.  The graph
+`H=G-\{u,v\}` is five-connected.
+
+Protect `Q` and two of the four other independent degree-eight centres in
+one terminal-legal contraction of `H`.  The written and audited
+[two-protected-centre theorem](hc7_k7minus_dominated_two_protected_centres_kernel.md)
+eliminates the complete order-eleven branch, so the common irreducible
+kernel has order nine or ten.  The exact order-ten catalogue has 1,153
+rooted occurrences; an independent connected-partition checker confirms
+that one usable contact from either protected centre to a `Q`-rooted bag
+closes every occurrence.  In the all-terminal order-nine branch, contacts
+at both centres close every static survivor.  One contact closes 2,177 of
+2,252, leaving 75 asymmetric placements which prescribe the degree-three
+centre.
+
+The prescribed-representative theorem gives a literal selectable matching
+edge at a protected centre but not its rooted-bag location.  Ordinary
+root-bag minimisation does not bridge that gap.  The exact faithful suffix
+screen deletes every source adjacency owned solely by the moved suffix and
+still leaves
+
+\[
+                         256,\qquad1022,\qquad256
+\]
+
+order-nine placements.  This is a decisive route nonclosure for static
+two-owner transfer, not a host counterexample.  The missing positive
+statement must use the matching edge's singleton-signature colouring.
+
+The separately audited
 [anchored-compression barrier](../barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md)
-has arbitrarily high connectivity and minimum degree and an unbounded
+still has arbitrarily high connectivity and minimum degree and an unbounded
 singleton response boundary.  It contains a literal `K_7`, so it does not
-refute target-free compression; it proves that `K_7^-`-minor exclusion must
-be used at the terminal list-critical or singleton side.
+refute the live target; it proves that the target must use the exact model,
+the second operation and `K_7^-`-minor exclusion.
 
 The audited six-centre feedback theorem, forest-component reduction,
 forest-shore extension and four-of-five composition theorem remain valid
@@ -902,19 +989,23 @@ seven branch bags and critical colouring responses.
 
 The immediate theorem inside the forced eight-coordinate case is therefore:
 
-> **Anchored coordinate-response compression.**  An actual response side
-> carrying one original edge of the eight-coordinate forest either yields
-> `K_7^-`, has a compatible boundary partition on its two shores, or admits
-> a reduction to boundary order seven or eight which retains that edge and
-> its exterior colouring.
+> **Operation-labelled protected-centre contact or split.**  In the common
+> rooted kernel retaining `Q` and two exceptional centres, either `G`
+> contains `K_7^-`, one selected centre edge has its other end in a usable
+> `Q`-rooted bag, or the singleton-signature colouring of a swallowed edge
+> yields a movable rooted-bag split or an actual labelled separation.
 
 Unlike the punctured response cube, which is automatic for every
 componentwise-induced forest in a minor-critical graph, the connectivity,
 common-cycle and model-placement conclusions are genuine structural data.
-The complete bounded-feedback alternative is terminally eliminated and
-endpoint placement in the forced exact model is terminal.  The displayed
-compression theorem remains open precisely at a boundary-list-critical or
-singleton response side.
+The complete bounded-feedback alternative is terminally eliminated,
+endpoint placement in the forced exact model is terminal, and the
+dominated singleton is model-aligned in every degree and its centre-bearing
+terminal has a common nine- or ten-vertex rooted kernel.  The displayed
+contact-or-split theorem remains open at the conversion from a colouring
+response to named branch-set geometry.  In the nonsingleton outcome, the
+parallel open theorem is operation-sensitive transfer across at most two
+model-owning appendages.
 
 ### Seven-removable matching entrance
 
@@ -1504,30 +1595,32 @@ remaining open step in this secondary route.
 Prove the six-coordinate induced-forest terminalization theorem, in this
 order.
 
-1. In the forced eight-coordinate host, terminalise the bounded response
-   returned by the endpoint-visibility theorem.  Prefer a one-coordinate
-   anchored compression: preserve one `F_8` edge and its exterior
-   colouring while decreasing boundary order to seven or eight, or produce
-   `K_7^-` or a boundary partition extending through both shores.  A
-   coordinate-minimal list-critical side can increase its boundary, while
-   generic density descent can lose the coordinate; do not identify those
-   two existential choices.
+1. In the forced eight-coordinate host, prove the operation-labelled
+   protected-centre contact-or-split theorem.  The accepted outcomes are
+   `K_7^-`, a usable coordinate contact with a `Q`-rooted bag, a movable
+   rooted-bag split carrying the same singleton signature, or an actual
+   labelled separation.  One usable contact closes every order-ten kernel;
+   two close every order-nine kernel.  Static two-owner suffix transfer is
+   already known not to suffice.
 2. In the seven-connected exact-model row, use the two-cycle portal theorem.
    Either merge the two cycles while retaining the six coordinates and the
    portal edge, or turn the failed rerouting into an order-seven separation
    carrying those labels.  Do not assume the unresolved one-cycle
    Lovasz--Woodall conclusion.
-3. Return to `kappa(X)=6` only with new exchange technology.  In the
+3. If component-to-bag capture does not close, apply one response-sensitive
+   allocation theorem to the common induced-path triple split.  Its
+   low-connectivity outcome already returns an order-seven/eight response;
+   do not open a second path programme with fewer labels.
+4. Return to `kappa(X)=6` matching only with new exchange technology.  In the
    matching row, a valid proof must supply one deficiency-aware common
    `EE` pivot or another Kempe-valid model-monotone exchange; the three
    realised signatures, fixed deficiencies and target exclusion do not do
-   this statically.  In the induced-path row, four foreign bags must meet
-   all three pieces of the common path bag, or the blocked exchange must
-   return a labelled order-seven response.
+   this statically.
 
 The common co-bagged-`K_6` split proposed for the original removable
 matching is not available in the eight-coordinate host and is obstructed at
-quotient level.  In the six-cut matching row where a common model is
-available, one fixed all-lock colouring cannot label a branch-set transfer;
-the full response square has now been spent up to the exact shared-pivot
-quantifier and model-incidence gaps.
+quotient level.  Static appendage ownership is likewise exhausted.  In the
+six-cut matching row where a common model is available, one fixed all-lock
+colouring cannot label a branch-set transfer; the full response square has
+now been spent up to the exact shared-pivot quantifier and model-incidence
+gaps.

@@ -24,8 +24,15 @@ Selected audited inputs:
   eight-coordinate seven-connected exact-model host](../results/hc7_k7minus_bounded_feedback_degree_elimination.md)
 - [maximal endpoint visibility reduces that host to `K_7^-` or a bounded
   response interface, while identifying the exact coordinate-label loss](../results/hc7_k7minus_eight_coordinate_endpoint_visibility.md)
-- [fixed-coordinate list-core reduction preserves one forest edge and its
-  colouring under strict side-order descent](../results/hc7_k7minus_fixed_coordinate_response_core_reduction.md)
+- [model-anchored minimisation leaves a boundary-list-critical core and at
+  most two coordinate-free appendages, each monopolising at least two
+  disjoint model adjacencies](../results/hc7_k7minus_model_anchored_appendage_ownership.md)
+- [a singleton response has either one common induced-path operation or a
+  dominated coordinate edge](../results/hc7_k7minus_singleton_coordinate_localisation.md)
+- [the dominated case is model-aligned in every degree; the only finite
+  low-degree placements are eliminated by exact minor verification](../results/hc7_k7minus_dominated_singleton_low_degree_terminal.md)
+- [centre-preserving visibility bypasses the unbounded side and exposes an
+  exact order-eight boundary carrying the other four centre operations](hc7_k7minus_degree_eight_centre_cube_interface.md)
 
 Immediate barriers:
 
@@ -52,17 +59,48 @@ If `kappa(X)>=7`, the forest grows to eight coordinates: `H=G-F_8` is
 seven-connected, realises all `255` nonempty signatures, and has an exact
 spanning `K_7^vee` model.  Maximising coordinate-endpoint visibility in
 that model gives `K_7^-` or an actual separator retaining one singleton
-`F_8` response.  Generic density descent bounds the latter interface by
-nine, but can replace the forest edge by an unrelated singleton operation.
-The immediate target is therefore a **one-coordinate anchored compression
-theorem**: preserve one `F_8` edge and its exterior colouring while reducing
-the boundary to order seven or eight, or produce `K_7^-` or one boundary
-partition extending through both shores.  Coordinate-preserving
-list-critical minimisation now provably lowers side order until a connected
-boundary-list-critical or singleton side remains, but may increase the
-boundary.  Generic density descent lowers the boundary but may lose the
-coordinate.  A target-free proof must therefore use `K_7^-`-minor exclusion
-at that terminal side.
+`F_8` response.
+
+The response side can now be minimised without discarding its exact-model
+geometry.  If it is nonsingleton, it consists of one boundary-list-critical
+core and at most two coordinate-free appendages.  Each appendage monopolises
+at least two disjoint foreign model adjacencies.  Deleting an attachment
+edge supplies a fresh response, but comparison with the retained forest
+coordinate does not exchange their model provenance; both exhaustive
+[static quotient diagnostics](experiments/model_anchored_appendage_quotient_gate/README.md)
+leave target-free contact profiles.
+
+If the minimum side is a singleton, its forest response localises exactly.
+A fresh nonadjacent neighbour gives one induced-path deletion host with all
+three nonempty signatures.  Every failure of seven-connectivity returns an
+actual order-seven or order-eight response retaining that whole square; the
+seven-connected outcome is the existing induced-path triple-split
+allocation problem.  Otherwise the forest edge is dominated.  That case is
+now aligned in every degree: one common deletion preserves the original
+exact model, original coordinate colouring, a fresh exclusive response and
+an actual response component.  What is not implied is that this component
+lies in one branch bag or has a named anticomplete bag.
+
+Centre-preserving visibility gives more at a dominated degree-eight
+singleton.  Its exterior is connected, its exact boundary is
+`N(u)=Q\dot\cup\{v\}`, and `Q` is one of three seven-vertex graphs.  In
+`H=G-\{u,v\}`, protect `Q` and two of the four other exceptional centres.
+One common terminal-legal contraction then leaves a rooted kernel of order
+nine or ten: the complete order-eleven branch is eliminated.  The order-ten
+catalogue has 1,153 rooted occurrences and an independent checker confirms
+that one usable centre-to-`Q`-bag coordinate contact closes every one.  At
+order nine, two usable contacts close every survivor; a single contact
+closes all but 75 asymmetric placements.
+
+The immediate target is therefore an **operation-labelled contact-or-split
+theorem for two protected centres**.  For a selected centre edge, either its
+mate lies in a usable `Q`-rooted bag, or the singleton-signature colouring
+produces a movable split of its centre-rooted bag or an actual labelled
+separation.  This is the missing host input.  Ordinary rooted-bag
+minimisation and exact two-owner suffix transfer leave `256`, `1022`, and
+`256` order-nine placements, so static ownership is decisively exhausted.
+The nonsingleton model-anchored outcome still has the parallel operation-
+transfer obligation across at most two appendages.
 
 If `kappa(X)=6`, the matching and induced-`P_3` cases remain deferred.  In
 the matching case the full `EP,PE,EE` comparison proves a literal
