@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 11 August 2026
+**Last updated:** 12 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -75,6 +75,104 @@ degree-eight vertices.  Since `R(4,5)=25` and the host has no literal
 independent degree-eight centres.
 
 ### 3. Immediate structural laboratory
+
+The audited
+[removable-matching theorem](results/hc7_k7minus_seven_removable_matching_reduction.md)
+and [replacement-abundance theorem](results/hc7_k7minus_removable_matching_rotation_abundance.md)
+now force one common six-coordinate object.  The audited
+[induced-forest reduction](results/hc7_k7minus_six_coordinate_forest_reduction.md)
+gives a six-edge forest
+
+\[
+                 F\cong 6K_2\quad\hbox{or}\quad4K_2\mathbin{\dot\cup}P_3
+\]
+
+whose components are induced in `G`, such that, for `X=G-F`, both of two
+distinguished one-edge restorations are seven-connected.  Consequently
+
+\[
+ \kappa(X)\ge6,qquad |E(X)|\ge4|V(X)|-6,qquad
+ \{\Sigma_F(c):c\in\operatorname{Col}_6(X)\}
+                       =2^F-\{\varnothing\}.         \tag{R1}
+\]
+
+The graph `X` has a spanning exact `K_7^vee` model, and one literal cycle
+of `G` contains every edge of `F`.  The five-edge star which first appeared
+in the replacement theorem is therefore not a separate obstruction: the
+absence of a literal `K_5` supplies two nonadjacent leaves and turns it into
+the induced `P_3` above.  The signature cube in (R1) is automatic from
+minor-criticality and componentwise inducedness; the nonautomatic inputs
+are the two seven-connected restorations, the common cycle and the exact
+model.
+
+This gives the present capstone target:
+
+> **Six-coordinate induced-forest terminalization.**  The critical host
+> cannot contain the displayed forest `F` with both distinguished
+> one-edge restorations seven-connected.
+
+The target has two exhaustive connectivity rows.
+
+1. If `kappa(X)=6`, every six-cut has exactly two full components and both
+   distinguished edges cross them.  The audited
+   [complementary-cube lift](results/hc7_k7minus_six_cut_complementary_cube_lift.md)
+   first turns every nonsingleton crossing allocation into one actual
+   separator of order eight through twelve.  The audited
+   [coordinate-localisation theorem](results/hc7_k7minus_six_cut_coordinate_localisation.md)
+   now sends each selected coordinate to a strict response-bearing
+   separator or to a full component.  If all strict responses, including
+   the fresh singleton response at boundary order at least ten, are
+   excluded, the boundary has order eight or nine and exactly two or three
+   full components.  The audited
+   [fan theorem](results/hc7_k7minus_six_cut_fan_model_alignment.md)
+   gives a full-boundary fan from every connected shore piece and a
+   shore-confined six-fan retaining five prescribed Kempe first edges for
+   each coordinate response.  The remaining implication is a
+   boundary-respecting fan-to-model exchange: assign these paths to one
+   edge-rooted `K_6` model, glue the colouring response, or return a strict
+   labelled separation.
+2. If `kappa(X)>=7`, the audited
+   [growth-or-feedback theorem](results/hc7_k7minus_six_coordinate_growth_or_feedback.md)
+   says that the coordinate forest either grows to an eight-edge
+   componentwise-induced forest whose deletion is seven-connected and
+   still has an exact spanning `K_7^vee` model, or `G` has a feedback
+   vertex set `T` of order at most fourteen with `chi(G[T])>=5`.  In the
+   latter case the audited
+   [six-centre feedback theorem](results/hc7_k7minus_feedback_six_centre_common_matching.md)
+   gives six independent degree-eight centres outside `T`, with their six
+   selected neighbours all in `T`, all 63 nonempty signatures and a
+   spanning `K_6` model co-bagging all six pairs.  The audited
+   [forest-component reduction](results/hc7_k7minus_feedback_forest_component_reduction.md)
+   adds one common cycle through all six centre edges and returns exactly
+   one of: a full order-seven forest shore; a three-piece
+   forest path with `T`-contact bounds `7,6,7`; or six distinct forest
+   components, each with at least eight neighbours in `T`.  The audited
+   [forest-shore theorem](results/hc7_k7minus_forest_shore_four_colour_extension.md)
+   terminally eliminates the first outcome.  In the three-piece outcome,
+   the audited
+   [four-of-five composition theorem](results/hc7_k7minus_three_piece_k5_composition.md)
+   gives `K_7^-` as soon as one `K_5` model in `G[T]` has at least four
+   branch bags adjacent to each piece.  Thus only that incidence theorem
+   and the six-component composition remain in the bounded-feedback row.
+
+In the seven-connected exact-model row, the audited
+[portal-cycle threshold reduction](results/hc7_k7minus_portal_edge_cycle_threshold.md)
+puts a selected model portal edge and all six coordinates on at most two
+vertex-disjoint cycles.  A single-cycle
+conclusion from connectivity alone is precisely the unresolved
+Lovasz--Woodall threshold; the next valid theorem must compose the two
+cycles using the exact model and critical colouring data, or return a
+labelled order-seven separation.  Thus the proposed common co-bagged-`K_6`
+split is not the first gate: Chu's matching does not supply that model, and
+contact-only quotient splitting already has explicit obstructions.
+
+This is genuine terminal progress inside one global row: a full
+order-seven forest shore is now impossible.  It does not close Conjecture
+21.  The exact live residues are the order-eight/nine fan-to-model exchange,
+the feedback `7,6,7` incidence and six-component compositions, the
+eight-coordinate dense host, and the two-cycle exact-model row.
+
+#### Secondary centre-labelled route
 
 Fix five independent degree-eight centres `Z`, and put `F=G-Z`.  The
 audited
@@ -412,17 +510,19 @@ separator is already a labelled two-cut or four-centre three-separation of
 `F`, according to how many centres its boundary contains, provided that the
 selected piece itself avoids `Z`.
 
-This is the present immediate structural laboratory.  It has achieved the
-literal common host which the five-packet composition sought, but it is not
-terminal.  The exact remaining alternatives are: eliminate the five
+This centre-labelled common host remains a secondary laboratory.  It has
+achieved the literal synchronization which the five-packet composition
+sought, but it is not terminal.  Its exact remaining alternatives are:
+eliminate the five
 simultaneous singleton contacts through the `3`-by-`3` allocation, or handle
 the all-five-on-`D` orientation; terminalize the signed four-coordinate
 separator or compose the five omitted-coordinate path systems; or eliminate
 the dense model whose four universal bags each contain at most one supported
 portal.  Unbounded returned boundaries and repetition among their induced
-partitions remain unsupported.  The older rotation theorem remains
-available for labelled three-cut geometry, but direct palette intersection
-is no longer the immediate proof target.
+partitions remain unsupported.  These rows may receive an exact labelled
+separation from the seven-removable route.  The older rotation theorem
+remains available for labelled three-cut geometry, while direct palette
+intersection is frozen.
 
 Any four-set `U subset Z` may also be used in the audited
 [four-centre theorem](results/hc7_k7minus_four_centre_web_cut_lattice.md)
