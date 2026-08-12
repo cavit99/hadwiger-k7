@@ -7562,7 +7562,7 @@ title = "The final six-cut shores have full-boundary response fans"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_six_cut_fan_model_alignment.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_six_cut_fan_model_alignment_audit.md"
 expected_source_sha256 = "f50587a8d481379da4b0d7851878555500ba75b51d3e3cfa818cc3d09297f56c"
 scope = "the order-eight or order-nine full-component residue after every strict six-cut response is excluded"
@@ -7581,6 +7581,143 @@ does_not_prove = [
   "the K7-minus six-colour conjecture or HC7",
 ]
 keywords = ["K7 minus", "full-boundary fan", "Kempe first edge", "edge-rooted K6", "model alignment", "route nonclosure"]
+
+[[claims]]
+id = "hc7.k7minus_matching_square_common_state"
+title = "Two opposite matching coordinates share one response square and one model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_matching_square_common_state.md"
+source_heading = "Theorem 2.1 (opposite-coordinate common state)"
+active = true
+audit = "results/hc7_k7minus_matching_square_common_state_audit.md"
+expected_source_sha256 = "ca291c23674c11832159301af0c9d1bd7bfd5302495359bbfe81b4f8a5f55e14"
+scope = "the order-nine matching six-cut row with two opposite distinguished coordinates and a spanning six-connected common subgraph"
+label_fidelity = "both selected edges, both open shores, all three nonempty signatures, the common co-bagged K6 model, response fans and exact K7-vee model remain literal"
+separator_order = "the common deletion is seven-connected unless it returns an actual response boundary of order seven or eight"
+colour_compatibility = "one common graph realises exactly equal-proper, proper-equal and equal-equal; the forbidden proper-proper signature drives the lock-or-separator conclusion"
+conclusions = [
+  "the double deletion is exactly six-chromatic and has the complete three-vertex response square",
+  "one spanning K6 model lifted from the double contraction co-bags both coordinate pairs",
+  "excluding order-seven and order-eight responses makes the common deletion seven-connected with an exact spanning K7-vee model",
+  "an unlocked singleton palette returns an actual response separator; otherwise all five alternate palettes are locked",
+  "four foreign bags meeting both sides of a co-bagged split give an explicit K7-minus model",
+]
+does_not_prove = [
+  "an upper bound for the first unlocked response separator",
+  "assignment of the five lock paths or response-fan ends to five distinct model bags",
+  "closure of the matching six-cut row or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "opposite coordinates", "response square", "double contraction", "common K6 model", "Kempe locks"]
+
+[[claims]]
+id = "hc7.k7minus_matching_forbidden_signature_kempe_coupling"
+title = "The forbidden all-proper signature couples two critical matching edges"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_matching_forbidden_signature_kempe_coupling.md"
+source_heading = "Theorem 2.1 (unique unlocked palette and crossed components)"
+active = false
+audit = "results/hc7_k7minus_matching_forbidden_signature_kempe_coupling_audit.md"
+expected_source_sha256 = "0159743557cc9c0de8a0d9e9f3969b9ecde20bb2bf50d5e8716cf6e54a1297d1"
+scope = "two vertex-disjoint deleted edges in a non-q-colourable graph, followed by the seven-connected minor-critical host specialisation"
+label_fidelity = "both deleted edges, the unique unlocked palette, its two crossed bichromatic components and the common exterior colouring remain literal"
+separator_order = "a nondominating crossed component gives an actual separator of order at least seven; no upper bound is asserted"
+colour_compatibility = "switching either crossed component changes equal-proper to proper-equal while preserving one literal exterior trace"
+conclusions = [
+  "at most one alternate palette can be unlocked",
+  "an unlocked palette has exactly two crossed components, each containing one endpoint of each deleted edge",
+  "both crossed components cannot dominate in the critical K7-free host",
+  "a nondominating component returns a response separator, while a dominating component has a five-chromatic K6-minor-free complement",
+]
+does_not_prove = [
+  "a bounded separator",
+  "alignment of palette components with branch-set labels",
+  "closure of the matching row or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "forbidden signature", "Kempe component", "crossed transition", "response separator"]
+
+[[claims]]
+id = "hc7.k7minus_matching_lock_boundary_reduction"
+title = "Large actual boundaries descend and matching locks have a dominating normal form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_matching_lock_boundary_reduction.md"
+source_heading = "Theorem 2.1 (large actual-boundary singleton descent)"
+active = true
+audit = "results/hc7_k7minus_matching_lock_boundary_reduction_audit.md"
+expected_source_sha256 = "d95c459737f7d94e8c212e8f3d90e2b5fbf762f46567d70e6e6d9dfb386dd244"
+scope = "a seven-connected seven-chromatic proper-minor-critical K7-free graph and, for the lock normal form, two disjoint critical matching edges"
+label_fidelity = "the initial matching labels survive only to the first response; density descent uses fresh singleton operations and explicitly records the subsequent label loss"
+separator_order = "every actual boundary of order at least ten strictly descends, iterating to order seven, eight or nine"
+colour_compatibility = "each new singleton boundary carries an exterior-realised partition rejected by its intact side; an all-lock component retains its named palette"
+conclusions = [
+  "every connected nondominating side with boundary order at least ten yields a strictly smaller actual singleton response boundary",
+  "iteration terminates at order seven, eight or nine",
+  "a new order-nine singleton either returns order at most eight or the sharp full-component degree-nine pole",
+  "an unlocked transition ends at those bounded alternatives or its initial exact order-nine response",
+  "after those exits are excluded, each of the five lock components is connected, dominating and three-chromatic with a four- or five-chromatic K6-minor-free complement",
+]
+does_not_prove = [
+  "preservation of the original matching edges or model labels through density descent",
+  "allocation of dominating lock components to four foreign model bags",
+  "closure of the matching row or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "boundary descent", "degree nine", "Kempe lock", "dominating component", "Mader Jorgensen"]
+
+[[claims]]
+id = "hc7.k7minus_order9_crossed_transition_projection"
+title = "An unlocked transition has support on at most four vertices of the original order-nine boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_order9_crossed_transition_projection.md"
+source_heading = "Theorem 2.1 (order-nine projection)"
+active = true
+audit = "results/hc7_k7minus_order9_crossed_transition_projection_audit.md"
+expected_source_sha256 = "27b91fc459a81ba2b0d2002b281bb992151f82faafa013c496067bd43778052e"
+scope = "the order-nine opposite-shore matching response with one unlocked equal coordinate"
+label_fidelity = "the original nine-vertex boundary, crossed Kempe component, at most four support vertices and the two shore-extension languages remain literal"
+separator_order = "the theorem bypasses rather than bounds the transition separator; supporting original-shore components have boundary order seven, eight or nine"
+colour_compatibility = "successive switches on at most four boundary components yield a doubly rejected trace or one literal interchange between opposite-shore extensions"
+conclusions = [
+  "one nondominating crossed component meets a nonempty set of at most four original boundary vertices",
+  "its boundary switches yield either a colouring rejected by both shores or adjacent colourings extending through opposite shores",
+  "the adjacent-transition outcome names one component in each shore with boundary order seven, eight or the full original nine-set",
+  "the doubly rejected outcome yields connected list-critical kernels on both shores",
+]
+does_not_prove = [
+  "terminalisation of shore-filling paired order-nine kernels",
+  "alignment of the named full components with the common K6 or K7-vee model bags",
+  "closure of the matching row or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "order nine", "boundary projection", "Kempe interchange", "list-critical kernel", "opposite shores"]
+
+[[claims]]
+id = "hc7.k7minus_p3_opposite_coordinate_common_model"
+title = "The induced-path row has two seven-connected response hosts and one common model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_p3_opposite_coordinate_common_model.md"
+source_heading = "Theorem 3.1 (one model for the whole induced path)"
+active = true
+audit = "results/hc7_k7minus_p3_opposite_coordinate_common_model_audit.md"
+expected_source_sha256 = "3a2ded6ee2bbbe1e9735dd43f30bb7b0dcb193395ffc69fc64056ab7964a1cf7"
+scope = "the induced-P3 six-cut row with one crossing fixed matching coordinate and the two distinguished path restorers"
+label_fidelity = "the crossing matching edge, both path edges, the two leaves, common centre, six-cut, response signatures, model bags and linkage endpoints remain literal"
+separator_order = "six-cuts of the common triple deletion return order-seven or order-eight responses; after their exclusion the order-nine host is seven-connected and the order-eight row has an exact normal form"
+colour_compatibility = "one common host realises the complete punctured three-edge response cube and one model co-bags the matching pair and the entire induced path"
+conclusions = [
+  "each leaf and the crossing matching coordinate share a seven-connected two-edge response host with an exact K7-vee model",
+  "the common triple deletion is exactly six-chromatic and its triple contraction gives one spanning K6 model co-bagging the matching pair and induced path",
+  "four foreign bags meeting all three path-bag pieces give an explicit K7-minus model",
+  "the exact order-eight row has both complete geometric linkage families with one common shore fan",
+]
+does_not_prove = [
+  "four foreign bags meeting all three split pieces",
+  "simultaneous colour-labelled linkage families",
+  "closure of the induced-path row or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "induced P3", "opposite coordinate", "common K6 model", "triple split", "six-cut linkage"]
 
 [[claims]]
 id = "hc7.k7minus_six_coordinate_growth_or_feedback"
@@ -10154,7 +10291,7 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "aa412e23a6592284f9ef2e078401b9f89d043cbd02b98e27e9b5e6359d11e4c1"
+expected_source_sha256 = "f6f1b67caaf327ccdfe9ed39ef3ae4247bdfbca8454a1efda6abceba11fc1c62"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -17157,8 +17294,32 @@ note = "This reduces the six-cut row to a strict response or an order-eight or o
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_six_cut_fan_model_alignment"
+kind = "related_to"
+note = "Its fan existence is consumed by the sharper matching and induced-path common-host reductions."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_matching_square_common_state"
 kind = "uses"
-note = "This supplies the full-boundary and coordinate-response fans in the final six-cut residue and isolates model-label exchange as the exact gap."
+note = "This puts two opposite distinguished matching coordinates, the exact response square, a co-bagged K6 model and the exact K7-vee model on one host."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_matching_lock_boundary_reduction"
+kind = "uses"
+note = "This reduces every large actual response boundary numerically through fresh singleton operations and gives the dominating all-lock normal form."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_order9_crossed_transition_projection"
+kind = "uses"
+note = "This projects every unlocked order-nine transition onto a bounded portion of the original boundary and two explicit shore-extension outcomes."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_p3_opposite_coordinate_common_model"
+kind = "uses"
+note = "This gives the exact common-model and triple-split normal forms for the induced-path six-cut row."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
@@ -17219,6 +17380,48 @@ source = "hc7.k7minus_six_cut_fan_model_alignment"
 target = "hc7.k7minus_six_cut_coordinate_localisation"
 kind = "uses"
 note = "The localisation theorem supplies the exact order-eight and order-nine full-component residue."
+
+[[relations]]
+source = "hc7.k7minus_matching_square_common_state"
+target = "hc7.k7minus_six_coordinate_forest_reduction"
+kind = "uses"
+note = "The forest theorem supplies the two distinguished restorers, common six-connected host and opposite six-cut placement in the matching row."
+
+[[relations]]
+source = "hc7.k7minus_matching_forbidden_signature_kempe_coupling"
+target = "hc7.k7minus_matching_square_common_state"
+kind = "related_to"
+note = "The general Kempe theorem isolates the forbidden-signature calculation used in the matching common-state theorem."
+
+[[relations]]
+source = "hc7.k7minus_matching_lock_boundary_reduction"
+target = "hc7.k7minus_matching_forbidden_signature_kempe_coupling"
+kind = "uses"
+note = "The crossed-component theorem supplies the unlocked transition and the all-lock dichotomy before boundary reduction."
+
+[[relations]]
+source = "hc7.k7minus_matching_lock_boundary_reduction"
+target = "hc7.large_boundary_singleton_response_descent"
+kind = "uses"
+note = "The audited Mader-Jorgensen argument supplies the strict density bound and singleton response calculation generalised to every actual connected-side boundary."
+
+[[relations]]
+source = "hc7.k7minus_matching_lock_boundary_reduction"
+target = "hc7.tight_degree9_boundary_alignment"
+kind = "uses"
+note = "This classifies a newly produced degree-nine singleton as an order-seven/eight response or the sharp full-component pole."
+
+[[relations]]
+source = "hc7.k7minus_order9_crossed_transition_projection"
+target = "hc7.k7minus_matching_square_common_state"
+kind = "uses"
+note = "The matching common state supplies the exact order-nine opposite-shore response and its forbidden all-proper signature."
+
+[[relations]]
+source = "hc7.k7minus_p3_opposite_coordinate_common_model"
+target = "hc7.k7minus_six_coordinate_forest_reduction"
+kind = "uses"
+note = "The forest theorem supplies the induced path, two seven-connected restorations and exact six-cut placement."
 
 [[relations]]
 source = "hc7.k7minus_feedback_forest_component_reduction"

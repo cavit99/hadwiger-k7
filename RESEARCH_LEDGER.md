@@ -123,14 +123,49 @@ The target has two exhaustive connectivity rows.
    separator or to a full component.  If all strict responses, including
    the fresh singleton response at boundary order at least ten, are
    excluded, the boundary has order eight or nine and exactly two or three
-   full components.  The audited
-   [fan theorem](results/hc7_k7minus_six_cut_fan_model_alignment.md)
-   gives a full-boundary fan from every connected shore piece and a
-   shore-confined six-fan retaining five prescribed Kempe first edges for
-   each coordinate response.  The remaining implication is a
-   boundary-respecting fan-to-model exchange: assign these paths to one
-   edge-rooted `K_6` model, glue the colouring response, or return a strict
-   labelled separation.
+   full components.  The two forest types now have sharper, audited normal
+   forms.
+
+   * In the matching case, the sole row has boundary order nine.  Two
+     opposite distinguished coordinates have one common double-deletion
+     host whose six-colourings realise exactly the three signatures
+     `(equal,proper)`, `(proper,equal)` and `(equal,equal)`.  One spanning
+     `K_6` model co-bags both endpoint pairs; excluding responses of order
+     at most eight makes this same host seven-connected and gives it an
+     exact spanning `K_7^vee` model.  The audited
+     [matching common-state theorem](results/hc7_k7minus_matching_square_common_state.md)
+     then spends the absent all-proper signature: an unlocked palette gives
+     a crossed response transition, while otherwise all five alternate
+     palettes are locked.  The audited
+     [boundary-reduction theorem](results/hc7_k7minus_matching_lock_boundary_reduction.md)
+     sends every large actual response boundary numerically to order seven,
+     eight or nine via fresh singleton responses; the matching and model
+     labels need not survive that descent.  Its only sharp order-nine
+     fallback is the existing full-component degree-nine pole.
+     Independently, the audited
+     [order-nine projection theorem](results/hc7_k7minus_order9_crossed_transition_projection.md)
+     projects an unlocked transition onto at most four vertices of the
+     original boundary.  It yields either one boundary colouring rejected
+     by both shores or one boundary Kempe interchange supported by named
+     opposite-shore components.  If no bounded response is available, each
+     all-lock component is connected, dominating and three-chromatic, with
+     a four- or five-chromatic `K_6`-minor-free complement.
+   * In the induced-`P_3` case, the audited
+     [common-model theorem](results/hc7_k7minus_p3_opposite_coordinate_common_model.md)
+     puts each leaf response on a seven-connected two-edge host and puts
+     the crossing matching edge and the whole induced path in one common
+     co-bagged `K_6` model.  The order-nine host becomes seven-connected
+     after bounded responses are excluded.  The order-eight row has the
+     exact three-crossing normal form and two complete geometric linkages
+     sharing one shore fan.
+
+   Thus path existence, unrelated-model choice and an unbounded unlocked
+   separator are no longer the first gaps.  The matching residue is to
+   allocate one dominating lock or one projected transition to four
+   foreign model bags, or preserve its labels through the order-nine
+   response.  The induced-path residue is the corresponding triple split:
+   four foreign bags must meet all three pieces of the co-bagged path, or a
+   labelled order-seven response must be returned.
 2. If `kappa(X)>=7`, the audited
    [growth-or-feedback theorem](results/hc7_k7minus_six_coordinate_growth_or_feedback.md)
    says that the coordinate forest either grows to an eight-edge
@@ -166,10 +201,12 @@ labelled order-seven separation.  Thus the proposed common co-bagged-`K_6`
 split is not the first gate: Chu's matching does not supply that model, and
 contact-only quotient splitting already has explicit obstructions.
 
-This is genuine terminal progress inside one global row: a full
-order-seven forest shore is now impossible.  It does not close Conjecture
-21.  The exact live residues are the order-eight/nine fan-to-model exchange,
-the feedback `7,6,7` incidence and six-component compositions, the
+This is genuine progress inside two global rows: a full order-seven forest
+shore is impossible, and the six-cut row now has common response hosts and
+models rather than separately existential fans and minor models.  It does
+not close Conjecture 21.  The exact live residues are the matching
+lock/transition-to-model allocation, the induced-path triple split, the
+feedback `7,6,7` incidence and six-component compositions, the
 eight-coordinate dense host, and the two-cycle exact-model row.
 
 #### Secondary centre-labelled route

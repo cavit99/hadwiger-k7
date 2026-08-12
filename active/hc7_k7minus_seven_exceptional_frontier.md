@@ -12,7 +12,9 @@ the exact one-coordinate response language in Section 4 are separately
 audited GREEN.  The removable-matching, replacement-abundance,
 six-coordinate induced-forest, growth-or-feedback, six-centre feedback and
 portal-cycle threshold reductions are separately audited GREEN.  The
-five-centre
+matching common-state, large-boundary lock reduction, order-nine transition
+projection and induced-path common-model theorems are separately audited
+GREEN.  The five-centre
 two-cut response reduction and its terminal
 order-five, order-six, and order-seven component cases are separately
 audited GREEN.  The order-six case has independently checked DRAT
@@ -743,18 +745,60 @@ four.  The explicit
 shows that fullness and ordinary boundary colouring alone do not force the
 adjacent-pair partition needed for four-colour gluing.
 
-The audited
-[full-boundary fan theorem](../results/hc7_k7minus_six_cut_fan_model_alignment.md)
-removes path existence from this final residue.  Every completed shore is
-`|T|`-connected from any connected shore piece to the literal boundary,
-and each singleton-coordinate response has a shore-confined six-fan which
-retains five prescribed Kempe first edges.  What is not proved is the
-assignment of those paths to model labels.  Prescribing six representatives
-raises the Menger separator bound to `|T|`, while the exact spanning
-`K_7^vee` model in `G-F` and the edge-rooted `K_6` model in `G/e` are
-different models.  The smallest repair is a boundary-respecting
-fan-to-model exchange giving four doubly contacted foreign bags, a glued
-response, or a strict labelled separator.
+The two forest types now admit separate common-host reductions.
+
+For `F=6K_2`, only three matching edges cross and `|T|=9`.  Choose the two
+distinguished restorers, which enter opposite open sides.  The audited
+[matching common-state theorem](../results/hc7_k7minus_matching_square_common_state.md)
+puts all three nonempty two-edge signatures on one common six-chromatic
+double deletion, and one spanning `K_6` model co-bags both endpoint pairs.
+After responses of order at most eight are excluded, the common deletion is
+seven-connected and has an exact spanning `K_7^vee` model.  An unlocked
+palette gives two crossed Kempe components and an actual response
+separator; the both-dominating alternative gives an explicit `K_7` minor.
+
+Two audited refinements prevent that separator from remaining an amorphous
+unbounded object.  The
+[boundary-reduction theorem](../results/hc7_k7minus_matching_lock_boundary_reduction.md)
+strictly reduces every actual boundary of order at least ten numerically by
+a fresh singleton response and iterates to order seven, eight or nine; the
+original matching and model labels need not survive.  At a new
+order-nine singleton it either returns order at most eight or the sharp
+full-component degree-nine pole.  If every palette is locked, each lock
+component either gives one of these endpoints or is connected, dominating
+and three-chromatic, with a four- or five-chromatic `K_6`-minor-free
+complement.  The
+[order-nine projection theorem](../results/hc7_k7minus_order9_crossed_transition_projection.md)
+gives a complementary conclusion without losing the old boundary: an
+unlocked transition has nonempty support on at most four vertices of `T`
+and yields either a boundary colouring rejected by both shores or one
+literal boundary Kempe interchange between opposite-shore colourings.  In
+the latter case the two supporting components have boundary order seven,
+eight or nine and are full to `T` in the final case.
+
+For `F=4K_2 dotcup P_3`, the audited
+[induced-path common-model theorem](../results/hc7_k7minus_p3_opposite_coordinate_common_model.md)
+puts each leaf response on a seven-connected two-edge host.  Deleting a
+crossing matching coordinate and both path edges gives one six-connected
+host with the complete punctured three-coordinate cube and one spanning
+`K_6` model co-bagging both the matching pair and the entire induced path.
+The order-nine host becomes seven-connected after order-seven/eight
+responses are excluded.  In the exact order-eight row, all three deleted
+edges cross the cut and two complete geometric linkage families share one
+shore fan.
+
+These theorems remove path existence, unrelated model choice and an
+unbounded unlocked separator as the first gaps.  They do not allocate
+palette components or transition paths to model bags.  The matching repair
+is to make one dominating lock or one projected transition meet both sides
+of four foreign bags, or to preserve its labels through a bounded response.
+The induced-path repair is the corresponding triple split: four foreign
+bags must meet all three connected pieces of the path bag, or the failed
+allocation must return a labelled order-seven response.  The finite
+[opposite-shore diagnostic](experiments/opposite_shore_coordinate_square_gate/)
+shows that the three positive signatures, two response fans and a common
+co-bagged model do not suffice if the forbidden all-proper signature and
+critical connectivity are omitted.
 
 If `kappa(X)>=7`, the audited
 [growth-or-feedback theorem](../results/hc7_k7minus_six_coordinate_growth_or_feedback.md)
@@ -1406,11 +1450,15 @@ remaining open step in this secondary route.
 Prove the six-coordinate induced-forest terminalization theorem, in this
 order.
 
-1. Close `kappa(X)=6` with the boundary-respecting fan-to-model exchange.
-   Path existence and the blocked-split count are proved; the new content is
-   to assign the shore-confined response fan to four foreign model bags,
-   glue its boundary partition, or return a strict separator of smaller
-   order.
+1. Close `kappa(X)=6` with its two exact allocation theorems.  In the
+   order-nine matching row, use one dominating lock component or one
+   projected boundary transition to make four foreign bags meet both sides
+   of the common co-bagged split; failure must preserve the matching/model
+   labels through the order-nine response.  In the induced-path row, make
+   four foreign bags meet all three pieces of the common path bag, or turn
+   the blocked exchange into a labelled order-seven response.  Do not
+   return to an unlabelled fan-to-model statement: the common models,
+   response hosts and bounded endpoint alternatives are already proved.
 2. In the feedback row, first force the four-of-five `K_5`-model incidence
    for the `7,6,7` forest path.  This is the shortest remaining terminal
    implication and the boundary has order at most fourteen.  If the
