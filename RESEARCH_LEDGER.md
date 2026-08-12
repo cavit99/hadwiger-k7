@@ -166,6 +166,32 @@ The target has two exhaustive connectivity rows.
      colouring does not produce an original-labelled response separator or
      a common shore partition.  Any continuation must compare different
      realised signatures, or spend target exclusion in a genuinely new way.
+
+     That comparison has now passed a hard proof gate.  The written and
+     separately audited
+     [cross-signature pivot theorem](active/hc7_k7minus_cross_signature_pivot_gate.md)
+     proves that the ordinary foreign-bag deficiency profile is independent
+     of the colouring, so its `EP`, `PE`, and `EE` values repeat the same
+     data.  If one `EE` colouring is adjacent by Kempe interchanges to both
+     singleton signatures, however, the two components must interact
+     literally: their palettes share exactly one colour, and the components
+     either share a vertex of that colour or have an edge between their two
+     other colour classes.  Otherwise the two switches combine to the
+     forbidden `PP` signature.  What is not forced is one common `EE` pivot,
+     or placement of its interaction on a deficient model label.
+
+     The separately audited
+     [static two-split profile barrier](barriers/hc7_k7minus_static_two_split_profile_barrier.md)
+     makes the second issue exact.  The graph `K_{2,2,2,2}` has a common
+     labelled `K_6` model with both selected splits blocked at three foreign
+     double contacts, no literal `K_5`, and no `K_7^-` minor.  The exhaustive
+     quotient diagnostic retains `30,652` target-free, `K_5`-free blocked
+     profiles.  The example has the forbidden `PP` signature and is not a
+     critical host, so it does not refute a cross-signature theorem; it
+     proves that uncoloured deficiency profiles cannot perform the missing
+     conversion.  The matching route is therefore frozen pending a
+     Kempe-valid, model-monotone exchange, rather than another fixed-lock or
+     static-profile argument.
    * In the induced-`P_3` case, the audited
      [common-model theorem](results/hc7_k7minus_p3_opposite_coordinate_common_model.md)
      puts each leaf response on a seven-connected two-edge host and puts
@@ -187,7 +213,7 @@ The target has two exhaustive connectivity rows.
    says that the coordinate forest either grows to an eight-edge
    componentwise-induced forest whose deletion is seven-connected and
    still has an exact spanning `K_7^vee` model, or `G` has a feedback
-   vertex set `T` of order at most fourteen with `chi(G[T])>=5`.  In the
+   vertex set `T` of order at most fourteen with `chi(G[T])>=5`.  The
    latter alternative is now impossible.  The separately audited
    [bounded-feedback degree elimination](results/hc7_k7minus_bounded_feedback_degree_elimination.md)
    combines the exact degree defect from (1), the forest identity for
@@ -198,6 +224,57 @@ The target has two exhaustive connectivity rows.
    `kappa(X)>=7` now forces the eight-coordinate exact-model host.  The
    earlier full-shore, `7,6,7` and six-component feedback reductions remain
    proved infrastructure, but none is a live residue.
+
+   The written and separately audited
+   [eight-coordinate endpoint-visibility theorem](results/hc7_k7minus_eight_coordinate_endpoint_visibility.md)
+   now spends the full response cube on that exact model.  Maximising the
+   number of coordinate endpoints in the closed neighbourhood of the
+   deficient branch set gives an exact branch-set transfer: moving a
+   connected piece either constructs `K_7^-`, returns an actual separator
+   retaining a singleton `F_8` response, or strictly increases that score.
+   The third outcome cannot persist.  Pigeonhole over the fifteen or sixteen
+   endpoints then forces two endpoint portals in one universal bag, where
+   the exact-model dichotomy again gives the target or an original-coordinate
+   response separator.
+
+   Hence the eight-coordinate host is no longer an unlocalised model
+   allocation problem.  It has the exhaustive conclusion
+
+   \[
+       K_7^-\preccurlyeq G
+       \quad\text{or}\quad
+       \text{an actual separator carrying a singleton }F_8\text{ response}.
+   \]
+
+   Generic density descent reduces the latter numerically to a response
+   boundary of order seven, eight or nine, but may replace the forest edge
+   by an unrelated singleton operation.  The exact remaining gap is a
+   one-coordinate anchored boundary compression, or direct synchronisation
+   of the resulting bounded response interface.  Side-minimal
+   list-critical reduction preserves the coordinate but can increase the
+   boundary; density descent decreases the boundary but can lose the
+   coordinate.  This quantifier mismatch is the current immediate
+   obstruction.
+
+   The written and separately audited
+   [fixed-coordinate response-core reduction](results/hc7_k7minus_fixed_coordinate_response_core_reduction.md)
+   now makes the positive half exact.  The same edge-deletion colouring
+   gives a rejected trace on every connected actual subset containing a
+   relevant endpoint.  A vertex-minimal boundary-list obstruction is
+   connected, retains that endpoint (and retains both when both lie on the
+   side), and strictly decreases side order whenever it is proper.  The
+   iteration terminates at a fixed-coordinate boundary-list-critical side,
+   but its boundary may have grown.
+
+   The separately audited explicit
+   [anchored-compression barrier](barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md)
+   shows that this endpoint is genuine without target exclusion.  For every
+   `m>=4`, the `(m+4)`-connected graph
+   `K_4 vee (K_{m,m}+uv)` has a singleton `uv`-response side with boundary
+   `m+5` and no proper rooted subset.  These graphs contain a literal `K_7`
+   and are not critical hosts, so they do not refute the desired theorem;
+   they prove that its terminal step must use `K_7^-`-minor exclusion, not
+   colouring trace, connectivity and minimum degree alone.
 
 In the seven-connected exact-model row, the audited
 [portal-cycle threshold reduction](results/hc7_k7minus_portal_edge_cycle_threshold.md)
@@ -214,9 +291,9 @@ This is genuine progress inside both global rows: the entire
 bounded-feedback alternative is impossible, and the six-cut row now has
 common response hosts and models rather than separately existential fans
 and minor models.  It does not close Conjecture 21.  The exact live
-residues are the matching cross-signature/model allocation, the
-induced-path triple split, the eight-coordinate exact-model host, and the
-two-cycle exact-model composition.
+residues are the bounded coordinate-response synchronisation in the
+eight-coordinate host, the deferred matching shared-pivot/model exchange,
+the induced-path triple split, and the two-cycle exact-model composition.
 
 #### Secondary centre-labelled route
 
