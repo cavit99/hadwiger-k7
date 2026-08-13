@@ -114,11 +114,15 @@ def overlay_q_on_carrier(
 
 
 def add_two_coordinate_contacts(
-    adjacency: tuple[int, ...], centres: tuple[int, int], contacts: tuple[int, int]
+    adjacency: tuple[int, ...],
+    centres: tuple[int, int],
+    contacts: tuple[int | None, int | None],
 ) -> tuple[int, ...]:
     roots = tuple(vertex for vertex in range(9) if vertex not in centres)
     answer = list(adjacency)
     for centre, contact in zip(centres, contacts, strict=True):
+        if contact is None:
+            continue
         old_root = roots[contact]
         answer[centre] |= 1 << old_root
         answer[old_root] |= 1 << centre
@@ -154,7 +158,7 @@ def one_contact_quotient_family(
             add_two_coordinate_contacts(
                 adjacency,
                 centres,
-                (contact, 0) if selected == 0 else (0, contact),
+                (contact, None) if selected == 0 else (None, contact),
             ),
             centres,
         )

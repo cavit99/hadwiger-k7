@@ -53,11 +53,15 @@ supplies such quotient contacts: a matching-representative edge may have
 its other endpoint inside the same contracted centre bag.  The diagnostic
 is not used in the order-eleven theorem.
 
-One adaptive contact already closes 2,177 of the 2,252 static survivors.
-In the remaining 75 placements, the usable-contact centre always has
-kernel degree three and the other centre has degree four through eight.
-Only two of those 75 placements have nonadjacent centre vertices, so
-adjacency is not the correct host discriminator.
+The original purported one-contact helper was faulty: it added the selected
+contact and a hidden contact from the other centre to `Q` root zero.  The
+corrected replay is retained in the adjacent
+`dominated_singleton_order9_three_fan_gate` experiment.  A contact at either
+named centre separately closes 1,901 of the 2,252 static survivors.  Every
+placement has a closing contact at at least one centre, but 351 placements
+are one-sided: their counts are 102, 204 and 45 over the three `Q` types.
+The earlier figures 2,177 and 75, and their associated degree assertions,
+must not be used.
 
 The order-ten row is generated and checked by:
 
