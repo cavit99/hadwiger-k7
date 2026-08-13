@@ -145,7 +145,7 @@ The checked script revisions are:
 51f096626f8c49715e0b2086c03213f00f2502620bad48665b10e5c425f530b5  ../dominated_singleton_nine_terminal_kernel/verify_order_nine.py
 d4e76e39e0ede578582be8e5e8cac29e0712a73515425dee305826d176a0fd97  verify.py
 acf57329066a57fd7634f0a3d5c21c14f39f641df4415a2629fa394e699c9222  marked_edge_absorption.py
-f257802715a1102ce20f66068d12cc3034137f47091f2fbe3c94a788b9ee4b1d  corrected_one_contact.py
+93f0e348dd322b90d622cf50fc67de28ac63941ed9e0a62a9e856316fa1bd935  corrected_one_contact.py
 ```
 
 ## Trust boundary

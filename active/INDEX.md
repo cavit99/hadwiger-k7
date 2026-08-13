@@ -41,7 +41,7 @@ Immediate barriers:
   The construction contains a literal `K_7`, so it isolates the need to use
   target exclusion rather than refuting the desired disjunction.
 
-## Immediate finishing route
+## Principal finishing architecture (campaign paused)
 
 [Critical-host exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md)
 
@@ -88,19 +88,28 @@ singleton.  Its exterior is connected, its exact boundary is
 One common terminal-legal contraction then leaves a rooted kernel of order
 nine or ten: the complete order-eleven branch is eliminated.  The order-ten
 catalogue has 1,153 rooted occurrences and an independent checker confirms
-that one usable centre-to-`Q`-bag coordinate contact closes every one.  At
-order nine, two usable contacts close every survivor; a single contact
-closes all but 75 asymmetric placements.
+that one suitable contact from an adaptively selected centre to a
+`Q`-rooted bag closes every one.  At
+order nine, two usable contacts close every survivor.  A corrected
+computer-assisted diagnostic finds that, in 1,901 of 2,252
+placements, each named centre admits some closing contact; in the remaining
+351 exactly one of the two centres does.  Earlier figures 2,177 and 75
+came from a verifier which inadvertently added a hidden second contact and
+have been withdrawn.
 
-The immediate target is therefore an **operation-labelled contact-or-split
-theorem for two protected centres**.  For a selected centre edge, either its
-mate lies in a usable `Q`-rooted bag, or the singleton-signature colouring
-produces a movable split of its centre-rooted bag or an actual labelled
-separation.  This is the missing host input.  Ordinary rooted-bag
-minimisation and exact two-owner suffix transfer leave `256`, `1022`, and
-`256` order-nine placements, so static ownership is decisively exhausted.
-The nonsingleton model-anchored outcome still has the parallel operation-
-transfer obligation across at most two appendages.
+The proposed protected-centre fan-to-root proof has reached a decisive
+[route nonclosure](hc7_k7minus_protected_matching_six_fan_response.md).
+Failure of a six-arm fan gives an actual order-seven separation retaining
+the original centre-edge colouring.  In the six-fan outcome, however, the
+fan in the original graph and the independently contracted rooted model do
+not share branch-set ownership.  An exact target-free quotient survives
+even when the selected mate has six direct `Q` contacts.  Thus neither
+fan incidence, marked-edge terminal contraction nor three simultaneous
+root-bag suffixes proves the required common two-centre contact or split.
+This line is frozen; the conjecture campaign is paused at this decision
+point rather than extended by further kernel cases.  The nonsingleton
+model-anchored outcome retains the parallel open operation-transfer problem
+across at most two appendages.
 
 If `kappa(X)=6`, the matching and induced-`P_3` cases remain deferred.  In
 the matching case the full `EP,PE,EE` comparison proves a literal

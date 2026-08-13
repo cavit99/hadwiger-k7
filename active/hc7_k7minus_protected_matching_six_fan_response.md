@@ -1,9 +1,11 @@
 # A protected matching edge gives a six-fan or an exact order-seven response
 
-**Status:** active written proof and recorded route nonclosure; no separate
-internal audit yet.  Section 5 contains a deterministic finite diagnostic,
-not an unbounded theorem.  This note does not prove the `K_7^-` six-colour
-conjecture or `HC_7`.
+**Status:** written proof and recorded route nonclosure.  Theorem 2.1 and
+Proposition 4.2 have a separate
+[internal audit](hc7_k7minus_protected_matching_six_fan_response_audit.md).
+Section 5 contains deterministic finite diagnostics, not unbounded
+theorems.  This note does not prove the `K_7^-` six-colour conjecture or
+`HC_7`.
 
 The protected-centre reduction leaves a selected edge `wx` inside the
 branch set rooted at `w`.  The edge-deletion colouring supplies the correct
@@ -135,7 +137,8 @@ Consequently the first unsupported inference is
 
 \[
  \begin{gathered}
-  \text{six disjoint }x\text{--}Q\text{ arms with distinct first exits}
+  \text{six }x\text{--}Q\text{ paths meeting only at }x
+  \text{ and with distinct first exits}
  \end{gathered}
  \Longrightarrow
  \begin{gathered}
@@ -150,8 +153,10 @@ outside contacts.
 
 ### Proposition 4.1 (prescribing the first edge of a five-fan)
 
-Assume additionally that `H` is five-connected and that `w` is a
-degree-eight exceptional centre.  Let
+Assume additionally the critical-host hypotheses of the common
+five-centre matching theorem, let `Z` be its fixed set of five independent
+degree-eight centres, let `w\in Z`, and suppose that `H` is five-connected.
+Let
 
 \[
  K_w=\bigcap\{I\subseteq N_G(w): |I|=3\text{ and }I
@@ -248,9 +253,10 @@ It has the following properties.
 The deterministic
 [`verify.py`](experiments/protected_matching_six_fan_response/verify.py)
 checks these statements using the repository's exact deletion--contraction
-minor routines.  This is a finite counterexample to the uncoloured
-inference (3.3), not to Theorem 2.1 or to an operation-sensitive host
-theorem: it is only three-connected and carries no critical colouring.
+minor routines.  This is an exact finite diagnostic showing that the
+uncoloured data encoded in (3.3) are insufficient.  It is not classified
+as a barrier to a host theorem: the graph is only three-connected and
+carries no critical colouring response.
 
 ### 5.2 Correction to the historical one-contact diagnostic
 
@@ -264,27 +270,28 @@ A literal one-edge replay of the same rooted-composition criterion gives
 
 \[
 \begin{array}{c|cc}
-Q&\text{either named centre works}&\text{only one named centre works}\\ \hline
+Q&\text{each centre individually admits a contact}
+ &\text{only one named centre admits a contact}\\ \hline
 C_5\dot\cup K_2&325&102\\
 C_5\text{ with a pendant }P_2&1242&204\\
 C_7&334&45
 \end{array}                                           \tag{5.1}
 \]
 
-Thus both named centres work in `1,901` placements and only one works in
-`351`; there is no placement in which neither centre works.  The adaptive
-existence of a good one-centre contact and the separate two-contact
-zero-survivor conclusion remain intact.  The `2,177/75` split and its
-derived degree-profile statements must not be used.  The correction is a
-computer-assisted active diagnostic and requires a separate audit before
-promotion.
+Thus, in `1,901` placements, each centre individually admits some closing
+contact; in `351` only one does.  There is no placement in which neither
+centre works.  The adaptive existence of a good one-centre contact and the
+separate two-contact zero-survivor conclusion remain intact.  The
+`2,177/75` split and its derived degree-profile statements must not be
+used.  The correction is a computer-assisted active diagnostic and
+requires a separate audit before promotion.
 
-## 6. Remaining theorem
+## 6. Frozen residual requirement
 
-Theorem 2.1 closes the failure of a sixth arm.  In the six-arm outcome, the
-smallest positive repair is not another contact count.  It is an
-operation-sensitive owner-circuit theorem which uses the colouring of
-`G-wx` to prove one of:
+Theorem 2.1 closes the failure of a sixth arm.  In the six-arm outcome, any
+future repair would have to go beyond another contact count.  It would need
+an operation-sensitive owner-circuit theorem using the colouring of `G-wx`
+to prove one of:
 
 1. distinct retained-side attachment vertices for the required owners;
 2. an ownership-preserving branch-set transfer;
@@ -292,9 +299,9 @@ operation-sensitive owner-circuit theorem which uses the colouring of
 4. an actual separation retaining `wx` and its rejected boundary trace.
 
 The common-hub quotient in Section 5 shows that target exclusion at the
-static quotient level is insufficient.  The critical colouring must be
-used to convert the owner circuit into the fourth outcome or to eliminate
-it.
+static quotient level is insufficient.  No such owner-circuit theorem is
+proved here, and the fan-to-root route is frozen rather than designated as
+the next proof attack.
 
 ## Dependencies
 

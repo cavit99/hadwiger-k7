@@ -2,17 +2,18 @@
 
 ## Status and scope
 
-**Active note; new written lemmas and finite normal-form diagnostics are not
-independently audited.**  The host reductions cited below are written and
-audited, but Lemmas 4.1 and 7.1 have only the proofs given here.  The
+**Frozen route note; new written lemmas and finite normal-form diagnostics
+are not independently audited.**  The host reductions cited below are
+written and audited, but Lemmas 4.1 and 7.1 have only the proofs given here.  The
 order-eight and order-nine exact terminal catalogues have not yet received
 an independent implementation audit.  Consequently the finite propositions
 below are conditional computer-assisted statements, not promoted results.
 
 This note does not prove the `K_7^-` six-colour conjecture or `HC_7`.  It
-identifies the exact finite objects left by the protected-centre reduction
-and isolates one host lemma which would eliminate them using a second centre
-response.
+identifies the exact finite objects left by the protected-centre reduction.
+The proposed fan-to-root continuation is now frozen at a separately recorded
+path/model quantifier mismatch; the note must not be read as an active claim
+that one further host lemma is likely to eliminate the residue.
 
 ## 1. Host setting
 

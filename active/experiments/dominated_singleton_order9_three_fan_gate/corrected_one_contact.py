@@ -81,11 +81,6 @@ def main() -> None:
         "FCQb_": {(True, True): 1_242, (True, False): 204},
         "FCp`_": {(True, True): 334, (True, False): 45},
     }
-    expected_profiles = {
-        "FCQ`_": {(True, True): 325, (True, False): 102},
-        "FCQb_": {(True, True): 1_242, (True, False): 204},
-        "FCp`_": {(True, True): 334, (True, False): 45},
-    }
 
     for code, expected_static in expected.items():
         copies = order9.order11.q_copies(by_code[code])

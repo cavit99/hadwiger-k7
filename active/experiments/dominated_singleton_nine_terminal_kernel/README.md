@@ -55,11 +55,12 @@ is not used in the order-eleven theorem.
 
 The original purported one-contact helper was faulty: it added the selected
 contact and a hidden contact from the other centre to `Q` root zero.  The
-corrected replay is retained in the adjacent
-`dominated_singleton_order9_three_fan_gate` experiment.  A contact at either
-named centre separately closes 1,901 of the 2,252 static survivors.  Every
-placement has a closing contact at at least one centre, but 351 placements
-are one-sided: their counts are 102, 204 and 45 over the three `Q` types.
+corrected computer-assisted replay is retained in the adjacent
+`dominated_singleton_order9_three_fan_gate` experiment.  In 1,901 of the
+2,252 static survivors, each named centre admits some closing contact.
+Every placement has a closing contact at at least one centre, but 351
+placements are one-sided: their counts are 102, 204 and 45 over the three
+`Q` types.
 The earlier figures 2,177 and 75, and their associated degree assertions,
 must not be used.
 
