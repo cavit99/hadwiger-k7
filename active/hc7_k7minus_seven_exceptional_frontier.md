@@ -654,7 +654,7 @@ exact meet/join lattice.  If three cuts have all eight sign regions nonempty,
 each centre has exactly one neighbour in every region; four cuts cannot have
 all sixteen sign regions nonempty.
 
-The exhaustive three-connected branch is now open through the audited
+The exhaustive three-connected branch was opened through the audited
 [global five-centre rotation
 reduction](../results/hc7_k7minus_five_centre_rotation_reduction.md).  The common core
 `F=G-Z` is nonplanar and exactly six-chromatic.  Every six-colouring of `F`
@@ -711,7 +711,7 @@ shows that the five singleton-saturation rows alone do not force the
 displayed common missing colour or its common-partition fallback.  It is a
 palette-level barrier, not a critical-host counterexample.
 
-### Six-coordinate induced-forest route: immediate laboratory
+### Six-coordinate induced-forest route: principal structural laboratory (paused)
 
 The audited
 [replacement-abundance theorem](../results/hc7_k7minus_removable_matching_rotation_abundance.md)
@@ -945,11 +945,15 @@ one terminal-legal contraction of `H`.  The written and audited
 eliminates the complete order-eleven branch, so the common irreducible
 kernel has order nine or ten.  The exact order-ten catalogue has 1,153
 rooted occurrences; an independent connected-partition checker confirms
-that one usable contact from either protected centre to a `Q`-rooted bag
+that one usable contact from an adaptively selected protected centre to an
+adaptively selected `Q`-rooted bag
 closes every occurrence.  In the all-terminal order-nine branch, contacts
-at both centres close every static survivor.  One contact closes 2,177 of
-2,252, leaving 75 asymmetric placements which prescribe the degree-three
-centre.
+at both centres close every static survivor.  A corrected computer-assisted
+diagnostic shows that,
+in 1,901 of 2,252 placements, each named centre admits some closing contact;
+in the remaining 351 exactly one centre does.  The
+former figures 2,177 and 75 came from a helper which inadvertently added a
+hidden second contact and are withdrawn.
 
 The prescribed-representative theorem gives a literal selectable matching
 edge at a protected centre but not its rooted-bag location.  Ordinary
@@ -987,13 +991,18 @@ one-cycle upgrade: this is precisely the unresolved Lovasz--Woodall
 threshold.  The smallest repair is a two-cycle composition using the exact
 seven branch bags and critical colouring responses.
 
-The immediate theorem inside the forced eight-coordinate case is therefore:
-
-> **Operation-labelled protected-centre contact or split.**  In the common
-> rooted kernel retaining `Q` and two exceptional centres, either `G`
-> contains `K_7^-`, one selected centre edge has its other end in a usable
-> `Q`-rooted bag, or the singleton-signature colouring of a swallowed edge
-> yields a movable rooted-bag split or an actual labelled separation.
+The proposed operation-labelled protected-centre contact-or-split theorem
+has now reached a decisive route nonclosure.  In `H-w`, failure of a
+six-arm fan from the selected mate to `Q` gives an exact order-seven
+separation retaining the selected edge and its singleton-signature
+colouring.  If the fan exists, its paths in the original host need not
+align with the independently contracted branch sets.  A target-free exact
+quotient survives even when the mate has six direct `Q` contacts,
+and explicit simultaneous three-arm suffixes still leave faithful-transfer
+survivors.  A marked-edge terminal kernel supplies only a contact already
+covered by the baseline connected-absorption search.  Thus
+five-connectivity, fan incidence and static branch-set ownership do not
+imply the desired common two-centre contact or split.
 
 Unlike the punctured response cube, which is automatic for every
 componentwise-induced forest in a minor-critical graph, the connectivity,
@@ -1001,11 +1010,11 @@ common-cycle and model-placement conclusions are genuine structural data.
 The complete bounded-feedback alternative is terminally eliminated,
 endpoint placement in the forced exact model is terminal, and the
 dominated singleton is model-aligned in every degree and its centre-bearing
-terminal has a common nine- or ten-vertex rooted kernel.  The displayed
-contact-or-split theorem remains open at the conversion from a colouring
-response to named branch-set geometry.  In the nonsingleton outcome, the
-parallel open theorem is operation-sensitive transfer across at most two
-model-owning appendages.
+terminal has a common nine- or ten-vertex rooted kernel.  The underlying
+colouring-to-branch-set conversion remains open, but the protected-centre
+fan-to-root mechanism is frozen rather than treated as an active theorem
+target.  In the nonsingleton outcome, the parallel open problem is
+operation-sensitive transfer across at most two model-owning appendages.
 
 ### Seven-removable matching entrance
 
@@ -1590,18 +1599,18 @@ The operation is then aligned, but the near-clique and column labels are
 not.  Producing that label transfer, or a terminal when it fails, is the
 remaining open step in this secondary route.
 
-## 5. Recommended next attack
+## 5. Pause decision and possible restart points
 
-Prove the six-coordinate induced-forest terminalization theorem, in this
-order.
+The Conjecture 21 discovery campaign is paused at the protected-centre
+fan-to-root nonclosure.  No item below is authorised as an immediate proof
+attack.  If the campaign is deliberately resumed after external specialist
+review, the remaining mechanisms should be considered in this order.
 
-1. In the forced eight-coordinate host, prove the operation-labelled
-   protected-centre contact-or-split theorem.  The accepted outcomes are
-   `K_7^-`, a usable coordinate contact with a `Q`-rooted bag, a movable
-   rooted-bag split carrying the same singleton signature, or an actual
-   labelled separation.  One usable contact closes every order-ten kernel;
-   two close every order-nine kernel.  Static two-owner suffix transfer is
-   already known not to suffice.
+1. Pause the protected-centre fan-to-root line.  Its exact positive output
+   is an order-seven labelled separation when the required fan fails; its
+   fan-success case has a verified target-free quotient and the same
+   path/model quantifier mismatch as earlier allocation programmes.  Do not
+   add further kernel orders, protected centres or static owner transfers.
 2. In the seven-connected exact-model row, use the two-cycle portal theorem.
    Either merge the two cycles while retaining the six coordinates and the
    portal edge, or turn the failed rerouting into an order-seven separation

@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 12 August 2026
+**Last updated:** 13 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -11,6 +11,17 @@ The previous live ledger is preserved at
 This file is the sole authority for the present research frontier.
 
 ## Current frontier
+
+**Campaign decision, 13 August 2026.**  The protected-centre fan-to-root
+attack has been stopped at its hard proof gate.  It produced an exact
+order-seven labelled separation in the fan-failure case, but the fan-success
+case reproduces the known path/model compatibility gap and has an explicit
+finite target-free quotient lacking the critical-host hypotheses.  The
+repository records that nonclosure and
+the corrected finite counts below.  No further Conjecture 21 proof attack is
+designated pending external specialist review and a deliberate choice among
+the remaining global mechanisms.  The conjecture remains the sole primary
+research target; this is a pause in discovery work, not a change of target.
 
 ### 1. Exhaustive global obligation
 
@@ -329,24 +340,42 @@ The target has two exhaustive connectivity rows.
    The finite residue is exact.  At order ten, Wu's contractible-edge
    theorem gives 1,153 rooted occurrences; an independent implementation
    regenerates them and verifies that one usable coordinate contact from
-   either protected centre to a `Q`-rooted bag makes every composition
+   an adaptively selected protected centre to an adaptively selected
+   `Q`-rooted bag makes every composition
    terminal.  At order nine, two usable contacts eliminate every static
-   survivor.  One contact already eliminates 2,177 of the 2,252 survivors;
-   the remaining 75 are asymmetric and prescribe the degree-three centre.
+   survivor.  A corrected computer-assisted replay shows that, in 1,901 of the
+   2,252 placements, each named centre admits some closing contact; in the
+   remaining 351 exactly one centre does.  The former figures
+   2,177 and 75 came from a helper which inadvertently added a hidden second
+   contact.  The order-eleven proof and independently checked order-ten
+   statement are unaffected.
 
    Matching selection can prescribe a literal neighbour of a protected
    centre, but does not force its rooted-bag location.  The exact
    [rooted-suffix diagnostic](active/experiments/dominated_singleton_exact_eight_kernel_absorption/README.md#a-swallowed-matching-mate-exact-rooted-suffix-transfer)
    shows that this is not repaired by ordinary bag minimisation: faithful
    two-owner suffix transfer leaves `256`, `1022`, and `256` placements for
-   the three graphs on `Q`.  The immediate theorem is therefore an
-   **operation-labelled contact-or-split theorem**.  A selected centre edge
-   must either leave its centre-rooted bag in a usable `Q` bag, or its
-   singleton-signature colouring must return a movable split or an actual
-   labelled separation.  This is a colouring-to-model conversion; static
-   contact allocation is exhausted.  The parallel nonsingleton obligation
-   remains operation-sensitive transfer across at most two model-owning
-   appendages.
+   the three graphs on `Q`.  The proposed
+   **operation-labelled contact-or-split proof mechanism** has now failed
+   a decisive test.  In `H-w`, failure of a six-arm fan from the
+   selected mate to `Q` does produce an exact order-seven separation carrying
+   the original operation and colouring.  When the fan exists, however, its
+   paths and the independently contracted rooted model have incompatible
+   quantifiers: distinct literal ends need not own distinct branch-set
+   contacts or co-connected transferable suffixes.  An exact target-free
+   quotient survives even when the mate has six direct `Q` contacts, and
+   the explicit three-arm transfer screen has survivors.  Marked-edge
+   terminal contraction also supplies only a contact already covered by the
+   baseline rooted absorption.
+
+   This is a recorded route nonclosure, not a counterexample to the desired
+   host theorem.  It shows that the requested theorem cannot be obtained
+   from five-connectivity, fan incidence and static rooted ownership alone.
+   The protected-centre fan-to-root line is therefore frozen, and the
+   Conjecture 21 discovery campaign is paused at this decision point rather
+   than extended by more finite kernel cases.  The parallel nonsingleton
+   obligation remains operation-sensitive transfer across at most two
+   model-owning appendages.
 
    The separately audited
    [anchored-compression barrier](barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md)
@@ -368,16 +397,16 @@ labelled order-seven separation.  Thus the proposed common co-bagged-`K_6`
 split is not the first gate: Chu's matching does not supply that model, and
 contact-only quotient splitting already has explicit obstructions.
 
-This is genuine progress inside both global rows: the entire
+This is genuine progress inside both global cases: the entire
 bounded-feedback alternative is impossible, and the eight-coordinate row
 now has a model-anchored terminal normal form rather than an arbitrary
 response separator.  Its hardest dominated singleton is reduced further to
 a common kernel on seven boundary roots and two literal exceptional centres,
 with at most one nonterminal.  It does not close Conjecture 21.  The exact
-live residues are the operation-labelled contact-or-split theorem (or
-appendage operation transfer) in the eight-coordinate host, the induced-
-path triple split, the deferred matching shared-pivot/model exchange, and
-the two-cycle exact-model composition.
+unresolved residues are a genuinely new operation-sensitive contact/model
+exchange (not the frozen fan-to-root mechanism) or appendage transfer in the
+eight-coordinate host, the induced-path triple split, the deferred matching
+shared-pivot/model exchange, and the two-cycle exact-model composition.
 
 #### Secondary centre-labelled route
 
@@ -518,7 +547,7 @@ The exact-seven backup reaches the same label-placement failure: the new
 boundary need not contain the five centres or inherit the original
 equality-response orientation.  The two-cut branch remains open.
 
-The three-connected campaign is now open through the audited
+The three-connected branch was opened through the audited
 [global rotation reduction](results/hc7_k7minus_five_centre_rotation_reduction.md).
 The literal common core `F` is nonplanar and exactly six-chromatic.  Every
 six-colouring of `F` saturates at least one centre, while the restriction of
@@ -1338,8 +1367,9 @@ five-limb packing, and gives the exact independent-boundary normal form in
 the case where one component contains two disjoint connected subgraphs
 adjacent to the whole boundary.
 
-The exceptional-centre programme is now the active proof route to Conjecture
-21.  The universal `4n-2` theorem remains a sufficient conditional route,
+The exceptional-centre programme remains the principal proof architecture
+for Conjecture 21, but no immediate attack is designated during the current
+pause.  The universal `4n-2` theorem remains a sufficient conditional route,
 and E5 remains a stronger frozen laboratory.  Direct `HC_7` bridge
 composition is also frozen: Conjecture 21 is the cleaner setting in which to
 develop the missing branch-set transfer and separator-resolution machinery.

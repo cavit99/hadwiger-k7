@@ -6,7 +6,7 @@
 revision
 
 ```text
-0cc512a6f8a686db7c0568e1b183912ea8e5395ec2cde7e83e6abd57e41e948b
+005040f58c26524c0e746f3bb44611c21dac839fef02b259808787791e8ef0b0
 ```
 
 of
@@ -26,6 +26,32 @@ cc12279f1f8ec4a83e0e3bb34e74741dd1ca4b292bd6e76c483314ecc3fb454a  active/experim
 This is an internal mathematical and implementation audit, not external
 peer review.  It is not an independent reimplementation of the finite
 minor search.
+
+**Correction, 13 August 2026.**  The verdict remains green only for the
+order-eleven exclusion and the independently checked order-ten one-contact
+implication.  The historical order-nine one-contact helper was
+mis-encoded: it added the selected contact and a second contact from the
+other centre to `Q` root zero.  The former figures 2,177 and 75 and their
+associated degree profile are therefore withdrawn.  A corrected
+computer-assisted replay gives 1,901 placements in which each named centre
+admits some closing contact and 351 in which exactly one centre does.  Every placement has
+a closing contact at some adaptively selected centre, and the correctly
+encoded two-contact calculation still has no survivor.  This correction
+does not touch either verifier used in the proof of the order-eleven
+theorem.
+
+The corrected one-contact replay is retained separately at revision
+
+```text
+93f0e348dd322b90d622cf50fc67de28ac63941ed9e0a62a9e856316fa1bd935
+```
+
+of
+[`corrected_one_contact.py`](experiments/dominated_singleton_order9_three_fan_gate/corrected_one_contact.py).
+Its asserted profiles are `(325,102)`, `(1242,204)`, and `(334,45)`, where
+the first entry counts placements in which both centres admit some closing
+contact and the second counts placements in which exactly one does.  This
+is a corrected computer-assisted diagnostic; it is not used in Theorem 4.1.
 
 ## 1. Host hypotheses and terminal count
 
@@ -215,3 +241,10 @@ the audited list of three live `Q` codes.  This audit checked their use and
 replayed both scripts, but did not implement an independent connected-
 partition minor detector.  Promotion beyond the active frontier should
 therefore obtain a cold independent replay of the finite calculations.
+
+The correction above records a missed audit obligation: this audit checked
+the stated scope of the augmentation but did not trace the arguments passed
+by `one_contact_quotient_family` into the two-contact helper.  The corrected
+replay is now separate, deterministic and hash-pinned.  Promotion beyond
+this active theorem would still benefit from an independent implementation
+of the complete order-nine composition test.

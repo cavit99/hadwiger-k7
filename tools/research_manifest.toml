@@ -10391,7 +10391,6 @@ status = "written-unaudited"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "3. Seven-root list reduction"
 active = false
-expected_source_sha256 = "adc9f31cbaf9e040467633d0f044c073a08ac19ec6e16680ad3547b0ce10593a"
 scope = "one six-colouring of the complement of seven selected exceptional vertices, together with the seven list states induced by colourings of G-x, in the critical K7-minus host"
 label_fidelity = "the seven literal exceptional vertices, their exterior neighbours, lists, and inclusion-minimal uncolourable core remain fixed"
 conclusions = [
@@ -11496,6 +11495,52 @@ does_not_prove = [
 keywords = ["K7 minus", "dominated singleton", "low degree", "computer-assisted", "model alignment"]
 
 [[claims]]
+id = "hc7.k7minus_protected_matching_six_fan_response"
+title = "A protected matching edge gives a six-fan or an exact order-seven response"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_protected_matching_six_fan_response.md"
+source_heading = "Theorem 2.1 (six arms or an operation-labelled order-seven separation)"
+active = false
+audit = "active/hc7_k7minus_protected_matching_six_fan_response_audit.md"
+expected_source_sha256 = "bd79ccab741f81a41b888b9f719bd0ebe7fda2a210e08d9397b5274c70968c02"
+scope = "a seven-connected non-six-colourable graph with the dominated degree-eight interface and one selected edge carrying a proper edge-deletion six-colouring"
+label_fidelity = "the selected edge, its six-colouring and the rejected boundary partition remain literal in the separation outcome"
+separator_order = "failure of a six-arm fan gives an exact order-seven separator"
+conclusions = [
+  "either the selected mate has six paths to distinct common-neighbour roots meeting only at that mate",
+  "or an exact order-seven separation retains the selected edge and a rejected exterior boundary partition from its original colouring",
+]
+does_not_prove = [
+  "that six fan paths align with branch sets of an independently contracted rooted model",
+  "the protected-centre contact-or-split theorem",
+  "closure of the dominated singleton case, the eight-coordinate branch or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "protected matching edge", "six-fan", "order-seven separation", "colouring response", "route nonclosure"]
+
+[[claims]]
+id = "hc7.k7minus_mate_protected_kernel_contact"
+title = "A mate-protected terminal kernel has a quotient contact"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_k7minus_protected_matching_six_fan_response.md"
+source_heading = "Proposition 4.2 (a mate-protected kernel has a quotient contact)"
+active = false
+audit = "active/hc7_k7minus_protected_matching_six_fan_response_audit.md"
+expected_source_sha256 = "bd79ccab741f81a41b888b9f719bd0ebe7fda2a210e08d9397b5274c70968c02"
+scope = "a three-connected graph reduced by terminal-legal contractions while preserving seven common-neighbour roots and both ends of one selected edge"
+label_fidelity = "the seven roots and both literal selected-edge ends remain protected"
+conclusions = [
+  "the irreducible kernel makes the selected mate adjacent to one of the seven protected roots",
+]
+does_not_prove = [
+  "a common contraction model protecting a second exceptional centre",
+  "that the quotient contact is terminal in the order-nine composition",
+  "the protected-centre contact-or-split theorem",
+]
+keywords = ["K7 minus", "terminal kernel", "protected mate", "rooted contact", "parity"]
+
+[[claims]]
 id = "hc7.k7minus_dominated_two_protected_centres_kernel"
 title = "Two protected exceptional centres leave at most one nonterminal kernel vertex"
 kind = "theorem"
@@ -11503,13 +11548,13 @@ status = "audited-green"
 source = "active/hc7_k7minus_dominated_two_protected_centres_kernel.md"
 active = false
 audit = "active/hc7_k7minus_dominated_two_protected_centres_kernel_audit.md"
-expected_source_sha256 = "0cc512a6f8a686db7c0568e1b183912ea8e5395ec2cde7e83e6abd57e41e948b"
+expected_source_sha256 = "005040f58c26524c0e746f3bb44611c21dac839fef02b259808787791e8ef0b0"
 scope = "the connected dominated degree-eight centre case with the seven common neighbours and two other exceptional centres protected in one five-connected remainder"
 label_fidelity = "the seven literal common-neighbour roots and two literal exceptional centres survive one terminal-legal contraction process"
 conclusions = [
   "the rooted irreducible kernel has order nine or ten, so at most one nonterminal branch set remains",
   "the order-eleven charge-complete and one-uncharged normal forms both compose to K7-minus",
-  "one usable centre-to-root contact closes every order-ten occurrence and two close every order-nine survivor, conditionally on those contacts",
+  "one usable centre-to-root contact closes every order-ten occurrence, conditionally on that contact",
 ]
 does_not_prove = [
   "that a selected centre edge leaves its centre-rooted bag",
@@ -17803,6 +17848,18 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_dominated_two_protected_centres_kernel"
 kind = "related_to"
 note = "This reduces the dominated degree-eight endpoint to a common rooted kernel with two literal exceptional centres and at most one nonterminal; the missing direct input is an operation-labelled contact or split."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_protected_matching_six_fan_response"
+kind = "related_to"
+note = "Fan failure gives a labelled order-seven separation, while the fan-success case records the frozen mismatch between paths in the host and ownership in an independently contracted rooted model."
+
+[[relations]]
+source = "hc7.k7minus_protected_matching_six_fan_response"
+target = "hc7.k7minus_mate_protected_kernel_contact"
+kind = "related_to"
+note = "Protecting the selected mate through terminal-kernel contractions gives one quotient contact, but this contact is not terminal in the two-centre composition."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"

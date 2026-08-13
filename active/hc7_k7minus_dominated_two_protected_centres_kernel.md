@@ -1,10 +1,11 @@
 # Two protected exceptional centres eliminate the two-nonterminal kernel
 
-**Status:** active written host theorem with two computer-assisted finite
-composition lemmas; internal hash-pinned audit adjacent.  This eliminates
-the order-eleven terminal-kernel branch of the connected dominated
-degree-eight centre case.  It does not eliminate the remaining order-nine
-and order-ten kernels, prove Conjecture 21, or prove `HC_7`.
+**Status:** written host theorem with two computer-assisted finite
+composition lemmas; internal hash-pinned audit adjacent.  The theorem
+eliminates the order-eleven terminal-kernel branch of the connected
+dominated degree-eight centre case.  The protected-centre fan-to-root
+continuation is frozen.  This note does not eliminate the remaining
+order-nine and order-ten kernels, prove Conjecture 21, or prove `HC_7`.
 
 ## 1. Host setting
 
@@ -313,28 +314,33 @@ contacts with (not necessarily prescribed) Q-rooted bags.
 If that lemma is proved, the order-nine branch closes by the verified
 calculation.
 
-The one-contact calculation is nearly as strong.  Among all 2,252 static
-survivors, an arbitrary adaptive contact at either named centre closes
-2,177.  The remaining 75 labelled placements split as
+The corrected computer-assisted one-contact diagnostic has a different,
+but still useful, form.  Among all 2,252 static survivors, a suitably chosen
+adaptive contact
+at at least one of the two named centres closes every placement.  In 1,901
+placements, each named centre admits some closing contact.  In the remaining
+351 exactly one centre does; these
+split as
 
 \[
-                         20,\qquad40,\qquad15         \tag{5.2}
+                         102,\qquad204,\qquad45        \tag{5.2}
 \]
 
-over the three `Q` types.  In every one, a contact at one named centre
-closes and a contact at the other need not.  The usable centre has kernel
-degree three in all 75 placements; the other centre has degree between four
-and eight.  Thus the exact all-terminal
-dichotomy is: one usable contact closes unless the surviving quotient
-prescribes the degree-three centre; contacts at both centres always close.
+over the three `Q` types.  Thus contacts at both centres always close, and
+one contact closes if it is supplied at a centre selected after the rooted
+quotient is known.
+
+An earlier version of the diagnostic incorrectly reported 2,177 and 75.
+Its purported one-contact helper passed `(contact,0)` or `(0,contact)` to a
+two-contact routine, thereby adding a hidden contact from the other centre
+to the fixed `Q` root indexed by zero.  The adjacent audit did not detect
+that implementation error.  The order-eleven proof and the independently
+checked order-ten result use different routines and are unaffected.
 
 The kernel degrees of the two centre vertices do not remove this residue.
 Static survivors occur with sorted degree pairs from `(3,3)` through
 `(4,5)`, and with the two centre vertices both adjacent and nonadjacent.
-Among the 75 asymmetric placements the degree pairs are `(3,d)` for
-`4\leq d\leq8`; all but two have the centre vertices adjacent.  The two
-nonadjacent cases show that adjacency is not a terminal discriminator.
-Nor may their lifted root bags be assumed adjacent: the literal centres are
+Nor may the lifted root bags be assumed adjacent: the literal centres are
 independent in `G`, and a quotient adjacency can only be created after a
 bag absorbs other material.  A standard owner choice supplies neither such
 an adjacency nor a `Q` contact without a literal edge leaving the
@@ -370,8 +376,9 @@ labelled `Q` copy.  Static composition leaves respectively
 
 placements.  Allowing **one** new quotient contact from either protected
 centre to an adaptively chosen `Q`-rooted bag eliminates every placement in
-(5.4).  Thus order ten needs only one usable protected-centre contact;
-order nine needs two in the 75 asymmetric placements described above.
+(5.4).  Thus order ten needs only one usable protected-centre contact.  At
+order nine, two contacts always suffice; one suffices when it is supplied
+at a quotient-good centre.
 
 The independent checker
 [`audit_order_ten.py`](experiments/dominated_singleton_nine_terminal_kernel/audit_order_ten.py)
@@ -391,14 +398,16 @@ They do not by themselves prove that a selected matching representative
 edge leaves its centre-rooted kernel bag.  Hence no unconditional conclusion
 beyond (4.1) is presently claimed.
 
-The finite terminal-kernel rows are now complete.  The exact remaining host
-problem is the simultaneous-contact supply lemma: prove that the two fixed
-matching-coordinate edges cannot both be swallowed inside their respective
-centre-rooted bags, or turn that failure directly into a response-labelled
-bag split.  A single usable contact closes every order-ten kernel and all
-but 75 asymmetric order-nine placements; usable contacts at both centres
-close all remaining kernels.  A bare static carrier theorem is known to be
-insufficient in the order-nine branch.
+The finite terminal-kernel composition calculations are now complete.  The
+exact remaining
+host problem is to supply contacts at both centres, or to identify from the
+host which one centre is closing after the quotient is known, or to turn
+swallowing directly into a response-labelled bag split.  A single usable
+contact closes every order-ten kernel.  At order nine, contacts at both
+centres close every placement, while one contact closes every placement
+only when the quotient-good centre may be selected adaptively.  A bare
+static carrier theorem is known to be insufficient in the order-nine
+branch.
 
 Two different swallowed-coordinate diagnostics must not be conflated.  A
 generous screen which retains every old source-bag adjacency and merely adds
