@@ -1,0 +1,248 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={DRAFT: Every K2,n is contractible},
+  pdfauthor={Cavit Erginsoy}
+]{hyperref}
+\setlength{\emergencystretch}{1em}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title[DRAFT: Every $K_{2,n}$ is contractible]
+{\textbf{DRAFT}\\[0.5ex]
+Every $K_{2,n}$ is contractible}
+\author{Cavit Erginsoy}
+\date{Draft, 16 August 2026}
+
+\subjclass[2020]{05C83, 05B35}
+\keywords{graph schemes, rooted minors, contractible graphs, matroid union}
+
+\begin{document}
+
+\begin{abstract}
+We prove that $K_{2,n}$ is contractible for every $n\geq1$: every graph
+containing a $K_{2,n}$-scheme contains a rooted $K_{2,n}$ minor.  This
+answers the $K_{2,4}$ part of Question~8.2 of K\"undgen, Pelsmajer and
+Ramamurthi.  Since contractibility is inherited by subgraphs, every
+bipartite graph with one part of order at most two is also contractible.
+The proof encodes the two distinguished colour classes as connected
+multigraphs on a common labelled edge set.  A component count and Edmonds'
+matroid union theorem yield disjoint spanning trees.
+\end{abstract}
+
+\maketitle
+\markboth{DRAFT: EVERY $K_{2,n}$ IS CONTRACTIBLE}
+{CAVIT ERGINSOY: DRAFT}
+
+\section{Introduction}
+
+Let $G$ and $H$ be graphs with $V(H)\subseteq V(G)$.  An \emph{$H$-scheme}
+in $G$ is a family
+\[
+                 (P_{uv}:uv\in E(H))
+\]
+of paths such that $P_{uv}$ is a $u$--$v$ path containing no other vertex
+of $H$, and every non-empty collection of scheme paths with a common
+vertex has a common end in $H$.  Their union is the \emph{underlying
+graph} of the scheme.  A \emph{rooted $H$ minor} is a family
+$(C_v:v\in V(H))$ of pairwise disjoint connected vertex sets such that
+$C_u$ and $C_v$ are adjacent whenever $uv\in E(H)$, and $v\in C_v$ for
+every $v\in V(H)$.  The graph $H$ is \emph{contractible} if every graph
+containing an $H$-scheme contains a rooted $H$ minor.
+
+K\"undgen, Pelsmajer and Ramamurthi introduced this terminology and
+developed the basic theory of contractible graphs
+\cite{KundgenPelsmajerRamamurthi2015}.  They proved that $K_{2,3}$ is
+contractible \cite[Theorem~6.2]{KundgenPelsmajerRamamurthi2015}, and asked
+whether $K_{2,4}$ or $K_{3,3}$ is contractible
+\cite[Question~8.2]{KundgenPelsmajerRamamurthi2015}.  We answer the first
+part and obtain the whole family at once.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\geq1$, the graph $K_{2,n}$ is contractible.
+\end{theorem}
+
+The proof uses the coloured-scheme reduction of K\"undgen, Pelsmajer and
+Ramamurthi and Edmonds' matroid union theorem.  The only additional
+ingredient is the following elementary packing lemma.  Auxiliary
+multigraphs may have parallel edges but no loops; all other graphs are
+finite and simple.
+
+\section{A two-projection packing lemma}
+
+\begin{lemma}\label{lem:packing}
+Let $m\geq1$, and let $M_1,M_2$ be connected multigraphs whose edge sets
+are both labelled bijectively by the same set $E$.  For
+$j\in\{1,2\}$, suppose that $M_j$ is the union of paths
+$Q_1^j,\ldots,Q_m^j$ whose edge sets are pairwise disjoint and have union
+$E$.  Trivial paths are allowed.  Suppose also that these paths all
+contain a vertex $r_j$, and every other vertex of $M_j$ belongs to at
+least two of them.  Then the graphic matroids of $M_1$ and $M_2$ have
+disjoint bases.  Equivalently, there are disjoint subsets $T_1,T_2$ of
+$E$ such that $T_j$ is a spanning tree of $M_j$.
+\end{lemma}
+
+\begin{proof}
+For $X\subseteq E$, let $c_j(X)$ denote the number of components of the
+spanning subgraph $(V(M_j),X)$, including isolated vertices, and put
+$Y=E\setminus X$.  Count the incidences between these components and the
+paths $Q_i^j$.  The component containing $r_j$ meets all $m$ paths, while
+every other component meets at least two.  Hence
+\[
+        \sum_C |\{i:V(Q_i^j)\cap V(C)\ne\varnothing\}|
+             \geq m+2(c_j(X)-1).                         \tag{2.1}
+\]
+Deleting the edges in $Y$ breaks $Q_i^j$ into at most
+$|E(Q_i^j)\cap Y|+1$ pieces.  Distinct pieces may lie in the same
+component of $(V(M_j),X)$, so the left side of (2.1) is at most
+\[
+             \sum_{i=1}^m (|E(Q_i^j)\cap Y|+1)=|Y|+m.
+\]
+It follows that
+\[
+                    c_j(X)\leq \frac{|Y|}{2}+1.           \tag{2.2}
+\]
+
+Let $\mathcal M_j$ be the graphic matroid of $M_j$, with rank function
+$\rho_j$.  Since $M_j$ is connected,
+\[
+ \rho_j(E)=|V(M_j)|-1,
+ \qquad
+ \rho_j(X)=|V(M_j)|-c_j(X).
+\]
+Adding (2.2) for $j=1,2$ gives
+\[
+ |E\setminus X|+\rho_1(X)+\rho_2(X)
+       \geq \rho_1(E)+\rho_2(E)                         \tag{2.3}
+\]
+for every $X\subseteq E$.  Edmonds' matroid union formula
+\cite{Edmonds1970} says that
+\[
+ \rho_{\mathcal M_1\vee\mathcal M_2}(E)
+   =\min_{X\subseteq E}
+      \bigl(|E\setminus X|+\rho_1(X)+\rho_2(X)\bigr).
+\]
+By (2.3), this rank is at least $\rho_1(E)+\rho_2(E)$; taking $X=E$ in
+the displayed minimum gives the reverse inequality.  Choose a maximum
+independent set $I=I_1\cup I_2$ of the union, where $I_j$ is independent
+in $\mathcal M_j$.  Its cardinality is $\rho_1(E)+\rho_2(E)$.  Equality in
+\[
+ |I_1\cup I_2|\leq |I_1|+|I_2|
+                  \leq \rho_1(E)+\rho_2(E)
+\]
+shows that $I_1$ and $I_2$ are disjoint bases.  Taking $T_j=I_j$ proves
+the lemma.
+\end{proof}
+
+\section{Proof of the theorem}
+
+K\"undgen, Pelsmajer and Ramamurthi proved that an $H$-scheme can be
+reduced, by root-preserving minor operations, to a \emph{coloured
+$H$-scheme} \cite[Lemma~3.3]{KundgenPelsmajerRamamurthi2015}.  Such a
+scheme has a proper colouring
+\[
+                         f:V(G)\longrightarrow V(H)
+\]
+which fixes $V(H)$, and $P_{uv}$ uses only the colours $u$ and $v$.
+Moreover, every vertex outside $V(H)$ has degree at least four.  We shall
+also use the following consequences recorded in
+\cite[Remark~3.2(1), (2), and (7)]{KundgenPelsmajerRamamurthi2015}:
+colours alternate on every scheme path; every edge lies on exactly one
+scheme path; and, when $u$ has degree two in $H$, every vertex of colour
+$u$ lies on both scheme paths incident with $u$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let the two vertices in the part of order two be $a,b$, and let the other
+vertices be $t_1,\ldots,t_n$.  By the coloured-scheme reduction, it is
+enough to find the required rooted minor in the underlying graph $G$ of a
+coloured $K_{2,n}$-scheme.  Write
+\[
+ A=f^{-1}(a),\qquad B=f^{-1}(b),\qquad L_i=f^{-1}(t_i),
+\]
+and set
+\[
+                  E_i=L_i\setminus\{t_i\},
+                  \qquad E=\bigcup_{i=1}^n E_i.          \tag{3.1}
+\]
+
+Every $x\in E_i$ lies internally on both $P_{at_i}$ and $P_{bt_i}$.
+Thus $x$ has two distinct neighbours in $A$ on the first path and two
+distinct neighbours in $B$ on the second.  Form an abstract
+edge-labelled multigraph $M_a$ on vertex set $A$ by replacing each
+$x\in E$ with an edge, labelled $x$, between its two neighbours in $A$.
+Define $M_b$ on $B$ in the same way, using the same labelled edge set
+$E$.
+
+Suppressing the vertices of $E_i$ on $P_{at_i}$ gives a path $Q_i^a$ in
+$M_a$, from $a$ to the $A$-neighbour of $t_i$.  If $P_{at_i}=at_i$, this
+is the trivial path at $a$.  Alternation gives
+\[
+                         E(Q_i^a)=E_i.                    \tag{3.2}
+\]
+Thus the edge sets of $Q_1^a,\ldots,Q_n^a$ are pairwise disjoint and have
+union $E$.  Every vertex of $A\setminus\{a\}$ lies on a scheme path
+incident with $a$, so these paths also cover $V(M_a)$.  Their union is
+therefore $M_a$, which is connected.  A vertex in $A\setminus\{a\}$
+lying on $k$ of the paths has degree $2k$ in $G$: it is internal on each
+path, and distinct scheme paths share no edge.  Since its degree is at
+least four, $k\geq2$.  The same argument on the $b$ side gives paths
+$Q_i^b$ with $E(Q_i^b)=E_i$, and every vertex of $B\setminus\{b\}$
+belongs to at least two of them.
+
+Lemma~\ref{lem:packing} now gives disjoint sets $T_a,T_b\subseteq E$ such
+that $T_a$ is a spanning tree of $M_a$ and $T_b$ is a spanning tree of
+$M_b$.  In $G$, put
+\[
+ \begin{aligned}
+ C_a&=A\cup\{x\in E:x\in T_a\},\\
+ C_b&=B\cup\{x\in E:x\in T_b\},\\
+ C_i&=\{t_i\} \quad (1\leq i\leq n).
+ \end{aligned}                                            \tag{3.3}
+\]
+These sets are pairwise disjoint.  An edge of $T_a$ labelled $x$, with
+ends $u,v$, corresponds to the two-edge path with vertex sequence $u,x,v$
+in $G$, so $G[C_a]$ is connected; similarly $G[C_b]$ is connected.  The
+edge of $P_{at_i}$ incident with $t_i$ joins $C_i$ to $A\subseteq C_a$,
+and the corresponding edge of $P_{bt_i}$ joins $C_i$ to $B\subseteq C_b$.
+The sets in (3.3) therefore form a rooted $K_{2,n}$-minor model.
+
+Finally, the coloured scheme lies in a rooted minor of the original
+scheme graph.  Composing the two rooted minor models gives a rooted
+$K_{2,n}$ minor in the original graph.
+\end{proof}
+
+Contractibility is inherited by subgraphs
+\cite[Lemma~2.2]{KundgenPelsmajerRamamurthi2015}.  The theorem therefore
+has the following immediate consequence.
+
+\begin{corollary}
+Every bipartite graph with a part of order at most two is contractible.
+\end{corollary}
+
+The argument is computation-free.  It does not address the $K_{3,3}$
+part of Question~8.2 or the wider question of whether every bipartite
+graph is contractible.
+
+\section*{Statement on AI use and independence}
+
+GPT-5.6 Sol, an OpenAI model, contributed to theorem discovery, proofs,
+verification and drafting.  Cavit Erginsoy directed the work and made the
+final decisions.  Erginsoy is not affiliated with OpenAI, and OpenAI
+neither sponsored nor verified the work.
+
+{\hbadness=2000
+\bibliographystyle{amsplain}
+\bibliography{references}
+}
+
+\end{document}
