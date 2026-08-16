@@ -19288,3 +19288,27 @@ expected_stdout = [
   "seven_bag_states=47385 max_contacts=19 k7minus_models=0",
   "PASS connected-full bridge quotient barrier",
 ]
+
+[[claims]]
+id = "graph_schemes.k2n_contractible"
+title = "Every complete bipartite graph K2,n is contractible"
+kind = "theorem"
+status = "audited-green"
+source = "results/k2n_contractibility_via_matroid_packing.md"
+source_heading = "Theorem 1.1"
+active = false
+audit = "results/k2n_contractibility_via_matroid_packing_audit.md"
+expected_source_sha256 = "c8784e5d244c0e07a2d78a9a0ccb005a0c5d7dcb2f83b5d05404aaae1316249b"
+scope = "all integers n at least one and arbitrary K2,n-schemes"
+conclusions = [
+  "every K2,n-scheme forces a K2,n minor rooted at the scheme vertices",
+  "the K2,4 half of Kuendgen--Pelsmajer--Ramamurthi Question 8.2 has an affirmative answer",
+  "the proof is unbounded and computation-free",
+]
+does_not_prove = [
+  "contractibility of K3,3",
+  "contractibility of every bipartite graph",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["graph scheme", "contractible graph", "rooted minor", "K2,n", "matroid union", "disjoint spanning trees"]

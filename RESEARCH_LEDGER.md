@@ -12,6 +12,17 @@ This file is the sole authority for the present research frontier.
 
 ## Current frontier
 
+**Audited standalone theorem, 16 August 2026.**  Every complete bipartite
+graph `K_{2,n}` is contractible in the sense of graph schemes.  The new
+computation-free proof projects a coloured scheme onto two graphic matroids,
+proves Edmonds' disjoint-base inequalities by a path--component count, and
+lifts the resulting two spanning trees to a rooted `K_{2,n}` minor.  It
+answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi Question 8.2
+uniformly for all `n`; the [theorem](results/k2n_contractibility_via_matroid_packing.md)
+and [hash-pinned internal audit](results/k2n_contractibility_via_matroid_packing_audit.md)
+are promoted results.  It does not settle `K_{3,3}`, the `K_7^-` six-colour
+conjecture, or `HC_7`.
+
 **Campaign restart, 16 August 2026.**  The protected-centre fan-to-root
 attack remains stopped at its recorded hard proof gate; no hidden branch-set
 ownership is inferred from that fan.  Discovery has resumed through a suite

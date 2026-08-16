@@ -42,6 +42,16 @@ edges contains a `K_7^-` minor.  The older universal `4n-2` statement and
 the five-connected `4n-7` laboratory remain stronger conditional routes,
 not primary targets.  None of these statements is proved here.
 
+Separately from the unresolved `HC_7` proof spine, the repository now
+contains a complete computation-free proof that every complete bipartite
+graph `K_{2,n}` is contractible in the sense of graph schemes.  This answers
+the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's explicit Question 8.2
+and strengthens it to an infinite family.  Read the
+[written theorem](results/k2n_contractibility_via_matroid_packing.md) with
+its [hash-pinned internal audit](results/k2n_contractibility_via_matroid_packing_audit.md).
+This standalone result does not prove the `K_7^-` six-colour conjecture or
+`HC_7`.
+
 The project works from a hypothetical minor-minimal non-six-colourable
 `K_7^-`-minor-free graph `G`.  The audited computation-free chain now gives
 
