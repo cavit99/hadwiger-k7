@@ -14,23 +14,29 @@ This file is the sole authority for the present research frontier.
 
 **Campaign restart, 16 August 2026.**  The protected-centre fan-to-root
 attack remains stopped at its recorded hard proof gate; no hidden branch-set
-ownership is inferred from that fan.  Discovery has resumed through four
-new, separately audited, computation-free mechanisms.  First, Chu's
-prescribed-set theorem gives a seven-removable edge completely outside the
-closed neighbourhood of every exceptional centre; together with an
-independent neighbour triple it produces an exact `80`-pattern operation
-cube and an actual order-seven/eight separation carrying opposite
-operation-labelled response families.  Second, its topological reduction
-eliminates the connected order-seven exterior and, in the nonfull return,
-puts all fifteen operation signatures against one partition-disjoint reverse
-response on a common exact-seven cut.  Third, a general linear-forest
-threshold theorem closes the portal two-cycle target by returning one cycle
-or an operation-labelled minimum separation.  Fourth, minimum path-bag
-ownership compresses the induced-path allocation obstruction to shared
-contact, repeated contact, or a response-bearing boundary of order seven or
-eight, eliminating the nonrepeated order-nine case.  The conjecture remains
-the sole primary target and remains open; the active proof laboratory is now
-the bounded exceptional-centre interface, not the frozen fan-to-root line.
+ownership is inferred from that fan.  Discovery has resumed through a suite
+of separately audited mechanisms.  Chu's prescribed-set theorem gives a
+seven-removable edge completely outside the closed neighbourhood of every
+exceptional centre; an independent neighbour triple then produces an exact
+`80`-pattern operation cube and an actual order-seven/eight separation with
+oppositely oriented responses.  The topological reduction eliminates the
+connected order-seven exterior and, in the nonfull return, puts all fifteen
+operation signatures against one partition-disjoint reverse response on a
+common exact-seven cut.  That return now grows to one five-edge forest with
+all `3^5-1=242` nontrivial minor-operation patterns exactly six-chromatic,
+all 31 nonempty equality signatures, and a renewed spanning exact
+`K_7^\vee` model.  In the cross-miss/full order-seven and both-full
+order-eight cases, the remote edge is nonseparating in its exterior
+component and lies on four prescribed cycles; the proof includes an exact
+252-case minor verification.  The connected-full order-eight case now has
+one six-connected centre-deletion graph carrying the complete pointed
+signature family and an exhaustive lift of every six-separation.  In
+parallel, a general linear-forest threshold theorem closes the portal
+two-cycle target, and minimum path-bag ownership eliminates the
+nonrepeated order-nine allocation case.  The conjecture remains the sole
+primary target and remains open; the active obstruction is operation-to-
+model alignment on the bounded exceptional-centre interface, not the
+frozen fan-to-root line.
 
 ### 1. Exhaustive global obligation
 
@@ -135,6 +141,54 @@ The three residual topologies are cross-miss/full at order seven, a
 connected full exterior at order eight, or two full exteriors at order
 eight.  The fixed exact model remains available on the original deletion
 host; no persistence through the fresh crossing-edge deletion is asserted.
+
+The audited
+[five-edge operation-cube and model-renewal theorem](results/hc7_k7minus_remote_crossing_five_cube_model_renewal.md)
+strengthens the full punctured-cube exact-seven return.  A reverse crossing
+edge can be chosen disjoint from the three-spoke star and the remote edge,
+so one componentwise-induced
+`K_{1,3}\dot\cup K_2\dot\cup K_2` supports all `242` nontrivial labelled
+keep/delete/contract patterns as exactly six-chromatic proper minors.  Its
+common deletion graph realises all 31 nonempty signatures, retains the
+fifteen original response colourings and the reverse response literally,
+and has a renewed spanning exact `K_7^\vee` model.  The model-separator
+dichotomy then exposes a named singleton response or returns a separator
+containing all eight forest vertices.  That eight-endpoint allocation is
+the exact surviving obstruction; the theorem does not identify operation
+blocks with renewed model bags.
+
+The audited
+[two-component cyclic-stability theorem](results/hc7_k7minus_remote_two_component_shore_stability.md)
+removes every bridge realization of the remote edge in the cross-miss/full
+order-seven case and the both-full order-eight case.  In the former, the
+component carrying the edge has full-subgraph packing number one, so
+seven-connectivity after deleting the edge forces its remainder to stay
+connected.  In the latter, an exact 252-case quotient verification over
+the seven promoted boundary types rules out every near-full bridge split.
+The same theorem localises the complete three-shore response matrix,
+forces boundary-partition demand at least three for the remote-only response
+at order seven and for every one-coordinate response at order eight, and
+puts the remote edge on one internal cycle and on three further cycles
+containing each selected pair of star spokes.  Its remaining step is a
+response-preserving split of that connected exterior shore, not another
+boundary-only enumeration.
+
+The audited
+[connected-full centre-deletion theorem](results/hc7_k7minus_connected_full_remote_pole_core.md)
+handles the last order-eight topology differently.  Deleting the centre and
+the remote edge gives one six-connected, exactly six-chromatic graph of
+density at least `4N-5` with a spanning exact `K_7^\vee` model and all
+fifteen pointed signatures.  In every six-colouring, unequal remote-edge
+ends force all six colours on the eight-vertex neighbourhood, while the
+remote-only response uses at most five.  Every six-cut lifts exhaustively
+to an operation-labelled exact-seven response, two overlapping order-eight
+separations, or one boundary-contained endpoint configuration; otherwise
+the centre-deletion graph is seven-connected.  Static boundary topology
+does not eliminate the final bridge profile: the retained
+[connected-full bridge quotient barrier](barriers/hc7_k7minus_connected_full_bridge_quotient_barrier.md)
+is an explicit exceptional order-eight boundary with two adjacent
+one-miss images whose full union still has no `K_7^-` minor.  The live
+requirement is therefore a colouring- or model-sensitive argument.
 
 ### 3. Immediate structural laboratory
 

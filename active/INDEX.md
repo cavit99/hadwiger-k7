@@ -21,6 +21,14 @@ Selected audited inputs:
   80-pattern cube; its interface lies in four exact topological rows, with
   the connected order-seven row excluded and the nonfull return carrying
   all 15 signatures plus a reverse response](../results/hc7_k7minus_remote_interface_topological_reduction.md)
+- [the nonfull exact-seven return extends to a five-edge forest with all
+  242 nontrivial mixed operations exactly six-chromatic, all 31 signatures,
+  and a renewed spanning exact model](../results/hc7_k7minus_remote_crossing_five_cube_model_renewal.md)
+- [in the cross-miss/full order-seven and both-full order-eight cases the
+  remote edge is nonseparating, has high-demand response partitions, and
+  lies on four prescribed cycles](../results/hc7_k7minus_remote_two_component_shore_stability.md)
+- [the connected-full order-eight case has one six-connected pointed-cube
+  graph and an exhaustive operation-labelled lift of every six-cut](../results/hc7_k7minus_connected_full_remote_pole_core.md)
 - [a six-coordinate induced forest supplies the complete punctured
   signature cube, two seven-connected restorations, an exact spanning
   `K_7^vee` model and a common coordinate cycle](../results/hc7_k7minus_six_coordinate_forest_reduction.md)
@@ -44,6 +52,11 @@ Immediate barriers:
   under stronger connectivity and degree bounds](../barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md).
   The construction contains a literal `K_7`, so it isolates the need to use
   target exclusion rather than refuting the desired disjunction.
+- [exceptional boundary topology and two adjacent one-miss bridge images do
+  not force a `K_7^-` minor](../barriers/hc7_k7minus_connected_full_bridge_quotient_barrier.md).
+  The exact order-eleven quotient shows that the connected-full bridge case
+  must use operation colourings, the exact model, or other critical-host
+  structure.
 
 ## Principal finishing architecture
 
@@ -51,18 +64,19 @@ Immediate barriers:
 
 The discovery campaign resumed on 16 August 2026 without reopening the
 failed protected-centre fan-to-root mechanism.  Its direct laboratory is
-now the bounded interface returned at **every** exceptional centre: one
-actual boundary of order seven or eight carries all seven nonempty
-three-spoke responses from one orientation, a remote seven-removable-edge
-response from the other, at least five or three distinct visible boundary
-partitions, and a complete exact mixed-operation cube on the common
-deletion host.  The connected-exterior order-seven topology is impossible;
-if a second exterior component is nonfull, one exact order-seven shore
-carries all fifteen operation signatures and a reverse crossing-edge
-partition distinct from all fifteen.  The immediate target is to spend this
-`15`-versus-`1` exact-seven return, or eliminate the cross-miss/full
-order-seven row and the two explicit order-eight rows, while retaining the
-centre and remote-edge labels.
+the bounded interface returned at **every** exceptional centre.  The
+nonfull exact-seven return now has a single five-edge deletion graph with
+all `242` nontrivial mixed operations, all 31 nonempty signatures, the
+fifteen old responses, the reverse response and a renewed spanning exact
+model.  In the cross-miss/full order-seven and both-full order-eight cases,
+the remote edge is nonseparating and belongs to four prescribed cycles.
+In the connected-full order-eight case, deleting the centre and remote edge
+gives one six-connected pointed-cube graph whose every six-cut has an
+exhaustive operation-labelled lift.  The exact surviving tasks are now:
+escape from the eight-endpoint model separator, a response-preserving split
+of the connected two-component shore, and operation-to-model alignment in
+the connected-full centre-deletion graph.  Boundary topology and fresh
+unlabelled restarts are not sufficient.
 
 Let `G` be a minor-minimal counterexample.  The direct campaign supplies a
 six-edge componentwise-induced forest

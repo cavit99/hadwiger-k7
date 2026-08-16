@@ -14,6 +14,9 @@ six-coordinate induced-forest, growth-or-feedback, bounded-feedback degree
 elimination, six-centre feedback, remote removable-edge operation-cube,
 remote-interface topological, linear-forest cycle-or-separation and minimum
 path-bag owner-circuit reductions are separately audited GREEN.  The
+remote crossing five-cube/model-renewal theorem, the two-component cyclic
+stability theorem and the connected-full centre-deletion/six-cut theorem
+are separately audited GREEN.  The
 matching common-state, large-boundary lock reduction, order-nine transition
 projection and induced-path common-model theorems are separately audited
 GREEN.  The selected-edge root-bag response theorem and the all-lock
@@ -768,16 +771,70 @@ opposite orientation and has a partition different from all fifteen.  The
 three nonterminal rows are cross-miss/full at order seven, connected-full at
 order eight, and both-full at order eight.
 
-This is the active direct laboratory.  The full punctured-cube exact-seven
-return can enter the audited restart machinery, but that recursion need not
-retain its fifteen original partitions or the remote edge.  The
-cross-miss/full row retains the original seven centre-star responses in one
-orientation and the remote response in the other, without a common pivot.
-The two order-eight rows enter the full-component and operation-coupled
-theorems, whose fan, Hall, singleton, separator-excess and shore-filling
-alternatives still lose operation-to-model alignment.  The fixed exact
-model remains available on the original deletion host; it is not asserted
-to survive a fresh crossing-edge deletion.  Remote edges chosen at different
+The full punctured-cube exact-seven return has now been strengthened by the
+audited
+[five-edge operation-cube/model-renewal theorem](../results/hc7_k7minus_remote_crossing_five_cube_model_renewal.md).
+Choose a crossing edge `h` from the nonfull second component to a boundary
+vertex outside the independent triple.  Then
+
+\[
+ F^+=T\mathbin{\dot\cup}\{h\}
+    \cong K_{1,3}\mathbin{\dot\cup}K_2\mathbin{\dot\cup}K_2
+                                                               \tag{4.E4}
+\]
+
+is componentwise induced and supports all `3^5-1=242` nontrivial labelled
+keep/delete/contract patterns as exactly six-chromatic minors.  The common
+deletion graph realises all 31 nonempty signatures, retains the fifteen old
+same-shore response colourings and the reverse crossing response, and has a
+renewed spanning exact `K_7^\vee` model.  Applying the exact-model
+separator dichotomy either exposes one of those five singleton responses
+or gives a separator containing all eight vertices of `F^+`.  The latter
+eight-endpoint allocation is the precise remaining case; the old and
+renewed model bags are not identified.
+
+The audited
+[two-component cyclic-stability theorem](../results/hc7_k7minus_remote_two_component_shore_stability.md)
+settles the bridge question in the cross-miss/full order-seven and both-full
+order-eight cases.  The graph `G[C]-f` is connected and remains adjacent to
+every boundary vertex.  At order seven this follows from the packing vector
+`(1,2)` and seven-connectivity of `G-f`; at order eight an exact 252-case
+minor verifier covers all seven promoted boundary types and all unordered
+full-or-one-miss split profiles.  The theorem also proves the full
+three-shore response matrix, lower bounds two and three on the relevant
+boundary-partition demands, and four distinct cycles containing `f`: one
+inside `C` and one through each pair of selected star spokes.  What remains
+is a split-or-response theorem using the fixed `f`-deletion colouring; a
+boundary-only allocation does not use the new internal cycle.
+
+For the connected-full order-eight case, the audited
+[centre-deletion theorem](../results/hc7_k7minus_connected_full_remote_pole_core.md)
+puts `K=G-z-f` on one common graph with
+
+\[
+ \kappa(K)\ge6,\qquad \chi(K)=6,\qquad
+ |E(K)|\ge4|V(K)|-5,                                  \tag{4.E5}
+\]
+
+a spanning exact `K_7^\vee` model, and all fifteen pointed signatures.
+The boundary palette distinguishes the pure-star and remote-only
+colourings.  Every six-cut of `K` lifts exhaustively to an
+operation-labelled exact-seven response, two overlapping order-eight
+separations, or a boundary-contained endpoint configuration; otherwise
+`K` is seven-connected.  A static full-or-one-miss contraction of a
+hypothetical bridge does not always contain `K_7^-`: the retained
+[connected-full bridge quotient barrier](../barriers/hc7_k7minus_connected_full_bridge_quotient_barrier.md)
+has an exceptional boundary and two adjacent one-miss images whose union is
+full, yet exhaustive minor checking finds no `K_7^-`.  No topology-only
+bridge elimination is therefore used.
+
+This is the active direct laboratory.  The three exact unresolved
+configurations are the eight-endpoint separator in the five-edge common
+model, the operation-preserving split of the cyclic two-component shore,
+and the model/colouring alignment in the connected-full centre-deletion
+graph.  Generic exact-seven restart can lose the original fifteen
+partitions or remote edge; the order-eight fan and Hall alternatives can
+lose operation-to-model alignment.  Remote edges chosen at different
 centres need not form a matching or occupy fixed model bags.
 
 ### Six-coordinate induced-forest route: parallel structural laboratory
@@ -1694,14 +1751,16 @@ has a verified target-free quotient and the same model/path quantifier gap
 as earlier allocation programmes.  The restart does not add kernel orders
 or assume static owner transfers.  It proceeds in this order.
 
-1. Terminalise the four-row remote-edge interface (4.E3).
-   In the full punctured-cube exact-seven return, use all fifteen original
-   signatures together with the partition-disjoint reverse crossing
-   response; do not replace them by an unlabelled generic restart.  Treat the
-   cross-miss/full exact-seven row with its original seven-versus-one
-   orientation.  At order eight only the connected-full and both-full rows
-   remain.  A valid closure must retain the literal centre, remote edge,
-   shore orientation and at least one original operation partition.
+1. Terminalise the three exact remote-interface configurations in (4.E4)--
+   (4.E5).  In the full punctured-cube exact-seven return, force one named
+   singleton response out of the separator containing all eight vertices
+   of the five-edge forest.  In the cross-miss/full order-seven and
+   both-full order-eight cases, split the connected `f`-shore while
+   retaining the fixed `f`-deletion partition, or return a smaller labelled
+   separation.  In the connected-full case, align one pointed signature
+   with the exact model or one of the exhaustive six-cut outcomes.  Do not
+   replace these data by an unlabelled generic restart or a boundary-only
+   bridge contraction.
 2. Feed the separation outcome of the linear-forest theorem into the same
    exact-seven terminalisation.  The portal two-cycle composition problem is
    closed; do not reopen it or assume the unresolved Lovasz--Woodall
