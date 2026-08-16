@@ -11,8 +11,9 @@ Boolean minimum-separator linkage, the cyclic four-region elimination, and
 the exact one-coordinate response language in Section 4 are separately
 audited GREEN.  The removable-matching, replacement-abundance,
 six-coordinate induced-forest, growth-or-feedback, bounded-feedback degree
-elimination, six-centre feedback and portal-cycle threshold reductions are
-separately audited GREEN.  The
+elimination, six-centre feedback, remote removable-edge operation-cube,
+remote-interface topological, linear-forest cycle-or-separation and minimum
+path-bag owner-circuit reductions are separately audited GREEN.  The
 matching common-state, large-boundary lock reduction, order-nine transition
 projection and induced-path common-model theorems are separately audited
 GREEN.  The selected-edge root-bag response theorem and the all-lock
@@ -711,7 +712,75 @@ shows that the five singleton-saturation rows alone do not force the
 displayed common missing colour or its common-partition fallback.  It is a
 palette-level barrier, not a critical-host counterexample.
 
-### Six-coordinate induced-forest route: principal structural laboratory (paused)
+### Remote removable-edge operation cube: active bounded interface
+
+The audited
+[remote removable-edge theorem](../results/hc7_k7minus_remote_removable_edge_operation_cube.md)
+uses Theorem 2.2, rather than only Theorem 1.3, of Chu's removable-edge
+preprint.  For every exceptional degree-eight centre `z`, it gives a
+seven-removable edge
+
+\[
+                         f\in E(G-N[z]).              \tag{4.E1}
+\]
+
+Choose an independent triple `I=\{x_1,x_2,x_3\}\subseteq N(z)`.  The
+componentwise-induced forest
+
+\[
+             T=\{zx_1,zx_2,zx_3,f\}
+                    \cong K_{1,3}\mathbin{\dot\cup}K_2          \tag{4.E2}
+\]
+
+supports every one of the `3^4-1=80` nontrivial labelled
+keep/delete/contract patterns as an exactly six-chromatic minor.  The full
+deletion `G-T` is exactly five-connected, realises all fifteen nonempty
+signatures and has a spanning exact `K_7^\vee` model.  Deleting only two
+spokes and `f` gives an exactly six-connected induced-`P_3`-plus-edge host
+with all seven signatures and all `26` nontrivial mixed patterns.
+
+The structural return is bounded in the original graph.  Let `C` be the
+component of `G-N[z]` containing `f` and put `Q=N(C)`.  Then
+
+\[
+                         7\le |Q|\le8.                \tag{4.E3}
+\]
+
+For every nonempty subset of the three spoke edges, the corresponding
+signature colouring restricts properly to `G[C\cup Q]`.  The `f`-only
+colouring restricts properly to `G-C`.  The seven centre-star boundary
+partitions are rejected in one orientation, the remote-edge partition is
+rejected in the other, and the remote partition differs from every
+star-labelled partition.  If all three star leaves belong to `Q`, four
+centre-star partitions are forced distinct and the remote partition gives
+a fifth; if exactly two leaves belong to `Q`, two star partitions and the
+remote partition give at least three distinct states.  All labels and both
+literal shores are therefore synchronised on one actual order-seven/eight
+separation.
+
+The audited
+[topological reduction](../results/hc7_k7minus_remote_interface_topological_reduction.md)
+removes the connected-exterior order-seven row completely.  Every interface
+now lies in exactly one of four rows.  If a second exterior component is
+nonfull, its exact order-seven shore carries all fifteen nonempty
+`T`-signatures, while any fresh crossing-edge response is proper in the
+opposite orientation and has a partition different from all fifteen.  The
+three nonterminal rows are cross-miss/full at order seven, connected-full at
+order eight, and both-full at order eight.
+
+This is the active direct laboratory.  The full punctured-cube exact-seven
+return can enter the audited restart machinery, but that recursion need not
+retain its fifteen original partitions or the remote edge.  The
+cross-miss/full row retains the original seven centre-star responses in one
+orientation and the remote response in the other, without a common pivot.
+The two order-eight rows enter the full-component and operation-coupled
+theorems, whose fan, Hall, singleton, separator-excess and shore-filling
+alternatives still lose operation-to-model alignment.  The fixed exact
+model remains available on the original deletion host; it is not asserted
+to survive a fresh crossing-edge deletion.  Remote edges chosen at different
+centres need not form a matching or occupy fixed model bags.
+
+### Six-coordinate induced-forest route: parallel structural laboratory
 
 The audited
 [replacement-abundance theorem](../results/hc7_k7minus_removable_matching_rotation_abundance.md)
@@ -794,6 +863,20 @@ responses are excluded.  In the exact order-eight row, all three deleted
 edges cross the cut and two complete geometric linkage families share one
 shore fan.
 
+The new audited
+[minimum path-bag owner-circuit theorem](../results/hc7_k7minus_p3_owner_circuit_compression.md)
+now keeps that model and those three path responses on one literal returned
+boundary.  In a spanning co-bagged `K_6` model with minimum path bag, every
+off-path component owns at least two of the five foreign adjacencies and
+distinct owner sets are disjoint.  A minimal Rado--Menger owner circuit has
+order at most four: an all-five circuit would be a four-cut between the
+retained path bag and the connected union of all five foreign bags.  Hence
+the exact output is one shared differently labelled contact, repeated
+contact in one foreign bag, or a response-bearing component boundary of
+order seven or eight.  Without repetition the boundary is exactly `2+5`
+at order seven or `3+5` at order eight.  This removes the nonrepeated
+order-nine branch and the old operation-provenance mismatch.
+
 These theorems remove path existence, unrelated model choice and an
 unbounded unlocked separator as the first gaps.  They do not allocate
 palette components or transition paths to model bags.  The matching repair
@@ -824,9 +907,10 @@ label.  The audited
 shows that target exclusion and `K_5`-free quotient contacts do not repair
 this second gap.  The matching route is therefore deferred until a
 Kempe-valid model-monotone exchange is available.
-The induced-path repair is the corresponding triple split: four foreign
-bags must meet all three connected pieces of the path bag, or the failed
-allocation must return a labelled order-seven response.  The finite
+The remaining induced-path repair is narrower: shared labelled contact or
+repeated foreign-bag contact must be absorbed into the triple split, while
+the bounded owner-circuit outcomes enter the exact-seven/eight machinery.
+The finite
 [opposite-shore diagnostic](experiments/opposite_shore_coordinate_square_gate/)
 shows that the three positive signatures, two response fans and a common
 co-bagged model do not suffice if the forbidden all-proper signature and
@@ -983,13 +1067,16 @@ proof infrastructure for the now-impossible alternative.  Their full-shore,
 residues.
 
 Finally, the audited
-[portal-cycle threshold reduction](../results/hc7_k7minus_portal_edge_cycle_threshold.md)
-puts a clean exact-model portal edge and all six edges in (4.F1) on at most
-two vertex-disjoint cycles.  The exceptional seven-edge-cut outcome gives a
-proper order-seven separation.  Connectivity alone cannot cite the desired
-one-cycle upgrade: this is precisely the unresolved Lovasz--Woodall
-threshold.  The smallest repair is a two-cycle composition using the exact
-seven branch bags and critical colouring responses.
+[linear-forest cycle-or-separation theorem](../results/hc7_k7minus_linear_forest_cycle_or_exact7_response.md)
+supersedes the former portal two-cycle target.  A clean exact-model portal
+edge and the six edges in (4.F1) form a seven-edge componentwise-induced
+linear forest.  Either one cycle contains all seven edges, or an actual
+order-seven separation localises the complete `127`-signature cube and
+retains the same fixed exact model.  At least one oriented shore carries a
+two-coordinate punctured subcube, and the two opposite boundary-partition
+families are disjoint when both occur.  This avoids the unresolved
+Lovasz--Woodall one-cycle inference: critical colourability supplies the
+labelled separation at connectivity exactly seven.
 
 The proposed operation-labelled protected-centre contact-or-split theorem
 has now reached a decisive route nonclosure.  In `H-w`, failure of a
@@ -1599,32 +1686,34 @@ The operation is then aligned, but the near-clique and column labels are
 not.  Producing that label transfer, or a terminal when it fails, is the
 remaining open step in this secondary route.
 
-## 5. Pause decision and possible restart points
+## 5. Active restart and exact next targets
 
-The Conjecture 21 discovery campaign is paused at the protected-centre
-fan-to-root nonclosure.  No item below is authorised as an immediate proof
-attack.  If the campaign is deliberately resumed after external specialist
-review, the remaining mechanisms should be considered in this order.
+The Conjecture 21 discovery campaign resumed on 16 August 2026.  The former
+protected-centre fan-to-root mechanism remains frozen: its fan-success case
+has a verified target-free quotient and the same model/path quantifier gap
+as earlier allocation programmes.  The restart does not add kernel orders
+or assume static owner transfers.  It proceeds in this order.
 
-1. Pause the protected-centre fan-to-root line.  Its exact positive output
-   is an order-seven labelled separation when the required fan fails; its
-   fan-success case has a verified target-free quotient and the same
-   path/model quantifier mismatch as earlier allocation programmes.  Do not
-   add further kernel orders, protected centres or static owner transfers.
-2. In the seven-connected exact-model row, use the two-cycle portal theorem.
-   Either merge the two cycles while retaining the six coordinates and the
-   portal edge, or turn the failed rerouting into an order-seven separation
-   carrying those labels.  Do not assume the unresolved one-cycle
-   Lovasz--Woodall conclusion.
-3. If component-to-bag capture does not close, apply one response-sensitive
-   allocation theorem to the common induced-path triple split.  Its
-   low-connectivity outcome already returns an order-seven/eight response;
-   do not open a second path programme with fewer labels.
-4. Return to `kappa(X)=6` matching only with new exchange technology.  In the
-   matching row, a valid proof must supply one deficiency-aware common
-   `EE` pivot or another Kempe-valid model-monotone exchange; the three
-   realised signatures, fixed deficiencies and target exclusion do not do
-   this statically.
+1. Terminalise the four-row remote-edge interface (4.E3).
+   In the full punctured-cube exact-seven return, use all fifteen original
+   signatures together with the partition-disjoint reverse crossing
+   response; do not replace them by an unlabelled generic restart.  Treat the
+   cross-miss/full exact-seven row with its original seven-versus-one
+   orientation.  At order eight only the connected-full and both-full rows
+   remain.  A valid closure must retain the literal centre, remote edge,
+   shore orientation and at least one original operation partition.
+2. Feed the separation outcome of the linear-forest theorem into the same
+   exact-seven terminalisation.  The portal two-cycle composition problem is
+   closed; do not reopen it or assume the unresolved Lovasz--Woodall
+   conclusion.
+3. Apply the minimum path-bag owner-circuit compression to the induced-path
+   triple split.  Its nonrepeated outcome has boundary order seven or eight;
+   the remaining shared-portal and repeated-contact branches require a
+   response-sensitive absorption theorem, not static ownership.
+4. Return to `kappa(X)=6` matching only with new exchange technology.  A
+   valid proof must supply one deficiency-aware common `EE` pivot or another
+   Kempe-valid model-monotone exchange; the three realised signatures,
+   fixed deficiencies and target exclusion do not do this statically.
 
 The common co-bagged-`K_6` split proposed for the original removable
 matching is not available in the eight-coordinate host and is obstructed at

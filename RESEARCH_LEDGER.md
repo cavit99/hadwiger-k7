@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 13 August 2026
+**Last updated:** 16 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -12,16 +12,25 @@ This file is the sole authority for the present research frontier.
 
 ## Current frontier
 
-**Campaign decision, 13 August 2026.**  The protected-centre fan-to-root
-attack has been stopped at its hard proof gate.  It produced an exact
-order-seven labelled separation in the fan-failure case, but the fan-success
-case reproduces the known path/model compatibility gap and has an explicit
-finite target-free quotient lacking the critical-host hypotheses.  The
-repository records that nonclosure and
-the corrected finite counts below.  No further Conjecture 21 proof attack is
-designated pending external specialist review and a deliberate choice among
-the remaining global mechanisms.  The conjecture remains the sole primary
-research target; this is a pause in discovery work, not a change of target.
+**Campaign restart, 16 August 2026.**  The protected-centre fan-to-root
+attack remains stopped at its recorded hard proof gate; no hidden branch-set
+ownership is inferred from that fan.  Discovery has resumed through four
+new, separately audited, computation-free mechanisms.  First, Chu's
+prescribed-set theorem gives a seven-removable edge completely outside the
+closed neighbourhood of every exceptional centre; together with an
+independent neighbour triple it produces an exact `80`-pattern operation
+cube and an actual order-seven/eight separation carrying opposite
+operation-labelled response families.  Second, its topological reduction
+eliminates the connected order-seven exterior and, in the nonfull return,
+puts all fifteen operation signatures against one partition-disjoint reverse
+response on a common exact-seven cut.  Third, a general linear-forest
+threshold theorem closes the portal two-cycle target by returning one cycle
+or an operation-labelled minimum separation.  Fourth, minimum path-bag
+ownership compresses the induced-path allocation obstruction to shared
+contact, repeated contact, or a response-bearing boundary of order seven or
+eight, eliminating the nonrepeated order-nine case.  The conjecture remains
+the sole primary target and remains open; the active proof laboratory is now
+the bounded exceptional-centre interface, not the frozen fan-to-root line.
 
 ### 1. Exhaustive global obligation
 
@@ -85,6 +94,48 @@ degree-eight vertices.  Since `R(4,5)=25` and the host has no literal
 `K_5`, every hypothetical counterexample therefore contains five
 independent degree-eight centres.
 
+The new audited
+[remote removable-edge and operation-cube theorem](results/hc7_k7minus_remote_removable_edge_operation_cube.md)
+now applies at every one of those exceptional centres.  For an exceptional
+degree-eight vertex `z`, it gives an edge
+
+\[
+                         f\in E(G-N[z])
+\]
+
+such that `G-f` is still seven-connected.  If
+`I=\{x_1,x_2,x_3\}\subseteq N(z)` is independent, then
+
+\[
+              T=\{zx_1,zx_2,zx_3,f\}
+                    \cong K_{1,3}\mathbin{\dot\cup}K_2          \tag{R0}
+\]
+
+supports all `3^4-1=80` nontrivial labelled keep/delete/contract patterns
+as exactly six-chromatic proper minors.  The full deletion host is exactly
+five-connected, has all fifteen nonempty signatures and has a spanning
+exact `K_7^\vee` model.  More importantly, if `C` is the component of
+`G-N[z]` containing `f`, then `Q=N(C)` has order seven or eight.  The seven
+nonempty star signatures restrict properly to the closed `C`-shore, while
+the `f`-only signature restricts properly to the opposite closed shore; the
+remote partition differs from every star-labelled partition.  If all three
+star leaves lie on the boundary, at least five distinct boundary partitions
+survive; if exactly two lie there, at least three survive.  This is the
+current direct bounded finishing interface.
+
+The audited
+[remote-interface topological reduction](results/hc7_k7minus_remote_interface_topological_reduction.md)
+now removes the connected-exterior order-seven topology completely.  Every
+interface lies in exactly one of four rows.  If the second exterior
+component is nonfull, its exact order-seven shore carries all fifteen
+nonempty `T`-signatures in one orientation and a fresh crossing-edge
+partition in the other which differs from all fifteen; this feeds the
+existing exact-seven machinery but is not itself a proof of the conjecture.
+The three residual topologies are cross-miss/full at order seven, a
+connected full exterior at order eight, or two full exteriors at order
+eight.  The fixed exact model remains available on the original deletion
+host; no persistence through the fresh crossing-edge deletion is asserted.
+
 ### 3. Immediate structural laboratory
 
 The audited
@@ -116,7 +167,7 @@ minor-criticality and componentwise inducedness; the nonautomatic inputs
 are the two seven-connected restorations, the common cycle and the exact
 model.
 
-This gives the present capstone target:
+The six-coordinate route remains a parallel capstone target:
 
 > **Six-coordinate induced-forest terminalization.**  The critical host
 > cannot contain the displayed forest `F` with both distinguished
@@ -211,6 +262,24 @@ The target has two exhaustive connectivity rows.
      after bounded responses are excluded.  The order-eight row has the
      exact three-crossing normal form and two complete geometric linkages
      sharing one shore fan.
+
+     The new audited
+     [minimum path-bag owner-circuit theorem](results/hc7_k7minus_p3_owner_circuit_compression.md)
+     now attacks the branch-set allocation directly.  Choose a spanning
+     co-bagged `K_6` model with its path bag minimum.  Every component left
+     after deleting the induced path owns at least two of the five foreign
+     bag adjacencies; owner sets are disjoint, so there are at most two
+     components.  Rado--Menger deficiency gives a minimal owner circuit of
+     order two through four.  An all-five circuit would create a four-cut
+     separating the retained path bag from the connected union of the five
+     foreign bags, and is therefore impossible.  The exact output is a
+     shared differently labelled contact, a repeated contact in one foreign
+     bag, or a component boundary of order seven or eight.  In the
+     nonrepeated case the boundary is exactly `2+5` at order seven or `3+5`
+     at order eight, and it carries the original three path responses on the
+     same literal shore.  Thus the nonrepeated order-nine branch and the old
+     operation-provenance mismatch are eliminated; shared/repeated contact
+     absorption remains open.
 
    Thus path existence, unrelated-model choice and an unbounded unlocked
    separator are no longer the first gaps.  The matching residue is to
@@ -371,9 +440,9 @@ The target has two exhaustive connectivity rows.
    This is a recorded route nonclosure, not a counterexample to the desired
    host theorem.  It shows that the requested theorem cannot be obtained
    from five-connectivity, fan incidence and static rooted ownership alone.
-   The protected-centre fan-to-root line is therefore frozen, and the
-   Conjecture 21 discovery campaign is paused at this decision point rather
-   than extended by more finite kernel cases.  The parallel nonsingleton
+   The protected-centre fan-to-root line is therefore frozen and is not
+   being extended by more finite kernel cases.  The resumed campaign instead
+   uses the remote-edge interface (R0).  The parallel nonsingleton
    obligation remains operation-sensitive transfer across at most two
    model-owning appendages.
 
@@ -386,16 +455,26 @@ The target has two exhaustive connectivity rows.
    the second operation and `K_7^-`-minor exclusion, not merely the size of
    the response side.
 
-In the seven-connected exact-model row, the audited
-[portal-cycle threshold reduction](results/hc7_k7minus_portal_edge_cycle_threshold.md)
-puts a selected model portal edge and all six coordinates on at most two
-vertex-disjoint cycles.  A single-cycle
-conclusion from connectivity alone is precisely the unresolved
-Lovasz--Woodall threshold; the next valid theorem must compose the two
-cycles using the exact model and critical colouring data, or return a
-labelled order-seven separation.  Thus the proposed common co-bagged-`K_6`
-split is not the first gate: Chu's matching does not supply that model, and
-contact-only quotient splitting already has explicit obstructions.
+In the seven-connected exact-model row, the new audited
+[linear-forest cycle-or-separation theorem](results/hc7_k7minus_linear_forest_cycle_or_exact7_response.md)
+supersedes the former two-cycle target.  A clean portal edge together with
+the six original coordinates is a seven-edge componentwise-induced linear
+forest.  If `G` is eight-connected, Haggkvist--Thomassen puts it on one
+cycle.  Otherwise a seven-cut localises the complete `127`-signature cube:
+one shore carries at least a two-coordinate punctured subcube, opposite
+shore partition languages are disjoint, and the original fixed exact
+`K_7^\vee` model survives.  Thus the exact alternative is now
+
+\[
+ \text{one portal-compatible cycle}
+ \quad\hbox{or}\quad
+ \text{an operation-labelled order-seven separation}.          \tag{R2}
+\]
+
+This does not assert the unresolved Lovasz--Woodall one-cycle conclusion;
+it spends critical colourability at precisely the missing unit of
+connectivity.  The returned exact-seven interface, rather than two-cycle
+merging, is the remaining branch.
 
 This is genuine progress inside both global cases: the entire
 bounded-feedback alternative is impossible, and the eight-coordinate row
@@ -1427,4 +1506,15 @@ Manuscript preparation is separate from the active proof target.
   essential-edge separation and shore accounting.
 - [`results/hc7_k7minus_strict_surplus_canonical_six_boundary.md`](results/hc7_k7minus_strict_surplus_canonical_six_boundary.md):
   reserve blindness and the canonical sparse six-boundary obstruction.
+- [`results/hc7_k7minus_remote_removable_edge_operation_cube.md`](results/hc7_k7minus_remote_removable_edge_operation_cube.md):
+  a remote seven-removable edge and bounded opposite-shore operation
+  interface at every exceptional centre.
+- [`results/hc7_k7minus_remote_interface_topological_reduction.md`](results/hc7_k7minus_remote_interface_topological_reduction.md):
+  the four-row interface normal form, excluding connected order seven and
+  preserving all fifteen signatures on the nonfull return.
+- [`results/hc7_k7minus_linear_forest_cycle_or_exact7_response.md`](results/hc7_k7minus_linear_forest_cycle_or_exact7_response.md):
+  the portal-compatible one-cycle or labelled minimum-separation theorem.
+- [`results/hc7_k7minus_p3_owner_circuit_compression.md`](results/hc7_k7minus_p3_owner_circuit_compression.md):
+  minimum path-bag ownership compresses the nonrepeated allocation residue
+  to boundary order seven or eight.
 - [`archive/`](archive/): superseded proof spines and the previous ledger.

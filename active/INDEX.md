@@ -17,6 +17,10 @@ Selected audited inputs:
 
 - [the critical host is seven-connected, `K_5`-free, has minimum degree at
   least eight and at least 25 degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
+- [every exceptional centre has a remote seven-removable edge and exact
+  80-pattern cube; its interface lies in four exact topological rows, with
+  the connected order-seven row excluded and the nonfull return carrying
+  all 15 signatures plus a reverse response](../results/hc7_k7minus_remote_interface_topological_reduction.md)
 - [a six-coordinate induced forest supplies the complete punctured
   signature cube, two seven-connected restorations, an exact spanning
   `K_7^vee` model and a common coordinate cycle](../results/hc7_k7minus_six_coordinate_forest_reduction.md)
@@ -41,9 +45,24 @@ Immediate barriers:
   The construction contains a literal `K_7`, so it isolates the need to use
   target exclusion rather than refuting the desired disjunction.
 
-## Principal finishing architecture (campaign paused)
+## Principal finishing architecture
 
 [Critical-host exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md)
+
+The discovery campaign resumed on 16 August 2026 without reopening the
+failed protected-centre fan-to-root mechanism.  Its direct laboratory is
+now the bounded interface returned at **every** exceptional centre: one
+actual boundary of order seven or eight carries all seven nonempty
+three-spoke responses from one orientation, a remote seven-removable-edge
+response from the other, at least five or three distinct visible boundary
+partitions, and a complete exact mixed-operation cube on the common
+deletion host.  The connected-exterior order-seven topology is impossible;
+if a second exterior component is nonfull, one exact order-seven shore
+carries all fifteen operation signatures and a reverse crossing-edge
+partition distinct from all fifteen.  The immediate target is to spend this
+`15`-versus-`1` exact-seven return, or eliminate the cross-miss/full
+order-seven row and the two explicit order-eight rows, while retaining the
+centre and remote-edge labels.
 
 Let `G` be a minor-minimal counterexample.  The direct campaign supplies a
 six-edge componentwise-induced forest
@@ -106,8 +125,9 @@ not share branch-set ownership.  An exact target-free quotient survives
 even when the selected mate has six direct `Q` contacts.  Thus neither
 fan incidence, marked-edge terminal contraction nor three simultaneous
 root-bag suffixes proves the required common two-centre contact or split.
-This line is frozen; the conjecture campaign is paused at this decision
-point rather than extended by further kernel cases.  The nonsingleton
+This line remains frozen; the resumed campaign uses the remote removable
+edge and bounded opposite-shore interface instead of adding further kernel
+cases.  The nonsingleton
 model-anchored outcome retains the parallel open operation-transfer problem
 across at most two appendages.
 
@@ -119,13 +139,19 @@ that pivot to repair a missing model contact.  In the path case, four
 foreign bags must still meet all three pieces of one co-bagged path, or a
 labelled response must be returned.
 
-The separate exact-model route retains one further conditional problem: a
-portal edge and all six original coordinates lie on at most two disjoint
-cycles.  Merging them still requires the critical colouring data or a
-labelled order-seven separation.
+The former portal two-cycle problem is closed by the audited
+[linear-forest threshold theorem](../results/hc7_k7minus_linear_forest_cycle_or_exact7_response.md):
+the portal edge and all six original coordinates lie on one cycle, or an
+actual order-seven separation retains a whole localised subcube and the
+fixed exact model.  This feeds the existing exact-seven machinery; no
+Lovasz--Woodall one-cycle assertion is assumed.
 
 ## Conditional refinements and secondary laboratories
 
+- [Minimum path-bag owner circuits](../results/hc7_k7minus_p3_owner_circuit_compression.md)
+  eliminate the nonrepeated order-nine induced-path allocation branch and
+  retain the original path responses on exact order-seven/eight boundaries;
+  shared and repeated foreign-bag contacts remain.
 - [The cross-signature matching gate](hc7_k7minus_cross_signature_pivot_gate.md)
   records the shared-pivot theorem and exact route nonclosure.  The
   [static two-split profile barrier](../barriers/hc7_k7minus_static_two_split_profile_barrier.md)
