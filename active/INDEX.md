@@ -17,6 +17,18 @@ Selected audited inputs:
 
 - [the critical host is seven-connected, `K_5`-free, has minimum degree at
   least eight and at least 25 degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
+- [every exceptional centre has a remote seven-removable edge and exact
+  80-pattern cube; its interface lies in four exact topological rows, with
+  the connected order-seven row excluded and the nonfull return carrying
+  all 15 signatures plus a reverse response](../results/hc7_k7minus_remote_interface_topological_reduction.md)
+- [the nonfull exact-seven return extends to a five-edge forest with all
+  242 nontrivial mixed operations exactly six-chromatic, all 31 signatures,
+  and a renewed spanning exact model](../results/hc7_k7minus_remote_crossing_five_cube_model_renewal.md)
+- [in the cross-miss/full order-seven and both-full order-eight cases the
+  remote edge is nonseparating, has high-demand response partitions, and
+  lies on four prescribed cycles](../results/hc7_k7minus_remote_two_component_shore_stability.md)
+- [the connected-full order-eight case has one six-connected pointed-cube
+  graph and an exhaustive operation-labelled lift of every six-cut](../results/hc7_k7minus_connected_full_remote_pole_core.md)
 - [a six-coordinate induced forest supplies the complete punctured
   signature cube, two seven-connected restorations, an exact spanning
   `K_7^vee` model and a common coordinate cycle](../results/hc7_k7minus_six_coordinate_forest_reduction.md)
@@ -40,10 +52,31 @@ Immediate barriers:
   under stronger connectivity and degree bounds](../barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md).
   The construction contains a literal `K_7`, so it isolates the need to use
   target exclusion rather than refuting the desired disjunction.
+- [exceptional boundary topology and two adjacent one-miss bridge images do
+  not force a `K_7^-` minor](../barriers/hc7_k7minus_connected_full_bridge_quotient_barrier.md).
+  The exact order-eleven quotient shows that the connected-full bridge case
+  must use operation colourings, the exact model, or other critical-host
+  structure.
 
-## Principal finishing architecture (campaign paused)
+## Principal finishing architecture
 
 [Critical-host exceptional-centre frontier](hc7_k7minus_seven_exceptional_frontier.md)
+
+The discovery campaign resumed on 16 August 2026 without reopening the
+failed protected-centre fan-to-root mechanism.  Its direct laboratory is
+the bounded interface returned at **every** exceptional centre.  The
+nonfull exact-seven return now has a single five-edge deletion graph with
+all `242` nontrivial mixed operations, all 31 nonempty signatures, the
+fifteen old responses, the reverse response and a renewed spanning exact
+model.  In the cross-miss/full order-seven and both-full order-eight cases,
+the remote edge is nonseparating and belongs to four prescribed cycles.
+In the connected-full order-eight case, deleting the centre and remote edge
+gives one six-connected pointed-cube graph whose every six-cut has an
+exhaustive operation-labelled lift.  The exact surviving tasks are now:
+escape from the eight-endpoint model separator, a response-preserving split
+of the connected two-component shore, and operation-to-model alignment in
+the connected-full centre-deletion graph.  Boundary topology and fresh
+unlabelled restarts are not sufficient.
 
 Let `G` be a minor-minimal counterexample.  The direct campaign supplies a
 six-edge componentwise-induced forest
@@ -106,8 +139,9 @@ not share branch-set ownership.  An exact target-free quotient survives
 even when the selected mate has six direct `Q` contacts.  Thus neither
 fan incidence, marked-edge terminal contraction nor three simultaneous
 root-bag suffixes proves the required common two-centre contact or split.
-This line is frozen; the conjecture campaign is paused at this decision
-point rather than extended by further kernel cases.  The nonsingleton
+This line remains frozen; the resumed campaign uses the remote removable
+edge and bounded opposite-shore interface instead of adding further kernel
+cases.  The nonsingleton
 model-anchored outcome retains the parallel open operation-transfer problem
 across at most two appendages.
 
@@ -119,13 +153,19 @@ that pivot to repair a missing model contact.  In the path case, four
 foreign bags must still meet all three pieces of one co-bagged path, or a
 labelled response must be returned.
 
-The separate exact-model route retains one further conditional problem: a
-portal edge and all six original coordinates lie on at most two disjoint
-cycles.  Merging them still requires the critical colouring data or a
-labelled order-seven separation.
+The former portal two-cycle problem is closed by the audited
+[linear-forest threshold theorem](../results/hc7_k7minus_linear_forest_cycle_or_exact7_response.md):
+the portal edge and all six original coordinates lie on one cycle, or an
+actual order-seven separation retains a whole localised subcube and the
+fixed exact model.  This feeds the existing exact-seven machinery; no
+Lovasz--Woodall one-cycle assertion is assumed.
 
 ## Conditional refinements and secondary laboratories
 
+- [Minimum path-bag owner circuits](../results/hc7_k7minus_p3_owner_circuit_compression.md)
+  eliminate the nonrepeated order-nine induced-path allocation branch and
+  retain the original path responses on exact order-seven/eight boundaries;
+  shared and repeated foreign-bag contacts remain.
 - [The cross-signature matching gate](hc7_k7minus_cross_signature_pivot_gate.md)
   records the shared-pivot theorem and exact route nonclosure.  The
   [static two-split profile barrier](../barriers/hc7_k7minus_static_two_split_profile_barrier.md)

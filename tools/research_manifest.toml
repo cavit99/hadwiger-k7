@@ -11793,6 +11793,190 @@ does_not_prove = [
 ]
 keywords = ["K7 minus", "shore allocation barrier", "two full components", "mechanism witness", "K3 K3 K2"]
 
+[[claims]]
+id = "hc7.k7minus_remote_removable_edge_operation_cube"
+title = "Every exceptional centre has a remote removable edge and bounded opposite responses"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_remote_removable_edge_operation_cube.md"
+source_heading = "Corollary 3.4 (a bounded opposite-shore response interface at every centre)"
+active = false
+audit = "results/hc7_k7minus_remote_removable_edge_operation_cube_audit.md"
+expected_source_sha256 = "2f7c69fd57319f898d84c9884907ac70e3e1f2064b3a5753d19da8531406ecf9"
+scope = "every exceptional degree-eight vertex in a hypothetical minor-minimal seven-chromatic K7-minus-minor-free graph"
+label_fidelity = "the exceptional centre, independent neighbour triple, remote seven-removable edge, literal exterior component and both shore orientations remain fixed"
+separator_order = "the exterior component has its full literal neighbourhood of order seven or eight"
+colour_compatibility = "seven centre-star partitions are rejected in one orientation; the remote-edge partition is rejected in the other and is distinct from every star partition; at least five total states survive when all three leaves are visible and at least three otherwise"
+conclusions = [
+  "a seven-removable edge has both ends outside the centre's closed neighbourhood",
+  "the induced K1,3 plus K2 supports all 80 nontrivial labelled keep/delete/contract patterns as exactly six-chromatic minors",
+  "the full deletion host is exactly five-connected, has all 15 signatures and an exact spanning K7-vee model",
+  "every centre yields an actual order-seven or order-eight separation with opposite operation-labelled response families",
+  "the bounded interface has at least five distinct boundary partitions when all star leaves are visible and at least three otherwise",
+]
+does_not_prove = [
+  "that remote edges chosen for different centres are distinct or form a matching",
+  "placement of the remote edge in prescribed branch bags",
+  "terminalisation of the returned order-seven/eight interface",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "exceptional centre", "remote removable edge", "operation cube", "opposite responses", "bounded separation"]
+
+[[claims]]
+id = "hc7.k7minus_remote_interface_topological_reduction"
+title = "The remote centre interface has four exact topological rows"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_remote_interface_topological_reduction.md"
+source_heading = "Theorem 2.1 (connected order seven is impossible)"
+active = true
+audit = "results/hc7_k7minus_remote_interface_topological_reduction_audit.md"
+expected_source_sha256 = "5bc54f3b7f4cbe68a7b3c35a35d16c693672cfbffa17686f65008938cdfc3865"
+scope = "the operation-cube interface at an exceptional degree-eight centre in the hypothetical critical K7-minus-free host"
+label_fidelity = "the exceptional centre, independent neighbour triple, remote edge, its exterior component, all 15 operation signatures, any second exterior component and the fresh crossing edge remain literal"
+separator_order = "seven in the two nonfull rows and eight in the connected-full and both-full rows"
+colour_compatibility = "in the nonfull second-component row all 15 operation signatures are rejected in one orientation and one fresh crossing-edge partition is rejected in the other and differs from all 15"
+conclusions = [
+  "a connected exceptional anti-neighbourhood cannot have a seven-vertex attachment boundary",
+  "every remote interface lies in exactly one of four explicit topological rows",
+  "a nonfull second exterior component yields an exact order-seven shore carrying all 15 operation signatures plus a reverse crossing-edge response",
+  "the three unresolved topological residues are cross-miss/full order seven, connected-full order eight and both-full order eight",
+]
+does_not_prove = [
+  "that the 15 operation partitions are mutually distinct",
+  "that the fixed exact model survives deletion of the fresh crossing edge",
+  "terminalisation of the full punctured-cube exact-seven return",
+  "operation-to-branch-set allocation in any of the three residual rows",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "exceptional centre", "remote edge", "four-way reduction", "exact seven separation", "operation signatures"]
+
+[[claims]]
+id = "hc7.k7minus_linear_forest_cycle_or_exact7_response"
+title = "A prescribed linear forest lies on one cycle or labels a minimum separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_linear_forest_cycle_or_exact7_response.md"
+source_heading = "Theorem 1.1 (cycle or operation-labelled minimum separation)"
+active = false
+audit = "results/hc7_k7minus_linear_forest_cycle_or_exact7_response_audit.md"
+expected_source_sha256 = "a8f06843ac08fcfa2c8cda40e05a54f69209029c502c058f115b509a18db209d"
+scope = "q-edge linear forests in q-connected edge-critical graphs, with a seven-coordinate critical-host specialization"
+label_fidelity = "the prescribed path components, selected deleted edge, literal minimum cut, portal edge, full signature cube and fixed exact model remain named"
+separator_order = "exactly q in the general threshold branch and exactly seven in the portal application"
+conclusions = [
+  "a q-edge linear forest lies on one cycle at connectivity q+1",
+  "at connectivity q a selected forest-edge colouring labels a proper order-q separation",
+  "the seven-coordinate critical host localises a complete punctured cube on the two shores",
+  "the portal two-cycle target is replaced by one cycle or an operation-labelled order-seven separation retaining the fixed model",
+]
+does_not_prove = [
+  "the parameter-seven Lovasz-Woodall one-cycle conjecture",
+  "terminalisation of the returned exact-seven interface",
+  "a shared Kempe pivot or branch-bag/colour-component alignment",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["linear forest", "prescribed cycle", "minimum separation", "signature cube", "portal edge"]
+
+[[claims]]
+id = "hc7.k7minus_p3_owner_circuit_compression"
+title = "Minimum path-bag owner circuits have bounded nonrepeated boundaries"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_p3_owner_circuit_compression.md"
+source_heading = "Theorem 3.1 (shared portal, repeated contact, or order at most eight)"
+active = false
+audit = "results/hc7_k7minus_p3_owner_circuit_compression_audit.md"
+expected_source_sha256 = "0d1b0a8246ee87487de82e2350bedb13eb3a643c8aa4fee046c98bb180b7c41c"
+scope = "a minimum spanning K6 model whose root bag contains one selected induced path in the critical K7-minus host"
+label_fidelity = "the induced path, five foreign bags, minimal owner labels, original three path colourings and returned literal component boundary remain fixed"
+separator_order = "seven or eight in every nonrepeated owner-circuit outcome"
+conclusions = [
+  "every off-path root-bag component owns at least two foreign labels and at most two such components exist",
+  "the minimal deficient owner family has order two through four; the all-five/order-nine case is impossible by seven-connectivity",
+  "the nonrepeated outputs are exact labelled 2+5 order-seven or 3+5 order-eight boundaries",
+  "all original path signatures are inherited on the same returned closed shore",
+]
+does_not_prove = [
+  "elimination of shared labelled contact or repeated foreign-bag contact",
+  "terminalisation of the exact-seven/eight boundary",
+  "the deficient R=V(P) contact case",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "induced path", "spanning K6 model", "owner circuit", "Rado Menger", "bounded boundary"]
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_remote_interface_topological_reduction"
+kind = "uses"
+note = "Every hypothetical critical host has at least twenty-five exceptional centres, and each remote interface now lies in one of four exact topological rows."
+
+[[relations]]
+source = "hc7.k7minus_remote_interface_topological_reduction"
+target = "hc7.k7minus_remote_removable_edge_operation_cube"
+kind = "uses"
+note = "The remote-edge theorem supplies the four-edge operation cube, all 15 signatures, the fixed exact model and the initial order-seven/eight boundary."
+
+[[relations]]
+source = "hc7.k7minus_remote_interface_topological_reduction"
+target = "hc7.low_degree_exterior_component_bounds"
+kind = "uses"
+note = "The degree-eight exterior theorem leaves exactly one or two anti-neighbourhood components."
+
+[[relations]]
+source = "hc7.k7minus_remote_interface_topological_reduction"
+target = "hc7.k7minus_three_full_subgraph_quotient"
+kind = "uses"
+note = "Three full connected subgraphs at the hypothetical connected order-seven boundary force a three-colourable boundary."
+
+[[relations]]
+source = "hc7.k7minus_remote_interface_topological_reduction"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "Every order-seven cut has exactly two full complementary components, fixing the cross-miss topology."
+
+[[relations]]
+source = "hc7.k7minus_remote_interface_topological_reduction"
+target = "hc7.k7minus_both_full_boundary_reduction"
+kind = "uses"
+note = "The both-full order-eight row has one of seven exact boundary types and full-subgraph packing vector (1,1,1)."
+
+[[relations]]
+source = "hc7.k7minus_remote_removable_edge_operation_cube"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "uses"
+note = "The critical-host closure supplies seven-connectivity, minimum degree eight, coefficient-four density, target exclusion and at least twenty-five vertices."
+
+[[relations]]
+source = "hc7.k7minus_remote_removable_edge_operation_cube"
+target = "hc7.k7minus_exceptional_independent_triples"
+kind = "uses"
+note = "The independent triple four-colours the exceptional neighbourhood and forms the induced three-spoke component of the operation cube."
+
+[[relations]]
+source = "hc7.k7minus_linear_forest_cycle_or_exact7_response"
+target = "hc7.k7minus_six_coordinate_forest_reduction"
+kind = "uses"
+note = "The portal application adds one clean redundant model edge to the six-coordinate componentwise-induced forest."
+
+[[relations]]
+source = "hc7.k7minus_linear_forest_cycle_or_exact7_response"
+target = "hc7.k7minus_three_component_seven_cut_exclusion"
+kind = "uses"
+note = "The exact two-full-component theorem localises the seven-coordinate cube on both orientations of a minimum cut."
+
+[[relations]]
+source = "hc7.k7minus_linear_forest_cycle_or_exact7_response"
+target = "hc7.k7minus_portal_edge_cycle_threshold"
+kind = "supersedes"
+note = "The old one-or-two-cycle endpoint is replaced by one cycle or an operation-labelled exact-seven separation."
+
+[[relations]]
+source = "hc7.k7minus_p3_owner_circuit_compression"
+target = "hc7.k7minus_p3_opposite_coordinate_common_model"
+kind = "uses"
+note = "The common spanning K6 model co-bagging the induced path supplies the minimum path-bag setting and original response colourings."
+
 [[relations]]
 source = "hc7.atomic_octahedral_frame_augmentation"
 target = "hc7.atomic_weak_k7_immersion_rounding"
@@ -18902,3 +19086,229 @@ expected_stdout = [
   "graph6=M~vNKA?_C?[No^w]_",
   "COUNTEREXAMPLE_TO_CONTACT_ONLY_767_QUOTIENT",
 ]
+
+[[claims]]
+id = "hc7.k7minus_remote_crossing_five_cube_model_renewal"
+title = "A reverse crossing edge gives a 242-pattern exact-six cube and renewed exact model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_remote_crossing_five_cube_model_renewal.md"
+source_heading = "Theorem 2.1 (full five-edge exact-six cube)"
+active = true
+audit = "results/hc7_k7minus_remote_crossing_five_cube_model_renewal_audit.md"
+expected_source_sha256 = "10eb1918965ef8e8f3380bcf1a4154e1b49dbfe77ec0ce4e93335ee682098323"
+scope = "the nonfull exact-seven outcome at an exceptional centre, with the three-spoke star, remote seven-removable edge and one disjoint reverse crossing edge"
+label_fidelity = "all five selected edges, all fifteen old response colourings, the reverse response, the exact-seven shore orientation and the renewed common model host remain fixed"
+separator_order = "the model dichotomy returns a separator of order at least seven; failure of singleton exposure puts all eight forest vertices in that separator"
+colour_compatibility = "the common deletion graph realises all 31 nonempty signatures; the fifteen old responses and reverse response retain opposite legal shores"
+conclusions = [
+  "all 242 nontrivial labelled keep/delete/contract patterns on the componentwise-induced five-edge forest are exactly six-chromatic",
+  "one common deletion graph realises the full punctured five-coordinate signature cube",
+  "the common graph is four- or five-connected, has density at least 4n-5 and has a renewed spanning exact K7-vee model",
+  "the exact-model separator dichotomy exposes a named singleton response or returns a separator containing all eight forest vertices",
+]
+does_not_prove = [
+  "compatibility of the old and renewed exact-model bags",
+  "escape from the eight-endpoint separator outcome",
+  "terminalisation of the exact-seven interface",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "exceptional centre", "five-edge forest", "operation cube", "signature cube", "exact model renewal"]
+
+[[claims]]
+id = "hc7.k7minus_remote_two_component_shore_stability"
+title = "The remote edge is nonseparating in the order-seven and both-full two-component cases"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_remote_two_component_shore_stability.md"
+source_heading = "Theorem 2.1 (the remote edge is nonseparating in the packing-one shore)"
+active = true
+audit = "results/hc7_k7minus_remote_two_component_shore_stability_audit.md"
+expected_source_sha256 = "5e7d0d0a143fbe9439435cb71a8afb455861562b08259c0791efe1edb17e2640"
+scope = "the cross-miss/full order-seven and both-full order-eight two-component cases at an exceptional centre"
+label_fidelity = "the centre, independent triple, remote edge, two exterior components, all fifteen operation signatures and all three literal shores remain fixed"
+separator_order = "seven in the cross-miss/full case and eight in the both-full case"
+colour_compatibility = "the complete three-shore response matrix is retained; one-coordinate response partitions have demand at least three"
+conclusions = [
+  "deleting the remote edge leaves its exterior component connected and full at the boundary in both covered cases",
+  "the both-full bridge exclusion is certified for all 252 promoted boundary/profile cases",
+  "at least five distinct operation-labelled boundary partitions are visible at the exact-seven interface",
+  "the remote edge lies on one internal cycle and on three cycles containing each chosen pair of star spokes",
+]
+does_not_prove = [
+  "the different order-eight case with one full and one nonfull exterior component",
+  "a response-preserving split of the connected exterior shore",
+  "alignment of operation partitions with rooted model bags",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "remote edge", "nonseparating edge", "full-subgraph packing", "boundary demand", "prescribed cycles"]
+
+[[claims]]
+id = "hc7.k7minus_connected_full_remote_centre_deletion"
+title = "The connected-full remote interface has a six-connected pointed-cube graph and exhaustive six-cut lift"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_connected_full_remote_pole_core.md"
+source_heading = "Theorem 3.1 (six-connected exact core and pointed cube)"
+active = true
+audit = "results/hc7_k7minus_connected_full_remote_pole_core_audit.md"
+expected_source_sha256 = "a7bfb9746eb365e89d0ed3eec63aefa24a29d779744dcb3d929b3e945a567826"
+scope = "the connected-full order-eight remote-interface case at an exceptional centre"
+label_fidelity = "the centre neighbourhood, independent triple, remote edge, its endpoint equality bit, all fifteen signatures and the exact model remain on one common centre-deletion graph"
+separator_order = "every six-cut lifts to an exact-seven response, two overlapping order-eight separations, or one boundary-contained exact-seven case"
+colour_compatibility = "unequal remote endpoints force all six colours on the boundary; pure-star partitions have six blocks while the remote-only partition has at most five"
+conclusions = [
+  "deleting the centre and remote edge gives a six-connected exactly six-chromatic target-free graph of density at least 4n-5",
+  "the graph has a spanning exact K7-vee model and the full fifteen-signature pointed cube",
+  "every six-cut has an exhaustive operation-labelled lift to the three stated separation configurations",
+  "if no six-cut exists, the common centre-deletion graph is seven-connected",
+]
+does_not_prove = [
+  "that deleting the remote edge preserves connectivity inside its exterior component",
+  "elimination of the boundary-contained endpoint configuration",
+  "operation-to-model alignment in the seven-connected outcome",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "connected exterior", "centre deletion", "six-connected", "pointed signature cube", "six-cut lift"]
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_remote_crossing_five_cube_model_renewal"
+kind = "uses"
+note = "The exact-seven nonfull interface now carries one five-edge 242-pattern operation cube and renewed exact model."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_remote_two_component_shore_stability"
+kind = "uses"
+note = "The two covered residual topologies now have a nonseparating remote edge, high-demand response partitions and four prescribed cycles."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_connected_full_remote_centre_deletion"
+kind = "uses"
+note = "The connected-full order-eight case is reduced to one common pointed-cube graph and an exhaustive lift of every six-cut."
+
+[[relations]]
+source = "hc7.k7minus_remote_crossing_five_cube_model_renewal"
+target = "hc7.k7minus_remote_interface_topological_reduction"
+kind = "uses"
+note = "The topological reduction supplies the nonfull exact-seven shore and reverse crossing response."
+
+[[relations]]
+source = "hc7.k7minus_remote_crossing_five_cube_model_renewal"
+target = "hc7.k7minus_remote_removable_edge_operation_cube"
+kind = "uses"
+note = "The four-edge operation cube supplies the old fifteen signatures, exact five-connectivity and remote edge."
+
+[[relations]]
+source = "hc7.k7minus_remote_two_component_shore_stability"
+target = "hc7.k7minus_remote_interface_topological_reduction"
+kind = "uses"
+note = "The topological reduction supplies the two covered component configurations and their labelled operation responses."
+
+[[relations]]
+source = "hc7.k7minus_remote_two_component_shore_stability"
+target = "hc7.k7minus_both_full_boundary_reduction"
+kind = "uses"
+note = "The both-full theorem supplies the seven exact boundary types and packing vector (1,1,1)."
+
+[[relations]]
+source = "hc7.k7minus_connected_full_remote_centre_deletion"
+target = "hc7.k7minus_remote_interface_topological_reduction"
+kind = "uses"
+note = "The topological reduction isolates the connected-full order-eight case."
+
+[[relations]]
+source = "hc7.k7minus_connected_full_remote_centre_deletion"
+target = "hc7.k7minus_remote_removable_edge_operation_cube"
+kind = "uses"
+note = "The remote-edge theorem supplies seven-connectivity of G-f and all fifteen pointed signatures."
+
+[[verifiers]]
+id = "k7minus-remote-two-component-shore-stability"
+path = "results/hc7_k7minus_remote_two_component_shore_stability_verify.py"
+sha256 = "8750ec3264b546f1278d018387c0ebc37d748caabaad651d8a1f325e82d01611"
+timeout = 120
+expected_stdout = [
+  "boundary_types=7 digest=bf063de64c772c1c9c1c83cba7dc39d11bb9c214f3e101595889fe63f25861a0",
+  "bridge_split_cases=252 terminal=252 survivors=0",
+  "certificate_digest=311f08b508413fdc416b5af98e20abe0c45b86dafe890c8c88402b73e1565c8c",
+  "PASS remote two-component shore stability finite lemma",
+]
+
+[[claims]]
+id = "hc7.barrier.k7minus_connected_full_bridge_quotient"
+title = "Exceptional boundary topology does not eliminate a connected-full bridge quotient"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k7minus_connected_full_bridge_quotient_barrier.md"
+source_heading = "Theorem 2.1 (exact noncontainment)"
+active = true
+audit = "barriers/hc7_k7minus_connected_full_bridge_quotient_barrier_audit.md"
+expected_source_sha256 = "73434c773d628c8cfe3e3b83e508193592c1c4559ec93d1cff807e0d182b7819"
+scope = "the explicit order-eleven quotient built from the exceptional graph6 boundary G@aIZ_, one full centre image and two adjacent distinct-one-miss bridge images"
+conclusions = [
+  "the boundary is K4-free with independence number three",
+  "each bridge image meets seven boundary vertices and their connected union is boundary-full",
+  "exhaustive deletion/contraction enumeration finds no K7-minus minor",
+  "boundary topology and full-or-one-miss contact counts alone cannot eliminate the connected-full bridge case",
+]
+does_not_prove = [
+  "existence of the quotient inside a minor-critical host",
+  "failure of operation-preserving bridge elimination",
+  "failure of response-to-model alignment",
+  "the absence of K7-minus after using interior host structure",
+]
+keywords = ["K7 minus", "bridge quotient barrier", "exceptional boundary", "one-miss profiles", "exact minor enumeration"]
+
+[[relations]]
+source = "hc7.k7minus_connected_full_remote_centre_deletion"
+target = "hc7.barrier.k7minus_connected_full_bridge_quotient"
+kind = "guarded_by"
+note = "The explicit quotient shows that any bridge elimination in the connected-full case must use operation colourings, the exact model or other critical-host structure."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.k7minus_connected_full_bridge_quotient"
+kind = "guarded_by"
+note = "The active exceptional-centre route cannot close the connected-full bridge case from boundary topology and contact counts alone."
+
+[[verifiers]]
+id = "k7minus-connected-full-bridge-quotient-barrier"
+path = "barriers/hc7_k7minus_connected_full_bridge_quotient_barrier_verify.py"
+sha256 = "f0678c00e08811b7862b400fdec2f093c29ade2fe40148df93a1255c28cae20f"
+timeout = 30
+expected_stdout = [
+  "boundary_graph6=G@aIZ_ order=8 edges=10 omega=3 alpha=3",
+  "quotient_order=11 edges=33 profiles=z:full,a:miss-0,b:miss-1 joined_component:full",
+  "reachable_states=11:1,10:44,9:810,8:8076,7:47385",
+  "state_digest=8e76ba088cc1a21e772d160c5284bb6d38df807af33651eb848a712d304a5642",
+  "seven_bag_contact_histogram=7:5,8:11,9:18,10:183,11:596,12:1200,13:3416,14:7196,15:10150,16:12248,17:8866,18:2906,19:590",
+  "seven_bag_states=47385 max_contacts=19 k7minus_models=0",
+  "PASS connected-full bridge quotient barrier",
+]
+
+[[claims]]
+id = "graph_schemes.k2n_contractible"
+title = "Every complete bipartite graph K2,n is contractible"
+kind = "theorem"
+status = "audited-green"
+source = "results/k2n_contractibility_via_matroid_packing.md"
+source_heading = "Theorem 1.1"
+active = false
+audit = "results/k2n_contractibility_via_matroid_packing_audit.md"
+expected_source_sha256 = "c8784e5d244c0e07a2d78a9a0ccb005a0c5d7dcb2f83b5d05404aaae1316249b"
+scope = "all integers n at least one and arbitrary K2,n-schemes"
+conclusions = [
+  "every K2,n-scheme forces a K2,n minor rooted at the scheme vertices",
+  "the K2,4 half of Kuendgen--Pelsmajer--Ramamurthi Question 8.2 has an affirmative answer",
+  "the proof is unbounded and computation-free",
+]
+does_not_prove = [
+  "contractibility of K3,3",
+  "contractibility of every bipartite graph",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["graph scheme", "contractible graph", "rooted minor", "K2,n", "matroid union", "disjoint spanning trees"]
