@@ -133,23 +133,26 @@ roots every ordinary `K_5^-` minor when the component has order at most six,
 and roots a literal five-vertex `K_5^-` subgraph at arbitrary component
 order.  In a minimum larger counterexample, contraction of every edge
 internal to a branch set is blocked by a connected exact order-six fragment
-containing both edge ends in its boundary.  The first possible nonliteral
-order, seven, has an exact Hall-deficiency profile: a minimal deficient
-family consists of singleton bags whose union dominates the complement.
-Only a one-bag deficient family forces an individually universal degree-six
-singleton.  The independently audited
-[full order-seven `i=1` completion](hc7_k7minus_sparse_sixcut_order_seven_i1_completion.md)
-closes that entire one-bag case whenever `eta_S(C)>=6`.  If the complementary
-six-vertex graph has a nonspanning ordinary `K_4^-` model or a `K_5^-`
-minor, the perfect boundary matching roots it directly.  Otherwise an exact
-`2^15`-graph classification leaves precisely
-`Theta(2,2,3)`, `Theta(1,2,4)` and `Theta(1,3,3)`.  These cores have seven
-edges, so the excess bound gives at least twenty-one boundary incidences;
-the separately twice-audited theta theorem then forces a punctured rooted
-model from one incidence across a core nonedge.  Consequently the first
-unresolved order-seven Hall families have order two, three or four.  Their
-outside contacts are only collectively dominated, and assigning those
-contacts to individual singleton bags remains open.
+containing both edge ends in its boundary.
+
+The independently audited
+[complete order-seven ordinary-minor theorem](hc7_k7minus_sparse_sixcut_order_seven_ordinary_minor_completion.md)
+now closes the whole first nonliteral order when `eta_S(C)>=6`.  Make the
+five-bag model spanning.  A saturating Hall matching roots it immediately;
+otherwise the exact order-seven profile gives a minimal deficient singleton
+family of order `i` with `1<=i<=4`.  The `i=1` row is the twice-audited theta
+completion.  For `i=2`, a direct pole-and-tree theorem checks three
+nonadjacent-pole cases and sixty adjacent-pole cases.  For `i=3`, one finite
+support classification leaves a single eleven-edge orbit whose Hall leaves
+have total degree at most five.  For `i=4`, a fourteen-row allocation lemma
+roots the model directly.  The latter three rows need no excess hypothesis
+after the Hall return.  Thus a target-free three-full-component returned cut
+has `eta_S(C)<=5` for every order-seven lobe containing an ordinary
+`K_5^-` minor.
+
+This removes the complete order-seven ordinary-minor residue, but not the
+unbounded obstruction: shores of order at least eight may still return an
+exact order-six fragment along a nonsingleton branch bag.
 
 Two independently audited boundary-composition results constrain any
 spanning ordinary model:
