@@ -155,14 +155,24 @@ essential arms.
 Independently, an ordinary `K_5^-` minor roots at component order at most
 six, and a literal `K_5^-` subgraph roots at arbitrary component order; in a
 larger minimum nonliteral obstruction every branch-set contraction returns
-another exact order-six fragment.  Two boundary-composition theorems force
-one branch set with at most one boundary neighbour or three branch sets with
-at most two each.  In the ordinary-minor-free branch, Wood--Woodall's
-three-connected classification makes every non-exact core bounded: a wheel
-has order at most `31`, while cutvertices already return an exact fragment
-or two boundary-full connected subgraphs.  Nested two-separation chains and
-the bounded incidence cores remain.  The exact open local theorem sufficient
-to close the whole row is still
+another exact order-six fragment.  The order-seven Hall row now records only
+collective domination by a deficient singleton family: individual
+universality is forced only when that family has order one.  Two
+boundary-composition theorems force one branch set with at most one boundary
+neighbour or three branch sets with at most two each.
+
+The independently twice-audited
+[exact-singleton theorem](active/hc7_k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton.md)
+removes the no-exact-fragment subcase of the three-connected
+ordinary-minor-free case.  By Wood--Woodall, the lobe is a wheel, the
+triangular prism or `K_{3,3}`; an exact finite mask lemma and the
+target-sensitive four-root packing bound force a total-degree-six vertex.
+Its neighbourhood is an exact six-cut and the returned singleton has
+coefficient-four excess exactly `2`.  This supersedes the former
+order-`31`/excess-`62` bounded-core residue, but the exact fragment is a
+descent output rather than a terminal contradiction.  Transfer across the
+derived cut, ordinary-minor lobes and nested two-separation chains remain.
+The exact open local theorem sufficient to close the whole case is still
 
 \[
  \text{no punctured five-rooted }K_5^-\text{ model}

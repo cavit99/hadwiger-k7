@@ -4,8 +4,9 @@
 
 /*
  * Exhaust the attachment masks used in the Wood--Woodall exceptional-core
- * decoder.  Bit i means adjacency to boundary root i.  A missing core pair
- * xy is covered when the root assigned at x sees y, or conversely.
+ * rooted-model constructions.  Bit i means adjacency to boundary root i.
+ * A missing core pair xy is covered when the root assigned at x sees y, or
+ * conversely.
  */
 
 typedef struct {
@@ -25,7 +26,7 @@ static int popcount6(unsigned value) {
     return count;
 }
 
-static int carrier_violation(const int *mask, int n) {
+static int violates_four_set_condition(const int *mask, int n) {
     for (int z = 0; z < 64; ++z) {
         if (popcount6((unsigned)z) != 4) {
             continue;
@@ -53,8 +54,9 @@ static int covered_pairs(const int *mask, const int *root,
     return covered;
 }
 
-static int five_bag_decoder(const int *mask, const Pair *missing,
-                            int missing_count, int needed) {
+static int has_required_five_bag_assignment(const int *mask,
+                                            const Pair *missing,
+                                            int missing_count, int needed) {
     int root[5];
     for (root[0] = 0; root[0] < 6; ++root[0]) {
         if (!((mask[0] >> root[0]) & 1)) continue;
@@ -83,7 +85,7 @@ static int five_bag_decoder(const int *mask, const Pair *missing,
     return 0;
 }
 
-static int k4_plus_singleton_decoder(const int *mask) {
+static int has_k4_plus_singleton_assignment(const int *mask) {
     for (int singleton_root = 0; singleton_root < 6; ++singleton_root) {
         int seen = 0;
         for (int i = 0; i < 4; ++i) {
@@ -130,16 +132,17 @@ static void run_five_equal_masks(const char *name, const Pair *missing,
         mask[3] = masks_at_least_4[i3];
         mask[4] = masks_at_least_4[i4];
         ++tested;
-        if (!five_bag_decoder(mask, missing, missing_count, needed)) {
+        if (!has_required_five_bag_assignment(mask, missing, missing_count,
+                                              needed)) {
             ++bad;
-            unexplained += !carrier_violation(mask, 5);
+            unexplained += !violates_four_set_condition(mask, 5);
         }
     }
 
     assert(tested == UINT64_C(5153632));
     assert(bad == expected_bad);
     assert(unexplained == 0);
-    printf("%s tested=%llu decoder_failures=%llu carrier_admissible_failures=%llu\n",
+    printf("%s tested=%llu assignment_failures=%llu four_set_admissible_failures=%llu\n",
            name, (unsigned long long)tested, (unsigned long long)bad,
            (unsigned long long)unexplained);
 }
@@ -162,16 +165,16 @@ static void run_w4(void) {
         mask[3] = masks_at_least_4[i3];
         mask[4] = masks_at_least_4[i4];
         ++tested;
-        if (!five_bag_decoder(mask, missing, 2, 1)) {
+        if (!has_required_five_bag_assignment(mask, missing, 2, 1)) {
             ++bad;
-            unexplained += !carrier_violation(mask, 5);
+            unexplained += !violates_four_set_condition(mask, 5);
         }
     }
 
     assert(tested == UINT64_C(9838752));
     assert(bad == UINT64_C(75));
     assert(unexplained == 0);
-    printf("W4 tested=%llu decoder_failures=%llu carrier_admissible_failures=%llu\n",
+    printf("W4 tested=%llu assignment_failures=%llu four_set_admissible_failures=%llu\n",
            (unsigned long long)tested, (unsigned long long)bad,
            (unsigned long long)unexplained);
 }
@@ -191,16 +194,16 @@ static void run_w3(void) {
         mask[2] = masks_at_least_4[i2];
         mask[3] = masks_at_least_4[i3];
         ++tested;
-        if (!k4_plus_singleton_decoder(mask)) {
+        if (!has_k4_plus_singleton_assignment(mask)) {
             ++bad;
-            unexplained += !carrier_violation(mask, 4);
+            unexplained += !violates_four_set_condition(mask, 4);
         }
     }
 
     assert(tested == UINT64_C(234256));
     assert(bad == UINT64_C(15));
     assert(unexplained == 0);
-    printf("W3 tested=%llu decoder_failures=%llu carrier_admissible_failures=%llu\n",
+    printf("W3 tested=%llu assignment_failures=%llu four_set_admissible_failures=%llu\n",
            (unsigned long long)tested, (unsigned long long)bad,
            (unsigned long long)unexplained);
 }

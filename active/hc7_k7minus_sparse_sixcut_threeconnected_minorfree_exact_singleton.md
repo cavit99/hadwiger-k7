@@ -1,14 +1,15 @@
 # A three-connected ordinary-minor-free lobe has an exact singleton
 
 **Status:** complete unbounded theorem with an exact finite certificate,
-pending independent cold audit.  In a returned three-component six-cut, a
+independently cold-audited twice.  In a returned three-component six-cut, a
 three-connected lobe with no ordinary `K_5^-` minor has a vertex of total
 degree six.  Its neighbourhood is an exact six-cut and the singleton
 fragment has coefficient-four excess `2`.  This eliminates the entire
-three-connected ordinary-minor-free branch; it does not eliminate ordinary
-near-five models or nested two-separations.
+no-exact-fragment subcase of the three-connected ordinary-minor-free case;
+the returned exact fragment is not itself terminal for the weighted local
+theorem.  Ordinary near-five models and nested two-separations also remain.
 
-## 1. Setup and the carrier guard
+## 1. Setup and the four-root packing bound
 
 Let `G` be a six-connected graph with no `K_7^-` minor.  Let `S` be a cut of
 order six such that `G-S` has at least three components, and fix a component
@@ -20,14 +21,15 @@ For `v in C`, write
 A(v)=N_G(v) intersect S,        a(v)=|A(v)|.          (1)
 ```
 
-The audited four-root carrier theorem gives the following guard:
+The audited four-root connected-subgraph theorem gives the following bound:
 
 ```text
 for every four-set Z subseteq S,
 at most two vertices v in C satisfy Z subseteq A(v). (2)
 ```
 
-Indeed, three such vertices would be three disjoint singleton `Z`-carriers.
+Indeed, three such vertices would be three disjoint connected singleton
+subgraphs, each adjacent to every vertex of `Z`.
 
 A model on five distinct roots of `S`, confined to the graph obtained by
 omitting the sixth root, is terminal.  Two other full components complete its
@@ -37,7 +39,7 @@ whenever such a punctured rooted `K_5^-` model is constructed.
 ## 2. The six-root mask lemma
 
 Let `A_0,...,A_{k-1}` be subsets of a six-set.  Call the tuple
-**carrier-admissible** if no four-set is contained in three of the `A_i`.
+**four-set admissible** if no four-set is contained in three of the `A_i`.
 For distinct assigned roots `r_i in A_i`, say that a pair `ij` is **covered**
 if
 
@@ -48,35 +50,35 @@ r_i in A_j       or       r_j in A_i.                (3)
 Thus, when bag `i` contains a core vertex seeing `A_i` and its assigned root
 `r_i`, a covered pair is an actual contact between bags `i` and `j`.
 
-### Lemma 2.1 (five exceptional-core decoders)
+### Lemma 2.1 (five exceptional-core root assignments)
 
-Every carrier-admissible tuple has the indicated assignment.
+Every four-set-admissible tuple has the indicated assignment.
 
-1. **`W_3` row.**  If `A_0,...,A_3` all have order at least four, there are
+1. **`W_3` case.**  If `A_0,...,A_3` all have order at least four, there are
    five distinct roots `r_0,...,r_3,t` such that `r_i in A_i` and `t` belongs
    to at least three of the four sets.
-2. **`W_4` row.**  If `|A_0|>=3` and `|A_i|>=4` for `1<=i<=4`, there are five
+2. **`W_4` case.**  If `|A_0|>=3` and `|A_i|>=4` for `1<=i<=4`, there are five
    distinct roots `r_i in A_i` which cover at least one of
 
    ```text
    13, 24.                                             (4)
    ```
 
-3. **Long-wheel row.**  If all five sets have order at least four, there are
+3. **Long-wheel case.**  If all five sets have order at least four, there are
    five distinct roots `r_i in A_i` which cover at least two of
 
    ```text
    13, 14, 24.                                         (5)
    ```
 
-4. **Prism row.**  Under the same lower bound, five distinct assigned roots
+4. **Prism case.**  Under the same lower bound, five distinct assigned roots
    cover at least three edges of the path
 
    ```text
    01, 12, 23, 34.                                     (6)
    ```
 
-5. **`K_{3,3}` row.**  Under the same lower bound, five distinct assigned
+5. **`K_{3,3}` case.**  Under the same lower bound, five distinct assigned
    roots cover at least three of
 
    ```text
@@ -90,25 +92,25 @@ The standard-C verifier
 enumerates all `64` masks of a six-set, retaining the `22` masks of order at
 least four and, for the `W_4` hub, the `42` masks of order at least three.  It
 then tests every injection of the bag roots into the six-set and directly
-counts the covered pairs in (4)--(7).  The `W_3` row separately tests the
+counts the covered pairs in (4)--(7).  The `W_3` case separately tests the
 fifth singleton root.
 
 The exact census is
 
 ```text
-row          tuples tested   decoder failures   admissible failures
-W3                 234,256                 15                     0
-W4               9,838,752                 75                     0
-long wheel        5,153,632                 15                     0
-prism             5,153,632                 15                     0
-K33               5,153,632                 15                     0
+case         tuples tested   assignment failures   admissible failures
+W3                234,256                    15                     0
+W4              9,838,752                    75                     0
+long wheel       5,153,632                    15                     0
+prism            5,153,632                    15                     0
+K33              5,153,632                    15                     0
 ```
 
 Here `22^4=234,256`, `42*22^4=9,838,752`, and
 `22^5=5,153,632`, so every eligible tuple is generated.  For every raw tuple
-on which the displayed decoder fails, the verifier finds a four-set contained
-in at least three masks, which violates carrier-admissibility.  Assertions
-pin all five censuses and the zero residual; no random search or external
+on which the displayed assignment fails, the verifier finds a four-set
+contained in at least three masks, which violates four-set admissibility.
+Assertions pin all five censuses and the zero residual; no random search or external
 solver is used.  This proves the lemma within the displayed finite trust
 boundary.
 `\square`
@@ -146,7 +148,7 @@ v_0 v_1 ... v_(m-1) v_0,       m>=3.                 (9)
 ```
 
 Every rim vertex has three neighbours in `C`, so the supposition gives
-`a(v_i)>=4`.  The tuples of masks used below are carrier-admissible by (2).
+`a(v_i)>=4`.  The tuples of masks used below are four-set admissible by (2).
 
 If `m=3`, the wheel is `K_4`, and the hub also has internal degree three.
 Label its four vertices `x_0,...,x_3` and apply Lemma 2.1(1).  The bags
@@ -258,31 +260,34 @@ gives (15).  The hereditary claim is Corollary 3 of the audited exact-six
 rerooting theorem. `\square`
 
 Thus the ordinary-minor-free three-connected branch returns not merely a
-bounded exceptional core but the sharp low-excess atom `eta=2`, together
-with a strict two-unit decrement in the complementary bookkeeping term.
+bounded exceptional core but an exact singleton fragment with `eta=2`,
+together with a strict two-unit decrement in the complementary bookkeeping
+term.  Further descent must still transfer the rooted or packing information
+across the derived boundary.
 
 ## 5. Scope
 
-The theorem eliminates every three-connected ordinary-`K_5^-`-minor-free
-lobe in the no-exact-fragment row.  It is unbounded in the wheel order and
-uses only the target-sensitive four-root carrier guard plus the published
-three-connected classification.
+The theorem eliminates the no-exact-fragment subcase for every
+three-connected ordinary-`K_5^-`-minor-free lobe.  It is unbounded in the
+wheel order and uses only the target-sensitive four-root packing bound plus
+the published three-connected classification.  It does not make the returned
+exact fragment terminal.
 
 It does **not** prove the full local excess-five dichotomy.  Two branches
 remain outside its hypotheses:
 
 * a lobe containing an ordinary `K_5^-` minor, where low-visibility branch
-  bags and two-copy packet transfer remain; and
+  bags and transfer of two boundary-full connected subgraphs remain; and
 * a two-connected but non-three-connected lobe, where nested strict
   two-separations may persist.
 
 The finite mask lemma is not asserted for arbitrary rooted graphs without
-the carrier guard (2); its raw decoder-failure rows show that guard is
-essential for these templates.
+the four-root packing bound (2); its raw assignment-failure cases show that
+condition is essential for these constructions.
 
 ## 6. Pinned dependencies and primary source
 
-* four-root carrier packing: source SHA-256
+* four-root connected-subgraph packing: source SHA-256
   `adfcc70aca8543e15bcf7e94e1fb310492535f8155f02cb5a5430adba4ce8372`,
   GREEN audit SHA-256
   `4a185697d20ed73c358703eb7d433c3555bca6474497a011630d3805dc493e97`;
@@ -295,9 +300,9 @@ essential for these templates.
   GREEN audit SHA-256
   `c30aa69b6919edd2cfba80d6df1f02e2c75d38d9544bd87e4332ba4d823526a3`;
 * finite verifier SHA-256
-  `56b40afd3ab310fa3b7a71bc4a6bc5afeae2505b94c69d14b870df11e6f389a3`,
+  `37584ca0a390c9d556fdfe7cdfc83d24afd7f5fe39987209693f0512c83d60ca`,
   transcript README SHA-256
-  `f6598778e66d5006264a1113e8d162d368793abf768e80e493a8477743163841`.
+  `e63be6b2758356e8f141b14cb688e66cc84cd433181c7518d796a17d7b76f40f`.
 
 The external structural input is R. G. Wood and D. R. Woodall,
 *Defective Choosability of Graphs without Small Minors*, Electronic Journal

@@ -7,6 +7,11 @@ adfcc70aca8543e15bcf7e94e1fb310492535f8155f02cb5a5430adba4ce8372
   active/hc7_k7minus_sparse_sixcut_four_root_carrier_packing.md
 ```
 
+The current source SHA-256 is
+`2d71dcc2110efe7aea44889e8671b0e9289d0ce3b25e95407f35574c37b12a42`.
+The only post-audit change marks the source as independently audited; the
+mathematical statement and proof are unchanged.
+
 This is an independent internal mathematical audit, not external peer
 review.  The source was not edited during the audit.
 
