@@ -10430,7 +10430,7 @@ keywords = ["K7 minus", "exceptional centre", "rooted K5", "exterior allocation"
 
 [[claims]]
 id = "hc7.target.k7minus_seven_exceptional_vertices"
-title = "A critical K7-minus host has at most 24 exceptional degree-eight vertices"
+title = "A critical K7-minus host has at most 26 exceptional degree-eight vertices"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
@@ -10452,7 +10452,7 @@ does_not_prove = [
   "the bare seven-connected 4n-2 extremal theorem",
   "HC7",
 ]
-keywords = ["K7 minus", "25 exceptional vertices", "finishing target", "shore allocation", "anchored list cores"]
+keywords = ["K7 minus", "27 exceptional vertices", "finishing target", "shore allocation", "anchored list cores"]
 
 [[claims]]
 id = "hc7.target.k7minus_five_exceptional_vertices"
@@ -11909,7 +11909,7 @@ keywords = ["K7 minus", "induced path", "spanning K6 model", "owner circuit", "R
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_remote_interface_topological_reduction"
 kind = "uses"
-note = "Every hypothetical critical host has at least twenty-five exceptional centres, and each remote interface now lies in one of four exact topological rows."
+note = "Every hypothetical critical host has at least twenty-seven exceptional centres, and each remote interface now lies in one of four exact topological cases."
 
 [[relations]]
 source = "hc7.k7minus_remote_interface_topological_reduction"
@@ -19312,3 +19312,366 @@ does_not_prove = [
   "HC7",
 ]
 keywords = ["graph scheme", "contractible graph", "rooted minor", "K2,n", "matroid union", "disjoint spanning trees"]
+
+[[claims]]
+id = "hc7.k7minus_degree_eight_triangle_poor_edge_packing"
+title = "Exceptional degree-eight vertices admit a linear-size covering by three-triangle edges"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_degree_eight_triangle_poor_edge_packing.md"
+source_heading = "Corollary 8 (the Jakobsen defect is at least twenty-six)"
+active = false
+audit = "results/hc7_k7minus_degree_eight_triangle_poor_edge_packing_audit.md"
+expected_source_sha256 = "2ffeb857f4c999abc14bc28cd4650332d9397a140c601929117376f38f637449"
+scope = "seven-connected K7-minus-minor-free graphs with minimum degree eight and exceptional degree-eight neighbourhoods"
+label_fidelity = "every degree-eight centre and its selected incident edge remain literal host objects"
+conclusions = [
+  "every exceptional centre has an incident edge lying in at most three triangles",
+  "the Jakobsen defect is at least twenty-six",
+  "at least ceil((26+tau)/2) distinct three-triangle edges cover all degree-eight vertices",
+]
+does_not_prove = [
+  "the stronger six-connected degree-eight theorem without exceptional-neighbourhood hypotheses",
+  "the universal six-connected 4n extremal target",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree eight", "edge codegree", "triangles", "Jakobsen defect", "edge covering"]
+
+[[verifiers]]
+id = "k7minus-degree-eight-triangle-poor-edge-packing"
+path = "results/hc7_k7minus_degree_eight_triangle_poor_edge_packing_verify.py"
+sha256 = "dc205fccdef1859a66ac1338ad11418a347b4165687f556f4291027d4ee6c951"
+timeout = 30
+expected_stdout = [
+  "GREEN exceptional-neighbourhood finite cross-check",
+  "atlas_order_seven=1044",
+  "eligible_extension_representations=352",
+  "eligible_isomorphism_classes=42",
+  "rooted_deletion_checks=336",
+  "almost_full_augmentation_checks=378",
+  "negative_calibration=GMs`KK full exterior augmentation is target-free",
+  "certificate_sha256=6024f1bcececd88038a16700c6c867570524a774f312e5d3acc5a27934e58047",
+]
+
+[[claims]]
+id = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
+title = "Every degree-eight vertex in a six-connected target-free graph has a three-triangle edge"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md"
+source_heading = "Theorem 2 (six-connected degree-eight low-codegree theorem)"
+active = true
+audit = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md"
+expected_source_sha256 = "06d35e4059848517e65e48b04c592e948bbc8e4407501de75520cfa3e9d22844"
+scope = "arbitrary six-connected K7-minus-minor-free graphs, with density consequences at m at least 4n"
+label_fidelity = "the degree-eight centre, selected incident edge, contracted exterior components and returned lifted order-six cut remain explicit"
+separator_order = "a minimum enemy to the six-connected 4n target returns an exact lifted order-six cut with two or three full components"
+conclusions = [
+  "every degree-eight vertex has an incident edge of codegree at most three",
+  "every six-connected target-free graph at density 4n has some edge of codegree at most three",
+  "every r-connected target-free graph at density 4n has Jakobsen defect at least 20+r",
+  "a hypothetical critical host has n8 at least 27+tau",
+  "a minimum enemy to the six-connected 4n target returns only the two exact high-excess order-six-cut cases",
+]
+does_not_prove = [
+  "elimination of either returned high-excess cut case",
+  "the universal six-connected 4n extremal target",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "six connectivity", "degree eight", "edge codegree", "defect ladder", "4n density"]
+
+[[verifiers]]
+id = "k7minus-sixconnected-degree-eight-low-codegree"
+path = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree_verify.py"
+sha256 = "d721c181a8388feb7901e8ab04f704c19679cfb56551752756a45733f28d6fdc"
+timeout = 30
+expected_stdout = [
+  "GREEN six-connected degree-eight low-codegree finite lemma",
+  "atlas_order_seven=1044",
+  "minimum_degree_four_extensions=4443",
+  "minimum_degree_four_isomorphism_classes=424",
+  "K6minus_free_local_classes=55",
+  "augmentation_profiles=2035",
+  "positive_K7minus_certificates=2031",
+  "certificate_digest=8b9b31cae19b10a9e958a51dd2c8ef12193b655ec7ab2163b67b638dfc646501",
+]
+
+[[claims]]
+id = "hc7.k7minus_returned_three_component_dense_boundary"
+title = "Dense three-component cuts returned by the six-connected 4n programme are impossible"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md"
+source_heading = "Theorem 1 (three-component dense-boundary bound)"
+active = true
+audit = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination_audit.md"
+expected_source_sha256 = "78676354ff551da0fe3cd85e53f84495a07f60f723c93ff4d480868d21d09001"
+scope = "arbitrary six-connected K7-minus-minor-free graphs with an order-six cut having three boundary-full components and a seven- or eight-edge boundary satisfying the returned-cut restrictions"
+label_fidelity = "the six boundary vertices, each open component, every rooted pair and every composed branch set remain literal"
+separator_order = "six"
+conclusions = [
+  "all three eight-edge returned boundary types are impossible at density 4n",
+  "six of the seven seven-edge returned boundary types are impossible at density 4n",
+  "the component orders are unrestricted",
+]
+does_not_prove = [
+  "elimination of the final type-VII boundary without the companion theorem",
+  "elimination of returned boundaries with at most six edges",
+  "elimination of the returned two-component case",
+  "the universal six-connected 4n theorem or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "six-cut", "three components", "rooted K4", "component excess", "4n density"]
+
+[[verifiers]]
+id = "k7minus-returned-three-component-dense-boundary"
+path = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination_verify.py"
+sha256 = "5d4cc91f168d5d0d8d89f2e4418478ffa713d7fd8d517a5567b27635ec194ac6"
+timeout = 30
+expected_stdout = [
+  "GREEN returned three-component dense-boundary certificates",
+  "eight_edge_isomorphism_classes=3",
+  "seven_edge_unhandled_isomorphism_classes=1",
+  "type_VI_bound=5",
+  "cross_lobe_compatible_pair_pairs=7-VI:11;7-VII:10",
+]
+
+[[claims]]
+id = "hc7.k7minus_returned_type_vii_elimination"
+title = "The final seven-edge three-component returned boundary is impossible"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_returned_type_vii_elimination.md"
+source_heading = "Theorem 1 (type-VII elimination)"
+active = true
+audit = "results/hc7_k7minus_returned_type_vii_elimination_audit.md"
+expected_source_sha256 = "c7be590f7006ab65289eb020141edd6a30bb73d8aff17df51ffcbfb7f0e9caa1"
+scope = "arbitrary six-connected K7-minus-minor-free graphs with an order-six cut having three full components and the type-VII seven-edge boundary"
+label_fidelity = "the six boundary vertices, doubled low-degree attachments, retained K2 components and all quotient branch sets remain literal"
+separator_order = "six"
+conclusions = [
+  "every component other than a K2 has exactly one attachment at each of the two degree-two boundary roots",
+  "minimum degree forces one or two retained K2 components",
+  "all 121 exact quotient profiles contain a K7-minus minor",
+  "together with the dense-boundary theorem every seven- and eight-edge returned three-component boundary is impossible",
+]
+does_not_prove = [
+  "elimination of returned three-component boundaries with at most six edges",
+  "elimination of the returned two-component case",
+  "the universal six-connected 4n theorem or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "six-cut", "type VII", "rooted K4", "K2 attachments", "exact minor verification"]
+
+[[verifiers]]
+id = "k7minus-returned-type-vii-elimination"
+path = "results/hc7_k7minus_returned_type_vii_elimination_verify.py"
+sha256 = "6bf239425a4acee9070de98303d602c28698ff8b61b96e2eaeec8161552fe93e"
+timeout = 30
+expected_stdout = [
+  "GREEN returned type-VII quotient elimination",
+  "same_component_feasible_profiles=21",
+  "split_component_first_profiles=10",
+  "split_component_second_profiles=10",
+  "split_component_profile_pairs=100",
+  "target_certificates=121",
+  "certificate_digest=88bef0aaee0914ff2b71cc4e00d7b55e8d4a42c274294d8418d37da646805fe6",
+]
+
+[[verifiers]]
+id = "k7minus-returned-type-vii-independent-audit"
+path = "results/hc7_k7minus_returned_type_vii_elimination_audit_verify.py"
+sha256 = "7b78c174433b079ff2a8c25202365f246f1b7b11f74fbd25184a3f8894cc6451"
+timeout = 30
+expected_stdout = [
+  "GREEN independent type-VII graph-state audit",
+  "quotients_checked=121",
+  "search_states=3129",
+]
+
+[[claims]]
+id = "hc7.k7minus_critical_to_sixconnected_4n"
+title = "A hypothetical critical host contracts to a six-connected exactly six-chromatic 4n quotient"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_critical_to_sixconnected_4n_reduction.md"
+source_heading = "Theorem 1 (critical contraction)"
+active = false
+audit = "active/hc7_k7minus_critical_to_sixconnected_4n_reduction_audit.md"
+expected_source_sha256 = "ac3a9fcf81549c9bb3f7a6e789b240040b1f63bf40cae59b4ac61fbd8981d0a2"
+scope = "minor-minimal non-six-colourable K7-minus-minor-free graphs"
+label_fidelity = "the contracted edge, degree-eight end, contraction vertex and seven remaining neighbours remain fixed"
+colour_compatibility = "in every six-colouring the seven named neighbours use all five colours other than the contraction vertex colour"
+conclusions = [
+  "the quotient is six-connected, exactly six-chromatic and target-free",
+  "the quotient has at least four times as many edges as vertices",
+  "the universal six-connected 4n extremal theorem would imply Conjecture 21",
+]
+does_not_prove = [
+  "the universal six-connected 4n extremal theorem",
+  "a rooted near-clique model respecting the seven-vertex colour trace",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "critical contraction", "six connectivity", "4n density", "six colouring", "palette trace"]
+
+[[claims]]
+id = "hc7.k7minus_critical_codegree_three_separator_or_surplus"
+title = "A critical degree-eight edge yields a positive-surplus quotient or a prescribed-vertex separator"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md"
+source_heading = "Theorem 2 (critical separator-or-surplus dichotomy)"
+active = true
+audit = "results/hc7_k7minus_critical_codegree_three_separator_or_surplus_cold_audit_sparse_threecut.md"
+expected_source_sha256 = "fb2083fff6087ea3b192a63800b1aa0e1f7f496d47524e452964f616a12b79e0"
+scope = "minor-minimal non-six-colourable K7-minus-minor-free graphs and, for the model-splitting theorem, arbitrary adjacent critical pairs of codegree three or four"
+label_fidelity = "the edge ends, common neighbours, six model bags, split branch set, two connected split pieces and prescribed degree-eight boundary vertex remain literal"
+separator_order = "at least seven; equality makes every complementary component full, but no upper bound is proved"
+colour_compatibility = "the positive-surplus contraction retains a seven-vertex set using all five colours other than the contracted vertex colour in every six-colouring"
+conclusions = [
+  "codegree at most two gives a six-connected exactly six-chromatic target-free quotient with at least 4n+1 edges",
+  "codegree three forces every spanning K6 model after deleting the edge ends to contain a mixed branch set",
+  "every rooted split of that branch set exposes an actual separator whose boundary can be chosen to contain the degree-eight endpoint",
+]
+does_not_prove = [
+  "an upper bound on the returned separator order",
+  "elimination of the six-connected 4n+1 quotient",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "critical edge", "codegree three", "K6 model", "branch-set split", "prescribed separator", "positive surplus"]
+
+[[claims]]
+id = "hc7.barrier.degree_eight_prescribed_separator_order"
+title = "A prescribed degree-eight boundary vertex does not bound separator order"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_degree_eight_prescribed_separator_order_barrier.md"
+source_heading = "2. Construction and exact value"
+active = true
+audit = "barriers/hc7_degree_eight_prescribed_separator_order_barrier_cold_audit.md"
+expected_source_sha256 = "2abfb09d7b288355a4a5de3ebab48e26fdff8f9d80083e1118d36ef5e26f8a79"
+scope = "the target-rich complete bipartite family K_{8,n}; it tests connectivity, a prescribed degree-eight boundary vertex, separator-side minimisation and fullness only"
+label_fidelity = "the bipartition, nominated degree-eight vertex and every connected separator side are explicit"
+conclusions = [
+  "K_{8,n} is eight-connected and the nominated vertex has degree eight",
+  "the least boundary order of a connected actual-separator side whose boundary contains that vertex is n",
+  "every component behind the minimum boundary is full",
+]
+does_not_prove = [
+  "failure of a separator bound using K7-minus exclusion or chromatic criticality",
+  "failure of the critical-edge dichotomy",
+  "the absence of a K7-minus minor",
+]
+keywords = ["separator order", "degree eight", "K8n", "full components", "barrier"]
+
+[[claims]]
+id = "hc7.target.k7minus_sixconnected_4n_extremal"
+title = "Six-connected coefficient-four K7-minus extremal theorem"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md"
+source_heading = "1. Entrance and exact accounting"
+active = false
+scope = "arbitrary six-connected graphs with at least four times as many edges as vertices"
+separator_order = "a minimum target-free enemy returns an order-six cut with two or three full components"
+hypotheses = [
+  "six-connectivity",
+  "at least 4n edges",
+  "no K7-minus minor",
+]
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "a contradiction to the exact returned-cut density identity",
+]
+does_not_prove = [
+  "the sparse three-component local rooted extremal theorem",
+  "the returned two-component case",
+  "Conjecture 21 without the audited critical-contraction reduction",
+  "HC7",
+]
+keywords = ["K7 minus", "six connectivity", "4n density", "order-six cut", "component excess"]
+
+[[claims]]
+id = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
+title = "Sparse six-cut packet-weighted excess theorem"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md"
+source_heading = "2. The local theorem which would close this case"
+active = false
+scope = "one arbitrary-order component behind a full order-six boundary in the sparse three-component returned cut"
+label_fidelity = "the six boundary roots, omitted root, five rooted branch sets and boundary-full packing number mu_U(X) retain their literal meaning"
+separator_order = "six, including derived exact-six fragments under rerooting"
+hypotheses = [
+  "relative six-connectivity of the closed component shore",
+  "two other full components available for terminal composition",
+]
+allowed_exits = [
+  "a punctured five-rooted K5-minus model",
+  "the bound eta_U(X) <= 5 mu_U(X)",
+]
+does_not_prove = [
+  "the packet-weighted alternative itself",
+  "the returned two-component case",
+  "the universal six-connected 4n theorem without the existing returned-cut reductions",
+  "Conjecture 21 or HC7",
+]
+keywords = ["K7 minus", "sparse six-cut", "rooted K5 minus", "component excess", "exact-six fragment"]
+
+[[relations]]
+source = "hc7.target.k7minus_sixconnected_4n_extremal"
+target = "hc7.target.k7minus_six_colour_conjecture"
+kind = "subproblem_of"
+note = "The audited critical-contraction reduction turns any hypothetical counterexample into a six-connected target-free quotient at coefficient-four density."
+
+[[relations]]
+source = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
+target = "hc7.target.k7minus_sixconnected_4n_extremal"
+kind = "subproblem_of"
+note = "The packet-weighted alternative would eliminate the only remaining three-component order-six-cut row; the returned two-component row remains separate."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
+kind = "uses"
+note = "The global low-codegree theorem raises the critical-host defect to twenty-seven and removes the last local-degree obstruction to a coefficient-four contraction."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_returned_three_component_dense_boundary"
+kind = "uses"
+note = "The target-sensitive rooted inequalities eliminate the dense three-component cuts returned by the coefficient-four contraction programme."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_returned_type_vii_elimination"
+kind = "uses"
+note = "The type-VII theorem completes the elimination of every seven- and eight-edge three-component returned cut."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_critical_codegree_three_separator_or_surplus"
+kind = "uses"
+note = "The critical-edge theorem replaces the degree-eight local choice by an exhaustive positive-surplus quotient or prescribed-vertex separation."
+
+[[relations]]
+source = "hc7.k7minus_critical_codegree_three_separator_or_surplus"
+target = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
+kind = "uses"
+note = "The generic low-codegree theorem supplies the degree-eight incident edge of codegree at most three."
+
+[[relations]]
+source = "hc7.k7minus_critical_codegree_three_separator_or_surplus"
+target = "hc7.barrier.degree_eight_prescribed_separator_order"
+kind = "guarded_by"
+note = "The K8n family shows that connectivity, degree and separator-side minimisation alone cannot bound the returned separator order."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.barrier.degree_eight_prescribed_separator_order"
+kind = "guarded_by"
+note = "The prescribed-separator branch cannot be closed by connectivity, degree eight and separator-side minimisation without target-sensitive or chromatic-critical input."
+
+[[relations]]
+source = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
+target = "hc7.k7minus_degree_eight_triangle_poor_edge_packing"
+kind = "uses"
+note = "The computation-free eight-vertex complement lemma handles the exterior-empty case; the new finite quotient removes the exceptional-neighbourhood hypotheses."

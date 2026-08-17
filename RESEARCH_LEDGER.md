@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 16 August 2026
+**Last updated:** 17 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -22,6 +22,178 @@ uniformly for all `n`; the [theorem](results/k2n_contractibility_via_matroid_pac
 and [hash-pinned internal audit](results/k2n_contractibility_via_matroid_packing_audit.md)
 are promoted results.  It does not settle `K_{3,3}`, the `K_7^-` six-colour
 conjecture, or `HC_7`.
+
+**Direct campaign advance, 17 August 2026.**  A new audited
+[six-connected degree-eight theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md)
+shows that every degree-eight vertex of every six-connected target-free
+graph has an incident edge contained in at most three triangles.  Its
+coefficient-four contraction iterates with connectivity and gives the
+global defect ladder `9n-2m>=20+kappa(G)`.  In the critical host this
+improves the exceptional-vertex inequality from `n_8-tau>=25` to
+
+\[
+                              n_8-\tau\ge27.             \tag{A}
+\]
+
+Thus both former defect layers 25 and 26 are eliminated, not merely one
+degree sequence.  The computation-free exceptional-neighbourhood
+[precursor](results/hc7_k7minus_degree_eight_triangle_poor_edge_packing.md)
+also gives a linear-size covering by such edges.  The associated audited
+[critical-contraction reduction](active/hc7_k7minus_critical_to_sixconnected_4n_reduction.md)
+shows that any hypothetical counterexample has a proper quotient `H` which
+is six-connected, exactly six-chromatic, target-free and satisfies
+`|E(H)|>=4|V(H)|`.  It also retains a specified contracted vertex and a
+seven-vertex set which uses all other five colours in every six-colouring.
+Consequently the universal six-connected `4n` extremal theorem would prove
+Conjecture 21, although only quotients with this stronger colouring trace
+need be excluded.  Neither that extremal theorem nor Conjecture 21 is proved
+here; the Norin--Totschnig significance benchmark remains unmet.
+
+**Critical-edge dichotomy, 17 August 2026.**  The independently audited
+[codegree-three separator theorem](results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md)
+removes the former degree bound on the second endpoint.  At a selected
+degree-eight vertex of every hypothetical critical host, either an incident
+edge has codegree at most two, in which case its contraction is
+six-connected, exactly six-chromatic, target-free and has at least
+`4|V|+1` edges, with the retained seven-vertex five-colour trace; or the
+edge has codegree three, in which case every spanning `K_6` model after
+deleting its ends has a branch set whose every rooted split exposes an
+actual separator.  One of the resulting separator boundaries can always be
+chosen to contain the degree-eight endpoint; its order is at least seven
+and it is full at order seven.  This replaces the former high-degree-surplus
+incidence alternative by two exact structural outcomes.  Neither an upper
+bound on the separator order nor elimination of the positive-surplus
+six-connected quotient is proved, so the primary conjecture and the
+Norin--Totschnig benchmark remain open.
+
+The adjacent audited
+[separator-order barrier](barriers/hc7_degree_eight_prescribed_separator_order_barrier.md)
+shows why the second outcome cannot be finished by connectivity, a
+degree-eight boundary vertex and separator-side minimisation alone:
+`K_{8,n}` has connectivity eight and a prescribed degree-eight boundary
+vertex, yet the least boundary order of such a connected separator side is
+`n`.  The construction is target-rich, so it does not refute a
+critical-host theorem; it proves that target exclusion or the full
+proper-minor colouring system must enter any order bound.
+
+**Returned-cut elimination, 17 August 2026.**  Two independently audited
+theorems now eliminate every dense three-component cut returned by a
+minimum enemy to the six-connected `4n` target.  The
+[dense-boundary theorem](results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
+uses target-sensitive rooted `K_4` exclusions and sharp forms of the
+Norin--Totschnig four-root bounds to eliminate all three eight-edge boundary
+types and six of the seven seven-edge types, for components of arbitrary
+order.  The companion
+[type-VII theorem](results/hc7_k7minus_returned_type_vii_elimination.md)
+eliminates the final seven-edge type: its rooted inequalities force doubled
+attachments into one or two literal `K_2` components, and three independent
+exact minor searches certify all 121 resulting quotient profiles.  Hence a
+minimum target-free six-connected graph with at least `4n` edges can now
+return only
+
+\[
+ \begin{array}{ll}
+ r=2:& |E(G[S])|\le11,\\
+ r=3:& |E(G[S])|\le6.
+ \end{array}                                                   \tag{B}
+\]
+
+This is an unbounded direct elimination of a broad returned-cut class; it
+does not eliminate either row in (B), prove the universal `4n` theorem, or
+prove Conjecture 21.  The Norin--Totschnig significance benchmark therefore
+remains unmet.
+
+**Two-component and full-exterior checkpoint, 17 August 2026.**  The
+independently audited
+[order-two dense-lobe theorem](active/hc7_k7minus_returned_order_two_dense_lobe_elimination.md)
+contracts the arbitrary opposite lobe and exhausts the resulting `122,941`
+labelled nine-vertex quotients with two independent exact algorithms.  It
+eliminates the order-two outcome in the dense returned two-component descent.
+For `e(S)>=3`, only the one- or two-vertex boundary atom and the nested
+near-model separator remain.  Independently, an audited census of all
+`611,678` relevant six-connected
+[adjacent exterior-pair quotients](active/hc7_k7minus_adjacent_exterior_pair_elimination.md)
+proves that a connected full degree-eight exterior cannot contract to two
+adjacent blocks while retaining six-connectivity.  Its computation-free
+[terminal consequence](active/hc7_k7minus_full_exterior_contraction_terminal.md)
+is unbounded: every maximal connectivity-preserving exterior contraction
+ends in an exactly six-connected quotient with at least three exterior
+images, and contracting any remaining exterior edge is exactly
+five-connected and lifts to a full exact six-cut.  The cumulative
+common-neighbour loss is not controlled and those cuts need not lift as
+order-six cuts of the original graph.  Thus this is a new global normal
+form, not a proof of the coefficient-four extremal theorem or Conjecture 21.
+
+**Common-centre and sparse-six-cut machinery, 17 August 2026.**  The audited
+[global edge--centre incidence theorem](active/hc7_k7minus_common_remote_edge_multicentre_cube.md)
+uses the defect ladder `n_8-tau>=27` to show that every edge of a hypothetical
+critical host is remote from at least fourteen degree-eight centres and
+hence from three independent such centres.  Every five-edge matching also
+has one exceptional centre remote from at least three of its edges.
+
+On the sparse returned row, the consolidated
+[technical frontier](active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
+now records an unbounded exact-six descent.  Independent audits verify the
+[rerooting theorem](active/hc7_k7minus_six_boundary_fragment_rerooting.md),
+the [prescribed-boundary minimisation](active/hc7_k7minus_prescribed_vertex_separator_minimisation.md),
+and the [cycle-rank bound](active/hc7_k7minus_sparse_sixcut_cyclic_residue.md)
+
+\[
+ |C|\le28+2\beta(C),\qquad |C|\le25+2\beta(C)
+ \quad\hbox{if }\Delta(G[S])\ge2,
+\]
+
+with respective nontrivial-tree bounds `22` and `19`.  A spanning rooted
+`K_4` confines each omitted root to two branch sets; a four-portal return is
+an exact order-six fragment and exchanges at least two roots, eliminating
+the former one-root-exchange residue.  Punctured rooted-model exclusion and
+the coefficient-four excess are hereditary across that fragment.  In the
+two-root exchange, clean paths and a boundary-full connected-subgraph repair
+give explicit `K_7^-` models unless the internal portals control separate
+essential arms.
+
+Independently, an ordinary `K_5^-` minor roots at component order at most
+six, and a literal `K_5^-` subgraph roots at arbitrary component order; in a
+larger minimum nonliteral obstruction every branch-set contraction returns
+another exact order-six fragment.  Two boundary-composition theorems force
+one branch set with at most one boundary neighbour or three branch sets with
+at most two each.  In the ordinary-minor-free branch, Wood--Woodall's
+three-connected classification makes every non-exact core bounded: a wheel
+has order at most `31`, while cutvertices already return an exact fragment
+or two boundary-full connected subgraphs.  Nested two-separation chains and
+the bounded incidence cores remain.  The exact open local theorem sufficient
+to close the whole row is still
+
+\[
+ \text{no punctured five-rooted }K_5^-\text{ model}
+ \quad\Longrightarrow\quad
+ \eta_U(X)\le5\mu_U(X).                              \tag{C}
+\]
+
+Equivalently, `eta_U(X)>=5 mu_U(X)+1` must force the rooted model.  The
+sharp packet-one subcase `eta_U(X)>=6 =>` rooted model or `mu_U(X)>=2`
+suffices when the boundary has maximum degree at least two, because then
+every lobe has `mu=1`, but it leaves the possible `mu=2` lobe uncontrolled
+in the matching-boundary row.  The audited orientation theorem shows that
+the weighted form (C), not merely the packet-one subcase, would eliminate
+the whole sparse three-component row.  Exact enumeration through every
+connected internal graph of order four supports the packet-one subcase
+only; it is not an unbounded proof.  Explicit barriers rule out
+incidence-only, abstract three--two connectedness and automatic rooted-`K_4`
+augmentation shortcuts.
+Thus the universal `4n` theorem, Conjecture 21 and the Norin--Totschnig
+benchmark remain open.
+
+**New-literature check, 17 August 2026.**  Lo's arXiv:2603.27973v1 states
+that every four-connected non-planar graph of minimum degree at least five
+has a `K_6^-` minor.  The primary-source statement and the repository's
+[elementary-minor deductions](active/hc7_k7minus_lo_elementary_minor_robustness.md)
+have been checked, but the preprint is unrefereed and its finite terminal
+figures have not all been independently reconstructed here.  More
+importantly, it supplies an unrooted model where the current route already
+has an unrooted `K_6`; it does not force the branch bags to meet the specified
+degree-eight neighbourhood.  It therefore does not close the rooted
+augmentation bottleneck.
 
 **Campaign restart, 16 August 2026.**  The protected-centre fan-to-root
 attack remains stopped at its recorded hard proof gate; no hidden branch-set
@@ -86,7 +258,7 @@ critical-host chain now gives
 excludes every literal `K_5`, and gives
 
 \[
- n_8\ge25+\sum_{i\ge10}(i-9)n_i.                     \tag{1}
+ n_8\ge27+\sum_{i\ge10}(i-9)n_i.                     \tag{1}
 \]
 
 Every degree-eight vertex has a `K_4`-free neighbourhood.  Every order-seven
@@ -94,12 +266,41 @@ cut has exactly two complementary components.  Consequently the following
 is a headline-equivalent finishing theorem, not a routine local lemma:
 
 > **Exceptional-centre finishing target.** Every graph satisfying the
-> critical-host hypotheses has at most 24 degree-eight vertices.
+> critical-host hypotheses has at most 26 degree-eight vertices.
 
 This would contradict (1) and prove Conjecture 21 directly.  The active
 technical statement, proved inputs and exact surviving allocation problem
 are recorded in the
 [critical-host frontier](active/hc7_k7minus_seven_exceptional_frontier.md).
+
+The [critical-contraction reduction](active/hc7_k7minus_critical_to_sixconnected_4n_reduction.md)
+is a second, direct conditional refinement.  It preserves enough density to
+reach `4|V(H)|` after one contraction while retaining the exact split and
+five-colour-surjectivity data.  The immediate universal extremal target is
+
+\[
+ \kappa(H)\ge6,\qquad |E(H)|\ge4|V(H)|
+ \quad\Longrightarrow\quad K_7^-\preccurlyeq H,       \tag{2}
+\]
+
+but proving (2) for arbitrary graphs is stronger than the critical-host
+route requires.  Existing degree-six separation arithmetic does not close
+this target by itself; explicit target-rich examples at exact density `4n`
+defeat every orientation of the current numerical composition lemma.  Any
+completion must use target exclusion or the retained colouring trace to
+construct the rooted near-clique model.
+
+The sharper
+[critical-edge dichotomy](results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md)
+now makes this refinement exhaustive at a degree-eight vertex.  Codegree at
+most two improves the quotient density to `4|V(H)|+1`.  Codegree three no
+longer needs a bound on the other endpoint: the proved `t=6` case of
+Hadwiger supplies a spanning `K_6` model after deleting the edge ends, and
+target exclusion splits a mixed branch set into an actual separation whose
+boundary contains the degree-eight endpoint.  The remaining obligations are
+therefore a target-sensitive use of that prescribed boundary vertex, or a
+strict-surplus version of the six-connected extremal theorem; neither is yet
+proved.
 
 The audited
 [independence-four elimination](results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)
@@ -1480,14 +1681,15 @@ The strengthened audited computation-free critical-host package now gives:
 n_7=0,
 \qquad \delta(G)\ge8,
 \qquad |E(G)|\ge4|V(G)|,
-\qquad b=n_8\ge25+\sum_{i\ge10}(i-9)n_i.
+\qquad b=n_8\ge27+\sum_{i\ge10}(i-9)n_i.
 \]
 
 Here the host contains no literal `K_5`, and `b` counts its exceptional
-degree-eight vertices.  The new rooted-helper theorem eliminates every
+degree-eight vertices.  The rooted-helper theorem eliminates every
 degree-seven vertex; applying it at all five vertices of a hypothetical
 literal `K_5` then contradicts the exact degree surplus.  Jakobsen's defect
-inequality supplies the displayed lower bound on `n_8`.  These are necessary
+inequality, sharpened by the audited three-triangle-edge contraction, supplies
+the displayed lower bound on `n_8`.  These are necessary
 conditions on a hypothetical counterexample, not yet a colouring theorem,
 and they do not apply to an arbitrary enemy to the unconditional `4n-2`
 target.
@@ -1511,10 +1713,10 @@ five-limb packing, and gives the exact independent-boundary normal form in
 the case where one component contains two disjoint connected subgraphs
 adjacent to the whole boundary.
 
-The exceptional-centre programme remains the principal proof architecture
-for Conjecture 21, but no immediate attack is designated during the current
-pause.  The universal `4n-2` theorem remains a sufficient conditional route,
-and E5 remains a stronger frozen laboratory.  Direct `HC_7` bridge
+The exceptional-centre programme and the split-colouring `4n` quotient are
+the two active proof architectures for Conjecture 21.  The universal `4n-2`
+theorem remains a sufficient conditional route, and E5 remains a stronger
+frozen laboratory.  Direct `HC_7` bridge
 composition is also frozen: Conjecture 21 is the cleaner setting in which to
 develop the missing branch-set transfer and separator-resolution machinery.
 
