@@ -16,7 +16,10 @@ yield a `K_7` minor.
 Selected audited inputs:
 
 - [the critical host is seven-connected, `K_5`-free, has minimum degree at
-  least eight and at least 25 degree-eight vertices](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
+  least eight and density at least `4n`](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
+- [every degree-eight vertex of an arbitrary six-connected target-free graph
+  has an incident edge in at most three triangles; the resulting defect ladder
+  gives `n_8>=27+tau` in the critical host](../results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md)
 - [every exceptional centre has a remote seven-removable edge and exact
   80-pattern cube; its interface lies in four exact topological rows, with
   the connected order-seven row excluded and the nonfull return carrying
@@ -162,6 +165,11 @@ Lovasz--Woodall one-cycle assertion is assumed.
 
 ## Conditional refinements and secondary laboratories
 
+- [Critical contraction to a six-connected `4n` quotient](hc7_k7minus_critical_to_sixconnected_4n_reduction.md)
+  retains exact six-chromaticity, the split vertex and a seven-vertex set
+  which uses all five other colours in every six-colouring.  Excluding these
+  quotients would prove Conjecture 21; the universal six-connected `4n`
+  extremal statement remains open.
 - [Minimum path-bag owner circuits](../results/hc7_k7minus_p3_owner_circuit_compression.md)
   eliminate the nonrepeated order-nine induced-path allocation branch and
   retain the original path responses on exact order-seven/eight boundaries;

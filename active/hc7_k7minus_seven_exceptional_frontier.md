@@ -17,6 +17,8 @@ path-bag owner-circuit reductions are separately audited GREEN.  The
 remote crossing five-cube/model-renewal theorem, the two-component cyclic
 stability theorem and the connected-full centre-deletion/six-cut theorem
 are separately audited GREEN.  The
+six-connected degree-eight low-codegree theorem, its defect ladder and the
+critical-contraction `4n` reduction are separately audited GREEN.  The
 matching common-state, large-boundary lock reduction, order-nine transition
 projection and induced-path common-model theorems are separately audited
 GREEN.  The selected-edge root-bag response theorem and the all-lock
@@ -59,17 +61,18 @@ Let `G` satisfy
 Call a degree-eight vertex exceptional when its neighbourhood is
 `K_4`-free.  The audited
 [degree-seven rooted-helper closure](../results/hc7_k7minus_degree7_rooted_helper_closure.md)
-now gives
+and [six-connected defect ladder](../results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md)
+now give
 
 \[
  n_7=0,\qquad G\text{ contains no literal }K_5,
- \qquad b=n_8\ge25+\sum_{i\ge10}(i-9)n_i.               \tag{1}
+ \qquad b=n_8\ge27+\sum_{i\ge10}(i-9)n_i.               \tag{1}
 \]
 
 where `b` is the number of exceptional vertices; write `tau` for the
 displayed sum.  Therefore the theorem
 
-> every graph satisfying (H) has at most 24 exceptional vertices
+> every graph satisfying (H) has at most 26 exceptional vertices
 
 would prove Conjecture 21.  It is a headline-equivalent finishing theorem,
 not a routine intermediate lemma.
@@ -77,6 +80,17 @@ not a routine intermediate lemma.
 The audited rooted-helper closure also proves `delta(G)>=8` and `m>=4n`.
 Thus the former positive-degree-seven and literal-clique branches, the exact
 `b=7` layer, and all two-clique tight layers are excluded.
+
+The audited
+[triangle-poor-edge theorem](../results/hc7_k7minus_degree_eight_triangle_poor_edge_packing.md)
+first sharpens the right side from 25 to 26.  Its six-connected extension
+iterates the contraction through the connectivity levels and gives 27 in
+(1).  Contracting a selected critical-host edge also gives the separately audited
+[six-connected `4n` quotient](hc7_k7minus_critical_to_sixconnected_4n_reduction.md),
+which is exactly six-chromatic and retains a seven-vertex set using all five
+colours other than the contracted vertex's colour in every six-colouring.
+This is a direct conditional route, not a proof of its universal extremal
+target.
 
 The audited
 [independence-four elimination](../results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)
@@ -100,7 +114,7 @@ The new
 proves two facts.
 
 1. Every exceptional vertex `u` has `alpha(G[N(u)])=3`.  Thus every one of
-   the at least 25 centres has an independent triple; the former
+   the at least 27 centres has an independent triple; the former
    independence-number-two branch is absent.
 2. For an independent triple `I\subseteq N(u)` and
    `R=N(u)-I`, any `R`-rooted `K_5` model in `G-({u}\cup I)` that avoids an
@@ -129,13 +143,13 @@ conclusion globally, whether the exterior is connected or not:
 
 \[
  n_7=0,\qquad \delta(G)\ge8,\qquad |E(G)|\ge4|V(G)|,
- \qquad n_8\ge25+\sum_{i\ge10}(i-9)n_i.                \tag{2}
+ \qquad n_8\ge27+\sum_{i\ge10}(i-9)n_i.                \tag{2}
 \]
 
-Every degree-eight vertex is therefore exceptional and `|V(G)|\ge25`.
+Every degree-eight vertex is therefore exceptional and `|V(G)|\ge27`.
 There is no longer a positive-degree-seven side of the dichotomy.  The
 remaining connectivity target lies entirely in the branch described by
-(2), with at least 25 exceptional centres available simultaneously.
+(2), with at least 27 exceptional centres available simultaneously.
 
 The earlier
 [nonfull-attachment theorem](../results/hc7_k7minus_nonfull_attachment_reduction.md)
@@ -1683,7 +1697,7 @@ restriction or the minor-critical colouring responses.
 The earlier one-centre allocation statement remains a sufficient target,
 but it is no longer the preferred endpoint:
 
-> **Rooted exterior-allocation target.** Among the at least 25 exceptional
+> **Rooted exterior-allocation target.** Among the at least 27 exceptional
 > centres, find `u`, an independent triple `I\subseteq N(u)`, and an
 > `(N(u)-I)`-rooted `K_5` model such that either:
 >
@@ -1729,7 +1743,7 @@ boundary with two or three full complementary components and a
 `K_5`-minor-free four-colourable boundary satisfying a stronger
 vertex-deletion profile.  In the order-eight branch,
 `kappa(G)=delta(G)=8`, `n_7=0`, `|E(G)|>=4|V(G)|`,
-`n_8>=25+tau`, and `b>=20+tau`; every disconnected exceptional
+`n_8>=27+tau`, and `b>=22+tau`; every disconnected exceptional
 anti-neighbourhood is automatically a two-shore both-full interface.  The
 fixed double-star response also has a persistent single-edge-deletion
 colouring with the same trace away from its root.  Eight-connectivity forces

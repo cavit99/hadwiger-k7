@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 16 August 2026
+**Last updated:** 17 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -22,6 +22,32 @@ uniformly for all `n`; the [theorem](results/k2n_contractibility_via_matroid_pac
 and [hash-pinned internal audit](results/k2n_contractibility_via_matroid_packing_audit.md)
 are promoted results.  It does not settle `K_{3,3}`, the `K_7^-` six-colour
 conjecture, or `HC_7`.
+
+**Direct campaign advance, 17 August 2026.**  A new audited
+[six-connected degree-eight theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md)
+shows that every degree-eight vertex of every six-connected target-free
+graph has an incident edge contained in at most three triangles.  Its
+coefficient-four contraction iterates with connectivity and gives the
+global defect ladder `9n-2m>=20+kappa(G)`.  In the critical host this
+improves the exceptional-vertex inequality from `n_8-tau>=25` to
+
+\[
+                              n_8-\tau\ge27.             \tag{A}
+\]
+
+Thus both former defect layers 25 and 26 are eliminated, not merely one
+degree sequence.  The computation-free exceptional-neighbourhood
+[precursor](results/hc7_k7minus_degree_eight_triangle_poor_edge_packing.md)
+also gives a linear-size covering by such edges.  The associated audited
+[critical-contraction reduction](active/hc7_k7minus_critical_to_sixconnected_4n_reduction.md)
+shows that any hypothetical counterexample has a proper quotient `H` which
+is six-connected, exactly six-chromatic, target-free and satisfies
+`|E(H)|>=4|V(H)|`.  It also retains a specified contracted vertex and a
+seven-vertex set which uses all other five colours in every six-colouring.
+Consequently the universal six-connected `4n` extremal theorem would prove
+Conjecture 21, although only quotients with this stronger colouring trace
+need be excluded.  Neither that extremal theorem nor Conjecture 21 is proved
+here; the Norin--Totschnig significance benchmark remains unmet.
 
 **Campaign restart, 16 August 2026.**  The protected-centre fan-to-root
 attack remains stopped at its recorded hard proof gate; no hidden branch-set
@@ -86,7 +112,7 @@ critical-host chain now gives
 excludes every literal `K_5`, and gives
 
 \[
- n_8\ge25+\sum_{i\ge10}(i-9)n_i.                     \tag{1}
+ n_8\ge27+\sum_{i\ge10}(i-9)n_i.                     \tag{1}
 \]
 
 Every degree-eight vertex has a `K_4`-free neighbourhood.  Every order-seven
@@ -94,12 +120,29 @@ cut has exactly two complementary components.  Consequently the following
 is a headline-equivalent finishing theorem, not a routine local lemma:
 
 > **Exceptional-centre finishing target.** Every graph satisfying the
-> critical-host hypotheses has at most 24 degree-eight vertices.
+> critical-host hypotheses has at most 26 degree-eight vertices.
 
 This would contradict (1) and prove Conjecture 21 directly.  The active
 technical statement, proved inputs and exact surviving allocation problem
 are recorded in the
 [critical-host frontier](active/hc7_k7minus_seven_exceptional_frontier.md).
+
+The [critical-contraction reduction](active/hc7_k7minus_critical_to_sixconnected_4n_reduction.md)
+is a second, direct conditional refinement.  It preserves enough density to
+reach `4|V(H)|` after one contraction while retaining the exact split and
+five-colour-surjectivity data.  The immediate universal extremal target is
+
+\[
+ \kappa(H)\ge6,\qquad |E(H)|\ge4|V(H)|
+ \quad\Longrightarrow\quad K_7^-\preccurlyeq H,       \tag{2}
+\]
+
+but proving (2) for arbitrary graphs is stronger than the critical-host
+route requires.  Existing degree-six separation arithmetic does not close
+this target by itself; explicit target-rich examples at exact density `4n`
+defeat every orientation of the current numerical composition lemma.  Any
+completion must use target exclusion or the retained colouring trace to
+construct the rooted near-clique model.
 
 The audited
 [independence-four elimination](results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)
@@ -1480,14 +1523,15 @@ The strengthened audited computation-free critical-host package now gives:
 n_7=0,
 \qquad \delta(G)\ge8,
 \qquad |E(G)|\ge4|V(G)|,
-\qquad b=n_8\ge25+\sum_{i\ge10}(i-9)n_i.
+\qquad b=n_8\ge27+\sum_{i\ge10}(i-9)n_i.
 \]
 
 Here the host contains no literal `K_5`, and `b` counts its exceptional
-degree-eight vertices.  The new rooted-helper theorem eliminates every
+degree-eight vertices.  The rooted-helper theorem eliminates every
 degree-seven vertex; applying it at all five vertices of a hypothetical
 literal `K_5` then contradicts the exact degree surplus.  Jakobsen's defect
-inequality supplies the displayed lower bound on `n_8`.  These are necessary
+inequality, sharpened by the audited three-triangle-edge contraction, supplies
+the displayed lower bound on `n_8`.  These are necessary
 conditions on a hypothetical counterexample, not yet a colouring theorem,
 and they do not apply to an arbitrary enemy to the unconditional `4n-2`
 target.
@@ -1511,10 +1555,10 @@ five-limb packing, and gives the exact independent-boundary normal form in
 the case where one component contains two disjoint connected subgraphs
 adjacent to the whole boundary.
 
-The exceptional-centre programme remains the principal proof architecture
-for Conjecture 21, but no immediate attack is designated during the current
-pause.  The universal `4n-2` theorem remains a sufficient conditional route,
-and E5 remains a stronger frozen laboratory.  Direct `HC_7` bridge
+The exceptional-centre programme and the split-colouring `4n` quotient are
+the two active proof architectures for Conjecture 21.  The universal `4n-2`
+theorem remains a sufficient conditional route, and E5 remains a stronger
+frozen laboratory.  Direct `HC_7` bridge
 composition is also frozen: Conjecture 21 is the cleaner setting in which to
 develop the missing branch-set transfer and separator-resolution machinery.
 

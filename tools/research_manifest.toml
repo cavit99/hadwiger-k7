@@ -10430,7 +10430,7 @@ keywords = ["K7 minus", "exceptional centre", "rooted K5", "exterior allocation"
 
 [[claims]]
 id = "hc7.target.k7minus_seven_exceptional_vertices"
-title = "A critical K7-minus host has at most 24 exceptional degree-eight vertices"
+title = "A critical K7-minus host has at most 26 exceptional degree-eight vertices"
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
@@ -10452,7 +10452,7 @@ does_not_prove = [
   "the bare seven-connected 4n-2 extremal theorem",
   "HC7",
 ]
-keywords = ["K7 minus", "25 exceptional vertices", "finishing target", "shore allocation", "anchored list cores"]
+keywords = ["K7 minus", "27 exceptional vertices", "finishing target", "shore allocation", "anchored list cores"]
 
 [[claims]]
 id = "hc7.target.k7minus_five_exceptional_vertices"
@@ -11909,7 +11909,7 @@ keywords = ["K7 minus", "induced path", "spanning K6 model", "owner circuit", "R
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_remote_interface_topological_reduction"
 kind = "uses"
-note = "Every hypothetical critical host has at least twenty-five exceptional centres, and each remote interface now lies in one of four exact topological rows."
+note = "Every hypothetical critical host has at least twenty-seven exceptional centres, and each remote interface now lies in one of four exact topological cases."
 
 [[relations]]
 source = "hc7.k7minus_remote_interface_topological_reduction"
@@ -19312,3 +19312,123 @@ does_not_prove = [
   "HC7",
 ]
 keywords = ["graph scheme", "contractible graph", "rooted minor", "K2,n", "matroid union", "disjoint spanning trees"]
+
+[[claims]]
+id = "hc7.k7minus_degree_eight_triangle_poor_edge_packing"
+title = "Exceptional degree-eight vertices admit a linear-size covering by three-triangle edges"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_degree_eight_triangle_poor_edge_packing.md"
+source_heading = "Corollary 8 (the Jakobsen defect is at least twenty-six)"
+active = false
+audit = "results/hc7_k7minus_degree_eight_triangle_poor_edge_packing_audit.md"
+expected_source_sha256 = "2ffeb857f4c999abc14bc28cd4650332d9397a140c601929117376f38f637449"
+scope = "seven-connected K7-minus-minor-free graphs with minimum degree eight and exceptional degree-eight neighbourhoods"
+label_fidelity = "every degree-eight centre and its selected incident edge remain literal host objects"
+conclusions = [
+  "every exceptional centre has an incident edge lying in at most three triangles",
+  "the Jakobsen defect is at least twenty-six",
+  "at least ceil((26+tau)/2) distinct three-triangle edges cover all degree-eight vertices",
+]
+does_not_prove = [
+  "the stronger six-connected degree-eight theorem without exceptional-neighbourhood hypotheses",
+  "the universal six-connected 4n extremal target",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree eight", "edge codegree", "triangles", "Jakobsen defect", "edge covering"]
+
+[[verifiers]]
+id = "k7minus-degree-eight-triangle-poor-edge-packing"
+path = "results/hc7_k7minus_degree_eight_triangle_poor_edge_packing_verify.py"
+sha256 = "dc205fccdef1859a66ac1338ad11418a347b4165687f556f4291027d4ee6c951"
+timeout = 30
+expected_stdout = [
+  "GREEN exceptional-neighbourhood finite cross-check",
+  "atlas_order_seven=1044",
+  "eligible_extension_representations=352",
+  "eligible_isomorphism_classes=42",
+  "rooted_deletion_checks=336",
+  "almost_full_augmentation_checks=378",
+  "negative_calibration=GMs`KK full exterior augmentation is target-free",
+  "certificate_sha256=6024f1bcececd88038a16700c6c867570524a774f312e5d3acc5a27934e58047",
+]
+
+[[claims]]
+id = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
+title = "Every degree-eight vertex in a six-connected target-free graph has a three-triangle edge"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md"
+source_heading = "Theorem 2 (six-connected degree-eight low-codegree theorem)"
+active = true
+audit = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md"
+expected_source_sha256 = "06d35e4059848517e65e48b04c592e948bbc8e4407501de75520cfa3e9d22844"
+scope = "arbitrary six-connected K7-minus-minor-free graphs, with density consequences at m at least 4n"
+label_fidelity = "the degree-eight centre, selected incident edge, contracted exterior components and returned lifted order-six cut remain explicit"
+separator_order = "a minimum enemy to the six-connected 4n target returns an exact lifted order-six cut with two or three full components"
+conclusions = [
+  "every degree-eight vertex has an incident edge of codegree at most three",
+  "every six-connected target-free graph at density 4n has some edge of codegree at most three",
+  "every r-connected target-free graph at density 4n has Jakobsen defect at least 20+r",
+  "a hypothetical critical host has n8 at least 27+tau",
+  "a minimum enemy to the six-connected 4n target returns only the two exact high-excess order-six-cut cases",
+]
+does_not_prove = [
+  "elimination of either returned high-excess cut case",
+  "the universal six-connected 4n extremal target",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "six connectivity", "degree eight", "edge codegree", "defect ladder", "4n density"]
+
+[[verifiers]]
+id = "k7minus-sixconnected-degree-eight-low-codegree"
+path = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree_verify.py"
+sha256 = "d721c181a8388feb7901e8ab04f704c19679cfb56551752756a45733f28d6fdc"
+timeout = 30
+expected_stdout = [
+  "GREEN six-connected degree-eight low-codegree finite lemma",
+  "atlas_order_seven=1044",
+  "minimum_degree_four_extensions=4443",
+  "minimum_degree_four_isomorphism_classes=424",
+  "K6minus_free_local_classes=55",
+  "augmentation_profiles=2035",
+  "positive_K7minus_certificates=2031",
+  "certificate_digest=8b9b31cae19b10a9e958a51dd2c8ef12193b655ec7ab2163b67b638dfc646501",
+]
+
+[[claims]]
+id = "hc7.k7minus_critical_to_sixconnected_4n"
+title = "A hypothetical critical host contracts to a six-connected exactly six-chromatic 4n quotient"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_critical_to_sixconnected_4n_reduction.md"
+source_heading = "Theorem 1 (critical contraction)"
+active = false
+audit = "active/hc7_k7minus_critical_to_sixconnected_4n_reduction_audit.md"
+expected_source_sha256 = "ac3a9fcf81549c9bb3f7a6e789b240040b1f63bf40cae59b4ac61fbd8981d0a2"
+scope = "minor-minimal non-six-colourable K7-minus-minor-free graphs"
+label_fidelity = "the contracted edge, degree-eight end, contraction vertex and seven remaining neighbours remain fixed"
+colour_compatibility = "in every six-colouring the seven named neighbours use all five colours other than the contraction vertex colour"
+conclusions = [
+  "the quotient is six-connected, exactly six-chromatic and target-free",
+  "the quotient has at least four times as many edges as vertices",
+  "the universal six-connected 4n extremal theorem would imply Conjecture 21",
+]
+does_not_prove = [
+  "the universal six-connected 4n extremal theorem",
+  "a rooted near-clique model respecting the seven-vertex colour trace",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "critical contraction", "six connectivity", "4n density", "six colouring", "palette trace"]
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
+kind = "uses"
+note = "The global low-codegree theorem raises the critical-host defect to twenty-seven and removes the last local-degree obstruction to a coefficient-four contraction."
+
+[[relations]]
+source = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
+target = "hc7.k7minus_degree_eight_triangle_poor_edge_packing"
+kind = "uses"
+note = "The computation-free eight-vertex complement lemma handles the exterior-empty case; the new finite quotient removes the exceptional-neighbourhood hypotheses."
