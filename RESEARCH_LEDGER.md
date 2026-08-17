@@ -49,6 +49,33 @@ Conjecture 21, although only quotients with this stronger colouring trace
 need be excluded.  Neither that extremal theorem nor Conjecture 21 is proved
 here; the Norin--Totschnig significance benchmark remains unmet.
 
+**Critical-edge dichotomy, 17 August 2026.**  The independently audited
+[codegree-three separator theorem](results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md)
+removes the former degree bound on the second endpoint.  At a selected
+degree-eight vertex of every hypothetical critical host, either an incident
+edge has codegree at most two, in which case its contraction is
+six-connected, exactly six-chromatic, target-free and has at least
+`4|V|+1` edges, with the retained seven-vertex five-colour trace; or the
+edge has codegree three, in which case every spanning `K_6` model after
+deleting its ends has a branch set whose every rooted split exposes an
+actual separator.  One of the resulting separator boundaries can always be
+chosen to contain the degree-eight endpoint; its order is at least seven
+and it is full at order seven.  This replaces the former high-degree-surplus
+incidence alternative by two exact structural outcomes.  Neither an upper
+bound on the separator order nor elimination of the positive-surplus
+six-connected quotient is proved, so the primary conjecture and the
+Norin--Totschnig benchmark remain open.
+
+The adjacent audited
+[separator-order barrier](barriers/hc7_degree_eight_prescribed_separator_order_barrier.md)
+shows why the second outcome cannot be finished by connectivity, a
+degree-eight boundary vertex and separator-side minimisation alone:
+`K_{8,n}` has connectivity eight and a prescribed degree-eight boundary
+vertex, yet the least boundary order of such a connected separator side is
+`n`.  The construction is target-rich, so it does not refute a
+critical-host theorem; it proves that target exclusion or the full
+proper-minor colouring system must enter any order bound.
+
 **Returned-cut elimination, 17 August 2026.**  Two independently audited
 theorems now eliminate every dense three-component cut returned by a
 minimum enemy to the six-connected `4n` target.  The
@@ -170,6 +197,18 @@ this target by itself; explicit target-rich examples at exact density `4n`
 defeat every orientation of the current numerical composition lemma.  Any
 completion must use target exclusion or the retained colouring trace to
 construct the rooted near-clique model.
+
+The sharper
+[critical-edge dichotomy](results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md)
+now makes this refinement exhaustive at a degree-eight vertex.  Codegree at
+most two improves the quotient density to `4|V(H)|+1`.  Codegree three no
+longer needs a bound on the other endpoint: the proved `t=6` case of
+Hadwiger supplies a spanning `K_6` model after deleting the edge ends, and
+target exclusion splits a mixed branch set into an actual separation whose
+boundary contains the degree-eight endpoint.  The remaining obligations are
+therefore a target-sensitive use of that prescribed boundary vertex, or a
+strict-surplus version of the six-connected extremal theorem; neither is yet
+proved.
 
 The audited
 [independence-four elimination](results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)

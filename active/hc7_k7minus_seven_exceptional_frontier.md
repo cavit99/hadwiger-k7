@@ -17,8 +17,9 @@ path-bag owner-circuit reductions are separately audited GREEN.  The
 remote crossing five-cube/model-renewal theorem, the two-component cyclic
 stability theorem and the connected-full centre-deletion/six-cut theorem
 are separately audited GREEN.  The
-six-connected degree-eight low-codegree theorem, its defect ladder and the
-critical-contraction `4n` reduction are separately audited GREEN.  The
+six-connected degree-eight low-codegree theorem, its defect ladder, the
+critical-contraction `4n` reduction and the degree-free codegree-three
+separator theorem are separately audited GREEN.  The
 matching common-state, large-boundary lock reduction, order-nine transition
 projection and induced-path common-model theorems are separately audited
 GREEN.  The selected-edge root-bag response theorem and the all-lock
@@ -91,6 +92,19 @@ which is exactly six-chromatic and retains a seven-vertex set using all five
 colours other than the contracted vertex's colour in every six-colouring.
 This is a direct conditional route, not a proof of its universal extremal
 target.
+
+The independently audited
+[critical-edge dichotomy](../results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md)
+sharpens that route without any bound on the second endpoint.  At a selected
+degree-eight vertex, codegree at most two gives a six-connected,
+target-free, exactly six-chromatic quotient with at least `4|V|+1` edges and
+the same seven-vertex colour trace.  At codegree three, every spanning
+`K_6` model after deleting the two ends has a mixed branch set; every rooted
+split of that set exposes an actual separator, and one separator boundary
+can always be chosen to contain the degree-eight endpoint.  Its order is at
+least seven and it is full at order seven.  The proof does not bound the
+separator above by seven and does not eliminate the positive-surplus
+quotient.
 
 The audited
 [independence-four elimination](../results/hc7_k7minus_alpha4_regular_ramsey_elimination.md)

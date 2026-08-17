@@ -20,6 +20,10 @@ Selected audited inputs:
 - [every degree-eight vertex of an arbitrary six-connected target-free graph
   has an incident edge in at most three triangles; the resulting defect ladder
   gives `n_8>=27+tau` in the critical host](../results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md)
+- [at a degree-eight vertex of a hypothetical critical host, codegree at most
+  two gives a six-connected `4n+1` exactly six-chromatic quotient, while
+  codegree three forces an actual separator whose boundary can be chosen to
+  contain that degree-eight vertex](../results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md)
 - [target-sensitive rooted inequalities eliminate every dense returned
   three-component six-cut except one seven-edge topology](../results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
 - [every returned three-component six-cut with seven or eight boundary edges
@@ -55,6 +59,10 @@ Selected audited inputs:
 
 Immediate barriers:
 
+- [connectivity, a prescribed degree-eight boundary vertex and
+  separator-side minimisation do not bound the separator order](../barriers/hc7_degree_eight_prescribed_separator_order_barrier.md).
+  The exact `K_{8,n}` family is target-rich, so a critical-host descent must
+  use target exclusion or proper-minor colouring data.
 - [a singleton coordinate response can have arbitrarily large boundary even
   under stronger connectivity and degree bounds](../barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md).
   The construction contains a literal `K_7`, so it isolates the need to use
@@ -172,8 +180,11 @@ Lovasz--Woodall one-cycle assertion is assumed.
 - [Critical contraction to a six-connected `4n` quotient](hc7_k7minus_critical_to_sixconnected_4n_reduction.md)
   retains exact six-chromaticity, the split vertex and a seven-vertex set
   which uses all five other colours in every six-colouring.  Excluding these
-  quotients would prove Conjecture 21; the universal six-connected `4n`
-  extremal statement remains open.
+  quotients would prove Conjecture 21.  The newer
+  [critical-edge dichotomy](../results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md)
+  improves the low-codegree quotient to `4n+1` and replaces the codegree-three
+  case by a prescribed-vertex separator.  The universal six-connected `4n`
+  extremal statement and both new outcomes remain open.
 - [Dense returned three-component cuts](../results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
   are eliminated in every seven- and eight-edge boundary type, including the
   separately audited [final type VII](../results/hc7_k7minus_returned_type_vii_elimination.md).
