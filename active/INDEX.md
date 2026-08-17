@@ -28,6 +28,27 @@ Selected audited inputs:
   three-component six-cut except one seven-edge topology](../results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
 - [every returned three-component six-cut with seven or eight boundary edges
   is impossible; only the sparse `e(S)<=6` three-component row remains](../results/hc7_k7minus_returned_type_vii_elimination.md)
+- [the order-two dense lobe in the returned two-component descent is
+  impossible; two independent exact verifiers cover all 122,941 quotient
+  profiles](hc7_k7minus_returned_order_two_dense_lobe_elimination.md)
+- [a connected full degree-eight exterior cannot have a six-connected
+  adjacent two-block quotient; maximal connectivity-preserving contraction
+  ends at an exactly six-connected relative contraction-critical exterior](hc7_k7minus_full_exterior_contraction_terminal.md)
+- [every edge of a hypothetical critical host is remote from at least
+  fourteen exceptional centres, including three independent centres; a
+  common five-edge matching concentrates three remote edges at one centre](hc7_k7minus_common_remote_edge_multicentre_cube.md)
+- [exact-six rerooting makes punctured rooted-model exclusion hereditary and
+  preserves coefficient-four excess across derived six-cuts](hc7_k7minus_six_boundary_fragment_rerooting.md)
+- [prescribed-boundary minimisation gives the full component normal form but
+  does not bound the separator order](hc7_k7minus_prescribed_vertex_separator_minimisation.md)
+- [cycle-rank accounting bounds every sparse returned lobe by
+  `|C|<=28+2 beta(C)`, with stronger constants on the nontrivial boundary
+  row](hc7_k7minus_sparse_sixcut_cyclic_residue.md)
+- [a clean portal path closes one two-root exchange; every survivor is
+  support-bag or model-essential on every saturated linkage](hc7_k7minus_sparse_sixcut_clean_portal_path_completion.md)
+- [the one-exchanged-root packet return forces at least four internal
+  portals and at most one old-root contact; the maximal four-portal
+  augmentation lemma is explicitly open](hc7_k7minus_sparse_sixcut_one_exchange_four_portal_gate.md)
 - [every exceptional centre has a remote seven-removable edge and exact
   80-pattern cube; its interface lies in four exact topological rows, with
   the connected order-seven row excluded and the nonfull return carrying
@@ -188,8 +209,17 @@ Lovasz--Woodall one-cycle assertion is assumed.
 - [Dense returned three-component cuts](../results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
   are eliminated in every seven- and eight-edge boundary type, including the
   separately audited [final type VII](../results/hc7_k7minus_returned_type_vii_elimination.md).
-  The surviving universal `4n` cut rows are exactly the sparse
-  three-component case `e(S)<=6` and the two-component case `e(S)<=11`.
+  In the two-component row, the independently audited
+  [order-two dense-lobe theorem](hc7_k7minus_returned_order_two_dense_lobe_elimination.md)
+  removes the first outcome of the dense contraction descent; the surviving
+  outputs are the pinned boundary atom and a nested separator of uncontrolled
+  density.  The universal `4n` route still contains the sparse
+  three-component case `e(S)<=6` and unresolved two-component boundaries.
+- [Sparse returned three-component frontier](hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md):
+  exact-six rerooting and excess additivity, rooted-`K_4` portal descent,
+  ordinary near-five boundary visibility, and the precise remaining local
+  density theorem `eta>=6 =>` a punctured rooted near-clique or two disjoint
+  boundary-full connected subgraphs.  The local theorem remains open.
 - [Minimum path-bag owner circuits](../results/hc7_k7minus_p3_owner_circuit_compression.md)
   eliminate the nonrepeated order-nine induced-path allocation branch and
   retain the original path responses on exact order-seven/eight boundaries;

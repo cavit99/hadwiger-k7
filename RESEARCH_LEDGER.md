@@ -103,6 +103,91 @@ does not eliminate either row in (B), prove the universal `4n` theorem, or
 prove Conjecture 21.  The Norin--Totschnig significance benchmark therefore
 remains unmet.
 
+**Two-component and full-exterior checkpoint, 17 August 2026.**  The
+independently audited
+[order-two dense-lobe theorem](active/hc7_k7minus_returned_order_two_dense_lobe_elimination.md)
+contracts the arbitrary opposite lobe and exhausts the resulting `122,941`
+labelled nine-vertex quotients with two independent exact algorithms.  It
+eliminates the order-two outcome in the dense returned two-component descent.
+For `e(S)>=3`, only the one- or two-vertex boundary atom and the nested
+near-model separator remain.  Independently, an audited census of all
+`611,678` relevant six-connected
+[adjacent exterior-pair quotients](active/hc7_k7minus_adjacent_exterior_pair_elimination.md)
+proves that a connected full degree-eight exterior cannot contract to two
+adjacent blocks while retaining six-connectivity.  Its computation-free
+[terminal consequence](active/hc7_k7minus_full_exterior_contraction_terminal.md)
+is unbounded: every maximal connectivity-preserving exterior contraction
+ends in an exactly six-connected quotient with at least three exterior
+images, and contracting any remaining exterior edge is exactly
+five-connected and lifts to a full exact six-cut.  The cumulative
+common-neighbour loss is not controlled and those cuts need not lift as
+order-six cuts of the original graph.  Thus this is a new global normal
+form, not a proof of the coefficient-four extremal theorem or Conjecture 21.
+
+**Common-centre and sparse-six-cut machinery, 17 August 2026.**  The audited
+[global edge--centre incidence theorem](active/hc7_k7minus_common_remote_edge_multicentre_cube.md)
+uses the defect ladder `n_8-tau>=27` to show that every edge of a hypothetical
+critical host is remote from at least fourteen degree-eight centres and
+hence from three independent such centres.  Every five-edge matching also
+has one exceptional centre remote from at least three of its edges.
+
+On the sparse returned row, the consolidated
+[technical frontier](active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
+now records an unbounded exact-six descent.  Independent audits verify the
+[rerooting theorem](active/hc7_k7minus_six_boundary_fragment_rerooting.md),
+the [prescribed-boundary minimisation](active/hc7_k7minus_prescribed_vertex_separator_minimisation.md),
+and the [cycle-rank bound](active/hc7_k7minus_sparse_sixcut_cyclic_residue.md)
+
+\[
+ |C|\le28+2\beta(C),\qquad |C|\le25+2\beta(C)
+ \quad\hbox{if }\Delta(G[S])\ge2,
+\]
+
+with respective nontrivial-tree bounds `22` and `19`.  A spanning rooted
+`K_4` confines each omitted root to two branch sets; a four-portal return is
+an exact order-six fragment and exchanges at least two roots, eliminating
+the former one-root-exchange residue.  Punctured rooted-model exclusion and
+the coefficient-four excess are hereditary across that fragment.  In the
+two-root exchange, clean paths and a boundary-full connected-subgraph repair
+give explicit `K_7^-` models unless the internal portals control separate
+essential arms.
+
+Independently, an ordinary `K_5^-` minor roots at component order at most
+six, and a literal `K_5^-` subgraph roots at arbitrary component order; in a
+larger minimum nonliteral obstruction every branch-set contraction returns
+another exact order-six fragment.  Two boundary-composition theorems force
+one branch set with at most one boundary neighbour or three branch sets with
+at most two each.  In the ordinary-minor-free branch, Wood--Woodall's
+three-connected classification makes every non-exact core bounded: a wheel
+has order at most `31`, while cutvertices already return an exact fragment
+or two boundary-full connected subgraphs.  Nested two-separation chains and
+the bounded incidence cores remain.  The exact open local theorem is still
+
+\[
+ \eta_U(X)\ge6\quad\Longrightarrow\quad
+ \text{a punctured five-rooted }K_5^-\text{ model, or two disjoint
+ }U\text{-full connected subgraphs}.                 \tag{C}
+\]
+
+The audited orientation theorem shows that (C) would eliminate the whole
+sparse three-component row.  Exact enumeration through every connected
+internal graph of order four supports (C), but is not promoted to an
+unbounded proof.  Explicit barriers rule out incidence-only, abstract
+three--two connectedness and automatic rooted-`K_4` augmentation shortcuts.
+Thus the universal `4n` theorem, Conjecture 21 and the Norin--Totschnig
+benchmark remain open.
+
+**New-literature check, 17 August 2026.**  Lo's arXiv:2603.27973v1 states
+that every four-connected non-planar graph of minimum degree at least five
+has a `K_6^-` minor.  The primary-source statement and the repository's
+[elementary-minor deductions](active/hc7_k7minus_lo_elementary_minor_robustness.md)
+have been checked, but the preprint is unrefereed and its finite terminal
+figures have not all been independently reconstructed here.  More
+importantly, it supplies an unrooted model where the current route already
+has an unrooted `K_6`; it does not force the branch bags to meet the specified
+degree-eight neighbourhood.  It therefore does not close the rooted
+augmentation bottleneck.
+
 **Campaign restart, 16 August 2026.**  The protected-centre fan-to-root
 attack remains stopped at its recorded hard proof gate; no hidden branch-set
 ownership is inferred from that fan.  Discovery has resumed through a suite

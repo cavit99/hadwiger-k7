@@ -16,6 +16,12 @@ This is a separate cold mathematical pass, not external peer review.
 | [`hc7_k7minus_returned_two_component_contraction_descent.md`](hc7_k7minus_returned_two_component_contraction_descent.md) | `87fdc55007f32622a11f5050d6f0e9719e45af95c1e7e2d86f480a4a3a1338e3` |
 | [`experiments/returned_two_component_equality_witness_verify.py`](experiments/returned_two_component_equality_witness_verify.py) | `e7960a8c3738ac3cb3c1f621a221db21cf94c5e7f1fa0a1fe2cc7df9896a2c56` |
 
+The current theorem SHA-256 is
+`a59da28e1f7d4bba06ad5e4defcede39d56b03d2904868d0ff6ef98b4bb7b78b`.
+The only later edits link the independently audited elimination of outcome 1
+and update the exact-scope paragraph accordingly; no statement or proof in
+the audited descent changed.
+
 Relevant audited local dependencies were also pinned:
 
 | dependency | SHA-256 |

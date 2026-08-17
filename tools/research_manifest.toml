@@ -19562,6 +19562,73 @@ does_not_prove = [
 ]
 keywords = ["separator order", "degree eight", "K8n", "full components", "barrier"]
 
+[[claims]]
+id = "hc7.target.k7minus_sixconnected_4n_extremal"
+title = "Six-connected coefficient-four K7-minus extremal theorem"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md"
+source_heading = "1. Entrance and exact accounting"
+active = false
+scope = "arbitrary six-connected graphs with at least four times as many edges as vertices"
+separator_order = "a minimum target-free enemy returns an order-six cut with two or three full components"
+hypotheses = [
+  "six-connectivity",
+  "at least 4n edges",
+  "no K7-minus minor",
+]
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "a contradiction to the exact returned-cut density identity",
+]
+does_not_prove = [
+  "the sparse three-component local rooted extremal theorem",
+  "the returned two-component case",
+  "Conjecture 21 without the audited critical-contraction reduction",
+  "HC7",
+]
+keywords = ["K7 minus", "six connectivity", "4n density", "order-six cut", "component excess"]
+
+[[claims]]
+id = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
+title = "Sparse six-cut punctured-rooted-model or two-full-subgraphs theorem"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md"
+source_heading = "2. The local theorem which would close this case"
+active = false
+scope = "one arbitrary-order component behind a full order-six boundary in the sparse three-component returned cut"
+label_fidelity = "the six boundary roots, omitted root, five rooted branch sets and both disjoint boundary-full connected subgraphs remain literal"
+separator_order = "six, including derived exact-six fragments under rerooting"
+hypotheses = [
+  "relative six-connectivity of the closed component shore",
+  "coefficient-four component excess at least six",
+  "two other full components available for terminal composition",
+]
+allowed_exits = [
+  "a punctured five-rooted K5-minus model",
+  "two disjoint connected subgraphs each adjacent to all six boundary vertices",
+]
+does_not_prove = [
+  "the local dichotomy itself",
+  "the returned two-component case",
+  "the universal six-connected 4n theorem without the existing returned-cut reductions",
+  "Conjecture 21 or HC7",
+]
+keywords = ["K7 minus", "sparse six-cut", "rooted K5 minus", "component excess", "exact-six fragment"]
+
+[[relations]]
+source = "hc7.target.k7minus_sixconnected_4n_extremal"
+target = "hc7.target.k7minus_six_colour_conjecture"
+kind = "subproblem_of"
+note = "The audited critical-contraction reduction turns any hypothetical counterexample into a six-connected target-free quotient at coefficient-four density."
+
+[[relations]]
+source = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
+target = "hc7.target.k7minus_sixconnected_4n_extremal"
+kind = "subproblem_of"
+note = "The local rooted-model-or-two-full-subgraphs theorem would eliminate the only remaining three-component order-six-cut row; the returned two-component row remains separate."
+
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_sixconnected_degree_eight_low_codegree"

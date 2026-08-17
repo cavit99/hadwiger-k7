@@ -411,6 +411,13 @@ it returns a strict branch-set separator.  It does not yet prove that the
 new separator has order six or that one of its closed sides retains
 coefficient-four density.
 
+The subsequent independently audited
+[`order-two dense-lobe elimination`](hc7_k7minus_returned_order_two_dense_lobe_elimination.md)
+rules out outcome 1 by contracting the arbitrary opposite component and
+exhausting the resulting `122,941` labelled nine-vertex quotients.  Thus the
+current `e_S\geq3` residue consists only of the boundary atom and nested
+near-model separator outcomes.
+
 ### Proposition 6.1 (the sparse-boundary Lo handoff)
 
 Assume (3) and `e_S<=2`, and choose `C` with maximum excess.  Then
@@ -665,9 +672,10 @@ It deliberately makes no target-minor claim.
 ## Exact scope
 
 Theorem 6 is an unbounded target-sensitive reduction of every returned
-two-component boundary with at least three edges.  Its unresolved outputs
-are an order-two dense lobe, a one- or two-vertex pinned boundary atom, or
-a new near-model separator whose density has not been controlled.
+two-component boundary with at least three edges.  Its order-two dense-lobe
+output has now been eliminated by the linked independently audited theorem.
+Its unresolved outputs are a one- or two-vertex pinned boundary atom or a
+new near-model separator whose density has not been controlled.
 Proposition 6.1 reduces the remaining boundary sizes to the exact
 three-separation obstruction or to two unrooted Lo minors.
 
