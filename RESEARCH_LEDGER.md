@@ -23,6 +23,27 @@ and [hash-pinned internal audit](results/k2n_contractibility_via_matroid_packing
 are promoted results.  It does not settle `K_{3,3}`, the `K_7^-` six-colour
 conjecture, or `HC_7`.
 
+**Five-root partial-routing theorem, 17 August 2026.**  The independently
+twice-audited
+[Kriesell--Mohr application](results/llru_question61_via_km_property_star.md)
+proves that five roots spanning at least four literal edges have a rooted
+`K_5` minor whenever every nonliteral root pair is joined inside its two
+prescribed disjoint packets.  It answers Lafferty--Liu--Rolek--Yu Question
+6.1 affirmatively and, by the consequence stated explicitly by those
+authors, lowers their eight-connectivity threshold for
+contraction-critical graphs from `k>=17` to `k>=11`.  This is a new
+application of Kriesell--Mohr Theorem 7, not new property-`(*)` machinery.
+Rolek--Song Lemma 1.7 gives the following exact local consequence in the
+present campaign: at a degree-eight critical vertex `x`, every independent
+neighbour triple `S` for which `R=N(x)-S` spans at least four edges yields
+an `R`-rooted `K_5` minor in `G-(S\cup\{x\})`.  In the
+adjacent-true-twin induced-`C_7` case this holds for every independent
+triple, with the twin fixed as a singleton branch set.  The resulting
+seven-bag construction still may miss the two contacts from one
+independent-triple vertex to its two opposite rooted bags.  Neither that
+connector problem, Conjecture 21, nor `HC_7` is solved; the
+Norin--Totschnig benchmark remains unmet.
+
 **Direct campaign advance, 17 August 2026.**  A new audited
 [six-connected degree-eight theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md)
 shows that every degree-eight vertex of every six-connected target-free
