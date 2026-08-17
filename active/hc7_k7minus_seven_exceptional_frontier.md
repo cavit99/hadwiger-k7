@@ -134,6 +134,28 @@ proves two facts.
    `R=N(u)-I`, any `R`-rooted `K_5` model in `G-({u}\cup I)` that avoids an
    exterior component completes immediately to a `K_7^-` model.
 
+A separate independently twice-audited
+[partial-routing theorem](../results/llru_question61_via_km_property_star.md)
+removes one rooted-model existence gap when the five complementary
+neighbours span at least four edges.  For an independent triple
+`I\subseteq N(u)`, put `R=N(u)-I`.  Rolek--Song Lemma 1.7 gives a
+two-colour path inside the corresponding two colour classes for every
+missing edge of `G[R]`; Kriesell--Mohr Theorem 7 supplies the missing
+rooted contacts, while the at least four literal edges supply the rest.
+Hence `G-({u}\cup I)` has an `R`-rooted `K_5` minor whenever
+`e(G[R])>=4`.  This does not make the model avoid an exterior component.
+In a target-free host it must still satisfy the bilateral or residual
+allocation restrictions below.
+
+In particular, if `u` has an adjacent degree-eight true twin and their
+external common neighbourhood is an induced `C_7`, the twin is universal
+on `R` and contributes four literal root edges, so the rooted model exists
+for every independent triple.  Fixing the twin as a singleton and adding
+`u` leaves exactly two possible missing contacts from a chosen member of
+the triple to the two opposite cycle-root bags.  The exact remaining
+assertion is an additional-contact or branch-set-splitting theorem; the
+partial-routing theorem alone does not supply it.
+
 The audited
 [low-degree exterior-component theorem](../results/hc7_low_degree_exterior_component_bounds.md)
 gives at most two components of `G-N[u]`.

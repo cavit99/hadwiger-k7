@@ -19709,3 +19709,57 @@ source = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
 target = "hc7.k7minus_degree_eight_triangle_poor_edge_packing"
 kind = "uses"
 note = "The computation-free eight-vertex complement lemma handles the exterior-empty case; the new finite quotient removes the exceptional-neighbourhood hypotheses."
+
+[[claims]]
+id = "graph_minors.partial_five_root_routing"
+title = "Four literal root edges complete five-root partial routing"
+kind = "theorem"
+status = "audited-green"
+source = "results/llru_question61_via_km_property_star.md"
+source_heading = "Theorem 1.1 (four literal root edges complete partial routing)"
+active = false
+audit = "results/llru_question61_via_km_property_star_audit.md"
+expected_source_sha256 = "8cac1bbffdc41825c6934921b4f778eea60a593615e4ae5e1ce5fe2606cf3797"
+scope = "arbitrary finite graphs with five roots in five pairwise disjoint prescribed packets"
+label_fidelity = "all five roots remain in their nominated branch sets; output bags may mix input packets, exactly as allowed by Lafferty--Liu--Rolek--Yu Question 6.1"
+conclusions = [
+  "at least four literal root edges plus two-packet paths for every nonliteral pair force a rooted K5 minor",
+  "Lafferty--Liu--Rolek--Yu Question 6.1 has an affirmative answer",
+  "the eight-connectivity threshold explicitly derived by those authors improves from k at least 17 to k at least 11",
+]
+does_not_prove = [
+  "that K5 itself has Kriesell--Mohr property star",
+  "the K7-minus six-colour conjecture",
+  "HC7",
+]
+keywords = ["rooted K5", "Kempe routing", "property star", "contraction-critical connectivity", "Question 6.1"]
+
+[[claims]]
+id = "hc7.k7minus_degree8_independent_triple_rooted_k5"
+title = "A four-edge complementary neighbourhood has a rooted K5 packet"
+kind = "corollary"
+status = "audited-green"
+source = "results/llru_question61_via_km_property_star.md"
+source_heading = "Corollary 5.1 (degree-eight rooted K5 packet)"
+active = false
+audit = "results/llru_question61_via_km_property_star_audit.md"
+expected_source_sha256 = "8cac1bbffdc41825c6934921b4f778eea60a593615e4ae5e1ce5fe2606cf3797"
+scope = "a degree-eight vertex with an independent neighbour triple in a seven-contraction-critical graph"
+label_fidelity = "the five literal complementary neighbours are the five roots; all branch sets avoid the centre and the independent triple"
+conclusions = [
+  "if the five complementary neighbours span at least four edges, deleting the centre and independent triple leaves a rooted K5 minor",
+  "in the induced-C7 adjacent-true-twin residue the twin may be fixed as a singleton rooted bag for every independent triple",
+]
+does_not_prove = [
+  "avoidance of an exterior component by the rooted model",
+  "an additional contact from an independent-triple vertex to an opposite rooted bag",
+  "elimination of the induced-C7 true-twin residue",
+  "the K7-minus six-colour conjecture or HC7",
+]
+keywords = ["K7 minus", "degree eight", "independent triple", "Rolek Song paths", "rooted K5"]
+
+[[relations]]
+source = "hc7.k7minus_degree8_independent_triple_rooted_k5"
+target = "graph_minors.partial_five_root_routing"
+kind = "uses"
+note = "Rolek--Song Lemma 1.7 supplies the required two-packet paths for every nonliteral complementary-neighbour pair."
