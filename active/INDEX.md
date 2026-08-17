@@ -20,6 +20,10 @@ Selected audited inputs:
 - [every degree-eight vertex of an arbitrary six-connected target-free graph
   has an incident edge in at most three triangles; the resulting defect ladder
   gives `n_8>=27+tau` in the critical host](../results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md)
+- [target-sensitive rooted inequalities eliminate every dense returned
+  three-component six-cut except one seven-edge topology](../results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
+- [every returned three-component six-cut with seven or eight boundary edges
+  is impossible; only the sparse `e(S)<=6` three-component row remains](../results/hc7_k7minus_returned_type_vii_elimination.md)
 - [every exceptional centre has a remote seven-removable edge and exact
   80-pattern cube; its interface lies in four exact topological rows, with
   the connected order-seven row excluded and the nonfull return carrying
@@ -170,6 +174,11 @@ Lovasz--Woodall one-cycle assertion is assumed.
   which uses all five other colours in every six-colouring.  Excluding these
   quotients would prove Conjecture 21; the universal six-connected `4n`
   extremal statement remains open.
+- [Dense returned three-component cuts](../results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
+  are eliminated in every seven- and eight-edge boundary type, including the
+  separately audited [final type VII](../results/hc7_k7minus_returned_type_vii_elimination.md).
+  The surviving universal `4n` cut rows are exactly the sparse
+  three-component case `e(S)<=6` and the two-component case `e(S)<=11`.
 - [Minimum path-bag owner circuits](../results/hc7_k7minus_p3_owner_circuit_compression.md)
   eliminate the nonrepeated order-nine induced-path allocation branch and
   retain the original path responses on exact order-seven/eight boundaries;

@@ -49,6 +49,33 @@ Conjecture 21, although only quotients with this stronger colouring trace
 need be excluded.  Neither that extremal theorem nor Conjecture 21 is proved
 here; the Norin--Totschnig significance benchmark remains unmet.
 
+**Returned-cut elimination, 17 August 2026.**  Two independently audited
+theorems now eliminate every dense three-component cut returned by a
+minimum enemy to the six-connected `4n` target.  The
+[dense-boundary theorem](results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md)
+uses target-sensitive rooted `K_4` exclusions and sharp forms of the
+Norin--Totschnig four-root bounds to eliminate all three eight-edge boundary
+types and six of the seven seven-edge types, for components of arbitrary
+order.  The companion
+[type-VII theorem](results/hc7_k7minus_returned_type_vii_elimination.md)
+eliminates the final seven-edge type: its rooted inequalities force doubled
+attachments into one or two literal `K_2` components, and three independent
+exact minor searches certify all 121 resulting quotient profiles.  Hence a
+minimum target-free six-connected graph with at least `4n` edges can now
+return only
+
+\[
+ \begin{array}{ll}
+ r=2:& |E(G[S])|\le11,\\
+ r=3:& |E(G[S])|\le6.
+ \end{array}                                                   \tag{B}
+\]
+
+This is an unbounded direct elimination of a broad returned-cut class; it
+does not eliminate either row in (B), prove the universal `4n` theorem, or
+prove Conjecture 21.  The Norin--Totschnig significance benchmark therefore
+remains unmet.
+
 **Campaign restart, 16 August 2026.**  The protected-centre fan-to-root
 attack remains stopped at its recorded hard proof gate; no hidden branch-set
 ownership is inferred from that fan.  Discovery has resumed through a suite

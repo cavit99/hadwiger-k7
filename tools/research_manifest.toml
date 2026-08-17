@@ -19397,6 +19397,97 @@ expected_stdout = [
 ]
 
 [[claims]]
+id = "hc7.k7minus_returned_three_component_dense_boundary"
+title = "Dense three-component cuts returned by the six-connected 4n programme are impossible"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md"
+source_heading = "Theorem 1 (three-component dense-boundary bound)"
+active = true
+audit = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination_audit.md"
+expected_source_sha256 = "78676354ff551da0fe3cd85e53f84495a07f60f723c93ff4d480868d21d09001"
+scope = "arbitrary six-connected K7-minus-minor-free graphs with an order-six cut having three boundary-full components and a seven- or eight-edge boundary satisfying the returned-cut restrictions"
+label_fidelity = "the six boundary vertices, each open component, every rooted pair and every composed branch set remain literal"
+separator_order = "six"
+conclusions = [
+  "all three eight-edge returned boundary types are impossible at density 4n",
+  "six of the seven seven-edge returned boundary types are impossible at density 4n",
+  "the component orders are unrestricted",
+]
+does_not_prove = [
+  "elimination of the final type-VII boundary without the companion theorem",
+  "elimination of returned boundaries with at most six edges",
+  "elimination of the returned two-component case",
+  "the universal six-connected 4n theorem or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "six-cut", "three components", "rooted K4", "component excess", "4n density"]
+
+[[verifiers]]
+id = "k7minus-returned-three-component-dense-boundary"
+path = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination_verify.py"
+sha256 = "5d4cc91f168d5d0d8d89f2e4418478ffa713d7fd8d517a5567b27635ec194ac6"
+timeout = 30
+expected_stdout = [
+  "GREEN returned three-component dense-boundary certificates",
+  "eight_edge_isomorphism_classes=3",
+  "seven_edge_unhandled_isomorphism_classes=1",
+  "type_VI_bound=5",
+  "cross_lobe_compatible_pair_pairs=7-VI:11;7-VII:10",
+]
+
+[[claims]]
+id = "hc7.k7minus_returned_type_vii_elimination"
+title = "The final seven-edge three-component returned boundary is impossible"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_returned_type_vii_elimination.md"
+source_heading = "Theorem 1 (type-VII elimination)"
+active = true
+audit = "results/hc7_k7minus_returned_type_vii_elimination_audit.md"
+expected_source_sha256 = "c7be590f7006ab65289eb020141edd6a30bb73d8aff17df51ffcbfb7f0e9caa1"
+scope = "arbitrary six-connected K7-minus-minor-free graphs with an order-six cut having three full components and the type-VII seven-edge boundary"
+label_fidelity = "the six boundary vertices, doubled low-degree attachments, retained K2 components and all quotient branch sets remain literal"
+separator_order = "six"
+conclusions = [
+  "every component other than a K2 has exactly one attachment at each of the two degree-two boundary roots",
+  "minimum degree forces one or two retained K2 components",
+  "all 121 exact quotient profiles contain a K7-minus minor",
+  "together with the dense-boundary theorem every seven- and eight-edge returned three-component boundary is impossible",
+]
+does_not_prove = [
+  "elimination of returned three-component boundaries with at most six edges",
+  "elimination of the returned two-component case",
+  "the universal six-connected 4n theorem or the K7-minus six-colour conjecture",
+]
+keywords = ["K7 minus", "six-cut", "type VII", "rooted K4", "K2 attachments", "exact minor verification"]
+
+[[verifiers]]
+id = "k7minus-returned-type-vii-elimination"
+path = "results/hc7_k7minus_returned_type_vii_elimination_verify.py"
+sha256 = "6bf239425a4acee9070de98303d602c28698ff8b61b96e2eaeec8161552fe93e"
+timeout = 30
+expected_stdout = [
+  "GREEN returned type-VII quotient elimination",
+  "same_component_feasible_profiles=21",
+  "split_component_first_profiles=10",
+  "split_component_second_profiles=10",
+  "split_component_profile_pairs=100",
+  "target_certificates=121",
+  "certificate_digest=88bef0aaee0914ff2b71cc4e00d7b55e8d4a42c274294d8418d37da646805fe6",
+]
+
+[[verifiers]]
+id = "k7minus-returned-type-vii-independent-audit"
+path = "results/hc7_k7minus_returned_type_vii_elimination_audit_verify.py"
+sha256 = "7b78c174433b079ff2a8c25202365f246f1b7b11f74fbd25184a3f8894cc6451"
+timeout = 30
+expected_stdout = [
+  "GREEN independent type-VII graph-state audit",
+  "quotients_checked=121",
+  "search_states=3129",
+]
+
+[[claims]]
 id = "hc7.k7minus_critical_to_sixconnected_4n"
 title = "A hypothetical critical host contracts to a six-connected exactly six-chromatic 4n quotient"
 kind = "theorem"
@@ -19426,6 +19517,18 @@ source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
 kind = "uses"
 note = "The global low-codegree theorem raises the critical-host defect to twenty-seven and removes the last local-degree obstruction to a coefficient-four contraction."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_returned_three_component_dense_boundary"
+kind = "uses"
+note = "The target-sensitive rooted inequalities eliminate the dense three-component cuts returned by the coefficient-four contraction programme."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_returned_type_vii_elimination"
+kind = "uses"
+note = "The type-VII theorem completes the elimination of every seven- and eight-edge three-component returned cut."
 
 [[relations]]
 source = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
