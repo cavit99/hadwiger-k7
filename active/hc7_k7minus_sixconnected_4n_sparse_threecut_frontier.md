@@ -137,8 +137,19 @@ containing both edge ends in its boundary.  The first possible nonliteral
 order, seven, has an exact Hall-deficiency profile: a minimal deficient
 family consists of singleton bags whose union dominates the complement.
 Only a one-bag deficient family forces an individually universal degree-six
-singleton; the outside-contact distribution for larger families remains
-open.
+singleton.  The independently audited
+[full order-seven `i=1` completion](hc7_k7minus_sparse_sixcut_order_seven_i1_completion.md)
+closes that entire one-bag case whenever `eta_S(C)>=6`.  If the complementary
+six-vertex graph has a nonspanning ordinary `K_4^-` model or a `K_5^-`
+minor, the perfect boundary matching roots it directly.  Otherwise an exact
+`2^15`-graph classification leaves precisely
+`Theta(2,2,3)`, `Theta(1,2,4)` and `Theta(1,3,3)`.  These cores have seven
+edges, so the excess bound gives at least twenty-one boundary incidences;
+the separately twice-audited theta theorem then forces a punctured rooted
+model from one incidence across a core nonedge.  Consequently the first
+unresolved order-seven Hall families have order two, three or four.  Their
+outside contacts are only collectively dominated, and assigning those
+contacts to individual singleton bags remains open.
 
 Two independently audited boundary-composition results constrain any
 spanning ordinary model:

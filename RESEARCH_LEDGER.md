@@ -157,9 +157,19 @@ six, and a literal `K_5^-` subgraph roots at arbitrary component order; in a
 larger minimum nonliteral obstruction every branch-set contraction returns
 another exact order-six fragment.  The order-seven Hall row now records only
 collective domination by a deficient singleton family: individual
-universality is forced only when that family has order one.  Two
-boundary-composition theorems force one branch set with at most one boundary
-neighbour or three branch sets with at most two each.
+universality is forced only when that family has order one.  The
+[full order-seven `i=1` completion](active/hc7_k7minus_sparse_sixcut_order_seven_i1_completion.md)
+now eliminates that entire one-bag case at excess at least six.  An exact
+six-vertex classification reduces the complementary core to the three
+two-edge subdivisions of `K_4^-`; twenty-one boundary incidences then force
+one incidence across a core nonedge, and an explicit rooted model closes
+every such incidence.  The classification and all `34,560` labelled theta
+completions have separate exact verifiers and independent cold audits.
+Thus any remaining order-seven Hall obstruction has a deficient family of
+order two, three or four, where collective domination still does not assign
+the outside contacts to individual singleton bags.  Two boundary-composition
+theorems force one branch set with at most one boundary neighbour or three
+branch sets with at most two each.
 
 The independently twice-audited
 [exact-singleton theorem](active/hc7_k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton.md)
