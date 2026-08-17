@@ -134,7 +134,11 @@ and roots a literal five-vertex `K_5^-` subgraph at arbitrary component
 order.  In a minimum larger counterexample, contraction of every edge
 internal to a branch set is blocked by a connected exact order-six fragment
 containing both edge ends in its boundary.  The first possible nonliteral
-order, seven, has an exact Hall-deficiency profile.
+order, seven, has an exact Hall-deficiency profile: a minimal deficient
+family consists of singleton bags whose union dominates the complement.
+Only a one-bag deficient family forces an individually universal degree-six
+singleton; the outside-contact distribution for larger families remains
+open.
 
 Two independently audited boundary-composition results constrain any
 spanning ordinary model:
@@ -157,12 +161,16 @@ The audited
 [Wood--Woodall descent](hc7_k7minus_sparse_sixcut_ordinary_minor_wood_woodall_descent.md)
 also controls the branch in which no ordinary near-five minor exists.  A
 cutvertex yields an exact-six fragment or two disjoint boundary-full
-connected subgraphs.  A three-connected minor-free component is a wheel,
-the triangular prism or `K_{3,3}`; absent an exact singleton fragment, its
-order is at most `31`.  Disjoint strict two-separation shores are likewise
-bounded in number and size.  A nested chain of two-separations and the
-finite wheel/prism/`K_{3,3}` incidence cores remain, and the current excess
-bounds are not the sharp value five required by (2).
+connected subgraphs.  The independently twice-audited
+[exact-singleton theorem](hc7_k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton.md)
+now eliminates its no-exact-fragment subcase: for every wheel, triangular
+prism or `K_{3,3}` lobe, an exact finite attachment-set verification plus the
+four-root packing bound forces a total-degree-six vertex.  Its neighbourhood
+is an exact six-cut and its singleton fragment has excess `2`, superseding
+the former bounded order-`31` residue.  The returned fragment still requires
+transfer across its derived boundary.  A nested chain of strict
+two-separations remains, as does the separate case containing an ordinary
+`K_5^-` minor.
 
 ## 4. Falsified shortcuts retained as barriers
 

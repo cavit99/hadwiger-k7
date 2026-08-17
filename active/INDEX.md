@@ -221,6 +221,10 @@ Lovasz--Woodall one-cycle assertion is assumed.
   packet-weighted theorem: in the absence of a punctured rooted near-clique,
   `eta<=5 mu`, where `mu` is the maximum number of disjoint boundary-full
   connected subgraphs.  The local theorem remains open.
+- [Three-connected ordinary-minor-free lobes return an exact singleton](hc7_k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton.md):
+  a twice-audited unbounded Wood--Woodall reduction, with an exact finite
+  mask certificate, forcing a degree-six vertex and singleton excess `2`;
+  the returned exact fragment still requires transfer across its boundary.
 - [Minimum path-bag owner circuits](../results/hc7_k7minus_p3_owner_circuit_compression.md)
   eliminate the nonrepeated order-nine induced-path allocation branch and
   retain the original path responses on exact order-seven/eight boundaries;

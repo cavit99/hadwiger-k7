@@ -19616,6 +19616,34 @@ does_not_prove = [
 ]
 keywords = ["K7 minus", "sparse six-cut", "rooted K5 minus", "component excess", "exact-six fragment"]
 
+[[claims]]
+id = "hc7.k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton"
+title = "Every three-connected ordinary-K5-minus-minor-free component returns an exact singleton"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton.md"
+source_heading = "Theorem 3.1"
+active = false
+audit = "active/hc7_k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton_adversarial_cold_audit.md"
+expected_source_sha256 = "8c8084bf0291098c2a323d43200562f5d0aaad5b61503bb3c78390f27c9e5176"
+scope = "one three-connected component behind a full order-six boundary with at least two other full components in a six-connected K7-minus-minor-free host, assuming no ordinary K5-minus minor in the component"
+label_fidelity = "the six boundary roots, exceptional Wood--Woodall core vertices, five rooted branch sets and returned singleton boundary remain literal"
+separator_order = "the forced degree-six vertex has an exact neighbourhood cut of order six"
+conclusions = [
+  "the Wood--Woodall wheel, triangular-prism and K3,3 cases all contain a total-degree-six vertex",
+  "the vertex neighbourhood is an exact six-cut and its singleton fragment has coefficient-four excess two",
+  "punctured rooted-model exclusion holds on the singleton derived shore and coefficient-four excess splits as two plus the complementary excess",
+  "the former no-exact-fragment order-31 and excess-62 residue is eliminated",
+]
+does_not_prove = [
+  "that the returned exact fragment is terminal or that two boundary-full connected subgraphs transfer across it",
+  "the case containing an ordinary K5-minus minor",
+  "elimination of nested strict two-separations",
+  "the weighted local extremal theorem",
+  "the universal six-connected 4n theorem, Conjecture 21 or HC7",
+]
+keywords = ["K7 minus", "six-cut", "Wood--Woodall", "wheel", "exact singleton", "component excess"]
+
 [[relations]]
 source = "hc7.target.k7minus_sixconnected_4n_extremal"
 target = "hc7.target.k7minus_six_colour_conjecture"
@@ -19627,6 +19655,12 @@ source = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
 target = "hc7.target.k7minus_sixconnected_4n_extremal"
 kind = "subproblem_of"
 note = "The packet-weighted alternative would eliminate the only remaining three-component order-six-cut row; the returned two-component row remains separate."
+
+[[relations]]
+source = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
+target = "hc7.k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton"
+kind = "uses"
+note = "The exact-singleton theorem eliminates the no-exact-fragment subcase of the three-connected ordinary-K5-minus-minor-free case and returns an excess-two singleton fragment; transfer across the derived boundary remains open."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"

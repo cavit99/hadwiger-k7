@@ -1,20 +1,22 @@
 # Cold audit: ordinary-`K_5^-` rooting contraction gate
 
-**Audit status:** GREEN.
+**Audit status:** GREEN after correction of the order-seven contact profile.
 
 **Source audited:**
 [`hc7_k7minus_ordinary_k5minus_rooting_contraction_gate.md`](hc7_k7minus_ordinary_k5minus_rooting_contraction_gate.md),
 SHA-256
 
 ```text
-0e078226085a494413fac157ca4de6cc4ebcb0fb5eb855a2f8738d141b59776a
+a81cb9476890fe0d373ecdc8aecebf5a40996d7d44ba15f16faf076dd5b581d8
 ```
 
 The audit reconstructs the small-order Hall argument, the arbitrary-order
 literal-core linkage, both directions of the contraction obstruction, all
-lifting assertions, and the order-seven deficiency profile.  It does not
-certify a transfer of two packets across a derived boundary or elimination
-of the exact fragments.
+lifting assertions, and the corrected order-seven deficiency profile.  An
+earlier revision incorrectly promoted collective domination by a deficient
+family to individual universality of each singleton bag.  The argument below
+does not make that inference.  The audit does not certify a transfer of two
+packets across a derived boundary or elimination of the exact fragments.
 
 ## 1. The order-at-most-six row
 
@@ -101,8 +103,9 @@ give the equality chain
 ```
 
 Consequently `|U|=i`, `|N_S(U)|=i-1`, and
-`N_C(U)=C-U`.  In particular every bag of `I` is a singleton and every such
-vertex is adjacent to all of `C-U`.  Inclusion-minimal deficiency supplies a
+`N_C(U)=C-U`.  In particular every bag of `I` is a singleton and their union
+dominates `C-U`.  This equality does not say that each singleton is adjacent
+to every vertex of `C-U` when `i>1`.  Inclusion-minimal deficiency supplies a
 matching of `i-1` of these bags to all `i-1` roots in `N_S(U)`.
 
 For nonempty `Y subseteq C-U`, applying relative connectivity to `U union Y`
@@ -116,18 +119,17 @@ This is Hall's condition from `C-U` to `S-N_S(U)`; both sets have order
 `7-i`, so the matching is perfect.  The five model bags contain seven shore
 vertices, hence the complementary `5-i` bags contain exactly two vertices
 beyond one representative per bag.  Combining the two matchings roots four
-of the five branch bags, leaves exactly one universal singleton bag
-unassigned, and distinctly matches the two surplus complementary vertices.
-
-Here “unrooted” is correctly read relative to this assembled matching: it
-does not assert that the singleton has no boundary neighbours.  With that
-standard meaning, the final profile follows exactly as written.  Moving a
-surplus matched vertex while preserving its old branch-bag quotient contacts
-is indeed an additional, unproved operation, as the source states.
+of the five branch bags, leaves exactly one singleton bag unmatched, and
+distinctly matches the two surplus complementary vertices.  If `i=1`, the
+unmatched singleton alone dominates `C-U` and has no root neighbour, so it is
+individually universal in `C` and has total degree six.  If `i>1`, neither an
+individual universal singleton nor a quotient-preserving surplus transfer is
+forced.  The corrected source records that distribution problem as open.
 
 ## 6. Scope verdict
 
-All stated implications are sound under the explicit stable-boundary and
+All corrected implications are sound under the explicit stable-boundary and
 relative-six-connectivity hypotheses.  The result identifies a genuine
-exact-six obstruction but does not make the two-packet outcome hereditary;
-the source labels that remaining obstruction accurately.
+exact-six obstruction but does not make the two-packet outcome hereditary or
+resolve the `i>1` order-seven contact distribution; the source labels both
+remaining obstructions accurately.
