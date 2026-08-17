@@ -112,9 +112,7 @@ at most five; six-connectivity instead forces another exact order-six
 fragment.  The audited
 [portal-orientation descent](hc7_k7minus_sparse_sixcut_rooted_k4_portal_descent.md)
 shows that at least two roots are exchanged and that every proper fragment
-inherits the local alternative by minimality.  The unresolved point is
-transferring two disjoint boundary-full connected subgraphs across one
-saturated linkage.
+inherits the local alternative by minimality.
 
 In the two-exchanged-root case, the audited
 [clean-path construction](hc7_k7minus_sparse_sixcut_clean_portal_path_completion.md)
@@ -124,6 +122,25 @@ give explicit seven-branch-set `K_7^-` models unless the internal portals
 control separate essential arms of the rooted branch sets.  These theorems
 are deliberately restricted to the two-exchange case; the proof uses a
 retained original root which is absent in the four-exchange case.
+
+The two-copy transfer obstruction in the two-exchanged-root rooted-`K_4`
+portal return is now closed completely by the independently audited
+[complete transfer theorem](hc7_k7minus_sparse_sixcut_rooted_k4_two_root_transfer_completion.md).
+The transfer trichotomy first isolates the sole failure vector
+
+```text
+(mu_T(L),mu_S(C-L),mu_S(C))=(2,0,1).
+```
+
+The packet-free complement then collapses to the two exchanged portals, and
+a quotient completion gives portal charge at most `-4`.  Connectedness of
+the two support bags consumes the entire surviving portal allowance, and
+explicit seven-bag models eliminate both possible portal allocations.
+Consequently `mu_T(L)<=mu_S(C)` throughout every target-free `k=2`
+rooted-`K_4` portal fragment in this setup: two derived-boundary-full
+connected subgraphs always transfer to two original-boundary-full ones.  The
+transfer obstruction is therefore gone for `k=2`; only `k=3` and `k=4`
+remain in the rooted-`K_4` portal descent.
 
 ### 3.3 Ordinary `K_5^-` minors
 
@@ -153,6 +170,19 @@ has `eta_S(C)<=5` for every order-seven lobe containing an ordinary
 This removes the complete order-seven ordinary-minor residue, but not the
 unbounded obstruction: shores of order at least eight may still return an
 exact order-six fragment along a nonsingleton branch bag.
+
+At shore order eight, the independently audited
+[Hall-profile theorem](hc7_k7minus_sparse_sixcut_order_eight_hall_profile.md)
+gives an exact but nonterminal reduction.  Every inclusion-minimal deficient
+bag family of a spanning ordinary `K_5^-` model has order `1<=i<=4` and is
+either all singleton bags or one two-vertex bag with the rest singleton.  All
+six roots match to distinct shore vertices and exactly two shore vertices
+remain unmatched; up to bag-size symmetry there are sixteen profiles.  For
+every six-root matching supplied by the theorem, deleting its associated
+pair of unmatched shore vertices leaves a six-vertex
+ordinary-`K_5^-`-minor-free graph and hence at most eleven edges under
+punctured-rooted-model exclusion.  The sixteen bag-size profiles are not yet
+completed, and this reduction uses neither `eta>=6` nor `mu=1`.
 
 Two independently audited boundary-composition results constrain any
 spanning ordinary model:
@@ -215,8 +245,8 @@ The live proof obligation is to eliminate a minimum counterexample to (2)
 after the exact-six descent.  The proved reductions leave two concrete
 forms:
 
-1. a rooted four-bag model whose two support branch sets contain essential
-   exchanged-root portals on separate arms; or
+1. a rooted four-bag model whose exact return exchanges three or four roots;
+   the two-root orientation is closed by complete transfer; or
 2. a spanning ordinary near-five model with one very low-visibility branch
    set or three simultaneously low-visibility branch sets, every internal
    edge contraction returning an exact-six fragment.

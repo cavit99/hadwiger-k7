@@ -147,10 +147,20 @@ with respective nontrivial-tree bounds `22` and `19`.  A spanning rooted
 `K_4` confines each omitted root to two branch sets; a four-portal return is
 an exact order-six fragment and exchanges at least two roots, eliminating
 the former one-root-exchange residue.  Punctured rooted-model exclusion and
-the coefficient-four excess are hereditary across that fragment.  In the
-two-root exchange, clean paths and a boundary-full connected-subgraph repair
-give explicit `K_7^-` models unless the internal portals control separate
-essential arms.
+the coefficient-four excess are hereditary across that fragment.  The
+two-copy transfer obstruction in the two-exchanged-root rooted-`K_4` portal
+return is now closed completely.  The audited transfer trichotomy first
+isolates the sole failure vector
+`(mu_T(L),mu_S(C-L),mu_S(C))=(2,0,1)`.  The packet-free complement then
+collapses to the two exchanged portals, and a quotient completion gives
+portal charge at most `-4`.  In the rooted-`K_4` portal orientation,
+connectedness of the two support bags consumes the entire surviving portal
+allowance, and explicit seven-bag models eliminate both portal allocations.
+Hence every target-free `k=2` rooted-`K_4` portal fragment in this setup satisfies
+`mu_T(L)<=mu_S(C)`: two derived-boundary-full connected subgraphs transfer
+to two original-boundary-full ones.  This closes the former
+clean-path/essential-arm residue.  The `k=3` and `k=4` portal orientations,
+and the unbounded packet-weighted local theorem, remain open.
 
 Independently, an ordinary `K_5^-` minor roots at component order at most
 six, and a literal `K_5^-` subgraph roots at arbitrary component order; in a
@@ -167,6 +177,19 @@ six-connectivity; and a fourteen-row incidence lemma closes `i=4` directly.
 All four rows have deterministic verifiers and independent cold audits.
 Consequently, in a target-free three-full-component returned cut, every
 order-seven lobe with an ordinary `K_5^-` minor satisfies `eta<=5`.
+
+At shore order eight, the independently audited
+[Hall-profile theorem](active/hc7_k7minus_sparse_sixcut_order_eight_hall_profile.md)
+gives an exact but nonterminal reduction.  Any inclusion-minimal deficient
+bag family of a spanning ordinary `K_5^-` model has order `1<=i<=4` and is
+either all singleton bags or one two-vertex bag with the rest singleton.  In
+every case all six roots match to distinct shore vertices and exactly two
+shore vertices remain unmatched; up to bag-size symmetry there are sixteen
+profiles.  For every six-root matching supplied by the theorem, deleting its
+associated pair of unmatched shore vertices leaves a six-vertex
+ordinary-`K_5^-`-minor-free graph, hence at most eleven edges, under
+punctured-rooted-model exclusion.  The sixteen profiles are not yet
+completed, and the theorem uses neither `eta>=6` nor `mu=1`.
 
 This is a complete base-order closure, not the unbounded local theorem.
 Ordinary-minor shores of order at least eight can still return exact

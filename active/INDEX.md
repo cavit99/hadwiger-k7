@@ -44,8 +44,8 @@ Selected audited inputs:
 - [cycle-rank accounting bounds every sparse returned lobe by
   `|C|<=28+2 beta(C)`, with stronger constants on the nontrivial boundary
   row](hc7_k7minus_sparse_sixcut_cyclic_residue.md)
-- [a clean portal path closes one two-root exchange; every survivor is
-  support-bag or model-essential on every saturated linkage](hc7_k7minus_sparse_sixcut_clean_portal_path_completion.md)
+- [complete two-root packet transfer closes the `k=2` rooted-`K_4` portal
+  return; only the three- and four-root exchange orientations remain](hc7_k7minus_sparse_sixcut_rooted_k4_two_root_transfer_completion.md)
 - [the one-exchanged-root packet return forces at least four internal
   portals and at most one old-root contact; the maximal four-portal
   augmentation lemma is explicitly open](hc7_k7minus_sparse_sixcut_one_exchange_four_portal_gate.md)
@@ -217,10 +217,12 @@ Lovasz--Woodall one-cycle assertion is assumed.
   three-component case `e(S)<=6` and unresolved two-component boundaries.
 - [Sparse returned three-component frontier](hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md):
   exact-six rerooting and excess additivity, rooted-`K_4` portal descent,
-  ordinary near-five boundary visibility, and the precise remaining
-  packet-weighted theorem: in the absence of a punctured rooted near-clique,
-  `eta<=5 mu`, where `mu` is the maximum number of disjoint boundary-full
-  connected subgraphs.  The local theorem remains open.
+  complete transfer in the two-root orientation, an exact sixteen-profile
+  Hall reduction at shore order eight, ordinary near-five boundary
+  visibility, and the precise remaining packet-weighted theorem: in the
+  absence of a punctured rooted near-clique, `eta<=5 mu`, where `mu` is the
+  maximum number of disjoint boundary-full connected subgraphs.  The local
+  theorem remains open.
 - [Three-connected ordinary-minor-free lobes return an exact singleton](hc7_k7minus_sparse_sixcut_threeconnected_minorfree_exact_singleton.md):
   a twice-audited unbounded Wood--Woodall reduction, with an exact finite
   mask certificate, forcing a degree-six vertex and singleton excess `2`;
