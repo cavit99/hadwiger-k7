@@ -1,6 +1,6 @@
 # Four stable roots give a tripod configuration or an exact-six fragment
 
-**Status:** written unbounded reduction, pending separate audit.  The
+**Status:** written unbounded reduction; independently audited.  The
 separator outcome is a strict nested six-boundary fragment with exact
 coefficient-four additivity and hereditary punctured-model exclusion.  The
 subdivision outcome is not, by itself, a five-rooted near-clique or a pair

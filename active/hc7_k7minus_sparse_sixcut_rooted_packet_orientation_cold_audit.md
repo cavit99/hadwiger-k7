@@ -8,6 +8,11 @@ Audited source:
 efe0df2eaa66e26f80544d990bbbe321cc12e829ca7854d8ff27dc953a3bc990  active/hc7_k7minus_sparse_sixcut_rooted_packet_orientation.md
 ```
 
+The current source SHA-256 is
+`4043882d33a80eef5934e59aa3632b3e969bf7c01f05d8f5153c8de541978671`.
+The only post-audit change marks the source as independently audited; the
+mathematical text is unchanged.
+
 Five disjoint full packets give the seven displayed bags.  Four anchor
 roots make four packet bags connected and mutually adjacent; each anchored
 packet also meets the fifth packet, and both unabsorbed root singletons

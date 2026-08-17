@@ -1,6 +1,6 @@
 # Rooted-model packet orientation in a returned six-cut
 
-**Status:** written unbounded proof, pending separate audit.  Five full
+**Status:** written unbounded proof; independently audited.  Five full
 packets are always terminal, and a four-rooted `K_4` in one lobe forces
 each other lobe to have full-packet packing number one.  Combined with the
 audited forced-rooted-model theorem, this gives an exact packet-vector

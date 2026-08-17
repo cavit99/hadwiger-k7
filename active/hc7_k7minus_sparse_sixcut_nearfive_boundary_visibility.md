@@ -1,6 +1,6 @@
 # Boundary visibility of a spanning near-five model
 
-**Status:** written proof, awaiting an independent cold audit.  The theorem
+**Status:** written proof; independently audited.  The theorem
 is an unbounded composition result for a three-component order-six
 separation.  It does not force the near-five model used in its hypothesis.
 

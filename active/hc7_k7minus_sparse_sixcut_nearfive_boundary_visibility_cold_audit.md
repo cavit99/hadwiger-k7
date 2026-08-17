@@ -14,6 +14,11 @@ at SHA-256
 36a196529df143dc0d06464bad122b3478f37e748ab122dd42779e670192b0f4
 ```
 
+The current source SHA-256 is
+`f860157875b2503b0ab9d056d4e2f2d11afc56ca937f401b4a3ce67147cf2bd9`.
+The only post-audit change marks the source as independently audited; the
+mathematical text is unchanged.
+
 The adversarial verifier is
 [`experiments/sparse_sixcut_nearfive_boundary_visibility_verify.py`](experiments/sparse_sixcut_nearfive_boundary_visibility_verify.py)
 at SHA-256

@@ -217,9 +217,10 @@ Lovasz--Woodall one-cycle assertion is assumed.
   three-component case `e(S)<=6` and unresolved two-component boundaries.
 - [Sparse returned three-component frontier](hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md):
   exact-six rerooting and excess additivity, rooted-`K_4` portal descent,
-  ordinary near-five boundary visibility, and the precise remaining local
-  density theorem `eta>=6 =>` a punctured rooted near-clique or two disjoint
-  boundary-full connected subgraphs.  The local theorem remains open.
+  ordinary near-five boundary visibility, and the precise remaining
+  packet-weighted theorem: in the absence of a punctured rooted near-clique,
+  `eta<=5 mu`, where `mu` is the maximum number of disjoint boundary-full
+  connected subgraphs.  The local theorem remains open.
 - [Minimum path-bag owner circuits](../results/hc7_k7minus_p3_owner_circuit_compression.md)
   eliminate the nonrepeated order-nine induced-path allocation branch and
   retain the original path responses on exact order-seven/eight boundaries;

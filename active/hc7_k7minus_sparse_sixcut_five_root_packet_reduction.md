@@ -193,18 +193,20 @@ which is unbounded.  This family is correctly excluded by Lemma 1: the five
 common roots have a rooted `K_5` model, obtained by assigning four clique
 vertices to four root bags and leaving the fifth root as a singleton.
 
-Thus the exact remaining component theorem is the target-sensitive
-dichotomy
+Thus the sharp packet-one target is the target-sensitive dichotomy
 
 ```text
 eta(C)>=6  =>  a five-rooted K_5^- model or mu_S(C)>=2. (7)
 ```
 
-Lemma 3 would turn its second outcome into the target whenever
-`Delta(B)>=2`, while Lemma 1 forbids its first outcome in every returned
-three-component six-cut.  Neither (7) nor an equivalent excess-five bound
-is proved here.  The examples (5)--(6) show respectively that its threshold
-would be sharp and that the rooted exception cannot be omitted.
+Lemma 3 turns this into the target when `Delta(B)>=2`, because every lobe
+then has `mu=1`.  For a matching boundary, however, (7) leaves a possible
+`mu=2` lobe with uncontrolled excess.  Closing the full sparse row requires
+the stronger packet-weighted alternative `eta(C)<=5 mu_S(C)` under
+rooted-model exclusion, equivalently `eta(C)>=5 mu_S(C)+1` forces the rooted
+model.  Neither statement is proved here.  The examples (5)--(6) show
+respectively that the packet-one threshold would be sharp and that the
+rooted exception cannot be omitted.
 
 ## References
 

@@ -50,21 +50,24 @@ adjacent to every vertex of `U`.  A **punctured five-rooted near-clique
 model** is a `K_5^-` model rooted at five vertices of `U` and contained in
 the closed shore obtained by omitting the sixth root.
 
-The exact remaining local assertion is
+The exact remaining local assertion sufficient to close the entire sparse
+row is the packet-weighted alternative
 
 ```text
-eta_U(X)>=6
-  => X has a punctured five-rooted K_5^- model
-     or mu_U(X)>=2.                                  (2)
+X has a punctured five-rooted K_5^- model
+  or eta_U(X)<=5 mu_U(X).                            (2)
 ```
 
-Equivalently, in the absence of the rooted model one needs
-`eta_U(X)<=5 mu_U(X)`.  The audited
+Equivalently, `eta_U(X)>=5 mu_U(X)+1` forces the punctured rooted model.
+The weaker sharp packet-one statement
+`eta_U(X)>=6 =>` rooted model or `mu_U(X)>=2` is only the
+`mu_U(X)=1` subcase; it does not bound the possible `mu_U(X)=2` lobe when
+`G[S]` is a matching.  The audited
 [connected-subgraph orientation theorem](hc7_k7minus_sparse_sixcut_rooted_packet_orientation.md)
-shows that (2) eliminates the whole case: five such connected subgraphs
-across the three components give an explicit `K_7^-` model, whilst the
-boundary graph forces the only possible distribution of their numbers.
-Combining those bounds with (1) gives a strict contradiction.
+shows that the weighted alternative (2) eliminates the whole case: total
+packet number is at most four, and when `Delta(G[S])>=2` every lobe has
+packet number one.  Combining `eta<=5 mu` with (1) gives a strict
+contradiction.
 
 This is an unbounded rooted extremal theorem, not a finite boundary
 classification.  It has not been proved.

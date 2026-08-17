@@ -8,6 +8,15 @@
 **Source SHA-256:**
 `32c45ee41ee349e2499c82c49bd7a0af7cfd636620bbc7873edea4ca061e1100`
 
+**Current source SHA-256:**
+`78f5138bd2ebbc10374ef6bd616aee9b3a2e13381014d8e8a5241519338a6cf3`
+
+The current revision corrects the former description of (7) as equivalent
+to an excess-five bound.  It now records (7) only as the packet-one target
+and identifies `eta<=5 mu` as the strictly stronger weighted target needed
+for the matching-boundary row.  No proved lemma or audited bag construction
+changed.
+
 This is an independent internal mathematical audit, not external peer
 review.  The results are unbounded local reductions.  The proposed
 excess-five dichotomy (7) is explicitly left open.

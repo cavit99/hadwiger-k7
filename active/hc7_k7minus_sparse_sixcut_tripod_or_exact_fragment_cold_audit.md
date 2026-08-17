@@ -10,6 +10,11 @@ SHA-256
 dc0d5784eccc26a0e04188b92524f54c71dc5b737cdb22f55c4d26439a14c226
 ```
 
+The current source SHA-256 is
+`0444ca85f21fe12638e183298e612fe2efe9efb6b28fff108ae327cc8248f08d`.
+The only post-audit change marks the source as independently audited; the
+mathematical text is unchanged.
+
 The audit was performed independently from the derivation.  It checks the
 stated source theorem, every separator lift, the coefficient-four identity,
 the rooted-model decoder added in Section 3, and the three-vertex guardrail.

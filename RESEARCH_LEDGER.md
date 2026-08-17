@@ -161,19 +161,26 @@ at most two each.  In the ordinary-minor-free branch, Wood--Woodall's
 three-connected classification makes every non-exact core bounded: a wheel
 has order at most `31`, while cutvertices already return an exact fragment
 or two boundary-full connected subgraphs.  Nested two-separation chains and
-the bounded incidence cores remain.  The exact open local theorem is still
+the bounded incidence cores remain.  The exact open local theorem sufficient
+to close the whole row is still
 
 \[
- \eta_U(X)\ge6\quad\Longrightarrow\quad
- \text{a punctured five-rooted }K_5^-\text{ model, or two disjoint
- }U\text{-full connected subgraphs}.                 \tag{C}
+ \text{no punctured five-rooted }K_5^-\text{ model}
+ \quad\Longrightarrow\quad
+ \eta_U(X)\le5\mu_U(X).                              \tag{C}
 \]
 
-The audited orientation theorem shows that (C) would eliminate the whole
-sparse three-component row.  Exact enumeration through every connected
-internal graph of order four supports (C), but is not promoted to an
-unbounded proof.  Explicit barriers rule out incidence-only, abstract
-three--two connectedness and automatic rooted-`K_4` augmentation shortcuts.
+Equivalently, `eta_U(X)>=5 mu_U(X)+1` must force the rooted model.  The
+sharp packet-one subcase `eta_U(X)>=6 =>` rooted model or `mu_U(X)>=2`
+suffices when the boundary has maximum degree at least two, because then
+every lobe has `mu=1`, but it leaves the possible `mu=2` lobe uncontrolled
+in the matching-boundary row.  The audited orientation theorem shows that
+the weighted form (C), not merely the packet-one subcase, would eliminate
+the whole sparse three-component row.  Exact enumeration through every
+connected internal graph of order four supports the packet-one subcase
+only; it is not an unbounded proof.  Explicit barriers rule out
+incidence-only, abstract three--two connectedness and automatic rooted-`K_4`
+augmentation shortcuts.
 Thus the universal `4n` theorem, Conjecture 21 and the Norin--Totschnig
 benchmark remain open.
 
