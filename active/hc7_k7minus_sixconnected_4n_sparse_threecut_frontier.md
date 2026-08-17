@@ -184,6 +184,20 @@ ordinary-`K_5^-`-minor-free graph and hence at most eleven edges under
 punctured-rooted-model exclusion.  The sixteen bag-size profiles are not yet
 completed, and this reduction uses neither `eta>=6` nor `mu=1`.
 
+The independently audited
+[contraction-compatibility theorem](hc7_k7minus_sparse_sixcut_order_eight_contraction_compatibility.md)
+then gives an exact fork under the order-eight hypotheses
+`eta_S(C)>=6` and punctured-rooted-model exclusion.  Every edge internal to
+a nonsingleton bag of the fixed spanning ordinary `K_5^-` model is either
+blocked by a connected exact-six fragment having both edge ends in its
+boundary, or has combined internal and boundary codegree at least
+`eta_S(C)-2`.  In the nonfragment branch, if the unique two-vertex bag
+belongs to a minimal deficient family of order `i`, its internal
+common-neighbour count is at least `eta_S(C)-i-1`; hence
+`eta_S(C)>=i+8` forces the fragment alternative.  This routes high excess
+back into the exact-six descent but does not align a rooted model in the
+low-excess profiles.
+
 Two independently audited boundary-composition results constrain any
 spanning ordinary model:
 

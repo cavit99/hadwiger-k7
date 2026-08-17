@@ -191,6 +191,20 @@ ordinary-`K_5^-`-minor-free graph, hence at most eleven edges, under
 punctured-rooted-model exclusion.  The sixteen profiles are not yet
 completed, and the theorem uses neither `eta>=6` nor `mu=1`.
 
+The adjacent independently audited
+[contraction-compatibility theorem](active/hc7_k7minus_sparse_sixcut_order_eight_contraction_compatibility.md)
+sharpens the next step without claiming a completion.  Under its order-eight
+hypotheses `eta_S(C)>=6` and punctured-rooted-model exclusion, every edge
+internal to a nonsingleton bag of the fixed spanning ordinary `K_5^-` model
+is either blocked by a connected exact-six fragment containing both ends in
+its boundary, or has combined internal and boundary codegree at least
+`eta_S(C)-2`.  In the nonfragment branch, if the unique two-vertex bag
+belongs to a minimal deficient family of order `i`, its ends have at least
+`eta_S(C)-i-1` common neighbours inside the shore; hence
+`eta_S(C)>=i+8` forces the fragment outcome.  High codegree alone does not
+align a rooted model, and the returned fragment still requires the portal
+descent, so the order-eight row remains open.
+
 This is a complete base-order closure, not the unbounded local theorem.
 Ordinary-minor shores of order at least eight can still return exact
 order-six fragments, and the two audited boundary-composition theorems only
