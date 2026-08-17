@@ -206,9 +206,9 @@ Indeed, (1) and Hall deficiency give
 ```
 
 while `|U|>=i`; equality is forced throughout.  Hence every bag in `I` is a
-singleton and every one of those singleton vertices is adjacent to every
-vertex outside `U`.  Minimality of `I` gives a matching of `i-1` of these
-singletons to the `i-1` roots in `N_S(U)`.
+singleton and the union `U` dominates `C-U`.  This does not force any one of
+the singleton vertices to dominate `C-U` when `i>1`.  Minimality of `I` gives
+a matching of `i-1` of these singletons to the `i-1` roots in `N_S(U)`.
 
 There is also a perfect matching between `C-U` and `S-N_S(U)`.  For every
 nonempty `Y subseteq C-U`, apply (1) to `U union Y` and use
@@ -218,9 +218,14 @@ nonempty `Y subseteq C-U`, apply (1) to `U union Y` and use
 |N_S(Y)-N_S(U)|>=|Y|.
 ```
 
-Both sides have order `7-i`, so Hall applies.  Any order-seven counterexample
-must therefore have precisely one unrooted universal singleton branch bag and
-two surplus, distinctly root-matched vertices in the complementary branch
-bags.  The remaining issue is not root visibility but preserving the
-`K_5^-` quotient when one of those surplus vertices is transferred across
-the branch partition.
+Both sides have order `7-i`, so Hall applies.  Thus an inclusion-minimal
+deficient family consists of `i` singleton branch bags whose union dominates
+`C-U`; `i-1` of them can be matched to `N_S(U)`, while every vertex of `C-U`
+is matched perfectly to `S-N_S(U)`.  Exactly one singleton branch bag remains
+unmatched, and the complementary branch bags contain two surplus,
+distinctly root-matched vertices.  When `i=1`, the unmatched singleton is
+individually universal in `C`, has no neighbour in `S`, and therefore gives
+an exact degree-six singleton boundary.  For `i>1`, the distribution of the
+outside contacts among the singleton bags remains unresolved; in particular,
+no individual-universality or quotient-preserving transfer conclusion is
+claimed.
