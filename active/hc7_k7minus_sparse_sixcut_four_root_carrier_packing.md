@@ -1,6 +1,6 @@
 # Four-root carrier packing in a three-component six-cut
 
-**Status:** written unbounded proof, pending separate audit.  The theorem
+**Status:** written unbounded proof; independently audited.  The theorem
 gives a target-sensitive packing bound and a constant boundary-incidence
 core in every component of a returned three-component six-cut.  It does
 not prove the remaining excess-five dichotomy or eliminate every sparse
