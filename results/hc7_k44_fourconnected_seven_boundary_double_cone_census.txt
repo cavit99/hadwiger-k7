@@ -1,0 +1,8 @@
+DOUBLE_CONE_ATLAS total=1044 positive=344 negative=700
+connectivity_totals={0: 191, 1: 385, 2: 332, 3: 111, 4: 21, 5: 3, 6: 1}
+connectivity_positive={0: 27, 1: 73, 2: 129, 3: 90, 4: 21, 5: 3, 6: 1}
+minimum_degree_at_least_four=29 positive=29
+negative_edge_histogram={0: 1, 1: 1, 2: 2, 3: 5, 4: 10, 5: 21, 6: 41, 7: 65, 8: 97, 9: 130, 10: 140, 11: 117, 12: 58, 13: 12}
+maximal_negative_graph6=['FBfnO', 'FD^Ww', 'FDh}o', 'FN^Sg', 'F`urg', 'Fb]lg', 'FhNvO', 'Fh`}w', 'Fhfww', 'Floxo', 'FnTNG', 'Fnkpg', 'Fnz@O', 'FreRW', 'FxNgw', 'FyVwo', 'FyVyG', 'FyVz?', 'F}qtO', 'F~MQ_', 'F~ZC_']
+minimum_degree_at_least_four_certificates=29
+certificate_digest=d862876512b71717e4122aa9081b88b6731e21f59eb9eab0817f08f7215dd487

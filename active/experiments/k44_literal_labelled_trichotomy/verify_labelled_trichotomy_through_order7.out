@@ -1,0 +1,6 @@
+PASS labelled portal trichotomy through order seven
+three_connected_graphs {4: 1, 5: 3, 6: 17, 7: 136} total 157
+assignment_universe_per_graph 2^(8n)
+model_totals_by_order {4: [10, 1, 0], 5: [159, 20, 0], 6: [3615, 469, 2], 7: [111765, 14509, 197]}
+all_instances_unsat 157
+records_sha256 5756bb90b251ea51023408414936a042ef3991f3e52312e765d0b75736ab94bc
