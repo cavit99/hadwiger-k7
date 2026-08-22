@@ -57,14 +57,15 @@ The project works from a hypothetical minor-minimal non-six-colourable
 
 ```text
 n_7 = 0,  delta(G) >= 8,  |E(G)| >= 4|V(G)|,
-G has no K_5 subgraph,  and  n_8 >= 25 + tau,
+G has no K_5 subgraph,  and  n_8 >= 27 + tau,
 ```
 
 where `tau` is the degree excess above nine.  Every degree-eight
 neighbourhood is `K_4`-free, and every seven-vertex separator leaves exactly
-two components.  Thus the remaining target for the critical graph is to
-prove `n_8 <= 24`.  These are necessary structural conditions on a
-hypothetical counterexample; they do not prove Conjecture 21 or `HC_7`.
+two components.  Thus the headline-equivalent finishing target for the
+critical graph is to prove `n_8 <= 26`.  These are necessary structural
+conditions on a hypothetical counterexample; they do not prove Conjecture 21
+or `HC_7`.
 
 The direct `HC_7` programme is frozen.  Its audited bounded-separation,
 colouring-response and labelled near-clique results leave an unresolved
