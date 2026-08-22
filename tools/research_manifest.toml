@@ -19737,10 +19737,10 @@ keywords = ["rooted K5", "Kempe routing", "property star", "contraction-critical
 [[claims]]
 id = "hc7.k7minus_degree8_independent_triple_rooted_k5"
 title = "A four-edge complementary neighbourhood has a rooted K5 packet"
-kind = "corollary"
+kind = "theorem"
 status = "audited-green"
 source = "results/llru_question61_via_km_property_star.md"
-source_heading = "Corollary 5.1 (degree-eight rooted K5 packet)"
+source_heading = "Corollary 5.1 (degree-eight rooted `K_5` packet)"
 active = false
 audit = "results/llru_question61_via_km_property_star_audit.md"
 expected_source_sha256 = "8cac1bbffdc41825c6934921b4f778eea60a593615e4ae5e1ce5fe2606cf3797"
