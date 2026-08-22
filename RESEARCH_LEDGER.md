@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 17 August 2026
+**Last updated:** 22 August 2026
 **Authoritative status:** `HC_7` is not proved here.  Neither is the
 `K_7^-` six-colour conjecture.  Internal audits are not external peer
 review.  Hadwiger's conjecture is known for `t<=6` and remains open for
@@ -11,6 +11,57 @@ The previous live ledger is preserved at
 This file is the sole authority for the present research frontier.
 
 ## Current frontier
+
+**T44 campaign pivot, 22 August 2026.**  The sole active completion target is
+
+> **T44.** Every seven-connected graph containing a `K_{4,4}` minor contains
+> a `K_7^-` minor.
+
+T44 is open.  It would prove Norin--Totschnig Conjecture 21: a
+minor-minimal non-six-colourable target-free graph is seven-connected, and
+Kawarabayashi--Toft prove that every seven-chromatic graph has a `K_7` or a
+`K_{4,4}` minor.  The first alternative already contains the target and T44
+would close the second.  T44 would not by itself prove `HC_7`.
+
+The first falsification pass found no counterexample.  Exact certificate
+searches cover every seven-connected graph through order eleven, including
+all `9,940` order-eleven isomorphism types.  A separate monotone reduction
+and exact search closes all `105` edge-minimal representatives of the
+unbounded full-attachment non-clique seven-sum family.  These are bounded
+and family results, respectively, and no global inference is made from
+them.
+
+The promoted local input is now substantial.  Four prescribed roots in a
+three-connected graph have a rooted `K_4^-` model.  A double cone over a
+five-connected graph forces `K_7^-`.  In a vertex-minimal nonliteral T44
+counterexample, every internal branch-bag edge belongs to an exact
+seven-cut.  A strengthened seven-vertex boundary theorem shows that every
+such cut `Z` in a target-free host satisfies `delta(G[Z])<=3`.  For a
+literal `K_{4,4}` core, the exterior is three-connected; a triangle of
+four-portal bags is terminal; and a spanning `K_4` of three-portal bags is
+terminal, with the sole tetrahedral local exception excluded by global
+portal coverage.
+
+Two obligations remain, and neither is a proved intermediate theorem.  In
+the literal case one needs a core-sensitive labelled trichotomy producing
+the terminal portal triangle, the terminal spanning `K_4`, or six
+positive-portal exterior bags forming a `K_6^-` model.  The whole literal
+core is the seventh bag in the last outcome.  The trichotomy is proved by
+hand only through exterior order six and is supported, not proved, at order
+seven by an exact Z3 census.  In the nonliteral case the exact cuts must be
+converted into a well-founded labelled branch-model rotation.  Exact cuts
+alone do not give a peel side, laminarity or preservation of branch
+ownership.  The authoritative hypotheses, falsification data, trust
+boundaries and stop rules are recorded in the [T44 technical
+frontier](active/hc7_k44_closure_frontier.md).
+
+The sound adjacent-true-twin induced-`C_7` chain, together with the RED
+st-numbering audit and its 140 obstruction profiles, is preserved in
+[`archive/adjacent-true-twin-c7-2026-08-17/`](archive/adjacent-true-twin-c7-2026-08-17/README.md).
+It is not on the active spine.  The entries below retain promoted results
+and the former campaign state as durable context; unless selected from
+[`active/INDEX.md`](active/INDEX.md), the exceptional-centre and
+six-connected-density threads are frozen rather than concurrent targets.
 
 **Audited standalone theorem, 16 August 2026.**  Every complete bipartite
 graph `K_{2,n}` is contractible in the sense of graph schemes.  The new
@@ -254,14 +305,16 @@ frozen fan-to-root line.
 
 ### 1. Exhaustive global obligation
 
-The sole active research target is Norin--Totschnig Conjecture 21.
+The sole active research target is T44.
 
-> **`K_7^-` six-colour conjecture.** Every graph with no `K_7^-` minor is
-> six-colourable.
+> **T44.** Every seven-connected graph containing a `K_{4,4}` minor contains
+> a `K_7^-` minor.
 
-This statement is open.  It is weaker than `HC_7`: proving that every
-seven-chromatic graph contains `K_7^-` does not prove that it contains
-`K_7`.
+This statement is open.  By the contraction-critical reduction and the
+Kawarabayashi--Toft `K_7`-or-`K_{4,4}` theorem, T44 would prove
+Norin--Totschnig Conjecture 21.  Conjecture 21 is still weaker than `HC_7`:
+forcing a `K_7^-` minor in every seven-chromatic graph does not force a
+`K_7` minor.
 
 The formerly primary density statement
 
@@ -275,7 +328,7 @@ seven-connected graphs and discards the proper-minor colouring responses of
 a hypothetical counterexample.  It is therefore retained as a conditional
 extremal route rather than the active primary target.
 
-### 2. Principal conditional refinement: the critical host
+### 2. Frozen conditional refinement: the critical host
 
 Assume Conjecture 21 false and let `G` be minor-minimal subject to being
 non-six-colourable and `K_7^-`-minor-free.  The audited computation-free
@@ -299,7 +352,7 @@ is a headline-equivalent finishing theorem, not a routine local lemma:
 > **Exceptional-centre finishing target.** Every graph satisfying the
 > critical-host hypotheses has at most 26 degree-eight vertices.
 
-This would contradict (1) and prove Conjecture 21 directly.  The active
+This would contradict (1) and prove Conjecture 21 directly.  The former
 technical statement, proved inputs and exact surviving allocation problem
 are recorded in the
 [critical-host frontier](active/hc7_k7minus_seven_exceptional_frontier.md).
