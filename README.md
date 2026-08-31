@@ -32,104 +32,83 @@ $$
 HC_7:\qquad K_7\not\preccurlyeq G\quad\Longrightarrow\quad\chi(G)\le6.
 $$
 
-## Scope and headline progress
+## Current research status
 
-The sole active completion target is the open statement that every
-seven-connected graph containing a `K_{4,4}` minor contains a `K_7^-`
-minor, where `K_7^-` is `K_7` with one edge deleted.  Kawarabayashi--Toft's
-`K_7`-or-`K_{4,4}` theorem makes this sufficient for Norin--Totschnig
-Conjecture 21, but it would not by itself prove `HC_7`.  The former
-exceptional-centre, six-connected `4n`, universal `4n-2` and
-five-connected `4n-7` programmes are preserved conditional or frozen
-routes, not parallel active targets.  None of these completion statements
-is proved here.
+The sole active completion target is the following open statement.
 
-Separately from the unresolved `HC_7` proof spine, the repository now
-contains a complete computation-free proof that every complete bipartite
-graph `K_{2,n}` is contractible in the sense of graph schemes.  This answers
-the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's explicit Question 8.2
-and strengthens it to an infinite family.  Read the
-[written theorem](results/k2n_contractibility_via_matroid_packing.md) with
-its [hash-pinned internal audit](results/k2n_contractibility_via_matroid_packing_audit.md).
-This standalone result does not prove the `K_7^-` six-colour conjecture or
-`HC_7`.
+> **T44.** Every seven-connected graph containing a `K_{4,4}` minor
+> contains a `K_7^-` minor, where `K_7^-` is `K_7` with one edge deleted.
 
-The preserved critical-host refinement works from a hypothetical
-minor-minimal non-six-colourable `K_7^-`-minor-free graph `G`.  Its audited
-computation-free chain gives
+Kawarabayashi--Toft's `K_7`-or-`K_{4,4}` theorem makes T44 sufficient for
+Norin--Totschnig Conjecture 21.  T44 would not by itself prove `HC_7`.
+The exact hypotheses, proved inputs and two remaining obligations are in the
+[T44 technical frontier](active/hc7_k44_closure_frontier.md).  The
+[research ledger](RESEARCH_LEDGER.md) is the sole authority for current
+status; [the active index](active/INDEX.md) is the concise navigation map.
+
+The former exceptional-centre, density and direct-`HC_7` programmes are
+preserved as frozen or conditional routes, not parallel active targets.
+None of their completion statements is proved here.
+
+## Selected completed work
+
+The repository contains many proof notes.  The following are the strongest
+reader-facing completed results; the [selected-results map](results/README.md)
+links their proofs, audits and exact scopes.
+
+| Result | Status and scope |
+|---|---|
+| [Every `K_{2,n}` is contractible](results/k2n_contractibility_via_matroid_packing.md) | Computation-free written proof with a [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md).  It answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
+| [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
+| [Four prescribed roots in a three-connected graph](results/rooted_k4minus_four_roots.md) | Elementary unbounded proof, with a [GREEN audit](results/rooted_k4minus_four_roots_audit.md), of a rooted `K_4^-` minor at any four distinct roots.  The missing quotient edge is not prescribed. |
+| [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Written unbounded host reduction with one deterministic finite local lemma and [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md).  It upgrades the current critical-host count to `n_8>=27+tau`. |
+| [Three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md) | Computation-free written proof with a [GREEN audit](results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md).  In the critical `K_7^-` host, every seven-vertex cut therefore leaves exactly two components. |
+
+The preserved critical-host chain now gives
 
 ```text
 n_7 = 0,  delta(G) >= 8,  |E(G)| >= 4|V(G)|,
 G has no K_5 subgraph,  and  n_8 >= 27 + tau,
 ```
 
-where `tau` is the degree excess above nine.  Every degree-eight
-neighbourhood is `K_4`-free, and every seven-vertex separator leaves exactly
-two components.  Thus the headline-equivalent finishing target for the
-critical graph is to prove `n_8 <= 26`.  These are necessary structural
-conditions on a hypothetical counterexample; they do not prove Conjecture 21
+where `tau=sum_{i>=10}(i-9)n_i`.  Every degree-eight neighbourhood is
+`K_4`-free.  Thus `n_8<=26` would finish Conjecture 21.  These are necessary
+conditions on a hypothetical counterexample, not a proof of Conjecture 21
 or `HC_7`.
 
-The direct `HC_7` programme is frozen.  Its audited bounded-separation,
-colouring-response and labelled near-clique results leave an unresolved
-branch-set and colouring synchronisation problem.  The
-[bounded-interface frontier](active/hc7_bounded_interface_synchronization_frontier.md)
-records that exhaustive direct-`HC_7` obligation; it is not a parallel
-active target.
+## Manuscripts
 
-The exact live theorem changes as new reductions are proved. Its
-authoritative status is maintained in the research ledger, and its full
-hypotheses and trust boundary are stated in the technical frontier rather
-than duplicated here.
-
-### Partial-results manuscript status
-
-The current manuscript is the eight-page, computation-free draft
+The compact paper is the clearly marked eight-page DRAFT
 [Minimum degree eight in `K_7^-`-minor-free contraction-critical
-graphs](paper/k7minus-low-degree/main.pdf),
-with [LaTeX source](paper/k7minus-low-degree/main.tex), a
-[hash-pinned internal audit](paper/k7minus-low-degree/main_audit.md),
-and a separate
+graphs](paper/k7minus-low-degree/main.pdf), with
+[source](paper/k7minus-low-degree/main.tex), a
+[hash-pinned internal audit](paper/k7minus-low-degree/main_audit.md) and an
 [internal citation and novelty review](paper/k7minus-low-degree/citation_novelty_review.md).
-Both reviews are internal checks, not external peer review or a priority
-certificate.  The manuscript proves the linked-cliques theorem, excludes
-degree seven, and derives the current low-degree and density package.  The
-former rooted-web manuscript is retained as a clearly labelled
-[historical draft](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf).
-The broader
-[external-review blueprint](active/hc7_partial_results_external_review_blueprint.md)
-is frozen.  This manuscript proves neither the `K_7^-` six-colour conjecture
-nor `HC_7`.
+It is a frozen, computation-free snapshot: it proves the linked-cliques
+theorem, excludes degree seven and obtains the baseline bound
+`n_8>=25+tau`.  The later `27+tau` strengthening above is not incorporated
+in that draft.
 
-## Start here
+The former rooted-web manuscript is retained as a clearly labelled
+[historical DRAFT](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf).
+Neither manuscript proves Conjecture 21 or `HC_7`.  See the
+[manuscript map](paper/README.md) for the exact distinction.
 
-| Document | Purpose |
+## Repository map
+
+| Location | Purpose |
 |---|---|
-| [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current research status |
-| [`active/INDEX.md`](active/INDEX.md) | Concise navigation to live proof work |
-| [Seven-connected `K_{4,4}` closure frontier](active/hc7_k44_closure_frontier.md) | Sole active completion target, exact hypotheses, two open obligations, barriers and stop rules |
-| [Degree-eight finishing frontier](active/hc7_k7minus_seven_exceptional_frontier.md) | Frozen critical-host refinement and operation/model alignment obstruction |
-| [`K_7^-` strict-density frontier](active/hc7_k7minus_density_frontier.md) | Stronger conditional `4n-2` route, minimal-enemy reductions, and exact nonclosures |
-| [External-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md) | Frozen theorem package, review questions, reproduction plan, and restart criteria |
-| [Frozen case verification map](active/hc7_live_case_dag.md) | Preserved pre-pivot global chain, conditional refinements, and missing descent arrows |
-| [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Frozen direct-`HC_7` programme, inputs, and trust boundary |
-| [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
-| [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Frozen hash-pinned review provenance predating the rooted `K^*_{4,2}` closure |
-| [`K_7^-` minimum-degree-eight draft](paper/k7minus-low-degree/main.pdf) | Eight-page computation-free paper containing the linked-cliques theorem, degree-seven exclusion and the low-degree critical-host package |
-| [Order-seven separator component bound](results/hc7_k7minus_critical_seven_cut_capacity.md) | Excludes four-component seven-vertex separators in the critical graph and normalises the three-component boundary |
-| [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
-| [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
-| [Exterior-component upper bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
-| [Exact order-seven packing restrictions](results/hc7_exact_seven_packet_packing.md) | Limits disjoint connected subgraphs adjacent to every vertex of an order-seven boundary |
-| [Component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md) | Simultaneous component-supported augmentation and rejection-map dichotomy |
-| [Full-component common-root exchange](results/hc7_full_exterior_component_common_root_exchange.md) | Exact two-component rooted residue in the full unique-rejector case |
-| [Degree-seven boundary-labelled near-clique model](results/hc7_degree7_aligned_near_k7_model.md) | Principal degree-seven structural compression |
-| [Research integrity tools](tools/README.md) | Search, curated dependency metadata, audit hashes, and CI checks |
+| [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current mathematical status |
+| [`active/INDEX.md`](active/INDEX.md) | Sole active target and its direct proved inputs and barriers |
+| [`results/README.md`](results/README.md) | Selected completed and audited proofs; navigation only |
+| [`paper/README.md`](paper/README.md) | Current and historical manuscript map |
+| [`barriers/`](barriers/) | Counterexamples to intermediate claims, with exact scope |
+| [`archive/`](archive/) | Frozen, superseded and retracted work retained for provenance |
+| [`tools/README.md`](tools/README.md) | Search, curated dependency metadata, audit hashes and integrity checks |
 
-Read a theorem in [`results/`](results/) together with its adjacent
-`_audit.md` file. Refuted intermediate principles and their exact scope are
-kept in [`barriers/`](barriers/). Superseded work remains in
-[`archive/`](archive/) for provenance.
+Directory placement alone does not establish a claim.  Read a theorem in
+[`results/`](results/) together with its adjacent audit, and use the ledger
+to determine whether it belongs to the current proof spine.
 
 ## Claim labels
 

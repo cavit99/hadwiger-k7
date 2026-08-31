@@ -6,10 +6,16 @@ Audited file:
 Audited SHA-256:
 
 ```text
-c8784e5d244c0e07a2d78a9a0ccb005a0c5d7dcb2f83b5d05404aaae1316249b
+66eefeae3734910f6d19c85b41847164a02f59cbbb015f6155f74a4859e88bfd
 ```
 
-Audited Git blob: `cd0c6deb3fa26d0cda1c8d7a905029ded4b3abe6`.
+Audited Git blob: `46d8c96a7d9f862fb132ffdde1abcc10178f88cc`.
+
+The previously audited source had SHA-256
+`c8784e5d244c0e07a2d78a9a0ccb005a0c5d7dcb2f83b5d05404aaae1316249b`
+and Git blob `cd0c6deb3fa26d0cda1c8d7a905029ded4b3abe6`.  The only change is the
+documentation correction from “internal audits” to the singular “internal
+audit”; no theorem statement, proof, hypothesis or scope claim changed.
 
 **Verdict:** **GREEN** for Theorem 1.1 and its stated scope.  No unresolved
 mathematical assumption or proof gap remains at the pinned revision.

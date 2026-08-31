@@ -101,21 +101,48 @@ intermediate theorem.
 ## Durable recent results outside the active spine
 
 - Every complete bipartite graph `K_{2,n}` is contractible in the sense of
-  graph schemes. The computation-free proof and adjacent internal audit are
-  in
-  [`results/k2n_contractibility_via_matroid_packing.md`](results/k2n_contractibility_via_matroid_packing.md).
-- The twice internally audited
-  [five-root partial-routing theorem](results/llru_question61_via_km_property_star.md)
+  graph schemes. The [computation-free proof](results/k2n_contractibility_via_matroid_packing.md)
+  has an adjacent [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md).
+- The [five-root partial-routing theorem](results/llru_question61_via_km_property_star.md),
+  with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md)
+  and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md),
   answers Lafferty--Liu--Rolek--Yu Question 6.1 when the five roots lie in
   pairwise disjoint vertex sets and every nonadjacent root pair is linked
   within the union of its two sets. It lowers their stated
   eight-connectivity threshold from `k>=17` to `k>=11`, but does not close
   the remaining degree-eight connector problem.
+- Every three-connected graph has a `K_4^-` minor rooted at any four
+  prescribed distinct vertices, with the missing quotient edge unspecified.
+  The [elementary unbounded proof](results/rooted_k4minus_four_roots.md) has
+  a [GREEN internal audit](results/rooted_k4minus_four_roots_audit.md).
+- The [degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md),
+  with [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md),
+  combines one deterministic finite local lemma with an unbounded host
+  reduction. It proves the defect ladder `D(G)>=20+kappa(G)` and the current
+  critical-host bound `n_8>=27+tau`.
+- The computation-free [three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+  and its [GREEN audit](results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md),
+  combined with the separately audited [critical seven-cut capacity theorem](results/hc7_k7minus_critical_seven_cut_capacity.md),
+  show that every seven-vertex cut in the critical host leaves exactly two
+  components.
+
+The [selected-results map](results/README.md) is a non-authoritative reader
+guide to these proofs and the direct proved inputs to T44.
+
+## Manuscript status
+
+The compact eight-page [low-degree DRAFT](paper/k7minus-low-degree/main.pdf)
+is a frozen, computation-free snapshot with a [GREEN internal audit](paper/k7minus-low-degree/main_audit.md).
+It proves the baseline `n_8>=25+tau`, not the later `27+tau` strengthening.
+The former rooted-web manuscript is retained only as a clearly marked
+[historical DRAFT](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf).
+Neither manuscript proves Conjecture 21 or `HC_7`.
 
 ## Preserved frozen routes
 
 The former exceptional-centre campaign remains a frozen critical-host
-refinement. Its sound chain gives
+refinement. Its sound chain, including the audited low-codegree theorem
+linked above, gives
 
 `n_8 >= 27 + tau`, where `tau=sum_{i>=10}(i-9)n_i`.
 
@@ -148,6 +175,9 @@ lemma directly removes one of their recorded barriers.
 ## Navigation
 
 - [`active/INDEX.md`](active/INDEX.md): concise live navigation.
+- [`results/README.md`](results/README.md): selected completed and audited
+  proofs, grouped by scope.
+- [`paper/README.md`](paper/README.md): manuscript status and exact contents.
 - [T44 technical frontier](active/hc7_k44_closure_frontier.md): exact
   hypotheses, two open obligations, barriers and stop rules.
 - [T44 falsification checkpoint](active/experiments/k44_closure_falsification/README.md):

@@ -19298,11 +19298,11 @@ source = "results/k2n_contractibility_via_matroid_packing.md"
 source_heading = "Theorem 1.1"
 active = false
 audit = "results/k2n_contractibility_via_matroid_packing_audit.md"
-expected_source_sha256 = "c8784e5d244c0e07a2d78a9a0ccb005a0c5d7dcb2f83b5d05404aaae1316249b"
+expected_source_sha256 = "66eefeae3734910f6d19c85b41847164a02f59cbbb015f6155f74a4859e88bfd"
 scope = "all integers n at least one and arbitrary K2,n-schemes"
 conclusions = [
   "every K2,n-scheme forces a K2,n minor rooted at the scheme vertices",
-  "the K2,4 half of Kuendgen--Pelsmajer--Ramamurthi Question 8.2 has an affirmative answer",
+  "the K2,4 half of Kuendgen--Pelsmajer--Ramamurthi Section 8, Question 2 has an affirmative answer",
   "the proof is unbounded and computation-free",
 ]
 does_not_prove = [

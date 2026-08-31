@@ -1,6 +1,6 @@
 # Every complete bipartite graph `K_{2,n}` is contractible
 
-**Status:** written proof; separate internal audits GREEN.
+**Status:** written proof; separate internal audit GREEN.
 
 This note settles, and strengthens, the explicit question of
 Kündgen--Pelsmajer--Ramamurthi asking whether `K_{2,4}` is contractible.
