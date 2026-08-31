@@ -7136,7 +7136,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_degree7_rooted_helper_closure.md"
 source_heading = "Corollary 3 (the critical host is `K_5`-free and has many degree-eight vertices)"
-active = true
+active = false
 audit = "results/hc7_k7minus_degree7_rooted_helper_closure_audit.md"
 expected_source_sha256 = "6ffee04cf9ff66275f9674c24bc2b9c669b1e108b76e5b1d2a18ec7d0106fe67"
 scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
@@ -7482,7 +7482,7 @@ title = "A six-coordinate induced forest has a common cycle and exact cut struct
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_six_coordinate_forest_reduction.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_six_coordinate_forest_reduction_audit.md"
 expected_source_sha256 = "cc2b56362d52a3ef23559a4a0e5cbf5eded5abbe7d54b57e73f66f74f1dd3405"
 scope = "the critical K7-minus host with the five replacement alternatives supplied by the rotation-abundance theorem"
@@ -7775,7 +7775,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_bounded_feedback_degree_elimination.md"
 source_heading = "Theorem 1 (no five-chromatic feedback set of order at most fourteen)"
-active = true
+active = false
 audit = "results/hc7_k7minus_bounded_feedback_degree_elimination_audit.md"
 expected_source_sha256 = "15c765ab83c396410fab88c57d855f7a594c99f26f7b462a7461bc028fc368f1"
 scope = "the hypothetical critical K7-minus host with its exact degree-eight defect bound"
@@ -9377,10 +9377,10 @@ keywords = ["K7 minus", "seven roots", "list colouring", "odd cycle", "barrier"]
 id = "hc7.target.k7minus_six_colour_conjecture"
 title = "Every K7-minus-minor-free graph is six-colourable"
 kind = "target"
-status = "active-target"
+status = "frozen"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
 source_heading = "1. Primary target and exact finishing reduction"
-active = true
+active = false
 scope = "all finite graphs"
 label_fidelity = "the conclusion may be a six-colouring or, in a hypothetical minor-minimal counterexample, an explicit K7-minus minor model"
 allowed_exits = [
@@ -11265,7 +11265,7 @@ title = "Eight coordinate endpoints force a bounded response interface"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_eight_coordinate_endpoint_visibility.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_eight_coordinate_endpoint_visibility_audit.md"
 expected_source_sha256 = "8ad949ac4d3cb831e9cffa26115f955e98feaca9cef4a238d240eaa113e4f11d"
 scope = "the forced seven-connected eight-coordinate host with its full punctured signature cube and exact spanning K7-vee model"
@@ -11314,7 +11314,7 @@ title = "A fixed coordinate response can be a singleton with unbounded boundary"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_anchored_coordinate_compression_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_anchored_coordinate_compression_barrier_audit.md"
 expected_source_sha256 = "2e09b181eb0afc95cee6c68ef7ebfb7ede99c39f0337f0f77675d6599a4c2a17"
 scope = "the infinite family K4 join (K_m,m plus one same-part edge), for every m at least four"
@@ -11362,7 +11362,7 @@ title = "A minimum model-anchored side has at most two model-owning appendages"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_model_anchored_appendage_ownership.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_model_anchored_appendage_ownership_audit.md"
 expected_source_sha256 = "aefcb5164c4122bfb142b7cbbbc31f4d4154cb5c632fe454510e358a510843d8"
 scope = "globally minimum model-anchored response sides over all eight forest coordinates and ordinary exact K7-vee models"
@@ -11385,7 +11385,7 @@ title = "A singleton response localises to an induced path or a dominated coordi
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_singleton_coordinate_localisation.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_singleton_coordinate_localisation_audit.md"
 expected_source_sha256 = "90c1a84a934ca2848c35152b3a0d0b089da55f308fa829f2add24addbcba8749"
 scope = "a singleton response side carrying one edge of the eight-coordinate forest"
@@ -11477,7 +11477,7 @@ title = "The dominated singleton is model-aligned in every degree"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_dominated_singleton_low_degree_terminal.md"
-active = true
+active = false
 audit = "results/hc7_k7minus_dominated_singleton_low_degree_terminal_audit.md"
 expected_source_sha256 = "d5c3fa4bcfb43af83d617d4022fa151bdb445240c2a152df74fb5bf178f7f779"
 scope = "the dominated singleton outcome at every degree at least eight, with one fixed exact K7-vee model"
@@ -11829,7 +11829,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_remote_interface_topological_reduction.md"
 source_heading = "Theorem 2.1 (connected order seven is impossible)"
-active = true
+active = false
 audit = "results/hc7_k7minus_remote_interface_topological_reduction_audit.md"
 expected_source_sha256 = "5bc54f3b7f4cbe68a7b3c35a35d16c693672cfbffa17686f65008938cdfc3865"
 scope = "the operation-cube interface at an exceptional degree-eight centre in the hypothetical critical K7-minus-free host"
@@ -19094,7 +19094,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_remote_crossing_five_cube_model_renewal.md"
 source_heading = "Theorem 2.1 (full five-edge exact-six cube)"
-active = true
+active = false
 audit = "results/hc7_k7minus_remote_crossing_five_cube_model_renewal_audit.md"
 expected_source_sha256 = "10eb1918965ef8e8f3380bcf1a4154e1b49dbfe77ec0ce4e93335ee682098323"
 scope = "the nonfull exact-seven outcome at an exceptional centre, with the three-spoke star, remote seven-removable edge and one disjoint reverse crossing edge"
@@ -19122,7 +19122,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_remote_two_component_shore_stability.md"
 source_heading = "Theorem 2.1 (the remote edge is nonseparating in the packing-one shore)"
-active = true
+active = false
 audit = "results/hc7_k7minus_remote_two_component_shore_stability_audit.md"
 expected_source_sha256 = "5e7d0d0a143fbe9439435cb71a8afb455861562b08259c0791efe1edb17e2640"
 scope = "the cross-miss/full order-seven and both-full order-eight two-component cases at an exceptional centre"
@@ -19150,7 +19150,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_connected_full_remote_pole_core.md"
 source_heading = "Theorem 3.1 (six-connected exact core and pointed cube)"
-active = true
+active = false
 audit = "results/hc7_k7minus_connected_full_remote_pole_core_audit.md"
 expected_source_sha256 = "a7bfb9746eb365e89d0ed3eec63aefa24a29d779744dcb3d929b3e945a567826"
 scope = "the connected-full order-eight remote-interface case at an exceptional centre"
@@ -19244,7 +19244,7 @@ kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k7minus_connected_full_bridge_quotient_barrier.md"
 source_heading = "Theorem 2.1 (exact noncontainment)"
-active = true
+active = false
 audit = "barriers/hc7_k7minus_connected_full_bridge_quotient_barrier_audit.md"
 expected_source_sha256 = "73434c773d628c8cfe3e3b83e508193592c1c4559ec93d1cff807e0d182b7819"
 scope = "the explicit order-eleven quotient built from the exceptional graph6 boundary G@aIZ_, one full centre image and two adjacent distinct-one-miss bridge images"
@@ -19360,7 +19360,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md"
 source_heading = "Theorem 2 (six-connected degree-eight low-codegree theorem)"
-active = true
+active = false
 audit = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md"
 expected_source_sha256 = "06d35e4059848517e65e48b04c592e948bbc8e4407501de75520cfa3e9d22844"
 scope = "arbitrary six-connected K7-minus-minor-free graphs, with density consequences at m at least 4n"
@@ -19403,7 +19403,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination.md"
 source_heading = "Theorem 1 (three-component dense-boundary bound)"
-active = true
+active = false
 audit = "results/hc7_k7minus_returned_three_component_dense_boundary_elimination_audit.md"
 expected_source_sha256 = "78676354ff551da0fe3cd85e53f84495a07f60f723c93ff4d480868d21d09001"
 scope = "arbitrary six-connected K7-minus-minor-free graphs with an order-six cut having three boundary-full components and a seven- or eight-edge boundary satisfying the returned-cut restrictions"
@@ -19442,7 +19442,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_returned_type_vii_elimination.md"
 source_heading = "Theorem 1 (type-VII elimination)"
-active = true
+active = false
 audit = "results/hc7_k7minus_returned_type_vii_elimination_audit.md"
 expected_source_sha256 = "c7be590f7006ab65289eb020141edd6a30bb73d8aff17df51ffcbfb7f0e9caa1"
 scope = "arbitrary six-connected K7-minus-minor-free graphs with an order-six cut having three full components and the type-VII seven-edge boundary"
@@ -19519,7 +19519,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md"
 source_heading = "Theorem 2 (critical separator-or-surplus dichotomy)"
-active = true
+active = false
 audit = "results/hc7_k7minus_critical_codegree_three_separator_or_surplus_cold_audit_sparse_threecut.md"
 expected_source_sha256 = "fb2083fff6087ea3b192a63800b1aa0e1f7f496d47524e452964f616a12b79e0"
 scope = "minor-minimal non-six-colourable K7-minus-minor-free graphs and, for the model-splitting theorem, arbitrary adjacent critical pairs of codegree three or four"
@@ -19545,7 +19545,7 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_degree_eight_prescribed_separator_order_barrier.md"
 source_heading = "2. Construction and exact value"
-active = true
+active = false
 audit = "barriers/hc7_degree_eight_prescribed_separator_order_barrier_cold_audit.md"
 expected_source_sha256 = "2abfb09d7b288355a4a5de3ebab48e26fdff8f9d80083e1118d36ef5e26f8a79"
 scope = "the target-rich complete bipartite family K_{8,n}; it tests connectivity, a prescribed degree-eight boundary vertex, separator-side minimisation and fullness only"
@@ -19763,3 +19763,312 @@ source = "hc7.k7minus_degree8_independent_triple_rooted_k5"
 target = "graph_minors.partial_five_root_routing"
 kind = "uses"
 note = "Rolek--Song Lemma 1.7 supplies the required two-packet paths for every nonliteral complementary-neighbour pair."
+
+[[claims]]
+id = "hc7.target.k44_sevenconnected_closure"
+title = "Seven-connected K4,4 closure"
+kind = "target"
+status = "active-target"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "T44"
+active = true
+expected_source_sha256 = "f2728580e4bb8d1987d3d5a6750c30d958d403fc6cac5b2beb2dae2b82fe40a1"
+scope = "all finite seven-connected graphs containing a K4,4 minor"
+label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
+separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
+hypotheses = [
+  "the host is seven-connected",
+  "the host contains a K4,4 minor",
+]
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
+]
+does_not_prove = [
+  "the still-open literal portal-exchange trichotomy",
+  "the still-open nonliteral model-trace rotation theorem",
+  "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft handoff is applied",
+  "HC7",
+]
+keywords = ["K4,4 minor", "K7 minus", "seven connectivity", "literal core", "branch-model rotation"]
+
+[[claims]]
+id = "graph_minors.rooted_k4minus_four_roots"
+title = "Four prescribed roots in a three-connected graph have a rooted K4-minus model"
+kind = "theorem"
+status = "audited-green"
+source = "results/rooted_k4minus_four_roots.md"
+source_heading = "Theorem"
+active = true
+audit = "results/rooted_k4minus_four_roots_audit.md"
+expected_source_sha256 = "c848504c758371545c27e60f577c06d096f5fd61714bfcab37f4cd80402af598"
+scope = "any four prescribed distinct vertices of an arbitrary three-connected finite graph"
+label_fidelity = "each prescribed vertex lies in its named branch set; the missing quotient edge is not prescribed"
+conclusions = [
+  "four disjoint connected rooted bags have a quotient containing K4 minus at most one edge",
+]
+does_not_prove = [
+  "a rooted K4 model",
+  "control of which quotient edge may be missing",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["rooted K4 minus", "three connectivity", "four roots", "cycle bridge"]
+
+[[claims]]
+id = "hc7.k44_branch_model_normal_forms"
+title = "Double-cone and minimal K4,4 branch-model normal forms"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_branch_model_and_double_cone.md"
+source_heading = "Branch-model normal forms and a double-cone theorem for `K_7^-`"
+active = true
+audit = "results/hc7_k44_branch_model_and_double_cone_audit.md"
+expected_source_sha256 = "9385a53db73abc8c7a35a78bbe243bfc6fa18fba8b367ef0d0f9248e9961a87a"
+scope = "double cones over five-connected graphs and a vertex-minimal universal-T44 counterexample with a displayed K4,4 model"
+label_fidelity = "the two apex bags, the eight K4,4 model labels and the internal branch edge remain explicit"
+separator_order = "every internal edge of every nontrivial branch bag lies in an exact seven-cut in a vertex-minimal T44 counterexample"
+conclusions = [
+  "two universal vertices over a five-connected graph force K7-minus",
+  "two complementary components disjoint from the displayed model and adjacent to at least seven model bags force K7-minus",
+  "every internal edge of every nontrivial model bag lies in an exact seven-cut in a vertex-minimal T44 counterexample",
+  "an eight-connected vertex-minimal T44 counterexample would have a literal K4,4 model",
+]
+does_not_prove = [
+  "that an exact cut has a peel side contained in one branch bag",
+  "laminarity of cuts through different branch edges",
+  "preservation of all eight branch labels under reconstruction",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["double cone", "K4,4 branch model", "exact seven-cut", "near-full model bridge", "vertex minimality"]
+
+[[claims]]
+id = "hc7.k44_exact_sevencut_sparse_boundary"
+title = "Every exact seven-cut boundary in a target-free seven-connected graph has minimum degree at most three"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_fourconnected_seven_boundary_double_cone.md"
+source_heading = "Consequence for an exact seven-cut"
+active = true
+audit = "results/hc7_k44_fourconnected_seven_boundary_double_cone_audit.md"
+expected_source_sha256 = "88b93cb80a4bd916fed0d10b68e74d0caba5c7c62492f8f667e59c0bef8a900e"
+scope = "every exact order-seven cut in an arbitrary seven-connected K7-minus-minor-free graph"
+separator_order = "seven"
+conclusions = [
+  "every seven-vertex graph of minimum degree at least four either has a K5 minor or is the pentagonal bipyramid",
+  "the double cone over every seven-vertex graph of minimum degree at least four contains K7-minus",
+  "the graph induced by an exact seven-cut boundary has minimum degree at most three",
+]
+does_not_prove = [
+  "that the secondary separator inside the boundary respects K4,4 branch labels",
+  "a branch-model peel or reconstruction theorem",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["exact seven-cut", "double cone", "pentagonal bipyramid", "sparse boundary"]
+
+[[claims]]
+id = "hc7.k44_literal_exterior_threeconnectivity"
+title = "The exterior of a literal K4,4 core is three-connected"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_literal_k44_exterior_threeconnectivity.md"
+source_heading = "Theorem 3.1"
+active = true
+audit = "results/hc7_literal_k44_exterior_threeconnectivity_audit.md"
+expected_source_sha256 = "4b863b62699f62131e874d22bda0af127fb29c73de7da82da46c1f3d3e34811a"
+scope = "seven-connected K7-minus-minor-free graphs containing a literal K4,4 core S"
+label_fidelity = "the eight core vertices, exterior components and portal sets remain literal"
+separator_order = "cuts of order zero, one and two in the exterior are excluded"
+conclusions = [
+  "the exterior obtained by deleting the literal K4,4 core is three-connected",
+]
+does_not_prove = [
+  "the weighted literal-core trichotomy",
+  "a portal-rich triangle or spanning portal-rich K4 model",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "exterior three connectivity", "portals", "exact quotient"]
+
+[[claims]]
+id = "hc7.k44_four_portal_triangle_completion"
+title = "A four-portal exterior triangle completes K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_four_portal_triangle_completion.md"
+source_heading = "Theorem (four-portal triangle completion)"
+active = true
+audit = "results/hc7_k44_four_portal_triangle_completion_audit.md"
+expected_source_sha256 = "965a92a736c4d9c891ebbd37f1bfd81415b864faea01c19e7b12adcac9787920"
+scope = "a literal K4,4 core and three pairwise adjacent disjoint connected exterior bags"
+label_fidelity = "each exterior bag retains its actual portal set in the eight-vertex core"
+hypotheses = [
+  "each of the three exterior bags has at least four core neighbours",
+]
+conclusions = [
+  "the whole host contains a K7-minus minor",
+]
+does_not_prove = [
+  "existence of such a portal-rich triangle in every literal-core host",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "portal triangle", "K7 minus", "finite core model"]
+
+[[claims]]
+id = "hc7.k44_three_portal_k4_tetrahedral_dichotomy"
+title = "A three-portal exterior K4 is terminal except for the tetrahedral profile"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md"
+source_heading = "Theorem 1 (three-portal `K_4` dichotomy)"
+active = true
+audit = "results/hc7_k44_three_portal_k4_tetrahedral_dichotomy_audit.md"
+expected_source_sha256 = "407aba726108fd83b41834505c5220312b16584ec91ad34b9a6c0aeb0ad3d554"
+scope = "a literal K4,4 core and four pairwise adjacent disjoint connected exterior bags"
+label_fidelity = "each exterior bag retains its actual portal set in the eight-vertex core"
+hypotheses = [
+  "each of the four exterior bags has at least three core neighbours",
+]
+allowed_exits = [
+  "an explicit K7-minus minor model",
+  "the exact tetrahedral portal profile",
+]
+conclusions = [
+  "if the four bags span the exterior, seven-connectivity excludes the tetrahedral profile and the host contains K7-minus",
+]
+does_not_prove = [
+  "existence of a spanning three-portal K4 model in every literal exterior",
+  "the literal portal-exchange trichotomy",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "portal K4", "tetrahedral profile", "K7 minus"]
+
+[[claims]]
+id = "hc7.barrier.k44_shortcut_certificates"
+title = "Local fat-triangle and split-edge path counts do not force K7-minus"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k44_shortcut_certificate_barriers.md"
+source_heading = "Exact barriers to local `K_{4,4}` shortcut certificates"
+active = true
+expected_source_sha256 = "e9ef73b739d483c89f6fd2a3242c073a5e67cd608d31c523076a3d28e507217a"
+scope = "the fifteen subdivided fat-triangle profiles and eighteen one-split-branch theta profiles over a literal K4,4"
+refutes = [
+  "seven units of local triangle linkage alone force K7-minus",
+  "six alternate paths around one split branch edge alone force K7-minus",
+]
+conclusions = [
+  "every enumerated graph is K7-minus-minor-free",
+  "every enumerated graph fails seven-connectivity and hence is not a T44 counterexample",
+]
+does_not_prove = [
+  "that T44 is false",
+  "failure of a literal exchange using global portal coverage",
+  "failure of a nonliteral rotation using global attachment data",
+]
+keywords = ["K4,4", "fat triangle", "split branch edge", "finite barrier", "shortcut certificate"]
+
+[[claims]]
+id = "hc7.laboratory.k44_closure_falsification"
+title = "Exact bounded and full-attachment T44 falsification checkpoint"
+kind = "laboratory"
+status = "written-unaudited"
+source = "active/experiments/k44_closure_falsification/README.md"
+source_heading = "T44 exact falsification checkpoint (22 August 2026)"
+active = false
+expected_source_sha256 = "fba2038766f8eae160f20870e82050a09808d8fbc8e407e237ef969b6e8c8986"
+scope = "seven-connected graphs through order eleven and the full-attachment non-clique seven-sum family"
+conclusions = [
+  "no T44 counterexample occurs through order eleven",
+  "the unbounded full-attachment non-clique seven-sum family is target-positive after reduction to 105 edge-minimal cases",
+]
+does_not_prove = [
+  "T44",
+  "that a counterexample cannot occur at larger order outside the reduced family",
+  "the literal portal exchange or nonliteral branch-model lift",
+]
+keywords = ["T44", "exact search", "certificate verification", "seven-sum", "bounded evidence"]
+
+[[claims]]
+id = "hc7.laboratory.k44_literal_labelled_trichotomy"
+title = "Bounded literal K4,4 labelled-trichotomy census"
+kind = "laboratory"
+status = "written-unaudited"
+source = "active/experiments/k44_literal_labelled_trichotomy/README.md"
+source_heading = "Literal-`K_{4,4}` capstone scratch: a sharper direct alternative"
+active = false
+expected_source_sha256 = "34ce2a767b8c1b3d1d9b791ba066dd55a8e377c5545b6e9540f38f211aa9b37d"
+scope = "all three-connected unlabelled exteriors through order seven and all eight-label incidence assignments satisfying the exact fragment inequalities"
+allowed_exits = [
+  "three pairwise touching connected bags each meeting at least four labels",
+  "a spanning K4 model of four bags each meeting at least three labels",
+  "six disjoint connected positive-label bags whose quotient contains K6-minus",
+]
+conclusions = [
+  "a computation-free argument proves the labelled trichotomy for exteriors of order at most six",
+  "the exact bounded census finds no labelled survivor through exterior order seven",
+]
+does_not_prove = [
+  "the unbounded pure labelled trichotomy",
+  "the literal case of T44",
+  "Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "labelled trichotomy", "bounded census", "Z3", "portal weights"]
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "graph_minors.rooted_k4minus_four_roots"
+kind = "uses"
+note = "The rooted diamond supplies the four-root exterior minor used by the literal and double-cone reductions."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_branch_model_normal_forms"
+kind = "uses"
+note = "The double-cone, near-full-model-bridge and exact-cut normal forms are the direct entrance to the nonliteral lift."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_exact_sevencut_sparse_boundary"
+kind = "uses"
+note = "Every exact seven-cut returned by a minimal nonliteral branch edge has an internally sparse boundary; ownership across the resulting secondary cut remains open."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_literal_exterior_threeconnectivity"
+kind = "uses"
+note = "Deleting a literal K4,4 core leaves the three-connected exterior on which the portal-exchange obligation is posed."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_four_portal_triangle_completion"
+kind = "uses"
+note = "A portal-rich triangle is one terminal outcome of the open literal trichotomy."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_three_portal_k4_tetrahedral_dichotomy"
+kind = "uses"
+note = "A spanning portal-rich K4 is the other structural terminal outcome; global portal coverage excludes its exact tetrahedral exception."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.barrier.k44_shortcut_certificates"
+kind = "guarded_by"
+note = "The exact target-free profiles show that local path counts cannot replace global portal coverage or branch-label ownership."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.laboratory.k44_closure_falsification"
+kind = "related_to"
+note = "The exact searches found no counterexample in their bounded and reduced-family scopes; they make no unbounded inference."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.laboratory.k44_literal_labelled_trichotomy"
+kind = "related_to"
+note = "The exact bounded labelled census supports the three-outcome literal obligation through exterior order seven without supplying an unbounded proof."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.target.k7minus_six_colour_conjecture"
+kind = "strengthens"
+note = "A proof of T44, combined with the Kawarabayashi--Toft K7-or-K4,4 theorem and the seven-connected critical-host reduction, would prove Conjecture 21."
