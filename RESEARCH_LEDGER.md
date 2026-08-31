@@ -102,7 +102,9 @@ intermediate theorem.
 
 - Every complete bipartite graph `K_{2,n}` is contractible in the sense of
   graph schemes. The [computation-free proof](results/k2n_contractibility_via_matroid_packing.md)
-  has an adjacent [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md).
+  has an adjacent [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md)
+  and a separate [four-page manuscript DRAFT](paper/k2n-contractibility/main.pdf)
+  ready for specialist review.
 - The [five-root partial-routing theorem](results/llru_question61_via_km_property_star.md),
   with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md)
   and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md),
@@ -130,6 +132,11 @@ The [selected-results map](results/README.md) is a non-authoritative reader
 guide to these proofs and the direct proved inputs to T44.
 
 ## Manuscript status
+
+The four-page [`K_{2,n}` DRAFT](paper/k2n-contractibility/main.pdf) is the
+primary circulation candidate. It is computation-free, has a
+[GREEN internal audit](paper/k2n-contractibility/main_audit.md) and is
+independent of the Hadwiger programme.
 
 The compact eight-page [low-degree DRAFT](paper/k7minus-low-degree/main.pdf)
 is a frozen, computation-free snapshot with a [GREEN internal audit](paper/k7minus-low-degree/main_audit.md).

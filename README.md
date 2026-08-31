@@ -58,7 +58,7 @@ links their proofs, audits and exact scopes.
 
 | Result | Status and scope |
 |---|---|
-| [Every `K_{2,n}` is contractible](results/k2n_contractibility_via_matroid_packing.md) | Computation-free written proof with a [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md).  It answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
+| [Every `K_{2,n}` is contractible](results/k2n_contractibility_via_matroid_packing.md) | Computation-free written proof with a [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md) and a [four-page manuscript](paper/k2n-contractibility/main.pdf).  It answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
 | [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
 | [Four prescribed roots in a three-connected graph](results/rooted_k4minus_four_roots.md) | Elementary unbounded proof, with a [GREEN audit](results/rooted_k4minus_four_roots_audit.md), of a rooted `K_4^-` minor at any four distinct roots.  The missing quotient edge is not prescribed. |
 | [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Written unbounded host reduction with one deterministic finite local lemma and [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md).  It upgrades the current critical-host count to `n_8>=27+tau`. |
@@ -78,7 +78,15 @@ or `HC_7`.
 
 ## Manuscripts
 
-The compact paper is the clearly marked eight-page DRAFT
+The primary circulation candidate is the clearly marked four-page DRAFT
+[Every `K_{2,n}` is contractible](paper/k2n-contractibility/main.pdf), with
+[source](paper/k2n-contractibility/main.tex), a
+[hash-pinned GREEN internal audit](paper/k2n-contractibility/main_audit.md)
+and a
+[qualified-GREEN citation and novelty review](paper/k2n-contractibility/citation_novelty_review.md).
+It is computation-free and independent of the Hadwiger programme.
+
+The compact `K_7^-` paper is the clearly marked eight-page DRAFT
 [Minimum degree eight in `K_7^-`-minor-free contraction-critical
 graphs](paper/k7minus-low-degree/main.pdf), with
 [source](paper/k7minus-low-degree/main.tex), a
@@ -91,7 +99,7 @@ in that draft.
 
 The former rooted-web manuscript is retained as a clearly labelled
 [historical DRAFT](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf).
-Neither manuscript proves Conjecture 21 or `HC_7`.  See the
+Neither `K_7^-` manuscript proves Conjecture 21 or `HC_7`.  See the
 [manuscript map](paper/README.md) for the exact distinction.
 
 ## Repository map
