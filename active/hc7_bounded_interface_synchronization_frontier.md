@@ -1,11 +1,14 @@
 # Bounded-interface bridge composition
 
-**Status:** sole exhaustive all-degree target.  Sections 1--3, 5 and 6
-summarize separately audited results; the theorem in Section 4 and the
-terminal decoder in Section 7 remain open.  The
+**Status:** frozen direct-`HC_7` programme, retained as a conditional
+all-degree reduction rather than the current target.  T44 is the current
+completion target.  References below to “live” or “current” residues describe
+this programme's historical state.  Sections 1--3, 5 and 6 summarize
+separately audited results; the theorem in Section 4 and the terminal
+composition step in Section 7 remain open.  The
 degree-seven branch has a sharper conditional refinement in
 [`hc7_degree7_model_separator_frontier.md`](hc7_degree7_model_separator_frontier.md),
-but it does not replace this global obligation.  Nothing here proves `HC_7`.
+but it did not replace this global obligation.  Nothing here proves `HC_7`.
 
 ## 1. Uniform entry from every hypothetical counterexample
 

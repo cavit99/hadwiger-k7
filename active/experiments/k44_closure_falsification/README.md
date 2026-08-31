@@ -5,7 +5,9 @@ from the first falsification pass on
 
 > every seven-connected graph with a `K_{4,4}` minor has a `K_7^-` minor.
 
-No unbounded conclusion is inferred here.
+No conclusion about arbitrary T44 hosts is inferred here.  The only
+unbounded statement below is the written-unaudited reduction for the
+seven-connected members of one specified full-attachment family.
 
 The primary order-eleven generator needs `pynauty`; the seven-sum and
 orders-eight-to-ten scripts need `z3-solver`.  Those two research-only
@@ -61,23 +63,35 @@ last command is the independent locked-runtime certificate check.
 ## Exact full-attachment seven-sums
 
 `full_attachment_seven_sum.py` checks the edge-minimal representatives of
+the seven-connected members of
 
 `G = S join (L disjoint-union R)`, `|S|=7`,
 
 where `L,R` are nonempty connected graphs and there are no `LR` edges.
-For four through seven outside vertices, reduce the shores to spanning trees
-and `S` to an edge-minimal `(7-|L|-|R|)`-connected graph.  There are
-respectively 10, 18, 66, and 11 representative cases, and every case has a
-validated `K_7^-` model.  For at least seven outside vertices, delete down
-to connected subgraphs with seven total vertices; hence the finite `q=7`
-row covers every larger order.  This exact computer-assisted family result
-does not cover arbitrary non-full seven-sums.
+For two outside vertices, seven-connectivity forces `S` to be
+five-connected, so the audited double-cone theorem applies.  For three
+outside vertices it forces `S` to be four-connected and hence to have
+minimum degree at least four, so the audited seven-vertex double-cone
+theorem applies.  For four through seven outside vertices, reduce the
+shores to spanning trees and `S` to an edge-minimal
+`(7-|L|-|R|)`-connected graph.  There are respectively 10, 18, 66, and 11
+representative cases, and every case has a validated `K_7^-` model.  For at
+least seven outside vertices, delete down to connected subgraphs with seven
+total vertices; hence the finite `q=7` case covers every larger order.  This
+written reduction plus exact computer-assisted family result covers only
+seven-connected members of this full-attachment family; it does not cover
+arbitrary non-full seven-sums.
 
-The validated certificate digest for the `10+18+66+11=105` minimal cases is
+The solver-independent graph6 corpus digest for the
+`10+18+66+11=105` minimal cases is
 
 ```text
-996637ab39873ce8649442bec0232ae5e4883b331efd8dc0e4406ac470368fd6
+915f0faf4a8dc6ef28a007289acccf5835cfe945a9555f970c6ef92eadd614be
 ```
+
+The script validates one `K_7^-` model for every case but deliberately does
+not hash the Z3-selected witnesses, whose presentation can vary with solver
+version.
 
 The finite reduction is monotone: delete each shore to a spanning tree and
 delete separator edges until its connectivity is edge-minimal.  The formula
@@ -94,10 +108,12 @@ also covers every larger member of this full-attachment family.
 
 ## Existing sharp local survivors
 
-The earlier scratch programs `exact_k44_fat_triangle_minor.c` and
-`exact_k44_one_split_theta_minor.c` were source-audited.  Their spanning
-forest enumeration is complete.  The former has fifteen target-free
-profiles with best seven-bag quotient density 18; the latter has eighteen
-target-free profiles with best density 15.  None of those graphs is
-seven-connected, so they are barriers to shortcut certificates rather than
-counterexamples to the global target.
+The retained
+[`fat-triangle`](../../../barriers/hc7_k44_fat_triangle_certificate_barrier_verify.c)
+and
+[`one-split-theta`](../../../barriers/hc7_k44_one_split_theta_certificate_barrier_verify.c)
+programs are source-audited.  Their spanning-forest enumeration is
+complete.  The former has fifteen target-free profiles with best seven-bag
+quotient density 18; the latter has eighteen target-free profiles with best
+density 15.  None of those graphs is seven-connected, so they are barriers
+to shortcut certificates rather than counterexamples to the global target.

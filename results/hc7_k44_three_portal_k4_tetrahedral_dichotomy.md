@@ -256,6 +256,7 @@ orbits 12 positive 9 negative 3
 negative_profiles 70
 orbit_sizes [2, 32, 32, 36, 36, 48, 48, 72, 144, 144, 288, 288]
 sha256 95b9d40e6e9ff1778b364b0a883fe0d72e7f41f9f5d9258c31af215ea38272bf
+tetrahedral_near_miss_orbits 3 quotient_edges 19
 classification_and_certificates_valid
 ```
 

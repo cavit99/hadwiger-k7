@@ -1,7 +1,9 @@
 # Sparse three-component frontier for the six-connected `4n` theorem
 
-**Status:** live conditional refinement, last consolidated on 17 August
-2026.  The universal theorem, Conjecture 21 and `HC_7` remain open.  Every
+**Status:** frozen conditional refinement, last consolidated on 17 August
+2026.  It was a parallel conditional route, not the primary campaign, and is
+not on the current T44 spine.  References below to the “live” obligation are
+historical.  The universal theorem, Conjecture 21 and `HC_7` remain open.  Every
 statement called proved below has a separate hash-pinned internal audit; an
 internal audit is not external peer review.
 

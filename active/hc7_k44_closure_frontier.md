@@ -1,6 +1,6 @@
 # Seven-connected `K_{4,4}` closure frontier
 
-**Status (22 August 2026):** T44 is the sole active completion target.  It is
+**Status (31 August 2026):** T44 is the sole active completion target.  It is
 open.  No seven-connected counterexample has been found.  The literal-core
 completion and the nonliteral branch-model lift are both still open, and no
 result in this file proves Conjecture 21 or `HC_7`.
@@ -11,6 +11,8 @@ result in this file proves Conjecture 21 or `HC_7`.
 
 > Every seven-connected graph containing a `K_{4,4}` minor contains a
 > `K_7^-` minor.
+
+Here, *target-free* means `K_7^-`-minor-free.
 
 T44 would prove Norin--Totschnig Conjecture 21.  If that conjecture failed,
 choose a minor-minimal non-six-colourable target-free graph `G`.  It is
@@ -28,7 +30,7 @@ This implication uses the universal seven-connected theorem exactly as
 stated.  A later critical-host strengthening may be useful proof machinery,
 but it is not silently substituted for T44.
 
-## 2. Falsification status
+## 2. Computer-assisted finite evidence and reduced-family result
 
 The first exact pass found no counterexample.
 
@@ -39,22 +41,28 @@ The first exact pass found no counterexample.
    9,940 have independently validated seven-bag certificates.  Of the
    literal-core cases, 3,871 already contain the target as a subgraph and
    5,973 require contraction.
-2. The complete full-attachment non-clique seven-sum family
+2. Every seven-connected member of the full-attachment non-clique seven-sum
+   family
 
    ```text
    G = S join (L disjoint-union R),  |S|=7,
    ```
 
-   with nonempty connected `L,R`, is target-positive.  Monotonicity reduces
-   the unbounded family to 105 edge-minimal cases with four through seven
-   outside vertices; all have validated models.
+   with nonempty connected `L,R` is target-positive.  For outside orders two
+   and three, seven-connectivity reduces respectively to the audited
+   five-connected and minimum-degree-four double-cone theorems.  For orders
+   four through seven, an exact search checks 105 edge-minimal cases.  Above
+   seven, connected subgraphs of the two shores reduce to the order-seven
+   row.
 3. Exact one- and two-vertex branch-split probes found no global survivor.
    The sharp local survivors instead have low connectivity and refute only
    shortcut certificates.
 
 Sources, counts, digests and reproduction commands are in
 [`experiments/k44_closure_falsification/`](experiments/k44_closure_falsification/README.md).
-These exact bounded and family results do not imply T44.
+The order-eleven conclusion is a computer-assisted finite result.  The
+full-attachment conclusion is a written-unaudited reduction whose 105 base
+cases are checked computationally.  Neither result implies T44.
 
 The sharpest current near-miss is the tetrahedral literal profile
 
@@ -70,7 +78,7 @@ and minimum degree four, so it is not a T44 counterexample.
 
 Let `H` be a literal `K_{4,4}` with core `S`, and let `C=G-S`.
 
-The following results are promoted and independently audited.
+The following results are promoted and separately internally audited.
 
 1. [Four prescribed roots in a three-connected graph have a rooted
    `K_4^-` model](../results/rooted_k4minus_four_roots.md).
@@ -80,8 +88,9 @@ The following results are promoted and independently audited.
 3. [Every exact seven-cut in a seven-connected target-free graph has an
    internal boundary vertex of degree at most
    three](../results/hc7_k44_fourconnected_seven_boundary_double_cone.md).
-4. [In a seven-connected target-free literal host, the exterior is
-   three-connected](../results/hc7_literal_k44_exterior_threeconnectivity.md).
+4. [In a seven-connected target-free literal host, the exterior is connected
+   and has no separator of order at most
+   two](../results/hc7_literal_k44_exterior_threeconnectivity.md).
 5. [A triangle of exterior bags with four portals each is
    terminal](../results/hc7_k44_four_portal_triangle_completion.md).
 6. [Four mutually adjacent exterior bags with three portals each are
@@ -90,13 +99,13 @@ The following results are promoted and independently audited.
 
 If the four bags span `C`, the tetrahedral exception is impossible: its
 total portal coverage is four, while seven-connectivity forces
-`|N_S(C)|>=7`.  The consolidated [cold
+`|N_S(C)|>=7`.  The consolidated internal [cold
 audit](../results/hc7_k44_closure_local_normal_forms_audit.md) pins every
 source and executable trust boundary.
 
 ## 4. Exact literal obligation
 
-Exterior three-connectivity does not itself produce the weighted model.
+The exterior separator theorem does not itself produce the weighted model.
 For a connected exterior set `X`, write
 
 `w(X)=|partial_S(X)|`.
@@ -144,7 +153,8 @@ known.
 
 ## 5. Exact nonliteral obligation
 
-Choose a vertex-minimal T44 counterexample and then a `K_{4,4}` model
+Assume T44 is false.  Choose a vertex-minimal counterexample and then a
+`K_{4,4}` model
 minimising its nontrivial bags and total branch-tree size.  Contracting an
 internal branch edge preserves the displayed model and target-freeness; by
 minimality it destroys seven-connectivity.  Equivalently, that edge lies in
@@ -210,5 +220,5 @@ seven-connected target-free counterexample is independently verified.
 - A T44 counterexample must be checked independently for seven-connectivity,
   a `K_{4,4}` model and absence of every `K_7^-` minor model.
 - Conjecture 21 is not declared proved until the literal completion, the
-  nonliteral lift, the Kawarabayashi--Toft handoff and two independent final
-  audits are all present.
+  nonliteral lift, the application of the Kawarabayashi--Toft theorem and
+  two independent internal final audits are all present.

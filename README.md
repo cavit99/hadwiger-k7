@@ -34,13 +34,15 @@ $$
 
 ## Scope and headline progress
 
-The sole active target is Norin--Totschnig Conjecture 21: every
-`K_7^-`-minor-free graph is six-colourable, where `K_7^-` is `K_7` with one
-edge deleted.  This would follow already from the conditional extremal
-statement that every seven-connected `n`-vertex graph with at least `4n`
-edges contains a `K_7^-` minor.  The older universal `4n-2` statement and
-the five-connected `4n-7` laboratory remain stronger conditional routes,
-not primary targets.  None of these statements is proved here.
+The sole active completion target is the open statement that every
+seven-connected graph containing a `K_{4,4}` minor contains a `K_7^-`
+minor, where `K_7^-` is `K_7` with one edge deleted.  Kawarabayashi--Toft's
+`K_7`-or-`K_{4,4}` theorem makes this sufficient for Norin--Totschnig
+Conjecture 21, but it would not by itself prove `HC_7`.  The former
+exceptional-centre, six-connected `4n`, universal `4n-2` and
+five-connected `4n-7` programmes are preserved conditional or frozen
+routes, not parallel active targets.  None of these completion statements
+is proved here.
 
 Separately from the unresolved `HC_7` proof spine, the repository now
 contains a complete computation-free proof that every complete bipartite
@@ -52,8 +54,9 @@ its [hash-pinned internal audit](results/k2n_contractibility_via_matroid_packing
 This standalone result does not prove the `K_7^-` six-colour conjecture or
 `HC_7`.
 
-The project works from a hypothetical minor-minimal non-six-colourable
-`K_7^-`-minor-free graph `G`.  The audited computation-free chain now gives
+The preserved critical-host refinement works from a hypothetical
+minor-minimal non-six-colourable `K_7^-`-minor-free graph `G`.  Its audited
+computation-free chain gives
 
 ```text
 n_7 = 0,  delta(G) >= 8,  |E(G)| >= 4|V(G)|,
@@ -104,11 +107,12 @@ nor `HC_7`.
 |---|---|
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current research status |
 | [`active/INDEX.md`](active/INDEX.md) | Concise navigation to live proof work |
-| [Degree-eight finishing frontier](active/hc7_k7minus_seven_exceptional_frontier.md) | Sole active route, finishing reduction, and current support-allocation obstruction |
+| [Seven-connected `K_{4,4}` closure frontier](active/hc7_k44_closure_frontier.md) | Sole active completion target, exact hypotheses, two open obligations, barriers and stop rules |
+| [Degree-eight finishing frontier](active/hc7_k7minus_seven_exceptional_frontier.md) | Frozen critical-host refinement and operation/model alignment obstruction |
 | [`K_7^-` strict-density frontier](active/hc7_k7minus_density_frontier.md) | Stronger conditional `4n-2` route, minimal-enemy reductions, and exact nonclosures |
 | [External-review and manuscript blueprint](active/hc7_partial_results_external_review_blueprint.md) | Frozen theorem package, review questions, reproduction plan, and restart criteria |
-| [Live case verification map](active/hc7_live_case_dag.md) | Exhaustive global chain, conditional refinements, and every missing descent arrow |
-| [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Frozen all-degree target, direct inputs, and trust boundary |
+| [Frozen case verification map](active/hc7_live_case_dag.md) | Preserved pre-pivot global chain, conditional refinements, and missing descent arrows |
+| [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Frozen direct-`HC_7` programme, inputs, and trust boundary |
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [`K_7^-` specialist-review dossier](active/hc7_k7minus_external_review_dossier.md) | Frozen hash-pinned review provenance predating the rooted `K^*_{4,2}` closure |
 | [`K_7^-` minimum-degree-eight draft](paper/k7minus-low-degree/main.pdf) | Eight-page computation-free paper containing the linked-cliques theorem, degree-seven exclusion and the low-degree critical-host package |
@@ -149,11 +153,11 @@ Every tracked Markdown file, including archived work, is searchable through
 a disposable SQLite/FTS index:
 
 ```bash
-python3 tools/research_index.py build
-python3 tools/research_index.py search '"bounded interface"'
-python3 tools/research_index.py context hc7.target.k7minus_six_colour_conjecture
-python3 tools/research_index.py check
-python3 tools/research_index.py report
+uv run --locked python tools/research_index.py build
+uv run --locked python tools/research_index.py search '"bounded interface"'
+uv run --locked python tools/research_index.py context hc7.target.k44_sevenconnected_closure
+uv run --locked python tools/research_index.py check
+uv run --locked python tools/research_index.py report
 ```
 
 The generated index and reports are retrieval and integrity aids. Markdown

@@ -273,16 +273,20 @@ These barrier graphs are not seven-connected (their new internal vertices
 have degree two).  They refute the proposed *certificate implications*, not
 the global seven-connected theorem.
 
-The promoted source and verifier hashes are pinned in
-`hc7_k44_closure_local_normal_forms_audit.md`.
+The promoted theorem hashes are pinned in
+`hc7_k44_closure_local_normal_forms_audit.md`; the shortcut-verifier hashes
+are pinned in
+[`hc7_k44_shortcut_certificate_barriers.md`](../barriers/hc7_k44_shortcut_certificate_barriers.md).
 
 ## 6. Exact remaining global obligation
 
 The results leave two genuinely different interfaces.
 
 1. **Literal interface.**  The audited exterior theorem makes the exterior
-   three-connected.  One still needs a core-sensitive trichotomy producing
-   a portal-rich spanning `K_4`, a rich triangle, or a direct target.
+   connected and excludes separators of order at most two; when the
+   exterior has at least four vertices, it is three-connected.  One still
+   needs a core-sensitive trichotomy producing a portal-rich spanning
+   `K_4`, a rich triangle, or a direct target.
 2. **Nonliteral interface.**  Theorem 4.2 supplies an exact seven-cut through
    every internal branch edge.  One needs a reconstruction theorem across
    those cuts, or a proof that two compatible certificates force the two

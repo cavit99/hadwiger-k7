@@ -9,16 +9,21 @@ nonliteral branch bags, T44, Conjecture 21, or `HC_7`.
 ```text
 c848504c758371545c27e60f577c06d096f5fd61714bfcab37f4cd80402af598  rooted_k4minus_four_roots.md
 15ff05aec0d17184a9a50b3fe62e6097b27bfe10eafb5fda2e77dd4316a1f18b  rooted_k4minus_four_roots_verify.c
-9385a53db73abc8c7a35a78bbe243bfc6fa18fba8b367ef0d0f9248e9961a87a  hc7_k44_branch_model_and_double_cone.md
+3aa9c7b2fb013d8da68695d6e4285c4829695fde2e6fa0c8e2163592d7b50c5f  hc7_k44_branch_model_and_double_cone.md
 4b863b62699f62131e874d22bda0af127fb29c73de7da82da46c1f3d3e34811a  hc7_literal_k44_exterior_threeconnectivity.md
 c77769fe640a75289106b1854cca35eeaa4ac379aec62cab95eb30a4f826365d  hc7_literal_k44_adjacent_portal_census_verify.c
 965a92a736c4d9c891ebbd37f1bfd81415b864faea01c19e7b12adcac9787920  hc7_k44_four_portal_triangle_completion.md
 1aaa5b12e0e9ad09024db2a87ad1a12aa84bc9474846359a3a862a55ce18d81d  hc7_k44_four_portal_triangle_completion_verify.py
-407aba726108fd83b41834505c5220312b16584ec91ad34b9a6c0aeb0ad3d554  hc7_k44_three_portal_k4_tetrahedral_dichotomy.md
+115dcd59a36ae51db6dd59ecd4c8f8a09f0da91e1e0d6c974d7935418ca68ca4  hc7_k44_three_portal_k4_tetrahedral_dichotomy.md
 f337ddc96f7354c14e642c315bb4798b53be45f4e2ec2e0848a7304223c96576  hc7_k44_three_portal_k4_tetrahedral_dichotomy_verify.py
 ```
 
 The paths in this block are relative to `results/`.
+
+The refreshed theorem-file hashes record documentation-only corrections to a
+reproduction block, a provenance link, and an exact small-order scope
+qualification; the audited statements, proofs, verifier inputs, and verdict
+are unchanged.
 
 ## 2. Statements audited
 
@@ -138,8 +143,10 @@ external peer review.
 
 ## 5. Explicit nonclosure
 
-The exterior theorem supplies three-connectivity, not a rich model.  The
-statement that every such exterior has either a four-portal triangle, a
+The exterior theorem supplies connectivity and excludes separators of order
+at most two; for an exterior of order at least four, this is conventional
+three-connectivity.  It does not supply a rich model.  The statement that
+every such three-connected exterior has either a four-portal triangle, a
 spanning three-portal `K_4`, or the target is still open; in a target-free
 host it is already the whole literal T44 theorem in structured form.
 

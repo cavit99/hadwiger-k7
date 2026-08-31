@@ -10,7 +10,11 @@ that profile by global portal coverage.
 [`hc7_k44_three_portal_k4_tetrahedral_dichotomy.md`](hc7_k44_three_portal_k4_tetrahedral_dichotomy.md)
 
 **Source SHA-256:**
-`407aba726108fd83b41834505c5220312b16584ec91ad34b9a6c0aeb0ad3d554`
+`115dcd59a36ae51db6dd59ecd4c8f8a09f0da91e1e0d6c974d7935418ca68ca4`
+
+This hash refresh records only the addition of the verifier's already-audited
+`tetrahedral_near_miss_orbits` line to the source's reproduction block. No
+theorem statement, proof, verifier, certificate, or audit verdict changed.
 
 This adjacent note is only a wrapper around the already completed
 [independent internal cold audit](hc7_k44_closure_local_normal_forms_audit.md).

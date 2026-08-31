@@ -1,8 +1,11 @@
-# Exceptional degree-eight vertices: live technical frontier
+# Exceptional degree-eight vertices: frozen conditional frontier
 
-**Status:** active primary technical frontier for Norin--Totschnig
-Conjecture 21.  The lower bound and the local neighbourhood,
-exterior-completion, and two-component reductions in Sections 1--2 are
+**Status:** frozen conditional refinement for Norin--Totschnig Conjecture 21,
+superseded as the primary campaign by T44 on 22 August 2026.  References
+below to the “primary,” “live,” or “current” route describe this file's
+17 August snapshot, not current repository status.  The lower bound and the
+local neighbourhood, exterior-completion, and two-component reductions in
+Sections 1--2 are
 written and separately audited GREEN; the finite boundary claims have
 retained independently checked verifiers.  The four-centre theorem and its
 operation-coupled, tri-separation, trace-preserving, and generalized-wheel
@@ -37,11 +40,11 @@ scoped route nonclosure are separately audited GREEN.  The five-edge
 common-host theorem, its signed four-crossing and omitted-coordinate
 reductions, the two-shore rooted-minor theorem, the dense-branch visibility
 theorem, and the palette-intersection barrier are separately audited GREEN,
-while the list-core calculation in Section 3 remains a written live
+while the list-core calculation in Section 3 remains a written historical
 derivation without a separate audit.  The upper bound is open.  This file
 is not a second status ledger.
 
-## 1. Primary target and exact finishing reduction
+## 1. Historical target and exact finishing reduction
 
 The primary target is:
 

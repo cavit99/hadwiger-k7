@@ -136,13 +136,13 @@ def main():
         count = 0
         for graph in cases(outside_order):
             assert nx.node_connectivity(graph) == 7
-            bags = has_k7minus(graph)
+            has_k7minus(graph)
             graph6 = nx.to_graph6_bytes(graph, header=False).strip()
-            digest.update(graph6 + repr(bags).encode("ascii"))
+            digest.update(graph6)
             count += 1
         assert count == expected[outside_order]
         print("outside", outside_order, "cases", count, "positive", count)
-    print("certificate_digest", digest.hexdigest())
+    print("case_corpus_digest", digest.hexdigest())
 
 
 if __name__ == "__main__":

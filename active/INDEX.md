@@ -17,26 +17,31 @@ Kawarabayashi--Toft theorem that every seven-chromatic graph has a `K_7` or
 
 Selected audited inputs:
 
-- [four prescribed roots in a three-connected graph have a rooted
-  `K_4^-` model](../results/rooted_k4minus_four_roots.md);
 - [the double-cone theorem, two-near-full-model-bridges lemma and exact-cut
   normal form for a vertex-minimal nonliteral model](../results/hc7_k44_branch_model_and_double_cone.md);
-- [every exact seven-cut boundary has minimum degree at most
+- [every exact seven-cut boundary in a seven-connected target-free graph has
+  minimum degree at most
   three](../results/hc7_k44_fourconnected_seven_boundary_double_cone.md);
-- [the exterior of a literal core is three-connected](../results/hc7_literal_k44_exterior_threeconnectivity.md);
+- [the exterior of a literal core is connected and has no separator of
+  order at most two](../results/hc7_literal_k44_exterior_threeconnectivity.md);
 - [a four-portal exterior triangle is terminal](../results/hc7_k44_four_portal_triangle_completion.md);
 - [a three-portal exterior `K_4` is terminal except for the exact
-  tetrahedral profile, which spanning portal coverage excludes](../results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md);
-- [one hash-pinned cold audit covers the five local statements other than
-  the separately audited dense-boundary theorem](../results/hc7_k44_closure_local_normal_forms_audit.md).
+  tetrahedral profile, which spanning portal coverage excludes](../results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md).
+
+A [hash-pinned internal cold audit](../results/hc7_k44_closure_local_normal_forms_audit.md)
+covers the five local statements other than the separately audited
+dense-boundary theorem.
 
 ## Falsification checkpoint
 
-[Exact searches and certificate checks](experiments/k44_closure_falsification/README.md)
-find no counterexample through order eleven and eliminate the whole
-full-attachment non-clique seven-sum family.  These are bounded/family
-results only.  The sharp local survivor is the 19-contact tetrahedral
-profile, whose connectivity is four.
+[Computer-assisted exact searches and a written reduced-family
+argument](experiments/k44_closure_falsification/README.md)
+find no counterexample through order eleven and eliminate every
+seven-connected member of the full-attachment non-clique seven-sum family.
+The first conclusion is a computer-assisted finite result; the second is a
+written-unaudited reduction with computer-assisted base cases.  The sharp
+local survivor is the 19-contact tetrahedral profile, whose connectivity is
+four.
 
 The separate [literal labelled-trichotomy
 census](experiments/k44_literal_labelled_trichotomy/README.md) checks every
@@ -57,13 +62,15 @@ depend on Z3 and are bounded evidence only.
 
 Immediate barriers:
 
-- [a fat triangle with seven local paths and a split edge with six alternate
+- **Barrier/counterexample to local shortcut claims:** [a fat triangle with
+  seven local paths and a split edge with six alternate
   paths can both remain target-free](../barriers/hc7_k44_shortcut_certificate_barriers.md);
-- the existing core-sensitive trichotomy is the whole literal theorem in
-  structured form, not a proved intermediate capstone;
-- a component of an exact-cut complement may contain pieces of several
-  branch bags, so fullness to the cut cannot be counted as external
-  branch-set contact.
+- **Recorded route nonclosure:** [the existing core-sensitive trichotomy is
+  the whole literal theorem in structured form, not a proved intermediate
+  capstone](../results/hc7_k44_closure_local_normal_forms_audit.md#5-explicit-nonclosure);
+- **Recorded route nonclosure:** [a component of an exact-cut complement may
+  contain pieces of several branch bags](../results/hc7_k44_branch_model_and_double_cone_audit.md#exact-scope),
+  so fullness to the cut cannot be counted as external branch-set contact.
 
 ## Preserved secondary work
 

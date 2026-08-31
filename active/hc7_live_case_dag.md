@@ -1,7 +1,9 @@
-# Verification map for the live `HC_7` programme
+# Frozen verification map for the direct `HC_7` programme
 
-**Status:** verification map, not a new theorem.  Every mathematical arrow
-below is either linked to an audited result or marked open.  This file makes
+**Status:** point-in-time verification map for the frozen direct-`HC_7`
+programme, not a current status authority or a new theorem.  Terms such as
+“live” and “currently” below describe that historical programme.  Every
+mathematical arrow below is either linked to an audited result or marked open.  This file makes
 the exhaustiveness and descent obligations explicit; it does not prove
 `HC_7`.
 

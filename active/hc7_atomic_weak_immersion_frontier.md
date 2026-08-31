@@ -4,7 +4,8 @@
 after choosing a weak `K_7` immersion with exactly one binary collision.
 No current theorem shows that an arbitrary guaranteed weak immersion has
 this form, so this direction is not an exhaustive entry to `HC_7` and does
-not replace the bounded-interface primary target.
+not replace T44.  The bounded-interface programme that was primary when this
+laboratory was written is also frozen.
 
 ## 1. Conditional entry
 
@@ -72,12 +73,11 @@ first bad partial-quotient residue remain separate conditional obligations.
 
 ## 4. Frozen conditional target
 
-This two-bridge laboratory remains frozen during the opposite-shore response
-sprint.
-It should be reopened only if a new theorem connects an arbitrary
-collision-minimal weak immersion to the atomic case, or if the global
-bounded-interface work supplies a label-preserving composition mechanism
-that directly resolves the large one-star residue.
+This two-bridge laboratory is frozen under the T44 pivot.  It should be
+reopened only if a new theorem connects an arbitrary collision-minimal weak
+immersion to the atomic case, or if a new label-preserving composition
+theorem directly resolves the large one-star residue.  The bounded-interface
+programme is also frozen and is not a current route.
 
 ## Dependencies and guardrails
 

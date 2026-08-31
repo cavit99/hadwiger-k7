@@ -4,7 +4,7 @@
 conjectural.  The reductions listed here have written proofs and separate
 internal audits; those audits are not external peer review.  Further
 E5-specific casework is not part of the current concise manuscript or the
-active exceptional-centre route.
+current T44 campaign.
 
 ## 1. Auxiliary target
 
@@ -17,7 +17,7 @@ Write `K_7^-` for `K_7` with one edge deleted.  The auxiliary statement is
 > contains a `K_7^-` minor.
 
 This is stronger than the conditional extremal statement now needed for the
-critical host, namely the seven-connected `4n` theorem.  It would also imply
+critical host, namely the six-connected `4n` theorem.  It would also imply
 the older seven-connected `4n-2` theorem, but neither stronger assertion is
 needed in full generality to settle Norin--Totschnig Conjecture 21.  No
 counterexample to `(E5)` is known here, and `(E5)` is not proved.
@@ -506,10 +506,11 @@ Thus the two programmes now meet at one mathematical issue: turn a dense,
 internally five-connected lobe with five prescribed boundary roots into a
 rooted six-bag model, or preserve enough density under a strict descent.
 
-The gate also produced a direct theorem for the primary programme.  At an
+The gate also produced a direct theorem for the former critical-host
+programme.  At an
 essential-edge six-separation whose boundary contains a literal `K_4`, the
 two remaining boundary vertices have degree sum at least
-`15+q+\mathbf1_{rs}`.  The immediate campaign now aggregates that inequality
-over the strict-surplus safe-edge cover.  Further E5-only boundary census is
-frozen unless it yields an unbounded theorem transferable to that campaign
-or a genuine E5 counterexample.
+`15+q+\mathbf1_{rs}`.  At the 17 August snapshot, that campaign aggregated
+the inequality over the strict-surplus safe-edge cover.  The campaign is now
+frozen; further E5-only boundary census requires reactivation under the
+criteria in the authoritative ledger or a genuine E5 counterexample.

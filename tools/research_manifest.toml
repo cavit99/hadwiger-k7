@@ -82,7 +82,7 @@ status = "frozen"
 source = "active/hc7_atomic_weak_immersion_frontier.md"
 source_heading = "4. Frozen conditional target"
 active = false
-expected_source_sha256 = "dfb6f0484c277d59cdb77558f33c67d0543d5d8ee7a42d7009dbeb36b7840f64"
+expected_source_sha256 = "f059bcbc3b6b6b3298debbb1516c582aeaadecf09394b208b3374c753938dc50"
 scope = "a weak K7 immersion with exactly one binary collision, reduced to the arbitrary-subdivision two-bridge landing-star residue"
 label_fidelity = "the common frame, deficient roots, first-hit boundary, avoided landing star and branch-set ownership remain literal"
 separator_order = "a minimum contained q-b separator gives a response interface at order seven through nine; the survivor has every such separator of order at least ten"
@@ -109,7 +109,7 @@ status = "frozen"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = false
-expected_source_sha256 = "562fe1c68fdd150db8dc3a2735dd5d88ecefe9623644da3326b6d2d37a3b5d50"
+expected_source_sha256 = "80a9b0370fccb3c618e9a98a0c5f60617f10f83a13a316d370c812c9c6284b3b"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -9379,7 +9379,7 @@ title = "Every K7-minus-minor-free graph is six-colourable"
 kind = "target"
 status = "frozen"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
-source_heading = "1. Primary target and exact finishing reduction"
+source_heading = "1. Historical target and exact finishing reduction"
 active = false
 scope = "all finite graphs"
 label_fidelity = "the conclusion may be a six-colouring or, in a hypothetical minor-minimal counterexample, an explicit K7-minus minor model"
@@ -10434,7 +10434,7 @@ title = "A critical K7-minus host has at most 26 exceptional degree-eight vertic
 kind = "target"
 status = "conditional-target"
 source = "active/hc7_k7minus_seven_exceptional_frontier.md"
-source_heading = "1. Primary target and exact finishing reduction"
+source_heading = "1. Historical target and exact finishing reduction"
 active = false
 scope = "seven-connected seven-chromatic K7-minus-minor-free graphs whose every proper minor is six-colourable"
 label_fidelity = "the exceptional centres, selected independent triples, five literal roots, exterior components, and any final minor-model bags remain explicit"
@@ -19382,8 +19382,8 @@ keywords = ["K7 minus", "six connectivity", "degree eight", "edge codegree", "de
 
 [[verifiers]]
 id = "k7minus-sixconnected-degree-eight-low-codegree"
-path = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree_verify.py"
-sha256 = "d721c181a8388feb7901e8ab04f704c19679cfb56551752756a45733f28d6fdc"
+path = "results/hc7_k7minus_sixconnected_degree_eight_low_codegree_registered_verify.py"
+sha256 = "163b1afbc153816a6926325dfc5abe68902322545036e7ffcea7c53b8c687c33"
 timeout = 30
 expected_stdout = [
   "GREEN six-connected degree-eight low-codegree finite lemma",
@@ -19393,6 +19393,7 @@ expected_stdout = [
   "K6minus_free_local_classes=55",
   "augmentation_profiles=2035",
   "positive_K7minus_certificates=2031",
+  "negative_profiles=[('GLNM^_', (5, 6), (4, 4, 4, 4, 4, 4, 4, 4)), ('Gfwhmk', (0, 1), (4, 4, 4, 5, 4, 4, 4, 5)), ('Gfwhm{', (0, 1), (4, 4, 4, 5, 5, 4, 4, 6)), ('GxNg~k', (0, 1), (4, 4, 6, 4, 4, 6, 4, 6))]",
   "certificate_digest=8b9b31cae19b10a9e958a51dd2c8ef12193b655ec7ab2163b67b638dfc646501",
 ]
 
@@ -19429,10 +19430,21 @@ sha256 = "5d4cc91f168d5d0d8d89f2e4418478ffa713d7fd8d517a5567b27635ec194ac6"
 timeout = 30
 expected_stdout = [
   "GREEN returned three-component dense-boundary certificates",
+  "eight_edge_labelled=630",
   "eight_edge_isomorphism_classes=3",
+  "seven_edge_three_cubic_labelled=1260",
+  "seven_edge_three_cubic_isomorphism_classes=3",
+  "seven_edge_remaining_isomorphism_classes=4",
+  "seven_edge_further_eliminated_isomorphism_classes=3",
   "seven_edge_unhandled_isomorphism_classes=1",
+  "adjacent_cover_triggers=7-IV:03;7-V:01",
+  "strict_rooted_counts=7-IV:2,2,2,2;7-V:2,2,2,2",
+  "linear_witness_eta=7-IV:4,7-V:4,7-VI:5,7-VII:12@c10",
+  "type_VI_dual=R04+R13+R15+degree+upper1+lower2:5",
   "type_VI_bound=5",
+  "remaining_type_VII_recession_eta=c+2",
   "cross_lobe_compatible_pair_pairs=7-VI:11;7-VII:10",
+  "weighted_bounds=8-I:5/2,8-II:5/2,8-III:5/2,7-I:3,7-II:3,7-III:3,7-IV:4,7-V:4",
 ]
 
 [[claims]]
@@ -19764,6 +19776,98 @@ target = "graph_minors.partial_five_root_routing"
 kind = "uses"
 note = "Rolek--Song Lemma 1.7 supplies the required two-packet paths for every nonliteral complementary-neighbour pair."
 
+[[verifiers]]
+id = "rooted-k4minus-four-roots"
+path = "results/rooted_k4minus_four_roots_registered_verify.py"
+sha256 = "eeb07e7e5b0c1b2854544b77b9532a92669208d13dae879140d0db2d7c2e98df"
+timeout = 30
+requires = ["cc"]
+expected_stdout = [
+  "n=4 three_connected_labelled=1 assignment_upper_bound=1 all_green",
+  "n=5 three_connected_labelled=26 assignment_upper_bound=130 all_green",
+  "n=6 three_connected_labelled=1768 assignment_upper_bound=44200 all_green",
+  "n=7 three_connected_labelled=225096 assignment_upper_bound=28137000 all_green",
+]
+
+[[verifiers]]
+id = "k44-literal-adjacent-portal-census"
+path = "results/hc7_literal_k44_adjacent_portal_census_registered_verify.py"
+sha256 = "dfc8c1c75f8fe60e29a78f8722dc48d1cd658bec40a2c823917b4bf38059b9d8"
+timeout = 30
+requires = ["cc"]
+expected_stdout = [
+  "GREEN literal K4,4 adjacent-portal census",
+  "partitions=11880",
+  "total=26569 negative=5428",
+  "hist 4 4 4900",
+  "hist 4 5 240",
+  "hist 5 4 240",
+  "hist 5 5 48",
+  "special_five=48 crossing_edge_positive=192",
+  "profile_rows=5428",
+  "profile_sha256=c71d9fa9c62e9b002ac40374835c8e2f7fcf90622274055511a9844a18c0932e",
+]
+
+[[verifiers]]
+id = "k44-seven-boundary-double-cone"
+path = "results/hc7_k44_fourconnected_seven_boundary_double_cone_registered_verify.py"
+sha256 = "b093cd041b736b543158f8d538d5dd73c322f540864f6464161ab488fa9d1c36"
+timeout = 90
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "DOUBLE_CONE_ATLAS total=1044 positive=344 negative=700",
+  "connectivity_totals={0: 191, 1: 385, 2: 332, 3: 111, 4: 21, 5: 3, 6: 1}",
+  "connectivity_positive={0: 27, 1: 73, 2: 129, 3: 90, 4: 21, 5: 3, 6: 1}",
+  "minimum_degree_at_least_four=29 positive=29",
+  "negative_edge_histogram={0: 1, 1: 1, 2: 2, 3: 5, 4: 10, 5: 21, 6: 41, 7: 65, 8: 97, 9: 130, 10: 140, 11: 117, 12: 58, 13: 12}",
+  "maximal_negative_graph6=['FBfnO', 'FD^Ww', 'FDh}o', 'FN^Sg', 'F`urg', 'Fb]lg', 'FhNvO', 'Fh`}w', 'Fhfww', 'Floxo', 'FnTNG', 'Fnkpg', 'Fnz@O', 'FreRW', 'FxNgw', 'FyVwo', 'FyVyG', 'FyVz?', 'F}qtO', 'F~MQ_', 'F~ZC_']",
+  "minimum_degree_at_least_four_certificates=29",
+  "certificate_digest=d862876512b71717e4122aa9081b88b6731e21f59eb9eab0817f08f7215dd487",
+  "DOUBLE_CONE_CERTIFICATES_VALID 29 digest d862876512b71717e4122aa9081b88b6731e21f59eb9eab0817f08f7215dd487",
+]
+
+[[verifiers]]
+id = "k44-four-portal-triangle-completion"
+path = "results/hc7_k44_four_portal_triangle_completion_verify.py"
+sha256 = "1aaa5b12e0e9ad09024db2a87ad1a12aa84bc9474846359a3a862a55ce18d81d"
+timeout = 30
+expected_stdout = [
+  "core_models 1656",
+  "fallback_profiles 1140",
+  "orbits 10",
+  "orbit_sizes [36, 36, 36, 72, 96, 144, 144, 144, 144, 288]",
+  "sha256 755316af73023902cbe205ec2f0b914b25677a61a5fb77dc129567a46fe6f552",
+  "all_ten_certificates_valid",
+]
+
+[[verifiers]]
+id = "k44-three-portal-k4-tetrahedral-dichotomy"
+path = "results/hc7_k44_three_portal_k4_tetrahedral_dichotomy_verify.py"
+sha256 = "f337ddc96f7354c14e642c315bb4798b53be45f4e2ec2e0848a7304223c96576"
+timeout = 30
+expected_stdout = [
+  "core_models 3784",
+  "restricted_failures 1170",
+  "orbits 12 positive 9 negative 3",
+  "negative_profiles 70",
+  "orbit_sizes [2, 32, 32, 36, 36, 48, 48, 72, 144, 144, 288, 288]",
+  "sha256 95b9d40e6e9ff1778b364b0a883fe0d72e7f41f9f5d9258c31af215ea38272bf",
+  "tetrahedral_near_miss_orbits 3 quotient_edges 19",
+  "classification_and_certificates_valid",
+]
+
+[[verifiers]]
+id = "k44-shortcut-certificate-barriers"
+path = "barriers/hc7_k44_shortcut_certificate_barriers_registered_verify.py"
+sha256 = "727c868f6950fcba1c0fd0dce07a56e5f6ad5f580adef701cc81cb21ea054c78"
+timeout = 60
+requires = ["cc"]
+expected_stdout = [
+  "fat_profiles=15 unexpected_status=0 max_quotient_edges=18",
+  "split_profiles=18 unexpected_status=0 max_quotient_edges=15",
+  "PASS K4,4 shortcut-certificate barriers",
+]
+
 [[claims]]
 id = "hc7.target.k44_sevenconnected_closure"
 title = "Seven-connected K4,4 closure"
@@ -19772,7 +19876,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "f2728580e4bb8d1987d3d5a6750c30d958d403fc6cac5b2beb2dae2b82fe40a1"
+expected_source_sha256 = "1c78291968f890a2915a54d0b89fb9f77f91eb9586e07271dd62374dc95b316e"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19787,7 +19891,7 @@ allowed_exits = [
 does_not_prove = [
   "the still-open literal portal-exchange trichotomy",
   "the still-open nonliteral model-trace rotation theorem",
-  "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft handoff is applied",
+  "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
   "HC7",
 ]
 keywords = ["K4,4 minor", "K7 minus", "seven connectivity", "literal core", "branch-model rotation"]
@@ -19799,7 +19903,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/rooted_k4minus_four_roots.md"
 source_heading = "Theorem"
-active = true
+active = false
 audit = "results/rooted_k4minus_four_roots_audit.md"
 expected_source_sha256 = "c848504c758371545c27e60f577c06d096f5fd61714bfcab37f4cd80402af598"
 scope = "any four prescribed distinct vertices of an arbitrary three-connected finite graph"
@@ -19823,7 +19927,7 @@ source = "results/hc7_k44_branch_model_and_double_cone.md"
 source_heading = "Branch-model normal forms and a double-cone theorem for `K_7^-`"
 active = true
 audit = "results/hc7_k44_branch_model_and_double_cone_audit.md"
-expected_source_sha256 = "9385a53db73abc8c7a35a78bbe243bfc6fa18fba8b367ef0d0f9248e9961a87a"
+expected_source_sha256 = "3aa9c7b2fb013d8da68695d6e4285c4829695fde2e6fa0c8e2163592d7b50c5f"
 scope = "double cones over five-connected graphs and a vertex-minimal universal-T44 counterexample with a displayed K4,4 model"
 label_fidelity = "the two apex bags, the eight K4,4 model labels and the internal branch edge remain explicit"
 separator_order = "every internal edge of every nontrivial branch bag lies in an exact seven-cut in a vertex-minimal T44 counterexample"
@@ -19867,7 +19971,7 @@ keywords = ["exact seven-cut", "double cone", "pentagonal bipyramid", "sparse bo
 
 [[claims]]
 id = "hc7.k44_literal_exterior_threeconnectivity"
-title = "The exterior of a literal K4,4 core is three-connected"
+title = "The exterior of a literal K4,4 core has no separator of order at most two"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_literal_k44_exterior_threeconnectivity.md"
@@ -19875,11 +19979,12 @@ source_heading = "Theorem 3.1"
 active = true
 audit = "results/hc7_literal_k44_exterior_threeconnectivity_audit.md"
 expected_source_sha256 = "4b863b62699f62131e874d22bda0af127fb29c73de7da82da46c1f3d3e34811a"
-scope = "seven-connected K7-minus-minor-free graphs containing a literal K4,4 core S"
+scope = "seven-connected K7-minus-minor-free graphs containing a literal K4,4 core S; conventional three-connectivity is concluded when the exterior has at least four vertices"
 label_fidelity = "the eight core vertices, exterior components and portal sets remain literal"
 separator_order = "cuts of order zero, one and two in the exterior are excluded"
 conclusions = [
-  "the exterior obtained by deleting the literal K4,4 core is three-connected",
+  "the exterior obtained by deleting the literal K4,4 core is connected and no set of at most two vertices separates two nonempty exterior sets",
+  "if the exterior has at least four vertices, it is three-connected",
 ]
 does_not_prove = [
   "the weighted literal-core trichotomy",
@@ -19921,7 +20026,7 @@ source = "results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md"
 source_heading = "Theorem 1 (three-portal `K_4` dichotomy)"
 active = true
 audit = "results/hc7_k44_three_portal_k4_tetrahedral_dichotomy_audit.md"
-expected_source_sha256 = "407aba726108fd83b41834505c5220312b16584ec91ad34b9a6c0aeb0ad3d554"
+expected_source_sha256 = "115dcd59a36ae51db6dd59ecd4c8f8a09f0da91e1e0d6c974d7935418ca68ca4"
 scope = "a literal K4,4 core and four pairwise adjacent disjoint connected exterior bags"
 label_fidelity = "each exterior bag retains its actual portal set in the eight-vertex core"
 hypotheses = [
@@ -19968,17 +20073,17 @@ keywords = ["K4,4", "fat triangle", "split branch edge", "finite barrier", "shor
 
 [[claims]]
 id = "hc7.laboratory.k44_closure_falsification"
-title = "Exact bounded and full-attachment T44 falsification checkpoint"
+title = "Exact bounded and reduced full-attachment T44 falsification checkpoint"
 kind = "laboratory"
 status = "written-unaudited"
 source = "active/experiments/k44_closure_falsification/README.md"
 source_heading = "T44 exact falsification checkpoint (22 August 2026)"
 active = false
-expected_source_sha256 = "fba2038766f8eae160f20870e82050a09808d8fbc8e407e237ef969b6e8c8986"
-scope = "seven-connected graphs through order eleven and the full-attachment non-clique seven-sum family"
+expected_source_sha256 = "9539a8d24a5265e07473a7d8cc2c7307ae43a7dc5f0430835ad9750d4e3e7c8f"
+scope = "seven-connected graphs through order eleven and seven-connected members of the full-attachment non-clique seven-sum family, using written reductions for outside orders two and three, 105 searched representatives for outside orders four through seven, and monotone reduction above seven"
 conclusions = [
   "no T44 counterexample occurs through order eleven",
-  "the unbounded full-attachment non-clique seven-sum family is target-positive after reduction to 105 edge-minimal cases",
+  "every seven-connected member of the unbounded full-attachment non-clique seven-sum family is target-positive after reduction to 105 edge-minimal cases",
 ]
 does_not_prove = [
   "T44",
@@ -20014,10 +20119,10 @@ does_not_prove = [
 keywords = ["literal K4,4", "labelled trichotomy", "bounded census", "Z3", "portal weights"]
 
 [[relations]]
-source = "hc7.target.k44_sevenconnected_closure"
+source = "hc7.k44_branch_model_normal_forms"
 target = "graph_minors.rooted_k4minus_four_roots"
 kind = "uses"
-note = "The rooted diamond supplies the four-root exterior minor used by the literal and double-cone reductions."
+note = "The rooted diamond supplies the four-root model used inside the audited double-cone theorem."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
@@ -20035,7 +20140,7 @@ note = "Every exact seven-cut returned by a minimal nonliteral branch edge has a
 source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.k44_literal_exterior_threeconnectivity"
 kind = "uses"
-note = "Deleting a literal K4,4 core leaves the three-connected exterior on which the portal-exchange obligation is posed."
+note = "Deleting a literal K4,4 core leaves a connected exterior with no separator of order at most two; for order at least four it is three-connected."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"

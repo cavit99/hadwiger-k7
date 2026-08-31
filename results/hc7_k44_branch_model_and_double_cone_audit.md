@@ -9,7 +9,12 @@ stated in the source.
 [`hc7_k44_branch_model_and_double_cone.md`](hc7_k44_branch_model_and_double_cone.md)
 
 **Source SHA-256:**
-`9385a53db73abc8c7a35a78bbe243bfc6fa18fba8b367ef0d0f9248e9961a87a`
+`3aa9c7b2fb013d8da68695d6e4285c4829695fde2e6fa0c8e2163592d7b50c5f`
+
+This hash refresh records only a corrected provenance link for the separate
+shortcut-barrier verifier hashes and an exact small-order qualification in
+the concluding status summary. No theorem statement, proof, verifier,
+certificate, or audit verdict changed.
 
 This adjacent note is only a wrapper around the already completed
 [independent internal cold audit](hc7_k44_closure_local_normal_forms_audit.md).

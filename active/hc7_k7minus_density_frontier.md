@@ -1,9 +1,13 @@
 # Density frontier for the `K_7^-` six-colour route
 
-**Status:** conditional sufficient frontier; not a proof of the `K_7^-`
-six-colour conjecture or of `HC_7`.  The `4n-2` extremal theorem below remains
-open and would settle Conjecture 21, but the direct critical-host programme is
-the active route.  Its computation-free critical-host entrance,
+**Status:** frozen conditional sufficient frontier; not a proof of the
+`K_7^-` six-colour conjecture or of `HC_7`.  The `4n-2` extremal theorem below
+remains open and would settle Conjecture 21, but this direct critical-host
+programme is no longer the active route.  T44 is the current completion
+target.  References below to the “active,” “current,” or “immediate”
+programme, and the bounds 25/24, describe the 9 August 2026 snapshot; the
+later audited defect ladder strengthens the frozen critical-host chain to
+27/26.  The frozen programme's computation-free critical-host entrance,
 seven-cut reduction, safe degree-seven contraction, and strict-surplus
 labelled-separator-shore theorem have written proofs with separate GREEN
 internal audits.  The same is true of the order-six-cut localisation after

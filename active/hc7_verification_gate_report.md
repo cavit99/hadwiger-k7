@@ -8,10 +8,11 @@ status remains governed by [`RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md), and
 the reconstructed case graph is
 [`hc7_live_case_dag.md`](hc7_live_case_dag.md).
 
-**Current supersession:** this report predates the rooted-helper closure and
-the 9 August shift to Norin--Totschnig Conjecture 21 as the sole active
-target.  It remains point-in-time verification provenance for the frozen
-direct-`HC_7` programme; consult the ledger for current conclusions.
+**Current supersession:** this report predates the rooted-helper closure, the
+9 August shift to Norin--Totschnig Conjecture 21, and the 22 August shift to
+T44 as the sole active completion target.  It remains point-in-time
+verification provenance for the frozen direct-`HC_7` programme; consult the
+ledger for current conclusions.
 
 ## 1. Purpose
 
