@@ -1,0 +1,9 @@
+z3_version=4.16.0 networkx_version=3.6.1
+symbolic_exact order=4 status=UNSAT
+symbolic_exact order=5 status=UNSAT
+symbolic_exact order=6 status=UNSAT
+atlas_spanning order=4 hosts=1 status=UNSAT host_digest=62073900de6d9451c02333f80b3c4de1105edb4559989fee6cfa91c1365d102b
+atlas_spanning order=5 hosts=3 status=UNSAT host_digest=cf522cd28bc5df189b4691fde206d7c45fda756359d87686e5a6b901137d26c7
+atlas_spanning order=6 hosts=17 status=UNSAT host_digest=5a698eceb9def652a91cada55716a9df0b9a13b195cbd0fbe59bd643fdcb488d
+atlas_spanning order=7 hosts=136 status=UNSAT host_digest=af496d74518fb6a0126ac240981c6201a0d281fd1324f95033ae30eea291eb87
+GREEN bounded literal-K44 minimum-blocker bisection screen
