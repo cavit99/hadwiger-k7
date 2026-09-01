@@ -1,0 +1,10 @@
+order_R=3
+minimum_relative_boundary=7
+tight_nonempty_sets=6
+tight_proper_sets=5
+unique_common_R_neighbours=1
+joint_contact_rank=3
+anchored_disjoint_pairs=7
+minimum_total_defect=2
+degree_seven_compatible=True
+GREEN local core-concentrated bisection incidence barrier
