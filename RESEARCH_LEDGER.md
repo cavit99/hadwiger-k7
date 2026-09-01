@@ -21,9 +21,12 @@ This file is the sole authority for the present research frontier.
    whether every `K_7^-`-minor-free graph is six-colourable. T44 is the sole
    active completion target because it would prove this refinement.
 3. **Immediate structural laboratory:** the literal-core route is reduced to
-   a singleton all-edge atom whose crossing blockers have exact one-resource
-   overlap and bipartite order-seven boundaries; the nonliteral labelled
-   branch-model rotation obligation remains separate.
+   two exact residues.  A minimum nonsingleton crossing blocker is
+   three-connected of minimum degree at least four, with sharply classified
+   three-cuts; an adjacent singleton pair has an exact contraction trace,
+   and its two-component literal-shore split has explicit separator and
+   endpoint-miss profiles.  The nonliteral labelled branch-model rotation
+   obligation remains separate.
 
 ## Current frontier
 
@@ -58,6 +61,16 @@ certificate is retained. The exact encoding, checker, counts and digests are
 preserved in the [weighted-splitter
 experiment](active/experiments/k44_literal_weighted_splitter/README.md).
 
+A more local hostile screen attacks the remaining minimum-blocker
+bisection directly.  Its complete labelled encoding is UNSAT through
+blocker order six, and a separate fixed-host encoding is UNSAT on all 157
+three-connected graph-atlas hosts of orders four through seven.  The latter
+already uses only spanning connected bisections.  Z3 remains the decisive
+UNSAT trust boundary and no independently checkable certificate is retained;
+the exact formulas, host digests, output and independent finite-encoding
+audit are preserved in the [minimum-blocker bisection
+experiment](active/experiments/k44_literal_minimum_blocker_bisection/README.md).
+
 A separate written-unaudited family reduction treats seven-connected
 full-attachment seven-sums
 
@@ -87,12 +100,25 @@ The current direct inputs are:
   at least four vertices, it is three-connected;
 - the four-portal exterior-triangle completion theorem;
 - the three-portal exterior-`K_4` dichotomy, with its tetrahedral exception
-  excluded in the spanning case by global portal coverage; and
-- the singleton-atom and one-resource blocker reduction: absent a terminal
-  configuration or a safe contraction, every minimum all-contractible-edge
-  tight atom is a singleton; every crossing blocker meets its seven-vertex
-  neighbourhood exactly in the outside edge endpoint, and the blocker
-  boundary is bipartite with shore orders three and four.
+  excluded in the spanning case by global portal coverage;
+- the singleton-atom and exact one-resource blocker theorem, which is the
+  direct entrance from failure of every safe contraction to the singleton
+  atom and its crossing-boundary normal form;
+- the tight-boundary and minimum-blocker theorem: every connected tight
+  exterior shore has an actual bipartite `3`-by-`4` seven-boundary, while a
+  minimum nonsingleton crossing blocker is three-connected of minimum degree
+  at least four, has all five non-atom resources multiply attached, and has
+  the stated exact three-cut profiles;
+- the contraction-trace theorem for an adjacent singleton pair: the edge lies
+  in an exact seven-cut with two or three complementary components; the
+  three-component case puts one literal shore and one exterior vertex on a
+  subcubic boundary, while the two-component case is either a whole-shore
+  split or has a rooted `K_5` with universal endpoint-contact bounds; and
+- the exact shore-split profile theorem: an unbalanced split has one connected
+  tight small shore and reduces to an order-one or order-two attachment
+  separator, while a balanced `2+2` split has the displayed exact endpoint
+  miss types and, when both one-endpoint miss types occur, their forced
+  cross-nonedges.
 
 These promoted results have adjacent hash-pinned GREEN internal audits.
 Their deterministic finite components are registered in the research
@@ -101,30 +127,53 @@ prove T44, Conjecture 21 or `HC_7`.
 
 ### Two open obligations
 
-1. **Literal singleton-atom completion.** Exclude the audited singleton
-   all-edge atom together with the complete system of exact one-overlap
-   crossing blockers in a terminal-free labelled exterior. This yields a
-   safe contraction, induction gives the pure labelled trichotomy, and the
-   whole literal core joins its six-bag outcome to the target.
+1. **Literal exact-residue completion.** Close both audited outcomes of a
+   minimum crossing blocker.  For a nonsingleton blocker, prove the precise
+   minimum-degree-four boundary-bisection lemma.  For a singleton blocker,
+   eliminate the exact contraction traces: the core-concentrated rooted-contact
+   profile, the unbalanced and balanced literal-shore split profiles, and the
+   three-component whole-shore trace.  This yields a safe contraction,
+   induction gives the pure labelled trichotomy, and the whole literal core
+   joins its six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.** Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target. Exact cuts alone do not provide
    laminarity, a peel side or preserved branch ownership.
 
-The literal route now has a substantially sharper unbounded intermediate
-theorem. Every non-singleton atom is eliminated. For the remaining singleton
-`a`, `N_G(a)` is a `3`-by-`4` bipartite exact seven-cut. Every blocker `X` of
-a crossing contractible edge has a second `3`-by-`4` bipartite exact
-seven-cut and meets `N_G(a)` in exactly the outside endpoint `b`. If
-`|X cap N_C(a)|>=2`, at least two of those atom neighbours are
-non-cutvertices of `G[X]`; an adjacent singleton blocker gives two
-degree-seven vertices with the unique common neighbour `b` and disjoint
-label sets. The precise missing mechanism is the singleton all-edge atom
-completion lemma recorded in the technical frontier. The computation-free
-induction base remains exterior order at most six; the order-seven and newer
-finite screens are bounded evidence only. The weighted splitter theorem,
-the literal T44 branch and the nonliteral rotation obligation all remain
-open.
+The literal route now has three further audited unbounded reductions.  A
+minimum nonsingleton crossing blocker `X` is three-connected with
+`delta(G[X])>=4`; every one of its five non-atom boundary resources has at
+least two neighbours in `X`, deleting a specified atom-neighbour leaves all
+six other resources represented, and every three-cut has one of two exact
+resource-distribution profiles.  The missing nonsingleton statement is now
+a single boundary-bisection lemma whose positive outcome feeds an explicit
+two-helper `K_7^-` construction.
+
+Those three-cut profiles do not by themselves permit whole-component
+bisection.  The technical frontier records an explicit profile
+`K_3 join (3K_2)` which satisfies all preceding local consequences but leaves
+two helper defects, hence only nineteen guaranteed contacts, whenever the
+three components are kept intact.  Splitting one component closes that
+profile, so this is a route nonclosure rather than a counterexample.  The
+precise repair is an intra-component nonseparating-transversal lemma.
+
+For a singleton blocker `p`, the adjacent edge `ap` has an exact contraction
+cut.  A three-component response has a subcubic boundary consisting of
+`a,p`, one literal shore and one exterior vertex.  A two-component response
+is either core-concentrated, giving a rooted `K_5` which each endpoint meets
+in at most three bags, or splits the opposite literal shore.  In the latter
+case the unbalanced split has a connected tight small shore, places the
+unique common neighbour in the large component, and forces an order-one
+attachment separator when the fifth boundary vertex is exterior (or the
+specified order-two core separator when it is a core vertex).  The balanced
+  `2+2` split is reduced to exact endpoint-miss types and, when both
+  one-endpoint miss types occur, their forced cross-nonedges.
+
+These results identify the remaining mechanisms; they do not eliminate
+them.  The computation-free induction base remains exterior order at most
+six, and all order-seven and newer finite screens are bounded evidence only.
+The weighted splitter theorem, the literal T44 branch, T44, Conjecture 21,
+and the nonliteral rotation obligation all remain open.
 
 ## Durable recent results outside the active spine
 

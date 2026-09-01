@@ -19895,7 +19895,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "d32fd8d7d381369bd0c9f59d6d9fce5439aac5817e900cd449ace7d6920f92b6"
+expected_source_sha256 = "915f1c64239efa81dc21073cf3173a2d4b6478e7ae80603fb6183ce977089760"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19908,7 +19908,7 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the still-open literal singleton all-edge atom completion lemma",
+  "the still-open literal minimum-blocker bisection and adjacent-singleton trace completion lemmas",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
   "HC7",
@@ -20133,6 +20133,90 @@ does_not_prove = [
 keywords = ["literal K4,4", "weighted splitter", "singleton atom", "exact seven-cut", "one-resource overlap"]
 
 [[claims]]
+id = "hc7.k44_tight_boundary_minimum_blocker"
+title = "Tight literal boundaries and minimum nonsingleton crossing blockers"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_tight_boundary_and_minimum_blocker.md"
+source_heading = "Theorem 1.1 (tight boundaries and minimum crossing blockers)"
+active = true
+audit = "results/hc7_k44_tight_boundary_and_minimum_blocker_audit.md"
+expected_source_sha256 = "384150b962a3e86848622e78cd711fac3d27b1bfcedbc22a1ce8adb2d7127b90"
+scope = "connected tight shores and minimum crossing blockers arising from the singleton all-edge atom in a seven-connected target-free literal K4,4 host"
+label_fidelity = "the literal shores, both exact seven-boundaries, all five non-atom resources and every component contact remain explicit"
+hypotheses = [
+  "the host is finite, simple, seven-connected and K7-minus-minor-free",
+  "the host contains the specified literal K4,4 and X is a minimum connected tight blocker of a crossing three-contractible edge",
+]
+conclusions = [
+  "every connected tight exterior shore has an actual seven-cut boundary whose induced graph is properly bipartite with class orders three and four",
+  "a minimum crossing blocker is either a singleton or is three-connected with minimum degree at least four",
+  "in the nonsingleton case every one of the five non-atom resources has at least two neighbours in the blocker",
+  "a specified atom-neighbour p leaves all six other resources represented after deletion and sees at most two of the five non-atom resources",
+  "every three-cut leaves at most three components, with exactly the two stated resource-distribution profiles in the three-component case",
+  "the displayed two-helper bisection inequality forces an explicit K7-minus minor model",
+]
+does_not_prove = [
+  "the minimum-degree-four boundary-bisection lemma",
+  "the singleton-blocker contraction profiles",
+  "the weighted splitter theorem or full labelled trichotomy",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "tight boundary", "minimum blocker", "three connectivity", "boundary bisection"]
+
+[[claims]]
+id = "hc7.k44_adjacent_singleton_contraction_trace"
+title = "Exact contraction trace of an adjacent singleton pair"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_adjacent_singleton_contraction_trace.md"
+source_heading = "1. Theorem"
+active = true
+audit = "results/hc7_k44_adjacent_singleton_contraction_trace_audit.md"
+expected_source_sha256 = "174baaa7a01d75048575760387f568bbf2ace15cef61e10a2dd5ed35372ca2ef"
+scope = "an adjacent exterior pair in a vertex-minimal seven-connected K7-minus-minor-free graph containing a specified literal K4,4"
+label_fidelity = "the adjacent endpoints, exact seven-cut, literal shores, complementary components and every rooted K5 branch set remain explicit"
+separator_order = "the adjacent edge lies in an exact seven-cut with two or three complementary components"
+conclusions = [
+  "a three-component trace has one whole literal shore and one exterior vertex among the five additional cut vertices, subcubic cut boundary and the opposite shore split across at least two components",
+  "a two-component trace either splits the literal shore around a cut containing one whole shore or concentrates all residual core vertices in one component",
+  "in the core-concentrated case there is a rooted K5, each endpoint sees at most three bags of every such model, and their total number of neighbours in the five-set is at most five",
+  "the core-concentrated boundary has a proper three-by-four bipartition extending the literal shores, with the endpoints in opposite classes",
+]
+does_not_prove = [
+  "elimination of any contraction-trace alternative",
+  "the adjacent-singleton case or literal K4,4 case of T44",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "adjacent singleton", "contraction cut", "rooted K5", "shore trace"]
+
+[[claims]]
+id = "hc7.k44_adjacent_singleton_shore_split_profiles"
+title = "Exact shore-split profiles for an adjacent singleton pair"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_adjacent_singleton_shore_split_profiles.md"
+source_heading = "1. Setting and theorem"
+active = true
+audit = "results/hc7_k44_adjacent_singleton_shore_split_profiles_audit.md"
+expected_source_sha256 = "9234ff2c545608e7dcb3572dff3875137cbd2978a209826196dc111153d555ae"
+scope = "the two-component whole-shore contraction trace of an adjacent singleton pair with its exact neighbourhood identities"
+label_fidelity = "the adjacent endpoints, common neighbour, whole cut shore, fifth boundary vertex, opposite-shore split and attachment sets remain explicit"
+separator_order = "the unbalanced exterior-fifth-vertex case forces a one-vertex set-Menger separator; the core-fifth-vertex case forces the displayed two-core-vertex separator"
+conclusions = [
+  "in an unbalanced split the small shore minus its unique core vertex is nonempty and connected with the exact displayed seven-boundary",
+  "the common neighbour lies in the large component and four displayed endpoint, fifth-vertex and core adjacencies are absent",
+  "the two relevant large-component attachment sets have an order-one separator when the fifth boundary vertex is exterior, or the displayed order-two core separator when it is a core vertex",
+  "in a balanced two-plus-two split every residual component has one of the stated endpoint-miss types, with exact cross-nonedges when both one-endpoint types occur",
+]
+does_not_prove = [
+  "elimination of the unbalanced or balanced shore split",
+  "the adjacent-singleton case or literal K4,4 case of T44",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "adjacent singleton", "shore split", "set-Menger separator", "endpoint miss profile"]
+
+[[claims]]
 id = "hc7.barrier.k44_shortcut_certificates"
 title = "Local fat-triangle and split-edge path counts do not force K7-minus"
 kind = "barrier"
@@ -20224,6 +20308,29 @@ does_not_prove = [
 ]
 keywords = ["weighted splitter", "bounded census", "Z3", "small atom", "order eight"]
 
+[[claims]]
+id = "hc7.laboratory.k44_minimum_blocker_bisection"
+title = "Bounded hostile screen for the minimum-blocker bisection residue"
+kind = "laboratory"
+status = "audited-green"
+source = "active/experiments/k44_literal_minimum_blocker_bisection/README.md"
+source_heading = "Literal-`K_{4,4}` minimum-blocker bisection screen"
+active = false
+audit = "active/experiments/k44_literal_minimum_blocker_bisection/AUDIT.md"
+expected_source_sha256 = "edf25b53b9c71170c904fbedde6178a88f3be1576174739b32d9c6f68a7aee0a"
+scope = "the complete labelled minimum-blocker formula through blocker order six and the fixed-host spanning-bisection formula on every three-connected graph-atlas host through order seven"
+conclusions = [
+  "the complete labelled encoding is UNSAT at blocker orders four, five and six",
+  "the fixed-host encoding is UNSAT on all 1, 3, 17 and 136 three-connected graph-atlas hosts of orders four through seven respectively",
+  "the independent finite-encoding audit reproduces the pinned output and host digests",
+]
+does_not_prove = [
+  "the unbounded minimum-degree-four boundary-bisection lemma",
+  "the weighted splitter theorem or literal K4,4 case of T44",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "minimum blocker", "boundary bisection", "bounded census", "Z3"]
+
 [[relations]]
 source = "hc7.k44_branch_model_normal_forms"
 target = "graph_minors.rooted_k4minus_four_roots"
@@ -20262,9 +20369,51 @@ note = "A spanning portal-rich K4 is the other structural terminal outcome; glob
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_tight_boundary_minimum_blocker"
+kind = "uses"
+note = "The tight-boundary theorem reduces every minimum nonsingleton crossing blocker to the exact minimum-degree-four bisection residue."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_adjacent_singleton_contraction_trace"
+kind = "uses"
+note = "A singleton crossing blocker returns the exact two- or three-component contraction traces."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_adjacent_singleton_shore_split_profiles"
+kind = "uses"
+note = "The two-component whole-shore contraction trace reduces to exact unbalanced separator and balanced endpoint-miss profiles."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.k44_positive_atom_elimination"
 kind = "uses"
-note = "The exact contraction obstruction, atom elimination and one-resource blocker theorem isolate the remaining literal completion lemma at a singleton atom."
+note = "Failure of every safe contraction enters the exact literal residue through the singleton atom and its one-resource crossing-blocker normal form."
+
+[[relations]]
+source = "hc7.k44_tight_boundary_minimum_blocker"
+target = "hc7.k44_positive_atom_elimination"
+kind = "uses"
+note = "The all-edge-atom theorem supplies the singleton atom, crossing-edge normal form and exact one-resource blocker overlap."
+
+[[relations]]
+source = "hc7.k44_adjacent_singleton_shore_split_profiles"
+target = "hc7.k44_adjacent_singleton_contraction_trace"
+kind = "uses"
+note = "The contraction trace supplies the exact whole-shore two-component cut analysed by the profile theorem."
+
+[[relations]]
+source = "hc7.k44_adjacent_singleton_shore_split_profiles"
+target = "hc7.k44_tight_boundary_minimum_blocker"
+kind = "uses"
+note = "The unbalanced small shore is a connected tight set, so its exact boundary colouring comes from the tight-boundary theorem."
+
+[[relations]]
+source = "hc7.k44_adjacent_singleton_shore_split_profiles"
+target = "hc7.k44_positive_atom_elimination"
+kind = "uses"
+note = "The singleton-atom theorem supplies the exact adjacent-pair neighbourhood identities used throughout the profile theorem."
 
 [[relations]]
 source = "hc7.k44_positive_atom_elimination"
@@ -20295,6 +20444,12 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.laboratory.k44_weighted_splitter_hostile_screen"
 kind = "related_to"
 note = "The hostile screen supports the weighted-splitter route at order eight and in targeted higher-order atom probes without supplying an unbounded proof."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.laboratory.k44_minimum_blocker_bisection"
+kind = "related_to"
+note = "The independently audited bounded screen finds no local bisection survivor through blocker order seven without supplying an unbounded proof."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"

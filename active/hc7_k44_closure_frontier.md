@@ -111,6 +111,16 @@ The following results are promoted and separately internally audited.
 8. [Every such atom is in fact a singleton, and every crossing blocker has
    exact one-resource overlap with a bipartite order-seven
    boundary](../results/hc7_k44_positive_atom_elimination.md).
+9. [Every connected tight shore has an actual bipartite `3`-by-`4`
+   boundary; a minimum nonsingleton crossing blocker is three-connected of
+   minimum degree at least four and has two exact three-cut
+   profiles](../results/hc7_k44_tight_boundary_and_minimum_blocker.md).
+10. [An adjacent singleton edge has an exact contraction cut with a complete
+    two- versus three-component trace
+    dichotomy](../results/hc7_k44_adjacent_singleton_contraction_trace.md).
+11. [The two-component whole-shore trace has exact unbalanced separator and
+    balanced endpoint-miss
+    profiles](../results/hc7_k44_adjacent_singleton_shore_split_profiles.md).
 
 If the four bags span `C`, the tetrahedral exception is impossible: its
 total portal coverage is four, while seven-connectivity forces
@@ -155,63 +165,144 @@ evidence only, not an unbounded inference.  The source and exact output are
 preserved in the [labelled-trichotomy
 experiment](experiments/k44_literal_labelled_trichotomy/README.md).
 
-The audited [singleton-atom and exact one-resource blocker
-reduction](../results/hc7_k44_positive_atom_elimination.md) now supplies a
-sharper unbounded intermediate theorem.  For a three-contractible edge
-`uv`, contraction fails the boundary system exactly when a nonempty set
-`X subseteq V(C)-{u,v}` is tight and has both `u,v` in its boundary.  This
-includes disconnected and co-spanning witnesses; sets containing the
+The audited contraction obstruction is exact.  For a three-contractible
+edge `uv`, contraction fails the boundary system precisely when a nonempty
+set `X subseteq V(C)-{u,v}` is tight and has both `u,v` in its boundary.
+This includes disconnected and co-spanning witnesses; sets containing the
 contracted vertex preserve their preimage boundary and weight.
 
-If no terminal configuration and no safe edge exists, choose a minimum
-tight atom over the endpoints of **all** three-contractible edges.  Mader's
-trace lemma, an exact marked rooted partition, the finite seven-portal
-triangle theorem, and a seven-path literal-core linkage eliminate every
-two- and three-vertex atom.  Thus
+If no terminal configuration and no safe edge exists, the audited
+all-edge-atom theorem reduces a minimum tight atom to a singleton `A={a}`.
+Its exact neighbourhood is a bipartite `3`-by-`4` seven-cut.  For a crossing
+three-contractible edge `ab`, every connected tight blocker has normal form
 
 ```text
-A={a},    N_G(a)=B dotcup Q,    |B|+|Q|=7,    |Q|<=3,
+partial X = {a,b} dotcup K,    |K|=5,
 ```
 
-`C-a` is connected, and `G[N_G(a)]` is bipartite with shore orders three
-and four, extending the literal-core shore colouring on `Q`.
+and meets `N_G(a)` in exactly the exterior vertex `b`.  The blocker boundary
+is another bipartite `3`-by-`4` seven-cut.
 
-Now let `ab` be a crossing three-contractible edge and let `X` be any
-connected tight blocker.  With `P=X cap B`, the two exact boundaries have
-the following normal form:
+### 4.1 Nonsingleton minimum blocker
+
+Choose `X` of minimum order among the connected tight blockers of `ab` and
+put `H={b} dotcup K`.  If `X` is nonsingleton, the new minimum-blocker theorem
+proves all of the following:
 
 ```text
-N_G(a) = P dotcup {b} dotcup O,
-partial X = {a,b} dotcup K,
-|K|=5,    |P|>=1,    |O|>=1.
+G[X] is three-connected,    delta(G[X])>=4;
+every k in K has at least two neighbours in X;
+some p in N_X(a) has X-p full to H and |N_K(p)|<=2.
 ```
 
-In particular their common resource is exactly `b`; no core label lies in
-the overlap.  The graph `G[partial X]` is another bipartite graph with shore
-orders three and four.  If `|P|>=2`, at least two vertices of `P` are
-non-cutvertices of `G[X]`.  If `X={p}`, then `a,p` are adjacent degree-seven
-vertices with the unique common neighbour `b`, their label sets are
-disjoint, and
+Moreover, deleting any three-cut leaves at most three components.  In the
+three-component case either two `K`-resources meet all three components and
+the other three are component-exclusive, one per component; or one component
+contains every `X`-neighbour of both `a,b`, exactly three `K`-resources are
+not supported wholly inside a single component and meet that component, and
+each other component owns one of the remaining resources and meets at least
+two of the first three.
+
+The explicit closing criterion is now a bisection problem.  Find disjoint
+adjacent connected sets `U,V subseteq X`, orient them so that `U` sees `a`,
+and find `h_0 in H` with
 
 ```text
-|L(a) union L(b)|<=3,    |L(p) union L(b)|<=3.
+|H-(N_D(U) union {b,h_0})|
+  + |H-(N_D(V) union {h_0})| <= 1,    D=partial X.
 ```
 
-Every prescribed omitted literal-core portal either supports the full
-`B`--core linkage or returns a second exact seven-cut; when `Q` is nonempty,
-absence of all such cuts forces a `Q`-free component of `G[N_G(a)]` with
-nonzero odd bipartition imbalance.
+The two-helper construction then gives a `K_7^-` model with twenty quotient
+contacts.  This **minimum-degree-four boundary-bisection lemma** is the exact
+nonsingleton residue.
 
-The remaining **singleton all-edge atom completion lemma** is precise:
-exclude this singleton and its complete system of exact one-overlap
-crossing blockers in a terminal-free labelled exterior.  Once this lemma is
-proved, safe contraction and terminal lifting give induction from the
-computation-free base through order six and close the literal branch.
+A targeted local screen checks the full labelled formula through blocker
+order six and, independently, every three-connected graph-atlas host through
+order seven against the spanning-bisection subformula.  All instances are
+UNSAT.  This is audited bounded evidence with Z3 as the decisive trust
+boundary; it is not an unbounded inference.
 
-The known `W_5` profile still shows that a bare weighted-`K_4` assertion is
-false and that the triangle exit is indispensable.  The singleton-atom
-reduction does not prove the weighted splitter theorem, the literal branch,
-or T44.
+The three-cut profiles alone do **not** justify keeping their components
+intact in the bisection.  The exact route-nonclosure is the graph
+
+```text
+X_0 = K_3[Q] join (K_2[W_1] dotcup K_2[W_2] dotcup K_2[W_3]).
+```
+
+Let `Q={t_0,t_1,t_2}`.  On the boundary
+`D={a,b,c_1,c_2,e_1,e_2,e_3}`, give `a` the sole neighbour `t_0`, give each
+of `b,c_1,c_2` all six vertices in the three `W_i`, and give `e_i` precisely
+the two neighbours in `W_i`.  This profile is three-connected with minimum
+degree four, satisfies every relative boundary inequality and strict
+minimum-blocker inequality, has all five `K`-resources multiply attached,
+and has the special vertex `p=t_0`.  The three-cut `Q` realizes the first
+audited component profile exactly.
+
+Any nondegenerate spanning bisection which keeps each `W_i` intact has three
+exclusive-resource misses across its two sides.  Omitting one `h_0` removes
+only one, leaving defect two and hence only nineteen guaranteed quotient
+contacts.  This does not refute the bisection lemma: splitting a component
+closes immediately, for example `V={v_1}`, `U=X_0-{v_1}`.  It refutes only
+the attempted inference from the component profile to a
+component-respecting bisection.
+
+The smallest repair is an **intra-component nonseparating-transversal
+lemma**.  In the first three-cut profile, with common resources `c_1,c_2`
+and exclusive resources `e_i`, find distinct `i,j,k` and a nonempty connected
+`V subseteq W_i` such that `X-V` is connected, `V` sees
+`b,c_1,c_2,e_i`, and `X-V` sees `a,c_1,c_2,e_i,e_j`.  Taking
+`U=X-V` and `h_0=e_k` then gives total defect at most one.  The example
+above satisfies this repair; it is a route nonclosure, not a counterexample
+to the open lemma, the weighted splitter theorem, or T44.
+
+### 4.2 Singleton blocker and its contraction trace
+
+If `X={p}`, then `a,p` are adjacent degree-seven exterior vertices with
+unique common neighbour `b` and disjoint literal-core label sets.  In a
+vertex-minimal target-free host, contraction of `ap` returns an exact cut
+
+```text
+E={a,p} dotcup T,    |T|=5.
+```
+
+The complement has two or three components.  With three components, one
+literal shore and one exterior vertex form `T`; the opposite shore meets at
+least two components and `G[E]` is subcubic.  With two components, either:
+
+1. all core vertices outside `T` lie in one component, which contains a
+   `T`-rooted `K_5`; each of `a,p` meets at most three branch sets of every
+   such model, and their total number of neighbours in `T` is at most five;
+   or
+2. `T` consists of a whole literal shore `S_0` and one vertex `x`, while
+   both components meet the opposite shore.
+
+The second case now has exact profiles.  If the smaller side `R` contains a
+single opposite-shore core vertex `s`, then `R-s` is nonempty and connected.
+For an ordering `epsilon,eta` of `a,p`,
+
+```text
+N_G(R-s)=(E-{epsilon}) union {s},
+```
+
+`epsilon` has unique `R`-neighbour `s`, the forced nonedges are
+`eta s, eta x, epsilon x, xs`, and the common neighbour `b` lies in the
+large component `D`.  If `x` is exterior, `D` has a one-vertex separator
+between `N_D(x)` and `N_D(epsilon)`; if `x` is core, the two remaining
+opposite-shore core vertices separate those attachment sets.
+
+If the opposite shore splits `2+2`, then `x` is exterior.  Every component
+of a side after deleting its two core vertices misses `a` or `p`, misses at
+most two vertices of `E`, and meets at least as many of those two core
+vertices as it misses boundary vertices.  If both one-endpoint miss types
+occur, their miss sets are exactly `{a,u}` and `{p,v}` for `u,v in T`, with
+the forced cross-nonedges `pu,av`.
+
+The literal completion is therefore reduced to four explicit mechanisms:
+the nonsingleton bisection, the core-concentrated rooted-contact profile, the
+two shore-split profiles, and the three-component trace.  The known `W_5`
+profile still shows that a bare weighted-`K_4` assertion is false and that
+the triangle exit is indispensable.  None of these reductions proves the
+weighted splitter theorem, the literal branch, or T44.
 
 ## 5. Exact nonliteral obligation
 

@@ -26,16 +26,23 @@ Selected audited inputs:
   order at most two](../results/hc7_literal_k44_exterior_threeconnectivity.md);
 - [a four-portal exterior triangle is terminal](../results/hc7_k44_four_portal_triangle_completion.md);
 - [a three-portal exterior `K_4` is terminal except for the exact
-  tetrahedral profile, which spanning portal coverage excludes](../results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md); and
-- [a complete system of unsafe three-contractible edges reduces to a
-  singleton all-edge atom whose crossing blockers have exact one-resource
-  overlap and bipartite order-seven
-  boundaries](../results/hc7_k44_positive_atom_elimination.md).
+  tetrahedral profile, which spanning portal coverage excludes](../results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md);
+- [failure of every safe contraction reduces directly to a singleton
+  all-edge atom with exact one-resource crossing
+  blockers](../results/hc7_k44_positive_atom_elimination.md);
+- [a minimum nonsingleton crossing blocker is three-connected of minimum
+  degree at least four, with multiply attached resources and two exact
+  three-cut profiles](../results/hc7_k44_tight_boundary_and_minimum_blocker.md);
+- [an adjacent singleton edge has an exact two- or three-component
+  contraction trace](../results/hc7_k44_adjacent_singleton_contraction_trace.md);
+- [a two-component literal-shore split has exact unbalanced separator and
+  balanced endpoint-miss
+  profiles](../results/hc7_k44_adjacent_singleton_shore_split_profiles.md).
 
 A [hash-pinned internal cold audit](../results/hc7_k44_closure_local_normal_forms_audit.md)
 covers the five local statements other than the separately audited
-dense-boundary theorem.  The singleton-atom reduction has its own
-[hash-pinned GREEN internal audit](../results/hc7_k44_positive_atom_elimination_audit.md).
+dense-boundary theorem.  Each of the three newer literal reductions has its
+own adjacent hash-pinned GREEN internal audit.
 
 ## Falsification checkpoint
 
@@ -60,13 +67,23 @@ targeted four-regular small-atom probes at orders nine and ten.  It also
 finds no survivor.  Z3 remains the decisive UNSAT trust boundary, so this is
 bounded evidence rather than an unbounded inference.
 
+The [minimum-blocker bisection
+screen](experiments/k44_literal_minimum_blocker_bisection/README.md) checks
+the exact reduced local formula with a complete labelled encoding through
+blocker order six and a separate fixed-host encoding on all 157
+three-connected graph-atlas hosts through order seven.  It is independently
+audited bounded evidence without an independently checkable UNSAT
+certificate.
+
 ## Two open obligations
 
-1. **Literal singleton-atom completion.**  Exclude the audited singleton
-   all-edge atom and its complete system of exact one-overlap crossing
-   blockers in a terminal-free labelled exterior.  Safe contraction and
-   induction then give the pure labelled trichotomy; the whole literal core
-   joins its six-bag outcome to the target.
+1. **Literal exact-residue completion.**  Prove the minimum-degree-four
+   boundary-bisection lemma for a nonsingleton blocker, and eliminate the
+   exact adjacent-singleton contraction profiles: the core-concentrated
+   rooted-contact case, both two-component literal-shore splits, and the
+   three-component whole-shore trace.  Safe contraction and induction then
+   give the pure labelled trichotomy; the whole literal core joins its
+   six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.**  Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target.  Exact cuts alone do not give laminarity,
@@ -77,9 +94,17 @@ Immediate barriers:
 - **Barrier/counterexample to local shortcut claims:** [a fat triangle with
   seven local paths and a split edge with six alternate
   paths can both remain target-free](../barriers/hc7_k44_shortcut_certificate_barriers.md);
-- **Precise remaining literal lemma:** [exclude the singleton all-edge atom
-  with exact one-resource crossing blockers and the associated spanning
-  enclosure profiles](../results/hc7_k44_positive_atom_elimination.md#8-exact-unresolved-scope);
+- **Precise nonsingleton lemma:** [find the closing connected bisection in a
+  minimum-degree-four three-connected blocker](../results/hc7_k44_tight_boundary_and_minimum_blocker.md#8-finite-falsification-and-exact-remaining-lemma);
+- **Route nonclosure, not a counterexample:** [the `K_3 join (3K_2)` profile
+  shows that the three-cut components cannot simply be kept intact in that
+  bisection](hc7_k44_closure_frontier.md#41-nonsingleton-minimum-blocker).
+  Splitting one component closes the profile; the precise repair is the
+  intra-component nonseparating-transversal lemma;
+- **Precise singleton profiles:** [the contraction-trace
+  dichotomy](../results/hc7_k44_adjacent_singleton_contraction_trace.md#6-exact-scope)
+  and [the exact unbalanced and balanced literal-shore
+  splits](../results/hc7_k44_adjacent_singleton_shore_split_profiles.md);
 - **Recorded route nonclosure:** [a component of an exact-cut complement may
   contain pieces of several branch bags](../results/hc7_k44_branch_model_and_double_cone_audit.md#exact-scope),
   so fullness to the cut cannot be counted as external branch-set contact.
