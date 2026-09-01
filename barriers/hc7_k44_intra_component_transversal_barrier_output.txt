@@ -5,4 +5,12 @@ minimum_internal_degree=4
 repair_witnesses=0
 spanning_two_helper_witnesses=231
 explicit_cross_component_defects=1,0
-GREEN intra-component transversal barrier
+GREEN first intra-component profile
+second_order=9
+second_minimum_relative_value=7
+second_minimum_proper_connected_ab_value=8
+second_local_mode_witnesses=0
+b_requiring_cross_mode_witnesses=0
+b_free_cross_mode_witnesses=54
+second_explicit_cross_component_defects=1,0
+GREEN blocker repair barriers

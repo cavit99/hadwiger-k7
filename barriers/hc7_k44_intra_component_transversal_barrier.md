@@ -1,13 +1,13 @@
-# Barrier to a component-local transversal in a minimum blocker
+# Barriers to component-local and boundary-resource-redundant repairs
 
-**Status.**  Explicit abstract incidence counterexample to the
-profile-level intermediate lemma stated below, with an adjacent deterministic
-verifier and an independent internal audit.  It is not asserted to occur as
-a blocker in a seven-connected host, and it is not a graph counterexample to
+**Status.**  Two explicit abstract incidence counterexamples to the
+profile-level intermediate lemmas stated below, with an adjacent deterministic
+verifier and an independent internal audit.  Neither is asserted to occur as
+a blocker in a seven-connected host, and neither is a graph counterexample to
 the full boundary-bisection lemma, the weighted splitter theorem, the literal
 case of T44, or T44.
 
-## 1. Refuted statement
+## 1. First refuted statement
 
 The first exact three-cut profile in the audited
 [minimum-blocker theorem](../results/hc7_k44_tight_boundary_and_minimum_blocker.md)
@@ -101,14 +101,59 @@ defect is one, so the audited two-helper construction still produces the
 target.  Exhaustion finds 231 spanning two-helper witnesses in this profile.
 
 The next sufficient target must therefore allow cross-component bisections.
-One exact sufficient alternative is a connected set `U` such that `X-U` is
-connected and `H`-full, while `U` sees `a,b` and at least three of the five
-resources in `K`.  Choosing `h_0` among at most two missed `K`-resources then
-makes the first defect at most one and the second zero.  The displayed
-profile realizes this alternative.  No claim is made here that this
-cross-component condition must always occur.
+The condition that `U` see `b`, however, is extraneous: the two-helper
+criterion already gives the first helper its `b`-contact through the crossing
+edge `ab`.  The next profile makes this failure exact.
 
-## 4. Verification
+## 4. A second order-nine profile
+
+On the same graph and boundary resources, use instead
+
+```text
+N_X(a)  = {l1,r1,l2,r2,l3,r3};
+N_X(b)  = {t2};
+N_X(c1) = {l1,l2,l3};
+N_X(c2) = {r1,r2,r3};
+N_X(e_i)= {l_i,r_i}.
+```
+
+Again retain only `ab` on the boundary.  This profile satisfies every
+relative inequality, every strict proper connected `a,b`-seeing inequality,
+multiple attachment, and the first exact three-cut profile.  The special
+vertex can be `p=l_1`: it sees `a`, has `d_K(p)=2`, and `X-p` is `H`-full.
+
+There is no component-local witness because no `W_i` sees `b`.  There is
+also no connected bisection in which the first side sees `a,b` and at least
+three `K`-resources while its complement is `H`-full: every first side seeing
+`b` contains `t_2`, so its complement misses `b`.
+
+Nevertheless the full two-helper criterion again closes.  Take
+
+```text
+U={t0,l1,l2},       V=X-U,       h0=c2.
+```
+
+The set `U` sees `a` and exactly the three `K`-resources `c_1,e_1,e_2`;
+it need not see `b`.  The complement `V` is `H`-full, and the two defects are
+again `{e_3}` and the empty set.
+
+This refutes the proposed two-mode statement which required the
+cross-component side to see `b`.  The corrected exact sufficient alternative
+is:
+
+> `U` and `X-U` are nonempty and connected, `U` sees `a` and at least three
+> resources in `K`, and `X-U` is `H`-full.
+
+This is precisely the `H`-full-complement subcase of the two-helper
+criterion.  If the complement is `H`-full, its defect is zero and the first
+defect is at most one exactly when `h_0` can excuse one of at most two missed
+`K`-resources.  The remaining nonsingleton difficulty is therefore the
+**support-transfer case** in which the complement is not `H`-full and the
+one or two resources supported wholly on the first side must be coordinated
+with the single choice of `h_0`.  No unbounded claim is made that the corrected
+`H`-full-complement alternative always occurs.
+
+## 5. Verification
 
 Run
 
@@ -116,7 +161,7 @@ Run
 python3 barriers/hc7_k44_intra_component_transversal_barrier_verify.py
 ```
 
-The verifier exhausts all 511 nonempty vertex sets, every proper connected
-set seeing `a,b`, every component-local candidate, and every spanning
-two-helper bisection.  Its pinned output is in
+The verifier exhausts all 511 nonempty vertex sets for each profile, every
+proper connected set seeing `a,b`, every component-local candidate, and every
+relevant spanning two-helper bisection.  Its pinned output is in
 [`hc7_k44_intra_component_transversal_barrier_output.txt`](hc7_k44_intra_component_transversal_barrier_output.txt).

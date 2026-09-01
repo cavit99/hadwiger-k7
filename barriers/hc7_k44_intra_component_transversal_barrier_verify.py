@@ -185,4 +185,105 @@ print(f"minimum_internal_degree={min(pop(adj[v]) for v in range(N))}")
 print(f"repair_witnesses={repair_count}")
 print(f"spanning_two_helper_witnesses={len(spanning_witnesses)}")
 print("explicit_cross_component_defects=1,0")
-print("GREEN intra-component transversal barrier")
+print("GREEN first intra-component profile")
+
+# Second profile: the b-contact need not be supplied by U because Lemma 4.1
+# gives that contact through the crossing edge ab.
+support = [0] * 7
+support[0] = sum((1 << block[0]) | (1 << block[1]) for block in W)
+support[1] = 1 << 2
+for block in W:
+    support[2] |= 1 << block[0]
+    support[3] |= 1 << block[1]
+for i, block in enumerate(W):
+    support[4 + i] = (1 << block[0]) | (1 << block[1])
+
+minimum_value = 100
+strict_minimum = 100
+for mask in range(1, ALL + 1):
+    value = pop(internal_boundary(mask)) + pop(seen_resources(mask))
+    minimum_value = min(minimum_value, value)
+    assert value >= 7, (mask, value)
+    seen = seen_resources(mask)
+    if mask != ALL and connected(mask) and (seen & 0b11) == 0b11:
+        strict_minimum = min(strict_minimum, value)
+        assert value >= 8, (mask, value)
+
+assert all(pop(support[resource]) >= 2 for resource in range(2, 7))
+p = 3  # l1
+assert support[0] & (1 << p)
+assert pop(seen_resources(ALL ^ (1 << p)) & 0b1111110) == 6
+assert pop(seen_resources(1 << p) & 0b1111100) == 2
+for i, block in enumerate(W):
+    block_mask = sum(1 << vertex for vertex in block)
+    assert support[2] & block_mask
+    assert support[3] & block_mask
+    assert support[4 + i] == block_mask
+
+local_mode = 0
+for i, block in enumerate(W):
+    other_indices = [j for j in range(3) if j != i]
+    for local_mask in range(1, 1 << len(block)):
+        mask = sum(
+            1 << block[position]
+            for position in range(len(block))
+            if local_mask >> position & 1
+        )
+        if not connected(mask) or not connected(ALL ^ mask):
+            continue
+        seen_v = seen_resources(mask)
+        seen_u = seen_resources(ALL ^ mask)
+        v_required = (1 << 1) | (1 << 2) | (1 << 3) | (1 << (4 + i))
+        for j in other_indices:
+            u_required = (
+                (1 << 0)
+                | (1 << 2)
+                | (1 << 3)
+                | (1 << (4 + i))
+                | (1 << (4 + j))
+            )
+            if (
+                seen_v & v_required == v_required
+                and seen_u & u_required == u_required
+            ):
+                local_mode += 1
+assert local_mode == 0
+
+b_requiring_cross_mode = 0
+b_free_cross_mode = 0
+for u_mask in range(1, ALL):
+    v_mask = ALL ^ u_mask
+    if not connected(u_mask) or not connected(v_mask):
+        continue
+    seen_u = seen_resources(u_mask)
+    seen_v = seen_resources(v_mask)
+    if not (seen_u & 1):
+        continue
+    if pop(seen_u & 0b1111100) < 3:
+        continue
+    if pop(seen_v & 0b1111110) != 6:
+        continue
+    b_free_cross_mode += 1
+    if seen_u & 2:
+        b_requiring_cross_mode += 1
+assert b_requiring_cross_mode == 0
+assert b_free_cross_mode == 54
+
+explicit_u = (1 << 0) | (1 << 3) | (1 << 5)
+explicit_v = ALL ^ explicit_u
+explicit_h0 = 3
+seen_u = seen_resources(explicit_u)
+seen_v = seen_resources(explicit_v)
+first = h_mask & ~seen_u & ~(1 << 1) & ~(1 << explicit_h0)
+second = h_mask & ~seen_v & ~(1 << explicit_h0)
+assert connected(explicit_u) and connected(explicit_v)
+assert first == 1 << 6 and second == 0
+
+print("second_order=9")
+print(f"second_minimum_relative_value={minimum_value}")
+print(f"second_minimum_proper_connected_ab_value={strict_minimum}")
+print(f"second_local_mode_witnesses={local_mode}")
+print(f"b_requiring_cross_mode_witnesses={b_requiring_cross_mode}")
+print(f"b_free_cross_mode_witnesses={b_free_cross_mode}")
+print("second_explicit_cross_component_defects=1,0")
+print("GREEN blocker repair barriers")
