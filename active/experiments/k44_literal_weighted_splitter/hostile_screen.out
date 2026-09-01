@@ -1,0 +1,31 @@
+PASS bounded weighted-splitter hostile screen: no SAT survivor found
+networkx_version=3.6.1
+z3_version=5.1.0
+nauty_geng_version=2.9.3
+
+order8_geng_connected_minimum_degree3=2589
+order8_at_most_two_cubic=1655
+order8_three_connected=1619
+order8_not_three_connected=36
+order8_solver_statuses={'unsat': 1619}
+order8_three_connected_cubic_distribution={0: 422, 1: 582, 2: 615}
+order8_stable_records_sha256=77fc8b9575328030a69bd4da9b68f31f909168b4d00d909a87f3e7ecf8c0dc4a
+
+small_atom_order9_generated=16
+small_atom_order9_three_connected=16
+small_atom_order9_solver_statuses={'unsat': 16}
+small_atom_order9_pairs={(1,3),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3)}
+small_atom_order9_stable_records_sha256=2903c8e0435862474a558f189edf309c913f326675c71c9438ac33d611ef1aea
+
+small_atom_order10_generated=59
+small_atom_order10_three_connected=57
+small_atom_order10_not_three_connected=2
+small_atom_order10_solver_statuses={'unsat': 57}
+small_atom_order10_pairs={(1,3),(2,1),(2,2),(2,3),(3,0),(3,1),(3,2),(3,3)}
+small_atom_order10_stable_records_sha256=60d7e292ba123fe8dfdb2b178eef14636a7ea74c05d65eff8e3c9d078baae36c
+
+atlas_graph_counts={4: 1, 5: 3, 6: 17, 7: 136}
+atlas_terminal_model_totals={4: [10, 1, 0], 5: [159, 20, 0], 6: [3615, 469, 2], 7: [111765, 14509, 197]}
+
+trust_boundary=Z3 UNSAT; no independently checkable UNSAT certificate retained
+scope=bounded evidence only; no unbounded theorem inferred
