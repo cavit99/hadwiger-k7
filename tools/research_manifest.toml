@@ -19868,6 +19868,25 @@ expected_stdout = [
   "PASS K4,4 shortcut-certificate barriers",
 ]
 
+[[verifiers]]
+id = "k44-positive-atom-elimination"
+path = "results/hc7_k44_positive_atom_elimination_verify.py"
+sha256 = "fc6e0eb9173bfd24a9c823b0f5f0634ae10ed93a5a707e048268015733e97250"
+timeout = 30
+expected_stdout = [
+  "partitions 63987",
+  "q 1 positive 20",
+  "q 2 positive 77",
+  "q 3 positive 198",
+  "digest 48afac546bfa7bb92768b77581a774eeb735faf477a870886ea03f02b3a2c3f5",
+  "singleton_5_1_1_orbits 3",
+  "singleton_5_1_1_positive 2",
+  "singleton_5_1_1_survivor (55, 8, 64)",
+  "singleton_5_1_1_digest a0812a66b38384445f877fa4cac909b4bea11a13d36364643cf9e1100ae2c6e8",
+  "singleton_big_to_small_additions 10",
+  "singleton_addition_digest ce2f0641c454480ccd151d3d4679cc320b7a15abfd7a559622273240893e8565",
+]
+
 [[claims]]
 id = "hc7.target.k44_sevenconnected_closure"
 title = "Seven-connected K4,4 closure"
@@ -19876,7 +19895,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "5f1bca74ec2d16c6555fc2c37137e25ac5f6933850b4e331e3e1b607485d2a35"
+expected_source_sha256 = "d32fd8d7d381369bd0c9f59d6d9fce5439aac5817e900cd449ace7d6920f92b6"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19889,7 +19908,7 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the still-open literal small transverse-atom completion lemma",
+  "the still-open literal singleton all-edge atom completion lemma",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
   "HC7",
@@ -20053,7 +20072,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k44_weighted_splitter_small_atom_reduction.md"
 source_heading = "Theorem 4.1 (safe contraction or a small transverse atom)"
-active = true
+active = false
 audit = "results/hc7_k44_weighted_splitter_small_atom_reduction_audit.md"
 expected_source_sha256 = "bc4f7d38d94beed2d86b9858a2290fd1cb85af398653b5b16a5d3231f80eb2db"
 scope = "finite simple three-connected labelled graphs of order at least seven satisfying every seven-resource boundary inequality"
@@ -20079,6 +20098,39 @@ does_not_prove = [
   "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
 ]
 keywords = ["weighted splitter", "safe contraction", "tight set", "generalized atom", "literal K4,4"]
+
+[[claims]]
+id = "hc7.k44_positive_atom_elimination"
+title = "Unsafe literal-core contractions reduce to a singleton atom with exact one-resource blockers"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_positive_atom_elimination.md"
+source_heading = "Theorem 1.1 (all-edge atom reduction to a singleton)"
+active = true
+audit = "results/hc7_k44_positive_atom_elimination_audit.md"
+expected_source_sha256 = "775a4f5a6cf2f455a2ca54a232146fd2f4b22a1c88e7e38770b26bfb83df8e07"
+scope = "seven-connected K7-minus-minor-free graphs with a specified literal K4,4 core and exterior order at least seven"
+label_fidelity = "the eight literal core vertices, every exterior label set, both crossing exact boundaries and all rooted path bags remain explicit"
+hypotheses = [
+  "the host is seven-connected and K7-minus-minor-free",
+  "the displayed K4,4 core is literal and the exterior has order at least seven",
+  "the labelled exterior has no safe three-contractible edge",
+]
+conclusions = [
+  "a minimum tight atom over all three-contractible-edge endpoint pairs is a singleton a with connected complement",
+  "N(a) is an exact seven-cut whose induced graph is bipartite with shore orders three and four",
+  "every connected blocker X of a crossing contractible edge ab has boundary {a,b} union K with |K|=5 and meets N(a) exactly in b",
+  "every blocker boundary is bipartite with shore orders three and four",
+  "if X meets N_C(a) in at least two vertices then at least two of them are non-cutvertices of G[X]",
+  "an adjacent singleton blocker gives two degree-seven vertices with unique common neighbour b, disjoint label sets and the displayed three-portal union bounds",
+  "every prescribed omitted core portal yields either a saturated linkage or an exact seven-cut",
+]
+does_not_prove = [
+  "the singleton all-edge atom completion lemma",
+  "the weighted splitter theorem or full labelled trichotomy",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "weighted splitter", "singleton atom", "exact seven-cut", "one-resource overlap"]
 
 [[claims]]
 id = "hc7.barrier.k44_shortcut_certificates"
@@ -20210,9 +20262,15 @@ note = "A spanning portal-rich K4 is the other structural terminal outcome; glob
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_positive_atom_elimination"
+kind = "uses"
+note = "The exact contraction obstruction, atom elimination and one-resource blocker theorem isolate the remaining literal completion lemma at a singleton atom."
+
+[[relations]]
+source = "hc7.k44_positive_atom_elimination"
 target = "hc7.k44_weighted_splitter_small_atom_reduction"
 kind = "uses"
-note = "The exact contraction obstruction and generalized-atom reduction isolate the remaining literal completion lemma in four atom shapes."
+note = "The preceding generalized-atom theorem supplies the safe-contraction obstruction, contractible spanning tree and initial atom of order at most three."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"

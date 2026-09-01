@@ -27,14 +27,15 @@ Selected audited inputs:
 - [a four-portal exterior triangle is terminal](../results/hc7_k44_four_portal_triangle_completion.md);
 - [a three-portal exterior `K_4` is terminal except for the exact
   tetrahedral profile, which spanning portal coverage excludes](../results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md); and
-- [a complete system of unsafe three-contractible edges reduces to a tight
-  atom of order at most three with transverse companion
-  blockers](../results/hc7_k44_weighted_splitter_small_atom_reduction.md).
+- [a complete system of unsafe three-contractible edges reduces to a
+  singleton all-edge atom whose crossing blockers have exact one-resource
+  overlap and bipartite order-seven
+  boundaries](../results/hc7_k44_positive_atom_elimination.md).
 
 A [hash-pinned internal cold audit](../results/hc7_k44_closure_local_normal_forms_audit.md)
 covers the five local statements other than the separately audited
-dense-boundary theorem.  The weighted-splitter reduction has its own
-[hash-pinned GREEN internal audit](../results/hc7_k44_weighted_splitter_small_atom_reduction_audit.md).
+dense-boundary theorem.  The singleton-atom reduction has its own
+[hash-pinned GREEN internal audit](../results/hc7_k44_positive_atom_elimination_audit.md).
 
 ## Falsification checkpoint
 
@@ -61,11 +62,11 @@ bounded evidence rather than an unbounded inference.
 
 ## Two open obligations
 
-1. **Literal small transverse-atom completion.**  Exclude the four audited
-   atom shapes and their companion blockers in a terminal-free labelled
-   exterior.  Safe contraction and induction then give the pure labelled
-   trichotomy; the whole literal core joins its six-bag outcome to the
-   target.
+1. **Literal singleton-atom completion.**  Exclude the audited singleton
+   all-edge atom and its complete system of exact one-overlap crossing
+   blockers in a terminal-free labelled exterior.  Safe contraction and
+   induction then give the pure labelled trichotomy; the whole literal core
+   joins its six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.**  Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target.  Exact cuts alone do not give laminarity,
@@ -76,9 +77,9 @@ Immediate barriers:
 - **Barrier/counterexample to local shortcut claims:** [a fat triangle with
   seven local paths and a split edge with six alternate
   paths can both remain target-free](../barriers/hc7_k44_shortcut_certificate_barriers.md);
-- **Precise remaining literal lemma:** [for a three-vertex atom, obtain the
-  rooted positive-weight partition inside the one or two remaining
-  components](../results/hc7_k44_weighted_splitter_small_atom_reduction.md#6-exact-remaining-lemma-and-consequence);
+- **Precise remaining literal lemma:** [exclude the singleton all-edge atom
+  with exact one-resource crossing blockers and the associated spanning
+  enclosure profiles](../results/hc7_k44_positive_atom_elimination.md#8-exact-unresolved-scope);
 - **Recorded route nonclosure:** [a component of an exact-cut complement may
   contain pieces of several branch bags](../results/hc7_k44_branch_model_and_double_cone_audit.md#exact-scope),
   so fullness to the cut cannot be counted as external branch-set contact.

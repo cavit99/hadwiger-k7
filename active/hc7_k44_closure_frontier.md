@@ -108,6 +108,9 @@ The following results are promoted and separately internally audited.
 7. [The exact obstruction to a safe weighted contraction reduces every
    complete blocker system to a tight atom of order at most
    three](../results/hc7_k44_weighted_splitter_small_atom_reduction.md).
+8. [Every such atom is in fact a singleton, and every crossing blocker has
+   exact one-resource overlap with a bipartite order-seven
+   boundary](../results/hc7_k44_positive_atom_elimination.md).
 
 If the four bags span `C`, the tetrahedral exception is impossible: its
 total portal coverage is four, while seven-connectivity forces
@@ -152,50 +155,63 @@ evidence only, not an unbounded inference.  The source and exact output are
 preserved in the [labelled-trichotomy
 experiment](experiments/k44_literal_labelled_trichotomy/README.md).
 
-The audited [weighted-splitter small-atom
-reduction](../results/hc7_k44_weighted_splitter_small_atom_reduction.md)
-now supplies a genuine unbounded intermediate theorem.  For a
-three-contractible edge `uv`, contraction fails the boundary system exactly
-when a nonempty set `X subseteq V(C)-{u,v}` is tight and has both `u,v` in
-its boundary.  This includes disconnected and co-spanning witnesses; sets
-containing the contracted vertex preserve their preimage boundary and
-weight.
+The audited [singleton-atom and exact one-resource blocker
+reduction](../results/hc7_k44_positive_atom_elimination.md) now supplies a
+sharper unbounded intermediate theorem.  For a three-contractible edge
+`uv`, contraction fails the boundary system exactly when a nonempty set
+`X subseteq V(C)-{u,v}` is tight and has both `u,v` in its boundary.  This
+includes disconnected and co-spanning witnesses; sets containing the
+contracted vertex preserve their preimage boundary and weight.
 
-If no terminal triangle and no safe edge exists, the reduction produces a
-spanning tree all of whose edges are three-contractible and a minimum tight
-set `A` whose boundary contains a tree edge.  Writing `B=N_C(A)` and
-`Q=L(A)`, it proves
-
-```text
-1 <= |A| <= 3,    4 <= |B| <= 7,    |Q| = 7-|B| <= 3.
-```
-
-Every tree edge incident with `A` has a connected tight companion blocker
-`X`, and
+If no terminal configuration and no safe edge exists, choose a minimum
+tight atom over the endpoints of **all** three-contractible edges.  Mader's
+trace lemma, an exact marked rooted partition, the finite seven-portal
+triangle theorem, and a seven-path literal-core linkage eliminate every
+two- and three-vertex atom.  Thus
 
 ```text
-A subseteq N_C(X),
-|partial A intersect partial X| <= 7-2|A|.
+A={a},    N_G(a)=B dotcup Q,    |B|+|Q|=7,    |Q|<=3,
 ```
 
-For a three-vertex atom and a crossing tree edge, the two seven-resource
-boundaries meet in exactly the outside endpoint.  The companion set is
-adjacent to all three atom vertices, its contacts in `B` form a set `P` with
-`1<=|P|<=3`, and `lambda(A union X)=10-|P|`.  Terminal-freeness forces
-`C-A` to have at most two components, with the sharper triangle/path
-deficiency restrictions stated in the theorem.
+`C-a` is connected, and `G[N_G(a)]` is bipartite with shore orders three
+and four, extending the literal-core shore colouring on `Q`.
 
-The remaining **small transverse-atom completion lemma** is precise: exclude
-the four atom shapes together with all companion blockers in a terminal-free
-labelled exterior.  In the three-vertex case, the missing mechanism is a
-rooted positive-weight partition inside the one or two components of `C-A`;
-the one-resource overlap alone does not supply it.  Once this lemma is
+Now let `ab` be a crossing three-contractible edge and let `X` be any
+connected tight blocker.  With `P=X cap B`, the two exact boundaries have
+the following normal form:
+
+```text
+N_G(a) = P dotcup {b} dotcup O,
+partial X = {a,b} dotcup K,
+|K|=5,    |P|>=1,    |O|>=1.
+```
+
+In particular their common resource is exactly `b`; no core label lies in
+the overlap.  The graph `G[partial X]` is another bipartite graph with shore
+orders three and four.  If `|P|>=2`, at least two vertices of `P` are
+non-cutvertices of `G[X]`.  If `X={p}`, then `a,p` are adjacent degree-seven
+vertices with the unique common neighbour `b`, their label sets are
+disjoint, and
+
+```text
+|L(a) union L(b)|<=3,    |L(p) union L(b)|<=3.
+```
+
+Every prescribed omitted literal-core portal either supports the full
+`B`--core linkage or returns a second exact seven-cut; when `Q` is nonempty,
+absence of all such cuts forces a `Q`-free component of `G[N_G(a)]` with
+nonzero odd bipartition imbalance.
+
+The remaining **singleton all-edge atom completion lemma** is precise:
+exclude this singleton and its complete system of exact one-overlap
+crossing blockers in a terminal-free labelled exterior.  Once this lemma is
 proved, safe contraction and terminal lifting give induction from the
 computation-free base through order six and close the literal branch.
 
 The known `W_5` profile still shows that a bare weighted-`K_4` assertion is
-false and that the triangle exit is indispensable.  The small-atom reduction
-does not prove the weighted splitter theorem, the literal branch, or T44.
+false and that the triangle exit is indispensable.  The singleton-atom
+reduction does not prove the weighted splitter theorem, the literal branch,
+or T44.
 
 ## 5. Exact nonliteral obligation
 

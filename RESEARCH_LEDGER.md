@@ -21,7 +21,8 @@ This file is the sole authority for the present research frontier.
    whether every `K_7^-`-minor-free graph is six-colourable. T44 is the sole
    active completion target because it would prove this refinement.
 3. **Immediate structural laboratory:** the literal-core route is reduced to
-   the small transverse-atom completion lemma below; the nonliteral labelled
+   a singleton all-edge atom whose crossing blockers have exact one-resource
+   overlap and bipartite order-seven boundaries; the nonliteral labelled
    branch-model rotation obligation remains separate.
 
 ## Current frontier
@@ -87,10 +88,11 @@ The current direct inputs are:
 - the four-portal exterior-triangle completion theorem;
 - the three-portal exterior-`K_4` dichotomy, with its tetrahedral exception
   excluded in the spanning case by global portal coverage; and
-- the weighted-splitter small-atom reduction: absent a terminal triangle or
-  a safe contraction, a spanning tree of three-contractible edges has a
-  minimum tight atom of order at most three, with sharply transverse
-  companion blockers and the stated component restrictions.
+- the singleton-atom and one-resource blocker reduction: absent a terminal
+  configuration or a safe contraction, every minimum all-contractible-edge
+  tight atom is a singleton; every crossing blocker meets its seven-vertex
+  neighbourhood exactly in the outside edge endpoint, and the blocker
+  boundary is bipartite with shore orders three and four.
 
 These promoted results have adjacent hash-pinned GREEN internal audits.
 Their deterministic finite components are registered in the research
@@ -99,25 +101,30 @@ prove T44, Conjecture 21 or `HC_7`.
 
 ### Two open obligations
 
-1. **Literal small transverse-atom completion.** Exclude the four audited
-   atom shapes, together with their companion blockers, in a terminal-free
-   labelled exterior. This yields a safe contraction, induction gives the
-   pure labelled trichotomy, and the whole literal core joins its six-bag
-   outcome to the target.
+1. **Literal singleton-atom completion.** Exclude the audited singleton
+   all-edge atom together with the complete system of exact one-overlap
+   crossing blockers in a terminal-free labelled exterior. This yields a
+   safe contraction, induction gives the pure labelled trichotomy, and the
+   whole literal core joins its six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.** Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target. Exact cuts alone do not provide
    laminarity, a peel side or preserved branch ownership.
 
-The literal route now has a genuine unbounded intermediate theorem. In the
-three-vertex residue, every crossing tree edge has a tight companion whose
-boundary meets the atom boundary in exactly one vertex; the exterior minus
-the atom has at most two components. The precise missing mechanism is a
-rooted positive-weight partition inside those one or two components. The
-computation-free induction base remains exterior order at most six; the
-order-seven and newer finite screens are bounded evidence only. The
-weighted splitter theorem, the literal T44 branch and the nonliteral
-rotation obligation all remain open.
+The literal route now has a substantially sharper unbounded intermediate
+theorem. Every non-singleton atom is eliminated. For the remaining singleton
+`a`, `N_G(a)` is a `3`-by-`4` bipartite exact seven-cut. Every blocker `X` of
+a crossing contractible edge has a second `3`-by-`4` bipartite exact
+seven-cut and meets `N_G(a)` in exactly the outside endpoint `b`. If
+`|X cap N_C(a)|>=2`, at least two of those atom neighbours are
+non-cutvertices of `G[X]`; an adjacent singleton blocker gives two
+degree-seven vertices with the unique common neighbour `b` and disjoint
+label sets. The precise missing mechanism is the singleton all-edge atom
+completion lemma recorded in the technical frontier. The computation-free
+induction base remains exterior order at most six; the order-seven and newer
+finite screens are bounded evidence only. The weighted splitter theorem,
+the literal T44 branch and the nonliteral rotation obligation all remain
+open.
 
 ## Durable recent results outside the active spine
 
