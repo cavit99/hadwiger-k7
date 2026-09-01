@@ -5,8 +5,15 @@
 **GREEN** at the exact source revision
 
 ```text
-b364d3adb0574a98afa8a8c975b47bca694137dc7348ac1559df433a5ad4937a  results/hc7_k44_core_concentrated_joint_contact_reduction.md
+b2a50744b39e4e2e77e8f6de54976074a9757a42415b9468e24d46417ed104da  results/hc7_k44_core_concentrated_joint_contact_reduction.md
 ```
+
+Relative to audited revision
+`b364d3adb0574a98afa8a8c975b47bca694137dc7348ac1559df433a5ad4937a`,
+this revision only replaces the undefined symbol `t_h` with the already named
+root `h` of `B_h` in the tree-partition argument.  An independent recheck
+confirmed that the rooted bag, tree split, branch sets, inferences, and
+contacts are unchanged; the GREEN verdict is unchanged.
 
 The three conclusions are proved under the displayed hypotheses.  In
 particular, the proof correctly strengthens the two separate rooted-contact
@@ -99,15 +106,15 @@ five, while the joint contact bound puts them in at most three bags, so
 one bag contains at least two distinct neighbours.
 
 The tree partition in Section 5 is correct.  In the minimal subtree
-containing `t_h` and all `a`-neighbours in `B_h`, there is a leaf different
-from `t_h` which is an `a`-neighbour.  Removing its incident minimal-subtree
+containing `h` and all `a`-neighbours in `B_h`, there is a leaf different
+from `h` which is an `a`-neighbour.  Removing its incident minimal-subtree
 edge from the full spanning tree puts that leaf alone among the specified
 terminals on one side.  Thus both resulting connected parts contain an
-`a`-neighbour, the other part contains `t_h`, and the two parts are
+`a`-neighbour, the other part contains `h`, and the two parts are
 adjacent by the removed tree edge.
 
 For the seven bags in (21), the first three form a triangle: the split
-edge, `ap`, and an `R-t_h` edge supply its three contacts.  The four foreign
+edge, `ap`, and an `R-h` edge supply its three contacts.  The four foreign
 bags supply six contacts, `R union {p}` supplies four more to them, and the
 two split parts with the attached `a` supply `8-d'`.  Therefore
 `3+6+4+8-d'=21-d'` is correct.  If `d'<=1` this is a `K_7^-` model; otherwise
@@ -155,7 +162,9 @@ the ambient seven-connectivity, literal-core, or degree-seven hypotheses.
 
 This audit is a direct finite-graph and branch-set check; it invokes no
 computer-assisted unbounded inference.  It confirms an unbounded separator
-reduction, not closure of the adjacent-singleton case.  The unresolved step
-is exactly the one stated in the source: bound the returned separator or
-obtain compatible structure across it.  The theorem does not prove the
-literal `K_{4,4}` case, T44, Conjecture 21, or `HC_7`.
+reduction, not closure of the adjacent-singleton case.  The exact remaining
+target is to eliminate the whole core-concentrated profile.  Neither of the
+two evident mechanisms is proved: an exact-seven marked-certificate theorem
+producing the target or a safe contraction, or a descent/rerouting theorem
+for larger boundaries with a strictly decreasing complexity.  The theorem
+does not prove the literal `K_{4,4}` case, T44, Conjecture 21, or `HC_7`.

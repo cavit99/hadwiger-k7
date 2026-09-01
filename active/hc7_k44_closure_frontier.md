@@ -135,8 +135,9 @@ The following results are promoted and separately internally audited.
 If the four bags span `C`, the tetrahedral exception is impossible: its
 total portal coverage is four, while seven-connectivity forces
 `|N_S(C)|>=7`.  The consolidated internal [cold
-audit](../results/hc7_k44_closure_local_normal_forms_audit.md) pins every
-source and executable trust boundary.
+audit](../results/hc7_k44_closure_local_normal_forms_audit.md) covers and
+hash-pins the five local statements it names.  The other promoted results
+above have their own adjacent hash-pinned internal audits.
 
 ## 4. Exact literal obligation
 
@@ -213,18 +214,21 @@ not supported wholly inside a single component and meet that component, and
 each other component owns one of the remaining resources and meets at least
 two of the first three.
 
-The explicit closing criterion is now a bisection problem.  Find disjoint
-adjacent connected sets `U,V subseteq X`, orient them so that `U` sees `a`,
-and find `h_0 in H` with
+Put `D=partial X` and, for `Z subseteq X`, define
+`N_D(Z)=N_G(Z) cap D`.  The explicit closing criterion is a two-helper
+problem.  Find disjoint adjacent connected sets `U,V subseteq X`, orient
+them so that `U` sees `a`, and find `h_0 in H` with
 
 ```text
 |H-(N_D(U) union {b,h_0})|
-  + |H-(N_D(V) union {h_0})| <= 1,    D=partial X.
+  + |H-(N_D(V) union {h_0})| <= 1.
 ```
 
 The two-helper construction then gives a `K_7^-` model with twenty quotient
-contacts.  This **minimum-degree-four boundary-bisection lemma** is the exact
-nonsingleton residue.
+contacts.  The sets are not required to cover `X`; “bisection” in older notes
+refers to these two disjoint connected sides, not necessarily a partition.
+This **minimum-degree-four two-helper lemma** is the exact nonsingleton
+residue.
 
 A targeted local screen checks the full labelled formula through blocker
 order six and, independently, every three-connected graph-atlas host through
@@ -372,24 +376,80 @@ set `Y` such that `N_G(Y)` is an actual separator.  Seven-connectivity gives
 ```
 
 and equality makes every component of `G-N_G(Y)` full to the boundary.
+The proof retains a fixed spanning rooted model and marked data: either a
+two-part tree split of `R` with endpoint anchors, or a two-part split of one
+rooted branch bag, together with a named rooted bag anticomplete to the
+deficient part `Y` and the relevant endpoint/root ownership.
 
-The lower bound cannot simply be replaced by equality.  The verified
+The theorem supplies no upper bound on `|N_G(Y)|`.  The verified
 [order-three incidence barrier](../barriers/hc7_k44_core_concentrated_bisection_incidence_barrier.md)
 satisfies every relative boundary inequality, fullness, unique common
 endpoint incidence, the degree-seven counts, and joint contact rank three,
 but every disjoint connected endpoint-anchored pair has total defect at
 least two.  This is a local incidence counterexample only, not an ambient
 seven-connected host; it shows that the boundary inequalities alone cannot
-force the required bisection.  Notably, five of its six proper nonempty
-sides are already tight, so a separator-based continuation remains viable.
+force the required split.  It does not refute the possibility of selecting
+an order-seven returned separator; five of its six proper nonempty sides are
+already tight.  It shows only that the listed local incidence data do not
+produce the target-making one-defect split.
 
-The literal completion is therefore reduced to two explicit mechanisms:
-the nonsingleton boundary-bisection lemma, and the singleton assertion that
-one returned separator has order seven or supports compatible rooted
-structure across a larger boundary.  The known `W_5` profile still shows
-that a bare weighted-`K_4` assertion is false and that the triangle exit is
-indispensable.  Neither remaining mechanism is closed, so the weighted
-splitter theorem, literal branch, and T44 remain open.
+The literal completion is therefore reduced to the nonsingleton two-helper
+lemma and elimination of the entire singleton core-concentrated profile.
+For the singleton profile, obtaining an order-seven marked separator is only
+a milestone: no theorem currently turns that certificate into the target or
+a safe contraction.  For a larger returned boundary, no descent/rerouting
+theorem with a strictly decreasing complexity is known.  The known `W_5`
+profile still shows that a bare weighted-`K_4` assertion is false and that the
+triangle exit is indispensable.  Neither remaining literal theorem is
+closed, so the weighted splitter theorem, literal branch, and T44 remain open.
+
+### 4.3 Cold-start handoff
+
+A new agent should treat the following as the exact live theorem pair.
+
+1. **Nonsingleton support transfer.**  Under the hypotheses of item 2 of the
+   [minimum-blocker theorem](../results/hc7_k44_tight_boundary_and_minimum_blocker.md),
+   in its nonsingleton outcome and with the conclusions of items 3--4, find
+   disjoint adjacent connected `U,V subseteq X`, with `U` adjacent to `a`,
+   and `h_0 in H` satisfying
+
+   ```text
+   |H-(N_D(U) union {b,h_0})|
+     + |H-(N_D(V) union {h_0})| <= 1.
+   ```
+
+   The sets need not partition `X`.  The criterion in the
+   `H`-full-complement subcase is characterized; no unbounded theorem proves
+   that this subcase always occurs.  The unresolved case is support transfer
+   when the other side is not `H`-full.  The component-respecting and
+   component-local repairs are explicitly refuted only in their stated scopes
+   by the profiles above and the [transversal
+   barrier](../barriers/hc7_k44_intra_component_transversal_barrier.md).
+2. **Singleton core-concentrated completion.**  Prove that no target-free
+   graph satisfies the hypotheses of the [joint-contact and separator
+   theorem](../results/hc7_k44_core_concentrated_joint_contact_reduction.md).
+   Its marked separator certificate is the current input.  Two possible next
+   milestones remain unproved: an exact-seven marked-certificate completion,
+   and a larger-boundary descent/rerouting theorem with a declared strictly
+   decreasing complexity.  Equality by itself is not a proved terminal
+   condition, and no descent monovariant has been established.
+
+Only after both literal residues close does the separate nonliteral
+model-trace rotation theorem in Section 5 become the remaining T44
+obligation.
+
+For re-entry, run
+
+```bash
+python3 tools/research_index.py check
+python3 tools/research_index.py report
+uv run python3 tools/research_index.py verify
+```
+
+Then inspect
+`.cache/research/context_hc7.target.k44_sevenconnected_closure.md`.  The
+generated pack is a retrieval aid; this frontier, `active/INDEX.md`, and the
+ledger remain authoritative.
 
 ## 5. Exact nonliteral obligation
 
@@ -457,6 +517,18 @@ seven-connected target-free counterexample is independently verified.
 - A false weighted trichotomy, portal census or proposed peel is recorded as
   RED and repaired; it is not a reason to abandon T44.
 - A bounded search never supports an unbounded inference.
+- Do not restart generic donor minimisation without a theorem preserving the
+  marked rooted model and boundary labels; the [boundary-first donor
+  route](hc7_k7minus_five_centre_minimal_donor_gate.md) records the failure of
+  the unlabelled minimisation class.
+- Palette synchronization belongs only to the conditional critical-host
+  refinement in Section 7; universal T44 supplies no colouring response to
+  synchronize.
+- Static branch-set contact profiles and one split-edge theta counts are not
+  terminal certificates.  The [core-concentrated incidence
+  barrier](../barriers/hc7_k44_core_concentrated_bisection_incidence_barrier.md)
+  and [shortcut-certificate barriers](../barriers/hc7_k44_shortcut_certificate_barriers.md)
+  record their exact limited scopes.
 - A T44 counterexample must be checked independently for seven-connectivity,
   a `K_{4,4}` model and absence of every `K_7^-` minor model.
 - Conjecture 21 is not declared proved until the literal completion, the

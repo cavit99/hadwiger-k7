@@ -19937,7 +19937,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "2738107da1cea0aa5416018098dc5170f6b15e82b204a1cd7dbc8e7ff7872d2b"
+expected_source_sha256 = "4586baf924c271e07439c473988459ea021566cae84984dff5b09458763e4e0e"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19950,7 +19950,8 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the still-open nonsingleton minimum-blocker bisection and singleton separator-completion lemmas",
+  "the nonsingleton support-transfer theorem: in the non-H-full regime, find disjoint adjacent connected U,V and h_0 with total two-helper defect at most one; U,V need not cover the blocker",
+  "the singleton core-concentrated completion theorem: the current marked separator certificate proves neither that exact boundary seven is terminal nor a well-founded descent across larger boundaries",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
   "HC7",
@@ -20292,7 +20293,7 @@ source = "results/hc7_k44_two_component_shore_split_elimination.md"
 source_heading = "1. Theorem"
 active = true
 audit = "results/hc7_k44_two_component_shore_split_elimination_audit.md"
-expected_source_sha256 = "672d929dfe7df82cbd70d9105f46fec4eed2583e3d8d88c9106e7a490a0c9bdf"
+expected_source_sha256 = "bebf46848e162a037361f74e2da5b02c2cb484789c83b9fe91db4e6e0a69145d"
 scope = "the complete unbalanced or balanced two-component literal-shore-split response in the contraction trace of an adjacent singleton blocker"
 label_fidelity = "the adjacent endpoints, common neighbour, split literal shore, exact component miss sets and all seven final branch sets remain explicit"
 conclusions = [
@@ -20316,7 +20317,7 @@ source = "results/hc7_k44_three_component_trace_elimination.md"
 source_heading = "1. Theorem"
 active = true
 audit = "results/hc7_k44_three_component_trace_elimination_audit.md"
-expected_source_sha256 = "3a0231bf451aa1ae577b8cc9c59e2900f6f311582984b572e992dc2f8fddf6d3"
+expected_source_sha256 = "d662336b79ba7f570ae998ffd2f034120694ca0cc2ca0d2a3b49f4dde526dd1f"
 scope = "the three-component whole-shore contraction trace of an adjacent singleton blocker with disjoint literal-core label sets"
 label_fidelity = "the adjacent endpoints, exterior cut vertex, four opposite-shore core vertices, three complementary components and all seven final branch sets remain explicit"
 conclusions = [
@@ -20333,17 +20334,17 @@ keywords = ["literal K4,4", "adjacent singleton", "three-component cut", "whole-
 
 [[claims]]
 id = "hc7.k44_core_concentrated_joint_contact_reduction"
-title = "Core-concentrated traces have joint contact rank three or a new separator side"
+title = "Core-concentrated target-free traces have joint contact rank at most three and a marked separator side"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k44_core_concentrated_joint_contact_reduction.md"
 source_heading = "1. Theorem"
 active = true
 audit = "results/hc7_k44_core_concentrated_joint_contact_reduction_audit.md"
-expected_source_sha256 = "b364d3adb0574a98afa8a8c975b47bca694137dc7348ac1559df433a5ad4937a"
+expected_source_sha256 = "b2a50744b39e4e2e77e8f6de54976074a9757a42415b9468e24d46417ed104da"
 scope = "the two-component core-concentrated rooted-K5 response in the exact contraction trace of an adjacent degree-seven singleton pair"
 label_fidelity = "the adjacent endpoints, unique common neighbour, exact seven-cut, two complementary components, five named roots and every rooted K5 branch set remain explicit"
-separator_order = "the returned proper connected side has a full-neighbourhood separator of order at least seven; equality, not merely the lower bound, remains open"
+separator_order = "the returned proper connected side has a full-neighbourhood separator of order at least seven; selecting equality remains open, and equality alone is not yet known to be terminal"
 conclusions = [
   "every rooted K5 model has joint endpoint-contact rank at most three",
   "if one endpoint contacts three rooted bags then it contains the other endpoint's contact set",
@@ -20353,6 +20354,8 @@ conclusions = [
 ]
 does_not_prove = [
   "that a returned separator has order seven",
+  "that an order-seven marked separator yields the target or a safe contraction",
+  "a well-founded descent or rooted rerouting across returned separators of order greater than seven",
   "elimination of the core-concentrated trace or adjacent-singleton case",
   "the weighted splitter theorem, literal K4,4 case, T44, Conjecture 21 or HC7",
 ]
@@ -20593,7 +20596,7 @@ note = "Every three-component whole-shore trace is eliminated by a uniform compo
 source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.k44_core_concentrated_joint_contact_reduction"
 kind = "uses"
-note = "The sole core-concentrated singleton trace has joint contact rank at most three and otherwise returns the precise new separator-completion residue."
+note = "In a target-free core-concentrated singleton trace, the one-defect completion is impossible, so the joint-contact theorem returns a marked separator certificate; this is a reduction, not a separator-completion lemma."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"

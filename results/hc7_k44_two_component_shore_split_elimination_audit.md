@@ -9,7 +9,14 @@ audit, not external peer review.
 [`hc7_k44_two_component_shore_split_elimination.md`](hc7_k44_two_component_shore_split_elimination.md)
 
 **Audited source SHA-256:**
-`672d929dfe7df82cbd70d9105f46fec4eed2583e3d8d88c9106e7a490a0c9bdf`
+`bebf46848e162a037361f74e2da5b02c2cb484789c83b9fe91db4e6e0a69145d`
+
+**Presentation-only recheck (1 September 2026).**  Relative to audited
+revision `672d929dfe7df82cbd70d9105f46fec4eed2583e3d8d88c9106e7a490a0c9bdf`,
+the theorem now defines vertex-minimality explicitly and names the already
+used two-set `H` as `\{d_1,d_2\}`.  An independent recheck found no changed
+hypothesis, conclusion, branch-set construction, inference, or contact count.
+The GREEN verdict and frozen inputs are unchanged.
 
 **Frozen inputs:**
 

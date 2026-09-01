@@ -10,7 +10,14 @@ separate internal audit, not external peer review.
 [`hc7_k44_three_component_trace_elimination.md`](hc7_k44_three_component_trace_elimination.md)
 
 **Audited source SHA-256:**
-`3a0231bf451aa1ae577b8cc9c59e2900f6f311582984b572e992dc2f8fddf6d3`
+`d662336b79ba7f570ae998ffd2f034120694ca0cc2ca0d2a3b49f4dde526dd1f`
+
+**Presentation-only recheck (1 September 2026).**  Relative to audited
+revision `3a0231bf451aa1ae577b8cc9c59e2900f6f311582984b572e992dc2f8fddf6d3`,
+the theorem now expands the meaning of vertex-minimality in the same terms as
+its contraction-trace input.  An independent recheck found no changed
+hypothesis, conclusion, branch-set construction, inference, or contact count.
+The GREEN verdict and frozen input are unchanged.
 
 **Frozen adjacent-singleton contraction trace:**
 `174baaa7a01d75048575760387f568bbf2ace15cef61e10a2dd5ed35372ca2ef`

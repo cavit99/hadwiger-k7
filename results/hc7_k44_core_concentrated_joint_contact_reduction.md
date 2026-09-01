@@ -236,9 +236,9 @@ Section 4 contains all five.  By (5), some branch bag `B_h` contains at
 least two distinct neighbours of `a`.
 
 We need an elementary tree partition.  Take a spanning tree of `G[B_h]`
-and its minimal subtree containing `t_h` and all members of
+and its minimal subtree containing `h` and all members of
 `N_G(a) cap B_h`.  This minimal subtree has a leaf
-`ell in (N_G(a) cap B_h)-\{t_h\}`.  Let `e` be the unique edge of the
+`ell in (N_G(a) cap B_h)-\{h\}`.  Let `e` be the unique edge of the
 minimal subtree incident with `ell`, delete `e` from the full spanning
 tree, and let
 
@@ -246,7 +246,7 @@ tree, and let
                             B_h=Z\mathbin{\dot\cup}W   \tag{20}
 \]
 
-be the resulting partition, with `ell in Z` and `t_h in W`.  Both parts
+be the resulting partition, with `ell in Z` and `h in W`.  Both parts
 are nonempty, connected, and adjacent.  Every path in the tree from `ell`
 to another specified terminal starts with `e`; hence all the other
 specified terminals lie in `W`.  Thus `Z` contains the chosen neighbour of
@@ -260,7 +260,7 @@ Use the following seven bags:
 \]
 
 The first three bags form a triangle.  The edge deleted in (20) joins the
-first two, `ap` joins the first and third, and fullness of `R` at `t_h`
+first two, `ap` joins the first and third, and fullness of `R` at `h`
 joins the second and third.  The four foreign rooted bags form a `K_4`,
 and `R union {p}` is adjacent to all four through their roots.
 

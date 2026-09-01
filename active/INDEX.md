@@ -40,7 +40,8 @@ Selected audited inputs:
 - [every three-component whole-shore trace yields an explicit `K_7^-`
   minor](../results/hc7_k44_three_component_trace_elimination.md); and
 - [the sole core-concentrated trace has joint endpoint-contact rank at most
-  three and otherwise returns a new proper connected separator
+  three; its one-defect split is target-producing, and under target-free
+  hypotheses failure returns a marked proper connected separator
   side](../results/hc7_k44_core_concentrated_joint_contact_reduction.md).
 
 A [hash-pinned internal cold audit](../results/hc7_k44_closure_local_normal_forms_audit.md)
@@ -82,11 +83,14 @@ certificate.
 ## Two open obligations
 
 1. **Literal exact-residue completion.**  Prove the minimum-degree-four
-   boundary-bisection lemma for a nonsingleton blocker.  For the sole
-   adjacent-singleton residue, force order seven for the new proper connected
-   separator side or construct compatible rooted structure across a larger
-   separator.  Safe contraction and induction then give the pure labelled
-   trichotomy; the whole literal core joins its six-bag outcome to the target.
+   two-helper lemma for a nonsingleton blocker; its two connected sets need
+   not cover the blocker.  For the sole adjacent-singleton residue, eliminate
+   the entire core-concentrated target-free profile.  The present reduction
+   returns a marked separator, but neither an exact-seven completion theorem
+   nor a well-founded descent through larger separators is proved.  Closing
+   both residues would make safe contraction and induction available for the
+   pure labelled trichotomy; the whole literal core would then join its
+   six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.**  Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target.  Exact cuts alone do not give laminarity,
@@ -97,7 +101,7 @@ Immediate barriers:
 - **Barrier/counterexample to local shortcut claims:** [a fat triangle with
   seven local paths and a split edge with six alternate
   paths can both remain target-free](../barriers/hc7_k44_shortcut_certificate_barriers.md);
-- **Precise nonsingleton lemma:** [find the closing connected bisection in a
+- **Precise nonsingleton lemma:** [find the closing two-helper pair in a
   minimum-degree-four three-connected blocker](../results/hc7_k44_tight_boundary_and_minimum_blocker.md#8-finite-falsification-and-exact-remaining-lemma);
 - **Route nonclosure, not a counterexample:** [the `K_3 join (3K_2)` profile
   shows that the three-cut components cannot simply be kept intact in that
@@ -108,16 +112,23 @@ Immediate barriers:
   refutes the unnecessary requirement that the first side see `b`.  Neither
   profile refutes the full bisection lemma.  The exact unresolved subcase is
   support transfer when the complementary side is not full to `H`;
-- **Precise singleton lemma:** [the core-concentrated joint-contact
-  reduction](../results/hc7_k44_core_concentrated_joint_contact_reduction.md)
-  forces joint contact rank at most three and returns a proper connected
-  separator side if the one-defect two-helper split fails.  A verified
+- **Singleton reduction and exact remaining target:** [the core-concentrated
+  joint-contact reduction](../results/hc7_k44_core_concentrated_joint_contact_reduction.md)
+  forces joint contact rank at most three and, in the target-free profile,
+  returns a marked proper connected separator side if the one-defect
+  two-helper split fails.  A verified
   [order-three incidence profile](../barriers/hc7_k44_core_concentrated_bisection_incidence_barrier.md)
   shows that the local boundary inequalities alone do not force that split;
-  the remaining task is to make the new separator exact or use its excess;
+  the remaining theorem must eliminate the whole profile.  Making the new
+  separator exact is only a milestone until exact-seven completion is proved;
+  using its excess requires a descent with an explicit decreasing quantity;
 - **Recorded route nonclosure:** [a component of an exact-cut complement may
   contain pieces of several branch bags](../results/hc7_k44_branch_model_and_double_cone_audit.md#exact-scope),
   so fullness to the cut cannot be counted as external branch-set contact.
+
+The [cold-start handoff](hc7_k44_closure_frontier.md#43-cold-start-handoff)
+states both literal residues with their exact quantifiers and gives the
+re-entry verification commands.
 
 ## Preserved secondary work
 

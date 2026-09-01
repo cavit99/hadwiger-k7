@@ -26,9 +26,11 @@ This file is the sole authority for the present research frontier.
    three-cuts.  For an adjacent singleton pair, every literal-shore split
    and every three-component contraction trace is now eliminated.  In the
    sole two-component core-concentrated profile, every rooted `K_5` has joint
-   endpoint-contact rank at most three, and target-freeness forces either the
-   exact two-helper completion or a new proper connected separator side.
-   Controlling that separator is the remaining singleton task.  The
+   endpoint-contact rank at most three.  The one-defect two-helper split is
+   target-producing; in the target-free profile its failure returns a marked
+   proper connected side whose full neighbourhood is an actual separator.
+   Eliminating that marked separator profile is the remaining singleton
+   task.  The
    nonliteral labelled branch-model rotation obligation remains separate.
 
 ## Current frontier
@@ -126,8 +128,8 @@ The current direct inputs are:
 - the core-concentrated joint-contact theorem: every rooted `K_5` has joint
   endpoint-contact rank at most three, order-three contact on one side
   contains the other side's contacts, and failure of the exact two-helper
-  split returns a proper connected set with an actual separator as its full
-  neighbourhood.
+  split in the target-free profile returns a proper connected set with an
+  actual separator as its full neighbourhood.
 
 These promoted results have adjacent hash-pinned GREEN internal audits.
 Their deterministic finite components are registered in the research
@@ -138,18 +140,20 @@ prove T44, Conjecture 21 or `HC_7`.
 
 1. **Literal exact-residue completion.** Close both audited outcomes of a
    minimum crossing blocker.  For a nonsingleton blocker, prove the precise
-   minimum-degree-four boundary-bisection lemma.  For a singleton blocker,
-   complete the new core-concentrated separator alternative: force its full
-   neighbourhood to have order seven or construct compatible rooted structure
-   across a larger separator.  This yields a safe contraction, induction
-   gives the pure labelled trichotomy, and the whole literal core joins its
-   six-bag outcome to the target.
+   minimum-degree-four two-helper lemma.  Its two connected sets need not
+   cover the blocker.  For a singleton blocker, eliminate the entire
+   core-concentrated profile.  The current theorem only returns a marked
+   separator certificate: even order seven is not yet proved sufficient for
+   a target or safe contraction, and no well-founded descent through larger
+   boundaries is known.  Closing both residues would give a safe contraction;
+   induction would then prove the pure labelled trichotomy, and the whole
+   literal core would join its six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.** Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target. Exact cuts alone do not provide
    laminarity, a peel side or preserved branch ownership.
 
-The literal route now has three further audited unbounded reductions.  A
+The literal route now has the following audited unbounded reductions.  A
 minimum nonsingleton crossing blocker `X` is three-connected with
 `delta(G[X])>=4`; every one of its five non-atom boundary resources has at
 least two neighbours in `X`, deleting a specified atom-neighbour leaves all
@@ -215,17 +219,22 @@ soon as two disjoint connected endpoint-anchored sets in the remote
 component have total rooted-bag defect at most one.  If no such split is
 obtained, a spanning-tree split of the remote component—or, in the unique
 common-neighbour case, of one rooted branch bag—returns a proper nonempty
-connected set `Y` for which `N_G(Y)` is an actual separator.  Thus
-`|N_G(Y)|>=7`; equality makes every complementary component full to that
-boundary.
+connected set `Y` for which `N_G(Y)` is an actual separator.  The construction
+retains the relevant two-part tree or rooted-branch-bag split, its endpoint
+anchors, and a named rooted bag anticomplete to `Y`.  Thus `|N_G(Y)|>=7`;
+equality makes every complementary component full to that boundary.
 
-This is the precise remaining singleton lemma: force equality for one such
-separator or construct compatible rooted structure across a larger one.  A
-verified order-three local incidence profile shows that relative boundary
-inequalities, fullness, the degree-seven counts and the joint contact bound
-alone do not force the one-defect bisection.  It already has five proper
-tight sides.  Therefore the next argument must use the returned separator or
-reconfigure the rooted model; bare contact counting cannot close the case.
+The exact remaining singleton target is to prove that no target-free graph
+satisfies this core-concentrated profile.  Two plausible mechanisms are open:
+an exact-seven marked-certificate theorem producing the target or a safe
+contraction, and a descent/rerouting theorem for larger returned boundaries
+with an explicitly decreasing complexity.  Equality alone is not presently
+known to be terminal, and no such descent measure has been proved.  A verified
+order-three local incidence profile shows that relative boundary inequalities,
+fullness, the degree-seven counts and the joint contact bound alone do not
+force the one-defect split.  It already has five proper tight sides.  Therefore
+the next argument must use the marked separator data or reconfigure the rooted
+model; bare contact counting cannot close the case.
 
 The computation-free induction base remains exterior order at most six, and
 all order-seven and newer finite screens are bounded evidence only.

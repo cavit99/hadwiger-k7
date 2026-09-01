@@ -21,6 +21,9 @@ containing a specified literal `K_{4,4}` with shores `S_0,S_1`.  Let
 \end{aligned}
 \]
 
+Here vertex-minimal means that no graph with fewer vertices is
+seven-connected, `K_7^-`-minor-free, and contains a literal `K_{4,4}`.
+
 Suppose that the contraction trace of `ap` gives an exact seven-cut
 
 \[

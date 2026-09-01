@@ -36,10 +36,11 @@ Later theorem notes strengthen and extend that snapshot:
 These are necessary structural theorems about a hypothetical counterexample.
 They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
 
-## Direct proved inputs to the active T44 campaign
+## Selected foundational inputs to the active T44 campaign
 
-T44 remains open.  Its direct proved inputs are kept deliberately small in
-the [active index](../active/INDEX.md):
+T44 remains open.  The exact current set of direct proved inputs is maintained
+only in the [active index](../active/INDEX.md), so it is not duplicated here.
+The following are selected foundational results:
 
 - [branch-model normal forms and the double-cone theorem](hc7_k44_branch_model_and_double_cone.md), with [audit](hc7_k44_branch_model_and_double_cone_audit.md);
 - [the restriction on exact seven-cut boundaries](hc7_k44_fourconnected_seven_boundary_double_cone.md), with [audit](hc7_k44_fourconnected_seven_boundary_double_cone_audit.md);
@@ -49,8 +50,11 @@ the [active index](../active/INDEX.md):
 - [the weighted-splitter small-atom reduction](hc7_k44_weighted_splitter_small_atom_reduction.md), with [audit](hc7_k44_weighted_splitter_small_atom_reduction_audit.md).
 
 The [local-normal-forms cold audit](hc7_k44_closure_local_normal_forms_audit.md)
-checks the package at its pinned revisions and states explicitly what it does
-not prove.  The two unproved completion obligations remain in the
+checks its five named statements at pinned revisions and states explicitly
+what it does not prove.  The later direct literal reductions—positive-atom
+elimination, the minimum-blocker theorem, the contraction trace, both trace
+eliminations, and the joint-contact separator theorem—are navigated from the
+active index.  The two unproved completion obligations remain in the
 [T44 technical frontier](../active/hc7_k44_closure_frontier.md).
 
 ## Finding other material
