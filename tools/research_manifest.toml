@@ -19887,6 +19887,48 @@ expected_stdout = [
   "singleton_addition_digest ce2f0641c454480ccd151d3d4679cc320b7a15abfd7a559622273240893e8565",
 ]
 
+[[verifiers]]
+id = "k44-intra-component-transversal-barrier"
+path = "barriers/hc7_k44_intra_component_transversal_barrier_verify.py"
+sha256 = "7e075b20d71793fcb6c35bc43b2326a3199a4daf2b276a363b288d74d4cc11ee"
+timeout = 30
+expected_stdout = [
+  "order=9",
+  "minimum_relative_value=7",
+  "minimum_proper_connected_ab_value=8",
+  "minimum_internal_degree=4",
+  "repair_witnesses=0",
+  "spanning_two_helper_witnesses=231",
+  "explicit_cross_component_defects=1,0",
+  "GREEN first intra-component profile",
+  "second_order=9",
+  "second_minimum_relative_value=7",
+  "second_minimum_proper_connected_ab_value=8",
+  "second_local_mode_witnesses=0",
+  "b_requiring_cross_mode_witnesses=0",
+  "b_free_cross_mode_witnesses=54",
+  "second_explicit_cross_component_defects=1,0",
+  "GREEN blocker repair barriers",
+]
+
+[[verifiers]]
+id = "k44-core-concentrated-bisection-incidence-barrier"
+path = "barriers/hc7_k44_core_concentrated_bisection_incidence_barrier_verify.py"
+sha256 = "fe3333a0480d28c8ff3168b6d6980366daa103831912155672d984ae4574e95f"
+timeout = 30
+expected_stdout = [
+  "order_R=3",
+  "minimum_relative_boundary=7",
+  "tight_nonempty_sets=6",
+  "tight_proper_sets=5",
+  "unique_common_R_neighbours=1",
+  "joint_contact_rank=3",
+  "anchored_disjoint_pairs=7",
+  "minimum_total_defect=2",
+  "degree_seven_compatible=True",
+  "GREEN local core-concentrated bisection incidence barrier",
+]
+
 [[claims]]
 id = "hc7.target.k44_sevenconnected_closure"
 title = "Seven-connected K4,4 closure"
@@ -19895,7 +19937,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "915f1c64239efa81dc21073cf3173a2d4b6478e7ae80603fb6183ce977089760"
+expected_source_sha256 = "2738107da1cea0aa5416018098dc5170f6b15e82b204a1cd7dbc8e7ff7872d2b"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19908,7 +19950,7 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the still-open literal minimum-blocker bisection and adjacent-singleton trace completion lemmas",
+  "the still-open nonsingleton minimum-blocker bisection and singleton separator-completion lemmas",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
   "HC7",
@@ -20197,7 +20239,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k44_adjacent_singleton_shore_split_profiles.md"
 source_heading = "1. Setting and theorem"
-active = true
+active = false
 audit = "results/hc7_k44_adjacent_singleton_shore_split_profiles_audit.md"
 expected_source_sha256 = "9234ff2c545608e7dcb3572dff3875137cbd2978a209826196dc111153d555ae"
 scope = "the two-component whole-shore contraction trace of an adjacent singleton pair with its exact neighbourhood identities"
@@ -20215,6 +20257,106 @@ does_not_prove = [
   "T44, Conjecture 21 or HC7",
 ]
 keywords = ["literal K4,4", "adjacent singleton", "shore split", "set-Menger separator", "endpoint miss profile"]
+
+[[claims]]
+id = "hc7.k44_balanced_shore_split_one_sidedness"
+title = "Balanced adjacent-singleton shore splits are one-sided"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_balanced_shore_split_one_sidedness.md"
+source_heading = "1. Theorem"
+active = false
+audit = "results/hc7_k44_balanced_shore_split_one_sidedness_audit.md"
+expected_source_sha256 = "5d89f80b93bb185fc7176cf5098a96b506fd8e518c5b7bbc9718867a4d0db664"
+scope = "the balanced two-plus-two whole-shore contraction trace of an adjacent singleton pair under the audited endpoint-miss profile theorem"
+label_fidelity = "the adjacent endpoints, fifth boundary vertex, two split core pairs, exact component miss sets and all seven final branch sets remain explicit"
+conclusions = [
+  "the components missing a but not p and those missing p but not a cannot both occur",
+  "assuming coexistence forces the second missed boundary vertex of every endpoint-specific component to be x and forces x anticomplete to the two split core vertices",
+  "three exact seven-cut counts leave exactly one component of each endpoint-specific type and exactly one component missing both endpoints",
+  "the resulting three component bags form a triangle universal to a four-bag K4-minus quotient, giving an explicit 20-contact K7-minus model",
+]
+does_not_prove = [
+  "elimination of the remaining one-sided balanced profile",
+  "elimination of the unbalanced, core-concentrated or three-component contraction traces",
+  "the adjacent-singleton case, literal K4,4 case, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "adjacent singleton", "balanced shore split", "one-sided profile", "K7 minus"]
+
+[[claims]]
+id = "hc7.k44_two_component_shore_split_elimination"
+title = "Every two-component adjacent-singleton literal-shore split yields K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_two_component_shore_split_elimination.md"
+source_heading = "1. Theorem"
+active = true
+audit = "results/hc7_k44_two_component_shore_split_elimination_audit.md"
+expected_source_sha256 = "672d929dfe7df82cbd70d9105f46fec4eed2583e3d8d88c9106e7a490a0c9bdf"
+scope = "the complete unbalanced or balanced two-component literal-shore-split response in the contraction trace of an adjacent singleton blocker"
+label_fidelity = "the adjacent endpoints, common neighbour, split literal shore, exact component miss sets and all seven final branch sets remain explicit"
+conclusions = [
+  "the unbalanced one-plus-three and one-plus-two splits yield an explicit triangle universal to a four-bag K4-minus core",
+  "after one-sidedness, every balanced split with exterior vertices beyond its two core vertices yields the same 20-contact quotient",
+  "the degenerate balanced component consisting of its two core vertices is eliminated by an exact two-resource allocation or a degree-seven label contradiction",
+  "every two-component literal-shore split contains an explicit K7-minus minor",
+]
+does_not_prove = [
+  "elimination of the two-component core-concentrated rooted-contact profile",
+  "the adjacent-singleton case, literal K4,4 case, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "adjacent singleton", "shore split", "balanced allocation", "K7 minus"]
+
+[[claims]]
+id = "hc7.k44_three_component_trace_elimination"
+title = "Every three-component adjacent-singleton trace yields K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_three_component_trace_elimination.md"
+source_heading = "1. Theorem"
+active = true
+audit = "results/hc7_k44_three_component_trace_elimination_audit.md"
+expected_source_sha256 = "3a0231bf451aa1ae577b8cc9c59e2900f6f311582984b572e992dc2f8fddf6d3"
+scope = "the three-component whole-shore contraction trace of an adjacent singleton blocker with disjoint literal-core label sets"
+label_fidelity = "the adjacent endpoints, exterior cut vertex, four opposite-shore core vertices, three complementary components and all seven final branch sets remain explicit"
+conclusions = [
+  "the opposite-shore distributions three-plus-one-plus-zero, two-plus-two-plus-zero and two-plus-one-plus-one admit one uniform component selection",
+  "two removed opposite-shore vertices complete four core bags to K4-minus while selected component pieces remain universal to them",
+  "distinct representatives from the three exterior cut vertices make the three component-derived bags a triangle",
+  "the resulting quotient has 3+12+5=20 contacts and is an explicit K7-minus minor",
+]
+does_not_prove = [
+  "elimination of the two-component core-concentrated rooted-contact profile",
+  "the adjacent-singleton case, literal K4,4 case, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "adjacent singleton", "three-component cut", "whole-shore trace", "K7 minus"]
+
+[[claims]]
+id = "hc7.k44_core_concentrated_joint_contact_reduction"
+title = "Core-concentrated traces have joint contact rank three or a new separator side"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_core_concentrated_joint_contact_reduction.md"
+source_heading = "1. Theorem"
+active = true
+audit = "results/hc7_k44_core_concentrated_joint_contact_reduction_audit.md"
+expected_source_sha256 = "b364d3adb0574a98afa8a8c975b47bca694137dc7348ac1559df433a5ad4937a"
+scope = "the two-component core-concentrated rooted-K5 response in the exact contraction trace of an adjacent degree-seven singleton pair"
+label_fidelity = "the adjacent endpoints, unique common neighbour, exact seven-cut, two complementary components, five named roots and every rooted K5 branch set remain explicit"
+separator_order = "the returned proper connected side has a full-neighbourhood separator of order at least seven; equality, not merely the lower bound, remains open"
+conclusions = [
+  "every rooted K5 model has joint endpoint-contact rank at most three",
+  "if one endpoint contacts three rooted bags then it contains the other endpoint's contact set",
+  "two disjoint connected endpoint-anchored remote sets with total rooted-bag defect at most one give an explicit K7-minus minor",
+  "in every target-free profile, failure of that completion returns a proper connected subset of the remote component or one rooted branch bag whose full neighbourhood is an actual separator",
+  "an order-seven returned separator is full to every complementary component",
+]
+does_not_prove = [
+  "that a returned separator has order seven",
+  "elimination of the core-concentrated trace or adjacent-singleton case",
+  "the weighted splitter theorem, literal K4,4 case, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "adjacent singleton", "core-concentrated trace", "joint contact rank", "separator side", "rooted K5"]
 
 [[claims]]
 id = "hc7.barrier.k44_shortcut_certificates"
@@ -20240,6 +20382,62 @@ does_not_prove = [
   "failure of a nonliteral rotation using global attachment data",
 ]
 keywords = ["K4,4", "fat triangle", "split branch edge", "finite barrier", "shortcut certificate"]
+
+[[claims]]
+id = "hc7.barrier.k44_intra_component_transversal"
+title = "Minimum-blocker profiles refute component-local and b-redundant repairs"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k44_intra_component_transversal_barrier.md"
+source_heading = "Barriers to component-local and boundary-resource-redundant repairs"
+active = true
+audit = "barriers/hc7_k44_intra_component_transversal_barrier_audit.md"
+expected_source_sha256 = "66e1502d0132a89d22439aa464e0dc48a0e79aa9f16b0fe9390d37e6d8688237"
+scope = "abstract order-nine boundary-incidence profiles satisfying every audited reduced local minimum-blocker inequality and the first exact three-cut profile; no ambient seven-connected realization is asserted"
+refutes = [
+  "the first three-cut profile and audited local blocker inequalities force the displayed component-local nonseparating transversal",
+  "the component-local mode or a cross-component H-full-complement mode whose first side must see b is exhaustive",
+]
+conclusions = [
+  "the polarized K3-join-three-K2 incidence profile has no component-local transversal witness",
+  "the same profile has 231 spanning two-helper witnesses and the displayed cross-component witness has defect one",
+  "a second profile has no component-local or b-seeing cross-mode witness but has 54 b-free H-full-complement witnesses",
+  "within the H-full-complement subcase the exact condition is that the first side sees a and at least three K-resources; seeing b is unnecessary",
+  "the remaining nonsingleton difficulty is the support-transfer case in which the complement is not H-full",
+]
+does_not_prove = [
+  "that the polarized incidence profile occurs in an ambient seven-connected blocker",
+  "failure of the full minimum-degree-four boundary-bisection lemma",
+  "failure of the weighted splitter theorem, literal K4,4 case, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "minimum blocker", "three-cut profile", "transversal barrier", "support transfer", "cross-component bisection"]
+
+[[claims]]
+id = "hc7.barrier.k44_core_concentrated_bisection_incidence"
+title = "Local boundary data do not force the core-concentrated one-defect bisection"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k44_core_concentrated_bisection_incidence_barrier.md"
+source_heading = "A local incidence barrier to the core-concentrated bisection"
+active = true
+audit = "barriers/hc7_k44_core_concentrated_bisection_incidence_barrier_audit.md"
+expected_source_sha256 = "ac7ce34f53cba653f8ac215ba4f0414ccfbf6de547fd7a32c447129e87978320"
+scope = "an abstract order-three remote-component incidence profile satisfying the displayed relative boundary, fullness, unique-common-neighbour, degree-compatibility and joint-contact conditions; no ambient realization is asserted"
+refutes = [
+  "relative seven-boundary inequalities, fullness, unique endpoint overlap, degree-seven compatibility and joint contact rank three force the exact one-defect connected bisection",
+]
+conclusions = [
+  "every nonempty remote subset has relative boundary at least seven and five proper subsets are tight",
+  "the endpoint supports have one common vertex and the contact sets have joint rank three",
+  "all seven ordered disjoint connected endpoint-anchored pairs have total rooted-bag defect at least two",
+  "the remaining endpoint neighbours admit an explicit degree-seven-compatible placement in the three common rooted bags",
+]
+does_not_prove = [
+  "ambient realization in a seven-connected target-free graph",
+  "failure of a bisection-or-new-exact-separator disjunction",
+  "failure of the weighted splitter theorem, literal K4,4 case, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "core-concentrated trace", "local incidence barrier", "connected bisection", "joint contact rank"]
 
 [[claims]]
 id = "hc7.laboratory.k44_closure_falsification"
@@ -20381,9 +20579,21 @@ note = "A singleton crossing blocker returns the exact two- or three-component c
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
-target = "hc7.k44_adjacent_singleton_shore_split_profiles"
+target = "hc7.k44_two_component_shore_split_elimination"
 kind = "uses"
-note = "The two-component whole-shore contraction trace reduces to exact unbalanced separator and balanced endpoint-miss profiles."
+note = "Every unbalanced or balanced two-component literal-shore split is eliminated by an explicit 20-contact minor model."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_three_component_trace_elimination"
+kind = "uses"
+note = "Every three-component whole-shore trace is eliminated by a uniform component-selection and core-allocation model."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_core_concentrated_joint_contact_reduction"
+kind = "uses"
+note = "The sole core-concentrated singleton trace has joint contact rank at most three and otherwise returns the precise new separator-completion residue."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
@@ -20416,6 +20626,48 @@ kind = "uses"
 note = "The singleton-atom theorem supplies the exact adjacent-pair neighbourhood identities used throughout the profile theorem."
 
 [[relations]]
+source = "hc7.k44_balanced_shore_split_one_sidedness"
+target = "hc7.k44_adjacent_singleton_shore_split_profiles"
+kind = "uses"
+note = "The profile theorem supplies the exact balanced component miss bounds and the conditional miss-set normal forms."
+
+[[relations]]
+source = "hc7.k44_two_component_shore_split_elimination"
+target = "hc7.k44_adjacent_singleton_shore_split_profiles"
+kind = "uses"
+note = "The exact unbalanced and balanced incidence profiles supply all cases closed by the explicit two-component models."
+
+[[relations]]
+source = "hc7.k44_two_component_shore_split_elimination"
+target = "hc7.k44_balanced_shore_split_one_sidedness"
+kind = "uses"
+note = "One-sidedness reduces the balanced split before the final exterior and two-core-vertex cases are eliminated."
+
+[[relations]]
+source = "hc7.k44_three_component_trace_elimination"
+target = "hc7.k44_adjacent_singleton_contraction_trace"
+kind = "uses"
+note = "The contraction trace supplies the exact whole-shore boundary, three full components and opposite-shore distribution."
+
+[[relations]]
+source = "hc7.k44_three_component_trace_elimination"
+target = "hc7.k44_positive_atom_elimination"
+kind = "uses"
+note = "The singleton theorem supplies the disjoint literal-core label sets needed to exclude a singleton one-core component."
+
+[[relations]]
+source = "hc7.k44_core_concentrated_joint_contact_reduction"
+target = "hc7.k44_adjacent_singleton_contraction_trace"
+kind = "uses"
+note = "The contraction trace supplies the exact seven-cut, two full components and spanning rooted K5 model in the core-concentrated case."
+
+[[relations]]
+source = "hc7.k44_core_concentrated_joint_contact_reduction"
+target = "hc7.k44_positive_atom_elimination"
+kind = "uses"
+note = "The singleton theorem supplies the degree-seven endpoints, unique common neighbour and disjoint boundary labels used in the literal application."
+
+[[relations]]
 source = "hc7.k44_positive_atom_elimination"
 target = "hc7.k44_weighted_splitter_small_atom_reduction"
 kind = "uses"
@@ -20426,6 +20678,18 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.barrier.k44_shortcut_certificates"
 kind = "guarded_by"
 note = "The exact target-free profiles show that local path counts cannot replace global portal coverage or branch-label ownership."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.barrier.k44_intra_component_transversal"
+kind = "guarded_by"
+note = "The polarized order-nine local profile refutes a purely intra-component repair of the nonsingleton three-cut case while leaving the full bisection lemma open."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.barrier.k44_core_concentrated_bisection_incidence"
+kind = "guarded_by"
+note = "The order-three local profile shows that relative boundary inequalities and joint contact rank alone cannot force the singleton one-defect bisection; the returned separator or rooted-model geometry must be used."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"

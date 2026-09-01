@@ -121,6 +121,16 @@ The following results are promoted and separately internally audited.
 11. [The two-component whole-shore trace has exact unbalanced separator and
     balanced endpoint-miss
     profiles](../results/hc7_k44_adjacent_singleton_shore_split_profiles.md).
+12. [The two one-endpoint miss types cannot coexist in the balanced
+    `2+2` split](../results/hc7_k44_balanced_shore_split_one_sidedness.md).
+13. [Every unbalanced or balanced two-component literal-shore split yields
+    an explicit `K_7^-` minor](../results/hc7_k44_two_component_shore_split_elimination.md).
+14. [Every three-component whole-shore trace yields an explicit `K_7^-`
+    minor](../results/hc7_k44_three_component_trace_elimination.md).
+15. [In the core-concentrated two-component trace, every rooted `K_5` has
+    joint endpoint-contact rank at most three; failure of the exact
+    two-helper split returns a new proper connected separator
+    side](../results/hc7_k44_core_concentrated_joint_contact_reduction.md).
 
 If the four bags span `C`, the tetrahedral exception is impossible: its
 total portal coverage is four, while seven-connectivity forces
@@ -246,14 +256,47 @@ closes immediately, for example `V={v_1}`, `U=X_0-{v_1}`.  It refutes only
 the attempted inference from the component profile to a
 component-respecting bisection.
 
-The smallest repair is an **intra-component nonseparating-transversal
-lemma**.  In the first three-cut profile, with common resources `c_1,c_2`
-and exclusive resources `e_i`, find distinct `i,j,k` and a nonempty connected
-`V subseteq W_i` such that `X-V` is connected, `V` sees
-`b,c_1,c_2,e_i`, and `X-V` sees `a,c_1,c_2,e_i,e_j`.  Taking
-`U=X-V` and `h_0=e_k` then gives total defect at most one.  The example
-above satisfies this repair; it is a route nonclosure, not a counterexample
-to the open lemma, the weighted splitter theorem, or T44.
+The natural **intra-component nonseparating-transversal** repair is itself
+false at the level of all audited local data.  The explicit order-nine
+[polarized profile](../barriers/hc7_k44_intra_component_transversal_barrier.md)
+uses the same graph `K_3 join (3K_2)`, but gives `a` the support
+`{t_0,r_1,r_2,r_3}`, gives `b,c_1` the three `l_i`, gives `c_2` the three
+`r_i`, and gives `e_i` both vertices of `W_i`.  A connected subset of one
+`W_i` seeing `b,c_1,c_2,e_i` must equal `W_i`, after which its complement
+misses `e_i`.  Thus there is no component-local witness.  This profile is
+an abstract incidence counterexample to that inference; it is not known to
+occur in an ambient seven-connected blocker.
+
+The full bisection still closes the polarized profile.  Take
+
+```text
+U={t_0,l_1,l_2},    V=X-U,    h_0=c_2.
+```
+
+Then `U,V` are connected and adjacent, `U` sees `a,b` and three of the five
+`K`-resources, and `V` is `H`-full.  The two defects are one and zero.
+
+The requirement that `U` see `b` is nevertheless redundant.  A second
+order-nine profile on the same graph gives `a` all six `W_i` vertices,
+gives `b` only `t_2`, gives `c_1,c_2` the left and right triples, and gives
+`e_i` both vertices of `W_i`.  It satisfies every audited local hypothesis
+but has no component-local witness and no `H`-full-complement witness whose
+first side sees `b`.  The same choice
+
+```text
+U={t_0,l_1,l_2},    V=X-U,    h_0=c_2
+```
+
+closes once the unnecessary `b` requirement is removed.  The crossing edge
+`ab` supplies that helper contact for free.  More precisely, when `V` is
+`H`-full, the bisection criterion is equivalent to requiring `U` to see `a`
+and at least three of the five `K`-resources.
+
+The exact unresolved nonsingleton subcase is therefore **support transfer**:
+`V` is not `H`-full, so the resources supported wholly on `U` must be
+coordinated with the single omitted resource `h_0`.  The explicit profiles
+refute only the stronger repairs, not the full bisection lemma, weighted
+splitter theorem, or T44.
 
 ### 4.2 Singleton blocker and its contraction trace
 
@@ -276,33 +319,77 @@ least two components and `G[E]` is subcubic.  With two components, either:
 2. `T` consists of a whole literal shore `S_0` and one vertex `x`, while
    both components meet the opposite shore.
 
-The second case now has exact profiles.  If the smaller side `R` contains a
-single opposite-shore core vertex `s`, then `R-s` is nonempty and connected.
-For an ordering `epsilon,eta` of `a,p`,
+The second case is now eliminated in full.  In an unbalanced split, the
+exact small shore gives two endpoint-derived connected sets.  A path from
+the common neighbour `b` to an unused opposite-shore core vertex gives a
+third.  These sets form a triangle and are universal to four `S_0`-rooted
+sets completed to `K_4^-`, for `3+12+5=20` contacts.
+
+In a balanced `2+2` split, the audited one-sidedness theorem first excludes
+coexistence of the two one-endpoint miss types.  If `R-F` is nonempty, either
+one such component or a component missing both endpoints again supplies the
+third member of a triangle universal to a `K_4^-` core.  If `R=F` consists
+of the two split core vertices, their degree-seven neighbourhoods are exact.
+A two-resource allocation closes every component of `D-(D cap S_1)`; the
+last case `D=D cap S_1` contradicts disjointness of the endpoint label sets.
+Thus every unbalanced and balanced shore split contains an explicit
+`K_7^-` minor.
+
+The three-component response is also eliminated uniformly.  Choose two
+components meeting the opposite shore, remove one core vertex from each,
+and choose a remaining connected component piece.  Each piece misses at
+most one vertex of `E`, so the two removed core vertices repair all missed
+`S_0` contacts and complete four core bags to `K_4^-`.  Distinct
+representatives from `{a,p,x}` turn those two pieces and the untouched third
+component into a triangle.  This covers all shore distributions
+`3+1+0`, `2+2+0`, and `2+1+1`, again with twenty contacts.
+
+Hence the **sole singleton residue** is the first two-component alternative:
+all core vertices outside `T` lie in one component containing a
+`T`-rooted `K_5`.  The new joint-contact theorem strengthens the two
+separate contact bounds.  If `C_a,C_p` are the sets of model bags contacted
+by `a,p`, then every such model satisfies
 
 ```text
-N_G(R-s)=(E-{epsilon}) union {s},
+|C_a union C_p| <= 3.
 ```
 
-`epsilon` has unique `R`-neighbour `s`, the forced nonedges are
-`eta s, eta x, epsilon x, xs`, and the common neighbour `b` lies in the
-large component `D`.  If `x` is exterior, `D` has a one-vertex separator
-between `N_D(x)` and `N_D(epsilon)`; if `x` is core, the two remaining
-opposite-shore core vertices separate those attachment sets.
+If either contact set has order three, it contains the other.  In particular,
+the endpoint neighbour counts in `T` now total at most three, rather than
+five.
 
-If the opposite shore splits `2+2`, then `x` is exterior.  Every component
-of a side after deleting its two core vertices misses `a` or `p`, misses at
-most two vertices of `E`, and meets at least as many of those two core
-vertices as it misses boundary vertices.  If both one-endpoint miss types
-occur, their miss sets are exactly `{a,u}` and `{p,v}` for `u,v in T`, with
-the forced cross-nonedges `pu,av`.
+There is also an exact target-producing split condition.  If the remote
+component contains disjoint nonempty connected sets `U,V`, adjacent to
+`a,p`, respectively, and the two endpoint-derived bags together miss at
+most one of the five rooted bags, those two bags and the rooted `K_5` give
+twenty contacts.  If this split is not obtained, a spanning-tree split of
+the remote component—or, when its only endpoint neighbour is the common
+neighbour `b`, of one rooted branch bag—returns a proper nonempty connected
+set `Y` such that `N_G(Y)` is an actual separator.  Seven-connectivity gives
 
-The literal completion is therefore reduced to four explicit mechanisms:
-the nonsingleton bisection, the core-concentrated rooted-contact profile, the
-two shore-split profiles, and the three-component trace.  The known `W_5`
-profile still shows that a bare weighted-`K_4` assertion is false and that
-the triangle exit is indispensable.  None of these reductions proves the
-weighted splitter theorem, the literal branch, or T44.
+```text
+|N_G(Y)| >= 7,
+```
+
+and equality makes every component of `G-N_G(Y)` full to the boundary.
+
+The lower bound cannot simply be replaced by equality.  The verified
+[order-three incidence barrier](../barriers/hc7_k44_core_concentrated_bisection_incidence_barrier.md)
+satisfies every relative boundary inequality, fullness, unique common
+endpoint incidence, the degree-seven counts, and joint contact rank three,
+but every disjoint connected endpoint-anchored pair has total defect at
+least two.  This is a local incidence counterexample only, not an ambient
+seven-connected host; it shows that the boundary inequalities alone cannot
+force the required bisection.  Notably, five of its six proper nonempty
+sides are already tight, so a separator-based continuation remains viable.
+
+The literal completion is therefore reduced to two explicit mechanisms:
+the nonsingleton boundary-bisection lemma, and the singleton assertion that
+one returned separator has order seven or supports compatible rooted
+structure across a larger boundary.  The known `W_5` profile still shows
+that a bare weighted-`K_4` assertion is false and that the triangle exit is
+indispensable.  Neither remaining mechanism is closed, so the weighted
+splitter theorem, literal branch, and T44 remain open.
 
 ## 5. Exact nonliteral obligation
 

@@ -35,14 +35,18 @@ Selected audited inputs:
   three-cut profiles](../results/hc7_k44_tight_boundary_and_minimum_blocker.md);
 - [an adjacent singleton edge has an exact two- or three-component
   contraction trace](../results/hc7_k44_adjacent_singleton_contraction_trace.md);
-- [a two-component literal-shore split has exact unbalanced separator and
-  balanced endpoint-miss
-  profiles](../results/hc7_k44_adjacent_singleton_shore_split_profiles.md).
+- [every unbalanced or balanced two-component literal-shore split yields an
+  explicit `K_7^-` minor](../results/hc7_k44_two_component_shore_split_elimination.md);
+- [every three-component whole-shore trace yields an explicit `K_7^-`
+  minor](../results/hc7_k44_three_component_trace_elimination.md); and
+- [the sole core-concentrated trace has joint endpoint-contact rank at most
+  three and otherwise returns a new proper connected separator
+  side](../results/hc7_k44_core_concentrated_joint_contact_reduction.md).
 
 A [hash-pinned internal cold audit](../results/hc7_k44_closure_local_normal_forms_audit.md)
 covers the five local statements other than the separately audited
-dense-boundary theorem.  Each of the three newer literal reductions has its
-own adjacent hash-pinned GREEN internal audit.
+dense-boundary theorem.  Each newer literal reduction has its own adjacent
+hash-pinned GREEN internal audit.
 
 ## Falsification checkpoint
 
@@ -78,12 +82,11 @@ certificate.
 ## Two open obligations
 
 1. **Literal exact-residue completion.**  Prove the minimum-degree-four
-   boundary-bisection lemma for a nonsingleton blocker, and eliminate the
-   exact adjacent-singleton contraction profiles: the core-concentrated
-   rooted-contact case, both two-component literal-shore splits, and the
-   three-component whole-shore trace.  Safe contraction and induction then
-   give the pure labelled trichotomy; the whole literal core joins its
-   six-bag outcome to the target.
+   boundary-bisection lemma for a nonsingleton blocker.  For the sole
+   adjacent-singleton residue, force order seven for the new proper connected
+   separator side or construct compatible rooted structure across a larger
+   separator.  Safe contraction and induction then give the pure labelled
+   trichotomy; the whole literal core joins its six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.**  Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target.  Exact cuts alone do not give laminarity,
@@ -99,12 +102,19 @@ Immediate barriers:
 - **Route nonclosure, not a counterexample:** [the `K_3 join (3K_2)` profile
   shows that the three-cut components cannot simply be kept intact in that
   bisection](hc7_k44_closure_frontier.md#41-nonsingleton-minimum-blocker).
-  Splitting one component closes the profile; the precise repair is the
-  intra-component nonseparating-transversal lemma;
-- **Precise singleton profiles:** [the contraction-trace
-  dichotomy](../results/hc7_k44_adjacent_singleton_contraction_trace.md#6-exact-scope)
-  and [the exact unbalanced and balanced literal-shore
-  splits](../results/hc7_k44_adjacent_singleton_shore_split_profiles.md);
+  A second [polarized order-nine profile refutes the purely
+  intra-component repair](../barriers/hc7_k44_intra_component_transversal_barrier.md)
+  while retaining cross-component two-helper witnesses; a third profile
+  refutes the unnecessary requirement that the first side see `b`.  Neither
+  profile refutes the full bisection lemma.  The exact unresolved subcase is
+  support transfer when the complementary side is not full to `H`;
+- **Precise singleton lemma:** [the core-concentrated joint-contact
+  reduction](../results/hc7_k44_core_concentrated_joint_contact_reduction.md)
+  forces joint contact rank at most three and returns a proper connected
+  separator side if the one-defect two-helper split fails.  A verified
+  [order-three incidence profile](../barriers/hc7_k44_core_concentrated_bisection_incidence_barrier.md)
+  shows that the local boundary inequalities alone do not force that split;
+  the remaining task is to make the new separator exact or use its excess;
 - **Recorded route nonclosure:** [a component of an exact-cut complement may
   contain pieces of several branch bags](../results/hc7_k44_branch_model_and_double_cone_audit.md#exact-scope),
   so fullness to the cut cannot be counted as external branch-set contact.

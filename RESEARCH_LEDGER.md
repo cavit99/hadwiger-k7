@@ -23,10 +23,13 @@ This file is the sole authority for the present research frontier.
 3. **Immediate structural laboratory:** the literal-core route is reduced to
    two exact residues.  A minimum nonsingleton crossing blocker is
    three-connected of minimum degree at least four, with sharply classified
-   three-cuts; an adjacent singleton pair has an exact contraction trace,
-   and its two-component literal-shore split has explicit separator and
-   endpoint-miss profiles.  The nonliteral labelled branch-model rotation
-   obligation remains separate.
+   three-cuts.  For an adjacent singleton pair, every literal-shore split
+   and every three-component contraction trace is now eliminated.  In the
+   sole two-component core-concentrated profile, every rooted `K_5` has joint
+   endpoint-contact rank at most three, and target-freeness forces either the
+   exact two-helper completion or a new proper connected separator side.
+   Controlling that separator is the remaining singleton task.  The
+   nonliteral labelled branch-model rotation obligation remains separate.
 
 ## Current frontier
 
@@ -113,12 +116,18 @@ The current direct inputs are:
   in an exact seven-cut with two or three complementary components; the
   three-component case puts one literal shore and one exterior vertex on a
   subcubic boundary, while the two-component case is either a whole-shore
-  split or has a rooted `K_5` with universal endpoint-contact bounds; and
-- the exact shore-split profile theorem: an unbalanced split has one connected
-  tight small shore and reduces to an order-one or order-two attachment
-  separator, while a balanced `2+2` split has the displayed exact endpoint
-  miss types and, when both one-endpoint miss types occur, their forced
-  cross-nonedges.
+  split or has a rooted `K_5` with universal endpoint-contact bounds;
+- the two-component shore-split elimination theorem: every unbalanced or
+  balanced literal-shore split yields an explicit triangle universal to a
+  four-bag `K_4^-`, hence a `3+12+5=20` contact model;
+- the three-component trace elimination theorem: every distribution of the
+  opposite literal shore across the three full components yields the same
+  `3+12+5=20` conclusion after a uniform two-root allocation; and
+- the core-concentrated joint-contact theorem: every rooted `K_5` has joint
+  endpoint-contact rank at most three, order-three contact on one side
+  contains the other side's contacts, and failure of the exact two-helper
+  split returns a proper connected set with an actual separator as its full
+  neighbourhood.
 
 These promoted results have adjacent hash-pinned GREEN internal audits.
 Their deterministic finite components are registered in the research
@@ -130,11 +139,11 @@ prove T44, Conjecture 21 or `HC_7`.
 1. **Literal exact-residue completion.** Close both audited outcomes of a
    minimum crossing blocker.  For a nonsingleton blocker, prove the precise
    minimum-degree-four boundary-bisection lemma.  For a singleton blocker,
-   eliminate the exact contraction traces: the core-concentrated rooted-contact
-   profile, the unbalanced and balanced literal-shore split profiles, and the
-   three-component whole-shore trace.  This yields a safe contraction,
-   induction gives the pure labelled trichotomy, and the whole literal core
-   joins its six-bag outcome to the target.
+   complete the new core-concentrated separator alternative: force its full
+   neighbourhood to have order seven or construct compatible rooted structure
+   across a larger separator.  This yields a safe contraction, induction
+   gives the pure labelled trichotomy, and the whole literal core joins its
+   six-bag outcome to the target.
 2. **Nonliteral model-trace rotation.** Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target. Exact cuts alone do not provide
@@ -154,24 +163,72 @@ bisection.  The technical frontier records an explicit profile
 `K_3 join (3K_2)` which satisfies all preceding local consequences but leaves
 two helper defects, hence only nineteen guaranteed contacts, whenever the
 three components are kept intact.  Splitting one component closes that
-profile, so this is a route nonclosure rather than a counterexample.  The
-precise repair is an intra-component nonseparating-transversal lemma.
+profile, so this is a route nonclosure rather than a counterexample to the
+full bisection lemma.
+
+A second order-nine polarized incidence profile refutes the proposed
+purely intra-component nonseparating-transversal repair while still having
+231 spanning two-helper witnesses.  A third profile refutes the proposed
+cross-component condition if its first side is unnecessarily required to
+see `b`: it has no witness to either that mode or the component-local mode,
+but has 54 witnesses after the redundant requirement is removed.  Neither
+profile is known to occur in an ambient seven-connected blocker.
+
+The exact `H`-full-complement subcase now asks for a connected nonseparating
+set which sees `a` and at least three of the five `K`-resources; the crossing
+edge `ab` supplies `b` to the first helper for free.  The remaining hard
+case is support transfer: the complementary side is not `H`-full, and the
+resources supported wholly on the first side must be coordinated with the
+single omitted resource `h_0`.  The full boundary-bisection lemma remains
+open.
 
 For a singleton blocker `p`, the adjacent edge `ap` has an exact contraction
 cut.  A three-component response has a subcubic boundary consisting of
 `a,p`, one literal shore and one exterior vertex.  A two-component response
 is either core-concentrated, giving a rooted `K_5` which each endpoint meets
-in at most three bags, or splits the opposite literal shore.  In the latter
-case the unbalanced split has a connected tight small shore, places the
-unique common neighbour in the large component, and forces an order-one
-attachment separator when the fifth boundary vertex is exterior (or the
-specified order-two core separator when it is a core vertex).  The balanced
-  `2+2` split is reduced to exact endpoint-miss types and, when both
-  one-endpoint miss types occur, their forced cross-nonedges.
+in at most three bags, or splits the opposite literal shore.
 
-These results identify the remaining mechanisms; they do not eliminate
-them.  The computation-free induction base remains exterior order at most
-six, and all order-seven and newer finite screens are bounded evidence only.
+The latter alternative is now eliminated completely.  In the unbalanced
+case, the unique common neighbour gives a third connected bag beside the two
+endpoint-derived bags; these three form a triangle and are universal to four
+`S_0`-rooted bags completed to `K_4^-`.  In the balanced case, the audited
+one-sidedness theorem and a two-resource allocation eliminate both
+`R-F nonempty` and the final two-core-vertex component `R=F`.  Every case
+again has `3+12+5=20` contacts.
+
+The three-component response is also eliminated.  Select two
+opposite-shore components and remove one core vertex from each.  The selected
+component pieces miss at most one cut vertex, so the removed core vertices
+repair their possible missed literal roots and complete four core bags to
+`K_4^-`.  Distinct representatives from `a,p,x` make the three
+component-derived bags a triangle.  This uniform construction covers the
+`3+1+0`, `2+2+0`, and `2+1+1` shore distributions.
+
+In the sole two-component core-concentrated response, the two separate
+three-bag endpoint bounds sharpen to the joint inequality
+
+`|C_a union C_p|<=3`
+
+for every spanning `T`-rooted `K_5` model.  If one contact set has order
+three it contains the other.  The exact two-helper construction closes as
+soon as two disjoint connected endpoint-anchored sets in the remote
+component have total rooted-bag defect at most one.  If no such split is
+obtained, a spanning-tree split of the remote component—or, in the unique
+common-neighbour case, of one rooted branch bag—returns a proper nonempty
+connected set `Y` for which `N_G(Y)` is an actual separator.  Thus
+`|N_G(Y)|>=7`; equality makes every complementary component full to that
+boundary.
+
+This is the precise remaining singleton lemma: force equality for one such
+separator or construct compatible rooted structure across a larger one.  A
+verified order-three local incidence profile shows that relative boundary
+inequalities, fullness, the degree-seven counts and the joint contact bound
+alone do not force the one-defect bisection.  It already has five proper
+tight sides.  Therefore the next argument must use the returned separator or
+reconfigure the rooted model; bare contact counting cannot close the case.
+
+The computation-free induction base remains exterior order at most six, and
+all order-seven and newer finite screens are bounded evidence only.
 The weighted splitter theorem, the literal T44 branch, T44, Conjecture 21,
 and the nonliteral rotation obligation all remain open.
 
