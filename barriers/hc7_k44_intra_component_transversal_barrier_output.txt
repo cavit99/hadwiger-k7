@@ -1,0 +1,8 @@
+order=9
+minimum_relative_value=7
+minimum_proper_connected_ab_value=8
+minimum_internal_degree=4
+repair_witnesses=0
+spanning_two_helper_witnesses=231
+explicit_cross_component_defects=1,0
+GREEN intra-component transversal barrier
