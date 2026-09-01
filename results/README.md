@@ -44,8 +44,9 @@ the [active index](../active/INDEX.md):
 - [branch-model normal forms and the double-cone theorem](hc7_k44_branch_model_and_double_cone.md), with [audit](hc7_k44_branch_model_and_double_cone_audit.md);
 - [the restriction on exact seven-cut boundaries](hc7_k44_fourconnected_seven_boundary_double_cone.md), with [audit](hc7_k44_fourconnected_seven_boundary_double_cone_audit.md);
 - [connectivity of the exterior of a literal `K_{4,4}`](hc7_literal_k44_exterior_threeconnectivity.md), with [audit](hc7_literal_k44_exterior_threeconnectivity_audit.md);
-- [four-portal triangle completion](hc7_k44_four_portal_triangle_completion.md), with [audit](hc7_k44_four_portal_triangle_completion_audit.md); and
-- [the three-portal `K_4` dichotomy](hc7_k44_three_portal_k4_tetrahedral_dichotomy.md), with [audit](hc7_k44_three_portal_k4_tetrahedral_dichotomy_audit.md).
+- [four-portal triangle completion](hc7_k44_four_portal_triangle_completion.md), with [audit](hc7_k44_four_portal_triangle_completion_audit.md);
+- [the three-portal `K_4` dichotomy](hc7_k44_three_portal_k4_tetrahedral_dichotomy.md), with [audit](hc7_k44_three_portal_k4_tetrahedral_dichotomy_audit.md); and
+- [the weighted-splitter small-atom reduction](hc7_k44_weighted_splitter_small_atom_reduction.md), with [audit](hc7_k44_weighted_splitter_small_atom_reduction_audit.md).
 
 The [local-normal-forms cold audit](hc7_k44_closure_local_normal_forms_audit.md)
 checks the package at its pinned revisions and states explicitly what it does

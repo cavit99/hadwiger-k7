@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 31 August 2026
+**Last updated:** 1 September 2026
 **Authoritative status:** `HC_7` is not proved here. Neither is the
 `K_7^-` six-colour conjecture. Internal audits are not external peer
 review. Hadwiger's conjecture is known for `t<=6` and remains open for every
@@ -20,9 +20,9 @@ This file is the sole authority for the present research frontier.
 2. **Principal conditional refinement:** Norin--Totschnig Conjecture 21 asks
    whether every `K_7^-`-minor-free graph is six-colourable. T44 is the sole
    active completion target because it would prove this refinement.
-3. **Immediate structural laboratory:** the T44 campaign must close both the
-   literal-core portal-exchange obligation and the nonliteral labelled
-   branch-model rotation obligation described below.
+3. **Immediate structural laboratory:** the literal-core route is reduced to
+   the small transverse-atom completion lemma below; the nonliteral labelled
+   branch-model rotation obligation remains separate.
 
 ## Current frontier
 
@@ -45,6 +45,17 @@ order eleven. At order eleven, complementation reduces the census to 10,946
 unlabelled subcubic graphs; 9,940 complements are seven-connected and all
 have independently checked seven-bag `K_7^-` certificates. This is a
 computer-assisted finite result, not an unbounded theorem.
+
+A separate hostile screen of the weighted literal-core splitter formula
+found no survivor at exterior order eight after the cubic-vertex reduction:
+all 1,619 eligible three-connected graphs were UNSAT. Targeted small-atom
+probes were also UNSAT on all 16 connected four-regular graphs of order nine
+and on the 57 three-connected graphs among the 59 connected four-regular
+graphs of order ten. Z3
+5.1.0 is the decisive trust boundary and no independently checkable UNSAT
+certificate is retained. The exact encoding, checker, counts and digests are
+preserved in the [weighted-splitter
+experiment](active/experiments/k44_literal_weighted_splitter/README.md).
 
 A separate written-unaudited family reduction treats seven-connected
 full-attachment seven-sums
@@ -73,9 +84,13 @@ The current direct inputs are:
 - the literal-core exterior theorem: the exterior is connected and no set
   of at most two vertices separates two nonempty exterior sets; when it has
   at least four vertices, it is three-connected;
-- the four-portal exterior-triangle completion theorem; and
+- the four-portal exterior-triangle completion theorem;
 - the three-portal exterior-`K_4` dichotomy, with its tetrahedral exception
-  excluded in the spanning case by global portal coverage.
+  excluded in the spanning case by global portal coverage; and
+- the weighted-splitter small-atom reduction: absent a terminal triangle or
+  a safe contraction, a spanning tree of three-contractible edges has a
+  minimum tight atom of order at most three, with sharply transverse
+  companion blockers and the stated component restrictions.
 
 These promoted results have adjacent hash-pinned GREEN internal audits.
 Their deterministic finite components are registered in the research
@@ -84,19 +99,25 @@ prove T44, Conjecture 21 or `HC_7`.
 
 ### Two open obligations
 
-1. **Literal portal exchange.** Prove the pure labelled trichotomy producing
-   a triangle of three four-portal bags, a spanning `K_4` of four
-   three-portal bags, or six positive-portal bags whose quotient contains
-   `K_6^-`. The whole literal core joins the last outcome to the target.
+1. **Literal small transverse-atom completion.** Exclude the four audited
+   atom shapes, together with their companion blockers, in a terminal-free
+   labelled exterior. This yields a safe contraction, induction gives the
+   pure labelled trichotomy, and the whole literal core joins its six-bag
+   outcome to the target.
 2. **Nonliteral model-trace rotation.** Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target. Exact cuts alone do not provide
    laminarity, a peel side or preserved branch ownership.
 
-The literal trichotomy has a computation-free proof only through exterior
-order six. The order-seven Z3 census is bounded written-unaudited evidence
-without an independent UNSAT certificate. Neither obligation is a proved
-intermediate theorem.
+The literal route now has a genuine unbounded intermediate theorem. In the
+three-vertex residue, every crossing tree edge has a tight companion whose
+boundary meets the atom boundary in exactly one vertex; the exterior minus
+the atom has at most two components. The precise missing mechanism is a
+rooted positive-weight partition inside those one or two components. The
+computation-free induction base remains exterior order at most six; the
+order-seven and newer finite screens are bounded evidence only. The
+weighted splitter theorem, the literal T44 branch and the nonliteral
+rotation obligation all remain open.
 
 ## Durable recent results outside the active spine
 

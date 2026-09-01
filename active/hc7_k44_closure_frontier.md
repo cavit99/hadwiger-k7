@@ -1,6 +1,6 @@
 # Seven-connected `K_{4,4}` closure frontier
 
-**Status (31 August 2026):** T44 is the sole active completion target.  It is
+**Status (1 September 2026):** T44 is the sole active completion target.  It is
 open.  No seven-connected counterexample has been found.  The literal-core
 completion and the nonliteral branch-model lift are both still open, and no
 result in this file proves Conjecture 21 or `HC_7`.
@@ -57,12 +57,21 @@ The first exact pass found no counterexample.
 3. Exact one- and two-vertex branch-split probes found no global survivor.
    The sharp local survivors instead have low connectivity and refute only
    shortcut certificates.
+4. The exact weighted-splitter formula has no survivor on the 1,619
+   three-connected order-eight graphs left by the cubic-vertex reduction.
+   Targeted small-atom probes are also UNSAT on all 16 connected
+   four-regular graphs of order nine and on the 57 three-connected graphs
+   among the 59 connected four-regular graphs of order ten.
 
 Sources, counts, digests and reproduction commands are in
 [`experiments/k44_closure_falsification/`](experiments/k44_closure_falsification/README.md).
 The order-eleven conclusion is a computer-assisted finite result.  The
 full-attachment conclusion is a written-unaudited reduction whose 105 base
-cases are checked computationally.  Neither result implies T44.
+cases are checked computationally.  The weighted-splitter runs use Z3 5.1.0
+without an independently checkable UNSAT certificate; their exact encoding,
+independent concrete-witness checker, counts and digests are preserved in the
+[hostile-screen experiment](experiments/k44_literal_weighted_splitter/README.md).
+None of these finite results implies T44.
 
 The sharpest current near-miss is the tetrahedral literal profile
 
@@ -96,6 +105,9 @@ The following results are promoted and separately internally audited.
 6. [Four mutually adjacent exterior bags with three portals each are
    terminal except for the exact tetrahedral
    profile](../results/hc7_k44_three_portal_k4_tetrahedral_dichotomy.md).
+7. [The exact obstruction to a safe weighted contraction reduces every
+   complete blocker system to a tight atom of order at most
+   three](../results/hc7_k44_weighted_splitter_small_atom_reduction.md).
 
 If the four bags span `C`, the tetrahedral exception is impossible: its
 total portal coverage is four, while seven-connectivity forces
@@ -140,16 +152,50 @@ evidence only, not an unbounded inference.  The source and exact output are
 preserved in the [labelled-trichotomy
 experiment](experiments/k44_literal_labelled_trichotomy/README.md).
 
-The smallest proposed repair is a portal-exchange theorem.  Choose a
-spanning `K_4` model of `C` whose sorted portal-count vector is
-lexicographically maximal.  One must prove that a bag with at most two
-portals either admits a contact-preserving transfer which improves this
-vector, exposes three mutually adjacent four-portal bags, or creates the
-positive-weight six-bag near-clique.  A valid proof must track which
-transferred connected piece owns each of the six `K_4` contacts.  The known
-`W_5` profile shows that a bare weighted-`K_4` assertion is false and that
-the triangle exit is indispensable.  No such exchange proof is currently
-known.
+The audited [weighted-splitter small-atom
+reduction](../results/hc7_k44_weighted_splitter_small_atom_reduction.md)
+now supplies a genuine unbounded intermediate theorem.  For a
+three-contractible edge `uv`, contraction fails the boundary system exactly
+when a nonempty set `X subseteq V(C)-{u,v}` is tight and has both `u,v` in
+its boundary.  This includes disconnected and co-spanning witnesses; sets
+containing the contracted vertex preserve their preimage boundary and
+weight.
+
+If no terminal triangle and no safe edge exists, the reduction produces a
+spanning tree all of whose edges are three-contractible and a minimum tight
+set `A` whose boundary contains a tree edge.  Writing `B=N_C(A)` and
+`Q=L(A)`, it proves
+
+```text
+1 <= |A| <= 3,    4 <= |B| <= 7,    |Q| = 7-|B| <= 3.
+```
+
+Every tree edge incident with `A` has a connected tight companion blocker
+`X`, and
+
+```text
+A subseteq N_C(X),
+|partial A intersect partial X| <= 7-2|A|.
+```
+
+For a three-vertex atom and a crossing tree edge, the two seven-resource
+boundaries meet in exactly the outside endpoint.  The companion set is
+adjacent to all three atom vertices, its contacts in `B` form a set `P` with
+`1<=|P|<=3`, and `lambda(A union X)=10-|P|`.  Terminal-freeness forces
+`C-A` to have at most two components, with the sharper triangle/path
+deficiency restrictions stated in the theorem.
+
+The remaining **small transverse-atom completion lemma** is precise: exclude
+the four atom shapes together with all companion blockers in a terminal-free
+labelled exterior.  In the three-vertex case, the missing mechanism is a
+rooted positive-weight partition inside the one or two components of `C-A`;
+the one-resource overlap alone does not supply it.  Once this lemma is
+proved, safe contraction and terminal lifting give induction from the
+computation-free base through order six and close the literal branch.
+
+The known `W_5` profile still shows that a bare weighted-`K_4` assertion is
+false and that the triangle exit is indispensable.  The small-atom reduction
+does not prove the weighted splitter theorem, the literal branch, or T44.
 
 ## 5. Exact nonliteral obligation
 

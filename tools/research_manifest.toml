@@ -19876,7 +19876,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "1c78291968f890a2915a54d0b89fb9f77f91eb9586e07271dd62374dc95b316e"
+expected_source_sha256 = "5f1bca74ec2d16c6555fc2c37137e25ac5f6933850b4e331e3e1b607485d2a35"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19889,7 +19889,7 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the still-open literal portal-exchange trichotomy",
+  "the still-open literal small transverse-atom completion lemma",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
   "HC7",
@@ -20047,6 +20047,40 @@ does_not_prove = [
 keywords = ["literal K4,4", "portal K4", "tetrahedral profile", "K7 minus"]
 
 [[claims]]
+id = "hc7.k44_weighted_splitter_small_atom_reduction"
+title = "Unsafe weighted contractions reduce to a tight atom of order at most three"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_weighted_splitter_small_atom_reduction.md"
+source_heading = "Theorem 4.1 (safe contraction or a small transverse atom)"
+active = true
+audit = "results/hc7_k44_weighted_splitter_small_atom_reduction_audit.md"
+expected_source_sha256 = "bc4f7d38d94beed2d86b9858a2290fd1cb85af398653b5b16a5d3231f80eb2db"
+scope = "finite simple three-connected labelled graphs of order at least seven satisfying every seven-resource boundary inequality"
+label_fidelity = "all eight labels, their unions on contracted vertices, and the vertex and label parts of every tight boundary remain explicit"
+hypotheses = [
+  "the graph is three-connected and has order at least seven",
+  "every nonempty vertex set X satisfies |N(X)|+w(X)>=7, including the full set",
+]
+allowed_exits = [
+  "a four-label triangle model",
+  "a safe three-contractible edge",
+  "one of four tight atom shapes of order at most three with the stated companion blockers",
+]
+conclusions = [
+  "a three-contractible edge is unsafe exactly when both ends lie in the boundary of a tight set avoiding them",
+  "absent a four-label triangle there is a spanning tree of three-contractible edges",
+  "a complete system of tight blockers has a minimum connected atom of order at most three with boundary order at least four and weight at most three",
+  "for a three-vertex atom a crossing-edge blocker meets its boundary in exactly one resource and the graph minus the atom has at most two components under terminal exclusion",
+]
+does_not_prove = [
+  "the small transverse-atom completion lemma",
+  "the weighted splitter theorem or the full labelled trichotomy",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["weighted splitter", "safe contraction", "tight set", "generalized atom", "literal K4,4"]
+
+[[claims]]
 id = "hc7.barrier.k44_shortcut_certificates"
 title = "Local fat-triangle and split-edge path counts do not force K7-minus"
 kind = "barrier"
@@ -20118,6 +20152,26 @@ does_not_prove = [
 ]
 keywords = ["literal K4,4", "labelled trichotomy", "bounded census", "Z3", "portal weights"]
 
+[[claims]]
+id = "hc7.laboratory.k44_weighted_splitter_hostile_screen"
+title = "Bounded hostile screen for the literal weighted-splitter theorem"
+kind = "laboratory"
+status = "written-unaudited"
+source = "active/experiments/k44_literal_weighted_splitter/README.md"
+source_heading = "Weighted-splitter hostile finite screen"
+active = false
+expected_source_sha256 = "715e9cf54fb4cf39b057d5eb4de52036ec9274b68f04372657d9b03f35d03e77"
+scope = "all eligible three-connected exteriors of order eight after the proved cubic-vertex reduction, plus targeted connected four-regular small-atom probes at orders nine and ten"
+conclusions = [
+  "all 1619 eligible order-eight fixed-graph formulas are UNSAT",
+  "the small-atom probe is UNSAT on all 16 connected four-regular order-nine graphs and all 57 three-connected graphs among the 59 connected four-regular order-ten graphs",
+]
+does_not_prove = [
+  "any unbounded weighted-splitter statement",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["weighted splitter", "bounded census", "Z3", "small atom", "order eight"]
+
 [[relations]]
 source = "hc7.k44_branch_model_normal_forms"
 target = "graph_minors.rooted_k4minus_four_roots"
@@ -20156,6 +20210,12 @@ note = "A spanning portal-rich K4 is the other structural terminal outcome; glob
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_weighted_splitter_small_atom_reduction"
+kind = "uses"
+note = "The exact contraction obstruction and generalized-atom reduction isolate the remaining literal completion lemma in four atom shapes."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.barrier.k44_shortcut_certificates"
 kind = "guarded_by"
 note = "The exact target-free profiles show that local path counts cannot replace global portal coverage or branch-label ownership."
@@ -20171,6 +20231,12 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.laboratory.k44_literal_labelled_trichotomy"
 kind = "related_to"
 note = "The exact bounded labelled census supports the three-outcome literal obligation through exterior order seven without supplying an unbounded proof."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.laboratory.k44_weighted_splitter_hostile_screen"
+kind = "related_to"
+note = "The hostile screen supports the weighted-splitter route at order eight and in targeted higher-order atom probes without supplying an unbounded proof."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
