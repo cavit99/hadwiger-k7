@@ -33,11 +33,17 @@ Selected audited inputs:
 - [a minimum nonsingleton crossing blocker is three-connected of minimum
   degree at least four, with multiply attached resources and two exact
   three-cut profiles](../results/hc7_k44_tight_boundary_and_minimum_blocker.md);
-- [the nonsingleton blocker satisfies a five-support six-boundary inequality;
-  either a closing bond exists or a minimum support-full bond side has one of
-  three explicit block forms, with a plain-path refinement when it meets the
-  `b`-support and additional parity restrictions in the four-connected
-  case](../results/hc7_k44_five_support_bond_reduction.md);
+- [every three-support bond in a nonsingleton blocker is terminal; the
+  four-connected case is impossible, the selected minimum support-full bond
+  shore opposite the specified `p` is a sequential path, and every surviving
+  three-cut has exactly two
+  components](../results/hc7_k44_three_support_bond_and_threecut_reduction.md);
+- [at a surviving two-component three-cut, each support meets the cut at
+  most once, the five supports have one of two exact incidence types, and
+  every choice of a two-element pair in a whole support on each side and a
+  cross-component pair in a bridge support is weakly linkable; a
+  smallest three-support component has a four-connected triangle-boundary
+  torso](../results/hc7_k44_two_component_threecut_support_normal_form.md);
 - [an adjacent singleton edge has an exact two- or three-component
   contraction trace](../results/hc7_k44_adjacent_singleton_contraction_trace.md);
 - [every unbalanced or balanced two-component literal-shore split yields an
@@ -94,11 +100,17 @@ Z3 as the decisive trust boundary, not an unbounded theorem.
 
 ## Two open obligations
 
-1. **Literal exact-residue completion.**  Prove the minimum-degree-four
-   leaf-block completion lemma for a nonsingleton blocker.  Its helper sets
-   may be taken to form a spanning partition; after minimizing a support-full
-   side opposite the distinguished `a`-neighbour, only three explicit block
-   forms remain, and the `b`-meeting form is a path.  For the sole
+1. **Literal exact-residue completion.**  Prove the triangle-boundary torso
+   bisection lemma for a nonsingleton blocker.  The selected minimum
+   support-full bond shore opposite the specified `p` is already a path with
+   two split endpoint supports and three
+   sequential internal supports, and every survivor has connectivity exactly
+   three.  Every three-cut already has exactly two components, both meeting
+   the minimum path.  Its supports have the two exact incidence types in the
+   audited normal form, and a smallest component meeting three supports has
+   a four-connected torso.  Find inside that component a connected
+   nonseparating set meeting every external support and splitting every whole
+   support.  For the sole
    adjacent-singleton residue, eliminate
    the entire core-concentrated target-free profile.  The present reduction
    returns a marked separator, but neither an exact-seven completion theorem
@@ -111,30 +123,34 @@ Z3 as the decisive trust boundary, not an unbounded theorem.
    `K_{4,4}` model or the target.  Exact cuts alone do not give laminarity,
    a peel side or preserved branch ownership.
 
+Immediate nonsingleton lemma: [prove the triangle-boundary torso bisection
+lemma in the selected four-connected three-support
+torso](../results/hc7_k44_two_component_threecut_support_normal_form.md#4-exact-localized-completion-lemma).
+
 Immediate barriers:
 
 - **Barrier/counterexample to local shortcut claims:** [a fat triangle with
   seven local paths and a split edge with six alternate
   paths can both remain target-free](../barriers/hc7_k44_shortcut_certificate_barriers.md);
-- **Precise nonsingleton lemma:** [find the closing two-helper pair in a
-  minimum-degree-four three-connected blocker](../results/hc7_k44_five_support_bond_reduction.md#6-exact-remaining-statement);
-- **Barrier to the four-support-only shortcut:** [a four-connected exterior
-  can satisfy the derived six-boundary inequality while its six-connected
-  five-root augmentation has no root-preserving `K_7^-`
-  model](../barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier.md).
-  The augmentation has an unrooted target and the fixed support profile has
-  no full `a,b` blocker extension, so this does not refute the exact
-  leaf-block lemma;
-- **Route nonclosure, not a counterexample:** [the `K_3 join (3K_2)` profile
-  shows that the three-cut components cannot simply be kept intact in that
-  bisection](hc7_k44_closure_frontier.md#41-nonsingleton-minimum-blocker).
-  A second [polarized order-nine profile refutes the purely
-  intra-component repair](../barriers/hc7_k44_intra_component_transversal_barrier.md)
-  while retaining cross-component two-helper witnesses; a third profile
-  refutes the unnecessary requirement that the first side see `b`.  Neither
-  profile refutes the full bisection lemma.  Support transfer remains the
-  difficult incidence pattern, now confined by the minimum-side leaf-block
-  classification;
+- **Barrier to a prescribed local path step:** [the path data and boundary
+  inequalities do not force a bond which separates a fixed anchor from a
+  fixed `b`-support vertex while splitting the three prescribed internal
+  supports](../barriers/hc7_k44_minimum_path_internal_transversal_barrier.md).
+  The example has other three-support bonds, so it does not refute the
+  triangle-boundary torso bisection lemma;
+- **Barrier to quotient-only completion:** [the mandatory two-component
+  support incidences alone admit a thirteen-vertex literal-core quotient
+  whose exact `K_7^-` contact optimum is
+  nineteen](../barriers/hc7_k44_two_component_quotient_completion_barrier.md).
+  It fails `q>=6`, support multiplicity and the minimum-path normal form, so
+  the live proof must use that uncontracted structure;
+- **Barrier to a stripped torso proof:** [a `K_5` triangle-boundary torso can
+  satisfy every local three-support inequality but have no connected
+  nonseparating set meeting both external supports and splitting the whole
+  support](../barriers/hc7_k44_three_support_torso_bisection_barrier.md).
+  This proves only that the local torso hypotheses are insufficient; the
+  global bond restriction, support provenance, complementary supports,
+  minimum path and distinguished incidences remain available;
 - **Singleton reduction and exact remaining target:** [the core-concentrated
   joint-contact reduction](../results/hc7_k44_core_concentrated_joint_contact_reduction.md)
   forces joint contact rank at most three and, in the target-free profile,

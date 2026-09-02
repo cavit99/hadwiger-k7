@@ -19888,6 +19888,52 @@ expected_stdout = [
 ]
 
 [[verifiers]]
+id = "k44-three-support-bond-completion"
+path = "results/hc7_k44_three_support_bond_completion_verify.py"
+sha256 = "9aa04512b78656c59e67a3e425f025cfeab6121f1babf00863175efc2d8ce200"
+timeout = 30
+expected_stdout = [
+  "PASS cases=160 minimum_optimum=20",
+  "PASS optimum_distribution=20:136,21:24",
+  "PASS certificate_sha256=a21f18a19ad4618c1cf4569f05cbd2b25201f924de140a5f78eb04aa9a3c4b17",
+  "NOTE bounded corroboration only; the unbounded lemma uses its written proof",
+]
+
+[[verifiers]]
+id = "k44-minimum-path-internal-transversal-barrier"
+path = "barriers/hc7_k44_minimum_path_internal_transversal_barrier_verify.py"
+sha256 = "9465153ef5b42e6fa45c09046feb3084894bd4b7819c5389e15cd861e1b628da"
+timeout = 30
+expected_stdout = [
+  "PASS graph6=GEnbvw connectivity=4 delta=4",
+  "PASS minimum_q=6 minimum_support_full_order=4",
+  "PASS rooted_internal_transversal_bonds=0 explicit_closing_bond={0,4}",
+]
+
+[[verifiers]]
+id = "k44-two-component-quotient-completion-barrier"
+path = "barriers/hc7_k44_two_component_quotient_completion_barrier_verify.py"
+sha256 = "c53445b6d0a3627152945ff536e70f6d4b2b8616cee100ef82dd6074784b3910"
+timeout = 30
+expected_stdout = [
+  "PASS vertices=13 edges=31 exact_minor_optimum=19",
+  "PASS canonical_states=1586222",
+  "PASS skeleton_bonds=11 maximum_split_supports=2",
+  "NOTE local contracted quotient only; q>=6 and support multiplicity fail",
+]
+
+[[verifiers]]
+id = "k44-three-support-torso-bisection-barrier"
+path = "barriers/hc7_k44_three_support_torso_bisection_barrier_verify.py"
+sha256 = "0ce91654d2ad981315f515d688df2038a60a861d66de1d8361d3676a5ca03fd9"
+timeout = 30
+expected_stdout = [
+  "PASS order=5 connectivity=4 local_scores=6,6,6",
+  "PASS candidate_bisections=0",
+  "NOTE stripped local torso claim only; global support provenance is absent",
+]
+
+[[verifiers]]
 id = "k44-intra-component-transversal-barrier"
 path = "barriers/hc7_k44_intra_component_transversal_barrier_verify.py"
 sha256 = "7e075b20d71793fcb6c35bc43b2326a3199a4daf2b276a363b288d74d4cc11ee"
@@ -19977,7 +20023,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "c394432afaea6e1bbdb37e1936826c04b7d68c7ed96b2e9ab2a361dd043e98ac"
+expected_source_sha256 = "d2b7bc5c1fec1c9f48a01fb48a0e30d71c5029de3dfea43364a0b46fbd427a76"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19990,7 +20036,7 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the nonsingleton leaf-block completion theorem: eliminate the three minimum-side block forms using the complementary side, full a,b incidence and exact three-cut profiles",
+  "the nonsingleton triangle-boundary torso bisection theorem under the full global blocker hypotheses, including the at-most-two-split restriction, complementary support provenance, the minimum path and a,b incidence",
   "the singleton core-concentrated completion theorem: the current marked separator certificate proves neither that exact boundary seven is terminal nor a well-founded descent across larger boundaries",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
@@ -20313,7 +20359,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k44_five_support_bond_reduction.md"
 source_heading = "Theorem 4.1 (minimum-side block reduction)"
-active = true
+active = false
 audit = "results/hc7_k44_five_support_bond_reduction_audit.md"
 expected_source_sha256 = "687034d01f4b1a9784585aa9596def4439939f17efc6ecd0d0530c2c95aa7773"
 scope = "minimum nonsingleton crossing blockers in the literal K4,4 route, together with abstract five-support bond and parity consequences under their explicit hypotheses"
@@ -20336,6 +20382,64 @@ does_not_prove = [
   "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
 ]
 keywords = ["literal K4,4", "minimum blocker", "support-full bond", "block-cut tree", "parity bond", "facial obstruction"]
+
+[[claims]]
+id = "hc7.k44_three_support_bond_threecut_reduction"
+title = "Three-support bonds eliminate four-connected and three-component nonsingleton blockers"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_three_support_bond_and_threecut_reduction.md"
+source_heading = "Theorem 4.1 (reduction to two-component three-cuts)"
+active = true
+audit = "results/hc7_k44_three_support_bond_and_threecut_reduction_audit.md"
+expected_source_sha256 = "4007a05f71be45b16df65637806bffd241fd3da3cb9905b0764e73b818ecb9db"
+scope = "minimum nonsingleton crossing blockers in a seven-connected target-free graph with a specified literal K4,4, plus the stated abstract four-connected five-support theorem"
+label_fidelity = "the literal shores, seven boundary-rooted bags, unused core vertex, five indexed non-atom supports, minimum path and every split support remain explicit"
+hypotheses = [
+  "the blocker has the exact nonsingleton minimum-blocker normal form",
+  "the five supports have order at least two and every proper connected set has five-support score at least six",
+]
+conclusions = [
+  "every bond splitting at least three supports yields an explicit K7-minus minor",
+  "every four-connected graph satisfying the abstract five-support hypotheses has a bond splitting at least three supports",
+  "in a target-free blocker every minimum support-full side is the stated sequential induced path",
+  "every surviving nonsingleton blocker has connectivity exactly three and every three-cut leaves exactly two components, each meeting the minimum path",
+]
+does_not_prove = [
+  "elimination of the remaining two-component three-cut",
+  "elimination of the singleton blocker",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "three-support bond", "four connectivity", "three-cut", "minimum path", "K7 minus"]
+
+[[claims]]
+id = "hc7.k44_two_component_threecut_support_normal_form"
+title = "Two-component cuts reduce to a four-connected three-support torso"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_two_component_threecut_support_normal_form.md"
+source_heading = "Support normal form at the remaining two-component three-cut"
+active = true
+audit = "results/hc7_k44_two_component_threecut_support_normal_form_audit.md"
+expected_source_sha256 = "26f8e6caf6a682035a6bf7d02f9aa10c90cab44f02176e700cc0dc1349de4a26"
+scope = "a three-connected graph with five multiply attached indexed supports satisfying the six-boundary inequality and with no bond splitting three supports; applied to every surviving nonsingleton literal blocker three-cut"
+label_fidelity = "the two components, all three cut vertices, all five indexed supports and their component and cut incidences remain explicit"
+separator_order = "a three-cut leaving exactly two components"
+conclusions = [
+  "each support meets the three-cut in at most one vertex",
+  "exactly one or two supports meet both components",
+  "with two bridge supports, the other three supports are wholly component-contained in a one-plus-two distribution",
+  "with one bridge support, two further supports occur on each side and any cross-side cut contacts use one common cut vertex",
+  "every local-pair local-pair bridge-pair parity instance is weakly linkable",
+  "a smallest three-cut component meeting exactly three supports has a four-connected triangle-boundary torso with one or two whole supports",
+]
+does_not_prove = [
+  "the global triangle-boundary torso bisection lemma",
+  "a torso bisection from four-connectivity and the local three-support inequality alone",
+  "the nonsingleton or singleton literal-core completion",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "two-component three-cut", "support incidence", "bond", "Menger linkage"]
 
 [[claims]]
 id = "hc7.k44_adjacent_singleton_contraction_trace"
@@ -20498,7 +20602,7 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier.md"
 source_heading = "1. Claim refuted"
-active = true
+active = false
 audit = "barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier_audit.md"
 expected_source_sha256 = "f2db7bb270fc22abc473f1859a50c3f37dc5a1baf89038b65318669ea27cd4b6"
 scope = "a fixed four-connected icosahedral-minus-one-vertex exterior with five supports satisfying the six-boundary score, and its canonical five-clique augmentation"
@@ -20546,13 +20650,89 @@ does_not_prove = [
 keywords = ["K4,4", "fat triangle", "split branch edge", "finite barrier", "shortcut certificate"]
 
 [[claims]]
+id = "hc7.barrier.k44_minimum_path_internal_transversal"
+title = "Minimum-path data do not force one prescribed rooted three-support bond"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k44_minimum_path_internal_transversal_barrier.md"
+source_heading = "1. Claim refuted"
+active = true
+expected_source_sha256 = "cc290e09453fd07f287fc329372f8f26a358d7a7298ce79234d2eb9a64465959"
+scope = "one explicit four-connected labelled graph satisfying the minimum-path attachment and six-boundary hypotheses for a fixed anchor, b-support vertex and three prescribed internal supports"
+label_fidelity = "the graph6 host, five indexed supports, selected minimum path, fixed anchor and fixed b-support vertex are explicit"
+refutes = [
+  "the local minimum-path data alone force a bond separating the fixed anchor from the fixed b-support vertex while splitting the three prescribed internal supports",
+]
+conclusions = [
+  "the explicit graph satisfies the six-boundary inequality and the stated minimum-path data",
+  "no bond has the prescribed rooted three-support property",
+  "another bond splits three supports, so the example does not satisfy the global target-free restriction",
+]
+does_not_prove = [
+  "failure of the triangle-boundary torso bisection lemma",
+  "failure of an adaptive choice of support triple or anchor",
+  "failure of the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "minimum path", "prescribed bond", "transversal barrier", "three supports"]
+
+[[claims]]
+id = "hc7.barrier.k44_two_component_quotient_completion"
+title = "Mandatory two-component quotient contacts do not force K7-minus"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k44_two_component_quotient_completion_barrier.md"
+source_heading = "1. The refuted claim"
+active = true
+expected_source_sha256 = "b38dcb771c2dba7d030329a1c3c8443439fa36c0c7c0134420397a87f6576bdd"
+scope = "a thirteen-vertex literal-core quotient with the two-bridge one-plus-two support incidence and both distinguished roots on the three-support component"
+label_fidelity = "the literal shores, seven rooted core vertices, unused core vertex, two component vertices and three cut vertices are explicit"
+refutes = [
+  "the mandatory rooted-core contacts of the two-component two-bridge support profile alone force a K7-minus minor after contracting both components",
+]
+conclusions = [
+  "the exact maximum quotient contact count over seven connected branch sets is nineteen",
+  "all eleven bonds of the K2,3 skeleton split at most the two bridge supports",
+  "the construction fails support multiplicity, the six-boundary inequality and the minimum support-full path conclusion",
+]
+does_not_prove = [
+  "failure of the triangle-boundary torso bisection lemma with uncontracted component structure",
+  "failure of the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "two-component quotient", "nineteen contacts", "K7 minus", "route barrier"]
+
+[[claims]]
+id = "hc7.barrier.k44_three_support_torso_bisection"
+title = "Four-connectivity and the local three-support inequality do not force the torso bisection"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k44_three_support_torso_bisection_barrier.md"
+source_heading = "1. Claim refuted"
+active = true
+expected_source_sha256 = "9d8789d17f1e65517e71e6339edb0ca2d08f74fe66324d90d3df06138482cfcf"
+scope = "the stripped local triangle-boundary torso assertion with one whole and two external supports under the component-side six-boundary inequality"
+label_fidelity = "the K5 torso, boundary triangle, two-vertex component and all three support sets are explicit"
+refutes = [
+  "four-connectivity of the triangle-boundary torso and the local three-support inequality alone force a connected nonseparating set meeting both external supports and splitting the whole support",
+]
+conclusions = [
+  "all three nonempty connected component-side sets have score exactly six",
+  "no component-side set meets both external supports while splitting the whole support",
+  "the example lacks the complementary component, two other supports, global support provenance and minimum-path data",
+]
+does_not_prove = [
+  "failure of the global triangle-boundary torso bisection lemma",
+  "failure of the nonsingleton literal-core completion or T44",
+]
+keywords = ["literal K4,4", "four-connected torso", "triangle boundary", "support bisection", "local barrier"]
+
+[[claims]]
 id = "hc7.barrier.k44_intra_component_transversal"
 title = "Minimum-blocker profiles refute component-local and b-redundant repairs"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_k44_intra_component_transversal_barrier.md"
 source_heading = "Barriers to component-local and boundary-resource-redundant repairs"
-active = true
+active = false
 audit = "barriers/hc7_k44_intra_component_transversal_barrier_audit.md"
 expected_source_sha256 = "66e1502d0132a89d22439aa464e0dc48a0e79aa9f16b0fe9390d37e6d8688237"
 scope = "abstract order-nine boundary-incidence profiles satisfying every audited reduced local minimum-blocker inequality and the first exact three-cut profile; no ambient seven-connected realization is asserted"
@@ -20759,9 +20939,45 @@ note = "The tight-boundary theorem reduces every minimum nonsingleton crossing b
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_three_support_bond_threecut_reduction"
+kind = "uses"
+note = "The three-support theorem eliminates the four-connected and three-component nonsingleton cases and supplies the sequential minimum path at every survivor."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_two_component_threecut_support_normal_form"
+kind = "uses"
+note = "The sole nonsingleton residue has one of two exact support-incidence types and a selected four-connected triangle-boundary torso with three incident supports."
+
+[[relations]]
+source = "hc7.k44_three_support_bond_threecut_reduction"
 target = "hc7.k44_five_support_bond_reduction"
 kind = "uses"
-note = "The audited minimum-side theorem reduces the nonsingleton bisection residue to three explicit leaf-block forms and standard parity-bond obstructions."
+note = "The minimum-side block theorem supplies the path structure and parity-bond machinery sharpened by the universal three-support threshold."
+
+[[relations]]
+source = "hc7.k44_three_support_bond_threecut_reduction"
+target = "hc7.k44_tight_boundary_minimum_blocker"
+kind = "uses"
+note = "The minimum-blocker theorem supplies support multiplicity, the six-boundary inequality and the two three-component profiles eliminated here."
+
+[[relations]]
+source = "hc7.k44_three_support_bond_threecut_reduction"
+target = "hc7.k44_spanning_two_helper_split_count"
+kind = "uses"
+note = "One orientation of the direct three-support completion uses the audited spanning two-helper count."
+
+[[relations]]
+source = "hc7.k44_two_component_threecut_support_normal_form"
+target = "hc7.k44_three_support_bond_threecut_reduction"
+kind = "uses"
+note = "The preceding theorem supplies the global prohibition on three-split bonds and proves that every surviving three-cut has two components."
+
+[[relations]]
+source = "hc7.k44_two_component_threecut_support_normal_form"
+target = "hc7.k44_five_support_bond_reduction"
+kind = "uses"
+note = "The simultaneous parity obstruction invokes the audited Chen--Ding--Yu--Zang bond dichotomy in the form recorded by the five-support reduction."
 
 [[relations]]
 source = "hc7.k44_five_support_bond_reduction"
@@ -20897,15 +21113,21 @@ note = "The exact target-free profiles show that local path counts cannot replac
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
-target = "hc7.barrier.k44_sixconnected_k5_rooted_extension"
+target = "hc7.barrier.k44_minimum_path_internal_transversal"
 kind = "guarded_by"
-note = "The four-connected facial example rules out discarding a,b and replacing the oriented two-helper problem by a generic four-support rooted-extension claim."
+note = "The explicit local profile rules out prescribing one fixed internal support triple and anchor separation; the remaining proof must choose adaptively and use the actual two-component cut."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
-target = "hc7.barrier.k44_intra_component_transversal"
+target = "hc7.barrier.k44_two_component_quotient_completion"
 kind = "guarded_by"
-note = "The polarized order-nine local profile refutes a purely intra-component repair of the nonsingleton three-cut case while leaving the full bisection lemma open."
+note = "The exact nineteen-contact quotient shows that mandatory root incidences do not suffice after contracting both components; support multiplicity, q and path structure must remain visible."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.barrier.k44_three_support_torso_bisection"
+kind = "guarded_by"
+note = "The K5 torso shows that four-connectivity and the local three-support inequality alone do not force the required bisection; global support provenance or the minimum path must be used."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"

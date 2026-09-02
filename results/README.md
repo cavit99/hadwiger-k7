@@ -58,12 +58,23 @@ eliminations, and the joint-contact separator theorem—are navigated from the
 active index.  The two unproved completion obligations remain in the
 [T44 technical frontier](../active/hc7_k44_closure_frontier.md).
 
-The nonsingleton two-helper criterion also has an audited
+The audited [three-support bond and three-cut
+reduction](hc7_k44_three_support_bond_and_threecut_reduction.md) lowers the
+terminal threshold to any three split supports, eliminates the entire
+four-connected nonsingleton case and proves that every surviving three-cut
+has exactly two components.  The adjacent [two-component support normal
+form](hc7_k44_two_component_threecut_support_normal_form.md) reduces those
+cuts to two exact support-incidence types and then to a smallest
+three-support side with a four-connected triangle-boundary torso.  Neither
+result proves the remaining torso bisection lemma.
+
+The earlier nonsingleton two-helper criterion also has an audited
 [spanning and split-count normal form](hc7_k44_spanning_two_helper_split_count.md):
 unused blocker components can be absorbed without increasing defect, after
 which the exact threshold is three split supports when the second side sees
-`b` and four when it misses `b`.  This reformulates the open residue but does
-not prove that a closing partition exists.
+`b` and four when it misses `b`.  This remains useful bookkeeping, but the
+later `b`-independent three-support construction supersedes it as the live
+terminal threshold.
 
 ## Finding other material
 

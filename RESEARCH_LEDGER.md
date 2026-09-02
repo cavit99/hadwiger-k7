@@ -21,14 +21,20 @@ This file is the sole authority for the present research frontier.
    whether every `K_7^-`-minor-free graph is six-colourable. T44 is the sole
    active completion target because it would prove this refinement.
 3. **Immediate structural laboratory:** the literal-core route is reduced to
-   two exact residues.  A minimum nonsingleton crossing blocker is
-   three-connected of minimum degree at least four, with sharply classified
-   three-cuts.  Its seven-resource inequalities imply a five-support
-   six-boundary system.  Either a closing bond already exists, or a minimum
-   support-full bond side opposite the distinguished `a`-neighbour has one of
-   three explicit block forms, and is a plain path if it sees `b`.
-   Eliminating those forms is the exact nonsingleton leaf-block completion
-   lemma.  For an adjacent singleton pair,
+   two exact residues.  In a target-free nonsingleton minimum blocker, a new
+   literal-core construction shows that every bond splits at most two of the
+   five non-atom supports.  Consequently the selected minimum support-full
+   bond shore opposite the specified `p` is a plain path with two split
+   endpoint supports and three sequential internal supports, without a
+   `b`-incidence hypothesis.  A four-connected graph with
+   the derived six-boundary system always has a three-support bond, so the
+   entire four-connected nonsingleton case is eliminated.  Every survivor has
+   connectivity exactly three, and every three-cut leaves exactly two
+   components, each meeting the sequential minimum path.  At such a cut,
+   every support meets the cut at most once and the five supports have one of
+   two exact incidence types.  A smallest component meeting three supports
+   has a four-connected triangle-boundary torso.  Its exact bisection lemma
+   is the remaining nonsingleton task.  For an adjacent singleton pair,
    every literal-shore split
    and every three-component contraction trace is now eliminated.  In the
    sole two-component core-concentrated profile, every rooted `K_5` has joint
@@ -131,12 +137,23 @@ The current direct inputs are:
   minimum nonsingleton crossing blocker is three-connected of minimum degree
   at least four, has all five non-atom resources multiply attached, and has
   the stated exact three-cut profiles;
-- the five-support bond reduction: minimum-blocker strictness gives the
-  six-boundary inequality and, unless a closing bond already exists, a
-  minimum support-full side opposite the distinguished `a`-neighbour has one
-  of three explicit block forms; the `b`-meeting case is a path with exactly
-  two split supports, and a rainbow four-support path reduces to the standard
-  weakly-linkable parity obstruction;
+- the three-support bond and three-cut reduction: every bond splitting three
+  non-atom supports has an explicit literal-core `K_7^-` model; an abstract
+  four-connected graph satisfying the five-support six-boundary system has
+  such a bond; hence every target-free nonsingleton blocker has connectivity
+  exactly three, the selected minimum support-full bond shore opposite the
+  specified `p` is a sequential path, and every three-cut leaves exactly two
+  components, each meeting that path;
+- the two-component three-cut support normal form: each support meets the
+  cut at most once; either two supports meet both components and the other
+  three lie wholly in the components with a `1+2` distribution, or one
+  support meets both components and two further supports occur on each side,
+  with the stated common cut-vertex restriction; every choice of a pair in
+  a whole support on each side and a cross-component pair in a bridge
+  support is weakly linkable, while any small torso separation behind one
+  component meets at least three incident supports; a smallest component
+  meeting exactly three supports has a four-connected triangle-boundary
+  torso with one or two whole supports;
 - the contraction-trace theorem for an adjacent singleton pair: the edge lies
   in an exact seven-cut with two or three complementary components; the
   three-component case puts one literal shore and one exterior vertex on a
@@ -163,10 +180,12 @@ prove T44, Conjecture 21 or `HC_7`.
 
 1. **Literal exact-residue completion.** Close both audited outcomes of a
    minimum crossing blocker.  For a nonsingleton blocker, prove the precise
-   leaf-block completion lemma: eliminate the three minimum-side block forms
-   using the complementary side, the full `a,b` incidence and the exact
-   three-cut profiles.  The `b`-meeting form is already reduced to a plain
-   path.  For a singleton blocker,
+   triangle-boundary torso bisection lemma: inside the selected
+   four-connected minimum three-support torso, find a connected
+   nonseparating set which meets every external support and splits every
+   whole support.  The former triangle and claw block forms, the
+   four-connected case, and both three-component profiles are closed; the
+   plain-path/two-component residue survives.  For a singleton blocker,
    eliminate the entire
    core-concentrated profile.  The current theorem only returns a marked
    separator certificate: even order seven is not yet proved sufficient for
@@ -179,84 +198,101 @@ prove T44, Conjecture 21 or `HC_7`.
    `K_{4,4}` model or the target. Exact cuts alone do not provide
    laminarity, a peel side or preserved branch ownership.
 
-The literal route now has the following audited unbounded reductions.  A
+The literal route now has the following audited unbounded reduction.  A
 minimum nonsingleton crossing blocker `X` is three-connected with
 `delta(G[X])>=4`; every one of its five non-atom boundary resources has at
-least two neighbours in `X`, deleting a specified atom-neighbour leaves all
-six other resources represented, and every three-cut has one of two exact
-resource-distribution profiles.  The missing nonsingleton statement is now
-a single boundary-bisection lemma whose positive outcome feeds an explicit
-two-helper `K_7^-` construction.
-
-An audited spanning-normal-form corollary makes the numerical residue exact.
-Any positive pair of disjoint adjacent connected helpers can absorb every
-unused component without increasing its defect.  For an ordered spanning
-partition, let `s` count the five non-atom resources represented on both
-sides, and let `epsilon_b=1` exactly when the second side misses `b`.  The
-minimum defect over the omitted resource is
-
-`max(0,4-s+epsilon_b)`.
-
-Thus the two-helper inequality holds exactly when `s>=3+epsilon_b`: three
-split supports suffice when the second side sees `b`, while four are needed
-when it misses `b`.  This is an exact reformulation of the sufficient
-construction, not a proof that such a partition exists.
-
-The new audited five-support reduction removes most of the arbitrary
-partition geometry.  If `R_d=N_X(d)`, minimum-blocker strictness gives
+least two neighbours in `X`, and
 
 `|N_X(W)|+|{k in K:R_k meets W}|>=6`
 
-for every nonempty proper connected `W`.  Choose the distinguished
-`p in R_a` and minimize a support-full bond side `U` subject to `p` lying on
-the complementary side `V`.  If no closing bond exists, `X[U]` is either a
-path with at most one edge replaced by a triangle, a triangle with a pendant
-path, or a subdivided claw with its centre optionally replaced by a triangle.
-Every vertex of `U` meets `V`, singleton leaf lobes have at least three
-neighbours there, and the case in which `U` sees `b` is a plain path with
-exactly two split supports.
+for every nonempty proper connected `W`.  The former split-count threshold
+of four when one helper misses `b` is not the true ambient threshold.  A new
+six-row literal-core construction reallocates all seven boundary-rooted bags,
+the two connected bond shores and the unused core vertex.  It gives twenty
+quotient contacts whenever any three `K`-supports split, independently of
+the `a,b` distribution.  Therefore every bond of a target-free blocker
+splits at most two supports.
 
-The same reduction exposes the correct planar obstruction.  A rainbow path
-through four distinct `K`-supports from an `a`-support vertex to a
-`b`-support vertex gives a closing bond unless its parity instance is weakly
-linkable in the sense of Chen--Ding--Yu--Zang.  Thus a four-connected
-nonplanar blocker carrying such a rainbow path closes.  More generally, a
-nonclosing four-connected nonplanar profile has no `K`-support containing
-distinct vertices from both `R_a` and `R_b`.  In a four-connected facial
-obstruction, Euler's formula
-forces some `K`-support off the facial cycle.  Conversely, an
-explicit icosahedral-minus-one-vertex profile shows that the stripped
-four-support bond claim is false even when `X` is four-connected and the
-five-root augmentation is six-connected.  That augmentation nevertheless
-contains an unrooted target, and the fixed profile has no full `a,b` blocker
-extension.  Thus this is a barrier to discarding the distinguished supports,
-not to the exact blocker lemma.
+Choose the distinguished `p in R_a` and minimize a support-full bond side
+`U` opposite `p`.  The earlier three-form block theorem now has
+`2<=|M|<=s(U,V)<=2`, so all triangle and claw forms disappear: `X[U]` is an
+induced path, exactly two supports split at its endpoints, and the other
+three lie wholly on the path with positive pairwise edge-disjoint hulls.
+Every path vertex meets the complementary side; the endpoints have at least
+three such neighbours and internal vertices at least two.  Every subpath is
+a bond and splits at most two supports.  More globally, every bipolar order
+has five support intervals of depth at most two, with interval-intersection
+graph a forest.
 
-Those three-cut profiles do not by themselves permit whole-component
-bisection.  The technical frontier records an explicit profile
-`K_3 join (3K_2)` which satisfies all preceding local consequences but leaves
-two helper defects, hence only nineteen guaranteed contacts, whenever the
-three components are kept intact.  Splitting one component closes that
-profile, so this is a route nonclosure rather than a counterexample to the
-full bisection lemma.
+These path hulls also close the full four-connected case.  Their three
+extreme pairs form a nontrivial acyclic parity triple.  The
+Chen--Ding--Yu--Zang bond theorem either supplies a three-support bond or a
+facial obstruction.  In the latter case the audited Euler inequality gives
+an off-face support; replacing one pair gives a second acyclic triple which
+cannot lie on a facial cycle sharing three vertices with the first.  Thus a
+four-connected graph satisfying the five-support system has a three-support
+bond, contrary to target-freeness.
 
-A second order-nine polarized incidence profile refutes the proposed
-purely intra-component nonseparating-transversal repair while still having
-231 spanning two-helper witnesses.  A third profile refutes the proposed
-cross-component condition if its first side is unnecessarily required to
-see `b`: it has no witness to either that mode or the component-local mode,
-but has 54 witnesses after the redundant requirement is removed.  Neither
-profile is known to occur in an ambient seven-connected blocker.
+Every nonsingleton survivor consequently has connectivity exactly three,
+and every component behind every three-cut meets the minimum path.  Both
+formerly possible three-component profiles are impossible.  In the
+exceptional profile, one component bond splits the three nonexclusive
+supports.  In the equality profile, choose two vertices from each of the
+three component-exclusive supports.  A two-linkage from each pair to two
+vertices of the cut produces disjoint connected sets separating all three
+pairs; extending them to a spanning bond splits the three supports.
 
-The exact `H`-full-complement subcase asks for a connected nonseparating
-set which sees `a` and at least three of the five `K`-resources; the crossing
-edge `ab` supplies `b` to the first helper for free.  The remaining hard
-incidence phenomenon is support transfer when the complementary side is not
-`H`-full.  The sharp theorem to prove is now the leaf-block completion lemma:
-use the complementary side, full `a,b` incidence and exact three-cut profiles
-to eliminate the three minimum-side forms above.  Equivalently phrased as a
-proof goal, produce a closing bond in each form; a rainbow support path and
-exclusion of its weakly-linkable planar outcome is one sufficient route.
+At every remaining two-component three-cut, each support meets the cut in at
+most one vertex.  Either two supports meet both components and the other
+three are wholly component-contained in a `1+2` distribution, or one support
+meets both components and two further supports occur on each side.  In the
+latter type at most one side-support on each side meets the cut, and any two
+such cross-side contacts use the same cut vertex.
+
+More strongly, choose a whole support in each component and a support which
+meets both.  Every choice of one two-element pair in each whole support and
+one cross-component pair in the bridge support is a nontrivial acyclic
+parity instance.  A feasible parity bond would split three supports, so all
+members of this full Cartesian family must be weakly linkable in the sense
+of Chen--Ding--Yu--Zang.  In the torso on either component and the cut, every
+separation of order at most three isolating a nonempty component-side set
+has order exactly three and that set meets at least three incident supports.
+The next theorem must exclude this simultaneous weak-linkability system;
+one inconvenient fixed triple is not enough.
+
+There is also a canonical local place to do so.  Choose, over all three-cut
+components meeting exactly three supports, one of minimum order, and replace
+the other component by a triangle on the cut.  The resulting torso is
+four-connected.  Exactly one or two of its three incident supports lie
+wholly in the selected component, and connected component-side sets retain
+the six-boundary inequality.  The exact open lemma asks for a nonempty
+connected set inside that component whose torso complement is connected,
+which meets every support extending outside the component and splits every
+whole support.  Such a set is precisely one shore of a global bond splitting
+the three incident supports, and would close the nonsingleton branch.
+The [stripped-torso barrier](barriers/hc7_k44_three_support_torso_bisection_barrier.md)
+shows that four-connectivity and the local inequality alone do not force
+this set: a `K_5` example has all local scores equal to six but no valid
+bisection.  It proves only that at least one retained global input must enter.
+Available inputs include the global at-most-two-split bond restriction,
+complementary-support provenance, the two supports outside the torso, the
+minimum path, and the distinguished `a,b` incidence.
+
+The exact nonsingleton target is therefore the triangle-boundary torso
+bisection lemma under the full global blocker hypotheses.  The verified
+minimum-path transversal counterexample shows that a fixed choice of the
+three path-internal supports need not admit a prescribed rooted bond, even
+in a four-connected local model; that graph has other three-support bonds.
+It refutes only that local selection step, not the new theorem or the
+remaining torso bisection lemma.
+
+The exact two-component incidences also do not suffice after contracting
+both components.  A thirteen-vertex literal-core quotient with two bridge
+supports, a `1+2` distribution of the other supports and both distinguished
+roots on the three-support side has exact `K_7^-` contact optimum nineteen.
+It fails support multiplicity, `q>=6` and the minimum-path normal form, so it
+is only a barrier to quotient-only completion.  The live proof must use the
+uncontracted structure forced by those three hypotheses.
 
 For a singleton blocker `p`, the adjacent edge `ap` has an exact contraction
 cut.  A three-component response has a subcubic boundary consisting of
