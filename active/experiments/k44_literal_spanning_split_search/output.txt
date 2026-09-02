@@ -1,0 +1,18 @@
+z3_version=4.16.0 networkx_version=3.6.1 nauty_tools=available
+order=8 mode=anchored family=all degree_range=delta>=4 min_connectivity=3 generated=424 graph6_digest=79043a58646d5fc086e54b33c75f77e9935221dcf00245e2781ad234eb288ad5
+UNSAT order=8 mode=anchored examined=422 eligible_hosts=422
+order=8 mode=full family=all degree_range=delta>=4 min_connectivity=3 generated=424 graph6_digest=79043a58646d5fc086e54b33c75f77e9935221dcf00245e2781ad234eb288ad5
+UNSAT order=8 mode=full examined=422 eligible_hosts=422
+order=9 mode=anchored family=all degree_range=4<=degree<=4 min_connectivity=3 generated=16 graph6_digest=9e851692305a2c9b565cdb6e4ff4644c34b02c796dbc7b53db416a2afb2260bd
+UNSAT order=9 mode=anchored examined=16 eligible_hosts=16
+order=9 mode=full family=all degree_range=4<=degree<=4 min_connectivity=3 generated=16 graph6_digest=9e851692305a2c9b565cdb6e4ff4644c34b02c796dbc7b53db416a2afb2260bd
+UNSAT order=9 mode=full examined=16 eligible_hosts=16
+order=9 mode=anchored family=planar degree_range=delta>=4 min_connectivity=4 generated=14 graph6_digest=08048d0e52435765946d241d35ddf08617b4b35f3c8c4aca2bedbff69dc32f9c
+UNSAT order=9 mode=anchored examined=10 eligible_hosts=10
+order=9 mode=full family=planar degree_range=delta>=4 min_connectivity=4 generated=14 graph6_digest=08048d0e52435765946d241d35ddf08617b4b35f3c8c4aca2bedbff69dc32f9c
+UNSAT order=9 mode=full examined=10 eligible_hosts=10
+order=9 mode=anchored family=join-perturbations degree_range=delta>=4 min_connectivity=3 generated=6 graph6_digest=ae62a05e285f00fafebda2b36776d8074136d419a8e679eec67caf2949964821
+UNSAT order=9 mode=anchored examined=6 eligible_hosts=6
+order=9 mode=full family=join-perturbations degree_range=delta>=4 min_connectivity=3 generated=6 graph6_digest=ae62a05e285f00fafebda2b36776d8074136d419a8e679eec67caf2949964821
+UNSAT order=9 mode=full examined=6 eligible_hosts=6
+GREEN bounded literal-K44 spanning split hostile screen
