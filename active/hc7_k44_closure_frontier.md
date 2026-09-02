@@ -131,6 +131,11 @@ The following results are promoted and separately internally audited.
     joint endpoint-contact rank at most three; failure of the exact
     two-helper split returns a new proper connected separator
     side](../results/hc7_k44_core_concentrated_joint_contact_reduction.md).
+16. [For a nonsingleton blocker, the seven-resource inequalities imply a
+    five-support six-boundary inequality; either a closing bond exists or a
+    minimum support-full bond side opposite the distinguished `a`-neighbour
+    has one of three explicit block forms, with a sharper path outcome when
+    it sees `b`](../results/hc7_k44_five_support_bond_reduction.md).
 
 If the four bags span `C`, the tetrahedral exception is impossible: its
 total portal coverage is four, while seven-connectivity forces
@@ -249,14 +254,65 @@ s(U,V) >= 3+epsilon_b(U,V).
 There are exactly two modes: `V` sees `b` and at least three `K`-supports
 split, or `V` misses `b` and at least four split.  This equivalence concerns
 the sufficient two-helper inequality, not target existence itself.  The
-**minimum-degree-four two-helper lemma** remains the exact nonsingleton
-residue.
+existence problem remains open; the minimum-side block reduction below is
+its sharpest proved normal form.
 
 A targeted local screen checks the full labelled formula through blocker
 order six and, independently, every three-connected graph-atlas host through
-order seven against the spanning-bisection subformula.  All instances are
-UNSAT.  This is audited bounded evidence with Z3 as the decisive trust
-boundary; it is not an unbounded inference.
+order seven against the spanning-bisection subformula.  A second screen
+checks both the full and the stronger anchored negations on all 422 eligible
+minimum-degree-four hosts of order eight.  It also checks all 16 connected
+four-regular hosts of order nine, ten four-connected planar hosts of order
+nine, and six sharp three-cut join perturbations.  Every formula is UNSAT.
+These are audited bounded results with Z3 as the decisive trust boundary;
+there is no independently checkable UNSAT certificate and no unbounded
+inference.  Counts, graph6 digests, exact formulas and reproduction commands
+are in the [spanning-split hostile
+screen](experiments/k44_literal_spanning_split_search/README.md).
+
+An audited unbounded reduction now changes the exact shape of this residue.
+For `d in D`, put `R_d=N_X(d)`.  Minimum-blocker strictness implies
+
+```text
+q(W)=|N_X(W)|+|{k in K:R_k meets W}| >= 6
+```
+
+for every nonempty proper connected `W subset X`.  Choose the distinguished
+vertex `p` from (6), and among all bonds `X=U dotcup V` with `p in V` and
+`U` meeting all five `K`-supports, minimize `|U|`.  If no closing bond
+exists, then `X[U]` has a cutvertex and has exactly one of three forms: a
+path with at most one edge replaced by a triangle; a triangle with a
+pendant path; or a subdivided claw with its centre optionally replaced by a
+triangle.  Every vertex of `U` has a neighbour in `V`, and every singleton
+leaf lobe has at least three such neighbours.  If `U` meets `R_b`, the
+classification sharpens to a triangle-free path with exactly two movable
+endvertices and exactly two split supports.  Thus the only three-form case
+is the orientation in which the minimum support-full side misses `b`.
+
+The same theorem identifies two useful, but nonterminal, reformulations.
+Adding a five-vertex clique and joining its `i`th vertex exactly to `R_i`
+produces a six-connected graph precisely when `q>=6` and every `R_i` has
+order at least two.  A `K_7^-` model retaining those five clique vertices as
+singletons is equivalent to a bond splitting four supports.  That generic
+rooted conclusion is false: the explicit four-connected
+[facial-cycle barrier](../barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier.md)
+has a six-connected augmentation but no such bond.  Its augmentation does
+have an unrooted `K_7^-` model, and solver-free exhaustion shows that its
+fixed five supports admit no full `a,b` minimum-blocker extension.  Hence
+the barrier rules out only the `a,b`-free rooted shortcut; it does not refute
+the exact bisection lemma.
+
+Finally, the parity-bond theorem of Chen--Ding--Yu--Zang applies directly.
+A rainbow support path through four distinct `K`-supports, from an
+`R_a`-vertex to an `R_b`-vertex, gives either a closing bond or their precise
+weakly-linkable obstruction.  In a four-connected nonplanar blocker it
+always gives a closing bond; more generally, in a target-free nonplanar
+profile no `K`-support can contain distinct vertices belonging respectively
+to `R_a` and `R_b`.  In a four-connected planar facial obstruction, Euler's
+formula and `q>=6` force at least one of the five supports to extend off the
+obstructing facial cycle.  The proof and its exact hypotheses are in
+the [five-support bond
+reduction](../results/hc7_k44_five_support_bond_reduction.md).
 
 The three-cut profiles alone do **not** justify keeping their components
 intact in the bisection.  The exact route-nonclosure is the graph
@@ -318,11 +374,18 @@ closes once the unnecessary `b` requirement is removed.  The crossing edge
 `H`-full, the bisection criterion is equivalent to requiring `U` to see `a`
 and at least three of the five `K`-resources.
 
-The exact unresolved nonsingleton subcase is therefore **support transfer**:
-`V` is not `H`-full, so the resources supported wholly on `U` must be
-coordinated with the single omitted resource `h_0`.  The explicit profiles
-refute only the stronger repairs, not the full bisection lemma, weighted
-splitter theorem, or T44.
+The former **support-transfer** description remains a useful account of the
+missing incidences when one side is not `H`-full, but it is no longer the
+sharpest endpoint.  The exact remaining theorem is the **leaf-block
+completion lemma**: under all minimum-blocker hypotheses and exact three-cut
+profiles, eliminate the three minimum-side block forms above by producing a
+closing bond.  In the `b`-meeting orientation only the two-ended path remains;
+in the `b`-avoiding orientation all three forms remain.  One possible route
+is to find the rainbow support path and exclude its weakly-linkable planar
+obstruction using the complementary side, the off-face support, and the
+three-cut profiles.  The explicit profiles above refute only their stronger
+local repairs, not this leaf-block lemma, the weighted splitter theorem, or
+T44.
 
 ### 4.2 Singleton blocker and its contraction trace
 
@@ -429,7 +492,7 @@ closed, so the weighted splitter theorem, literal branch, and T44 remain open.
 
 A new agent should treat the following as the exact live theorem pair.
 
-1. **Nonsingleton support transfer.**  Under the hypotheses of item 2 of the
+1. **Nonsingleton leaf-block completion.**  Under the hypotheses of item 2 of the
    [minimum-blocker theorem](../results/hc7_k44_tight_boundary_and_minimum_blocker.md),
    in its nonsingleton outcome and with the conclusions of items 3--4, find
    disjoint adjacent connected `U,V subseteq X`, with `U` adjacent to `a`,
@@ -444,13 +507,22 @@ A new agent should treat the following as the exact live theorem pair.
    corollary](../results/hc7_k44_spanning_two_helper_split_count.md), the sets
    may be taken to partition `X`.  With `s` split `K`-supports and
    `epsilon_b=1` exactly when `V` misses `b`, the inequality is equivalent to
-   `s>=3+epsilon_b`.  The criterion in the `H`-full-complement subcase is
-   characterized; no unbounded theorem proves that this subcase always
-   occurs.  The unresolved case is support transfer when the other side is
-   not `H`-full.  The component-respecting and
-   component-local repairs are explicitly refuted only in their stated scopes
-   by the profiles above and the [transversal
-   barrier](../barriers/hc7_k44_intra_component_transversal_barrier.md).
+   `s>=3+epsilon_b`.  Now choose the specified `p` from the theorem and a
+   minimum support-full bond side opposite `p`.  The audited
+   [five-support bond reduction](../results/hc7_k44_five_support_bond_reduction.md)
+   leaves only its three stated block forms; if that side sees `b`, it is a
+   triangle-free path with exactly two split supports.  Prove a closing bond
+   from these forms using the complementary side and the full incidence data.
+   A rainbow four-support path closes unless its parity quadruple is weakly
+   linkable; in the four-connected planar obstruction, at least one support
+   lies off the facial cycle, while in the four-connected nonplanar case no
+   support can contain distinct `a`- and `b`-support vertices.  The
+   component-respecting, component-local and four-support-only repairs are
+   explicitly refuted only in their stated scopes by the profiles above, the
+   [transversal
+   barrier](../barriers/hc7_k44_intra_component_transversal_barrier.md), and
+   the [rooted-extension
+   barrier](../barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier.md).
 2. **Singleton core-concentrated completion.**  Prove that no target-free
    graph satisfies the hypotheses of the [joint-contact and separator
    theorem](../results/hc7_k44_core_concentrated_joint_contact_reduction.md).

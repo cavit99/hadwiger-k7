@@ -33,6 +33,11 @@ Selected audited inputs:
 - [a minimum nonsingleton crossing blocker is three-connected of minimum
   degree at least four, with multiply attached resources and two exact
   three-cut profiles](../results/hc7_k44_tight_boundary_and_minimum_blocker.md);
+- [the nonsingleton blocker satisfies a five-support six-boundary inequality;
+  either a closing bond exists or a minimum support-full bond side has one of
+  three explicit block forms, with a plain-path refinement when it meets the
+  `b`-support and additional parity restrictions in the four-connected
+  case](../results/hc7_k44_five_support_bond_reduction.md);
 - [an adjacent singleton edge has an exact two- or three-component
   contraction trace](../results/hc7_k44_adjacent_singleton_contraction_trace.md);
 - [every unbalanced or balanced two-component literal-shore split yields an
@@ -80,11 +85,21 @@ three-connected graph-atlas hosts through order seven.  It is independently
 audited bounded evidence without an independently checkable UNSAT
 certificate.
 
+The [spanning-split hostile
+screen](experiments/k44_literal_spanning_split_search/README.md) checks both
+the exact and stronger anchored negations on all 422 eligible
+minimum-degree-four order-eight hosts and three targeted order-nine families.
+It finds no survivor.  This is independently audited bounded evidence with
+Z3 as the decisive trust boundary, not an unbounded theorem.
+
 ## Two open obligations
 
 1. **Literal exact-residue completion.**  Prove the minimum-degree-four
-   two-helper lemma for a nonsingleton blocker; its two connected sets need
-   not cover the blocker.  For the sole adjacent-singleton residue, eliminate
+   leaf-block completion lemma for a nonsingleton blocker.  Its helper sets
+   may be taken to form a spanning partition; after minimizing a support-full
+   side opposite the distinguished `a`-neighbour, only three explicit block
+   forms remain, and the `b`-meeting form is a path.  For the sole
+   adjacent-singleton residue, eliminate
    the entire core-concentrated target-free profile.  The present reduction
    returns a marked separator, but neither an exact-seven completion theorem
    nor a well-founded descent through larger separators is proved.  Closing
@@ -102,7 +117,14 @@ Immediate barriers:
   seven local paths and a split edge with six alternate
   paths can both remain target-free](../barriers/hc7_k44_shortcut_certificate_barriers.md);
 - **Precise nonsingleton lemma:** [find the closing two-helper pair in a
-  minimum-degree-four three-connected blocker](../results/hc7_k44_tight_boundary_and_minimum_blocker.md#8-finite-falsification-and-exact-remaining-lemma);
+  minimum-degree-four three-connected blocker](../results/hc7_k44_five_support_bond_reduction.md#6-exact-remaining-statement);
+- **Barrier to the four-support-only shortcut:** [a four-connected exterior
+  can satisfy the derived six-boundary inequality while its six-connected
+  five-root augmentation has no root-preserving `K_7^-`
+  model](../barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier.md).
+  The augmentation has an unrooted target and the fixed support profile has
+  no full `a,b` blocker extension, so this does not refute the exact
+  leaf-block lemma;
 - **Route nonclosure, not a counterexample:** [the `K_3 join (3K_2)` profile
   shows that the three-cut components cannot simply be kept intact in that
   bisection](hc7_k44_closure_frontier.md#41-nonsingleton-minimum-blocker).
@@ -110,8 +132,9 @@ Immediate barriers:
   intra-component repair](../barriers/hc7_k44_intra_component_transversal_barrier.md)
   while retaining cross-component two-helper witnesses; a third profile
   refutes the unnecessary requirement that the first side see `b`.  Neither
-  profile refutes the full bisection lemma.  The exact unresolved subcase is
-  support transfer when the complementary side is not full to `H`;
+  profile refutes the full bisection lemma.  Support transfer remains the
+  difficult incidence pattern, now confined by the minimum-side leaf-block
+  classification;
 - **Singleton reduction and exact remaining target:** [the core-concentrated
   joint-contact reduction](../results/hc7_k44_core_concentrated_joint_contact_reduction.md)
   forces joint contact rank at most three and, in the target-free profile,

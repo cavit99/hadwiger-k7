@@ -19929,6 +19929,46 @@ expected_stdout = [
   "GREEN local core-concentrated bisection incidence barrier",
 ]
 
+[[verifiers]]
+id = "k44-sixconnected-k5-rooted-extension-barrier"
+path = "barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier_verify.py"
+sha256 = "30907951777503c3348a4dddd509cb5e3820b3e9fd4c7bc516b389756b351c1d"
+timeout = 30
+expected_stdout = [
+  "graph6=JhfwEDbKgs_ order=11 edges=25 connectivity=4 minimum_degree=4",
+  "connected_set_q_histogram={6: 32, 7: 155, 8: 398, 9: 508, 10: 317, 11: 73, 12: 2}",
+  "unordered_bond_split_histogram={2: 172, 3: 243, 1: 52}",
+  "augmentation_order=16 edges=51 connectivity=6",
+  "maximum_canonical_rooted_contacts=19",
+  "GREEN scoped six-connected K5 rooted-extension barrier",
+]
+
+[[verifiers]]
+id = "k44-minimum-kfull-side-structure-nonclosure"
+path = "active/experiments/k44_literal_spanning_split_search/verify_minimum_kfull_bond_route_nonclosure.py"
+sha256 = "42195c818ba2d59284df05a9c1c5516e7a061d781b1250b4e0a0bdaad7f404de"
+timeout = 30
+expected_stdout = [
+  "graph6=GCxvf{ order=8 edges=18 connectivity=4 three_cuts=0",
+  "eligible_p=1,2,3,4,5",
+  "minimum_K_full_bond_order=3 minimum_sides=1 U=0,3,4 articulation=0 boundary_in_U=0,3,4 split_count=3",
+  "closing_partition_U=1,4 closing_partition_V=0,2,3,5,6,7 eligible_p=1 split_resources=k2,k3,k5",
+  "anchored_witnesses=182 full_witnesses=95",
+  "GREEN scoped minimum-K-full-bond route nonclosure",
+]
+
+[[verifiers]]
+id = "k44-icosahedral-seed-nonextension"
+path = "active/experiments/k44_literal_spanning_split_search/verify_icosahedral_seed_nonextension.py"
+sha256 = "94a00b974fb57c7adcef6c3693d513f6274e33c411db6037a905d05b5f742eeb"
+timeout = 30
+expected_stdout = [
+  "graph6=JhfwEDbKgs_ order=11 edges=25 connectivity=4 minimum_degree=4",
+  "oriented_three_split_bonds=486 pure_score_six_sets=32",
+  "a_supports=1023 nonempty_allowed_b_regions=12 full_boundary_extensions=0 exact_blocker_extensions=0",
+  "GREEN fixed icosahedral seed has no full a,b blocker extension",
+]
+
 [[claims]]
 id = "hc7.target.k44_sevenconnected_closure"
 title = "Seven-connected K4,4 closure"
@@ -19937,7 +19977,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "008305524eeb1294f21402387b092909e2128983f4bebf358da9847319f9d8e4"
+expected_source_sha256 = "c394432afaea6e1bbdb37e1936826c04b7d68c7ed96b2e9ab2a361dd043e98ac"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19950,7 +19990,7 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the nonsingleton support-transfer theorem: find an ordered spanning connected partition with at least three split K-supports when the second side sees b, or at least four when it misses b",
+  "the nonsingleton leaf-block completion theorem: eliminate the three minimum-side block forms using the complementary side, full a,b incidence and exact three-cut profiles",
   "the singleton core-concentrated completion theorem: the current marked separator certificate proves neither that exact boundary seven is terminal nor a well-founded descent across larger boundaries",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
@@ -20260,11 +20300,42 @@ conclusions = [
 ]
 does_not_prove = [
   "existence of a partition meeting either split threshold",
-  "the minimum-degree-four two-helper lemma",
+  "the leaf-block completion lemma for a minimum nonsingleton blocker",
   "the weighted splitter theorem or literal K4,4 case of T44",
   "T44, Conjecture 21 or HC7",
 ]
 keywords = ["literal K4,4", "minimum blocker", "two helper", "spanning partition", "split supports"]
+
+[[claims]]
+id = "hc7.k44_five_support_bond_reduction"
+title = "Minimum nonsingleton blockers reduce to three support-full leaf-block forms"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_five_support_bond_reduction.md"
+source_heading = "Theorem 4.1 (minimum-side block reduction)"
+active = true
+audit = "results/hc7_k44_five_support_bond_reduction_audit.md"
+expected_source_sha256 = "687034d01f4b1a9784585aa9596def4439939f17efc6ecd0d0530c2c95aa7773"
+scope = "minimum nonsingleton crossing blockers in the literal K4,4 route, together with abstract five-support bond and parity consequences under their explicit hypotheses"
+label_fidelity = "the distinguished a- and b-supports, five non-atom supports, selected p, ordered bond sides and every split support remain explicit"
+hypotheses = [
+  "the blocker is three-connected with minimum degree at least four",
+  "each of the five K-supports has order at least two",
+  "the seven-resource boundary inequalities and strict proper connected a,b inequality hold",
+]
+conclusions = [
+  "every proper connected set has five-support score at least six",
+  "the five-clique augmentation is six-connected exactly under the stated score and support-multiplicity conditions, and its canonical rooted K7-minus models are equivalent to four-split bonds",
+  "a minimum K-full bond side opposite a specified p in R_a has one of three explicit block forms when no closing bond exists",
+  "if that minimum side meets R_b it is a triangle-free path with exactly two movable endpoints and two split supports",
+  "rainbow and mixed three-support parity certificates close in the four-connected nonplanar case, while a planar facial obstruction must have an off-cycle support",
+]
+does_not_prove = [
+  "the leaf-block completion lemma or existence of a closing bond",
+  "the weighted splitter theorem or full labelled trichotomy",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "minimum blocker", "support-full bond", "block-cut tree", "parity bond", "facial obstruction"]
 
 [[claims]]
 id = "hc7.k44_adjacent_singleton_contraction_trace"
@@ -20419,6 +20490,35 @@ does_not_prove = [
   "the weighted splitter theorem, literal K4,4 case, T44, Conjecture 21 or HC7",
 ]
 keywords = ["literal K4,4", "adjacent singleton", "core-concentrated trace", "joint contact rank", "separator side", "rooted K5"]
+
+[[claims]]
+id = "hc7.barrier.k44_sixconnected_k5_rooted_extension"
+title = "A six-connected five-root augmentation need not have a canonical rooted K7-minus model"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier.md"
+source_heading = "1. Claim refuted"
+active = true
+audit = "barriers/hc7_k44_sixconnected_k5_rooted_extension_barrier_audit.md"
+expected_source_sha256 = "f2db7bb270fc22abc473f1859a50c3f37dc5a1baf89038b65318669ea27cd4b6"
+scope = "a fixed four-connected icosahedral-minus-one-vertex exterior with five supports satisfying the six-boundary score, and its canonical five-clique augmentation"
+label_fidelity = "the labelled host graph6 code, five supports, five added clique roots and all displayed unrooted branch sets are explicit"
+refutes = [
+  "four-connectivity, support multiplicity and the five-support six-boundary inequality force a bond splitting four supports",
+  "six-connectivity of the five-clique augmentation forces a K7-minus model keeping all five added roots singleton",
+]
+conclusions = [
+  "the fixed exterior has no bond splitting more than three supports",
+  "the augmentation is six-connected and every canonical rooted seven-bag model has at most nineteen contacts",
+  "the augmentation nevertheless has an explicit unrooted K7-minus minor",
+  "the fixed five-support seed has no extension to the full a,b blocker inequalities while avoiding every closing bond",
+]
+does_not_prove = [
+  "failure of the exact oriented leaf-block completion lemma",
+  "failure of any unrooted six-connected K5 extension theorem",
+  "failure of the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "six-connected augmentation", "rooted K7 minus", "facial cycle", "four-support barrier"]
 
 [[claims]]
 id = "hc7.barrier.k44_shortcut_certificates"
@@ -20591,6 +20691,30 @@ does_not_prove = [
 ]
 keywords = ["literal K4,4", "minimum blocker", "boundary bisection", "bounded census", "Z3"]
 
+[[claims]]
+id = "hc7.laboratory.k44_literal_spanning_split_search"
+title = "Order-eight and targeted order-nine hostile screen for the literal blocker split"
+kind = "laboratory"
+status = "audited-green"
+source = "active/experiments/k44_literal_spanning_split_search/README.md"
+source_heading = "Literal-`K_{4,4}` spanning-split hostile screen"
+active = false
+audit = "active/experiments/k44_literal_spanning_split_search/AUDIT.md"
+expected_source_sha256 = "c65a77dc89cf5ef38c414dd86a2869031b3c05720d350e65a49b7be79680a626"
+scope = "all 422 eligible minimum-degree-four order-eight hosts and three targeted order-nine families, with all seven support incidences symbolic under the exact minimum-blocker hypotheses"
+conclusions = [
+  "both the exact full negation and the stronger anchored negation are UNSAT on every eligible order-eight host",
+  "both negations are UNSAT on all connected order-nine four-regular hosts, ten four-connected planar hosts and six canonical sharp-three-cut join perturbations",
+  "a fixed order-eight profile refutes only two-connectivity and four-split consequences of minimum-side selection while its selected side is itself closing",
+  "the fixed planar rooted-extension seed has no full a,b blocker extension",
+]
+does_not_prove = [
+  "an unbounded anchored or spanning-split theorem",
+  "the leaf-block completion lemma or weighted splitter theorem",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "minimum blocker", "spanning partition", "anchored split", "bounded UNSAT", "Z3"]
+
 [[relations]]
 source = "hc7.k44_branch_model_normal_forms"
 target = "graph_minors.rooted_k4minus_four_roots"
@@ -20632,6 +20756,24 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.k44_tight_boundary_minimum_blocker"
 kind = "uses"
 note = "The tight-boundary theorem reduces every minimum nonsingleton crossing blocker to the exact minimum-degree-four bisection residue."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.k44_five_support_bond_reduction"
+kind = "uses"
+note = "The audited minimum-side theorem reduces the nonsingleton bisection residue to three explicit leaf-block forms and standard parity-bond obstructions."
+
+[[relations]]
+source = "hc7.k44_five_support_bond_reduction"
+target = "hc7.k44_tight_boundary_minimum_blocker"
+kind = "uses"
+note = "The minimum-blocker theorem supplies three-connectivity, minimum degree four, support multiplicity, the distinguished p and the exact three-cut profiles retained by the leaf-block reduction."
+
+[[relations]]
+source = "hc7.k44_five_support_bond_reduction"
+target = "hc7.k44_spanning_two_helper_split_count"
+kind = "uses"
+note = "The split-count theorem identifies the exact closing thresholds for the spanning bonds classified by the minimum-side reduction."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
@@ -20755,6 +20897,12 @@ note = "The exact target-free profiles show that local path counts cannot replac
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.barrier.k44_sixconnected_k5_rooted_extension"
+kind = "guarded_by"
+note = "The four-connected facial example rules out discarding a,b and replacing the oriented two-helper problem by a generic four-support rooted-extension claim."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.barrier.k44_intra_component_transversal"
 kind = "guarded_by"
 note = "The polarized order-nine local profile refutes a purely intra-component repair of the nonsingleton three-cut case while leaving the full bisection lemma open."
@@ -20788,6 +20936,12 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.laboratory.k44_minimum_blocker_bisection"
 kind = "related_to"
 note = "The independently audited bounded screen finds no local bisection survivor through blocker order seven without supplying an unbounded proof."
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.laboratory.k44_literal_spanning_split_search"
+kind = "related_to"
+note = "The independently audited screen finds no exact or anchored spanning-split survivor at order eight or in three targeted order-nine families, without supplying an unbounded proof."
 
 [[relations]]
 source = "hc7.target.k44_sevenconnected_closure"
