@@ -1,6 +1,6 @@
 # Seven-connected `K_{4,4}` closure frontier
 
-**Status (1 September 2026):** T44 is the sole active completion target.  It is
+**Status (2 September 2026):** T44 is the sole active completion target.  It is
 open.  No seven-connected counterexample has been found.  The literal-core
 completion and the nonliteral branch-model lift are both still open, and no
 result in this file proves Conjecture 21 or `HC_7`.
@@ -225,9 +225,31 @@ them so that `U` sees `a`, and find `h_0 in H` with
 ```
 
 The two-helper construction then gives a `K_7^-` model with twenty quotient
-contacts.  The sets are not required to cover `X`; “bisection” in older notes
-refers to these two disjoint connected sides, not necessarily a partition.
-This **minimum-degree-four two-helper lemma** is the exact nonsingleton
+contacts.  Although the original criterion does not require the sets to cover
+`X`, the audited [spanning-extension and split-count
+corollary](../results/hc7_k44_spanning_two_helper_split_count.md) shows that
+every positive pair can be enlarged, without increasing either defect, to a
+connected partition `X=U dotcup V`.
+
+For such an ordered spanning partition, let `s(U,V)` be the number of the five
+`K`-resources whose supports meet both sides, and put `epsilon_b(U,V)=1` when
+`V` misses `b`, and zero otherwise.  The exact optimized defect is
+
+```text
+min_{h_0 in H} defect(U,V;h_0)
+  = max(0,4-s(U,V)+epsilon_b(U,V)).
+```
+
+Thus the numerical two-helper criterion is equivalent to
+
+```text
+s(U,V) >= 3+epsilon_b(U,V).
+```
+
+There are exactly two modes: `V` sees `b` and at least three `K`-supports
+split, or `V` misses `b` and at least four split.  This equivalence concerns
+the sufficient two-helper inequality, not target existence itself.  The
+**minimum-degree-four two-helper lemma** remains the exact nonsingleton
 residue.
 
 A targeted local screen checks the full labelled formula through blocker
@@ -418,10 +440,14 @@ A new agent should treat the following as the exact live theorem pair.
      + |H-(N_D(V) union {h_0})| <= 1.
    ```
 
-   The sets need not partition `X`.  The criterion in the
-   `H`-full-complement subcase is characterized; no unbounded theorem proves
-   that this subcase always occurs.  The unresolved case is support transfer
-   when the other side is not `H`-full.  The component-respecting and
+   By the [spanning-extension and split-count
+   corollary](../results/hc7_k44_spanning_two_helper_split_count.md), the sets
+   may be taken to partition `X`.  With `s` split `K`-supports and
+   `epsilon_b=1` exactly when `V` misses `b`, the inequality is equivalent to
+   `s>=3+epsilon_b`.  The criterion in the `H`-full-complement subcase is
+   characterized; no unbounded theorem proves that this subcase always
+   occurs.  The unresolved case is support transfer when the other side is
+   not `H`-full.  The component-respecting and
    component-local repairs are explicitly refuted only in their stated scopes
    by the profiles above and the [transversal
    barrier](../barriers/hc7_k44_intra_component_transversal_barrier.md).
@@ -499,8 +525,25 @@ data in the literal exchange and nonliteral rotation steps.
 ## 7. Critical-host refinement, not a target pivot
 
 If universal T44 stalls, the same model can be studied inside the exact
-critical host needed for Conjecture 21.  For an internal branch edge `uv`,
-there are two responses:
+critical host needed for Conjecture 21.  The audited
+[critical safe-contraction theorem](../results/hc7_k44_critical_safe_contraction.md)
+gives a first sharp distinction in the literal case.  If the specified
+literal core has exterior order at least seven, its exterior contains a safe
+three-contractible edge.  Otherwise the singleton-atom theorem would produce
+a degree-seven vertex with a bipartite `3`-by-`4` neighbourhood, contradicting
+Dirac's neighbourhood-independence inequality.
+
+This does not create an induction.  Contracting the safe edge gives a
+six-colourable proper minor, not another seven-contraction-critical host, and
+the quotient is not asserted to remain seven-connected.  The universal
+literal residues can therefore reappear after the first contraction.  The
+useful critical-host datum attached to that edge is a six-colouring of
+`G-uv` in which `u,v` have the same colour and are joined in each of the five
+corresponding bichromatic subgraphs.  These five paths are not asserted to
+be mutually disjoint or otherwise compatible.
+
+More generally, for an internal branch edge `uv`, there are two structural
+responses:
 
 1. `G/uv` is not seven-connected, returning an exact two-shore seven-cut;
 2. `G/uv` is seven-connected and six-colourable, equivalently `G-uv` has a

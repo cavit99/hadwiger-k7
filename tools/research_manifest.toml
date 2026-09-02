@@ -19937,7 +19937,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "4586baf924c271e07439c473988459ea021566cae84984dff5b09458763e4e0e"
+expected_source_sha256 = "008305524eeb1294f21402387b092909e2128983f4bebf358da9847319f9d8e4"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -19950,7 +19950,7 @@ allowed_exits = [
   "an independently verified seven-connected K7-minus-minor-free graph containing a K4,4 minor",
 ]
 does_not_prove = [
-  "the nonsingleton support-transfer theorem: in the non-H-full regime, find disjoint adjacent connected U,V and h_0 with total two-helper defect at most one; U,V need not cover the blocker",
+  "the nonsingleton support-transfer theorem: find an ordered spanning connected partition with at least three split K-supports when the second side sees b, or at least four when it misses b",
   "the singleton core-concentrated completion theorem: the current marked separator certificate proves neither that exact boundary seven is terminal nor a well-founded descent across larger boundaries",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
@@ -20206,6 +20206,65 @@ does_not_prove = [
   "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
 ]
 keywords = ["literal K4,4", "tight boundary", "minimum blocker", "three connectivity", "boundary bisection"]
+
+[[claims]]
+id = "hc7.k44_critical_safe_contraction"
+title = "A critical literal K4,4 host has a safe exterior contraction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_critical_safe_contraction.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_k44_critical_safe_contraction_audit.md"
+expected_source_sha256 = "51e9b3b574e44a3a12efa7c986b16b3e40489503501e4f01064417a60eda9a45"
+scope = "strongly seven-contraction-critical K7-minus-minor-free graphs with a specified literal K4,4 core and exterior order at least seven"
+label_fidelity = "the literal core, union-labelled exterior, selected safe edge and five proper-minor bichromatic responses remain explicit"
+hypotheses = [
+  "the host is finite, simple, seven-chromatic and every proper minor is six-colourable",
+  "the host is K7-minus-minor-free and contains the specified literal K4,4",
+  "the exterior has order at least seven",
+]
+conclusions = [
+  "the literal exterior contains a safe three-contractible edge",
+  "contracting the selected edge gives a six-colourable proper minor",
+  "pullback gives a six-colouring of the edge deletion with equal-coloured endpoints and one bichromatic endpoint path for each of the other five colours",
+]
+does_not_prove = [
+  "that the contracted host remains seven-connected or seven-contraction-critical",
+  "a second safe contraction or an inductive contraction sequence",
+  "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "safe contraction", "contraction critical", "Dirac inequality", "Kempe paths"]
+
+[[claims]]
+id = "hc7.k44_spanning_two_helper_split_count"
+title = "Exact spanning split count for the literal K4,4 two-helper criterion"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_spanning_two_helper_split_count.md"
+source_heading = "Theorem 3.1 (split-count identity)"
+active = false
+audit = "results/hc7_k44_spanning_two_helper_split_count_audit.md"
+expected_source_sha256 = "9e139106b9f5c47d1c12b7b24436f1890b6f50aa31c293689b2cb1fb3945da54"
+scope = "the two-helper boundary normal form of a minimum nonsingleton blocker in a target-free literal K4,4 host"
+label_fidelity = "all five non-atom boundary supports, the distinguished b-resource, helper orientation and omitted resource remain explicit"
+hypotheses = [
+  "the connected blocker has boundary D={a,b} union K with |K|=5 and every boundary resource represented",
+  "the first helper side sees a",
+]
+conclusions = [
+  "every nonspanning two-helper witness extends to a spanning connected partition without increasing defect",
+  "for a spanning partition the optimized defect is max(0,4-s+epsilon_b)",
+  "the numerical criterion holds exactly with three split K-supports when the second side sees b and four when it misses b",
+  "placing the distinguished p on the first side and a b-neighbour on the second with three split supports is sufficient but not equivalent",
+]
+does_not_prove = [
+  "existence of a partition meeting either split threshold",
+  "the minimum-degree-four two-helper lemma",
+  "the weighted splitter theorem or literal K4,4 case of T44",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["literal K4,4", "minimum blocker", "two helper", "spanning partition", "split supports"]
 
 [[claims]]
 id = "hc7.k44_adjacent_singleton_contraction_trace"
@@ -20518,7 +20577,7 @@ source = "active/experiments/k44_literal_minimum_blocker_bisection/README.md"
 source_heading = "Literal-`K_{4,4}` minimum-blocker bisection screen"
 active = false
 audit = "active/experiments/k44_literal_minimum_blocker_bisection/AUDIT.md"
-expected_source_sha256 = "edf25b53b9c71170c904fbedde6178a88f3be1576174739b32d9c6f68a7aee0a"
+expected_source_sha256 = "0750e980a408baa6a268aa9748537c5fe8aca52e325ac86b18231a66c8358ef7"
 scope = "the complete labelled minimum-blocker formula through blocker order six and the fixed-host spanning-bisection formula on every three-connected graph-atlas host through order seven"
 conclusions = [
   "the complete labelled encoding is UNSAT at blocker orders four, five and six",
@@ -20609,6 +20668,18 @@ source = "hc7.k44_tight_boundary_minimum_blocker"
 target = "hc7.k44_positive_atom_elimination"
 kind = "uses"
 note = "The all-edge-atom theorem supplies the singleton atom, crossing-edge normal form and exact one-resource blocker overlap."
+
+[[relations]]
+source = "hc7.k44_critical_safe_contraction"
+target = "hc7.k44_positive_atom_elimination"
+kind = "uses"
+note = "If no safe exterior edge exists, the singleton-atom theorem supplies the degree-seven bipartite neighbourhood contradicted by Dirac's critical-neighbourhood inequality."
+
+[[relations]]
+source = "hc7.k44_spanning_two_helper_split_count"
+target = "hc7.k44_tight_boundary_minimum_blocker"
+kind = "uses"
+note = "The minimum-blocker theorem supplies the exact six-resource helper defect and its target-producing interpretation; spanning absorption and the split count then reformulate that numerical criterion."
 
 [[relations]]
 source = "hc7.k44_adjacent_singleton_shore_split_profiles"

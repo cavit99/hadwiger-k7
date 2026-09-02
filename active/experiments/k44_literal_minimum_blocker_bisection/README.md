@@ -56,6 +56,16 @@ The excluded inequality is then equivalent to `r(U)+c(U)<=2`.  Thus every
 survivor must satisfy `r(U)+c(U)>=3` for every spanning connected
 bipartition whose first side sees `a`.
 
+The subsequently audited
+[spanning-extension and split-count
+corollary](../../../results/hc7_k44_spanning_two_helper_split_count.md)
+shows that this restriction loses no positive witness: every unused
+component can be absorbed whole into a side it meets without increasing the
+defect.  Equivalently, if `s` is the number of split `K`-supports and
+`epsilon_b=1` exactly when the second side misses `b`, the optimized defect
+is `max(0,4-s+epsilon_b)` and the closing threshold is
+`s>=3+epsilon_b`.
+
 ## Two encodings
 
 The first encoding makes every internal edge and boundary incidence
@@ -65,7 +75,8 @@ orders four, five and six.
 
 The second encoding independently fixes each unlabelled three-connected
 host from the NetworkX graph atlas and makes only its boundary incidences
-symbolic.  It imposes only the spanning-bipartition subfamily of item 4,
+symbolic.  It imposes the spanning-bipartition form of item 4, which the
+spanning-extension corollary now proves equivalent for witness existence,
 together with two proved consequences of minimum-blocker structure:
 
 - every `k in K` has at least two neighbours in `X`; and
@@ -81,8 +92,8 @@ It is UNSAT on all atlas hosts through order seven:
 | 7 | 136 |
 
 In particular, spanning connected bipartitions already exclude every host
-in this bounded range.  The stronger unused-vertex form is not needed by
-the atlas check.
+in this bounded range.  The unused-vertex form is not needed by the atlas
+check.
 
 ## Reproduction and expected output
 

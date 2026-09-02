@@ -32,6 +32,7 @@ Later theorem notes strengthen and extend that snapshot:
 | A low-codegree edge at every degree-eight vertex in a six-connected target-free graph | [Proof](hc7_k7minus_sixconnected_degree_eight_low_codegree.md) · [two GREEN internal audits](hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md) | Uses a deterministic finite local lemma and an unbounded host reduction; proves the defect ladder `D(G)>=20+kappa(G)` and upgrades the critical-host count to `n_8>=27+tau`. |
 | Capacity of a seven-vertex cut in the critical host | [Proof](hc7_k7minus_critical_seven_cut_capacity.md) · [GREEN audit](hc7_k7minus_critical_seven_cut_capacity_audit.md) | Leaves two or three components and sharply constrains their boundary-full connected subgraphs and boundary colouring. |
 | Exclusion of the remaining three-component `3,2,2` cut | [Proof](hc7_k7minus_three_component_seven_cut_exclusion.md) · [GREEN audit](hc7_k7minus_three_component_seven_cut_exclusion_audit.md) | Computation-free; together with the capacity theorem, every seven-vertex cut in the critical host leaves exactly two components. |
+| A literal `K_{4,4}` exterior in the critical host has a first safe contraction | [Proof](hc7_k44_critical_safe_contraction.md) · [GREEN audit](hc7_k44_critical_safe_contraction_audit.md) | Exterior order at least seven; the contracted graph is six-colourable, so the conclusion does not iterate or close literal T44. |
 
 These are necessary structural theorems about a hypothetical counterexample.
 They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
@@ -56,6 +57,13 @@ elimination, the minimum-blocker theorem, the contraction trace, both trace
 eliminations, and the joint-contact separator theorem—are navigated from the
 active index.  The two unproved completion obligations remain in the
 [T44 technical frontier](../active/hc7_k44_closure_frontier.md).
+
+The nonsingleton two-helper criterion also has an audited
+[spanning and split-count normal form](hc7_k44_spanning_two_helper_split_count.md):
+unused blocker components can be absorbed without increasing defect, after
+which the exact threshold is three split supports when the second side sees
+`b` and four when it misses `b`.  This reformulates the open residue but does
+not prove that a closing partition exists.
 
 ## Finding other material
 

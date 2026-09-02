@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 1 September 2026
+**Last updated:** 2 September 2026
 **Authoritative status:** `HC_7` is not proved here. Neither is the
 `K_7^-` six-colour conjecture. Internal audits are not external peer
 review. Hadwiger's conjecture is known for `t<=6` and remains open for every
@@ -140,8 +140,9 @@ prove T44, Conjecture 21 or `HC_7`.
 
 1. **Literal exact-residue completion.** Close both audited outcomes of a
    minimum crossing blocker.  For a nonsingleton blocker, prove the precise
-   minimum-degree-four two-helper lemma.  Its two connected sets need not
-   cover the blocker.  For a singleton blocker, eliminate the entire
+   minimum-degree-four two-helper lemma.  Its two connected sets may be taken
+   to form a spanning partition of the blocker.  For a singleton blocker,
+   eliminate the entire
    core-concentrated profile.  The current theorem only returns a marked
    separator certificate: even order seven is not yet proved sufficient for
    a target or safe contraction, and no well-founded descent through larger
@@ -161,6 +162,20 @@ six other resources represented, and every three-cut has one of two exact
 resource-distribution profiles.  The missing nonsingleton statement is now
 a single boundary-bisection lemma whose positive outcome feeds an explicit
 two-helper `K_7^-` construction.
+
+An audited spanning-normal-form corollary makes the numerical residue exact.
+Any positive pair of disjoint adjacent connected helpers can absorb every
+unused component without increasing its defect.  For an ordered spanning
+partition, let `s` count the five non-atom resources represented on both
+sides, and let `epsilon_b=1` exactly when the second side misses `b`.  The
+minimum defect over the omitted resource is
+
+`max(0,4-s+epsilon_b)`.
+
+Thus the two-helper inequality holds exactly when `s>=3+epsilon_b`: three
+split supports suffice when the second side sees `b`, while four are needed
+when it misses `b`.  This is an exact reformulation of the sufficient
+construction, not a proof that such a partition exists.
 
 Those three-cut profiles do not by themselves permit whole-component
 bisection.  The technical frontier records an explicit profile
@@ -241,6 +256,16 @@ all order-seven and newer finite screens are bounded evidence only.
 The weighted splitter theorem, the literal T44 branch, T44, Conjecture 21,
 and the nonliteral rotation obligation all remain open.
 
+There is also a new audited critical-host corollary.  In a strongly
+seven-contraction-critical target-free graph with a specified literal
+`K_{4,4}` and exterior order at least seven, the exterior has a safe
+three-contractible edge.  Failure would produce the audited singleton atom,
+whose degree-seven bipartite `3`-by-`4` neighbourhood contradicts Dirac's
+neighbourhood-independence inequality.  This supplies only the first safe
+edge: its contraction is six-colourable and need not remain seven-connected,
+so the corollary neither iterates nor replaces universal T44 as the sole
+active target.
+
 ## Durable recent results outside the active spine
 
 - Every complete bipartite graph `K_{2,n}` is contractible in the sense of
@@ -270,6 +295,11 @@ and the nonliteral rotation obligation all remain open.
   combined with the separately audited [critical seven-cut capacity theorem](results/hc7_k7minus_critical_seven_cut_capacity.md),
   show that every seven-vertex cut in the critical host leaves exactly two
   components.
+- The [critical literal-core safe-contraction
+  corollary](results/hc7_k44_critical_safe_contraction.md), with its adjacent
+  audit, combines the singleton-atom theorem with Dirac's neighbourhood
+  inequality.  It forces the first safe exterior edge but cannot be iterated
+  after the resulting six-colourable contraction.
 
 The [selected-results map](results/README.md) is a non-authoritative reader
 guide to these proofs and the direct proved inputs to T44.
