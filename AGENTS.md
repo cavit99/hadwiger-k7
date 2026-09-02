@@ -66,12 +66,12 @@ relations for retrieval. When the primary target changes, update the ledger
 frontier block, `active/INDEX.md`, manifest active flags and direct target
 relations atomically in one focused commit. The integrity check enforces
 this navigation-to-manifest alignment.
-Run `python3 tools/research_index.py check` and
-`python3 tools/research_index.py report`, then inspect the regenerated target
-context pack.  Agents must still consult `RESEARCH_LEDGER.md`, `active/INDEX.md`, and
-the designated technical frontier before relying on a generated context
-pack.  Discovery connections remain non-authoritative until separately
-reviewed and promoted as typed manifest relations.
+Run `uv run python3 tools/research_index.py check` and
+`uv run python3 tools/research_index.py report`, then inspect the regenerated
+target context pack.  Agents must still consult `RESEARCH_LEDGER.md`,
+`active/INDEX.md`, and the designated technical frontier before relying on a
+generated context pack.  Discovery connections remain non-authoritative
+until separately reviewed and promoted as typed manifest relations.
 
 ## Mathematical language
 
@@ -162,6 +162,15 @@ written theorem to `results/` with its required audit, move refuted claims to
 
 - Python dependencies are declared in `pyproject.toml` and locked by `uv.lock`;
   use `uv add`, `uv sync`, and `uv run`. NetworkX 3.6.1 is pinned there.
+- Run repository Python tools and verifiers through the project environment by
+  default: `uv run python3 <script> ...`.  This includes research-index checks,
+  reports and verifier sweeps.  Do not begin with plain `python3` or treat its
+  missing-import error as a failed/stopped verifier run; rerun under `uv`
+  before reporting.  Use plain `python3` only when a script is explicitly
+  documented as dependency-free and the standard-library-only trust boundary
+  is intentionally being checked.
+- If the sandbox cannot write the default uv cache, use
+  `UV_CACHE_DIR=/tmp/hadwiger-k7-uv-cache uv run python3 <script> ...`.
 - Prefer deterministic, dependency-light scripts with documented invocation
   and expected output.
 - Keep generated bulk data out of Git unless it is essential for independent
