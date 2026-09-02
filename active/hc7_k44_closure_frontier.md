@@ -551,8 +551,8 @@ obligation.
 For re-entry, run
 
 ```bash
-python3 tools/research_index.py check
-python3 tools/research_index.py report
+uv run python3 tools/research_index.py check
+uv run python3 tools/research_index.py report
 uv run python3 tools/research_index.py verify
 ```
 
