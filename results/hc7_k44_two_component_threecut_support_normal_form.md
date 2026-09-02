@@ -330,5 +330,7 @@ adjacent [stripped-torso
 barrier](../barriers/hc7_k44_three_support_torso_bisection_barrier.md) is a
 `K_5` torso with one whole and two external supports, all local scores equal
 to six, but no such set `A`.  It lacks the complementary component, the two
-other supports, their exact global provenance, and the minimum-path data.
-At least one of those retained global inputs must therefore enter the proof.
+other supports, the global at-most-two-split bond restriction, their exact
+global provenance, the minimum-path data, and the distinguished incidences.
+The example proves only that at least one retained global input must enter
+the proof.

@@ -14,7 +14,7 @@ separate internal mathematical audit, not external peer review.
 [`hc7_k44_two_component_threecut_support_normal_form.md`](hc7_k44_two_component_threecut_support_normal_form.md)
 
 **Audited source SHA-256:**
-`8840a94e131a9e7272f39786f84ab092cbbe42ba96444a5db31ff11191bb3347`
+`26f8e6caf6a682035a6bf7d02f9aa10c90cab44f02176e700cc0dc1349de4a26`
 
 ## 1. The three-pair bond lemma
 
@@ -235,10 +235,14 @@ PASS candidate_bisections=0
 NOTE stripped local torso claim only; global support provenance is absent
 ```
 
-This example lacks `Q`, the other two indexed supports, the required global
-incidence provenance, and the minimum-path data.  It therefore refutes only
-the implication from four-connectivity and (8) to the bisection, not the
-stated global triangle-boundary torso bisection lemma.
+This example lacks `Q`, the other two indexed supports, their required
+global incidence provenance, the minimum-path data, and the distinguished
+`a,b` incidences.  It also fails the global prohibition on a bond splitting
+three supports: for example, the `K_5` bond with shore `{u,t_2}` splits
+`E,F_1,F_2`.  It therefore refutes only the implication from
+four-connectivity and (8) to the bisection, not the stated global
+triangle-boundary torso bisection lemma.  The source correctly concludes
+only that at least one retained global input must enter a proof.
 
 ## 6. Accepted inputs and exact scope
 

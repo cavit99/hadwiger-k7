@@ -58,10 +58,12 @@ one-whole-support side without additional bridge information.  The example
 also does not carry the global minimum support-full path or the distinguished
 `a,b` incidences.
 
-Accordingly, the live triangle-boundary torso bisection lemma must use the
-provenance of the external supports in the complementary component, the two
-supports not meeting `P`, or the global minimum-path data.  Four-connectivity
-of the torso and its three-support inequality alone are insufficient.
+Accordingly, the example proves only that four-connectivity of the torso and
+its three-support inequality are insufficient.  At least one retained global
+input must enter; available inputs include the at-most-two-split bond
+restriction, external-support provenance in the complementary component, the
+two supports not meeting `P`, the global minimum-path data, and the
+distinguished incidences.
 
 ## 4. Verification
 
