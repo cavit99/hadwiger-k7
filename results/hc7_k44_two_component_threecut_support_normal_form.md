@@ -160,3 +160,175 @@ The remaining nonsingleton problem is now narrower than an arbitrary
 two-component cut.  It is enough to eliminate these two types while also
 using the sequential minimum support-full path, its exact subpath formula,
 and the distinguished `a,b` incidence retained by the blocker theorem.
+
+## 3. The simultaneous parity obstruction
+
+The support normal form also identifies the exact global obstruction which
+any remaining example must realize.  We use Theorem 1.2 of
+Chen--Ding--Yu--Zang, [*Bonds with Parity
+Constraints*](https://www.math.lsu.edu/~ding/bonds.pdf), in the form recorded
+and audited in the [five-support bond
+reduction](hc7_k44_five_support_bond_reduction.md): a nontrivial acyclic
+quadruple on a two-connected graph either has the prescribed parity bond or
+is weakly linkable in their precise sense.
+
+### Lemma 3.1 (small torso separations contain three supports)
+
+Retain a component `P` of `X-T`, and let `S_P` be the indexed supports which
+meet `P`.  Form the torso `Y=X[P union T]+K_T`.  Suppose `|Z|<=3`, the set
+`W subseteq P` is the vertex set of a component of `Y-Z`, and
+`Y-(Z union W)` is nonempty.  Then
+
+\[
+ |N_X(W)|=3
+ \quad\hbox{and}\quad
+ |\{i:R_i\cap W\ne\varnothing\}|\ge3.                     \tag{6}
+\]
+
+In particular, when `|S_P|=3`, the set `W` meets every support in `S_P`.
+
+#### Proof
+
+The set `W` has no neighbour in `Q`, and its neighbours in `P union T` all
+belong to `Z`.  Hence `N_X(W) subseteq Z`.  Three-connectivity gives
+`|N_X(W)|>=3`, so equality holds.  Now (1) gives the support lower bound in
+(6).  Every support meeting `W` belongs to `S_P`, which proves the final
+assertion. \(\square\)
+
+### Theorem 3.2 (a smallest three-support side has a four-connected torso)
+
+Assume now the target-free nonsingleton minimum-blocker setting of Section 2.
+Among all pairs `(T,P)` in which `T` is a three-cut and `P` is a component
+of `X-T` meeting exactly three supports, choose one with `|P|` minimum.  Such
+a pair exists.  Then the torso
+
+\[
+                         Y=X[P\cup T]+K_T                        \tag{7}
+\]
+
+is four-connected.  If `S_P` denotes the three supports meeting `P`, then
+either exactly one member of `S_P` is contained wholly in `P` and the other
+two have vertices outside `P`, or exactly two are contained wholly in `P`
+and the third meets both components of `X-T`.  Moreover, for every nonempty
+connected `W subseteq P`,
+
+\[
+ |N_Y(W)|+|\{i\in S_P:R_i\cap W\ne\varnothing\}|\ge6.          \tag{8}
+\]
+
+#### Proof
+
+The preceding audited three-support theorem gives a three-cut, and says that
+every such cut has exactly two components.  Existence now follows from
+Theorem 1.2: in the two-bridge type, the component which contains only one of
+the other three supports meets exactly three, while in the one-bridge type
+both components meet exactly three.
+
+First, `Y` is three-connected.  Delete at most two vertices.  Some vertex of
+`T` remains, and the surviving vertices of `T` form a clique in `Y`.  Every
+component of `P` after the deletion has a neighbour in `T` outside the
+deleted set; otherwise at most two vertices would separate that component
+in `X`.  Hence all surviving vertices of `Y` lie in one component.
+
+Suppose that `Z` is a three-cut of `Y`.  It is not `T`, since `Y-T=P` is
+connected.  The clique on `T` puts all vertices of `T-Z` in one component
+`C_0` of `Y-Z`.  Every other component `W` lies in `P`.  Its neighbourhood
+in both `Y` and `X` is `Z`.  In `X-Z`, the other original component of
+`X-T` attaches to `T-Z` and hence joins `C_0`.  Thus the components of
+`Y-Z` other than `C_0` are also precisely the remaining components of
+`X-Z`.  The audited three-support theorem says that every three-cut of `X`
+has exactly two components.  Consequently there is exactly one such `W`.
+
+Lemma 3.1 says that `W` meets at least three supports.  Only the three
+members of `S_P` can meet a subset of `P`, so `W` meets all three.  Since
+`Z ne T`, at least one vertex of `P` lies in `Z` or in `C_0`; hence
+`|W|<|P|`.  The pair `(Z,W)` contradicts the choice of `P`.  Therefore `Y`
+has no three-cut.  A singleton component `P` would have degree three in
+`X`, contrary to `delta(X)>=4`; thus `|V(Y)|>=5`, and `Y` is
+four-connected.
+
+The two support alternatives follow directly from Theorem 1.2.  On a
+three-support side of the two-bridge type, one support is wholly inside and
+the two bridge supports have vertices outside.  On a side of the one-bridge
+type, the bridge support has vertices outside, while at least one of the two
+side supports is wholly inside; according as the other side support meets
+`T` or not, exactly one or exactly two supports are wholly inside.  Finally,
+for `W subseteq P`, no support outside `S_P` meets `W`, and adding the edges
+of `K_T` does not change `N_X(W)`.  Thus (8) is exactly (1). \(\square\)
+
+### Corollary 3.3 (a Cartesian family of weakly linkable triples)
+
+Choose any supports `E_P subseteq P` and `E_Q subseteq Q`, any support `H`
+which meets both components, arbitrary two-element sets
+
+\[
+ A_P\subseteq E_P,\qquad A_Q\subseteq E_Q,
+\]
+
+and arbitrary vertices `x in H cap P`, `y in H cap Q`.  Then the quadruple
+
+\[
+                    (X;A_P,A_Q,\{x,y\})                    \tag{9}
+\]
+
+is weakly linkable.  Thus this conclusion holds simultaneously for every
+choice in the full Cartesian family of two local support pairs and one
+bridge-support pair.
+
+#### Proof
+
+The three displayed two-element sets belong to three distinct indexed
+supports.  Their symmetric difference is nonempty: its intersection with
+`P` is `A_P` symmetric-differenced with `{x}`, which has odd order whether
+or not `x` lies in `A_P`.  Hence (9) is nontrivial and acyclic.
+
+A feasible parity bond would separate both vertices of all three sets and
+therefore split `E_P,E_Q,H`.  The universal three-support bond prohibition
+excludes this.  Since `X` is three-connected, it is two-connected, so the
+Chen--Ding--Yu--Zang theorem forces (9) to be weakly linkable. \(\square\)
+
+Consequently the remaining nonsingleton theorem can be stated precisely as
+a **simultaneous weak-linkability exclusion**: prove that the complete family
+(9) cannot all be weakly linkable in either incidence type of Theorem 1.2
+when the six-boundary inequality, the small-torso restriction (6), and the
+sequential minimum-path data hold.  It is not enough to make one fixed
+choice of the three pairs; the obstruction is universal over all such
+choices.
+
+## 4. Exact localized completion lemma
+
+Use the minimum pair `(T,P)` and four-connected torso `Y` from Theorem 3.2.
+Call a member of `S_P` **whole** if it is contained in `P`, and **external**
+if it has a vertex outside `P`.  There are either one whole and two external
+supports, or two whole and one external support.
+
+> **Triangle-boundary torso bisection lemma (open).**  There is a nonempty
+> connected set `A subset P` such that `Y-A` is connected, `A` meets every
+> external support, and
+> \[
+>        A\cap E\ne\varnothing\ne(P-A)\cap E
+> \]
+> for every whole support `E`.
+
+This is exactly a component-side three-support bond.  Indeed, the displayed
+conditions split every whole support, while `A` meets each external support
+and its vertex outside `P` lies in the other shore.  The graph `X-A` is
+connected: start from the connected graph `Y-A` and replace every added
+edge of the triangle `K_T` by a path through the connected component `Q`,
+which is adjacent to every vertex of `T`.  Thus `(A,X-A)` is a bond splitting
+all three members of `S_P`, contrary to the global restriction.
+
+Conversely, if a bond with one shore `A subset P` splits all three members
+of `S_P`, then `A` has exactly the displayed support properties, and
+connectivity of `X-A` implies connectivity of `Y-A` after the component `Q`
+is replaced by the triangle on `T`.  Hence the open lemma is equivalent to
+finding a three-support bond whose one shore stays inside the selected
+minimum component.  Proving it would eliminate every nonsingleton blocker.
+
+The lemma is not a consequence of four-connectivity and (8) alone.  The
+adjacent [stripped-torso
+barrier](../barriers/hc7_k44_three_support_torso_bisection_barrier.md) is a
+`K_5` torso with one whole and two external supports, all local scores equal
+to six, but no such set `A`.  It lacks the complementary component, the two
+other supports, their exact global provenance, and the minimum-path data.
+At least one of those retained global inputs must therefore enter the proof.
