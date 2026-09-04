@@ -1,7 +1,8 @@
 # Seven-connected `K_{4,4}` closure frontier
 
-**Status (4 September 2026):** T44 is the sole active completion target.  It is
-open.  No seven-connected counterexample has been found.  The literal-core
+**Status (4 September 2026):** T44 is a preserved conditional target; the
+primary campaign is now [bipartite contractibility](bipartite_contractibility_frontier.md).
+T44 remains open.  No seven-connected counterexample has been found.  The literal-core
 completion and the nonliteral branch-model lift are both still open, and no
 result in this file proves Conjecture 21 or `HC_7`. In addition to the two
 local literal residues, the proposed induction needs the hypothesis-class

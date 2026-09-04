@@ -34,21 +34,18 @@ $$
 
 ## Current research status
 
-The sole active completion target is the following open statement.
+The primary research campaign asks whether every finite bipartite graph is
+contractible: every graph scheme should contain its prescribed rooted minor.
+The [technical frontier](active/bipartite_contractibility_frontier.md) states
+the exact target and limitations. It pursues an independent theorem; no
+implication to `HC_7` is established.
 
-> **T44.** Every seven-connected graph containing a `K_{4,4}` minor
-> contains a `K_7^-` minor, where `K_7^-` is `K_7` with one edge deleted.
-
-Kawarabayashi--Toft's `K_7`-or-`K_{4,4}` theorem makes T44 sufficient for
-Norin--Totschnig Conjecture 21.  T44 would not by itself prove `HC_7`.
-The exact hypotheses, proved inputs and two remaining obligations are in the
-[T44 technical frontier](active/hc7_k44_closure_frontier.md).  The
-[research ledger](RESEARCH_LEDGER.md) is the sole authority for current
-status; [the active index](active/INDEX.md) is the concise navigation map.
-
-The former exceptional-centre, density and direct-`HC_7` programmes are
-preserved as frozen or conditional routes, not parallel active targets.
-None of their completion statements is proved here.
+The seven-connected `K_{4,4}` closure conjecture, T44, remains a preserved
+conditional route to Norin--Totschnig Conjecture 21. It is open and would
+not by itself prove `HC_7`. Its proved inputs and remaining obligations are
+in the [T44 technical frontier](active/hc7_k44_closure_frontier.md).
+The [research ledger](RESEARCH_LEDGER.md) is the sole status authority;
+[the active index](active/INDEX.md) is the concise navigation map.
 
 ## Selected completed work
 
@@ -79,7 +76,11 @@ or `HC_7`.
 
 ## Manuscripts
 
-The primary circulation candidate is the clearly marked four-page DRAFT
+The primary manuscript candidate is the four-page DRAFT
+[Even subdivisions are contractible](paper/even-subdivision-contractibility/main.tex).
+It gives the complete computation-free proof of the broader theorem above.
+
+The earlier four-page DRAFT
 [Every `K_{2,n}` is contractible](paper/k2n-contractibility/main.pdf), with
 [source](paper/k2n-contractibility/main.tex), a
 [hash-pinned GREEN internal audit](paper/k2n-contractibility/main_audit.md)
