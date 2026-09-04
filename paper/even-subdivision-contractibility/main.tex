@@ -1,0 +1,221 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage[hidelinks,pdftitle={Draft: Even subdivisions are contractible}]{hyperref}
+\setlength{\emergencystretch}{1em}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title[Even subdivisions are contractible]{Even subdivisions are contractible}
+\date{Draft, 4 September 2026}
+
+\begin{document}
+\begin{abstract}
+We prove that a bipartite graph is contractible in the sense of graph
+schemes whenever every vertex in one part has degree at most two.
+Consequently, replacing every edge of a loopless multigraph by a path of
+positive even length produces a contractible graph. The proof projects a
+coloured scheme onto a family of graphic matroids. Each edge label occurs
+in at most two projections, and a component count verifies the matroid
+union inequalities needed for simultaneous disjoint spanning trees.
+\end{abstract}
+\maketitle
+
+\noindent\textit{Status.} Draft with internal proof and manuscript
+audits; not externally peer reviewed.
+
+\section{Statement}
+
+All graphs are finite. Target and scheme graphs are simple; auxiliary
+multigraphs may have parallel edges but no loops. Following
+K\"undgen, Pelsmajer and Ramamurthi~\cite[Definitions 1.1 and 2.1]{KPR},
+an \emph{$H$-scheme} in a graph $G$ with $V(H)\subseteq V(G)$ is a family
+$(P_{uv}:uv\in E(H))$ of paths satisfying two conditions:
+\begin{enumerate}
+\item $P_{uv}$ joins $u$ to $v$ and contains no other vertex of $H$;
+\item whenever a nonempty collection of scheme paths has a common vertex,
+their corresponding edges in $H$ have a common endpoint.
+\end{enumerate}
+A \emph{rooted $H$ minor} in $G$ is a family $(C_v:v\in V(H))$ of
+pairwise disjoint connected vertex sets, with $v\in C_v$ for every $v$,
+such that $C_u$ and $C_v$ are adjacent whenever $uv\in E(H)$.
+The graph $H$ is \emph{contractible} if every graph containing an
+$H$-scheme contains a rooted $H$ minor.
+
+\begin{theorem}\label{thm:main}
+Let $H$ be bipartite with a specified bipartition $(A,B)$.
+If $d_H(b)\leq2$ for every $b\in B$, then $H$ is contractible.
+\end{theorem}
+
+\begin{corollary}\label{cor:even}
+Let $F$ be a loopless multigraph. Replace each edge of $F$ by a path of
+positive even length, using mutually disjoint new internal vertices.
+The resulting simple graph is contractible.
+\end{corollary}
+
+\begin{proof}
+Place every original vertex, and every even-position internal vertex of
+each replacement path, in $A$. Place the odd-position internal vertices
+in $B$. Every vertex of $B$ has degree two, so Theorem~\ref{thm:main}
+applies. Isolated vertices of $F$ may be retained.
+\end{proof}
+
+Theorem~\ref{thm:main} includes $K_{2,n}$ for every $n$, with the part
+of order $n$ as $B$. Corollary~\ref{cor:even} includes the graph obtained
+by subdividing every edge of any simple graph exactly once. Throughout,
+``even'' refers to the length of each replacement path.
+
+\section{Packing spanning trees with shared labels}
+
+\begin{lemma}\label{lem:packing}
+Let $J$ be a finite index set. For each $j\in J$, let $M_j$ be a connected
+multigraph with a distinguished vertex $r_j$ and an edge set labelled
+bijectively by a finite set $E_j$. Suppose that $M_j$ is the union of a
+family $\mathcal Q_j$ of paths whose edge sets partition $E_j$, all these
+paths contain $r_j$, and every other vertex belongs to at least two of
+them. Suppose also that each element of $E=\bigcup_j E_j$ belongs to at
+most two sets $E_j$. Then there are pairwise disjoint sets
+$T_j\subseteq E_j$ such that $T_j$ is a spanning tree of $M_j$.
+Trivial paths are allowed; an empty family is allowed when $V(M_j)=\{r_j\}$.
+\end{lemma}
+
+\begin{proof}
+Fix $X\subseteq E$. Let $c_j(X)$ count the components, including isolated
+vertices, of the spanning subgraph of $M_j$ with edge labels $E_j\cap X$.
+Put $m_j=|\mathcal Q_j|$. The component containing $r_j$ meets all $m_j$
+paths, and every other component meets at least two. Conversely, a path
+$Q$ meets at most $1+|E(Q)\setminus X|$ components: deleting those edges
+leaves that many path pieces, each contained in one component. Thus
+\[
+ m_j+2(c_j(X)-1)
+ \leq \sum_C |\{Q\in\mathcal Q_j:V(Q)\cap V(C)\ne\varnothing\}|
+ \leq m_j+|E_j\setminus X|.
+\]
+The last bound uses the partition of $E_j$ into the path
+edge sets. It follows that
+\begin{equation}\label{eq:components}
+ c_j(X)-1\leq\tfrac12|E_j\setminus X|.
+\end{equation}
+
+Extend the graphic matroid of $M_j$ to the common ground set $E$ by
+declaring all labels outside $E_j$ to be matroid loops. Its rank function
+$\rho_j$ satisfies
+\[
+ \rho_j(E)=|V(M_j)|-1,
+ \qquad \rho_j(X)=|V(M_j)|-c_j(X).
+\]
+Summing~\eqref{eq:components} and using the label multiplicity bound gives
+\begin{equation}\label{eq:unionbound}
+ \sum_j\bigl(\rho_j(E)-\rho_j(X)\bigr)
+ \leq \tfrac12\sum_j|E_j\setminus X|
+ \leq |E\setminus X|.
+\end{equation}
+The finite matroid union rank formula~\cite{Edmonds} states that
+\[
+ \rho_{\bigvee_j\mathcal M_j}(E)
+ =\min_{X\subseteq E}\left(|E\setminus X|+\sum_j\rho_j(X)\right).
+\]
+Equation~\eqref{eq:unionbound}, together with $X=E$, makes this rank equal
+to $\sum_j\rho_j(E)$. Write a maximum independent set of the union as
+$\bigcup_j I_j$, where each $I_j$ is independent in $\mathcal M_j$.
+Equality throughout
+\[
+ |\bigcup_j I_j|\leq\sum_j|I_j|\leq\sum_j\rho_j(E)
+\]
+forces the $I_j$ to be pairwise disjoint bases. A base contains no matroid
+loops. Therefore $T_j=I_j\subseteq E_j$ is the required spanning tree.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+By the coloured-scheme reduction~\cite[Lemma 3.3]{KPR}, an $H$-scheme
+has a rooted minor whose underlying graph $G$ supports a \emph{coloured
+$H$-scheme}. This consists of a proper colouring
+$f:V(G)\longrightarrow V(H)$ fixing each root, such that $P_{uv}$ uses
+only colours $u,v$ and every nonroot has degree at least four. We remove
+isolated roots before this reduction and restore them as singleton branch
+sets at the end. The graph with no remaining roots is immediate.
+
+The paths alternate colours, every edge belongs to exactly one scheme
+path, and each nonroot lies on at least two scheme paths
+\cite[Remark 3.2(1), (2), (6), (7)]{KPR}. Set
+\[
+ A_a=f^{-1}(a)\quad(a\in A),
+ \qquad L_b=f^{-1}(b)\quad(b\in B).
+\]
+If $d_H(b)\leq1$, then $L_b=\{b\}$, since no nonroot of colour $b$ can
+lie on two distinct paths incident with $b$. If $d_H(b)=2$, every nonroot
+of colour $b$ lies internally on both paths incident with $b$. Put
+\[
+ E=\bigcup_{b\in B}(L_b\setminus\{b\}),
+ \qquad E_a=\bigcup_{b\in N_H(a)}(L_b\setminus\{b\}).
+\]
+These labels are actual vertices of $G$. Each label belongs to exactly
+two sets $E_a$, one for each neighbour of its degree-two root colour.
+
+Construct $M_a$ on vertex set $A_a$ as follows. For each $b\in N_H(a)$
+and $x\in L_b\setminus\{b\}$, put an auxiliary edge labelled $x$ between
+the two neighbours of $x$ on $P_{ab}$. Both neighbours have colour $a$,
+and they are distinct because $P_{ab}$ is a path. Different labels may
+give parallel edges. Suppress all such vertices $x$ on $P_{ab}$ and
+remove its terminal vertex $b$. This leaves a path $Q_b^a$ in $M_a$ from
+$a$ to the $A_a$-neighbour of $b$; it is trivial if $P_{ab}=ab$.
+Its edge-label set is exactly $L_b\setminus\{b\}$.
+
+As $b$ ranges over $N_H(a)$, the paths $Q_b^a$ partition $E_a$, cover
+$A_a$, and all contain $a$. In particular, $M_a$ is connected. Every
+vertex of $A_a\setminus\{a\}$ lies internally on at least two distinct
+scheme paths incident with $a$, so it remains on at least two projected
+paths. Hence the family $(M_a:a\in A)$ satisfies Lemma~\ref{lem:packing}.
+Choose its pairwise disjoint spanning-tree label sets $T_a$.
+
+In the reduced graph $G$, define
+\[
+ C_a=A_a\cup T_a\quad(a\in A),
+ \qquad C_b=\{b\}\quad(b\in B).
+\]
+These sets are pairwise disjoint: the $A_a$ are different colour classes,
+the $T_a$ are disjoint sets of nonroot $B$-colour vertices, and no $T_a$
+contains a root. Each tree edge labelled $x$ lifts to the two-edge path
+through $x$ in $G$, so $G[C_a]$ is connected. Moreover $a\in C_a$.
+For each $ab\in E(H)$, the last edge of $P_{ab}$ joins the root $b$ to
+a vertex of $A_a\subseteq C_a$. Thus these branch sets form a rooted
+$H$-minor model.
+
+Finally compose this model with the rooted minor reduction. Replace every
+vertex in each branch set by its connected preimage in the original graph.
+Disjointness, connectivity, root containment and required adjacencies are
+preserved. Restoring the isolated roots completes the proof.
+The singleton assertion for the $B$ branch sets applies only in the
+reduced coloured scheme. \hfill$\square$
+
+\section{Scope}
+
+The contractible targets supplied by Corollary~\ref{cor:even} have
+unbounded treewidth, since they include a once-subdivision of $K_t$ for
+every $t$. This does not assert that contractibility is minor-closed or
+that $K_t$ itself is contractible. Theorem~\ref{thm:main} also covers
+theta graphs whose three paths all have even length; it does not cover
+the case of three odd-length paths. It therefore addresses only part of
+the bipartite-theta question in~\cite[Section 8, Question 3]{KPR}.
+Neither all bipartite graphs nor $K_{3,3}$ are covered. The theorem makes
+no conclusion about Hadwiger's conjecture or its $K_7^-$ analogue.
+
+\begin{thebibliography}{9}
+\bibitem{Edmonds}
+J.~Edmonds, \emph{Submodular functions, matroids, and certain polyhedra},
+in Combinatorial Structures and Their Applications, Gordon and Breach,
+1970, 69--87.
+
+\bibitem{KPR}
+A.~K\"undgen, M.~J.~Pelsmajer and R.~Ramamurthi,
+\emph{Finding minors in graphs with a given path structure},
+J.~Graph Theory \textbf{79} (2015), 30--47.
+\href{https://doi.org/10.1002/jgt.21812}{doi:10.1002/jgt.21812}.
+Primary preprint: \href{https://arxiv.org/abs/1207.6141}{arXiv:1207.6141}.
+\end{thebibliography}
+\end{document}
