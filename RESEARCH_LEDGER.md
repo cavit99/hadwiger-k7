@@ -44,6 +44,11 @@ This file is the sole authority for the present research frontier.
    Eliminating that marked separator profile is the remaining singleton
    task.  The
    nonliteral labelled branch-model rotation obligation remains separate.
+   **Induction qualification, 4 September:** closing the two local literal
+   residues must also preserve the ambient hypothesis class, or prove
+   completion with purely labelled hypotheses. Safety alone has not supplied
+   that unbounded step; see the
+   [technical frontier](active/hc7_k44_closure_frontier.md#44-the-hypothesis-class-needed-for-induction).
 
 ## Current frontier
 
@@ -190,9 +195,10 @@ prove T44, Conjecture 21 or `HC_7`.
    core-concentrated profile.  The current theorem only returns a marked
    separator certificate: even order seven is not yet proved sufficient for
    a target or safe contraction, and no well-founded descent through larger
-   boundaries is known.  Closing both residues would give a safe contraction;
-   induction would then prove the pure labelled trichotomy, and the whole
-   literal core would join its six-bag outcome to the target.
+   boundaries is known. Closing both local residues would give a safe
+   contraction in the stated ambient class. A purely labelled completion
+   theorem or preservation of the full ambient class is additionally needed
+   to iterate that contraction and conclude the literal theorem.
 2. **Nonliteral model-trace rotation.** Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target. Exact cuts alone do not provide
@@ -354,10 +360,24 @@ seven-contraction-critical target-free graph with a specified literal
 `K_{4,4}` and exterior order at least seven, the exterior has a safe
 three-contractible edge.  Failure would produce the audited singleton atom,
 whose degree-seven bipartite `3`-by-`4` neighbourhood contradicts Dirac's
-neighbourhood-independence inequality.  This supplies only the first safe
-edge: its contraction is six-colourable and need not remain seven-connected,
-so the corollary neither iterates nor replaces universal T44 as the sole
-active target.
+neighbourhood-independence inequality. The new audited
+[preservation theorem](results/hc7_k44_safe_contraction_preservation.md)
+adds that the core is induced and each core vertex has degree at least nine.
+The first safe contraction is seven-connected; if the exterior originally
+has at least eight vertices, a second safe edge exists and its contraction
+is seven-connected too. Both quotients remain target-free and retain the
+literal core. The proof excludes a degree-seven bipartite neighbourhood
+after one original contraction using Dirac's inequality. It proves neither
+a third safe edge nor an unbounded closed reduction class. Six-colourability
+of the proper quotients still prevents reapplying criticality itself.
+
+The separate [induction-scope finding](active/hc7_k44_closure_frontier.md#44-the-hypothesis-class-needed-for-induction)
+corrects the implication previously claimed after closing both literal
+residues. The small-atom theorem has purely labelled hypotheses, while its
+later ambient refinements use seven-connectivity and target exclusion.
+Their conditional completion statements cannot yet be reapplied after an
+arbitrary labelled safe contraction. No proved atom statement is retracted;
+the missing inference is the closure of the proposed induction class.
 
 ## Durable recent results outside the active spine
 
@@ -407,8 +427,9 @@ active target.
 - The [critical literal-core safe-contraction
   corollary](results/hc7_k44_critical_safe_contraction.md), with its adjacent
   audit, combines the singleton-atom theorem with Dirac's neighbourhood
-  inequality.  It forces the first safe exterior edge but cannot be iterated
-  after the resulting six-colourable contraction.
+  inequality. Its [audited preservation refinement](results/hc7_k44_safe_contraction_preservation.md)
+  gives two safe contractions preserving seven-connectivity when the
+  exterior has order at least eight, without an unbounded induction.
 
 The [selected-results map](results/README.md) is a non-authoritative reader
 guide to these proofs and the direct proved inputs to T44.
@@ -443,8 +464,19 @@ active targets under the T44 pivot.
 
 The six-connected `4n` theorem, the stronger `4n-2` density programme, E5
 and direct `HC_7` bridge composition remain conditional or frozen routes.
-They may be reactivated only if T44 is independently falsified or a new
-lemma directly removes one of their recorded barriers.
+Their priority can be reconsidered when a new argument offers a stronger
+justified prospect; T44 need not first be falsified.
+
+The [historical review through the former HEAD](archive/research_chronology_review_2026-09-04.md)
+records the initial commit, fortnightly snapshots and intervening
+retractions, including the off-main August exact-six closure. Across those
+changes the repeated failure was preservation of a complete colouring
+partition or rooted model in a class closed under the proposed reduction.
+The independent judgement is therefore to require a terminal theorem or a
+proved decreasing reduction before counting additional counterexample
+structure as progress. The even-subdivision theorem is a concrete outcome
+of assessing the standalone packing route on that basis, while T44 remains
+open.
 
 ## Trust boundary
 

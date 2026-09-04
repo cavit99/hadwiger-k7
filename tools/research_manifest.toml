@@ -20054,7 +20054,7 @@ status = "active-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = true
-expected_source_sha256 = "243f15f9e4db6d07e1f94326ab9063f9c037a665579c814081d643dd1ac4f624"
+expected_source_sha256 = "5027b30f159f67dfe774e0053d3804c911f7a65281dabf3465a8afc66122f063"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -20069,6 +20069,7 @@ allowed_exits = [
 does_not_prove = [
   "the nonsingleton triangle-boundary torso bisection theorem under the full global blocker hypotheses, including the at-most-two-split restriction, complementary support provenance, the minimum path and a,b incidence",
   "the singleton core-concentrated completion theorem: the current marked separator certificate proves neither that exact boundary seven is terminal nor a well-founded descent across larger boundaries",
+  "closure of the induction hypothesis class: ambient literal-host completion is not yet a purely labelled completion theorem, and arbitrary safe contractions are not proved to preserve all ambient hypotheses",
   "the still-open nonliteral model-trace rotation theorem",
   "Conjecture 21 unless T44 is proved and the Kawarabayashi--Toft theorem is applied",
   "HC7",
@@ -20352,6 +20353,60 @@ does_not_prove = [
   "the literal K4,4 case of T44, T44, Conjecture 21 or HC7",
 ]
 keywords = ["literal K4,4", "safe contraction", "contraction critical", "Dirac inequality", "Kempe paths"]
+
+[[claims]]
+id = "hc7.k44_safe_contraction_preservation"
+title = "Two safe contractions preserve seven-connectivity in a critical literal K4,4 host"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k44_safe_contraction_preservation.md"
+source_heading = "3. A second safe edge, with an explicit stopping point"
+active = false
+audit = "results/hc7_k44_safe_contraction_preservation_audit.md"
+expected_source_sha256 = "b62fe795c22992858da26ca5eba12e3886b960d782edcf4e5dbaf9cf40ca8ac5"
+scope = "seven-contraction-critical K7-minus-minor-free literal K4,4 hosts with exterior order at least eight"
+conclusions = [
+  "the core is induced and every core vertex has degree at least nine",
+  "a first safe contraction preserves seven-connectivity and target exclusion",
+  "the quotient has a second safe edge and every such contraction preserves seven-connectivity and target exclusion",
+  "both contractions retain the specified literal core",
+]
+does_not_prove = [
+  "a third safe edge or a closed unbounded induction class",
+  "the purely labelled trichotomy or a literal T44 completion",
+  "T44, Conjecture 21 or HC7",
+]
+keywords = ["safe contraction", "literal K4,4", "Dirac inequality", "induction preservation", "core degree"]
+
+[[relations]]
+source = "hc7.k44_safe_contraction_preservation"
+target = "hc7.k44_critical_safe_contraction"
+kind = "strengthens"
+note = "Adds ambient seven-connectivity and a second safe contraction; the earlier result's limited scope remains unchanged."
+
+[[relations]]
+source = "hc7.k44_safe_contraction_preservation"
+target = "hc7.k44_critical_safe_contraction"
+kind = "uses"
+note = "Supplies the first safe edge."
+
+[[relations]]
+source = "hc7.k44_safe_contraction_preservation"
+target = "hc7.k44_positive_atom_elimination"
+kind = "uses"
+note = "No second safe edge would give the forbidden singleton neighbourhood in the first quotient."
+
+[[relations]]
+source = "hc7.k44_safe_contraction_preservation"
+target = "hc7.k7minus_critical_host_degree7_closure"
+kind = "uses"
+note = "Minimum degree eight ensures every core vertex has an exterior neighbour."
+
+[[relations]]
+source = "hc7.k44_safe_contraction_preservation"
+target = "hc7.k44_literal_exterior_threeconnectivity"
+kind = "uses"
+note = "Supplies the initial three-connected exterior."
 
 [[claims]]
 id = "hc7.k44_spanning_two_helper_split_count"

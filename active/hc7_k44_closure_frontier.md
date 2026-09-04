@@ -1,9 +1,11 @@
 # Seven-connected `K_{4,4}` closure frontier
 
-**Status (2 September 2026):** T44 is the sole active completion target.  It is
+**Status (4 September 2026):** T44 is the sole active completion target.  It is
 open.  No seven-connected counterexample has been found.  The literal-core
 completion and the nonliteral branch-model lift are both still open, and no
-result in this file proves Conjecture 21 or `HC_7`.
+result in this file proves Conjecture 21 or `HC_7`. In addition to the two
+local literal residues, the proposed induction needs the hypothesis-class
+closure specified in Section 4.4 below.
 
 ## 1. Primary target and exact consequence
 
@@ -544,9 +546,9 @@ A new agent should treat the following as the exact live theorem pair.
    decreasing complexity.  Equality by itself is not a proved terminal
    condition, and no descent monovariant has been established.
 
-Only after both literal residues close does the separate nonliteral
-model-trace rotation theorem in Section 5 become the remaining T44
-obligation.
+Closing both local residues must also establish the induction closure in
+Section 4.4 before the literal theorem follows. The nonliteral model-trace
+rotation theorem in Section 5 remains a separate obligation.
 
 For re-entry, run
 
@@ -560,6 +562,34 @@ Then inspect
 `.cache/research/context_hc7.target.k44_sevenconnected_closure.md`.  The
 generated pack is a retrieval aid; this frontier, `active/INDEX.md`, and the
 ledger remain authoritative.
+
+### 4.4 The hypothesis class needed for induction
+
+**Recorded negative finding / route nonclosure, 4 September 2026.**
+The [small-atom theorem](../results/hc7_k44_weighted_splitter_small_atom_reduction.md)
+has purely labelled hypotheses and correctly makes its induction conditional
+on a completion theorem in that class. The later
+[singleton-atom theorem](../results/hc7_k44_positive_atom_elimination.md)
+and the two current completion residues assume an ambient seven-connected
+target-free literal host. In particular, the singleton reduction uses
+seven disjoint boundary-to-core paths supplied by ambient connectivity.
+
+The first unsupported inference in passing from those residues to the
+labelled trichotomy is to reapply the ambient theorem after an edge that is
+only safe for exterior three-connectivity and the labelled inequalities.
+Those are different hypothesis classes. Terminal lifting preserves the
+three labelled conclusions; it does not supply ambient seven-connectivity
+or turn absence of those conclusions into exclusion of all target models.
+
+The [preservation theorem and scope audit](../results/hc7_k44_safe_contraction_preservation.md#4-the-separate-pure-labelled-induction-gap)
+make the repair precise: prove completion under the original purely
+labelled hypotheses, or prove a reduction closed under all ambient
+hypotheses with a decreasing order. Safety alone fails to preserve ambient
+connectivity in an explicit target-rich example. That example does not
+refute target-free preservation, the labelled trichotomy, either literal
+residue or T44. The new two-step critical result below is not an unbounded
+repair. Existing audited atom statements are preserved at their stated
+scopes; their conditional induction discussion needs this qualification.
 
 ## 5. Exact nonliteral obligation
 
@@ -617,11 +647,15 @@ three-contractible edge.  Otherwise the singleton-atom theorem would produce
 a degree-seven vertex with a bipartite `3`-by-`4` neighbourhood, contradicting
 Dirac's neighbourhood-independence inequality.
 
-This does not create an induction.  Contracting the safe edge gives a
-six-colourable proper minor, not another seven-contraction-critical host, and
-the quotient is not asserted to remain seven-connected.  The universal
-literal residues can therefore reappear after the first contraction.  The
-useful critical-host datum attached to that edge is a six-colouring of
+The new audited [safe-contraction preservation theorem](../results/hc7_k44_safe_contraction_preservation.md)
+proves more: the core is induced, every core vertex has degree at least
+nine, and the first safe quotient is seven-connected. If the original
+exterior has at least eight vertices, the quotient has a second safe edge,
+and its contraction is again seven-connected and target-free. The proof
+uses Dirac's inequality to exclude the singleton-atom outcome after one
+original contraction. It supplies no third safe edge or closed inductive
+class. Both quotients are six-colourable proper minors, so criticality
+itself is lost. The useful datum attached to the first edge is a six-colouring of
 `G-uv` in which `u,v` have the same colour and are joined in each of the five
 corresponding bichromatic subgraphs.  These five paths are not asserted to
 be mutually disjoint or otherwise compatible.
@@ -636,8 +670,9 @@ responses:
 A synchronization lemma combining that equal-colour response, the four
 opposite-shore branch contacts and Kempe chains could rotate the model when
 separator ownership alone cannot.  This is a conditional proof strategy;
-T44 remains the sole declared target and is abandoned only after an actual
-seven-connected target-free counterexample is independently verified.
+T44 remains a live completion target. Its priority may be reconsidered when
+a different route has a stronger justified prospect; an independently
+verified counterexample is required to declare T44 false.
 
 ## 8. Stop rules
 

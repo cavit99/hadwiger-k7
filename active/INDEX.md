@@ -115,9 +115,9 @@ Z3 as the decisive trust boundary, not an unbounded theorem.
    the entire core-concentrated target-free profile.  The present reduction
    returns a marked separator, but neither an exact-seven completion theorem
    nor a well-founded descent through larger separators is proved.  Closing
-   both residues would make safe contraction and induction available for the
-   pure labelled trichotomy; the whole literal core would then join its
-   six-bag outcome to the target.
+   both local residues must also establish the
+   [hypothesis-class closure needed for induction](hc7_k44_closure_frontier.md#44-the-hypothesis-class-needed-for-induction)
+   before the pure labelled trichotomy or the literal theorem follows.
 2. **Nonliteral model-trace rotation.**  Use the exact seven-cut through an
    internal branch edge to construct a strictly smaller labelled
    `K_{4,4}` model or the target.  Exact cuts alone do not give laminarity,
