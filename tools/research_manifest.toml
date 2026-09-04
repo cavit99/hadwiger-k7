@@ -19290,6 +19290,37 @@ expected_stdout = [
 ]
 
 [[claims]]
+id = "graph_schemes.even_subdivision_contractible"
+title = "Bipartite graphs with degree at most two on one side are contractible"
+kind = "theorem"
+status = "audited-green"
+source = "results/even_subdivision_contractibility.md"
+source_heading = "Theorem 1.1"
+active = false
+audit = "results/even_subdivision_contractibility_audit.md"
+expected_source_sha256 = "e7e8499d03f440f81bf558f7d42bc6be09830dd68a4bba50b92e1df4e1332ef7"
+scope = "all finite bipartite graphs with degree at most two on one specified side and arbitrary schemes of those graphs"
+conclusions = [
+  "every such scheme has a minor rooted at all target vertices",
+  "every subdivision replacing each edge of a loopless multigraph by a path of positive even length is contractible",
+  "the contractible family has unbounded treewidth",
+  "the proof is unbounded and computation-free",
+]
+does_not_prove = [
+  "contractibility of K3,3 or every bipartite graph",
+  "contractibility of theta graphs with three odd-length paths",
+  "T44 or the K7-minus six-colour conjecture or HC7",
+  "publication priority or significance comparable to Norin--Totschnig",
+]
+keywords = ["graph scheme", "contractible graph", "rooted minor", "even subdivision", "matroid union", "partially shared labels"]
+
+[[relations]]
+source = "graph_schemes.even_subdivision_contractible"
+target = "graph_schemes.k2n_contractible"
+kind = "strengthens"
+note = "Arbitrarily many partially shared projections extend the two-projection K2,n proof; K2,n is a special case."
+
+[[claims]]
 id = "graph_schemes.k2n_contractible"
 title = "Every complete bipartite graph K2,n is contractible"
 kind = "theorem"

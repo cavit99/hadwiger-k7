@@ -171,6 +171,9 @@ re-entry verification commands.
 
 ## Preserved secondary work
 
+- [even-subdivision contractibility](../results/even_subdivision_contractibility.md),
+  with two separate internal audits, is a completed independent theorem;
+  it extends the earlier `K_{2,n}` result and is not a T44 input;
 - [the adjacent true-twin induced-`C_7` chain and its exact RED
   audit](../archive/adjacent-true-twin-c7-2026-08-17/README.md) are archived
   off the active spine;

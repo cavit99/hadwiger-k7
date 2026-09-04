@@ -58,6 +58,7 @@ links their proofs, audits and exact scopes.
 
 | Result | Status and scope |
 |---|---|
+| [Even subdivisions are contractible](results/even_subdivision_contractibility.md) | Computation-free written proof with [two separate internal audits](results/even_subdivision_contractibility_audit.md). More generally, every bipartite graph with degree at most two on one specified side is contractible. This extends the `K_{2,n}` theorem to a family of unbounded treewidth. |
 | [Every `K_{2,n}` is contractible](results/k2n_contractibility_via_matroid_packing.md) | Computation-free written proof with a [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md) and a [four-page manuscript](paper/k2n-contractibility/main.pdf).  It answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
 | [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
 | [Four prescribed roots in a three-connected graph](results/rooted_k4minus_four_roots.md) | Elementary unbounded proof, with a [GREEN audit](results/rooted_k4minus_four_roots_audit.md), of a rooted `K_4^-` minor at any four distinct roots.  The missing quotient edge is not prescribed. |

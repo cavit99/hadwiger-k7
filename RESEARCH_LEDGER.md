@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 2 September 2026
+**Last updated:** 4 September 2026
 **Authoritative status:** `HC_7` is not proved here. Neither is the
 `K_7^-` six-colour conjecture. Internal audits are not external peer
 review. Hadwiger's conjecture is known for `t<=6` and remains open for every
@@ -361,6 +361,22 @@ active target.
 
 ## Durable recent results outside the active spine
 
+- **Written proof with two separate internal audits, 4 September 2026:**
+  every bipartite graph with degree at most two on one specified side is
+  contractible. The [proof](results/even_subdivision_contractibility.md),
+  [cold audit](results/even_subdivision_contractibility_audit.md), and
+  [separate proof and literature audit](results/even_subdivision_contractibility_literature_audit.md)
+  extend the two-projection `K_{2,n}` argument to arbitrarily many graphic
+  matroids with partially shared labels. Every label belongs to at most two
+  projections, which verifies the simultaneous matroid union inequality.
+  Consequently every replacement of the edges of an arbitrary loopless
+  multigraph by paths of positive even length is contractible. This gives a
+  family of unbounded treewidth and covers the even-path portion of
+  Kündgen--Pelsmajer--Ramamurthi's bipartite-theta question. It does not cover
+  the three-odd-path case or `K_{3,3}`, and does not advance a specific
+  `HC_7` subcase. Targeted literature checks found no matching theorem;
+  priority and significance comparable to Norin--Totschnig remain
+  unestablished. The earlier audited proof and manuscript are preserved.
 - Every complete bipartite graph `K_{2,n}` is contractible in the sense of
   graph schemes. The [computation-free proof](results/k2n_contractibility_via_matroid_packing.md)
   has an adjacent [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md)
