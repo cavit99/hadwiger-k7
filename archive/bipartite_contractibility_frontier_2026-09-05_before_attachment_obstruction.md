@@ -1,3 +1,11 @@
+# Frozen frontier before the bipartite-attachment counterexample
+
+**Historical snapshot:** copied from the technical frontier at commit `fc37854`.
+The two classification sufficiency proposals below are now refuted by
+[the audited attachment construction](../barriers/triangle_free_bipartite_attachment_counterexample.md).
+This file is provenance, not current status; consult the
+[research ledger](../RESEARCH_LEDGER.md). Relative links have been relocated.
+
 # Universal bipartite contractibility and the remaining global target
 
 **Status:** the universal bipartite theorem has a written proof and a
@@ -20,7 +28,7 @@ Norin--Totschnig Conjecture 21 is established. No previously proved
 theorem is being invoked here as a direct sufficient reduction of `HC_7`.
 
 The preserved principal conditional refinement is
-[T44](hc7_k44_closure_frontier.md): every seven-connected graph containing
+[T44](../active/hc7_k44_closure_frontier.md): every seven-connected graph containing
 a `K_{4,4}` minor contains a `K_7^-` minor. T44 would prove Conjecture 21,
 that every `K_7^-`-minor-free graph is six-colourable. Both remain open.
 The designated T44 frontier retains its two literal residues, closure
@@ -120,66 +128,149 @@ now supplies full rooted conclusions for every included bipartite target,
 including `K_{3,3}`, all `K_{m,n}` and every bipartite theta graph. Its
 proof does not need root relocation or pendant root-forcing attachments.
 
-## Refuted classification proposals and global construction boundary
+## General contractibility classification laboratory
 
-**Barrier/counterexample with a written proof and separate internal audit:**
-for every odd `ell>=5`, the graph `H_ell` obtained by joining `C_ell` and
-`K_{3,4}` at one vertex in the three-vertex shore is noncontractible.
-The [explicit construction and proofs](../barriers/triangle_free_bipartite_attachment_counterexample.md)
-give an `H_ell`-scheme with all paths of length three and no rooted target
-minor. The host has `ell+8` nonroots; arbitrary rooted branch sets would
-require at least `ell+9`. This is a written unbounded obstruction, not
-an inference from the finite solver search that found its first example.
+**Conjectural target:** a finite graph is contractible if and only if every
+one of its subgraphs is `M'`-contractible. Here `M'(F)` has roots `v_0`
+and one nonroot `v_1` per target vertex; for each edge `uv` it has edges
+`u_0v_1,u_1v_0,u_1v_1`. These length-three paths form its canonical
+scheme. Necessity follows from subgraph closure; sufficiency is open.
+It would address the general classification and decidability questions,
+including full rooted `K_5` and `K_6`. This is an independent-theorem
+laboratory, not an established route to `HC_7` or a new completion claim.
 
-Every `H_ell` is triangle-free, has no skewed theta, and becomes bipartite
-after deleting any edge of its unique odd cycle. Thus the former positive
-classification target is false. There is no missing global construction
-under its exact hypotheses. Its necessary half remains the
-[audited odd-cycle-edge theorem](../results/triangle_free_contractibility_odd_cycle_edge.md).
+**Written proofs with a separate internal audit:** the
+[general scheme reduction](../results/general_scheme_independent_set_reduction.md)
+extends simultaneous matroid contraction to an independent set `T` of
+actual nonroot host vertices, even when the target is nonbipartite. Label
+vertices are removed from every projection's base set, so they cannot
+also be independently owned base vertices. If the sum of projection
+ranks is at most `|T|`, a nonempty simultaneously spanned restriction
+gives a root-preserving scheme on a strictly smaller host. In particular,
+this applies when `|N_(G-R)(T)|<=|T|`.
 
-**A second refutation, proved without enumeration:** every subgraph of
-`H_ell` is `M'`-contractible. The canonical two-copy graph `M'(F)` has one
-prescribed root and one clone per target vertex, with the three edges
-of a length-three scheme for each target edge. A matching-cover argument
-proves the canonical result for an odd cycle joined at a vertex to any
-bipartite graph. Consequently hereditary canonical-test sufficiency is
-also false. Actual membership choices obtained by splitting a colour's
-clone among incident paths can obstruct rooted minors even when every
-canonical subgraph test passes.
+Consequently a minimum counterexample has strict independent-neighbour
+expansion outside its roots. The first unsupported classification step
+is reducing such an arbitrary scheme to one nonroot per target colour,
+or providing a simultaneous root rotation. Strict expansion neither
+bounds host order nor makes that inference valid. The same file proves
+a terminal host theorem: every scheme of every finite target has its
+fully rooted minor when the graph outside its roots is a pseudoforest.
+After normalization, the nonroots form cycles; cyclic assignment to
+adjacent prescribed roots gives disjoint stars witnessing every demand.
+This restricted host theorem is a milestone, not the user's objective.
 
-The first false inference in the proposed classification was upgrading
-necessary target structure to arbitrary-scheme sufficiency. In the
-broader proposal it was upgrading the canonical schemes of all subgraphs
-to all schemes. These are now explicit target counterexamples, stronger
-than the earlier failures of particular local gluing rules. Any repaired
-classification must exclude `H_ell` and account for actual memberships;
-merely choosing a different split or a more favourable model cannot
-prove either refuted statement. No replacement sufficiency conjecture
-is promoted at this checkpoint.
+**Barrier to an intermediate classification:** every triangle-free
+totally odd subdivision of `K_4` is noncontractible. The
+[written obstruction and audit](../barriers/triangle_free_odd_subdivision_contractibility.md)
+give its explicit two-copy scheme and an unbounded positive-weight
+generalization. Strict neighbourhood expansion excludes every nonempty
+stable set in KPR's exact criterion, while degree preservation excludes
+a shift automorphism. This refutes excluding only skewed thetas and two
+long odd cycles joined by a path. It does not refute the hereditary
+`M'` candidate. The applicable ear-decomposition literature and its
+remaining scheme-lifting obligation are recorded beside the obstruction.
 
-The prior [technical campaign](../archive/bipartite_contractibility_frontier_2026-09-05_before_attachment_obstruction.md)
-is frozen. Its independent-set rank reduction, pseudoforest host theorem,
-odd-subdivision obstruction and series-class parity theorem remain valid
-at their audited revisions. Their statements do not imply either false
-sufficiency proposal. In particular, the
-[general reduction](../results/general_scheme_independent_set_reduction.md)
-still gives host-order descent under its exact rank condition; this new
-obstruction does not change its roots, colouring or lift obligations.
+**Written necessary structural theorem with a separate internal audit:**
+every connected triangle-free contractible graph is bipartite or becomes
+bipartite after deleting one edge. The
+[proof](../results/triangle_free_contractibility_odd_cycle_edge.md)
+extracts a skewed theta or a totally odd `K_4` subdivision from any signed
+odd-`K_4` minor, explicitly checking the parity and disjointness of the
+lift. The checked signed odd-cycle packing theorem then gives a common
+edge of all odd cycles in the unique nonbipartite block. The exclusion of
+two nonbipartite blocks is KPR Corollary 7.8, with triangle-freeness
+ensuring the required long odd cycles.
 
-The [earlier attachment and Whitney-transport counterexamples](../barriers/scheme_articulation_colour_fibre.md)
-remain preserved. The new construction goes further: both target blocks
-are contractible, yet their union at a prescribed common root need not be.
-The finite [diagnostics](experiments/bipartite_contractibility/README.md)
-remain finite observations. The
-[new independent branch-set checker](../barriers/triangle_free_bipartite_attachment_verify.py)
-checks the smallest 24-vertex example against positive and negative
-calibrations; its output is not used in the unbounded proof.
+**Concrete positive classification target:** prove that a triangle-free
+graph is contractible whenever it has no skewed theta and every connected
+component becomes bipartite after deleting at most one edge. The converse
+is now proved. The sufficiency direction remains conjectural; neither
+single-edge odd-cycle cover nor a canonical two-copy model supplies the
+required arbitrary-scheme lift. This is a complete-classification attempt,
+with arbitrary target order and degree, within the broader hereditary
+`M'` programme. Its proof and comparative significance remain unestablished.
 
-The requested HC7 or comparable-theorem objective remains unmet. The
-universal bipartite theorem is unaffected, and the T44 frontier retains
-its full-host and nonliteral ownership requirements. Neither this
-classification refutation nor the earlier positive milestones supplies
-a sufficient HC7 reduction.
+### Contracting the edge meeting all odd cycles
+
+**Written structural theorem with a separate internal audit:** for a
+2-connected nonbipartite simple target `H` with `H-e` bipartite, having
+no skewed theta is equivalent to self-orthogonality of the binary cycle
+space of `H/e`. Equivalently, all graphic-matroid series classes of `H`
+have even size except the class containing `e`. Here two edges are in
+the same series class when every cycle contains both or neither.
+The [full proof, Theorem 4](../results/triangle_free_contractibility_odd_cycle_edge.md#cycle-spaces-and-series-classes)
+uses the checked odd-cycle basis theorem and an explicit edge-Menger
+argument for series classes. Thus `H/e` is bipartite and has no theta
+whose three paths are odd; it is simple when `H` is triangle-free.
+
+**Recorded route nonclosure, not a counterexample.** This target
+contraction decreases target order by one, but merges two prescribed
+roots. Even if an `H/e`-scheme is constructed by contracting the
+`uv` scheme path, an arbitrary rooted `H/e` model does not provide a
+partition of the inverse image of the branch set at the contracted vertex
+into disjoint connected sets containing the original roots `u,v`, adjacent to each
+other and to their respective original neighbour branch sets. That
+partition is the first unsupported inference. The required repair is
+an existential construction of a reduced model admitting this split,
+with all other branch sets retaining their disjoint ownership. A
+decrease in target order alone supplies neither the preserved roots
+nor this lift.
+
+Likewise, a proposed description by even subdivisions and Whitney
+switches across 2-separations would still need a scheme-level
+composition theorem. A switch exchanges the two boundary vertices
+in one target piece. An original nonroot of one boundary colour may
+lie on paths from both pieces; switching only one piece can destroy
+the common-target-endpoint condition at that actual host vertex.
+The [explicit six-cycle example](../barriers/scheme_articulation_colour_fibre.md#a-whitney-switch-cannot-just-relabel-one-sides-path-incidences)
+refutes this incidence-preserving relabelling rule even though both
+targets are contractible. Relabelling the piece is therefore not a
+valid general scheme transformation.
+The proved series-class description is a cycle-matroid statement;
+its classes need not be consecutive paths through degree-two vertices.
+It supplies no invariance of rooted contractibility under Whitney
+switches. The required decomposition with an ownership-preserving
+scheme lift remains open. Cao's construction procedure is not an input;
+Benchetrit--Sebő [4, Appendix A.2] explicitly identifies its failure.
+
+### A failed local rule for gluing at a common root
+
+**Barrier/counterexample to an intermediate claim:** even for a bipartite
+block, one cannot require its common-root branch set to contain the entire
+host colour class of that root. The
+[explicit nine-vertex cycle scheme](../barriers/scheme_articulation_colour_fibre.md)
+has an ordinary fully rooted model, but putting both nonroots of the
+attachment colour in its root bag forces the two neighbours of another
+root into that bag, eliminating required contacts. Both examples have
+[separate internal checks](../barriers/scheme_articulation_colour_fibre_audit.md)
+at the recorded exact revision.
+
+The refuted inference was to solve a bipartite block locally while
+absorbing every occurrence of its attachment colour into the shared root,
+then leave the rest of the scheme unaffected. Its first failure is this
+additional colour-class containment, which full rooted contractibility
+does not supply. This does not refute closure under attaching bipartite
+blocks or the classification candidate. A valid gluing proof must instead
+coordinate ownership of shared-colour nonroots across the blocks, or
+give a different global reduction.
+
+**Computer-assisted finite diagnostics:** the
+[retained classification screen and mixed-cycle tests](../active/experiments/bipartite_contractibility/README.md#classification-falsification)
+found no counterexample to the candidate in the stated finite searches.
+The canonical two-copy test does not certify arbitrary schemes. More
+specifically, all 64 tested schemes of a five-cycle and a four-cycle
+sharing one root have checked rooted models, while no independent set
+of their nonroots satisfies the current reduction's rank inequality.
+These examples identify a positive case beyond that sufficient reduction;
+they do not prove even this fixed target contractible in arbitrary hosts.
+
+The [T44 frontier](../active/hc7_k44_closure_frontier.md#42-singleton-blocker-and-its-contraction-trace)
+now also records why a broader local rooted completion fails even when
+separator roots may expand. Its explicit planar boundary example cannot
+supply the bipartite scheme needed by the universal theorem. Completing
+the full singleton case must use the other side or change the fixed
+rooted `K_5` model; the other T44 obligations remain intact.
 
 ## Literature scope and significance
 
@@ -229,7 +320,7 @@ also preserve the failure of a natural degree-preserving gadget lift and
 an explicit obstruction to upgrading an arbitrary five-connected `K_6`
 model to `K_7` minus a matching. Neither is used by the universal proof.
 The
-[retained experiments](experiments/bipartite_contractibility/README.md)
+[retained experiments](../active/experiments/bipartite_contractibility/README.md)
 are diagnostics with explicitly finite scope.
 
 ## References

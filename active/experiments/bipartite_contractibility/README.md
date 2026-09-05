@@ -38,6 +38,13 @@ The finite sample families do not restrict the written theorem's scope.
 
 ## Classification falsification
 
+**Historical diagnostics:** the two sufficiency proposals tested here are
+now refuted by the
+[odd-cycle bipartite-attachment construction](../../../barriers/triangle_free_bipartite_attachment_counterexample.md).
+Its arbitrary-scheme obstruction has a written proof, as does the fact
+that every canonical subgraph test passes. The earlier finite outputs
+below remain valid within their scopes.
+
 The [classification screen](classification_screen.py) tests the necessary
 `M'`-contractibility condition in Kündgen--Pelsmajer--Ramamurthi,
 [Theorem 7.7](https://arxiv.org/pdf/1207.6141). For a triangle-free target,
@@ -53,7 +60,7 @@ uv run python3 active/experiments/bipartite_contractibility/classification_scree
 uv run python3 active/experiments/bipartite_contractibility/classification_screen.py --order 9 --even-subdivisions --certificates /tmp/classification-certificates.jsonl
 ```
 
-The candidate requires no skewed theta and deletion of at most one edge
+The former candidate requires no skewed theta and deletion of at most one edge
 per component to make the target bipartite. All 168 candidate graphs in
 the NetworkX atlas through order seven pass the `M'` test. The generator
 then exhausts connected nonbipartite triangle-free targets of orders eight
@@ -72,8 +79,9 @@ The certificate stream can be retained outside Git with `--certificates`.
 
 Calibration includes the theta with path lengths `2,3,3`: among its 1,279
 labelled vertex-and-edge subgraphs, exactly the whole theta fails the
-`M'` test. In particular, this example does not refute the separate
-proposal that *every* subgraph being `M'`-contractible might suffice.
+`M'` test. This theta alone did not refute the separate
+proposal that *every* subgraph being `M'`-contractible might suffice;
+the new attachment family does refute it.
 `M'`-contractibility itself is not hereditary, and a positive test on a
 target alone cannot establish that proposal's premise.
 
@@ -85,6 +93,20 @@ set of subdivision vertices at odd positions supplies a certificate
 which is checked directly, avoiding exponential enumeration of stable
 sets in these larger examples. All 5,391 samples, of order at most 81,
 pass. These samples also remain finite evidence.
+
+The new smallest obstruction has an independent exhaustive branch-set
+checker, with positive cycle and canonical-attachment calibrations and
+a negative skewed-theta calibration:
+
+```text
+uv run python3 barriers/triangle_free_bipartite_attachment_verify.py
+uv run python3 barriers/triangle_free_bipartite_attachment_verify.py --json
+```
+
+It checks the 24-vertex scheme, all 27 surviving singleton-root cases
+and 1,768 recursive search nodes. The JSON option emits its complete
+path certificate. The unbounded theorem uses the adjacent counting proof,
+not this enumeration. Bulk exploratory samples are not retained in Git.
 
 Recorded certificate-stream SHA-256 values are
 `f506cb18c219f575e6845e4fbe6e956381464e565852eecbc6f2f920ee1ec724`

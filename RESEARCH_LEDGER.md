@@ -2,10 +2,12 @@
 
 **Last updated:** 5 September 2026
 **Authoritative status:** `HC_7` is not proved here. T44 and the `K_7^-`
-six-colour conjecture remain open. Universal rooted bipartite contractibility now
-has a written proof and two separate GREEN internal audits. Internal audits
-are not external peer review. This file is the sole authority for current
-research status.
+six-colour conjecture remain open. Universal rooted bipartite contractibility
+has a written proof and two separate GREEN internal audits. The proposed
+triangle-free classification and hereditary canonical two-copy sufficiency
+are now refuted by an unbounded family with a written proof and separate
+internal audit. Internal audits are not external peer review. This file is
+the sole authority for current research status.
 
 ## Three-level frontier
 
@@ -18,12 +20,12 @@ research status.
    Conjecture 21 remain preserved conditional routes. T44 asserts that
    every seven-connected graph with a `K_{4,4}` minor has a `K_7^-` minor;
    it would prove Conjecture 21, not `HC_7`. Neither is proved.
-3. **Immediate structural laboratory:** pursue the general contractibility
-   classification using the new independent-set reduction, while testing
-   full-host completion of the T44 singleton residue. The universal
-   bipartite theorem proves the intended flow assertion independently,
-   but supplies no sufficient `HC_7` reduction. Exact targets, proved
-   reductions and remaining inferences are in the
+3. **Immediate structural laboratory:** reassess global rooted-minor
+   constructions after refuting both proposed classification sufficiency
+   statements. No replacement positive classification is promoted. The
+   universal bipartite theorem proves the intended flow assertion
+   independently, but supplies no sufficient `HC_7` reduction. The exact
+   counterexamples, preserved reductions and application boundaries are in the
    [designated technical frontier](active/bipartite_contractibility_frontier.md).
 
 ## Current frontier and completed campaign
@@ -96,6 +98,26 @@ live proof obligations for the completed bipartite theorem.
 
 ## Durable results and preserved proofs
 
+**Written unbounded counterexamples with a separate internal audit.** For
+every odd `ell>=5`, joining `C_ell` to `K_{3,4}` at a vertex in its
+three-vertex shore gives a noncontractible target. The
+[explicit length-three schemes and counting proof](barriers/triangle_free_bipartite_attachment_counterexample.md)
+preserve every prescribed root in the refuted conclusion. They have
+`ell+8` nonroots, whereas any rooted model would require `ell+9`.
+The targets are triangle-free, have no skewed theta and have just one
+odd cycle. Thus the previously recommended triangle-free sufficiency
+statement is false, including its existential global-construction form.
+
+The same file proves that **every subgraph of each target is
+`M'`-contractible**, using a matching-cover argument for an odd cycle
+attached to any bipartite graph. This refutes hereditary canonical
+two-copy sufficiency as well. Both results are computation-free written
+proofs; the retained independent exhaustive checker only confirms the
+smallest example. The former classification campaign is
+[frozen](archive/bipartite_contractibility_frontier_2026-09-05_before_attachment_obstruction.md).
+These are substantial corrections to our proposed route, not achievement
+of `HC_7` or the requested comparable-theorem alternative.
+
 **Continuation after the universal theorem.** The
 [general scheme reduction](results/general_scheme_independent_set_reduction.md)
 has a written proof and separate internal audit. It contracts simultaneously
@@ -104,17 +126,18 @@ preserving every root and decreasing host order. A minimum counterexample
 therefore has strict independent-neighbour expansion outside its roots.
 The same file gives a complete rooted construction for every target when
 the graph outside the prescribed roots is a pseudoforest. These are
-supporting results for the conjecture that contractibility is equivalent
-to every target subgraph's canonical two-copy scheme having its rooted
-minor. That general sufficiency direction, including full rooted `K_5`
-and `K_6`, remains open; the restricted host result is not completion.
+supporting results from the now-refuted hereditary canonical two-copy
+programme. Their mathematical statements remain valid at their audited
+revisions. Full rooted `K_5` and `K_6` contractibility remain open;
+the restricted host result is not completion.
 
 The [odd-subdivision obstruction](barriers/triangle_free_odd_subdivision_contractibility.md)
 adds an unbounded barrier to a proposed two-family classification:
 triangle-free totally odd subdivisions of `K_4` are noncontractible even
 though they contain neither of those proposed obstructions. The proof
 uses explicit positive edge weights and KPR's exact two-copy criterion.
-It leaves the stronger hereditary two-copy conjecture possible.
+That obstruction alone did not refute hereditary two-copy sufficiency;
+the new bipartite-attachment construction does.
 
 A further [written theorem with a separate internal audit](results/triangle_free_contractibility_odd_cycle_edge.md)
 shows that every connected triangle-free contractible graph is bipartite
@@ -122,15 +145,16 @@ or becomes bipartite after one edge deletion. The signed-minor extraction
 checks both parity and disjoint branch preimages before applying the
 primary odd-cycle packing theorem. Together with skewed-theta exclusion,
 this gives the proved necessary half of a concrete triangle-free
-classification candidate. Its sufficiency is the next positive scheme
-construction being investigated; no classification is claimed.
+classification candidate. Its sufficiency is now refuted by the
+bipartite-attachment targets above; the necessary theorem is unchanged.
 
 The same theorem file now gives the exact series-class parity description
 after contracting a common odd-cycle edge, with a renewed separate audit.
-Turning that target structure into a scheme construction still requires
-coordinated allocation across separations. The
+That target structure does not suffice for a scheme construction with
+arbitrary bipartite attachments. The
 [explicit attachment and Whitney-transport examples](barriers/scheme_articulation_colour_fibre.md)
-refute two local ownership rules, while leaving the classification open.
+refute two local ownership rules; the new obstruction refutes the
+classification itself.
 Retained finite diagnostics include positive mixed-cycle schemes outside
 the current rank-reduction condition; they do not establish sufficiency.
 
@@ -196,7 +220,18 @@ The five-page [universal bipartite contractibility manuscript](paper/bipartite-c
 is the current manuscript candidate, with its [source](paper/bipartite-contractibility/main.tex)
 and [manuscript audit](paper/bipartite-contractibility/main_audit.md) beside it.
 Its mathematical source is the promoted universal theorem and its two
-exact-hash internal audits. The
+exact-hash internal audits.
+
+**Pending paper work, recorded separately from the proof campaign:** finish
+the originality and literature positioning. In particular, account for
+BLR Lemma 3.4's intended retention of every terminal, and the leaf and
+component extensions of its minimum-degree-two formulation; distinguish
+the new independent proof from a first assertion of the broad conclusion.
+Check the precise scope of later uses of that input and complete the
+primary-source priority review and final manuscript review. The current
+audited proof and manuscript have not been altered for this pending work.
+
+The
 [even-subdivision manuscript](paper/even-subdivision-contractibility/main.tex)
 and earlier [`K_{2,n}` manuscript](paper/k2n-contractibility/main.pdf)
 are preserved with their existing audits.

@@ -21378,7 +21378,7 @@ status = "active-target"
 source = "active/bipartite_contractibility_frontier.md"
 source_heading = "Remaining global target"
 active = true
-expected_source_sha256 = "311f1b4943ded3d8b312b69e6c4e370a8345fc327b9c95d7423d372c0051bf48"
+expected_source_sha256 = "9811f7b884c93f075a1ec957a18e9bb5837cde37efda182d57e4e8deb354f557"
 scope = "every finite simple graph"
 hypotheses = ["G contains no K7 minor"]
 allowed_exits = ["a proof that G is six-colourable for every such G"]
@@ -21515,3 +21515,46 @@ scope = "a properly coloured C4 scheme with a distinguished attachment root, and
 conclusions = ["a rooted block model need not absorb the whole attachment colour class", "incidence-preserving one-sided Whitney relabelling can violate the common-endpoint scheme condition"]
 does_not_prove = ["failure of coordinated gluing or of Whitney-switch invariance", "failure of the triangle-free classification candidate", "HC7 or a full contractibility classification"]
 keywords = ["rooted minor", "target separation", "shared colour", "Whitney switch", "branch set ownership"]
+
+
+[[claims]]
+id = "graph_schemes.target.hereditary_canonical_sufficiency"
+title = "Every canonical subgraph scheme suffices for contractibility"
+kind = "target"
+status = "refuted"
+source = "archive/bipartite_contractibility_frontier_2026-09-05_before_attachment_obstruction.md"
+source_heading = "General contractibility classification laboratory"
+active = false
+expected_source_sha256 = "6b927a910ab0cd97fda5e2c92d2bc41eb69e406ffa23936b37d52bd57936d675"
+scope = "the former sufficiency proposal for all finite simple target graphs"
+conclusions = ["historical proposal only; explicit attachment targets now refute it"]
+does_not_prove = ["contractibility", "HC7 or a comparable independent theorem"]
+keywords = ["canonical scheme", "M-prime", "refuted classification"]
+
+[[claims]]
+id = "graph_schemes.barrier.odd_cycle_bipartite_attachment"
+title = "Odd cycles with K3,4 attachments refute both scheme classifications"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/triangle_free_bipartite_attachment_counterexample.md"
+source_heading = "Statements"
+active = false
+audit = "barriers/triangle_free_bipartite_attachment_counterexample_audit.md"
+expected_source_sha256 = "252e475a4e4dba5867ae25101dac4b5f18fed5b3a174e6399fa1228e9c568f41"
+scope = "every odd cycle length at least five, joined at one vertex to the three-vertex shore of K3,4; canonical contractibility of every subgraph"
+label_fidelity = "the explicit counterexample excludes all models preserving every prescribed root, with arbitrary nonroot allocation"
+conclusions = ["an explicit length-three scheme with no rooted target minor", "the targets have no skewed theta and only one odd cycle", "every subgraph is M-prime contractible by a uniform matching-cover proof", "both triangle-free sufficiency and hereditary canonical sufficiency are false"]
+does_not_prove = ["failure of weak contractibility of these fixed targets", "failure of the universal bipartite theorem", "HC7, T44 or significance comparable to Norin--Totschnig"]
+keywords = ["rooted minor", "bipartite attachment", "odd cycle", "M-prime", "counting obstruction", "actual path membership"]
+
+[[relations]]
+source = "graph_schemes.target.hereditary_canonical_sufficiency"
+target = "graph_schemes.barrier.odd_cycle_bipartite_attachment"
+kind = "refuted_by"
+note = "Every subgraph of each constructed target passes the canonical test, but the explicit scheme has no fully rooted target minor."
+
+[[relations]]
+source = "graph_schemes.barrier.odd_cycle_bipartite_attachment"
+target = "graph_schemes.triangle_free_odd_cycle_edge"
+kind = "related_to"
+note = "The necessary common-odd-cycle-edge theorem is preserved, while its proposed converse even with skewed-theta exclusion is refuted."
