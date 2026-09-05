@@ -34,11 +34,15 @@ $$
 
 ## Current research status
 
-The primary research campaign asks whether every finite bipartite graph is
-contractible: every graph scheme should contain its prescribed rooted minor.
-The [technical frontier](active/bipartite_contractibility_frontier.md) states
-the exact target and limitations. It pursues an independent theorem; no
-implication to `HC_7` is established.
+The universal bipartite campaign now has a computation-free written proof
+with separate internal audits: **every finite bipartite graph is
+contractible**, with every prescribed root retained. The
+[theorem](results/bipartite_contractibility_via_matroid_reduction.md)
+uses simultaneous component contractions supplied by matroid union and
+strict induction on host order. The
+[technical frontier](active/bipartite_contractibility_frontier.md) records
+the result and its application boundary. No implication to `HC_7` is
+established; `HC_7` remains the primary open objective.
 
 The seven-connected `K_{4,4}` closure conjecture, T44, remains a preserved
 conditional route to Norin--Totschnig Conjecture 21. It is open and would
@@ -55,6 +59,7 @@ links their proofs, audits and exact scopes.
 
 | Result | Status and scope |
 |---|---|
+| [Every bipartite graph is contractible](results/bipartite_contractibility_via_matroid_reduction.md) | Computation-free written proof with two separate internal audits. Every scheme of every finite bipartite target contains the fully prescribed rooted minor, with no degree or path-length bound. It also independently proves the intended BLR bipartite-flow assertion. Publication priority and significance compared with Norin--Totschnig remain qualified. |
 | [Degree three on one bipartition side](results/degree_three_bipartite_weak_contractibility.md) | Computation-free proof with a [separate GREEN internal audit](results/degree_three_bipartite_weak_contractibility_audit.md). Every scheme has a minor retaining all prescribed roots on the opposite side. This includes weak contractibility of every `K_{3,n}`; full rooted contractibility is not asserted. |
 | [Even subdivisions are contractible](results/even_subdivision_contractibility.md) | Computation-free written proof with [two separate internal audits](results/even_subdivision_contractibility_audit.md). More generally, every bipartite graph with degree at most two on one specified side is contractible. This extends the `K_{2,n}` theorem to a family of unbounded treewidth. |
 | [Every `K_{2,n}` is contractible](results/k2n_contractibility_via_matroid_packing.md) | Computation-free written proof with a [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md) and a [four-page manuscript](paper/k2n-contractibility/main.pdf).  It answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
@@ -77,10 +82,19 @@ or `HC_7`.
 
 ## Manuscripts
 
-The primary manuscript candidate is the short DRAFT
-[Even subdivisions are contractible](paper/even-subdivision-contractibility/main.tex).
-It gives the computation-free even-subdivision proof and the degree-three
-extension with one shore's roots preserved.
+The primary manuscript candidate is the five-page DRAFT
+[Bipartite graphs are contractible](paper/bipartite-contractibility/main.tex),
+with [PDF](paper/bipartite-contractibility/main.pdf) and
+[internal manuscript audit](paper/bipartite-contractibility/main_audit.md).
+It proves the universal rooted theorem and its bipartite-flow corollary.
+It supplies an independent proof of an already published broader flow
+assertion whose prefix argument has explicit gaps; it makes no priority
+claim or claim to prove Hadwiger's conjecture.
+
+The earlier DRAFT
+[Even subdivisions are contractible](paper/even-subdivision-contractibility/main.tex)
+is preserved unchanged. It gives the even-subdivision proof and the
+degree-three extension with one shore's roots preserved.
 
 The earlier four-page DRAFT
 [Every `K_{2,n}` is contractible](paper/k2n-contractibility/main.pdf), with

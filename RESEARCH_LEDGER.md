@@ -1,231 +1,200 @@
 # Hadwiger `K_7` research ledger
 
 **Last updated:** 5 September 2026
-**Authoritative status:** `HC_7` is not proved here. Neither is the
-`K_7^-` six-colour conjecture or the new bipartite contractibility target.
-Internal audits are not external peer review.
-This file is the sole authority for current research status.
+**Authoritative status:** `HC_7` is not proved here. T44 and the `K_7^-`
+six-colour conjecture remain open. Universal rooted bipartite contractibility now
+has a written proof and two separate GREEN internal audits. Internal audits
+are not external peer review. This file is the sole authority for current
+research status.
 
 ## Three-level frontier
 
-1. **Exhaustive global obligation:** prove `HC_7`, or obtain an independent
-   theorem of comparable significance to Norin--Totschnig. The completed
-   even-subdivision theorem has not received such a significance assessment.
-2. **Principal conditional refinement:** the sole primary proof campaign is
-   now the conjecture that every finite bipartite graph is contractible.
-   It seeks the independent-theorem alternative; no implication to `HC_7`
-   is claimed. Conjecture 21 and T44 remain preserved conditional routes.
-3. **Immediate structural laboratory:** root relocation now proves the
-   degree-three case with one shore's roots preserved. Universal weak
-   contractibility would suffice by the proved root-forcing reduction;
-   a nonroot on three of four incident paths is the first multiplicity
-   beyond the new argument. The full rooted `K_{3,3}` problem also remains
-   open. Detailed claims belong in the
-   [technical frontier](active/bipartite_contractibility_frontier.md).
+1. **Exhaustive global obligation:** prove `HC_7`, that every finite graph
+   with no `K_7` minor is six-colourable, or obtain an independent theorem
+   of reach and significance comparable to Norin--Totschnig. The universal
+   bipartite theorem is a substantial completed result; comparative
+   significance and publication priority remain qualified assessments.
+2. **Principal conditional refinement:** T44 and Norin--Totschnig
+   Conjecture 21 remain preserved conditional routes. T44 asserts that
+   every seven-connected graph with a `K_{4,4}` minor has a `K_7^-` minor;
+   it would prove Conjecture 21, not `HC_7`. Neither is proved.
+3. **Immediate structural laboratory:** establish the exact application
+   boundary of the new universal rooted theorem. It proves the intended
+   bipartite-flow minor assertion independently, but currently supplies
+   no sufficient reduction of `HC_7`. The precise hypotheses and limits
+   are in the [designated technical frontier](active/bipartite_contractibility_frontier.md).
 
-## Current frontier
+## Current frontier and completed campaign
 
-**Conjectural target:** every finite simple bipartite graph `H` is
-contractible: every `H`-scheme has an `H`-minor rooted at its designated
-vertices. By subgraph closure it suffices to handle all `K_{n,n}`.
-The user authorized this change of primary target after the historical
-assessment. Further T44 residue refinement is paused; its complete prior
-status is preserved in the
-[4 September snapshot](archive/RESEARCH_LEDGER_2026-09-04_T44.md) and its
-[technical frontier](active/hc7_k44_closure_frontier.md).
+**Conjectural target:** `HC_7` is the sole remaining primary target after
+completion of the bipartite contractibility campaign. No audited result
+is invoked as a direct sufficient `HC_7` reduction at this checkpoint,
+and no counterexample to `HC_7` is established. The new theorem's proof
+does not complete T44 or infer extra near-clique contacts from an ordinary
+bipartite minor. The [active index](active/INDEX.md) distinguishes the
+remaining target from completed results and conditional routes.
 
-The original direct audited input is the
-[even-subdivision theorem](results/even_subdivision_contractibility.md).
-It proves contractibility when one bipartition class has maximum degree
-two, using simultaneous graphic-matroid packing with partially shared
-labels. The full target remains open: the same rank argument does not
-handle labels participating in three projections. Restricted packing
-failure is not failure of the required rooted minor.
+**Written proof with two separate GREEN internal audits:** every finite
+simple bipartite graph `H` is contractible. Every `H`-scheme in every
+finite host contains an `H`-minor rooted at every prescribed vertex.
+The [proof](results/bipartite_contractibility_via_matroid_reduction.md)
+and [first](results/bipartite_contractibility_via_matroid_reduction_audit.md)
+and [second exact-hash audits](results/bipartite_contractibility_via_matroid_reduction_second_audit.md)
+cover arbitrary target degrees, host orders, path lengths and vertex
+multiplicities. This includes fully rooted `K_{3,3}`, every `K_{m,n}` and
+every bipartite theta graph. It settles the bipartite questions in
+Kündgen--Pelsmajer--Ramamurthi, Section 8, including exclusion of the
+bipartite counterexample sought in Question 4.
 
-**New written theorem with a separate GREEN internal audit:** if a bipartite
-target has degree at most three on one specified side `B`, every scheme
-contains its minor with every original root on the opposite side `A`
-retained. The [proof](results/degree_three_bipartite_weak_contractibility.md)
-uses a valid root-relocation step that strictly decreases host order, then
-actual-membership matroid packing. This proves weak contractibility of
-every `K_{3,n}` and every bipartite target with the stated degree bound.
-The original `B` roots may move. It is an unbounded terminal theorem,
-but does not prove full bipartite contractibility or meet the requested
-Norin--Totschnig significance standard on the evidence available.
+The proof normalizes the scheme by root-preserving monochromatic
+contractions, then projects onto the shore with fewer nonroots. Edmonds'
+matroid union theorem supplies disjoint spanning trees or a nonempty
+minimizing label set. In the latter case, equality in its rank formula
+simultaneously allocates disjoint trees spanning every required projection
+component. Contracting those connected host sets yields a smaller scheme
+with all roots preserved. An occurrence of a shared deleted label has
+its two ends identified inside its own allocated component, so it does
+not reuse a vertex belonging to another branch set. Host order strictly
+decreases, and the final model lifts through the fixed disjoint preimages.
+The shore orientation may reverse between steps, allowing both original
+shores to expand. The proof is computation-free and uses only the finite
+matroid union theorem as an external proof input.
 
-The separate [root-forcing theorem](results/bipartite_weak_to_rooted.md)
-shows universal weak bipartite contractibility would imply the full rooted
-target. Its enlarged targets can have high degree, so the degree-three
-theorem does not supply that premise. This gives a justified global route
-with roots free to move, not a new conclusion about the universal target.
+**Written corollary and literature clarification:** the same result proves
+the intended existence assertion of Biswal--Lee--Rao, Lemma 3.2, with
+every terminal retained. For a bipartite demand graph of minimum degree
+two, paths for independent demand edges being vertex-disjoint supplies
+the required scheme. This uses the arXiv v2 independent-intersection
+convention. The apparently reversed published wording is separate from
+the substantive failures of the prefix construction: its Lemmas 3.5 and
+3.6 remain refuted by the
+[audited explicit examples](barriers/bipartite_flow_prefix_construction.md).
+The new proof establishes the intended minor-existence statement without
+validating those intermediate claims or asserting additional spectral,
+separator or bounded-depth conclusions.
 
-**Audited barrier, not a counterexample to the target:** for every `n>=3`,
-[an explicit coloured `K_{n,n}`-scheme](barriers/bipartite_scheme_singleton_shore_barrier.md)
-has a rooted model but no model leaving either entire root shore singleton.
-This refutes the fixed-shore extension even with arbitrary colour mixing
-or trees joining only the required terminals. Both shores must be allowed
-to expand. A separate split-off attempt also fails to lift arbitrary
-returned models with their ownership preserved; its exact quantifier gap
-is recorded in the technical frontier. These findings eliminate proposed
-proof mechanisms and do not meet the requested positive-theorem standard.
+**Qualified independent assessment:** this is a terminal universal theorem
+resolving a published rooted-minor question, with substantially broader
+reach than the preceding degree-two and degree-three results. The
+[separate assessment](results/bipartite_contractibility_via_matroid_reduction_audit.md#mathematical-reach-and-the-norin--totschnig-comparison)
+identifies it as a credible candidate for the user's independent-theorem
+alternative. It does not certify equal significance to Norin--Totschnig;
+BLR's older broad assertion also prevents an unsupported first-result
+claim. Specialist assessment of originality and comparative significance
+remains outstanding. The full user objective is not declared achieved.
 
-**Material literature finding:** Biswal--Lee--Rao's Lemma 3.2 claims a
-broader universal bipartite flow-minor theorem under its intended
-independent-intersection convention. The [audited counterexamples](barriers/bipartite_flow_prefix_construction.md)
-refute Lemmas 3.5 and 3.6 of its prefix construction; the published proof
-was checked as well as the preprint. These are failures of intermediate
-claims, not counterexamples to the intended main statement. No repaired
-proof was found in the bounded search, and the statement is not used as a
-verified input here. Independent special-demand constructions in later
-literature remain available. The new theorem's proof is independent, but
-priority remains qualified by the already published broader assertion.
+The [pre-promotion ledger](archive/RESEARCH_LEDGER_2026-09-05_before_universal_bipartite.md)
+and [technical snapshot](archive/bipartite_contractibility_frontier_2026-09-05_before_universal.md)
+preserve the earlier status and failed mechanisms. The
+[singleton-shore barrier](barriers/bipartite_scheme_singleton_shore_barrier.md)
+remains valid: its rooted models require expansion on both shores. The
+new reduction explicitly permits this and avoids the archived arbitrary
+split-and-lift ownership conflict. Frozen local attempts are no longer
+live proof obligations for the completed bipartite theorem.
 
-A finite search of only the shortest one-copy-per-colour schemes would
-miss the question: Kündgen--Pelsmajer--Ramamurthi already prove all
-bipartite graphs `M'`-contractible. Exact source statements, research
-findings and the completion standard are in the designated frontier.
+## Durable results and preserved proofs
 
-## Durable recent results
-
-- **Written proof with a separate GREEN internal audit, 5 September 2026:**
-  [degree at most three on one bipartition side](results/degree_three_bipartite_weak_contractibility.md)
-  forces a minor preserving all prescribed roots on the opposite side.
-  Root relocation and a strict induction on host order extend the packing
-  method to an unbounded target class, including all `K_{3,n}`. This does
-  not preserve every original root and is not a completion of the primary
-  target. The [universal weak-to-rooted equivalence](results/bipartite_weak_to_rooted.md)
-  is a separate audited reduction, whose high-degree enlarged targets
-  prevent an immediate application of the degree-three theorem.
-- **Written proof with two separate internal audits, 4 September 2026:**
-  every bipartite graph with degree at most two on one specified side is
-  contractible. The [proof](results/even_subdivision_contractibility.md),
-  [cold audit](results/even_subdivision_contractibility_audit.md), and
-  [separate proof and literature audit](results/even_subdivision_contractibility_literature_audit.md)
-  extend the two-projection `K_{2,n}` argument to arbitrarily many graphic
-  matroids with partially shared labels. Every label belongs to at most two
-  projections, which verifies the simultaneous matroid union inequality.
-  Consequently every replacement of the edges of an arbitrary loopless
-  multigraph by paths of positive even length is contractible. This gives a
-  family of unbounded treewidth and covers the even-path portion of
-  Kündgen--Pelsmajer--Ramamurthi's bipartite-theta question. It does not cover
-  the three-odd-path case or `K_{3,3}`, and does not advance a specific
-  `HC_7` subcase. Targeted literature checks found no matching theorem;
-  priority and significance comparable to Norin--Totschnig remain
-  unestablished. The earlier audited proof and manuscript are preserved.
-- Every complete bipartite graph `K_{2,n}` is contractible in the sense of
-  graph schemes. The [computation-free proof](results/k2n_contractibility_via_matroid_packing.md)
-  has an adjacent [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md)
-  and a separate [four-page manuscript DRAFT](paper/k2n-contractibility/main.pdf)
-  ready for specialist review.
+- **Written proof with a separate internal audit, 5 September 2026:**
+  [universal rooted bipartite contractibility](results/bipartite_contractibility_via_matroid_reduction.md),
+  with the full scope and proof mechanism stated above.
+- The [degree-three theorem preserving the opposite shore's roots](results/degree_three_bipartite_weak_contractibility.md)
+  and [universal weak-to-rooted equivalence](results/bipartite_weak_to_rooted.md)
+  retain their original proofs and adjacent audits. The former permits
+  its degree-three-side roots to move; the latter uses high-degree
+  attachments. Neither restricted argument alone supplied the universal
+  conclusion, whose new proof is independent of those reductions.
+- The [even-subdivision theorem](results/even_subdivision_contractibility.md),
+  with its [cold audit](results/even_subdivision_contractibility_audit.md)
+  and [separate literature audit](results/even_subdivision_contractibility_literature_audit.md),
+  remains a computation-free proof using simultaneous packing when
+  each label occurs in at most two projections. Its original manuscript
+  and the earlier [audited `K_{2,n}` theorem](results/k2n_contractibility_via_matroid_packing.md)
+  are preserved. Their target classes are now included in the universal
+  theorem without changing their audited content.
 - The [five-root partial-routing theorem](results/llru_question61_via_km_property_star.md),
-  with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md)
-  and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md),
-  answers Lafferty--Liu--Rolek--Yu Question 6.1 when the five roots lie in
-  pairwise disjoint vertex sets and every nonadjacent root pair is linked
-  within the union of its two sets. It lowers their stated
-  eight-connectivity threshold from `k>=17` to `k>=11`, but does not close
-  the remaining degree-eight connector problem.
+  with its [first](results/llru_question61_via_km_property_star_audit.md)
+  and [second](results/llru_question61_via_km_property_star_second_cold_audit.md)
+  GREEN audits, answers Lafferty--Liu--Rolek--Yu Question 6.1 under its
+  precise disjoint-set hypotheses and lowers their stated connectivity
+  threshold from `k>=17` to `k>=11`.
 - Every three-connected graph has a `K_4^-` minor rooted at any four
-  prescribed distinct vertices, with the missing quotient edge unspecified.
-  The [elementary unbounded proof](results/rooted_k4minus_four_roots.md) has
-  a [GREEN internal audit](results/rooted_k4minus_four_roots_audit.md).
+  distinct prescribed vertices, with the missing edge unspecified. The
+  [written proof](results/rooted_k4minus_four_roots.md) has a separate
+  [GREEN audit](results/rooted_k4minus_four_roots_audit.md).
 - The [degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md),
-  with [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md),
-  combines one deterministic finite local lemma with an unbounded host
-  reduction. It proves the defect ladder `D(G)>=20+kappa(G)` and the current
-  critical-host bound `n_8>=27+tau`.
-- The computation-free [three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md)
-  and its [GREEN audit](results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md),
-  combined with the separately audited [critical seven-cut capacity theorem](results/hc7_k7minus_critical_seven_cut_capacity.md),
-  show that every seven-vertex cut in the critical host leaves exactly two
-  components.
-- The [critical literal-core safe-contraction
-  corollary](results/hc7_k44_critical_safe_contraction.md), with its adjacent
-  audit, combines the singleton-atom theorem with Dirac's neighbourhood
-  inequality. Its [audited preservation refinement](results/hc7_k44_safe_contraction_preservation.md)
-  gives two safe contractions preserving seven-connectivity when the
-  exterior has order at least eight, without an unbounded induction.
+  with [two internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md),
+  combines a deterministic finite local lemma with an unbounded reduction.
+  It proves `D(G)>=20+kappa(G)` and the critical-host bound `n_8>=27+tau`.
+- The [three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+  and [critical seven-cut capacity theorem](results/hc7_k7minus_critical_seven_cut_capacity.md)
+  have adjacent internal audits and imply that every seven-vertex cut in
+  the specified critical host leaves exactly two components.
+- The [critical literal-core safe-contraction result](results/hc7_k44_critical_safe_contraction.md)
+  and [preservation refinement](results/hc7_k44_safe_contraction_preservation.md)
+  retain their adjacent audits. They supply two safe contractions under
+  the stated exterior-order hypothesis, without a closed unbounded
+  induction.
 
-The [selected-results map](results/README.md) is a non-authoritative reader
-guide to these proofs and the direct proved inputs to T44.
+The [selected-results map](results/README.md) is navigation, not a second
+status authority. These completed statements are not all direct inputs
+to the current `HC_7` target.
 
 ## Manuscript status
 
-The minimal [even-subdivision DRAFT](paper/even-subdivision-contractibility/main.tex)
-is the primary manuscript candidate. Its five pages contain the full
-computation-free proof and the degree-three extension preserving one
-shore's roots, with a revised exact-hash internal manuscript audit.
-The earlier four-page
-[`K_{2,n}` DRAFT](paper/k2n-contractibility/main.pdf) is preserved. It is computation-free, has a
-[GREEN internal audit](paper/k2n-contractibility/main_audit.md) and is
-independent of the Hadwiger programme.
+The five-page [universal bipartite contractibility manuscript](paper/bipartite-contractibility/main.pdf)
+is the current manuscript candidate, with its [source](paper/bipartite-contractibility/main.tex)
+and [manuscript audit](paper/bipartite-contractibility/main_audit.md) beside it.
+Its mathematical source is the promoted universal theorem and its two
+exact-hash internal audits. The
+[even-subdivision manuscript](paper/even-subdivision-contractibility/main.tex)
+and earlier [`K_{2,n}` manuscript](paper/k2n-contractibility/main.pdf)
+are preserved with their existing audits.
 
-The compact eight-page [low-degree DRAFT](paper/k7minus-low-degree/main.pdf)
-is a frozen, computation-free snapshot with a [GREEN internal audit](paper/k7minus-low-degree/main_audit.md).
-It proves the baseline `n_8>=25+tau`, not the later `27+tau` strengthening.
-The former rooted-web manuscript is retained only as a clearly marked
-[historical DRAFT](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf).
-Neither manuscript proves Conjecture 21 or `HC_7`.
+The eight-page [low-degree manuscript](paper/k7minus-low-degree/main.pdf)
+remains a frozen computation-free snapshot with its
+[GREEN audit](paper/k7minus-low-degree/main_audit.md). It proves the baseline
+`n_8>=25+tau`, rather than the later `27+tau` bound. The former
+[rooted-web manuscript](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf)
+remains historical. None of these manuscripts proves `HC_7` or
+Conjecture 21.
 
-## Preserved frozen routes
+## Preserved conditional routes and historical check
 
-The former exceptional-centre campaign remains a frozen critical-host
-refinement. Its sound chain, including the audited low-codegree theorem
-linked above, gives
+The [T44 frontier](active/hc7_k44_closure_frontier.md) retains the literal
+singleton separator residue, nonsingleton connected two-sided allocation,
+closure of the induction hypotheses, and the nonliteral ownership-preserving
+lift. All remain open. The [exceptional-centre programme](active/hc7_k7minus_seven_exceptional_frontier.md)
+retains `n_8>=27+tau`, where `tau=sum_(i>=10)(i-9)n_i`; an upper bound
+`n_8<=26` in that same critical host would prove Conjecture 21. Its
+operation-sensitive colouring/model alignment remains unresolved. The
+[six-connected `4n` programme](active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md),
+the stronger density route, E5 and direct `HC_7` bridge composition remain
+conditional or frozen programmes.
 
-`n_8 >= 27 + tau`, where `tau=sum_{i>=10}(i-9)n_i`.
+The requested historical orientation was checked against Git after reading
+the [chronology review](archive/research_chronology_review_2026-09-04.md):
+initial `a14eb38`, approximately fortnightly `df001e9`, `92b8722` and
+`f85e51c`, then the T44 checkpoint `2c17559` and intervening retractions.
+The off-main `15f824c` confirms the invalid separator-degree subtraction
+that retracted the claimed exact-six closure. The contemporary initial
+spine already distinguished reversible rotations from descent. These
+checks motivated attacking the global ownership and termination inference,
+which the new simultaneous component contraction proves directly.
 
-Thus an upper bound `n_8<=26` in the hypothetical critical host would prove
-Conjecture 21. Its first unresolved inference is the operation-sensitive
-alignment of colouring responses with a fixed exact minor model. The remote
-interface, induced-forest and fan/static-profile programmes are not parallel
-active targets under the bipartite-contractibility pivot.
+## Trust boundary and navigation
 
-The six-connected `4n` theorem, the stronger `4n-2` density programme, E5
-and direct `HC_7` bridge composition remain conditional or frozen routes.
-Their priority can be reconsidered when a new argument offers a stronger
-justified prospect; T44 need not first be falsified.
+Promoted theorems have written proofs and adjacent internal audits at exact
+source hashes. Computer-assisted results retain only their finite or
+explicitly reduced scopes; no finite experiment is needed for the new
+universal proof. Barriers to intermediate claims are not counterexamples
+to `HC_7` or T44. Existing audited material remains at its recorded revision.
 
-The [historical review through the former HEAD](archive/research_chronology_review_2026-09-04.md)
-records the initial commit, fortnightly snapshots and intervening
-retractions, including the off-main August exact-six closure. Across those
-changes the repeated failure was preservation of a complete colouring
-partition or rooted model in a class closed under the proposed reduction.
-The independent judgement is therefore to require a terminal theorem or a
-proved decreasing reduction before counting additional counterexample
-structure as progress. The even-subdivision theorem is a concrete outcome
-of assessing the standalone packing route on that basis, while T44 remains
-open.
-
-## Trust boundary
-
-- Promoted theorems have written proofs and adjacent internal audits at exact
-  source hashes. Directory placement alone is not treated as promotion.
-- Computer-assisted claims are restricted to their finite or explicitly
-  reduced-family scopes. The order-eleven and Z3 generation environments are
-  research-only; the claim-critical deterministic promoted-result checks are
-  separately registered and hash-pinned.
-- The shortcut profiles are barriers to local intermediate implications.
-  They are not seven-connected and are not counterexamples to T44.
-- External inputs are cited beside the results that use them. Recent
-  preprints, including Chu's removable-matching theorem, are identified as
-  preprints; checking the statement and its use is not an audit of the
-  external proof.
-
-## Navigation
-
-- [`active/INDEX.md`](active/INDEX.md): concise live navigation.
-- [`results/README.md`](results/README.md): selected completed and audited
-  proofs, grouped by scope.
-- [`paper/README.md`](paper/README.md): manuscript status and exact contents.
-- [Bipartite contractibility frontier](active/bipartite_contractibility_frontier.md):
-  the sole primary target, direct proof mechanism and exact failure points.
-- [T44 technical frontier](active/hc7_k44_closure_frontier.md): preserved exact
-  hypotheses, two open obligations, barriers and stop rules.
-- [T44 falsification checkpoint](active/experiments/k44_closure_falsification/README.md):
-  bounded and reduced-family computational evidence.
-- [Frozen exceptional-centre frontier](active/hc7_k7minus_seven_exceptional_frontier.md):
-  preserved critical-host reduction and operation/model alignment barrier.
-- [Frozen six-connected `4n` frontier](active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md):
-  conditional sparse-cut programme.
-- [`archive/`](archive/): superseded proof spines and historical ledgers.
+- [Active index](active/INDEX.md): the sole primary target and concise links.
+- [Designated technical frontier](active/bipartite_contractibility_frontier.md):
+  remaining `HC_7` target, completed universal theorem and application limits.
+- [T44 frontier](active/hc7_k44_closure_frontier.md): all preserved conditional
+  obligations and relevant barriers.
+- [Results map](results/README.md) and [manuscript map](paper/README.md):
+  non-authoritative navigation.
+- [Archive](archive/): frozen proof directions, historical status and
+  preserved negative findings.

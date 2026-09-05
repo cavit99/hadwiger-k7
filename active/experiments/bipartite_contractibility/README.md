@@ -6,6 +6,42 @@ and [internal audit](../../../barriers/bipartite_scheme_singleton_shore_barrier_
 The primary target and exact proof limits are in the
 [technical frontier](../../bipartite_contractibility_frontier.md).
 
+## Universal construction diagnostics
+
+The [matroid-reduction implementation](matroid_reduction.py) constructs
+models and checks their lifts independently with NetworkX. The
+[universal theorem](../../../results/bipartite_contractibility_via_matroid_reduction.md)
+has a written computation-free proof; these runs test the implementation.
+
+```text
+uv run python3 active/experiments/bipartite_contractibility/matroid_reduction.py --samples 100
+uv run python3 active/experiments/bipartite_contractibility/matroid_reduction.py --order 4 --samples 0
+uv run python3 active/experiments/bipartite_contractibility/matroid_reduction.py --order 5 --samples 0
+uv run python3 active/experiments/bipartite_contractibility/matroid_reduction.py --order 3 --json
+```
+
+Recorded checks: the augmentation engine agrees with an independent
+exhaustive assignment check on 21 small matroid systems; all 100
+variable-support `K_{3,3}` schemes and 100 mixed pair/triple-support
+`K_{4,4}` schemes return checked rooted models. The singleton-shore
+barriers at `n=3,4,5` reduce in order as `36 -> 21`, `56 -> 32`,
+and `80 -> 45`, respectively, then finish with the opposite shore as
+the projection shore. This directly exercises expansion on both sides.
+
+The JSON option emits the input paths and colours, allocated forests,
+minimizing label sets, contracted pieces, reduced paths and final model.
+Checks cover matroid ranks, disjoint connected pieces, all roots, every
+reduced path edge, strict order decrease, and the lifted model's contacts.
+The diagnostic starts with properly endpoint-coloured schemes; it does
+not implement the theorem's general monochromatic normalization.
+The finite sample families do not restrict the written theorem's scope.
+
+The [frozen supplied-matching-path diagnostic](../../../archive/experiments/bipartite_matching_path_cuts_2026-09-05/README.md)
+records an earlier failed restriction: one explicit two-membership
+`K_{4,4}` scheme has a rooted model but defeats all 1,944 constructions
+obtained by cutting four supplied matching paths once each. The universal
+component reduction does not impose that restriction.
+
 ## Construction checker
 
 ```text

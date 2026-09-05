@@ -5,44 +5,38 @@
 
 ## Primary target
 
-[Bipartite graph contractibility](bipartite_contractibility_frontier.md)
+[Hadwiger's conjecture for `t=7`](bipartite_contractibility_frontier.md#remaining-global-target)
 
-> Every finite simple bipartite graph `H` is contractible: every `H`-scheme
-> contains an `H`-minor rooted at its designated vertices.
+> Every finite graph with no `K_7` minor is six-colourable.
 
-**Status:** conjectural target. Universal weak contractibility is an
-equivalent route by the root-forcing theorem below.
+**Status:** conjectural target. The universal bipartite contractibility
+theorem below is proved, but supplies no established reduction of this
+remaining target.
 
-Selected audited inputs:
-
-- [Bipartite graphs with maximum degree two on one specified side are
-  contractible](../results/even_subdivision_contractibility.md), including
-  all even subdivisions of loopless multigraphs.
-- [Degree at most three on one side forces a minor retaining every root
-  on the opposite side](../results/degree_three_bipartite_weak_contractibility.md).
-- [Universal weak bipartite contractibility is equivalent to universal
-  rooted contractibility](../results/bipartite_weak_to_rooted.md).
+Selected audited inputs: none is invoked as a direct sufficient `HC_7`
+reduction at this checkpoint.
 
 Immediate barriers:
 
-- [A coloured `K_{n,n}`-scheme can require expansion of both entire root
-  shores](../barriers/bipartite_scheme_singleton_shore_barrier.md), for every
-  `n>=3`; the examples have explicit rooted models.
-- [The published bipartite-flow prefix construction can produce disconnected
-  or overlapping branch sets](../barriers/bipartite_flow_prefix_construction.md);
-  this refutes intermediate proof claims under the intended intersection
-  convention, not the main minor-existence assertion.
+No counterexample to `HC_7` is established. Barriers
+to intermediate claims remain with their designated conditional routes.
 
-The [technical frontier](bipartite_contractibility_frontier.md) records
-exact failures of proposed extensions and the necessary search scope.
-No counterexample to the primary target is established.
+## Completed theorem and current application laboratory
 
-## Manuscripts and preserved conditional routes
+- [Universal bipartite contractibility](../results/bipartite_contractibility_via_matroid_reduction.md),
+  with [two](../results/bipartite_contractibility_via_matroid_reduction_audit.md)
+  [separate internal audits](../results/bipartite_contractibility_via_matroid_reduction_second_audit.md):
+  every bipartite scheme has its fully rooted target minor.
+- [Universal bipartite contractibility manuscript](../paper/bipartite-contractibility/main.tex).
+- [Exact application boundary and prior constructions](bipartite_contractibility_frontier.md#exact-application-boundary):
+  the independent flow-minor proof, the restrictions on further applications,
+  and the preserved earlier results.
 
-- [Minimal even-subdivision manuscript](../paper/even-subdivision-contractibility/main.tex).
-- [T44](hc7_k44_closure_frontier.md) remains open and is paused as a
-  primary campaign. Its completion would prove Norin--Totschnig
-  Conjecture 21, not `HC_7`; the technical frontier retains all residues.
+## Preserved conditional routes
+
+- [T44](hc7_k44_closure_frontier.md): every seven-connected graph with a
+  `K_{4,4}` minor has a `K_7^-` minor. This remains open and would prove
+  Norin--Totschnig Conjecture 21, not `HC_7`.
 - [Exceptional-centre critical-host refinement](hc7_k7minus_seven_exceptional_frontier.md)
   and [six-connected density programme](hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
-  remain preserved, without an active completion claim.
+  remain preserved conditional programmes.

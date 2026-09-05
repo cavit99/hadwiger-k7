@@ -1,0 +1,299 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage[hidelinks,pdftitle={Draft: Bipartite graphs are contractible}]{hyperref}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\title[Bipartite graphs are contractible]{Bipartite graphs are contractible}
+\date{Draft, 5 September 2026}
+
+\begin{document}
+\begin{abstract}
+An $H$-scheme assigns a path to every edge of a target graph $H$, with
+prescribed endpoints, such that paths meeting at a vertex have a common
+target endpoint. We prove that every scheme of a finite bipartite graph
+contains a minor of that graph rooted at all prescribed vertices.
+The proof projects a properly coloured scheme onto graphic matroids.
+Either disjoint spanning trees give the required model, or a minimizing
+set in the matroid union rank formula yields a strictly smaller
+root-preserving minor containing another scheme of the same target.
+The orientation of the bipartition may change during the induction.
+\end{abstract}
+\maketitle
+
+\noindent\textit{Status.} Draft based on a written proof with separate
+internal audits; not externally peer reviewed.
+
+\section{Statement and colour normalization}
+
+All graphs are finite. Targets and hosts are simple; auxiliary
+multigraphs may have parallel edges. Following K\"undgen, Pelsmajer and
+Ramamurthi~\cite[Definitions 1.1 and 2.1]{KPR}, an \emph{$H$-scheme}
+in a graph $G$ consists of distinct roots $(r_v:v\in V(H))$ and a simple
+$r_u,r_v$-path $P_{uv}$ for every $uv\in E(H)$, with no other root
+internal to a path, such that any collection of paths with a common
+vertex has a common target endpoint.
+A \emph{rooted $H$-minor model} is a family of pairwise disjoint nonempty
+connected vertex sets $(C_v:v\in V(H))$, with $r_v\in C_v$, such that
+$C_u,C_v$ are adjacent whenever $uv\in E(H)$. A graph $H$ is
+\emph{contractible} if every $H$-scheme contains such a model.
+
+\begin{theorem}\label{thm:main}
+Every finite simple bipartite graph is contractible.
+\end{theorem}
+
+The only external proof input is Edmonds' matroid union rank formula.
+We first give the part of the coloured-scheme reduction
+of~\cite[Lemma 3.3]{KPR} needed here, without its additional degree
+condition. A minor is \emph{root-preserving} when its vertices have
+pairwise disjoint connected preimages and each new root's preimage
+contains its corresponding original root.
+
+\begin{lemma}\label{lem:normalization}
+Every $H$-scheme has a root-preserving minor whose underlying graph is
+properly coloured by a map $f$ to $V(H)$, with $f(r_v)=v$, and whose
+scheme paths use only their endpoint colours.
+\end{lemma}
+
+\begin{proof}
+Delete unused edges and nonroot vertices. Give each root its target
+label. At each nonroot, choose an endpoint common to all target edges
+whose paths contain it. Thus each path uses only its endpoint labels.
+Contract every connected component induced by one label. Such a component
+contains at most one root; the quotient colouring is proper. Each path
+maps to an endpoint-coloured walk, from which deleting closed excursions
+gives a simple path between the new roots. Another root cannot occur,
+since it has a different label. All paths meeting at a vertex have its
+label as a common target endpoint. Delete unused vertices and edges,
+retaining isolated prescribed roots.
+\end{proof}
+
+\section{A matroid union equality}
+
+Let $(M_j:j\in J)$ be a finite family of multigraphs, each with distinct
+edge labels in a subset $E_j$ of a finite set $E$. Extend its graphic
+matroid to $E$ by declaring labels outside $E_j$ to be matroid loops.
+Write $r_j$ for its rank function and $M_j(X)$ for its spanning subgraph
+with labels in $X$. If $c_j(X)$ counts its components, including isolated
+vertices, then $r_j(X)=|V(M_j)|-c_j(X)$.
+
+\begin{lemma}\label{lem:union}
+Let $R$ be the maximum of $\sum_j|I_j|$ over pairwise disjoint sets
+$I_j\subseteq E_j$ that are forests in their respective graphs.
+There is $X\subseteq E$ such that
+\begin{equation}\label{eq:union}
+ R=|E\setminus X|+\sum_jr_j(X).
+\end{equation}
+For any maximizing family $(I_j)$ and any such $X$, the forest
+$I_j\cap X$ spans every component of $M_j(X)$.
+\end{lemma}
+
+\begin{proof}
+Edmonds' matroid union rank formula~\cite[Theorem 1 and the following
+discussion, pp.~202--203]{Edmonds} gives
+\[
+ R=\min_{X\subseteq E}\left(|E\setminus X|+\sum_jr_j(X)\right).
+\]
+For a minimizing $X$ and a maximizing disjoint family,
+\[
+ R=\sum_j|I_j\setminus X|+\sum_j|I_j\cap X|
+ \leq |E\setminus X|+\sum_jr_j(X)=R.
+\]
+Equality forces $|I_j\cap X|=r_j(X)$ for every $j$. An independent
+set of this rank is a spanning tree in each nontrivial component of
+$M_j(X)$, with isolated vertices retained.
+\end{proof}
+
+\section{A simultaneous component contraction}
+
+Let $H$ be bipartite with parts $(A,B)$, and let $G$ be the union of a
+properly endpoint-coloured $H$-scheme and its isolated roots, as in
+Lemma~\ref{lem:normalization}. Put
+\[
+ W_a=f^{-1}(a)\quad(a\in A),\qquad
+ E=f^{-1}(B)\setminus\{r_b:b\in B\}.
+\]
+For $a\in A$, construct a multigraph $M_a$ on $W_a$. Each actual
+occurrence of $x\in E$ on $P_{ab}$ gives an edge labelled $x$ between
+its two neighbours on that path. They are distinct vertices of colour
+$a$, so the edge is not a loop. Each label occurs at most once in
+$M_a$, since its colour determines $b$ and the target is simple.
+Denote the label set of $M_a$ by $E_a$.
+
+Suppressing the internal $B$ vertices of $P_{ab}$ and deleting its
+terminal root $r_b$ gives a path in $M_a$ starting at $r_a$. These
+projected paths cover $W_a$ and its edges, so $M_a$ is connected.
+For an isolated target vertex it is the one-vertex graph. Every label
+of $E$ is a nonloop in at least one projection.
+
+\begin{lemma}\label{lem:reduction}
+Suppose $X\subseteq E$ admits pairwise disjoint forests
+$F_a\subseteq E_a\cap X$, each spanning every component of $M_a(X)$.
+Then $G$ has a root-preserving minor $Q$ containing an $H$-scheme.
+If $X\ne\varnothing$, then $|V(Q)|<|V(G)|$.
+\end{lemma}
+
+\begin{proof}
+For every component $K$ of $M_a(X)$, set
+\[
+ D_{a,K}=V(K)\cup
+ \{x\in F_a:\text{the edge labelled }x\text{ belongs to }K\}.
+\]
+Each allocated tree lifts to two-edge paths through its actual label
+vertices, making $D_{a,K}$ connected. Isolated components give singleton
+sets. These sets are pairwise disjoint: the original $A$ vertices belong
+to distinct colour components, and every allocated $B$ label has just
+one owner. They contain no $B$ root and at most one $A$ root.
+
+Contract each $D_{a,K}$ to $d_{a,K}$, and delete every unallocated
+vertex of $X$. Keep the roots $r_b$ and the vertices of $E\setminus X$
+as separate vertices. Retain precisely the edges from $d_{a,K}$ to
+surviving $B$ vertices $y$ witnessed by an original edge from $V(K)$
+to $y$, deleting other edges and parallel copies. This defines a minor
+$Q$ with a proper colouring: $d_{a,K}$ receives colour $a$, and the
+surviving $B$ vertices retain their colours. The root of $a$ is its
+component vertex, and every $B$ root is unchanged.
+
+Fix $ab\in E(H)$. Each segment $u x v$ of $P_{ab}$ with $x\in X$
+has its two $A$ vertices in the same component $K$ of $M_a(X)$.
+Replace this traversal by a walk inside the allocated connected set
+$D_{a,K}$. The replacement uses only that component's allocated labels;
+it does not restore $x$ through a different owner's branch set. After
+contraction it is just one vertex. All other steps of $P_{ab}$ join an
+original $A$ vertex to a surviving $B$ vertex, and hence supply retained
+edges of $Q$.
+
+Thus $P_{ab}$ gives a walk in $Q$ between the new roots of $a,b$ using
+only colours $a,b$. Delete closed excursions to obtain a simple path.
+No other $A$ root occurs, since it has another colour; the only $B$
+root on the original path was $r_b$. Every resulting path uses only its
+endpoint colours, so all paths meeting at a vertex have its colour as
+a common target endpoint. This proves the scheme condition in $Q$;
+no scheme condition is asserted for the intermediate walks before
+contraction.
+
+If $X$ is nonempty, a label in $X$ is a nonloop in some projection.
+Consequently $\sum_a r_a(X)>0$, so an allocated forest has an edge.
+Its lifted two-edge path places at least three vertices in one contracted
+set. All other operations also contract or delete vertices, giving
+strictly smaller host order.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+Remove isolated target vertices and their roots, restoring them as their
+original singleton branch sets afterwards. An edgeless target is
+immediate. For the remaining fixed target use strong induction on the
+host order. Lemma~\ref{lem:normalization} gives a root-preserving minor
+$K$ of the original host $G$, with a proper endpoint-coloured scheme and
+$|V(K)|\leq|V(G)|$.
+
+Orient the bipartition $(A,B)$ so that the number $N_A$ of nonroots
+with colours in $A$ is at most the number $N_B$ with colours in $B$.
+Form the projections in Section~3 for $K$. They satisfy
+\[
+ \sum_{a\in A}r_a(E)=\sum_{a\in A}(|W_a|-1)=N_A,
+ \qquad |E|=N_B.
+\]
+Let $(I_a)$ be a maximizing disjoint family of projection forests,
+and let $R=\sum_a|I_a|$.
+
+If $R=N_A$, every $I_a$ is a spanning tree. Set
+\[
+ C_a=W_a\cup I_a\quad(a\in A),\qquad C_b=\{r_b\}\quad(b\in B).
+\]
+The lifted trees make these sets connected, and the disjoint label sets
+make them disjoint. They retain every root. The final edge of $P_{ab}$
+joins $r_b$ to $W_a$, giving every required contact.
+
+Otherwise $R<N_A\leq N_B=|E|$. A minimizing set $X$ in
+Lemma~\ref{lem:union} is nonempty, since the expression at the empty
+set equals $|E|>R$. That lemma supplies the forests $F_a=I_a\cap X$
+required by Lemma~\ref{lem:reduction}. We obtain a root-preserving minor
+$Q$ containing an $H$-scheme, with
+\[
+ |V(Q)|<|V(K)|\leq |V(G)|.
+\]
+The induction hypothesis supplies a rooted model in $Q$. Replace its
+vertices by their disjoint connected preimages, first in $K$ and then
+in $G$. This preserves connectivity, disjointness, all roots and every
+required adjacency. The same lift applies to the direct spanning-tree
+case. Every recursive application strictly decreases host order,
+completing the induction. \hfill$\square$
+
+The orientation can reverse at later induction steps. Accordingly,
+lifting the component contractions may expand roots on both original
+shores; no singleton-shore normal form is needed.
+
+\section{The bipartite-flow assertion}
+
+\begin{corollary}\label{cor:flow}
+Let $H$ be bipartite of minimum degree at least two. Inject its vertices
+into a finite graph $G$ as terminals and choose a simple path between
+the corresponding terminal pair for every target edge. If paths for edges with four distinct endpoints are
+vertex-disjoint, then $G$ has an $H$-minor rooted at every terminal.
+\end{corollary}
+
+\begin{proof}
+A pairwise intersecting family of edges in a bipartite graph has a
+common endpoint: after two edges $ab,ac$, an edge meeting both but
+avoiding $a$ would be $bc$, forming a triangle. Hence paths meeting
+at a vertex satisfy the common-endpoint condition. No terminal $r_v$
+can be internal to a path for a nonincident edge $ab$: at most one of
+$a,b$ is adjacent to $v$, so $v$ has a neighbour $w$ outside $\{a,b\}$.
+Then $P_{vw}$ and $P_{ab}$ meet at $r_v$ although their edges have four
+distinct endpoints. Thus the paths form a scheme, and
+Theorem~\ref{thm:main} applies.
+\end{proof}
+
+The theorem includes every $K_{m,n}$ with all roots prescribed and gives
+a positive contractibility answer to the bipartite question
+in~\cite[Section 8, Question 4]{KPR}. Corollary~\ref{cor:flow}
+independently proves the intended existence assertion of
+Biswal, Lee and Rao~\cite[Lemma 3.2]{BLR}, with every terminal retained.
+Here the convention is that paths for independent demand edges do not
+intersect, as in their preprint v2; the published definition appears to
+reverse the intersection wording.
+
+Their prefix construction is not used. For example, in the coloured
+$K_{2,2}$-scheme
+\[
+ P_{ij}=a_i\,b'_j\,a'_i\,b_j\qquad(i,j\in\{0,1\}),
+\]
+all eight displayed vertex names are distinct. Their left prefixes are
+$\{a_i\}$, and their proposed right sets are
+$\{b_j,b'_j,a'_0,a'_1\}$, which overlap. This refutes the construction's
+Lemma~3.6, not its intended minor-existence assertion. Our result supplies
+an independent existence proof; it makes no publication-priority claim
+or new assertion about downstream spectral estimates. No implication
+to Hadwiger's conjecture is established here.
+
+\begin{thebibliography}{9}
+\bibitem{BLR}
+P.~Biswal, J.~R.~Lee and S.~Rao,
+\emph{Eigenvalue bounds, spectral partitioning, and metrical deformations
+via flows}, J.~ACM \textbf{57}(3) (2010), Article 13.
+\href{https://doi.org/10.1145/1706591.1706593}{doi:10.1145/1706591.1706593}.
+Preprint convention: \href{https://arxiv.org/abs/0808.0148v2}{arXiv:0808.0148v2}.
+
+\bibitem{Edmonds}
+J.~Edmonds, \emph{Matroid partition}, reprinted with the author's
+introduction in \emph{50 Years of Integer Programming 1958--2008},
+Springer, 2010, 199--218.
+\href{https://doi.org/10.1007/978-3-540-68279-0_7}{doi:10.1007/978-3-540-68279-0\_7}.
+
+\bibitem{KPR}
+A.~K\"undgen, M.~J.~Pelsmajer and R.~Ramamurthi,
+\emph{Finding minors in graphs with a given path structure},
+J.~Graph Theory \textbf{79} (2015), 30--47.
+\href{https://doi.org/10.1002/jgt.21812}{doi:10.1002/jgt.21812}.
+Primary preprint: \href{https://arxiv.org/abs/1207.6141}{arXiv:1207.6141}.
+\end{thebibliography}
+\end{document}

@@ -19296,7 +19296,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/even_subdivision_contractibility.md"
 source_heading = "Theorem 1.1"
-active = true
+active = false
 audit = "results/even_subdivision_contractibility_audit.md"
 expected_source_sha256 = "e7e8499d03f440f81bf558f7d42bc6be09830dd68a4bba50b92e1df4e1332ef7"
 scope = "all finite bipartite graphs with degree at most two on one specified side and arbitrary schemes of those graphs"
@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "a86b9d7f423937f7f0989e9caca4cadd15b228cb8f4e42230c3815eea0e9e5b8"
+expected_source_sha256 = "f6076886ecd6a18571faf2a1be415d8d8a751411f03fcafefde1e0418080bd85"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21261,11 +21261,11 @@ note = "A proof of T44, combined with the Kawarabayashi--Toft K7-or-K4,4 theorem
 id = "graph_schemes.target.bipartite_contractibility"
 title = "Every finite bipartite graph is contractible"
 kind = "target"
-status = "active-target"
-source = "active/bipartite_contractibility_frontier.md"
+status = "superseded"
+source = "archive/bipartite_contractibility_frontier_2026-09-05_before_universal.md"
 source_heading = "Target"
-active = true
-expected_source_sha256 = "84656f9d44074059290a00341f37891a8eb54e46fdabf74ed208148597c56a50"
+active = false
+expected_source_sha256 = "c7d23d718af5ec96fa46c1da404ce19227874df95bff17adc42f15b76c6c3ca5"
 scope = "every finite simple bipartite target and every scheme rooted at its designated vertices"
 label_fidelity = "all target roots remain in their prescribed pairwise disjoint connected branch sets"
 hypotheses = ["H is finite simple and bipartite", "G contains an H-scheme with the designated roots"]
@@ -21286,7 +21286,7 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/bipartite_scheme_singleton_shore_barrier.md"
 source_heading = "Theorem"
-active = true
+active = false
 audit = "barriers/bipartite_scheme_singleton_shore_barrier_audit.md"
 expected_source_sha256 = "456b9ea984326cee119843a8d5d1d9dda51c0307604727bfab3c3af0ab01d1bf"
 scope = "explicit coloured K_n,n schemes for every n at least three"
@@ -21307,7 +21307,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/degree_three_bipartite_weak_contractibility.md"
 source_heading = "Theorem 3"
-active = true
+active = false
 audit = "results/degree_three_bipartite_weak_contractibility_audit.md"
 expected_source_sha256 = "72e52cdcb734bd5620e4c3d6cc3bdd29d7861563bc9ba2507ff39d1c6c2d609d"
 scope = "all finite bipartite targets with degree at most three on a specified side B and every scheme of each target"
@@ -21322,7 +21322,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/bipartite_weak_to_rooted.md"
 source_heading = "Corollary 2"
-active = true
+active = false
 audit = "results/bipartite_weak_to_rooted_audit.md"
 expected_source_sha256 = "358782d3cf3ddc9d06cec3babd2824266c6eade2a11811797b85e488a75fefd8"
 scope = "an exact polynomial root-forcing construction for arbitrary finite rooted-minor instances, and its universal bipartite scheme consequence"
@@ -21337,7 +21337,7 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/bipartite_flow_prefix_construction.md"
 source_heading = "Seven-vertex counterexample to Lemma 3.5"
-active = true
+active = false
 audit = "barriers/bipartite_flow_prefix_construction_audit.md"
 expected_source_sha256 = "f87c9ff55d22528296858876ba724ea9fc1f0a3138427f49d6226a5e6205f4ee"
 scope = "two explicit C4 flows under the intended arXiv-v2 independent-intersection convention; published proof and reversed display wording distinguished"
@@ -21368,3 +21368,67 @@ source = "graph_schemes.degree_three_one_shore_rooted"
 target = "graph_schemes.even_subdivision_contractible"
 kind = "uses"
 note = "Uses the audited arbitrary-family packing lemma with labels determined by actual path membership; it does not assume degree-two target colours."
+
+
+[[claims]]
+id = "hc7.target.hadwiger7"
+title = "Every K7-minor-free graph is six-colourable"
+kind = "target"
+status = "active-target"
+source = "active/bipartite_contractibility_frontier.md"
+source_heading = "Remaining global target"
+active = true
+expected_source_sha256 = "a1a4aca94da441325bacb223fa1148f821137eb308d86dfd8e83e2e451ce33d0"
+scope = "every finite simple graph"
+hypotheses = ["G contains no K7 minor"]
+allowed_exits = ["a proof that G is six-colourable for every such G"]
+does_not_prove = ["HC7", "an implication from universal bipartite contractibility to HC7", "comparative significance or publication priority of the independent theorem"]
+keywords = ["Hadwiger conjecture", "K7", "six-colourable", "application boundary"]
+
+[[claims]]
+id = "graph_schemes.bipartite_contractible"
+title = "Every finite bipartite graph is fully rooted contractible"
+kind = "theorem"
+status = "audited-green"
+source = "results/bipartite_contractibility_via_matroid_reduction.md"
+source_heading = "Theorem"
+active = false
+audit = "results/bipartite_contractibility_via_matroid_reduction_audit.md"
+expected_source_sha256 = "3faac3d0628f4ea61ceb7e1b2005917371e46b1168ed446492907035efa09272"
+scope = "every finite simple bipartite target, every finite host, every injective root map and every scheme"
+label_fidelity = "all original prescribed roots and disjoint branch-set ownership are preserved by fixed minor preimages"
+strict_parameter = "host order strictly decreases in every recursive call"
+hypotheses = ["H is finite simple and bipartite", "G contains an H-scheme at its prescribed roots"]
+conclusions = ["a fully rooted H-minor", "the intended BLR bipartite independent-intersection flow assertion, retaining every terminal", "no degree, path-length or multiplicity bound"]
+does_not_prove = ["HC7, T44 or Conjecture 21", "correctness of the BLR prefix branch sets", "publication priority or significance comparable to Norin--Totschnig"]
+keywords = ["bipartite scheme", "rooted minor", "matroid union", "simultaneous component contraction", "well-founded induction"]
+
+[[relations]]
+source = "graph_schemes.bipartite_contractible"
+target = "graph_schemes.target.bipartite_contractibility"
+kind = "supersedes"
+note = "The universal rooted proof completes the former conjectural campaign; its snapshot remains historical provenance."
+
+[[relations]]
+source = "graph_schemes.bipartite_contractible"
+target = "graph_schemes.even_subdivision_contractible"
+kind = "strengthens"
+note = "The target-degree restriction is removed; the prior theorem and audits are preserved unchanged."
+
+[[relations]]
+source = "graph_schemes.bipartite_contractible"
+target = "graph_schemes.degree_three_one_shore_rooted"
+kind = "strengthens"
+note = "Every prescribed root is retained and the degree bound is removed; the earlier proof is not an input to the universal induction."
+
+[[relations]]
+source = "graph_schemes.bipartite_contractible"
+target = "graph_schemes.barrier.singleton_shore"
+kind = "related_to"
+note = "Iterated component contraction may reverse the projection shore and expand both original root shores, consistently with this barrier."
+
+[[relations]]
+source = "graph_schemes.bipartite_contractible"
+target = "graph_schemes.barrier.flow_prefix_construction"
+kind = "related_to"
+note = "The intended main existence assertion is independently proved, while the two intermediate prefix claims remain refuted."

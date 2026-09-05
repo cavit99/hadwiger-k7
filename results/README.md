@@ -13,6 +13,7 @@ is not external peer review.
 
 | Theorem | Proof and audit | Exact scope |
 |---|---|---|
+| Every finite bipartite graph is contractible | [Proof](bipartite_contractibility_via_matroid_reduction.md) · [GREEN audit](bipartite_contractibility_via_matroid_reduction_audit.md) · [second GREEN audit](bipartite_contractibility_via_matroid_reduction_second_audit.md) · [manuscript](../paper/bipartite-contractibility/main.pdf) | Every scheme yields the fully prescribed rooted minor. No degree, order or path-length bound. The intended BLR flow assertion follows independently; priority and comparative significance remain qualified. |
 | Degree at most three on one bipartition side forces a minor retaining all prescribed roots on the opposite side | [Proof](degree_three_bipartite_weak_contractibility.md) · [GREEN audit](degree_three_bipartite_weak_contractibility_audit.md) | Includes weak contractibility of every `K_{3,n}` and every bipartite subcubic target; does not retain all roots on the degree-bounded side. |
 | Universal weak and rooted bipartite contractibility are equivalent | [Proof](bipartite_weak_to_rooted.md) · [GREEN audit](bipartite_weak_to_rooted_audit.md) | An exact polynomial reduction with pendant four-cycles forces prescribed roots in an enlarged target. Neither universal statement is proved by the reduction. |
 | Every bipartite graph with degree at most two on one specified side is contractible | [Proof](even_subdivision_contractibility.md) · [GREEN cold audit](even_subdivision_contractibility_audit.md) · [separate GREEN proof and qualified novelty audit](even_subdivision_contractibility_literature_audit.md) | Includes every replacement of the edges of an arbitrary loopless multigraph by paths of positive even length. Extends `K_{2,n}` to a family of unbounded treewidth; does not settle `K_{3,3}`, all bipartite theta graphs, or a Hadwiger conjecture. |
@@ -40,10 +41,10 @@ Later theorem notes strengthen and extend that snapshot:
 These are necessary structural theorems about a hypothetical counterexample.
 They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
 
-## Selected foundational inputs to the active T44 campaign
+## Selected foundational inputs to the preserved T44 campaign
 
-T44 remains open.  The exact current set of direct proved inputs is maintained
-only in the [active index](../active/INDEX.md), so it is not duplicated here.
+T44 remains open. Its direct proved inputs are maintained in the
+[technical frontier](../active/hc7_k44_closure_frontier.md).
 The following are selected foundational results:
 
 - [branch-model normal forms and the double-cone theorem](hc7_k44_branch_model_and_double_cone.md), with [audit](hc7_k44_branch_model_and_double_cone_audit.md);
@@ -58,7 +59,7 @@ checks its five named statements at pinned revisions and states explicitly
 what it does not prove.  The later direct literal reductions—positive-atom
 elimination, the minimum-blocker theorem, the contraction trace, both trace
 eliminations, and the joint-contact separator theorem—are navigated from the
-active index.  The two unproved completion obligations remain in the
+technical frontier. The unproved completion obligations remain in the
 [T44 technical frontier](../active/hc7_k44_closure_frontier.md).
 
 The audited [three-support bond and three-cut

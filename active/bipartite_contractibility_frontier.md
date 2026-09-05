@@ -1,255 +1,175 @@
-# Bipartite graph contractibility frontier
+# Universal bipartite contractibility and the remaining global target
 
-**Status:** conjectural target; no proof of the universal statement.
-This is the sole primary research target following the user-authorized
-4 September 2026 pivot. The authoritative status is the
+**Status:** the universal bipartite theorem has a written proof and a
+separate GREEN internal audit. `HC_7` remains conjectural and is the sole
+remaining primary target. This technical file records the theorem's exact
+application boundary; authoritative current status belongs only to the
 [research ledger](../RESEARCH_LEDGER.md).
 
-## Target
+## Remaining global target
 
-> Every finite simple bipartite graph is contractible: for every such graph
-> `H` and every `H`-scheme in a finite graph `G`, there is an `H`-minor in
-> `G` rooted at the designated vertices of `H`.
+**Conjectural target — Hadwiger's conjecture for `t=7`.** Every finite
+graph with no `K_7` minor is six-colourable.
 
-An `H`-scheme consists of one path `P_uv` for each edge `uv` of `H`, with
-ends `u,v` and no other root internally; any collection of paths with a
-common vertex has a common endpoint in `H`. A rooted minor is a family of
-pairwise disjoint connected sets `C_v`, each containing its designated
-root `v`, with `C_u` adjacent to `C_v` for every edge `uv` of `H`.
+The user's acceptable alternative is an independent theorem of reach and
+significance comparable to Norin--Totschnig. The completed theorem below
+is universal in its target class and resolves the bipartite scheme
+question. Its publication priority and comparative significance require
+separate assessment. No implication from it to `HC_7`, T44 or
+Norin--Totschnig Conjecture 21 is established. No previously proved
+theorem is being invoked here as a direct sufficient reduction of `HC_7`.
 
-It suffices to prove the target for every `K_{n,n}`. Every finite bipartite
-graph embeds as a subgraph of some `K_{n,n}`, and contractibility is
-subgraph-closed by Kündgen--Pelsmajer--Ramamurthi [1, Lemma 2.2]. This is
-an unbounded target, not an assertion derived from finite searches.
+The preserved principal conditional refinement is
+[T44](hc7_k44_closure_frontier.md): every seven-connected graph containing
+a `K_{4,4}` minor contains a `K_7^-` minor. T44 would prove Conjecture 21,
+that every `K_7^-`-minor-free graph is six-colourable. Both remain open.
+The designated T44 frontier retains its two literal residues, closure
+under the proposed induction, and the separate nonliteral branch-set
+ownership obligation. Completing only the literal residues would not
+prove T44. These are conditional routes, not consequences of bipartite
+contractibility.
 
-## Direct proved inputs and first missing steps
+## Completed universal theorem
 
-The [audited even-subdivision theorem](../results/even_subdivision_contractibility.md)
-proves the target whenever one bipartition class has maximum degree two.
-Its component-incidence argument packs disjoint spanning trees in a family
-of graphic matroids: each nonroot vertex used as an edge label occurs in
-at most two projections, and every component away from its root meets at
-least two projected paths.
+**Written proof with a separate internal audit.** For every finite simple
+bipartite graph `H`, every `H`-scheme in a finite host `G` contains an
+`H`-minor rooted at all prescribed vertices. There is no bound on either
+graph's order, degrees, path lengths or intersection multiplicities.
 
-For a general coloured bipartite scheme, label sets must instead be
-defined by actual membership in the scheme paths. A vertex of colour `b`
-need not lie on every path incident with `b`. At degree three a label may
-occur in three projections. The proved component bound is still one half
-of the deleted-label incidence count; it no longer implies the matroid
-union inequality. Keeping all vertices of each `A` colour in its named
-branch set, and every `B` root singleton, is an additional restriction.
-Its failure would not refute rooted contractibility.
+An `H`-scheme has one simple path for each target edge, with its two
+prescribed roots as ends and no other prescribed root internally. Every
+collection of paths meeting at one vertex has a common target endpoint.
+A rooted minor consists of pairwise disjoint connected branch sets, one
+containing each prescribed root, with every required target adjacency.
 
-The [degree-three theorem](../results/degree_three_bipartite_weak_contractibility.md),
-with its [separate GREEN audit](../results/degree_three_bipartite_weak_contractibility_audit.md),
-now proves a stronger conclusion with fewer prescribed roots: if every
-vertex of `B` has degree at most three, every scheme contains an `H` minor
-retaining all original `A` roots. Thus every such target, including every
-`K_{3,n}`, is weakly contractible. This is an unbounded terminal theorem.
+The [full proof](../results/bipartite_contractibility_via_matroid_reduction.md),
+[first exact-hash audit](../results/bipartite_contractibility_via_matroid_reduction_audit.md)
+and [second independent internal audit](../results/bipartite_contractibility_via_matroid_reduction_second_audit.md)
+give the complete unbounded argument. The
+[current manuscript](../paper/bipartite-contractibility/main.tex) presents
+the theorem independently of the earlier Hadwiger programme.
 
-Its recursive step moves a `B` root to a nonroot lying on all its incident
-paths, truncates those paths, and deletes the old root. Other paths avoid
-the new root; the abstract target and every `A` root are preserved. Host
-order strictly decreases. When no such vertex remains, every `B` nonroot
-has exactly two path memberships, so actual-membership packing applies.
-The original `B` roots are not preserved by this argument.
+### The decisive reduction
 
-The [audited root-forcing reduction](../results/bipartite_weak_to_rooted.md)
-proves that universal weak and universal rooted bipartite contractibility
-are equivalent. Pendant four-cycles of different multiplicities force an
-unrooted model of an enlarged target to respect every original root.
-The enlarged target depends on the host and can have arbitrarily large
-degrees. Therefore the degree-three theorem does not supply the universal
-weak hypothesis of this reduction.
+A direct root-preserving colour normalization makes each path use only
+its two endpoint colours. Orient the target bipartition `(A,B)` so that
+the number `N_A` of nonroots on the `A` side is at most the number `N_B`
+on the `B` side. Project paths onto each `A` colour, using each actual
+`B` nonroot as an edge label wherever that vertex occurs. The total
+graphic rank is `N_A` and there are `N_B` labels.
 
-The principal new proof possibility is universal weak contractibility
-with roots allowed to move, followed by the proved root-forcing reduction.
-After removing vertices lying on every path at their colour, the first
-case beyond the degree-three theorem has a nonroot on three of the four
-paths incident with its colour. Moving that root then requires a new
-connection for the fourth path; it is not the proved truncation step.
-The full six-root `K_{3,3}` problem remains a separate useful diagnostic.
-Neither bounded path lengths nor bounded host order settle either route.
+Edmonds' matroid union theorem gives either disjoint spanning trees in
+all projections, immediately constructing the rooted model, or a
+nonempty minimizing label set `X`. Equality in its rank formula forces
+a maximizing disjoint forest family to span every component of every
+projection restricted to `X`. Contract these connected host sets
+simultaneously and delete unused labels of `X`.
 
-## Audited obstruction to keeping one shore singleton
+Even when an `X` label belongs to several projections, each occurrence
+has both endpoints in one component of its own projection. Its endpoints
+are therefore already identified in the quotient using that component's
+allocated tree. No path must recover the old label from another branch
+set. The surviving paths use only their endpoint colours and retain all
+roots; at least one contraction is nontrivial, so host order strictly
+decreases. Induction and composition of the fixed minor models complete
+the proof. Reversing the shore orientation between steps permits expansion
+on both original shores.
 
-**Barrier/counterexample to an intermediate claim:** the
-[written construction](../barriers/bipartite_scheme_singleton_shore_barrier.md)
-and its [separate internal audit](../barriers/bipartite_scheme_singleton_shore_barrier_audit.md)
-prove that, for every `n>=3`, a coloured `K_{n,n}`-scheme on `2n^2+6n`
-vertices has a rooted model but no model in which either entire root shore
-is singleton. This allows arbitrary colour mixing and unused vertices.
-Thus neither a more favourable global orientation nor replacing spanning
-trees by trees connecting only required terminals repairs that strategy.
-The displayed successful model expands roots on both shores.
+This construction handles arbitrary label multiplicity. It neither
+assumes a singleton root shore nor relies on an arbitrary returned model
+being liftable through a previously deleted vertex. The proof is
+computation-free; the exact source and its audit, rather than finite
+tests, establish the theorem.
 
-The first false inference would be to require a singleton shore as a
-normal form for all coloured schemes. A smallest useful repair must
-allow expansion on both shores, or supply a root-preserving reduction
-whose lift does so. The construction refutes neither repair and is not a
-counterexample to the primary target.
+## Exact application boundary
 
-## Two uniform cases and a failed induction
+**Written corollary.** Let `H` be finite simple bipartite of minimum
+degree at least two, with its vertices injected into a finite host. Choose
+one path for each target edge. If paths for edges with four distinct
+endpoints are vertex-disjoint, the host contains an `H`-minor rooted at
+all those terminals. In a bipartite graph, pairwise incident edges form
+a star; the minimum-degree condition also excludes a nonincident terminal
+inside a chosen path. These facts make the flow paths an `H`-scheme.
 
-**Written deduction from the audited packing lemma.** Suppose a coloured
-bipartite `H`-scheme has every nonroot on one host bipartition in exactly
-two scheme paths. It has a rooted `H` minor, even if those target colours
-have degree greater than two. To see this, form the same projections, but
-label an edge by a nonroot only when it actually lies on the corresponding
-path. Each label occurs in exactly two projections; the projected paths
-partition the labels, cover the colour class, and every nonroot of the
-other shore lies on at least two projected paths. All hypotheses of the
-audited packing lemma hold. This is a scheme-specific deduction, not
-contractibility of an additional target class.
+The [corollary's written proof](../results/bipartite_contractibility_via_matroid_reduction.md#5-the-intended-bipartite-flow-assertion)
+independently proves the intended existence assertion of
+Biswal--Lee--Rao [2, Lemma 3.2]. It uses the independent-intersection
+convention in arXiv v2. The apparent reversal in the published definition
+is a separate issue from the false intermediate statements in its prefix
+construction. Lemmas 3.5 and 3.6 of that construction remain refuted by the
+[audited explicit examples](../barriers/bipartite_flow_prefix_construction.md).
+The new proof supplies the existence conclusion without validating those
+branch sets or making an additional claim about spectral, separator or
+bounded-depth conclusions.
 
-**Written deduction from matching.** If every nonroot of each colour lies
-on every path incident with that colour, any bipartite target also has a
-rooted model. Choose a minimum vertex cover `W` of the target and let
-`S=V(H)-W`. A maximum matching saturates `W` and matches its vertices to
-`S`: its size is `|W|` by König's theorem, and covering every matching edge
-with exactly `|W|` vertices forces exactly one cover vertex on each edge.
-For each matching edge `sw`, put `V(P_sw)-{s}` in `C_w`, and leave roots
-in `S` singleton. The matching paths are disjoint, each `C_w` contains
-all vertices of colour `w`, and every edge incident with `S` is witnessed
-at its root. If both ends of a target edge lie in `W`, its scheme path is
-covered by their two branch sets and supplies a contact. Isolated roots
-are retained. This also follows from the complete-support specialization
-of [1, Lemma 6.1]. The unproved case mixes partial and full path support.
+**Application requirement.** A proposed further use must specify the
+finite bipartite target, injective prescribed-root map and all scheme
+paths, and verify the common-endpoint condition and exclusion of foreign
+roots. Alternatively, it must verify exactly the flow corollary's
+minimum-degree and independent-intersection hypotheses. Producing an
+ordinary `K_{4,4}` minor alone supplies no additional `K_7^-` adjacency;
+that is still the separate T44 obligation. No edge colouring or collection
+of Kempe paths is assumed to satisfy the required scheme conditions
+without a proof.
 
-**Recorded negative finding / route nonclosure.** A proposed induction
-splits off one path through a degree-six nonroot, obtains a rooted model
-in the new graph, and replaces its virtual edge by the original two-edge
-path. The last step need not preserve disjointness. For an explicit example,
-take roots `v,w,b_0,b_1,b_2` and nonroots `x,z,y_0,y_1,y_2`, with paths
-`v y_j x b_j` and `w y_j z b_j` for `j=0,1,2`. This is a coloured
-`K_{2,3}`-scheme. Split off `y_j x b_j` to the edge `y_j b_j` and let
-`{j,k,l}={0,1,2}`. In the split graph the branch sets
+The earlier [even-subdivision theorem](../results/even_subdivision_contractibility.md),
+[degree-three theorem preserving one shore's roots](../results/degree_three_bipartite_weak_contractibility.md),
+and [universal weak-to-rooted equivalence](../results/bipartite_weak_to_rooted.md)
+remain audited results at their original revisions. The universal theorem
+now supplies full rooted conclusions for every included bipartite target,
+including `K_{3,3}`, all `K_{m,n}` and every bipartite theta graph. Its
+proof does not need root relocation or pendant root-forcing attachments.
 
-`C_v={v,y_k}`, `C_w={w,y_l}`, `C_bj={b_j,y_j}`,
-`C_bk={b_k,x}`, `C_bl={b_l,z}`
+## Literature scope and significance
 
-are connected, disjoint, and have all required adjacencies. Restoring the
-virtual edge inside `C_bj` would reuse `x` from `C_bk`. There is an
-obstructed returned model for each split choice. This does not refute an
-existential choice of a liftable split and model: the original graph is
-contractible. The smallest repair is a joint split-and-model existence
-lemma with a proved exchange resolving this conflict. Choosing a split,
-then an arbitrary model, is a different quantifier order.
+**Written scope deductions; qualified independent assessment.** The
+theorem answers Kündgen--Pelsmajer--Ramamurthi [1, Section 8, Questions 2
+and 3] affirmatively, and rules out the bipartite counterexample sought in
+Question 4. This is a terminal universal result, not another restriction
+on a hypothetical counterexample. Its broad rooted-minor conclusion and
+independent proof of the intended flow theorem make it a credible
+candidate for the requested independent-theorem alternative.
 
-Splitting a triple intersection into pair intersections using only its
-three original paths is not a coloured-scheme reduction either. Every
-replacement vertex shared by at least two of those paths has their common
-root colour; proper colouring forbids an edge joining two such vertices.
-With no other paths and every replacement nonroot shared, the three
-segments must still pass through a single common vertex. A monochromatic
-chain merely contracts back under coloured normalization. A successful
-replacement must alter additional paths or prove a global recolouring.
+The [separate internal assessment](../results/bipartite_contractibility_via_matroid_reduction_audit.md#mathematical-reach-and-the-norin--totschnig-comparison)
+does not certify equal significance to Norin--Totschnig. Their Theorems 4
+and 6 concern six-colouring under a near-clique-minor exclusion and the
+supporting extremal bound. The present theorem has a different scope;
+its relation to that colouring programme remains unproved. BLR's earlier
+broad existence assertion also requires explicit qualification of any
+priority claim. Specialist assessment of originality and comparative
+significance remains outstanding; an internal audit is not external
+peer review.
 
-A target perfect matching supplies disjoint scheme paths, and each other
-scheme path meets only matching paths sharing one of its endpoints.
-However, splitting each selected matching path once between its two roots
-is an extra requirement on a rooted model. No proof was found that
-optimizing lengths among the supplied matching paths makes that requirement
-sufficient. The missing step is a joint rerouting of the selected paths
-and the rest of the scheme preserving every root-to-root requirement and
-the common-endpoint intersection condition. Individual path shortening
-without that preservation is not a well-founded scheme reduction.
+## Preserved barriers and frozen attempts
 
-## Literature and odd-path-strip attempts
+The [pre-promotion technical snapshot](../archive/bipartite_contractibility_frontier_2026-09-05_before_universal.md)
+preserves the exact hypotheses, first unsupported inferences and possible
+repairs of the former local approaches. Their failure does not contradict
+the universal theorem. In particular:
 
-**Written deduction and audited barrier to a proposed proof.**
-Biswal--Lee--Rao [2, Lemma 3.2] state that an integral flow for any
-bipartite demand graph of minimum degree two forces that graph as a minor
-if paths for independent demand edges do not intersect. Under this
-intersection convention the flow is a scheme: pairwise intersecting
-edges in a bipartite graph have a common endpoint, and a root internal
-to a nonincident path would, by its degree at least two, create an
-independent-edge intersection. Conversely a scheme has no such
-intersections. Together with root forcing, the universal flow assertion
-would prove the primary target. It is not a weaker substitute for it.
+- The [singleton-shore barrier](../barriers/bipartite_scheme_singleton_shore_barrier.md)
+  still refutes requiring either entire original root shore to remain
+  singleton. Iterated contraction permits both shores to expand.
+- The [archived split-and-lift attempt](../archive/bipartite_contractibility_frontier_2026-09-05_before_universal.md#two-uniform-cases-and-a-failed-induction)
+  still shows that a virtual edge cannot always be expanded through a
+  vertex already owned by another returned branch set. The new proof
+  contracts all required projection components with disjoint allocated
+  labels before invoking induction.
+- The [prefix-construction barrier](../barriers/bipartite_flow_prefix_construction.md)
+  still refutes the two stated intermediate BLR lemmas. The intended
+  main assertion is now independently proved.
 
-The [audited seven- and eight-vertex constructions](../barriers/bipartite_flow_prefix_construction.md)
-refute intermediate Lemmas 3.5 and 3.6 of the supplied prefix proof.
-One proposed branch set is disconnected in the first example; two
-proposed branch sets overlap in the second. Both hosts have explicit
-rooted `C_4` models. The first unsupported inference excludes a suffix
-vertex from another prefix at the same root. No counterexample to the
-intended main minor statement is established.
-
-The final JACM PDF was also checked: the same prefix argument appears on
-p. 13:11. Its preceding display reverses the intersection wording; the
-construction note explicitly distinguishes that apparent typographical
-error from the substantive failures under the intended arXiv v2 convention.
-No corrected proof was found in the bounded search. The external main
-statement is therefore not used as a verified proof input here.
-
-This does not invalidate spectral or separator conclusions. For example,
-[Bonnet et al., Lemma 2 and Appendix B](https://arxiv.org/html/2512.01587v1#A2)
-give a separate transfer for specially chosen twice-subdivided clique
-demands, and [Kolbe--Spalding-Jamieson, Proposition 3.4](https://arxiv.org/html/2608.27179)
-use a separate local-lemma construction. Those special demand families
-do not settle universal bipartite contractibility. The new degree-three
-theorem is an independent proof; priority remains qualified because the
-broader BLR assertion was already published.
-
-**Recorded negative findings / route nonclosure.** Reducing an odd target
-path by suppressing two of its internal roots does produce a smaller
-scheme, but ordinary contractibility of that smaller target gives no
-preservation of the removed roots on the required connection. Thus this
-is not a proved reduction of the odd-theta question to the even-subdivision
-theorem. A direct cover-and-matching construction works for odd strips
-with one nonroot per internal colour; no reduction of arbitrary multiplicity
-to that case was obtained, and no new target contractibility is claimed.
-
-Fleiner's [Theorem 6.3](https://egres.elte.hu/tr/egres-01-01.pdf), pp. 16--17,
-on matroid kernels was checked as a possible exchange tool. It supplies
-ordered matroid spanning, not connected sets at specified roots or the
-ordered internal roots of a strip. The first unsupported inference would
-be to treat root-connected support choices as the matroidal choice needed
-there, or to lift a kernel while silently retaining those root conditions.
-A specifically defined encoding and a rooted lifting theorem are still
-required. No application of Fleiner's theorem is promoted here.
-
-## Finite diagnostics
-
-The [experiment description](experiments/bipartite_contractibility/README.md)
-records a deterministic 30-sample search using variable path supports and
-lengths. Every sampled scheme had an independently checked rooted model.
-There is no exhaustive or unbounded conclusion. The actual obstacle is
-still construction for arbitrary schemes, not a lack of small examples.
-
-## External inputs and search boundary
-
-- [1, Lemma 3.3] permits root-preserving reduction to a coloured scheme.
-  Its paths alternate endpoint colours and are edge-disjoint, and every
-  nonroot lies on at least two paths [1, Remark 3.2].
-- `K_{3,3}` is already weakly contractible [1, Theorem 5.3]. The new
-  degree-three theorem retains any one of its prescribed shores, but the
-  full rooted diagnostic still requires all six original roots.
-- Every bipartite graph is already `M'`-contractible [1, Corollary 7.6].
-  Thus the model having one additional vertex of each colour and all
-  paths of length three cannot refute the target. A useful hostile search
-  must permit varied colour multiplicities and longer paths.
-- The full target addresses [1, Section 8, Question 4]. A proof would still
-  require independent specialist assessment of novelty and significance;
-  it has no proved implication to T44, Conjecture 21 or `HC_7` here.
-
-## Completion standard
-
-A positive completion is a proof constructing the rooted model for every
-finite scheme, with every reduction preserving its exact hypotheses and
-strictly decreasing an explicitly stated well-founded parameter. A negative
-completion is an explicit valid scheme and a rigorous certificate that its
-host has no prescribed rooted model. An obstruction to a restricted
-packing method is recorded only as a barrier to that intermediate claim.
-Further normal forms alone do not meet the intended research standard.
-
-## Preserved work
-
-- [Minimal manuscript of the even-subdivision theorem](../paper/even-subdivision-contractibility/main.tex).
-- [T44 technical frontier](hc7_k44_closure_frontier.md): a preserved
-  conditional route, with local residues, induction-class closure and
-  nonliteral branch-set preservation still open.
+Local root relocation beyond degree three, root-suppression attempts on
+odd paths, a fixed split of matching paths and a proposed matroid-kernel
+application remain archived failed mechanisms. They are not live proof
+obligations after the universal theorem. The
+[campaign reduction nonclosures](../archive/bipartite_campaign_reduction_nonclosures_2026-09-05.md)
+also preserve the failure of a natural degree-preserving gadget lift and
+an explicit obstruction to upgrading an arbitrary five-connected `K_6`
+model to `K_7` minus a matching. Neither is used by the universal proof.
+The
+[retained experiments](experiments/bipartite_contractibility/README.md)
+are diagnostics with explicitly finite scope.
 
 ## References
 
@@ -261,4 +181,8 @@ with a given path structure*, Journal of Graph Theory 79 (2015), 30--47,
 [2] P. Biswal, J. R. Lee and S. Rao, *Eigenvalue bounds, spectral
 partitioning, and metrical deformations via flows*, Journal of the ACM
 57(3) (2010), Article 13, [DOI](https://doi.org/10.1145/1706591.1706593),
-[primary preprint, v2](https://arxiv.org/pdf/0808.0148v2).
+[primary preprint v2](https://arxiv.org/pdf/0808.0148v2).
+
+[3] S. Norin and A. Totschnig, *Every graph with no `K_7^vee`-minor is
+6-colorable*, [primary preprint](https://arxiv.org/html/2507.03244v1),
+Theorems 4 and 6, Conjecture 21.

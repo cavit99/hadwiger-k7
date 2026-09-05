@@ -1,7 +1,9 @@
 # Seven-connected `K_{4,4}` closure frontier
 
-**Status (4 September 2026):** T44 is a preserved conditional target; the
-primary campaign is now [bipartite contractibility](bipartite_contractibility_frontier.md).
+**Status (5 September 2026):** T44 is a preserved conditional target.
+[Universal bipartite contractibility](bipartite_contractibility_frontier.md)
+now has a written proof with separate internal audits; no implication to
+T44 or `HC_7` is established. `HC_7` remains the primary open objective.
 T44 remains open.  No seven-connected counterexample has been found.  The literal-core
 completion and the nonliteral branch-model lift are both still open, and no
 result in this file proves Conjecture 21 or `HC_7`. In addition to the two
