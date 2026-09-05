@@ -72,22 +72,27 @@ def generate(rng):
     return g, roots, paths
 
 
-def model(g, roots, timeout):
+def model(g, roots, timeout, target_edges=None):
+    """Find a rooted model; the historical default target is K3,3."""
+    if target_edges is None:
+        assert len(roots) == 6
+        target_edges = itertools.product(range(3), range(3, 6))
+    target_edges = tuple(target_edges)
     vertices = roots + sorted(set(g) - set(roots))
     index = {v: i for i, v in enumerate(vertices)}
-    n = len(vertices)
+    n, k = len(vertices), len(roots)
     lines = [f"(set-option :timeout {timeout * 1000})", "(set-logic QF_LIA)"]
     for i in range(n):
         lines += [f"(declare-const c{i} Int)", f"(declare-const d{i} Int)"]
     for i, v in enumerate(vertices):
-        lines += [f"(assert (and (<= -1 c{i}) (<= c{i} 5) (<= 0 d{i}) (<= d{i} {n})))"]
-        if i < 6:
+        lines += [f"(assert (and (<= -1 c{i}) (<= c{i} {k - 1}) (<= 0 d{i}) (<= d{i} {n})))"]
+        if i < k:
             lines += [f"(assert (= c{i} {i}))", f"(assert (= d{i} 0))"]
         else:
             descent = " ".join(f"(and (= c{i} c{index[w]}) (< d{index[w]} d{i}))"
                                for w in g[v])
             lines.append(f"(assert (=> (>= c{i} 0) (or {descent})))")
-    for a, b in itertools.product(range(3), range(3, 6)):
+    for a, b in target_edges:
         contacts = []
         for u, v in g.edges:
             i, j = index[u], index[v]
@@ -104,11 +109,11 @@ def model(g, roots, timeout):
         return status, result.stdout
     values = {int(i): int(v.replace(" ", "").replace("(", "").replace(")", ""))
               for i, v in re.findall(r"\(c(\d+)\s+(-?\d+|\(-\s+\d+\))\)", result.stdout)}
-    bags = [{vertices[i] for i in range(n) if values[i] == a} for a in range(6)]
+    bags = [{vertices[i] for i in range(n) if values[i] == a} for a in range(k)]
     assert all(roots[a] in bags[a] and nx.is_connected(g.subgraph(bags[a]))
-               for a in range(6))
+               for a in range(k))
     assert all(any(g.has_edge(u, v) for u in bags[a] for v in bags[b])
-               for a, b in itertools.product(range(3), range(3, 6)))
+               for a, b in target_edges)
     return status, [sorted(bag) for bag in bags]
 
 

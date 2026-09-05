@@ -125,6 +125,15 @@ this gives the proved necessary half of a concrete triangle-free
 classification candidate. Its sufficiency is the next positive scheme
 construction being investigated; no classification is claimed.
 
+The same theorem file now gives the exact series-class parity description
+after contracting a common odd-cycle edge, with a renewed separate audit.
+Turning that target structure into a scheme construction still requires
+coordinated allocation across separations. The
+[explicit attachment and Whitney-transport examples](barriers/scheme_articulation_colour_fibre.md)
+refute two local ownership rules, while leaving the classification open.
+Retained finite diagnostics include positive mixed-cycle schemes outside
+the current rank-reduction condition; they do not establish sufficiency.
+
 On the HC7 route, [expanding separator roots](barriers/hc7_k44_expanding_separator_roots.md)
 closes the fixed-model case `C_a=C_p`, `|C_a|=3`, `|R|>=2` of the
 singleton residue. An explicit planar boundary graph refutes the broader

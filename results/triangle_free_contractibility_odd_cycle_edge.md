@@ -146,6 +146,95 @@ all other blocks already are bipartite. Thus `H-e` contains no odd
 cycle and is bipartite. The componentwise statement follows by
 applying this argument separately. ∎
 
+## Cycle spaces and series classes
+
+**Status of this addition:** written proof with a separate internal audit
+of this revision recorded beside the theorem.
+
+**Theorem 4.** Let `H` be a finite simple 2-connected nonbipartite graph,
+and let `e=uv` satisfy that `H-e` is bipartite. Retain edge identities,
+including possible parallel edges, when forming `Q=H/e`. Then the
+following are equivalent:
+
+1. `H` has no skewed theta.
+2. The binary cycle space of `Q` is self-orthogonal: any two even-degree
+   edge sets of `Q` intersect in an even number of edges.
+3. Every graphic-matroid series class of `H` has even size except the
+   class containing `e`, which has odd size. Here two edges are in the
+   same series class when every cycle contains both or neither.
+
+In particular, under any of these conditions `Q` is bipartite and has
+no theta whose three paths all have odd length. If `H` is triangle-free,
+`Q` is simple. This is a statement about the target graph, not a
+reduction of an arbitrary rooted scheme.
+
+**Proof.** Work over `F_2`, writing `x.y` for the edge-coordinate dot
+product and `p(x)` for the parity of the size of an edge set. The exact
+external input is Benchetrit--Sebő [2, Theorem 2.2]: a 2-connected
+nonbipartite graph without a skewed theta has a cycle-space basis
+`c_1,...,c_k` consisting of odd cycles, with `c_i.c_j=1` for every
+`i,j`. Thus, for all cycle vectors `x=sum_i a_i c_i` and
+`y=sum_j b_j c_j`,
+
+```text
+x.y = (sum_i a_i)(sum_j b_j) = p(x)p(y).
+```
+
+The graph `H-e` is connected because `H` is 2-connected. The ends `u,v`
+belong to the same shore of its bipartition, since otherwise `H` would
+be bipartite. Every cycle of `H` avoiding `e` is therefore even and
+every cycle containing `e` is odd. Consequently `p(x)=x_e` for every
+cycle vector `x`.
+
+Deleting coordinate `e` is a linear bijection from the cycle space of
+`H` to that of `Q`. To see surjectivity explicitly, lift an even-degree
+edge set of `Q` before identifying `u,v`. All vertices other than `u,v`
+have even degree, and the degree parities at `u,v` agree. Add `e` if
+and only if both are odd. This is also the unique even-degree lift.
+For corresponding vectors `x',y'` in `Q`, the displayed identity gives
+
+```text
+x'.y' = x.y + x_e y_e = 0.
+```
+
+Conversely, self-orthogonality of `Q` gives
+`x.y=x_e y_e=p(x)p(y)` in `H`. In particular, every two odd cycles of
+`H` have odd edge intersection. Benchetrit--Sebő [2, Lemma 2.3], whose
+hypothesis is precisely 2-connectivity, excludes a skewed theta.
+
+Self-orthogonality implies that every cycle of `Q` is even by taking
+its dot product with itself. Two cycles formed from three internally
+disjoint odd paths intersect in exactly one odd path, so such a theta
+is also excluded. Contraction deletes `e` and creates no other loop
+because `H` is simple. A pair of parallel edges in `Q` would come from
+a common neighbour of `u,v`, which triangle-freeness excludes. Without
+triangle-freeness, keep the parallel edges distinct throughout the
+cycle-space argument.
+
+For completeness, a connected bridgeless loopless multigraph `F` has
+self-orthogonal cycle space if and only if all its series classes have
+even size. Fix `f=ab`. Its series class consists exactly of `f` and
+the bridges of `F-f`: another edge belongs to every cycle through `f`
+exactly when it belongs to every `a,b` path in `F-f`. Every bridge of
+`F-f` separates `a,b`, since otherwise it would remain a bridge in
+`F`. The bridge blocks therefore occur along a single `a,b` chain.
+Within each nontrivial block, edge-Menger supplies two edge-disjoint
+paths between its entry and exit vertices; use two empty paths when
+these coincide. Joining them across the bridges gives two `a,b` paths
+whose common edges are exactly those bridges. The two cycles obtained
+by adding `f` thus intersect in exactly its series class. Their dot
+product forces that class to be even. Conversely, intersections of
+cycles are unions of whole series classes, proving self-orthogonality
+when all classes are even. This also applies to all even-degree edge
+sets by linearity.
+
+The graph `Q` is connected and bridgeless. Being in the same series
+class is equivalent to the coordinate identity `x_f=x_g` for every
+cycle vector `x`. The cycle-space bijection preserves these identities
+between remaining edges, so its series classes are those of `H` with
+`e` removed from its class, omitting that class if it becomes empty.
+The criterion just proved establishes the equivalence with item 3. ∎
+
 ## Provenance and limits
 
 The signed packing theorem is established external input, attributed
@@ -175,7 +264,7 @@ positive proof obligation. These theorems do not close it, prove
    Journal of Combinatorial Theory, Series B 23 (1977), 189--222.
 2. Y. Benchetrit and A. Sebő, *Ear-decompositions and the complexity of
    the matching polytope*, [primary preprint](https://arxiv.org/pdf/1509.05586),
-   Lemma 2.3.
+   Theorem 2.2 and Lemma 2.3.
 3. A. Kündgen, M. J. Pelsmajer and R. Ramamurthi, *Finding minors in
    graphs with a given path structure*, Journal of Graph Theory 79
    (2015), 30--47, [primary preprint](https://arxiv.org/pdf/1207.6141),

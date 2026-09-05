@@ -5,13 +5,71 @@ This is an internal agent audit, not external peer review.
 
 **Audited source:** [the written theorem](triangle_free_contractibility_odd_cycle_edge.md),
 whole-file SHA256
-`39b35a2b94c5cc6de6ba12f0a8174111f9aa55f2b62fd059d666fcc102538efb`.
+`21bd3accaf4bc2df5483a05712c851aa0482e5c1be2508d3e450b3950e183eb6`.
 
-**Verdict: GREEN** for Lemma 3, Theorem 1 and Theorem 2, including
-the componentwise conclusion. No unresolved mathematical gap was
-found under their explicit hypotheses. These are necessary structural
+**Verdict: GREEN** for Lemma 3 and Theorems 1, 2 and 4, including
+the componentwise conclusion and the cycle-space equivalences. No unresolved
+mathematical gap was found under their explicit hypotheses. These are necessary structural
 conditions; the audit does not establish the converse or a classification
 of contractible graphs.
+
+## Revision and independent review
+
+The initial separate agent audit checked Lemma 3 and Theorems 1--2 at
+SHA256 `39b35a2b94c5cc6de6ba12f0a8174111f9aa55f2b62fd059d666fcc102538efb`,
+committed in `d3bf131`. That mathematical text is unchanged in this
+revision; its audit reasoning is preserved below. The added Theorem 4
+was written by the literature agent and independently reviewed by the
+parent agent. The parent checked the primary cycle-basis statement,
+the coordinate lift and the series-class argument, and verified the
+unchanged earlier proof against that commit. This is a separate internal
+review of the new inference, not a new claim of external review.
+
+## Added Theorem 4: cycle spaces and series classes
+
+Benchetrit--Sebő [Theorem 2.2](https://arxiv.org/pdf/1509.05586)
+was checked in the primary paper. Its hypotheses are 2-connectivity
+and nonbipartiteness; its totally odd circuit basis consists of odd
+cycles having pairwise odd edge intersections. Bilinearity gives
+`x.y=p(x)p(y)` for every pair of cycle-space vectors. Since `H-e` is
+connected and bipartite, the ends of `e` lie in the same shore. Hence
+every cycle through `e` is odd and every cycle avoiding it is even,
+so `p(x)=x_e` also holds for arbitrary cycle vectors by linearity.
+
+Contraction is checked at the level actually claimed. Deleting the
+coordinate of `e` bijects the two cycle spaces: an even-degree edge set
+after contraction lifts with equal degree parities at `u,v`, and adding
+`e` precisely when both are odd supplies its unique even-degree lift.
+Edge identities are retained; parallel edges are not simplified away.
+Thus `x'.y'=x.y+x_e y_e`. This proves both directions of the stated
+self-orthogonality equivalence, using the exact Lemma 2.3 for the reverse
+skewed-theta exclusion. It also proves bipartiteness of the quotient by
+applying the identity to one cycle twice. The two cycles in an all-odd
+theta would have odd intersection, so that exclusion follows as well.
+
+The strongest new combinatorial step is the series-class criterion.
+For an edge `f=ab` of a connected bridgeless loopless multigraph, every
+bridge of `F-f` separates `a,b`; otherwise it would still be a bridge
+in `F`. Conversely, an edge used by every `a,b` path is such a bridge.
+Every cycle containing that bridge must use `f`, which verifies both
+directions of the series relation. The bridge blocks form a chain.
+Inside each block two edge-disjoint paths join its entry and exit,
+or both paths are empty if those vertices coincide. The resulting two
+simple `a,b` paths intersect in exactly the bridges, so adding `f`
+gives two cycles whose common edges are exactly its series class.
+This proves necessity of even class size. Sufficiency follows because
+every cycle, and therefore every cycle intersection, is a union of
+whole series classes. Coordinate identities between remaining edges
+are preserved by the cycle-space bijection; no additional series
+classes merge after contracting `e`. This establishes the precise
+single-odd-class conclusion, including when the class of `e` was a
+singleton and disappears in the quotient.
+
+No unresolved gap was found in Theorem 4. These operations concern the
+target cycle space only. They do not preserve the two original scheme
+roots separately or split an arbitrary quotient branch set, and the
+theorem expressly does not claim that missing rooted-scheme lift. No
+finite enumeration is a premise of the equivalences.
 
 ## Exact signed-graph input
 

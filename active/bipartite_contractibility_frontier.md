@@ -183,6 +183,80 @@ required arbitrary-scheme lift. This is a complete-classification attempt,
 with arbitrary target order and degree, within the broader hereditary
 `M'` programme. Its proof and comparative significance remain unestablished.
 
+### Contracting the edge meeting all odd cycles
+
+**Written structural theorem with a separate internal audit:** for a
+2-connected nonbipartite simple target `H` with `H-e` bipartite, having
+no skewed theta is equivalent to self-orthogonality of the binary cycle
+space of `H/e`. Equivalently, all graphic-matroid series classes of `H`
+have even size except the class containing `e`. Here two edges are in
+the same series class when every cycle contains both or neither.
+The [full proof, Theorem 4](../results/triangle_free_contractibility_odd_cycle_edge.md#cycle-spaces-and-series-classes)
+uses the checked odd-cycle basis theorem and an explicit edge-Menger
+argument for series classes. Thus `H/e` is bipartite and has no theta
+whose three paths are odd; it is simple when `H` is triangle-free.
+
+**Recorded route nonclosure, not a counterexample.** This target
+contraction decreases target order by one, but merges two prescribed
+roots. Even if an `H/e`-scheme is constructed by contracting the
+`uv` scheme path, an arbitrary rooted `H/e` model does not provide a
+partition of the inverse image of the branch set at the contracted vertex
+into disjoint connected sets containing the original roots `u,v`, adjacent to each
+other and to their respective original neighbour branch sets. That
+partition is the first unsupported inference. The required repair is
+an existential construction of a reduced model admitting this split,
+with all other branch sets retaining their disjoint ownership. A
+decrease in target order alone supplies neither the preserved roots
+nor this lift.
+
+Likewise, a proposed description by even subdivisions and Whitney
+switches across 2-separations would still need a scheme-level
+composition theorem. A switch exchanges the two boundary vertices
+in one target piece. An original nonroot of one boundary colour may
+lie on paths from both pieces; switching only one piece can destroy
+the common-target-endpoint condition at that actual host vertex.
+The [explicit six-cycle example](../barriers/scheme_articulation_colour_fibre.md#a-whitney-switch-cannot-just-relabel-one-sides-path-incidences)
+refutes this incidence-preserving relabelling rule even though both
+targets are contractible. Relabelling the piece is therefore not a
+valid general scheme transformation.
+The proved series-class description is a cycle-matroid statement;
+its classes need not be consecutive paths through degree-two vertices.
+It supplies no invariance of rooted contractibility under Whitney
+switches. The required decomposition with an ownership-preserving
+scheme lift remains open. Cao's construction procedure is not an input;
+Benchetrit--Sebő [4, Appendix A.2] explicitly identifies its failure.
+
+### A failed local rule for gluing at a common root
+
+**Barrier/counterexample to an intermediate claim:** even for a bipartite
+block, one cannot require its common-root branch set to contain the entire
+host colour class of that root. The
+[explicit nine-vertex cycle scheme](../barriers/scheme_articulation_colour_fibre.md)
+has an ordinary fully rooted model, but putting both nonroots of the
+attachment colour in its root bag forces the two neighbours of another
+root into that bag, eliminating required contacts. Both examples have
+[separate internal checks](../barriers/scheme_articulation_colour_fibre_audit.md)
+at the recorded exact revision.
+
+The refuted inference was to solve a bipartite block locally while
+absorbing every occurrence of its attachment colour into the shared root,
+then leave the rest of the scheme unaffected. Its first failure is this
+additional colour-class containment, which full rooted contractibility
+does not supply. This does not refute closure under attaching bipartite
+blocks or the classification candidate. A valid gluing proof must instead
+coordinate ownership of shared-colour nonroots across the blocks, or
+give a different global reduction.
+
+**Computer-assisted finite diagnostics:** the
+[retained classification screen and mixed-cycle tests](experiments/bipartite_contractibility/README.md#classification-falsification)
+found no counterexample to the candidate in the stated finite searches.
+The canonical two-copy test does not certify arbitrary schemes. More
+specifically, all 64 tested schemes of a five-cycle and a four-cycle
+sharing one root have checked rooted models, while no independent set
+of their nonroots satisfies the current reduction's rank inequality.
+These examples identify a positive case beyond that sufficient reduction;
+they do not prove even this fixed target contractible in arbitrary hosts.
+
 The [T44 frontier](hc7_k44_closure_frontier.md#42-singleton-blocker-and-its-contraction-trace)
 now also records why a broader local rooted completion fails even when
 separator roots may expand. Its explicit planar boundary example cannot
@@ -256,3 +330,7 @@ partitioning, and metrical deformations via flows*, Journal of the ACM
 [3] S. Norin and A. Totschnig, *Every graph with no `K_7^vee`-minor is
 6-colorable*, [primary preprint](https://arxiv.org/html/2507.03244v1),
 Theorems 4 and 6, Conjecture 21.
+
+[4] Y. Benchetrit and A. Sebő, *Ear-decompositions and the complexity
+of the matching polytope*, [primary preprint](https://arxiv.org/pdf/1509.05586),
+Theorem 2.2, Lemma 2.3 and Appendix A.2.
