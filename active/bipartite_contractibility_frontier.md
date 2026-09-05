@@ -27,6 +27,11 @@ ownership obligation. Completing only the literal residues would not
 prove T44. These are conditional routes, not consequences of bipartite
 contractibility.
 
+The current construction effort uses the narrower
+[critical-host hypotheses](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
+needed for Conjecture 21. Its full boundary-colouring data and the missing
+ownership-preserving reduction are recorded there.
+
 ## Completed universal theorem
 
 **Written proof with two separate internal audits.** For every finite simple

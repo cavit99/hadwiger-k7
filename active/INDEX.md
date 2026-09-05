@@ -32,8 +32,11 @@ to intermediate claims remain with their designated conditional routes.
   the independent flow-minor proof, the restrictions on further applications,
   and the preserved earlier results.
 
-## Preserved conditional routes
+## Conditional routes
 
+- [Critical-host construction for Conjecture 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
+  combine proper-minor six-colourings with arbitrary `K_{4,4}` branch sets.
+  The global construction remains open.
 - [T44](hc7_k44_closure_frontier.md): every seven-connected graph with a
   `K_{4,4}` minor has a `K_7^-` minor. This remains open and would prove
   Norin--Totschnig Conjecture 21, not `HC_7`.

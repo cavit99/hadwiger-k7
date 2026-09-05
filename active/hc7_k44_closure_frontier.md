@@ -657,10 +657,13 @@ This is a certificate, not a peel.  It does not imply that:
 The first safe trace statement is weaker.  If an exact cut meets at least
 seven model bags, at most one complementary component can be disjoint from
 the entire model; otherwise two such components are anticomplete near-full
-model bridges and force the target.  A bag avoiding the cut lies in one
-component, and opposite-shore avoiding bags lie in the same component.  A
-component containing pieces of model bags is not an exterior bridge, so no
-six-trace bound follows.
+model bridges and force the target. This statement does not apply to the
+cut through an internal edge `uv` of one displayed bag: its seven vertices
+include two from that bag, so it meets **at most six** bags. At least two
+bags avoid it, though they need not belong to opposite shores. A bag
+avoiding the cut lies in one component; any opposite-shore avoiding pair
+lies in the same component because a model edge joins it. A component
+containing pieces of model bags is not an exterior bridge.
 
 The desired lift is therefore a **model-trace rotation theorem**: for an
 internal branch-tree edge and its exact seven-cut, either two genuinely
@@ -676,10 +679,19 @@ paths around one split branch edge force the target in isolation.  These
 graphs are not seven-connected.  Their role is to require global attachment
 data in the literal exchange and nonliteral rotation steps.
 
-## 7. Critical-host refinement, not a target pivot
+## 7. The critical-host global construction
 
-If universal T44 stalls, the same model can be studied inside the exact
-critical host needed for Conjecture 21.  The audited
+**Conjectural target.** Every finite graph `G` with `chi(G)=7`, all proper
+minors six-colourable, and a `K_{4,4}` minor contains a `K_7^-` minor.
+Together with Kawarabayashi--Toft's theorem this would prove Conjecture 21.
+It uses more hypotheses than T44, so a proof would not establish T44.
+The deductions and route nonclosures below have a
+[separate internal audit](hc7_k44_critical_global_construction_audit.md).
+No global construction is proved.
+
+### 7.1 What the safe contractions preserve
+
+Assume here that `G` has no `K_7^-` minor. The audited
 [critical safe-contraction theorem](../results/hc7_k44_critical_safe_contraction.md)
 gives a first sharp distinction in the literal case.  If the specified
 literal core has exterior order at least seven, its exterior contains a safe
@@ -695,24 +707,119 @@ and its contraction is again seven-connected and target-free. The proof
 uses Dirac's inequality to exclude the singleton-atom outcome after one
 original contraction. It supplies no third safe edge or closed inductive
 class. Both quotients are six-colourable proper minors, so criticality
-itself is lost. The useful datum attached to the first edge is a six-colouring of
-`G-uv` in which `u,v` have the same colour and are joined in each of the five
-corresponding bichromatic subgraphs.  These five paths are not asserted to
-be mutually disjoint or otherwise compatible.
+itself is lost. Decreasing host order alone does not justify applying the
+critical-host target to either quotient.
 
-More generally, for an internal branch edge `uv`, there are two structural
-responses:
+### 7.2 The colouring data exist in both connectivity cases
 
-1. `G/uv` is not seven-connected, returning an exact two-shore seven-cut;
-2. `G/uv` is seven-connected and six-colourable, equivalently `G-uv` has a
-   six-colouring in which `u,v` receive the same colour.
+**Written deduction.** For every edge `uv` of a seven-contraction-critical
+graph, `chi(G/uv)=chi(G-uv)=6`. Proper-minor colourability gives the upper
+bounds; a five-colouring of either graph would six-colour `G` by expanding
+the contraction if necessary and assigning `u` one fresh colour.
+Every six-colouring of `G-uv` identifies `u,v`, since otherwise it colours
+`G`. If their common colour is `alpha`, they lie in the same
+`alpha,beta` component for every other colour `beta`: swapping only the
+component containing `u` would otherwise separate their colours.
 
-A synchronization lemma combining that equal-colour response, the four
-opposite-shore branch contacts and Kempe chains could rotate the model when
-separator ownership alone cannot.  This is a conditional proof strategy;
-T44 remains a live completion target. Its priority may be reconsidered when
-a different route has a stronger justified prospect; an independently
-verified counterexample is required to declare T44 false.
+These assertions hold after every Kempe change, using the resulting
+endpoint colour. They do not preserve particular paths or identify
+colours with foreign branch-set labels. The colourings exist whether or
+not `G/uv` remains seven-connected. In the latter case the contraction/cut
+lemma additionally supplies an exact seven-cut through `u,v`. Criticality
+alone does not assert that this latter case occurs for every internal edge.
+
+### 7.3 The full boundary-colouring obligation
+
+Assume additionally that `G` has no `K_7^-` minor, and that an exact
+seven-cut `Z` contains an internal edge `uv` of a displayed model bag.
+The [three-component exclusion](../results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+gives exactly two components `C_1,C_2` of `G-Z`. Put
+`J_i=G[C_i union Z]`. Let `Pi_i` be all equality partitions of `Z`
+induced by proper six-colourings of `J_i`, and let `Q_i` be the analogous
+family for `J_i-uv`. Then
+
+```text
+Pi_1 intersect Pi_2 = empty;
+Q_1 intersect Q_2 is nonempty, and every member identifies u,v;
+each Pi_i contains a partition with at most five blocks.
+```
+
+**Proof.** Matching partitions allow permutation of colour names and
+gluing, proving the first assertion. A six-colouring of `G-uv` gives the
+second; any common partition separating `u,v` would colour `G`.
+Seven-connectivity makes both components full to `Z`. The audited
+[minimum-degree bound](../results/hc7_k7minus_degree7_rooted_helper_closure.md)
+is eight, so neither component is a singleton. Contracting the opposite
+component to an apex therefore strictly decreases order. Its six-colouring
+uses at most five colours on `Z`, proving the last assertion. This pulls
+the colouring back only on the untouched closed side, not through the
+contracted component. QED
+
+**Recorded negative finding / route nonclosure.** These entire families,
+not just one colouring or five bichromatic paths, are available for a
+global construction. The missing inference is that their incompatibility
+forces a `K_7^-` model or a reduction retaining the colouring obstruction
+and the displayed model's ownership. Section 5's cut meets at most six
+bags; the earlier seven-bag trace lemma cannot provide that reduction.
+Contracting a side preserves neither its full extension family nor
+seven-chromaticity without an additional proof. No closed induction class,
+decreasing rerouting parameter, or lift proving this inference is known.
+
+The bipartite theorem supplies a model only after a valid scheme has been
+constructed. With repeated contact colours, paths in common bichromatic
+components can pass through other prescribed roots or intersect paths for
+independent demands. Separately retaining an additional Kempe path does
+not retain its adjacency after the returned bags occupy its interior.
+A valid application must construct all these paths compatibly, or prove
+that the extra contact is unnecessary. This does not refute such a
+construction using the full critical-host hypotheses.
+
+### 7.4 Comparison with the companion conjecture
+
+Norin--Totschnig's [Conjecture 19](https://arxiv.org/html/2507.03244v1#S5)
+replaces `K_7^-` by `K_7^=`, obtained by deleting two independent edges.
+Proving that conjecture would give a direct comparison with their main
+theorem: the same universal six-colouring conclusion, excluding the other
+seven-vertex, nineteen-edge target. This is an assessment of a proposed
+theorem's reach, not an achievement or a consequence of Conjecture 21's
+partial results.
+
+**Written construction.** A `K_{4,4}` model and a disjoint connected set
+`D` adjacent to at least six of its eight bags force `K_7^=`. Choose two
+disjoint cross pairs covering every bag missed by `D`, pairing each missed
+bag with a contacted bag. This is possible with at most two misses; for
+opposite misses `A_1,B_1`, use `A_1 B_2,A_2 B_1`. Merge each chosen pair
+using a model edge. The six resulting core bags all meet `D` and miss at
+most the two independent pairs between the remaining pure shore bags.
+Adding `D` gives the target. Every lift uses only the fixed disjoint bags.
+Consequently the entire literal `K_{4,4}` case holds in a seven-connected
+graph: an exterior component meets at least seven core vertices; if there
+is no exterior, the graph has order eight and is `K_8`.
+
+The arbitrary-model case remains open: seven distinct attachment vertices
+need not lie in six different bags. A near-clique exchange also fails to
+give a terminating proof. Starting with six pairwise adjacent bags and
+a seventh missing two contacts, absorption from another bag may fill both
+while making the donor remainder miss those same two foreign bags. The
+result is another `K_7^vee` model. Neither the deficient bag's order nor
+total model order is proved to decrease. Thus the companion conjecture
+has a shorter literal construction, but no completed global alternative.
+
+**Literature application and route nonclosure.** Johnson--Thomas,
+[*Generating Internally Four-Connected Graphs*](https://thomas.math.gatech.edu/PAP/gener.pdf),
+Theorem (2.3), gives a valid first extension of `K_7^vee` in a
+seven-connected host. Its ladder/biwheel exceptions and degree-three
+conditions are vacuous for this starting minor. The other special
+extensions require degree-three vertices; an addition fills a missing
+edge. Thus a target-free host must contain a vertex split. This need not
+be terminal or permit iteration. The first unsupported inference is
+reapplying (2.3) without verifying internal four-connectivity of the
+returned split, which the authors explicitly do not guarantee (p. 9).
+Their definition uses edge partitions: a degree-three vertex in a triangle
+already violates it, even when every three-vertex cut isolates one vertex.
+A continuation must handle these separations inside the full host; the
+stronger theorem announced in their Section 3 is not proved in that paper.
+This does not refute a suitable continuation or either global conjecture.
 
 ## 8. Stop rules
 
@@ -733,6 +840,7 @@ verified counterexample is required to declare T44 false.
   record their exact limited scopes.
 - A T44 counterexample must be checked independently for seven-connectivity,
   a `K_{4,4}` model and absence of every `K_7^-` minor model.
-- Conjecture 21 is not declared proved until the literal completion, the
-  nonliteral lift, the application of the Kawarabayashi--Toft theorem and
-  two independent internal final audits are all present.
+- A T44-based proof of Conjecture 21 needs the literal completion,
+  nonliteral lift and Kawarabayashi--Toft application. A different complete
+  critical-host construction may bypass T44. Either claimed proof needs
+  two independent internal final audits; neither is currently available.

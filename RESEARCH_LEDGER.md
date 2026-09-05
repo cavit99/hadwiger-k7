@@ -19,9 +19,11 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    `K_7^-`-minor-free graph is six-colourable. The stronger structural target
    T44 would imply it: every seven-connected graph containing a `K_{4,4}`
    minor contains a `K_7^-` minor. Neither would by itself prove `HC_7`.
-3. **Immediate structural laboratory:** reassess global rooted-minor
-   constructions after the two classification refutations. No replacement
-   sufficiency conjecture is promoted. The
+3. **Immediate structural laboratory:** the
+   [critical-host global construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
+   for Conjecture 21, combining proper-minor six-colourings with arbitrary
+   `K_{4,4}` branch sets. No global construction or closed induction is
+   proved. The
    [technical frontier](active/bipartite_contractibility_frontier.md)
    records the completed bipartite theorem, exact counterexamples and
    application limits; the [T44 frontier](active/hc7_k44_closure_frontier.md)
@@ -130,7 +132,14 @@ well-founded parameter. Closing only the literal residues would not prove
 T44. The [root-expansion result and local barrier](barriers/hc7_k44_expanding_separator_roots.md)
 close only the stated fixed-model subcase; global model reselection remains
 possible. The critical-host refinement has two safe contractions, with no
-closed unbounded induction.
+closed unbounded induction. The latest independent audit confirms that
+equal-endpoint colourings exist in both connectivity cases, while a cut
+through an internal branch edge meets at most six model bags. The full
+boundary-colouring families are now explicit; converting their
+incompatibility into a terminal model remains unproved. The companion
+Conjecture 19 has a short complete literal-core construction, but its
+arbitrary-model exchange also lacks a decreasing parameter. Neither
+conjecture has been settled by this work.
 
 The [exceptional-centre programme](active/hc7_k7minus_seven_exceptional_frontier.md)
 retains `n_8>=27+tau`, where `tau=sum_(i>=10)(i-9)n_i`; an upper bound
