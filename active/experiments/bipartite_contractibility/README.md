@@ -17,6 +17,20 @@ explicit rooted model. Checks at `n=3,4,5` passed: respectively `36,56,80`
 vertices and `81,144,225` edges. The unbounded claim rests on the written
 proof, not these evaluations.
 
+## Flow-prefix counterexamples
+
+```text
+uv run python3 active/experiments/bipartite_contractibility/flow_prefix_counterexample.py
+```
+
+This checks and prints the two explicit certificates in the
+[audited flow-prefix construction finding](../../../barriers/bipartite_flow_prefix_construction.md):
+a seven-vertex ordinary scheme giving a disconnected proposed branch set,
+and an eight-vertex coloured scheme giving overlapping proposed branches.
+Both records include a valid rooted `C_4` model. They refute intermediate
+construction claims, not the intended main flow-minor theorem. Both records
+return `verified: true`.
+
 ## Exploratory rooted-model search
 
 ```text

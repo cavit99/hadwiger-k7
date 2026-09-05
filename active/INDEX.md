@@ -10,20 +10,28 @@
 > Every finite simple bipartite graph `H` is contractible: every `H`-scheme
 > contains an `H`-minor rooted at its designated vertices.
 
-**Status:** conjectural target. The first diagnostic is `K_{3,3}`;
-its completion alone would not settle the universal target or `HC_7`.
+**Status:** conjectural target. Universal weak contractibility is an
+equivalent route by the root-forcing theorem below.
 
 Selected audited inputs:
 
 - [Bipartite graphs with maximum degree two on one specified side are
   contractible](../results/even_subdivision_contractibility.md), including
   all even subdivisions of loopless multigraphs.
+- [Degree at most three on one side forces a minor retaining every root
+  on the opposite side](../results/degree_three_bipartite_weak_contractibility.md).
+- [Universal weak bipartite contractibility is equivalent to universal
+  rooted contractibility](../results/bipartite_weak_to_rooted.md).
 
 Immediate barriers:
 
 - [A coloured `K_{n,n}`-scheme can require expansion of both entire root
   shores](../barriers/bipartite_scheme_singleton_shore_barrier.md), for every
   `n>=3`; the examples have explicit rooted models.
+- [The published bipartite-flow prefix construction can produce disconnected
+  or overlapping branch sets](../barriers/bipartite_flow_prefix_construction.md);
+  this refutes intermediate proof claims under the intended intersection
+  convention, not the main minor-existence assertion.
 
 The [technical frontier](bipartite_contractibility_frontier.md) records
 exact failures of proposed extensions and the necessary search scope.

@@ -55,6 +55,7 @@ links their proofs, audits and exact scopes.
 
 | Result | Status and scope |
 |---|---|
+| [Degree three on one bipartition side](results/degree_three_bipartite_weak_contractibility.md) | Computation-free proof with a [separate GREEN internal audit](results/degree_three_bipartite_weak_contractibility_audit.md). Every scheme has a minor retaining all prescribed roots on the opposite side. This includes weak contractibility of every `K_{3,n}`; full rooted contractibility is not asserted. |
 | [Even subdivisions are contractible](results/even_subdivision_contractibility.md) | Computation-free written proof with [two separate internal audits](results/even_subdivision_contractibility_audit.md). More generally, every bipartite graph with degree at most two on one specified side is contractible. This extends the `K_{2,n}` theorem to a family of unbounded treewidth. |
 | [Every `K_{2,n}` is contractible](results/k2n_contractibility_via_matroid_packing.md) | Computation-free written proof with a [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md) and a [four-page manuscript](paper/k2n-contractibility/main.pdf).  It answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
 | [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
@@ -76,9 +77,10 @@ or `HC_7`.
 
 ## Manuscripts
 
-The primary manuscript candidate is the four-page DRAFT
+The primary manuscript candidate is the short DRAFT
 [Even subdivisions are contractible](paper/even-subdivision-contractibility/main.tex).
-It gives the complete computation-free proof of the broader theorem above.
+It gives the computation-free even-subdivision proof and the degree-three
+extension with one shore's roots preserved.
 
 The earlier four-page DRAFT
 [Every `K_{2,n}` is contractible](paper/k2n-contractibility/main.pdf), with

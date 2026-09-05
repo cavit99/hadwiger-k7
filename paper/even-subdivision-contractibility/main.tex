@@ -11,7 +11,7 @@
 \newtheorem{corollary}[theorem]{Corollary}
 
 \title[Even subdivisions are contractible]{Even subdivisions are contractible}
-\date{Draft, 4 September 2026}
+\date{Draft, 5 September 2026}
 
 \begin{document}
 \begin{abstract}
@@ -22,11 +22,15 @@ positive even length produces a contractible graph. The proof projects a
 coloured scheme onto a family of graphic matroids. Each edge label occurs
 in at most two projections, and a component count verifies the matroid
 union inequalities needed for simultaneous disjoint spanning trees.
+If the degrees in that part are at most three, we instead obtain a minor
+retaining all prescribed roots in the opposite part. Its proof combines
+the same packing argument with a strictly decreasing root-relocation
+induction. In particular, every $K_{3,n}$ is weakly contractible.
 \end{abstract}
 \maketitle
 
-\noindent\textit{Status.} Draft with internal proof and manuscript
-audits; not externally peer reviewed.
+\noindent\textit{Status.} Draft based on internally audited proofs;
+not externally peer reviewed.
 
 \section{Statement}
 
@@ -193,6 +197,64 @@ preserved. Restoring the isolated roots completes the proof.
 The singleton assertion for the $B$ branch sets applies only in the
 reduced coloured scheme. \hfill$\square$
 
+\section{Degree three with one part of the roots retained}
+
+An $H$-minor model is \emph{rooted on $A\subseteq V(H)$} if $a\in C_a$
+for every $a\in A$; roots outside $A$ need not be retained. A target is
+\emph{weakly contractible} if every scheme of it contains an unrooted
+minor of it.
+
+\begin{lemma}\label{lem:memberships}
+Let $H$ be bipartite with bipartition $(A,B)$. If every nonroot of a
+$B$ colour in a coloured $H$-scheme belongs to exactly two scheme paths,
+then the underlying graph contains a fully rooted $H$ minor.
+\end{lemma}
+
+\begin{proof}
+Repeat the projections in Section~3, but include a label $x$ in $M_a$
+only when $x$ actually occurs on $P_{ab}$. Each label then belongs to
+exactly two projections, even when its target colour has degree greater
+than two. For fixed $a$, the projected paths partition the labels, cover
+$f^{-1}(a)$, and all contain $a$. Every other vertex belongs to at least
+two projected paths. Lemma~\ref{lem:packing} therefore supplies disjoint
+spanning-tree label sets. The same branch sets $C_a=f^{-1}(a)\cup T_a$,
+$C_b=\{b\}$ give the rooted model: the last edge of each $P_{ab}$ still
+witnesses its required contact. Isolated roots are singletons.
+\end{proof}
+
+\begin{theorem}\label{thm:degree-three}
+Let $H$ be bipartite with bipartition $(A,B)$ and $d_H(b)\leq3$ for every
+$b\in B$. Every $H$-scheme contains an $H$ minor rooted on $A$.
+Consequently $H$ is weakly contractible.
+\end{theorem}
+
+\begin{proof}
+Delete isolated target roots from the host and restore them as their
+original singleton branch sets at the end. They lie on no scheme path;
+an edgeless target is immediate. For the remaining fixed target, use
+strong induction on host order. During this argument regard $H$ as an
+abstract target with an injective current root map $v\mapsto r_v$.
+
+The reduction in~\cite[Lemma 3.3]{KPR} gives a root-preserving minor $K$
+supporting a coloured scheme, with $|V(K)|\leq|V(G)|$. Suppose a nonroot
+$x$ of colour $b\in B$ lies on every path incident with $b$. Move the
+root of $b$ to $x$ and replace each $P_{ba}$ by its suffix from $x$ to
+$r_a$. No other path contains $x$, since its colour is $b$. The new paths
+avoid the old root $r_b$, contain no other current root internally, and
+inherit the scheme intersection condition from the old paths. They form
+an $H$-scheme in $K-r_b$, whose order is strictly smaller than $|V(G)|$.
+The induction hypothesis gives a model rooted on $A$, since none of those
+roots moved. Its lift to $G$ retains every original $A$ root.
+
+Otherwise, every nonroot of a $B$ colour has exactly two memberships.
+Indeed each has at least two; a degree-one colour admits none, a
+degree-two colour would have full support, and three memberships at a
+degree-three colour would also give the preceding case. Apply
+Lemma~\ref{lem:memberships} and lift the resulting model to $G$.
+Every recursive step strictly lowers host order, and every lift preserves
+the required $A$ roots.
+\end{proof}
+
 \section{Scope}
 
 The contractible targets supplied by Corollary~\ref{cor:even} have
@@ -202,10 +264,43 @@ that $K_t$ itself is contractible. Theorem~\ref{thm:main} also covers
 theta graphs whose three paths all have even length; it does not cover
 the case of three odd-length paths. It therefore addresses only part of
 the bipartite-theta question in~\cite[Section 8, Question 3]{KPR}.
-Neither all bipartite graphs nor $K_{3,3}$ are covered. The theorem makes
-no conclusion about Hadwiger's conjecture or its $K_7^-$ analogue.
+Theorem~\ref{thm:degree-three} gives a $K_{3,n}$ minor retaining its three
+prescribed roots in the part of order three. For $K_{3,3}$ it does not
+guarantee retention of all six roots; its unrooted special case is already
+\cite[Theorem 5.3]{KPR}. Neither theorem establishes full bipartite
+contractibility or a Hadwiger conjecture.
+
+Biswal, Lee and Rao~\cite[Lemma 3.2]{BLR} state a broader unrooted claim
+for integral unit flows with bipartite demand of minimum degree two.
+We use their intended preprint-v2 intersection convention: paths with
+four distinct demand endpoints are vertex-disjoint when the independent
+intersection count is zero. The published definition appears to reverse
+``intersect'' and ``are vertex disjoint''; the following issue concerns
+the intended convention, independently of that apparent typo.
+
+Their supplied prefix construction fails even for the coloured
+$K_{2,2}$-scheme on eight distinct vertices with paths
+\[
+ P_{ij}=a_i\,b'_j\,a'_i\,b_j\qquad(i,j\in\{0,1\}).
+\]
+Each left prefix stops strictly before its first vertex on a path
+incident with another left root, giving $C_{a_i}=\{a_i\}$ and
+$C_{b_j}=\{b_j,b'_j,a'_0,a'_1\}$. The right sets overlap. This refutes
+the construction, including the containment assertion of their
+Lemma~3.6, not the intended existence statement of Lemma~3.2. The graph
+does have the rooted model $D_{a_i}=\{a_i\}$,
+$D_{b_j}=\{b_j,b'_j,a'_j\}$. Our proofs do not use that broader claim;
+publication priority remains to be assessed in light of it.
 
 \begin{thebibliography}{9}
+\bibitem{BLR}
+P.~Biswal, J.~R.~Lee and S.~Rao,
+\emph{Eigenvalue bounds, spectral partitioning, and metrical deformations
+via flows}, J.~ACM \textbf{57}(3) (2010), Article 13.
+\href{https://doi.org/10.1145/1706591.1706593}{doi:10.1145/1706591.1706593}.
+Preprint version used for the intersection convention:
+\href{https://arxiv.org/abs/0808.0148v2}{arXiv:0808.0148v2}.
+
 \bibitem{Edmonds}
 J.~Edmonds, \emph{Submodular functions, matroids, and certain polyhedra},
 in Combinatorial Structures and Their Applications, Gordon and Breach,

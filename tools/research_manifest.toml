@@ -21265,7 +21265,7 @@ status = "active-target"
 source = "active/bipartite_contractibility_frontier.md"
 source_heading = "Target"
 active = true
-expected_source_sha256 = "d2d536c067524667d3db952cab717353256763763339210d9ae95cc82606745c"
+expected_source_sha256 = "84656f9d44074059290a00341f37891a8eb54e46fdabf74ed208148597c56a50"
 scope = "every finite simple bipartite target and every scheme rooted at its designated vertices"
 label_fidelity = "all target roots remain in their prescribed pairwise disjoint connected branch sets"
 hypotheses = ["H is finite simple and bipartite", "G contains an H-scheme with the designated roots"]
@@ -21299,3 +21299,72 @@ source = "graph_schemes.target.bipartite_contractibility"
 target = "graph_schemes.barrier.singleton_shore"
 kind = "guarded_by"
 note = "A universal construction cannot assume that an entire root shore remains singleton in the original coloured scheme."
+
+[[claims]]
+id = "graph_schemes.degree_three_one_shore_rooted"
+title = "Degree three on one bipartition side forces a minor preserving the opposite roots"
+kind = "theorem"
+status = "audited-green"
+source = "results/degree_three_bipartite_weak_contractibility.md"
+source_heading = "Theorem 3"
+active = true
+audit = "results/degree_three_bipartite_weak_contractibility_audit.md"
+expected_source_sha256 = "72e52cdcb734bd5620e4c3d6cc3bdd29d7861563bc9ba2507ff39d1c6c2d609d"
+scope = "all finite bipartite targets with degree at most three on a specified side B and every scheme of each target"
+conclusions = ["an H-minor retaining every prescribed A root", "weak contractibility of every K3,n and every bipartite subcubic target", "a computation-free induction with strictly decreasing host order"]
+does_not_prove = ["preservation of original B roots", "full rooted K3,3 or universal bipartite contractibility", "T44, Conjecture 21 or HC7", "publication priority or Norin--Totschnig significance"]
+keywords = ["bipartite scheme", "degree three", "partially rooted minor", "weak contractibility", "root relocation", "matroid packing"]
+
+[[claims]]
+id = "graph_schemes.universal_weak_to_rooted"
+title = "Universal weak and rooted bipartite contractibility are equivalent"
+kind = "theorem"
+status = "audited-green"
+source = "results/bipartite_weak_to_rooted.md"
+source_heading = "Corollary 2"
+active = true
+audit = "results/bipartite_weak_to_rooted_audit.md"
+expected_source_sha256 = "358782d3cf3ddc9d06cec3babd2824266c6eade2a11811797b85e488a75fefd8"
+scope = "an exact polynomial root-forcing construction for arbitrary finite rooted-minor instances, and its universal bipartite scheme consequence"
+conclusions = ["universal weak bipartite contractibility is equivalent to universal rooted bipartite contractibility", "weak contractibility of all connected bipartite minimum-degree-two targets suffices"]
+does_not_prove = ["either universal contractibility statement", "a per-target implication from weak to rooted contractibility", "preservation of a bound of three on target degrees", "verification of the external BLR flow-minor claim"]
+keywords = ["rooted minor", "weak contractibility", "bipartite graph", "pendant four-cycles", "universal quantifier"]
+
+[[claims]]
+id = "graph_schemes.barrier.flow_prefix_construction"
+title = "The bipartite-flow prefix construction can fail connectivity and disjointness"
+kind = "barrier"
+status = "barrier"
+source = "barriers/bipartite_flow_prefix_construction.md"
+source_heading = "Seven-vertex counterexample to Lemma 3.5"
+active = true
+audit = "barriers/bipartite_flow_prefix_construction_audit.md"
+expected_source_sha256 = "f87c9ff55d22528296858876ba724ea9fc1f0a3138427f49d6226a5e6205f4ee"
+scope = "two explicit C4 flows under the intended arXiv-v2 independent-intersection convention; published proof and reversed display wording distinguished"
+conclusions = ["a seven-vertex example refutes prefix Lemma 3.5", "an eight-vertex coloured example refutes prefix Lemma 3.6", "both hosts have explicitly checked rooted C4 models"]
+does_not_prove = ["a counterexample to the intended BLR main minor statement", "failure of universal bipartite contractibility", "failure of spectral or separator conclusions"]
+keywords = ["bipartite flow", "prefix construction", "BLR", "disconnected branch set", "overlapping branch sets"]
+
+[[relations]]
+source = "graph_schemes.target.bipartite_contractibility"
+target = "graph_schemes.degree_three_one_shore_rooted"
+kind = "uses"
+note = "Direct terminal result with every opposite-shore root retained; its unpreserved roots remain an explicit obstacle to the full target."
+
+[[relations]]
+source = "graph_schemes.target.bipartite_contractibility"
+target = "graph_schemes.universal_weak_to_rooted"
+kind = "uses"
+note = "A universal unrooted theorem would suffice via the proved enlarged-target root-forcing construction."
+
+[[relations]]
+source = "graph_schemes.target.bipartite_contractibility"
+target = "graph_schemes.barrier.flow_prefix_construction"
+kind = "guarded_by"
+note = "The supplied external prefix proof cannot establish the universal flow premise under its intended convention."
+
+[[relations]]
+source = "graph_schemes.degree_three_one_shore_rooted"
+target = "graph_schemes.even_subdivision_contractible"
+kind = "uses"
+note = "Uses the audited arbitrary-family packing lemma with labels determined by actual path membership; it does not assume degree-two target colours."

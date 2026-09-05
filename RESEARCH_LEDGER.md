@@ -15,10 +15,12 @@ This file is the sole authority for current research status.
    now the conjecture that every finite bipartite graph is contractible.
    It seeks the independent-theorem alternative; no implication to `HC_7`
    is claimed. Conjecture 21 and T44 remain preserved conditional routes.
-3. **Immediate structural laboratory:** arbitrary coloured `K_{3,3}` schemes
-   test the extension from labels occurring in two projections to labels
-   occurring in three. A proof must permit more flexible branch sets or
-   replace the packing construction. Detailed claims belong in the
+3. **Immediate structural laboratory:** root relocation now proves the
+   degree-three case with one shore's roots preserved. Universal weak
+   contractibility would suffice by the proved root-forcing reduction;
+   a nonroot on three of four incident paths is the first multiplicity
+   beyond the new argument. The full rooted `K_{3,3}` problem also remains
+   open. Detailed claims belong in the
    [technical frontier](active/bipartite_contractibility_frontier.md).
 
 ## Current frontier
@@ -32,13 +34,30 @@ status is preserved in the
 [4 September snapshot](archive/RESEARCH_LEDGER_2026-09-04_T44.md) and its
 [technical frontier](active/hc7_k44_closure_frontier.md).
 
-The direct audited input is the
+The original direct audited input is the
 [even-subdivision theorem](results/even_subdivision_contractibility.md).
 It proves contractibility when one bipartition class has maximum degree
 two, using simultaneous graphic-matroid packing with partially shared
 labels. The full target remains open: the same rank argument does not
 handle labels participating in three projections. Restricted packing
 failure is not failure of the required rooted minor.
+
+**New written theorem with a separate GREEN internal audit:** if a bipartite
+target has degree at most three on one specified side `B`, every scheme
+contains its minor with every original root on the opposite side `A`
+retained. The [proof](results/degree_three_bipartite_weak_contractibility.md)
+uses a valid root-relocation step that strictly decreases host order, then
+actual-membership matroid packing. This proves weak contractibility of
+every `K_{3,n}` and every bipartite target with the stated degree bound.
+The original `B` roots may move. It is an unbounded terminal theorem,
+but does not prove full bipartite contractibility or meet the requested
+Norin--Totschnig significance standard on the evidence available.
+
+The separate [root-forcing theorem](results/bipartite_weak_to_rooted.md)
+shows universal weak bipartite contractibility would imply the full rooted
+target. Its enlarged targets can have high degree, so the degree-three
+theorem does not supply that premise. This gives a justified global route
+with roots free to move, not a new conclusion about the universal target.
 
 **Audited barrier, not a counterexample to the target:** for every `n>=3`,
 [an explicit coloured `K_{n,n}`-scheme](barriers/bipartite_scheme_singleton_shore_barrier.md)
@@ -50,6 +69,17 @@ returned models with their ownership preserved; its exact quantifier gap
 is recorded in the technical frontier. These findings eliminate proposed
 proof mechanisms and do not meet the requested positive-theorem standard.
 
+**Material literature finding:** Biswal--Lee--Rao's Lemma 3.2 claims a
+broader universal bipartite flow-minor theorem under its intended
+independent-intersection convention. The [audited counterexamples](barriers/bipartite_flow_prefix_construction.md)
+refute Lemmas 3.5 and 3.6 of its prefix construction; the published proof
+was checked as well as the preprint. These are failures of intermediate
+claims, not counterexamples to the intended main statement. No repaired
+proof was found in the bounded search, and the statement is not used as a
+verified input here. Independent special-demand constructions in later
+literature remain available. The new theorem's proof is independent, but
+priority remains qualified by the already published broader assertion.
+
 A finite search of only the shortest one-copy-per-colour schemes would
 miss the question: Kündgen--Pelsmajer--Ramamurthi already prove all
 bipartite graphs `M'`-contractible. Exact source statements, research
@@ -57,6 +87,15 @@ findings and the completion standard are in the designated frontier.
 
 ## Durable recent results
 
+- **Written proof with a separate GREEN internal audit, 5 September 2026:**
+  [degree at most three on one bipartition side](results/degree_three_bipartite_weak_contractibility.md)
+  forces a minor preserving all prescribed roots on the opposite side.
+  Root relocation and a strict induction on host order extend the packing
+  method to an unbounded target class, including all `K_{3,n}`. This does
+  not preserve every original root and is not a completion of the primary
+  target. The [universal weak-to-rooted equivalence](results/bipartite_weak_to_rooted.md)
+  is a separate audited reduction, whose high-degree enlarged targets
+  prevent an immediate application of the degree-three theorem.
 - **Written proof with two separate internal audits, 4 September 2026:**
   every bipartite graph with degree at most two on one specified side is
   contractible. The [proof](results/even_subdivision_contractibility.md),
@@ -112,9 +151,11 @@ guide to these proofs and the direct proved inputs to T44.
 
 ## Manuscript status
 
-The new minimal [even-subdivision DRAFT](paper/even-subdivision-contractibility/main.tex)
-is the primary manuscript candidate. It presents the full computation-free
-proof in four pages. The earlier four-page
+The minimal [even-subdivision DRAFT](paper/even-subdivision-contractibility/main.tex)
+is the primary manuscript candidate. Its five pages contain the full
+computation-free proof and the degree-three extension preserving one
+shore's roots, with a revised exact-hash internal manuscript audit.
+The earlier four-page
 [`K_{2,n}` DRAFT](paper/k2n-contractibility/main.pdf) is preserved. It is computation-free, has a
 [GREEN internal audit](paper/k2n-contractibility/main_audit.md) and is
 independent of the Hadwiger programme.
