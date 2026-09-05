@@ -4,192 +4,120 @@ Do not change this file unless the user explicitly requests it.
 
 ## Workflow
 
-Use short-lived branches with a clear purpose:
+Work toward the user's stated completion criterion. Local lemmas, finite
+checks, failed approaches and commits are checkpoints, not substitutes for
+the requested theorem. Continue through plausible repairs and alternative
+global constructions; report unresolved gaps and comparative significance
+honestly. Do not force a preferred route when the evidence favours another.
 
-```text
-main
-  ├── feature/<short-descriptor>
-  ├── fix/<short-descriptor>
-  ├── experiment/<short-descriptor>
-  └── refactor/<short-descriptor>
-```
+For research decisions, consult `RESEARCH_LEDGER.md`, `active/INDEX.md` and
+the designated technical frontier. Reuse that orientation until relevant
+state changes; revisit history only for a disputed dependency or claim.
+For a narrow edit, read the affected material and its dependencies. Load
+skills and additional sources only when they serve the task.
 
-Keep commits focused, preserve a clear mathematical narrative, and merge or
-retire branches promptly.
+Continue authorized local research, reversible edits and relevant checks
+without repeated permission requests or a routine stop after the first
+result. Existing user authorization governs commits, merging and publishing;
+this file does not authorize contacting others or using Clawpatch.
 
-Code and verification scripts should be simple, deterministic, efficient,
-and no larger than the mathematical task requires.
+Use short-lived `feature/`, `fix/`, `experiment/` or `refactor/` branches.
+Keep commits focused and merge or retire branches promptly. Keep code and
+verification scripts simple, deterministic and proportionate to the task.
 
-## Documentation roles
+## Research records
 
-- `README.md` is the stable public overview.
-- `RESEARCH_LEDGER.md` is the sole authoritative current research status.
-  Keep a short three-level frontier at its top: the exhaustive global
-  obligation, the principal conditional refinement, and the immediate
-  structural laboratory. Put detailed live residues in their technical
-  frontiers and move superseded ledger snapshots to `archive/`; never append
-  new live updates beneath a frozen historical section.
-- `active/INDEX.md` is a navigation map only. It names exactly one primary
-  target, its genuinely direct proved inputs and nearest barriers, followed
-  by concise links to conditional refinements or current laboratories. A
-  dependency is direct only when the target invokes it without passing
-  through another listed theorem. Do not put transitive closure, frozen
-  programmes, proof history, or residual case analysis in this file.
-- `results/` contains written proofs and adjacent audit notes.
-- `barriers/` contains counterexamples to intermediate claims.
-- `archive/` preserves superseded work; do not delete it.
+- `RESEARCH_LEDGER.md` is the sole current status authority. Its opening
+  frontier has three levels: global obligation, conditional refinement and
+  immediate laboratory. Put detailed residues in designated technical
+  frontiers; archive superseded snapshots without appending live updates to
+  frozen history. Do not create competing ledgers or proof spines.
+- `active/INDEX.md` is navigation: exactly one primary target, direct proved
+  inputs and immediate barriers, then concise links to conditional routes.
+  A direct input is invoked without another listed theorem in between.
+  Keep history, transitive dependencies and case analysis out of this map.
+  Every live direction must be reachable through it; classify unlisted
+  files before treating them as current proof work.
+- Develop drafts and scripts in `active/`; promote written proofs with
+  adjacent audits to `results/`; put explicit counterexamples in `barriers/`.
+  Preserve superseded work and provenance in `archive/`, not by deletion.
+- Keep `README.md` stable: change it for scope, navigation, durable results,
+  claim policy or repository structure, not the latest local lemma.
 
-Do not add new status ledgers or competing proof spines.  Update the existing
-authoritative document instead.
+Update the ledger and designated technical frontier when the mathematical
+position changes. Update the active index only when its targets or direct
+dependencies change. In `tools/research_manifest.toml`, `active = true`
+must match the primary target and direct inputs/barriers in that index;
+other claims and richer relations may remain inactive for retrieval.
+When the primary target changes, update the ledger frontier, active index,
+manifest flags and direct target relations together in one commit.
 
-When the mathematical frontier changes, update `RESEARCH_LEDGER.md` and
-whichever technical frontier or coverage files `active/INDEX.md` currently
-designates.  Update `active/INDEX.md` only when the set of live targets or
-their immediate dependencies changes.
+Generated context packs aid retrieval; they do not establish status or a
+complete dependency closure. Consult the authoritative records before using
+them. Discovery connections require separate review and promotion to typed
+manifest relations before becoming proof dependencies.
 
-Keep the README stable. Change it only when the project scope, navigation,
-durable headline result, claim policy, or repository structure changes. Do
-not name a fast-moving immediate lemma there.
+## Mathematical claims and audits
 
-Every live proof direction must be reachable from `active/INDEX.md`, either
-directly or through one of the technical files it designates.  An unlisted
-file in `active/` is not thereby false or obsolete, but it must not be treated
-as part of the current proof spine until it is classified.
+Label substantive claims with their applicable statuses: written proof;
+separate internal audit; computer-assisted finite result; conjectural target;
+recorded negative finding / route nonclosure (not a counterexample); or
+barrier/counterexample to an intermediate claim.
 
-The generated research index is a retrieval and integrity aid, not a status
-authority. Its dependency closure is curated rather than presumed complete.
-In `tools/research_manifest.toml`, use `active = true` only for the sole
-primary target and the small set of direct proved inputs and immediate
-barriers displayed in `active/INDEX.md`; historical relevance alone is not
-active status. The manifest may retain non-active claims and richer
-relations for retrieval. When the primary target changes, update the ledger
-frontier block, `active/INDEX.md`, manifest active flags and direct target
-relations atomically in one focused commit. The integrity check enforces
-this navigation-to-manifest alignment.
-Run `uv run python3 tools/research_index.py check` and
+- State exact hypotheses, quantifiers and conclusion before each proof.
+  For reductions, verify all retained roots, colouring constraints and
+  branch-set ownership, closure of the induction class, a genuinely
+  decreasing well-founded parameter and a valid lift.
+- Inspect primary statements and hypotheses before applying literature;
+  cite the exact theorem or lemma where practical. Distinguish external
+  input from new deductions and substantiate novelty or significance claims.
+- Independent audits should attack the strongest inference, not merely
+  exposition. Internal audits are not external peer review. Promotion to
+  `results/` requires an adjacent `_audit.md`; unaudited drafts and legacy
+  files remain explicitly unaudited regardless of directory placement.
+- New or materially updated audits must identify the exact revision or
+  content hash, verdict and unresolved assumptions or gaps. Bring older
+  audits to this standard before reusing their results in current proofs.
+  If audited mathematics changes, update or replace its audit and rerun
+  recorded hash checks; never silently alter the audited source.
+- Record material failed mechanisms in the designated frontier: hypotheses,
+  attempted inference, first unsupported step, what remains possible and
+  the smallest repair needed. Summarize in the ledger only when standing
+  changes; archive when frozen. A barrier requires an explicit construction
+  refuting a stated claim, with its unaffected scope made clear.
+
+Use established graph-theoretic terminology and define necessary shorthand.
+Distinguish subgraphs from explicit minor models; specify boundary colouring
+partitions, preserved branch sets and exact chromatic conditions instead of
+unexplained metaphors or labels. Retain historical filenames and hashes,
+using descriptive link text.
+
+## Computation and verification
+
+Run Python through `uv run python3`; dependencies belong in `pyproject.toml`
+and `uv.lock` and are managed with `uv add` / `uv sync`. If the cache is
+unwritable, prefix commands with `UV_CACHE_DIR=/tmp/hadwiger-k7-uv-cache`.
+Use plain Python only for an explicitly documented dependency-free script
+whose standard-library-only trust boundary is being checked.
+
+Finite checks establish only their stated finite conclusions unless a
+written reduction proves more. State bounds prominently, retain generating
+scripts and checkable certificates where practical, and test new encodings
+against known positive and negative examples before promotion. Retain an
+independent checker when feasible. Document invocation and expected output;
+keep bulk data out of Git unless essential and reasonably sized.
+
+For changes to research records, proofs, instructions or index tooling, run
+`uv run python3 tools/research_index.py check` and
 `uv run python3 tools/research_index.py report`, then inspect the regenerated
-target context pack.  Agents must still consult `RESEARCH_LEDGER.md`,
-`active/INDEX.md`, and the designated technical frontier before relying on a
-generated context pack.  Discovery connections remain non-authoritative
-until separately reviewed and promoted as typed manifest relations.
+target context pack. Run affected mathematical verifiers when their claims,
+inputs or implementations change. Once the relevant checks pass, repeat or
+broaden them only for a new change, failure or unresolved concern.
 
-## Mathematical language
+## Commit hygiene
 
-Prefer established graph-theoretic terminology and self-contained theorem
-statements.  Introduce project-specific shorthand only for a precisely
-defined recurring object, define it at first use, and give its
-standard-language meaning.
-
-In public-facing documents and new theorem statements, avoid metaphorical
-or overloaded terms such as *cell, decoder, carrier, handoff, lock, duty,
-seam, gate, row,* and *packet* when the mathematics can instead be stated as
-*case, explicit minor-model construction, branch set or connected subgraph,
-separation, colouring constraint, boundary or separator, matching edge,* or
-*connected subgraph adjacent to every boundary vertex*.
-
-In particular:
-
-- say “an explicit `K_t`-minor model in `G`,” not “a literal `K_t`,” unless
-  the conclusion is genuinely a `K_t` subgraph;
-- describe a colouring pattern by the boundary partition or by the set of
-  matching edges with monochromatic endpoints, rather than calling it a
-  “state” without definition;
-- describe a reduction as an order-`k` separation preserving specified
-  branch sets and colouring data, rather than an unexplained “handoff”; and
-- expand “strongly contraction-critical” as the exact chromatic statement
-  being used.
-
-Historical filenames may retain old shorthand to preserve citations and
-audit hashes.  Use descriptive link text so readers do not need that
-shorthand.
-
-## Claim discipline
-
-Label every substantive claim with one or more applicable statuses:
-
-- written proof;
-- separate internal audit;
-- computer-assisted finite result;
-- conjectural target; or
-- recorded negative finding / route nonclosure (not a counterexample); or
-- barrier/counterexample to an intermediate claim.
-
-Never describe an internal agent audit as external peer review.  Never infer
-an unbounded theorem from finite enumeration without a written reduction.
-
-For established external input, cite a primary source and the exact theorem
-or lemma number whenever practical.  Distinguish the cited statement from
-new deductions made in this repository; do not call a result “known” without
-a traceable source.
-
-## Proof and audit integrity
-
-- State every theorem with explicit hypotheses and conclusion before its
-  proof.
-- When a result is promoted to `results/`, keep its audit beside it using the
-  `_audit.md` suffix.  Mark active drafts explicitly when they are unaudited.
-- Directory placement does not establish claim status.  In particular, a
-  legacy file in `results/` without an adjacent audit remains unaudited and
-  must not be cited as a promoted result.
-- Every new or materially updated audit must identify the exact theorem
-  revision or content hash it checked, state a verdict, and list any
-  unresolved assumptions or gaps.  Before an older audited result enters
-  the current proof spine, bring its audit up to this standard.
-- Do not silently alter an audited theorem.  If its mathematical content
-  changes, update or replace the audit and rerun any recorded hash check.
-- Separate theorem-level reasoning from computational evidence.  A finite
-  verifier should output or identify a checkable certificate whenever
-  practical.
-- Record counterexamples to proposed lemmas in `barriers/`, including the
-  exact statement they refute and the scope they do not refute.
-- Record material negative findings even when they are not counterexamples:
-  failed proof mechanisms, incompatible quantifier choices, and first
-  unsupported inferences which another agent might otherwise repeat.  Put a
-  live finding in the designated technical frontier, including its exact
-  hypotheses, attempted inference, failure point, what it does not refute,
-  and the smallest repair lemma; summarize it in `RESEARCH_LEDGER.md` only
-  when it changes the current understanding.
-  Archive it when the route is frozen.  Do not classify it as a barrier
-  unless an explicit construction actually refutes a stated claim.
-- Preserve historical work in `archive/`; use Git history and archive notes
-  rather than deleting or rewriting provenance.
-
-The lifecycle is: develop drafts and live scripts in `active/`, promote a
-written theorem to `results/` with its required audit, move refuted claims to
-`barriers/`, and archive superseded work.
-
-## Computational work
-
-- Python dependencies are declared in `pyproject.toml` and locked by `uv.lock`;
-  use `uv add`, `uv sync`, and `uv run`. NetworkX 3.6.1 is pinned there.
-- Run repository Python tools and verifiers through the project environment by
-  default: `uv run python3 <script> ...`.  This includes research-index checks,
-  reports and verifier sweeps.  Do not begin with plain `python3` or treat its
-  missing-import error as a failed/stopped verifier run; rerun under `uv`
-  before reporting.  Use plain `python3` only when a script is explicitly
-  documented as dependency-free and the standard-library-only trust boundary
-  is intentionally being checked.
-- If the sandbox cannot write the default uv cache, use
-  `UV_CACHE_DIR=/tmp/hadwiger-k7-uv-cache uv run python3 <script> ...`.
-- Prefer deterministic, dependency-light scripts with documented invocation
-  and expected output.
-- Keep generated bulk data out of Git unless it is essential for independent
-  verification and reasonably sized.
-- Do not encode an unbounded mathematical assumption as a finite search
-  bound without stating that limitation prominently.
-- Before promoting a computer-assisted claim, test the encoding against
-  known positive and negative examples and retain an independent checker
-  when feasible.
-
-## Repository hygiene
-
-Do not add research files at the repository root beyond the documented
-top-level files.  Keep audits beside their theorem, retain generating scripts
-for finite claims, avoid device-specific absolute paths, and do not sweep
-unclassified local files into commits.
-
-Before committing, inspect the staged path list, run link and formatting
-checks on changed documentation, and verify that `.codex/`, local runtimes,
-generated caches, credentials, personal data, device-specific paths,
-non-redistributable third-party material, and unrelated untracked files are
-not staged.
+Before committing, inspect staged paths and check changed documentation's
+links and formatting. Do not add root-level research files beyond the
+documented structure. Exclude `.codex/`, runtimes, caches, credentials,
+personal data, device-specific paths, non-redistributable third-party
+material and unrelated or unclassified files from commits.
