@@ -29,6 +29,29 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    application limits; the [T44 frontier](active/hc7_k44_closure_frontier.md)
    retains the conditional HC7-related constructions.
 
+## Current work plan
+
+Concentrate on the critical-host target above: construct a `K_7^-` minor
+from an arbitrary `K_{4,4}` model using the full proper-minor colouring
+constraints. Seek a direct construction or a reduction closed under its
+stated hypotheses, with a decreasing parameter and a valid lift. The
+literal-core cases and bounded contraction sequences remain inputs.
+
+Local lemmas and failed mechanisms are research checkpoints. Continue
+through repair attempts and independent attacks on the strongest inference;
+reassess the route when its obstruction warrants a different global
+construction. Neither a commit nor an audited partial result completes
+the campaign. Conjecture 21 would meet this campaign's concrete theorem
+target; the larger HC7 or comparable-theorem objective still requires its
+own explicit assessment.
+
+Resume from this ledger and the relevant technical frontier. Revisit the
+completed historical review only for a disputed dependency or changed
+claim. Load other proofs and sources as needed, and update documentation
+when the mathematical position or work plan changes. The bipartite paper's
+pending originality and final reviews remain scheduled after this proof
+effort unless they supply a needed input.
+
 ## Current frontier and completed campaign
 
 **Written proof; two separate GREEN internal audits.** Every scheme of
