@@ -1,9 +1,9 @@
 # Universal bipartite contractibility and the remaining global target
 
-**Status:** the universal bipartite theorem has a written proof and a
-separate GREEN internal audit. `HC_7` remains conjectural and is the sole
-remaining primary target. This technical file records the theorem's exact
-application boundary; authoritative current status belongs only to the
+**Status:** the universal bipartite theorem has a written proof and two
+separate GREEN internal audits. The later triangle-free and hereditary
+canonical sufficiency proposals are refuted. `HC_7` remains the sole
+primary target. Authoritative current status belongs only to the
 [research ledger](../RESEARCH_LEDGER.md).
 
 ## Remaining global target
@@ -11,13 +11,11 @@ application boundary; authoritative current status belongs only to the
 **Conjectural target — Hadwiger's conjecture for `t=7`.** Every finite
 graph with no `K_7` minor is six-colourable.
 
-The user's acceptable alternative is an independent theorem of reach and
-significance comparable to Norin--Totschnig. The completed theorem below
-is universal in its target class and resolves the bipartite scheme
-question. Its publication priority and comparative significance require
-separate assessment. No implication from it to `HC_7`, T44 or
-Norin--Totschnig Conjecture 21 is established. No previously proved
-theorem is being invoked here as a direct sufficient reduction of `HC_7`.
+The acceptable alternative is an independent theorem of reach and
+significance comparable to Norin--Totschnig. That benchmark remains unmet
+by the demonstrated contribution. No proved result is invoked as a direct
+sufficient reduction of `HC_7`; in particular, no implication from
+bipartite contractibility to `HC_7`, T44 or Conjecture 21 is established.
 
 The preserved principal conditional refinement is
 [T44](hc7_k44_closure_frontier.md): every seven-connected graph containing
@@ -31,7 +29,7 @@ contractibility.
 
 ## Completed universal theorem
 
-**Written proof with a separate internal audit.** For every finite simple
+**Written proof with two separate internal audits.** For every finite simple
 bipartite graph `H`, every `H`-scheme in a finite host `G` contains an
 `H`-minor rooted at all prescribed vertices. There is no bound on either
 graph's order, degrees, path lengths or intersection multiplicities.
@@ -75,11 +73,8 @@ decreases. Induction and composition of the fixed minor models complete
 the proof. Reversing the shore orientation between steps permits expansion
 on both original shores.
 
-This construction handles arbitrary label multiplicity. It neither
-assumes a singleton root shore nor relies on an arbitrary returned model
-being liftable through a previously deleted vertex. The proof is
-computation-free; the exact source and its audit, rather than finite
-tests, establish the theorem.
+This computation-free reduction handles arbitrary label multiplicity and
+preserves fixed disjoint preimages before invoking induction.
 
 ## Exact application boundary
 
@@ -122,14 +117,13 @@ proof does not need root relocation or pendant root-forcing attachments.
 
 ## Refuted classification proposals and global construction boundary
 
-**Barrier/counterexample with a written proof and separate internal audit:**
+**Barrier/counterexample; written proof and separate GREEN internal audit:**
 for every odd `ell>=5`, the graph `H_ell` obtained by joining `C_ell` and
 `K_{3,4}` at one vertex in the three-vertex shore is noncontractible.
 The [explicit construction and proofs](../barriers/triangle_free_bipartite_attachment_counterexample.md)
 give an `H_ell`-scheme with all paths of length three and no rooted target
 minor. The host has `ell+8` nonroots; arbitrary rooted branch sets would
-require at least `ell+9`. This is a written unbounded obstruction, not
-an inference from the finite solver search that found its first example.
+require at least `ell+9`. The proof is unbounded and computation-free.
 
 Every `H_ell` is triangle-free, has no skewed theta, and becomes bipartite
 after deleting any edge of its unique odd cycle. Thus the former positive
@@ -147,15 +141,11 @@ also false. Actual membership choices obtained by splitting a colour's
 clone among incident paths can obstruct rooted minors even when every
 canonical subgraph test passes.
 
-The first false inference in the proposed classification was upgrading
-necessary target structure to arbitrary-scheme sufficiency. In the
-broader proposal it was upgrading the canonical schemes of all subgraphs
-to all schemes. These are now explicit target counterexamples, stronger
-than the earlier failures of particular local gluing rules. Any repaired
-classification must exclude `H_ell` and account for actual memberships;
-merely choosing a different split or a more favourable model cannot
-prove either refuted statement. No replacement sufficiency conjecture
-is promoted at this checkpoint.
+The first false inferences were upgrading necessary target structure to
+arbitrary-scheme sufficiency, and upgrading canonical schemes of all
+subgraphs to all schemes. A repair must exclude `H_ell` and account for
+actual path memberships. A different split or model cannot prove either
+refuted statement. No replacement sufficiency conjecture is promoted.
 
 The prior [technical campaign](../archive/bipartite_contractibility_frontier_2026-09-05_before_attachment_obstruction.md)
 is frozen. Its independent-set rank reduction, pseudoforest host theorem,
@@ -169,37 +159,27 @@ obstruction does not change its roots, colouring or lift obligations.
 The [earlier attachment and Whitney-transport counterexamples](../barriers/scheme_articulation_colour_fibre.md)
 remain preserved. The new construction goes further: both target blocks
 are contractible, yet their union at a prescribed common root need not be.
-The finite [diagnostics](experiments/bipartite_contractibility/README.md)
-remain finite observations. The
+The [finite diagnostics](experiments/bipartite_contractibility/README.md)
+retain their stated scopes. The
 [new independent branch-set checker](../barriers/triangle_free_bipartite_attachment_verify.py)
 checks the smallest 24-vertex example against positive and negative
 calibrations; its output is not used in the unbounded proof.
-
-The requested HC7 or comparable-theorem objective remains unmet. The
-universal bipartite theorem is unaffected, and the T44 frontier retains
-its full-host and nonliteral ownership requirements. Neither this
-classification refutation nor the earlier positive milestones supplies
-a sufficient HC7 reduction.
 
 ## Literature scope and significance
 
 **Written scope deductions; qualified independent assessment.** The
 theorem answers Kündgen--Pelsmajer--Ramamurthi [1, Section 8, Questions 2
 and 3] affirmatively, and rules out the bipartite counterexample sought in
-Question 4. This is a terminal universal result, not another restriction
-on a hypothetical counterexample. Its broad rooted-minor conclusion and
-independent proof of the intended flow theorem make it a credible
-candidate for the requested independent-theorem alternative.
+Question 4. Its scope is universal for bipartite targets, and it gives an
+independent proof of the intended BLR flow assertion.
 
 The [separate internal assessment](../results/bipartite_contractibility_via_matroid_reduction_audit.md#mathematical-reach-and-the-norin--totschnig-comparison)
-does not certify equal significance to Norin--Totschnig. Their Theorems 4
-and 6 concern six-colouring under a near-clique-minor exclusion and the
-supporting extremal bound. The present theorem has a different scope;
-its relation to that colouring programme remains unproved. BLR's earlier
-broad existence assertion also requires explicit qualification of any
-priority claim. Specialist assessment of originality and comparative
-significance remains outstanding; an internal audit is not external
-peer review.
+does not establish equal significance to Norin--Totschnig. Their Theorems
+4 and 6 give a six-colouring theorem and a supporting extremal bound.
+The bipartite theorem has no proved implication to that programme, and
+BLR's earlier broad assertion limits a first-result claim. The ledger
+records the outstanding [paper work](../RESEARCH_LEDGER.md#manuscript-status).
+The current assessment falls short of the requested significance benchmark.
 
 ## Preserved barriers and frozen attempts
 
@@ -228,9 +208,6 @@ obligations after the universal theorem. The
 also preserve the failure of a natural degree-preserving gadget lift and
 an explicit obstruction to upgrading an arbitrary five-connected `K_6`
 model to `K_7` minus a matching. Neither is used by the universal proof.
-The
-[retained experiments](experiments/bipartite_contractibility/README.md)
-are diagnostics with explicitly finite scope.
 
 ## References
 
@@ -247,7 +224,3 @@ partitioning, and metrical deformations via flows*, Journal of the ACM
 [3] S. Norin and A. Totschnig, *Every graph with no `K_7^vee`-minor is
 6-colorable*, [primary preprint](https://arxiv.org/html/2507.03244v1),
 Theorems 4 and 6, Conjecture 21.
-
-[4] Y. Benchetrit and A. Sebő, *Ear-decompositions and the complexity
-of the matching polytope*, [primary preprint](https://arxiv.org/pdf/1509.05586),
-Theorem 2.2, Lemma 2.3 and Appendix A.2.

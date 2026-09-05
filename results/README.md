@@ -9,6 +9,10 @@ Directory placement does not establish a claim.  The entries below have
 written proofs and adjacent hash-pinned internal audits.  An internal audit
 is not external peer review.
 
+The universal bipartite theorem subsumes the earlier bipartite target
+families below. Each precursor retains its original proof and exact scope;
+the limitations of an earlier argument are not current open bipartite cases.
+
 ## Standalone and reusable theorems
 
 | Theorem | Proof and audit | Exact scope |
@@ -16,10 +20,16 @@ is not external peer review.
 | Every finite bipartite graph is contractible | [Proof](bipartite_contractibility_via_matroid_reduction.md) · [GREEN audit](bipartite_contractibility_via_matroid_reduction_audit.md) · [second GREEN audit](bipartite_contractibility_via_matroid_reduction_second_audit.md) · [manuscript](../paper/bipartite-contractibility/main.pdf) | Every scheme yields the fully prescribed rooted minor. No degree, order or path-length bound. The intended BLR flow assertion follows independently; priority and comparative significance remain qualified. |
 | Degree at most three on one bipartition side forces a minor retaining all prescribed roots on the opposite side | [Proof](degree_three_bipartite_weak_contractibility.md) · [GREEN audit](degree_three_bipartite_weak_contractibility_audit.md) | Includes weak contractibility of every `K_{3,n}` and every bipartite subcubic target; does not retain all roots on the degree-bounded side. |
 | Universal weak and rooted bipartite contractibility are equivalent | [Proof](bipartite_weak_to_rooted.md) · [GREEN audit](bipartite_weak_to_rooted_audit.md) | An exact polynomial reduction with pendant four-cycles forces prescribed roots in an enlarged target. Neither universal statement is proved by the reduction. |
-| Every bipartite graph with degree at most two on one specified side is contractible | [Proof](even_subdivision_contractibility.md) · [GREEN cold audit](even_subdivision_contractibility_audit.md) · [separate GREEN proof and qualified novelty audit](even_subdivision_contractibility_literature_audit.md) | Includes every replacement of the edges of an arbitrary loopless multigraph by paths of positive even length. Extends `K_{2,n}` to a family of unbounded treewidth; does not settle `K_{3,3}`, all bipartite theta graphs, or a Hadwiger conjecture. |
-| Every complete bipartite graph `K_{2,n}` is contractible | [Proof](k2n_contractibility_via_matroid_packing.md) · [GREEN audit](k2n_contractibility_via_matroid_packing_audit.md) · [four-page DRAFT](../paper/k2n-contractibility/main.pdf) | Computation-free; answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2.  It does not settle `K_{3,3}`. |
+| Every bipartite graph with degree at most two on one specified side is contractible | [Proof](even_subdivision_contractibility.md) · [GREEN cold audit](even_subdivision_contractibility_audit.md) · [separate GREEN proof and qualified novelty audit](even_subdivision_contractibility_literature_audit.md) | Includes every replacement of the edges of an arbitrary loopless multigraph by paths of positive even length, a family of unbounded treewidth. |
+| Every complete bipartite graph `K_{2,n}` is contractible | [Proof](k2n_contractibility_via_matroid_packing.md) · [GREEN audit](k2n_contractibility_via_matroid_packing_audit.md) · [four-page DRAFT](../paper/k2n-contractibility/main.pdf) | Computation-free; answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
 | Four literal root edges complete five-root partial routing | [Proof](llru_question61_via_km_property_star.md) · [GREEN audit](llru_question61_via_km_property_star_audit.md) · [second GREEN cold audit](llru_question61_via_km_property_star_second_cold_audit.md) | Answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated eight-connectivity threshold `k>=11`.  It is an application of Kriesell--Mohr property `(*)`. |
 | Every three-connected graph has a rooted `K_4^-` minor at any four prescribed roots | [Proof](rooted_k4minus_four_roots.md) · [GREEN audit](rooted_k4minus_four_roots_audit.md) | Elementary unbounded proof.  The missing quotient edge is not prescribed, and the model need not span. |
+
+The later [odd-cycle attachment counterexamples](../barriers/triangle_free_bipartite_attachment_counterexample.md),
+with a [separate GREEN audit](../barriers/triangle_free_bipartite_attachment_counterexample_audit.md),
+refute triangle-free sufficiency and hereditary canonical-test sufficiency.
+Every subgraph of each target passes the canonical two-copy test, while an
+explicit scheme has no fully rooted minor. The bipartite theorem is unaffected.
 
 ## Structural results for the `K_7^-` critical host
 

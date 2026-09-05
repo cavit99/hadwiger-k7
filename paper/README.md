@@ -4,6 +4,10 @@ This directory contains manuscripts, not the full collection of theorem
 notes.  Selected completed proofs are mapped separately in
 [`../results/README.md`](../results/README.md).
 
+The bipartite paper is the current manuscript candidate. Its pending
+literature positioning and final review are tracked only in the
+[research ledger](../RESEARCH_LEDGER.md#manuscript-status).
+
 | Manuscript | Status | Exact scope |
 |---|---|---|
 | [Bipartite graphs are contractible](bipartite-contractibility/main.pdf) ([source](bipartite-contractibility/main.tex)) | Five-page **DRAFT**; [internal manuscript audit](bipartite-contractibility/main_audit.md), based on the [separately audited theorem](../results/bipartite_contractibility_via_matroid_reduction.md) | Every finite bipartite target, every scheme, and every prescribed root. Self-contained normalization and a matroid-union component reduction give a computation-free proof. The intended BLR flow assertion follows; no Hadwiger consequence or priority claim is made. |
