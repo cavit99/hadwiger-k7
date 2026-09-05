@@ -467,6 +467,43 @@ If either contact set has order three, it contains the other.  In particular,
 the endpoint neighbour counts in `T` now total at most three, rather than
 five.
 
+The [root-expansion proof and barrier](../barriers/hc7_k44_expanding_separator_roots.md)
+now closes `C_a=C_p` of order three when the remote component has at least
+two vertices, using a rooted `K_4^-` in that component with four boundary
+roots. The same note gives an explicit planar obstruction to the broader
+boundary-only allocation claim even when every separator-root bag may
+expand. Both claims have a [separate GREEN internal audit](../barriers/hc7_k44_expanding_separator_roots_audit.md).
+Thus the new
+bipartite theorem does not remove the need to use the other component and
+reselect its rooted `K_5` model. The full singleton residue remains open.
+
+**Recorded negative finding / route nonclosure (5 September 2026).**
+One attempted global reselection chooses disjoint paths from `T` to a set
+`W` of endpoint neighbours, and separately chooses disjoint paths from
+`W` to the literal core `S`, then concatenates at `W`. Even granting both
+linkages, the first unsupported inference is that the concatenations are
+pairwise disjoint: a path ending at `w` in the first linkage may meet a
+path starting at `w'!=w` in the second. Such intersections also prevent
+the concatenated family from automatically being a scheme for the
+disjoint target paths through `W`. The new matroid contraction theorem
+assumes a valid scheme before it selects its disjoint allocation; it does
+not supply this missing compatibility. What remains possible is a joint
+choice and rerouting of the two linkages with a proved common-endpoint
+intersection condition, preserving all `T` roots and the distinct core
+branch assignments. If that construction recurses, a decreasing parameter
+and a lift retaining those assignments are separate obligations. This
+finding refutes no ambient theorem or existential compatible choice.
+
+A further ordinary-minor input does not supply the same missing rooted
+placement. Lo's [Theorem 1.3](https://arxiv.org/html/2603.27973v1) states
+that every four-connected non-planar graph of minimum degree at least
+five has a `K_6^-` minor. In particular, deleting a vertex from a
+seven-connected graph leaves a six-connected graph to which that
+statement applies. The conclusion prescribes no roots: it does not make
+the deleted vertex adjacent to six distinct returned bags. This primary
+statement has been inspected, but is not a rooted substitute or an input
+to the root-expansion proof above.
+
 There is also an exact target-producing split condition.  If the remote
 component contains disjoint nonempty connected sets `U,V`, adjacent to
 `a,p`, respectively, and the two endpoint-derived bags together miss at

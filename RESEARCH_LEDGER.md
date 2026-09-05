@@ -18,11 +18,13 @@ research status.
    Conjecture 21 remain preserved conditional routes. T44 asserts that
    every seven-connected graph with a `K_{4,4}` minor has a `K_7^-` minor;
    it would prove Conjecture 21, not `HC_7`. Neither is proved.
-3. **Immediate structural laboratory:** establish the exact application
-   boundary of the new universal rooted theorem. It proves the intended
-   bipartite-flow minor assertion independently, but currently supplies
-   no sufficient reduction of `HC_7`. The precise hypotheses and limits
-   are in the [designated technical frontier](active/bipartite_contractibility_frontier.md).
+3. **Immediate structural laboratory:** pursue the general contractibility
+   classification using the new independent-set reduction, while testing
+   full-host completion of the T44 singleton residue. The universal
+   bipartite theorem proves the intended flow assertion independently,
+   but supplies no sufficient `HC_7` reduction. Exact targets, proved
+   reductions and remaining inferences are in the
+   [designated technical frontier](active/bipartite_contractibility_frontier.md).
 
 ## Current frontier and completed campaign
 
@@ -93,6 +95,46 @@ split-and-lift ownership conflict. Frozen local attempts are no longer
 live proof obligations for the completed bipartite theorem.
 
 ## Durable results and preserved proofs
+
+**Continuation after the universal theorem.** The
+[general scheme reduction](results/general_scheme_independent_set_reduction.md)
+has a written proof and separate internal audit. It contracts simultaneously
+from independent sets of actual host nonroots for arbitrary targets,
+preserving every root and decreasing host order. A minimum counterexample
+therefore has strict independent-neighbour expansion outside its roots.
+The same file gives a complete rooted construction for every target when
+the graph outside the prescribed roots is a pseudoforest. These are
+supporting results for the conjecture that contractibility is equivalent
+to every target subgraph's canonical two-copy scheme having its rooted
+minor. That general sufficiency direction, including full rooted `K_5`
+and `K_6`, remains open; the restricted host result is not completion.
+
+The [odd-subdivision obstruction](barriers/triangle_free_odd_subdivision_contractibility.md)
+adds an unbounded barrier to a proposed two-family classification:
+triangle-free totally odd subdivisions of `K_4` are noncontractible even
+though they contain neither of those proposed obstructions. The proof
+uses explicit positive edge weights and KPR's exact two-copy criterion.
+It leaves the stronger hereditary two-copy conjecture possible.
+
+A further [written theorem with a separate internal audit](results/triangle_free_contractibility_odd_cycle_edge.md)
+shows that every connected triangle-free contractible graph is bipartite
+or becomes bipartite after one edge deletion. The signed-minor extraction
+checks both parity and disjoint branch preimages before applying the
+primary odd-cycle packing theorem. Together with skewed-theta exclusion,
+this gives the proved necessary half of a concrete triangle-free
+classification candidate. Its sufficiency is the next positive scheme
+construction being investigated; no classification is claimed.
+
+On the HC7 route, [expanding separator roots](barriers/hc7_k44_expanding_separator_roots.md)
+closes the fixed-model case `C_a=C_p`, `|C_a|=3`, `|R|>=2` of the
+singleton residue. An explicit planar boundary graph refutes the broader
+local completion even when all separator-root bags may expand. These
+boundary conditions cannot by themselves supply the scheme needed by
+matroid contraction. The example does not realize a globally
+seven-connected target-free host; model reselection in the other open
+side remains possible and is now an explicit necessary part of this
+approach. Full singleton completion, the nonsingleton residue and the
+nonliteral lift remain open.
 
 - **Written proof with a separate internal audit, 5 September 2026:**
   [universal rooted bipartite contractibility](results/bipartite_contractibility_via_matroid_reduction.md),

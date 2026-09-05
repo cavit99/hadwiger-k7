@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "f6076886ecd6a18571faf2a1be415d8d8a751411f03fcafefde1e0418080bd85"
+expected_source_sha256 = "9d67aec8432829159b40707f565ed8e87ce8acc1c8be849e3f3e0992012348fa"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21378,7 +21378,7 @@ status = "active-target"
 source = "active/bipartite_contractibility_frontier.md"
 source_heading = "Remaining global target"
 active = true
-expected_source_sha256 = "a1a4aca94da441325bacb223fa1148f821137eb308d86dfd8e83e2e451ce33d0"
+expected_source_sha256 = "c74d825d7acc4329d81a8764ce50239a234f8a737b132bf57676c375cfbc6110"
 scope = "every finite simple graph"
 hypotheses = ["G contains no K7 minor"]
 allowed_exits = ["a proof that G is six-colourable for every such G"]
@@ -21432,3 +21432,71 @@ source = "graph_schemes.bipartite_contractible"
 target = "graph_schemes.barrier.flow_prefix_construction"
 kind = "related_to"
 note = "The intended main existence assertion is independently proved, while the two intermediate prefix claims remain refuted."
+
+[[claims]]
+id = "graph_schemes.general_independent_set_reduction"
+title = "Independent host-set reduction and pseudoforest rooted-minor construction"
+kind = "theorem"
+status = "audited-green"
+source = "results/general_scheme_independent_set_reduction.md"
+source_heading = "Lemma 1: a root-preserving decreasing reduction"
+active = false
+audit = "results/general_scheme_independent_set_reduction_audit.md"
+expected_source_sha256 = "07fa0fc58284dba6f5ab180a64e92dd86f3829fd31494b8529f00fcaf7751e9f"
+scope = "arbitrary finite simple targets; a rank condition for independent nonroot sets in properly coloured schemes, and a separate terminal theorem when deletion of all prescribed roots leaves a pseudoforest"
+label_fidelity = "all prescribed roots and fixed disjoint connected minor preimages"
+strict_parameter = "host order strictly decreases in Lemma 1"
+conclusions = ["independent host labels admit simultaneous component contraction under the stated rank inequality", "minimum counterexamples have strict independent-neighbour expansion outside their roots", "a fully rooted target minor for every scheme with a pseudoforest outside its roots"]
+does_not_prove = ["hereditary M-prime sufficiency or a full contractibility classification", "full rooted K5 or K6 contractibility", "HC7 or significance comparable to Norin--Totschnig"]
+keywords = ["graph scheme", "matroid union", "independent set", "pseudoforest", "rooted minor"]
+
+[[claims]]
+id = "graph_schemes.barrier.triangle_free_odd_subdivisions"
+title = "Triangle-free totally odd K4 subdivisions are noncontractible"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/triangle_free_odd_subdivision_contractibility.md"
+source_heading = "An unbounded family of odd-subdivision obstructions"
+active = false
+audit = "barriers/triangle_free_odd_subdivision_contractibility_audit.md"
+expected_source_sha256 = "2fbd3199943469303fbac7ca820312bed8188a98d2429290e4ab34762061bc03"
+scope = "triangle-free odd subdivisions of connected nonbipartite simple bases of minimum degree at least three with positive equal-incidence edge weights and at least one subdivided edge"
+conclusions = ["canonical two-copy schemes with no prescribed rooted target minor", "exclusion of skewed thetas and connected two-odd-cycle cacti alone does not characterize contractibility"]
+does_not_prove = ["a counterexample to universal bipartite contractibility", "failure of hereditary M-prime sufficiency", "HC7 or a full contractibility classification"]
+keywords = ["odd subdivision", "K4", "shift automorphism", "positive edge weights", "contractibility"]
+
+[[claims]]
+id = "hc7.barrier.expanding_separator_roots"
+title = "Root expansion closes the equal-contact case but not the local singleton allocation"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k44_expanding_separator_roots.md"
+source_heading = "3. A planar obstruction even when separator roots may expand"
+active = false
+audit = "barriers/hc7_k44_expanding_separator_roots_audit.md"
+expected_source_sha256 = "239cf15baa7d513c292f6b7f50d232ff432989cceaef5c1913d80121ff52e68e"
+scope = "the exact T44 singleton seven-boundary data and a fixed rooted K5 model; a local planar obstruction and a separately stated equal-three-contact sufficient case"
+conclusions = ["a K7-minus model when both fixed-model contact sets coincide and have order three and the remote component has order at least two", "local boundary inequalities do not force the completing bipartite rooted model even with unrestricted root expansion"]
+does_not_prove = ["an ambient seven-connected counterexample to T44", "full singleton completion", "nonsingleton or nonliteral closure", "HC7 or Conjecture 21"]
+keywords = ["K4,4 closure", "seven separator", "root expansion", "planar boundary", "model reselection"]
+
+[[claims]]
+id = "graph_schemes.triangle_free_odd_cycle_edge"
+title = "Connected triangle-free contractible graphs become bipartite after at most one edge deletion"
+kind = "theorem"
+status = "audited-green"
+source = "results/triangle_free_contractibility_odd_cycle_edge.md"
+source_heading = "Statements"
+active = false
+audit = "results/triangle_free_contractibility_odd_cycle_edge_audit.md"
+expected_source_sha256 = "39b35a2b94c5cc6de6ba12f0a8174111f9aa55f2b62fd059d666fcc102538efb"
+scope = "all finite connected triangle-free contractible graphs, and the stated two-connected skewed-theta and totally-odd-K4 exclusion theorem"
+conclusions = ["one edge meets every odd cycle if the graph is nonbipartite", "signed odd-K4 minor extraction preserves path parity through disjoint branch-tree medians"]
+does_not_prove = ["sufficiency of the single-edge condition or of its conjunction with skewed-theta exclusion", "a full contractibility classification", "HC7 or significance comparable to Norin--Totschnig"]
+keywords = ["triangle-free", "contractible", "odd cycle", "signed minor", "odd cycle packing"]
+
+[[relations]]
+source = "graph_schemes.triangle_free_odd_cycle_edge"
+target = "graph_schemes.barrier.triangle_free_odd_subdivisions"
+kind = "uses"
+note = "Corollary 4 excludes totally odd K4 subdivisions from every triangle-free contractible subgraph before applying the signed packing theorem."

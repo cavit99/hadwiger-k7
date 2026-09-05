@@ -120,6 +120,76 @@ now supplies full rooted conclusions for every included bipartite target,
 including `K_{3,3}`, all `K_{m,n}` and every bipartite theta graph. Its
 proof does not need root relocation or pendant root-forcing attachments.
 
+## General contractibility classification laboratory
+
+**Conjectural target:** a finite graph is contractible if and only if every
+one of its subgraphs is `M'`-contractible. Here `M'(F)` has roots `v_0`
+and one nonroot `v_1` per target vertex; for each edge `uv` it has edges
+`u_0v_1,u_1v_0,u_1v_1`. These length-three paths form its canonical
+scheme. Necessity follows from subgraph closure; sufficiency is open.
+It would address the general classification and decidability questions,
+including full rooted `K_5` and `K_6`. This is an independent-theorem
+laboratory, not an established route to `HC_7` or a new completion claim.
+
+**Written proofs with a separate internal audit:** the
+[general scheme reduction](../results/general_scheme_independent_set_reduction.md)
+extends simultaneous matroid contraction to an independent set `T` of
+actual nonroot host vertices, even when the target is nonbipartite. Label
+vertices are removed from every projection's base set, so they cannot
+also be independently owned base vertices. If the sum of projection
+ranks is at most `|T|`, a nonempty simultaneously spanned restriction
+gives a root-preserving scheme on a strictly smaller host. In particular,
+this applies when `|N_(G-R)(T)|<=|T|`.
+
+Consequently a minimum counterexample has strict independent-neighbour
+expansion outside its roots. The first unsupported classification step
+is reducing such an arbitrary scheme to one nonroot per target colour,
+or providing a simultaneous root rotation. Strict expansion neither
+bounds host order nor makes that inference valid. The same file proves
+a terminal host theorem: every scheme of every finite target has its
+fully rooted minor when the graph outside its roots is a pseudoforest.
+After normalization, the nonroots form cycles; cyclic assignment to
+adjacent prescribed roots gives disjoint stars witnessing every demand.
+This restricted host theorem is a milestone, not the user's objective.
+
+**Barrier to an intermediate classification:** every triangle-free
+totally odd subdivision of `K_4` is noncontractible. The
+[written obstruction and audit](../barriers/triangle_free_odd_subdivision_contractibility.md)
+give its explicit two-copy scheme and an unbounded positive-weight
+generalization. Strict neighbourhood expansion excludes every nonempty
+stable set in KPR's exact criterion, while degree preservation excludes
+a shift automorphism. This refutes excluding only skewed thetas and two
+long odd cycles joined by a path. It does not refute the hereditary
+`M'` candidate. The applicable ear-decomposition literature and its
+remaining scheme-lifting obligation are recorded beside the obstruction.
+
+**Written necessary structural theorem with a separate internal audit:**
+every connected triangle-free contractible graph is bipartite or becomes
+bipartite after deleting one edge. The
+[proof](../results/triangle_free_contractibility_odd_cycle_edge.md)
+extracts a skewed theta or a totally odd `K_4` subdivision from any signed
+odd-`K_4` minor, explicitly checking the parity and disjointness of the
+lift. The checked signed odd-cycle packing theorem then gives a common
+edge of all odd cycles in the unique nonbipartite block. The exclusion of
+two nonbipartite blocks is KPR Corollary 7.8, with triangle-freeness
+ensuring the required long odd cycles.
+
+**Concrete positive classification target:** prove that a triangle-free
+graph is contractible whenever it has no skewed theta and every connected
+component becomes bipartite after deleting at most one edge. The converse
+is now proved. The sufficiency direction remains conjectural; neither
+single-edge odd-cycle cover nor a canonical two-copy model supplies the
+required arbitrary-scheme lift. This is a complete-classification attempt,
+with arbitrary target order and degree, within the broader hereditary
+`M'` programme. Its proof and comparative significance remain unestablished.
+
+The [T44 frontier](hc7_k44_closure_frontier.md#42-singleton-blocker-and-its-contraction-trace)
+now also records why a broader local rooted completion fails even when
+separator roots may expand. Its explicit planar boundary example cannot
+supply the bipartite scheme needed by the universal theorem. Completing
+the full singleton case must use the other side or change the fixed
+rooted `K_5` model; the other T44 obligations remain intact.
+
 ## Literature scope and significance
 
 **Written scope deductions; qualified independent assessment.** The
