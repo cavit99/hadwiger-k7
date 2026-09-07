@@ -62,11 +62,12 @@ their [first](hc7_degree8_cycle_exterior_audit.md) and
 spanning configurations. The cycle case also gives exterior minimum degree
 five. Neither theorem supplies the remaining simultaneous allocation.
 
-The [marked bipartite completion](hc7_marked_k33_scheme_completion.md), with
-its [GREEN audit](hc7_marked_k33_scheme_completion_audit.md), preserves the
-literal cycle while extracting a forbidden minor from a properly coloured
-partial `K_{3,3}` scheme: the six old paths plus `a0--1` and one of
-`a0--3,a0--4` suffice. Forcing this state in a critical host remains open.
+The [colour-path completion](hc7_cycle_colour_path_completion.md), with
+its [GREEN audit](hc7_cycle_colour_path_completion_audit.md), extends the
+[marked-scheme proof](hc7_marked_k33_scheme_completion.md): any two extra
+root connections or the two crossed colour paths suffice. It reduces every
+reserved-triple colouring to one two-pair pattern by a single Kempe swap.
+The simultaneous endpoint choice in that pattern remains open.
 
 ## Selected foundational inputs to the preserved T44 campaign
 

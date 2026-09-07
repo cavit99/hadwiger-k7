@@ -7,9 +7,9 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
-`0354f788194a76d32cbd9c919e72fa4e99fcf9fa20eb62cee53cfe1787a668c4`.
-The latest check covers only the final marked-scheme completion, failed
-Kempe connections and projection nonclosure block before Section 7.6.
+`e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9`.
+The latest check covers only the colour-path completion and canonical
+two-pair construction/nonclosure block before Section 7.6.
 Removing it exactly recovers Git
 `0f93db9`, at SHA-256
 `49f5a7c6415e1c997d0abc733251a38c848398fa60a6cf15c0a20e8c149a875c`.
@@ -470,27 +470,35 @@ are exact. This does not assert Kempe equivalence. A changed colour class
 does not lift an old model, and a contracted component's colour need not
 extend over its internal edges. The stated global ownership gap remains open.
 
-## Section 7.5 marked-scheme completion: scoped addendum
+## Section 7.5 colour-path completion: scoped addendum
 
-**Verdict: GREEN.** The block and ledger match the separately audited
-marked-scheme source at SHA-256
-`fb55cc00b52e0f3fb6f6e547f08b29ed6aae37cb25c4176a7c7fb96ada05dc2f`.
-The final theorem needs the connection to `1` and one to `3,4` in the
-same reserved-triple colouring. Its independent auxiliary inductions,
-strict recursive parameter and fixed preimages are summarized accurately;
-the pair only to `3,4` remains excluded. Failure at `1` permits the stated
-two-pair swap because its `a0` component avoids both `0,2`. If `1` succeeds,
-both other connections fail; their components exclude the corresponding
-cycle-adjacent marker, but may contain the other. The separately audited
-one-path barrier at `7b6ee34368f1b8d6828d5291e9559b05c192b22ad148671a7c69e4aec810b768`
-does not satisfy the critical-host hypotheses.
+**Verdict: GREEN.** The replacement block and ledger match the independently
+audited source at SHA-256
+`a7f4a6df568ffa1c9158a1714c2e2b0b71a74f940a2c149ee586bba30aaefa31`.
+It proves both any-two root connections and crossed paths without `a0--1`.
+The rank-one construction uses ordinary forest components and an actual
+tree transfer; the virtual marker identification is only a rank test.
+Independent auxiliaries close root hits with strict recursive descent.
+The one-swap corollary uses paths from the same original colouring, then
+properly recolours the unchanged host. Its cycle reflection preserves the
+spanning decorations; independence is required only of the resulting
+repeated pairs, not of a newly asserted reserved triple.
 
-In the recorded nonclosure, endpoint labels can be loops, so a minimizing
-set of those labels need not give any positive-rank component contraction.
-The stated simultaneous packing would be terminal: the two `a0` components
-separate the markers, so one contains `a0` and a marker; disjoint full
-`a1,a2` trees give a rooted `K_{2,3}` avoiding it and both markers.
-The elementary helper construction then applies. Identifying the two
-markers in a projection, however, supplies no connected original preimage
-for that virtual vertex. No packing existence or deficient-case lift is
-claimed, and no global colouring conclusion follows from this block.
+In the canonical two-pair state, disconnected singleton-colour roots would
+permit a swap removing a neighbourhood colour, so the four stated old
+paths exist. The four further demands are exactly
+`a1--0,a2--0,a0--1,a0--4`, all in that same colouring.
+Together they give a proper `K_{3,3}` minus edge `a0--0` scheme. Its rooted model
+retains the literal triangle and `4--0--1`; only `a0--0` and `1--4`
+can be missing, independently. Every bag retains a neighbour of `v`, so
+adding its singleton gives `Q`. Criticality alone supplies alternative
+endpoints `2` or `3`, and no simultaneous correction is asserted.
+The final clarification correctly retains the old colouring and actual
+paths. The four singleton-to-singleton paths avoid the swapped colours
+after the stated relabelling; other old paths can use three new colours
+and need not form a scheme for the new target.
+The one-path barrier at
+`7b6ee34368f1b8d6828d5291e9559b05c192b22ad148671a7c69e4aec810b768`
+remains outside the critical class. The cycle case, other spanning case
+and global conjectures remain open. This replaces the superseded marked
+block check; all earlier audited frontier material is byte-for-byte retained.

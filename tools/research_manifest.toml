@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "0354f788194a76d32cbd9c919e72fa4e99fcf9fa20eb62cee53cfe1787a668c4"
+expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "0354f788194a76d32cbd9c919e72fa4e99fcf9fa20eb62cee53cfe1787a668c4"
+expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "0354f788194a76d32cbd9c919e72fa4e99fcf9fa20eb62cee53cfe1787a668c4"
+expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "0354f788194a76d32cbd9c919e72fa4e99fcf9fa20eb62cee53cfe1787a668c4"
+expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22261,3 +22261,98 @@ source = "hc7.companion.marked_k33_cycle_completion"
 target = "hc7.barrier.one_path_marked_scheme"
 kind = "related_to"
 note = "Refutes the unrestricted one-path weakening while leaving the critical-host colouring construction open."
+
+[[claims]]
+id = "hc7.companion.cycle_two_connection_completion"
+title = "Any two additional cycle-root connections force the companion minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_cycle_colour_path_completion.md"
+source_heading = "4. Proof of Theorem 1"
+active = false
+audit = "results/hc7_cycle_colour_path_completion_audit.md"
+expected_source_sha256 = "a7f4a6df568ffa1c9158a1714c2e2b0b71a74f940a2c149ee586bba30aaefa31"
+scope = "a literal triangle, disjoint five-cycle and common apex, with a properly endpoint-coloured K3,3 scheme missing any one edge at a0; both used cycle markers have colour a0"
+label_fidelity = "the rank-one allocation uses actual disjoint connected preimages; abstract marker identification only tests forest separation"
+conclusions = ["a K7-equals minor", "the omitted edge may be a0-1, a0-3 or a0-4, without additional degree or connectivity hypotheses"]
+does_not_prove = ["existence of two such connections in a critical colouring", "the complete cycle-and-triangle case", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.cycle_crossed_path_completion"
+title = "Two crossed colour paths force the companion minor without an a0-1 path"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_cycle_colour_path_completion.md"
+source_heading = "6. Projection induction for the crossed paths"
+active = false
+audit = "results/hc7_cycle_colour_path_completion_audit.md"
+expected_source_sha256 = "a7f4a6df568ffa1c9158a1714c2e2b0b71a74f940a2c149ee586bba30aaefa31"
+scope = "the same literal decorations, the six old K2,3 paths, an a0-to-0 path in colours a0,3 and an a0-to-2 path in colours a0,4, all in one proper colouring"
+label_fidelity = "an independent one-marker induction handles root hits; every recursive step preserves the full path state and strictly decreases its union order"
+conclusions = ["a K7-equals minor", "no a0-1 connection or critical-host assumption is required"]
+does_not_prove = ["existence of the crossed paths in a critical colouring", "the complete cycle-and-triangle case", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.cycle_two_pair_colour_reduction"
+title = "One Kempe swap gives a non-common-neighbour two-pair colouring"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_cycle_colour_path_completion.md"
+source_heading = "7. Exact critical-colouring consequence"
+active = false
+audit = "results/hc7_cycle_colour_path_completion_audit.md"
+expected_source_sha256 = "a7f4a6df568ffa1c9158a1714c2e2b0b71a74f940a2c149ee586bba30aaefa31"
+scope = "the stated seven-connected seven-chromatic proper-minor-six-colourable Q-free host with a degree-eight cycle-and-triangle neighbourhood and independent reserved triple"
+label_fidelity = "the host and all original vertices remain unchanged; only the colouring and cycle labels change, with no asserted lift of an old path system"
+conclusions = ["every reserved-triple colouring admits one Kempe swap giving repeated pairs a0,3 and 0,2 after dihedral cycle relabelling", "a reserved-triple colouring exists by proper-minor six-colourability"]
+does_not_prove = ["the four remaining endpoint-specific connections in the new colouring", "the simultaneous global minor construction", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.cycle_two_connection_completion"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+
+[[relations]]
+source = "hc7.companion.cycle_two_connection_completion"
+target = "hc7.companion.marked_k33_cycle_completion"
+kind = "uses"
+note = "Uses its elementary root-and-marker terminal construction, while replacing its omitted-edge restriction with the rank-one argument."
+
+[[relations]]
+source = "hc7.companion.cycle_crossed_path_completion"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+
+[[relations]]
+source = "hc7.companion.cycle_crossed_path_completion"
+target = "hc7.companion.marked_k33_cycle_completion"
+kind = "uses"
+note = "Uses the elementary disjoint helper and tree-transfer constructions."
+
+[[relations]]
+source = "hc7.companion.cycle_crossed_path_completion"
+target = "hc7.companion.cycle_two_connection_completion"
+kind = "uses"
+note = "Two actual root connections after a crossed-path root hit give the already established first theorem."
+
+[[relations]]
+source = "hc7.companion.cycle_two_pair_colour_reduction"
+target = "hc7.companion.cycle_two_connection_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.companion.cycle_two_pair_colour_reduction"
+target = "hc7.companion.cycle_crossed_path_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.companion.cycle_two_pair_colour_reduction"
+target = "hc7.companion.cycle_triangle_reserved_neighbours"
+kind = "uses"
+note = "Supplies the reserved-star colouring and the six old paths in every reserved-triple colouring."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.cycle_two_pair_colour_reduction"
+kind = "related_to"
+note = "Reduces the cycle-case colouring to one two-pair pattern; the simultaneous endpoint construction in that pattern remains open."

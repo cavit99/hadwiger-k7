@@ -1111,38 +1111,51 @@ also loses criticality, and expanding its single colour need not colour its
 internal edges. The missing inference is still a joint choice of colouring,
 paths and disjoint bags; neither of these operations supplies that choice.
 
-**Written proof; separate internal audit.** The
-[marked bipartite completion](../results/hc7_marked_k33_scheme_completion.md)
-now needs only eight cross-paths: the six old paths, `a0--1`, and at
-least one of `a0--3,a0--4`, all bichromatic in one reserved-triple
-colouring. Its matroid reduction has separately proved auxiliary cases
-for a retained single marker and a connected preimage containing both
-markers. Absorbing the other marker creates the needed literal cycle
-contact. Every recursive step decreases scheme order, and all transitions
-have fixed disjoint preimages. No degree normalization or arbitrary-model
-ownership assumption is used. The pair of paths only to `3,4` is not covered.
+**Written proofs; separate internal audits.** The
+[colour-path completion](../results/hc7_cycle_colour_path_completion.md)
+proves two terminal constructions: the six old paths plus **any two**
+connections from `a0` to `1,3,4`; or the six old paths plus an
+`a0--0` path using colours `a0,3` and an `a0--2` path using
+colours `a0,4`. The latter needs no `a0--1` connection. Each uses
+one proper endpoint-colouring. In the rank-one case, augmentation of
+the other two forests moves the deficit to the `a0` projection; an
+explicit tree transfer then gives seven disjoint bags. Identifying the
+markers is only a rank test, never an asserted host contraction.
+Separate one-marker inductions handle root hits and preserve connected
+preimages. This resolves the earlier endpoint-loop and root-hit residues.
 
-Thus every reserved-triple colouring in a target-free critical host either
-fails the `a0--1` connection, or has it but fails both connections to
-`3,4`. In the first case a Kempe swap gives the specific repeated pairs
-`{0,2}` and `{a0,1}`. In the second, the `a0` component on the reserved
-colour and colour `3` avoids `2` but may contain `0`; the colour-`4`
-component behaves symmetrically. Neither response has a complete construction.
-The [nine-vertex one-path example](../barriers/hc7_one_path_marked_scheme.md)
-shows that the single extra path `a0--1` cannot suffice from the decorated
-scheme alone. Its low-degree vertices violate the critical-host hypotheses;
-it does not refute a completion that uses those hypotheses.
+Consequently **every** reserved-triple colouring can be changed by one
+Kempe swap to repeated pairs `{a0,3}` and `{0,2}`, after a dihedral
+relabelling of the cycle. The host and critical hypotheses are unchanged.
+The new paths must be chosen in the new colouring; the old model is not
+asserted to survive the swap. The
+[one-path example](../barriers/hc7_one_path_marked_scheme.md) still refutes
+the unrestricted single-connection weakening, without the critical data.
 
-**Recorded route nonclosure.** If the two latter components contain their
-respective other markers, they give bichromatic paths from `a0` to `0,2`
-avoiding the corresponding cycle roots. In reverse projections an endpoint
-marker can be a loop. A minimizing set consisting only of these loops
-supplies no contraction if the endpoints are retained; deleting them loses
-the path data. Simultaneously packing full `a1,a2` trees and a spanning
-`a0` forest with two components separating the markers would give a helper
-through `a0` and one marker, disjoint from the five root bags. Identifying
-the markers in the projection does not give a connected preimage for the
-deficient-case reduction. That lift remains unproved.
+**Immediate construction.** In this two-pair colouring take
+`A={a0,a1,a2}` and `B={4,0,1}`. The four paths from `a1,a2` to
+`1,4` exist because their neighbourhood colours are singleton. It would
+suffice to obtain, in the same colouring, the four further connections
+`a1--0,a2--0,a0--1,a0--4`. They give a genuine
+`K_{3,3}-a0·0` scheme at six distinct-colour roots. The universal
+bipartite theorem, literal `A` triangle and `B` path `4--0--1`
+give six bags whose only possible missing pairs are `a0--0` and
+`1--4`; these are independent. Adding `{v}` gives `Q`.
+
+**Recorded route nonclosure.** Criticality forces each singleton-colour
+root to be bichromatically connected to at least one root of a repeated
+colour, but these may be `2` instead of `0`, or `3` instead of `a0`.
+The first unsupported inference is obtaining all four specified
+connections in one colouring. Replacing alternative endpoints after
+extracting a model can reuse vertices owned by other bags.
+A joint choice using the full proper-minor colouring data, a different
+terminal model, or a decreasing reduction with a valid lift is still
+needed. The original colouring, its six actual paths and the swapped
+component also remain available. Old paths may now use three colours;
+they are not automatically paths of a scheme for the new target.
+The four-colour attachment limitation in Section 7.7 remains
+applicable; no colouring or connected preimage may be discarded without
+its required replacement.
 
 ### 7.6 A reduction preserving the entire core
 

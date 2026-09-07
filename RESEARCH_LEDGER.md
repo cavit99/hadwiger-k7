@@ -56,17 +56,22 @@ fragment by distinct missing neighbour roots, preserving every subset
 boundary. An opposite full component then supplies the helper; that step
 has no established replacement inside the remaining single component.
 
-The [marked bipartite completion](results/hc7_marked_k33_scheme_completion.md),
-with a separate internal audit, now constructs the forbidden minor from
-the six old cross-paths plus the bichromatic connection `a0--1` and at least
-one of `a0--3,a0--4`, in the same reserved-triple colouring. Its separate
-auxiliary inductions handle a marker being absorbed and the two markers
-merging, with explicit disjoint preimages and strict descent. The pair of
-connections only to `3,4` is not covered. Forcing the sufficient state, or
-completing both responses to its failure, remains open. A nine-vertex
-example shows that the lone `a0--1` connection cannot suffice without
-further critical-host information. Changing a colouring changes the
-available path host; an old model does not automatically survive.
+The [colour-path completion](results/hc7_cycle_colour_path_completion.md)
+has written proofs and separate internal audits. With the six old paths,
+any two extra bichromatic root connections suffice, including the
+previously excluded pair to `3,4`. Two crossed paths to the reserved cycle vertices also
+suffice, without the `a0--1` connection. The rank-one allocation now has
+an explicit minor construction, and separate auxiliary inductions handle
+root hits with disjoint connected preimages.
+
+Together these prove a single colouring reduction: every reserved-triple
+colouring admits one Kempe swap to repeated pairs `{a0,3}` and `{0,2}`,
+after relabelling the cycle. The immediate sufficient construction is
+four additional bichromatic connections in that colouring, specified in
+the frontier. Criticality currently supplies paths to either member of a
+repeated pair; choosing the required endpoints simultaneously remains
+unproved. No old model is assumed to survive a recolouring. The cycle
+case, the other spanning case and the global objective remain open.
 The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
 [deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
 remain available with their exact preservation limits.
