@@ -1,8 +1,8 @@
-# Two insufficient induction hypotheses for the companion target
+# Insufficient induction hypotheses for the companion target
 
 **Status:** explicit counterexamples with written proofs. The adjacent audit
 records its separate internal verdict at an exact source hash.
-Neither construction refutes Conjecture 19, Conjecture 21 or HC7.
+None of these constructions refutes Conjecture 19, Conjecture 21 or HC7.
 Write `Q=K_7^=` for the complete seven-vertex graph minus two independent
 edges. All minor exclusions below allow arbitrary connected branch sets.
 
@@ -68,3 +68,60 @@ therefore remains a possible source of a terminal construction when
 degree-preserving contraction fails. The first unsupported induction
 step is dropping that hypothesis, or claiming that a quotient remains
 in the minimum-degree-eight class merely because its order decreases.
+
+## 3. A full boundary apex does not retain a sufficient side class
+
+**Refuted assertion.** Let `|S|=5`, let `C` be connected, and suppose
+`(F,S)` is internally five-connected, where `V(F)=C union S`.
+Even if adding a new vertex adjacent to exactly `S` gives a `K_7^=`-minor-free
+graph, these hypotheses do not imply
+`e(F[C])+e_F(C,S)<=4|C|+4`.
+
+Take five independent roots `S` and a triangle `C`, with all edges between
+them, and add a vertex `d` adjacent to `S` and anticomplete to `C`.
+Completing `S` to a clique makes `F` complete, so the rooted pair is
+internally five-connected. But its displayed side count is
+`3+15=18>16=4|C|+4`.
+
+The graph with `d` is a subgraph of `K_4 join I_5`, with `C union {d}`
+in the four-set. That supergraph has no `K_6` minor: at least two of six
+disjoint branch sets would avoid the four-set, so would be nonadjacent
+singletons in the independent five-set. Since `K_7^=` has a `K_6` minor
+(contract an edge joining endpoints of its two different missing edges),
+the example is `K_7^=`-minor-free. It also has no five-rooted `K_6` model.
+
+**Unaffected scope.** The example has connectivity four: deleting
+`C union {d}` separates `S`, while fewer deletions leave a connected
+graph. It does not refute the five-connected ambient density target.
+Replacing an opposite component by a full boundary apex can lose exactly
+this connectivity. A reduction must retain sufficient information from
+both original sides; internal rooted connectivity and exclusion in the
+one-apex graph alone do not supply the asserted side estimate.
+
+## 4. Five-connectivity and a proper six-clique minor are insufficient
+
+**Refuted assertion.** Every five-connected graph with a proper `K_6`
+minor contains `Q`.
+
+Let `G` be the complement of the cycle `0,1,...,7,0`. It has eight
+vertices, twenty edges and degree five at every vertex. Deleting at most
+four vertices leaves a connected graph: a disconnected remaining graph
+would partition at least four vertices into nonempty sets complete to one
+another in the original cycle. Its maximum degree two forces both sets
+to have size two, which would give a four-cycle subgraph of `C_8`.
+Deleting the five neighbours of any vertex disconnects it from its two
+nonneighbours, so the connectivity is exactly five.
+
+The bags `{0},{2},{4},{6},{1,5},{3,7}` give a `K_6` minor. The last two
+are edges, the four singleton bags form a clique, and each singleton
+contacts both pairs. Thus this is a proper minor.
+
+Every edge of `G` has at least two common neighbours. Any seven-bag
+minor either uses seven vertices, giving a vertex-deleted subgraph with
+at most fifteen edges, or uses all eight, with one two-vertex bag. Its
+contraction has at most `20-1-2=17` edges. Neither can contain the
+nineteen-edge target `Q`; these cases exhaust arbitrary seven-bag models.
+
+**Unaffected scope.** Here `e(G)=20<4|V(G)|=32` and `delta(G)=5`.
+The dense five-connected target and the original seven-connected,
+minimum-degree-eight critical class are not refuted.

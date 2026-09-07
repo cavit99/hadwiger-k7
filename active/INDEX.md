@@ -35,9 +35,9 @@ to intermediate claims remain with their designated conditional routes.
 ## Conditional routes
 
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
-  the current companion attack combines a literal four-clique with the
-  remaining graph's minor and colouring data. Simultaneous near-clique
-  changes remain an alternative. Both global constructions are open.
+  the companion attempts retain the critical host's colouring data or seek
+  a global density reduction. The four-clique allocation and density
+  theorem remain open; neither construction is mandatory.
 - [T44](hc7_k44_closure_frontier.md): every seven-connected graph with a
   `K_{4,4}` minor has a `K_7^-` minor. This remains open and would prove
   Norin--Totschnig Conjecture 21, not `HC_7`.

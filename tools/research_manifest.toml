@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "ccb152686832e05f93555162259977b3ad0dd5d094d2ba5afa463f10d2a91ad8"
+expected_source_sha256 = "83762eaecfd641df2c82bdf924cbf67cf30179f03f3543fa3a4aa39bbc22f46c"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "ccb152686832e05f93555162259977b3ad0dd5d094d2ba5afa463f10d2a91ad8"
+expected_source_sha256 = "83762eaecfd641df2c82bdf924cbf67cf30179f03f3543fa3a4aa39bbc22f46c"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21769,7 +21769,7 @@ source = "barriers/hc7_companion_induction_shortcuts.md"
 source_heading = "1. Density without connectivity does not force the target"
 active = false
 audit = "barriers/hc7_companion_induction_shortcuts_audit.md"
-expected_source_sha256 = "f3761a2a22c7c13f56b39ce0e28ee226d6871be566b13ff176d27badf2a2ce81"
+expected_source_sha256 = "99661d13e82d84c940e3a7861bb7cfd048502399c1484c62c487da5a1ca0fec3"
 scope = "an unbounded matching-join family and an explicit Hamming graph"
 conclusions = ["density four alone with the two exclusions is insufficient", "local exclusions and minimum degree eight do not ensure a degree-preserving contraction"]
 does_not_prove = ["a target-free obstruction with all critical-host hypotheses", "failure of Conjecture 19, Conjecture 21 or HC7"]
@@ -21815,3 +21815,87 @@ source = "hc7.companion.two_edge_literal_exclusion"
 target = "hc7.companion.five_connected_helper_closure"
 kind = "uses"
 note = "The same contrapositive applies to the second quotient, whose connectivity is only five."
+
+[[claims]]
+id = "hc7.target.companion_five_connected_density"
+title = "Five-connected companion-free graphs have fewer than four times their order edges"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_companion_density_separators.md"
+active = false
+expected_source_sha256 = "6bef580656a804b30ee415d535c24af604715c56821e7f8d84aed0216fab3bb9"
+scope = "all five-connected K7-equals-minor-free graphs"
+does_not_prove = ["the asserted density bound", "a closed reduction across sparse five-cuts", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.dense_five_cut_boundaries"
+title = "Dense companion-free graphs have only diamond-free five-cut boundaries"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_companion_density_separators.md"
+source_heading = "3. The dense case has only diamond-free boundaries"
+active = false
+audit = "active/hc7_companion_density_separators_audit.md"
+expected_source_sha256 = "6bef580656a804b30ee415d535c24af604715c56821e7f8d84aed0216fab3bb9"
+scope = "five-connected K7-equals-minor-free graphs with at least four times their order edges"
+label_fidelity = "the actual five boundary vertices, four prescribed root bags, fifth root in a helper and opposite full component remain disjoint and explicit"
+conclusions = ["every five-cut boundary is diamond-free and has at most six edges", "there are two to four components", "four-component boundaries are matchings and isolated vertices"]
+does_not_prove = ["elimination of sparse five-cuts", "five-connectivity of a returned quotient", "the global density theorem or Conjecture 19"]
+
+[[claims]]
+id = "hc7.barrier.companion_rooted_side_cone"
+title = "A target-free full boundary apex does not preserve the needed side estimate"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_companion_induction_shortcuts.md"
+source_heading = "3. A full boundary apex does not retain a sufficient side class"
+active = false
+audit = "barriers/hc7_companion_induction_shortcuts_audit.md"
+expected_source_sha256 = "99661d13e82d84c940e3a7861bb7cfd048502399c1484c62c487da5a1ca0fec3"
+scope = "five independent boundary roots complete to a triangle, with one extra full boundary apex"
+conclusions = ["the rooted pair is internally five-connected and the cone excludes K7-equals", "the proposed side bound is violated", "ordinary connectivity is only four"]
+does_not_prove = ["failure of the original five-connected ambient density target", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.target.companion_four_clique_closure"
+target = "hc7.target.companion_five_connected_density"
+kind = "related_to"
+note = "These are alternative sufficient constructions for the companion critical host; neither is required by the other."
+
+[[relations]]
+source = "hc7.target.companion_five_connected_density"
+target = "hc7.companion.dense_five_cut_boundaries"
+kind = "related_to"
+note = "The proved separator restriction is a necessary condition on a hypothetical counterexample, not a complete reduction."
+
+[[relations]]
+source = "hc7.companion.dense_five_cut_boundaries"
+target = "hc7.k7minus_low_degree_rooted_helper_closure"
+kind = "uses"
+note = "The proof uses the recorded exact NT Lemma 12 input and rechecks the fifth-root placement, including a low-degree-root repair."
+
+[[relations]]
+source = "hc7.target.companion_five_connected_density"
+target = "hc7.barrier.companion_rooted_side_cone"
+kind = "related_to"
+note = "Replacing the opposite side by a full apex preserves exclusion but can lose the ambient connectivity needed for a sufficient side bound."
+
+[[claims]]
+id = "hc7.barrier.companion_five_connected_k6"
+title = "Five-connectivity does not augment every proper K6 minor to the companion target"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_companion_induction_shortcuts.md"
+source_heading = "4. Five-connectivity and a proper six-clique minor are insufficient"
+active = false
+audit = "barriers/hc7_companion_induction_shortcuts_audit.md"
+expected_source_sha256 = "99661d13e82d84c940e3a7861bb7cfd048502399c1484c62c487da5a1ca0fec3"
+scope = "the complement of an eight-cycle"
+conclusions = ["connectivity five", "an explicit proper K6 model", "every seven-bag model has at most seventeen contacts"]
+does_not_prove = ["failure of the dense five-connected target", "failure in the seven-connected critical host"]
+
+[[relations]]
+source = "hc7.target.companion_five_connected_density"
+target = "hc7.barrier.companion_five_connected_k6"
+kind = "related_to"
+note = "A proper K6 minor cannot replace the density hypothesis: the explicit counterexample has twenty edges on eight vertices."

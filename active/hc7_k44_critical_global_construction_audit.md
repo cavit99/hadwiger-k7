@@ -7,8 +7,15 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`83762eaecfd641df2c82bdf924cbf67cf30179f03f3543fa3a4aa39bbc22f46c`.
+The latest scoped check covers only the added three-full-helper criterion
+and density-route navigation at the end of Section 7.4.1. Removing those
+additions exactly recovers Git `623110a`, at SHA-256
 `ccb152686832e05f93555162259977b3ad0dd5d094d2ba5afa463f10d2a91ad8`.
-The latest scoped check covers new Section 7.4.1 and the change from
+This byte equality was checked directly against Git; all older audited
+text is unchanged.
+
+The preceding scoped check covers new Section 7.4.1 and the change from
 "The current structural target" to "A retained structural target".
 Removing the new subsection and reversing that wording exactly recovers
 Git `285f934`, with SHA-256
@@ -271,6 +278,22 @@ unchanged. Thus the stated next connectivity obstruction and non-iteration
 warning are valid. No global existence or closed reduction is established.
 
 ## Remaining obligations
+
+The latest additions are **GREEN** within their explicit partial scope.
+Here `G-R` is connected. Three disjoint connected full-root sets can be
+extended to a partition by a spanning forest rooted at those sets. Each
+bag stays connected and keeps its four contacts, and their three-vertex
+contact graph is connected. Thus it misses at most one edge, and the four
+literal clique roots give the displayed `K_7^-` model. This is a sufficient
+criterion, not an existence proof. The density-route summary agrees with
+the separate source and audit at source SHA-256
+`6bef580656a804b30ee415d535c24af604715c56821e7f8d84aed0216fab3bb9`.
+It retains the five-connectivity hypothesis, exact component restrictions,
+weakened-side-bound failure and missing reduction. The five-connected
+global density theorem remains conjectural; no new literature application
+or finite computation is used for this scoped addendum.
+The added eight-cycle navigation matches the separately audited barrier;
+removing all latest additions still exactly recovers Git `623110a`.
 
 No gap was found in these scoped partial statements. Existing imported
 finite inputs retain their recorded status; no new finite result is used.

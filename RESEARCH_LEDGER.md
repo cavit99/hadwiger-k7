@@ -15,13 +15,14 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 1. **Exhaustive global obligation:** prove `HC_7`, that every finite
    `K_7`-minor-free graph is six-colourable, or obtain an independent theorem
    of reach and significance comparable to Norin--Totschnig.
-2. **Principal conditional refinement:** Conjecture 21 asserts that every
-   `K_7^-`-minor-free graph is six-colourable. The stronger structural target
-   T44 would imply it: every seven-connected graph containing a `K_{4,4}`
-   minor contains a `K_7^-` minor. Neither would by itself prove `HC_7`.
+2. **Immediate theorem target:** Conjecture 19 asserts that every
+   `K_7^=`-minor-free graph is six-colourable, where the two deleted edges
+   are independent. This gives a concrete proposed comparison with
+   Norin--Totschnig; it is unproved. The stronger Conjecture 21 and its
+   sufficient structural target T44 remain available conditional routes.
 3. **Immediate structural laboratory:** the
    [critical-host global construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
-   for Conjecture 21, combining proper-minor six-colourings with near-clique
+   for the companion conjectures, combining proper-minor six-colourings with near-clique
    or `K_{4,4}` models. No global construction or closed induction is proved.
    The
    [technical frontier](active/bipartite_contractibility_frontier.md)
@@ -31,15 +32,18 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
-The current concrete attempt is Conjecture 19 through the critical-host
-four-clique construction. Every degree-eight vertex of a critical
-companion-free host lies in a literal `K_4`, by a written, computation-free
-proof and separate internal audit.
-Deleting that clique leaves minimum degree at least six and hence a `K_5`
-minor. The missing step is a global construction combining these inputs
-without reusing vertices or destroying the retained contacts. The
+The target is Conjecture 19; no particular construction is mandatory.
+The critical-host attempt retains the full proper-minor colouring data.
+Its audited four-clique and residual `K_5`-minor inputs still need a
+simultaneous allocation. A separate global density attempt asks whether
+every five-connected `K_7^=`-minor-free graph has fewer than `4n` edges.
+This would exclude the critical host, but is also unproved. The new
+[separator proof](active/hc7_companion_density_separators.md), with a separate
+internal audit, restricts every five-cut of a hypothetical dense host to a
+diamond-free boundary and two to four components. It does not eliminate
+those cuts or supply a closed contraction. The
 [technical frontier](active/hc7_k44_closure_frontier.md#741-the-four-clique-construction-and-contraction-closure)
-states the precise sufficient theorem and contraction limits.
+records both global construction obligations.
 
 The new five-connected helper bound also proves literal `K_5^-` exclusion
 in that host after every connected three-vertex contraction, and after any

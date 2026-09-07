@@ -884,6 +884,27 @@ eight supply the missing induction. They leave the target-free critical
 class and its global construction open. None of these deductions proves
 Conjecture 19, Conjecture 21 or HC7.
 
+Three disjoint connected sets in `G-R`, each adjacent to all four roots,
+would already suffice. Extend them to a partition of the connected graph
+`G-R` by assigning unused vertices along a forest. The three bags' contact
+graph is connected, so at most one of its three contacts is missing.
+Together with the four singleton clique roots they give `K_7^-`.
+Existence of these three sets remains unproved.
+
+**Alternative global density attempt; unproved.** Every five-connected
+`K_7^=`-minor-free graph has fewer than `4n` edges. This would exclude the
+critical host without preserving its colouring in each quotient. The
+[separator proof and exact failure of a weakened side bound](hc7_companion_density_separators.md)
+have a separate internal audit: in a hypothetical dense host every
+five-cut is diamond-free, has at most four components, and has a matching
+boundary if there are four components. A contraction can still return a
+four-cut. The remaining boundary allocation and a reduction retaining
+five-connectivity, sufficient density and disjoint preimages are unproved.
+Removing the ambient exclusion in favour of a five-rooted `K_6` exclusion
+does not preserve a sufficient side inequality.
+Nor can five-connectivity and a proper `K_6` minor replace the density
+hypothesis: [the complement of an eight-cycle refutes that shortcut](../barriers/hc7_companion_induction_shortcuts.md#4-five-connectivity-and-a-proper-six-clique-minor-are-insufficient).
+
 ### 7.5 A neighbourhood contact construction
 
 **Written criterion; conjectural construction.** Fix a vertex `v` and put
