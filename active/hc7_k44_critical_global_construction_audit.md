@@ -7,9 +7,14 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`87c8d865dc3ffa0b109c3462af211fafe12930ae42d0173ded67e3ca1635d5e0`.
+The 7 September 2026 extension audits only new Section 7.5. Removing that
+section exactly recovers the frontier at Git `HEAD=9307ce3`, with SHA-256
 `49b39443e977c772609e0561c8700211a3f0b62cbe709e883e4316125d8724ff`.
-Checked 5 September 2026. The author restored the required target-free
-hypothesis in Section 7.1 before this final revision was checked.
+Sections 5 and 7.1–7.4 are byte-identical. Their 5 September audit and
+literature checks below are retained, not newly repeated. The author had
+restored the required target-free hypothesis in Section 7.1 before that
+earlier revision was checked.
 
 ## Quantifiers, colourings and ownership
 
@@ -74,6 +79,21 @@ hypothesis in Section 7.1 before this final revision was checked.
   be internally four-connected, as Section 3 explicitly warns. The
   edge-partition definition and degree-three triangle obstruction were
   checked; the announced stronger Section 3 theorem is not invoked.
+
+## Section 7.5: singleton-vertex criterion and nonclosure
+
+For the six specified bags, `q` counts those intersecting `N_G(v)`.
+The seven bags including `{v}` have exactly `e+q` contact pairs. At least
+twenty is necessary and sufficient for these bags to model `K_7^-`.
+Since `e<=15` and `q<=6`, the alternatives are precisely `e=15,q>=5`
+or `e=14,q=6`. This does not constrain a model in which `v` belongs to a
+larger bag, and it proves no existence or monotone exchange theorem.
+The [separately audited capacity family](../barriers/prescribed_clique_roots_capacity_audit.md)
+refutes the general prescribed-root claim, with first parameter `t=9`.
+It does not refute the six-clique five-root proposal or a flexible choice
+of neighbours. Menger paths require an additional ownership-preserving
+construction; neither distinct selectors nor positive probes supplies it.
+No online literature or finite enumeration was used for this addendum.
 
 ## Remaining obligations
 

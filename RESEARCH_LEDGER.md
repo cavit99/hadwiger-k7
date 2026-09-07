@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 5 September 2026. This is the sole authority for current
+**Last updated:** 7 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjecture 21
@@ -51,6 +51,13 @@ claim. Load other proofs and sources as needed, and update documentation
 when the mathematical position or work plan changes. The bipartite paper's
 pending originality and final reviews remain scheduled after this proof
 effort unless they supply a needed input.
+
+The current [neighbourhood contact construction](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+allows either a complete six-bag core with five neighbour contacts or a
+one-edge-deficient core with all six contacts. No construction is proved.
+The proposed general connectivity-based rooting shortcut is
+[refuted](barriers/prescribed_clique_roots_capacity.md); its specific
+five-root `K_6` version remains open here.
 
 ## Current frontier and completed campaign
 

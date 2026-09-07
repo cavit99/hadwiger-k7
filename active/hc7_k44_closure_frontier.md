@@ -821,6 +821,36 @@ A continuation must handle these separations inside the full host; the
 stronger theorem announced in their Section 3 is not proved in that paper.
 This does not refute a suitable continuation or either global conjecture.
 
+### 7.5 A neighbourhood contact construction
+
+**Written criterion; conjectural construction.** Fix a vertex `v` and put
+`S=N_G(v)`. For six disjoint nonempty connected bags in `G-v`, let `e`
+count their pairwise contacts and let `q` count the bags meeting `S`.
+Adding the singleton bag `{v}` gives a `K_7^-` model exactly when
+`e+q>=20`: either the six bags form `K_6` and at least five meet `S`,
+or they have exactly fourteen contacts and all six meet `S`. This follows
+by counting the twenty required contacts among the seven disjoint bags.
+This criterion covers models with `{v}` singleton; it is not a necessary
+condition for an arbitrary `K_7^-` model.
+
+The construction effort may choose which neighbours occupy the bags and
+may use the second outcome. It need not preserve five preselected roots
+or all fifteen core contacts during an exchange. Such exchanges must
+still preserve connectivity and disjointness and reach a terminal model;
+no increasing contact count or well-founded rule through equal-count
+exchanges is proved.
+
+**Recorded negative finding / route nonclosure.** The stronger proposal
+that six-connectivity and a `K_6` minor place any five prescribed vertices
+in distinct clique bags is unproved here. Disjoint paths to distinct bag
+selectors may first enter the same original bag; their interiors cannot
+be assigned to their terminal bags without checking all other ownership.
+A [complete multipartite counterexample family](../barriers/prescribed_clique_roots_capacity.md)
+refutes the analogous general clique assertion even with connectivity
+exceeding the clique order. It does not refute the `K_6` proposal or the
+more flexible construction above. Neither is an established reduction
+closing Conjecture 21.
+
 ## 8. Stop rules
 
 - A false weighted trichotomy, portal census or proposed peel is recorded as

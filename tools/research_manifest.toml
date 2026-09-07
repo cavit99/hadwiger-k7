@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "49b39443e977c772609e0561c8700211a3f0b62cbe709e883e4316125d8724ff"
+expected_source_sha256 = "87c8d865dc3ffa0b109c3462af211fafe12930ae42d0173ded67e3ca1635d5e0"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21558,3 +21558,25 @@ source = "graph_schemes.barrier.odd_cycle_bipartite_attachment"
 target = "graph_schemes.triangle_free_odd_cycle_edge"
 kind = "related_to"
 note = "The necessary common-odd-cycle-edge theorem is preserved, while its proposed converse even with skewed-theta exclusion is refuted."
+
+[[claims]]
+id = "hc7.barrier.prescribed_clique_roots_capacity"
+title = "Connectivity above the clique order does not root all but one clique bag"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/prescribed_clique_roots_capacity.md"
+source_heading = "Counterexample family"
+active = false
+audit = "barriers/prescribed_clique_roots_capacity_audit.md"
+expected_source_sha256 = "b01ff427f2baafa35ebc87ed4ec27f36bfa87f427e26b95acc0df84aec57b18c"
+scope = "complete multipartite graphs with 2m parts of order two, for every integer m at least three"
+label_fidelity = "all 3m-1 prescribed vertices must occupy distinct bags of a K3m model"
+conclusions = ["connectivity exactly 4m-2 and an explicit K3m minor", "every K3m model consists of one singleton per part and m pairs", "a prescribed set of order 3m-1 cannot occupy distinct bags"]
+does_not_prove = ["failure of five-root K6 augmentation", "failure of universal bipartite contractibility", "Conjecture 21, T44 or HC7", "significance comparable to Norin--Totschnig"]
+keywords = ["rooted clique minor", "prescribed roots", "connectivity", "Menger", "branch-set ownership"]
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.barrier.prescribed_clique_roots_capacity"
+kind = "related_to"
+note = "Section 7.5's construction tests cannot use a general connectivity-based rooting rule; the specific K6 proposal and global target remain open."
