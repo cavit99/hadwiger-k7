@@ -1142,6 +1142,26 @@ bipartite theorem, literal `A` triangle and `B` path `4--0--1`
 give six bags whose only possible missing pairs are `a0--0` and
 `1--4`; these are independent. Adding `{v}` gives `Q`.
 
+**A completed colouring state.** The
+[flexible-root theorem](../results/bipartite_flexible_root_families.md),
+with a separate GREEN internal audit, retains a separate connected bag
+for every prescribed root of a bipartite target while permitting a demand
+to change endpoints within its two root families. The reduction truncates
+at the first actual root-containing piece; it never contracts a disconnected
+preimage of an auxiliary identified root. Applied to cycle-colour families
+`{0,2},{1,3},{4}`, it completes the state where the triangle uses the
+three other colours: one of three cuts of `0--1--2--3` gives a cycle
+triangle with at most two independent missing cross-contacts.
+
+This exclusion forces a new connection in the retained two-pair colouring.
+The component of `1` in colours `g(1),g(3)` must contain `3`.
+Criticality forces it to meet `a0` or `3`; meeting only `a0` would
+allow a swap producing the completed three-colour cycle state. Thus an
+actual bichromatic `1--3` path exists, although it may pass through
+`a0`. The theorem does not preserve a chosen member of a root family
+as the endpoint of every contact, so it does not supply the four
+connections in the preceding paragraph.
+
 **Recorded route nonclosure.** Criticality forces each singleton-colour
 root to be bichromatically connected to at least one root of a repeated
 colour, but these may be `2` instead of `0`, or `3` instead of `a0`.

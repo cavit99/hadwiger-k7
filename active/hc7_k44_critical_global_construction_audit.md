@@ -7,8 +7,14 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4`.
+The latest check covers only the completed-colouring-state block in
+Section 7.5. Removing its twenty lines exactly recovers Git `9d37c62`,
+at SHA-256
 `e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9`.
-The latest check covers only the colour-path completion and canonical
+This byte equality was checked directly against Git.
+
+The preceding check covers only the colour-path completion and canonical
 two-pair construction/nonclosure block before Section 7.6.
 Removing it exactly recovers Git
 `0f93db9`, at SHA-256
@@ -502,3 +508,18 @@ The one-path barrier at
 remains outside the critical class. The cycle case, other spanning case
 and global conjectures remain open. This replaces the superseded marked
 block check; all earlier audited frontier material is byte-for-byte retained.
+
+## Section 7.5 flexible-root application: scoped addendum
+
+**Verdict: GREEN.** The added block matches the separately audited source at
+`5435c44801978073092cfaef1b685e8b5b52723a52ea28a87e3089d44127ec44`.
+Individual roots remain in separate connected bags, but a demand may change
+its two family members. First-root-piece truncation supplies the actual
+lift; the three cycle cuts give only independent missing cross-contacts.
+In the canonical colouring, the component of `1` in colours `g(1),g(3)`
+must meet `a0` or `3`, since otherwise a swap removes its singleton
+neighbourhood colour. Meeting only `a0` yields the excluded three-colour
+cycle state, so it must meet `3`. The resulting `1--3` path can contain
+`a0`; no root-avoiding path or prescribed endpoint allocation is inferred.
+The four simultaneous endpoint-specific connections and the global
+conjectures remain open. No inherited frontier mathematics was changed.

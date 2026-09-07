@@ -66,10 +66,16 @@ root hits with disjoint connected preimages.
 
 Together these prove a single colouring reduction: every reserved-triple
 colouring admits one Kempe swap to repeated pairs `{a0,3}` and `{0,2}`,
-after relabelling the cycle. The immediate sufficient construction is
-four additional bichromatic connections in that colouring, specified in
-the frontier. Criticality currently supplies paths to either member of a
-repeated pair; choosing the required endpoints simultaneously remains
+after relabelling the cycle. The
+[flexible-root theorem](results/bipartite_flexible_root_families.md), with a
+separate GREEN internal audit, allows prescribed root families on both
+shores of any finite simple bipartite target. It retains each individual
+root in a separate bag while permitting the endpoints of family contacts
+to change. Its application completes the colouring state in which the
+cycle uses three colours and the triangle uses three other colours.
+Consequently, in the retained two-pair colouring, `1` must be
+bichromatically connected to `3` in their two colours. The four additional
+connections sufficient for a complete cycle-case construction are still
 unproved. No old model is assumed to survive a recolouring. The cycle
 case, the other spanning case and the global objective remain open.
 The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and

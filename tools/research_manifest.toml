@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
+expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
+expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
+expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9"
+expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22356,3 +22356,50 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.cycle_two_pair_colour_reduction"
 kind = "related_to"
 note = "Reduces the cycle-case colouring to one two-pair pattern; the simultaneous endpoint construction in that pattern remains open."
+
+[[claims]]
+id = "graph_schemes.bipartite_flexible_root_families"
+title = "Bipartite colour paths admit disjoint bags at every member of prescribed root families"
+kind = "theorem"
+status = "audited-green"
+source = "results/bipartite_flexible_root_families.md"
+source_heading = "1. A contraction theorem with prescribed root sets"
+active = false
+audit = "results/bipartite_flexible_root_families_audit.md"
+expected_source_sha256 = "5435c44801978073092cfaef1b685e8b5b52723a52ea28a87e3089d44127ec44"
+scope = "every finite simple bipartite target, nonempty disjoint prescribed root families on both shores, and one root-clean properly endpoint-coloured path for each target edge"
+label_fidelity = "every individual root has a separate connected bag; a target-edge contact may change endpoints within its prescribed families"
+conclusions = ["simultaneous disjoint bags at all individual roots realizing every required contact between families", "a component reduction with actual connected preimages and strictly decreasing path-union order"]
+does_not_prove = ["a connected bag containing each entire root family", "preservation of every initially selected endpoint pair", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.three_colour_cycle_completion"
+title = "Three cycle colours disjoint from the triangle colours force the companion minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/bipartite_flexible_root_families.md"
+source_heading = "2. The three-coloured cycle state is terminal"
+active = false
+audit = "results/bipartite_flexible_root_families_audit.md"
+expected_source_sha256 = "5435c44801978073092cfaef1b685e8b5b52723a52ea28a87e3089d44127ec44"
+scope = "a literal triangle and disjoint five-cycle with a common apex, and one properly coloured path from each triangle root to each of the three cycle-colour families"
+label_fidelity = "all eight prescribed root bags remain distinct before the final connected cycle unions"
+conclusions = ["a K7-equals minor by one of three explicit cycle partitions", "the stated critical host has no six-colouring with three cycle colours disjoint from three triangle colours"]
+does_not_prove = ["existence of the terminal colouring", "the complete cycle-and-triangle case", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "graph_schemes.bipartite_flexible_root_families"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "Uses the pinned matroid-union rank formula and tight-component lemma; the flexible endpoint reduction is proved separately."
+
+[[relations]]
+source = "hc7.companion.three_colour_cycle_completion"
+target = "graph_schemes.bipartite_flexible_root_families"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.three_colour_cycle_completion"
+kind = "related_to"
+note = "Completes one colouring state and forces a 1-to-3 colour path in the retained two-pair state; the simultaneous endpoint construction remains open."
