@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
+expected_source_sha256 = "58b518fd4656613c23ff65efed5e4c3021c5f6ee250f5a237dda52ab9246f08f"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
+expected_source_sha256 = "58b518fd4656613c23ff65efed5e4c3021c5f6ee250f5a237dda52ab9246f08f"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
+expected_source_sha256 = "58b518fd4656613c23ff65efed5e4c3021c5f6ee250f5a237dda52ab9246f08f"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4"
+expected_source_sha256 = "58b518fd4656613c23ff65efed5e4c3021c5f6ee250f5a237dda52ab9246f08f"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22403,3 +22403,49 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.three_colour_cycle_completion"
 kind = "related_to"
 note = "Completes one colouring state and forces a 1-to-3 colour path in the retained two-pair state; the simultaneous endpoint construction remains open."
+
+[[claims]]
+id = "hc7.companion.five_colour_cycle_cross"
+title = "A five-cycle that always uses at least four colours has a cross"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_cycle_colour_cross.md"
+source_heading = "1. The five-colour theorem"
+active = false
+audit = "results/hc7_cycle_colour_cross_audit.md"
+expected_source_sha256 = "1057b5ef2a5dda04590b55cfc64128b536a8c831b809847c15ca5b2c235a420a"
+scope = "every five-colourable graph containing a specified five-cycle on which every proper five-colouring uses at least four colours"
+label_fidelity = "two disjoint paths have four actual cycle endpoints in alternating order and interiors outside the cycle"
+conclusions = ["a rooted K4 subdivision with four branch vertices on the cycle", "without a cross, at most four Kempe swaps suffice to give the cycle three colours from any proper five-colouring"]
+does_not_prove = ["avoidance of arbitrary additional roots", "a fifth unused cycle root", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.colour_class_avoiding_cycle_cross"
+title = "The critical cycle case has a cross avoiding a triangle root colour class"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_cycle_colour_cross.md"
+source_heading = "3. Consequence of proper-minor six-colourings"
+active = false
+audit = "results/hc7_cycle_colour_cross_audit.md"
+expected_source_sha256 = "1057b5ef2a5dda04590b55cfc64128b536a8c831b809847c15ca5b2c235a420a"
+scope = "the seven-chromatic proper-minor-six-colourable Q-free host with the degree-eight cycle-and-triangle neighbourhood; every colouring in which a selected triangle root has a unique neighbourhood colour"
+label_fidelity = "the cross avoids v and the whole chosen colour class; the other two triangle roots may be used by its paths"
+conclusions = ["contracting va supplies such a colouring for each triangle root a", "every five-colouring after deleting that class uses at least four cycle colours", "a cross exists after deleting that class"]
+does_not_prove = ["simultaneous crosses from different colourings", "the required contacts from disjoint triangle bags to the cross", "the complete cycle case, Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.colour_class_avoiding_cycle_cross"
+target = "hc7.companion.five_colour_cycle_cross"
+kind = "uses"
+
+[[relations]]
+source = "hc7.companion.colour_class_avoiding_cycle_cross"
+target = "hc7.companion.three_colour_cycle_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.colour_class_avoiding_cycle_cross"
+kind = "related_to"
+note = "Supplies actual crossing paths and a quantified five-colouring restriction while leaving the joint triangle attachment open."

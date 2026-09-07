@@ -43,30 +43,19 @@ The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-c
 records the exact constructions and ownership requirements. In the cycle
 case the bipartite theorem supplies a rooted five-clique; a compatible
 connected helper through the omitted triangle vertex would complete the
-case. The four-clique exterior is four-connected. The
+case. The
 [cycle-and-triangle](results/hc7_degree8_cycle_exterior.md) and
 [two-triangle](results/hc7_degree8_two_triangle_exterior.md) exterior
-proofs now make `G-N[v]` connected and full to all eight neighbours in
-**both** configurations. Both have separate internal audits. The latter
-proof also removes the separate degree hypothesis from the five-root wheel
-lemma: internal five-connectivity at five roots containing a triangle and
-at least two nonroots suffice.
-Simultaneous disjoint paths replace all actual ports of a seven-boundary
-fragment by distinct missing neighbour roots, preserving every subset
-boundary. An opposite full component then supplies the helper; that step
-has no established replacement inside the remaining single component.
+proofs make `G-N[v]` connected and full to all eight neighbours in both
+configurations. The latter also proves the five-root wheel lemma without
+a separate degree hypothesis. Their audits and the frontier retain the
+exact statements and port constructions. Finding the helper inside the
+remaining single component is still open.
 
-The [colour-path completion](results/hc7_cycle_colour_path_completion.md)
-has written proofs and separate internal audits. With the six old paths,
-any two extra bichromatic root connections suffice, including the
-previously excluded pair to `3,4`. Two crossed paths to the reserved cycle vertices also
-suffice, without the `a0--1` connection. The rank-one allocation now has
-an explicit minor construction, and separate auxiliary inductions handle
-root hits with disjoint connected preimages.
-
-Together these prove a single colouring reduction: every reserved-triple
-colouring admits one Kempe swap to repeated pairs `{a0,3}` and `{0,2}`,
-after relabelling the cycle. The
+The audited [colour-path completion](results/hc7_cycle_colour_path_completion.md)
+proves two terminal path constructions and a colouring reduction: every
+reserved-triple colouring admits one Kempe swap to repeated pairs
+`{a0,3}` and `{0,2}`, after relabelling the cycle. The
 [flexible-root theorem](results/bipartite_flexible_root_families.md), with a
 separate GREEN internal audit, allows prescribed root families on both
 shores of any finite simple bipartite target. It retains each individual
@@ -78,6 +67,16 @@ bichromatically connected to `3` in their two colours. The four additional
 connections sufficient for a complete cycle-case construction are still
 unproved. No old model is assumed to survive a recolouring. The cycle
 case, the other spanning case and the global objective remain open.
+
+The [cycle-colouring theorem](results/hc7_cycle_colour_cross.md), with a
+separate GREEN internal audit, converts the new restriction into two
+disjoint crossing paths on the cycle. After deleting the whole colour
+class of any triangle root uniquely coloured on `N(v)`, every resulting
+five-colouring uses at least four cycle colours, so such a cross exists
+outside that class. The four cycle branch roots are retained; the other
+triangle roots may lie on the paths. The next construction must combine
+this cross with the triangle while retaining the full colouring condition.
+Neither an isolated cross nor paths from separate colourings suffice.
 The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
 [deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
 remain available with their exact preservation limits.

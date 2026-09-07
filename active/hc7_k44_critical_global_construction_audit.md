@@ -7,8 +7,13 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`58b518fd4656613c23ff65efed5e4c3021c5f6ee250f5a237dda52ab9246f08f`.
+The latest check covers only the cycle-colouring paragraph in Section 7.5.
+Removing its sixteen lines exactly recovers Git `6e7b4b1`, at SHA-256
 `4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4`.
-The latest check covers only the completed-colouring-state block in
+This byte equality was checked directly against Git.
+
+The preceding check covers only the completed-colouring-state block in
 Section 7.5. Removing its twenty lines exactly recovers Git `9d37c62`,
 at SHA-256
 `e22872e8d2d2eee8fd0fd792245e10cea498266341d9b7a9b6cf43d13d0cdbb9`.
@@ -523,3 +528,16 @@ cycle state, so it must meet `3`. The resulting `1--3` path can contain
 `a0`; no root-avoiding path or prescribed endpoint allocation is inferred.
 The four simultaneous endpoint-specific connections and the global
 conjectures remain open. No inherited frontier mathematics was changed.
+
+## Section 7.5 cycle-cross application: scoped addendum
+
+**Verdict: GREEN.** The added paragraph matches the independently audited
+source at `1057b5ef2a5dda04590b55cfc64128b536a8c831b809847c15ca5b2c235a420a`.
+It retains five-colourability and the quantifier over every five-colouring,
+the cycle-clean cross, and the contrapositive bound of four Kempe swaps.
+The proper-minor colouring supplies an entire independent class `I`, not
+merely the selected triangle root; every colouring of its complement
+extends over `I`. The resulting paths avoid `I` and `v`, but may own the
+other triangle roots. Keeping those roots as separate additional bags
+would therefore be unsupported. No compatible seven-bag assembly or
+global conjecture is claimed, and all earlier source bytes are unchanged.

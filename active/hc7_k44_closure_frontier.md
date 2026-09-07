@@ -1162,6 +1162,22 @@ actual bichromatic `1--3` path exists, although it may pass through
 as the endpoint of every contact, so it does not supply the four
 connections in the preceding paragraph.
 
+The [cycle-colouring theorem](../results/hc7_cycle_colour_cross.md), with
+a separate GREEN internal audit, gives actual disjoint paths from a stronger
+quantified restriction. In a five-colourable graph, if every five-colouring
+uses at least four colours on a specified `C_5`, there are two disjoint
+paths with alternating cycle endpoints and interiors outside the cycle.
+Without such a cross, at most four Kempe swaps give three cycle colours.
+In the critical host, contracting `va` supplies a colouring where the
+triangle root `a` is uniquely coloured on `N(v)`. Delete its whole
+colour class `I`. Every five-colouring of `G-v-I` must use at least four
+cycle colours, by the completed state above, so a cross exists there.
+Its four branch vertices are actual cycle roots. It may use the other
+two triangle roots, and crosses from different colourings have no joint
+ownership guarantee. The first unsupported assembly is retaining those
+roots as additional disjoint bags after the paths have used them. A joint
+construction must retain the every-colouring condition as well as the cross.
+
 **Recorded route nonclosure.** Criticality forces each singleton-colour
 root to be bichromatically connected to at least one root of a repeated
 colour, but these may be `2` instead of `0`, or `3` instead of `a0`.
