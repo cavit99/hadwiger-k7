@@ -1111,6 +1111,39 @@ also loses criticality, and expanding its single colour need not colour its
 internal edges. The missing inference is still a joint choice of colouring,
 paths and disjoint bags; neither of these operations supplies that choice.
 
+**Written proof; separate internal audit.** The
+[marked bipartite completion](../results/hc7_marked_k33_scheme_completion.md)
+now needs only eight cross-paths: the six old paths, `a0--1`, and at
+least one of `a0--3,a0--4`, all bichromatic in one reserved-triple
+colouring. Its matroid reduction has separately proved auxiliary cases
+for a retained single marker and a connected preimage containing both
+markers. Absorbing the other marker creates the needed literal cycle
+contact. Every recursive step decreases scheme order, and all transitions
+have fixed disjoint preimages. No degree normalization or arbitrary-model
+ownership assumption is used. The pair of paths only to `3,4` is not covered.
+
+Thus every reserved-triple colouring in a target-free critical host either
+fails the `a0--1` connection, or has it but fails both connections to
+`3,4`. In the first case a Kempe swap gives the specific repeated pairs
+`{0,2}` and `{a0,1}`. In the second, the `a0` component on the reserved
+colour and colour `3` avoids `2` but may contain `0`; the colour-`4`
+component behaves symmetrically. Neither response has a complete construction.
+The [nine-vertex one-path example](../barriers/hc7_one_path_marked_scheme.md)
+shows that the single extra path `a0--1` cannot suffice from the decorated
+scheme alone. Its low-degree vertices violate the critical-host hypotheses;
+it does not refute a completion that uses those hypotheses.
+
+**Recorded route nonclosure.** If the two latter components contain their
+respective other markers, they give bichromatic paths from `a0` to `0,2`
+avoiding the corresponding cycle roots. In reverse projections an endpoint
+marker can be a loop. A minimizing set consisting only of these loops
+supplies no contraction if the endpoints are retained; deleting them loses
+the path data. Simultaneously packing full `a1,a2` trees and a spanning
+`a0` forest with two components separating the markers would give a helper
+through `a0` and one marker, disjoint from the five root bags. Identifying
+the markers in the projection does not give a connected preimage for the
+deficient-case reduction. That lift remains unproved.
+
 ### 7.6 A reduction preserving the entire core
 
 **Written proof; separate internal audit.** The

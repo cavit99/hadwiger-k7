@@ -56,11 +56,17 @@ fragment by distinct missing neighbour roots, preserving every subset
 boundary. An opposite full component then supplies the helper; that step
 has no established replacement inside the remaining single component.
 
-The colouring search includes both reserved-triple and two-pair neighbour
-colourings. Changing a colouring changes the available path host, so an
-old model does not automatically survive. Contracting the failed helper
-component loses criticality and does not supply a colouring lift. The
-missing step is a joint choice of colouring, paths and disjoint bags.
+The [marked bipartite completion](results/hc7_marked_k33_scheme_completion.md),
+with a separate internal audit, now constructs the forbidden minor from
+the six old cross-paths plus the bichromatic connection `a0--1` and at least
+one of `a0--3,a0--4`, in the same reserved-triple colouring. Its separate
+auxiliary inductions handle a marker being absorbed and the two markers
+merging, with explicit disjoint preimages and strict descent. The pair of
+connections only to `3,4` is not covered. Forcing the sufficient state, or
+completing both responses to its failure, remains open. A nine-vertex
+example shows that the lone `a0--1` connection cannot suffice without
+further critical-host information. Changing a colouring changes the
+available path host; an old model does not automatically survive.
 The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
 [deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
 remain available with their exact preservation limits.

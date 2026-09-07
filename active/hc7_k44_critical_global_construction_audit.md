@@ -7,8 +7,15 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`0354f788194a76d32cbd9c919e72fa4e99fcf9fa20eb62cee53cfe1787a668c4`.
+The latest check covers only the final marked-scheme completion, failed
+Kempe connections and projection nonclosure block before Section 7.6.
+Removing it exactly recovers Git
+`0f93db9`, at SHA-256
 `49f5a7c6415e1c997d0abc733251a38c848398fa60a6cf15c0a20e8c149a875c`.
-The latest check covers only the two-triangle exterior and colouring
+This byte equality was checked directly against Git.
+
+The preceding check covers only the two-triangle exterior and colouring
 nonclosure block before Section 7.6. Removing it exactly recovers Git
 `1927a6f`, at SHA-256
 `7d0db666392bd8a4dd3083412b07fb38181ff67a68b70b8fea46d29a52fe29f3`.
@@ -462,3 +469,28 @@ remaining colours, or `v` could be coloured; hence the stated multiplicities
 are exact. This does not assert Kempe equivalence. A changed colour class
 does not lift an old model, and a contracted component's colour need not
 extend over its internal edges. The stated global ownership gap remains open.
+
+## Section 7.5 marked-scheme completion: scoped addendum
+
+**Verdict: GREEN.** The block and ledger match the separately audited
+marked-scheme source at SHA-256
+`fb55cc00b52e0f3fb6f6e547f08b29ed6aae37cb25c4176a7c7fb96ada05dc2f`.
+The final theorem needs the connection to `1` and one to `3,4` in the
+same reserved-triple colouring. Its independent auxiliary inductions,
+strict recursive parameter and fixed preimages are summarized accurately;
+the pair only to `3,4` remains excluded. Failure at `1` permits the stated
+two-pair swap because its `a0` component avoids both `0,2`. If `1` succeeds,
+both other connections fail; their components exclude the corresponding
+cycle-adjacent marker, but may contain the other. The separately audited
+one-path barrier at `7b6ee34368f1b8d6828d5291e9559b05c192b22ad148671a7c69e4aec810b768`
+does not satisfy the critical-host hypotheses.
+
+In the recorded nonclosure, endpoint labels can be loops, so a minimizing
+set of those labels need not give any positive-rank component contraction.
+The stated simultaneous packing would be terminal: the two `a0` components
+separate the markers, so one contains `a0` and a marker; disjoint full
+`a1,a2` trees give a rooted `K_{2,3}` avoiding it and both markers.
+The elementary helper construction then applies. Identifying the two
+markers in a projection, however, supplies no connected original preimage
+for that virtual vertex. No packing existence or deficient-case lift is
+claimed, and no global colouring conclusion follows from this block.
