@@ -31,15 +31,23 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
-The current concrete attempt is the companion structural theorem: every
-seven-connected graph with a `K_7^vee` minor has a `K_7^=` minor. It would
-prove Conjecture 19 and permit a direct comparison with Norin--Totschnig;
-it is unproved. The [technical frontier](active/hc7_k44_closure_frontier.md#74-comparison-with-the-companion-conjecture)
-links the simultaneous branch-set construction and the critical-host
-helper construction. The former permits temporary contact losses and
-changes to several bags; the latter uses the full colouring-critical
-hypotheses. Neither supplies global existence or a closed induction.
-The deficient-edge colouring data and the `K_{4,4}` route are retained.
+The current concrete attempt is Conjecture 19 through the critical-host
+four-clique construction. Every degree-eight vertex of a critical
+companion-free host lies in a literal `K_4`, by a written, computation-free
+proof and separate internal audit.
+Deleting that clique leaves minimum degree at least six and hence a `K_5`
+minor. The missing step is a global construction combining these inputs
+without reusing vertices or destroying the retained contacts. The
+[technical frontier](active/hc7_k44_closure_frontier.md#741-the-four-clique-construction-and-contraction-closure)
+states the precise sufficient theorem and contraction limits.
+
+The new five-connected helper bound also proves literal `K_5^-` exclusion
+in that host after every connected three-vertex contraction, and after any
+two edge contractions when the first meets a degree-eight vertex. These are valid
+contraction certificates, not a closed induction: the returned graphs
+need not retain the original connectivity, minimum degree or criticality.
+The purely structural `K_7^vee` augmentation, deficient-edge colouring
+data and `K_{4,4}` route remain available. No global conjecture is closed.
 
 Local lemmas and failed mechanisms are research checkpoints. Continue
 through repair attempts and independent attacks on the strongest inference;

@@ -784,7 +784,7 @@ seven-vertex, nineteen-edge target. This is an assessment of a proposed
 theorem's reach, not an achievement or a consequence of Conjecture 21's
 partial results.
 
-The current structural target is: every seven-connected graph with a
+A retained structural target is: every seven-connected graph with a
 `K_7^vee` minor has a `K_7^=` minor. The
 [augmenting-chain draft](hc7_companion_augmenting_chain.md) gives its exact
 implication to Conjecture 19 and the simultaneous transfers being tested.
@@ -828,6 +828,61 @@ already violates it, even when every three-vertex cut isolates one vertex.
 A continuation must handle these separations inside the full host; the
 stronger theorem announced in their Section 3 is not proved in that paper.
 This does not refute a suitable continuation or either global conjecture.
+
+### 7.4.1 The four-clique construction and contraction closure
+
+**Current conjectural construction.** Let `G` be seven-connected and let
+`R` span a literal `K_4`. If `delta(G-R)>=6`, does `G` contain a `K_7^=`
+minor? This sufficient structural statement is unproved. The immediate
+attempt retains the additional proper-minor six-colourings of the critical
+host, so it need not prove this stronger statement in all hosts.
+
+The [audited critical reduction](../results/hc7_k7minus_degree7_rooted_helper_closure.md#corollary-3-the-critical-host-is-k_5-free-and-has-many-degree-eight-vertices)
+already ensures that such a host has a degree-eight vertex. The
+[degree-eight neighbourhood proof](hc7_degree8_neighbourhood_triangle.md)
+places every such vertex in a four-clique, without finite enumeration. Literal
+`K_5^-` exclusion means that each vertex outside `R` has at most two
+neighbours in it; hence `G-R` has minimum degree at least six. The
+[audited sharp `K_5` bound](../results/hc7_k5_transversal_order7_separator.md)
+then supplies a `K_5` minor there. Its bags need not be singletons.
+
+One sufficient construction is three connected, disjoint, pairwise
+adjacent sets outside `R` whose missing contacts to `R` form a matching
+of size at most two. Together with the four singleton roots they give
+the target. A linkage from the roots to distinct bags of the `K_5` model
+does not yet give those three sets: cross-merging two pairs leaves six
+contacts to check between the two unused roots and three remaining bags.
+At least four must survive, with any two omissions independent. Counting
+distinct endpoints does not establish this. Root expansion and complete
+model reselection remain permitted.
+
+**Written proofs; separate internal audits.** The
+[five-connected helper theorem](hc7_five_connected_helper_closure.md)
+improves the earlier closure's connectivity threshold without changing
+its density bound. Its four-vertex boundary argument yields the
+[connected-set contraction certificate](hc7_companion_contraction_closure.md):
+for a connected set `C`, write `b=|N(C)|` and
+`D=sum_{z in N(C)}(|N(z) intersect C|-1)`. In the stated dense host,
+`D<=b+3` and five-connectivity of `G/C` exclude a literal `K_5^-` there.
+Every connected set of at most three vertices qualifies in the original
+seven-connected host. The
+[controlled two-edge proof](hc7_companion_two_edge_contractions.md)
+also allows any second contraction when the first meets a degree-eight
+vertex, including disjoint edges.
+
+These contractions have disjoint fixed preimages and strictly decrease
+host order. They do not preserve seven-connectivity, minimum degree eight
+or chromatic criticality. A four-vertex contraction can reduce connectivity
+to four: a separating set of four containing its merged vertex lifts to
+an actual order-seven separator containing all four contracted vertices.
+A continuation must handle that separator or prove a stronger lift;
+reapplying the five-connected theorem without it is unsupported.
+
+The [induction-shortcut counterexamples](../barriers/hc7_companion_induction_shortcuts.md)
+show why neither density alone nor local exclusions with minimum degree
+eight supply the missing induction. They leave the target-free critical
+class and its global construction open. None of these deductions proves
+Conjecture 19, Conjecture 21 or HC7.
 
 ### 7.5 A neighbourhood contact construction
 

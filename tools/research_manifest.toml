@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "da9865bc6e673487b10670e19bb41b3117f56cbfe19963a235aa84e9d9a571de"
+expected_source_sha256 = "ccb152686832e05f93555162259977b3ad0dd5d094d2ba5afa463f10d2a91ad8"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21686,3 +21686,132 @@ source = "hc7.target.companion_near_clique_closure"
 target = "hc7.companion.rooted_helper_extension"
 kind = "related_to"
 note = "The helper route uses additional colouring-critical hypotheses and need not prove the purely structural target."
+
+[[claims]]
+id = "hc7.target.companion_four_clique_closure"
+title = "Four-clique construction for the companion six-colouring conjecture"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "7.4.1 The four-clique construction and contraction closure"
+active = false
+expected_source_sha256 = "ccb152686832e05f93555162259977b3ad0dd5d094d2ba5afa463f10d2a91ad8"
+scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
+allowed_exits = ["an explicit K7-equals minor"]
+does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
+
+[[claims]]
+id = "hc7.companion.five_connected_helper_closure"
+title = "Five-connectivity suffices for the neighbourhood helper closure"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_five_connected_helper_closure.md"
+source_heading = "3. The closure theorem"
+active = false
+audit = "active/hc7_five_connected_helper_closure_audit.md"
+expected_source_sha256 = "d68986c2c5228b322c8f1c93fff532d4c5f5b49009448a827ea7204fe5016513"
+scope = "five-connected graphs with a neighbourhood diamond or four-clique and the stated density bound"
+label_fidelity = "four prescribed roots and all literal root edges survive; a four-vertex actual cut forces a helper contact with the deleted vertex"
+conclusions = ["a neighbourhood diamond gives K7-equals", "a neighbourhood four-clique gives K7-minus"]
+does_not_prove = ["a general rooted construction from a neighbourhood triangle", "Conjecture 19, Conjecture 21 or HC7"]
+
+[[claims]]
+id = "hc7.companion.connected_set_literal_exclusion"
+title = "Literal near-clique exclusion after connected-set contractions"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_companion_contraction_closure.md"
+source_heading = "4. A certificate for contracting an arbitrary connected set"
+active = false
+audit = "active/hc7_companion_contraction_closure_audit.md"
+expected_source_sha256 = "ab7ce8adc265c0e2300fb2d0c3367b972f6fc828163ee8c4ffb5d950c987ccb4"
+scope = "six-connected K7-equals-free graphs of minimum degree eight; connected sets satisfying the explicit multiplicity and quotient-connectivity conditions"
+label_fidelity = "each merged vertex has one fixed connected preimage; distinct roots within that preimage are not claimed to survive separately"
+conclusions = ["every edge quotient is literal K5-minus-free", "the connected-set multiplicity certificate excludes a literal K5-minus", "in seven-connectivity every connected set of at most three vertices qualifies"]
+does_not_prove = ["preservation of minimum degree or chromatic criticality", "unrestricted iteration", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.two_edge_literal_exclusion"
+title = "A controlled degree deficit permits a second edge contraction"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_companion_two_edge_contractions.md"
+source_heading = "1. A six-connected class closed for one literal exclusion"
+active = false
+audit = "active/hc7_companion_two_edge_contractions_audit.md"
+expected_source_sha256 = "fe0cd007483e61d5de4164a116c089f6c6842fd815c64ffeaa6ba4e58daa1b16"
+scope = "six-connected K7-equals-free graphs with minimum degree seven and at most five degree-seven vertices"
+label_fidelity = "the two contractions have disjoint fixed preimages or one connected three-vertex preimage"
+conclusions = ["the graph and every edge quotient are literal K5-minus-free", "in the stated critical host any second edge may follow a degree-eight incident contraction"]
+does_not_prove = ["closure of the six-connected degree class", "arbitrary further contractions", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.degree_eight_four_clique"
+title = "Every surviving degree-eight centre belongs to a literal four-clique"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_degree8_neighbourhood_triangle.md"
+source_heading = "2. The critical-host application and its exact lift"
+active = false
+audit = "active/hc7_degree8_neighbourhood_triangle_audit.md"
+expected_source_sha256 = "907384c665975c47f7850ee49da2d7f389802b077837c4285a3f00a81f5ef824"
+scope = "seven-connected K7-equals-free graphs of minimum degree eight, at a degree-eight vertex whose neighbourhood has independence number at most three"
+label_fidelity = "the centre is untouched by the connected contraction inside its neighbourhood"
+conclusions = ["the neighbourhood contains a triangle", "the centre lies in a literal K4", "the proof uses no finite enumeration"]
+does_not_prove = ["a global minor from that four-clique", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.barrier.companion_induction_shortcuts"
+title = "Density and local exclusions alone do not close the induction"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_companion_induction_shortcuts.md"
+source_heading = "1. Density without connectivity does not force the target"
+active = false
+audit = "barriers/hc7_companion_induction_shortcuts_audit.md"
+expected_source_sha256 = "f3761a2a22c7c13f56b39ce0e28ee226d6871be566b13ff176d27badf2a2ce81"
+scope = "an unbounded matching-join family and an explicit Hamming graph"
+conclusions = ["density four alone with the two exclusions is insufficient", "local exclusions and minimum degree eight do not ensure a degree-preserving contraction"]
+does_not_prove = ["a target-free obstruction with all critical-host hypotheses", "failure of Conjecture 19, Conjecture 21 or HC7"]
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.target.companion_four_clique_closure"
+kind = "related_to"
+note = "Section 7.4.1 records the current critical-host construction for the separate companion conjecture."
+
+[[relations]]
+source = "hc7.target.companion_four_clique_closure"
+target = "hc7.companion.degree_eight_four_clique"
+kind = "related_to"
+note = "The proved necessary critical-host condition supplies the literal four-clique, without the global allocation."
+
+[[relations]]
+source = "hc7.target.companion_four_clique_closure"
+target = "hc7.companion.two_edge_literal_exclusion"
+kind = "related_to"
+note = "The controlled quotients are valid construction data but do not close an induction."
+
+[[relations]]
+source = "hc7.target.companion_four_clique_closure"
+target = "hc7.barrier.companion_induction_shortcuts"
+kind = "related_to"
+note = "The exact target-free and critical hypotheses cannot be replaced by these weaker induction classes."
+
+[[relations]]
+source = "hc7.companion.degree_eight_four_clique"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "A connected contraction inside the neighbourhood would otherwise create a literal K5-minus with the untouched centre."
+
+[[relations]]
+source = "hc7.companion.connected_set_literal_exclusion"
+target = "hc7.companion.five_connected_helper_closure"
+kind = "uses"
+note = "The five-connected contrapositive supplies the degree lower bounds in the excess calculation."
+
+[[relations]]
+source = "hc7.companion.two_edge_literal_exclusion"
+target = "hc7.companion.five_connected_helper_closure"
+kind = "uses"
+note = "The same contrapositive applies to the second quotient, whose connectivity is only five."

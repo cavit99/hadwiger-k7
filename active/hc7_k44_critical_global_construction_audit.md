@@ -7,8 +7,15 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
-`da9865bc6e673487b10670e19bb41b3117f56cbfe19963a235aa84e9d9a571de`.
-The latest 7 September 2026 check covers only the new navigation paragraph
+`ccb152686832e05f93555162259977b3ad0dd5d094d2ba5afa463f10d2a91ad8`.
+The latest scoped check covers new Section 7.4.1 and the change from
+"The current structural target" to "A retained structural target".
+Removing the new subsection and reversing that wording exactly recovers
+Git `285f934`, with SHA-256
+`da9865bc6e673487b10670e19bb41b3117f56cbfe19963a235aa84e9d9a571de`;
+this byte equality was checked directly against Git.
+
+The preceding 7 September 2026 check covers only the new navigation paragraph
 in Section 7.4. Removing that paragraph exactly recovers Git `3e0a909`,
 with SHA-256
 `1bc6088dad59d66394442d2c9610251571d4484147040a335da3e745751777ed`.
@@ -228,6 +235,40 @@ contacts except the two disjoint rim diagonals. Replacing that wheel by
 `K_5^-` leaves just one missing contact. None of these counts proves
 existence of the stipulated models or preserves them through arbitrary
 path contractions. No new external source or finite enumeration was used.
+
+## Section 7.4.1: contraction closure and the four-clique laboratory
+
+**Verdict: GREEN** within the stated conditional scope. Literal `K_5^-`
+exclusion limits every outside vertex to two neighbours in the four-clique,
+so the critical host's minimum degree eight gives `delta(G-R)>=6`.
+For `J=G-R`, its order is at least seven and `e(J)>=3|V(J)|` exceeds
+the retained `K_5`-minor-free bound `3|V(J)|-6`. That external input is
+recorded in the linked source at SHA-256
+`069bfa0dd96211d44e762cc49aaa2476a4e655f52ba45e63e492bb6445411023`,
+matching its adjacent audit; its primary literature was not newly checked
+in this scoped update. Three disjoint connected adjacent outside bags
+with at most two independent missing root contacts give the claimed
+seven-bag minor. The six remaining contacts after the proposed two
+cross-mergers are real ownership obligations, not supplied by endpoint
+counts. The retained critical-host Corollary 3 at SHA-256
+`6ffee04cf9ff66275f9674c24bc2b9c669b1e108b76e5b1d2a18ec7d0106fe67`
+does supply a degree-eight vertex: it proves `n_8>=25+tau` with `tau>=0`.
+Its hypotheses hold because companion-minor exclusion implies
+`K_7^-`-minor exclusion. Combining this with the new neighbourhood result
+places a literal four-clique in every critical companion-free host.
+Consequently the proposed universal four-clique construction would close
+Conjecture 19; that construction itself remains unproved.
+
+The linked five-connected helper, connected-set, two-edge and neighbourhood
+proofs have separate adjacent audits. Their summarized conclusions retain
+their host and independence hypotheses. Quotient preimages are connected
+and disjoint, and order decreases, but these facts do not retain criticality
+or minimum degree. A four-cut of a four-vertex-set quotient must contain
+the merged vertex, since otherwise it would lift to a four-cut of the
+seven-connected original graph. Replacing that vertex by its four original
+vertices gives an actual order-seven separator with both open sides
+unchanged. Thus the stated next connectivity obstruction and non-iteration
+warning are valid. No global existence or closed reduction is established.
 
 ## Remaining obligations
 
