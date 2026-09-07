@@ -7,8 +7,15 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
-`87c8d865dc3ffa0b109c3462af211fafe12930ae42d0173ded67e3ca1635d5e0`.
-The 7 September 2026 extension audits only new Section 7.5. Removing that
+`acb131d53c6f323e3ee23c144d7c049381fe5558b5c6331bc79c1e12ae189166`.
+The latest 7 September 2026 addendum audits only new Sections 7.6–7.7.
+Removing those sections exactly recovers Git `46669f6`, with SHA-256
+`87c8d865dc3ffa0b109c3462af211fafe12930ae42d0173ded67e3ca1635d5e0`;
+this equality was checked against Git, not inferred from the author's
+description. All previously audited text is byte-identical.
+
+The earlier 7 September 2026 extension audited only new Section 7.5 at
+that preceding whole-frontier hash. Removing that
 section exactly recovers the frontier at Git `HEAD=9307ce3`, with SHA-256
 `49b39443e977c772609e0561c8700211a3f0b62cbe709e883e4316125d8724ff`.
 Sections 5 and 7.1–7.4 are byte-identical. Their 5 September audit and
@@ -94,6 +101,73 @@ It does not refute the six-clique five-root proposal or a flexible choice
 of neighbours. Menger paths require an additional ownership-preserving
 construction; neither distinct selectors nor positive probes supplies it.
 No online literature or finite enumeration was used for this addendum.
+
+## Sections 7.6–7.7: 7 September 2026 scoped addendum
+
+**Verdict: GREEN** for the two new sections, within their expressly partial
+scope. This check does not renew the older literature or finite-result
+audits and does not assert a global completion.
+
+Section 7.6 accurately applies the
+[deficient-bag reduction](../results/hc7_near_clique_deficient_bag_normalization.md)
+at SHA-256
+`537e885c1ef8930fadde8a8bf12423044e8d20a99b6c2f78a4b379e17870c4f2`.
+Its [separate audit](../results/hc7_near_clique_deficient_bag_normalization_audit.md)
+checks the complete promoted source, including the added no-triangle
+conclusion. Three-connectivity and absence of a `K_7^-` minor are retained.
+The reduction fixes the two missed bags, enlarges the other original core
+bags only by inclusion, and shrinks `D` inside its original vertex set.
+The minimum order-two conclusion is about the component outside the core;
+it does not assert that the deficient edge is a bridge of the whole host.
+The six-neighbour assertion counts actual vertices in two bags. Neither
+it nor the absence of a triangle supplies a small separator or a
+connectivity-preserving contraction. The frontier states these limits.
+
+For Section 7.7, the existing
+[paired-colourful barrier](../barriers/hc7_paired_colourful_planar_core_barrier.md)
+was read at SHA-256
+`25d436688ed47f624fafc465249165ac889c43839e1c3a83d4930a90f1118630`.
+Only its explicit core and written Propositions 2.1–2.2 are used here.
+The unique independent triple `012`, together with the complementary
+six-cycle on the other vertices, gives exactly the two displayed
+four-colour partitions, in both of which each marked set meets every
+colour. For the paired model, its common marked vertex `0` must form a
+singleton bag. The six possible root pairs for the other three bags
+have only the two displayed perfect matchings, each of which requires
+two bags to own the same additional vertex. This independently confirms
+the paired-model exclusion; it permits unused vertices and arbitrarily
+chosen connected bags. The explicit core's four-connectivity is also
+consistent with its edge list: its minimum degree is four, and its
+complement gives any two vertices at most two common neighbours. Thus
+it has no complete bipartite subgraph on side sizes `2,4` or `3,3`,
+excluding the remaining possible separations of order at most three on
+nine vertices. The extension's computer-assisted exclusion of
+an unrooted `K_6` minor is not invoked or re-audited.
+
+The list-extension assertion has the following exact elementary meaning.
+For a vertex partition `V(G)=V(R) union P` and a proper colouring
+`phi:V(R)->{1,...,6}`, define
+
+```text
+L_phi(p) = {1,...,6} minus phi(N_G(p) intersect V(R)),  p in P.
+```
+
+The colouring `phi` extends to a six-colouring of `G` exactly when
+`G[P]` has a proper colouring from these lists: the lists enforce every
+cross edge and properness enforces edges inside `P`. Consequently `G`
+is not six-colourable exactly when every such `phi` has no list-colouring
+extension. Restricting the check to core colourings using at most four
+or five colours checks only a subfamily, hence supplies only a necessary
+condition for non-six-colourability. This is the precise sense of the
+frontier's lost colouring responses; it does not assert that a
+seven-chromatic host itself has a five- or six-colouring. The barrier
+refutes simultaneous selection from colourful-set information alone,
+not a construction using these full extension obstructions.
+
+No new external input or finite minor search supports this addendum.
+There is no identified gap in the two scoped additions. The global
+singleton and two-pair constructions, and the conversion of full
+colouring obstructions into compatible minor models, remain open.
 
 ## Remaining obligations
 

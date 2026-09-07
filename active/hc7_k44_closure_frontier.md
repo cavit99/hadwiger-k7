@@ -851,6 +851,44 @@ exceeding the clique order. It does not refute the `K_6` proposal or the
 more flexible construction above. Neither is an established reduction
 closing Conjecture 21.
 
+### 7.6 A reduction preserving the entire core
+
+**Written proof; separate internal audit.** The
+[deficient-bag reduction](../results/hc7_near_clique_deficient_bag_normalization.md)
+applies to any `K_7^vee` model in a three-connected `K_7^-`-minor-free
+host. It shrinks the deficient bag to a vertex or an edge while retaining
+all six original core bags by inclusion. The two missed bags stay fixed;
+vertices of the original deficient bag may move into other bags.
+
+In the minimum order-two case, removing the core leaves the deficient
+edge as a bridge. Its two connected sides contact disjoint pairs of the
+four indicated core bags; the edge lies in no triangle of the host.
+Seven-connectivity gives each side at least six actual neighbours in its
+pair. The proof minimizes deficient-bag
+order in the fixed host, preserving all core ownership; it uses neither
+a splitter theorem nor an induction on quotients. The remaining singleton
+and two-pair allocations are unproved. Six vertices in two bags do not
+supply six separate bag contacts or an actual small separator.
+
+### 7.7 Why four-colour attachment data do not close the construction
+
+**Recorded negative finding / route nonclosure.** Separating four colour
+classes from the other two can leave a four-root core and several
+neighbourhoods that use every colour in each four-colouring. The first
+unsupported step is choosing one rooted `K_4` meeting those neighbourhoods
+in all its bags. The existing
+[paired-colourful planar barrier](../barriers/hc7_paired_colourful_planar_core_barrier.md#2-the-nine-vertex-core)
+already refutes this inference, even with a connected four-connected
+core; its paired-model exclusion has a written proof.
+
+Restricting the core to four colours loses valid five- and six-colour
+responses of the full host. A repair must retain the corresponding list
+extension obstructions on the two omitted classes, or use the full
+proper-minor colouring data directly. Five-colour list obstructions alone
+are only necessary; the version quantifying over every six-colouring of
+the core is a reformulation of non-six-colourability, not a new theorem.
+The barrier does not refute a simultaneous construction using that data.
+
 ## 8. Stop rules
 
 - A false weighted trichotomy, portal census or proposed peel is recorded as

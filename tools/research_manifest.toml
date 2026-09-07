@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "87c8d865dc3ffa0b109c3462af211fafe12930ae42d0173ded67e3ca1635d5e0"
+expected_source_sha256 = "acb131d53c6f323e3ee23c144d7c049381fe5558b5c6331bc79c1e12ae189166"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21580,3 +21580,26 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.barrier.prescribed_clique_roots_capacity"
 kind = "related_to"
 note = "Section 7.5's construction tests cannot use a general connectivity-based rooting rule; the specific K6 proposal and global target remain open."
+
+[[claims]]
+id = "hc7.near_clique.deficient_bag_normalization"
+title = "A deficient near-clique bag reduces to a vertex or an edge while retaining the core"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_near_clique_deficient_bag_normalization.md"
+source_heading = "Theorem"
+active = false
+audit = "results/hc7_near_clique_deficient_bag_normalization_audit.md"
+expected_source_sha256 = "537e885c1ef8930fadde8a8bf12423044e8d20a99b6c2f78a4b379e17870c4f2"
+scope = "finite three-connected K7-minus-minor-free graphs containing a K7-vee model"
+label_fidelity = "all six original core bags retained by inclusion; the two missed bags fixed; no prescribed root in the deficient bag is preserved"
+hypotheses = ["three-connectivity", "K7-minus minor exclusion", "a specified K7-vee minor model"]
+conclusions = ["deficient bag shrinks inside its original vertex set to order at most two", "a minimum order-two deficient edge is a bridge outside the core and lies in no triangle", "its two connected sides contact disjoint pairs of core bags", "seven-connectivity gives six actual neighbours in each indicated pair"]
+does_not_prove = ["simultaneous allocation through the two pairs of core bags", "a terminating continuation in the singleton or edge case", "Conjecture 19, Conjecture 21, T44 or HC7", "significance comparable to Norin--Totschnig"]
+keywords = ["near clique", "deficient branch set", "branch-set ownership", "three-connectivity", "triangle-free edge", "actual vertex separator"]
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.near_clique.deficient_bag_normalization"
+kind = "related_to"
+note = "Section 7.6 reduces an available near-clique model while retaining its entire core; the required singleton or two-pair allocation remains open."

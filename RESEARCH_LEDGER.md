@@ -59,6 +59,15 @@ The proposed general connectivity-based rooting shortcut is
 [refuted](barriers/prescribed_clique_roots_capacity.md); its specific
 five-root `K_6` version remains open here.
 
+An audited [near-clique reduction](results/hc7_near_clique_deficient_bag_normalization.md)
+now shrinks the deficient bag to a vertex or an edge while retaining the
+entire six-bag core by inclusion. The edge case has two connected sides,
+each with at least six actual neighbours in a pair of core bags. This
+does not supply the missing simultaneous allocation or complete either
+conjecture. Four-colour attachment constraints alone are insufficient;
+the [frontier](active/hc7_k44_closure_frontier.md#77-why-four-colour-attachment-data-do-not-close-the-construction)
+records the information lost by that attempted reduction.
+
 ## Current frontier and completed campaign
 
 **Written proof; two separate GREEN internal audits.** Every scheme of
