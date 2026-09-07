@@ -32,81 +32,51 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
-The target is Conjecture 19; no particular construction is mandatory.
-The critical-host attempt retains the full proper-minor colouring data.
-Its audited four-clique and residual `K_5`-minor inputs still need a
-simultaneous allocation. A separate global density attempt asks whether
-every five-connected `K_7^=`-minor-free graph has fewer than `4n` edges.
-This would exclude the critical host, but is also unproved. The
-[separator proof](active/hc7_companion_density_separators.md), with a separate
-internal audit, now combines models from different sides through their
-actual roots. A rooted triangulation contraction settles the proposed
-apex-planar equality family. General density reductions and the critical
-boundary-colouring construction remain open. The
-[technical frontier](active/hc7_k44_closure_frontier.md#741-the-four-clique-construction-and-contraction-closure)
-records the new cut restrictions, exact equality residue and missing
-contact allocation.
-The [neighbourhood alternative](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-retains six-connectivity and may choose five of the eight actual neighbours;
-the stronger universal five-root proposal is an optional test, not an input.
-The audited joint endpoint construction excludes every four-cycle and
-reduces such a neighbourhood to two spanning configurations: two triangles
-and an edge, or a five-cycle and a triangle. In the latter configuration,
-the bipartite theorem gives a rooted five-clique. The new
-[five-root wheel theorem](results/hc7_five_root_wheel.md), with a separate
-internal audit, closes every three-cut of the four-clique exterior in
-this cycle-and-triangle case: that exterior is now four-connected.
-The wheel proof uses root-preserving contractions and a connected-prefix
-ordering, without computation. Its
-[almost-clique strengthening](results/hc7_five_root_almost_clique.md) gives
-nine contacts at nonroot degree seven, also allowing at most five
-degree-six exceptions, with a designated triangle endpoint for the possible
-missing pair. A further
-[exterior construction](results/hc7_degree8_cycle_exterior.md) excludes all
-multiple-component cases outside the degree-eight vertex's entire closed
-neighbourhood. That exterior is connected, has minimum degree at least five,
-and contacts all eight neighbours. Both proofs have separate internal audits.
-A compatible helper or three-part allocation inside this exterior is still
-missing. Neither spanning configuration has a complete global construction.
+The immediate target is Conjecture 19. Its audited critical-host reductions
+leave two spanning degree-eight neighbourhood configurations: a five-cycle
+and a triangle, or two triangles and an edge. Extra edges remain allowed.
+The priority is a complete construction in the cycle case, using the full
+proper-minor six-colourability hypothesis, followed by the other case and
+an audit of the whole implication. Neither case is closed.
 
-The five-connected helper bound also proves literal `K_5^-` exclusion
-in that host after every connected three-vertex contraction, and after any
-two edge contractions when the first meets a degree-eight vertex. These are valid
-contraction certificates, not a closed induction: the returned graphs
-need not retain the original connectivity, minimum degree or criticality.
-The purely structural `K_7^vee` augmentation, deficient-edge colouring
-data and `K_{4,4}` route remain available. No global conjecture is closed.
+The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+records the exact constructions and ownership requirements. In the cycle
+case the bipartite theorem supplies a rooted five-clique; a compatible
+connected helper through the omitted triangle vertex would complete the
+case. The four-clique exterior is four-connected. The
+[cycle-and-triangle](results/hc7_degree8_cycle_exterior.md) and
+[two-triangle](results/hc7_degree8_two_triangle_exterior.md) exterior
+proofs now make `G-N[v]` connected and full to all eight neighbours in
+**both** configurations. Both have separate internal audits. The latter
+proof also removes the separate degree hypothesis from the five-root wheel
+lemma: internal five-connectivity at five roots containing a triangle and
+at least two nonroots suffice.
+Simultaneous disjoint paths replace all actual ports of a seven-boundary
+fragment by distinct missing neighbour roots, preserving every subset
+boundary. An opposite full component then supplies the helper; that step
+has no established replacement inside the remaining single component.
 
-Local lemmas and failed mechanisms are research checkpoints. Continue
-through repair attempts and independent attacks on the strongest inference;
-reassess the route when its obstruction warrants a different global
-construction. Neither a commit nor an audited partial result completes
-the campaign. Conjecture 21 would meet this campaign's concrete theorem
-target; the larger HC7 or comparable-theorem objective still requires its
-own explicit assessment.
+The colouring search includes both reserved-triple and two-pair neighbour
+colourings. Changing a colouring changes the available path host, so an
+old model does not automatically survive. Contracting the failed helper
+component loses criticality and does not supply a colouring lift. The
+missing step is a joint choice of colouring, paths and disjoint bags.
+The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
+[deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
+remain available with their exact preservation limits.
 
-Resume from this ledger and the relevant technical frontier. Revisit the
-completed historical review only for a disputed dependency or changed
-claim. Load other proofs and sources as needed, and update documentation
-when the mathematical position or work plan changes. The bipartite paper's
-pending originality and final reviews remain scheduled after this proof
-effort unless they supply a needed input.
+The [density and boundary-colouring routes](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
+and T44 remain conditional alternatives, not mandatory intermediate
+statements. An original proof of Conjecture 19 is the present concrete
+candidate for the Norin--Totschnig comparison; its proof and comparative
+assessment are still outstanding. Local results and commits do not meet
+the user's completion criterion.
 
-The current [neighbourhood contact construction](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-allows either a complete six-bag core with five neighbour contacts or a
-one-edge-deficient core with all six contacts. No construction is proved.
-The proposed general connectivity-based rooting shortcut is
-[refuted](barriers/prescribed_clique_roots_capacity.md); its specific
-five-root `K_6` version remains open here.
-
-An audited [near-clique reduction](results/hc7_near_clique_deficient_bag_normalization.md)
-now shrinks the deficient bag to a vertex or an edge while retaining the
-entire six-bag core by inclusion. The edge case has two connected sides,
-each with at least six actual neighbours in a pair of core bags. This
-does not supply the missing simultaneous allocation or complete either
-conjecture. Four-colour attachment constraints alone are insufficient;
-the [frontier](active/hc7_k44_closure_frontier.md#77-why-four-colour-attachment-data-do-not-close-the-construction)
-records the information lost by that attempted reduction.
+Resume from this ledger and the designated frontier; revisit history only
+for a disputed dependency or changed claim. The bipartite paper's primary-
+source originality review and final manuscript review remain pending after
+this proof effort unless they supply a needed input. No author contact is
+authorized.
 
 ## Current frontier and completed campaign
 

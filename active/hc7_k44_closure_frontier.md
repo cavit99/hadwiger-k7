@@ -1087,6 +1087,30 @@ Even a valid five-root model would leave the deleted triangle vertex's
 cycle-bag contacts unproved. A good cycle matching alone is not a terminal
 construction; the cut and the additional contacts both need justification.
 
+The [two-triangle exterior theorem](../results/hc7_degree8_two_triangle_exterior.md),
+with a separate internal audit, now excludes multiple exterior components
+in the other spanning configuration as well. Its wheel lemma removes the
+separate degree hypothesis: internal five-connectivity at five roots containing
+a triangle and at least two nonroots suffice. The terminal two-nonroot case
+replaces further contraction.
+For an actual seven-boundary fragment, disjoint paths replace every internal
+port by a distinct missing neighbour of `v`, preserving every subset boundary.
+An unused eighth neighbour joins the opposite component to form a full helper.
+Thus in either spanning configuration `G-N[v]` is connected and full to all
+eight neighbours. The one-component construction remains open: the port paths
+need not leave a disjoint connected helper through that unused neighbour.
+
+The colouring attempt must also include two-pair colourings. Contracting
+`{v,0,2}` in the cycle case and expanding the independent pair gives a
+six-colouring of `G-v` with neighbourhood multiplicities `2,2,1,1,1,1`:
+the other six neighbours avoid the contracted colour and must use all five
+others. This does not require a Kempe sequence from a reserved-triple colouring.
+Changing the reserved colour class changes the available five-colour host;
+an old model has no automatic lift. Contracting a failed helper component
+also loses criticality, and expanding its single colour need not colour its
+internal edges. The missing inference is still a joint choice of colouring,
+paths and disjoint bags; neither of these operations supplies that choice.
+
 ### 7.6 A reduction preserving the entire core
 
 **Written proof; separate internal audit.** The

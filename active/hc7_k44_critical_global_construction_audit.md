@@ -7,8 +7,14 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`49f5a7c6415e1c997d0abc733251a38c848398fa60a6cf15c0a20e8c149a875c`.
+The latest check covers only the two-triangle exterior and colouring
+nonclosure block before Section 7.6. Removing it exactly recovers Git
+`1927a6f`, at SHA-256
 `7d0db666392bd8a4dd3083412b07fb38181ff67a68b70b8fea46d29a52fe29f3`.
-The latest check covers only the almost-clique, connected-exterior and
+This byte equality was checked directly against Git.
+
+The preceding check covers only the almost-clique, connected-exterior and
 contracted-cycle nonclosure block before Section 7.6. Removing it exactly recovers Git
 `dfb86b7`, at SHA-256
 `0a732e450f1297a031817261db2e4fc511a067fb3c55fee9bdd46ef9f11c4be6`.
@@ -441,3 +447,18 @@ two deficits. In contrast, the retained boundary lower bound is only
 `7-1-2=4`, and the deleted triangle root has no guaranteed contacts to
 the three returned cycle bags. The paragraph records these two failures
 without claiming a counterexample to the desired global construction.
+
+## Section 7.5 two-triangle exterior: scoped addendum
+
+**Verdict: GREEN.** The new block and ledger retain the five-root triangle
+and at-least-two-nonroots hypotheses of the degree-free wheel, and match
+the separately audited exterior source at SHA-256
+`e51564c9ffd857d15eb3d1de9c5cfa4ce9b9bfac514ac3188ac5379e2a745776`.
+The simultaneous port replacement and unused-root helper prove connectedness
+and full contact, with no claim that a helper survives in the single component.
+Contracting `{v,0,2}` and expanding the independent pair gives its common
+colour, absent from the other six neighbours. Those six must use all five
+remaining colours, or `v` could be coloured; hence the stated multiplicities
+are exact. This does not assert Kempe equivalence. A changed colour class
+does not lift an old model, and a contracted component's colour need not
+extend over its internal edges. The stated global ownership gap remains open.

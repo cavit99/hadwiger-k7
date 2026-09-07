@@ -24,7 +24,7 @@ the limitations of an earlier argument are not current open bipartite cases.
 | Every complete bipartite graph `K_{2,n}` is contractible | [Proof](k2n_contractibility_via_matroid_packing.md) · [GREEN audit](k2n_contractibility_via_matroid_packing_audit.md) · [four-page DRAFT](../paper/k2n-contractibility/main.pdf) | Computation-free; answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
 | Four literal root edges complete five-root partial routing | [Proof](llru_question61_via_km_property_star.md) · [GREEN audit](llru_question61_via_km_property_star_audit.md) · [second GREEN cold audit](llru_question61_via_km_property_star_second_cold_audit.md) | Answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated eight-connectivity threshold `k>=11`.  It is an application of Kriesell--Mohr property `(*)`. |
 | Every three-connected graph has a rooted `K_4^-` minor at any four prescribed roots | [Proof](rooted_k4minus_four_roots.md) · [GREEN audit](rooted_k4minus_four_roots_audit.md) | Elementary unbounded proof.  The missing quotient edge is not prescribed, and the model need not span. |
-| Five prescribed roots containing a triangle force a rooted wheel under internal five-connectivity, a nonempty nonroot set and nonroot degree at least six | [Proof](hc7_five_root_wheel.md) · [GREEN audit](hc7_five_root_wheel_audit.md) | Preserves every root by strict contraction descent; closes the three-cut case of the companion cycle-and-triangle exterior, leaving a four-connected exterior. |
+| Five prescribed roots containing a triangle force a rooted wheel under internal five-connectivity and at least two nonroots | [Proof, Lemma 1](hc7_degree8_two_triangle_exterior.md) · [GREEN audit](hc7_degree8_two_triangle_exterior_audit.md) | No separate degree hypothesis; stopping the root-preserving contraction at two nonroots strengthens the [earlier wheel theorem](hc7_five_root_wheel.md). |
 | Nonroot degree seven, with at most five degree-six exceptions, strengthens the five-root wheel to `K_5^-` | [Proof](hc7_five_root_almost_clique.md) · [GREEN audit](hc7_five_root_almost_clique_audit.md) | Under the same rooted boundary and triangle hypotheses, nine contacts survive; the triangle endpoint of the possible missing pair can be designated in advance. No extra helper is guaranteed. |
 
 The later [odd-cycle attachment counterexamples](../barriers/triangle_free_bipartite_attachment_counterexample.md),
@@ -54,10 +54,13 @@ These are necessary structural theorems about a hypothetical counterexample.
 They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
 
 For the companion target, the
-[cycle-and-triangle exterior theorem](hc7_degree8_cycle_exterior.md), with
-[GREEN audit](hc7_degree8_cycle_exterior_audit.md), makes the exterior of
-that degree-eight closed neighbourhood connected, of minimum degree five,
-and full to its eight neighbours. It leaves the simultaneous allocation open.
+[cycle-and-triangle](hc7_degree8_cycle_exterior.md) and
+[two-triangle](hc7_degree8_two_triangle_exterior.md) exterior theorems, with
+their [first](hc7_degree8_cycle_exterior_audit.md) and
+[second](hc7_degree8_two_triangle_exterior_audit.md) GREEN audits, make
+`G-N[v]` connected and full to all eight neighbours in both remaining
+spanning configurations. The cycle case also gives exterior minimum degree
+five. Neither theorem supplies the remaining simultaneous allocation.
 
 ## Selected foundational inputs to the preserved T44 campaign
 
