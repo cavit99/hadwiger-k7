@@ -7,8 +7,14 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21`.
+The latest check covers only the 24-line neighbourhood-construction block
+before Section 7.6. Removing it exactly recovers Git `8da9ebe`, at SHA-256
 `62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318`.
-The latest check covers only the new cut deductions and matching criterion
+This byte equality was checked directly against Git; all earlier audited
+mathematics and the prior provenance below are retained.
+
+The preceding check covers only the new cut deductions and matching criterion
 in Section 7.3, expanded density navigation in Section 7.4.1 and the new
 companion-candidate block in Section 7.5. Removing both new blocks and
 reversing the navigation expansion exactly recovers Git
@@ -359,3 +365,19 @@ missing pairs are independent, and extra contacts are harmless. The
 universal five-connected, `4n-9`, every-five-set statement is stronger
 and unproved. Neither deleting occupied helpers nor finite probes supplies
 its missing ownership-preserving construction or the weaker critical case.
+
+## Section 7.5 neighbourhood constructions: scoped addendum
+
+**Verdict: GREEN.** The new block matches the separately audited
+four-cycle exclusion and spanning-configuration source at
+`a0be7837d03dffd565313c8f29faf20226f5b116ec053ee8a82f27fd83865d10`
+and cycle-and-triangle source at
+`b3c43b4682c4554c2100d75dd14ea9df07aa898686b1cb6e3a1d9603985f68fe`.
+The critical hypotheses supply every input, and the endpoint construction
+gives `Q` directly. In the cycle-and-triangle case its at most one
+cross-edge permits an omitted triangle vertex anticomplete to the cycle;
+the two nonadjacent omitted cycle vertices then complete an independent
+triple. The rooted five-clique construction and sufficient extra-helper
+condition apply with their original-host ownership intact. The block
+correctly leaves that helper's existence and the other spanning case open;
+three occupied bag labels do not give an actual separator of order six.

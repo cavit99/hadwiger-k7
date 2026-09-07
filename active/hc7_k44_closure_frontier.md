@@ -1022,6 +1022,30 @@ helper bags is unsupported: they may contain arbitrarily many vertices,
 and neither the needed connectivity nor both sets of contacts survive
 automatically. Initial finite probes do not resolve either statement.
 
+**Written proof; separate internal audit.** The
+[joint endpoint construction](hc7_degree8_neighbourhood_four_cycle_exclusion.md)
+rules out every four-cycle in `G[N(v)]` under these critical-host hypotheses.
+It retains `v` and a neighbouring cycle vertex as actual bags while applying
+the helper theorem after deleting both. An elementary eight-vertex argument
+and the global degree-excess identity close the cycle case. A further
+elementary argument reduces the neighbourhood to two spanning configurations:
+two triangles and an edge, or a five-cycle and a triangle. The latter has
+at most one edge between its parts. These are spanning subgraphs, not a
+classification of all induced neighbourhoods. The endpoint construction
+produces `Q` directly and does not require the stronger five-root packet.
+
+In the five-cycle-and-triangle case, the
+[reserved-neighbour construction](hc7_degree8_cycle_triangle_construction.md)
+uses a proper-minor colouring and the bipartite theorem to obtain a rooted
+`K_5` on five neighbours. Choose the omitted triangle vertex away from the
+possible cross-edge; the two omitted cycle vertices and that vertex are
+then independent. A connected set through the omitted triangle vertex,
+disjoint from the underlying `K_{2,3}` model and touching two of its cycle
+bags, would give `Q`. Its existence remains unproved. When it fails, the
+component boundary lies in three model bags and `{v}`; this does not bound
+the number of actual separator vertices by six. The other spanning
+configuration and a decreasing global exchange remain open.
+
 ### 7.6 A reduction preserving the entire core
 
 **Written proof; separate internal audit.** The

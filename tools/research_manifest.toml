@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
+expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
+expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
+expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
+expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -21991,3 +21991,69 @@ source = "hc7.target.companion_four_clique_closure"
 target = "hc7.target.companion_neighbourhood_five_roots"
 kind = "related_to"
 note = "Alternative sufficient constructions; the neighbourhood approach may reselect five actual neighbours and does not require the stronger universal rooting statement."
+
+[[claims]]
+id = "hc7.companion.degree_eight_spanning_configurations"
+title = "Degree-eight neighbourhoods reduce to two spanning configurations"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_degree8_neighbourhood_four_cycle_exclusion.md"
+source_heading = "4. Two spanning configurations"
+active = false
+audit = "active/hc7_degree8_neighbourhood_four_cycle_exclusion_audit.md"
+expected_source_sha256 = "a0be7837d03dffd565313c8f29faf20226f5b116ec053ee8a82f27fd83865d10"
+scope = "seven-connected K7-equals-minor-free graphs with minimum degree eight, at a degree-eight vertex whose neighbourhood has independence number at most three"
+label_fidelity = "the endpoint construction retains actual vertices and uses one spanning-helper model"
+conclusions = ["the neighbourhood has no four-cycle", "it contains spanning 2K3 plus K2 or C5 plus K3", "the latter has at most one cross-edge", "the proof uses no finite census"]
+does_not_prove = ["a global model in either remaining configuration", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.cycle_triangle_reserved_neighbours"
+title = "Reserved cycle vertices complete a rooted five-clique"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_degree8_cycle_triangle_construction.md"
+source_heading = "1. A rooted five-clique avoiding the triangle's third vertex"
+active = false
+audit = "active/hc7_degree8_cycle_triangle_construction_audit.md"
+expected_source_sha256 = "b3c43b4682c4554c2100d75dd14ea9df07aa898686b1cb6e3a1d9603985f68fe"
+scope = "the critical companion-free host, with a spanning C5 and disjoint triangle in a degree-eight neighbourhood and the stated independent triple"
+label_fidelity = "the bipartite model avoids the reserved neighbours; all enlargements and pendant transfers retain the five roots"
+conclusions = ["a rooted K5 on five neighbours avoiding the omitted triangle vertex", "a disjoint connected set through that vertex touching two cycle bags gives K7-equals"]
+does_not_prove = ["existence of the compatible connected set", "an upper bound of six on its actual boundary", "a decreasing exchange", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.degree_eight_spanning_configurations"
+kind = "related_to"
+note = "Restricts the critical neighbourhood without establishing the required global construction."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.cycle_triangle_reserved_neighbours"
+kind = "related_to"
+note = "The cycle-and-triangle configuration has a rooted core; simultaneous helper allocation remains open."
+
+[[relations]]
+source = "hc7.companion.degree_eight_spanning_configurations"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "Connected sets of order at most three exclude the specified neighbourhood diamonds."
+
+[[relations]]
+source = "hc7.companion.degree_eight_spanning_configurations"
+target = "hc7.companion.rooted_helper_extension"
+kind = "uses"
+note = "Uses the four-root helper input and its spanning-helper form after deleting two actual vertices."
+
+[[relations]]
+source = "hc7.companion.degree_eight_spanning_configurations"
+target = "hc7.companion.degree_eight_four_clique"
+kind = "uses"
+note = "Supplies the initial triangle for the elementary spanning-configuration proof."
+
+[[relations]]
+source = "hc7.companion.cycle_triangle_reserved_neighbours"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "Extracts the fully rooted K2,3 from bichromatic paths avoiding the whole reserved colour class."

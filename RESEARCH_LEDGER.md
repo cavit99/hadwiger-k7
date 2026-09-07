@@ -49,6 +49,11 @@ contact allocation.
 The [neighbourhood alternative](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 retains six-connectivity and may choose five of the eight actual neighbours;
 the stronger universal five-root proposal is an optional test, not an input.
+The audited joint endpoint construction excludes every four-cycle and
+reduces such a neighbourhood to two spanning configurations: two triangles
+and an edge, or a five-cycle and a triangle. In the latter configuration,
+the bipartite theorem gives a rooted five-clique; a compatible connected
+helper remains missing. Neither case has a complete global construction.
 
 The five-connected helper bound also proves literal `K_5^-` exclusion
 in that host after every connected three-vertex contraction, and after any
