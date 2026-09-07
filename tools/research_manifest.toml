@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "acb131d53c6f323e3ee23c144d7c049381fe5558b5c6331bc79c1e12ae189166"
+expected_source_sha256 = "1bc6088dad59d66394442d2c9610251571d4484147040a335da3e745751777ed"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21603,3 +21603,25 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.near_clique.deficient_bag_normalization"
 kind = "related_to"
 note = "Section 7.6 reduces an available near-clique model while retaining its entire core; the required singleton or two-pair allocation remains open."
+
+[[claims]]
+id = "hc7.barrier.near_clique_centroid_allocation"
+title = "Connected centroid complements do not close near-clique allocation"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_near_clique_global_exchange.md"
+source_heading = "2. The centroid weakening is false"
+active = false
+audit = "barriers/hc7_near_clique_global_exchange_audit.md"
+expected_source_sha256 = "6e48f030621358a37d99a963dc2125999a1decabed31bb6921df30e6a396e076"
+scope = "explicit clique-sum graphs with a six-bag core and balanced contact vertices"
+label_fidelity = "the first core model spans the host; the second example retains a disjoint deficient bag"
+conclusions = ["connected centroid complement and two outside neighbours per centroid do not force K7-equals", "an exact donor transfer with at least as many gained as lost contacts is terminal except at (0,0) or (2,2)"]
+does_not_prove = ["failure of the seven-connected global construction", "a decreasing continuation through deficient-bag rotations", "Conjecture 19, Conjecture 21 or HC7"]
+keywords = ["near clique", "branch-set ownership", "centroid", "global allocation", "clique separator"]
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.barrier.near_clique_centroid_allocation"
+kind = "related_to"
+note = "Section 7.6 must retain the full mixed-deletion constraints; centroid connectivity and neighbour counts alone are insufficient."

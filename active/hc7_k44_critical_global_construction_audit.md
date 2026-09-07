@@ -7,8 +7,15 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`1bc6088dad59d66394442d2c9610251571d4484147040a335da3e745751777ed`.
+The latest 7 September 2026 addendum audits only the added transfer
+paragraph in Section 7.6 and new Section 7.8. Removing those exact additions
+recovers Git `672e779`, with SHA-256
 `acb131d53c6f323e3ee23c144d7c049381fe5558b5c6331bc79c1e12ae189166`.
-The latest 7 September 2026 addendum audits only new Sections 7.6–7.7.
+All other bytes are unchanged; this was checked against Git directly.
+
+The preceding 7 September 2026 addendum audited Sections 7.6–7.7 at that
+preceding whole-frontier hash.
 Removing those sections exactly recovers Git `46669f6`, with SHA-256
 `87c8d865dc3ffa0b109c3462af211fafe12930ae42d0173ded67e3ca1635d5e0`;
 this equality was checked against Git, not inferred from the author's
@@ -168,6 +175,50 @@ No new external input or finite minor search supports this addendum.
 There is no identified gap in the two scoped additions. The global
 singleton and two-pair constructions, and the conversion of full
 colouring obstructions into compatible minor models, remain open.
+
+## Section 7.6 transfer paragraph and Section 7.8: scoped addendum
+
+**Verdict: GREEN** for these additions at the current whole-frontier hash.
+The [transfer and centroid source](../barriers/hc7_near_clique_global_exchange.md)
+remains at SHA-256
+`6e48f030621358a37d99a963dc2125999a1decabed31bb6921df30e6a396e076`.
+Its [adjacent audit](../barriers/hc7_near_clique_global_exchange_audit.md)
+checks the full construction. The summary retains its companion-target
+scope, valid connected transfer, exact gain/loss classification and absence
+of a decreasing continuation. The centroid examples refute only the
+specified weaker conditions, not seven-connectivity or a critical host.
+
+For Section 7.8, triangle-freeness makes `S,T` disjoint. Deleting the two
+endpoints lowers connectivity by at most two, and every remaining vertex
+loses at most one neighbour, giving the stated connectivity and degree
+bounds. Proper-minor colourability gives `chi(F)<=6`. In a hypothetical
+five-colouring, the recoloured part of `S` is independent and has no
+neighbour at `y`; the fresh colour causes no conflict elsewhere. Giving
+the freed colour to `x` and the fresh colour to `y` therefore colours every
+edge of `G`, proving `chi(F)=6` by contradiction.
+
+The six detours also exist for adjacent endpoints. Deleting one edge
+from a seven-connected graph leaves a six-connected graph: after deleting
+at most five vertices, the original remaining graph is two-connected,
+so removing that edge cannot disconnect it. Apply nonadjacent Menger to
+`x,y` in `G-xy`, then remove the endpoints and truncate if necessary.
+This gives six vertex-disjoint `S`--`T` paths in `F`, with no assertion
+that they are bichromatic.
+
+The missing-colour law quantifies over every six-colouring of `F`. Two
+distinct representatives extend to the adjacent endpoints; if both sets
+are nonempty and no such representatives exist, each is the same singleton.
+Two colours absent from `S union T` would contradict that law. Deleting
+vertex `0` from the recorded barrier removes `03,0w` and leaves only `s3`
+missing, so its stated `K_7^-` subgraph is present.
+
+All three sufficient constructions have disjoint connected bags and
+actual endpoint contacts. A `K_6` plus `{x,y}` has at least `15+5=20`
+contacts. A four-rim wheel plus the two singleton endpoints has all
+contacts except the two disjoint rim diagonals. Replacing that wheel by
+`K_5^-` leaves just one missing contact. None of these counts proves
+existence of the stipulated models or preserves them through arbitrary
+path contractions. No new external source or finite enumeration was used.
 
 ## Remaining obligations
 

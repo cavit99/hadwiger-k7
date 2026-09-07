@@ -21,9 +21,9 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    minor contains a `K_7^-` minor. Neither would by itself prove `HC_7`.
 3. **Immediate structural laboratory:** the
    [critical-host global construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
-   for Conjecture 21, combining proper-minor six-colourings with arbitrary
-   `K_{4,4}` branch sets. No global construction or closed induction is
-   proved. The
+   for Conjecture 21, combining proper-minor six-colourings with near-clique
+   or `K_{4,4}` models. No global construction or closed induction is proved.
+   The
    [technical frontier](active/bipartite_contractibility_frontier.md)
    records the completed bipartite theorem, exact counterexamples and
    application limits; the [T44 frontier](active/hc7_k44_closure_frontier.md)
@@ -31,11 +31,13 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
-Concentrate on the critical-host target above: construct a `K_7^-` minor
-from an arbitrary `K_{4,4}` model using the full proper-minor colouring
-constraints. Seek a direct construction or a reduction closed under its
-stated hypotheses, with a decreasing parameter and a valid lift. The
-literal-core cases and bounded contraction sequences remain inputs.
+Concentrate on a global construction in the critical host. The current
+attack uses the normalized near-clique and the full colouring constraints
+at its deficient edge; it permits all core bags to change. The
+[technical frontier](active/hc7_k44_closure_frontier.md#78-keeping-the-full-triangle-free-edge-state)
+states the exact clique-contact and paired-wheel targets and the data a
+reduction must retain. The singleton near-clique case and the arbitrary
+`K_{4,4}` route remain open alternatives. No closed induction is available.
 
 Local lemmas and failed mechanisms are research checkpoints. Continue
 through repair attempts and independent attacks on the strongest inference;

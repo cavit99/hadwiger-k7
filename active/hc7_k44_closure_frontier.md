@@ -870,6 +870,17 @@ a splitter theorem nor an induction on quotients. The remaining singleton
 and two-pair allocations are unproved. Six vertices in two bags do not
 supply six separate bag contacts or an actual small separator.
 
+The [audited transfer classification and centroid barrier](../barriers/hc7_near_clique_global_exchange.md)
+sharpen this obligation for the companion target. Split a donor into two
+connected pieces, move one into the deficient bag, and count newly gained
+contacts `g` and lost core contacts `l`. With `l<=g`, the only nonterminal
+outcomes are `(g,l)=(0,0)` and `(2,2)`; in the latter the donor remainder
+becomes deficient and the missing labels may change. No decreasing rule
+through these rotations is proved. Selecting six balanced contact vertices
+and keeping their complement connected, even with two neighbours per selected
+vertex, is insufficient. The explicit examples retain rooted core models;
+they fail the full mixed-deletion conditions of seven-connectivity.
+
 ### 7.7 Why four-colour attachment data do not close the construction
 
 **Recorded negative finding / route nonclosure.** Separating four colour
@@ -888,6 +899,39 @@ proper-minor colouring data directly. Five-colour list obstructions alone
 are only necessary; the version quantifying over every six-colouring of
 the core is a reformulation of non-six-colourability, not a new theorem.
 The barrier does not refute a simultaneous construction using that data.
+
+### 7.8 Keeping the full triangle-free-edge state
+
+**Written deductions; conjectural global construction.** In the critical
+host, let `xy` be the normalized triangle-free edge and put
+`F=G-{x,y}`, `S=N_G(x)-{y}`, `T=N_G(y)-{x}`. Then `S,T` are disjoint,
+`kappa(F)>=5`, `delta(F)>=7`, and `chi(F)=6`. The first two bounds follow
+from seven-connectivity and the audited `delta(G)>=8`: no remaining vertex
+loses two neighbours. If `F` had a five-colouring, recolour the vertices
+of one colour in `S` with colour six, give `x` the freed colour and `y`
+colour six. Disjointness makes this a six-colouring of `G`, a contradiction.
+Six internally disjoint `xy` detours give six disjoint `S`--`T` paths in
+`F`; they are not asserted to be bichromatic.
+
+For every six-colouring `c` of `F`, define missing-colour sets
+`M_S=[6]-c(S)` and `M_T=[6]-c(T)`. They have no distinct representatives:
+otherwise those colours extend to `x,y`. Equivalently, one set is empty
+or both equal the same singleton. In particular `S union T` uses at
+least five colours in every such colouring. The old
+[double-saturation barrier](../barriers/hc7_double_saturation_rooted_k5_barrier.md)
+does not refute a one-defect construction: deleting its vertex `0` already
+gives `K_7^-`.
+
+Two sufficient global constructions remain under investigation. A `K_6`
+model in `F` with five bags meeting `S union T` combines with `{x,y}`
+to give `K_7^-`. Alternatively, five disjoint connected bags, each meeting
+both `S,T` and forming a four-rim-vertex wheel, combine with the two
+singleton endpoint bags to give `K_7^=`. A `K_5^-` on those five bags
+instead gives `K_7^-`. These are explicit contact counts, not existence
+theorems. Arbitrarily contracting the six paths need not preserve the
+available chromatic lower bound, a clique model, or the required rooted
+placement in a returned wheel. A proof must construct the paired bags or
+preserve all these necessary data through a genuinely decreasing reduction.
 
 ## 8. Stop rules
 
