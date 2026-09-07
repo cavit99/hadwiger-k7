@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "1bc6088dad59d66394442d2c9610251571d4484147040a335da3e745751777ed"
+expected_source_sha256 = "da9865bc6e673487b10670e19bb41b3117f56cbfe19963a235aa84e9d9a571de"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21625,3 +21625,64 @@ source = "hc7.target.k44_sevenconnected_closure"
 target = "hc7.barrier.near_clique_centroid_allocation"
 kind = "related_to"
 note = "Section 7.6 must retain the full mixed-deletion constraints; centroid connectivity and neighbour counts alone are insufficient."
+
+[[claims]]
+id = "hc7.target.companion_near_clique_closure"
+title = "Seven-connected near-clique closure for Conjecture 19"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_companion_augmenting_chain.md"
+source_heading = "Global target and notation"
+active = false
+expected_source_sha256 = "fc9a69159af8e9c1f53961614fc2a049da5ad2be52bf4daee3e0f2dc5ce6e944"
+scope = "every finite seven-connected graph with a K7-vee minor"
+allowed_exits = ["a K7-equals minor"]
+does_not_prove = ["existence of a terminal simultaneous allocation", "a closed induction", "Conjecture 19, Conjecture 21 or HC7"]
+
+[[claims]]
+id = "hc7.companion.simultaneous_transfer"
+title = "Simultaneous near-clique transfers can use temporary contact losses"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_companion_augmenting_chain.md"
+source_heading = "1. A simultaneous transfer criterion"
+active = false
+audit = "active/hc7_companion_augmenting_chain_audit.md"
+expected_source_sha256 = "fc9a69159af8e9c1f53961614fc2a049da5ad2be52bf4daee3e0f2dc5ce6e944"
+scope = "a singleton deficient bag and any nonempty subset of its four core donors, with connected donations and remainders"
+label_fidelity = "all resulting bags are literal disjoint sets; no donor root is prescribed; remainder contacts are measured after all transfers"
+conclusions = ["the stated gain and matching-loss conditions give K7-equals", "a nine-vertex example requires a simultaneous move among the permitted donations"]
+does_not_prove = ["a terminal allocation in every seven-connected host", "a decreasing parameter", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.rooted_helper_extension"
+title = "Rooted helpers close a neighbourhood diamond for the companion target"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_companion_helper_construction.md"
+source_heading = "1. Audited input and the missing-edge extension"
+active = false
+audit = "active/hc7_companion_helper_construction_audit.md"
+expected_source_sha256 = "0c1ac8052f7734d8d0267381c030e177bd70010eded63d15fdca8c0db6d1f375"
+scope = "six-connected hosts satisfying the stated density and neighbourhood-diamond hypotheses; separate critical-host and helper-partition corollaries"
+label_fidelity = "four root vertices remain prescribed; literal root edges survive; helper partitions retain disjoint ownership"
+conclusions = ["the density-bound neighbourhood diamond gives K7-equals", "a critical companion-free host contains no literal K5-minus", "in a five-connected host two helpers can span all nonroots", "the stated four-cycle and two-vertex support condition is terminal"]
+does_not_prove = ["the general support redistribution", "a four-cycle in every surviving neighbourhood", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.target.k44_sevenconnected_closure"
+target = "hc7.target.companion_near_clique_closure"
+kind = "related_to"
+note = "Section 7.4 retains this distinct sufficient structural route to Conjecture 19."
+
+[[relations]]
+source = "hc7.target.companion_near_clique_closure"
+target = "hc7.companion.simultaneous_transfer"
+kind = "related_to"
+note = "The local transfer criterion is proved; its global existence assertion remains open."
+
+[[relations]]
+source = "hc7.target.companion_near_clique_closure"
+target = "hc7.companion.rooted_helper_extension"
+kind = "related_to"
+note = "The helper route uses additional colouring-critical hypotheses and need not prove the purely structural target."

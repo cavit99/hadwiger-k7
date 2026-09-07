@@ -7,8 +7,17 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`da9865bc6e673487b10670e19bb41b3117f56cbfe19963a235aa84e9d9a571de`.
+The latest 7 September 2026 check covers only the new navigation paragraph
+in Section 7.4. Removing that paragraph exactly recovers Git `3e0a909`,
+with SHA-256
 `1bc6088dad59d66394442d2c9610251571d4484147040a335da3e745751777ed`.
-The latest 7 September 2026 addendum audits only the added transfer
+The Git diff and byte equality were checked directly. All previously
+audited mathematics is unchanged. The two linked drafts have separate
+adjacent audits; this navigation check does not extend the scope of the
+present audit to their complete statements.
+
+The preceding 7 September 2026 addendum audits only the added transfer
 paragraph in Section 7.6 and new Section 7.8. Removing those exact additions
 recovers Git `672e779`, with SHA-256
 `acb131d53c6f323e3ee23c144d7c049381fe5558b5c6331bc79c1e12ae189166`.

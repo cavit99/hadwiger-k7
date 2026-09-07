@@ -784,6 +784,14 @@ seven-vertex, nineteen-edge target. This is an assessment of a proposed
 theorem's reach, not an achievement or a consequence of Conjecture 21's
 partial results.
 
+The current structural target is: every seven-connected graph with a
+`K_7^vee` minor has a `K_7^=` minor. The
+[augmenting-chain draft](hc7_companion_augmenting_chain.md) gives its exact
+implication to Conjecture 19 and the simultaneous transfers being tested.
+The [helper-construction draft](hc7_companion_helper_construction.md)
+uses the additional hypotheses of a colouring-critical host. Their
+local constructions do not establish either global conclusion.
+
 **Written construction.** A `K_{4,4}` model and a disjoint connected set
 `D` adjacent to at least six of its eight bags force `K_7^=`. Choose two
 disjoint cross pairs covering every bag missed by `D`, pairing each missed

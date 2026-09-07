@@ -3,8 +3,8 @@
 **Last updated:** 7 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
-**Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjecture 21
-also remain unproved.
+**Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjectures
+19 and 21 also remain unproved.
 Universal rooted bipartite contractibility has a written proof and two
 separate GREEN internal audits. The subsequent triangle-free classification
 and hereditary canonical two-copy sufficiency proposals are refuted.
@@ -31,13 +31,15 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
-Concentrate on a global construction in the critical host. The current
-attack uses the normalized near-clique and the full colouring constraints
-at its deficient edge; it permits all core bags to change. The
-[technical frontier](active/hc7_k44_closure_frontier.md#78-keeping-the-full-triangle-free-edge-state)
-states the exact clique-contact and paired-wheel targets and the data a
-reduction must retain. The singleton near-clique case and the arbitrary
-`K_{4,4}` route remain open alternatives. No closed induction is available.
+The current concrete attempt is the companion structural theorem: every
+seven-connected graph with a `K_7^vee` minor has a `K_7^=` minor. It would
+prove Conjecture 19 and permit a direct comparison with Norin--Totschnig;
+it is unproved. The [technical frontier](active/hc7_k44_closure_frontier.md#74-comparison-with-the-companion-conjecture)
+links the simultaneous branch-set construction and the critical-host
+helper construction. The former permits temporary contact losses and
+changes to several bags; the latter uses the full colouring-critical
+hypotheses. Neither supplies global existence or a closed induction.
+The deficient-edge colouring data and the `K_{4,4}` route are retained.
 
 Local lemmas and failed mechanisms are research checkpoints. Continue
 through repair attempts and independent attacks on the strongest inference;
