@@ -1060,6 +1060,33 @@ five-cycle-and-triangle case is four-connected. A three-part allocation
 there, or the earlier compatible helper, remains unproved. The theorem
 does not assert that a second application survives deletion of its bags.
 
+The [five-root almost-clique strengthening](../results/hc7_five_root_almost_clique.md),
+with a separate internal audit, raises the nonroot degree hypothesis to
+seven and gives nine contacts. For roots `b,c,r,s,t` with triangle `rst`,
+the only possible missing pair is `rb` or `rc`, where `r` is designated
+in advance. The same conclusion permits minimum degree six with at most
+five degree-six nonroots. The reductions retain this choice and all five
+roots. Neither version reserves a sixth helper.
+
+The [cycle-and-triangle exterior proof](../results/hc7_degree8_cycle_exterior.md),
+also separately audited, now makes `G-N[v]` connected, of minimum degree
+at least five, and full to all eight neighbours. Every exterior vertex
+has at most two cycle contacts, consecutive if there are two. Each exterior
+component must meet all three triangle vertices: otherwise a contracted
+cycle gives a five-root wheel, and another component and `v` complete `Q`.
+Explicit combinations then exclude both the two-component and larger
+cases. The remaining construction lies inside one connected exterior;
+each component behind a cutvertex must meet at least two triangle roots.
+These boundary contacts do not yet give three compatible helper bags.
+
+Deleting `v` and a triangle vertex, then contracting two disjoint cycle
+edges, passes the new degree test: at most two nonroots have degree six.
+It can still shrink a root-free boundary from seven to four, so applying
+the internal-five theorem without handling that cut is unsupported.
+Even a valid five-root model would leave the deleted triangle vertex's
+cycle-bag contacts unproved. A good cycle matching alone is not a terminal
+construction; the cut and the additional contacts both need justification.
+
 ### 7.6 A reduction preserving the entire core
 
 **Written proof; separate internal audit.** The

@@ -7,8 +7,14 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`7d0db666392bd8a4dd3083412b07fb38181ff67a68b70b8fea46d29a52fe29f3`.
+The latest check covers only the almost-clique, connected-exterior and
+contracted-cycle nonclosure block before Section 7.6. Removing it exactly recovers Git
+`dfb86b7`, at SHA-256
 `0a732e450f1297a031817261db2e4fc511a067fb3c55fee9bdd46ef9f11c4be6`.
-The latest check covers only the rooted-wheel paragraph before Section 7.6.
+This byte equality was checked directly against Git.
+
+The preceding check covers only the rooted-wheel paragraph before Section 7.6.
 Removing it exactly recovers Git `18b4b70`, at SHA-256
 `7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21`.
 This byte equality was checked directly against Git; all earlier audited
@@ -401,3 +407,37 @@ cycle-and-triangle exterior. The ledger and selected-results summary
 match this scope. The paragraph retains the missing simultaneous helper
 or three-part allocation; it does not claim a second application after
 occupied bags are deleted or completion of a global conjecture.
+
+## Section 7.5 almost-clique and exterior: scoped addendum
+
+**Verdict: GREEN.** The new block and current ledger paragraph match the
+separately audited almost-clique source at
+`de183e350c412739c05a744e811304454ba90856efee9e097813c70617bba9cd`
+and exterior source at
+`6c5196ea71f77a1426d8bc24ef040e7fe85805ac0cb784d2d62d152a67303eb3`.
+The first retains the wheel theorem's other hypotheses and guarantees
+all contacts except possibly one of `rb,rc`, with `r` fixed in advance.
+Its extension permits at most five degree-six nonroots: both transfers
+preserve surviving degrees, and the two-connected cofacial alternative
+has degree-sum discrepancy at least `max(2h,6)-5>0`.
+The second applies in the stated cycle-and-triangle configuration and
+proves a nonempty connected exterior full to all eight neighbours, with
+minimum degree five and the stated individual cycle-contact restriction.
+Its cutvertex corollary excludes a component with only one triangle-root
+contact, using the actual boundary of `L union M` and three disjoint
+apex bags full to a contracted four-cycle. The added frontier sentence
+matches exactly this scope and does not assert that the exterior is two-connected.
+The wheel assemblies use actual root preimages and disjoint exterior
+components. Neither summary asserts a reserved sixth helper, a three-part
+allocation, or a global colouring conclusion.
+
+For the recorded attempted packet, each exterior vertex loses at most
+one neighbour when the two disjoint cycle edges are contracted. Degree
+six therefore requires adjacency to the deleted triangle root and both
+ends of one contracted edge. Two such vertices for the same edge would
+give a literal `K_5^-` after contracting the centre to that triangle root;
+the checked contraction closure excludes this. Hence there are at most
+two deficits. In contrast, the retained boundary lower bound is only
+`7-1-2=4`, and the deleted triangle root has no guaranteed contacts to
+the three returned cycle bags. The paragraph records these two failures
+without claiming a counterexample to the desired global construction.

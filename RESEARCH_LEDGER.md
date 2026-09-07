@@ -57,9 +57,17 @@ the bipartite theorem gives a rooted five-clique. The new
 internal audit, closes every three-cut of the four-clique exterior in
 this cycle-and-triangle case: that exterior is now four-connected.
 The wheel proof uses root-preserving contractions and a connected-prefix
-ordering, without computation. A compatible helper or three-part allocation
-in the remaining exterior is still missing. Neither spanning configuration
-has a complete global construction.
+ordering, without computation. Its
+[almost-clique strengthening](results/hc7_five_root_almost_clique.md) gives
+nine contacts at nonroot degree seven, also allowing at most five
+degree-six exceptions, with a designated triangle endpoint for the possible
+missing pair. A further
+[exterior construction](results/hc7_degree8_cycle_exterior.md) excludes all
+multiple-component cases outside the degree-eight vertex's entire closed
+neighbourhood. That exterior is connected, has minimum degree at least five,
+and contacts all eight neighbours. Both proofs have separate internal audits.
+A compatible helper or three-part allocation inside this exterior is still
+missing. Neither spanning configuration has a complete global construction.
 
 The five-connected helper bound also proves literal `K_5^-` exclusion
 in that host after every connected three-vertex contraction, and after any

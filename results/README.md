@@ -25,6 +25,7 @@ the limitations of an earlier argument are not current open bipartite cases.
 | Four literal root edges complete five-root partial routing | [Proof](llru_question61_via_km_property_star.md) · [GREEN audit](llru_question61_via_km_property_star_audit.md) · [second GREEN cold audit](llru_question61_via_km_property_star_second_cold_audit.md) | Answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated eight-connectivity threshold `k>=11`.  It is an application of Kriesell--Mohr property `(*)`. |
 | Every three-connected graph has a rooted `K_4^-` minor at any four prescribed roots | [Proof](rooted_k4minus_four_roots.md) · [GREEN audit](rooted_k4minus_four_roots_audit.md) | Elementary unbounded proof.  The missing quotient edge is not prescribed, and the model need not span. |
 | Five prescribed roots containing a triangle force a rooted wheel under internal five-connectivity, a nonempty nonroot set and nonroot degree at least six | [Proof](hc7_five_root_wheel.md) · [GREEN audit](hc7_five_root_wheel_audit.md) | Preserves every root by strict contraction descent; closes the three-cut case of the companion cycle-and-triangle exterior, leaving a four-connected exterior. |
+| Nonroot degree seven, with at most five degree-six exceptions, strengthens the five-root wheel to `K_5^-` | [Proof](hc7_five_root_almost_clique.md) · [GREEN audit](hc7_five_root_almost_clique_audit.md) | Under the same rooted boundary and triangle hypotheses, nine contacts survive; the triangle endpoint of the possible missing pair can be designated in advance. No extra helper is guaranteed. |
 
 The later [odd-cycle attachment counterexamples](../barriers/triangle_free_bipartite_attachment_counterexample.md),
 with a [separate GREEN audit](../barriers/triangle_free_bipartite_attachment_counterexample_audit.md),
@@ -51,6 +52,12 @@ Later theorem notes strengthen and extend that snapshot:
 
 These are necessary structural theorems about a hypothetical counterexample.
 They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
+
+For the companion target, the
+[cycle-and-triangle exterior theorem](hc7_degree8_cycle_exterior.md), with
+[GREEN audit](hc7_degree8_cycle_exterior_audit.md), makes the exterior of
+that degree-eight closed neighbourhood connected, of minimum degree five,
+and full to its eight neighbours. It leaves the simultaneous allocation open.
 
 ## Selected foundational inputs to the preserved T44 campaign
 
