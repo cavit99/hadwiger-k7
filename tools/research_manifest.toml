@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "83762eaecfd641df2c82bdf924cbf67cf30179f03f3543fa3a4aa39bbc22f46c"
+expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "83762eaecfd641df2c82bdf924cbf67cf30179f03f3543fa3a4aa39bbc22f46c"
+expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21823,7 +21823,7 @@ kind = "target"
 status = "conditional-target"
 source = "active/hc7_companion_density_separators.md"
 active = false
-expected_source_sha256 = "6bef580656a804b30ee415d535c24af604715c56821e7f8d84aed0216fab3bb9"
+expected_source_sha256 = "cac72ab56f48c63732f311d8fafbc3b99ff92cc059cc599dff4c62c827aff8a9"
 scope = "all five-connected K7-equals-minor-free graphs"
 does_not_prove = ["the asserted density bound", "a closed reduction across sparse five-cuts", "Conjecture 19 or HC7"]
 
@@ -21836,7 +21836,7 @@ source = "active/hc7_companion_density_separators.md"
 source_heading = "3. The dense case has only diamond-free boundaries"
 active = false
 audit = "active/hc7_companion_density_separators_audit.md"
-expected_source_sha256 = "6bef580656a804b30ee415d535c24af604715c56821e7f8d84aed0216fab3bb9"
+expected_source_sha256 = "cac72ab56f48c63732f311d8fafbc3b99ff92cc059cc599dff4c62c827aff8a9"
 scope = "five-connected K7-equals-minor-free graphs with at least four times their order edges"
 label_fidelity = "the actual five boundary vertices, four prescribed root bags, fifth root in a helper and opposite full component remain disjoint and explicit"
 conclusions = ["every five-cut boundary is diamond-free and has at most six edges", "there are two to four components", "four-component boundaries are matchings and isolated vertices"]
@@ -21899,3 +21899,95 @@ source = "hc7.target.companion_five_connected_density"
 target = "hc7.barrier.companion_five_connected_k6"
 kind = "related_to"
 note = "A proper K6 minor cannot replace the density hypothesis: the explicit counterexample has twenty edges on eight vertices."
+
+[[claims]]
+id = "hc7.companion.five_boundary_model_gluing"
+title = "Compatible root ownership combines dense models across a five-cut"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_companion_density_separators.md"
+source_heading = "4. Combining models across the actual boundary"
+active = false
+audit = "active/hc7_companion_density_separators_audit.md"
+expected_source_sha256 = "cac72ab56f48c63732f311d8fafbc3b99ff92cc059cc599dff4c62c827aff8a9"
+scope = "five-connected graphs with an actual five-cut; r components and h closed sides above the stated helper threshold"
+conclusions = ["the three r+h boundary criteria force K7-equals", "two sides below the threshold in a dense excluded-minor host have stable boundary and exact equality"]
+does_not_prove = ["compatible model choices within one side", "elimination of arbitrary equality sides", "the global density or colouring targets"]
+
+[[claims]]
+id = "hc7.companion.rooted_triangulation_contraction"
+title = "Planar triangulations contract onto every prescribed set of at least four roots"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_companion_density_separators.md"
+source_heading = "5. A triangulated side gives the missing rooted model"
+active = false
+audit = "active/hc7_companion_density_separators_audit.md"
+expected_source_sha256 = "cac72ab56f48c63732f311d8fafbc3b99ff92cc059cc599dff4c62c827aff8a9"
+scope = "planar triangulations with k>=4 prescribed distinct vertices"
+label_fidelity = "every contraction has a nonroot endpoint; all prescribed roots remain distinct and every minor edge lifts through fixed disjoint preimages"
+conclusions = ["a planar triangulation minor on exactly the prescribed roots", "five roots give a rooted K5-minus with unrestricted missing pair", "two disjoint exterior sets full to those five roots give K7-equals"]
+does_not_prove = ["a prescribed missing pair", "that general dense sides are triangulations", "the global density or colouring targets"]
+
+[[claims]]
+id = "hc7.companion.clique_threecut_colouring"
+title = "Canonical colour gluing excludes independent triples beside a four-clique"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "7.3 The full boundary-colouring obligation"
+active = false
+audit = "active/hc7_k44_critical_global_construction_audit.md"
+expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
+scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
+conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
+does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.target.companion_five_connected_density"
+target = "hc7.companion.five_boundary_model_gluing"
+kind = "related_to"
+note = "This restricts actual cuts without establishing a closed induction."
+
+[[relations]]
+source = "hc7.companion.five_boundary_model_gluing"
+target = "hc7.companion.dense_five_cut_boundaries"
+kind = "uses"
+note = "Uses the exact fifth-root helper placement proved in the same source."
+
+[[relations]]
+source = "hc7.target.companion_five_connected_density"
+target = "hc7.companion.rooted_triangulation_contraction"
+kind = "related_to"
+note = "The planar contraction resolves the apex-planar equality test family; arbitrary sides remain untreated."
+
+[[relations]]
+source = "hc7.target.companion_four_clique_closure"
+target = "hc7.companion.clique_threecut_colouring"
+kind = "related_to"
+note = "These deductions use critical colourability in addition to the structural four-clique hypotheses."
+
+[[relations]]
+source = "hc7.companion.clique_threecut_colouring"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "The original literal exclusion bounds every outside vertex's contacts with R by two."
+
+[[claims]]
+id = "hc7.target.companion_neighbourhood_five_roots"
+title = "Five chosen neighbours support a rooted near-clique and a full helper"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "7.5 A neighbourhood contact construction"
+active = false
+expected_source_sha256 = "62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318"
+scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
+allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
+does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.target.companion_four_clique_closure"
+target = "hc7.target.companion_neighbourhood_five_roots"
+kind = "related_to"
+note = "Alternative sufficient constructions; the neighbourhood approach may reselect five actual neighbours and does not require the stronger universal rooting statement."

@@ -1,13 +1,16 @@
 # Audit: five-vertex separators in the companion density problem
 
-**Verdict: GREEN** for Lemmas 1–2, Theorem 3 and the stated reduction
+**Verdict: GREEN** for all six numbered claims and the stated reduction
 limits. Separate internal audit by the route-assessment agent, 2026-09-07;
 not external peer review or completion of the global density theorem,
 Conjecture 19 or HC7.
 
 **Source:** [density separators](hc7_companion_density_separators.md), SHA-256
+`cac72ab56f48c63732f311d8fafbc3b99ff92cc059cc599dff4c62c827aff8a9`.
+The earlier checks below are retained from Git `8affc0b`, source SHA-256
 `6bef580656a804b30ee415d535c24af604715c56821e7f8d84aed0216fab3bb9`.
-The added eight-cycle navigation was checked; the positive proofs are unchanged.
+Removing new Sections 4–5 and restoring the final heading recovers those
+earlier bytes exactly; this was checked against Git.
 
 **Input checked.** Norin–Totschnig Lemma 12 requires internal four-connectivity
 at four roots and `e(F)>=4|F|-9`; it supplies adjacent helpers full to the
@@ -44,6 +47,30 @@ Both file hashes were verified:
    five-vertex bound `e<=6` is valid. The contraction identity and strict
    order decrease are exact; dense hosts have order at least nine, avoiding
    the small-order exception to the actual-five-cut assertion.
+
+5. **Cross-side gluing.** Every heavy-side model owns each actual root
+   once; unions across different sides meet only at that same root.
+   All free helpers remain outside the boundary and disjoint. With
+   `3<=r+h<=5`, choose the `k=7-r-h` retained roots first; there is room
+   for `h` distinct centres outside them. The `r-2` remaining root-helper
+   pairs have disjoint connected preimages and become universal bags.
+   The seven bags miss only the independent root and helper pairs.
+   The `h=0` singleton initialization and reduction to `h=5-r` cover the
+   end cases. Summing the two light-side bounds forces every displayed
+   equality. Different models within one side are not combined.
+6. **Root-preserving triangulation contraction.** The neighbour cycle
+   bounds the incident faces; all neighbour chords lie in the other disk.
+   A polygon triangulation completing this outerplanar graph has an ear
+   of degree two, also degree two in the original neighbour graph.
+   Hence the chosen edge has exactly two common neighbours. Its nonroot
+   endpoint permits contraction without merging roots; the simple planar
+   quotient has exactly `3(n-1)-6` edges and remains a triangulation.
+   Order strictly decreases to the prescribed root count, with fixed
+   disjoint preimages. Five remaining roots therefore span `K_5^-`.
+   Two disjoint exterior sets full to those actual roots give `Q`, whatever
+   root pair is missing. For the apex-planar family, both singleton apices
+   qualify; connectivity survives four deletions and the independent
+   overlap duplicates no edges, giving the asserted `4n` count.
 
 **Side-bound counterexample checked:** [barrier, Section 3](../barriers/hc7_companion_induction_shortcuts.md#3-a-full-boundary-apex-does-not-retain-a-sufficient-side-class), SHA-256
 `99661d13e82d84c940e3a7861bb7cfd048502399c1484c62c487da5a1ca0fec3`.

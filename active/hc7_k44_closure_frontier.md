@@ -774,6 +774,71 @@ A valid application must construct all these paths compatibly, or prove
 that the extra contact is unnecessary. This does not refute such a
 construction using the full critical-host hypotheses.
 
+**Written cut deductions; separate internal audit recorded in the adjacent audit.**
+In the following two claims, `G` is seven-connected, `chi(G)=7`, every
+proper minor is
+six-colourable, `G` has no `K_7^=` minor, and `R` is a literal four-clique.
+The audited critical reduction and contraction closure in Section 7.4.1
+give `delta(G)>=8` and at most two `R` neighbours for every outside vertex.
+
+First, no exact seven-cut `Z=R dotcup T` has `T` independent. Every
+component of `G-Z` is full to `Z`: otherwise its neighbourhood is an
+actual cut of order at most six. For each component `C`, choose another
+component `D`, delete all remaining components, and contract the connected
+set `D union T` to one vertex. This proper minor has a six-colouring.
+On the untouched closed side `G[C union Z]`, pull its merged colour back
+to all of `T`. This is proper because `T` is independent; the merged
+vertex contacts all four roots, so its colour differs from theirs.
+Every side therefore admits the same equality partition of `Z`: four
+singleton root blocks and the block `T`. Permuting colour names makes
+these colourings agree, and gluing all sides six-colours `G`, a
+contradiction. No colouring is pulled back through `D`.
+
+Second, let `T={a,b,c}` be a three-cut of `J=G-R` with `G[T]` consisting
+of the edge `ab`. Then some component `B` of `J-T` has the following
+property: **for every `r in R`, `G[B union T union {r}]` has a
+`(T union {r})`-rooted `K_4` model.** Every component is full to `R union T`
+by the same cut argument. There are exactly two components: three would
+give three disjoint connected `R`-full sets, which extend to a connected
+partition of `J` and yield `K_7^-` with the four singleton roots.
+Write `d_B(X)=sum_{x in X}|N(x) intersect B|`. The total number of
+edges from `T` to the two components is at least `24-2-6=16`, so choose
+`B` with `d_B(T)>=8`. For `F=G[B union T union {r}]`, every `x in B`
+has `d_F(x)>=6+1_{xr in E(G)}`. Summing these degrees gives
+
+```text
+e(F)>=3|B|+d_B(T)/2+d_B(r)+e(G[T union {r}])
+    >=3|B|+6=3|V(F)|-6.
+```
+
+Here fullness gives `d_B(r)>=1`, and `ab` supplies the last edge.
+The pair `(F,T union {r})` is internally four-connected: a separation
+of order at most three with all four roots on one side and a nonempty
+other side becomes an actual cut of order at most six in `G` after
+adding `R-{r}`; the opposite component survives outside it.
+[Norin--Totschnig, Lemma 9](https://arxiv.org/html/2507.03244v1#S2),
+whose primary statement was inspected, now supplies the claimed model:
+without one, an internally four-connected four-root pair has at most
+`3|V(F)|-7` edges. Its four bags avoid the other three `R` roots.
+
+**Route nonclosure.** Two disjoint identifications such as `ac` and `br`
+do not force a canonical boundary partition: the `ac` bag may share a
+colour with a remaining root unless their adjacency is also retained.
+Even the rooted `K_4` above, the three untouched `R` roots, and the
+opposite full component guarantee only `K_2 join (K_3 disjoint-union K_3)`.
+That graph is a two-clique-sum of two `K_5` graphs and has no `K_7^=` minor.
+Extra contacts to `R-{r}` may all enter the `r` bag. Their allocation to
+the other rooted bags, or compatible full boundary colourings, is still
+unproved; the four model choices for different `r` are not simultaneous.
+One sufficient repair is a matching of three contacts between the three
+`T`-rooted bags and `R-{r}`. Contract one matched pair. That merged bag,
+the `r` bag and the opposite component are universal to the remaining
+four bags; their only possible missing contacts are the two independent
+cross-pairs not in the matching. This is a disjoint `K_7^=` model.
+Moving an endpoint supporting two required contacts into one recipient
+can erase the other contact. No decreasing transfer step ensuring the
+three-contact matching has been proved.
+
 ### 7.4 Comparison with the companion conjecture
 
 Norin--Totschnig's [Conjecture 19](https://arxiv.org/html/2507.03244v1#S5)
@@ -898,7 +963,11 @@ critical host without preserving its colouring in each quotient. The
 have a separate internal audit: in a hypothetical dense host every
 five-cut is diamond-free, has at most four components, and has a matching
 boundary if there are four components. A contraction can still return a
-four-cut. The remaining boundary allocation and a reduction retaining
+four-cut. Cross-side gluing also limits how many sides can meet the helper
+threshold. Two sides below it must have independent boundary and exact
+density equality. Root-preserving contractions of planar triangulations
+settle the proposed apex-planar equality family; they do not classify all
+equality sides. The remaining boundary allocation and a reduction retaining
 five-connectivity, sufficient density and disjoint preimages are unproved.
 Removing the ambient exclusion in favour of a five-rooted `K_6` exclusion
 does not preserve a sufficient side inequality.
@@ -934,6 +1003,24 @@ refutes the analogous general clique assertion even with connectivity
 exceeding the clique order. It does not refute the `K_6` proposal or the
 more flexible construction above. Neither is an established reduction
 closing Conjecture 21.
+
+**Companion construction under investigation; unproved.** Choose an audited
+degree-eight vertex `v` of the critical companion-free host. Then `F=G-v`
+is six-connected and `e(F)>=4|V(F)|-4`. It suffices to find **some** five
+vertices `S subseteq N_G(v)`, five disjoint `S`-rooted bags with at least
+nine contacts, and a sixth bag adjacent to all five. Adding `{v}` gives `Q`:
+only the missing root pair and the pair from `v` to the helper may be
+absent, and those pairs are independent. The prescribed roots and the
+disjoint bags supply the lift directly.
+
+A stronger test statement asks for that six-bag model for every five-set
+in every five-connected graph with at least `4n-9` edges. It is unproved
+and is not required by the critical-host route. The known helper theorem
+gives a five-rooted star plus a full helper, not the required rooted
+`K_5^-`. Applying a rooted-diamond theorem after deleting the two old
+helper bags is unsupported: they may contain arbitrarily many vertices,
+and neither the needed connectivity nor both sets of contacts survive
+automatically. Initial finite probes do not resolve either statement.
 
 ### 7.6 A reduction preserving the entire core
 

@@ -7,8 +7,17 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318`.
+The latest check covers only the new cut deductions and matching criterion
+in Section 7.3, expanded density navigation in Section 7.4.1 and the new
+companion-candidate block in Section 7.5. Removing both new blocks and
+reversing the navigation expansion exactly recovers Git
+`8affc0b`, at SHA-256
 `83762eaecfd641df2c82bdf924cbf67cf30179f03f3543fa3a4aa39bbc22f46c`.
-The latest scoped check covers only the added three-full-helper criterion
+This byte equality was checked against Git. Earlier audit provenance and
+checks below are retained; no older mathematical section was changed.
+
+The preceding scoped check covers only the added three-full-helper criterion
 and density-route navigation at the end of Section 7.4.1. Removing those
 additions exactly recovers Git `623110a`, at SHA-256
 `ccb152686832e05f93555162259977b3ad0dd5d094d2ba5afa463f10d2a91ad8`.
@@ -287,7 +296,7 @@ contact graph is connected. Thus it misses at most one edge, and the four
 literal clique roots give the displayed `K_7^-` model. This is a sufficient
 criterion, not an existence proof. The density-route summary agrees with
 the separate source and audit at source SHA-256
-`6bef580656a804b30ee415d535c24af604715c56821e7f8d84aed0216fab3bb9`.
+`cac72ab56f48c63732f311d8fafbc3b99ff92cc059cc599dff4c62c827aff8a9`.
 It retains the five-connectivity hypothesis, exact component restrictions,
 weakened-side-bound failure and missing reduction. The five-connected
 global density theorem remains conjectural; no new literature application
@@ -303,3 +312,50 @@ and a justified continuation after a split. No decreasing rerouting
 parameter or valid iterative lift is proved. Literal `K_7^=` completion
 does not settle its arbitrary-model case. T44, Conjectures 19/21 and `HC_7`
 remain open here; this checkpoint does not achieve the user's objective.
+
+## Section 7.3 cut deductions and matching repair: scoped addendum
+
+**Verdict: GREEN**, independently checked at the current source hash.
+Fullness follows from actual cuts of order at most six. For independent
+`T`, the set `D union T` is connected and its contraction strictly reduces
+order, preserving the untouched component and the four literal roots.
+Its colour can be pulled back to `T`, since `T` has no internal edges;
+every edge from `T` to the retained side survives at the merged vertex.
+That vertex is adjacent to all four roots, so every side admits exactly
+the stated five-block boundary partition. Permuting six colour names
+therefore permits gluing, without colouring any contracted component.
+
+For the one-edge case, three components would give the previously checked
+three-full-helper construction. With two, the degree sum at `T` gives
+at least `24-2-6=16` exterior edges. One component `B` has at least eight,
+independently of the later choice of `r`. Each vertex of `B` loses at most
+`2-1_{xr in E}` neighbours when the other roots are deleted. Summing gives
+the displayed edge inequality, and fullness plus `ab` supplies its last
+two edges: `e(F)>=3|V(F)|-6` for every `r`. Adding `R-{r}` to a prohibited
+rooted cut produces at most six actual separating vertices; the opposite
+component survives. Thus the internally four-connected hypothesis holds.
+[Norin–Totschnig Lemma 9 and the rooted-connectivity definition](https://arxiv.org/html/2507.03244v1#S2)
+were freshly inspected in the primary text. Their no-model bound is one
+edge smaller, so the four-root models follow with all other roots avoided.
+
+The guaranteed eight-bag contact graph is two `K_5` graphs sharing `K_2`,
+with nineteen edges and no isolated vertex. Every seven-bag model loses
+an edge by deletion or contraction, excluding the nineteen-edge target;
+the extra three contacts are not implicit.
+If the stated matching exists, one cross contraction leaves three
+universal bags. The two within-triple edges and two remaining matching
+edges give a four-cycle on the other bags, proving `Q` with disjoint
+preimages. Different choices of `r` are not simultaneous, and a transfer
+can lose another required contact. No global matching or reduction follows.
+The density navigation matches its separately audited final source,
+including cross-side gluing and the elementary triangulation contraction;
+it retains the unresolved general equality sides and induction obligations.
+
+The new Section 7.5 implication is **GREEN**, conditional on finding its
+six bags: deleting degree-eight `v` gives connectivity at least six and
+`e(F)>=4|F|-4`. At least nine root contacts, five helper contacts and the
+five contacts through the chosen neighbours give `Q`; the two possible
+missing pairs are independent, and extra contacts are harmless. The
+universal five-connected, `4n-9`, every-five-set statement is stronger
+and unproved. Neither deleting occupied helpers nor finite probes supplies
+its missing ownership-preserving construction or the weaker critical case.

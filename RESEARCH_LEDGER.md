@@ -37,15 +37,20 @@ The critical-host attempt retains the full proper-minor colouring data.
 Its audited four-clique and residual `K_5`-minor inputs still need a
 simultaneous allocation. A separate global density attempt asks whether
 every five-connected `K_7^=`-minor-free graph has fewer than `4n` edges.
-This would exclude the critical host, but is also unproved. The new
+This would exclude the critical host, but is also unproved. The
 [separator proof](active/hc7_companion_density_separators.md), with a separate
-internal audit, restricts every five-cut of a hypothetical dense host to a
-diamond-free boundary and two to four components. It does not eliminate
-those cuts or supply a closed contraction. The
+internal audit, now combines models from different sides through their
+actual roots. A rooted triangulation contraction settles the proposed
+apex-planar equality family. General density reductions and the critical
+boundary-colouring construction remain open. The
 [technical frontier](active/hc7_k44_closure_frontier.md#741-the-four-clique-construction-and-contraction-closure)
-records both global construction obligations.
+records the new cut restrictions, exact equality residue and missing
+contact allocation.
+The [neighbourhood alternative](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+retains six-connectivity and may choose five of the eight actual neighbours;
+the stronger universal five-root proposal is an optional test, not an input.
 
-The new five-connected helper bound also proves literal `K_5^-` exclusion
+The five-connected helper bound also proves literal `K_5^-` exclusion
 in that host after every connected three-vertex contraction, and after any
 two edge contractions when the first meets a degree-eight vertex. These are valid
 contraction certificates, not a closed induction: the returned graphs

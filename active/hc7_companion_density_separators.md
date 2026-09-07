@@ -115,7 +115,104 @@ six edges: if it has a triangle, each other vertex has at most one
 neighbour on it, giving at most `3+2+1=6`; if triangle-free, the elementary
 triangle-free edge bound gives at most `floor(25/4)=6`. QED
 
-## 4. Exact remaining induction gap
+## 4. Combining models across the actual boundary
+
+Call a closed side `F_i` **heavy** when `e(F_i)>=4|V(F_i)|-9`.
+This threshold is only sufficient for the following construction.
+
+**Theorem 4.** Let `G` be five-connected, let `S` be a five-vertex cut
+with `r>=2` components, and let `h` of its closed sides be heavy.
+Each of the following conditions forces a `Q` minor:
+
+- `r+h>=5`;
+- `r+h=4` and `G[S]` contains a three-vertex path;
+- `r+h=3` and `G[S]` contains a diamond.
+
+**Proof.** If `r>=5`, the `K_{5,5}` construction of Lemma 2 applies.
+If `r+h>5`, use only `5-r` heavy sides and treat the others as whole
+components. Thus it suffices to consider `3<=r+h<=5`.
+Put `k=7-r-h`, and choose `k` roots spanning `K_k` minus at most one
+edge, as supplied by the corresponding hypothesis. Choose the `h`
+distinct star centres outside those roots.
+
+A heavy side supplies five disjoint connected bags, one for
+each actual root in `S`, with a star centred at any prescribed `s in S`,
+and a sixth bag adjacent to all five. These are exactly Lemma 1's four
+root bags, the helper containing `s`, and the other helper.
+
+For `h=0`, start with the five singleton root bags. Otherwise unite the
+bags owning the same root across the different sides. Their only overlaps are at
+that root, so all five resulting bags remain connected and disjoint.
+Keep the free helper from every heavy side, and use the whole component
+of every other side as a helper. All `r` helpers are disjoint and adjacent
+to every root bag. Each selected star centre contacts all other root bags.
+
+Contract disjoint cross pairs
+between the remaining `r-2` roots and distinct helpers. These pairs are
+connected and have fixed disjoint preimages. The resulting seven bags
+consist of `r+h-2` universal bags, the chosen `k` root bags, and two
+helpers. Only the missing root pair and the helper pair can be absent;
+their ends are disjoint. This is `Q`. QED
+
+Thus four components permit no heavy side. Three components permit at
+most one, and if one is heavy the boundary is a matching. With two heavy
+sides the boundary is also a matching. These are necessary conditions,
+not a decomposition or a closed induction.
+
+For two sides with neither heavy, the density hypothesis forces the exact
+residue
+
+`e(G[S])=0,  e(G)=4|V(G)|,  e(F_i)=4|V(F_i)|-10  (i=1,2)`.
+
+Indeed, sum the two upper bounds and subtract the duplicated boundary
+edges. Models obtained by choosing different centres **in the same side**
+need not have compatible ownership; the proof only combines models from
+different components.
+
+## 5. A triangulated side gives the missing rooted model
+
+**Lemma 5.** Let `P` be a planar triangulation and let `S` be a prescribed
+set of `k>=4` vertices. There is a minor of `P` which is a planar
+triangulation on exactly the `k` distinct prescribed roots.
+
+**Proof.** While a nonroot `v` remains, its neighbours occur on a cycle
+bounding the union of its incident triangular faces. Every chord between
+neighbours lies on the other side of this cycle. Thus `P[N(v)]` is
+outerplanar with that cycle as its boundary. Complete it to a triangulated
+polygon. An ear has degree two in that completion, and hence also in
+`P[N(v)]`, which already contains the boundary cycle. Choose that ear `u`.
+The edge `uv` has exactly two common neighbours in `P`.
+
+Contract `uv`, retaining any root at `u`. No two prescribed roots merge,
+since `v` is a nonroot. The simple planar quotient has
+`3|V(P)|-6-3=3(|V(P)|-1)-6` edges, so it is again a planar triangulation.
+Host order decreases by one. Repeat until only the `k` roots remain.
+Composing the fixed disjoint contraction preimages preserves every root
+and lifts all edges of the final triangulation. QED
+
+**Theorem 6.** Suppose a graph contains a planar triangulation `P`, five
+specified vertices `S subseteq V(P)`, and two disjoint connected sets
+outside `P`, each adjacent to every vertex of `S`. Then it contains `Q`.
+
+**Proof.** Lemma 5 with `k=5` gives an `S`-rooted `K_5^-` model: a planar
+triangulation on five vertices has nine edges. Add the two exterior sets
+as separate bags. Both contact all five rooted bags through their actual
+roots. Only the missing root pair and the exterior-bag pair may be absent;
+they are independent. This gives `Q` without any need to choose which
+root pair is missing. QED
+
+In particular, consider two four-connected planar triangulations `P_1,P_2`
+intersecting exactly in a stable five-set `S`, with a separate apex `h_i`
+adjacent to all of `P_i` and no other added edges. Each apex piece is
+five-connected, and their union remains five-connected because the pieces
+share five vertices. Writing `p_i=|V(P_i)|`, the union has order
+`n=p_1+p_2-3` and size
+`(3p_1-6+p_1)+(3p_2-6+p_2)=4n`.
+It contains `Q` by Theorem 6, using `P_1` and the two singleton apices.
+This resolves that density-threshold family. No classification of arbitrary
+five-cut sides or proof of the global density target is supplied.
+
+## 6. Exact remaining induction gap
 
 An edge with at most three common neighbours has
 `e(G/uv)-4|V(G/uv)|=e(G)-4|V(G)|+3-|N(u) intersect N(v)|`.
