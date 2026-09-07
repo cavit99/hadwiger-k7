@@ -52,8 +52,14 @@ the stronger universal five-root proposal is an optional test, not an input.
 The audited joint endpoint construction excludes every four-cycle and
 reduces such a neighbourhood to two spanning configurations: two triangles
 and an edge, or a five-cycle and a triangle. In the latter configuration,
-the bipartite theorem gives a rooted five-clique; a compatible connected
-helper remains missing. Neither case has a complete global construction.
+the bipartite theorem gives a rooted five-clique. The new
+[five-root wheel theorem](results/hc7_five_root_wheel.md), with a separate
+internal audit, closes every three-cut of the four-clique exterior in
+this cycle-and-triangle case: that exterior is now four-connected.
+The wheel proof uses root-preserving contractions and a connected-prefix
+ordering, without computation. A compatible helper or three-part allocation
+in the remaining exterior is still missing. Neither spanning configuration
+has a complete global construction.
 
 The five-connected helper bound also proves literal `K_5^-` exclusion
 in that host after every connected three-vertex contraction, and after any

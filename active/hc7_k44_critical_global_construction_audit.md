@@ -7,8 +7,14 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`0a732e450f1297a031817261db2e4fc511a067fb3c55fee9bdd46ef9f11c4be6`.
+The latest check covers only the rooted-wheel paragraph before Section 7.6.
+Removing it exactly recovers Git `18b4b70`, at SHA-256
 `7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21`.
-The latest check covers only the 24-line neighbourhood-construction block
+This byte equality was checked directly against Git; all earlier audited
+mathematics and provenance are retained.
+
+The preceding check covers only the 24-line neighbourhood-construction block
 before Section 7.6. Removing it exactly recovers Git `8da9ebe`, at SHA-256
 `62856b184e5705a0cb43f6168e844f9f8b2280340e260958adfde36f90af4318`.
 This byte equality was checked directly against Git; all earlier audited
@@ -381,3 +387,17 @@ triple. The rooted five-clique construction and sufficient extra-helper
 condition apply with their original-host ownership intact. The block
 correctly leaves that helper's existence and the other spanning case open;
 three occupied bag labels do not give an actual separator of order six.
+
+## Section 7.5 rooted-wheel application: scoped addendum
+
+**Verdict: GREEN.** The added paragraph matches the independently audited
+[five-root wheel theorem](../results/hc7_five_root_wheel.md), source SHA-256
+`f0fbab79d23d8079b91ff1a812b83db96059aa4fb0024c809b1037f3f533f62a`.
+Its hypotheses now explicitly include a nonempty nonroot set. The strict
+root-preserving reduction and connected-prefix construction are summarized
+accurately. Under the standing critical-host hypotheses, Corollaries 3–4
+exclude the actual three-cut and give four-connectivity of the
+cycle-and-triangle exterior. The ledger and selected-results summary
+match this scope. The paragraph retains the missing simultaneous helper
+or three-part allocation; it does not claim a second application after
+occupied bags are deleted or completion of a global conjecture.

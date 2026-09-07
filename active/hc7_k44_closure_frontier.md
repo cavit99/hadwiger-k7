@@ -1046,6 +1046,20 @@ component boundary lies in three model bags and `{v}`; this does not bound
 the number of actual separator vertices by six. The other spanning
 configuration and a decreasing global exchange remain open.
 
+**Written proof; separate internal audit.** The
+[five-root wheel theorem](../results/hc7_five_root_wheel.md) requires a
+prescribed triangle, internal five-connectivity at all five roots, a
+nonempty nonroot set, and degree at least six at every nonroot. A triangle
+root with a unique outside neighbour absorbs it, preserving the rooted boundary condition
+and every surviving nonroot degree; host order decreases. A connected-prefix
+ordering then supplies the wheel, with all roots retained.
+Across an actual seven-cut consisting of a four-clique and a three-set,
+this closes the case where two vertices of the three-set neighbour the
+same clique vertex. Consequently the entire four-clique exterior in the
+five-cycle-and-triangle case is four-connected. A three-part allocation
+there, or the earlier compatible helper, remains unproved. The theorem
+does not assert that a second application survives deletion of its bags.
+
 ### 7.6 A reduction preserving the entire core
 
 **Written proof; separate internal audit.** The

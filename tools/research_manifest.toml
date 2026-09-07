@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
+expected_source_sha256 = "0a732e450f1297a031817261db2e4fc511a067fb3c55fee9bdd46ef9f11c4be6"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
+expected_source_sha256 = "0a732e450f1297a031817261db2e4fc511a067fb3c55fee9bdd46ef9f11c4be6"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
+expected_source_sha256 = "0a732e450f1297a031817261db2e4fc511a067fb3c55fee9bdd46ef9f11c4be6"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "7a9ecfcea0737ce1eab51d954e1f7ee5d1addcdaaa4e84275501ca694d387e21"
+expected_source_sha256 = "0a732e450f1297a031817261db2e4fc511a067fb3c55fee9bdd46ef9f11c4be6"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22057,3 +22057,45 @@ source = "hc7.companion.cycle_triangle_reserved_neighbours"
 target = "graph_schemes.bipartite_contractible"
 kind = "uses"
 note = "Extracts the fully rooted K2,3 from bichromatic paths avoiding the whole reserved colour class."
+
+[[claims]]
+id = "hc7.companion.five_root_wheel"
+title = "Five roots containing a triangle force a rooted wheel"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_root_wheel.md"
+source_heading = "A rooted wheel from a prescribed triangle"
+active = false
+audit = "results/hc7_five_root_wheel_audit.md"
+expected_source_sha256 = "f0fbab79d23d8079b91ff1a812b83db96059aa4fb0024c809b1037f3f533f62a"
+scope = "internally five-connected pairs at five distinct roots containing a triangle, with a nonempty nonroot set and nonroot degrees at least six"
+label_fidelity = "each thin triangle root absorbs its sole outside neighbour; rooted boundary sizes and surviving nonroot degrees persist exactly"
+conclusions = ["a fully rooted W4 with centre among the three prescribed triangle roots", "no edge between the other two prescribed roots is required", "strict nonroot-order descent and a disjoint rooted lift"]
+does_not_prove = ["a disjoint additional helper", "closure after deleting returned bags", "Conjecture 19 or HC7"]
+
+[[claims]]
+id = "hc7.companion.cycle_triangle_exterior_fourconnected"
+title = "The cycle-and-triangle four-clique exterior is four-connected"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_root_wheel.md"
+source_heading = "3. Application across an actual seven-vertex cut"
+active = false
+audit = "results/hc7_five_root_wheel_audit.md"
+expected_source_sha256 = "f0fbab79d23d8079b91ff1a812b83db96059aa4fb0024c809b1037f3f533f62a"
+scope = "seven-connected K7-equals-minor-free graphs of minimum degree eight, with a literal four-clique"
+label_fidelity = "two actual deleted vertices and the opposite full component give the rooted side condition and a disjoint two-apex lift"
+conclusions = ["no exterior three-cut contains two neighbours of the same clique vertex", "a two-connected remaining neighbour subgraph makes the exterior four-connected", "this closes every exterior three-cut in the degree-eight cycle-and-triangle case"]
+does_not_prove = ["the global construction in the four-connected exterior", "the two-triangle case", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.cycle_triangle_exterior_fourconnected"
+target = "hc7.companion.five_root_wheel"
+kind = "uses"
+note = "Deleting two actual boundary vertices leaves an internally five-connected side with nonroot degree six; the opposite component and clique vertex extend its wheel to K7-equals."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.cycle_triangle_exterior_fourconnected"
+kind = "related_to"
+note = "Eliminates the actual three-cut case while leaving the global helper or three-part allocation unproved."
