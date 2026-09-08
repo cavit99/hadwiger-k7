@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 7 September 2026. This is the sole authority for current
+**Last updated:** 8 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjectures
@@ -77,6 +77,10 @@ outside that class. The four cycle branch roots are retained; the other
 triangle roots may lie on the paths. The next construction must combine
 this cross with the triangle while retaining the full colouring condition.
 Neither an isolated cross nor paths from separate colourings suffice.
+The audited [palette counterexamples](barriers/hc7_cycle_palette_extension_barrier.md)
+also show that the full quantified five-colouring condition alone does not
+force the minor. They violate the actual host's literal `K_5^-` exclusion;
+the construction must retain more of that host's hypotheses.
 The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
 [deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
 remain available with their exact preservation limits.

@@ -1178,6 +1178,21 @@ ownership guarantee. The first unsupported assembly is retaining those
 roots as additional disjoint bags after the paths have used them. A joint
 construction must retain the every-colouring condition as well as the cross.
 
+**Audited barrier to discarding the original host.** The
+[cycle-palette counterexamples](../barriers/hc7_cycle_palette_extension_barrier.md)
+refute an unrestricted extension of that colouring argument. In the stronger
+example, the seven roots induce exactly `C_5` disjoint-union `K_2`; every
+five-colouring uses all five root colours and at least four cycle colours,
+yet the graph excludes both `Q` and `P=K_7-3K_2` (three independent deleted
+edges). Private colour-forcing gadgets and a two-clique-sum localization
+proof establish this without finite minor testing. The first invalid
+inference is that the quantified palette condition alone forces either
+minor. Both examples contain a literal `K_5^-`, already excluded in the
+actual host. A repair must therefore retain additional critical-host data,
+such as the literal exclusions, connectivity and compatible restoration of
+the deleted independent class. The cross theorem and the full cycle case
+are unaffected; the latter remains open.
+
 **Recorded route nonclosure.** Criticality forces each singleton-colour
 root to be bichromatically connected to at least one root of a repeated
 colour, but these may be `2` instead of `0`, or `3` instead of `a0`.

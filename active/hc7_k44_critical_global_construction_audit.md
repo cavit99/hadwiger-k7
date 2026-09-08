@@ -7,8 +7,13 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`daed18105260bda2e86a275de4aff84d865317d731b76e2073043e25d9bbf4d1`.
+The latest check covers only the palette-counterexample paragraph in Section 7.5.
+Removing its fifteen lines exactly recovers Git `e85f5bd`, at SHA-256
 `58b518fd4656613c23ff65efed5e4c3021c5f6ee250f5a237dda52ab9246f08f`.
-The latest check covers only the cycle-colouring paragraph in Section 7.5.
+This byte equality was checked directly against Git.
+
+The preceding check covers only the cycle-colouring paragraph in Section 7.5.
 Removing its sixteen lines exactly recovers Git `6e7b4b1`, at SHA-256
 `4a5327bc944bb14df0f9bf6c7711ace7279e096dc1316a639b85db37d19372f4`.
 This byte equality was checked directly against Git.
@@ -541,3 +546,16 @@ extends over `I`. The resulting paths avoid `I` and `v`, but may own the
 other triangle roots. Keeping those roots as separate additional bags
 would therefore be unsupported. No compatible seven-bag assembly or
 global conjecture is claimed, and all earlier source bytes are unchanged.
+
+## Section 7.5 palette barrier: scoped addendum
+
+**Verdict: GREEN.** The paragraph and ledger match the independently audited
+barrier at `257805e4f1c4771b57fdcb7980af77a53b94f45853920287593221166f2ef294`;
+promotion to `barriers/` preserved the source and adjacent audit byte-for-byte.
+The stronger example retains the induced seven-root graph, every-colouring
+quantifier, and simultaneous `P,Q` exclusion. Independent gadget extension
+and arbitrary-model localization across actual two-root cliques establish
+those claims deductively. Both witnesses contain literal `K_5^-`, so neither
+realizes the original critical host. The paragraph correctly rejects only
+the palette-only assembly; it preserves the cross theorem and leaves the
+full cycle case and global objectives open. No inherited mathematics changed.
