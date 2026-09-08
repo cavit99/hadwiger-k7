@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`a22104ad4beff0ee37e06144ed4205793a9a36e895e666cb9114df50d1d898fd`.
+`db7969cf5466f0c3b61c0e9042138eb52639a5992623128af63eba285912480a`.
 
 ## Preserved scope and exact provenance
 
@@ -19,8 +19,9 @@ original bytes have SHA-256
 `d0638e3d1907e995002779a84ec22f49f020cee36f083c5f6d7047335a45e7ff`.
 Only its header and one navigation link changed for archival placement.
 
-Outside the replaced cycle-case block in Section 7.5, the current frontier
-is byte-identical to Git `dbe474c`, whose whole-source SHA-256 is
+At the cycle-closure revision, outside the replaced cycle-case block in
+Section 7.5, the frontier was byte-identical to Git `dbe474c`, whose
+whole-source SHA-256 is
 `826239ff6eb59b1c59c933bc69896f3f0c171a8455df4cb0674bb0fa0172ae05`.
 The [superseded block](../archive/hc7_cycle_case_constructions_before_closure_2026-09-08.md)
 was checked against those Git bytes: only same-directory links and final
@@ -62,7 +63,8 @@ achieved. No additional gap was found in the replacement block.
 
 ## Subsequent helper-partition integration
 
-Outside the specified replacement from “A sufficient outcome” to before
+At the helper-partition revision, outside the specified replacement from
+“A sufficient outcome” to before
 “The earlier cycle paths”, bytes equal Git `0a924ec`, whose frontier hash
 is `ce97d76a2e9a69c8516681ed36d3ed391a0de3492e06f3543df6d5649ae53e8c`.
 The new block and ledger accurately use the [audited partition](hc7_two_triangle_helper_partition.md)
@@ -93,7 +95,8 @@ ownership is inferred. Both stated alternatives remain unclosed.
 
 ## Separator-allocation integration
 
-Removing only the new separator block before “The earlier cycle paths”
+At the separator-allocation revision, removing only its new block before
+“The earlier cycle paths”
 exactly recovers Git `c3c14656a9f338e2c30bf2122cb5064e166ded36`, whose frontier hash is
 `61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a`.
 The unchanged remainder therefore retains the preceding qualified audit.
@@ -113,3 +116,33 @@ cut roots outside `N(v)`, as stated. No compatible transfer, closure of
 all three-cuts or global colouring conclusion is inferred. The new manifest
 claim is inactive and adds only the four displayed direct proof inputs;
 the primary target and navigation flags remain unchanged.
+
+## Complete three-cut exclusion
+
+The replacement block in Section 7.5 and two accompanying connectivity
+sentences were checked against the [complement theorem](../results/hc7_two_triangle_complement_four_connectivity.md)
+at `0a75273d2270d5a675e3aa565610d47e375fa89e982b565fbd0ad4f4e5fd3b69`
+and its first separate GREEN audit at
+`d074cc7eb384222f1b68ed53728fd721c7a6e7edbf266c55cec313a5c73b2014`.
+Restoring only that block and those sentences exactly recovers Git
+`563c8b7f103fee99df2bb2736e43e4b8b8dc8cd3`, frontier hash
+`a22104ad4beff0ee37e06144ed4205793a9a36e895e666cb9114df50d1d898fd`.
+Deleting the replacement block and reversing the same two sentences also
+exactly recovers the earlier `c3c14656...` source with hash `61742e08...`
+recorded above. Both byte comparisons were performed.
+
+The current summaries correctly close every three-cut of both `G-v-A`
+and `G-v-B`, under the structural hypotheses and with extra edges allowed.
+The enlarged normalization uses two actual B ports and the omitted cut
+vertex to force an A root into the two-bag union. The fan permits shared
+V endpoints, retains separate donor ports and discards any virtual final
+edge. Naming the region containing the first cut root preserves its
+opposite-side contact. Zero, one or two port exits are handled separately;
+the last two cases explicitly account for the contact lost when a port
+leaves its old B bag. All seven-bag models have at most two independent
+holes and fixed disjoint original preimages. No finite result is used.
+
+The previous aligned-hole three-cut obligation is superseded. The remaining
+four-connected allocation and the full two-triangle exclusion remain open.
+The new inactive claim uses only the packaged separator theorem directly;
+the primary target, index and active flags are unchanged.

@@ -71,9 +71,12 @@ excludes every two-cut of `G-v-C`. The resulting
 three-region contact construction to close the entire five-cycle case.
 The [two-triangle separator theorem](hc7_two_triangle_separator_allocation.md),
 with its [GREEN audit](hc7_two_triangle_separator_allocation_audit.md), makes
-each A-side two-connected and its minimal torso four-connected, and proves
-that a full five-root clique packet on a minimal side is terminal. The remaining one-hole
-packet still requires a compatible allocation.
+each A-side two-connected and its minimal torso four-connected. Building
+on it, the [complement theorem](hc7_two_triangle_complement_four_connectivity.md),
+with [two](hc7_two_triangle_complement_four_connectivity_audit.md)
+[GREEN audits](hc7_two_triangle_complement_four_connectivity_second_audit.md),
+closes the entire three-cut case: both `G-v-A` and `G-v-B` are four-connected.
+Its explicit region and port constructions preserve disjoint original bags.
 The two-triangles-and-edge case and Conjecture 19 remain open.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with

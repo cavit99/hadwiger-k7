@@ -1079,7 +1079,7 @@ reserves the disjoint sixth helper needed by the present construction.
 
 The [audited helper-partition reduction](hc7_two_triangle_helper_partition.md)
 now gives a specific global starting state in `H=G-v-B`. This graph is
-three-connected with minimum degree at least six. It has a connected
+now four-connected with minimum degree at least six. It has a connected
 partition `U,Y`, both full to `B`, with two `A` roots in `U` and the
 third `A` root and `x` in `Y`. If an initial three-region allocation has
 a perfect matching to `B`, a matching-edge contraction already gives `Q`.
@@ -1095,7 +1095,7 @@ so they give `Q`. Simultaneous reselection of the partition is allowed.
 The first unsupported inference in maximizing `Y` is that a root-free
 component behind a cutvertex of `U` can always be absorbed into `Y`.
 It may own a private `B` support, whose loss destroys fullness of `U`.
-Three-connectivity of `H` does not make this an actual small separator.
+The strengthened connectivity of `H` has not yet supplied an actual small separator.
 A reverse transfer, a stronger rooted construction or a proof using the
 full proper-minor colouring responses remains needed. No decreasing rule
 through such exchanges is proved. The degree-free wheel and designated
@@ -1122,23 +1122,20 @@ mutual contact, and no argument identifies this component with a structural
 helper or combines the independently obtained models without vertex reuse.
 The rainbow alternative and this simultaneous allocation remain open.
 
-**Separator allocation; written proof with a separate internal audit.** In
-`H=G-v-B`, every three-cut has exactly an A-side and an opposite side,
-both full to the actual seven-vertex boundary. The
+**Entire three-cut case closed; written proof with two internal audits.**
+The [complement theorem](../results/hc7_two_triangle_complement_four_connectivity.md)
+proves that both `G-v-B` and `G-v-A` are four-connected. It uses the
 [separator theorem](../results/hc7_two_triangle_separator_allocation.md)
-makes the A-side two-connected and, when its order is minimal, its torso
-four-connected. Any full rooted `K_5` on that side with roots `B` and
-two cut vertices is terminal. Even an empty T-bag interior is handled:
-three actual root-to-port paths permit a disjoint A-containing component
-and a path repairing the opposite side's designated missing contact.
+to normalize a model on a minimal side's four-connected torso. Enlarging
+the model concentrates all A roots in one bag. A capacitated fan and
+connected region partition then give actual exits to the other bag or
+to distinct B ports. The zero-, one- and two-port constructions account
+for every lost contact and produce seven disjoint bags with at most two
+independent missing edges. No virtual torso edge is contracted.
 
-Consequently no two vertices of the minimal cut have a common B neighbour.
-In a normalized one-hole packet, exactly one T bag meets `N(v)` and the core hole joins
-the designated B root to the other T bag. With both chosen cut roots
-outside `N(v)`, all surviving A roots belong to the contacted bag.
-The missing core contact and missing `v` contact thus share the other
-bag. No transfer repairing this configuration, exclusion of every
-three-cut, or complete two-triangle construction is proved.
+This supersedes the aligned-hole three-cut residue. It does not establish
+the remaining two-region allocation or exclude the two-triangle case;
+proper-minor colouring and the full four-connected host remain available.
 
 The earlier cycle paths, colouring constructions and their precise barriers
 are [preserved in the frozen pre-closure record](../archive/hc7_cycle_case_constructions_before_closure_2026-09-08.md).

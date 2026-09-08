@@ -65,14 +65,14 @@ helper model. When no colouring makes the triangles rainbow, it provides a
 connected bichromatic set contacting five retained neighbours. Combining
 these constructions with disjoint ownership remains unproved, as does
 the six-colour triangle alternative. The
-[audited separator allocation](results/hc7_two_triangle_separator_allocation.md)
-makes every A-side of a three-cut two-connected and a minimal A-side's
-torso four-connected. Any full five-root clique packet there is terminal.
-The remaining normalized packet has a core hole and a missing `v` contact
-at the same cut-root bag; repairing that shared endpoint is unproved.
+[audited complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)
+now makes both `G-v-A` and `G-v-B` four-connected, closing the entire
+three-cut case. Its connected region construction handles zero, one or
+two donor ports with explicit disjoint lifts. The remaining construction
+in this four-connected host is still open.
 The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-records this exact residue. Conjecture 19 and the user's overall objective
-remain unmet.
+records the current allocation problem. Conjecture 19 and the user's
+overall objective remain unmet.
 
 The [density and boundary-colouring routes](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
 and T44 remain conditional alternatives, not mandatory intermediate
