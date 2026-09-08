@@ -4,12 +4,14 @@
 
 This separate internal audit covers the complete
 [source](k5_scheme_separator_reduction.md) at SHA-256
-`102bced36c8fd794b7d52870fb4c2041e2955068c54d5130ac23adc24538e616`.
+`fc00d9890006e9f786a4b194e38a74b9c44873733d20126b86ce9638e00938d4`.
 The source remains conditional on a minimum counterexample existing.
-Only the status sentence changed after the complete proof review.
-Reversing that sentence exactly recovers the reviewed source at
+The previous audited revision was
+`102bced36c8fd794b7d52870fb4c2041e2955068c54d5130ac23adc24538e616`.
+Only its status sentence changed after the original complete proof review;
+reversing that sentence exactly recovers the reviewed source at
 `ebea05fc794fe48745a1d7d31aba7d075a4905a57f5872302232722c203ca1b7`;
-the mathematics is unchanged.
+the mathematics of that revision was unchanged.
 
 ## Checks
 
@@ -36,6 +38,37 @@ the mathematics is unchanged.
   exactly the stated two-component, three-versus-two-root residue.
   The explicit repeated-port example is a proper scheme; its five
   displayed bags are connected, disjoint and pairwise adjacent.
+
+## Section 7: terminal constructions
+
+Removing the appended Section 7, including its separating blank line,
+byte-recovers the source at Git `24d2631` and SHA-256 `102bced36...` above.
+Sections 1–6 have not changed. The new section received a separate
+exact-source review after the reviewer checked its application sketch.
+
+The terminal criterion is valid for every returned outer rooted model.
+A triangle path leaving `J` has exactly one outside excursion between
+its two permitted ports. The six outer prefixes, reserved excursions,
+original a–b path and filled root edges form a proper smaller K5-scheme.
+The fixed interior bags realise every filled edge and intersect the outer
+host only at their respective ports. All five original roots remain in
+distinct bags; an arbitrary permutation of the three interior roots is
+valid because the target is complete. The order decreases by at least three.
+
+For the prescribed-colour alternative, contraction can create only
+endpoint revisits on an inside triangle path. Trimming them preserves a
+proper sub-triangle scheme: no such path uses an allocated a/b vertex or
+meets the third bag, and new intersections have a common target endpoint.
+The elementary rooted model expands the same fixed preimages entirely
+inside `J`. The all-outside alternative requires no filled contact and
+therefore works with any disjoint three-path root-to-port linkage.
+
+First-hit trimming of a linkage supplied by three-connectivity places it
+inside `J`, validating the full-region alternative. The invoked
+[two-region source](../results/two_full_regions_paired_triangle.md) matches
+its stated hash `7659e347...`; its adjacent GREEN audit was also checked
+(SHA-256 `15eb754137fd49895a63210ca658c47ae8057f60a4d9d29a8be388d97d215f06`).
+No allocation-existence assertion is added by these sufficient conditions.
 
 ## Scope and provenance
 

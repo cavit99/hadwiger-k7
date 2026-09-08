@@ -39,7 +39,13 @@ target nor its local reductions may be reported as C19 or HC7.
 - The [separator deductions](k5_scheme_separator_reduction.md), with an
   [adjacent audit](k5_scheme_separator_reduction_audit.md), make a
   minimum counterexample three-connected and restrict every three-cut
-  to the state below. They do not make it four-connected.
+  to the state below. Section 7 proves the terminal lifts below;
+  it does not make the host four-connected.
+- The [two-region theorem](../results/two_full_regions_paired_triangle.md),
+  with an [adjacent audit](../results/two_full_regions_paired_triangle_audit.md),
+  gives three pairwise adjacent bags joining two terminal triples whenever
+  there are three disjoint paths between the triples and two disjoint
+  connected regions full to all six terminals. The pairing is free.
 - The [allocation obstructions](../barriers/k5_scheme_full_colour_class_obstruction.md),
   with an [adjacent audit](../barriers/k5_scheme_full_colour_class_obstruction_audit.md),
   rule out requiring any whole colour class in its own bag, and rule
@@ -58,11 +64,25 @@ i-root to its i-port, one using colours i,a and one using i,b.
 The c,d,e demand paths may have excursions on the opposite side.
 An arbitrary three-path linkage does not retain the triangle contacts.
 
-One construction seeks two disjoint connected regions, each adjacent to
-all six roots and ports. Their joint allocation would still need proof.
-Its packing attempt uses c,d,e vertices as labels; these can be adjacent
-on the triangle paths. A deficient packing therefore does not license
-the existing independent-set reduction without a separate repair.
+The two-region theorem closes their joint allocation for arbitrary host
+order. Its proof contracts internal region edges when three-path
+connectivity survives. Otherwise exact three-cuts make every linkage
+spanning; taking coordinatewise minima of these cuts forces a separator
+avoided by one intact region. The original three-connected host supplies
+the required root-to-port linkage, truncated at its first boundary visits.
+
+Producing the two regions remains open. The reverse packing uses c,d,e
+vertices as labels; these can be adjacent on the triangle paths. A deficient
+packing therefore does not license the existing independent-set reduction.
+
+An alternative now has a verified lift: three disjoint connected bags,
+each joining i to its i-port using only colours i,a,b. The inside triangle
+paths then supply a rooted model for the contacts absent outside the cut.
+The outside pieces form a smaller K5-scheme, and every returned model lifts
+through the fixed bags. If all three triangle paths have outside excursions,
+any three-path root-to-port linkage already suffices. Thus a minimum
+counterexample has zero, one or two such excursions. The next task is to
+force one of these allocations or a strict reduction in all remaining cases.
 
 For hosts without a three-cut, a global exchange is also missing.
 The current local laboratory permits one colour to have at most one

@@ -22971,7 +22971,7 @@ status = "conditional-target"
 source = "active/k5_contractibility_frontier.md"
 source_heading = "Target and reason for the attack"
 active = false
-expected_source_sha256 = "fdd85a3f92f9dd196187c5280e3360b209eccf629d9737b03bbcb31faf7baa6a"
+expected_source_sha256 = "e76c05f22df44bebe466c40ade2f7a54cc4d929f825ec79f3ba8a930a3ff130e"
 scope = "all finite K5 schemes, without restrictions on host order or path intersections beyond the scheme condition"
 label_fidelity = "all five prescribed roots in fixed disjoint connected branch sets"
 allowed_exits = ["a fully rooted K5 model in every such scheme"]
@@ -23000,12 +23000,12 @@ status = "audited-green"
 source = "active/k5_scheme_separator_reduction.md"
 active = false
 audit = "active/k5_scheme_separator_reduction_audit.md"
-expected_source_sha256 = "102bced36c8fd794b7d52870fb4c2041e2955068c54d5130ac23adc24538e616"
+expected_source_sha256 = "fc00d9890006e9f786a4b194e38a74b9c44873733d20126b86ce9638e00938d4"
 scope = "a minimum-order properly coloured K5 scheme without a fully rooted K5 model, if one exists"
 label_fidelity = "all five original roots survive in fixed disjoint port preimages"
 strict_parameter = "each excluded separator pattern gives a smaller host"
-conclusions = ["the host is three-connected", "every three-cut is a root-free rainbow triple separating its three colour roots from the other two roots"]
-does_not_prove = ["four-connectivity", "the remaining paired-triangle allocation", "rooted K5 contractibility or HC7"]
+conclusions = ["the host is three-connected", "every three-cut is a root-free rainbow triple separating its three colour roots from the other two roots", "two full regions or three bags with prescribed colours give a terminal lift", "at most two inside-root triangle demands have outside excursions"]
+does_not_prove = ["four-connectivity", "existence of a terminal allocation in every remaining state", "rooted K5 contractibility or HC7"]
 
 [[claims]]
 id = "graph_schemes.barrier.k5_colour_allocation"
@@ -23049,3 +23049,30 @@ source = "hc7.companion.two_triangle_matching_colour_host"
 target = "graph_schemes.target.rooted_k5"
 kind = "related_to"
 note = "The five-colouring branch supplies actual-root K5 schemes; extraction alone would leave the other branch and the seven-bag extension."
+
+[[claims]]
+id = "rooted_minors.two_full_regions_paired_triangle"
+title = "Two full regions force a triangle joining two terminal triples"
+kind = "theorem"
+status = "audited-green"
+source = "results/two_full_regions_paired_triangle.md"
+active = false
+audit = "results/two_full_regions_paired_triangle_audit.md"
+expected_source_sha256 = "7659e3472a9710eed5e7e059c71ba9af4922f4bacd49bf66048c7df6a5078766"
+scope = "two disjoint terminal triples with a three-path linkage and two disjoint connected nonterminal sets each adjacent to all six terminals"
+label_fidelity = "each bag contains exactly one original terminal from each triple; the pairing is free"
+strict_parameter = "host order decreases under component deletion and internal region-edge contraction"
+conclusions = ["three disjoint connected pairwise adjacent bags joining the terminal triples"]
+does_not_prove = ["a prescribed pairing", "existence of the two regions in every K5 scheme", "rooted K5 contractibility, C19 or HC7", "comparative significance or novelty"]
+
+[[relations]]
+source = "graph_schemes.target.rooted_k5"
+target = "rooted_minors.two_full_regions_paired_triangle"
+kind = "uses"
+note = "Closes the joint allocation once the two full regions exist; deficient reverse packing and inseparable hosts remain open."
+
+[[relations]]
+source = "graph_schemes.k5_separator_reduction"
+target = "rooted_minors.two_full_regions_paired_triangle"
+kind = "uses"
+note = "Section 7 verifies the smaller-host K5 scheme and fixed lift once the paired triangle is supplied."

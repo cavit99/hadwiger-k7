@@ -196,3 +196,60 @@ Nevertheless
 are five disjoint connected rooted K5 bags. Section 4 instead contracts
 the first two exterior prefixes and leaves `q` available to the interior.
 This is a counterexample only to unnecessary fixed-colour port grouping.
+
+## 7. Terminal constructions for the rainbow cut
+
+Use the surviving state of Section 5. Let `D` be the component containing
+`R={c,d,e}`, and put `J=G[D union S]`, `Y=G-D`. Let `E_out` contain the
+pairs `ij` in `{c,d,e}` for which `P_ij` leaves `J`. Such a path has exactly
+one outside excursion, from `s_i` to `s_j`: these are its only possible
+ports, and the path is simple. Put `E_in=E(K3)-E_out`.
+
+**Terminal criterion.** Suppose `J` has three disjoint connected bags,
+each containing one root of `R` and one port of `S`, and the bags at
+`s_i,s_j` are adjacent whenever `ij in E_in`. Then `G` has a fully rooted
+K5 minor. The root-to-port pairing need not be prescribed.
+
+To prove this, add the edges `s_i s_j` for `ij in E_in` to `Y`. This
+smaller graph has a properly coloured K5-scheme rooted at `a,b,s_c,s_d,s_e`.
+Use the original `a,b` path, the six outside root-to-port prefixes, the
+reserved excursions for `E_out`, and the added edges for `E_in`.
+Every original piece retains its two colours; each new edge joins its
+two target roots. The full common-endpoint intersection condition holds.
+Delete unused vertices and edges if necessary. At least the three roots
+in `D` have disappeared, so minimum order supplies a rooted K5 model.
+
+Replace each port by its fixed connected bag in `J`. These preimages
+are disjoint and meet `Y` only at their respective ports. Every added
+edge lifts to a required bag contact; every old edge retains its actual
+ends. The roots `a,b` remain fixed, and the other three bags contain the
+three original roots separately. Their permutation is harmless for a
+complete target. This proves the criterion with a strict parameter and
+a lift of every returned model.
+
+Consequently each of the following is terminal.
+
+1. **Two full regions.** There are two disjoint connected subsets of
+   `J-(R union S)`, each adjacent to all six terminals. Three-connectivity
+   of `G` supplies a three-path `R`--`S` linkage whose first-hit prefixes
+   lie in `J`. The [two-region theorem](../results/two_full_regions_paired_triangle.md)
+   gives all three contacts, hence the criterion. Its source SHA-256 is
+   `7659e3472a9710eed5e7e059c71ba9af4922f4bacd49bf66048c7df6a5078766`.
+2. **Bags with prescribed colours.** There are disjoint connected sets
+   `B_i` in `J`, each containing `i,s_i` and otherwise using only vertices
+   of colours `i,a,b`. Contract these sets. Each inside path `P_ij` avoids
+   the third set: triangle demands contain no a/b vertices. Its image
+   can revisit only its own endpoint roots; simplify to a path. Any new
+   shared vertex has the correct common target endpoint, because all
+   c/d/e vertices of `B_i` have colour `i`. The paths for `E_in` therefore
+   form a scheme of a subgraph of K3. The elementary construction in
+   Section 1 gives its rooted model. Lift its three bags through the
+   `B_i`; they stay in `J`, retain each root and port, and supply exactly
+   the contacts needed by the criterion.
+3. **All three excursions outside.** If `E_out=E(K3)`, any three-path
+   `R`--`S` linkage in `J` supplies the criterion: no added contact is
+   required. Again an arbitrary pairing is allowed.
+
+A minimum counterexample therefore has at most two outside triangle
+excursions and admits neither of the first two allocations. Existence
+of one of those allocations in every remaining state is not proved.
