@@ -198,14 +198,16 @@ Question 4. Its scope is universal for bipartite targets, and it gives an
 independent proof of the intended BLR flow assertion.
 
 The [completed focused comparison](../paper/bipartite-contractibility/citation_novelty_review.md)
-does not substantiate the requested significance benchmark. NT's Theorems
-4 and 6 give new global colouring and density conclusions. BLR already
-intended the rooted bipartite conclusion; private four-cycles remove its
-degree restriction, and flexible root families follow by augmentation.
-The independent matroid proof repairs that assertion, but first-correct-
-proof priority and a comparable new advance are not established. Lee's
-later use shows utility without making his consequences new results here.
-The ledger records the remaining [paper revision](../RESEARCH_LEDGER.md#manuscript-status).
+assesses a substantial specialist contribution below the NT benchmark,
+even granting first-valid-proof credit. NT's Theorems 4 and 6 give new
+global colouring and density conclusions. BLR already intended the rooted
+bipartite conclusion; private four-cycles remove its degree restriction,
+and flexible root families follow by augmentation. Property `(*)` is an
+equivalent formulation. Lee's later use demonstrates utility; specialised
+KL/KSJ constructions also bypass the disputed extraction step for some
+clique-flow applications. Neither yields a new downstream theorem here.
+The [revised manuscript](../paper/bipartite-contractibility/main.tex)
+incorporates these distinctions. Historical firstness remains unresolved.
 
 ## Preserved barriers and frozen attempts
 

@@ -9,8 +9,8 @@ The [universal proof](../../results/bipartite_contractibility_via_matroid_reduct
 is checked at SHA256
 `3faac3d0628f4ea61ceb7e1b2005917371e46b1168ed446492907035efa09272`;
 the [five-page manuscript](main.tex) at
-`8cea0ca4838a7090b5fb4798c2c9ec670efe60017a6f7df1e79dc0d668c0b701`.
-Neither source is changed by this review.
+`6d804a715f8782ac84679a8a5715105cb28d2a7cf4a594c60aec5b1072b387b9`.
+The theorem source is unchanged; the manuscript incorporates this review.
 
 ## What was already asserted
 
@@ -21,7 +21,8 @@ demand edges with four distinct endpoints. Their prefix construction has
 the separately [audited counterexamples](../../barriers/bipartite_flow_prefix_construction.md)
 to Lemmas 3.5 and 3.6. These refute its intermediate assertions, not the
 intended theorem. The apparent reversal in the published intersection
-definition is a separate issue.
+definition on published page 13:10 is a separate issue. The defective
+construction remains on page 13:11 of the journal version.
 
 **The degree restriction supplies no new theorem priority.** The intended
 rooted assertion for minimum degree at least two implies contractibility
@@ -40,6 +41,15 @@ graphic-matroid allocation and component contraction proof. Its induction
 fixes disjoint connected preimages before recursion and strictly decreases
 host order. Root retention, unrestricted degrees and constructive existence
 must not be advertised as conclusions absent from the older assertion.
+
+**Equivalent terminology.** Contractibility is property `(*)` in
+[Kriesell--Mohr, Definition 1](https://arxiv.org/html/1911.09998v2#S1).
+Choose the required bichromatic paths through a transversal of a proper
+colouring: every intersection has its colour as a common target endpoint,
+and no foreign root can occur internally. Conversely, colour normalisation
+turns a scheme into this setting, and the rooted model lifts. Thus the
+bipartite theorem also proves property `(*)` for every bipartite target;
+this is an equivalent formulation, not an additional independent theorem.
 
 The [flexible root-family result](../../results/bipartite_flexible_root_families.md)
 also follows by augmentation. For each family add a centre joined to all
@@ -63,6 +73,18 @@ restates the bipartite flow assertion, citing BLR without a replacement
 proof. It is used in Theorem 3.4 and then Corollary 3.6. This establishes
 later use of the input; the separator and spectral conclusions are not
 new results of this repository.
+
+There is a narrower later bypass. [Kolbe--Spalding-Jamieson, Lemma 3.11
+and Proposition 3.4](https://arxiv.org/html/2608.27179v1#S3.SS1), using
+[Korhonen--Lokshtanov, Lemmas 4.3--4.4](https://arxiv.org/html/2308.04795v1#S4.SS3),
+choose for each `h>=3` a particular demand graph of minimum degree at least
+two and maximum degree at most three whose almost-embedding forces an unrooted
+`K_h` minor. This bypasses the disputed extraction step for their
+clique-flow application; other BLR inputs remain in use. It neither
+extracts arbitrary bipartite targets nor retains all prescribed roots.
+An arbitrary scheme cannot simply be subdivided into the required input:
+newly independent demand segments may still intersect. Our proof should
+not be described as necessary for those current clique-flow estimates.
 
 **Scope lemma.** Let `H` be finite simple bipartite with minimum degree at
 least two. A Lee `H`-flow of zero crossing congestion in a finite host
@@ -108,18 +130,21 @@ bipartite counterexample exists. Those questions do not erase BLR's earlier
 assertion. The later use above demonstrates utility, not a new downstream
 bound or first-correct-proof priority.
 
-**Assessment:** a complete independent proof with substantial universal
-scope and a concrete repair of an earlier construction. An original proof
-of an old assertion can be important research. The present evidence does
-not establish that this repair advances mathematics as far as the two new
-NT conclusions, nor that it is the first correct proof. Comparable
-significance is therefore not substantiated; no implication to HC7,
-Conjecture 19, Conjecture 21 or T44 is established by this theorem.
-External peer review is not being imposed as a separate completion gate.
+**Assessment:** a substantial specialist contribution, but below the NT
+benchmark on demonstrated consequences, even assuming first-valid-proof
+credit. The theorem realises a supplied compatible routing; NT force new
+minor structure from density and obtain a global colouring conclusion.
+The matroid method may have further uses, but those are not yet proved
+applications. This is a comparative judgement, not a community consensus.
+Historical firstness remains unresolved, and no implication to HC7,
+Conjecture 19, Conjecture 21 or T44 follows here. External peer review is
+not being imposed as a separate completion gate.
 
 The focused source check covered the BLR v2 statement and construction,
-its version record, KPR's questions, the stated NT theorems, and Lee's
-later use. No replacement proof was located in the checked sources. This
-is not an exhaustive absence claim. Manuscript positioning should be
-"an independent proof of the intended rooted bipartite flow assertion";
-stronger priority language needs further evidence.
+its published construction, KPR's questions, KM's property `(*)`, the NT
+theorems, Lee's later use and the KL/KSJ application bypass. No earlier
+complete proof of the universal rooted bipartite assertion was located
+in these sources. This is not an exhaustive absence claim. The manuscript
+presents an independent matroid proof; stronger priority language requires
+further evidence. The user's separate AI reviews corroborate the proof
+and comparison but supply no exact manuscript hash or external peer review.

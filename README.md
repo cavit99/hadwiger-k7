@@ -83,7 +83,7 @@ or `HC_7`.
 ## Manuscripts
 
 The primary manuscript candidate is the five-page DRAFT
-[Bipartite graphs are contractible](paper/bipartite-contractibility/main.tex),
+[A matroid proof of bipartite contractibility](paper/bipartite-contractibility/main.tex),
 with [PDF](paper/bipartite-contractibility/main.pdf) and
 [internal manuscript audit](paper/bipartite-contractibility/main_audit.md).
 It proves the universal rooted theorem and its bipartite-flow corollary.

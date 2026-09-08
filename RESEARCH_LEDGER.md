@@ -112,9 +112,10 @@ the user's completion criterion.
 Resume from this ledger and the designated frontier; revisit history only
 for a disputed dependency or changed claim. The bipartite paper's
 [focused primary-source review](paper/bipartite-contractibility/citation_novelty_review.md)
-is complete, with a separate internal audit. It confirms the independent
-proof contribution but does not substantiate comparable significance.
-The final manuscript revision remains pending. No author contact is authorized.
+is complete, with a separate internal audit, and incorporated in the
+revised manuscript. It supports a substantial specialist contribution,
+assessed below the NT benchmark even granting first-valid-proof credit.
+No author contact is authorized.
 
 ## Current frontier and completed campaign
 
@@ -159,10 +160,13 @@ Lee's later flow lemma, including fractional flows and initially
 noninjective terminal maps. BLR already intended all roots to be retained;
 private four-cycles remove its minimum-degree restriction. Flexible root
 families also follow by augmentation. These are not new statement-level
-advantages over that intended assertion. The proof repair has substantial
-scope, but first-correct-proof priority and an advance comparable to NT's
-new colouring and density theorems are not established. The objective
-remains unmet. The [active index](active/INDEX.md) retains `HC_7` as the
+advantages over that intended assertion. Property `(*)` is an equivalent
+formulation. Later specialised constructions bypass the disputed
+extraction step for some clique-flow applications without proving the
+universal rooted theorem. The repair is assessed as a substantial
+specialist contribution below NT's demonstrated advance, even granting
+first-valid-proof credit; historical firstness remains unresolved.
+The objective remains unmet. The [active index](active/INDEX.md) retains `HC_7` as the
 sole primary target, with no direct sufficient proved input.
 
 ## Durable results and preserved proofs
@@ -208,14 +212,14 @@ The five-page [bipartite manuscript](paper/bipartite-contractibility/main.pdf)
 is the current DRAFT, with its [source](paper/bipartite-contractibility/main.tex)
 and [internal audit](paper/bipartite-contractibility/main_audit.md).
 
-**Pending paper work:** incorporate the completed
-[scope review](paper/bipartite-contractibility/citation_novelty_review.md)
-and its [audit](paper/bipartite-contractibility/citation_novelty_review_audit.md)
-in the final manuscript revision. That review covers prior terminal
-retention, minimum-degree removal, flexible families and Lee's later use.
-The current five-page source and PDF remain at their audited revisions.
-Position the contribution as an independent proof; stronger novelty claims
-require evidence. No author contact is authorized.
+**Revision complete, 8 September 2026:** *A matroid proof of bipartite
+contractibility* incorporates the [scope review](paper/bipartite-contractibility/citation_novelty_review.md),
+states the property `(*)` equivalence and distinguishes the intended BLR
+assertion from later specialised bypasses. The shared-label quotient path
+and exact host-order decrease are explicit. The five-page British-English
+draft has updated exact-hash internal audits and a checked PDF; the
+originating theorem source is unchanged. Historical priority and external
+specialist review remain open. No author contact is authorized.
 
 The [manuscript map](paper/README.md) distinguishes preserved earlier drafts.
 The low-degree `K_7^-` manuscript remains a frozen snapshot with
