@@ -34,50 +34,35 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 The immediate target is Conjecture 19. Its audited critical-host reductions
 leave two spanning degree-eight neighbourhood configurations. The
-[cycle-and-triangle theorem](results/hc7_degree8_cycle_triangle_closure.md)
-now closes the entire five-cycle case for arbitrary host order, under
-seven-connectivity and minimum degree eight. Its two separate internal
-audits check the global construction and the fixed disjoint lift; no
-colouring hypothesis or finite enumeration is needed.
+[cycle-and-triangle theorem](results/hc7_degree8_cycle_triangle_closure.md),
+with two separate internal audits, closes the entire five-cycle case for
+arbitrary host order. The two-triangles-and-edge case remains open.
 
-The construction contracts one cycle edge, obtains two spanning helpers,
-and uses three-connectivity of the graph outside the four cycle roots to
-divide the triangle's helper into three connected regions. Either one region
-can be transferred, or the four cycle contacts directly assemble the required minor. Thus a
-failure of the stronger triangle-splitting partition is no longer a gap
-in this case.
+Write its neighbourhood as triangles `A,B` and edge `xy`. The
+[complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)
+makes both `G-v-A` and `G-v-B` four-connected. The new
+[spanning-helper theorem](results/hc7_two_triangle_exterior_helpers.md),
+with a separate internal audit, makes `G-N[v]+{x,y}` two-connected and
+partitions it into connected x/y-rooted parts with all but at most one
+of their six contacts to `A`. The A roots remain singleton, and all B
+roots are excluded from both parts. The symmetric assertion holds for B.
+A simultaneous global allocation is still missing; even making both parts
+full to both triangles would not alone give the required minor.
 
-The remaining case is two triangles and an edge. The next task is a
-complete construction in that actual critical host, retaining every
-proper-minor six-colouring and branch-set ownership, followed by an audit
-of the full implication to Conjecture 19. The
-[two-triangle exterior theorem](results/hc7_degree8_two_triangle_exterior.md)
-makes `G-N[v]` connected and full to all eight neighbours. The subsequent
-[audited helper partition](active/hc7_two_triangle_helper_partition.md)
-retains a connected helper and two triangle roots on the other side, with
-both sides contacting all three opposite triangle roots. The remaining
-construction must divide the two-root side into connected parts, each
-contacting at least two opposite roots, or reach a different complete
-minor model. Arbitrary component absorption can lose a private root
-contact; it is not a proved exchange. An audited extension now couples a
-proper-minor colouring with a dense three-vertex deletion and its rooted
-helper model. When no colouring makes the triangles rainbow, it provides a
-connected bichromatic set contacting five retained neighbours. Combining
-these constructions with disjoint ownership remains unproved, as does
-the six-colour triangle alternative. The
-[audited complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)
-now makes both `G-v-A` and `G-v-B` four-connected, closing the entire
-three-cut case. Its connected region construction handles zero, one or
-two donor ports with explicit disjoint lifts. The remaining construction
-in this four-connected host is still open.
-The [fixed colour-core response](active/hc7_two_triangle_fixed_colour_core.md)
-now gives an audited alternative retaining four named equal-colour
-neighbours: a rooted four-clique in a fixed four-chromatic subgraph, or
-five compatible endpoint paths. The simultaneous attachment or preservation
-of triangle vertices is still missing; this does not close another case.
-The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-records the current allocation problem. Conjecture 19 and the user's
-overall objective remain unmet.
+The [earlier full-helper partition](active/hc7_two_triangle_helper_partition.md)
+and [fixed colour-core response](active/hc7_two_triangle_fixed_colour_core.md)
+remain audited resources for that allocation. The latter preserves a
+fixed four-chromatic graph across all its four-colourings, giving either
+a minor rooted at four triangle vertices or five compatible endpoint
+paths. Neither result licenses combining independently chosen models.
+
+The next task is a complete construction in this actual critical host,
+using proper-minor six-colourings and preserving disjoint branch sets,
+followed by an audit of the whole implication to Conjecture 19. The
+[designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+records the exact gaps, including why arbitrary absorption or path
+contraction is not a proved reduction. Conjecture 19 and the user's
+HC7-or-comparable-theorem objective remain unmet.
 
 The [density and boundary-colouring routes](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
 and T44 remain conditional alternatives, not mandatory intermediate

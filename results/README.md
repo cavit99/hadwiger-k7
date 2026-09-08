@@ -77,6 +77,12 @@ with [two](hc7_two_triangle_complement_four_connectivity_audit.md)
 [GREEN audits](hc7_two_triangle_complement_four_connectivity_second_audit.md),
 closes the entire three-cut case: both `G-v-A` and `G-v-B` are four-connected.
 Its explicit region and port constructions preserve disjoint original bags.
+The [spanning-helper theorem](hc7_two_triangle_exterior_helpers.md), with
+its [GREEN audit](hc7_two_triangle_exterior_helpers_audit.md), now makes
+the exterior plus `x,y` two-connected and gives two spanning x/y-rooted
+parts with all but at most one contact to either specified triangle.
+The theorem does not give a common partition for both triangles or the
+additional division of these parts needed for the global construction.
 The two-triangles-and-edge case and Conjecture 19 remain open.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with

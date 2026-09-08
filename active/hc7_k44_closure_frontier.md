@@ -1137,6 +1137,25 @@ This supersedes the aligned-hole three-cut residue. It does not establish
 the remaining two-region allocation or exclude the two-triangle case;
 proper-minor colouring and the full four-connected host remain available.
 
+**Spanning exterior helpers; written proof with a separate internal audit.**
+The [new theorem](../results/hc7_two_triangle_exterior_helpers.md) makes
+`K=G-N[v]+{x,y}` two-connected. For some `r in A`, `(G-v-B)-r`
+has a four-clique rooted at `(A-{r}) union {x,y}`. Normalizing its two
+root bags gives a connected x/y-rooted partition of all `K`, both parts
+full to `A-{r}` and at least one full to `r`. All A roots are singleton;
+the entire B triangle is excluded from these parts. The symmetric
+statement holds for B, without asserting a common partition.
+
+The proof excludes an actual four-cut side whose boundary contains all
+of A by a degree-free wheel construction. A side meeting two A roots
+returns a rooted clique through two disjoint paths outside the side.
+If all three root deletions failed, their four-cut sides would either
+overlap and give that response, or be disjoint and directly give `K_7`.
+The conclusion still supplies only two parts. Even with both parts full
+to both triangles, the coarse contact graph is a three-clique-sum of
+two `K_6` graphs and has no `Q` minor. An actual split or reallocation
+inside those parts remains necessary; this is not case closure.
+
 **Fixed colour core; written deductions with a separate internal audit.**
 The [edge-colouring response](hc7_two_triangle_fixed_colour_core.md)
 chooses `a in A,b in B` so `{a,b,x,y}` induces only `xy`, and
@@ -1155,6 +1174,21 @@ rooted bags simultaneously. In the second, the leaves need not be named
 neighbours, and the two forest bags can absorb triangle vertices. Those
 are the first missing ownership steps; neither model may be combined
 with a separately obtained helper without a new disjoint construction.
+
+**Recorded route nonclosure: contracting two triangle-to-triangle paths.**
+Two disjoint A--B paths in `G-v`, with distinct triangle ends and no other A/B
+vertex internal, can be contracted to put a literal `K_4^-` in the
+neighbourhood of `v`. Their fixed disjoint preimages provide a valid
+minor lift. The five-connected helper theorem would finish if that
+quotient were five-connected and met its stated density threshold.
+Neither condition follows from choosing shortest paths. A failed
+absorption can leave a quotient cut of order at most four whose preimage
+contains an arbitrarily large old bag; seven-connectivity then gives
+no contradiction. Multiple contacts along the paths also remain in
+the edge-loss calculation. The first unsupported reduction is assuming
+an admissible five-connected quotient exists. A global choice of paths
+or connected bags with controlled edge loss and a valid separator repair
+remains possible; no such choice or decreasing repair is proved.
 
 The earlier cycle paths, colouring constructions and their precise barriers
 are [preserved in the frozen pre-closure record](../archive/hc7_cycle_case_constructions_before_closure_2026-09-08.md).

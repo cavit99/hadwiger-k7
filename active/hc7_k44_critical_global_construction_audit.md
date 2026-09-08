@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`97c913e2d0c19fa20d31878154040b6994018daefab3b3dd81caa35278f0deb2`.
+`be23e563b80083df0b82d608556e0e128f308850aece3c584d9c7de938a51e9d`.
 
 ## Preserved scope and exact provenance
 
@@ -165,3 +165,31 @@ but does not preserve named triangle vertices or establish their required
 contacts. The summaries correctly leave both simultaneous constructions
 open. All inherited frontier bytes and prior qualified audit scope remain
 unchanged; no new global conclusion is asserted.
+
+## Exterior helpers and path-contraction scope
+
+Removing just the new helper and path-contraction blocks exactly recovers
+Git `badfbb0`, frontier SHA-256
+`97c913e2d0c19fa20d31878154040b6994018daefab3b3dd81caa35278f0deb2`.
+The compressed ledger work plan and six added results-navigation lines
+were checked with those blocks against the [helper theorem](../results/hc7_two_triangle_exterior_helpers.md)
+at `b3fe07ea52e0e553c61edb59cd5b7da3719ae834d8803f21afb9bde90fc410a8`
+and its adjacent GREEN audit at
+`e9bc147d6c0e48bba395dc5fe590ef8a8cc778914804e3c1f5d33c48e2eec628`.
+They retain the existential choice of the omitted A root, the complete
+x/y-rooted partition, singleton triangle roots and exclusion of B. The
+symmetric theorem does not supply a common partition for both triangles.
+The compatible-cut and degree-free wheel summary is accurate. The coarse
+graph with three clique apices and two separate triangles is a clique-sum
+of two six-cliques along a triangle: five-connectivity of `Q` localizes any proposed
+model to one six-vertex piece, so that graph indeed has no `Q` minor.
+
+The path statement now explicitly avoids `v`. Its two disjoint contracted
+bags and the two unused triangle roots span the stated neighbourhood
+diamond, with actual fixed preimages. This verifies the local operation,
+not an admissible quotient: five-connectivity and the required density
+remain unproved. The corrected cut order is at most four; lifting a cut
+containing a large contracted bag need not violate seven-connectivity
+of the original graph. All old frontier bytes retain their prior audit scope.
+The current integration is GREEN and explicitly leaves the two-triangle
+case, Conjecture 19 and the overall completion criterion open.
