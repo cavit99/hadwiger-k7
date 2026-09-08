@@ -121,6 +121,9 @@ model whose bags each contact two of the outside clique bags
 `{v,a,x,y}` and the three singleton B roots;
 the [frontier](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
 proves this certificate without asserting its existence.
+A second proved certificate uses strict Hall inequalities between four
+clique bags and five other clique bags. A labelled-tree construction gives
+Q; obtaining those inequalities in one actual model remains unproved.
 The frontier also proves that contracting any triangle through v leaves
 a five-connected, six-chromatic graph. This permits a more flexible
 construction in a quotient; the required seven-bag construction and its

@@ -1314,6 +1314,44 @@ disjoint, and v may expand. This requires one model with the stated
 incidences; neither the chromatic bound nor connectivity to its union
 establishes them.
 
+**A second incidence certificate; written deduction.** Suppose nine
+disjoint connected bags form cliques R of order four and S of order five.
+For `X subseteq R`, let N(X) be the S bags contacted by X. If
+`|N(X)|>=|X|+1` for every nonempty X, two disjoint R--S mergers give Q.
+This condition concerns one model; the four R bags need not be singleton.
+
+Here is a general construction. For p>=1 labels with neighbour sets in a
+set S of order p+1, the same strict Hall inequalities give a tree on S
+whose p edges have distinct labels, each joining two neighbours of its
+label. Induct on p, with p=1 immediate. If a proper nonempty label set X
+is tight, first construct its tree on `D=N(X)`, then collapse D and
+delete X. A remaining label set Y meeting D has
+`|N'(Y)|=|N(X union Y)|-|D|+1>=|Y|+1`; one avoiding D retains its bound.
+Apply induction and expand D, choosing an actual neighbour for every
+edge incident with the collapsed vertex. Otherwise choose any label r
+and two of its neighbours, identify those neighbours and delete r.
+Every remaining nonempty label set previously had at least two more
+neighbours than labels, so the strict inequality survives. Expand the
+identified pair and insert the r-edge. In both cases the expanded graph
+is connected with p edges on p+1 vertices, hence a tree. Both recursive
+instances have fewer labels; no graph-model induction is being assumed.
+
+For p>=2, when R and S themselves form cliques, keep two adjacent tree
+edges and their three S vertices. For each other tree edge, merge its
+R label with its S endpoint farther from this three-vertex subtree.
+These p-2 cross edges are disjoint: their S endpoints are precisely the
+vertices outside the subtree. Each mixed bag is universal through the
+two cliques. The remaining two R and three S vertices have all contacts
+except possibly the two opposite end incidences, which are independent.
+Thus the result is `K_(p+3)-2K2`; p=4 gives Q. Unions of the original
+bags give fixed disjoint connected preimages for every merger.
+
+The strict Hall condition is exactly five-connectivity of the nine-bag
+quotient. A failed set X gives the quotient cut `(R-X) union N(X)` of
+order at most four. Its lift contains whole S bags, so seven-connectivity
+of G does not exclude it. Splitting those bags while retaining the needed
+contacts, or a different direct construction, remains unproved.
+
 **A five-connected six-chromatic quotient; written deduction.**
 For every triangle T containing the degree-eight vertex v, `G/T` is
 five-connected and six-chromatic. A cut of at most four vertices in the

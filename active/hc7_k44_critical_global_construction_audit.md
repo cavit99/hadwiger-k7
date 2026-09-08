@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`e8103fdb2c3d234e2f5f2f8b1af1250ae5254911681ad60efc75bf01b355c5f3`.
+`d9457f18dc7c94425c08970cdd18bbd713dab54fb50d7808a9392adc35a8c0e3`.
 
 ## Preserved scope and exact provenance
 
@@ -619,3 +619,33 @@ Connectivity follows by deleting two or three vertices from G. The
 five-line ledger addition retains the unproved rooted-wheel extension
 and the separate six-chromatic deletion branch. No simultaneous model
 allocation, external extension theorem or finite evidence closes either.
+
+## Strict-Hall incidence certificate
+
+**Scoped verdict: GREEN.** The exact reviewed frontier SHA-256 is
+`d9457f18dc7c94425c08970cdd18bbd713dab54fb50d7808a9392adc35a8c0e3`.
+Removing only the new incidence block byte-recovers Git `8ba977a`, SHA-256
+`e8103fdb2c3d234e2f5f2f8b1af1250ae5254911681ad60efc75bf01b355c5f3`.
+All earlier audit scopes are preserved. The parent supplied the symbolic
+construction; literature-repair independently checked its argument and
+then the complete written insertion. No finite check is a proof premise.
+
+The tight-set recursion retains strict Hall both for sets meeting the
+collapsed neighbourhood and for those avoiding it. In the other case,
+every remaining nonempty label set was proper and loses at most one
+neighbour. Both recursions decrease the number of labels; expansion uses
+an actual neighbour of each edge's own label and gives a connected tree.
+For p>=2, the farther endpoints biject with the vertices outside the
+chosen three-vertex subtree. The corresponding mergers have disjoint,
+connected preimages. Their mixed bags are universal through the original
+cliques; only two independent end incidences may be absent. Extra edges
+may be deleted, and the resulting order is p+3.
+
+For the converse connectivity check, a cut of at most four leaves some
+S bag. If it leaves no R bag, the remainder is a clique. Otherwise the
+surviving R set X can be separated from surviving S only if all N(X)
+were deleted, giving |N(X)|<=|X|. Conversely a failed set leaves both
+X and S minus N(X) nonempty after the displayed cut. Thus the stated
+five-connectivity equivalence is exact. The three-line ledger addition
+retains the need to obtain these incidences in one actual model; whole
+bag preimages do not turn that quotient cut into a small cut of G.
