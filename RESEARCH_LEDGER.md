@@ -108,10 +108,13 @@ choices of a qualify. The
 [edge-pair boundary exclusion](results/hc7_two_triangle_edge_pair_boundary.md)
 closes another actual four-boundary configuration. These have separate
 internal audits. The [joint component constructions](results/hc7_reserved_core_component_bound.md)
-now leave exactly one connected component behind the maximised core's
-five ports, contacting the omitted B root. Two components give Q or a
-strictly larger core. Allocation within the single component and the
-separate case in which both ports are roots remain open.
+make the nonroot-port residue connected. The subsequent
+[global choice of omitted root](results/hc7_two_triangle_nonroot_port_closure.md)
+closes that entire branch: choose a missing B,x,y and maximise over the
+eligible omitted B roots. Both ports must then be their B roots, and the
+two A bags partition `W union (A-{a})`. Their union is therefore at least
+five-chromatic by the reduced-complement bound. Constructing Q in this
+remaining root-port case is open; the two-triangle case is not closed.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited

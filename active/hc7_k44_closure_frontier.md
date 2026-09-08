@@ -1257,13 +1257,35 @@ prove that D is connected and contacts b. With two components, a missing
 B contact gives a fresh four-root model and three disjoint extra bags
 containing Q; if both components are full to B, they give a fresh rooted
 four-clique that enlarges M. These constructions discard the old B paths.
-Allocation within the single component and the root-port case remain open.
+They do not alone allocate the resulting connected component.
 
 **Superseded connectedness argument.** The original Bi--pi paths may have interiors in
 D. Retaining those paths as B bags while allocating an entire component
 of D to a new helper can reuse vertices. That was the first invalid step
 in the earlier argument. The new proof establishes connectedness by fresh
 joint constructions; it does not validate arbitrary reuse of those paths.
+
+**Global choice of omitted root; written proof with separate internal audits.**
+The [nonroot-port closure](../results/hc7_two_triangle_nonroot_port_closure.md)
+chooses a missing all of B,x,y, then maximises |M| over every eligible
+omitted b, where eligibility means missing x,y. The two-nonroot-port
+case is impossible for this global maximum. Its
+[boundary repair](../results/hc7_reserved_core_contraction_boundary.md)
+constructs Q on every side that would violate the four-neighbour bound
+after contracting b with a second eligible B root. The remaining quotient
+model lifts by choosing which of those two roots to retain; the singleton
+merged-root case assigns the new port bags using the old b contact.
+Both actual ports contact both old A bags, so that assignment is connected
+and preserves all four roots. Each outcome strictly enlarges |M| within
+the original class of eligible omissions.
+
+Together with the one-nonroot-port exclusion, this leaves both ports at
+their B roots. Thus `M=W union (A-{a})` exactly, and the reduced-complement
+theorem gives `chi(G[M])>=5` for this same maximised core. The two A bags
+partition M and are both full to the other two B roots; b meets at least
+one bag, and a meets both. This remaining root-port construction is open.
+The closure does not assert that every fixed reservation has root ports,
+nor does it infer a rooted five-clique from the chromatic bound.
 
 **Construction priority.** Obtain one Q model in the actual critical host.
 The following scheme is sufficient, but its six prescribed triangle roots

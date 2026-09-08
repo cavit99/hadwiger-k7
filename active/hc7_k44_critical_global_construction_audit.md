@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`f8a72c7c042b86c0370207c6fd4b59ea05e28e47c553ea20bcd41258059db8dc`.
+`667b7716e54ad6804a20d7fe40cd3446ca5d41e3e360743bc4ea88dce7c0e976`.
 
 ## Preserved scope and exact provenance
 
@@ -484,3 +484,46 @@ path-reuse argument remains identified as invalid, while its connectedness
 conclusion is now supplied by the new proof. The ledger and inactive
 component claim match this scope. Allocation within the connected residue
 and the two-root-port case remain open; no global target is declared proved.
+
+
+## Global omitted-root choice
+
+**Scoped verdict: GREEN.** Relative to Git `c7fb2ca`,
+frontier SHA-256
+`f8a72c7c042b86c0370207c6fd4b59ea05e28e47c553ea20bcd41258059db8dc`,
+the only changes are the new global-choice paragraph and the preceding
+component proof's scope sentence. Earlier reviewed mathematics is unchanged.
+Reversing exactly these changes byte-recovers that Git revision. The
+parent authored the integration and participated in the proof sketch;
+this reviewer independently compared the frontier, ledger and manifest
+diffs with the final sources and their separate audits. The reviewer
+co-developed earlier component results and audited the new source proofs;
+this is a separate integration check, not external peer review.
+The boundary-repair source/audit match
+`da0e3fd73fb52815d01bdfd7d9e56a0fd9d1bca4c93bb2d332fc0f4fe67de571` /
+`d2348e8500d49aeda6a9d8d220ce3b3fe41c0e5edf2e680749aa76e9a2683dc5`;
+the nonroot-port closure source/audit match
+`2b3d6945c1dbf85ac6c17444a95baaf400a115d6b5c48359668f302811f75140` /
+`3d9a5e60eb9ed57be13bed20777be764539dbd37d549e8d836fa29cc3d6d660b`.
+
+The summary preserves the fixed B-free, xy-free a, eligibility of both B
+endpoints and the maximum over all eligible omissions. No spanning core
+is asserted for an arbitrary fixed omission. The fresh quotient's boundary and
+degree hypotheses are checked before the rooted packet, and both lifts
+retain one actual B endpoint while avoiding the other. In the singleton
+case each old port's contacts with both A bags permit the reassignment.
+No arbitrary quotient edge is relabelled or old path reused.
+
+Combining the closure with the previously audited one-nonroot-port
+exclusion leaves two root ports. The old empty-residue argument then
+gives M=W union (A-{a}) in this same model. The exact reduced-complement
+bound therefore applies to G[M], without asserting a retained four-colouring
+or discarding the possible six-chromatic branch. The ledger and new inactive
+claims preserve that scope and leave the root-port construction open.
+The reduced-complement source/audit pins were rechecked as
+`22e6d77e3400e929131d72b8bded414483a7d6331b864cb253a91fd8e8f26a11` /
+`54123cee07d04780cab7ef111b6cb6648247d9cce2b0a6a6a2c987cfd2f7224a`.
+The manifest changes only the six frontier pins and adds the two inactive
+claims with their typed dependencies; primary-target and active flags
+are unchanged. All displayed source/audit pins match the checked files.
+No whole two-triangle or global conjectural conclusion is claimed.
