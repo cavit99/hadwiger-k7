@@ -88,6 +88,10 @@ at most one root of either triangle can occur in an exterior four-boundary
 of its complementary deletion, so at least two root deletions succeed.
 These responses do not give a common partition for both triangles or the
 additional division of the parts needed for the global construction.
+The [central-root normalization](hc7_seven_boundary_path_allocation.md),
+with its [GREEN audit](hc7_seven_boundary_path_allocation_audit.md),
+concentrates a remaining seven-boundary model on three port bags and one
+path; distinct boundary contacts in those bags are still not guaranteed.
 The [reserved-neighbour theorem](hc7_two_triangle_reserved_neighbours.md),
 with its [GREEN audit](hc7_two_triangle_reserved_neighbours_audit.md),
 keeps three of four additional neighbours outside a four-rooted clique.

@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
+expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
+expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
+expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
+expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22840,3 +22840,37 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.two_triangle_two_responses"
 kind = "related_to"
 note = "Restricts the exceptional boundary root and provides two separately chosen responses, without completing their simultaneous allocation."
+
+[[claims]]
+id = "hc7.companion.seven_boundary_path_allocation"
+title = "A central-root path with three spanning port bags"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_seven_boundary_path_allocation.md"
+source_heading = "1. Hypotheses and conclusion"
+active = false
+audit = "results/hc7_seven_boundary_path_allocation_audit.md"
+expected_source_sha256 = "db1d76d5d3330bca5bae82fa3f76a6a09a20a1d5098527f247ee2983283af1b8"
+scope = "a nonempty nonroot set with every subset having at least seven neighbours, minimum degree eight, a four-set C and three ports P, with at most two C neighbours per nonroot"
+label_fidelity = "every P root remains in its own bag; one central root is selected from C and all other C roots are excluded"
+strict_parameter = "maximize the total size of the three P bags, then minimize central-bag order"
+conclusions = ["three pairwise adjacent port bags and an induced central-root path partition D plus P plus the chosen root", "all later path vertices avoid C", "later internal path vertices have at least six actual neighbours in one port bag"]
+does_not_prove = ["a prescribed central root", "a matching to distinct port bags", "a nonseparating transfer through the first port bag", "the two-triangle case, Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.seven_boundary_path_allocation"
+target = "hc7.companion.two_triangle_exterior_helpers"
+kind = "uses"
+note = "Invokes its four-root packet separately for each possible central root before taking one extremum."
+
+[[relations]]
+source = "hc7.companion.seven_boundary_path_allocation"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "Only the actual-host application uses its literal-clique contact restriction to bound each nonroot's C contacts by two."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.seven_boundary_path_allocation"
+kind = "related_to"
+note = "Normalizes a remaining boundary response without proving the simultaneous matching and centre condition needed for the terminal construction."

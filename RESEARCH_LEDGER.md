@@ -64,9 +64,12 @@ across all exterior four-boundaries in `G-v-B`, at most one A root can
 occur, and its other three boundary vertices lie in the exterior.
 At least two A-root deletions therefore give the prescribed rooted
 four-clique; the models may differ. The symmetric assertion holds for B.
-The remaining boundary's opposite side is connected after deleting v;
-allocating its three ports while preserving the core and additional
-helper is still open. The two-triangle case is not closed.
+The remaining boundary's opposite side is connected after deleting v.
+The audited [central-root normalization](results/hc7_seven_boundary_path_allocation.md)
+removes unused components and concentrates the unallocated vertices on
+one path. A matching to three distinct port bags in the same model would
+close this boundary case under the frontier's stated centre condition;
+neither that matching nor the full two-triangle construction is proved.
 
 The [earlier full-helper partition](active/hc7_two_triangle_helper_partition.md)
 and [fixed colour-core response](active/hc7_two_triangle_fixed_colour_core.md)

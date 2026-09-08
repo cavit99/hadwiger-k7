@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea`.
+`ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95`.
 
 ## Preserved scope and exact provenance
 
@@ -234,3 +234,40 @@ adjacent source audit is the separate complete-proof review. At least two
 deletions succeed with potentially different models. The retained opposite-side
 argument and all earlier qualified audit scope are unchanged. The global
 allocation and completion criterion remain open. This integration is GREEN.
+
+## Seven-boundary path and matching integration
+
+Removing only the new 27-line insertion exactly recovers Git `2086547`,
+frontier SHA-256
+`83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea`.
+The [normalization source](../results/hc7_seven_boundary_path_allocation.md)
+and its separate audit match respectively
+`db1d76d5d3330bca5bae82fa3f76a6a09a20a1d5098527f247ee2983283af1b8` and
+`fd7fd4216f6f524d671277a44864b6f75d3357106ceb1bcb482eab0f37c20603`.
+Reversing only the source's promotion status and two input links recovers
+the audited draft `c735382ea8f417958cdec2793ccd8e650efac90e9e5b12d643c482b55a1b36bc`.
+This reviewer authored that normalization and participated in the matching
+construction; this integration check does not replace its separate audit.
+
+The spanning assertion now explicitly excludes the three unused C roots.
+The opposite component `Y union {v}` has actual boundary `B union {r} union P`:
+it is connected, the D side survives, and seven-connectivity forces all
+seven contacts. Since v misses P, Y contacts every P root itself.
+
+Write R for the central bag and Mi for the three P bags. For `c=r`,
+label the matching `Mi--Bi` and choose i covering Y's possible B omission.
+The seven bags are `R union {v}`, Y, `Mi union {Bi}`, Mj, Mk, Bj, Bk.
+The first two are adjacent full bags. The other five form a wheel: the
+merged bag is its hub, with rim edges Mj--Mk, Mk--Bk, Bk--Bj, Bj--Mj.
+
+For `c=B0`, require Y--B0 and label the matching r--M1, B1--M2, B2--M3.
+Interchange the last two pairs so B1 covers Y's possible omission.
+Use R, Y, v, `M1 union {r}`, `M2 union {B1}`, B2, M3. R and Y are
+adjacent full bags. Among the other five, only v--M3 and B2--(M1 union {r})
+may be absent, with disjoint ends. Every union uses a displayed matching
+or literal edge; all seven original preimages are disjoint in both cases.
+
+The maximum over all C roots may choose the root missed by Y. Neither
+the required centre nor the matching is forced. The ledger replacement
+and four navigation lines retain exactly this open scope; no global
+closure or counterexample is asserted. This scoped integration is GREEN.

@@ -1245,6 +1245,33 @@ omission is independent of the core's possible hole. This again gives Q.
 Thus the unclosed construction has one outside component and three
 actual exterior ports, with no disjoint-model lift through them yet proved.
 
+The [central-root normalization](../results/hc7_seven_boundary_path_allocation.md),
+with its separate audit, gives a common extremum over four possible central
+roots `c in C={r} union B`. Three pairwise adjacent P-rooted bags and a
+c-rooted path partition `D union P union {c}`, excluding the other C roots.
+Only the path endpoint supplies two
+of its three required bag contacts. A shortcut through an unused component
+would enlarge the P union; the remaining gaps have actual boundary at most
+two. Switching the central root then excludes every C contact beyond the
+first nonroot path vertex. Later internal vertices have at least six actual
+neighbours in the remaining P bag. These counts do not prove a connected
+split retaining that bag's root and its two other clique contacts.
+
+A precise sufficient allocation is a response centred at a C root contacted
+by Y, with a perfect matching from `C-{c}` to the three P bags in that
+same response. Here Y contacts all P: its union with v is the other full
+seven-boundary component, and v misses P. If `c=r`, merge its bag with v
+and contract a matched P--B edge incident with Y's possible B omission.
+The five remaining core bags form a wheel and the two extra bags are full.
+If `c in B`, absorb r into its matched P bag, then contract a matched
+edge at a remaining B root, again covering Y's possible omission. The
+central bag and Y are full to the other five. Among those five, the only
+possible holes are v to the unmerged P bag and the other B root to the
+r-containing P bag, with disjoint ends. Both constructions give Q.
+The extremum does not yet force this matching or choose a centre contacted
+by Y. This is the first missing simultaneous allocation, not a proved
+reduction or a counterexample to its existence.
+
 **Recorded route nonclosure: contracting two triangle-to-triangle paths.**
 Two disjoint A--B paths in `G-v`, with distinct triangle ends and no other A/B
 vertex internal, can be contracted to put a literal `K_4^-` in the
