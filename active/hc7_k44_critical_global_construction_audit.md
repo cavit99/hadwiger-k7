@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693`.
+`33e07a2f346bbf048935b69b3faf465dce46f62949c3a9e7e29c14880bad4694`.
 
 ## Preserved scope and exact provenance
 
@@ -311,3 +311,16 @@ at an exclusive-b weak vertex. Neither the degree bound nor the ordinary
 rooted-model lift proves preservation of that extra restriction. The
 whole block still removes to the same frozen frontier; this caution
 changes no audited construction or status. Scoped verdict: GREEN.
+
+## Matching-contraction integration
+
+Removing the matching-contraction paragraph recovers Git `3848542`,
+frontier SHA-256 `6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693`.
+The [new source](hc7_two_triangle_matching_colour_host.md), SHA-256
+`2e20d9ec5ad9e8ed918b43ee8a30718f4b096cf460ab125d4a8ff7de220629ae`,
+has its own [separate audit](hc7_two_triangle_matching_colour_host_audit.md).
+The frontier and ledger retain both chromatic alternatives, the universal
+five-colouring quantifiers, fixed pair preimages and separate path choices.
+They assert neither a rooted K5 minor nor a compatible extension to Q.
+This integration check preserves the earlier qualified audit scope;
+the companion conjecture and the user's completion criterion remain open.

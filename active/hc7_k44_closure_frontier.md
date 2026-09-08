@@ -1175,6 +1175,18 @@ neighbours, and the two forest bags can absorb triangle vertices. Those
 are the first missing ownership steps; neither model may be combined
 with a separately obtained helper without a new disjoint construction.
 
+**Matching contraction; written deductions with a separate internal audit.**
+The [matching-contraction construction](hc7_two_triangle_matching_colour_host.md)
+uses three disjoint neighbourhood edges. Deleting v after contraction gives
+a four-connected host with exterior minimum degree seven and five prescribed
+roots. It is either six-chromatic, or every five-colouring makes those roots
+rainbow. In the latter case every independent transversal of the original
+pairs can be reserved, leaving five actual roots with that same universal
+colouring constraint. The source records exact preimages and four-boundary
+lifts. Neither a rooted five-clique nor its extension to Q is established;
+paths obtained under different reservations cannot be combined without a
+new allocation.
+
 **Three reserved neighbours; written proof with a separate internal audit.**
 The [reserved-neighbour theorem](../results/hc7_two_triangle_reserved_neighbours.md)
 chooses `a in A,b in B` so `R={a,b,x,y}` induces only `xy`, and puts

@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
+expected_source_sha256 = "33e07a2f346bbf048935b69b3faf465dce46f62949c3a9e7e29c14880bad4694"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21718,7 +21718,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
+expected_source_sha256 = "33e07a2f346bbf048935b69b3faf465dce46f62949c3a9e7e29c14880bad4694"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21961,7 +21961,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
+expected_source_sha256 = "33e07a2f346bbf048935b69b3faf465dce46f62949c3a9e7e29c14880bad4694"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -22004,7 +22004,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
+expected_source_sha256 = "33e07a2f346bbf048935b69b3faf465dce46f62949c3a9e7e29c14880bad4694"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22690,6 +22690,38 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.two_triangle_complement_four_connectivity"
 kind = "related_to"
 note = "Closes the whole three-cut case while leaving the global construction in the four-connected complement open."
+
+[[claims]]
+id = "hc7.companion.two_triangle_matching_colour_host"
+title = "A four-connected matching quotient and coupled actual-root colourings"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_two_triangle_matching_colour_host.md"
+active = false
+audit = "active/hc7_two_triangle_matching_colour_host_audit.md"
+expected_source_sha256 = "2e20d9ec5ad9e8ed918b43ee8a30718f4b096cf460ab125d4a8ff7de220629ae"
+scope = "seven-connected, seven-chromatic, proper-minor-six-colourable Q-free hosts with minimum degree eight and a two-triangle-and-edge degree-eight neighbourhood"
+label_fidelity = "three fixed original pair preimages; each independent transversal reserves three actual neighbours and retains the other five as prescribed scheme roots"
+conclusions = ["the matching quotient is six-chromatic", "deleting the degree-eight vertex leaves a four-connected host with exterior minimum degree seven", "a six-chromatic branch or five prescribed roots rainbow in every five-colouring", "in the five-colour branch, all complementary actual-root deletions are five-chromatic with every five-colouring rainbow on their roots", "every root-free four-boundary contains all three pair vertices and one exterior vertex"]
+does_not_prove = ["a fully rooted K5 minor from a K5 scheme", "a compatible extension to Q", "closure of a recursive class", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.two_triangle_matching_colour_host"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "Controls extra neighbourhood edges and the exact degree losses under the three contractions."
+
+[[relations]]
+source = "hc7.companion.two_triangle_matching_colour_host"
+target = "hc7.companion.two_triangle_closed_neighbourhood_exterior"
+kind = "uses"
+note = "The connected exterior is full to all eight original neighbours; this closes the sole possible three-cut and identifies the exterior fourth boundary vertex."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.two_triangle_matching_colour_host"
+kind = "related_to"
+note = "Retains proper-minor colouring and actual pair ownership without supplying the required global minor."
 
 [[claims]]
 id = "hc7.companion.two_triangle_fixed_colour_core"

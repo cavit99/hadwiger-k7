@@ -86,6 +86,14 @@ fixed four-chromatic graph across all its four-colourings, giving either
 a minor rooted at four triangle vertices or five compatible endpoint
 paths. Neither result licenses combining independently chosen models.
 
+The [matching-contraction construction](active/hc7_two_triangle_matching_colour_host.md)
+retains a four-connected host with exterior minimum degree seven. It is
+either six-chromatic, or its five prescribed roots receive distinct colours
+in every five-colouring. In the latter case, deleting an independent
+transversal of the three original pairs gives five actual roots with the
+same colouring constraint, while reserving the other three neighbours.
+Extracting and extending one compatible minor remains unproved.
+
 The next task is a complete construction in this actual critical host,
 using proper-minor six-colourings and preserving disjoint branch sets,
 followed by an audit of the whole implication to Conjecture 19. The
