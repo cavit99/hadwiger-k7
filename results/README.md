@@ -64,7 +64,12 @@ five. Neither theorem supplies the remaining simultaneous allocation.
 The [cycle-complement theorem](hc7_cycle_triangle_complement_three_connectivity.md),
 with [two](hc7_cycle_triangle_complement_three_connectivity_audit.md)
 [GREEN audits](hc7_cycle_triangle_complement_three_connectivity_second_audit.md),
-excludes every two-cut of `G-v-C`; the full cycle-case partition remains open.
+excludes every two-cut of `G-v-C`. The resulting
+[complete cycle-case theorem](hc7_degree8_cycle_triangle_closure.md), with
+[two](hc7_degree8_cycle_triangle_closure_audit.md)
+[GREEN audits](hc7_degree8_cycle_triangle_closure_second_audit.md), uses a
+three-region contact construction to close the entire five-cycle case.
+The two-triangles-and-edge case and Conjecture 19 remain open.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with
 its [GREEN audit](hc7_cycle_colour_path_completion_audit.md), extends the

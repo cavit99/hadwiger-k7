@@ -33,68 +33,30 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 ## Current work plan
 
 The immediate target is Conjecture 19. Its audited critical-host reductions
-leave two spanning degree-eight neighbourhood configurations: a five-cycle
-and a triangle, or two triangles and an edge. Extra edges remain allowed.
-The priority is a complete construction in the cycle case, using the full
-proper-minor six-colourability hypothesis, followed by the other case and
-an audit of the whole implication. Neither case is closed.
+leave two spanning degree-eight neighbourhood configurations. The
+[cycle-and-triangle theorem](results/hc7_degree8_cycle_triangle_closure.md)
+now closes the entire five-cycle case for arbitrary host order, under
+seven-connectivity and minimum degree eight. Its two separate internal
+audits check the global construction and the fixed disjoint lift; no
+colouring hypothesis or finite enumeration is needed.
 
-The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-records the exact constructions and ownership requirements. In the cycle
-case the bipartite theorem supplies a rooted five-clique; a compatible
-connected helper through the omitted triangle vertex would complete the
-case. The
-[cycle-and-triangle](results/hc7_degree8_cycle_exterior.md) and
-[two-triangle](results/hc7_degree8_two_triangle_exterior.md) exterior
-proofs make `G-N[v]` connected and full to all eight neighbours in both
-configurations. The latter also proves the five-root wheel lemma without
-a separate degree hypothesis. Their audits and the frontier retain the
-exact statements and port constructions. Finding the helper inside the
-remaining single component is still open.
+The construction contracts one cycle edge, obtains two spanning helpers,
+and uses three-connectivity of the graph outside the four cycle roots to
+divide the triangle's helper into three connected regions. Either one region can be transferred,
+or the four cycle contacts directly assemble the required minor. Thus a
+failure of the stronger triangle-splitting partition is no longer a gap
+in this case.
 
-The audited [colour-path completion](results/hc7_cycle_colour_path_completion.md)
-proves two terminal path constructions and a colouring reduction: every
-reserved-triple colouring admits one Kempe swap to repeated pairs
-`{a0,3}` and `{0,2}`, after relabelling the cycle. The
-[flexible-root theorem](results/bipartite_flexible_root_families.md), with a
-separate GREEN internal audit, allows prescribed root families on both
-shores of any finite simple bipartite target. It retains each individual
-root in a separate bag while permitting the endpoints of family contacts
-to change. Its application completes the colouring state in which the
-cycle uses three colours and the triangle uses three other colours.
-Consequently, in the retained two-pair colouring, `1` must be
-bichromatically connected to `3` in their two colours. The four additional
-connections sufficient for a complete cycle-case construction are still
-unproved. No old model is assumed to survive a recolouring. The cycle
-case, the other spanning case and the global objective remain open.
-
-The [cycle-colouring theorem](results/hc7_cycle_colour_cross.md), with a
-separate GREEN internal audit, converts the new restriction into two
-disjoint crossing paths on the cycle. After deleting the whole colour
-class of any triangle root uniquely coloured on `N(v)`, every resulting
-five-colouring uses at least four cycle colours, so such a cross exists
-outside that class. The four cycle branch roots are retained; the other
-triangle roots may lie on the paths. The next construction must combine
-this cross with the triangle while retaining the full colouring condition.
-Neither an isolated cross nor paths from separate colourings suffice.
-The audited [palette counterexamples](barriers/hc7_cycle_palette_extension_barrier.md)
-also show that the full quantified five-colouring condition alone does not
-force the minor. They violate the actual host's literal `K_5^-` exclusion;
-the construction must retain more of that host's hypotheses.
-A second exact construction contracts a cycle edge and obtains two
-connected helpers, each meeting all four cycle bags. It would complete the
-case if the helpers could be chosen to put triangle vertices on both sides;
-that simultaneous partition remains unproved. The
-[frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-records its density bound, fixed lift and missing exchange.
-The [new three-connectivity theorem](results/hc7_cycle_triangle_complement_three_connectivity.md),
-with two separate GREEN internal audits, closes every two-vertex-separator
-case in `G-v-C`: a flow and one bridge exchange make the required donations
-simultaneously. The retained graph is therefore three-connected. This still
-does not establish the triangle-splitting helper partition or close the cycle case.
-The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
-[deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
-remain available with their exact preservation limits.
+The remaining case is two triangles and an edge. The next task is a
+complete construction in that actual critical host, retaining every
+proper-minor six-colouring and branch-set ownership, followed by an audit
+of the full implication to Conjecture 19. The
+[two-triangle exterior theorem](results/hc7_degree8_two_triangle_exterior.md)
+makes `G-N[v]` connected and full to all eight neighbours, and supplies a
+degree-free five-root wheel lemma. It does not yet provide the compatible
+additional helper. The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+records the exact remaining construction and links the preserved cycle
+work. Conjecture 19 and the user's overall objective remain unmet.
 
 The [density and boundary-colouring routes](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
 and T44 remain conditional alternatives, not mandatory intermediate
