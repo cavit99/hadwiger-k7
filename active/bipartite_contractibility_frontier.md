@@ -109,6 +109,18 @@ terminal map and permits a scheme to be selected directly from fractional
 flow. No rounding theorem is needed. BLR's bounded-depth assertion remains
 outside the proved application; its depth uses ambient-host diameter.
 
+**Audited quantitative refinement.** When every original scheme path has
+length at most three, the [intrinsic-radius theorem](../results/bipartite_short_scheme_radius.md)
+keeps each bag within two edges of its original root, entirely inside that
+bag. Only root preimages grow: every projection is a root-centred star,
+and every surviving nonliteral path is its unchanged original path.
+Radius one already fails for a two-edge star target. For length five the
+same source gives an actual tight-set contraction with a root-free path
+of unbounded intrinsic diameter. The first failed inference is that tight
+components still contain roots; another choice or construction could
+nevertheless give bounded-radius models. No general radius theorem or
+comparative-significance conclusion is established.
+
 **Application requirement.** A proposed further use must specify the
 finite bipartite target, injective prescribed-root map and all scheme
 paths, and verify the common-endpoint condition and exclusion of foreign

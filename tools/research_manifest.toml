@@ -21378,7 +21378,7 @@ status = "active-target"
 source = "active/bipartite_contractibility_frontier.md"
 source_heading = "Remaining global target"
 active = true
-expected_source_sha256 = "664071005f148ba17a1d5fae1d5c8260d7f009c076285f7641612f285f6c884b"
+expected_source_sha256 = "2f4baf3e165af12ba564be6573edb17951188fa0e5f17032b59355238395c4d7"
 scope = "every finite simple graph"
 hypotheses = ["G contains no K7 minor"]
 allowed_exits = ["a proof that G is six-colourable for every such G"]
@@ -21402,6 +21402,29 @@ hypotheses = ["H is finite simple and bipartite", "G contains an H-scheme at its
 conclusions = ["a fully rooted H-minor", "the intended BLR bipartite independent-intersection flow assertion, retaining every terminal", "no degree, path-length or multiplicity bound"]
 does_not_prove = ["HC7, T44 or Conjecture 21", "correctness of the BLR prefix branch sets", "publication priority or significance comparable to Norin--Totschnig"]
 keywords = ["bipartite scheme", "rooted minor", "matroid union", "simultaneous component contraction", "well-founded induction"]
+
+[[claims]]
+id = "graph_schemes.bipartite_short_scheme_radius"
+title = "Three-edge bipartite schemes have rooted models of intrinsic radius two"
+kind = "theorem"
+status = "audited-green"
+source = "results/bipartite_short_scheme_radius.md"
+source_heading = "1. The theorem and invariant"
+active = false
+audit = "results/bipartite_short_scheme_radius_audit.md"
+expected_source_sha256 = "4fd71c1bd710e84f168426d4934e7eb4b1e830ddd9d61ce003d5a8161684202d"
+scope = "every finite simple bipartite target and every scheme whose original paths have length at most three"
+label_fidelity = "all original roots have separate connected bags with intrinsic distance at most two to every vertex they contain"
+strict_parameter = "quotient host order strictly decreases; only original root preimages grow"
+conclusions = ["a fully rooted minor with intrinsic radius at most two in every bag", "radius one is insufficient even for a two-edge star target"]
+does_not_prove = ["an intrinsic-radius bound for longer schemes", "the bounded-depth BLR assertion in general", "HC7 or comparative significance"]
+keywords = ["bipartite scheme", "intrinsic radius", "rooted minor", "matroid union", "short paths"]
+
+[[relations]]
+source = "graph_schemes.bipartite_short_scheme_radius"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "Uses the proved normalization, component contraction and rank split with a new root-only preimage invariant."
 
 [[relations]]
 source = "graph_schemes.bipartite_contractible"

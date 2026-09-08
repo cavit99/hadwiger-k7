@@ -129,6 +129,14 @@ root and lift the final model. Both original shores may expand. The
 [technical explanation](active/bipartite_contractibility_frontier.md#the-decisive-reduction)
 records the ownership argument.
 
+**Written quantitative refinement; separate GREEN internal audit.** For
+[schemes with paths of length at most three](results/bipartite_short_scheme_radius.md),
+every final bag has intrinsic radius at most two at its original root.
+The bound is sharp. At length five the same reduction can create a
+root-free component of unbounded intrinsic diameter; this defeats that
+invariant, not bounded-radius existence. The refinement does not close
+the HC7-related objective or substantiate comparable significance.
+
 **Written corollary.** This independently proves the intended rooted
 existence assertion of Biswal--Lee--Rao, Lemma 3.2, under the arXiv v2
 independent-intersection convention. Their prefix construction's
