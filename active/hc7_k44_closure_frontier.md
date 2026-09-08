@@ -1208,6 +1208,36 @@ This stronger packet applies only after its own boundary and degree
 conditions are verified; deleting an entire reserved helper can still
 violate both conditions at its boundary vertices.
 
+**Prescribed full-root construction; target still open.** The audited
+[orientation deductions](hc7_five_root_oriented_construction.md) ask for
+five roots `B union {b,c}`, with B a triangle, nonempty nonroots of degree
+at least six, and every nonempty nonroot subset having at least five
+neighbours: must there be a rooted `K_5^-` with c full and sole possible
+hole `bBi`? This is stronger than choosing a triangle endpoint.
+The written auxiliary proves this orientation when c has two literal B
+neighbours, even allowing nonroot degree five provided every degree-five
+vertex is adjacent to c and there are at least two nonroots.
+In a minimum-order counterexample to the degree-six target, every proper
+nonempty nonroot subset has boundary at least six, each root has at least
+two nonroot neighbours, and b and all its nonroot neighbours miss B.
+The last exclusion uses two deletion responses after one root-edge
+contraction; their only possible common facial equality is contradictory.
+All root labels and actual separator vertices are retained on lifting.
+Along a three-edge b--B path, two disjoint root-edge contractions and
+simultaneous replacement of all maximal four-boundary sides give an
+internally five-connected rooted minor. Its nonroots have degree at
+least five, every degree-five vertex sees b or the adjacent B root,
+and one seeing only b among these anchors misses the other B roots.
+The resulting orientation, including small or empty interiors, is open;
+dropping the last restriction has an explicit two-nonroot counterexample.
+A further five-port reduction or thin B-root absorption may give an
+exclusive-b degree-five vertex a new forbidden B contact; preservation
+of the refined class under those operations is not proved.
+Two separately chosen spanning helper partitions remain available, but
+no compatible exchange completing the orientation is proved. Even that
+orientation alone would not automatically repair an additional missing
+contact of the opposite helper in the seven-boundary application.
+
 **Tight exterior boundaries; written proof with a separate audit.** The
 [two-response theorem](../results/hc7_two_triangle_two_responses.md)
 packages and strengthens the boundary application. In `H=G-v-B`, any

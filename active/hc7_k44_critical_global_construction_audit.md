@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95`.
+`6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693`.
 
 ## Preserved scope and exact provenance
 
@@ -271,3 +271,43 @@ The maximum over all C roots may choose the root missed by Y. Neither
 the required centre nor the matching is forced. The ledger replacement
 and four navigation lines retain exactly this open scope; no global
 closure or counterexample is asserted. This scoped integration is GREEN.
+
+## Prescribed-full-root construction integration
+
+Removing the new 20-line insertion exactly recovers Git `3e7352f`,
+frontier SHA-256 `ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95`.
+The [construction source](hc7_five_root_oriented_construction.md) and its
+[separate whole-file audit](hc7_five_root_oriented_construction_audit.md) match
+`8c66d44544b0b889c215dbdeb46e09cb503da95b617c7db3cce1fa0451b887f3` and
+`8f47face5e8048593b8d5e5c0c7b0bb10f167cf040add894c98be31e90169b97`.
+This reviewer co-developed and compiled the deductions; the adjacent source
+audit supplies the separate complete-proof review. This check concerns their
+integration and preserves all earlier qualified audit scope.
+The summary retains the diamond's two literal c--B edges, at least two
+nonroots, and the adjacency condition on every degree-five exception.
+The boundary-six and distance-two exclusions apply only to a minimum-order
+counterexample to the still conjectural degree-six orientation target.
+The facial equality argument and lift use the same quotient and individual
+old separator vertices. Separate responses are not jointly owned models.
+The ledger and inactive retrieval claim preserve these quantifiers and the
+possible third hole in the seven-boundary application. No target or direct
+dependency flag changes. The scoped integration is GREEN; the global
+allocation and completion criterion remain open.
+
+The expanded 27-line orientation block still removes exactly to the same
+Git `3e7352f` frontier. Its new paired-contraction summary matches source
+`167cb695687da0c6702116b1025f3092d743e7c76923d54ef371c4396da4fe5f` and audit
+`76e4bee5b431403f88667a1d3da1c433cb07fd55ea1f858793d7d0ca6d48ce1f`.
+The separate addition audit checks every maximal side and shared actual
+port simultaneously; it retains the exclusive-b weak-vertex restriction.
+Neither the small or empty torso endpoints nor the refined orientation
+is declared terminal. The ledger and inactive claim retain that scope;
+all preceding proof and integration provenance remains applicable to its
+recorded revision. This incremental integration is GREEN.
+
+The final 30-line block adds the first unsupported iteration explicitly:
+five-port relabelling or thin B-root absorption can create a new B contact
+at an exclusive-b weak vertex. Neither the degree bound nor the ordinary
+rooted-model lift proves preservation of that extra restriction. The
+whole block still removes to the same frozen frontier; this caution
+changes no audited construction or status. Scoped verdict: GREEN.

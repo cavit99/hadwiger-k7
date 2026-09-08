@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
+expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
+expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
+expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "ff0f11921d7ffe6369f0b81c7b00850424221ccd74d9b0fed5cef106e5d35a95"
+expected_source_sha256 = "6a2b4c01c24a1491ddd1ddc6d57b592f4800f0955b2e3ed9cfade0175e3ec693"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22874,3 +22874,36 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.seven_boundary_path_allocation"
 kind = "related_to"
 note = "Normalizes a remaining boundary response without proving the simultaneous matching and centre condition needed for the terminal construction."
+
+[[claims]]
+id = "hc7.companion.five_root_oriented_construction"
+title = "Audited constructions toward a prescribed full nontriangle root"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_five_root_oriented_construction.md"
+active = false
+audit = "active/hc7_five_root_oriented_construction_audit.md"
+expected_source_sha256 = "167cb695687da0c6702116b1025f3092d743e7c76923d54ef371c4396da4fe5f"
+scope = "five roots B+b+c with B a literal triangle and every nonempty nonroot subset having at least five neighbours; the auxiliary has at least two nonroots, while counterexample reductions concern the nonempty nonroot-degree-six c-full target"
+label_fidelity = "all five labels survive fixed disjoint preimages; added port-root edges lift through original literal edges and are never internal bag edges"
+strict_parameter = "minimum nonroot order; the auxiliary fixes two inadmissible triangle labels"
+conclusions = ["with c adjacent to two B roots, at least two nonroots, minimum nonroot degree five and every degree-five nonroot adjacent to c, a c-full rooted K5-minus exists", "a minimum-order counterexample to the degree-six orientation has proper nonroot boundaries at least six and every root has at least two nonroot neighbours", "in that counterexample b and its nonroot neighbours are anticomplete to B", "two separately selected spanning helper responses", "one paired root-edge contraction followed by simultaneous maximal-four-boundary replacement yields an internally five-connected rooted minor with the stated refined degree-five exceptions"]
+does_not_prove = ["the general prescribed-full-root theorem", "the refined degree-five terminal class or its small and empty endpoints", "unrestricted repeated root growth", "a simultaneous exchange between the responses", "repair of an additional opposite-helper omission", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.five_root_oriented_construction"
+target = "hc7.companion.five_root_degree_six"
+kind = "uses"
+note = "Two admissible triangle centres provide the separate spanning responses; their models need not coincide."
+
+[[relations]]
+source = "hc7.companion.five_root_oriented_construction"
+target = "hc7.companion.five_root_almost_clique"
+kind = "uses"
+note = "Uses its recorded exact NT four-root alternatives and actual-port normalization, then proves the new anchored-degree and facial-equality deductions."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.five_root_oriented_construction"
+kind = "related_to"
+note = "A conditional prescribed orientation could repair one hole alignment, but the general orientation and the compatible global helper construction remain open."

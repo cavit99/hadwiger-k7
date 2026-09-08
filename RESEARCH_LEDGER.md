@@ -58,6 +58,14 @@ also removes the earlier bound on degree-six nonroots in the five-root
 almost-clique construction, with two possible triangle endpoints for the
 missing edge. Both have separate internal audits; neither supplies the
 additional compatible helper or closes the two-triangle case.
+The audited [orientation deductions](active/hc7_five_root_oriented_construction.md)
+develop the stronger, still conjectural requirement that one prescribed
+nontriangle root be full. With at least two nonroots, a root diamond
+permits degree-five nonroots adjacent to that root; a minimum counterexample to the degree-six
+target has no triangle contact at the other root or any of its nonroot
+neighbours. One further paired contraction has a complete four-boundary
+replacement, but its refined degree-five terminal class and the global
+application remain unproved.
 The [two-response theorem](results/hc7_two_triangle_two_responses.md),
 with a separate internal audit, strengthens the boundary application:
 across all exterior four-boundaries in `G-v-B`, at most one A root can
