@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea`.
+`1d23a8586c0e7a8acaab6589840c5ffe49956929f0cc7c1bf4d44008c4e3cdb6`.
 
 ## Preserved scope and exact provenance
 
@@ -424,3 +424,36 @@ give at least two actual B contacts. The colour summary uses two classes
 of one colouring. No four-colouring of M, connectedness of D, reuse of old
 B-path interiors or simultaneous allocation is inferred. All prior qualified
 audit scope is preserved; the two-triangle construction remains open.
+
+## Reduced-complement and component integration
+
+**Scoped verdict: GREEN.** Removing exactly the two insertions (thirteen
+lines) byte-recovers Git `7bbcacb`, frontier SHA-256
+`a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea`.
+All other frontier bytes and all preceding qualified reviews are preserved.
+The component source explicitly invokes that historical revision and its
+audit `bd435dc374da1b58ba39ee77aa8f0414abf6245f51a2f287dbede3f8558148b8`,
+both checked against Git; it does not depend on this updated audit pin.
+
+The [colour bound](../results/hc7_two_triangle_reduced_complement_colour_bound.md)
+and its separate audit match
+`22e6d77e3400e929131d72b8bded414483a7d6331b864cb253a91fd8e8f26a11` /
+`54123cee07d04780cab7ef111b6cb6648247d9cce2b0a6a6a2c987cfd2f7224a`.
+This reviewer wrote the colouring proof; this integration review invokes
+that separate complete-source audit. Its every-eligible-a quantifier and
+at-least-two count are retained, without carrying a colouring into the
+maximised core. The [component source](../results/hc7_reserved_core_component_bound.md)
+and adjacent audit match
+`2371cf108769929f459eff213047714762e4c05f2d183ebcfe00a4fec47296e2` /
+`2571dcbe74253802d524a4235727b0225e528998a801ce5b47a25051dbc3d9db`.
+Their staged separate reviews cover the three-component constructions,
+both omission exclusions and one-degree-five packet used for strict
+enlargement. In Corollary 5 both b bags are discarded; equal-port unions
+preserve the four original roots and all six K4 contacts. Thus in the
+two-component case at least one component is full to B. The summaries
+preserve the two-nonroot-port hypothesis, original path ownership and
+the surviving one- and two-component cases.
+The ledger and inactive manifest claims match these conclusions; existing
+claims change only frontier pins, and existing relations are unchanged.
+Neither connectedness of D nor a simultaneous Q allocation is inferred.
+The arbitrary-order two-triangle case and global completion remain open.

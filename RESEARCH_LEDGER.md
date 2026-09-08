@@ -42,7 +42,8 @@ leave two spanning degree-eight neighbourhood configurations. The
 with two separate internal audits, closes the entire five-cycle case for
 arbitrary host order. The two-triangles-and-edge case remains open.
 
-Write its neighbourhood as triangles `A,B` and edge `xy`. The
+Write its neighbourhood as triangles `A,B` and edge `xy`, and put
+`W=V(G)-N[v]`. The
 [complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)
 makes both `G-v-A` and `G-v-B` four-connected. The new
 [spanning-helper theorem](results/hc7_two_triangle_exterior_helpers.md),
@@ -99,13 +100,17 @@ In the two-triangle case it also gives a rooted four-clique while reserving
 all four other neighbours, including both x and y. Deleting whole colour
 classes need not preserve connectivity or minimum degree. Extracting and
 extending one compatible five-root minor remains unproved.
-The new [colouring deduction](results/hc7_clique_deletion_colour_bound.md)
-makes every four-clique deletion at least five-chromatic. The
+The [clique-deletion bound](results/hc7_clique_deletion_colour_bound.md)
+makes every four-clique deletion at least five-chromatic. More strongly,
+the [reduced-complement bound](results/hc7_two_triangle_reduced_complement_colour_bound.md)
+gives `chi(G[W union (A-{a})])>=5` whenever a misses x,y; at least two
+choices of a qualify. The
 [edge-pair boundary exclusion](results/hc7_two_triangle_edge_pair_boundary.md)
-closes another actual four-boundary configuration. Both have separate
-internal audits. In the maximised reserved core, the remaining exterior
-components meet all five specified ports; their joint allocation is still
-open, and they need not form one connected set.
+closes another actual four-boundary configuration. These have separate
+internal audits. The [joint component constructions](results/hc7_reserved_core_component_bound.md)
+leave at most two components behind the maximised core's five ports;
+each contacts the omitted B root. They need not form one connected set;
+the remaining allocation is open.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited

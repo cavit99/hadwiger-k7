@@ -1193,6 +1193,11 @@ paths obtained under different reservations cannot be combined without a
 new allocation.
 
 **Whole-colour-class reservation; written deductions with a separate audit.**
+The [reduced-complement colouring theorem](../results/hc7_two_triangle_reduced_complement_colour_bound.md)
+gives `chi(G[W union (A-{a})])>=5` for every a missing x,y, including
+at least two A vertices. This holds before any helper is chosen: no
+four-colouring of the maximised core is inferred.
+
 The [reservation theorem](../results/hc7_critical_colour_class_reservation.md)
 reuses the cycle case's star contraction. For every independent triple
 `T subseteq N(v)`, an entire colour class I meets `N(v)` exactly in T.
@@ -1246,6 +1251,14 @@ constructs a fresh five-root model on the C side and a disjoint A-side
 helper. Thus every C contacts all five ports and at least two actual B
 roots, the latter by seven-connectivity in G. Neither the singleton-port
 case nor this remaining allocation is closed.
+
+The [joint component constructions](../results/hc7_reserved_core_component_bound.md)
+give `1<=c(D)<=2`. Every component contacts b; in the two-component
+case at least one is full to B. Their proof uses an
+old root path only after proving that it avoids every allocated component.
+A four-root construction inside any component missing b would enlarge
+the chosen core, contradicting its maximality. The remaining one- and
+two-component allocations and the root-port case are still open.
 
 **Recorded nonclosure.** The original Bi--pi paths may have interiors in
 D. Retaining those paths as B bags while allocating an entire component
