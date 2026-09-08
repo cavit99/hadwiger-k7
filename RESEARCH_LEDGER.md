@@ -99,6 +99,13 @@ In the two-triangle case it also gives a rooted four-clique while reserving
 all four other neighbours, including both x and y. Deleting whole colour
 classes need not preserve connectivity or minimum degree. Extracting and
 extending one compatible five-root minor remains unproved.
+The new [colouring deduction](results/hc7_clique_deletion_colour_bound.md)
+makes every four-clique deletion at least five-chromatic. The
+[edge-pair boundary exclusion](results/hc7_two_triangle_edge_pair_boundary.md)
+closes another actual four-boundary configuration. Both have separate
+internal audits. In the maximised reserved core, the remaining exterior
+components meet all five specified ports; their joint allocation is still
+open, and they need not form one connected set.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited

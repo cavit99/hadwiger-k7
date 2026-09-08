@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6"
+expected_source_sha256 = "a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21718,7 +21718,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6"
+expected_source_sha256 = "a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21961,7 +21961,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6"
+expected_source_sha256 = "a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -22004,7 +22004,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6"
+expected_source_sha256 = "a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -23265,7 +23265,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6"
+expected_source_sha256 = "a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea"
 scope = "the actual seven-contraction-critical Q-free host of minimum degree eight, with a degree-eight neighbourhood spanning triangles A,B and edge xy"
 label_fidelity = "all six original triangle roots; scheme paths avoid v and have no foreign roots internally"
 allowed_exits = ["in G-v an A/B-rooted K3,3 scheme with two independent cross edges omitted, whose missing pairs may be chosen"]
@@ -23288,3 +23288,105 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.target.two_triangle_bipartite_scheme"
 kind = "related_to"
 note = "An alternative sufficient construction in the actual remaining host; no full rooted K5 theorem is needed if this scheme is constructed."
+
+[[claims]]
+id = "hc7.companion.clique_deletion_colour_bound"
+title = "Every four-clique deletion is at least five-chromatic"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_clique_deletion_colour_bound.md"
+audit = "results/hc7_clique_deletion_colour_bound_audit.md"
+active = false
+expected_source_sha256 = "dd39ad7bf84d4bf698757e8bc7dbadec987356c4eb53593d41c5478129573a84"
+scope = "six-connected Q-minor-free graphs of minimum degree eight and chromatic number at least seven; every literal four-clique R"
+conclusions = ["G-R has chromatic number at least five", "the stated bipartite four-list inclusion condition admits an explicit proper list colouring"]
+does_not_prove = ["a five-chromatic deletion is impossible", "recolouring three classes with the clique colours", "placement of a minor model at prescribed contacts", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.clique_deletion_colour_bound"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "Corollary 3 supplies the clique-neighbour bound and list inclusion on each edge outside the clique."
+
+[[claims]]
+id = "hc7.companion.two_triangle_edge_pair_boundary"
+title = "No exterior four-boundary contains both edge endpoints"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_edge_pair_boundary.md"
+audit = "results/hc7_two_triangle_edge_pair_boundary_audit.md"
+active = false
+expected_source_sha256 = "7a6661db23b0364ea03a23cf1b9e5112fc024bb57930a6b4197e801b7e8ebfe3"
+scope = "seven-connected Q-free graphs with minimum degree eight and a degree-eight neighbourhood spanning triangles A,B and edge xy; exterior H-boundary xy plus two exterior ports, where H=G-v-B"
+label_fidelity = "five freshly constructed bags retain B,x,y; the actual A-containing outside component and v are disjoint extra bags"
+conclusions = ["no nonempty exterior set has H-boundary exactly x,y and two exterior ports", "the two possible missing model contacts have four distinct ends"]
+does_not_prove = ["all exterior four-boundaries are excluded", "connectedness of an unallocated remainder", "the two-triangle case, Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.two_triangle_edge_pair_boundary"
+target = "hc7.companion.two_triangle_complement_four_connectivity"
+kind = "uses"
+note = "Makes both actual sides of the displayed four-boundary full to its four ports."
+
+[[relations]]
+source = "hc7.companion.two_triangle_edge_pair_boundary"
+target = "hc7.companion.five_root_degree_six"
+kind = "uses"
+note = "Deleting only the two exterior ports preserves nonroot degree six and boundary five; choose an admissible centre contacted by the outside helper."
+
+[[claims]]
+id = "hc7.companion.two_triangle_reserved_core_ports"
+title = "A maximised reserved core has zero or two nonroot ports"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "7.5 A neighbourhood contact construction"
+audit = "active/hc7_k44_critical_global_construction_audit.md"
+active = false
+expected_source_sha256 = "a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea"
+scope = "the actual critical two-triangle host and an eligible independent reservation a,b,y; maximise the two A-rooted bags in G-v-a-b-x-y"
+label_fidelity = "the four original core roots stay separate; the five deleted vertices remain outside the model; original B-root path interiors are not available for simultaneous reuse"
+conclusions = ["exactly one nonroot B port is impossible", "zero nonroot ports leave H equal to the helper union and a,x,y", "with two nonroot ports the remainder is nonempty and every component contacts all five H ports and at least two actual B roots"]
+does_not_prove = ["connectedness of the remainder", "preservation of four-colourability after maximising the helper union", "the simultaneous component allocation", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.two_triangle_reserved_core_ports"
+target = "hc7.companion.critical_colour_class_reservation"
+kind = "uses"
+note = "Supplies the initial four-rooted clique while reserving all five deleted vertices."
+
+[[relations]]
+source = "hc7.companion.two_triangle_reserved_core_ports"
+target = "hc7.companion.rooted_helper_extension"
+kind = "uses"
+note = "The actual-port argument in Lemma 3 is used before its final connectivity-based singleton conclusion."
+
+[[relations]]
+source = "hc7.companion.two_triangle_reserved_core_ports"
+target = "hc7.companion.two_triangle_two_responses"
+kind = "uses"
+note = "Lemma 1 excludes any four-boundary containing a triangle root and another neighbourhood root."
+
+[[relations]]
+source = "hc7.companion.two_triangle_reserved_core_ports"
+target = "hc7.companion.two_triangle_edge_pair_boundary"
+kind = "uses"
+note = "Excludes a remainder component missing a from its five possible H-boundary ports."
+
+[[relations]]
+source = "hc7.companion.two_triangle_reserved_core_ports"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "The single A-B edge bound rules out an empty remainder when both B ports are nonroots."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.clique_deletion_colour_bound"
+kind = "related_to"
+note = "A further actual-host colouring constraint, with no compatible minor placement inferred."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.two_triangle_reserved_core_ports"
+kind = "related_to"
+note = "Refines the original-host reservation while leaving both surviving global allocation cases open."

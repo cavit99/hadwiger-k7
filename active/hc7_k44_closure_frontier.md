@@ -910,6 +910,11 @@ places every such vertex in a four-clique, without finite enumeration. Literal
 neighbours in it; hence `G-R` has minimum degree at least six. The
 [audited sharp `K_5` bound](../results/hc7_k5_transversal_order7_separator.md)
 then supplies a `K_5` minor there. Its bags need not be singletons.
+The [clique-deletion colouring theorem](../results/hc7_clique_deletion_colour_bound.md)
+also gives `chi(G-R)>=5`. If the deletion were four-colourable, its
+contact restrictions would allow two colour classes to reuse the four
+clique colours and the other two to use fresh colours, six-colouring G.
+This retains a chromatic constraint; it does not place the minor's bags.
 
 One sufficient construction is three connected, disjoint, pairwise
 adjacent sets outside `R` whose missing contacts to `R` form a matching
@@ -1209,6 +1214,44 @@ seven-bag extension remain open. Even an alpha/J-coloured connected
 helper full to the four core bags, together with v, gives only six bags.
 Connecting it to further endpoint-coloured paths can introduce intersections
 between independent demands. A simultaneous disjoint allocation is needed.
+
+**A maximised reserved core; written deduction.** Put
+`L=(A-{a}) union (B-{b})` and `F=G-{v,a,b,x,y}`. The reservation above
+supplies an L-rooted K4 in F. Maximise the union `M` of its two A-rooted
+bags, then minimise the two B-rooted bags. The actual-port argument makes
+each B-rooted bag a path from its root `Bi` to one common contact `pi`
+with both A bags; unused vertices miss M. Consequently
+`N_G(M)={v,a,b,x,y,p1,p2}`: a missing contact would give a cut of at most
+six vertices, with the missed vertex still outside. This maximisation may
+absorb other vertices of the reserved colour classes; M is not asserted
+to remain in the fixed four-coloured graph.
+
+Write `H=G-v-B` and `D=H-(M union {a,x,y,p1,p2})`. If both ports are
+their B roots, D has H-boundary at most three and is empty. Exactly one
+nonroot port is impossible: a nonempty D would have the forbidden mixed
+four-boundary `{a,x,y,p}` from the
+[two-response theorem](../results/hc7_two_triangle_two_responses.md#1-tight-boundaries-meet-only-one-neighbourhood-root).
+If D were empty instead, the B root with a nonroot port would miss M
+and have at most seven other vertices available as neighbours.
+
+If both ports are nonroots, D is nonempty. Otherwise both B roots miss
+M and have only eight other vertices outside M; minimum degree eight
+would force both to meet a, contrary to the single A--B edge bound.
+For each component C of D, four-connectivity gives at least four of the
+five possible H-boundary vertices `a,x,y,p1,p2`. A four-boundary containing
+a is again excluded by the two-response theorem. A four-boundary missing
+a is excluded by the new
+[edge-pair theorem](../results/hc7_two_triangle_edge_pair_boundary.md), which
+constructs a fresh five-root model on the C side and a disjoint A-side
+helper. Thus every C contacts all five ports and at least two actual B
+roots, the latter by seven-connectivity in G. Neither the singleton-port
+case nor this remaining allocation is closed.
+
+**Recorded nonclosure.** The original Bi--pi paths may have interiors in
+D. Retaining those paths as B bags while allocating an entire component
+of D to a new helper can reuse vertices. That was the first invalid step
+in a proposed connectedness argument; no connectedness of D is proved.
+A replacement must choose the B bags and component allocations jointly.
 
 **Construction priority.** Obtain one Q model in the actual critical host.
 The following scheme is sufficient, but its six prescribed triangle roots

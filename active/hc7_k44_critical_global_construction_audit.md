@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6`.
+`a7b7289d3e090414824b6d67b9abd5d456aadb765a2245bff3991c5783d6f5ea`.
 
 ## Preserved scope and exact provenance
 
@@ -398,3 +398,29 @@ triangle vertices differently; neither construction is asserted to exist.
 The ledger, index and manifest changes preserve the C19 target and its open
 status. They change construction priority, not the hypotheses, extraction
 theorem, simultaneous-ownership obligation or completion criterion.
+
+## Clique-deletion and reserved-core integration
+
+**Scoped verdict: GREEN.** Removing only the two new insertions exactly
+recovers Git `fbc732a`, frontier SHA-256
+`fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6`.
+The clique-deletion source/audit match
+`dd39ad7bf84d4bf698757e8bc7dbadec987356c4eb53593d41c5478129573a84` /
+`3ba97a173c20e065665ef49b537cebcc3c0a9033ec752d3f5694bac56f85e742`;
+the edge-pair source/audit match
+`7a6661db23b0364ea03a23cf1b9e5112fc024bb57930a6b4197e801b7e8ebfe3` /
+`ed4e0e48c39e6e85dc7360cfe209b17082ec75ed1bbae54b80aec1e6ee813143`.
+This reviewer wrote the edge-pair input; its separate audit was supplied
+by another agent. The parent and a collaborator supplied the new
+reserved-core deduction, whose full integration argument is reviewed here.
+
+The port normalisation gives the exact seven-vertex boundary of M.
+The one-port empty case permits only seven neighbours at its B root;
+the two-port empty case would force both B roots to contact a.
+Every remaining component lies in W. Its four-boundary, if it contains a,
+also contains x or y and is excluded by the two-response lemma; otherwise
+the fresh edge-pair packet applies. Five actual H contacts and seven-connectivity
+give at least two actual B contacts. The colour summary uses two classes
+of one colouring. No four-colouring of M, connectedness of D, reuse of old
+B-path interiors or simultaneous allocation is inferred. All prior qualified
+audit scope is preserved; the two-triangle construction remains open.
