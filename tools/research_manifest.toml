@@ -22971,7 +22971,7 @@ status = "conditional-target"
 source = "active/k5_contractibility_frontier.md"
 source_heading = "Target and reason for the attack"
 active = false
-expected_source_sha256 = "d8400984a5bd69a88219377e948d093340b89f7c01a9185308bc1548a5ae10ce"
+expected_source_sha256 = "f92104014478f6138034244096283801bc8ea4b2ee470e25d13728dd83f238cb"
 scope = "all finite K5 schemes, without restrictions on host order or path intersections beyond the scheme condition"
 label_fidelity = "all five prescribed roots in fixed disjoint connected branch sets"
 allowed_exits = ["a fully rooted K5 model in every such scheme"]
@@ -23122,3 +23122,31 @@ source = "graph_schemes.k5_four_connectivity"
 target = "graph_schemes.bipartite_contractible"
 kind = "uses"
 note = "Uses only Lemma 1, the matroid-union equality consequence, for the second component-spanning forest allocation."
+
+
+[[claims]]
+id = "rooted_minors.paired_clique_full_regions"
+title = "Full regions convert a terminal linkage into a paired clique"
+kind = "theorem"
+status = "audited-green"
+source = "results/paired_clique_full_regions.md"
+audit = "results/paired_clique_full_regions_audit.md"
+active = false
+expected_source_sha256 = "78121803cfc368cf0ff2e367d87dfc6747fbe888b0f3f5e994abdfe83ac5b8da"
+scope = "every positive integer k, disjoint terminal k-sets R and S, and k-1 disjoint connected nonterminal regions each adjacent to all 2k terminals; arbitrary finite host order"
+label_fidelity = "each of the k bags contains exactly one original R terminal and one original S terminal; their pairing is free"
+strict_parameter = "lexicographic induction on k and host order; every algorithmic recursive call decreases host order"
+conclusions = ["a k-path R-S linkage is equivalent to k disjoint connected pairwise adjacent bags joining the terminal sets", "k-2 full regions do not suffice for any k at least two", "given the regions, a polynomial-time conversion uses flow tests and fixed-preimage contractions"]
+does_not_prove = ["prescribed terminal pairing", "existence of these full regions in the remaining K5 or C19 hosts", "rooted K5 contractibility, C19, C21 or HC7", "novelty or NT-level significance"]
+
+[[relations]]
+source = "rooted_minors.paired_clique_full_regions"
+target = "rooted_minors.two_full_regions_paired_triangle"
+kind = "strengthens"
+note = "The self-contained arbitrary-k theorem includes k=3 and adds sharpness and a polynomial construction; it does not depend on the earlier proof."
+
+[[relations]]
+source = "graph_schemes.target.rooted_k5"
+target = "rooted_minors.paired_clique_full_regions"
+kind = "related_to"
+note = "The k=3 case is already used in the separator proof; no sufficient new four-connected allocation or C19 implication is established."

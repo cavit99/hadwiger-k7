@@ -104,6 +104,10 @@ order: either the [two-region theorem](results/two_full_regions_paired_triangle.
 provides the required paired triangle, or two successive forest packings
 give a strictly smaller original-root-preserving scheme. Thus a minimum
 counterexample is four-connected. Its global allocation remains open.
+The [general paired-clique theorem](results/paired_clique_full_regions.md)
+now extends the two-region construction to every k, with a sharp k−1
+region requirement and a polynomial-time algorithm. It has two internal
+reviews; its application to the remaining colouring case is unproved.
 Explicit positive schemes refute
 two restrictive allocation rules. Even a complete K5 theorem would leave
 the six-chromatic matching branch and the seven-bag extension open;

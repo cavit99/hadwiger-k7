@@ -49,6 +49,12 @@ target nor its local reductions may be reported as C19 or HC7.
   gives three pairwise adjacent bags joining two terminal triples whenever
   there are three disjoint paths between the triples and two disjoint
   connected regions full to all six terminals. The pairing is free.
+- The [general paired-clique theorem](../results/paired_clique_full_regions.md),
+  with [two internal reviews](../results/paired_clique_full_regions_audit.md),
+  extends this construction to every k: k paths and k−1 full regions
+  give k pairwise adjacent bags, each joining one terminal from each set.
+  The region count is sharp and the construction is polynomial-time.
+  Its stronger region hypothesis has not been obtained in the C19 host.
 - The [allocation obstructions](../barriers/k5_scheme_full_colour_class_obstruction.md),
   with an [adjacent audit](../barriers/k5_scheme_full_colour_class_obstruction_audit.md),
   rule out requiring any whole colour class in its own bag, and rule
@@ -85,7 +91,7 @@ are nonliteral paths `a-s_i-u-r_i`. Put `J=G−{a,u}`, with markers `S={s_i}`.
 A rooted K4 model in J suffices if it (i) avoids some s_i, or
 (ii) puts S in four different old-root bags. In (i) add `{a,s_i,u}`;
 in (ii) add `{a}`. Alternatively, (iii) suppose `J−r_i` has a K4 model
-rooted at s_i and the other three old roots. Adjoin a to its s_i bag,
+rooted at any marker s_j and the other three old roots. Adjoin a to its s_j bag,
 use `{r_i,u}` for the omitted old root, and retain the other three bags.
 All added bags are connected; u sees every r_j and s_j, while a sees
 every s_j, giving all ten contacts with fixed disjoint preimages.
