@@ -1314,6 +1314,25 @@ disjoint, and v may expand. This requires one model with the stated
 incidences; neither the chromatic bound nor connectivity to its union
 establishes them.
 
+**A five-connected six-chromatic quotient; written deduction.**
+For every triangle T containing the degree-eight vertex v, `G/T` is
+five-connected and six-chromatic. A cut of at most four vertices in the
+quotient lifts to a cut of at most six in G. Proper-minor colourability
+gives the chromatic upper bound. Suppose a five-colouring exists, with
+the triangle coloured 0, and write `T={v,u,w}`. The other six neighbours
+of v use at most four nonzero colours. If at most three occur, expand
+u with colour 0 and w with a fresh colour 5, then give v a missing old
+nonzero colour. Otherwise at least two old colours occur just once on
+those six neighbours, at vertices r,s. In this same expansion, w must
+meet both r,s: a missed vertex could receive the sole fresh colour 5,
+freeing its old colour for v. Reversing u,w in the same quotient colouring
+forces u to meet both as well. The resulting cycle `u-r-w-s-u` in N(v)
+contradicts the audited four-cycle exclusion. Both expansions preserve
+every edge outside v; no roots from different models are combined.
+In particular this applies to `T={v,x,y}`. A minor found in the quotient
+has the fixed connected preimage T, but splitting its owning bag into
+two compatible bags is an additional construction, not an automatic lift.
+
 **Construction priority.** Obtain one Q model in the actual critical host.
 The following scheme is sufficient, but its six prescribed triangle roots
 and singleton v are additional restrictions. A direct construction may

@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`88cf45680ba6b30a5f44372f9f6e9bb2ad47209e7646d61c559fe625b663f9eb`.
+`63af4524846da1b9bbb3387c32952e5cdccace5d059d4d26dd25eac6999f457c`.
 
 ## Preserved scope and exact provenance
 
@@ -559,3 +559,28 @@ the ledger preserves both limitations, and the manifest changes only six
 frontier pins. No incidence existence follows from chromatic number or
 connectivity to a union. The root-port case remains open; no external
 input or finite check is invoked as a mathematical premise.
+
+## Triangle-contraction chromatic bound
+
+**Scoped verdict: GREEN.** The exact reviewed frontier SHA-256 is
+`63af4524846da1b9bbb3387c32952e5cdccace5d059d4d26dd25eac6999f457c`.
+Removing only the new triangle-contraction paragraph byte-recovers Git
+`fdf4ff0`, SHA-256
+`88cf45680ba6b30a5f44372f9f6e9bb2ad47209e7646d61c559fe625b663f9eb`.
+Route-assessment originated the case `{v,x,y}`; the parent generalised it
+to every triangle through v. Literature-repair independently checked the
+argument and then read the final paragraph at these exact bytes.
+
+Contracting three vertices lifts a quotient cut of order at most four to
+one of order at most six. A hypothetical five-colouring has at least two
+singleton colours among the six remaining neighbours when four colours
+occur. Both expansions use the same colouring and the same singleton
+vertices. The sole fresh-colour vertex permits the asserted recolouring
+precisely when its indicated edge is absent; the reversed expansion then
+forces the forbidden four-cycle. The four-cycle source and adjacent audit
+match `a0be7837d03dffd565313c8f29faf20226f5b116ec053ee8a82f27fd83865d10`
+and `727c74852fcf36246f5f4d68ae255855695e306ed4931e21eb9bc8789dcddf13`.
+Proper-minor colourability supplies the upper bound of six. The conclusion
+neither places a K6 model nor splits a bag containing the contracted
+triangle; a model avoiding that vertex also supplies no new incidence.
+No new external application or global closure is asserted.

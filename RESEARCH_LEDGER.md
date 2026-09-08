@@ -121,6 +121,10 @@ model whose bags each contact two of the outside clique bags
 `{v,a,x,y}` and the three singleton B roots;
 the [frontier](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
 proves this certificate without asserting its existence.
+The frontier also proves that contracting any triangle through v leaves
+a five-connected, six-chromatic graph. This permits a more flexible
+construction in a quotient; the required seven-bag construction and its
+split on lifting remain open.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited
