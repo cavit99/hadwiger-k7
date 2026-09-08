@@ -1175,6 +1175,93 @@ neighbours, and the two forest bags can absorb triangle vertices. Those
 are the first missing ownership steps; neither model may be combined
 with a separately obtained helper without a new disjoint construction.
 
+**Three reserved neighbours; written proof with a separate internal audit.**
+The [reserved-neighbour theorem](../results/hc7_two_triangle_reserved_neighbours.md)
+chooses `a in A,b in B` so `R={a,b,x,y}` induces only `xy`, and puts
+`T=(A-{a}) union (B-{b})`. For every such choice, some `r in R` gives
+a T-rooted four-clique in `G-v-(R-{r})`. Thus three additional named
+neighbours are outside the model. Four failed responses would have
+pairwise disjoint obstruction regions: their intersections lie in `W`
+and require seven neighbours, whereas each region has only six in `G-v`.
+Choosing a component after removing each region's R root gives four
+disjoint connected sets full to R. Extend them to partition the connected
+exterior. A three-vertex
+path in their contact graph supplies a five-bag wheel, with two explicit
+full adjacent bags through `v,x,y` completing `Q`.
+
+The successful response still requires a global construction. Contracting
+its maximal helper bags can discard the vertices needed for a split;
+neither a compatible extra helper nor an admissible contraction quotient
+is returned by this theorem.
+
+**Unrestricted degree-six nonroots; written proof with a separate audit.**
+The [five-root theorem](../results/hc7_five_root_degree_six.md) retains
+the triangle and the boundary-at-least-five hypothesis, but permits any
+number of nonroots of degree six. At least two triangle roots can be the
+endpoint of the sole possible missing contact in a rooted `K_5^-`.
+The theorem does not assert all three designated endpoints. Root-preserving
+reductions force a bad endpoint to have a cofacial planar deletion.
+Subtracting the face's root-root edges from Euler's bound makes two bad
+deletions incompatible with the same nonroot degree sum. The earlier
+designated-endpoint result remains unchanged at its audited revision.
+This stronger packet applies only after its own boundary and degree
+conditions are verified; deleting an entire reserved helper can still
+violate both conditions at its boundary vertices.
+
+**Application; written proof.** Put `H=G-v-B`. No nonempty `D subseteq W`
+has a four-vertex H-boundary meeting A and at least two vertices of `N(v)`.
+The all-three-A boundary is already excluded by the exterior-helper
+theorem's Lemma 2. For the other cases its G-boundary is a seven-set
+`S=B union N_H(D)`, full to D by seven-connectivity. Deleting any two
+members of S from the induced D-side leaves a five-root graph with
+nonempty nonroot set, boundary at least five and nonroot degree at least
+six. Whenever its five roots include B, the new packet theorem applies.
+
+If `N_H(D)={s,t,p,q}` with exactly two A roots, let r be the third and
+let Y be its component outside `D union S union {v}`. Its boundary lies
+in `S union {v}`. Since D survives outside, Y has at least seven of
+these eight contacts. It hits `v,s,t` literally, and therefore misses
+at most one B root. Use the D-side packet rooted at `B union {s,t}`.
+Choose an admissible B centre different from that possible omission.
+Its only possible hole joins that centre to s or t, independently of
+Y's possible hole. The five packet bags, Y and v give Q.
+
+Otherwise the boundary contains exactly one A root r and at least one
+of x,y; name that endpoint x. The component Y outside `D union S union {v}`
+containing the other two A roots contacts v,r and misses at most one S
+vertex. If y is also in S, choose an endpoint e of xy contacted by Y;
+the packet on `B union {r,e}` and the preceding argument finish.
+If y is outside S, let Z be its component. It contacts v,x and misses
+at most one S vertex. If Y contacts x, or Z contacts r, the same
+construction on `B union {r,x}` finishes, choosing a B centre different
+from the retained component's possible B omission. In particular this
+handles `Y=Z`.
+
+In the remaining case Y misses only x among S and Z misses only r.
+Fix a packet on `B union {r,x}`. If its hole meets r, use Y and v as
+the other two bags; if its hole meets x, use Z and v. For a complete
+packet either choice works. The chosen component's omission and the
+packet's hole have distinct ends, and v is full to the other six bags.
+These are seven disjoint bags giving Q. Thus a
+failed A-root deletion's tight four-boundary must consist of that A
+root and three actual exterior vertices. The remaining three-port
+allocation is still open; no model through those ports is presumed.
+
+In this last case write the boundary as `{r} union P`, with `P subseteq W`
+of order three. The graph outside `D union B union {r,v} union P` is
+connected. Indeed, let Y contain the other two A roots. It contacts v,r
+and misses at most one of the seven boundary vertices. If another
+component Z contacts v, choose `p in P` contacted by both; each misses
+at most one of three choices. Use the D-side packet on `B union {r,p}`,
+with a B centre avoiding Y's possible B omission. The bags Y and
+`Z union {v}` complete Q, since the latter is full to all five core bags.
+If Z misses v, it is full to all seven boundary vertices by connectivity.
+Choose p contacted by Y and use the same packet, with extra bags
+`Y union {v}` and Z. Both are full to the core; their possible mutual
+omission is independent of the core's possible hole. This again gives Q.
+Thus the unclosed construction has one outside component and three
+actual exterior ports, with no disjoint-model lift through them yet proved.
+
 **Recorded route nonclosure: contracting two triangle-to-triangle paths.**
 Two disjoint A--B paths in `G-v`, with distinct triangle ends and no other A/B
 vertex internal, can be contracted to put a literal `K_4^-` in the

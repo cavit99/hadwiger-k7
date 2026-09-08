@@ -49,6 +49,22 @@ roots are excluded from both parts. The symmetric assertion holds for B.
 A simultaneous global allocation is still missing; even making both parts
 full to both triangles would not alone give the required minor.
 
+The [reserved-neighbour theorem](results/hc7_two_triangle_reserved_neighbours.md)
+now obtains a four-clique rooted at the other four triangle vertices while
+reserving three of `a,b,x,y`, where these four vertices induce only `xy`.
+Four failed reservations would themselves give `Q` through four disjoint
+exterior regions. The [degree-six theorem](results/hc7_five_root_degree_six.md)
+also removes the earlier bound on degree-six nonroots in the five-root
+almost-clique construction, with two possible triangle endpoints for the
+missing edge. Both have separate internal audits; neither supplies the
+additional compatible helper or closes the two-triangle case.
+Their [boundary application](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+now excludes any nonempty exterior set whose four-vertex boundary in
+`G-v-B` meets A and another neighbour of v. A failed A-root deletion can
+retain only three exterior ports.
+Its opposite side remains connected after deleting v; allocating those
+three ports while preserving the core and its additional helper is open.
+
 The [earlier full-helper partition](active/hc7_two_triangle_helper_partition.md)
 and [fixed colour-core response](active/hc7_two_triangle_fixed_colour_core.md)
 remain audited resources for that allocation. The latter preserves a

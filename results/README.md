@@ -26,6 +26,7 @@ the limitations of an earlier argument are not current open bipartite cases.
 | Every three-connected graph has a rooted `K_4^-` minor at any four prescribed roots | [Proof](rooted_k4minus_four_roots.md) · [GREEN audit](rooted_k4minus_four_roots_audit.md) | Elementary unbounded proof.  The missing quotient edge is not prescribed, and the model need not span. |
 | Five prescribed roots containing a triangle force a rooted wheel under internal five-connectivity and at least two nonroots | [Proof, Lemma 1](hc7_degree8_two_triangle_exterior.md) · [GREEN audit](hc7_degree8_two_triangle_exterior_audit.md) | No separate degree hypothesis; stopping the root-preserving contraction at two nonroots strengthens the [earlier wheel theorem](hc7_five_root_wheel.md). |
 | Nonroot degree seven, with at most five degree-six exceptions, strengthens the five-root wheel to `K_5^-` | [Proof](hc7_five_root_almost_clique.md) · [GREEN audit](hc7_five_root_almost_clique_audit.md) | Under the same rooted boundary and triangle hypotheses, nine contacts survive; the triangle endpoint of the possible missing pair can be designated in advance. No extra helper is guaranteed. |
+| Five-root `K_5^-` with unrestricted degree-six nonroots | [Proof](hc7_five_root_degree_six.md) · [GREEN audit](hc7_five_root_degree_six_audit.md) | A nonempty nonroot set, internal five-connectivity and a root triangle suffice when every nonroot has degree at least six. At least two triangle roots can be the missing-edge endpoint; this theorem does not prescribe a particular one. |
 
 The later [odd-cycle attachment counterexamples](../barriers/triangle_free_bipartite_attachment_counterexample.md),
 with a [separate GREEN audit](../barriers/triangle_free_bipartite_attachment_counterexample_audit.md),
@@ -83,6 +84,11 @@ the exterior plus `x,y` two-connected and gives two spanning x/y-rooted
 parts with all but at most one contact to either specified triangle.
 The theorem does not give a common partition for both triangles or the
 additional division of these parts needed for the global construction.
+The [reserved-neighbour theorem](hc7_two_triangle_reserved_neighbours.md),
+with its [GREEN audit](hc7_two_triangle_reserved_neighbours_audit.md),
+keeps three of four additional neighbours outside a four-rooted clique.
+Its four-failure alternative gives an explicit `Q` construction; the
+successful rooted-clique alternative still requires a compatible helper.
 The two-triangles-and-edge case and Conjecture 19 remain open.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with

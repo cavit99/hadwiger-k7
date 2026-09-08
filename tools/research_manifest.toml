@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "be23e563b80083df0b82d608556e0e128f308850aece3c584d9c7de938a51e9d"
+expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "be23e563b80083df0b82d608556e0e128f308850aece3c584d9c7de938a51e9d"
+expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "be23e563b80083df0b82d608556e0e128f308850aece3c584d9c7de938a51e9d"
+expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "be23e563b80083df0b82d608556e0e128f308850aece3c584d9c7de938a51e9d"
+expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22746,3 +22746,63 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.two_triangle_exterior_helpers"
 kind = "related_to"
 note = "Supplies a rooted five-bag model avoiding the other triangle, but not its additional compatible helper."
+
+
+[[claims]]
+id = "hc7.companion.two_triangle_reserved_neighbours"
+title = "A four-rooted clique reserving three additional neighbours"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_reserved_neighbours.md"
+active = false
+audit = "results/hc7_two_triangle_reserved_neighbours_audit.md"
+expected_source_sha256 = "f96680f0556ec70a089d6efe04d38f9ae0683b2a8db6c6c569e5d7850506c2d7"
+scope = "seven-connected Q-free graphs of minimum degree eight with a degree-eight neighbourhood spanning two triangles A,B and edge xy"
+label_fidelity = "for every a,b with R={a,b,x,y} inducing only xy, four distinct triangle roots survive in a model avoiding v and three members of R"
+conclusions = ["some r in R gives a T-rooted K4 in G-v-(R-r)", "four disjoint connected exterior regions full to R give an explicit Q minor"]
+does_not_prove = ["a disjoint compatible helper", "a five-connected paired contraction quotient", "the two-triangle case, Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.two_triangle_reserved_neighbours"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "The connected-triple restriction supplies the permitted choice of a,b."
+
+[[relations]]
+source = "hc7.companion.two_triangle_reserved_neighbours"
+target = "hc7.companion.two_triangle_closed_neighbourhood_exterior"
+kind = "uses"
+note = "Connectedness of the exterior extends four full regions to a partition for the terminal seven-bag construction."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.two_triangle_reserved_neighbours"
+kind = "related_to"
+note = "Reserves three named neighbours in the original host without asserting a compatible further allocation."
+
+[[claims]]
+id = "hc7.companion.five_root_degree_six"
+title = "Five-root almost-cliques with unrestricted degree-six nonroots"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_root_degree_six.md"
+active = false
+audit = "results/hc7_five_root_degree_six_audit.md"
+expected_source_sha256 = "289c5ad015b6c392ea69e8e26e15eba54b4eba7cb155789edd76b3dbb5c9f9a4"
+scope = "five prescribed roots containing a triangle, a nonempty nonroot set with every nonempty subset having at least five neighbours, and all nonroot degrees at least six"
+label_fidelity = "every root and two fixed candidate triangle labels survive the degree-preserving reductions and lift through disjoint connected preimages"
+strict_parameter = "nonroot order in the minimal counterexample with two fixed inadmissible triangle labels"
+conclusions = ["a fully rooted K5-minus", "at least two triangle roots are admissible endpoints of the sole possible missing edge"]
+does_not_prove = ["all three prescribed triangle endpoints", "a disjoint compatible sixth helper", "Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.five_root_degree_six"
+target = "hc7.companion.five_root_almost_clique"
+kind = "related_to"
+note = "Removes the bound on degree-six exceptions while allowing a choice between triangle endpoints; it does not replace the earlier all-designated-endpoints conclusion."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.five_root_degree_six"
+kind = "related_to"
+note = "A stronger five-root packet once its own boundary and degree hypotheses hold; the additional helper must still be constructed disjointly."

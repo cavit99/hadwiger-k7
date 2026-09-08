@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`be23e563b80083df0b82d608556e0e128f308850aece3c584d9c7de938a51e9d`.
+`6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133`.
 
 ## Preserved scope and exact provenance
 
@@ -193,3 +193,24 @@ containing a large contracted bag need not violate seven-connectivity
 of the original graph. All old frontier bytes retain their prior audit scope.
 The current integration is GREEN and explicitly leaves the two-triangle
 case, Conjecture 19 and the overall completion criterion open.
+
+## Reserved neighbours and the degree-six boundary application
+
+Removing the sole 87-line insertion exactly recovers Git `93af60b`, hash
+`be23e563b80083df0b82d608556e0e128f308850aece3c584d9c7de938a51e9d`.
+The reserved-neighbour and degree-six sources respectively match
+`f96680f0556ec70a089d6efe04d38f9ae0683b2a8db6c6c569e5d7850506c2d7` and
+`289c5ad015b6c392ea69e8e26e15eba54b4eba7cb155789edd76b3dbb5c9f9a4`;
+their separate audits match `1be3c9cc43745e3280f11eb0d5289871a1133d600e076422f2d8116c94b15288`
+and `6f13ffd37126c78a697b5752574fe06b6fd13b68dabb0d63e4e39d76a8f1d065`.
+This auditor authored the degree-six source and helped develop the boundary
+application; this integration check is not claimed independent of that work.
+The summaries retain the existential reserved root, component selection,
+nonempty nonroots and two admissible centres with potentially different models.
+The new application deletes only two actual boundary vertices, preserving
+degree six and boundary five. Literal contacts and the seven-of-eight count
+cover both mixed endpoint cases, with independent holes and disjoint bags.
+For the final outside-component test, `v` joins a component only when adjacent;
+otherwise its missing apex-pair contact is independent of the core hole.
+The remaining one-component, three-exterior-port allocation is explicitly open.
+The two new manifest claims remain inactive. This scoped integration is GREEN.
