@@ -1077,16 +1077,30 @@ boundary at least five, and there are at least two nonroots. The
 gives nine contacts under its stronger degree hypothesis. Neither result
 reserves the disjoint sixth helper needed by the present construction.
 
-A sufficient outcome is five neighbour-rooted bags forming `K_5^-` and a
-disjoint full helper, or five rooted wheel bags together with a helper
-meeting an unused neighbour of `v`. The latter helper and `v` must both
-contact all five wheel bags and each other, giving `K_2 join W_4=Q`.
-Port paths from an actual order-seven boundary can replace each internal
-port by a distinct missing neighbour, but do not automatically leave such
-a disjoint helper inside the same exterior component. This is the first
-unsupported inference of that attempted continuation. A valid repair may
-reselect both the rooted model and the helper globally; no fixed-bag or
-quotient-criticality preservation is assumed.
+The [audited helper-partition reduction](hc7_two_triangle_helper_partition.md)
+now gives a specific global starting state in `H=G-v-B`. This graph is
+three-connected with minimum degree at least six. It has a connected
+partition `U,Y`, both full to `B`, with two `A` roots in `U` and the
+third `A` root and `x` in `Y`. If an initial three-region allocation has
+a perfect matching to `B`, a matching-edge contraction already gives `Q`.
+Otherwise a region with no private `B` support can be donated, producing
+the stated two-root side without losing any `B` contact.
+
+The immediate construction is to split `U` into two connected parts
+separating its `A` roots, each contacting at least two `B` roots and
+together contacting all three. These parts and the triangle `B` form a
+five-root wheel. Both `v` and `Y` are adjacent and full to those five bags,
+so they give `Q`. Simultaneous reselection of the partition is allowed.
+
+The first unsupported inference in maximizing `Y` is that a root-free
+component behind a cutvertex of `U` can always be absorbed into `Y`.
+It may own a private `B` support, whose loss destroys fullness of `U`.
+Three-connectivity of `H` does not make this an actual small separator.
+A reverse transfer, a stronger rooted construction or a proof using the
+full proper-minor colouring responses remains needed. No decreasing rule
+through such exchanges is proved. The degree-free wheel and designated
+almost-clique theorems cannot be applied inside `U+B` without establishing
+their own boundary and degree hypotheses.
 
 The earlier cycle paths, colouring constructions and their precise barriers
 are [preserved in the frozen pre-closure record](../archive/hc7_cycle_case_constructions_before_closure_2026-09-08.md).

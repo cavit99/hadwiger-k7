@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`ce97d76a2e9a69c8516681ed36d3ed391a0de3492e06f3543df6d5649ae53e8c`.
+`3fcd07a4706226c1165136ecb67745ede64e034f33da669c62409270779f0cbb`.
 
 ## Preserved scope and exact provenance
 
@@ -59,3 +59,18 @@ The entire cycle-and-triangle case is closed. The two-triangles-and-edge
 construction and the full implication audit remain outstanding; neither
 Conjecture 19 nor the user's HC7/comparable-theorem objective is declared
 achieved. No additional gap was found in the replacement block.
+
+## Subsequent helper-partition integration
+
+Outside the specified replacement from “A sufficient outcome” to before
+“The earlier cycle paths”, bytes equal Git `0a924ec`, whose frontier hash
+is `ce97d76a2e9a69c8516681ed36d3ed391a0de3492e06f3543df6d5649ae53e8c`.
+The new block and ledger accurately use the [audited partition](hc7_two_triangle_helper_partition.md)
+at `dc3101172b266bbe69f02ef0ded4b1219cc0ec73930b137387710a8ee7f2def1`.
+They preserve the three-connected degree-six host, the exact two-plus-one
+root distribution, the matching contraction and donation ownership.
+The proposed two-region split gives a rooted wheel with independent
+omissions; `Y` and `v` are adjacent full apices. Existence of that split
+remains unproved. A private support prevents automatic component donation,
+and neither connectivity of `U` after deletion nor internal five-connectivity
+of `U+B` is inferred. This is a conditional construction, not case closure.

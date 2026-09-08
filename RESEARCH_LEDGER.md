@@ -42,8 +42,8 @@ colouring hypothesis or finite enumeration is needed.
 
 The construction contracts one cycle edge, obtains two spanning helpers,
 and uses three-connectivity of the graph outside the four cycle roots to
-divide the triangle's helper into three connected regions. Either one region can be transferred,
-or the four cycle contacts directly assemble the required minor. Thus a
+divide the triangle's helper into three connected regions. Either one region
+can be transferred, or the four cycle contacts directly assemble the required minor. Thus a
 failure of the stronger triangle-splitting partition is no longer a gap
 in this case.
 
@@ -52,11 +52,16 @@ complete construction in that actual critical host, retaining every
 proper-minor six-colouring and branch-set ownership, followed by an audit
 of the full implication to Conjecture 19. The
 [two-triangle exterior theorem](results/hc7_degree8_two_triangle_exterior.md)
-makes `G-N[v]` connected and full to all eight neighbours, and supplies a
-degree-free five-root wheel lemma. It does not yet provide the compatible
-additional helper. The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-records the exact remaining construction and links the preserved cycle
-work. Conjecture 19 and the user's overall objective remain unmet.
+makes `G-N[v]` connected and full to all eight neighbours. The subsequent
+[audited helper partition](active/hc7_two_triangle_helper_partition.md)
+retains a connected helper and two triangle roots on the other side, with
+both sides contacting all three opposite triangle roots. The remaining
+construction must divide the two-root side into connected parts, each
+contacting at least two opposite roots, or reach a different complete
+minor model. Arbitrary component absorption can lose a private root
+contact; it is not a proved exchange. The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+records this exact residue. Conjecture 19 and the user's overall objective
+remain unmet.
 
 The [density and boundary-colouring routes](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
 and T44 remain conditional alternatives, not mandatory intermediate
