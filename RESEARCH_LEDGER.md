@@ -21,9 +21,10 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    Norin--Totschnig; it is unproved. The stronger Conjecture 21 and its
    sufficient structural target T44 remain available conditional routes.
 3. **Immediate structural laboratory:** the
-   [critical-host global construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
-   for the companion conjectures, combining proper-minor six-colourings with near-clique
-   or `K_{4,4}` models. No global construction or closed induction is proved.
+   [fully rooted K5 construction](active/k5_contractibility_frontier.md)
+   and its connection to the
+   [critical-host construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction).
+   Neither global construction nor a closed induction is proved.
    The
    [technical frontier](active/bipartite_contractibility_frontier.md)
    records the completed bipartite theorem, exact counterexamples and
@@ -94,9 +95,19 @@ transversal of the three original pairs gives five actual roots with the
 same colouring constraint, while reserving the other three neighbours.
 Extracting and extending one compatible minor remains unproved.
 
-The next task is a complete construction in this actual critical host,
-using proper-minor six-colourings and preserving disjoint branch sets,
-followed by an audit of the whole implication to Conjecture 19. The
+The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
+addresses that extraction and an independent theorem target. Audited
+local exchanges change ownership across colours, and audited separator
+deductions leave one three-cut pattern. A global construction, including
+the inseparable case, is still missing. Explicit positive schemes refute
+two restrictive allocation rules. Even a complete K5 theorem would leave
+the six-chromatic matching branch and the seven-bag extension open;
+its significance would require a separate assessment.
+
+The next task is the global rooted construction, while retaining the
+critical-host colouring route if it offers a stronger reduction. Any
+C19 claim still requires the complete construction in that actual host
+and an audit of the whole implication. The
 [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records the exact gaps, including why arbitrary absorption or path
 contraction is not a proved reduction. Conjecture 19 and the user's

@@ -1187,6 +1187,11 @@ lifts. Neither a rooted five-clique nor its extension to Q is established;
 paths obtained under different reservations cannot be combined without a
 new allocation.
 
+The [fully rooted K5 attack](k5_contractibility_frontier.md) targets this
+extraction through schemes. Its local exchanges and separator deductions
+are audited, but its global theorem is open. It does not address the
+six-chromatic alternative or supply the subsequent seven-bag extension.
+
 **Three reserved neighbours; written proof with a separate internal audit.**
 The [reserved-neighbour theorem](../results/hc7_two_triangle_reserved_neighbours.md)
 chooses `a in A,b in B` so `R={a,b,x,y}` induces only `xy`, and puts

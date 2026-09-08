@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`33e07a2f346bbf048935b69b3faf465dce46f62949c3a9e7e29c14880bad4694`.
+`424868d16724cd45b7507a0e2d63dbb0001884834ac76553dcca6b61dde144fd`.
 
 ## Preserved scope and exact provenance
 
@@ -324,3 +324,12 @@ five-colouring quantifiers, fixed pair preimages and separate path choices.
 They assert neither a rooted K5 minor nor a compatible extension to Q.
 This integration check preserves the earlier qualified audit scope;
 the companion conjecture and the user's completion criterion remain open.
+
+The five-line K5 navigation insertion was separately reviewed for scope.
+Removing exactly those lines byte-recovers Git `2602ab6`, frontier SHA-256
+`33e07a2f346bbf048935b69b3faf465dce46f62949c3a9e7e29c14880bad4694`.
+The linked local exchanges and separator deductions have exact-source
+adjacent audits; the pointer expressly leaves the global K5 theorem,
+six-chromatic matching branch and seven-bag extension open. This is a
+navigation-only update: all prior mathematical text and qualified audit
+provenance are unchanged. Scoped verdict: GREEN.

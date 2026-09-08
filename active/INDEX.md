@@ -34,6 +34,9 @@ to intermediate claims remain with their designated conditional routes.
 
 ## Conditional routes
 
+- [Fully rooted K5 contractibility](k5_contractibility_frontier.md):
+  an independent theorem target and possible extraction step in C19.
+  The global construction and the remaining C19 implications are open.
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
   the companion attempts retain critical colouring and neighbourhood data
   or seek a global density reduction. The rooted constructions and density
