@@ -1102,6 +1102,26 @@ through such exchanges is proved. The degree-free wheel and designated
 almost-clique theorems cannot be applied inside `U+B` without establishing
 their own boundary and degree hypotheses.
 
+The same [audited source](hc7_two_triangle_helper_partition.md#a-coupled-colouring-and-deletion-response)
+now retains colouring and density for one choice of nonadjacent neighbours
+`a0,x`: their degree sum is at most `q+16`, where `q=e(G)-4|G|`.
+Contracting their star through `v` gives a six-colouring of `G-v` with
+`a0,x` equal. The four-connected deletion `F=G-{v,a0,x}` has at least
+`4|F|-10` edges. Completing only the four roots `B union {y}` permits
+the exact helper input; the added root-root edges cannot be used by its
+model, so the model exists in the original deletion. Maximal helper union
+has four actual boundary ports, and seven-connectivity forces each deleted
+vertex to contact it. Root bags need not be singleton.
+
+If no six-colouring makes `A union B` rainbow, one bichromatic component
+contains the repeated cross-pair and `y`. It avoids and contacts five other
+neighbours of `v`; a rooted triangle also exists outside it and the shared
+colour class of `a0,x`. A wheel on those five roots disjoint from the
+component would be terminal. The two remaining root bags still need a
+mutual contact, and no argument identifies this component with a structural
+helper or combines the independently obtained models without vertex reuse.
+The rainbow alternative and this simultaneous allocation remain open.
+
 The earlier cycle paths, colouring constructions and their precise barriers
 are [preserved in the frozen pre-closure record](../archive/hc7_cycle_case_constructions_before_closure_2026-09-08.md).
 They remain valid at their audited revisions. The complete cycle theorem

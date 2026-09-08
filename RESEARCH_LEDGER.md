@@ -59,7 +59,12 @@ both sides contacting all three opposite triangle roots. The remaining
 construction must divide the two-root side into connected parts, each
 contacting at least two opposite roots, or reach a different complete
 minor model. Arbitrary component absorption can lose a private root
-contact; it is not a proved exchange. The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+contact; it is not a proved exchange. An audited extension now couples a
+proper-minor colouring with a dense three-vertex deletion and its rooted
+helper model. When no colouring makes the triangles rainbow, it provides a
+connected bichromatic set contacting five retained neighbours. Combining
+these constructions with disjoint ownership remains unproved, as does
+the six-colour triangle alternative. The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records this exact residue. Conjecture 19 and the user's overall objective
 remain unmet.
 

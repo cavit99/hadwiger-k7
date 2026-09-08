@@ -88,3 +88,118 @@ A component of `U-w` containing neither retained `A` root may own a private
 even when it contacts `Y`. Thus a cutvertex of `U` is not an actual cutvertex
 of `H`. A compatible reverse transfer from `Y`, or another complete
 construction, remains required; no decreasing exchange has been proved.
+
+## A coupled colouring and deletion response
+
+**Proposition.** In addition to the preceding theorem's hypotheses, suppose
+`chi(G)=7` and every proper minor of `G` is six-colourable. Put
+`q=e(G)-4|G|>=0`. After possibly interchanging `x,y`, one can choose
+`a0 in A` nonadjacent to `x` such that
+
+`d(x)+d(a0)<=q+16`.
+
+The same choice supplies all the following conclusions:
+
+1. A six-colouring of `G-v` has `a0,x` in one colour and uses five or six
+   colours on `A union B`.
+2. The graph `F=G-{v,a0,x}` is four-connected, has at least `4|F|-10`
+   edges, and contains a two-helper model rooted at `B union {y}`.
+3. In a model maximizing the helper union and then minimizing its root
+   bags, every one of `v,a0,x` contacts that union in the original graph.
+   At least one of the other two `A` roots belongs to a helper. If the
+   other is outside the union, it is its root bag's unique contact vertex
+   to the helpers and is adjacent to both of them.
+
+**Proof.** Write `e_z=d(z)-8>=0`, so `sum_z e_z=2q`. Choose `x` with
+`e_x<=e_y`. Literal `K_5^-` exclusion makes `x` adjacent to at most one
+vertex of `A`. Among two nonneighbours in `A`, choose `a0` of smaller
+degree, and call the other `a'`. These four comparison vertices are
+distinct. Therefore
+
+`2(e_x+e_a0)<=e_x+e_y+e_a0+e_a'<=2q`.
+
+Contract the connected star `{v,a0,x}` and six-colour this proper minor.
+Give the merged vertex colour zero and expand only to `G-v`, putting both
+independent vertices `a0,x` in that colour. The other six neighbours of
+`v` avoid zero and must use all five other colours: otherwise the colouring
+extends to `v`. Exactly one pair among those six repeats. It cannot lie
+within either remaining clique. If it involves `y`, the six vertices of
+`A union B` are rainbow. Otherwise it is a cross-pair between `A-a0`
+and `B`, and `A union B` uses exactly five colours. This proves (1).
+
+Deleting three actual vertices gives four-connectivity of `F`. The only
+edges within the deleted triple are `va0,vx`, so
+
+`e(F)=e(G)-8-d(a0)-d(x)+2
+     =4|F|+q+6-d(a0)-d(x)>=4|F|-10`.
+
+For `Z=B union {y}`, at most four of the six root-root edges are present:
+`B` is a triangle and `y` has at most one neighbour in it. Temporarily
+complete `Z` to a clique. The resulting graph has at least `4|F|-8`
+edges, remains internally four-connected at `Z`, and satisfies the
+exact Norin--Totschnig Lemma 12 hypothesis recorded above. It has a
+`Z`-rooted two-helper model. No added edge can be used internally by a
+bag, since its ends are distinct prescribed roots in distinct bags; nor
+can it realize a required helper contact, since helpers contain no root.
+Deleting the added edges therefore preserves the model in `F`. This is
+an inference about the returned model, not a claim that the augmented
+graph is a minor of `G`.
+
+Maximize the union `S` of the two helpers, then minimize the total root-bag
+order. The port argument in the pinned spanning-helper lemma uses no
+connectivity bound until its final spanning step: each root bag now has
+exactly one actual vertex adjacent to `S`, and no unassigned component
+contacts `S`. Write `P` for these four distinct ports. Thus `N_F(S)=P`.
+Do not infer that the root bags are singleton in this four-connected host.
+
+If some `d in {v,a0,x}` missed `S`, then `N_G(S)` would be contained in
+`P union ({v,a0,x}-{d})`, of order at most six. Both `S` and the vertex
+`d` survive outside this boundary, contradicting seven-connectivity.
+This proves the three required contacts. The only neighbours of `v`
+that can lie in `S` are the two remaining `A` vertices, so one lies there.
+If the other is outside, their literal edge prevents it from being in
+an unassigned component. In its root bag it is adjacent to `S`, and is
+therefore that bag's unique port. Both helpers must contact that port.
+All root and helper bags are disjoint subsets of the original deletion;
+no colouring preservation of the returned model is asserted. QED
+
+## The five-colour triangle state
+
+**Proposition.** Retain the preceding critical-host hypotheses. If no
+six-colouring of `G-v` makes `A union B` rainbow, the same response can
+be labelled so that `a0,x` have colour zero, `a1,b0` share colour `alpha`,
+and `a2,b1,b2,y` have the four distinct other colours
+`gamma,delta,epsilon,zeta`. There is a connected `alpha,zeta` component
+`C` containing `a1,b0,y`. It avoids the five roots
+
+`R={a0,a2,b1,b2,x}`
+
+and contacts each of them. Outside `C` and the whole colour-zero class
+there is a rooted triangle at `a2,b1,b2`, with `b1,b2` singleton.
+
+**Proof.** The preceding proposition supplies precisely the stated
+five-colour alternative. If `a1,b0` were in different `alpha,zeta`
+components, swap one component's colours. This introduces `zeta` on
+`A union B` while retaining `alpha` at the other root, making its six
+vertices rainbow, a contradiction. Their common component must also
+contain `y`. Otherwise swapping it removes `alpha` from `N(v)`, permitting
+that colour on `v` and contradicting `chi(G)=7`.
+
+The component `C` avoids `R` by its two colours. Its contacts to `R`
+are the actual edges from `a1` to `a0,a2`, from `b0` to `b1,b2`, and
+from `y` to `x`. The singleton roots `a2,b1,b2` are pairwise bichromatically
+connected: separating the two singleton occurrences would permit a Kempe
+swap removing one colour from `N(v)`. Choose paths from `a2` to `b1`
+and `b2` in their respective two colours. Their union with `b1,b2`
+removed is a connected `a2` bag, disjoint from those two roots. It avoids
+`C` and colour zero. The literal edge `b1b2` completes the rooted triangle.
+No paths from different colourings are combined. QED
+
+A rooted wheel on the five roots `R`, disjoint from `C`, would finish:
+both `C` and `{v}` are adjacent and full to all five bags. The two bags
+containing `a0,x` would need their mutual contact as well if each only
+contacts two of the other three bags. Their roots are nonadjacent and
+have the same colour, so this contact is not automatic. The six-colour
+triangle alternative is also unclosed. In particular, no inference here
+identifies `C` with one of the structurally returned helpers or reserves
+the same vertices in both constructions.

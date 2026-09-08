@@ -5,11 +5,16 @@
 **Source:** [the helper-partition reduction](hc7_two_triangle_helper_partition.md).
 
 **Whole-source SHA-256:**
-`dc3101172b266bbe69f02ef0ded4b1219cc0ec73930b137387710a8ee7f2def1`.
+`5cdd75943fe3dd690986e699e69c24f585febfab78ed7d633df824d13f75b4c3`.
 
-This separate internal mathematical audit covers the theorem, its explicit
-terminal construction and its stated nonclosure. The final change from the
-cold-read draft only replaces the pending-audit status. No finite enumeration
+The original separate internal audit by `route_assessment`, retained below,
+covered the theorem, its terminal construction and its stated nonclosure at
+`dc3101172b266bbe69f02ef0ded4b1219cc0ec73930b137387710a8ee7f2def1`.
+That revision differed from its cold-read draft only in the pending-audit
+status. Its entire 90-line content is a byte-identical prefix of the current
+source, checked against Git `2e2ba11`. A separate cold audit by
+`literature_repair` covers the appended propositions at the current whole-source
+hash; its verdict and scope follow the original review. No finite enumeration
 or external peer review is a premise.
 
 The two input files were read at the hashes displayed in the source:
@@ -59,3 +64,55 @@ the rooted wheel. This does not prove the required split exists.
 Private supports can obstruct donation from an articulation branch of
 `U`; no actual separator of `H` or decreasing exchange follows. The
 remaining two-triangle case, Conjecture 19 and HC7 are still unresolved.
+
+## Separate audit of the coupled response
+
+**Verdict: GREEN.** The new propositions and their final nonclosure were
+read in full at the current source hash. Both imported sources and their
+adjacent hash pins were rechecked; the helper normalization proof was reread.
+No fresh primary-source inspection or independent external review is claimed.
+
+The synchronized choice uses four distinct vertices and nonnegative degree
+excesses: twice the sum of the two chosen excesses is at most the total
+`2q`. The independent pair `a0,x` permits expansion of the actual star
+contraction colouring to `G-v`. Exactly six other neighbours must use all
+five remaining colours, so precisely one pair repeats. The two triangle
+constraints give exactly the stated five- or six-colour alternative. Deleting
+the three chosen vertices removes precisely two internal edges and gives the
+asserted `4|F|-10` bound and actual four-connectivity.
+
+Completing the four prescribed roots adds at least two edges. In the returned
+rooted model, each added edge has its ends in two different prescribed root
+bags. It can neither connect a bag internally nor witness any required helper
+contact. Removing all added edges therefore leaves the model in the original
+deletion graph; no minor relation for the augmented graph is needed.
+
+The maximal-union, minimal-root-bag argument precedes the five-connectivity
+step of the imported normalization. Two distinct helper-contact vertices in
+a root bag permit a nonroot leaf transfer that enlarges a helper while
+retaining both contacts. Hence each root bag has one actual port, shared by
+both helpers; no unassigned component contacts their union. If any one of
+`v,a0,x` missed the union, its entire original boundary would lie in the four
+ports and the other two deleted vertices. The union and that missing vertex
+survive this actual separator of order at most six. Thus all three deleted
+vertices contact the union. Its required `v` contact places a remaining `A`
+root in a helper; the literal `A` edge puts the other root, if outside, at
+the unique port of its own root bag. Root singletonness is never inferred.
+
+The second proposition quantifies over the absence of any rainbow triangle
+colouring, then works in the single colouring just constructed. A swap on
+one of two distinct `alpha,zeta` components makes the triangles rainbow;
+swapping their common component when it omits `y` removes `alpha` from the
+whole neighbourhood. Both contradictions are valid. The resulting component
+contacts the five retained roots through the stated literal edges. The two
+singleton-colour paths avoid both that component and the entire zero-colour
+class. Removing their distinct terminal roots leaves one connected `a2` bag,
+and the literal `b1b2` edge completes its disjoint rooted triangle.
+
+These conclusions do not identify a Kempe component with a structural helper
+or preserve its reserved vertices in an independently returned model. A
+completion with two further root bags requires their mutual contact as well
+as the specified triangle contacts; nonadjacent same-colour roots do not
+supply it. Both the global allocation and the six-colour triangle alternative
+remain open. No conclusion proving the two-triangle case, Conjecture 19,
+HC7 or comparable mathematical significance is asserted by this audit.

@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`3fcd07a4706226c1165136ecb67745ede64e034f33da669c62409270779f0cbb`.
+`61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a`.
 
 ## Preserved scope and exact provenance
 
@@ -74,3 +74,19 @@ omissions; `Y` and `v` are adjacent full apices. Existence of that split
 remains unproved. A private support prevents automatic component donation,
 and neither connectivity of `U` after deletion nor internal five-connectivity
 of `U+B` is inferred. This is a conditional construction, not case closure.
+
+## Coupled response integration
+
+Removing the twenty-line insertion before “The earlier cycle paths” exactly
+recovers Git `2e2ba11`, with frontier hash
+`3fcd07a4706226c1165136ecb67745ede64e034f33da669c62409270779f0cbb`.
+The source and adjacent GREEN audit match respectively
+`5cdd75943fe3dd690986e699e69c24f585febfab78ed7d633df824d13f75b4c3`
+and `2171a2c8e1017fa75afd6a512e03ec8ceb3294b533d5283eb5a5c82b84876843`.
+The inserted block and ledger retain the common choice of deleted vertices,
+the original-deletion lift after root-edge completion and the four actual
+ports; four-connectivity does not make the root bags singleton. The
+bichromatic conclusion is conditional on absence of any rainbow triangle
+colouring, and its triangle paths avoid both that component and the zero
+class. Neither a missing root-root contact nor simultaneous disjoint
+ownership is inferred. Both stated alternatives remain unclosed.
