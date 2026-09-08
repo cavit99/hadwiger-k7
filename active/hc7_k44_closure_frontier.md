@@ -1210,6 +1210,35 @@ helper full to the four core bags, together with v, gives only six bags.
 Connecting it to further endpoint-coloured paths can introduce intersections
 between independent demands. A simultaneous disjoint allocation is needed.
 
+**Immediate sufficient target.** Construct in `G-v` a scheme rooted at
+all six vertices of `A union B` for K3,3 with two independent cross edges
+deleted. Bipartite contractibility supplies its seven cross contacts;
+the six literal triangle edges and the six contacts to singleton v
+then give Q. The omitted cross pairs may be chosen with the construction.
+One sufficient allocation has the four L-rooted K4 bags, a connected
+bag through a,x and another through b,y, all in `G-v` and disjoint; x,y may be
+interchanged. Each extra bag must contact at least one opposite-triangle
+L bag. Its own triangle supplies two contacts, xy joins the extra bags,
+and the two possible missing pairs are independent. The existence of
+this simultaneous allocation or of the stated scheme is unproved.
+
+**Recorded nonclosure:** making `A union B` rainbow in one six-colouring
+of `G-v` does not supply an actual-root K3,3 scheme. The first unsupported
+step is asserting every bichromatic root-to-root connection: x or y may
+retain a colour after a component swap removes it from a triangle root.
+Thus criticality does not force the required paths at those named roots.
+An actual K3,3 scheme would be terminal with the literal triangles and v,
+but its existence in that colouring remains open. This does not affect
+the universal rainbow statements on the fixed deletions F and K.
+
+The [singleton-root counterexample](../barriers/critical_colour_singleton_root.md)
+refutes extracting a singleton-x K5 from the fixed-F colouring constraint
+alone, even using all of F. Two K4s and an intervening vertex force every
+other bag through the same vertex; an expanded x bag gives the full rooted
+minor. The first unsupported inference is fixing x before allocation.
+The actual critical-host assumptions and unrestricted root expansion
+remain available; the example does not refute either global target.
+
 **Three reserved neighbours; written proof with a separate internal audit.**
 The [reserved-neighbour theorem](../results/hc7_two_triangle_reserved_neighbours.md)
 chooses `a in A,b in B` so `R={a,b,x,y}` induces only `xy`, and puts

@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1`.
+`66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a`.
 
 ## Preserved scope and exact provenance
 
@@ -359,3 +359,29 @@ four core bags give only six bags; a further simultaneous allocation is
 still required. The new
 wording supersedes only the old restriction of K5 extraction to one
 chromatic branch, not the open global construction. Scoped verdict: GREEN.
+
+## Colouring-allocation nonclosure check
+
+Removing only the seventeen-line insertion byte-recovers Git `b4eddfb`,
+frontier SHA-256 `50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1`.
+This review caught an unsupported draft inference from one rainbow
+colouring to actual-root Kempe paths; it and its dependent component
+claims were removed before this verdict. The fixed-F/K universal rainbow
+proof is unchanged. The retained passage records nonclosure, not a
+counterexample to the actual critical-host hypotheses.
+The [singleton barrier](../barriers/critical_colour_singleton_root.md) and
+its [audit](../barriers/critical_colour_singleton_root_audit.md) match hashes
+`b0707c128fa1d8847295fc5bbfd2c43d9a68d424b2b3e94ad17d98ef8e2272d7` and
+`1c8259698df56b990767385f05fae70824c84fbb019095e447b1d6d85ffccb51`.
+This reviewer wrote that source; its separate audit discloses construction
+provenance. Its summary correctly permits expanded root bags and leaves
+both global targets open. Earlier qualified scope is preserved. GREEN.
+
+The eleven-line sufficient-target insertion removes exactly to the reviewed
+frontier hash `2e2b276ab002ff8a37009be8b2a572b7e180ddd0e54f7f0eeb83058192ee3824`.
+Its scheme preserves all six actual A/B roots in `G-v`; seven cross contacts,
+six triangle contacts and six v contacts give Q. The alternative allocation
+has four core bags, the disjoint a/x and b/y bags, and singleton v. Each
+helper misses at most one opposite-triangle core bag, so the two possible
+holes have distinct ends; xy supplies their mutual contact. This is a
+correct sufficient construction with existence explicitly unproved. GREEN.

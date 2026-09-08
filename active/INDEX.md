@@ -34,13 +34,13 @@ to intermediate claims remain with their designated conditional routes.
 
 ## Conditional routes
 
-- [Fully rooted K5 contractibility](k5_contractibility_frontier.md):
-  an independent theorem target and possible extraction step in C19.
-  The global construction and the remaining C19 implications are open.
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
-  the companion attempts retain critical colouring and neighbourhood data
-  or seek a global density reduction. The rooted constructions and density
-  theorem remain open; none is mandatory.
+  the immediate C19 construction seeks a scheme at six triangle roots
+  with two independent cross edges omitted. The global allocation is open;
+  critical colouring and neighbourhood data must be retained.
+- [Fully rooted K5 contractibility](k5_contractibility_frontier.md):
+  an independent theorem target and alternative extraction step in C19.
+  The global construction and the remaining C19 implications are open.
 - [T44](hc7_k44_closure_frontier.md): every seven-connected graph with a
   `K_{4,4}` minor has a `K_7^-` minor. This remains open and would prove
   Norin--Totschnig Conjecture 21, not `HC_7`.

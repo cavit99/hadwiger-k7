@@ -55,6 +55,11 @@ target nor its local reductions may be reported as C19 or HC7.
   give k pairwise adjacent bags, each joining one terminal from each set.
   The region count is sharp and the construction is polynomial-time.
   Its stronger region hypothesis has not been obtained in the C19 host.
+- The [one-sided extension](../results/paired_clique_one_sided_regions.md)
+  permits the regions to contain the second terminal set, with fullness
+  required only to the first. Its terminal-cut side replacement is valid;
+  a [two-region obstruction](../barriers/paired_regions_two_region_obstruction.md)
+  refutes the proposed k−2-region paired almost-clique theorem.
 - The [allocation obstructions](../barriers/k5_scheme_full_colour_class_obstruction.md),
   with an [adjacent audit](../barriers/k5_scheme_full_colour_class_obstruction_audit.md),
   rule out requiring any whole colour class in its own bag, and rule

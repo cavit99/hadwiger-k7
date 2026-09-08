@@ -21,9 +21,10 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    Norin--Totschnig; it is unproved. The stronger Conjecture 21 and its
    sufficient structural target T44 remain available conditional routes.
 3. **Immediate structural laboratory:** the
-   [fully rooted K5 construction](active/k5_contractibility_frontier.md)
-   and its connection to the
-   [critical-host construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction).
+   [critical-host construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction),
+   seeking a six-root K3,3 scheme with two independent edges omitted.
+   The [fully rooted K5 construction](active/k5_contractibility_frontier.md)
+   remains an alternative extraction route.
    Neither global construction nor a closed induction is proved.
    The
    [technical frontier](active/bipartite_contractibility_frontier.md)
@@ -107,18 +108,30 @@ provides the required paired triangle, or two successive forest packings
 give a strictly smaller original-root-preserving scheme. Thus a minimum
 counterexample is four-connected. Its global allocation remains open.
 The [general paired-clique theorem](results/paired_clique_full_regions.md)
-now extends the two-region construction to every k, with a sharp k−1
-region requirement and a polynomial-time algorithm. It has two internal
-reviews; its application to the remaining colouring case is unproved.
+extends the two-region construction to every k, with a sharp k−1
+region requirement and a polynomial-time algorithm. The audited
+[one-sided extension](results/paired_clique_one_sided_regions.md) allows
+the regions to contain one terminal set and requires fullness only to
+the other. It also supplies a valid terminal-cut side replacement.
+With k−2 regions, even the proposed paired four-cycle can fail by the
+[explicit obstruction](barriers/paired_regions_two_region_obstruction.md).
+Neither the new theorem nor its side replacement closes the colouring case.
 Explicit positive schemes refute
 two restrictive allocation rules. A complete K5 theorem would now supply
 extraction in every reservation branch, but leave the seven-bag extension open;
 its significance would require a separate assessment.
+The [colouring counterexample](barriers/critical_colour_singleton_root.md)
+also rules out fixing the extra root as a singleton from the rainbow
+condition alone. Root expansion and the actual critical-host hypotheses
+must remain available.
 
-The next task is the global rooted construction, while retaining the
-critical-host colouring route if it offers a stronger reduction. Any
-C19 claim still requires the complete construction in that actual host
-and an audit of the whole implication. The
+The next task is a K3,3 scheme with two independent cross edges omitted,
+rooted at the six triangle vertices in `G-v`. The completed bipartite
+theorem, the literal triangle edges and v would then give Q and close
+the remaining case. The required simultaneous allocation must retain
+the actual critical-host colouring, connectivity and ownership data.
+Any C19 claim still requires that construction and an audit of the
+whole implication. The
 [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records the exact gaps, including why arbitrary absorption or path
 contraction is not a proved reduction. Conjecture 19 and the user's

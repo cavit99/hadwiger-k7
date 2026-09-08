@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
+expected_source_sha256 = "66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21718,7 +21718,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
+expected_source_sha256 = "66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21961,7 +21961,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
+expected_source_sha256 = "66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -22004,7 +22004,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
+expected_source_sha256 = "66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22971,7 +22971,7 @@ status = "conditional-target"
 source = "active/k5_contractibility_frontier.md"
 source_heading = "Target and reason for the attack"
 active = false
-expected_source_sha256 = "e43177daae205e07069d37023b83982f9772b659d6b45e152bfa06ecf22383cd"
+expected_source_sha256 = "734ba0e184064361f36c4776ca327949edf173d908359e5e618fa150192ed9fd"
 scope = "all finite K5 schemes, without restrictions on host order or path intersections beyond the scheme condition"
 label_fidelity = "all five prescribed roots in fixed disjoint connected branch sets"
 allowed_exits = ["a fully rooted K5 model in every such scheme"]
@@ -23189,3 +23189,102 @@ source = "hc7.companion.critical_colour_class_reservation"
 target = "graph_schemes.target.rooted_k5"
 kind = "related_to"
 note = "A full rooted K5 theorem would extract the supplied schemes in every reservation branch; extension to Q would remain."
+
+
+[[claims]]
+id = "rooted_minors.paired_clique_one_sided_regions"
+title = "Regions full to one terminal set force a paired clique"
+kind = "theorem"
+status = "audited-green"
+source = "results/paired_clique_one_sided_regions.md"
+audit = "results/paired_clique_one_sided_regions_audit.md"
+active = false
+expected_source_sha256 = "d39271926d1cce2287de2369061b9c236a6355536bbd81b736661fbc4e6bed69"
+scope = "k at least two, disjoint k-sets R,S, a k-linkage, and k-1 disjoint connected regions avoiding R and full to R, covering S with at least one S terminal in each region"
+label_fidelity = "each bag retains exactly one original R and one original S terminal; pairing is free, and permitted contraction preimages contain at most one terminal"
+strict_parameter = "lexicographic induction on k and host order; reserved terminal deletion or permitted region-edge contraction"
+conclusions = ["k pairwise adjacent R/S-paired bags", "the earlier two-sided full-region theorem follows by adjoining the S terminals to the regions", "the stated terminal-containing cut in the k-2-region problem has a valid paired-clique side replacement retaining actual cut ports"]
+does_not_prove = ["the proposed k-2-region extension", "the opposite-side allocation", "the actual C19 helper construction", "rooted K5 contractibility, C19, C21, HC7 or comparable significance"]
+
+[[relations]]
+source = "rooted_minors.paired_clique_one_sided_regions"
+target = "rooted_minors.paired_clique_full_regions"
+kind = "strengthens"
+note = "Allows regions to contain the S terminals and requires fullness only to R; the changed endpoint conditions and fixed-root lifts are proved explicitly."
+
+[[relations]]
+source = "graph_schemes.target.rooted_k5"
+target = "rooted_minors.paired_clique_one_sided_regions"
+kind = "related_to"
+note = "Provides a rooted side replacement but no new complete K5 or C19 reduction."
+
+[[claims]]
+id = "graph_schemes.barrier.critical_colour_singleton_root"
+title = "Universal rainbow roots do not force a prescribed singleton bag"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/critical_colour_singleton_root.md"
+audit = "barriers/critical_colour_singleton_root_audit.md"
+active = false
+expected_source_sha256 = "b0707c128fa1d8847295fc5bbfd2c43d9a68d424b2b3e94ad17d98ef8e2272d7"
+scope = "an explicit ten-vertex five-chromatic graph with five fixed roots rainbow in every five-colouring and a fixed independent class containing the extra root"
+conclusions = ["no rooted K5 model can leave the extra root singleton", "allowing that root bag to expand gives an explicit fully rooted K5"]
+does_not_prove = ["failure of fully rooted K5 contractibility", "a barrier satisfying the actual critical C19 host hypotheses", "failure of an expanded-root construction"]
+
+[[relations]]
+source = "hc7.companion.critical_colour_class_reservation"
+target = "graph_schemes.barrier.critical_colour_singleton_root"
+kind = "guarded_by"
+note = "The fixed-graph colouring condition alone does not license retaining the extra root as a singleton during extraction."
+
+
+[[claims]]
+id = "rooted_minors.barrier.two_region_paired_cycle"
+title = "One fewer full region can force two incident holes in every paired model"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/paired_regions_two_region_obstruction.md"
+audit = "barriers/paired_regions_two_region_obstruction_audit.md"
+active = false
+expected_source_sha256 = "b759e5a56e15911dd54bec784e36feaa8edc901558e30b3c05f2ecaf6d618736"
+scope = "an explicit family on 3k+3 vertices for every k at least four, with k-2 disjoint full regions and a k-linkage; a fifteen-vertex clique-boundary variant"
+conclusions = ["every paired contact graph in the family is Kk with two incident edges missing", "the k-2-region minimum-degree and matching-hole proposals are false", "the abstract clique-boundary proposal remains false with the proposed two-fan outside the other roots"]
+does_not_prove = ["failure of either proved k-1-region theorem", "failure of every stronger tight-cut origin class", "a critical C19 host counterexample", "failure of C19, HC7 or rooted K5 contractibility"]
+
+[[relations]]
+source = "rooted_minors.paired_clique_one_sided_regions"
+target = "rooted_minors.barrier.two_region_paired_cycle"
+kind = "guarded_by"
+note = "Its valid side replacement must not be extended to the refuted k-2-region or abstract clique-boundary conclusions."
+
+[[claims]]
+id = "hc7.target.two_triangle_bipartite_scheme"
+title = "Route a bipartite scheme with two independent holes at the six triangle roots"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "7.5 A neighbourhood contact construction"
+active = false
+expected_source_sha256 = "66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a"
+scope = "the actual seven-contraction-critical Q-free host of minimum degree eight, with a degree-eight neighbourhood spanning triangles A,B and edge xy"
+label_fidelity = "all six original triangle roots; scheme paths avoid v and have no foreign roots internally"
+allowed_exits = ["in G-v an A/B-rooted K3,3 scheme with two independent cross edges omitted, whose missing pairs may be chosen"]
+does_not_prove = ["existence of the scheme or the sufficient simultaneous helper allocation", "the whole Conjecture 19 implication audit", "Conjecture 19, Conjecture 21 or HC7"]
+
+[[relations]]
+source = "hc7.target.two_triangle_bipartite_scheme"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "Conditional on the scheme construction, contraction retains all six roots; the literal triangles and singleton v complete Q."
+
+[[relations]]
+source = "hc7.target.two_triangle_bipartite_scheme"
+target = "hc7.companion.critical_colour_class_reservation"
+kind = "related_to"
+note = "Provides four core bags and reserved neighbours, but the two additional compatible helpers and opposite-triangle contacts remain unproved."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.target.two_triangle_bipartite_scheme"
+kind = "related_to"
+note = "An alternative sufficient construction in the actual remaining host; no full rooted K5 theorem is needed if this scheme is constructed."
