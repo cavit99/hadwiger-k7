@@ -1220,15 +1220,19 @@ triangle vertex. Equivalently, for `D_z=N_F(z) intersect J`, find a
 connected bipartition of `J` splitting every `D_z` and the triangle `A`.
 Splitting the four `D_z` is already guaranteed; splitting `A` is not.
 
-The actual retained graph `J` is two-connected and has minimum degree at
-least six: an exterior vertex loses at most two cycle neighbours, and a triangle
+The actual retained graph `J` has minimum degree at least six: an exterior
+vertex loses at most two cycle neighbours, and a triangle
 vertex loses `v` and at most one cycle neighbour. These contact bounds are
 in the audited [exterior theorem](../results/hc7_degree8_cycle_exterior.md).
-For two-connectivity, a cutvertex `x` would leave all of `A-{x}` in one
-component. Any other component has original boundary contained in
-`C union {x}`, of order at most six, separating it from `v` in `G`.
-No four-connectivity of `J` follows here; the known four-connectivity is
-for the different graph `G-v-A`. Moving a triangle-containing region to
+The [three-connectivity theorem](../results/hc7_cycle_triangle_complement_three_connectivity.md),
+with two separate internal audits, excludes every two-cut of `J`.
+On its triangle side, an integral flow preserves all prescribed cut
+endpoints; a bridge reroutes one path when two have the same triangle
+source, leaving two cycle contacts in a third disjoint piece. The opposite
+side supplies a designated almost-clique, giving two independent possible
+missing contacts and a valid `Q` model. No four-connectivity of `J` is
+proved; the known four-connectivity is for the different graph `G-v-A`.
+Moving a triangle-containing region to
 the other helper may destroy a required `D_z` contact. No exchange that
 preserves all four contacts and strictly decreases a well-founded parameter
 has been proved. The contraction above is one fixed step with a valid

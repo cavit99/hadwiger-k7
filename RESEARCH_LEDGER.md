@@ -87,6 +87,11 @@ case if the helpers could be chosen to put triangle vertices on both sides;
 that simultaneous partition remains unproved. The
 [frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records its density bound, fixed lift and missing exchange.
+The [new three-connectivity theorem](results/hc7_cycle_triangle_complement_three_connectivity.md),
+with two separate GREEN internal audits, closes every two-vertex-separator
+case in `G-v-C`: a flow and one bridge exchange make the required donations
+simultaneously. The retained graph is therefore three-connected. This still
+does not establish the triangle-splitting helper partition or close the cycle case.
 The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
 [deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
 remain available with their exact preservation limits.

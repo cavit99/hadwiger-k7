@@ -61,6 +61,10 @@ their [first](hc7_degree8_cycle_exterior_audit.md) and
 `G-N[v]` connected and full to all eight neighbours in both remaining
 spanning configurations. The cycle case also gives exterior minimum degree
 five. Neither theorem supplies the remaining simultaneous allocation.
+The [cycle-complement theorem](hc7_cycle_triangle_complement_three_connectivity.md),
+with [two](hc7_cycle_triangle_complement_three_connectivity_audit.md)
+[GREEN audits](hc7_cycle_triangle_complement_three_connectivity_second_audit.md),
+excludes every two-cut of `G-v-C`; the full cycle-case partition remains open.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with
 its [GREEN audit](hc7_cycle_colour_path_completion_audit.md), extends the

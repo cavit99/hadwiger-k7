@@ -7,8 +7,13 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`826239ff6eb59b1c59c933bc69896f3f0c171a8455df4cb0674bb0fa0172ae05`.
+The latest check covers only the three-connectivity integration in Section 7.5.
+Restoring its predecessor paragraph exactly recovers Git `399ad28`, at SHA-256
 `5a3b816f1b1ccc42529c6590bb5318e403d9bfdccb9b06940d3183786d851840`.
-The latest check covers only the second cycle construction in Section 7.5.
+This byte equality was checked directly against Git.
+
+The preceding check covers only the second cycle construction in Section 7.5.
 Removing its forty-one lines exactly recovers Git `4f69dfb`, at SHA-256
 `daed18105260bda2e86a275de4aff84d865317d731b76e2073043e25d9bbf4d1`.
 This byte equality was checked directly against Git.
@@ -592,3 +597,17 @@ and has original boundary in `C union {x}`. This contradicts seven-connectivity
 and proves two-connectivity of `J`. No four-connectivity, triangle-splitting
 existence, or criticality of the quotient is inferred. The missing connected
 partition remains open.
+
+## Section 7.5 three-connectivity integration: scoped addendum
+
+**Verdict: GREEN.** The replacement paragraph, ledger and results navigation
+match the promoted source at
+`4e2b5b0b7b7294c30bdcdd1b4f147d12ba535dc3513508981160c5173d519228`.
+The source and first audit are unchanged by promotion, and both adjacent
+audits record GREEN verdicts at that exact source hash. The summary retains
+the prescribed cut endpoints, bridge rerouting and two untouched cycle
+contacts; these supply the designated almost-clique's compatible seven-bag
+lift. It correctly upgrades `J` to three-connectivity, while distinguishing
+the four-connectivity of `G-v-A`. Neither the remaining connected partition
+splitting all four support sets and `A`, nor the full cycle case is claimed.
+All other frontier bytes and the earlier audit provenance are retained.
