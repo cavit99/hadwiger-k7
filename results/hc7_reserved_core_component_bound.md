@@ -1,7 +1,7 @@
-# At most two components remain behind the reserved-core ports
+# The residual set behind the reserved-core ports is connected
 
-**Status:** written proof; a separate internal audit is recorded beside it. This bounds
-the remaining components, without closing the two-triangle case.
+**Status:** written proof; a separate internal audit records the exact reviewed
+source revision beside it. This does not close the two-triangle case.
 All graphs are finite and simple. Write `Q=K_7-2K_2`, with independent
 deleted edges. All contacts below are actual edges between disjoint bags.
 
@@ -11,7 +11,7 @@ chromatic number seven and six-colourability of every proper minor. Let
 `d(v)=8` and `N(v)=A dotcup B dotcup {x,y}`, where A and B are triangles
 and xy is an edge. Choose `a in A,b in B` so `{a,b,x,y}` induces only xy.
 For a maximised reserved core as specified below, if both B ports are
-nonroots, its residual set D has at most two connected components.
+nonroots, its residual set D is nonempty and connected.
 
 ## Exact input and notation
 
@@ -44,7 +44,9 @@ or retained colouring of M is assumed.
 
 ## Three components give the forbidden model
 
-Suppose D has distinct components `C1,C2,C3`. The two bags
+**Proposition 1.** The residual set D has at most two components.
+
+**Proof.** Suppose D has distinct components `C1,C2,C3`. The two bags
 
 `X=U union {b,p1}`,     `Y=V union {v,p2}`
 
@@ -248,3 +250,37 @@ Append its port bags to U,V as in Corollary 4. The four original roots
 A1,A2,B1,B2 remain fixed in separate bags, while the A-bag union strictly
 contains M. This contradicts the same maximality. Both b-rooted bags
 and all old B-root paths are discarded. QED
+
+## Two components are impossible
+
+**Theorem 6.** Under the standing hypotheses, the residual set D in the
+two-nonroot-port case is connected, proving the opening theorem.
+
+**Proof.** The input makes D nonempty, and Proposition 1 leaves at most
+two components. Suppose there are two, C1,C2.
+
+If one component, say C1, misses a B root, Corollary 4 makes it Bi for some `i in {1,2}`,
+and Corollary 5 makes C2 full to B. Put `{i,j}={1,2}`. As in
+Corollary 5, Lemma 3 gives a fresh K4 rooted at b,Bj,p1,p2 in
+`G[C1 union {b,Bj,p1,p2}]`: only a,x,y were deleted from the component's
+neighbourhood. Adjoin the three bags
+
+`X=U`, `Y=V union {v,Bi}`, `Z=C2 union {a}`.
+
+They are connected, disjoint from each other and the fresh core, and
+pairwise adjacent through U--V, a's U contact and av. X contacts the
+b and both port bags; it can miss only the Bj bag. Y contacts both
+port bags through V and both B bags through v. Z contacts all four
+core bags through C2, which is full to B and both ports. These seven
+bags contain K7 with at most one missing contact, hence Q.
+
+Otherwise both components are full to B. The four bags
+`C1 union {p1}`, `C2 union {p2}`, `{B1}`, `{B2}` form a rooted K4:
+each port union is connected and meets both B roots, their mutual
+contact uses C1--p2, and B1B2 is literal. Append the two port bags to
+U,V. This preserves the original four roots in separate connected
+bags in `G-{v,a,b,x,y}` and strictly enlarges M, a contradiction.
+
+Neither construction retains an old B-root path. Thus D has exactly
+one component. Its allocation and the two-root-port case remain open;
+the earlier invalid path-reuse argument is not invoked. QED

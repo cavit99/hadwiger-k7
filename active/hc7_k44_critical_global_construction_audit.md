@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`1d23a8586c0e7a8acaab6589840c5ffe49956929f0cc7c1bf4d44008c4e3cdb6`.
+`f8a72c7c042b86c0370207c6fd4b59ea05e28e47c553ea20bcd41258059db8dc`.
 
 ## Preserved scope and exact provenance
 
@@ -457,3 +457,30 @@ The ledger and inactive manifest claims match these conclusions; existing
 claims change only frontier pins, and existing relations are unchanged.
 Neither connectedness of D nor a simultaneous Q allocation is inferred.
 The arbitrary-order two-triangle case and global completion remain open.
+
+
+## Connected residual component
+
+**Scoped verdict: GREEN.** The only frontier changes from
+Git `0cd445f`, SHA-256
+`1d23a8586c0e7a8acaab6589840c5ffe49956929f0cc7c1bf4d44008c4e3cdb6`,
+replace the component summary and its adjacent historical nonclosure.
+All preceding mathematical passages retain their reviewed bytes.
+Literature-repair independently read this integration diff, including the
+ledger and manifest, and checked the exact frontier reversal and both pins
+below. The parent authored the summary and contributed the first new
+terminal case. This reviewer contributed earlier packet and omission
+deductions and separately audited the final connectedness construction;
+those roles and prior reviews are distinguished in its adjacent audit.
+The [connectedness source](../results/hc7_reserved_core_component_bound.md)
+and [separate audit](../results/hc7_reserved_core_component_bound_audit.md)
+have hashes `b02d2c88ebf4879b45e36031d9bf9b7ac0722d8c7302a26d7637d8ba3fcf0e3c`
+and `7851c856c4a37b92fc1dcea6c823d25c55718eaf575e723c118eaa65d48bf923`.
+The new summary uses their complete two-component exclusion: a missing
+B contact gives seven disjoint bags with at most one omission; two full
+components supply a fresh four-rooted clique that enlarges the same M.
+These constructions discard the old B paths. The historical invalid
+path-reuse argument remains identified as invalid, while its connectedness
+conclusion is now supplied by the new proof. The ledger and inactive
+component claim match this scope. Allocation within the connected residue
+and the two-root-port case remain open; no global target is declared proved.

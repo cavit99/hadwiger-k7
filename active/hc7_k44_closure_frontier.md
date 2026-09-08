@@ -1253,18 +1253,17 @@ roots, the latter by seven-connectivity in G. Neither the singleton-port
 case nor this remaining allocation is closed.
 
 The [joint component constructions](../results/hc7_reserved_core_component_bound.md)
-give `1<=c(D)<=2`. Every component contacts b; in the two-component
-case at least one is full to B. Their proof uses an
-old root path only after proving that it avoids every allocated component.
-A four-root construction inside any component missing b would enlarge
-the chosen core, contradicting its maximality. The remaining one- and
-two-component allocations and the root-port case are still open.
+prove that D is connected and contacts b. With two components, a missing
+B contact gives a fresh four-root model and three disjoint extra bags
+containing Q; if both components are full to B, they give a fresh rooted
+four-clique that enlarges M. These constructions discard the old B paths.
+Allocation within the single component and the root-port case remain open.
 
-**Recorded nonclosure.** The original Bi--pi paths may have interiors in
+**Superseded connectedness argument.** The original Bi--pi paths may have interiors in
 D. Retaining those paths as B bags while allocating an entire component
 of D to a new helper can reuse vertices. That was the first invalid step
-in a proposed connectedness argument; no connectedness of D is proved.
-A replacement must choose the B bags and component allocations jointly.
+in the earlier argument. The new proof establishes connectedness by fresh
+joint constructions; it does not validate arbitrary reuse of those paths.
 
 **Construction priority.** Obtain one Q model in the actual critical host.
 The following scheme is sufficient, but its six prescribed triangle roots

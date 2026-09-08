@@ -108,9 +108,10 @@ choices of a qualify. The
 [edge-pair boundary exclusion](results/hc7_two_triangle_edge_pair_boundary.md)
 closes another actual four-boundary configuration. These have separate
 internal audits. The [joint component constructions](results/hc7_reserved_core_component_bound.md)
-leave at most two components behind the maximised core's five ports;
-each contacts the omitted B root. They need not form one connected set;
-the remaining allocation is open.
+now leave exactly one connected component behind the maximised core's
+five ports, contacting the omitted B root. Two components give Q or a
+strictly larger core. Allocation within the single component and the
+separate case in which both ports are roots remain open.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited
