@@ -1137,6 +1137,25 @@ This supersedes the aligned-hole three-cut residue. It does not establish
 the remaining two-region allocation or exclude the two-triangle case;
 proper-minor colouring and the full four-connected host remain available.
 
+**Fixed colour core; written deductions with a separate internal audit.**
+The [edge-colouring response](hc7_two_triangle_fixed_colour_core.md)
+chooses `a in A,b in B` so `{a,b,x,y}` induces only `xy`, and
+six-colours `G-xy` with these four vertices in one class `C1` and
+`v` in another class `C0`. The fixed graph `K=G-(C0 union C1)` is
+four-chromatic. In every four-colouring of this same graph, both
+`N_K(x)` and `N_K(y)` meet all four colours.
+
+If every such colouring makes the other four triangle vertices rainbow,
+there is a minor rooted at them in `K` forming `K_4`. Otherwise five
+compatible bichromatic `x-y` paths avoid `v`; an actual two-tree
+projection gives an `xy`-rooted `K_{2,5}` with five singleton leaves.
+This is an exhaustive alternative, not a completed global construction.
+The first outcome does not yet attach both endpoint bags to the four
+rooted bags simultaneously. In the second, the leaves need not be named
+neighbours, and the two forest bags can absorb triangle vertices. Those
+are the first missing ownership steps; neither model may be combined
+with a separately obtained helper without a new disjoint construction.
+
 The earlier cycle paths, colouring constructions and their precise barriers
 are [preserved in the frozen pre-closure record](../archive/hc7_cycle_case_constructions_before_closure_2026-09-08.md).
 They remain valid at their audited revisions. The complete cycle theorem

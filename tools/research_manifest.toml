@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "db7969cf5466f0c3b61c0e9042138eb52639a5992623128af63eba285912480a"
+expected_source_sha256 = "97c913e2d0c19fa20d31878154040b6994018daefab3b3dd81caa35278f0deb2"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "db7969cf5466f0c3b61c0e9042138eb52639a5992623128af63eba285912480a"
+expected_source_sha256 = "97c913e2d0c19fa20d31878154040b6994018daefab3b3dd81caa35278f0deb2"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "db7969cf5466f0c3b61c0e9042138eb52639a5992623128af63eba285912480a"
+expected_source_sha256 = "97c913e2d0c19fa20d31878154040b6994018daefab3b3dd81caa35278f0deb2"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "db7969cf5466f0c3b61c0e9042138eb52639a5992623128af63eba285912480a"
+expected_source_sha256 = "97c913e2d0c19fa20d31878154040b6994018daefab3b3dd81caa35278f0deb2"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22667,3 +22667,36 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.two_triangle_complement_four_connectivity"
 kind = "related_to"
 note = "Closes the whole three-cut case while leaving the global construction in the four-connected complement open."
+
+[[claims]]
+id = "hc7.companion.two_triangle_fixed_colour_core"
+title = "A fixed four-chromatic core and an exhaustive rooted-minor alternative"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_two_triangle_fixed_colour_core.md"
+active = false
+audit = "active/hc7_two_triangle_fixed_colour_core_audit.md"
+# Audit SHA-256: ebf0ea182672830c8efd28993c8adc6f3d23332b84710f564fdae9282d76b32c
+expected_source_sha256 = "8596aab3da33d0169f7f8cc5b4805365bcb3a18bd32d6293809744e2a97d1100"
+scope = "the actual seven-connected, seven-chromatic, proper-minor-six-colourable Q-free host with minimum degree eight and a two-triangle-and-edge degree-eight neighbourhood"
+label_fidelity = "four named neighbours share one class; the rainbow outcome preserves four triangle roots, while the two-tree outcome preserves x,y but does not prescribe its leaves"
+conclusions = ["a fixed four-chromatic core after deleting two colour classes", "both endpoint neighbourhoods meet every colour in every four-colouring of that same core", "a four-rooted K4 or five simultaneous bichromatic endpoint paths giving an xy-rooted K2,5"]
+does_not_prove = ["simultaneous endpoint contacts to all four rooted clique bags", "preservation of triangle vertices in the two-tree model", "the two-triangle case, Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.two_triangle_fixed_colour_core"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "The contraction restrictions provide two triangle roots that together with x,y induce only xy."
+
+[[relations]]
+source = "hc7.companion.two_triangle_fixed_colour_core"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "In the rainbow outcome a rooted K2,2 plus the two literal triangle edges supplies the four-rooted clique inside the fixed core."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.two_triangle_fixed_colour_core"
+kind = "related_to"
+note = "Retains all proper-minor colouring responses while leaving the simultaneous global model construction open."

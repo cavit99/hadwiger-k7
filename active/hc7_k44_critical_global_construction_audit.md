@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`db7969cf5466f0c3b61c0e9042138eb52639a5992623128af63eba285912480a`.
+`97c913e2d0c19fa20d31878154040b6994018daefab3b3dd81caa35278f0deb2`.
 
 ## Preserved scope and exact provenance
 
@@ -146,3 +146,22 @@ The previous aligned-hole three-cut obligation is superseded. The remaining
 four-connected allocation and the full two-triangle exclusion remain open.
 The new inactive claim uses only the packaged separator theorem directly;
 the primary target, index and active flags are unchanged.
+
+## Fixed colour-core integration
+
+Removing only the new fixed-colour block, including its separator blank,
+exactly recovers Git `be4e7e6`, frontier SHA-256
+`db7969cf5466f0c3b61c0e9042138eb52639a5992623128af63eba285912480a`.
+The block and five added ledger lines match the [source](hc7_two_triangle_fixed_colour_core.md)
+at `8596aab3da33d0169f7f8cc5b4805365bcb3a18bd32d6293809744e2a97d1100`
+and its separate GREEN audit at
+`ebf0ea182672830c8efd28993c8adc6f3d23332b84710f564fdae9282d76b32c`.
+The choice of four equal-colour neighbours is existential; the chromatic
+and neighbourhood assertions quantify over every colouring of the fixed
+remaining graph. The exhaustive alternative retains either four prescribed
+roots in that graph or five simultaneous paths in one colouring avoiding
+`v`. The two-tree lift has disjoint root bags and distinct singleton leaves,
+but does not preserve named triangle vertices or establish their required
+contacts. The summaries correctly leave both simultaneous constructions
+open. All inherited frontier bytes and prior qualified audit scope remain
+unchanged; no new global conclusion is asserted.

@@ -70,6 +70,11 @@ now makes both `G-v-A` and `G-v-B` four-connected, closing the entire
 three-cut case. Its connected region construction handles zero, one or
 two donor ports with explicit disjoint lifts. The remaining construction
 in this four-connected host is still open.
+The [fixed colour-core response](active/hc7_two_triangle_fixed_colour_core.md)
+now gives an audited alternative retaining four named equal-colour
+neighbours: a rooted four-clique in a fixed four-chromatic subgraph, or
+five compatible endpoint paths. The simultaneous attachment or preservation
+of triangle vertices is still missing; this does not close another case.
 The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records the current allocation problem. Conjecture 19 and the user's
 overall objective remain unmet.
