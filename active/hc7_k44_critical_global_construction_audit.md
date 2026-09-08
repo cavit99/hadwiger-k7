@@ -7,8 +7,13 @@ This is a separate internal audit, not external peer review. It does not
 audit the entire frontier or establish any of its global conjectural targets.
 
 **Audited whole-frontier SHA-256:**
+`5a3b816f1b1ccc42529c6590bb5318e403d9bfdccb9b06940d3183786d851840`.
+The latest check covers only the second cycle construction in Section 7.5.
+Removing its forty-one lines exactly recovers Git `4f69dfb`, at SHA-256
 `daed18105260bda2e86a275de4aff84d865317d731b76e2073043e25d9bbf4d1`.
-The latest check covers only the palette-counterexample paragraph in Section 7.5.
+This byte equality was checked directly against Git.
+
+The preceding check covers only the palette-counterexample paragraph in Section 7.5.
 Removing its fifteen lines exactly recovers Git `e85f5bd`, at SHA-256
 `58b518fd4656613c23ff65efed5e4c3021c5f6ee250f5a237dda52ab9246f08f`.
 This byte equality was checked directly against Git.
@@ -559,3 +564,31 @@ those claims deductively. Both witnesses contain literal `K_5^-`, so neither
 realizes the original critical host. The paragraph correctly rejects only
 the palette-only assembly; it preserves the cross theorem and leaves the
 full cycle case and global objectives open. No inherited mathematics changed.
+
+## Section 7.5 contracted-cycle helpers: scoped addendum
+
+**Verdict: GREEN.** The new construction and ledger retain the conditional
+triangle-splitting requirement. Nonnegative degree excess gives
+`2c-14 <= (d(x)-8)+(d(y)-8) <= 2q`. Contracting the cycle edge loses
+exactly `1+c` edges and makes the surviving vertex `v` have degree seven;
+its deletion therefore gives exactly `4|F|+q-c >= 4|F|-7` edges.
+For a cut of `F`, replace its merged vertex by `x,y` if it is present,
+then add `v`; this has at most six vertices. If the merged vertex is not
+in the cut, adding only `v` suffices: the surviving edge `xy` restores
+its connected preimage. Thus five-connectivity is valid in both cases.
+
+Fresh inspection of [NT Lemma 12](https://arxiv.org/html/2507.03244v1#S2)
+confirms the internally-four-connected, four-root density input and the
+adjacent helpers. Spanning-helper Lemma 3 is checked at its audited source
+`0c1ac8052f7734d8d0267381c030e177bd70010eded63d15fdca8c0db6d1f375`.
+The singleton roots lift to three cycle singletons and the connected bag
+`{x,y}`. The helpers avoid these preimages and `v`; splitting `A` makes
+each adjacent to `v`, giving the claimed seven original-host bags for `Q`.
+Connectedness of `J` follows by deleting four roots from five-connected
+`F`; its degree-six bound uses the cited exterior contact bounds. At a
+putative cutvertex `x`, the surviving triangle vertices lie in one component.
+Every other component consists of exterior vertices, has no edge to `v`,
+and has original boundary in `C union {x}`. This contradicts seven-connectivity
+and proves two-connectivity of `J`. No four-connectivity, triangle-splitting
+existence, or criticality of the quotient is inferred. The missing connected
+partition remains open.

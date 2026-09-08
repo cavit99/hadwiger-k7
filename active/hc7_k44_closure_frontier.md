@@ -1193,6 +1193,47 @@ such as the literal exclusions, connectivity and compatible restoration of
 the deleted independent class. The cross theorem and the full cycle case
 are unaffected; the latter remains open.
 
+**A second exact cycle construction; its final partition is open.** Let
+`e=xy` be any cycle edge, `n=|V(G)|`, `q=e(G)-4n>=0`, and
+`c=|N_G(x) intersect N_G(y)|`. The total degree excess is `2q`, while
+`d(x),d(y)>=c+1`; hence `c<=q+7`. In the simple quotient
+`F=(G/e)-v`, there are `n-2` vertices and
+
+```text
+e(F)=e(G)-1-c-7=4|V(F)|+q-c >= 4|V(F)|-7.
+```
+
+The four images `Z` of the cycle span a `C_4`. The graph `F` is
+five-connected: a cut of order at most four lifts, on restoring `v` and
+both ends of the contracted edge, to a cut of order at most six in `G`.
+[Norin--Totschnig, Lemma 12](https://arxiv.org/html/2507.03244v1#S2),
+whose primary statement was inspected, and
+[spanning-helper normalization, Lemma 3](hc7_companion_helper_construction.md)
+therefore give adjacent connected helpers `U,V` partitioning
+`J=F-Z=G-v-C`, both contacting every singleton root in `Z`.
+
+If **some** choice of cycle edge and helper partition places triangle
+vertices on both sides, then `{v}`, `U,V` and the four lifted cycle bags
+give `K_3 join C_4=Q`. The only nonsingleton cycle preimage is `{x,y}`;
+the seven bags are disjoint, and each helper meets `N_G(v)` through its
+triangle vertex. Equivalently, for `D_z=N_F(z) intersect J`, find a
+connected bipartition of `J` splitting every `D_z` and the triangle `A`.
+Splitting the four `D_z` is already guaranteed; splitting `A` is not.
+
+The actual retained graph `J` is two-connected and has minimum degree at
+least six: an exterior vertex loses at most two cycle neighbours, and a triangle
+vertex loses `v` and at most one cycle neighbour. These contact bounds are
+in the audited [exterior theorem](../results/hc7_degree8_cycle_exterior.md).
+For two-connectivity, a cutvertex `x` would leave all of `A-{x}` in one
+component. Any other component has original boundary contained in
+`C union {x}`, of order at most six, separating it from `v` in `G`.
+No four-connectivity of `J` follows here; the known four-connectivity is
+for the different graph `G-v-A`. Moving a triangle-containing region to
+the other helper may destroy a required `D_z` contact. No exchange that
+preserves all four contacts and strictly decreases a well-founded parameter
+has been proved. The contraction above is one fixed step with a valid
+minor lift, not an induction preserving criticality or seven-connectivity.
+
 **Recorded route nonclosure.** Criticality forces each singleton-colour
 root to be bichromatically connected to at least one root of a repeated
 colour, but these may be `2` instead of `0`, or `3` instead of `a0`.

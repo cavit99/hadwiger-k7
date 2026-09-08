@@ -81,6 +81,12 @@ The audited [palette counterexamples](barriers/hc7_cycle_palette_extension_barri
 also show that the full quantified five-colouring condition alone does not
 force the minor. They violate the actual host's literal `K_5^-` exclusion;
 the construction must retain more of that host's hypotheses.
+A second exact construction contracts a cycle edge and obtains two
+connected helpers, each meeting all four cycle bags. It would complete the
+case if the helpers could be chosen to put triangle vertices on both sides;
+that simultaneous partition remains unproved. The
+[frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+records its density bound, fixed lift and missing exchange.
 The [almost-clique theorem](results/hc7_five_root_almost_clique.md) and
 [deficient-bag reduction](results/hc7_near_clique_deficient_bag_normalization.md)
 remain available with their exact preservation limits.
