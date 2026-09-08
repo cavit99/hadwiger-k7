@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 8 September 2026. This is the sole authority for current
+**Last updated:** 9 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjectures
@@ -125,6 +125,11 @@ The frontier also proves that contracting any triangle through v leaves
 a five-connected, six-chromatic graph. This permits a more flexible
 construction in a quotient; the required seven-bag construction and its
 split on lifting remain open.
+When `chi(G-{x,y})=5`, a fixed whole-colour-class deletion now supplies
+one K6 model with x,y singleton and v reserved. Extending its four
+common-neighbour roots together with v to a rooted five-vertex wheel
+would give Q. That simultaneous extension remains unproved, as does
+the alternative six-chromatic deletion branch.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited

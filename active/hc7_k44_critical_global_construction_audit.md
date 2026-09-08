@@ -2,14 +2,14 @@
 
 **Verdict: GREEN.**
 
-Date: 8 September 2026. This separate internal audit covers the corrected
+Date: 9 September 2026. This separate internal audit covers the corrected
 internal-edge trace in Section 5 and the deductions, constructions,
 literature applications and stated nonclosures in Section 7 of the
 [designated frontier](hc7_k44_closure_frontier.md). It does not audit the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`63af4524846da1b9bbb3387c32952e5cdccace5d059d4d26dd25eac6999f457c`.
+`e8103fdb2c3d234e2f5f2f8b1af1250ae5254911681ad60efc75bf01b355c5f3`.
 
 ## Preserved scope and exact provenance
 
@@ -584,3 +584,38 @@ Proper-minor colourability supplies the upper bound of six. The conclusion
 neither places a K6 model nor splits a bag containing the contracted
 triangle; a model avoiding that vertex also supplies no new incidence.
 No new external application or global closure is asserted.
+
+## Common-neighbour construction
+
+**Scoped verdict: GREEN.** The final reviewed frontier SHA-256 is
+`e8103fdb2c3d234e2f5f2f8b1af1250ae5254911681ad60efc75bf01b355c5f3`.
+Removing exactly this new block byte-recovers Git `bcfce65`, SHA-256
+`63af4524846da1b9bbb3387c32952e5cdccace5d059d4d26dd25eac6999f457c`.
+Universal-proof originated the common-neighbour extraction in a restricted
+colouring case; the parent generalised it by deleting the whole class
+containing v. Literature-repair independently read the complete argument,
+then checked the membership clarification and exact reversal at
+`108f511b393ccc839004c82f31fb4a0912aa50e1c8540218d0d3acf4d3d500ab`.
+Universal-proof proposed allowing the wheel representatives to change;
+literature-repair independently checked that final scope relaxation.
+Reversing only its four-line replacement recovers the preceding hash.
+
+The chromatic equalities use the independent whole class I: fewer than
+four colours on K contradict the chosen five-chromatic deletion, whereas
+five colours on J extend to six on G. The recolouring works for every
+four-colouring of this same K; its moved vertices are independent and
+miss y. Literature-repair separately inspected the primary definition and
+[Martinsson--Steiner, Theorem 1.3](https://arxiv.org/html/2209.00594v1):
+the four-chromatic host and universally colourful set C are precisely
+the required hypotheses. Set-rooting puts a vertex of C inside each bag;
+the four representatives are chosen afterwards and are distinct.
+
+All four bags avoid v,x,y, and each contacts both singleton x,y through
+its own representative. Any single five-bag wheel in `G-{x,y}` whose
+bags all meet the common-neighbour set gives Q upon adding singleton
+x,y. The fixed-root option also suffices because v is a common neighbour;
+neither those representatives nor the hub must be fixed in a construction.
+Connectivity follows by deleting two or three vertices from G. The
+five-line ledger addition retains the unproved rooted-wheel extension
+and the separate six-chromatic deletion branch. No simultaneous model
+allocation, external extension theorem or finite evidence closes either.
