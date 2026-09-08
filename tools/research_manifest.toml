@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a"
+expected_source_sha256 = "a22104ad4beff0ee37e06144ed4205793a9a36e895e666cb9114df50d1d898fd"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a"
+expected_source_sha256 = "a22104ad4beff0ee37e06144ed4205793a9a36e895e666cb9114df50d1d898fd"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a"
+expected_source_sha256 = "a22104ad4beff0ee37e06144ed4205793a9a36e895e666cb9114df50d1d898fd"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a"
+expected_source_sha256 = "a22104ad4beff0ee37e06144ed4205793a9a36e895e666cb9114df50d1d898fd"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22594,3 +22594,49 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.coupled_two_triangle_response"
 kind = "related_to"
 note = "Preserves a common proper-minor response and structural deletion but leaves their simultaneous allocation open."
+
+[[claims]]
+id = "hc7.companion.two_triangle_separator_allocation"
+title = "Minimal two-triangle sides have a four-connected torso and no full five-root packet"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_separator_allocation.md"
+active = false
+audit = "results/hc7_two_triangle_separator_allocation_audit.md"
+# Audit SHA-256: 2ad4131413f9693ce8f233fafc6cc8f317c8185ebb3478ea08d59abf80ee8a29
+expected_source_sha256 = "283444e901f18ec60f461eca91e158806a45e2b42394d6a87e5b54134c7b4b2b"
+scope = "three-cuts of G-v-B in seven-connected Q-minor-free graphs of minimum degree eight with the spanning two-triangle-and-edge neighbourhood"
+label_fidelity = "actual boundary ports, fixed disjoint path preimages and an opposite-side packet preserve all prescribed roots"
+strict_parameter = "the order of the A-side among actual three-cuts of the fixed host"
+conclusions = ["each A-side is two-connected and a minimal A-side has a four-connected torso", "a full B-plus-two-cut-root K5 packet on the minimal side is terminal", "no two roots of a minimal A-side cut have a common B neighbour", "the surviving normalized core hole and missing v contact share one cut-root bag"]
+does_not_prove = ["repair of the aligned missing contacts", "exclusion of all three-cuts", "the two-triangle case, Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.two_triangle_separator_allocation"
+target = "hc7.companion.connected_set_literal_exclusion"
+kind = "uses"
+note = "The literal four-clique contact bound gives minimum degree six in H."
+
+[[relations]]
+source = "hc7.companion.two_triangle_separator_allocation"
+target = "hc7.companion.five_root_wheel"
+kind = "uses"
+note = "Its Corollary 3 permits at most one neighbour of v in a three-cut of H."
+
+[[relations]]
+source = "hc7.companion.two_triangle_separator_allocation"
+target = "hc7.companion.five_root_wheel_degree_free"
+kind = "uses"
+note = "An A-side cutvertex gives an internally five-connected wheel side and disjoint root extensions."
+
+[[relations]]
+source = "hc7.companion.two_triangle_separator_allocation"
+target = "hc7.companion.five_root_almost_clique"
+kind = "uses"
+note = "Both sides satisfy the at-most-three degree-six deficit bound; the designated opposite-side hole admits a fixed path repair."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.two_triangle_separator_allocation"
+kind = "related_to"
+note = "Restricts every actual three-cut and excludes full packets on a minimal A-side, while the aligned-hole allocation remains open."

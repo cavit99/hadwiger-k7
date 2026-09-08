@@ -69,6 +69,11 @@ excludes every two-cut of `G-v-C`. The resulting
 [two](hc7_degree8_cycle_triangle_closure_audit.md)
 [GREEN audits](hc7_degree8_cycle_triangle_closure_second_audit.md), uses a
 three-region contact construction to close the entire five-cycle case.
+The [two-triangle separator theorem](hc7_two_triangle_separator_allocation.md),
+with its [GREEN audit](hc7_two_triangle_separator_allocation_audit.md), makes
+each A-side two-connected and its minimal torso four-connected, and proves
+that a full five-root clique packet on a minimal side is terminal. The remaining one-hole
+packet still requires a compatible allocation.
 The two-triangles-and-edge case and Conjecture 19 remain open.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with

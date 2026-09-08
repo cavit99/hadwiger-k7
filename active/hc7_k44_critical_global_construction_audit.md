@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a`.
+`a22104ad4beff0ee37e06144ed4205793a9a36e895e666cb9114df50d1d898fd`.
 
 ## Preserved scope and exact provenance
 
@@ -77,8 +77,8 @@ of `U+B` is inferred. This is a conditional construction, not case closure.
 
 ## Coupled response integration
 
-Removing the twenty-line insertion before “The earlier cycle paths” exactly
-recovers Git `2e2ba11`, with frontier hash
+At the coupled-response revision, removing its twenty-line insertion before
+“The earlier cycle paths” exactly recovers Git `2e2ba11`, with frontier hash
 `3fcd07a4706226c1165136ecb67745ede64e034f33da669c62409270779f0cbb`.
 The source and adjacent GREEN audit match respectively
 `5cdd75943fe3dd690986e699e69c24f585febfab78ed7d633df824d13f75b4c3`
@@ -90,3 +90,26 @@ bichromatic conclusion is conditional on absence of any rainbow triangle
 colouring, and its triangle paths avoid both that component and the zero
 class. Neither a missing root-root contact nor simultaneous disjoint
 ownership is inferred. Both stated alternatives remain unclosed.
+
+## Separator-allocation integration
+
+Removing only the new separator block before “The earlier cycle paths”
+exactly recovers Git `c3c14656a9f338e2c30bf2122cb5064e166ded36`, whose frontier hash is
+`61742e08d6bf73ae4c03f1bd1260c483df93833143755231efca337b5c612f8a`.
+The unchanged remainder therefore retains the preceding qualified audit.
+The new block, ledger and results navigation were checked against the
+[separator source](../results/hc7_two_triangle_separator_allocation.md) at
+`283444e901f18ec60f461eca91e158806a45e2b42394d6a87e5b54134c7b4b2b`
+and its separate GREEN audit at
+`2ad4131413f9693ce8f233fafc6cc8f317c8185ebb3478ea08d59abf80ee8a29`.
+
+The summary distinguishes the two-connectivity of every A-side from the
+four-connectivity of a minimal side's torso. Its full-packet exclusion
+includes the empty-interior case: three actual paths select a disjoint
+A-containing component and repair the opposite packet through fixed
+preimages. The surviving packet has exactly one core hole aligned with
+the missing `v` contact; concentrating all A roots requires choosing both
+cut roots outside `N(v)`, as stated. No compatible transfer, closure of
+all three-cuts or global colouring conclusion is inferred. The new manifest
+claim is inactive and adds only the four displayed direct proof inputs;
+the primary target and navigation flags remain unchanged.

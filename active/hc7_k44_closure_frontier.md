@@ -1122,6 +1122,24 @@ mutual contact, and no argument identifies this component with a structural
 helper or combines the independently obtained models without vertex reuse.
 The rainbow alternative and this simultaneous allocation remain open.
 
+**Separator allocation; written proof with a separate internal audit.** In
+`H=G-v-B`, every three-cut has exactly an A-side and an opposite side,
+both full to the actual seven-vertex boundary. The
+[separator theorem](../results/hc7_two_triangle_separator_allocation.md)
+makes the A-side two-connected and, when its order is minimal, its torso
+four-connected. Any full rooted `K_5` on that side with roots `B` and
+two cut vertices is terminal. Even an empty T-bag interior is handled:
+three actual root-to-port paths permit a disjoint A-containing component
+and a path repairing the opposite side's designated missing contact.
+
+Consequently no two vertices of the minimal cut have a common B neighbour.
+In a normalized one-hole packet, exactly one T bag meets `N(v)` and the core hole joins
+the designated B root to the other T bag. With both chosen cut roots
+outside `N(v)`, all surviving A roots belong to the contacted bag.
+The missing core contact and missing `v` contact thus share the other
+bag. No transfer repairing this configuration, exclusion of every
+three-cut, or complete two-triangle construction is proved.
+
 The earlier cycle paths, colouring constructions and their precise barriers
 are [preserved in the frozen pre-closure record](../archive/hc7_cycle_case_constructions_before_closure_2026-09-08.md).
 They remain valid at their audited revisions. The complete cycle theorem

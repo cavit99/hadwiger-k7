@@ -64,7 +64,13 @@ proper-minor colouring with a dense three-vertex deletion and its rooted
 helper model. When no colouring makes the triangles rainbow, it provides a
 connected bichromatic set contacting five retained neighbours. Combining
 these constructions with disjoint ownership remains unproved, as does
-the six-colour triangle alternative. The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+the six-colour triangle alternative. The
+[audited separator allocation](results/hc7_two_triangle_separator_allocation.md)
+makes every A-side of a three-cut two-connected and a minimal A-side's
+torso four-connected. Any full five-root clique packet there is terminal.
+The remaining normalized packet has a core hole and a missing `v` contact
+at the same cut-root bag; repairing that shared endpoint is unproved.
+The [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records this exact residue. Conjecture 19 and the user's overall objective
 remain unmet.
 
