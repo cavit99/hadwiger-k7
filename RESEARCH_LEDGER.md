@@ -102,10 +102,11 @@ assessment are still outstanding. Local results and commits do not meet
 the user's completion criterion.
 
 Resume from this ledger and the designated frontier; revisit history only
-for a disputed dependency or changed claim. The bipartite paper's primary-
-source originality review and final manuscript review remain pending after
-this proof effort unless they supply a needed input. No author contact is
-authorized.
+for a disputed dependency or changed claim. The bipartite paper's
+[focused primary-source review](paper/bipartite-contractibility/citation_novelty_review.md)
+is complete, with a separate internal audit. It confirms the independent
+proof contribution but does not substantiate comparable significance.
+The final manuscript revision remains pending. No author contact is authorized.
 
 ## Current frontier and completed campaign
 
@@ -136,14 +137,17 @@ intermediate Lemmas 3.5 and 3.6 remain
 definition's apparent reversal is a separate issue. The corollary makes
 no new spectral, separator or bounded-depth claim.
 
-**Assessment.** This is a substantial universal theorem and an independent
-proof of an older broad flow assertion. The
-[internal reach assessment](results/bipartite_contractibility_via_matroid_reduction_audit.md#mathematical-reach-and-the-norin--totschnig-comparison)
-does not establish equal significance to Norin--Totschnig. Our demonstrated
-contribution has not yet met that benchmark: no sufficient HC7 reduction
-is proved, and the exact originality and literature positioning remain
-unfinished. The [active index](active/INDEX.md) therefore retains `HC_7`
-as the sole primary target, with no direct sufficient proved input.
+**Assessment.** The [primary-source comparison](paper/bipartite-contractibility/citation_novelty_review.md)
+substantiates a universal independent proof and its exact application to
+Lee's later flow lemma, including fractional flows and initially
+noninjective terminal maps. BLR already intended all roots to be retained;
+private four-cycles remove its minimum-degree restriction. Flexible root
+families also follow by augmentation. These are not new statement-level
+advantages over that intended assertion. The proof repair has substantial
+scope, but first-correct-proof priority and an advance comparable to NT's
+new colouring and density theorems are not established. The objective
+remains unmet. The [active index](active/INDEX.md) retains `HC_7` as the
+sole primary target, with no direct sufficient proved input.
 
 ## Durable results and preserved proofs
 
@@ -188,12 +192,14 @@ The five-page [bipartite manuscript](paper/bipartite-contractibility/main.pdf)
 is the current DRAFT, with its [source](paper/bipartite-contractibility/main.tex)
 and [internal audit](paper/bipartite-contractibility/main_audit.md).
 
-**Pending paper work:** complete the primary-source originality review and
-final manuscript review. Account explicitly for BLR Lemma 3.4's intended
-retention of every terminal, leaf/component extensions of the
-minimum-degree-two statement, and the exact scope of later applications.
-Position the contribution as an independent proof, with any stronger
-novelty claim requiring evidence. No author contact is authorized.
+**Pending paper work:** incorporate the completed
+[scope review](paper/bipartite-contractibility/citation_novelty_review.md)
+and its [audit](paper/bipartite-contractibility/citation_novelty_review_audit.md)
+in the final manuscript revision. That review covers prior terminal
+retention, minimum-degree removal, flexible families and Lee's later use.
+The current five-page source and PDF remain at their audited revisions.
+Position the contribution as an independent proof; stronger novelty claims
+require evidence. No author contact is authorized.
 
 The [manuscript map](paper/README.md) distinguishes preserved earlier drafts.
 The low-degree `K_7^-` manuscript remains a frozen snapshot with

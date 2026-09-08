@@ -27,10 +27,10 @@ ownership obligation. Completing only the literal residues would not
 prove T44. These are conditional routes, not consequences of bipartite
 contractibility.
 
-The current construction effort uses the narrower
+The current construction effort uses the
 [critical-host hypotheses](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
-needed for Conjecture 21. Its full boundary-colouring data and the missing
-ownership-preserving reduction are recorded there.
+for Conjecture 19. Its remaining two-triangle neighbourhood construction,
+boundary-colouring data and ownership obligations are recorded there.
 
 ## Completed universal theorem
 
@@ -101,6 +101,13 @@ construction. Lemmas 3.5 and 3.6 of that construction remain refuted by the
 The new proof supplies the existence conclusion without validating those
 branch sets or making an additional claim about spectral, separator or
 bounded-depth conclusions.
+
+The [primary-source scope review](../paper/bipartite-contractibility/citation_novelty_review.md),
+with a [separate audit](../paper/bipartite-contractibility/citation_novelty_review_audit.md),
+also covers Lee's Lemma 3.3: zero crossing congestion forces an injective
+terminal map and permits a scheme to be selected directly from fractional
+flow. No rounding theorem is needed. BLR's bounded-depth assertion remains
+outside the proved application; its depth uses ambient-host diameter.
 
 **Application requirement.** A proposed further use must specify the
 finite bipartite target, injective prescribed-root map and all scheme
@@ -178,13 +185,15 @@ and 3] affirmatively, and rules out the bipartite counterexample sought in
 Question 4. Its scope is universal for bipartite targets, and it gives an
 independent proof of the intended BLR flow assertion.
 
-The [separate internal assessment](../results/bipartite_contractibility_via_matroid_reduction_audit.md#mathematical-reach-and-the-norin--totschnig-comparison)
-does not establish equal significance to Norin--Totschnig. Their Theorems
-4 and 6 give a six-colouring theorem and a supporting extremal bound.
-The bipartite theorem has no proved implication to that programme, and
-BLR's earlier broad assertion limits a first-result claim. The ledger
-records the outstanding [paper work](../RESEARCH_LEDGER.md#manuscript-status).
-The current assessment falls short of the requested significance benchmark.
+The [completed focused comparison](../paper/bipartite-contractibility/citation_novelty_review.md)
+does not substantiate the requested significance benchmark. NT's Theorems
+4 and 6 give new global colouring and density conclusions. BLR already
+intended the rooted bipartite conclusion; private four-cycles remove its
+degree restriction, and flexible root families follow by augmentation.
+The independent matroid proof repairs that assertion, but first-correct-
+proof priority and a comparable new advance are not established. Lee's
+later use shows utility without making his consequences new results here.
+The ledger records the remaining [paper revision](../RESEARCH_LEDGER.md#manuscript-status).
 
 ## Preserved barriers and frozen attempts
 
