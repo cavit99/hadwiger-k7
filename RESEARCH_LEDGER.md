@@ -58,12 +58,15 @@ also removes the earlier bound on degree-six nonroots in the five-root
 almost-clique construction, with two possible triangle endpoints for the
 missing edge. Both have separate internal audits; neither supplies the
 additional compatible helper or closes the two-triangle case.
-Their [boundary application](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-now excludes any nonempty exterior set whose four-vertex boundary in
-`G-v-B` meets A and another neighbour of v. A failed A-root deletion can
-retain only three exterior ports.
-Its opposite side remains connected after deleting v; allocating those
-three ports while preserving the core and its additional helper is open.
+The [two-response theorem](results/hc7_two_triangle_two_responses.md),
+with a separate internal audit, strengthens the boundary application:
+across all exterior four-boundaries in `G-v-B`, at most one A root can
+occur, and its other three boundary vertices lie in the exterior.
+At least two A-root deletions therefore give the prescribed rooted
+four-clique; the models may differ. The symmetric assertion holds for B.
+The remaining boundary's opposite side is connected after deleting v;
+allocating its three ports while preserving the core and additional
+helper is still open. The two-triangle case is not closed.
 
 The [earlier full-helper partition](active/hc7_two_triangle_helper_partition.md)
 and [fixed colour-core response](active/hc7_two_triangle_fixed_colour_core.md)

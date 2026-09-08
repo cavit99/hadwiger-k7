@@ -82,8 +82,12 @@ The [spanning-helper theorem](hc7_two_triangle_exterior_helpers.md), with
 its [GREEN audit](hc7_two_triangle_exterior_helpers_audit.md), now makes
 the exterior plus `x,y` two-connected and gives two spanning x/y-rooted
 parts with all but at most one contact to either specified triangle.
-The theorem does not give a common partition for both triangles or the
-additional division of these parts needed for the global construction.
+The [two-response theorem](hc7_two_triangle_two_responses.md), with its
+[GREEN audit](hc7_two_triangle_two_responses_audit.md), strengthens this:
+at most one root of either triangle can occur in an exterior four-boundary
+of its complementary deletion, so at least two root deletions succeed.
+These responses do not give a common partition for both triangles or the
+additional division of the parts needed for the global construction.
 The [reserved-neighbour theorem](hc7_two_triangle_reserved_neighbours.md),
 with its [GREEN audit](hc7_two_triangle_reserved_neighbours_audit.md),
 keeps three of four additional neighbours outside a four-rooted clique.

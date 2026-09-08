@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
+expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21695,7 +21695,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
+expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21938,7 +21938,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
+expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -21981,7 +21981,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133"
+expected_source_sha256 = "83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22806,3 +22806,37 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.five_root_degree_six"
 kind = "related_to"
 note = "A stronger five-root packet once its own boundary and degree hypotheses hold; the additional helper must still be constructed disjointly."
+
+
+[[claims]]
+id = "hc7.companion.two_triangle_two_responses"
+title = "At most one triangle root occurs in an exterior four-boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_two_responses.md"
+active = false
+audit = "results/hc7_two_triangle_two_responses_audit.md"
+expected_source_sha256 = "f190c8e63df3d12b301440280babeee611db897a5542216f2d074314fb5a6b18"
+scope = "seven-connected Q-free graphs with minimum degree eight and a degree-eight neighbourhood spanning triangles A,B and edge xy"
+label_fidelity = "all four roots survive each successful deletion separately; the terminal construction extends one port bag along a path disjoint from both chosen regions"
+strict_parameter = "inclusion-minimal connected exterior regions; deleting a cross-port produces a strictly smaller region"
+conclusions = ["across all tight exterior four-boundaries in G-v-B, at most one A root can occur", "every such boundary meeting A has three exterior ports", "at least two A-root deletions preserve all root-free boundary inequalities at four and contain the prescribed rooted K4", "the symmetric assertion for B"]
+does_not_prove = ["all three root deletions", "a model shared by different responses", "the remaining global allocation, Conjecture 19 or HC7"]
+
+[[relations]]
+source = "hc7.companion.two_triangle_two_responses"
+target = "hc7.companion.two_triangle_exterior_helpers"
+kind = "uses"
+note = "Four-connectivity, degree preservation, the all-A boundary exclusion and the four-root packet are used at the pinned revision."
+
+[[relations]]
+source = "hc7.companion.two_triangle_two_responses"
+target = "hc7.companion.five_root_degree_six"
+kind = "uses"
+note = "Deleting two actual boundary ports gives a five-root packet; its extended port bag and two explicit full extras give the terminal minor."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.two_triangle_two_responses"
+kind = "related_to"
+note = "Restricts the exceptional boundary root and provides two separately chosen responses, without completing their simultaneous allocation."

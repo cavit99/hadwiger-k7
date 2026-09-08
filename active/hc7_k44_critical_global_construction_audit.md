@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133`.
+`83d2f3e874412e2fc428480ff2d28a1be5a30259cb5c649421e768788e4a98ea`.
 
 ## Preserved scope and exact provenance
 
@@ -214,3 +214,23 @@ For the final outside-component test, `v` joins a component only when adjacent;
 otherwise its missing apex-pair contact is independent of the core hole.
 The remaining one-component, three-exterior-port allocation is explicitly open.
 The two new manifest claims remain inactive. This scoped integration is GREEN.
+
+## Unique triangle-root boundary integration
+
+Outside the single replaced application block, frontier bytes equal Git
+`e52a66a`, hash `6ec74f74d15e5ecd60719b1e7981f84ad3b05a12fabfdcb00b8000effc486133`.
+The new summary, ledger, results navigation and inactive manifest claim match
+the [two-response source](../results/hc7_two_triangle_two_responses.md) at
+`f190c8e63df3d12b301440280babeee611db897a5542216f2d074314fb5a6b18`
+and its separate audit at `e6d22369b0e860fde909aefe9e48491497769e72edfa8ff37eaa5024abb48e54`.
+The quantifier covers all nonempty exterior sets with four-boundaries,
+not only failed model responses. Minimal regions are disjoint and anticomplete;
+the two-connected deletion supplies a path avoiding the other region.
+Its first-port truncation extends just one fixed packet bag, and the other
+region with its A root and v give adjacent full extras. The resulting
+`K_7^-` model is valid independently of the packet's missing-edge endpoint.
+This auditor previously checked those two strongest constructions; the
+adjacent source audit is the separate complete-proof review. At least two
+deletions succeed with potentially different models. The retained opposite-side
+argument and all earlier qualified audit scope are unchanged. The global
+allocation and completion criterion remain open. This integration is GREEN.

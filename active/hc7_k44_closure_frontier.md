@@ -1208,46 +1208,29 @@ This stronger packet applies only after its own boundary and degree
 conditions are verified; deleting an entire reserved helper can still
 violate both conditions at its boundary vertices.
 
-**Application; written proof.** Put `H=G-v-B`. No nonempty `D subseteq W`
-has a four-vertex H-boundary meeting A and at least two vertices of `N(v)`.
-The all-three-A boundary is already excluded by the exterior-helper
-theorem's Lemma 2. For the other cases its G-boundary is a seven-set
-`S=B union N_H(D)`, full to D by seven-connectivity. Deleting any two
-members of S from the induced D-side leaves a five-root graph with
-nonempty nonroot set, boundary at least five and nonroot degree at least
-six. Whenever its five roots include B, the new packet theorem applies.
+**Tight exterior boundaries; written proof with a separate audit.** The
+[two-response theorem](../results/hc7_two_triangle_two_responses.md)
+packages and strengthens the boundary application. In `H=G-v-B`, any
+four-vertex boundary of a nonempty set in W that meets A has the form
+`{s} union P`, with three exterior ports P. Across all such boundaries,
+at most one A vertex s can occur. Consequently at least two deletions
+`H-s` retain boundary at least four for every nonempty W subset and
+have the prescribed rooted four-clique. The models may differ; the
+symmetric assertion for B does not supply a common allocation.
 
-If `N_H(D)={s,t,p,q}` with exactly two A roots, let r be the third and
-let Y be its component outside `D union S union {v}`. Its boundary lies
-in `S union {v}`. Since D survives outside, Y has at least seven of
-these eight contacts. It hits `v,s,t` literally, and therefore misses
-at most one B root. Use the D-side packet rooted at `B union {s,t}`.
-Choose an admissible B centre different from that possible omission.
-Its only possible hole joins that centre to s or t, independently of
-Y's possible hole. The five packet bags, Y and v give Q.
+The proof chooses minimal regions at two distinct A roots. Boundary
+submodularity and the two-A exclusion make them disjoint; deleting an
+actual cross-port would give a smaller region or a boundary of order
+three, so they are anticomplete. In the two-connected deletion of those
+A roots, the remaining A root has a path to the first region avoiding
+the second. Extend one port bag of the first region's five-root packet
+along this path. The second region with its A root and the singleton v
+are two adjacent full bags, giving `K_7^-` and hence Q. Every connection
+uses the same pair of regions and fixed disjoint preimages.
 
-Otherwise the boundary contains exactly one A root r and at least one
-of x,y; name that endpoint x. The component Y outside `D union S union {v}`
-containing the other two A roots contacts v,r and misses at most one S
-vertex. If y is also in S, choose an endpoint e of xy contacted by Y;
-the packet on `B union {r,e}` and the preceding argument finish.
-If y is outside S, let Z be its component. It contacts v,x and misses
-at most one S vertex. If Y contacts x, or Z contacts r, the same
-construction on `B union {r,x}` finishes, choosing a B centre different
-from the retained component's possible B omission. In particular this
-handles `Y=Z`.
-
-In the remaining case Y misses only x among S and Z misses only r.
-Fix a packet on `B union {r,x}`. If its hole meets r, use Y and v as
-the other two bags; if its hole meets x, use Z and v. For a complete
-packet either choice works. The chosen component's omission and the
-packet's hole have distinct ends, and v is full to the other six bags.
-These are seven disjoint bags giving Q. Thus a
-failed A-root deletion's tight four-boundary must consist of that A
-root and three actual exterior vertices. The remaining three-port
-allocation is still open; no model through those ports is presumed.
-
-In this last case write the boundary as `{r} union P`, with `P subseteq W`
+The possible remaining boundary has one exceptional A root and three
+exterior ports. Its opposite-side construction remains unresolved.
+Write that boundary as `{r} union P`, with `P subseteq W`
 of order three. The graph outside `D union B union {r,v} union P` is
 connected. Indeed, let Y contain the other two A roots. It contacts v,r
 and misses at most one of the seven boundary vertices. If another
