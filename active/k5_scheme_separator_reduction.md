@@ -1,8 +1,9 @@
 # Separators in a minimal rooted K5-scheme counterexample
 
 **Status:** written deductions with a separate adjacent internal audit.
-The theorem below is a separator normal form, not a proof that K5 is
-contractible. Its final three-cut allocation remains open.
+The theorem below is a separator normal form. Its remaining case is closed
+by the [four-connectivity theorem](../results/k5_scheme_four_connectivity.md).
+K5 contractibility remains open.
 
 All graphs are finite and simple. A properly coloured K5-scheme consists
 of five distinct roots, named by their colours, and a path `P_ij` for each
@@ -172,9 +173,8 @@ pairwise adjacent root-and-port bags. The complete remaining input
 also includes the two simultaneous systems of properly coloured
 `i`-to-`s_i` paths, of palettes `{i,a}` and `{i,b}`, and the three
 `c,d,e` demand paths (which may have excursions on the other side).
-Their compatible allocation is unproved here. In particular, neither
-four-connectivity of a minimal counterexample nor K5 contractibility
-has been established.
+Their compatible allocation requires the separate four-connectivity
+theorem linked above; the preceding argument proves only the normal form.
 
 ## 6. Why repeated ports must not be grouped unnecessarily
 
@@ -251,5 +251,5 @@ Consequently each of the following is terminal.
    required. Again an arbitrary pairing is allowed.
 
 A minimum counterexample therefore has at most two outside triangle
-excursions and admits neither of the first two allocations. Existence
-of one of those allocations in every remaining state is not proved.
+excursions and admits neither of the first two allocations. These are
+sufficient conditions; this argument does not prove their existence.

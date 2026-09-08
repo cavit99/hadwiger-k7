@@ -22971,7 +22971,7 @@ status = "conditional-target"
 source = "active/k5_contractibility_frontier.md"
 source_heading = "Target and reason for the attack"
 active = false
-expected_source_sha256 = "e76c05f22df44bebe466c40ade2f7a54cc4d929f825ec79f3ba8a930a3ff130e"
+expected_source_sha256 = "d8400984a5bd69a88219377e948d093340b89f7c01a9185308bc1548a5ae10ce"
 scope = "all finite K5 schemes, without restrictions on host order or path intersections beyond the scheme condition"
 label_fidelity = "all five prescribed roots in fixed disjoint connected branch sets"
 allowed_exits = ["a fully rooted K5 model in every such scheme"]
@@ -23000,7 +23000,7 @@ status = "audited-green"
 source = "active/k5_scheme_separator_reduction.md"
 active = false
 audit = "active/k5_scheme_separator_reduction_audit.md"
-expected_source_sha256 = "fc00d9890006e9f786a4b194e38a74b9c44873733d20126b86ce9638e00938d4"
+expected_source_sha256 = "5d7dc02cc98cd96817f0919e46212a27cc3831c67a7b84cb950aebedcca4cf96"
 scope = "a minimum-order properly coloured K5 scheme without a fully rooted K5 model, if one exists"
 label_fidelity = "all five original roots survive in fixed disjoint port preimages"
 strict_parameter = "each excluded separator pattern gives a smaller host"
@@ -23036,7 +23036,7 @@ note = "Local reduction and terminal model; their occurrence remains unproved."
 source = "graph_schemes.target.rooted_k5"
 target = "graph_schemes.k5_separator_reduction"
 kind = "uses"
-note = "Restricts possible small separators without closing the surviving state."
+note = "Supplies the separator normal form used by the four-connectivity proof."
 
 [[relations]]
 source = "graph_schemes.target.rooted_k5"
@@ -23069,10 +23069,56 @@ does_not_prove = ["a prescribed pairing", "existence of the two regions in every
 source = "graph_schemes.target.rooted_k5"
 target = "rooted_minors.two_full_regions_paired_triangle"
 kind = "uses"
-note = "Closes the joint allocation once the two full regions exist; deficient reverse packing and inseparable hosts remain open."
+note = "Supplies the full-packing terminal in the four-connectivity proof; the remaining inseparable construction is open."
 
 [[relations]]
 source = "graph_schemes.k5_separator_reduction"
 target = "rooted_minors.two_full_regions_paired_triangle"
 kind = "uses"
 note = "Section 7 verifies the smaller-host K5 scheme and fixed lift once the paired triangle is supplied."
+
+
+[[claims]]
+id = "graph_schemes.k5_four_connectivity"
+title = "Every minimum rooted K5-scheme counterexample is four-connected"
+kind = "theorem"
+status = "audited-green"
+source = "results/k5_scheme_four_connectivity.md"
+audit = "results/k5_scheme_four_connectivity_audit.md"
+active = false
+expected_source_sha256 = "8d13417b867f2a7202620c3d00915a8f217c115d0c720b7c2ca54bf896d4ced4"
+scope = "a minimum-order properly coloured K5 scheme without a fully rooted K5 model, if one exists; arbitrary host order"
+label_fidelity = "all five original roots survive through fixed disjoint connected preimages; every original C vertex retains its own C colour"
+strict_parameter = "original host order strictly decreases in either the outer scheme or the direct interval contraction"
+conclusions = ["every rainbow three-cut remaining after the separator normal form is terminal or reducible", "a minimum rooted K5-scheme counterexample is four-connected"]
+does_not_prove = ["the four-connected K5 construction", "rooted K5 contractibility, C19, C21 or HC7", "the abandoned raw-strip dichotomy", "novelty or comparative significance"]
+
+[[relations]]
+source = "graph_schemes.target.rooted_k5"
+target = "graph_schemes.k5_four_connectivity"
+kind = "uses"
+note = "Closes all separator states of order at most three; the four-connected case remains open."
+
+[[relations]]
+source = "graph_schemes.k5_four_connectivity"
+target = "graph_schemes.k5_separator_reduction"
+kind = "uses"
+note = "Provides strong normalization, three-connectivity and the unique rainbow three-cut pattern."
+
+[[relations]]
+source = "graph_schemes.k5_four_connectivity"
+target = "graph_schemes.general_independent_set_reduction"
+kind = "uses"
+note = "Bounds the forward rank before the reverse interval argument."
+
+[[relations]]
+source = "graph_schemes.k5_four_connectivity"
+target = "rooted_minors.two_full_regions_paired_triangle"
+kind = "uses"
+note = "Disjoint full reverse spanning trees supply the two actual full regions and the terminal paired triangle."
+
+[[relations]]
+source = "graph_schemes.k5_four_connectivity"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "Uses only Lemma 1, the matroid-union equality consequence, for the second component-spanning forest allocation."

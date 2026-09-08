@@ -39,8 +39,11 @@ target nor its local reductions may be reported as C19 or HC7.
 - The [separator deductions](k5_scheme_separator_reduction.md), with an
   [adjacent audit](k5_scheme_separator_reduction_audit.md), make a
   minimum counterexample three-connected and restrict every three-cut
-  to the state below. Section 7 proves the terminal lifts below;
-  it does not make the host four-connected.
+  to one rainbow pattern. Section 7 proves its terminal lifts.
+- The [four-connectivity theorem](../results/k5_scheme_four_connectivity.md),
+  with [two internal reviews](../results/k5_scheme_four_connectivity_audit.md),
+  closes that pattern. A minimum rooted K5-scheme counterexample,
+  if one exists, is four-connected.
 - The [two-region theorem](../results/two_full_regions_paired_triangle.md),
   with an [adjacent audit](../results/two_full_regions_paired_triangle_audit.md),
   gives three pairwise adjacent bags joining two terminal triples whenever
@@ -55,36 +58,19 @@ target nor its local reductions may be reported as C19 or HC7.
 
 ## The global construction still required
 
-For a surviving three-cut, its vertices have colours c,d,e; those
-three original roots lie on one side, and roots a,b on the other.
-The construction must carry the three roots to distinct boundary bags
-with all three mutual contacts, or give another smaller rooted scheme.
-The available paths include two simultaneous systems joining each
-i-root to its i-port, one using colours i,a and one using i,b.
-The c,d,e demand paths may have excursions on the opposite side.
-An arbitrary three-path linkage does not retain the triangle contacts.
+The three-cut construction is complete for arbitrary host order. Reverse
+packing either produces two actual full regions, or its deficient rank
+forces every component to occupy exactly one interval on each of two
+strands. A second packing then lifts directly to contractions in the
+original host, preserving every triangle-path vertex in its own colour.
+The host order strictly decreases. No arbitrary model is lifted from
+the auxiliary interval compression.
 
-The two-region theorem closes their joint allocation for arbitrary host
-order. Its proof contracts internal region edges when three-path
-connectivity survives. Otherwise exact three-cuts make every linkage
-spanning; taking coordinatewise minima of these cuts forces a separator
-avoided by one intact region. The original three-connected host supplies
-the required root-to-port linkage, truncated at its first boundary visits.
-
-Producing the two regions remains open. The reverse packing uses c,d,e
-vertices as labels; these can be adjacent on the triangle paths. A deficient
-packing therefore does not license the existing independent-set reduction.
-
-An alternative now has a verified lift: three disjoint connected bags,
-each joining i to its i-port using only colours i,a,b. The inside triangle
-paths then supply a rooted model for the contacts absent outside the cut.
-The outside pieces form a smaller K5-scheme, and every returned model lifts
-through the fixed bags. If all three triangle paths have outside excursions,
-any three-path root-to-port linkage already suffices. Thus a minimum
-counterexample has zero, one or two such excursions. The next task is to
-force one of these allocations or a strict reduction in all remaining cases.
-
-For hosts without a three-cut, a global exchange is also missing.
+The remaining task is a rooted construction in the four-connected case,
+or a reduction within the full class of properly coloured schemes.
+Deleting one original root exposes a rooted K4 scheme and four spokes;
+their compatible allocation is still missing. A separately chosen K4
+model need not leave the required vertices available to the fifth bag.
 The current local laboratory permits one colour to have at most one
 nonroot, while all four other colours and the host order are unrestricted.
 Strong normalisation preserves this class, although it can make a spoke
@@ -106,7 +92,7 @@ every s_j, giving all ten contacts with fixed disjoint preimages.
 No general existence of these outcomes is proved; states with literal
 a-spokes require separate handling.
 
-A complete proof must cover both the separator and inseparable states.
+A complete proof must now close the four-connected state.
 Every reduction must retain all roots in fixed disjoint preimages,
 preserve the full scheme intersection condition, decrease host order
 within its stated class, and lift any returned model. Further local

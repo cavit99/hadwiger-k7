@@ -97,22 +97,17 @@ Extracting and extending one compatible minor remains unproved.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited
-local exchanges change ownership across colours, and audited separator
-deductions leave one three-cut pattern. The audited
-[two-region theorem](results/two_full_regions_paired_triangle.md) now
-gives the required paired triangle whenever two disjoint connected regions
-are full to all six terminals and a three-path linkage exists. Its proof
-covers arbitrary host order. Producing those regions or another valid
-allocation remains open, as does the inseparable case. Explicit positive
-schemes refute
+local exchanges change ownership across colours. The
+[four-connectivity theorem](results/k5_scheme_four_connectivity.md),
+with two internal reviews, now closes every three-cut for arbitrary host
+order: either the [two-region theorem](results/two_full_regions_paired_triangle.md)
+provides the required paired triangle, or two successive forest packings
+give a strictly smaller original-root-preserving scheme. Thus a minimum
+counterexample is four-connected. Its global allocation remains open.
+Explicit positive schemes refute
 two restrictive allocation rules. Even a complete K5 theorem would leave
 the six-chromatic matching branch and the seven-bag extension open;
 its significance would require a separate assessment.
-
-The [separator lifts](active/k5_scheme_separator_reduction.md#7-terminal-constructions-for-the-rainbow-cut)
-also show that three bags with the specified colours suffice, and close
-the case where all three triangle demands have outside excursions.
-Existence of an allocation in every remaining case is still unproved.
 
 The next task is the global rooted construction, while retaining the
 critical-host colouring route if it offers a stronger reduction. Any

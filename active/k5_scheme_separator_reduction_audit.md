@@ -4,7 +4,12 @@
 
 This separate internal audit covers the complete
 [source](k5_scheme_separator_reduction.md) at SHA-256
-`fc00d9890006e9f786a4b194e38a74b9c44873733d20126b86ce9638e00938d4`.
+`5d7dc02cc98cd96817f0919e46212a27cc3831c67a7b84cb950aebedcca4cf96`.
+The current revision changes only three scope paragraphs to point to the
+separate four-connectivity theorem. Comparison with Git `2df86a9`
+(source SHA-256 `fc00d9890006e9f786a4b194e38a74b9c44873733d20126b86ce9638e00938d4`)
+confirms that every mathematical argument is unchanged. The review below
+records that revision and its predecessor.
 The source remains conditional on a minimum counterexample existing.
 The previous audited revision was
 `102bced36c8fd794b7d52870fb4c2041e2955068c54d5130ac23adc24538e616`.
@@ -41,7 +46,7 @@ the mathematics of that revision was unchanged.
 
 ## Section 7: terminal constructions
 
-Removing the appended Section 7, including its separating blank line,
+In the `2df86a9` revision, removing Section 7 and its separating blank line
 byte-recovers the source at Git `24d2631` and SHA-256 `102bced36...` above.
 Sections 1–6 have not changed. The new section received a separate
 exact-source review after the reviewer checked its application sketch.
@@ -77,7 +82,7 @@ in discussion with the author. This is a subsequent complete review of
 the exact source bytes, not a claim of independent discovery or a blind
 review. No computation is needed for the deductions or the example.
 
-The unresolved rainbow three-cut allocation remains unresolved. The
-source establishes neither four-connectivity of a minimum counterexample
-nor K5 contractibility, and it makes no Hadwiger-seven or comparative
-significance claim. This is an internal audit, not external peer review.
+This source supplies the separator normal form and terminal lifts used
+by the separate four-connectivity proof. It does not prove K5
+contractibility or make a Hadwiger-seven or comparative significance
+claim. This is an internal audit, not external peer review.
