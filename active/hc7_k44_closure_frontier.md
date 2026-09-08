@@ -1210,7 +1210,15 @@ helper full to the four core bags, together with v, gives only six bags.
 Connecting it to further endpoint-coloured paths can introduce intersections
 between independent demands. A simultaneous disjoint allocation is needed.
 
-**Immediate sufficient target.** Construct in `G-v` a scheme rooted at
+**Construction priority.** Obtain one Q model in the actual critical host.
+The following scheme is sufficient, but its six prescribed triangle roots
+and singleton v are additional restrictions. A direct construction may
+expand v's bag or allocate triangle vertices differently. The bipartite
+theorem resolves extraction after a scheme exists, not the preceding
+simultaneous path allocation. Keep either construction available; neither
+is proved.
+
+**Optional sufficient scheme.** Construct in `G-v` a scheme rooted at
 all six vertices of `A union B` for K3,3 with two independent cross edges
 deleted. Bipartite contractibility supplies its seven cross contacts;
 the six literal triangle edges and the six contacts to singleton v

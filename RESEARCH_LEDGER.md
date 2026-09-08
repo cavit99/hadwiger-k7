@@ -22,7 +22,9 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    sufficient structural target T44 remain available conditional routes.
 3. **Immediate structural laboratory:** the
    [critical-host construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction),
-   seeking a six-root K3,3 scheme with two independent edges omitted.
+   seeking one simultaneous Q-minor construction in the remaining case.
+   The six-root bipartite scheme is one sufficient route; retaining those
+   roots or leaving v singleton is not a requirement of the objective.
    The [fully rooted K5 construction](active/k5_contractibility_frontier.md)
    remains an alternative extraction route.
    Neither global construction nor a closed induction is proved.
@@ -125,11 +127,14 @@ also rules out fixing the extra root as a singleton from the rainbow
 condition alone. Root expansion and the actual critical-host hypotheses
 must remain available.
 
-The next task is a K3,3 scheme with two independent cross edges omitted,
-rooted at the six triangle vertices in `G-v`. The completed bipartite
-theorem, the literal triangle edges and v would then give Q and close
-the remaining case. The required simultaneous allocation must retain
-the actual critical-host colouring, connectivity and ownership data.
+The next task is one Q model in the actual two-triangle critical host.
+A six-root K3,3 scheme with two independent cross edges omitted would
+suffice, but a direct model may expand v's bag and allocate triangle
+vertices differently. The bipartite theorem supplies extraction only
+after compatible paths exist; it does not solve their allocation.
+Use the actual colouring and connectivity hypotheses to construct the
+bags together. Separate models or colourings cannot supply simultaneous
+contacts without a new proof.
 Any C19 claim still requires that construction and an audit of the
 whole implication. The
 [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)

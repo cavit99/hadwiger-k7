@@ -35,9 +35,10 @@ to intermediate claims remain with their designated conditional routes.
 ## Conditional routes
 
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
-  the immediate C19 construction seeks a scheme at six triangle roots
-  with two independent cross edges omitted. The global allocation is open;
-  critical colouring and neighbourhood data must be retained.
+  the immediate C19 task is a simultaneous minor construction in the
+  two-triangle critical host. The six-root bipartite scheme is an optional
+  sufficient route; direct models may allocate v and the triangle roots
+  differently. The global allocation remains open.
 - [Fully rooted K5 contractibility](k5_contractibility_frontier.md):
   an independent theorem target and alternative extraction step in C19.
   The global construction and the remaining C19 implications are open.

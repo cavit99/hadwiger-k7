@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a`.
+`fd271a42708991f559130dcead6b1abc99b847d9f129701f899a93044df175b6`.
 
 ## Preserved scope and exact provenance
 
@@ -385,3 +385,16 @@ has four core bags, the disjoint a/x and b/y bags, and singleton v. Each
 helper misses at most one opposite-triangle core bag, so the two possible
 holes have distinct ends; xy supplies their mutual contact. This is a
 correct sufficient construction with existence explicitly unproved. GREEN.
+
+**Construction-priority clarification; scoped verdict GREEN.** Reversing only
+the new priority paragraph and the following scheme-label change byte-recovers
+Git `fdbd1d6`, frontier SHA-256
+`66e58a8510bce7ad64f35e197f973fa2ccaaa712a1388454aadeb6cf72859e3a`.
+All other source bytes are unchanged, so the inherited qualified mathematical
+audit remains applicable. The target is a Q model for every host satisfying
+the stated critical hypotheses, at arbitrary order. The six-root scheme
+remains sufficient, while direct models may expand v's bag and allocate
+triangle vertices differently; neither construction is asserted to exist.
+The ledger, index and manifest changes preserve the C19 target and its open
+status. They change construction priority, not the hypotheses, extraction
+theorem, simultaneous-ownership obligation or completion criterion.
