@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`667b7716e54ad6804a20d7fe40cd3446ca5d41e3e360743bc4ea88dce7c0e976`.
+`88cf45680ba6b30a5f44372f9f6e9bb2ad47209e7646d61c559fe625b663f9eb`.
 
 ## Preserved scope and exact provenance
 
@@ -527,3 +527,35 @@ The manifest changes only the six frontier pins and adds the two inactive
 claims with their typed dependencies; primary-target and active flags
 are unchanged. All displayed source/audit pins match the checked files.
 No whole two-triangle or global conjectural conclusion is claimed.
+
+
+## Root-port construction constraints
+
+**Scoped verdict: GREEN.** The exact reviewed frontier SHA-256 is
+`88cf45680ba6b30a5f44372f9f6e9bb2ad47209e7646d61c559fe625b663f9eb`.
+Removing only the two new
+paragraphs following the global-choice conclusion byte-recovers Git
+`c7eb868`, frontier SHA-256
+`667b7716e54ad6804a20d7fe40cd3446ca5d41e3e360743bc4ea88dce7c0e976`.
+Literature-repair independently checked the parent's first deduction:
+the upper graph has clique summands of orders 6,6,4 and adhesions of
+orders 4,3. Five-connectivity localises a Q model to one side, and the
+actual clique edges preserve the restricted separator bags and contacts.
+It rules out the intact U,V quotient, not the actual-host theorem.
+Literature-repair originated the second deduction for four singleton
+outside roots; universal-proof separately reviewed that counting proof
+and supplied the strengthened outside bag `{v,a,x,y}`. Literature-repair
+independently checked the final strengthened paragraph: this bag is
+connected through v, avoids M and B, and contacts all three B roots
+through v. Together with the B triangle it gives four disjoint clique
+bags. Among five core bags, at most two two-contact types can repeat,
+excluding at most two of the three pairings. The remaining pairing leaves
+only independent omissions, with both new bags connected, adjacent and
+disjoint from the fixed core model. All preimages are explicit.
+Universal-proof also independently checked the first paragraph.
+This is an internal proof review with those contributions distinguished.
+Literature-repair checked the exact reversal and the ledger/manifest diff:
+the ledger preserves both limitations, and the manifest changes only six
+frontier pins. No incidence existence follows from chromatic number or
+connectivity to a union. The root-port case remains open; no external
+input or finite check is invoked as a mathematical premise.

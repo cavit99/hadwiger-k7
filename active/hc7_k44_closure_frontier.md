@@ -1287,6 +1287,33 @@ one bag, and a meets both. This remaining root-port construction is open.
 The closure does not assert that every fixed reservation has root ports,
 nor does it infer a rooted five-clique from the chromatic bound.
 
+**The whole-bag quotient cannot close the case; written deduction.**
+Contracting U,V intact gives a subgraph of the graph obtained by joining
+the clique `{U,V,v}` to an isolated a and two triangles sharing one vertex.
+The latter triangles cover B and x,y: at most one B vertex contacts x,y,
+and any absent contacts may be added for this upper bound. This graph is
+the clique-sum of two K6 graphs along a K4, with one K4 attached along a
+K3. A five-connected minor cannot straddle either adhesion: all bags
+avoiding the separator lie on one side, and the clique separator permits
+the other bags to be restricted to that side. Thus a Q model would lie
+in a summand of order at most six, which is impossible. A construction
+must split at least one of U,V; stronger contacts between intact bags
+cannot suffice. This does not refute the actual-host construction.
+
+**A sufficient unrooted five-clique construction; written deduction.**
+The connected bag `{v,a,x,y}` and the three singleton B roots form a
+four-clique minor disjoint from M. Suppose one K5 model inside M has every
+bag contacting at least two of these four bags. Among their three pairings,
+one gives Q when the two unions of paired bags are added to the model.
+Indeed a core bag with exactly two outside neighbours misses a pair when
+that pair is its complement. A partition fails only if one pair is missed
+by two or more core bags. Five bags allow at most two repeated neighbour
+pairs, each excluding only one partition. Some partition therefore leaves
+at most two omissions with disjoint ends. The seven bags are connected and
+disjoint, and v may expand. This requires one model with the stated
+incidences; neither the chromatic bound nor connectivity to its union
+establishes them.
+
 **Construction priority.** Obtain one Q model in the actual critical host.
 The following scheme is sufficient, but its six prescribed triangle roots
 and singleton v are additional restrictions. A direct construction may

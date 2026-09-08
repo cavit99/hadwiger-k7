@@ -115,6 +115,12 @@ eligible omitted B roots. Both ports must then be their B roots, and the
 two A bags partition `W union (A-{a})`. Their union is therefore at least
 five-chromatic by the reduced-complement bound. Constructing Q in this
 remaining root-port case is open; the two-triangle case is not closed.
+The intact two-bag quotient cannot contain Q, so the construction must
+reallocate vertices within that core. A sufficient alternative is one K5
+model whose bags each contact two of the outside clique bags
+`{v,a,x,y}` and the three singleton B roots;
+the [frontier](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
+proves this certificate without asserting its existence.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited
