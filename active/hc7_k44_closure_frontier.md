@@ -1187,10 +1187,28 @@ lifts. Neither a rooted five-clique nor its extension to Q is established;
 paths obtained under different reservations cannot be combined without a
 new allocation.
 
-The [fully rooted K5 attack](k5_contractibility_frontier.md) targets this
-extraction through schemes. Its local exchanges and separator deductions
-are audited, but its global theorem is open. It does not address the
-six-chromatic alternative or supply the subsequent seven-bag extension.
+**Whole-colour-class reservation; written deductions with a separate audit.**
+The [reservation theorem](../results/hc7_critical_colour_class_reservation.md)
+reuses the cycle case's star contraction. For every independent triple
+`T subseteq N(v)`, an entire colour class I meets `N(v)` exactly in T.
+The fixed graph `F=G-v-I` is five-chromatic, and every five-colouring
+makes the five remaining neighbours rainbow, supplying an actual-root
+K5 scheme. This applies in both matching-quotient branches.
+
+For `T={a,b,y}`, delete also x's entire colour class J. The fixed
+four-chromatic graph `K=G-v-I-J` makes the four remaining triangle
+roots rainbow in every four-colouring; x sees every colour. Bipartite
+contractibility and the two literal triangle edges give a rooted K4 in K,
+reserving all four neighbours `a,b,x,y`. These deletions need not preserve
+minimum degree or connectivity.
+
+The [fully rooted K5 attack](k5_contractibility_frontier.md) would therefore
+supply extraction under every reservation, rather than only the
+five-chromatic matching branch. Its global theorem and the subsequent
+seven-bag extension remain open. Even an alpha/J-coloured connected
+helper full to the four core bags, together with v, gives only six bags.
+Connecting it to further endpoint-coloured paths can introduce intersections
+between independent demands. A simultaneous disjoint allocation is needed.
 
 **Three reserved neighbours; written proof with a separate internal audit.**
 The [reserved-neighbour theorem](../results/hc7_two_triangle_reserved_neighbours.md)

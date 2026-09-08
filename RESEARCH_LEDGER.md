@@ -87,13 +87,15 @@ fixed four-chromatic graph across all its four-colourings, giving either
 a minor rooted at four triangle vertices or five compatible endpoint
 paths. Neither result licenses combining independently chosen models.
 
-The [matching-contraction construction](active/hc7_two_triangle_matching_colour_host.md)
-retains a four-connected host with exterior minimum degree seven. It is
-either six-chromatic, or its five prescribed roots receive distinct colours
-in every five-colouring. In the latter case, deleting an independent
-transversal of the three original pairs gives five actual roots with the
-same colouring constraint, while reserving the other three neighbours.
-Extracting and extending one compatible minor remains unproved.
+The [whole-colour-class reservation](results/hc7_critical_colour_class_reservation.md),
+with a separate internal audit, supplies K5 schemes rooted at five actual vertices for
+every independent triple of neighbours, reserving that triple. This
+reuses the earlier cycle argument and applies in both chromatic branches
+of the [matching construction](active/hc7_two_triangle_matching_colour_host.md).
+In the two-triangle case it also gives a rooted four-clique while reserving
+all four other neighbours, including both x and y. Deleting whole colour
+classes need not preserve connectivity or minimum degree. Extracting and
+extending one compatible five-root minor remains unproved.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited
@@ -109,8 +111,8 @@ now extends the two-region construction to every k, with a sharp k−1
 region requirement and a polynomial-time algorithm. It has two internal
 reviews; its application to the remaining colouring case is unproved.
 Explicit positive schemes refute
-two restrictive allocation rules. Even a complete K5 theorem would leave
-the six-chromatic matching branch and the seven-bag extension open;
+two restrictive allocation rules. A complete K5 theorem would now supply
+extraction in every reservation branch, but leave the seven-bag extension open;
 its significance would require a separate assessment.
 
 The next task is the global rooted construction, while retaining the

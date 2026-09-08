@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`424868d16724cd45b7507a0e2d63dbb0001884834ac76553dcca6b61dde144fd`.
+`50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1`.
 
 ## Preserved scope and exact provenance
 
@@ -333,3 +333,29 @@ adjacent audits; the pointer expressly leaves the global K5 theorem,
 six-chromatic matching branch and seven-bag extension open. This is a
 navigation-only update: all prior mathematical text and qualified audit
 provenance are unchanged. Scoped verdict: GREEN.
+
+## Whole-colour-class reservation integration
+
+Replacing only the new reservation block by the former five-line K5
+navigation paragraph byte-recovers Git `41e795f`, frontier SHA-256
+`424868d16724cd45b7507a0e2d63dbb0001884834ac76553dcca6b61dde144fd`.
+All bytes outside that replacement were compared with Git HEAD and match.
+The [reservation source](../results/hc7_critical_colour_class_reservation.md)
+and its [separate audit](../results/hc7_critical_colour_class_reservation_audit.md)
+match `6c40aab52c5e5c8dc822640ce3c801f6cc46e04b161fd49f108dfd6835116eb3`
+and `10d4ab2970bb45f41ffc228a5748cd4ee963016d4d89fe0db7ff11124abab636`.
+This reviewer supplied that exact-source audit; this block additionally
+checks its integration and preserves the earlier qualified audit scope.
+
+The frontier, ledger and K5 frontier correctly extend availability of the
+five-root scheme to every eligible independent triple, in both matching
+branches. The whole deleted class is fixed before quantifying over all
+five-colourings. The additional x-class deletion similarly retains the
+universal four-colouring statements and all four actual K4 roots. The
+earlier choice of a,b with only xy induced on a,b,x,y makes the stated
+triple independent. Neither minimum degree nor connectivity is carried
+through these class deletions. One compatible helper and v added to the
+four core bags give only six bags; a further simultaneous allocation is
+still required. The new
+wording supersedes only the old restriction of K5 extraction to one
+chromatic branch, not the open global construction. Scoped verdict: GREEN.

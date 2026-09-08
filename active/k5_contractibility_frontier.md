@@ -19,11 +19,11 @@ give the fixed preimages required here. Its statement and proof were
 inspected for this attack. No priority or NT-level significance claim
 is made for the present partial work.
 
-The [matching-contraction construction](hc7_two_triangle_matching_colour_host.md)
-gives actual five-root schemes in one branch of the remaining C19 host.
-A rooted K5 theorem would extract their minors while retaining the
-reserved independent transversal. The six-chromatic branch and the
-extension to seven compatible bags would still remain. Neither this
+The [whole-colour-class reservation](../results/hc7_critical_colour_class_reservation.md)
+gives actual five-root schemes in every branch of the remaining C19 host,
+for each independent triple of neighbours. A rooted K5 theorem would
+extract their minors while retaining that triple. The extension to seven
+compatible bags would still remain. Neither this
 target nor its local reductions may be reported as C19 or HC7.
 
 ## Written inputs and their limits

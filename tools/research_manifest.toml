@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "424868d16724cd45b7507a0e2d63dbb0001884834ac76553dcca6b61dde144fd"
+expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21718,7 +21718,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "424868d16724cd45b7507a0e2d63dbb0001884834ac76553dcca6b61dde144fd"
+expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21961,7 +21961,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "424868d16724cd45b7507a0e2d63dbb0001884834ac76553dcca6b61dde144fd"
+expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -22004,7 +22004,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "424868d16724cd45b7507a0e2d63dbb0001884834ac76553dcca6b61dde144fd"
+expected_source_sha256 = "50fe397e66ba87afc6aa605eb08a02f7a55f487db7bc3af72932843f903ddbe1"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22971,11 +22971,11 @@ status = "conditional-target"
 source = "active/k5_contractibility_frontier.md"
 source_heading = "Target and reason for the attack"
 active = false
-expected_source_sha256 = "f92104014478f6138034244096283801bc8ea4b2ee470e25d13728dd83f238cb"
+expected_source_sha256 = "e43177daae205e07069d37023b83982f9772b659d6b45e152bfa06ecf22383cd"
 scope = "all finite K5 schemes, without restrictions on host order or path intersections beyond the scheme condition"
 label_fidelity = "all five prescribed roots in fixed disjoint connected branch sets"
 allowed_exits = ["a fully rooted K5 model in every such scheme"]
-does_not_prove = ["rooted K5 contractibility", "the six-chromatic C19 matching branch or seven-bag extension", "C19, C21, HC7 or comparative significance"]
+does_not_prove = ["rooted K5 contractibility", "the compatible C19 seven-bag extension", "C19, C21, HC7 or comparative significance"]
 
 [[claims]]
 id = "graph_schemes.k5_local_exchange"
@@ -23048,7 +23048,7 @@ note = "Only the compulsory colour-class and four-marker shortcuts are refuted; 
 source = "hc7.companion.two_triangle_matching_colour_host"
 target = "graph_schemes.target.rooted_k5"
 kind = "related_to"
-note = "The five-colouring branch supplies actual-root K5 schemes; extraction alone would leave the other branch and the seven-bag extension."
+note = "This matching-specific construction supplies schemes in its five-colouring branch; the separate whole-colour-class reservation covers both branches. Extraction still leaves the seven-bag extension."
 
 [[claims]]
 id = "rooted_minors.two_full_regions_paired_triangle"
@@ -23150,3 +23150,42 @@ source = "graph_schemes.target.rooted_k5"
 target = "rooted_minors.paired_clique_full_regions"
 kind = "related_to"
 note = "The k=3 case is already used in the separator proof; no sufficient new four-connected allocation or C19 implication is established."
+
+
+[[claims]]
+id = "hc7.companion.critical_colour_class_reservation"
+title = "Whole-colour-class deletion reserves critical neighbours in every matching branch"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_critical_colour_class_reservation.md"
+audit = "results/hc7_critical_colour_class_reservation_audit.md"
+active = false
+expected_source_sha256 = "6c40aab52c5e5c8dc822640ce3c801f6cc46e04b161fd49f108dfd6835116eb3"
+scope = "seven-chromatic graphs with every proper minor six-colourable and a degree-eight vertex; each independent triple of its neighbours"
+label_fidelity = "five actual roots outside an entire reserved colour class; in the two-triangle case four actual triangle roots with all four other neighbours reserved"
+conclusions = ["a fixed five-chromatic deletion makes all five remaining neighbours rainbow in every five-colouring", "an actual-root K5 scheme exists under each independent-triple reservation, in either matching branch", "a further fixed four-chromatic deletion makes the other four triangle roots rainbow and the neighbourhood of x colourful in every four-colouring", "bipartite extraction gives a four-clique rooted at those triangle vertices, avoiding both deleted colour classes"]
+does_not_prove = ["rooted K5 extraction", "connectivity or minimum degree after colour-class deletion", "compatibility of models from different reservations", "the seven-bag extension, Conjecture 19 or HC7", "a new star-contraction method or comparative significance"]
+
+[[relations]]
+source = "hc7.companion.critical_colour_class_reservation"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "Extracts the four cross-pair bags; two literal triangle edges complete their rooted four-clique."
+
+[[relations]]
+source = "hc7.companion.critical_colour_class_reservation"
+target = "hc7.companion.cycle_triangle_reserved_neighbours"
+kind = "related_to"
+note = "Reuses the star-contraction and whole-colour-class restoration mechanism from its Section 1; the new source proves the needed general form directly."
+
+[[relations]]
+source = "hc7.target.companion_neighbourhood_five_roots"
+target = "hc7.companion.critical_colour_class_reservation"
+kind = "related_to"
+note = "Supplies reserved actual roots in all matching branches without establishing the compatible seven-bag construction."
+
+[[relations]]
+source = "hc7.companion.critical_colour_class_reservation"
+target = "graph_schemes.target.rooted_k5"
+kind = "related_to"
+note = "A full rooted K5 theorem would extract the supplied schemes in every reservation branch; extension to Q would remain."

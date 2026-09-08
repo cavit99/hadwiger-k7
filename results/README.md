@@ -98,6 +98,12 @@ with its [GREEN audit](hc7_two_triangle_reserved_neighbours_audit.md),
 keeps three of four additional neighbours outside a four-rooted clique.
 Its four-failure alternative gives an explicit `Q` construction; the
 successful rooted-clique alternative still requires a compatible helper.
+The [whole-colour-class reservation](hc7_critical_colour_class_reservation.md),
+with its [GREEN audit](hc7_critical_colour_class_reservation_audit.md),
+keeps all four additional neighbours outside a rooted four-clique under
+the critical colouring hypotheses. It also supplies actual-root K5 schemes
+for every independent triple reservation, in both matching branches;
+rooted K5 extraction and a compatible seven-bag extension remain open.
 The two-triangles-and-edge case and Conjecture 19 remain open.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with
