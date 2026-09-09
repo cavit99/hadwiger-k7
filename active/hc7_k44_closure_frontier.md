@@ -857,6 +857,12 @@ The [helper-construction draft](hc7_companion_helper_construction.md)
 uses the additional hypotheses of a colouring-critical host. Their
 local constructions do not establish either global conclusion.
 
+Reducing this target's connectivity to five is false: the
+[nine-vertex join obstruction](../barriers/hc7_five_connected_adjacent_holes.md)
+is five-connected and has a `K_7^vee` minor but no Q minor. Its
+four-chromaticity and minimum degree five leave both the retained
+seven-connected target and the chromatic augmentation target below open.
+
 **Written construction.** A `K_{4,4}` model and a disjoint connected set
 `D` adjacent to at least six of its eight bags force `K_7^=`. Choose two
 disjoint cross pairs covering every bag missed by `D`, pairing each missed
@@ -1607,6 +1613,52 @@ six-chromatic graph every single-edge quotient is five-colourable,
 because a five-colouring after deleting that edge gives its ends the
 same colour. A valid continuation needs the simultaneous marked
 construction or a reduction preserving both hypotheses and its lift.
+
+**The actual six triangle marks; written deduction.** Put
+`L=G-{v,x,y}` and `C=A union B`. If `chi(L)=5`, C is colourful in
+every five-colouring of L. Indeed, suppose a colour class I misses C.
+Then `I union {v}` is independent, `K=L-I` is four-chromatic and
+`J=G-(I union {v})=K+{x,y}` is six-chromatic: a five-colouring of J
+would extend to a six-colouring of G. In every four-colouring of this
+same K, the common x/y-neighbours in K meet every class. Otherwise
+move the x-neighbours of a missed class to a fifth colour, give x the
+old colour and y the fifth. All moved vertices miss y, so this would
+five-colour J. Martinsson--Steiner's Theorem 1.3 gives a K4 rooted at
+four actual common neighbours in K. Vertex v is a fifth common neighbour,
+unused by that model. The five-root wheel extension in `G-{x,y}`
+preserves all five roots; adjoining the singleton x,y bags gives
+`K2 join W4=Q`, a contradiction. No connectivity is asserted for K.
+Here L is four-connected, but the separate possibility `chi(L)=6`
+is not resolved by this five-colour argument.
+
+**Whole-star reduction; recorded nonclosure.** In the marked five-colour
+problem, the actual host allows a stronger starting pair. In any
+six-colouring of `G-v`, at least four classes contain exactly one of
+its eight neighbour marks. Choose such a whole class I. The
+[colour-class corollary](../results/colourful_five_wheel.md#six-colours-reserve-any-whole-class)
+gives a five-chromatic `F=G-v-I` with seven colourful marks
+`C=N(v)-I`, inside the unchanged six-connected ambient `L=G-v`.
+
+Call a colouring permitted if C avoids colour five. Let y be
+an unmarked vertex of degree five in F, and let X be all its neighbours
+of a repeated colour in one proper five-colouring. Contract `{y} union X`,
+marking its image exactly when X meets C. The ordinary colouring descends
+by giving the image X's colour. Any permitted quotient colouring would
+lift: expand X with that colour, then colour y, which sees at most four
+colours because at least two neighbours have merged. Thus the absence of
+a permitted colouring survives, host order decreases, and every minor has
+a fixed connected lift. However, distinct marks can merge and ambient
+four-connectivity need not survive. The
+[degree-five star obstruction](../barriers/hc7_degree_five_star_allocation.md)
+shows that an avoiding rooted K4 and the fifth neighbour alone cannot
+repair the split. A valid continuation must use the universal colouring
+constraint to retain or reconstruct six separate marked bags; that
+construction remains unproved.
+In the stronger starting pair, a star with exactly two leaves does retain
+at least six marks and ambient four-connectivity: any quotient cut of
+order at most three lifts to at most five vertices in L. This licenses
+one reduction, not its repetition; a second contraction has no proved
+connectivity or terminal-model guarantee.
 
 **The five-chromatic deletion branch is closed; written proof with two separate internal audits.**
 The [five-root wheel extension](../results/hc7_rooted_wheel_extension.md)

@@ -60,6 +60,13 @@ six bags to a general additional vertex. That marked construction remains
 open; neither novelty nor NT-level significance is established for this
 lower-order deduction.
 
+In the actual host, if `G-{v,x,y}` is five-chromatic, the six triangle
+vertices are colourful in every five-colouring of that graph. This keeps
+the universal colouring constraint in the marked construction. Explicit
+four-chromatic barriers now exclude replacing it by five-connectivity
+alone in the near-clique upgrade, or by a degree-five star with an avoiding
+four-clique. Neither barrier refutes the actual critical-host target.
+
 Write its neighbourhood as triangles `A,B` and edge `xy`, and put
 `W=V(G)-N[v]`. The
 [complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)

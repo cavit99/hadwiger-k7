@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`b281a9e253b4826dcd1520aa2e1517150c1ba85bf0d165fc1425211d4a89f61f`.
+`d218ba7a25fc7dfd755c09aaef40d6c543c5bf34899ec60d993fed455ab6d42e`.
 
 ## Preserved scope and exact provenance
 
@@ -1066,3 +1066,37 @@ The edge-critical quotient warning is valid and asserts no closed induction.
 The results row, all seven frontier pins, inactive claim and uses/related-to
 relations retain the proved scope. Earlier audit bytes are preserved except
 the header pin; general augmentation, C19/HC7 and NT-level significance remain open.
+
+## Actual colourful marks and whole-star reduction integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`d218ba7a25fc7dfd755c09aaef40d6c543c5bf34899ec60d993fed455ab6d42e`;
+the ledger is `9c07db986d116482aec28db7c245b827cfb6facf7b41a31d6b9244db5943e77c`.
+Removing only the new frontier blocks and seven ledger lines byte-recovers
+Git `a94a809`. The manifest differs only in seven frontier pins, two
+inactive barriers and their related-to relations; the results README is unchanged.
+The [adjacent-hole barrier](../barriers/hc7_five_connected_adjacent_holes.md) and its [audit](../barriers/hc7_five_connected_adjacent_holes_audit.md) match
+`83df13a4eeedf8c7a27d5eba314d758e0e002ab40a9b9f80536b6d90c15a7861` and
+`875f1c1e54a227dd3c85c16ba4e0c65055ce2a7b19d1b3e3618bdd385caeea5e`.
+The [star barrier](../barriers/hc7_degree_five_star_allocation.md) and its [audit](../barriers/hc7_degree_five_star_allocation_audit.md) match
+`7212bf4c1b4f9a97ac09077113a39d3cd4c67fd8256de5ab8a2ad51c3e52dd9e` and
+`3e4b99bb4fe6ab320a90636d9436518e9c52725240a3e19bf00896af09da8de0`.
+
+The C-colourfulness deduction uses every four-colouring of the same K;
+its four common-neighbour roots and unused v lie in one ambient wheel model.
+Whole-star contraction preserves the ordinary colouring because X includes
+all neighbours of its colour. A permitted colouring lifts since the unmarked
+centre sees at most four colours; the marked image retains every prohibition.
+Eight marks in six nonempty classes give at least four singleton classes.
+The selected whole-class deletion leaves seven colourful marks in a
+five-chromatic F, inside six-connected L. One two-leaf star merges at most
+two marks, and any quotient three-cut lifts to at most five vertices in L.
+Neither existence of such a star nor iterability or six compatible bags is asserted.
+
+The parent authored the integration. Literature-repair checked this diff,
+having contributed the C-colourfulness deduction and authored the join barrier;
+that barrier's separate mathematical audit is by universal_proof, not its author.
+Both barriers are four-chromatic and leave the actual critical-host scope intact.
+Earlier audit bytes are preserved apart from the header pin. This internal
+review neither closes the six-chromatic deletion branch nor establishes C19,
+HC7, novelty or NT-comparable significance.
