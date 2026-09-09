@@ -10,6 +10,12 @@ the requested theorem. Continue through plausible repairs and alternative
 global constructions; report unresolved gaps and comparative significance
 honestly. Do not force a preferred route when the evidence favours another.
 
+Prioritise complete case closures and reductions with a valid induction and
+lift. If repeated attempts reach the same gap, reassess the route before
+adding further sufficient conditions or records. Retain colouring and
+branch-set constraints together when testing compatibility. Give every
+delegated agent the full completion criterion and exact unresolved obligation.
+
 For research decisions, consult `RESEARCH_LEDGER.md`, `active/INDEX.md` and
 the designated technical frontier. Reuse that orientation until relevant
 state changes; revisit history only for a disputed dependency or claim.
