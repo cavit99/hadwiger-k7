@@ -4,7 +4,7 @@
 Date: 9 September 2026. This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`1b80523b745cc0b698f896feaf5f6c99f973adc0468f723226e4a4ccc94f7b2d`.
+`cce103f512dbe626e0a47df0c4e935f7cee86773a5512899710ebb652d6404c3`.
 The parent wrote the frontier. Literature-repair independently read the
 whole final source and rechecked Delcourt–Postle's primary Theorem 1.6.
 Universal-proof independently checked the preceding mathematical text;
@@ -29,3 +29,13 @@ Quotient independence does not permit charging successive rounds once.
 The all-minor hypothesis cannot be replaced by independence information
 about the original graph alone. No new colouring theorem, priority claim,
 HC7 proof or NT-level significance is certified by this audit.
+
+The bounded-bag obstruction insertion was separately checked by
+literature-repair. Removing its eleven lines recovers the preceding
+source `1b80523b745cc0b698f896feaf5f6c99f973adc0468f723226e4a4ccc94f7b2d`.
+The [barrier](../barriers/quantitative_bounded_bag_density.md) and
+[its audit](../barriers/quantitative_bounded_bag_density_audit.md)
+cover all fixed bag-size bounds and the stated small-order regime.
+The ledger at `1c849ad8f7628598c4b2d85aa1bcdfb6ba00684d93a50d13b279e0d8ae397545`
+adds only the limited scope summary. Neither record refutes the density
+inequality or the critical reduction R.

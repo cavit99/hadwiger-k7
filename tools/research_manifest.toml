@@ -23884,7 +23884,7 @@ status = "conditional-target"
 source = "active/quantitative_star_contraction_frontier.md"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "1b80523b745cc0b698f896feaf5f6c99f973adc0468f723226e4a4ccc94f7b2d"
+expected_source_sha256 = "cce103f512dbe626e0a47df0c4e935f7cee86773a5512899710ebb652d6404c3"
 scope = "minor-minimal q-chromatic graphs on at most r^(3/2) vertices whose every minor F satisfies alpha(F)>=|F|/r, with q>=Kr"
 colour_compatibility = "the desired minor retains chromatic number at least q-1"
 strict_parameter = "host order; the conditional proof minimises order then edge count"
@@ -23896,3 +23896,22 @@ source = "hc7.target.hadwiger7"
 target = "hadwiger.target.cubic_star_reduction"
 kind = "related_to"
 note = "A separate conditional asymptotic route towards the user's alternative completion criterion; its conclusion would not prove HC7."
+
+[[claims]]
+id = "hadwiger.barrier.bounded_bag_density"
+title = "Bounded branch sets do not extract the proposed density scale"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/quantitative_bounded_bag_density.md"
+audit = "barriers/quantitative_bounded_bag_density_audit.md"
+active = false
+expected_source_sha256 = "0818c1c78b098140c215f8e542033276c16460efb193380b9f1efae2b8ff0cd3"
+scope = "for every fixed positive bag-size bound b, finite graphs with t=sqrt(e/alpha) unbounded and order at most t log t"
+conclusions = ["every minor with bags of size at most b has independence ratio o(t)", "matching-only extraction fails even with the small-order restriction"]
+does_not_prove = ["failure of the density inequality e<=C h^2 alpha", "failure using unbounded bags or the full density-surplus hypotheses", "failure of critical reduction R", "HC7 or novelty"]
+
+[[relations]]
+source = "hadwiger.target.cubic_star_reduction"
+target = "hadwiger.barrier.bounded_bag_density"
+kind = "related_to"
+note = "Refutes the attempted unrestricted bounded-bag density extraction, not R or its density-surplus class."

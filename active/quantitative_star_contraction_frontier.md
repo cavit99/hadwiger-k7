@@ -128,6 +128,17 @@ Take `ceil(n delta/(2Dr^2))` of its vertices. This is at most r because
 The first unsupported step is
 this density inequality, not the star contraction or its cubic potential.
 
+The attempted intermediate statement that a minor with uniformly bounded
+branch-set size can have independence ratio
+`Omega(sqrt(e(G)/alpha(G)))` is
+[refuted for every fixed size bound](../barriers/quantitative_bounded_bag_density.md),
+even when `|G|<=t log t` for `t=sqrt(e(G)/alpha(G))`. The audited
+construction uses high-girth graphs and clique blow-ups and covers every
+choice of the bounded bags. Matching contractions are a special case.
+Thus the small-order hypothesis alone does not justify this extraction.
+Larger bags or use of the full density-surplus hypotheses remain possible;
+neither the density inequality nor R is refuted.
+
 Testing must respect the hypotheses. The all-minor independence bound
 implies `h(G)<=r`, by applying it to a clique minor. Thus a graph in the
 unbounded `q/r` regime would already contradict ordinary Hadwiger;

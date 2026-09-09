@@ -41,6 +41,9 @@ tests an exponent improvement beyond the September 2026 square-root
 colouring bound. Its required reduction and its global implication are
 separated explicitly; the stronger packing remains unproved. This is a
 parallel mathematical attack, not a replacement of the exact C19 campaign.
+Its shortcut through minors with uniformly bounded branch sets is now
+refuted, even under a small-order restriction. The density inequality and
+unrestricted contraction target remain open.
 
 The immediate target is Conjecture 19. Its audited critical-host reductions
 leave two spanning degree-eight neighbourhood configurations. The
