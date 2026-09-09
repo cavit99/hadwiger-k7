@@ -933,6 +933,26 @@ five-root wheel with two contacts per bag to a triangle and one full bag;
 and four connected clique bags receiving all six distinct R-pair contacts.
 It permits mixed bags and uses no finite search as a premise.
 
+The [four-cut theorem](../results/hc7_four_cut_components.md), with a
+separate internal audit, further constrains `F=G-R`. Every four-cut S
+leaves exactly two components. Under the actual critical colouring
+hypotheses S contains an edge. If either component misses a root r of R,
+then `|N(r) intersect S|<=1`. These statements retain extra neighbourhood
+edges and quantify over arbitrary host order. The independent-cut proof
+uses reverse contractions to align the entire boundary colouring,
+including the possibility that S shares a clique root's colour.
+
+**Remaining separator construction.** Both components are full to S and
+contact at least three R roots. For non-independent S, separate contractions
+can force individual independent colour blocks but do not force two
+compatible blocks simultaneously. Nor does maximising helper bags on one
+closed side bound their full boundary by the other root bags and unused
+S vertices: their S roots may have neighbours throughout the reserved
+opposite component. A simultaneous allocation or a reduction preserving
+the full colouring responses and disjoint preimages is still required.
+Even eliminating all four-cuts would leave the more connected complement
+case; no closed induction or C19 conclusion follows yet.
+
 These bounds do not control the number of vertices with one R-neighbour.
 In particular they give no coefficient-four density bound on `G-R`.
 Contracting R does give a five-connected quotient with positive density

@@ -36,7 +36,15 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
-The new [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
+Concentrate the exact attack on a construction closing the remaining
+two-triangle case. In the four-separator laboratory, the next obligation
+is a simultaneous boundary allocation for the two surviving components;
+separately forced colour classes do not suffice. Retain a quantitative
+alternative with a complete conditional implication, rather than starting
+another neighbourhood census or a general invariant programme without a
+proved progress step.
+
+The [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
 tests an exponent improvement beyond the September 2026 square-root
 colouring bound. Its required reduction and its global implication are
 separated explicitly; the stronger packing remains unproved. This is a
@@ -88,8 +96,12 @@ makes both `G-v-A` and `G-v-B` four-connected. The audited
 [four-clique contact bounds](results/hc7_four_clique_complement_contacts.md)
 give at most five vertices with two neighbours in either deleted
 four-clique, and at most three meeting any of its triangles twice.
-Each complement remains nonplanar after any one vertex deletion; the
-required global allocation is still missing. The
+Each complement remains nonplanar after any one vertex deletion. The
+[four-cut theorem](results/hc7_four_cut_components.md), with a separate
+internal audit, makes every four-cut leave exactly two components and,
+under the critical colouring hypotheses, contain an edge. A clique root
+missed by a component has at most one neighbour in the cut. The remaining
+binary cuts and the global allocation are open. The
 [spanning-helper theorem](results/hc7_two_triangle_exterior_helpers.md),
 with a separate internal audit, makes `G-N[v]+{x,y}` two-connected and
 partitions it into connected x/y-rooted parts with all but at most one

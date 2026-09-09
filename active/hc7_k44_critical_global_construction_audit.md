@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`7645d6fddd482de524182956f0733b9847178a598f8f358b62d204bf1133bcb9`.
+`92f4baa79c648a37d344febe71bb8d289af6e8165a6fe7cba9ab123351bf172e`.
 
 ## Preserved scope and exact provenance
 
@@ -1143,3 +1143,30 @@ All seven frontier pins, the new source pin, inactive claim and scoped
 uses/related-to relations check, including only Lemma 1 of the existing
 exterior-helper source. Earlier audit bytes are preserved except the header
 pin. C19, HC7, global allocation and NT-comparable significance remain open.
+
+## Four-cut component integration
+
+**Scoped verdict: GREEN.** Frontier SHA-256:
+`92f4baa79c648a37d344febe71bb8d289af6e8165a6fe7cba9ab123351bf172e`;
+ledger: `956859b44dd34da02487c9b7bbddb918fa0df6f43abd63ad9168eb10e903f69d`.
+The [four-cut theorem](../results/hc7_four_cut_components.md) matches
+`2986fb1f55c2cbaa4572b7c88e287ed5aa4230f34ab3b63dabe4d840e247e03f`;
+its [cold whole-source audit](../results/hc7_four_cut_components_audit.md) matches
+`7a9d05d3874f6a6da0fabda90493660ee893fb0fd7e29ab5afe8ef42ae3fa437`.
+The parent authored the integration; universal_proof checked its actual
+ledger, frontier and manifest diff against Git `5e2b5c2`.
+The source audit distinguishes literature-repair's earlier colouring proof
+from route-assessment's current independent reverse-contraction argument.
+The statements retain arbitrary order and extra neighbourhood edges. Exactly two
+components and the missed-root contact bound are structural; excluding
+independent cuts additionally uses the critical colouring hypotheses.
+Reverse contraction aligns the entire boundary partition, including a
+cut colour shared with a clique root. Separately forcing independent
+blocks does not supply two compatible blocks. A side helper's S roots
+can contact the reserved opposite component, so the proposed small full
+boundary does not follow from optimization confined to the closed side.
+All seven frontier pins and the new inactive theorem pin match; its two
+uses relations are exactly the complement and degree-six packet inputs.
+Earlier audit text is preserved apart from the header pin. The remaining
+binary cuts, more connected complement, global allocation and C19/HC7
+are explicitly open; no iterable reduction or NT-level claim is inferred.
