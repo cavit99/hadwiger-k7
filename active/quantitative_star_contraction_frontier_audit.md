@@ -4,7 +4,7 @@
 Date: 9 September 2026. This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`0776fe609b3ab24807756226fadafa21631d01d36ca78a4bf7c99179a76f9f36`.
+`6a2d2a1cf714a3d97f007d1e9b70348ce3d943da83eb6a34f5d45835142aea45`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -53,3 +53,15 @@ target. In the prism, pairing each top root with `w3` and each bottom
 root with `u3` proves minimality; both opposite-pair paths use `u3w3`.
 These checks certify the counterexamples and conditional implication,
 not an inexpensive contraction, density bound or improved colouring theorem.
+
+Literature-repair separately checked the added Lin August paragraph against
+the primary statements and Section 3. Removing it recovers the preceding
+audited source `0776fe609b3ab24807756226fadafa21631d01d36ca78a4bf7c99179a76f9f36`.
+The density convention and hypothesis are retained. The smaller colouring
+cutoff is reported, not used: its full substitution into Delcourt–Postle
+has not been independently audited here. No preservation of independence
+number, chromatic number or prescribed attachments follows from the cited
+dense-subgraph extraction. Restricting the admissible blocks breaks the
+maximality argument: an extension may fail the extra requirement without
+violating the edge-loss bound. The conditional theorem and its dependencies
+are unchanged.

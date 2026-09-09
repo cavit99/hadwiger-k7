@@ -22,6 +22,21 @@ critical minors. Both papers report `O(t sqrt(log log t))` colouring.
 Their primary statements and core proofs were inspected. These are fresh
 preprints; no claim of external verification or relative priority is made.
 
+[Lin, v3, 6 August 2026](https://arxiv.org/html/2607.21222v3),
+Theorems 1.4–1.5, gives an asymptotically sharp `O(t log t)` order bound
+for a k-connected subgraph when `k>=t>=3` and `e(G)/|G|>=Ck` in a
+`K_t`-minor-free graph. Section 3 maximises disjoint contractions with
+edge loss bounded by their degree sum; failure to extend them supplies
+a dense neighbourhood. This suggests testing unrestricted contractions
+against the density obligation below. It supplies neither independence
+decrease nor a chromatic-loss bound. Restricting blocks to require either
+breaks this inference: an extension can fail the extra condition without
+losing many edges. Its density premise is unavailable
+in the degree-eight C19 host. The paper also reports replacing the
+Delcourt–Postle order cutoff by `O(t log^2 t)`; the conditional proof
+below retains the original cutoff. That replacement alone would not
+improve its double-logarithmic exponent.
+
 The [archived two-centre argument](../archive/hadwiger_simultaneous_star_adversarial_audit.md)
 already uses simultaneous contractions for exact recolouring. It supplies
 no quantitative global packing. Our
