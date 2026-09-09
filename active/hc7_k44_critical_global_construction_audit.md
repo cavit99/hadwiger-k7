@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`37f52d830794f41930b01dfc00946497fbcf28a53a13101d57a00e9a68a3eb09`.
+`9ceebda9891b15e2526272901c382e849ea674f913b6e2a46000e0a55ed3ae19`.
 
 ## Preserved scope and exact provenance
 
@@ -1218,3 +1218,63 @@ relations have the stated direct scopes. Earlier audit text is preserved
 except the current header pin. Other binary cuts, the more connected
 complement, the global construction and C19/HC7 remain open; no theorem
 equivalence or NT-comparable significance is asserted.
+
+## Relative-wheel construction and terminal integration
+
+**Scoped verdict: GREEN after narrowing the application wording.** Reviewed
+frontier SHA-256 `9ceebda9891b15e2526272901c382e849ea674f913b6e2a46000e0a55ed3ae19`;
+ledger `9434cb79e6ab6dc30e59dcd42218862b293a8455cf25e79253dbc2c1c6d395e9`.
+The parent authored the integration. Route-assessment independently checked
+its diff against Git `067676f`, the three source/audit pairs and their
+promotion provenance. Current source/audit SHA-256 pairs are:
+
+- [Relative five-root wheel](../results/five_root_relative_degree_six_wheel.md):
+  `46a2211c03938afb9fd5fc3e8e309f31ab7d102c3211a51f7a1c6e1adcb5ed6d` /
+  `1c67692b6ce69ae068e9d1b14cc4b4f2884cc4d9c888373c76e5698c88f7163e`.
+- [Two-port terminal](../results/hc7_sealed_wheel_terminal.md):
+  `3036409fbf1cb23b826185e56d8381962575370bf323d5efdac59092fb7c6c01` /
+  `462566264b6b2dab8a1c73656687ba17cb25563ff42c49867a5632934f18c45a`.
+- [Weaker terminals](../barriers/hc7_weak_wheel_terminal.md):
+  `6d99e559b22a93cc22dd2dc71b75c30d969913c33f18b8a56e54ac88b053625e` /
+  `7effd47d6078e73dffb5cb7d3a16785d39809d642d15da0cb986317052ab4770`.
+
+The first source requires five roots, at least three nonroots, nonroot
+degree at least six and boundary at least five for every nonempty
+nonroot subset. Its fixed preimages preserve all five roots, with no
+prescribed wheel hub. The terminal retains nine disjoint connected sets:
+v,d are full to the disjoint triangle r,s,t, p contacts r,s, q contacts
+r,t, and d contacts v,b,c. The wheel at v,p,q,b,c may have any hub or
+rim order. Its two actual-edge mergers preserve the stated contacts.
+The adjacent audits disclose Bacon's authorship of the wheel proof and
+Sartre's authorship of the terminal and barriers, with this reviewer's
+separate whole-source checks.
+
+The completed-core examples exclude adding edges among six fixed
+contracted vertices with their triangle contacts fixed. Initial language
+that made unused separator vertices obligatory was corrected: additional
+bags, changed contacts, and constructions inside or splitting original
+preimages remain possible. The examples do not refute the actual critical
+host. No global application follows from the extraction alone.
+
+The final fixed-boundary paragraph is GREEN conditionally: its partitions
+come from proper colourings of the original closed sides. Consuming a
+nonempty open side gives a proper minor; boundary expansion gives a genuine
+opposite-side colouring with a coarser equality partition. Equality glues
+by a palette permutation; otherwise block count strictly decreases, and
+the stated universal realisation hypothesis permits exchanging sides.
+Neither connected self-realisation nor the original cofacial drawing is
+inferred from a colouring or a contracted graph. The missing inputs remain
+explicit, with no clique-contact requirement or fixed-block Kempe claim.
+
+Removing the final colouring paragraph recovers the preceding reviewed
+frontier hash `ded1e4a3159b2844a03b9854822c933bae0e97e2d1cac813a16f528c6b58b29e`.
+Removing both new frontier blocks recovers Git `067676f` byte for byte,
+with SHA-256
+`37f52d830794f41930b01dfc00946497fbcf28a53a13101d57a00e9a68a3eb09`.
+The ledger has only its two stated insertions and the results table one
+new row. All seven frontier pins and three new inactive source pins
+match; every existing active flag is unchanged. The direct uses and
+qualified related-to/guarded-by relations retain the reviewed scopes.
+Earlier audit text is preserved except the current header pin. The
+routes remain provisional; C19, HC7 and the NT-comparable completion
+criterion remain unmet.

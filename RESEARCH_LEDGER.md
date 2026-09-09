@@ -36,6 +36,9 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
+The routes below are provisional choices, not additional completion
+requirements; change them when a stronger credible construction emerges.
+
 Concentrate the exact attack on a construction closing the remaining
 two-triangle case. In the four-separator laboratory, the next obligation
 is a simultaneous boundary allocation for the two surviving components;
@@ -115,6 +118,19 @@ of their six contacts to `A`. The A roots remain singleton, and all B
 roots are excluded from both parts. The symmetric assertion holds for B.
 A simultaneous global allocation is still missing; even making both parts
 full to both triangles would not alone give the required minor.
+
+The [relative five-root wheel theorem](results/five_root_relative_degree_six_wheel.md),
+with a separate internal audit, now removes the need for a root triangle
+or a pre-existing clique: at least three nonroots, degree at least six
+and boundary at least five for every nonempty nonroot set suffice.
+The [two-port terminal](results/hc7_sealed_wheel_terminal.md) completes Q
+when both ports have the specified double triangle contacts and the
+exterior bag has its required contacts. The
+[weaker contact patterns](barriers/hc7_weak_wheel_terminal.md) fail even
+after completing the wheel and exterior bag to a clique. A repair must
+use resources beyond extra edges in that fixed six-bag core, such as
+additional bags or a changed allocation of triangle contacts. The actual
+critical-host construction remains open.
 
 The [reserved-neighbour theorem](results/hc7_two_triangle_reserved_neighbours.md)
 now obtains a four-clique rooted at the other four triangle vertices while

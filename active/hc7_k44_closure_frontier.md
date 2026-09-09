@@ -984,6 +984,40 @@ Contracting a B edge instead can return a smaller four-cut;
 its positive rooted model merges two B roots and has no justified split.
 Neither operation supplies the required five-root model or a closed lift.
 
+**Relative wheel construction; written proof with separate internal audit.**
+The [five-root theorem](../results/five_root_relative_degree_six_wheel.md)
+requires at least three nonroots, nonroot degree at least six and at
+least five external neighbours for every nonempty nonroot subset. It
+supplies a wheel rooted at all five vertices, with no root triangle or
+pre-existing four-clique. Thin-root and paired-root contractions preserve
+every surviving nonroot degree and boundary. After normalisation, two
+cofacial counts supply a four-of-five rooted clique. Suppressing peripheral
+degree-two roots gives a three-connected graph; a matching realises those
+suppressions while keeping each projected clique bag occupied by a root.
+All five roots lift through fixed disjoint preimages. The two-nonroot
+matching obstruction explains the order restriction.
+
+The [two-port terminal](../results/hc7_sealed_wheel_terminal.md), with a
+separate audit, gives Q from a five-root wheel at `v,p,q,b,c`, a disjoint
+triangle `r,s,t`, and an exterior bag d. It requires v,d full to the
+triangle, `p--r,s`, `q--r,t`, and `d--v,b,c`. The uniform two-contraction
+proof works for every hub and rim order.
+
+**First unsupported extension and exact barrier.** A port seeing only t,
+or a triangle root replacing one port, does not give that terminal.
+The [explicit counterexamples](../barriers/hc7_weak_wheel_terminal.md)
+remain Q-free even after the five wheel vertices and d are completed
+to K6. Each completion has a literal four-clique separator, across
+which every Q model projects to one Q-free side. Therefore improving
+only the edges within the fixed wheel and exterior bags cannot repair
+these patterns. Additional bags, changed triangle-contact allocations,
+or a construction inside or splitting the original preimages remain
+possible; the unused separator vertices are one available resource.
+These examples do not satisfy the actual critical-host hypotheses.
+Neither the wheel theorem nor this conditional terminal supplies such
+an allocation, closes all four-cuts, or handles the more connected
+complement.
+
 **Remaining separator construction.** Both components are full to S and
 contact at least three R roots. For non-independent S, separate contractions
 can force individual independent colour blocks but do not force two
@@ -994,6 +1028,23 @@ opposite component. A simultaneous allocation or a reduction preserving
 the full colouring responses and disjoint preimages is still required.
 Even eliminating all four-cuts would leave the more connected complement
 case; no closed induction or C19 conclusion follows yet.
+
+**Fixed-boundary colouring attempt; conditional only.** Keep one literal
+separator Z. If each colour partition on either closed side can be
+realised there by disjoint connected sets meeting Z exactly in its
+blocks, contract those sets and delete the remaining open-side vertices.
+Proper-minor colourability gives a colouring of the opposite closed side
+whose partition is coarser. Equality permits gluing; otherwise the number
+of blocks strictly decreases and the sides can be exchanged. This avoids
+requiring a clique between the block sets, as in the earlier
+[exact-response construction](../results/hc7_exact7_selected_response_preservation.md).
+The missing step is the connected realisation of mixed partitions in
+the actual sides. A Kempe swap which increases boundary colour count can
+split a previously imposed block, so maximising that count does not
+preserve this descent. Nor does planarity after root contractions give
+the original cofacial drawing needed for planar gluing. Those realisation
+and root-port cases remain open; no boundary response is identified with
+another merely because their colour counts agree.
 
 These bounds do not control the number of vertices with one R-neighbour.
 In particular they give no coefficient-four density bound on `G-R`.
