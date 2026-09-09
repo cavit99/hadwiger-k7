@@ -1,8 +1,8 @@
-# Two obstructions to proposed rooted extensions
+# Limits of proposed rooted wheel extensions
 
 **Status:** written counterexamples; the adjacent internal audit records
 its verdict and exact source hash. All graphs are finite and simple.
-Neither example refutes the audited five-root wheel theorem or HC7.
+None refutes the audited five-root wheel theorem or HC7.
 
 ## 1. Two triangles in a four-connected planar graph
 
@@ -59,3 +59,24 @@ are disjoint and have no foreign root internally. The first path uses
 the existing hub bag; assigning it to a rim bag is not a valid lift.
 The full scheme intersection constraints remain available and are not
 satisfied merely by these two paths. This is not a K5-scheme counterexample.
+
+## 3. The hub cannot always own its entire colour class
+
+**False assertion:** every strongly normalised coloured W4 scheme has a
+labelled rooted model whose hub bag contains every hub-coloured vertex.
+
+Let W4 have hub h and rim a,b,c,d. Add one clone of each root, named
+u,A,B,C,D respectively. For each target edge ij use the path
+`i-clone(j)-clone(i)-j`; take exactly their union. Each nonroot lies on
+at least three demands, so this is a strongly normalised coloured scheme.
+
+A connected hub bag containing h,u must contain a rim clone, say A by
+rotation. The only available nonroot neighbour of either b or d is then C.
+Each must absorb C: a singleton could contact at most one rim bag, whereas
+its required rim degree is two. Disjointness makes this impossible.
+
+Nevertheless `{h}, {a,B}, {b,C}, {c,D}, {d,A}` is a correctly labelled
+rooted W4 model. The first unsupported step is prescribing the entire
+hub colour class before allocating the rim. A successful construction
+must permit its vertices to be omitted or assigned elsewhere; neither
+arbitrary hub expansion nor W4 contractibility is refuted.

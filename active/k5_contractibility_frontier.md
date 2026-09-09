@@ -88,6 +88,8 @@ the [apex-prism obstruction](../barriers/rooted_wheel_extension_limits.md#2-a-wh
 shows that these paths can consume an existing bag. A repair must use the
 full scheme intersection constraints to retain the required labels and
 disjoint ownership; neither labelled W4 nor K5 schemes are refuted.
+The [canonical W4 scheme](../barriers/rooted_wheel_extension_limits.md#3-the-hub-cannot-always-own-its-entire-colour-class)
+also rules out placing the entire hub colour class inside the hub bag.
 
 Deleting one original root exposes a rooted K4 scheme and four spokes;
 their compatible allocation is still missing. A separately chosen K4

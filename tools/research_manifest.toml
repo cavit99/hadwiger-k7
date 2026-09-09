@@ -22971,7 +22971,7 @@ status = "conditional-target"
 source = "active/k5_contractibility_frontier.md"
 source_heading = "Target and reason for the attack"
 active = false
-expected_source_sha256 = "3700a251f74be6842fe46858712efb183f927daafb5445d127c70055f575c174"
+expected_source_sha256 = "0b55dd9f3657dee1fadd7e759555af92743a4b104da29ad44412044729833fa2"
 scope = "all finite K5 schemes, without restrictions on host order or path intersections beyond the scheme condition"
 label_fidelity = "all five prescribed roots in fixed disjoint connected branch sets"
 allowed_exits = ["a fully rooted K5 model in every such scheme"]
@@ -23549,15 +23549,15 @@ note = "Closes the entire five-chromatic x/y-deletion branch; the six-chromatic 
 
 [[claims]]
 id = "rooted_minors.barrier.wheel_extension_limits"
-title = "Planar triangle roots and disjoint wheel diagonals do not justify two proposed rooted extensions"
+title = "Planar triangle roots, disjoint wheel diagonals and whole hub-colour ownership do not justify rooted extensions"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/rooted_wheel_extension_limits.md"
 audit = "barriers/rooted_wheel_extension_limits_audit.md"
 active = false
-expected_source_sha256 = "be41868a1502979528f8548a35216e6d23028986b590d4ce925c9df4bd19e711"
-scope = "the cuboctahedron with two prescribed root triangles and the cone over a pentagonal prism with five cofacial base roots"
-conclusions = ["two disjoint triangles in a four-connected planar graph need not root an octahedron", "a rooted wheel and disjoint missing-diagonal paths in a four-connected nonplanar graph need not give a rooted K5"]
+expected_source_sha256 = "bcfbc442f33f18fe4198f0d9dcffae282ca31eea47d1251e72bfad2fecb01a39"
+scope = "the cuboctahedron with two prescribed root triangles, the cone over a pentagonal prism with five cofacial base roots, and the canonical two-copy W4 scheme"
+conclusions = ["two disjoint triangles in a four-connected planar graph need not root an octahedron", "a rooted wheel and disjoint missing-diagonal paths in a four-connected nonplanar graph need not give a rooted K5", "a strongly normalised W4 scheme need not have a rooted model whose hub bag contains the whole hub colour class"]
 does_not_prove = ["failure of the five-connected nonplanar two-triangle target", "failure of labelled W4 or K5 contractibility", "failure of the audited five-root wheel theorem", "C19 or HC7"]
 
 [[relations]]

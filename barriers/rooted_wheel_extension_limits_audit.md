@@ -1,11 +1,15 @@
-# Audit of the two rooted-extension obstructions
+# Audit of the rooted-wheel extension limits
 
-**Verdict:** GREEN; separate internal review of the complete
-[source](rooted_wheel_extension_limits.md), SHA-256
-`be41868a1502979528f8548a35216e6d23028986b590d4ce925c9df4bd19e711`.
-No unresolved mathematical gap was found in either stated counterexample.
-This reviewer did not develop the examples. The review checks the frozen
-written arguments independently; it is not external peer review.
+**Verdict:** GREEN for the [source](rooted_wheel_extension_limits.md),
+SHA-256 `bcfbc442f33f18fe4198f0d9dcffae282ca31eea47d1251e72bfad2fecb01a39`.
+No unresolved mathematical gap was found in the stated counterexamples.
+The first two examples retain Bacon's separate complete review at source
+`be41868a1502979528f8548a35216e6d23028986b590d4ce925c9df4bd19e711`;
+that reviewer did not develop them. Removing Section 3 and reversing only
+the title and “None refutes” wording byte-recovers that earlier hash.
+Route-assessment independently checked the new Section 3 and its frontier
+integration; the parent and literature-repair developed that example.
+The checks below are internal reviews, not external peer review.
 
 ## Cuboctahedral example
 
@@ -48,7 +52,7 @@ and internally root-free. One nevertheless traverses the hub bag, so
 the paths cannot simply be added to the wheel model as independent
 branch-set contacts.
 
-## Scope and dependencies
+## Preserved scope of the first two examples
 
 The two negative conclusions use only the elementary connectivity and
 planarity facts checked above. No finite search is a proof dependency.
@@ -56,3 +60,24 @@ The source does not claim labelled wheel contractibility, a K5-scheme
 counterexample, or a counterexample to the five-connected nonplanar
 two-triangle target. Neither construction refutes the audited five-root
 wheel theorem or closes the remaining C19/HC7 programme.
+
+## Entire hub colour class and frontier integration
+
+The canonical paths alternate their endpoint colours, contain no foreign
+roots and meet only at vertices whose colour is a common target endpoint.
+Every host edge is used; nonroots lie on three or four demands and have
+degree six or eight. The asserted strong normalisation therefore holds.
+A connected bag containing h,u must use a rim clone, which rotation makes
+A. Then the only possible nonroot neighbour of b or d outside that bag
+is C. Either singleton would have at most one rim-bag contact; both must
+therefore absorb C, contradicting disjointness. This checks containment of
+the hub colour class even when further expansion is allowed.
+
+The positive model has all four hub contacts and the four rim contacts
+through BC, CD, DA, AB; its bags are connected and correctly labelled.
+It leaves u unused and h singleton. Thus neither labelled W4
+contractibility nor a singleton-hub theorem is refuted. The two-line
+addition to the [K5 frontier](../active/k5_contractibility_frontier.md),
+SHA-256 `0b55dd9f3657dee1fadd7e759555af92743a4b104da29ad44412044729833fa2`,
+accurately records only the failed whole-class containment requirement.
+No computation is a proof premise, and no C19 or HC7 closure is claimed.
