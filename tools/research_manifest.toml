@@ -23884,7 +23884,7 @@ status = "conditional-target"
 source = "active/quantitative_star_contraction_frontier.md"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "6a2d2a1cf714a3d97f007d1e9b70348ce3d943da83eb6a34f5d45835142aea45"
+expected_source_sha256 = "627bbd53c83f4fdc0f69e7c54fb1298cbc74151d5a561fee35878fd70d5e69f6"
 scope = "minor-minimal q-chromatic graphs on at most r^(3/2) vertices whose every minor F satisfies alpha(F)>=|F|/r, with q>=Kr"
 colour_compatibility = "the desired minor retains chromatic number at least q-1"
 strict_parameter = "host order; the conditional proof minimises order then edge count"

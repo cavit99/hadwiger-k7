@@ -45,6 +45,13 @@ retains prescribed roots, but supplies no bound on chromatic loss.
 The [product audit](../archive/hadwiger_product_amplification_barrier_and_bramble_lift.md)
 already excludes the proposed amplification through standard products.
 
+Uniform extensions cannot assume odd Hadwiger: [Kühn–Sauermann–Steiner–Wigderson,
+v1, 23 December 2025](https://arxiv.org/html/2512.20392v1), Theorem 1.3,
+construct, for every fixed epsilon>0 and sufficiently large t, graphs
+with no odd K_t minor and chromatic number at least `(3/2-epsilon)t`.
+This refutes the universal odd variant. It does not refute ordinary
+Hadwiger or settle odd t=7. The present reduction uses only ordinary minors.
+
 ## A sufficient reduction, with its global implication
 
 **Unproved reduction R.** There are absolute constants `K>=2` and

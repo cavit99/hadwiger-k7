@@ -4,7 +4,7 @@
 Date: 9 September 2026. This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`6a2d2a1cf714a3d97f007d1e9b70348ce3d943da83eb6a34f5d45835142aea45`.
+`627bbd53c83f4fdc0f69e7c54fb1298cbc74151d5a561fee35878fd70d5e69f6`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -65,3 +65,12 @@ dense-subgraph extraction. Restricting the admissible blocks breaks the
 maximality argument: an extension may fail the extra requirement without
 violating the edge-loss bound. The conditional theorem and its dependencies
 are unchanged.
+
+Literature-repair checked the seven-line odd-Hadwiger addition against
+[Kühn–Sauermann–Steiner–Wigderson, v1, Theorem 1.3](https://arxiv.org/html/2512.20392v1).
+GREEN for the date, quantifiers and stated scope: the asymptotic disproof
+neither refutes ordinary Hadwiger nor settles odd t=7. This is a primary
+statement check, not an independent audit of that paper's proof. Removing
+the addition byte-recovers the preceding audited source
+`6a2d2a1cf714a3d97f007d1e9b70348ce3d943da83eb6a34f5d45835142aea45`.
+The conditional mathematics and ordinary-minor dependencies are unchanged.
