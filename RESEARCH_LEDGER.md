@@ -84,7 +84,12 @@ the marked terminal construction and an iterable reduction remain open.
 Write its neighbourhood as triangles `A,B` and edge `xy`, and put
 `W=V(G)-N[v]`. The
 [complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)
-makes both `G-v-A` and `G-v-B` four-connected. The new
+makes both `G-v-A` and `G-v-B` four-connected. The audited
+[four-clique contact bounds](results/hc7_four_clique_complement_contacts.md)
+give at most five vertices with two neighbours in either deleted
+four-clique, and at most three meeting any of its triangles twice.
+Each complement remains nonplanar after any one vertex deletion; the
+required global allocation is still missing. The
 [spanning-helper theorem](results/hc7_two_triangle_exterior_helpers.md),
 with a separate internal audit, makes `G-N[v]+{x,y}` two-connected and
 partitions it into connected x/y-rooted parts with all but at most one

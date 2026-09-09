@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`be57197378fddf209034f24b6b9cd9b983beb930adec1eba53322208d2b74d03`.
+`7645d6fddd482de524182956f0733b9847178a598f8f358b62d204bf1133bcb9`.
 
 ## Preserved scope and exact provenance
 
@@ -1119,3 +1119,27 @@ four-connectivity and fixed connected preimages all survive. Both orders
 decrease by two. No degree-five vertex in every state, second reduction
 or six-bag terminal is inferred. The ledger and navigation separately
 label the new quantitative route conditional; C19 and HC7 remain open.
+
+## Four-clique contact integration
+
+**Scoped verdict: GREEN.** Frontier SHA-256:
+`7645d6fddd482de524182956f0733b9847178a598f8f358b62d204bf1133bcb9`;
+ledger: `7785a3132644f89fec095824def1265353d80af879f888d4d7fe3eeadc243a6b`.
+The [contact theorem](../results/hc7_four_clique_complement_contacts.md) matches
+`945cfac070104f2b0994fcb6dcfafcc04fa32cbe22cbafb81ab2eac4c0b8d83a`;
+its [whole-source audit](../results/hc7_four_clique_complement_contacts_audit.md) matches
+`b7dee4a1bdb9472c1224a59284e396fe9f2a8d611f996b3a95cbfa20c2e83fec`.
+Reversing only the frontier insertion and ledger replacement byte-recovers
+Git `6707d8675c8b03384c0268c344ef0cc91a1faef3`. The parent authored this
+integration; universal_proof checked the actual diff and corrected source.
+Both triangle choices satisfy the stated hypotheses; chi(F) may be six.
+The sixteen allocations, weighted pair counts and Euler deficit establish
+the stated bounds without computation. The existing side lemma gives an
+old-R torso that remains four-connected and nonplanar; distinct R contacts,
+degree bounds and colouring responses are not automatically retained.
+For J=G/R, kappa(J)>=5 and e(J)-4|J|=q_G+6-n_2>=q_G+1;
+the older positive-surplus branch supplies no further terminal or lift.
+All seven frontier pins, the new source pin, inactive claim and scoped
+uses/related-to relations check, including only Lemma 1 of the existing
+exterior-helper source. Earlier audit bytes are preserved except the header
+pin. C19, HC7, global allocation and NT-comparable significance remain open.

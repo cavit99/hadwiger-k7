@@ -922,6 +922,26 @@ contact restrictions would allow two colour classes to reuse the four
 clique colours and the other two to use fresh colours, six-colouring G.
 This retains a chromatic constraint; it does not place the minor's bags.
 
+The [four-clique contact theorem](../results/hc7_four_clique_complement_contacts.md),
+with a separate internal audit, applies to `R={v} union A` or
+`R={v} union B`, whose complements are four-connected. At most five
+vertices outside R have two R-neighbours, and at most three have two
+neighbours in any fixed triangle of R. The complement has minimum degree
+six, at most five degree-six vertices, and remains nonplanar after any
+one vertex deletion. The proof supplies two actual constructions: a
+five-root wheel with two contacts per bag to a triangle and one full bag;
+and four connected clique bags receiving all six distinct R-pair contacts.
+It permits mixed bags and uses no finite search as a premise.
+
+These bounds do not control the number of vertices with one R-neighbour.
+In particular they give no coefficient-four density bound on `G-R`.
+Contracting R does give a five-connected quotient with positive density
+surplus, but surplus already occurs in the stronger six-connected
+[endpoint quotient](../results/hc7_k7minus_critical_codegree_three_separator_or_surplus.md).
+Its unresolved surplus branch cannot be bypassed by forgetting the
+clique preimage. A global allocation or a reduction preserving both
+colouring and ownership is still required.
+
 One sufficient construction is three connected, disjoint, pairwise
 adjacent sets outside `R` whose missing contacts to `R` form a matching
 of size at most two. Together with the four singleton roots they give
