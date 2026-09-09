@@ -80,3 +80,49 @@ rooted W4 model. The first unsupported step is prescribing the entire
 hub colour class before allocating the rim. A successful construction
 must permit its vertices to be omitted or assigned elsewhere; neither
 arbitrary hub expansion nor W4 contractibility is refuted.
+
+## 4. Six-connectivity does not reserve a connected complementary triple
+
+**False assertion:** if F is six-connected, T is an independent triple,
+and F-T has a wheel rooted at a disjoint five-set R, some such wheel
+leaves T in one connected component of its complement. This fails even
+when F-T has an R-rooted K5 subdivision.
+
+Let P be the hexagonal antiprism with cycles a0,...,a5 and b0,...,b5,
+and edges a_i b_i, a_i b_{i-1}, with indices modulo six, augmented by
+the inner-face diagonals b1b5, b2b4, b2b5. Its outer face remains the
+a-cycle. The underlying antiprism is C12 squared in interleaved order.
+Deleting at most three vertices leaves it connected: two separating gaps
+in that cyclic order would each require two consecutive deletions.
+Put F=K2 join P, with apex vertices h1,h2. It is six-connected, since a
+surviving apex connects everything and deleting both leaves at most three
+further deletions from P. Set R={h1,h2,a0,a2,a4} and T={a1,a3,a5}.
+The triple T is independent. The seven edges of F[R] and the disjoint paths
+
+    a0-b0-b1-a2,    a2-b2-b3-a4,    a4-b4-b5-a0
+
+give the claimed rooted K5 subdivision in F-T.
+
+The counterexample also retains a five-chromatic core K=F-T in which R
+is rainbow in every five-colouring, and chi(K+T)=chi(F)=6. Indeed the
+inner triangulation has faces b0b1b5, b1b2b5, b2b4b5, b2b3b4. Every
+three-colouring has, up to permutation, the b-colours (2,0,2,1,0,1),
+forcing colours (0,1,2) on a0,a2,a4 in P-T. Hence P-T is three-chromatic
+with these roots universally rainbow; the two joined apices give the
+claimed property of K. A three-colouring of P would also force a1 to
+have colour 1, equal to adjacent a2. Thus chi(P)=4: a fourth colour on
+the independent T extends the displayed colouring of P-T.
+
+Suppose a rooted R-wheel and a disjoint connected T-containing set existed.
+Remove the two bags rooted at h1,h2. W4 remains connected after deleting
+any two vertices, so the union of the other three bags is a connected
+subset of P containing a0,a2,a4. The T-containing set also lies in P.
+These disjoint connected sets would join alternating triples on one face,
+contradicting the planar separation of alternating cofacial terminals.
+Thus no choice of the rooted wheel leaves the required complementary set.
+
+This is not an actual critical-host counterexample. Here delta(F)=6,
+and F already contains Q: use h1,h2 and the wheel with hub
+{b0,...,b5} and rim bags {a0,a1},{a2,a3},{a4},{a5}. Adding a vertex v with
+neighbourhood R union T would give N(v)=K2 join C6, which contains a
+four-cycle and violates the actual C19 neighbourhood restrictions.

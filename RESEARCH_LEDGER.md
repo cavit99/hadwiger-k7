@@ -105,10 +105,11 @@ reuses the earlier cycle argument and applies in both chromatic branches
 of the [matching construction](active/hc7_two_triangle_matching_colour_host.md).
 In the two-triangle case it also gives a rooted four-clique while reserving
 all four other neighbours, including both x and y. Deleting whole colour
-classes need not preserve connectivity or minimum degree. Applying the
-wheel extension in the three-connected graph obtained by deleting only
-v and the independent triple gives a wheel rooted at the other five
-neighbours. This works for every eligible triple. The
+classes need not preserve connectivity or minimum degree. The
+[scheme-to-wheel deduction](results/k5_scheme_rooted_wheel.md), with a
+separate internal audit, now gives a wheel on all five roots of every
+K5-scheme, without prescribing the hub. It therefore supplies the wheel
+outside the entire reserved colour class I, for every eligible triple. The
 [remaining compatible choice](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 is a wheel whose complement contains that triple in one connected
 component; together with v this would give Q. That choice is unproved.
@@ -173,9 +174,11 @@ A six-root K3,3 scheme with two independent cross edges omitted would
 suffice, but a direct model may expand v's bag and allocate triangle
 vertices differently. The bipartite theorem supplies extraction only
 after compatible paths exist; it does not solve their allocation.
-Use the actual colouring and connectivity hypotheses to construct the
-bags together. Separate models or colourings cannot supply simultaneous
-contacts without a new proof.
+Use one shared construction, with colouring, ownership and adversarial
+reviews addressing the same proposed move. The current wheel avoids the
+entire independent class I, so its vertices are available for a joint
+exchange connecting the reserved triple. Separate models or colourings
+cannot supply simultaneous contacts without a new proof.
 Any C19 claim still requires that construction and an audit of the
 whole implication. The
 [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)

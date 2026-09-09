@@ -81,7 +81,10 @@ The remaining task is a rooted construction in the four-connected case,
 or a reduction within the full class of properly coloured schemes.
 The [five-root wheel extension](../results/hc7_rooted_wheel_extension.md)
 retains all five roots but prescribes neither its hub nor its missing rim
-diagonals. It therefore does not establish labelled W4 contractibility
+diagonals. The [scheme-to-wheel deduction](../results/k5_scheme_rooted_wheel.md)
+now obtains such a wheel from every K5-scheme: only the order-at-most-two
+separator reductions are needed before applying that extension.
+It does not establish labelled W4 contractibility
 or extract a rooted K5 by supplementing two prescribed literal edges.
 Even a wheel with disjoint paths for its missing diagonals is insufficient:
 the [apex-prism obstruction](../barriers/rooted_wheel_extension_limits.md#2-a-wheel-and-two-disjoint-missing-diagonal-paths)

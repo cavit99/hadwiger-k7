@@ -1,7 +1,7 @@
 # Audit of the rooted-wheel extension limits
 
 **Verdict:** GREEN for the [source](rooted_wheel_extension_limits.md),
-SHA-256 `bcfbc442f33f18fe4198f0d9dcffae282ca31eea47d1251e72bfad2fecb01a39`.
+SHA-256 `84db613b7c48e0cb48f86a13fafae362c91ea8f08cb3ea1b11eb2e8074e6be66`.
 No unresolved mathematical gap was found in the stated counterexamples.
 The first two examples retain Bacon's separate complete review at source
 `be41868a1502979528f8548a35216e6d23028986b590d4ce925c9df4bd19e711`;
@@ -81,3 +81,31 @@ addition to the [K5 frontier](../active/k5_contractibility_frontier.md),
 SHA-256 `0b55dd9f3657dee1fadd7e759555af92743a4b104da29ad44412044729833fa2`,
 accurately records only the failed whole-class containment requirement.
 No computation is a proof premise, and no C19 or HC7 closure is claimed.
+
+## Complementary triple: scoped Section 4 review
+
+**Verdict:** GREEN on the exact source pinned above; no unresolved gap.
+Bacon developed the example and its inner-triangulation strengthening,
+then separately checked the complete written source; the parent also
+checked the strengthening. The initial exposition was by literature-repair.
+This is a source-verification pass, not an independent rediscovery. The
+earlier reviews retain their stated provenance. Removing only Section 4 exactly
+recovers source `bcfbc442f33f18fe4198f0d9dcffae282ca31eea47d1251e72bfad2fecb01a39`.
+
+In the order a0,b0,a1,b1,...,a5,b5 the underlying antiprism is C12 squared.
+At most three deletions leave at most one gap blocking consecutive
+surviving vertices, so a spanning path remains. The join is six-connected.
+All ten subdivision demands exist, avoid T and have disjoint interiors.
+For every rooted wheel, deleting its two apex-rooted bags leaves a
+connected union of three bags entirely in P. Any complementary T-set
+would give disjoint a0-a2 and a1-a3 paths with alternating cofacial ends,
+which is impossible. This quantifies over all rooted wheel choices.
+The added diagonals triangulate only the inner face. Its four triangles
+successively force the displayed b-colours in every three-colouring.
+The three surviving outer roots then receive all three colours; with the
+apices, this proves the universal five-colour rainbow assertion. Restoring
+a1 forbids three-colouring P, while one fresh colour on T suffices.
+Consequently the counterexample retains both stated chromatic conditions.
+The displayed unrooted wheel and the two apices do give Q; the degree and
+neighbourhood checks correctly exclude the actual critical host. No finite
+test is a proof dependency, and no actual-case closure is asserted.

@@ -1254,16 +1254,17 @@ minimum degree or connectivity.
 
 **Reserved wheels; written deduction.** For every independent triple
 `T={a,b,t}` with `a in A`, `b in B` and `t in {x,y}`, the five vertices
-`R=N(v)-T` root a W4 minor in `G-v-T`. Indeed, writing `s` for the other
-endpoint of xy, the reservation theorem gives a K4 rooted at `R-{s}`
-and avoiding `v,T,s`. The actual vertex deletion `G-v-T` is
-three-connected, so the [wheel extension](../results/hc7_rooted_wheel_extension.md)
-retains all five R roots. This uses neither connectivity after deleting
-a whole colour class nor a five-chromatic matching quotient.
+`R=N(v)-T` root a W4 minor outside v and the entire reserved class I.
+The reservation theorem supplies their K5-scheme in `G-v-I`, and the
+[scheme-to-wheel theorem](../results/k5_scheme_rooted_wheel.md) extracts
+the wheel without a connectivity hypothesis. Its proof uses the actual
+root-preserving reductions at cuts of order at most two, followed by
+the three-connected wheel theorem. Neither its hub nor rim order is fixed.
 
 It suffices to choose one such wheel whose complement in `G-v` has
 a component D containing all of T. The triangle edges from a,b contact
-the four corresponding wheel bags, and ts contacts the fifth. Thus D
+the four corresponding wheel bags, and t contacts the bag at the other
+endpoint of xy. Thus D
 is full to the wheel, while v is adjacent to D and all five wheel bags.
 These seven disjoint connected bags contain `K2 join W4=Q`, whatever
 the wheel's hub. The compatible choice of T, wheel and D remains open.
@@ -1271,6 +1272,33 @@ Deleting a T-connecting tree need not preserve the colouring or K4
 witness used above; replacing the wheel after a root switch need not
 preserve an enlarged complementary component. Neither operation is a
 proved improving exchange.
+
+The [antiprism obstruction](../barriers/rooted_wheel_extension_limits.md#4-six-connectivity-does-not-reserve-a-connected-complementary-triple)
+shows that six-connectivity and even a rooted K5 subdivision avoiding T
+do not force this compatibility, even with a five-chromatic universally
+rainbow core whose extension by T is six-chromatic. It has minimum degree
+six, already contains Q and violates the actual neighbourhood restrictions.
+Those critical-host hypotheses must remain in the construction.
+
+For the same reserved core `F=G-v-I`, we also have `chi(F+T)=6`:
+a five-colouring would extend to G by putting `(I-T) union {v}` in colour
+six. Thus every five-colouring of F makes at least one T vertex see all
+five colours. The responsible vertex may vary. The next exchange must
+use this common obstruction while retaining the available vertices of I;
+a fresh quotient colouring need not keep the old I class monochromatic.
+
+**Induced-bipartite growth; recorded nonclosure.** Requiring `G[D]` to be
+bipartite with T on one shore makes `G[D+v]` bipartite and gives
+`chi(G-v-D)>=5`. This is already covered by the
+[bipartite palette theorem](../results/hc_bipartite_contraction_palette_dichotomy.md).
+A forced common two-colour component avoiding R touches both D shores;
+absorbing it creates an odd cycle, rather than an improving move. Keeping
+D in two original colour classes preserves a four-root K4 but does not
+preserve three-connectivity outside D. The
+[deleted-colour barrier](../barriers/hc7_degree8_deleted_colour_k4_contact_barrier.md)
+also refutes obtaining three contacts from the fixed core's colouring
+conditions alone. A joint exchange remains possible; it must preserve
+the wheel's actual contacts and justify any change of colouring or parity.
 
 The [fully rooted K5 attack](k5_contractibility_frontier.md) would therefore
 supply extraction under every reservation, rather than only the

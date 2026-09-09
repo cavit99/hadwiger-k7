@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f"
+expected_source_sha256 = "63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21718,7 +21718,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f"
+expected_source_sha256 = "63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21961,7 +21961,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f"
+expected_source_sha256 = "63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -22004,7 +22004,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f"
+expected_source_sha256 = "63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -22971,7 +22971,7 @@ status = "conditional-target"
 source = "active/k5_contractibility_frontier.md"
 source_heading = "Target and reason for the attack"
 active = false
-expected_source_sha256 = "0b55dd9f3657dee1fadd7e759555af92743a4b104da29ad44412044729833fa2"
+expected_source_sha256 = "c8ff445961effbf68105ebf731bca3d5992b4f225646d0808594d68e08f6c9ed"
 scope = "all finite K5 schemes, without restrictions on host order or path intersections beyond the scheme condition"
 label_fidelity = "all five prescribed roots in fixed disjoint connected branch sets"
 allowed_exits = ["a fully rooted K5 model in every such scheme"]
@@ -23265,7 +23265,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f"
+expected_source_sha256 = "63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632"
 scope = "the actual seven-contraction-critical Q-free host of minimum degree eight, with a degree-eight neighbourhood spanning triangles A,B and edge xy"
 label_fidelity = "all six original triangle roots; scheme paths avoid v and have no foreign roots internally"
 allowed_exits = ["in G-v an A/B-rooted K3,3 scheme with two independent cross edges omitted, whose missing pairs may be chosen"]
@@ -23343,7 +23343,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 audit = "active/hc7_k44_critical_global_construction_audit.md"
 active = false
-expected_source_sha256 = "67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f"
+expected_source_sha256 = "63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632"
 scope = "the actual critical two-triangle host and an eligible independent reservation a,b,y; maximise the two A-rooted bags in G-v-a-b-x-y"
 label_fidelity = "the four original core roots stay separate; the five deleted vertices remain outside the model; original B-root path interiors are not available for simultaneous reuse"
 conclusions = ["exactly one nonroot B port is impossible", "zero nonroot ports leave H equal to the helper union and a,x,y", "with two nonroot ports the remainder is nonempty and every component contacts all five H ports and at least two actual B roots"]
@@ -23549,16 +23549,16 @@ note = "Closes the entire five-chromatic x/y-deletion branch; the six-chromatic 
 
 [[claims]]
 id = "rooted_minors.barrier.wheel_extension_limits"
-title = "Planar triangle roots, disjoint wheel diagonals and whole hub-colour ownership do not justify rooted extensions"
+title = "Planar roots, wheel diagonals and connectivity do not force compatible extensions"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/rooted_wheel_extension_limits.md"
 audit = "barriers/rooted_wheel_extension_limits_audit.md"
 active = false
-expected_source_sha256 = "bcfbc442f33f18fe4198f0d9dcffae282ca31eea47d1251e72bfad2fecb01a39"
-scope = "the cuboctahedron with two prescribed root triangles, the cone over a pentagonal prism with five cofacial base roots, and the canonical two-copy W4 scheme"
-conclusions = ["two disjoint triangles in a four-connected planar graph need not root an octahedron", "a rooted wheel and disjoint missing-diagonal paths in a four-connected nonplanar graph need not give a rooted K5", "a strongly normalised W4 scheme need not have a rooted model whose hub bag contains the whole hub colour class"]
-does_not_prove = ["failure of the five-connected nonplanar two-triangle target", "failure of labelled W4 or K5 contractibility", "failure of the audited five-root wheel theorem", "C19 or HC7"]
+expected_source_sha256 = "84db613b7c48e0cb48f86a13fafae362c91ea8f08cb3ea1b11eb2e8074e6be66"
+scope = "the cuboctahedron, the cone over a pentagonal prism, the canonical two-copy W4 scheme, and K2 joined to the hexagonal antiprism, with the specified roots"
+conclusions = ["two disjoint triangles in a four-connected planar graph need not root an octahedron", "a rooted wheel and disjoint missing-diagonal paths in a four-connected nonplanar graph need not give a rooted K5", "a strongly normalised W4 scheme need not have a rooted model whose hub bag contains the whole hub colour class", "six-connectivity, a rooted K5 subdivision and a universally rainbow five-chromatic core becoming six-chromatic with an independent triple do not force a five-root wheel with that triple connected in its complement"]
+does_not_prove = ["failure of the five-connected nonplanar two-triangle target", "failure of labelled W4 or K5 contractibility", "failure of the audited five-root wheel theorem", "failure in the actual seven-chromatic Q-free critical host", "C19 or HC7"]
 
 [[relations]]
 source = "hc7.target.companion_neighbourhood_five_roots"
@@ -23615,33 +23615,66 @@ note = "Every smallest model can fail both stated exits; the two spanning-model 
 
 [[claims]]
 id = "hc7.companion.reserved_five_root_wheel"
-title = "Every eligible neighbour triple can be reserved outside a five-root wheel"
+title = "A five-root wheel avoids the whole reserved colour class"
 kind = "lemma"
 status = "audited-green"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 audit = "active/hc7_k44_critical_global_construction_audit.md"
 active = false
-expected_source_sha256 = "67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f"
+expected_source_sha256 = "63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632"
 scope = "the seven-connected critical two-triangle host and every independent triple T in its degree-eight neighbourhood"
-label_fidelity = "all five other actual neighbours root the wheel; T and v remain unused"
-conclusions = ["a five-root W4 exists in G-v-T for every eligible T, in either matching branch", "if some such wheel leaves all of T in one complementary component, that component and v complete Q"]
+label_fidelity = "all five other actual neighbours root the wheel; I contains T, and both the whole class I and v remain unused"
+conclusions = ["a five-root W4 exists in G-v-I for every eligible T, in either matching branch", "if some such wheel leaves all of T in one complementary component, that component and v complete Q"]
 does_not_prove = ["existence of the compatible complementary component", "rooted K5 extraction", "an improving root-switch", "Conjecture 19 or HC7"]
 
 [[relations]]
 source = "hc7.companion.reserved_five_root_wheel"
 target = "hc7.companion.critical_colour_class_reservation"
 kind = "uses"
-note = "Supplies the four-rooted K4 while reserving the triple and the fifth root."
+note = "Supplies the five-root K5-scheme outside the whole reserved colour class I and v."
 
 [[relations]]
 source = "hc7.companion.reserved_five_root_wheel"
-target = "hc7.companion.five_root_wheel_extension"
+target = "graph_schemes.k5_rooted_wheel"
 kind = "uses"
-note = "Applied after four actual vertex deletions, where three-connectivity is retained."
+note = "Extracts the five-root wheel without requiring connectivity after deleting I."
+
+[[relations]]
+source = "hc7.companion.reserved_five_root_wheel"
+target = "rooted_minors.barrier.wheel_extension_limits"
+kind = "guarded_by"
+note = "Section 4 refutes compatibility from six-connectivity and scheme existence alone; the actual critical-host hypotheses remain necessary."
 
 [[relations]]
 source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.companion.reserved_five_root_wheel"
 kind = "related_to"
 note = "Alternative sufficient C19 construction using a wheel and two full adjacent bags; the compatible component remains unproved."
+
+[[claims]]
+id = "graph_schemes.k5_rooted_wheel"
+title = "Every K5-scheme has a wheel on all five prescribed roots"
+kind = "theorem"
+status = "audited-green"
+source = "results/k5_scheme_rooted_wheel.md"
+audit = "results/k5_scheme_rooted_wheel_audit.md"
+active = false
+expected_source_sha256 = "523b649c85eeb5de453cda24340beb72cf58932a39f531c79e14621b208ac9d9"
+scope = "every finite simple host with a K5-scheme, without a connectivity assumption"
+label_fidelity = "all five prescribed roots survive in fixed disjoint preimages; hub and cyclic order are unspecified"
+strict_parameter = "host order for the single-demand and order-at-most-two separator reductions"
+conclusions = ["a W4 minor rooted at all five original roots", "the critical-host reservation can exclude the entire independent colour class I"]
+does_not_prove = ["labelled W4 or K5 contractibility", "a compatible complementary component", "Conjecture 19 or HC7", "priority or NT-comparable significance"]
+
+[[relations]]
+source = "graph_schemes.k5_rooted_wheel"
+target = "graph_schemes.k5_separator_reduction"
+kind = "uses"
+note = "Only Sections 1–2: their actual minor operations preserve any returned five-root wheel, so a minimum counterexample to that conclusion is three-connected."
+
+[[relations]]
+source = "graph_schemes.k5_rooted_wheel"
+target = "hc7.companion.five_root_wheel_extension"
+kind = "uses"
+note = "K4 contractibility supplies four selected roots in the normalised scheme; apply the extension in its three-connected whole host."

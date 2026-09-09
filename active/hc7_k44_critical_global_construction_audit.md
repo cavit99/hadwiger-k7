@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f`.
+`63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632`.
 
 ## Preserved scope and exact provenance
 
@@ -792,3 +792,76 @@ The resulting seven disjoint bags contain `K2 join W4=Q`, with no hub or
 rim-order prescription. Existence of a compatible choice of T, wheel and
 D remains unproved; neither proposed exchange has a proved improvement.
 The summaries claim neither full C19 closure nor the user's full objective.
+
+## Whole-class reserved-wheel integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632`;
+the ledger is
+`2ee419401eebf1151080963066d6dd7fe73955c457231aa6f1c42cf02f98fe00`.
+Reversing only the strengthened barrier summary recovers frontier
+`52d1528f396cce62b892fc4735c0766ca8e9252a956deac153ca9453827f6638`.
+Removing the current fourteen-line inserted block byte-recovers the
+previously reviewed frontier
+`1506127b1bd32d210384e80c5eeb3f58f8745da8913c37a32d1372e88710f134`.
+That version, against Git `be5b470`, frontier hash
+`67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f`,
+changes only the reserved-wheel construction and appends the
+induced-bipartite nonclosure. The corresponding ledger, K5-frontier and
+manifest changes were separately read. Earlier audit bytes are preserved
+apart from the current header pin. The parent authored the integration;
+literature-repair checked the preceding version after participating in the
+deduction and performing its separate whole-source internal audit.
+Route-assessment separately checked the insertion, its strengthened barrier
+summary and manifest changes, having contributed the colouring argument below.
+
+The [scheme-to-wheel source](../results/k5_scheme_rooted_wheel.md) and its
+[audit](../results/k5_scheme_rooted_wheel_audit.md) match hashes
+`523b649c85eeb5de453cda24340beb72cf58932a39f531c79e14621b208ac9d9`
+and `f5df8fc2a2a0d2d9f1ebba8b48eeb827537d91c2a44a52da8164e7c4eb68619a`.
+They justify reserving the whole independent class I, not merely T,
+without assuming connectivity after its deletion. I is not asserted to
+be a connected helper D. The actual complementary-component condition
+still supplies the same seven disjoint bags, with no prescribed wheel hub.
+
+The [barrier source](../barriers/rooted_wheel_extension_limits.md) and its
+[audit](../barriers/rooted_wheel_extension_limits_audit.md) match hashes
+`84db613b7c48e0cb48f86a13fafae362c91ea8f08cb3ea1b11eb2e8074e6be66`
+and `94604efe750d1f43bfa48120fb27fa50db446f339cb15b4ae8d3380973f1d66d`.
+Section 4 and the summary were independently checked: the six-connected
+antiprism join has the stated rooted K5 subdivision outside T, but deleting
+the two apex-rooted wheel bags leaves a connected planar set joining the
+three other roots, incompatible with a disjoint alternating T-connector.
+The added inner-face diagonals preserve that planar obstruction. Their
+four triangles force b-colours `(2,0,2,1,0,1)` and outer-root colours
+`(0,1,2)` in every three-colouring of P-T. With the apices this makes
+F-T five-chromatic with R universally rainbow; restoring a1 forbids a
+three-colouring of P, while a fresh colour on independent T suffices.
+Thus F is six-chromatic. Its minimum degree six, explicit Q model and
+forbidden neighbourhood four-cycle still exclude an actual critical-host
+counterexample. Bacon developed and checked the example and strengthening;
+literature-repair wrote its initial exposition. Route-assessment independently
+read the strengthened Section 4 and checked this complete colouring argument.
+
+For the new colouring deduction, the inherited five-colouring of F and a
+sixth colour on independent T give the upper bound. A five-colouring of
+F+T would extend to G because `(I-T) union {v}` is independent. Hence
+`chi(F+T)=6`. If every T vertex missed an F colour in one five-colouring,
+those missed colours could be assigned simultaneously, since T is
+independent, contradicting that equality. This does not select a single
+terminal that works in every colouring or preserve I under a fresh
+quotient colouring. The new inactive barrier relation has this limited
+scope and does not assert a compatible wheel or a C19 closure.
+
+For the bipartite attempt, N(v) intersect D=T places v on the shore opposite
+T, giving the stated chromatic bound. The common-component assertion is
+conditional on that component avoiding R: it then avoids every outside
+neighbour of v, so its two shore contacts are to D itself. Both external
+attachment ends have the same nonmerged colour; their even connecting path
+and an odd path between opposite D shores give an odd cycle. This is not a
+legal bipartite enlargement, nor an assertion that such a root-avoiding
+component must exist. Whole-layer deletion preserves the four-root scheme,
+not three-connectivity or a compatible wheel. The cited deleted-colour
+barrier refutes only the fixed-core contact shortcut. The revised manifest
+retains the conditional construction and the unresolved compatible D;
+neither a C19 closure nor the user's full completion criterion is claimed.
