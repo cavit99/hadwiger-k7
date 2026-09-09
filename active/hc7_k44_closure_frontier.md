@@ -1450,9 +1450,13 @@ and R to contact `W union K`, Fb and the other two common rows. Use
 of P,R restores the changed row's contact to the enlarged X; every other
 contact is inherited or stipulated. The only possible holes are (X union P)--Fb
 and R--Fa, with independent ends, giving Q. Existence of this partition
-is unproved. A fixed row path can forbid it when its only contacts with
-the other two common rows are its opposite ends. A simultaneous change
-across rows remains possible and must retain their mutual contacts.
+is unproved. The [three-row path barrier](../barriers/hc7_three_row_cycle_allocation.md)
+goes further: all three common rows can be paths, with four distinct
+centre/deficient-row contacts on each, while the host has no Q minor.
+Its written exclusion covers arbitrary models, not just this exchange.
+The example is three-connected and three-chromatic. Thus even simultaneous
+path-row allocation needs further actual-host hypotheses; it does not
+refute a construction using seven-connectivity and critical colourings.
 
 **A sufficient unrooted five-clique construction; written deduction.**
 The connected bag `{v,a,x,y}` and the three singleton B roots form a

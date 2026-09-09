@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`4f6fce827a561ce5400993197c632781919eaa8e02b97333b8d0df7fdf87c664`.
+`cb9b2dc78a6aa6d4776b366e36d5b87772d5aedd6dd9faac3aab6d8d7de7a9d1`.
 
 ## Preserved scope and exact provenance
 
@@ -945,3 +945,34 @@ Neither the requisite transfer in every critical host nor the allocation
 through the three common rows is proved. Frame changes and boundary
 colouring compatibility remain outside this deduction; the full C19,
 HC7 and comparative-significance obligations remain unmet.
+
+## Three-row counterexample integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`cb9b2dc78a6aa6d4776b366e36d5b87772d5aedd6dd9faac3aab6d8d7de7a9d1`;
+the ledger is
+`76268f09d2eeabac7da8d9877a55833063dc455a9cc7be747330da367a88a247`.
+Reversing only the replacement of the local path caveat by the explicit
+barrier summary byte-recovers Git `4ef1da9`, frontier hash
+`4f6fce827a561ce5400993197c632781919eaa8e02b97333b8d0df7fdf87c664`.
+The earlier audit bytes remain unchanged apart from the header pin.
+
+The [barrier](../barriers/hc7_three_row_cycle_allocation.md) and its
+[audit](../barriers/hc7_three_row_cycle_allocation_audit.md) match
+`e961fe0acca656c3685791eed662c425a4e661ab133140fa1d4a379653da5c08`
+and `c6ceda1f4427756767e79fcb641fdecf8f822bc6df65951b540768c51d276412`.
+Its exclusion permits arbitrary branch sets and mergers before proving
+the interval classification. It therefore blocks joint allocation in
+the displayed relaxed path-row host, not just the preceding one-row
+exchange. The construction is exactly three-connected and
+three-chromatic; neither the actual critical-host hypotheses nor an
+actual-host counterexample is asserted.
+
+The parent authored the integration. Literature-repair independently
+reviewed the complete barrier, then the changed frontier, three ledger
+lines and manifest. All seven frontier pins match; the inactive barrier
+claim and guarded-by relation correctly leave the transfer separator
+theorem intact. Its source remains at the previously audited
+`5f8c447153fd5961f7fb5835db426cbe8e7f89ada25f854c4700958b31d2f815`.
+No computation is a premise of this review. This is internal review,
+and the full C19/HC7 objective remains unmet.
