@@ -146,6 +146,10 @@ proves this certificate without asserting its existence.
 A second proved certificate uses strict Hall inequalities between four
 clique bags and five other clique bags. A labelled-tree construction gives
 Q; obtaining those inequalities in one actual model remains unproved.
+Reassessment of [near-clique transfers](results/hc7_q_free_rotation_separator.md)
+forces the missing pair to stay fixed and gives an actual separator in
+one transfer vertex and three common row bags. This removes the local
+path-ordering obstruction; allocation inside the three bags remains open.
 The frontier also proves that contracting any triangle through v leaves
 a five-connected, six-chromatic graph. This permits a more flexible
 construction in a quotient; the required seven-bag construction and its

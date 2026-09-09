@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`06743c76087c824755f84d1f079d71c43248676ad3224ca34927854388f30340`.
+`4f6fce827a561ce5400993197c632781919eaa8e02b97333b8d0df7fdf87c664`.
 
 ## Preserved scope and exact provenance
 
@@ -906,3 +906,42 @@ Six disjoint C-meeting bags forming K6-2K2, together with singleton v,
 indeed give Q: all six new contacts are actual edges from v to those
 bags. Existence of those six bags, or a compatible complementary
 component for the earlier fixed-triple wheel, remains unproved.
+
+## Q-free transfer integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`4f6fce827a561ce5400993197c632781919eaa8e02b97333b8d0df7fdf87c664`;
+the ledger is
+`c60ef59b54712986d9a718ffb8a8f5b928398619b4cf00f3083e1d407394a3c9`.
+Removing the new rotation block and its one-row exchange paragraph
+byte-recovers Git `fb94eee`, frontier hash
+`06743c76087c824755f84d1f079d71c43248676ad3224ca34927854388f30340`.
+The parent authored the integration. Literature-repair separately read
+the complete changed records and checked the added exchange, having
+previously reviewed the transfer proof and its ambient strengthening.
+This is internal review, not external peer review.
+
+The [transfer source](../results/hc7_q_free_rotation_separator.md) and
+its [audit](../results/hc7_q_free_rotation_separator_audit.md) match
+`5f8c447153fd5961f7fb5835db426cbe8e7f89ada25f854c4700958b31d2f815`
+and `fb9f654db0e7e918bdb49e834ea20b877f863a8aee2b3b66b96cf029c026b98c`.
+The summary now retains the two-hole condition, all missed-row contacts,
+both connected unions and the separate centre adjacency. It includes
+unused host vertices in the Menger search, but does not replace the three
+whole row bags by three vertices. The ledger, results row, inactive
+manifest claim and related-to relation preserve this conditional scope;
+all seven frontier pins match.
+
+For the one-row exchange, X union P, W union K, R and the four unchanged
+rows are seven disjoint connected bags. Connectedness of Fc supplies
+the P--R edge. All contacts are inherited or stipulated except possibly
+(X union P)--Fb and R--Fa, whose ends are distinct. The displayed model
+therefore contains Q. If Fc itself is an induced path and its contacts
+with the other two common rows occur only at opposite ends, no connected
+proper R can retain both contacts. This is an obstruction to the fixed
+partition, not to a simultaneous row exchange or an actual critical host.
+
+Neither the requisite transfer in every critical host nor the allocation
+through the three common rows is proved. Frame changes and boundary
+colouring compatibility remain outside this deduction; the full C19,
+HC7 and comparative-significance obligations remain unmet.

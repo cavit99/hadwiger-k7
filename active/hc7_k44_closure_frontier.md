@@ -1424,6 +1424,36 @@ in a summand of order at most six, which is impossible. A construction
 must split at least one of U,V; stronger contacts between intact bags
 cannot suffice. This does not refute the actual-host construction.
 
+**Reassessment of near-clique rotations; written proof with a separate audit.**
+The [Q-free transfer theorem](../results/hc7_q_free_rotation_separator.md)
+strengthens the older missing-pair overlap rule to equality. With five
+clique rows, adjacent two-hole centres and a transfer meeting all their
+missed rows whose union with either centre is connected, changing the
+missing pair already gives Q. This
+also covers disconnected transfers under those exact hypotheses.
+In the surviving equal-pair case, unordered paths assigning the two
+missing rows to different centres would give Q. Menger's theorem instead
+gives an actual separator consisting of one transfer vertex and the
+three common row bags, allowing paths through every unused host vertex.
+Thus local path ordering is no longer the obstruction in this configuration.
+The row bags can contain arbitrarily many vertices; splitting them with
+the required contacts, or matching colourings on the actual boundary,
+remains open. A frame-changing move can also change the missing pair.
+This reassessment does not establish the required transfer in every
+critical host or close the three-row allocation.
+
+One sufficient exchange permits a lost row contact. In the theorem's
+connected-gate notation, let the missing rows be Fa,Fb, and partition a
+common row Fc into nonempty connected P,R. Require P to contact X,Fa
+and R to contact `W union K`, Fb and the other two common rows. Use
+`X union P`, `W union K`, R and the four unchanged rows. The cut edge
+of P,R restores the changed row's contact to the enlarged X; every other
+contact is inherited or stipulated. The only possible holes are (X union P)--Fb
+and R--Fa, with independent ends, giving Q. Existence of this partition
+is unproved. A fixed row path can forbid it when its only contacts with
+the other two common rows are its opposite ends. A simultaneous change
+across rows remains possible and must retain their mutual contacts.
+
 **A sufficient unrooted five-clique construction; written deduction.**
 The connected bag `{v,a,x,y}` and the three singleton B roots form a
 four-clique minor disjoint from M. Suppose one K5 model inside M has every
