@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`3498739e39fbcd52064d7c5b762d1eb7a1d1c28c5953f053c1d98e0510231904`.
+`9075384623956cde633e8b36f3f3f3b933339526dbfafb325043068142e3ecbd`.
 
 ## Preserved scope and exact provenance
 
@@ -742,3 +742,18 @@ enlarging or replacing the model remains possible. The new inactive
 manifest claim preserves those exclusions and does not alter the primary
 target. No unrooted augmentation theorem, C19 closure or completion of the
 full objective follows. All preceding audit sections remain unchanged.
+
+## Spanning-optimiser scope integration
+
+**Scoped verdict: GREEN.** Removing the single six-line insertion
+byte-recovers Git `c74784a09d41e53a8929258858da90c870a8c6cd`, frontier
+hash `3498739e39fbcd52064d7c5b762d1eb7a1d1c28c5953f053c1d98e0510231904`.
+Route-assessment separately checked the parent's summary after its
+[independent appendix review](../barriers/hc7_minimum_clique_model_extension_audit.md)
+of source `67c42df2943647e8d19e01e3ee6a944175ca7e094f6b9ea320d44b93ac0456ec`.
+The summary distinguishes the existence of one bad spanning optimiser
+from failure of every optimiser. It correctly counts original host edges
+between bags, and the explicit leaf swap preserves both numerical optima
+while enabling a K7 split. Further selection and exchange remain possible;
+the unrooted conjecture, C19 and the full objective remain open. All earlier
+sections and review provenance are retained.

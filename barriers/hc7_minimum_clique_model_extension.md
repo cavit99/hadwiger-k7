@@ -111,3 +111,49 @@ This counterexample concerns the two stated terminals for minimum
 models. Its explicit K7 minor rules out treating it as a counterexample
 to C19, HC7 or the unrooted augmentation candidate. In particular a
 successful argument may enlarge or replace the original model.
+
+## Balanced spanning models can also require reallocation
+
+There is an eighteen-vertex six-connected graph J with a spanning K6
+model that simultaneously minimises `sum_i |B_i|^2` and maximises the
+number of interbag edges, but admits no Q-producing bag split. This is
+**one unsplittable optimiser**, not a claim about every optimiser: the
+swap below produces a splittable optimiser with both values unchanged.
+
+Take six clique vertices `c_0,…,c_5`. Give each c_i two private leaves
+`s_i,t_i`, and add all edges between the six leaves indexed by `0,1,2`
+and the six indexed by `3,4,5`. Add no other edges. Thus the leaves
+induce K6,6, and J has `15+12+36=63` edges.
+
+After at most five vertex deletions, the surviving leaf graph is
+connected. The surviving centres form a nonempty clique. If k centres
+were deleted, disconnecting all remaining centres from the leaves would
+require deleting their `2(6−k)` private leaves, exceeding the remaining
+budget `5−k`. Thus J is six-connected.
+
+The bags `B_i={c_i,s_i,t_i}` form a spanning K6 model. Their equal
+sizes attain the absolute lower bound
+
+`sum_i |B_i|^2 >= 18^2/6 = 54`.
+
+Every spanning partition into six connected bags has at least
+`sum_i (|B_i|−1)=12` internal edges, so has at most `63−12=51`
+interbag edges. These star bags attain that upper bound as well.
+Any connected split of one of them isolates a leaf. That singleton
+contacts only the three opposite-shore old bags and the part containing
+its own centre, giving degree four in the seven-bag contact graph.
+It therefore cannot yield Q, whose minimum degree is five.
+
+Now swap t_0 and t_3, leaving all other ownership unchanged. The two
+changed bags are the paths `{c_0,s_0,t_3}` and `{c_3,s_3,t_0}`. All
+six centres remain in different bags, preserving the K6 contacts.
+The sizes remain three and each bag still has two internal edges, so
+the objective values remain exactly 54 and 51.
+
+Split the first changed bag into `{c_0}` and `{s_0,t_3}`. The singleton
+centre contacts all five other centres and its own leaf s_0. The mixed
+leaf pair is connected and contacts every other bag through its leaves.
+Consequently these seven bags form K7. This example excludes a direct
+split guarantee from the two numerical optima alone; it leaves further
+tie-breakers and exchanges available, and supplies no counterexample to
+the unrooted augmentation candidate or the main research objective.

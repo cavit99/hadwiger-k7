@@ -1004,6 +1004,12 @@ gives K7. Changing a tie-break cannot repair this: a construction must
 permit enlargement or replacement of the model. No such general
 construction or induction is proved.
 
+The same source gives an eighteen-vertex obstruction to a spanning-model
+rule: one model minimises squared bag sizes and maximises the number of
+host edges between bags, yet no bag split gives Q. Swapping two vertices
+preserves both optima and permits a K7 split. Thus those numerical optima
+alone do not justify a split; a further choice or exchange may still work.
+
 **Written criterion; conjectural construction.** Fix a vertex `v` and put
 `S=N_G(v)`. For six disjoint nonempty connected bags in `G-v`, let `e`
 count their pairwise contacts and let `q` count the bags meeting `S`.

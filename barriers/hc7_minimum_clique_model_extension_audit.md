@@ -64,3 +64,40 @@ existence theorem or finite census is a dependency. The reviewer did not
 author the source; a prior independent check of the communicated
 construction was followed by this complete rereading of the frozen bytes.
 No source changes were requested or made.
+
+## Appended spanning-model example
+
+**Scoped verdict: GREEN**, 9 September 2026. The current complete source
+has SHA-256
+`67c42df2943647e8d19e01e3ee6a944175ca7e094f6b9ea320d44b93ac0456ec`.
+Removing only its final section, including the leading blank line,
+byte-recovers the original source at `b6e60ee98160a719b83df968f1705d571f18f27f470577c24beb19bcfad43739`.
+That comparison was performed against Git `c74784a`; the preceding audit
+remains unchanged. Bacon found the construction and wrote the appendix;
+route-assessment independently checked both the initial
+claim and the complete frozen section. This addendum reviews the new
+section rather than claiming independent discovery or a fresh review of
+the unchanged torus proof.
+
+The six-centre clique, twelve private spokes and leaf biclique give
+exactly 63 edges. After five deletions both leaf shores survive, and
+disconnecting all surviving centres from them exceeds the deletion
+budget. Equal bag sizes attain the absolute squared-size minimum 54;
+connectivity requires at least twelve internal edges in any spanning
+six-bag partition, giving the attained interbag-edge maximum 51.
+These are host-edge counts, not counts of adjacent bag pairs.
+
+Every split of an original star isolates a leaf with precisely three
+foreign-bag contacts and its own-centre contact, below Q's minimum degree
+five. The leaf swap keeps both changed bags connected paths, all six
+centres separate, and both numerical optima unchanged. In the final split,
+the mixed leaf pair sees bags 1,2 through t_3, bags 4,5 through s_0,
+and bag 3 through its centre or leaves; it also sees the singleton c_0
+through s_0. The centre clique supplies every remaining contact. Thus
+the displayed seven bags are a disjoint connected K7 model.
+
+The quantifier is exactly one unsplittable spanning optimiser, with a
+splittable optimiser also present. This does not extend the earlier
+every-minimum-used-model statement to all spanning optimisers, and does
+not exclude further tie-breakers, exchanges or the unrooted conjecture.
+No computation is a premise, and no source correction was needed.
