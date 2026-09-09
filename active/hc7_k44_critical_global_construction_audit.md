@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`92f4baa79c648a37d344febe71bb8d289af6e8165a6fe7cba9ab123351bf172e`.
+`37f52d830794f41930b01dfc00946497fbcf28a53a13101d57a00e9a68a3eb09`.
 
 ## Preserved scope and exact provenance
 
@@ -1170,3 +1170,51 @@ uses relations are exactly the complement and degree-six packet inputs.
 Earlier audit text is preserved apart from the header pin. The remaining
 binary cuts, more connected complement, global allocation and C19/HC7
 are explicitly open; no iterable reduction or NT-level claim is inferred.
+
+## Rooted degree exceptions and seven-separator integration
+
+**Scoped verdict: GREEN after the boundary correction below.** Reviewed
+frontier SHA-256 `37f52d830794f41930b01dfc00946497fbcf28a53a13101d57a00e9a68a3eb09`;
+ledger `90928aaf7e0fbdf184f97110db1bda8c14f8f9b295b7bdb25dca579976dcf572`.
+The parent authored the integration. Universal_proof read the actual
+diff against Git `3b61129`, all eight new source/audit files and their
+stated inputs. This reviewer supplied the four-root draft; its separate
+whole-source audit is route-assessment's. The other proof and barrier
+reviews retain the distinct provenance stated in their adjacent audits.
+
+All four source updates reverse to their exact reviewed hashes by restoring
+only the original status line. Current source/audit SHA-256 pairs are:
+
+- [Four-root exceptions](../results/four_root_degree_five_exceptions.md):
+  `a9bda26dcd8057cad14e2b52b33bec0700ecf8b2c64d60642afd1962e7d34067` /
+  `194457425ddfe6a134d16ffdee477d8e29fd2790e28626012df89a44cb9fbbe9`.
+- [Five-root exceptions](../results/hc7_five_root_two_degree_five_exceptions.md):
+  `bc2e20127d1c614e4567bc50e49137bbe00087d2eee333f454ba8fa7902382c9` /
+  `aef68f7aed4e169e490a0e8a80da14e27e2e4f15c888fc9a93d82092480babca`.
+- [Seven-separator theorem](../results/hc7_triangle_four_cycle_separator.md):
+  `30c85706951d2ba28fcf3d8834aebece78fb0e4a796012b3d9085dbf03c4b64b` /
+  `466fd4325c2cb1ac9f650cdb8ffeddbd1fe554ac11ef407fdff15b49ac7933c2`.
+- [Relative-four barrier](../barriers/hc7_degree_six_four_boundary_side.md):
+  `f2f5dc47472ee40653928ebe51480ae353919abe8ecfa489057a21036d70a523` /
+  `48353ad40729f2cdaa669583c6b8a93f0d91dedb9abd20e518a65b7c21e652ee`.
+
+The exception theorems retain the nonroot-order restriction and full
+subset-boundary hypotheses. The five-root extension supplies only one
+admissible endpoint; the seven-separator proof instead uses the original
+degree-six theorem's two choices. Its two side models meet only in their
+triangle roots, so their unions have the claimed independent holes.
+The barrier refutes the generic relative-four repair, not the actual host.
+
+The omitted-edge degree calculation gives at most four degree-five
+exceptions. The draft's stronger claim that every failed boundary gives
+a five-cut was corrected during this audit: one surviving B root in the
+three-vertex boundary leaves a permitted four-cut in F. With none, the
+boundary is a five-cut and the side contacts exactly v,u in R. Neither
+case is excluded in general. No minimal-component assumption, boundary
+degree preservation or split of a merged B-root bag is licensed.
+
+All seven frontier pins and four new inactive source pins match; uses
+relations have the stated direct scopes. Earlier audit text is preserved
+except the current header pin. Other binary cuts, the more connected
+complement, the global construction and C19/HC7 remain open; no theorem
+equivalence or NT-comparable significance is asserted.

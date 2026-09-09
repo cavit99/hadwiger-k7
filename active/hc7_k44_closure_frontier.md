@@ -942,6 +942,48 @@ edges and quantify over arbitrary host order. The independent-cut proof
 uses reverse contractions to align the entire boundary colouring,
 including the possibility that S shares a clique root's colour.
 
+The [seven-separator theorem](../results/hc7_triangle_four_cycle_separator.md),
+with a separate internal audit, gives Q in every seven-connected graph
+whose seven-cut contains disjoint literal triangle T and four-cycle S,
+provided all outside vertices have degree at least eight. Two five-root
+models on opposite pairs of S share only the prescribed T roots. Uniting
+their corresponding triangle bags preserves disjointness; the four S
+bags form a clique, and distinct admissible triangle endpoints make the
+possible holes independent. Thus, if C misses r, the cut `(R-r) union S`
+excludes a spanning four-cycle in S. A second actual construction shows
+that, when r has a unique S-neighbour w, the remaining S graphs are linear
+forests with w at an endpoint, or a triangle plus isolated w.
+
+Two separately audited inputs now permit degree-five exceptions:
+[four roots](../results/four_root_degree_five_exceptions.md) give a rooted
+K4 with at most five exceptions to degree six, and
+[five roots containing a triangle](../results/hc7_five_root_two_degree_five_exceptions.md)
+give a rooted K5-minus with at most two. Both require at least three
+nonroots and the full subset-boundary condition, respectively four and
+five. The second guarantees only one admissible triangle endpoint.
+For a full-R component C with at most two v-neighbours, deleting v and
+two S vertices gives the second degree bound but only boundary four.
+The [apex-icosahedron attachment](../barriers/hc7_degree_six_four_boundary_side.md)
+refutes replacing five by four, even with all nonroot degrees at least
+six and Q excluded. It does not satisfy the actual critical-host hypotheses.
+Replacing a tight four-boundary side by a rooted clique also lacks a
+degree-preserving continuation at the retained boundary. Neither is a
+valid reduction. A repair must retain additional actual-host constraints,
+including the omitted cut vertices and their contacts, or change the
+construction.
+
+**Omitted-edge attempt; route nonclosure.** Choose the omitted S pair
+U to be an edge and choose `u in B` missing `C intersect N(v)`.
+Deleting u as well leaves four distinct roots and at most four
+degree-five exceptions. The small-contraction exclusions control the
+new exceptions, but a failed boundary condition gives either an actual
+four-cut of F whose side misses a clique root, or a five-cut whose side
+contacts exactly v,u in R and has boundary `U union K`, with `|K|=3`.
+Neither alternative is excluded in general by the four-cut results.
+Contracting a B edge instead can return a smaller four-cut;
+its positive rooted model merges two B roots and has no justified split.
+Neither operation supplies the required five-root model or a closed lift.
+
 **Remaining separator construction.** Both components are full to S and
 contact at least three R roots. For non-independent S, separate contractions
 can force individual independent colour blocks but do not force two

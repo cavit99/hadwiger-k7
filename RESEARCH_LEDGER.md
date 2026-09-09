@@ -100,8 +100,14 @@ Each complement remains nonplanar after any one vertex deletion. The
 [four-cut theorem](results/hc7_four_cut_components.md), with a separate
 internal audit, makes every four-cut leave exactly two components and,
 under the critical colouring hypotheses, contain an edge. A clique root
-missed by a component has at most one neighbour in the cut. The remaining
-binary cuts and the global allocation are open. The
+missed by a component has at most one neighbour in the cut. The new
+[seven-separator theorem](results/hc7_triangle_four_cycle_separator.md),
+with a separate internal audit, constructs Q when a seven-cut contains
+a disjoint triangle and four-cycle and all outside degrees are at least
+eight. It closes the missed-root four-cut case with a spanning four-cycle
+by combining two models on their common triangle. Other cut shapes,
+cuts with both components full to the clique, and the global allocation
+remain open. The
 [spanning-helper theorem](results/hc7_two_triangle_exterior_helpers.md),
 with a separate internal audit, makes `G-N[v]+{x,y}` two-connected and
 partitions it into connected x/y-rooted parts with all but at most one
