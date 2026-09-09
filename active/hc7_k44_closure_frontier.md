@@ -1371,37 +1371,31 @@ In particular this applies to `T={v,x,y}`. A minor found in the quotient
 has the fixed connected preimage T, but splitting its owning bag into
 two compatible bags is an additional construction, not an automatic lift.
 
-**A common-neighbour construction in the double-critical branch; written deduction.**
-Suppose `chi(G-{x,y})=5`. Fix any five-colouring of this graph, let I be
-its whole class containing v, and put `K=G-{x,y}-I`, `J=G-I`.
-Then `chi(K)=4`: it is at most four, and three colours together with I
-would contradict the assumed chromatic number five. Also `chi(J)=6`:
-colouring K and giving x,y two fresh colours supplies the upper bound;
-five colours on J and one fresh colour on the independent I would colour G.
-For every four-colouring of this fixed K, each class meets
-`C=N_G(x) intersect N_G(y) intersect V(K)`. Otherwise recolour the
-x-neighbours in a missed class i with a fresh colour 5, give x colour i
-and y colour 5. The recoloured vertices are independent and miss y,
-so this five-colours J, a contradiction.
-[Martinsson--Steiner, Theorem 1.3](https://arxiv.org/html/2209.00594v1)
-therefore gives one K4 model in K with every bag meeting C. Their
-definition of set-rooting requires a vertex of C in each bag, rather
-than four preselected vertices; their primary statement was inspected.
-Choose one such vertex s_i from each bag. The four bags avoid v,x,y,
-and the adjacent singleton bags x,y are full to all four. Thus this is
-one K6 model retaining x,y as singletons and reserving v.
+**The five-chromatic deletion branch is closed; written proof with two separate internal audits.**
+The [five-root wheel extension](../results/hc7_rooted_wheel_extension.md)
+proves that any three-connected graph containing a K4 minor rooted at
+some four members of a five-set T contains a W4 minor rooted at all T.
+The omitted root may already belong to the K4 model; its selected four
+roots may change during induction. Every induction contraction decreases host order,
+preserves all five labels and a four-of-five K4 witness, and lifts through
+fixed disjoint connected preimages.
 
-It suffices to find a wheel `W4=K1 join C4` in `G-{x,y}` with each of
-its five bags meeting `N_G(x) intersect N_G(y)`: adding singleton x,y
-gives `K2 join W4=Q`. A model rooted at `v,s_1,s_2,s_3,s_4` would do,
-with any root as hub, but these representatives may change. This host
-is five-connected; the existing four-root model avoids v in its
-four-connected deletion. The proposed rooted-wheel extension remains
-unproved. A fan may first enter only one or two existing bags. A
-contraction preserving the five roots and three-connectivity need not
-preserve the four-root K4 witness, so host-order descent alone is insufficient.
-No model from a different colouring or a finite check supplies this step.
-The double-critical branch and the alternative `chi(G-{x,y})=6` both remain open.
+Its colouring corollary gives Q in every five-connected seven-chromatic
+G having an edge xy with `chi(G-{x,y})=5`. The common-neighbour set
+`C=N_G(x) intersect N_G(y)` is colourful in every five-colouring of
+`G-{x,y}`: a missed class allows its x-neighbours to receive a fresh
+sixth colour, x the missed colour and y the sixth, contradicting chi(G)=7.
+Deleting a whole class and applying Martinsson--Steiner, Theorem 1.3,
+gives four C-rooted K4 bags; a C vertex in the deleted class supplies
+the fifth root. The extension gives five wheel bags all meeting C.
+Adding the adjacent singleton x,y gives `K2 join W4=Q` in one model.
+
+Thus the current two-triangle case requires `chi(G-{x,y})=6`.
+More generally, every edge in an actual Q-free critical host has
+six-chromatic endpoint deletion: five is excluded by the corollary,
+fewer colours would extend to at most six on G, and proper-minor
+colourability supplies the upper bound. This remaining branch and the
+complete Conjecture 19 implication remain open.
 
 **Construction priority.** Obtain one Q model in the actual critical host.
 The following scheme is sufficient, but its six prescribed triangle roots

@@ -36,7 +36,8 @@ to intermediate claims remain with their designated conditional routes.
 
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
   the immediate C19 task is a simultaneous minor construction in the
-  two-triangle critical host. The six-root bipartite scheme is an optional
+  two-triangle critical host with six-chromatic x/y deletion; the
+  five-chromatic deletion branch is closed. The six-root bipartite scheme is an optional
   sufficient route; direct models may allocate v and the triangle roots
   differently. The global allocation remains open.
 - [Fully rooted K5 contractibility](k5_contractibility_frontier.md):

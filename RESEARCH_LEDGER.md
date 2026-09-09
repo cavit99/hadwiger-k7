@@ -40,7 +40,14 @@ The immediate target is Conjecture 19. Its audited critical-host reductions
 leave two spanning degree-eight neighbourhood configurations. The
 [cycle-and-triangle theorem](results/hc7_degree8_cycle_triangle_closure.md),
 with two separate internal audits, closes the entire five-cycle case for
-arbitrary host order. The two-triangles-and-edge case remains open.
+arbitrary host order. In the two-triangles-and-edge case, the
+[five-root wheel extension](results/hc7_rooted_wheel_extension.md), with two
+separate internal audits, closes the entire `chi(G-{x,y})=5` branch.
+It proves that a four-of-five rooted K4 in any three-connected graph
+extends to a wheel rooted at all five vertices. Its colouring corollary
+gives Q in every five-connected seven-chromatic graph having an edge xy
+with five-chromatic deletion. The remaining branch has
+`chi(G-{x,y})=6`; the two-triangle case and Conjecture 19 remain open.
 
 Write its neighbourhood as triangles `A,B` and edge `xy`, and put
 `W=V(G)-N[v]`. The
@@ -128,11 +135,6 @@ The frontier also proves that contracting any triangle through v leaves
 a five-connected, six-chromatic graph. This permits a more flexible
 construction in a quotient; the required seven-bag construction and its
 split on lifting remain open.
-When `chi(G-{x,y})=5`, a fixed whole-colour-class deletion now supplies
-one K6 model with x,y singleton and v reserved. Extending its four
-common-neighbour roots together with v to a rooted five-vertex wheel
-would give Q. That simultaneous extension remains unproved, as does
-the alternative six-chromatic deletion branch.
 
 The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
 addresses that extraction and an independent theorem target. Audited

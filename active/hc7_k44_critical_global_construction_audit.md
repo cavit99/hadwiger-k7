@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`d9457f18dc7c94425c08970cdd18bbd713dab54fb50d7808a9392adc35a8c0e3`.
+`b34af86e0c0b87d18644969caab3a48febb7094fd28e0f19225528697d3488b2`.
 
 ## Preserved scope and exact provenance
 
@@ -649,3 +649,36 @@ X and S minus N(X) nonempty after the displayed cut. Thus the stated
 five-connectivity equivalence is exact. The three-line ledger addition
 retains the need to obtain these incidences in one actual model; whole
 bag preimages do not turn that quotient cut into a small cut of G.
+
+## Five-chromatic edge-deletion branch closure
+
+**Scoped verdict: GREEN.** The final frontier hash is
+`b34af86e0c0b87d18644969caab3a48febb7094fd28e0f19225528697d3488b2`.
+Relative to Git `3f8bdea`, frontier hash
+`d9457f18dc7c94425c08970cdd18bbd713dab54fb50d7808a9392adc35a8c0e3`,
+only the former common-neighbour construction block was replaced.
+All earlier audit scopes and provenance above remain historical checks.
+The ledger and active-index changes against the same revision were also
+read. The parent wrote the integration and participated in the proof;
+route-assessment separately checked these exact summaries after its
+[complete second proof audit](../results/hc7_rooted_wheel_extension_second_audit.md).
+
+The invoked [wheel extension and colouring corollaries](../results/hc7_rooted_wheel_extension.md)
+have final source SHA-256
+`f72e0b3d4254724a58f55b9445c0c173ea6c96e535416da47b1efc7fd5eb43b3`.
+The summary preserves all five terminals while allowing the selected four
+roots to change. Its contraction invariant is correctly restricted to
+induction contractions; the auxiliary triangle kernel need not retain a
+K4 witness. Whole-class deletion and universal colourfulness supply the
+four distinct common-neighbour representatives and the fifth one outside
+their model. The same five wheel bags, with adjacent singleton x,y,
+give the required seven-bag Q model.
+
+For every actual edge uv, endpoint deletion has chromatic number at most
+six by proper-minor colourability. At most four colours extend to six on G
+using two fresh colours, while five is excluded by the new corollary:
+the actual host is seven-connected and hence satisfies its five-connectivity
+hypothesis. Thus every such deletion is six-chromatic. The records correctly
+close the five-chromatic branch while leaving the two-triangle construction,
+Conjecture 19 and the user's full objective open. No novelty or comparative
+significance conclusion is inferred from this integration.
