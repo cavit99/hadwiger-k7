@@ -1252,6 +1252,42 @@ contractibility and the two literal triangle edges give a rooted K4 in K,
 reserving all four neighbours `a,b,x,y`. These deletions need not preserve
 minimum degree or connectivity.
 
+**Colourful sets without connectivity; written proof with a separate audit.**
+The [marked-minor reduction](../results/colourful_five_wheel.md) adapts
+Martinsson–Steiner, Claims 3.8–3.10, to all k>=4: a k-colourable graph with a set colourful in every k-colouring
+has a three-connected minor retaining that condition, with disjoint
+connected marked preimages. Its five-colour corollary gives a W4 with
+five bags meeting the colourful set, without a connectivity hypothesis.
+Representatives and hub are free. A sixth mark may share one of those
+bags; it is not automatically available outside the model.
+
+**Current six-bag construction; unproved.** Put `F=G-v` and `C=N_G(v)`
+in the actual critical host. Then F is six-connected and six-chromatic,
+and C is colourful in every six-colouring. It suffices to find a
+`K6-2K2` model with six bags each meeting C: singleton v supplies every
+seventh-bag contact, giving Q. This allows any six representatives among
+the eight neighbours. A direct Q model may also expand v.
+
+For every whole class I of any six-colouring of F, the new theorem gives
+a wheel in F-I with five bags each meeting C-I. Indeed F-I is
+five-chromatic, and every five-colouring there makes C-I colourful;
+otherwise restoring I in colour six would contradict either chi(F)=6
+or the colourfulness of C. At least one C vertex lies in I and is
+therefore outside all five bags. Thus the next construction can reserve
+a singleton C-colour class and choose its five wheel marks among the
+other seven neighbours, instead of fixing a particular triple.
+
+If `C intersect I={c}`, the set `N_F(c)-I` is also colourful in every
+five-colouring of F-I: a missed colour could be assigned to c while
+I-c receives colour six, leaving C without colour six. Separate wheel
+extractions for these two colourful sets do not give one wheel whose
+five C-meeting bags all contact c. Nor can an arbitrary C-colour class
+be moved to colour six while restoring I-c: edges to I-c may conflict.
+This is the first unsupported recolouring step. Six-connectivity counts
+actual attachment vertices, not distinct wheel bags. A common model or
+an ownership-preserving exchange remains needed. The previous fixed-triple
+construction below is still available; neither formulation is a closure.
+
 **Reserved wheels; written deduction.** For every independent triple
 `T={a,b,t}` with `a in A`, `b in B` and `t in {x,y}`, the five vertices
 `R=N(v)-T` root a W4 minor outside v and the entire reserved class I.

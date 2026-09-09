@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632`.
+`06743c76087c824755f84d1f079d71c43248676ad3224ca34927854388f30340`.
 
 ## Preserved scope and exact provenance
 
@@ -865,3 +865,44 @@ not three-connectivity or a compatible wheel. The cited deleted-colour
 barrier refutes only the fixed-core contact shortcut. The revised manifest
 retains the conditional construction and the unresolved compatible D;
 neither a C19 closure nor the user's full completion criterion is claimed.
+
+## Colourful marked-minor integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`06743c76087c824755f84d1f079d71c43248676ad3224ca34927854388f30340`;
+the ledger is
+`a2c8513325c2ed61d2073bbdd27671c99097d48d8888ab30adfe5d36be171267`.
+Removing exactly the new colourful-set block byte-recovers Git
+`0f068dc`, frontier hash
+`63739e3e72021fa6de16cd3b7ba3b58fb3a588847513cb2478870a5cc6d4c632`.
+The parent authored this integration; literature-repair separately read
+the changed frontier, ledger, results navigation and manifest after
+independently auditing the adapted reduction and its corollaries. Direct
+inspection of Martinsson–Steiner, Claims 3.8–3.10, confirms the stated
+attribution of the separator method. This remains internal review.
+
+The [marked-minor source](../results/colourful_five_wheel.md) and its
+[audit](../results/colourful_five_wheel_audit.md) match
+`d804335fc68cff69d4eb2de770c246cbb91e0da336eb36a206d93d89378a64a1`
+and `4e9710fad89b9b2f09aae93ba0ff332473d3d9fd0f5a31346b8a3d99e11b5c6f`.
+The new manifest claim has the correct uniform k>=4 scope and fixed
+marked preimages; its wheel dependency applies to the five-colour
+corollary. All seven frontier pins match. Its relation to the six-bag
+construction is explicitly conditional, and the results row makes no
+sixth-bag, priority or C19 claim. The source and summaries do not present
+the adaptation as a new separator method or an NT-comparable result.
+
+In the actual host, vertex-deletion criticality gives chi(G-v)=6 and
+universal colourfulness of C=N(v). Any whole class I can therefore be
+reserved. Since eight neighbours use all six colours, a class meeting C
+only at c exists. If a five-colouring of F-I misses a colour at N_F(c),
+giving c that colour and I-c colour six properly colours F with colour
+six absent from C, a contradiction. This checks the second colourful
+set without asserting colourfulness of the intersection or a common
+wheel. Edges to I-c can obstruct the subsequent proposed recolouring,
+as stated. Only marks in I are guaranteed unused by the extracted wheel.
+
+Six disjoint C-meeting bags forming K6-2K2, together with singleton v,
+indeed give Q: all six new contacts are actual edges from v to those
+bags. Existence of those six bags, or a compatible complementary
+component for the earlier fixed-triple wheel, remains unproved.

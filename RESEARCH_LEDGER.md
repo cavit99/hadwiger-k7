@@ -113,6 +113,15 @@ outside the entire reserved colour class I, for every eligible triple. The
 [remaining compatible choice](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 is a wheel whose complement contains that triple in one connected
 component; together with v this would give Q. That choice is unproved.
+The [colourful-set reduction](results/colourful_five_wheel.md), with a
+separate internal audit, adapts Martinsson–Steiner's separator argument
+to every k>=4, preserving a colourful set in a three-connected marked minor. Its five-colour corollary removes
+connectivity from wheel extraction. Consequently any whole colour class
+I in G-v can be reserved while a wheel has five bags meeting N(v)-I.
+The current construction allows those representatives to vary: six
+N(v)-meeting bags forming K6-2K2 would give Q upon adding v. The sixth
+bag and its contacts remain unproved. This is a broader extraction input,
+not a closure of the remaining case or a substantiated NT-level result.
 The [clique-deletion bound](results/hc7_clique_deletion_colour_bound.md)
 makes every four-clique deletion at least five-chromatic. More strongly,
 the [reduced-complement bound](results/hc7_two_triangle_reduced_complement_colour_bound.md)
@@ -175,10 +184,11 @@ suffice, but a direct model may expand v's bag and allocate triangle
 vertices differently. The bipartite theorem supplies extraction only
 after compatible paths exist; it does not solve their allocation.
 Use one shared construction, with colouring, ownership and adversarial
-reviews addressing the same proposed move. The current wheel avoids the
-entire independent class I, so its vertices are available for a joint
-exchange connecting the reserved triple. Separate models or colourings
-cannot supply simultaneous contacts without a new proof.
+reviews addressing the same proposed move. Use the new freedom to reserve
+any whole class and change the wheel representatives; the fixed-triple
+construction remains an option. Separate models at N(v)-I and at the
+reserved neighbour's neighbourhood do not supply the same five contacts.
+The frontier records the exact recolouring conflict with I outside N(v).
 Any C19 claim still requires that construction and an audit of the
 whole implication. The
 [designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
