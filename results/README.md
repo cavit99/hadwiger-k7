@@ -115,8 +115,11 @@ with its [GREEN audit](hc7_critical_colour_class_reservation_audit.md),
 keeps all four additional neighbours outside a rooted four-clique under
 the critical colouring hypotheses. It also supplies actual-root K5 schemes
 for every independent triple reservation, in both matching branches.
-Combined with the wheel theorem, it gives a wheel rooted at the other
-five neighbours while avoiding the triple and v. The
+The [scheme-to-wheel deduction](k5_scheme_rooted_wheel.md), with its
+[separate internal audit](k5_scheme_rooted_wheel_audit.md), gives a wheel
+on all five roots of every K5-scheme, without prescribing the hub.
+It therefore reserves the entire independent colour class containing the
+triple, as well as v. The
 [remaining simultaneous construction](../active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 would choose the triple and wheel so that one component outside the wheel
 bags in `G-v` contains the whole triple. This would give Q, but is unproved.
