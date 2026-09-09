@@ -1232,6 +1232,21 @@ must use further actual-host hypotheses; this example is four-chromatic,
 has degree-three vertices and a three-cut. It does not refute the
 critical-host construction.
 
+**Simultaneous recolouring; written proof with a separate internal audit.**
+The [two-component repair](../results/hc7_common_response_recolouring.md)
+uses actual non-six-colourability. Among three loopless layers, two
+components have disjoint endpoint pairs covering all three matching edges.
+Shared α vertices can be reassigned safely: failure of repair forces an
+actual edge between their other colour shores. This holds for every
+eligible pair. The fixed graph on α and the three free colour classes is
+five-chromatic; deleting any matching edge makes it four-chromatic, so
+every induced five-critical subgraph retains all six endpoints.
+The outstanding construction must use these constraints together. A colour
+shore need not be connected, and shared vertices cannot be owned by several
+minor bags; contracting shores or lifting a short-path model through whole
+carriers is unsupported. Neither this loopless case nor the loop cases are
+closed.
+
 **Whole-colour-class reservation; written deductions with a separate audit.**
 The [reduced-complement colouring theorem](../results/hc7_two_triangle_reduced_complement_colour_bound.md)
 gives `chi(G[W union (A-{a})])>=5` for every a missing x,y, including

@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`cb9b2dc78a6aa6d4776b366e36d5b87772d5aedd6dd9faac3aab6d8d7de7a9d1`.
+`bd3ab65b32317d1cd7322cbca44e31f4d29e157c2eeddd5d4472b6f8e722c083`.
 
 ## Preserved scope and exact provenance
 
@@ -976,3 +976,24 @@ theorem intact. Its source remains at the previously audited
 `5f8c447153fd5961f7fb5835db426cbe8e7f89ada25f854c4700958b31d2f815`.
 No computation is a premise of this review. This is internal review,
 and the full C19/HC7 objective remains unmet.
+
+## Common-response recolouring integration
+
+**Scoped verdict: GREEN.** The exact reviewed frontier SHA-256 is
+`bd3ab65b32317d1cd7322cbca44e31f4d29e157c2eeddd5d4472b6f8e722c083`;
+the ledger is `1ee782a9bb1dcf690e98102068305ff2bc79a186d29a90e2013478ee6d1b6c88`.
+The [new proof](../results/hc7_common_response_recolouring.md) matches
+`0c90ba957d42eee66d8b082096a5528b54fef72e47e2f64785ac4a229a809e81`.
+Removing the 15-line frontier insertion and four ledger lines separately
+byte-recovers Git `4f56819`; all seven frontier pins match. Earlier audit
+bytes are preserved apart from the current header pin. The parent authored
+the proof and integration; literature-repair independently read the whole
+new proof and changed records, alongside Route's separate source audit.
+Shared nonterminal alpha vertices introduce no unexamined edge conflict:
+the obstruction is exactly an actual edge between the two specified colour
+shores. The eligible-pair quantifier, both complementary whole classes,
+five-chromatic H and retention of all six endpoints check. The results row,
+inactive claim and relation retain non-p-colourability explicitly after
+the scope correction. Connected shore allocation remains unproved, and
+neither the loopless nor the loop cases are closed. This internal review
+establishes neither C19 nor HC7 or NT-comparable significance.

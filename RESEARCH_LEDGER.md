@@ -97,6 +97,10 @@ remain audited resources for that allocation. The latter preserves a
 fixed four-chromatic graph across all its four-colourings, giving either
 a minor rooted at four triangle vertices or five compatible endpoint
 paths. Neither result licenses combining independently chosen models.
+The [simultaneous recolouring argument](results/hc7_common_response_recolouring.md)
+now forces actual cross-colour edges in the three-loopless-layer response,
+while retaining a fixed five-chromatic graph and all six matching endpoints.
+Allocating those contacts to disjoint connected bags remains unproved.
 
 The [whole-colour-class reservation](results/hc7_critical_colour_class_reservation.md),
 with a separate internal audit, supplies K5 schemes rooted at five actual vertices for
