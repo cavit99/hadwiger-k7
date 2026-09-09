@@ -49,6 +49,17 @@ gives Q in every five-connected seven-chromatic graph having an edge xy
 with five-chromatic deletion. The remaining branch has
 `chi(G-{x,y})=6`; the two-triangle case and Conjecture 19 remain open.
 
+The [four-connected colouring theorem](results/four_connected_five_chromatic_minor.md)
+now proves that every four-connected `K6-2K2`-minor-free graph other than
+K5 is four-colourable, with a separate internal audit. It closes the
+universal-vertex case of the proposed five-connected six-chromatic Q
+construction. The actual critical host has a five-connected six-chromatic
+triangle quotient of minimum degree at least six; constructing Q there
+would close C19. The new theorem supplies no simultaneous attachment of
+six bags to a general additional vertex. That marked construction remains
+open; neither novelty nor NT-level significance is established for this
+lower-order deduction.
+
 Write its neighbourhood as triangles `A,B` and edge `xy`, and put
 `W=V(G)-N[v]`. The
 [complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)

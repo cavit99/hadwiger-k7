@@ -1577,6 +1577,37 @@ In particular this applies to `T={v,x,y}`. A minor found in the quotient
 has the fixed connected preimage T, but splitting its owning bag into
 two compatible bags is an additional construction, not an automatic lift.
 
+**Chromatic augmentation target; unproved.** Every five-connected
+six-chromatic graph of order at least seven contains Q. This would close
+C19 by the preceding quotient, without splitting T. The actual quotient
+also has minimum degree at least six: unmerged vertices lose at most two
+neighbours, and the merged vertex retains the other six neighbours of v.
+Its order is at least seven since `delta(G)>=8`. Thus retaining this
+additional degree hypothesis would still suffice.
+
+The [four-connected colouring theorem](../results/four_connected_five_chromatic_minor.md),
+with a separate internal audit, proves the lower-order statement: every
+four-connected `K6-2K2`-minor-free graph other than K5 is four-colourable.
+Brooks supplies five neighbours in a noncomplete five-critical subgraph;
+colourful K4 extraction and the five-root wheel extension use the ambient
+graph after deleting their common neighbour. This closes the augmentation
+target when the six-chromatic graph has a universal vertex.
+
+For a general six-chromatic H, a six-critical induced subgraph J is either
+a literal K6, which is terminal by five-connectivity, or has a vertex z
+with at least six neighbours in J. Put `F=J-z`, `L=H-z` and `C=N_J(z)`.
+Then F is five-chromatic, C is colourful in every five-colouring of F,
+and L is four-connected. Six disjoint C-rooted bags forming `K6-2K2`
+in L would give Q by adjoining z. This marked construction remains open.
+F need not be four-connected, and L need not be five-chromatic. The new
+unrooted theorem does not retain the six required contacts to z.
+An induced critical core cannot simply replace H; nor does an edge
+contraction preserve its chromatic number. In an edge-critical
+six-chromatic graph every single-edge quotient is five-colourable,
+because a five-colouring after deleting that edge gives its ends the
+same colour. A valid continuation needs the simultaneous marked
+construction or a reduction preserving both hypotheses and its lift.
+
 **The five-chromatic deletion branch is closed; written proof with two separate internal audits.**
 The [five-root wheel extension](../results/hc7_rooted_wheel_extension.md)
 proves that any three-connected graph containing a K4 minor rooted at

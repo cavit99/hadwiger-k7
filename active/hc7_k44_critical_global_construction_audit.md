@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`2a36e8b1ea18ff5a50321d073d6819e2d265c1acc35f45c8592bd826df74f709`.
+`b281a9e253b4826dcd1520aa2e1517150c1ba85bf0d165fc1425211d4a89f61f`.
 
 ## Preserved scope and exact provenance
 
@@ -1043,3 +1043,26 @@ permits three colours; additional alpha vertices T are independent and nonadjace
 Restoring T and s in colour four aligns all blocks on S union T, their entire overlap.
 This is a four-colouring nonclosure, with no finite premise or three-layer minor claim.
 The response target and C19/HC7 remain open; all earlier audit text is preserved.
+
+## Four-connected colouring theorem integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`b281a9e253b4826dcd1520aa2e1517150c1ba85bf0d165fc1425211d4a89f61f`;
+the ledger is `4f56858222c6d889b211a51342671400fca373b9ef7ec9db63cc6d34aad4277b`.
+The [new theorem](../results/four_connected_five_chromatic_minor.md) matches
+`5ae447797bd217f620c193cb30ef3da92519381461bb743d7f0abd4e337be9c9`;
+its [separate audit](../results/four_connected_five_chromatic_minor_audit.md) matches
+`84bf618e9b959f8b53ab5f7daee7514d37b4d2ee85f7806654c3edec5bff1a51`.
+Reversing only the frontier and ledger insertions exactly recovers Git abb4fa7.
+The parent authored this integration; universal_proof independently checked
+its actual diff, the proof's pinned inputs and the complete adjacent audit.
+In the actual triangle quotient, unmerged vertices lose at most two neighbours;
+the merged vertex retains six, and delta(G)>=8 gives quotient order at least seven.
+The preceding connectivity/chromatic proof and fixed triangle preimage make
+the full proposed augmentation theorem sufficient for C19, without a bag split.
+Brooks' six-critical J, five-chromatic F=J-z, and four-connected L=H-z are
+kept distinct; L may be six-chromatic. Six C-rooted Q6 bags are only sufficient.
+The edge-critical quotient warning is valid and asserts no closed induction.
+The results row, all seven frontier pins, inactive claim and uses/related-to
+relations retain the proved scope. Earlier audit bytes are preserved except
+the header pin; general augmentation, C19/HC7 and NT-level significance remain open.
