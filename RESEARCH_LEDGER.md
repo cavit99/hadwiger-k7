@@ -100,7 +100,12 @@ paths. Neither result licenses combining independently chosen models.
 The [simultaneous recolouring argument](results/hc7_common_response_recolouring.md)
 now forces actual cross-colour edges in the three-loopless-layer response,
 while retaining a fixed five-chromatic graph and all six matching endpoints.
-Allocating those contacts to disjoint connected bags remains unproved.
+The [three-edge reduction](results/hc7_three_edge_response_reduction.md)
+then reduces a broader response class to three-connected five-critical
+cores, with fixed minor lifts and strictly decreasing order. Marked
+endpoints may merge. Its path case reduces to the triangle case, where
+the required Q must already lie in the core. That terminal construction
+and the remaining matching and path-plus-edge cases are unproved.
 
 The [whole-colour-class reservation](results/hc7_critical_colour_class_reservation.md),
 with a separate internal audit, supplies K5 schemes rooted at five actual vertices for

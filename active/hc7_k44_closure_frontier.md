@@ -1241,11 +1241,24 @@ actual edge between their other colour shores. This holds for every
 eligible pair. The fixed graph on α and the three free colour classes is
 five-chromatic; deleting any matching edge makes it four-chromatic, so
 every induced five-critical subgraph retains all six endpoints.
-The outstanding construction must use these constraints together. A colour
-shore need not be connected, and shared vertices cannot be owned by several
-minor bags; contracting shores or lifting a short-path model through whole
-carriers is unsupported. Neither this loopless case nor the loop cases are
-closed.
+
+The [three-edge response reduction](../results/hc7_three_edge_response_reduction.md),
+with a separate internal audit, permits three distinct marked edges to
+share endpoints. Every response in that enlarged class reduces to a
+three-connected five-critical core. Two-cut replacements preserve all
+three loopless quotients and a fixed minor lift, including the added
+port edge and both apex contacts simultaneously; core order decreases.
+The apex remains singleton during these reductions, while original
+endpoint roles may merge. If the marked edges form a path, one further
+contraction consumes the apex and reduces to a triangle response.
+The conjectural target is Q in the response plus its prescribed apex.
+For a marked triangle the apex cannot help: Q must already occur in the
+core. This stronger terminal claim is unproved, as are the remaining
+matching and path-plus-edge cases. No auxiliary seven-connectivity or
+seven-chromaticity is asserted. A colour shore need not be connected,
+and shared vertices cannot be owned by several minor bags; contracting
+shores or lifting a short-path model through whole carriers remains
+unsupported. Neither the loopless case nor the loop cases are closed.
 
 **Whole-colour-class reservation; written deductions with a separate audit.**
 The [reduced-complement colouring theorem](../results/hc7_two_triangle_reduced_complement_colour_bound.md)

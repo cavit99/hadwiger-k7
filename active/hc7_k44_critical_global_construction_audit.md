@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`bd3ab65b32317d1cd7322cbca44e31f4d29e157c2eeddd5d4472b6f8e722c083`.
+`0fa74456490c445f3954488937e3e94a8a5dcee18677848bf3e13d6e7ca6b22d`.
 
 ## Preserved scope and exact provenance
 
@@ -997,3 +997,28 @@ inactive claim and relation retain non-p-colourability explicitly after
 the scope correction. Connected shore allocation remains unproved, and
 neither the loopless nor the loop cases are closed. This internal review
 establishes neither C19 nor HC7 or NT-comparable significance.
+
+## Three-edge response reduction integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`0fa74456490c445f3954488937e3e94a8a5dcee18677848bf3e13d6e7ca6b22d`;
+the ledger is `5f7776880505e84a0b033c4ebee4f08b2ab7e66c052dd28108723c8a4d7a1341`.
+The [promoted proof](../results/hc7_three_edge_response_reduction.md) and
+its [audit](../results/hc7_three_edge_response_reduction_audit.md) match
+`2c6175160901c664f47c145c94ff9e0a56176a5938bc28dc0c7302a51d7b6c40`
+and `31c4fe1a21f5237e9489ec4797fab4c44bfc237f8aa0695e7aaf60faf3abe2d9`.
+Reversing only the displayed frontier and ledger replacements separately
+byte-recovers Git `93d3c5b`; all seven frontier pins match. The parent
+authored the integration. Literature-repair, having independently audited
+the proof and handled its promotion, separately checked these changed
+records, the merged results row, inactive claim and related-to relation.
+Earlier audit bytes are preserved apart from the current header pin.
+
+The summary distinguishes singleton-apex two-cut lifts from the separate
+apex-consuming P4 reduction. It retains strict core-order descent, the
+enlarged endpoint class and the necessity of Q already in a triangle core.
+It asserts neither six retained endpoint roles nor auxiliary critical-host
+connectivity or chromatic number. The matching, path-plus-edge and triangle
+terminal constructions remain open, as do the loop cases and C19/HC7.
+No planar-grid diagnostic or other finite result is a premise of this
+internal review, and no NT-comparable significance is claimed.
