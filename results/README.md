@@ -25,6 +25,7 @@ the limitations of an earlier argument are not current open bipartite cases.
 | Every complete bipartite graph `K_{2,n}` is contractible | [Proof](k2n_contractibility_via_matroid_packing.md) · [GREEN audit](k2n_contractibility_via_matroid_packing_audit.md) · [four-page DRAFT](../paper/k2n-contractibility/main.pdf) | Computation-free; answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
 | Four literal root edges complete five-root partial routing | [Proof](llru_question61_via_km_property_star.md) · [GREEN audit](llru_question61_via_km_property_star_audit.md) · [second GREEN cold audit](llru_question61_via_km_property_star_second_cold_audit.md) | Answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated eight-connectivity threshold `k>=11`.  It is an application of Kriesell--Mohr property `(*)`. |
 | Every three-connected graph has a rooted `K_4^-` minor at any four prescribed roots | [Proof](rooted_k4minus_four_roots.md) · [GREEN audit](rooted_k4minus_four_roots_audit.md) | Elementary unbounded proof.  The missing quotient edge is not prescribed, and the model need not span. |
+| Four clique roots extend to a five-root wheel | [Proof](hc7_rooted_wheel_extension.md) · [GREEN audit](hc7_rooted_wheel_extension_audit.md) · [second GREEN audit](hc7_rooted_wheel_extension_second_audit.md) | In any three-connected graph, a K4 rooted at four of five prescribed vertices gives a W4 rooted at all five. W4 is a four-cycle with a universal hub; the hub is not prescribed. The fifth root may lie in the initial K4 model. |
 | Five prescribed roots containing a triangle force a rooted wheel under internal five-connectivity and at least two nonroots | [Proof, Lemma 1](hc7_degree8_two_triangle_exterior.md) · [GREEN audit](hc7_degree8_two_triangle_exterior_audit.md) | No separate degree hypothesis; stopping the root-preserving contraction at two nonroots strengthens the [earlier wheel theorem](hc7_five_root_wheel.md). |
 | Nonroot degree seven, with at most five degree-six exceptions, strengthens the five-root wheel to `K_5^-` | [Proof](hc7_five_root_almost_clique.md) · [GREEN audit](hc7_five_root_almost_clique_audit.md) | Under the same rooted boundary and triangle hypotheses, nine contacts survive; the triangle endpoint of the possible missing pair can be designated in advance. No extra helper is guaranteed. |
 | Five-root `K_5^-` with unrestricted degree-six nonroots | [Proof](hc7_five_root_degree_six.md) · [GREEN audit](hc7_five_root_degree_six_audit.md) | A nonempty nonroot set, internal five-connectivity and a root triangle suffice when every nonroot has degree at least six. At least two triangle roots can be the missing-edge endpoint; this theorem does not prescribe a particular one. |
@@ -56,22 +57,32 @@ Later theorem notes strengthen and extend that snapshot:
 These are necessary structural theorems about a hypothetical counterexample.
 They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
 
-For the companion target, the
+## Results towards Conjecture 19
+
+Here `Q=K_7-2K_2`, with two independent edges deleted. The conjecture
+asserts that every Q-minor-free graph is six-colourable. The
+[cycle-case theorem](hc7_degree8_cycle_triangle_closure.md), with
+[two](hc7_degree8_cycle_triangle_closure_audit.md)
+[GREEN audits](hc7_degree8_cycle_triangle_closure_second_audit.md), closes
+the entire five-cycle-and-triangle case for arbitrary host order.
+The [wheel theorem's colouring corollary](hc7_rooted_wheel_extension.md#7-colourful-sets-and-the-double-critical-branch)
+gives Q in every five-connected seven-chromatic graph with an edge xy
+such that `chi(G-{x,y})=5`. Thus the remaining two-triangle critical-host
+branch has `chi(G-{x,y})=6`. Conjecture 19 remains open.
+
+The
 [cycle-and-triangle](hc7_degree8_cycle_exterior.md) and
 [two-triangle](hc7_degree8_two_triangle_exterior.md) exterior theorems, with
 their [first](hc7_degree8_cycle_exterior_audit.md) and
 [second](hc7_degree8_two_triangle_exterior_audit.md) GREEN audits, make
-`G-N[v]` connected and full to all eight neighbours in both remaining
+`G-N[v]` connected and full to all eight neighbours in both
 spanning configurations. The cycle case also gives exterior minimum degree
 five. Neither theorem supplies the remaining simultaneous allocation.
 The [cycle-complement theorem](hc7_cycle_triangle_complement_three_connectivity.md),
 with [two](hc7_cycle_triangle_complement_three_connectivity_audit.md)
 [GREEN audits](hc7_cycle_triangle_complement_three_connectivity_second_audit.md),
-excludes every two-cut of `G-v-C`. The resulting
-[complete cycle-case theorem](hc7_degree8_cycle_triangle_closure.md), with
-[two](hc7_degree8_cycle_triangle_closure_audit.md)
-[GREEN audits](hc7_degree8_cycle_triangle_closure_second_audit.md), uses a
-three-region contact construction to close the entire five-cycle case.
+excludes every two-cut of `G-v-C` and supplies an input to the cycle-case
+closure above.
 The [two-triangle separator theorem](hc7_two_triangle_separator_allocation.md),
 with its [GREEN audit](hc7_two_triangle_separator_allocation_audit.md), makes
 each A-side two-connected and its minimal torso four-connected. Building
@@ -103,9 +114,14 @@ The [whole-colour-class reservation](hc7_critical_colour_class_reservation.md),
 with its [GREEN audit](hc7_critical_colour_class_reservation_audit.md),
 keeps all four additional neighbours outside a rooted four-clique under
 the critical colouring hypotheses. It also supplies actual-root K5 schemes
-for every independent triple reservation, in both matching branches;
-rooted K5 extraction and a compatible seven-bag extension remain open.
-The two-triangles-and-edge case and Conjecture 19 remain open.
+for every independent triple reservation, in both matching branches.
+Combined with the wheel theorem, it gives a wheel rooted at the other
+five neighbours while avoiding the triple and v. The
+[remaining simultaneous construction](../active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+would choose the triple and wheel so that one component outside the wheel
+bags in `G-v` contains the whole triple. This would give Q, but is unproved.
+Fully rooted K5 extraction and other seven-bag constructions remain
+alternative open routes.
 
 The [colour-path completion](hc7_cycle_colour_path_completion.md), with
 its [GREEN audit](hc7_cycle_colour_path_completion_audit.md), extends the

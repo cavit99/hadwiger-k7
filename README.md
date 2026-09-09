@@ -44,6 +44,14 @@ strict induction on host order. The
 the result and its application boundary. No implication to `HC_7` is
 established; `HC_7` remains the primary open objective.
 
+The immediate campaign is Norin--Totschnig Conjecture 19: graphs with no
+`K_7-2K_2` minor are six-colourable, where the two deleted edges are
+independent. Audited proofs close the five-cycle-and-triangle neighbourhood
+case and the five-chromatic endpoint-deletion branch. The remaining
+two-triangles-and-edge case requires a simultaneous minor construction;
+Conjecture 19 remains open. See the
+[completed cases and available inputs](results/README.md#results-towards-conjecture-19).
+
 The seven-connected `K_{4,4}` closure conjecture, T44, remains a preserved
 conditional route to Norin--Totschnig Conjecture 21. It is open and would
 not by itself prove `HC_7`. Its proved inputs and remaining obligations are
@@ -59,10 +67,11 @@ links their proofs, audits and exact scopes.
 
 | Result | Status and scope |
 |---|---|
-| [Every bipartite graph is contractible](results/bipartite_contractibility_via_matroid_reduction.md) | Computation-free written proof with two separate internal audits. Every scheme of every finite bipartite target contains the fully prescribed rooted minor, with no degree or path-length bound. It also independently proves the intended BLR bipartite-flow assertion. Publication priority and significance compared with Norin--Totschnig remain qualified. |
-| [Degree three on one bipartition side](results/degree_three_bipartite_weak_contractibility.md) | Computation-free proof with a [separate GREEN internal audit](results/degree_three_bipartite_weak_contractibility_audit.md). Every scheme has a minor retaining all prescribed roots on the opposite side. This includes weak contractibility of every `K_{3,n}`; full rooted contractibility is not asserted. |
-| [Even subdivisions are contractible](results/even_subdivision_contractibility.md) | Computation-free written proof with [two separate internal audits](results/even_subdivision_contractibility_audit.md). More generally, every bipartite graph with degree at most two on one specified side is contractible. This extends the `K_{2,n}` theorem to a family of unbounded treewidth. |
-| [Every `K_{2,n}` is contractible](results/k2n_contractibility_via_matroid_packing.md) | Computation-free written proof with a [hash-pinned GREEN internal audit](results/k2n_contractibility_via_matroid_packing_audit.md) and a [four-page manuscript](paper/k2n-contractibility/main.pdf).  It answers the `K_{2,4}` half of Kündgen--Pelsmajer--Ramamurthi's Section 8, Question 2. |
+| [Every bipartite graph is contractible](results/bipartite_contractibility_via_matroid_reduction.md) | Computation-free written proof with two separate internal audits. Every scheme of every finite bipartite target contains the fully prescribed rooted minor, with no degree or path-length bound. It independently proves the intended BLR bipartite-flow assertion. The ledger assesses this as a substantial specialist contribution below the Norin--Totschnig benchmark; priority remains qualified. |
+| Preserved bipartite precursors | Audited proofs of [fully rooted even subdivisions](results/even_subdivision_contractibility.md), [fully rooted `K_{2,n}`](results/k2n_contractibility_via_matroid_packing.md), and [degree-three schemes retaining the opposite shore's roots](results/degree_three_bipartite_weak_contractibility.md). The universal theorem subsumes these families. |
+| [Degree-eight cycle-and-triangle case](results/hc7_degree8_cycle_triangle_closure.md) | Written proof with two separate internal audits. Closes this entire neighbourhood case in the Conjecture 19 reduction for arbitrary host order. |
+| [Five-root wheel extension](results/hc7_rooted_wheel_extension.md) | Written proof with two separate internal audits. In a three-connected graph, a `K_4` rooted at four of five prescribed vertices extends to a wheel rooted at all five; its hub is not prescribed. The colouring corollary closes the five-chromatic endpoint-deletion branch. |
+| [Regions full to one terminal set force a paired clique](results/paired_clique_one_sided_regions.md) | Written proof with a separate internal audit, for arbitrary target size and host order. Exact linkage and region hypotheses are in the [results map](results/README.md); no Conjecture 19 consequence is established. |
 | [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
 | [Four prescribed roots in a three-connected graph](results/rooted_k4minus_four_roots.md) | Elementary unbounded proof, with a [GREEN audit](results/rooted_k4minus_four_roots_audit.md), of a rooted `K_4^-` minor at any four distinct roots.  The missing quotient edge is not prescribed. |
 | [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Written unbounded host reduction with one deterministic finite local lemma and [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md).  It upgrades the current critical-host count to `n_8>=27+tau`. |
