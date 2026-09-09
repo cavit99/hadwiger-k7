@@ -105,8 +105,13 @@ reuses the earlier cycle argument and applies in both chromatic branches
 of the [matching construction](active/hc7_two_triangle_matching_colour_host.md).
 In the two-triangle case it also gives a rooted four-clique while reserving
 all four other neighbours, including both x and y. Deleting whole colour
-classes need not preserve connectivity or minimum degree. Extracting and
-extending one compatible five-root minor remains unproved.
+classes need not preserve connectivity or minimum degree. Applying the
+wheel extension in the three-connected graph obtained by deleting only
+v and the independent triple gives a wheel rooted at the other five
+neighbours. This works for every eligible triple. The
+[remaining compatible choice](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+is a wheel whose complement contains that triple in one connected
+component; together with v this would give Q. That choice is unproved.
 The [clique-deletion bound](results/hc7_clique_deletion_colour_bound.md)
 makes every four-clique deletion at least five-chromatic. More strongly,
 the [reduced-complement bound](results/hc7_two_triangle_reduced_complement_colour_bound.md)

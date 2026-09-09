@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`9075384623956cde633e8b36f3f3f3b933339526dbfafb325043068142e3ecbd`.
+`67860442f13e82d41191b5c701941efe5be4a609ac886a627e6547e320fd821f`.
 
 ## Preserved scope and exact provenance
 
@@ -757,3 +757,38 @@ between bags, and the explicit leaf swap preserves both numerical optima
 while enabling a K7 split. Further selection and exchange remain possible;
 the unrooted conjecture, C19 and the full objective remain open. All earlier
 sections and review provenance are retained.
+
+## Reserved-wheel integration
+
+**Scoped verdict: GREEN.** The frontier is pinned in the header; the
+accompanying ledger has SHA-256
+`0a30ccb5580f611f80cd2c40fc5bde3470b1a98e4756f9d2211eff56f7d83974`.
+Removing exactly the new reserved-wheel block byte-recovers Git `08204dc`,
+frontier SHA-256
+`9075384623956cde633e8b36f3f3f3b933339526dbfafb325043068142e3ecbd`.
+The ledger diff is confined to the corresponding reservation summary.
+Universal_proof separately reviewed the parent's exact integration after
+participating in the corollary discussion and the cited input audits.
+All preceding audit bytes are preserved except the current header pin.
+
+The [reservation source](../results/hc7_critical_colour_class_reservation.md)
+and its [audit](../results/hc7_critical_colour_class_reservation_audit.md)
+match SHA-256 `6c40aab52c5e5c8dc822640ce3c801f6cc46e04b161fd49f108dfd6835116eb3`
+and `10d4ab2970bb45f41ffc228a5748cd4ee963016d4d89fe0db7ff11124abab636`.
+The [wheel source](../results/hc7_rooted_wheel_extension.md) and its
+[audit](../results/hc7_rooted_wheel_extension_audit.md) match
+`f72e0b3d4254724a58f55b9445c0c173ea6c96e535416da47b1efc7fd5eb43b3`
+and `c93612165de23798c63922425fbd8d9e74407d2eb1a85b365853bd1343969178`.
+
+For every eligible independent `T={a,b,t}`, reservation supplies the
+four-root K4 avoiding `v,T,s`; deleting only the four actual vertices
+`{v} union T` from the seven-connected host leaves a three-connected
+host. The wheel theorem therefore supplies a wheel on all five actual
+roots `R=N(v)-T`, in either matching-quotient branch. Whole-class deletion
+is not used to preserve connectivity. If one such wheel leaves all of T
+in one complementary component D of `G-v`, the four triangle-root edges
+and ts make D full to its five bags; v is full to those bags and D.
+The resulting seven disjoint bags contain `K2 join W4=Q`, with no hub or
+rim-order prescription. Existence of a compatible choice of T, wheel and
+D remains unproved; neither proposed exchange has a proved improvement.
+The summaries claim neither full C19 closure nor the user's full objective.

@@ -1252,6 +1252,26 @@ contractibility and the two literal triangle edges give a rooted K4 in K,
 reserving all four neighbours `a,b,x,y`. These deletions need not preserve
 minimum degree or connectivity.
 
+**Reserved wheels; written deduction.** For every independent triple
+`T={a,b,t}` with `a in A`, `b in B` and `t in {x,y}`, the five vertices
+`R=N(v)-T` root a W4 minor in `G-v-T`. Indeed, writing `s` for the other
+endpoint of xy, the reservation theorem gives a K4 rooted at `R-{s}`
+and avoiding `v,T,s`. The actual vertex deletion `G-v-T` is
+three-connected, so the [wheel extension](../results/hc7_rooted_wheel_extension.md)
+retains all five R roots. This uses neither connectivity after deleting
+a whole colour class nor a five-chromatic matching quotient.
+
+It suffices to choose one such wheel whose complement in `G-v` has
+a component D containing all of T. The triangle edges from a,b contact
+the four corresponding wheel bags, and ts contacts the fifth. Thus D
+is full to the wheel, while v is adjacent to D and all five wheel bags.
+These seven disjoint connected bags contain `K2 join W4=Q`, whatever
+the wheel's hub. The compatible choice of T, wheel and D remains open.
+Deleting a T-connecting tree need not preserve the colouring or K4
+witness used above; replacing the wheel after a root switch need not
+preserve an enlarged complementary component. Neither operation is a
+proved improving exchange.
+
 The [fully rooted K5 attack](k5_contractibility_frontier.md) would therefore
 supply extraction under every reservation, rather than only the
 five-chromatic matching branch. Its global theorem and the subsequent
