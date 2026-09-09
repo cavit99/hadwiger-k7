@@ -981,6 +981,21 @@ hypothesis: [the complement of an eight-cycle refutes that shortcut](../barriers
 
 ### 7.5 A neighbourhood contact construction
 
+**Unrooted alternative; conjectural.** Every six-connected graph with a
+K6 minor contains Q. This would prove Conjecture 19: a minor-minimal
+seven-chromatic counterexample G is seven-connected, and G−v is
+six-connected and six-chromatic. The latter has a K6 minor by
+[Robertson–Seymour–Thomas](https://link.springer.com/article/10.1007/BF01202354)
+and the four-colour theorem (the primary abstract's exact implication
+has been checked). No prescribed-root lift is needed. A literal K6 is
+terminal: an exterior component has all six clique vertices in its
+boundary and contracts to a seventh full bag. The arbitrary minor case
+has no proved augmentation or closed induction. The complement-of-C8
+barrier above has connectivity five; the
+[icosahedral-cone barrier](../barriers/hc7_k7minus_unrooted_k6minus_augmentation_barrier.md)
+has no K6 minor, since deleting its apex leaves a planar graph. Neither
+refutes this candidate, which remains unproved.
+
 **Written criterion; conjectural construction.** Fix a vertex `v` and put
 `S=N_G(v)`. For six disjoint nonempty connected bags in `G-v`, let `e`
 count their pairwise contacts and let `q` count the bags meeting `S`.
@@ -1191,6 +1206,17 @@ colouring constraint. The source records exact preimages and four-boundary
 lifts. Neither a rooted five-clique nor its extension to Q is established;
 paths obtained under different reservations cannot be combined without a
 new allocation.
+
+**Common-response parity barrier.** The
+[explicit carrier construction](../barriers/hc7_common_response_carrier_triangles.md)
+has the exact two-triangle neighbourhood, connected exterior full to all
+eight neighbours, and three loopless two-colour carrier triangles using
+all three matching edges in one common-star response. Nevertheless it
+has treewidth at most four and no Q minor. The first false inference is that
+these simultaneous carriers supply the seventh compatible bag. A repair
+must use further actual-host hypotheses; this example is four-chromatic,
+has degree-three vertices and a three-cut. It does not refute the
+critical-host construction.
 
 **Whole-colour-class reservation; written deductions with a separate audit.**
 The [reduced-complement colouring theorem](../results/hc7_two_triangle_reduced_complement_colour_bound.md)

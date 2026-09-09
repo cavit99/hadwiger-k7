@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`28ffd09e946c159f1bafd34dc366ad24d8282d5f1b274f6890187594197ab2e0`.
+`06398531aadda59fa4ab761a05f042d5153b38bc47e2af028e8b85577e6523ea`.
 
 ## Preserved scope and exact provenance
 
@@ -703,3 +703,23 @@ example; the [barrier's independent audit](../barriers/rooted_wheel_extension_li
 checks source `be41868a1502979528f8548a35216e6d23028986b590d4ce925c9df4bd19e711`.
 All historical audit scopes remain preserved. C19's six-chromatic branch
 and the HC7/comparable-theorem objective remain open.
+
+## Common-response barrier and unrooted alternative
+
+**Scoped verdict: GREEN.** Removing exactly the two new paragraphs
+byte-recovers Git `430655bc4348977699471e6f33e85c3bc0bfb1df`, frontier
+SHA-256 `28ffd09e946c159f1bafd34dc366ad24d8282d5f1b274f6890187594197ab2e0`;
+all preceding audit provenance is retained. Route-assessment separately
+checked the parent's integration and independently audited Sartre's
+[common-response barrier](../barriers/hc7_common_response_carrier_triangles_audit.md),
+whose source hash is
+`584a0bd9daec9b27b0f7c2f6795f97dab60867f51a0108c59f6a12fe0020c9e5`.
+Its width-four decomposition excludes Q despite the simultaneous carrier
+systems and proper-minor six-colourability; its low degrees and chromatic
+number leave the actual critical host outside its scope. The proposed
+six-connected K6-to-Q theorem would apply to G-v using the existing
+connectivity and HC6 inputs, with no prescribed-root lift. The parent
+checked the cited primary abstract; this scoped review does not claim
+fresh independent literature verification. The literal-K6 terminal and
+the two earlier barriers' limitations are correct. General augmentation,
+the six-chromatic C19 case and the full objective remain unproved.
