@@ -1260,6 +1260,26 @@ and shared vertices cannot be owned by several minor bags; contracting
 shores or lifting a short-path model through whole carriers remains
 unsupported. Neither the loopless case nor the loop cases are closed.
 
+For `F={ab,bc,de}`, the replacement `J=(H−de)+ac` keeps the same
+coloured background and all three quotient triangles. It need not keep
+five-chromaticity: the [explicit four-connected example](../barriers/hc7_three_edge_triangle_replacement.md)
+has `χ(H)=5` and `χ(J)=4`. Its β core already contains Q, so it refutes
+only unconditional chromatic retention. The four-colour branch requires
+a new minor construction or a valid reduction using Q-exclusion.
+
+**Two-layer assembly; recorded nonclosure.** Suppose each block has the
+same marked triangle S, a proper three-colouring after deleting its
+edges, and two loopless triangle quotients. Let the blocks meet only on
+S and an independent set T of additional α vertices. Deleting any marked
+edge three-colours a block by component swaps, hence so does deleting
+any chosen `s in S`. Three-colour the block minus `T union {s}`, then
+restore `T union {s}` in a fourth colour. The other two S vertices are
+adjacent, so palettes can be aligned on the whole common boundary.
+Thus any number of these blocks combine to a four-colouring. This cannot
+produce a five-chromatic counterresponse; a repair requires further
+boundary data or a block outside the two-layer class. No full three-layer
+minor construction or exclusion of such counterresponses follows.
+
 **Whole-colour-class reservation; written deductions with a separate audit.**
 The [reduced-complement colouring theorem](../results/hc7_two_triangle_reduced_complement_colour_bound.md)
 gives `chi(G[W union (A-{a})])>=5` for every a missing x,y, including

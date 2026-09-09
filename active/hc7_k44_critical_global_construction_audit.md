@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`0fa74456490c445f3954488937e3e94a8a5dcee18677848bf3e13d6e7ca6b22d`.
+`2a36e8b1ea18ff5a50321d073d6819e2d265c1acc35f45c8592bd826df74f709`.
 
 ## Preserved scope and exact provenance
 
@@ -1022,3 +1022,24 @@ connectivity or chromatic number. The matching, path-plus-edge and triangle
 terminal constructions remain open, as do the loop cases and C19/HC7.
 No planar-grid diagnostic or other finite result is a premise of this
 internal review, and no NT-comparable significance is claimed.
+
+## Triangle replacement and two-layer assembly integration
+
+**Scoped verdict: GREEN.** The reviewed frontier SHA-256 is
+`2a36e8b1ea18ff5a50321d073d6819e2d265c1acc35f45c8592bd826df74f709`.
+Removing just the two new paragraphs byte-recovers Git `3b380d9`, with frontier
+hash `0fa74456490c445f3954488937e3e94a8a5dcee18677848bf3e13d6e7ca6b22d`.
+The ledger and reduction proof/audit are unchanged; all seven manifest pins match.
+The [barrier](../barriers/hc7_three_edge_triangle_replacement.md) and its [audit](../barriers/hc7_three_edge_triangle_replacement_audit.md) match
+`a9b6abedad1cee5f40b1fdb43f9e173009e1391829a3472c31c945e84fac0cf5` and
+`c841ace0a909770bc02c3455301fbe4e01c814ea829f3d64a24ca66cc34f9508`.
+Route-assessment authored the construction; the parent separately audited it and
+wrote the integration. This review checks that audit's account and the changed
+records, without claiming independent review of Route-assessment's own proof.
+The inactive barrier and guarded-by relation correctly exclude only unconditional
+chromatic retention: the example itself contains Q, and the proved reductions survive.
+Bacon's assembly argument also checks: deleting a marked edge, hence its endpoint s,
+permits three colours; additional alpha vertices T are independent and nonadjacent to s.
+Restoring T and s in colour four aligns all blocks on S union T, their entire overlap.
+This is a four-colouring nonclosure, with no finite premise or three-layer minor claim.
+The response target and C19/HC7 remain open; all earlier audit text is preserved.
