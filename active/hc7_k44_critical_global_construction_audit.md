@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`06398531aadda59fa4ab761a05f042d5153b38bc47e2af028e8b85577e6523ea`.
+`3498739e39fbcd52064d7c5b762d1eb7a1d1c28c5953f053c1d98e0510231904`.
 
 ## Preserved scope and exact provenance
 
@@ -723,3 +723,22 @@ checked the cited primary abstract; this scoped review does not claim
 fresh independent literature verification. The literal-K6 terminal and
 the two earlier barriers' limitations are correct. General augmentation,
 the six-chromatic C19 case and the full objective remain unproved.
+
+## Minimum-model obstruction integration
+
+**Scoped verdict: GREEN.** Removing the single new paragraph exactly
+recovers Git `df927123cdbc00e42a4fe67185b3507c39c91956`, frontier hash
+`06398531aadda59fa4ab761a05f042d5153b38bc47e2af028e8b85577e6523ea`.
+The [barrier source](../barriers/hc7_minimum_clique_model_extension.md)
+and its [complete independent audit](../barriers/hc7_minimum_clique_model_extension_audit.md)
+match hashes `b6e60ee98160a719b83df968f1705d571f18f27f470577c24beb19bcfad43739`
+and `d40e2fad302e40ac4434287e8370932abea43a5b4d3c0116bce6b7474484e170`.
+Route-assessment checked the parent's integration separately, having
+contributed the elementary torus construction and reviewed the strengthened
+example; Bacon supplied the cited whole-source audit. The summary correctly
+quantifies over every minimum-used K6 model and therefore every tie-break.
+Both fixed-model terminals fail, while a different allocation gives K7;
+enlarging or replacing the model remains possible. The new inactive
+manifest claim preserves those exclusions and does not alter the primary
+target. No unrooted augmentation theorem, C19 closure or completion of the
+full objective follows. All preceding audit sections remain unchanged.

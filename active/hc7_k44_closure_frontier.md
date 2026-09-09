@@ -996,6 +996,14 @@ barrier above has connectivity five; the
 has no K6 minor, since deleting its apex leaves a planar graph. Neither
 refutes this candidate, which remains unproved.
 
+The [minimum-model obstruction](../barriers/hc7_minimum_clique_model_extension.md)
+rules out choosing a smallest K6 model and requiring either a bag split
+or an exterior component contacting five bags. In its six-connected host,
+**every** smallest model fails both tests, although a different allocation
+gives K7. Changing a tie-break cannot repair this: a construction must
+permit enlargement or replacement of the model. No such general
+construction or induction is proved.
+
 **Written criterion; conjectural construction.** Fix a vertex `v` and put
 `S=N_G(v)`. For six disjoint nonempty connected bags in `G-v`, let `e`
 count their pairwise contacts and let `q` count the bags meeting `S`.
