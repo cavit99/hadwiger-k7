@@ -1397,6 +1397,16 @@ fewer colours would extend to at most six on G, and proper-minor
 colourability supplies the upper bound. This remaining branch and the
 complete Conjecture 19 implication remain open.
 
+**Alternative global construction; unproved.** A rooted `K6-2K2` at
+any two disjoint prescribed triangles in every five-connected nonplanar
+graph would close the actual case by applying it to `G-v` and adding v.
+The proposed planar starting step is false: two triangles in a
+four-connected planar graph need not root an octahedron, as the
+[cuboctahedron obstruction](../barriers/rooted_wheel_extension_limits.md#1-two-triangles-in-a-four-connected-planar-graph)
+shows. It does not refute the five-connected nonplanar target. A repair
+needs a direct construction there, or a valid prior reduction to a
+stronger planar class with all six root bags preserved.
+
 **Construction priority.** Obtain one Q model in the actual critical host.
 The following scheme is sufficient, but its six prescribed triangle roots
 and singleton v are additional restrictions. A direct construction may

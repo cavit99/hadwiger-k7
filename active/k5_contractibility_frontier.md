@@ -79,6 +79,16 @@ the auxiliary interval compression.
 
 The remaining task is a rooted construction in the four-connected case,
 or a reduction within the full class of properly coloured schemes.
+The [five-root wheel extension](../results/hc7_rooted_wheel_extension.md)
+retains all five roots but prescribes neither its hub nor its missing rim
+diagonals. It therefore does not establish labelled W4 contractibility
+or extract a rooted K5 by supplementing two prescribed literal edges.
+Even a wheel with disjoint paths for its missing diagonals is insufficient:
+the [apex-prism obstruction](../barriers/rooted_wheel_extension_limits.md#2-a-wheel-and-two-disjoint-missing-diagonal-paths)
+shows that these paths can consume an existing bag. A repair must use the
+full scheme intersection constraints to retain the required labels and
+disjoint ownership; neither labelled W4 nor K5 schemes are refuted.
+
 Deleting one original root exposes a rooted K4 scheme and four spokes;
 their compatible allocation is still missing. A separately chosen K4
 model need not leave the required vertices available to the fifth bag.

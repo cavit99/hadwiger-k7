@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`b34af86e0c0b87d18644969caab3a48febb7094fd28e0f19225528697d3488b2`.
+`28ffd09e946c159f1bafd34dc366ad24d8282d5f1b274f6890187594197ab2e0`.
 
 ## Preserved scope and exact provenance
 
@@ -682,3 +682,24 @@ hypothesis. Thus every such deletion is six-chromatic. The records correctly
 close the five-chromatic branch while leaving the two-triangle construction,
 Conjecture 19 and the user's full objective open. No novelty or comparative
 significance conclusion is inferred from this integration.
+
+## Rooted-extension limits and alternative construction
+
+**Scoped verdict: GREEN.** The two frontier insertions were checked against
+Git `096908c`; the critical-frontier hash is pinned above, and the K5
+frontier has SHA-256
+`3700a251f74be6842fe46858712efb183f927daafb5445d127c70055f575c174`.
+In the actual host, `G-v` is six-connected and six-chromatic, hence
+nonplanar. The proposed six-root theorem would therefore apply; adding
+singleton v, adjacent to every retained triangle root, gives seven
+disjoint bags with only the same two independent omissions. This remains
+an unproved sufficient construction. The cuboctahedron refutes only its
+four-connected planar starting step. The K5 insertion correctly retains
+the unspecified wheel hub and missing diagonals, and distinguishes
+disjoint paths from paths avoiding the existing bags; neither labelled
+W4 contractibility nor K5 schemes are refuted. Route-assessment checked
+the parent's integration separately but developed the cuboctahedral
+example; the [barrier's independent audit](../barriers/rooted_wheel_extension_limits_audit.md)
+checks source `be41868a1502979528f8548a35216e6d23028986b590d4ce925c9df4bd19e711`.
+All historical audit scopes remain preserved. C19's six-chromatic branch
+and the HC7/comparable-theorem objective remain open.
