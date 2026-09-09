@@ -139,6 +139,44 @@ Thus the small-order hypothesis alone does not justify this extraction.
 Larger bags or use of the full density-surplus hypotheses remain possible;
 neither the density inequality nor R is refuted.
 
+An alternative density induction would suffice if, for an absolute `D>=1`,
+every connected noncomplete G in the same small-order, all-minor class
+had a connected set B, `|B|>=2`, with `alpha(G/B)<alpha(G)` and
+`e(G)-e(G/B)<=Dr^2`. This existential statement remains unproved.
+For connected G, induction on order gives the density bound: a complete
+base has `alpha=1` and `|G|<=r`; otherwise apply induction to G/B and
+add at most `Dr^2` edges for at least one unit of independence loss.
+The quotient stays connected, has fewer vertices and retains the
+all-minor and order hypotheses; its contraction preimages give the lift.
+Summing over connected components proves the general case with the same r.
+No roots or colouring constraints are needed for this proposed step.
+
+For a nonempty connected B, the exact identities are
+`alpha(G/B)=max(alpha(G-B),1+alpha(G-N[B]))` and
+`e(G)-e(G/B)=e(G[B])+sum_(z outside B) max(0,|N(z) intersect B|-1)`.
+The first separates independent sets by use of the contracted vertex;
+the second counts deleted internal edges and coalesced parallel edges.
+Minimality of B alone does not bound this edge loss in terms of `h(G)^2`.
+For `m>=1`, take the cycle `u-v-a-b-u`, and add vertices `w_i,l_i`
+with exactly the extra edges `uw_i,vw_i,w_i l_i`, for `1<=i<=m`.
+Then `alpha(G)=m+2`, while B=`{u,v}` gives `alpha(G/B)=m+1`
+and edge loss `m+1`; its only proper nonempty subsets are singletons.
+Tree-decomposition bags `{u,v,a}`, `{u,a,b}`, `{u,v,w_i}`, `{w_i,l_i}`,
+with the second and all page bags attached to the first and each leaf
+bag attached to its page bag, give width two; the literal triangle
+`u,v,w_1` gives `h(G)=3`. Thus arbitrary minimal choices can be costly.
+This does not refute the existential statement: B=`{a,b}` drops alpha
+at cost one. The example neither violates the density inequality nor
+satisfies the small-order premise with `r=3`.
+
+Pairwise paths also need not form a scheme, even when each vertex of B
+is its sole vertex in some maximum independent set. In the triangular
+prism with triangles `u1u2u3`, `w1w2w3` and matching `u_i w_i`, take the
+minimal alpha-dropping set B=`{u1,u2,w1,w2}`. Paths for its two opposite
+pairs, with interiors outside B, must both use the edge `u3w3`.
+The missing step is a simultaneous construction that preserves the
+independence decrease and controls the edge loss using the density surplus.
+
 Testing must respect the hypotheses. The all-minor independence bound
 implies `h(G)<=r`, by applying it to a clique minor. Thus a graph in the
 unbounded `q/r` regime would already contradict ordinary Hadwiger;
