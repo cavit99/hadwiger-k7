@@ -36,6 +36,12 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
+The new [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
+tests an exponent improvement beyond the September 2026 square-root
+colouring bound. Its required reduction and its global implication are
+separated explicitly; the stronger packing remains unproved. This is a
+parallel mathematical attack, not a replacement of the exact C19 campaign.
+
 The immediate target is Conjecture 19. Its audited critical-host reductions
 leave two spanning degree-eight neighbourhood configurations. The
 [cycle-and-triangle theorem](results/hc7_degree8_cycle_triangle_closure.md),
@@ -66,6 +72,11 @@ the universal colouring constraint in the marked construction. Explicit
 four-chromatic barriers now exclude replacing it by five-connectivity
 alone in the near-clique upgrade, or by a degree-five star with an avoiding
 four-clique. Neither barrier refutes the actual critical-host target.
+The marked construction now permits any equal-colour neighbour pair at
+an unmarked degree-five vertex: deleting only interfering centre edges
+in the coloured subgraph gives a valid contraction inside the separate
+ambient minor. It retains six marks and four-connectivity for one step;
+the marked terminal construction and an iterable reduction remain open.
 
 Write its neighbourhood as triangles `A,B` and edge `xy`, and put
 `W=V(G)-N[v]`. The

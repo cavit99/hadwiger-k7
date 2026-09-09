@@ -34,6 +34,9 @@ to intermediate claims remain with their designated conditional routes.
 
 ## Conditional routes
 
+- [Quantitative star contractions](quantitative_star_contraction_frontier.md):
+  a sufficient reduction for a cube-root double-logarithmic colouring bound;
+  the required larger reduction per colour remains unproved.
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
   the immediate C19 task is a simultaneous minor construction in the
   two-triangle critical host with six-chromatic x/y deletion; the

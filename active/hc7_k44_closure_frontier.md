@@ -1631,7 +1631,7 @@ preserves all five roots; adjoining the singleton x,y bags gives
 Here L is four-connected, but the separate possibility `chi(L)=6`
 is not resolved by this five-colour argument.
 
-**Whole-star reduction; recorded nonclosure.** In the marked five-colour
+**Two-leaf reduction; written proof, global construction still open.** In the marked five-colour
 problem, the actual host allows a stronger starting pair. In any
 six-colouring of `G-v`, at least four classes contain exactly one of
 its eight neighbour marks. Choose such a whole class I. The
@@ -1639,26 +1639,36 @@ its eight neighbour marks. Choose such a whole class I. The
 gives a five-chromatic `F=G-v-I` with seven colourful marks
 `C=N(v)-I`, inside the unchanged six-connected ambient `L=G-v`.
 
-Call a colouring permitted if C avoids colour five. Let y be
-an unmarked vertex of degree five in F, and let X be all its neighbours
-of a repeated colour in one proper five-colouring. Contract `{y} union X`,
-marking its image exactly when X meets C. The ordinary colouring descends
-by giving the image X's colour. Any permitted quotient colouring would
-lift: expand X with that colour, then colour y, which sees at most four
-colours because at least two neighbours have merged. Thus the absence of
-a permitted colouring survives, host order decreases, and every minor has
-a fixed connected lift. However, distinct marks can merge and ambient
-four-connectivity need not survive. The
+The following reduction allows any subgraph F of L, not necessarily
+induced, with `chi(F)=5` and at least seven universally colourful marks C.
+Suppose an unmarked y has degree five in F. In a proper five-colouring
+choose two neighbours a,b of the same colour alpha. In F alone delete
+every edge from y to another alpha-coloured neighbour, then contract
+`S={a,y,b}` to w, giving F'. Independently let `L'=L/S`, keeping all
+ambient edges. Thus `F' subseteq L'`; giving w colour alpha preserves the
+chosen five-colouring of F'.
+
+Call a colouring permitted if the marks avoid colour five. Any permitted
+colouring of F' colours F-y by expanding a,b equally: all deleted edges
+were incident with y. The five original neighbours of y now use at most
+four colours, so y can be coloured too. Since y was unmarked, this gives
+a forbidden permitted colouring of F. Consequently F' is five-chromatic
+and its image marks C' remain colourful in every five-colouring.
+Only a,b can merge marks, so `|C'|>=6`. Every cut of order at most three
+in L' lifts to a cut of order at most five in the six-connected L;
+hence L' is four-connected. Both graph orders decrease by exactly two.
+The fixed preimages S and the other singleton vertices lift every marked
+model with disjoint connected bags and all contacts retained.
+
+This repairs the earlier restriction that an entire repeated-colour class
+have exactly two neighbours. It licenses one reduction whenever an
+unmarked degree-five vertex exists. It does not supply that vertex in
+every state, a second reduction preserving four-connectivity, or the six
+compatible marked bags. The
 [degree-five star obstruction](../barriers/hc7_degree_five_star_allocation.md)
 shows that an avoiding rooted K4 and the fifth neighbour alone cannot
-repair the split. A valid continuation must use the universal colouring
-constraint to retain or reconstruct six separate marked bags; that
-construction remains unproved.
-In the stronger starting pair, a star with exactly two leaves does retain
-at least six marks and ambient four-connectivity: any quotient cut of
-order at most three lifts to at most five vertices in L. This licenses
-one reduction, not its repetition; a second contraction has no proved
-connectivity or terminal-model guarantee.
+repair the split. The universal colouring constraint must still be used
+in the terminal construction or a closed induction.
 
 **The five-chromatic deletion branch is closed; written proof with two separate internal audits.**
 The [five-root wheel extension](../results/hc7_rooted_wheel_extension.md)

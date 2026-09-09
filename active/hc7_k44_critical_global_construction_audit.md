@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`d218ba7a25fc7dfd755c09aaef40d6c543c5bf34899ec60d993fed455ab6d42e`.
+`be57197378fddf209034f24b6b9cd9b983beb930adec1eba53322208d2b74d03`.
 
 ## Preserved scope and exact provenance
 
@@ -1100,3 +1100,22 @@ Both barriers are four-chromatic and leave the actual critical-host scope intact
 Earlier audit bytes are preserved apart from the header pin. This internal
 review neither closes the six-chromatic deletion branch nor establishes C19,
 HC7, novelty or NT-comparable significance.
+
+## Two-leaf contraction repair
+
+**Scoped verdict: GREEN.** Reviewed frontier SHA-256:
+`be57197378fddf209034f24b6b9cd9b983beb930adec1eba53322208d2b74d03`;
+ledger: `105ecaeb3f7fad0e48989fd4e340964349d62aece8fbc1ca8a30e9951e526e74`.
+Only the whole-star block changes against Git `84b8b5a`. Earlier audit
+bytes remain unchanged apart from the current header pin.
+
+Route-assessment supplied the repair; literature-repair independently
+audited its draft at `69d23ecf05c7a7848f6531810183fc4b7ee38c2dd2fdeb707d04cacf777cdba2`,
+then read the parent's complete integration diff. Deleting only centre
+edges in F permits any equal-colour pair without altering F-y. Thus every
+permitted quotient colouring lifts, although the ambient minor retains
+extra edges. Five-chromaticity, universal colourfulness, at least six marks,
+four-connectivity and fixed connected preimages all survive. Both orders
+decrease by two. No degree-five vertex in every state, second reduction
+or six-bag terminal is inferred. The ledger and navigation separately
+label the new quantitative route conditional; C19 and HC7 remain open.
