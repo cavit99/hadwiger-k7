@@ -1029,22 +1029,37 @@ the full colouring responses and disjoint preimages is still required.
 Even eliminating all four-cuts would leave the more connected complement
 case; no closed induction or C19 conclusion follows yet.
 
-**Fixed-boundary colouring attempt; conditional only.** Keep one literal
-separator Z. If each colour partition on either closed side can be
-realised there by disjoint connected sets meeting Z exactly in its
-blocks, contract those sets and delete the remaining open-side vertices.
-Proper-minor colourability gives a colouring of the opposite closed side
-whose partition is coarser. Equality permits gluing; otherwise the number
-of blocks strictly decreases and the sides can be exchanged. This avoids
-requiring a clique between the block sets, as in the earlier
-[exact-response construction](../results/hc7_exact7_selected_response_preservation.md).
-The missing step is the connected realisation of mixed partitions in
-the actual sides. A Kempe swap which increases boundary colour count can
-split a previously imposed block, so maximising that count does not
-preserve this descent. Nor does planarity after root contractions give
-the original cofacial drawing needed for planar gluing. Those realisation
-and root-port cases remain open; no boundary response is identified with
-another merely because their colour counts agree.
+**Chosen boundary response; written reduction with a separate internal
+audit.** Keep one literal separator Z and minimise the number of boundary
+colour classes over both original closed-side colouring languages. It
+suffices to realise one such minimum partition on its own coloured side
+by disjoint connected sets meeting Z exactly in its blocks. Contracting
+those sets and deleting unused open-side vertices gives a proper-minor
+colouring on the untouched side. Its partition coarsens the chosen one;
+minimality forces equality and permits gluing. No universal realisation
+premise or clique between block sets is needed.
+
+At a missed-root cut, the
+[chosen-response proof](four_cut_boundary_responses.md), with its
+[audit](four_cut_boundary_responses_audit.md), excludes minimum partitions
+with five or six blocks. The minimum is three or four. In the four-block
+case only sizes `3,2,1,1` and `2,2,2,1` remain. Both sides separately
+have S-rooted K4 models, but their S-distinct colouring responses need
+not include a globally minimum partition. In the `3,2,1,1` case, a
+five-root wheel supplies the required connected sets unless the pair
+occupies opposite rim bags. The remaining realisations are unproved;
+this does not exclude a four-cut.
+
+**Recorded failed inference.** A bichromatic component containing the two
+roots of a desired pair and a third boundary root need not give a pair
+path avoiding that third root. It may separate the pair inside the
+component. Thus disjoint colour palettes alone do not give the required
+disjoint carriers with exact boundary intersections. A repair must supply
+root-avoiding paths or change the chosen response with a valid lift.
+Likewise, coarsening can merge S-root colours; the separate S-clique
+models cannot be silently retained through a mixed-pair contraction.
+The both-full-clique-contact cuts and the three-/four-block missed-root
+responses still require a simultaneous construction.
 
 These bounds do not control the number of vertices with one R-neighbour.
 In particular they give no coefficient-four density bound on `G-R`.

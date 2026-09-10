@@ -55,6 +55,13 @@ construction requires them. If this attempt again ends at the same
 unproved simultaneous allocation, redirect discovery effort before adding
 further sufficient conditions; retain any valid deductions and barriers.
 
+The [chosen-response reduction](active/four_cut_boundary_responses.md),
+with a separate internal audit, now needs only one minimum boundary
+partition to be realised on its coloured side. At a missed-root four-cut
+that minimum has three or four blocks; five and six are excluded.
+The remaining realisations and the both-full-clique-contact cuts are open.
+No complete separator case or conjecture is closed by this refinement.
+
 The [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
 tests an exponent improvement beyond the September 2026 square-root
 colouring bound. Its required reduction and its global implication are

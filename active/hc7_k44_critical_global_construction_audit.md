@@ -2,14 +2,14 @@
 
 **Verdict: GREEN.**
 
-Date: 9 September 2026. This separate internal audit covers the corrected
+Date: 10 September 2026. This separate internal audit covers the corrected
 internal-edge trace in Section 5 and the deductions, constructions,
 literature applications and stated nonclosures in Section 7 of the
 [designated frontier](hc7_k44_closure_frontier.md). It does not audit the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`9ceebda9891b15e2526272901c382e849ea674f913b6e2a46000e0a55ed3ae19`.
+`84add66370417ee7143cf4aa0cee615ddfc20528638b78a83d0c929df32fbfa8`.
 
 ## Preserved scope and exact provenance
 
@@ -1278,3 +1278,17 @@ qualified related-to/guarded-by relations retain the reviewed scopes.
 Earlier audit text is preserved except the current header pin. The
 routes remain provisional; C19, HC7 and the NT-comparable completion
 criterion remain unmet.
+
+## Chosen minimum-response integration
+
+**Scoped verdict: GREEN.** Separate review of the parent's integration against Git `1a15bdc`.
+Frontier SHA-256: `84add66370417ee7143cf4aa0cee615ddfc20528638b78a83d0c929df32fbfa8`.
+Ledger SHA-256: `b8c43c7cdf0bc8f0414cb98cf57a4169e877d80c083e77bb6b8d121f9daad05a`.
+The [chosen-response proof](four_cut_boundary_responses.md) is pinned at `1e2e95d605f04a51adbc727a58a3d5792b5a4afc9961b2f0822ed9fe909e89aa`;
+its [separate audit](four_cut_boundary_responses_audit.md) is `7875cfb1e5f1095e76e1ea9720859ec244dd4ce2b3e7868ee67fdc2b50d597c9`.
+Restoring only the replaced frontier block and removing only the ledger insertion recovers the base files byte for byte.
+All seven frontier pins, the new inactive claim and its five scoped relations agree; existing active flags are unchanged.
+Minimum-block reflection uses a proper response and connected realisation on the same side, then expands only on the untouched side.
+The recorded Kempe failure correctly distinguishes component membership from a path avoiding other boundary roots; separate S-clique models supply no automatic preservation.
+This reviewer participated in the minimum-response discussion and separately checked the frozen proof; the integration is parent-authored internal work.
+Earlier audit records are preserved apart from the current header date and pin. Remaining three-/four-block and both-full-contact cases, C19 and the global completion criterion stay open.
