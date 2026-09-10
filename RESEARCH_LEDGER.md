@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 9 September 2026. This is the sole authority for current
+**Last updated:** 10 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjectures
@@ -39,19 +39,28 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 The routes below are provisional choices, not additional completion
 requirements; change them when a stronger credible construction emerges.
 
-Concentrate the exact attack on a construction closing the remaining
-two-triangle case. In the four-separator laboratory, the next obligation
-is a simultaneous boundary allocation for the two surviving components;
-separately forced colour classes do not suffice. Retain a quantitative
-alternative with a complete conditional implication, rather than starting
-another neighbourhood census or a general invariant programme without a
-proved progress step.
+The next concentrated theorem target is to exclude every four-vertex cut
+of `F=G-({v} union B)` in the remaining critical two-triangle host. Cover
+all binary non-independent cuts, including both full-clique-contact sides
+and every missed-root case. Even this would leave the more connected
+complement; it is a milestone towards C19, not completion.
+
+Use the actual proper-minor six-colourings to choose compatible boundary
+responses and construct their disjoint connected realisations. The
+fixed-boundary coarsening attempt is one candidate. Seek suitable choices
+of responses without making universal realisability an extra requirement.
+The construction remains unproved. Pause further wheel
+strengthening and routine rooted-K5 extraction unless a concrete global
+construction requires them. If this attempt again ends at the same
+unproved simultaneous allocation, redirect discovery effort before adding
+further sufficient conditions; retain any valid deductions and barriers.
 
 The [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
 tests an exponent improvement beyond the September 2026 square-root
 colouring bound. Its required reduction and its global implication are
-separated explicitly; the stronger packing remains unproved. This is a
-parallel mathematical attack, not a replacement of the exact C19 campaign.
+separated explicitly; the stronger packing remains unproved. Retain a
+bounded independent attempt at an unrestricted contraction that decreases
+independence number with controlled edge loss, as specified there.
 Its shortcut through minors with uniformly bounded branch sets is now
 refuted, even under a small-order restriction. The density inequality and
 unrestricted contraction target remain open.
