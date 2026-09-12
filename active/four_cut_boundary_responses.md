@@ -1,4 +1,4 @@
-# Chosen boundary responses at a missed-root four-cut
+# Chosen boundary responses at four-cuts
 
 **Status:** written proof; a [separate exact-source internal audit](four_cut_boundary_responses_audit.md)
 is recorded beside it. This reduces the possible minimum colouring
@@ -142,3 +142,49 @@ That wheel realises the partition
 when its two pair roots are adjacent. Opposite rim ownership is not
 resolved. No simultaneous three-pair realisation or valid improving
 exchange is asserted. The full four-cut exclusion remains open.
+
+## Both components contact all four clique roots
+
+Retain the critical-host hypotheses above, but now suppose both C,D
+contact all of R, and put `Z=R union S`. Minimise the boundary block
+count k over six-colourings of the two original closed sides.
+
+**Proposition.** The minimum is four or five. If it is five, its block
+sizes are `3,2,1,1,1` or `2,2,2,1,1`, and Z has no independent four-set.
+Moreover, the following construction on either side would force k=4:
+four disjoint connected bags covering Z, each containing exactly one
+R root and meeting Z in an independent set.
+
+**Proof.** The R clique gives `k>=4`. Both open sides have at least three
+vertices, by the same degree argument used above. Contracting all of D
+therefore gives a proper minor. Its merged vertex contacts every vertex
+of Z, so a six-colouring uses at most five colours on Z. Restricting to
+the untouched C-side gives an original-side response, proving `k<=5`.
+
+The reflection argument above applies verbatim with this eight-vertex Z:
+a realisation of a minimum response on its coloured side would give a
+matching response on the untouched side and hence six-colour G. In
+particular, a sole nonsingleton block is terminal. At k=5 this excludes
+`4,1,1,1,1`, leaving exactly the two stated patterns.
+
+If I is an independent four-subset of Z, contract `D union I`. This set
+is connected and its image contacts every vertex of `Z-I`. Expanding
+only I on the untouched side is proper: I is independent and every
+other original edge of that side survives. The resulting response has
+at most five blocks, with I separate from the other boundary vertices.
+If k=5, those other four vertices have distinct colours, giving the
+excluded sole-nonsingleton pattern. Thus k=5 implies `alpha(G[Z])<=3`.
+
+Finally, contract the four proposed bags and delete unused vertices of
+their open side. At least one open-side vertex is contracted into a bag
+or deleted, so this is a proper minor. The R clique forces four distinct
+bag colours in its six-colouring. Independence of each boundary trace
+permits expansion on the untouched side, yielding exactly four blocks.
+No pre-existing response on the consumed side is required. All these
+operations have fixed disjoint connected preimages; none expands a
+colouring through a consumed interior. QED
+
+The four bags are not yet constructed. Ordinary connected partitions
+can identify adjacent boundary vertices and do not suffice. Even their
+existence would only reduce the minimum to four; a compatible response
+at that minimum, and the full separator closure, remain unproved.

@@ -39,30 +39,41 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 The routes below are provisional choices, not additional completion
 requirements; change them when a stronger credible construction emerges.
 
-The next concentrated theorem target is to exclude every four-vertex cut
-of `F=G-({v} union B)` in the remaining critical two-triangle host. Cover
-all binary non-independent cuts, including both full-clique-contact sides
-and every missed-root case. Even this would leave the more connected
-complement; it is a milestone towards C19, not completion.
+Complete exclusion of four-vertex cuts of `F=G-({v} union B)` remains a
+checkpoint, covering every binary non-independent cut. Even this would
+leave the more connected complement. A direct construction may bypass
+these cases; they are not prerequisites imposed on a proof of C19.
 
 Review of the last 25 commits distinguishes completed critical-host cases
 from the latest auxiliary refinements. Freeze further relative-linkage
 normal forms: even its full three--two theorem would settle only the
-`3,2,1,1` boundary pattern. Concentrate on a construction using both actual
-separator sides, retaining their proper-minor six-colourings, the clique
-contacts and the literal near-clique exclusions after edge contractions.
+`3,2,1,1` boundary pattern. The two-sided construction retains actual
+proper-minor six-colourings, clique contacts and the literal near-clique
+exclusions after edge contractions, but still lacks compatible ownership.
 A one-side construction with six prescribed roots is only a candidate;
 its weaker degree/boundary formulation is false. The
 [technical frontier](active/hc7_k44_closure_frontier.md#full-contact-side-construction)
 records the exact missing construction and the limits of that shortcut.
-These choices remain provisional; another route with a stronger demonstrated
-payoff should replace them.
+The next global attack is the chromatic augmentation: prove that every
+five-connected six-chromatic graph of minimum degree six contains Q.
+This would close C19 through the actual triangle quotient. Its marked
+form retains the full neighbourhood of a deleted critical-core vertex,
+relative boundary five and degree six outside those marks; the six-bag
+construction or an unrooted Q exit remains unproved. Retain also the
+new actual exterior colouring information:
+`W=G-N[v]` is at least four-chromatic, and, when it is four-chromatic,
+each class of every three-colouring of N(v) has a universally colourful
+neighbourhood in W. Separate rooted K4 models do not yet combine. Closing
+this whole branch is a possible intermediate payoff, not a required detour.
+No further critical-host case is closed at this checkpoint.
 
 The [chosen-response reduction](active/four_cut_boundary_responses.md),
 with a separate internal audit, needs only one minimum boundary partition
 to be realised on its coloured side. At a missed-root four-cut that
-minimum has three or four blocks; five and six are excluded. The remaining
-realisations and both-full-clique-contact cuts are open.
+minimum has three or four blocks. When both components contact all four
+clique roots it has four or five; minimum five permits only
+`3,2,1,1,1` or `2,2,2,1,1` and no independent boundary four-set.
+The remaining realisations and complete separator closure are open.
 
 The [relative three--two reduction](active/relative_five_three_two_five_cut_reduction.md)
 now has an audited induced-path endpoint: the small U root has two or

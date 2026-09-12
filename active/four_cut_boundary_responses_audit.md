@@ -1,4 +1,12 @@
-# Audit of the chosen missed-root boundary responses
+# Audit of the chosen four-cut boundary responses
+
+**Current verdict: GREEN.** The reviewed
+[source](four_cut_boundary_responses.md) has SHA-256
+`39e21ddc123d8d55fb2daf4760b39bddf5e1c4d08d8dec86d02af1a21bc50d95`.
+The missed-root and full-contact response restrictions are accepted at
+their stated scopes. No full separator case or global target is closed.
+
+## Prior missed-root revision
 
 **Verdict: GREEN — separate internal exact-source audit.**
 The reviewed [source](four_cut_boundary_responses.md) has SHA-256
@@ -59,3 +67,47 @@ No simultaneous three-pair realisation, preservation of S-injectivity
 under arbitrary reflection, or root-clean carrier from bichromatic
 component membership is proved or used. The minimum-three and remaining
 minimum-four responses remain open.
+
+## Both components contact all four clique roots
+
+**Scoped verdict: GREEN.** Date: 12 September 2026. This review covers
+the final section at current source hash
+`39e21ddc123d8d55fb2daf4760b39bddf5e1c4d08d8dec86d02af1a21bc50d95`.
+Removing that section and restoring the former title recovers exactly
+the prior source `1e2e95d605f04a51adbc727a58a3d5792b5a4afc9961b2f0822ed9fe909e89aa`.
+The earlier audit and its provenance above remain historical.
+
+- **Strict whole-side contraction.** Each cut component has at least
+  three vertices: a component of order at most two would give one of its
+  vertices degree at most `1+4+2=7`, using the actual R-contact bound.
+  Thus contracting D strictly reduces order. Its image is adjacent to
+  every vertex of the eight-vertex boundary, so restriction of a proper
+  six-colouring gives at most five boundary colours on the untouched
+  original side. The R clique supplies the lower bound four. Nonemptiness
+  alone would not justify this strict contraction; the stated size bound
+  resolves that issue.
+- **Reflection and independent four-set.** The old reflection argument
+  uses independence of boundary blocks, fixed connected preimages and
+  minimality over both original colouring languages, independently of
+  boundary order seven. A sole nonsingleton block is still realisable
+  with the whole connected coloured side. Contracting `D union I` for
+  independent I of size four is connected and proper, and its image is
+  full to the other four boundary vertices. Expansion only on the
+  untouched side is proper. Under minimum five it forces precisely the
+  excluded `4,1,1,1,1` response. The two remaining five-block patterns
+  exhaust the integer partitions after that exclusion.
+- **Four independent boundary traces.** Every proposed bag contains a
+  distinct R root, so the literal R edges survive between all four bags.
+  Their quotient colours are distinct. Independence of the traces makes
+  boundary expansion proper on the untouched side, yielding exactly four
+  blocks. Unused open-side vertices are deleted; any used vertex is
+  contracted into a root-containing bag, so order strictly decreases.
+  No pre-existing colouring on the consumed side is required, and none
+  is reconstructed through its interior.
+
+The reviewer participated in deriving these deductions and supplied an
+earlier audit-ready formulation; the parent wrote the appended source.
+This is a separate exact-source internal check, not independent discovery
+or external peer review. The four bags themselves, a common response at
+minimum four, full four-cut exclusion, C19, HC7 and independently assessed
+NT-comparable significance remain unproved.

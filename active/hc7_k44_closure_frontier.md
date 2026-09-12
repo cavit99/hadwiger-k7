@@ -1080,6 +1080,15 @@ five-root wheel supplies the required connected sets unless the pair
 occupies opposite rim bags. The remaining realisations are unproved;
 this does not exclude a four-cut.
 
+When both components meet all four R roots, the same audited source
+gives minimum four or five: contracting the opposite component forces
+at most five colours on `R union S`. At minimum five only
+`3,2,1,1,1` and `2,2,2,1,1` remain, and the boundary has no independent
+four-set. Four connected R-rooted bags covering S with independent
+boundary intersections would force minimum four; their existence and
+a compatible response at that minimum are unproved. An arbitrary
+connected partition can identify a boundary edge and does not suffice.
+
 **Relative three--two construction; written reductions with separate
 internal audits.** The
 [linkage target and proof](relative_five_three_two_five_cut_reduction.md)
@@ -1836,12 +1845,22 @@ colourful K4 extraction and the five-root wheel extension use the ambient
 graph after deleting their common neighbour. This closes the augmentation
 target when the six-chromatic graph has a universal vertex.
 
-For a general six-chromatic H, a six-critical induced subgraph J is either
-a literal K6, which is terminal by five-connectivity, or has a vertex z
-with at least six neighbours in J. Put `F=J-z`, `L=H-z` and `C=N_J(z)`.
-Then F is five-chromatic, C is colourful in every five-colouring of F,
-and L is four-connected. Six disjoint C-rooted bags forming `K6-2K2`
-in L would give Q by adjoining z. This marked construction remains open.
+For a general six-chromatic H of minimum degree six, a six-critical
+induced subgraph J is either a literal K6, which is terminal by
+five-connectivity, or has a vertex z with at least six neighbours in J.
+Put `F=J-z`, `L=H-z` and retain the full marked set `C=N_H(z)`.
+Then F is five-chromatic, and `C intersect V(F)=N_J(z)` has at least
+six vertices and is colourful in every five-colouring of F. The ambient
+L is four-connected. Every unmarked vertex retains degree at least six,
+and every nonempty unmarked set has at least five neighbours: z has no
+edge to that set, so a smaller boundary would also separate it from z
+in H. Marked vertices have degree at least five. These bounds need not
+hold in the induced critical core F alone.
+
+Six disjoint C-rooted bags forming `K6-2K2` in L would give Q by adjoining
+z. An unrooted Q already in L is an equally valid exit. Neither conclusion
+is established from the combined marked hypotheses. The chosen six marks
+may vary with the construction; fixing six in advance is unnecessary.
 F need not be four-connected, and L need not be five-chromatic. The new
 unrooted theorem does not retain the six required contacts to z.
 An induced critical core cannot simply replace H; nor does an edge
@@ -1850,6 +1869,12 @@ six-chromatic graph every single-edge quotient is five-colourable,
 because a five-colouring after deleting that edge gives its ends the
 same colour. A valid continuation needs the simultaneous marked
 construction or a reduction preserving both hypotheses and its lift.
+
+The [squared-cycle counterexample](../barriers/rooted_k5_six_root_extension.md)
+rules out extending an arbitrary four-connected rooted K5 to six rooted
+Q6 bags. Its seven-vertex host has no Q6 minor at all, but is only
+four-chromatic. The five-chromatic universally colourful hypothesis and
+the full marked construction above remain available.
 
 **The actual six triangle marks; written deduction.** Put
 `L=G-{v,x,y}` and `C=A union B`. If `chi(L)=5`, C is colourful in
@@ -1998,6 +2023,31 @@ The successful response still requires a global construction. Contracting
 its maximal helper bags can discard the vertices needed for a split;
 neither a compatible extra helper nor an admissible contraction quotient
 is returned by this theorem.
+
+**Exterior colouring constraint; written deduction.** In the actual host,
+`chi(W)>=4`. To see that `G[N(v)]` is three-colourable, colour x,y with
+1,2. C4-freeness leaves at most one vertex of each triangle adjacent to
+`{x,y}`, and at most one A--B edge. Colour each triangle with 1,2,3,
+initially assigning 3 to its attachment vertex. Permute the other colours
+to satisfy the A--B edge unless it joins both attachment vertices. In
+that case one attachment misses x or y: if both met both, they would
+form a C4 with x,y. Give that attachment the colour of the missed vertex
+and complete its triangle. This is the required three-colouring.
+A three-colouring of W with a separate palette would now six-colour G,
+giving v any W colour, a contradiction.
+
+If `chi(W)=4`, more is forced. For every three-colouring of `G[N(v)]`
+and every one of its colour classes U, `N_W(U)` meets every colour class
+of every four-colouring of W. Otherwise reuse a missed W colour on U,
+give the other two neighbourhood classes two fresh colours, and colour
+v with a different W colour. This again six-colours G. Each neighbourhood
+colouring has class sizes `3,3,2`, since each triangle uses all three
+colours and x,y have different colours. Martinsson--Steiner Theorem 1.3,
+as pinned in the [colourful-set source](../results/colourful_five_wheel.md),
+therefore gives a K4 in W with every bag contacting U. For a pair class
+`U={a,b}`, a bag may contact only a or only b; neither their distribution
+nor the other classes' contacts to these same bags is prescribed.
+The simultaneous construction and the `chi(W)>4` case remain open.
 
 **Unrestricted degree-six nonroots; written proof with a separate audit.**
 The [five-root theorem](../results/hc7_five_root_degree_six.md) retains

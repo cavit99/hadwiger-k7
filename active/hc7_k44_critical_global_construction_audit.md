@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`f38610a7948ebc0aed26808c6b01894c03c9b4923faf771983f88350ff46e3d6`.
+`8bce5d2db2b3ed48088126af808d752ba6f0e0068d5ca46ebd134e8f8a7515d2`.
 
 ## Preserved scope and exact provenance
 
@@ -1382,3 +1382,22 @@ complement, C19, and HC7 or substantiated NT-comparable significance remain
 unproved. This is an integration review, not a fresh whole-source audit of
 the endpoint proof. The reviewer authored the barrier; its separate
 mathematical verdict is supplied by the adjacent audit cited above.
+
+## Full-contact responses, full neighbourhood marks and exterior colouring
+
+**Scoped verdict: GREEN**, 12 September 2026, against Git `2e4e345e4ebec774080c84c5dcceaa4a76e4c8ee`.
+Frontier SHA-256: `8bce5d2db2b3ed48088126af808d752ba6f0e0068d5ca46ebd134e8f8a7515d2`;
+ledger: `b760bfb9d5e5da0e97ce03cf360e3a15ca246c6531c71efaaadc109d41ed552c`;
+manifest: `c926551e5f763dcf1c12eec83e2b3714900d9b8a44e5bd57edc3757a556ebcdd`.
+Restoring only the four changed frontier regions recovers the base bytes; the ledger changes only the corresponding work-plan paragraphs.
+The full-contact summary matches the [response source](four_cut_boundary_responses.md) / [separate audit](four_cut_boundary_responses_audit.md),
+`39e21ddc123d8d55fb2daf4760b39bddf5e1c4d08d8dec86d02af1a21bc50d95` / `d49bb96f2e505dcd53121a0ded6f9b127795d547b73bcb18e39c75bfd50fb0f8`.
+Whole-side contractions are proper, independent boundary traces permit expansion only on the untouched side, and minimum four or five is not separator closure.
+For the marked state, induced J gives `C intersect V(J-z)=N_J(z)`. Deleting z preserves every unmarked degree and boundary; a boundary below five separates its set from z in H. Marked degrees fall by exactly one.
+Either a Q in L or six C-meeting Q6 bags followed by z lifts through the original triangle preimage. No fixed six marks, critical-core connectivity or colouring-preserving contraction is asserted.
+The neighbourhood three-colouring handles the sole cross-edge between attachment vertices by a missed x/y colour. Separate palettes prove `chi(W)>=4`.
+When `chi(W)=4`, reusing a missed W colour on one neighbourhood class and two fresh colours on the other classes proves the stated universal colourfulness. Martinsson--Steiner Theorem 1.3 applies to this same W.
+Its input is retained in the [colourful-set source](../results/colourful_five_wheel.md), SHA-256 `d804335fc68cff69d4eb2de770c246cbb91e0da336eb36a206d93d89378a64a1`; returned bags contact the class as a set, without prescribed member ownership or compatibility with other models.
+The [squared-cycle barrier](../barriers/rooted_k5_six_root_extension.md) / [separate audit](../barriers/rooted_k5_six_root_extension_audit.md), hashes `40a3f01036c13385b66e3c13397cf5ed87fb8fe96137f3bcb0f755dbcce75f3d` / `5a81598b85c7269725e202987a4730a4f644dea2fb57392ac8871f9c9bcbd331`, correctly exclude arbitrary sixth-root extension: every six-vertex minor has at most twelve edges; its four-chromatic host leaves the colourful five-chromatic target unaffected.
+All seven frontier pins, the response pin and the new barrier pin match. Existing claim identifiers and active flags are unchanged; the sole new claim is an inactive barrier with a scoped guarded-by relation. Historical audit records remain intact apart from the current header pin.
+This is internal review of parent-authored integration; the reviewer developed the marked refinement and checked the other deductions separately. No global conjectural target, full four-cut case, C19 or HC7/NT-comparable completion is certified.
