@@ -3,9 +3,9 @@
 Date: 12 September 2026.
 
 **Current verdict: GREEN** for the reductions, completed cut configurations,
-inner port coverage and small-U-root restrictions, with the full target open.
+inner port coverage and the induced-path endpoint, with the full target open.
 **Current source SHA-256:**
-`d499b9b4e6b6e5f5289d7b5477c4160bec42c8c4fa406cfb196daa4152665354`.
+`2e3ae751857d2d8c17b659072c0c73b9c17da893612dd0a2fe09342a1ade171a`.
 
 ## Initial reduction audit
 
@@ -128,3 +128,42 @@ not external peer review. The two- and three-neighbour U-root residues and
 the full linkage target remain open. Neither these normalisations nor the
 new contractions preserve a fixed original colouring; no C19, HC7 or
 NT-comparable conclusion is accepted.
+
+## Induced-path endpoint and thin-port contraction
+
+**Scoped verdict: GREEN**, 12 September 2026, for source SHA-256
+`2e3ae751857d2d8c17b659072c0c73b9c17da893612dd0a2fe09342a1ade171a`.
+The predecessor is Git `c95c0a03934110adf5966d206ee94a681248a565`, with source
+`d499b9b4e6b6e5f5289d7b5477c4160bec42c8c4fa406cfb196daa4152665354`
+and audit `68ae19309e4509d56cd50b1ceb37b9153c361aa4e9ee53d0d6e1d91209fd2686`.
+Removing only the final root--root-edge clarification exactly recovers the
+reviewed revision `6ab1810282bfcaafa9a074176fe42ed4629507d9250de7f0539dd1c3ca429774`.
+Earlier audit records remain historical; this review covers the added endpoint.
+
+- Lexicographic minimality in `(|D|,|E|)` permits deleting root--root edges
+  and deleting `up` when `d(p)>=7`: degrees, all five roots and the required
+  subset boundaries survive. Any resulting linkage already lies in F.
+- A spanning connected partition exists. Maximising its U side excludes
+  off-spine branches and non-edge spine blocks on the V side by their small
+  actual boundaries. Thus the complement is an induced V path. The root's
+  two or three D-neighbours are consecutive and all have degree six.
+- The thin-port identity `2e(J)=sum d_F(z)+K-6` cancels epsilon exactly.
+  Equality in the four-root disc bound forces the stated root incidences.
+  Drawing contractions preserve distinct cofacial roots; both resulting
+  four-vertex contact sets contradict the proper-six boundary condition.
+- In the new maximal partition of J, all five H-neighbours of p lie on its
+  V path. If q is bracketed, the replacement through p frees a root-free
+  interval containing q; q's two U-side contacts connect that interval and
+  u to the U carrier. The two original root groups remain disjoint.
+- Extremality of q leaves at most one common H-neighbour. Contracting pq
+  would otherwise preserve the induction class, so minimality forces its
+  unique degree-six common nonroot x. Contracting `{u,p,q}` has a connected
+  root preimage, leaves exactly x at degree five, preserves boundary five,
+  and gives the new root degree seven; the explicit absence of root--root
+  edges justifies that exact last count.
+
+The reviewer participated in earlier thin-root development and separately
+checked its scratch equality proof; this is an exact-source internal review,
+not independent discovery or external peer review. No absorption of x, fixed
+colouring preservation, full linkage theorem, C19 closure or HC7 conclusion
+is accepted. The degree-five quotient remains outside the induction class.

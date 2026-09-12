@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b`.
+`f38610a7948ebc0aed26808c6b01894c03c9b4923faf771983f88350ff46e3d6`.
 
 ## Preserved scope and exact provenance
 
@@ -1339,3 +1339,46 @@ The new contraction caveat also checks: without a degree-six common nonroot neig
 The earlier root-clean path barrier is retained with its exact restriction. No fixed colouring is transferred to the auxiliary normal form.
 This reviewer checked the constructions and frozen sources separately; the integration is parent-authored internal work, not external review.
 Earlier audit records are preserved apart from the current header pin. The small-root absorption, full relative linkage target, four-cut C19 checkpoint and HC7/NT-comparable objective remain unproved.
+
+## Induced-path endpoint and full-contact side construction
+
+**Scoped verdict: GREEN**, 12 September 2026, on the integration against
+Git `c95c0a03934110adf5966d206ee94a681248a565`.
+Reviewed frontier SHA-256:
+`f38610a7948ebc0aed26808c6b01894c03c9b4923faf771983f88350ff46e3d6`;
+ledger `e6d1ddbe202ae622a913f77839f0fca6ad32e787911dad072915e34c15803c12`;
+manifest `a795e8e7eafdd47915bc34fb0857e4ccaa1beb6ea4e282e56b5b7d363845b26f`.
+
+The induced-path endpoint is accurately summarised from the separately
+reviewed source `2e3ae751857d2d8c17b659072c0c73b9c17da893612dd0a2fe09342a1ade171a`
+and audit `2f9451c1103146935cd4c09ca472f28d29d2d20b2696185a572740698f998aa7`.
+Its one-degree-five-vertex quotient is explicitly outside the induction
+class; no absorption, retained original colouring or further critical-host
+case closure is inferred. The former endpoint programme is preserved as
+an audited conditional route, not made a mandatory completion requirement.
+
+The new six-root payoff is conditional and ownership-correct: the opposite
+component D is disjoint from the entire side model and contacts each of its
+six bags at that bag's prescribed R or p/q root. Adding D to rooted Q6
+therefore gives Q7. Seven-connectivity supplies boundary five after the
+two omitted cut vertices are deleted; only the whole side is known to have
+six-root contact. Four-connectivity of the complement additionally gives
+the stated non-R boundary of at least two. No altered side is presumed to
+inherit these conditions, colouring responses or contraction exclusions.
+
+The barrier source `8c350bb8d9e537b74a719f931953a7d090c9938a9a8c320e0934a46fae184fae`
+and separate audit `2e3b5fc412e2bab65c013b9a05c1e42e4423312d433188e9b9015833fb1fa620`
+are pinned accurately. Its rooted failure is distinguished from the actual
+host and from the rooted-Q6-or-unrooted-Q7 alternative: the example already
+contains Q7 and fails the additional complement and literal exclusions.
+
+The manifest explicitly specifies lexicographic minimality by nonroot
+order and then edge count, matching the endpoint source's quantifier.
+All seven frontier manifest pins match; existing active flags, the primary
+HC7 index and both README files are unchanged. The corrected ledger retains
+the historical reserved-wheel links and directs only its new work-plan link
+to the new subsection. Complete four-cut exclusion, the more connected
+complement, C19, and HC7 or substantiated NT-comparable significance remain
+unproved. This is an integration review, not a fresh whole-source audit of
+the endpoint proof. The reviewer authored the barrier; its separate
+mathematical verdict is supplied by the adjacent audit cited above.

@@ -45,35 +45,33 @@ all binary non-independent cuts, including both full-clique-contact sides
 and every missed-root case. Even this would leave the more connected
 complement; it is a milestone towards C19, not completion.
 
-Use the actual proper-minor six-colourings to choose compatible boundary
-responses and construct their disjoint connected realisations. The
-fixed-boundary coarsening attempt is one candidate. Seek suitable choices
-of responses without making universal realisability an extra requirement.
-The construction remains unproved. Pause further wheel
-strengthening and routine rooted-K5 extraction unless a concrete global
-construction requires them. If this attempt again ends at the same
-unproved simultaneous allocation, redirect discovery effort before adding
-further sufficient conditions; retain any valid deductions and barriers.
+Review of the last 25 commits distinguishes completed critical-host cases
+from the latest auxiliary refinements. Freeze further relative-linkage
+normal forms: even its full three--two theorem would settle only the
+`3,2,1,1` boundary pattern. Concentrate on a construction using both actual
+separator sides, retaining their proper-minor six-colourings, the clique
+contacts and the literal near-clique exclusions after edge contractions.
+A one-side construction with six prescribed roots is only a candidate;
+its weaker degree/boundary formulation is false. The
+[technical frontier](active/hc7_k44_closure_frontier.md#full-contact-side-construction)
+records the exact missing construction and the limits of that shortcut.
+These choices remain provisional; another route with a stronger demonstrated
+payoff should replace them.
 
 The [chosen-response reduction](active/four_cut_boundary_responses.md),
-with a separate internal audit, now needs only one minimum boundary
-partition to be realised on its coloured side. At a missed-root four-cut
-that minimum has three or four blocks; five and six are excluded.
-The remaining realisations and the both-full-clique-contact cuts are open.
-No complete separator case or conjecture is closed by this refinement.
+with a separate internal audit, needs only one minimum boundary partition
+to be realised on its coloured side. At a missed-root four-cut that
+minimum has three or four blocks; five and six are excluded. The remaining
+realisations and both-full-clique-contact cuts are open.
 
-The [relative three--two linkage reduction](active/relative_five_three_two_five_cut_reduction.md),
-with a separate internal audit, now closes two further cut configurations:
-a cut containing a U root with two nonempty interiors, and a largest
-single-U side with nonempty interior whose cut avoids U. The construction
-uses [four-root linkage criteria](results/four_root_linkage_with_ports.md)
-with an adjacent audit, retaining connected contraction preimages and
-allowing the pair path to use unused ports. Together with the earlier
-reductions, this forces a remaining minimum counterexample to have a U
-root with two or three nonroot neighbours. Absorbing that root with a
-valid lift is still unproved. These auxiliary reductions do not preserve
-an original side colouring; the whole linkage theorem and the complete
-four-cut C19 checkpoint remain open.
+The [relative three--two reduction](active/relative_five_three_two_five_cut_reduction.md)
+now has an audited induced-path endpoint: the small U root has two or
+three consecutive degree-six neighbours on the complementary V path.
+With two neighbours, contracting their triangle with the root leaves
+exactly one degree-five nonroot. This quotient lies outside the induction
+class; absorbing that vertex is unproved. The original colouring is not
+preserved by these auxiliary reductions. Neither the full linkage theorem
+nor a further critical-host separator case is closed by this checkpoint.
 
 The [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
 tests an exponent improvement beyond the September 2026 square-root

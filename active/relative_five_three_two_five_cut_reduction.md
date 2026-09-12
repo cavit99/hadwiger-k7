@@ -17,7 +17,9 @@ there are disjoint connected vertex sets A,B with `A intersect T=U` and
 
 If this target is false, choose a counterexample with minimum `|D|`,
 allowing all choices of the five labelled roots and their three--two
-partition. Then:
+partition, and then with minimum edge count. No root--root edge remains:
+its deletion preserves all nonroot degrees and boundaries, and any linkage
+after deletion already lies in F. Then:
 
 1. `|D|>=3`, D is connected, and every root has at least two D-neighbours.
 2. Every nonempty proper `X subset D` has at least six neighbours.
@@ -550,11 +552,119 @@ one component would supply the V path and another, together with p,u,
 the U-carrier. Thus X is connected; p,q avoid the other U roots and
 each has at least three X-neighbours. This residue remains open.
 
+## The endpoint is an induced path
+
+Choose u with minimum D-degree among U, so `2<=|N_D(u)|<=3`.
+Put `H=F-u`, with roots `R={U1,U2,v1,v2}`. Every nonempty nonroot
+subset has at least four neighbours. After deleting root--root edges,
+the nonroot degrees and root incidences give
+
+`2e(H)>=6|D|-d_D(u)+sum_{r in R}d_D(r)>=6|D|+6`.
+
+The four-root cofacial bound therefore supplies the U1--U2 and V-pair
+linkage. Extend its two carriers to a connected partition A,B of H,
+with U1,U2 in A and v1,v2 in B, and maximise `|A|`. Such an extension
+exists by absorbing unused connected components into an adjacent carrier.
+
+Every vertex of `B-{v1,v2}` adjacent to A separates v1 from v2 in B.
+Otherwise absorb that vertex and every component of its deletion except
+the one containing both V roots into A. In the block-cut tree of B,
+an off-spine branch consequently has no A-neighbour and boundary at most
+one. After excluding those branches, the interior of a non-edge block
+on the v1--v2 spine has no A-neighbour and boundary at most two.
+These nonempty sets contain only nonroots and gain at most u in F,
+contradicting the original five-neighbour condition. Hence B is an
+induced v1--v2 path.
+
+Every neighbour of u lies in B, since otherwise u can join A. The
+no-isolated-neighbour condition now makes `N_D(u)` either two consecutive
+vertices or three consecutive vertices of B. In particular its triangle
+case is excluded. All these vertices have degree six. If a neighbour p
+had degree at least seven, delete up. Every proper D-subset loses at most
+one of its at least six neighbours, all D still sees u through another
+neighbour, and all nonroot degrees remain at least six. This is a smaller
+instance in the lexicographic parameter `(|D|,|E|)`; any linkage in it
+already lies in F.
+
+### Deleting one of two neighbours
+
+Suppose `N_D(u)={p,q}`. In fact `F-{u,p}` has every prescribed
+two-linkage on R, and symmetrically for q. Here is the equality case
+needed beyond the usual degree bound.
+
+Delete root--root edges and write `J=F-{u,p}`, `d=|D-{p}|`,
+`epsilon=|N(p) intersect {v1,v2}|` and `K=sum_{r in R}|N_D(r)|`.
+The disjoint V-neighbourhoods give `epsilon<=1`, and `K>=8`.
+Every nonroot subset retains at least four neighbours. Exactly,
+
+`2e(J)=sum_{z in D-{p}}d_F(z)+K-6>=6d+2`.
+
+Indeed, deleting u,p removes `6-epsilon` nonroot degree incidences
+and epsilon of the K root incidences. A missing linkage gives a
+four-root disc drawing and `e(J)<=3d+1`. Equality forces all surviving
+original nonroot degrees to be six and every R root to have exactly
+two original D-neighbours.
+
+In this drawing, contract a root edge and delete any newly created
+root--root edges. Four distinct root images remain cofacial; with one
+fewer nonroot, the edge bound decreases by three. A root with two
+adjacent nonroot neighbours loses only two edges in this contraction,
+so the contracted neighbour must also contact another root. A pendant
+root loses only one edge, so its neighbour must contact two other roots.
+These are drawing contractions, not new uses of a boundary hypothesis.
+
+If `epsilon=0`, every root has two adjacent neighbours in J. Every
+vertex meeting R therefore meets at least two R roots. The disjoint
+two-element V-neighbourhoods already occupy four vertices and all eight
+root incidences. Thus all R contacts lie on a four-set W excluding p.
+The nonempty proper set `D-W` has boundary contained in `W union {u}`,
+contradicting the proper-six bound.
+
+If `epsilon=1`, say pv1, write `N_D(v1)={p,x}`. Root v1 is pendant
+in J. Its neighbour x must contact U1,U2, since it cannot contact v2.
+Write their other neighbours as a,b. They are distinct by the earlier
+common-two-neighbour exclusion. Contracting U1a and U2b separately in
+the drawing forces a,b to contact v2: each must contact another R root,
+and its other choices are excluded by the specified two-element
+neighbourhoods. All R contacts then lie on `W={p,x,a,b}`, excluding q.
+Again `D-W` contradicts the proper-six bound. This proves the claim.
+
+### One remaining degree-five vertex after contraction
+
+In J choose a connected U1/U2--V partition maximising its U side A.
+The preceding block argument still applies: a nonroot set has at least
+four neighbours in J. Its V side B is an induced path. Every one of
+the five H-neighbours of p lies on B; a contact with A would let p,u
+join A and finish the original linkage.
+
+Vertex q is extreme among these five neighbours along B. Otherwise
+two other p-neighbours bracket q. Replace their B segment by the
+two-edge path through p. The freed open interval contains q, which
+has degree four in J and hence two A-neighbours. Adjoin that interval
+and u to A. Both carriers stay connected, disjoint and correctly rooted,
+a contradiction. Since B is induced, q has at most one neighbour in
+`N_H(p)`. Thus p,q have at most one common H-neighbour.
+
+Contracting pq would preserve the original degree and boundary hypotheses
+unless a common degree-six nonroot survived: set boundaries lose at most
+one, and the merged nonroot has degree at least eight. Minimality forces
+such a vertex x. It is therefore the unique common H-neighbour of p,q;
+in particular the ports have no common V neighbour. Contracting the
+connected set `{u,p,q}` to the root u leaves exactly x with degree five
+and all other nonroots with degree at least six. The new u has degree
+seven. Nonroot boundaries remain at least five, since those sets had
+no neighbour at the old u and identifying p,q loses at most one.
+
+This last quotient is outside the proved induction class. Absorbing x
+may create further degree-five vertices or reduce a remaining boundary
+below five. No valid continuation or lift of the full linkage is asserted.
+
 ## Remaining scope
 
 The relative three--two target is still unproved. The completed cut
 constructions reduce its remaining minimum-counterexample obstruction to
-a U root with two or three D-neighbours. Absorbing such a root still needs
+a U root with two or three consecutive degree-six neighbours on the
+induced complementary V path. Absorbing such a root still needs
 a construction retaining all three U roots and the disjoint V path.
 A four-root linkage after deleting that root does not suffice: its
 U-carrier need not contact a neighbour of the deleted root.

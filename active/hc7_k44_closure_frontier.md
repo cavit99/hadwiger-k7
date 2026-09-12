@@ -1029,6 +1029,36 @@ the full colouring responses and disjoint preimages is still required.
 Even eliminating all four-cuts would leave the more connected complement
 case; no closed induction or C19 conclusion follows yet.
 
+#### Full-contact side construction
+
+**Conditional construction and failed weakening.** If both components C,D
+meet all four R roots, choose an actual edge pq of S. A model of
+`Q6=K6-2K2` in `G[C union R union {p,q}]`, rooted at those six vertices,
+would finish: D is connected, disjoint from every bag and contacts each
+through its prescribed root, giving a Q minor. An unrooted Q minor within
+the side is another valid exit. Neither exit is established universally.
+
+The actual side has nonroot degree at least six and at least five
+neighbours for each nonempty C-subset: seven-connectivity loses at most
+the two omitted S vertices. Only all of C is known to meet all six roots;
+proper subsets need not have boundary six. Four-connectivity of `G-R`
+also gives `|N_side(X) minus R|>=2`. Retain six-colourability and the
+[edge-quotient exclusions](hc7_companion_contraction_closure.md), including
+Corollary 3's containment of R-contact sets at a double-contact endpoint.
+None of these is licensed for a recursively altered side without proof.
+
+The [singleton-contact obstruction](../barriers/hc7_full_contact_six_root_packet.md),
+with a separate internal audit, refutes the rooted six-bag assertion using
+only degree six, boundary five, full root contact and contact containment.
+Its first obstruction is a single vertex separating the two helper roots
+from two clique roots; the required model would need two disjoint crossings.
+It fails the actual complement-connectivity and literal exclusions and
+already contains Q. Thus it does not refute the displayed disjunction or
+the actual C19 host. A construction must retain these further hypotheses
+or allocate bags across both sides; six-root fullness alone is insufficient.
+The present priority is the latter global allocation with the actual
+colouring responses, rather than further auxiliary linkage normal forms.
+
 **Chosen boundary response; written reduction with a separate internal
 audit.** Keep one literal separator Z and minimise the number of boundary
 colour classes over both original closed-side colouring languages. It
@@ -1076,24 +1106,29 @@ component. Its two-vertex endpoint uses the root-neighbourhood condition.
 This bypasses the unresolved synchronisation of independently selected
 inner and outer endpoints. The earlier three-component closure is retained.
 
-Together these reductions force some U root to have only two or three
-nonroot neighbours. Those neighbours are anticomplete to the other U
-roots, by a four-root contraction and cofacial degree count. Absorbing
-this prescribed root while retaining both carriers is unproved. In the
-two-neighbour case its ports are adjacent degree-six vertices, and the
-remaining nonroots form a connected side full to the other roots and
-both ports. A four-root linkage after deleting the small root need not
-put either port in the U-carrier.
+Together these reductions force some U root to have two or three
+nonroot neighbours, anticomplete to the other U roots. Choose a counterexample
+lexicographically by nonroot order and edge count. Maximising the U side
+of a spanning connected partition after deleting that root leaves an
+induced V path; its small-boundary branches and non-edge blocks are excluded.
+The root's neighbours are consecutive on this path and all have degree six.
 
-**Root-contraction continuation; recorded nonclosure.** Contracting one
-edge at that small root cannot simply activate Xie's theorem. In a
-minimum counterexample every such choice has a degree-six common
-nonroot neighbour; otherwise it already preserves the original induction
-class. That neighbour survives with degree five, and completing edges
-between roots does not increase its degree. Simultaneous contractions
-would need disjoint connected preimages absorbing every affected vertex,
-with a proof of connectivity and a lift of all root labels. No such
-construction has been established.
+**Thin-root contraction; written deduction and recorded nonclosure.**
+With two neighbours p,q, the graph after deleting the root and either
+port has every four-root two-linkage. The proof treats equality in the
+cofacial edge bound using root-edge drawing contractions. In a maximal
+U-side partition of this graph, q is extreme among the five remaining
+neighbours of p on the induced V path; otherwise rerouting through p
+frees q to join the U carrier. The two ports consequently have exactly
+one common nonroot neighbour x, of degree six. Contracting the triangle
+formed by the root and its ports leaves exactly x at degree five and
+all other nonroots at degree at least six; boundary five survives.
+
+The quotient is outside the induction class. Absorbing x can create
+further degree-five vertices or reduce a boundary below five. Completing
+root edges repairs neither defect. No decreasing continuation with a valid
+lift is proved. Further normal forms are paused: even the whole linkage
+theorem would cover only the `3,2,1,1` response, not all four-cuts.
 
 The [path barrier](../barriers/relative_six_boundary_pair_and_arm.md)
 remains valid for a V path forbidden from using other boundary roots.
