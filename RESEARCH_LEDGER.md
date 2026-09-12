@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 10 September 2026. This is the sole authority for current
+**Last updated:** 12 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjectures
@@ -61,6 +61,16 @@ partition to be realised on its coloured side. At a missed-root four-cut
 that minimum has three or four blocks; five and six are excluded.
 The remaining realisations and the both-full-clique-contact cuts are open.
 No complete separator case or conjecture is closed by this refinement.
+
+The [relative three--two linkage reduction](active/relative_five_three_two_five_cut_reduction.md),
+with a separate internal audit, removes proper five-neighbour nonroot
+sides in a minimum counterexample to that auxiliary target. It also
+excludes every three-component distribution of the three roots behind
+the specified five-cut, including root-only components. The two--one
+distribution and cuts containing a root remain open. These are reductions
+in the linkage class; they do not preserve an original side colouring.
+The whole linkage theorem, its three--two colour-block application and
+the complete four-cut C19 checkpoint remain unproved.
 
 The [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
 tests an exponent improvement beyond the September 2026 square-root

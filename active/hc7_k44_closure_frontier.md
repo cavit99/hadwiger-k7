@@ -1050,6 +1050,56 @@ five-root wheel supplies the required connected sets unless the pair
 occupies opposite rim bags. The remaining realisations are unproved;
 this does not exclude a four-cut.
 
+**Relative three--two construction; written reductions with a separate
+internal audit.** The
+[linkage target and proof](relative_five_three_two_five_cut_reduction.md)
+use five roots `U dotcup V`, of sizes three and two, at least two
+nonroots, nonroot degree at least six, and at least five neighbours for
+every nonempty nonroot subset. This is the sufficient construction for
+the `3,2,1,1` response after deleting its two singleton roots.
+
+In a minimum counterexample to this linkage target, a largest proper
+five-neighbour nonroot side splits the problem into two strictly smaller
+instances. The outer clique completion retains the degree and boundary
+bounds; the inner linkage replaces virtual edges in both carriers
+simultaneously. Consequently every proper nonroot subset has at least
+six neighbours and completing all five roots gives a six-connected graph.
+This is a stronger completion than the one in Xie's theorem, so that
+theorem does not yet finish the construction.
+
+The proof also excludes a five-cut consisting of V and three nonroots
+which separates the U roots into three components, including every
+root-only endpoint. Two-path choices and paired cofacial edge counts
+coordinate arms through distinct sides. A
+[path counterexample](../barriers/relative_six_boundary_pair_and_arm.md)
+shows why allocating both V roots in one side while reserving a U arm
+is invalid. For every inner port, identifying the two V roots gives a
+strictly smaller instance without reducing nonroot degrees; a simple
+path in its returned pair carrier lifts from one actual V root. This
+supplies inner port coverage, with the V choice depending on the port.
+The two--one distribution, a possible four-cut isolating
+a U root, and five-cuts containing a U root remain unclosed. These
+normalisations retain the linkage class, not an original colouring or
+critical-host hypothesis; only a proof of the whole target would give
+the stated colour-block application. Other minimum-response types and
+the both-full-contact cuts remain open.
+
+**Two-side continuation; recorded nonclosure.** In a two--one split,
+completing the outer port triangle and joining it to the retained U root
+and one V root would support a smaller linkage instance if every port
+had two neighbours outside the one-U component and `V union P`, and
+the other V root retained an outer nonroot neighbour. Choosing a maximal
+side has not yet proved these conditions.
+Even conditionally, the outer three-arm construction selects a port
+whose inner V choice need not match. Neither endpoint freedom nor a
+joint exchange is proved. Contracting a path between the two outer U
+roots instead merges boundary incidences; no bound sufficient to retain
+the four-neighbour condition of the cofacial argument has been
+established. A valid continuation must control those degrees and
+boundaries and the simultaneous port choice, or construct the carriers
+directly. These are unsupported reductions, not counterexamples to the
+actual target.
+
 **Recorded failed inference.** A bichromatic component containing the two
 roots of a desired pair and a third boundary root need not give a pair
 path avoiding that third root. It may separate the pair inside the

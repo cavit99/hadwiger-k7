@@ -2,14 +2,14 @@
 
 **Verdict: GREEN.**
 
-Date: 10 September 2026. This separate internal audit covers the corrected
+Date: 12 September 2026. This separate internal audit covers the corrected
 internal-edge trace in Section 5 and the deductions, constructions,
 literature applications and stated nonclosures in Section 7 of the
 [designated frontier](hc7_k44_closure_frontier.md). It does not audit the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`84add66370417ee7143cf4aa0cee615ddfc20528638b78a83d0c929df32fbfa8`.
+`15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48`.
 
 ## Preserved scope and exact provenance
 
@@ -1292,3 +1292,33 @@ Minimum-block reflection uses a proper response and connected realisation on the
 The recorded Kempe failure correctly distinguishes component membership from a path avoiding other boundary roots; separate S-clique models supply no automatic preservation.
 This reviewer participated in the minimum-response discussion and separately checked the frozen proof; the integration is parent-authored internal work.
 Earlier audit records are preserved apart from the current header date and pin. Remaining three-/four-block and both-full-contact cases, C19 and the global completion criterion stay open.
+
+## Relative three--two integration
+
+**Scoped verdict: GREEN.** Separate review of the parent's integration against Git `6518d7c`.
+Frontier SHA-256: `215cc2f03c8ee1c2064e504a53226ee82d28ae05f48443f48ce91ce76626f477`.
+Ledger SHA-256: `3ecdd1cbd70e4d6602e09ea858986ffd0afc9d59d2047e856483768463736aae`.
+The [reduction](relative_five_three_two_five_cut_reduction.md) / [audit](relative_five_three_two_five_cut_reduction_audit.md) hashes are
+`468aab55fe3b21f5a6c491714eba19e36ceba5f620b3a847471527824373a5eb` / `9a416da1fefc496b518fb7aab9b7d7e2a2ac0b17b61718cce39373983cb7af2f`.
+The [barrier](../barriers/relative_six_boundary_pair_and_arm.md) / [audit](../barriers/relative_six_boundary_pair_and_arm_audit.md) hashes are
+`65d7a300fc205fbb289d5eaedac2694837a2abb6463ec459401fb401c7a2bd85` / `47f3f5fea1d23409511aa5d3cb24c4b1ebbfd91f2ad21d0b40ce7d79984f558c`.
+Deleting the new frontier block and ledger paragraph, and restoring the ledger date, recovers both base files byte for byte.
+All seven frontier pins, two inactive claims and the related-to/guarded-by relations match; existing active flags are unchanged.
+Deleting the two singleton boundary roots leaves nonroot degree at least six and subset boundary at least five on either actual open side.
+The auxiliary minimum-counterexample induction preserves the linkage problem, not the original colouring or critical-host hypotheses.
+This reviewer participated in construction checks and separately audited the complete sources; this is internal review of parent-authored integration.
+The two--one distribution, including its possible four-cut, cuts containing U roots, other response patterns and both-full-contact cases remain open. No whole four-cut closure, C19, HC7 or NT-comparable conclusion follows; earlier audit records remain historical and unchanged.
+
+## Inner-port revision and outer nonclosure
+
+**Scoped verdict: GREEN.** Final frontier SHA-256: `15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48`.
+The ledger remains `3ecdd1cbd70e4d6602e09ea858986ffd0afc9d59d2047e856483768463736aae`.
+The [reduction](relative_five_three_two_five_cut_reduction.md) / [updated audit](relative_five_three_two_five_cut_reduction_audit.md) hashes are
+`89217494d2bc1d72b420e56f65f0635e1683d34c2c615d23caa0aa8ee705826f` / `1501ec56088501ff27946422568a58d13ea790ceda6fbec93ac7f42697ff1eed`.
+Deleting only the inner-port subsection recovers source `468aab55fe3b21f5a6c491714eba19e36ceba5f620b3a847471527824373a5eb`; removing the expanded frontier insertion still exactly recovers Git `6518d7c`.
+Disjoint V-neighbourhoods preserve nonroot degrees under identification; every retained subset loses at most one of its six boundary neighbours. The nonempty inner set has strictly smaller order and at least two nonroots.
+The triple carrier is unchanged; a simple pair path lifts through one actual first V edge, including the direct-edge case, without assigning a disconnected preimage to a bag.
+Coverage is existential in the V choice for each port. The frontier does not infer matching outer endpoints or impose this auxiliary normal form on a fixed colouring.
+The proposed outer instance still requires two port neighbours beyond its one-U component and `V union P`, plus a surviving nonroot neighbour of the uncompleted V root. Those conditions and the subsequent simultaneous endpoint choice are explicitly unproved.
+All seven frontier pins and the source pin match; inactive relations retain their previous scopes. The barrier and its audit are unchanged.
+This is an internal delta review of the parent/Bacon construction and parent integration; earlier audit records are preserved except the current header pin. The full linkage target, four-cut C19 checkpoint and global completion criterion remain unmet.
