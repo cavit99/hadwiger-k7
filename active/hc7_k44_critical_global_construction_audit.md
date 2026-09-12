@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`1c7e0acfdf0c8d682486c7aef0c9c1d17e51faeb7fb2e1a66e7100b8697e0757`.
+`a0a940a1d80ba2460f4606dfcedaddd685290c40c701b3272a8c297e86c70db3`.
 
 ## Preserved scope and exact provenance
 
@@ -1456,3 +1456,26 @@ two-class absorption as a sufficient route, not a necessary form of a
 six-colouring. Earlier audit records are unchanged apart from the current
 header pin. No finite computation is a premise of the new mathematics;
 neither C19, HC7 nor substantiated NT-comparable significance is certified.
+
+## Prescribed-singleton structural extension
+
+**Scoped verdict: GREEN**, 12 September 2026, against Git `5005b2c`.
+Frontier `a0a940a1d80ba2460f4606dfcedaddd685290c40c701b3272a8c297e86c70db3`;
+ledger `45bf305488bbbe707762cb047882bd9368d688dcc505a3c3be1dc955122b9bb8`;
+manifest `bdd5ae6a7b8310ca5f6b780ca55e8cde91e7b8dbcdb15dec08b4efb2c148c470`.
+Removing only the eight-line insertion reproduces the base frontier exactly.
+The [source](../results/four_connected_five_chromatic_minor.md) and
+[adjacent audit](../results/four_connected_five_chromatic_minor_audit.md) have respective hashes
+`92627c08e88c8e067c34d6865afa939f349545f694f8691c1b4d2e682bc9cfd7` and
+`901d9d32e466fd18bd29db254a04374667cd3066af844e42023c4773589f88af`; both match.
+Removing the new input and theorem recovers the old source byte for byte.
+The adjacent independent audit checks the addition and its primary input;
+this review checks integration and does not repeat that mathematical audit.
+All summaries retain the structural hypotheses and five actual neighbour roots.
+Planar-or-four-regular is necessary for Q6 exclusion, never asserted sufficient.
+No Lo import, general augmentation or additional exterior contacts are inferred.
+All seven frontier pins match. Claim IDs, active flags and relations are unchanged;
+only the existing inactive claim is enhanced beyond hash updates.
+The primary index and root README are unchanged; results navigation keeps the limits.
+Historical audit text is unchanged apart from the current header pin.
+No C19, HC7, novelty or NT-comparable completion is certified.

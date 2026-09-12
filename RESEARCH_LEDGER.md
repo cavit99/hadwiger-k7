@@ -113,9 +113,12 @@ the two-triangle case and Conjecture 19 remain open.
 
 The [four-connected colouring theorem](results/four_connected_five_chromatic_minor.md)
 now proves that every four-connected `K6-2K2`-minor-free graph other than
-K5 is four-colourable, with a separate internal audit. It closes the
+K5 is four-colourable, with a separate internal audit. Its structural
+extension gives a Q6 minor with any prescribed degree-at-least-five
+vertex as a singleton in every four-connected nonplanar graph. Thus
+four-connected Q6-minor-free graphs are planar or four-regular. The
 universal-vertex case of the proposed five-connected six-chromatic Q
-construction. The actual critical host has a five-connected six-chromatic
+construction is closed. The actual critical host has a five-connected six-chromatic
 triangle quotient of minimum degree at least six; constructing Q there
 would close C19. The new theorem supplies no simultaneous attachment of
 six bags to a general additional vertex. That marked construction remains

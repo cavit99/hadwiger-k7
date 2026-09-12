@@ -1844,6 +1844,14 @@ Brooks supplies five neighbours in a noncomplete five-critical subgraph;
 colourful K4 extraction and the five-root wheel extension use the ambient
 graph after deleting their common neighbour. This closes the augmentation
 target when the six-chromatic graph has a universal vertex.
+The same source now proves that in every four-connected nonplanar graph,
+any vertex of degree at least five can be a singleton in a Q6 model.
+Its neighbourhood is spread across all three-separations of its deletion;
+Martinsson--Steiner Lemma 3.1 supplies a neighbour-rooted K4, and the
+wheel extension retains a fifth neighbour before the singleton is added.
+Thus every four-connected Q6-minor-free graph is planar or four-regular.
+This deduction retains one chosen bag, but supplies no simultaneous
+attachment of all six bags to a different deleted vertex.
 
 For a general six-chromatic H of minimum degree six, a six-critical
 induced subgraph J is either a literal K6, which is terminal by

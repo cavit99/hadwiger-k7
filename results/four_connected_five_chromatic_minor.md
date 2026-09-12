@@ -22,6 +22,11 @@ pairwise disjoint nonempty connected bags with the required contacts.
   four-chromatic graph, it has a K4 model with a distinct member of C in
   each bag. The primary statement and set-rooted definition were inspected
   for Section 7 of the pinned wheel source and recorded in its audit.
+- Their [Lemma 3.1](https://arxiv.org/html/2209.00594v1#S3) says that if
+  L is three-connected and S has at least four vertices, meets both open
+  sides of every three-separation, and roots no K4, then adding a vertex
+  adjacent to S gives a planar graph. This primary statement and its
+  definition of spread were inspected on 12 September 2026.
 - Brooks, [*On colouring the nodes of a network*, p. 194](https://doi.org/10.1017/S030500410002168X):
   a graph of maximum degree at most four with no K5 component is
   four-colourable. This is the primary statement with its parameter n=4.
@@ -57,6 +62,27 @@ fifth root need not have been unused. Each returned bag contains an
 actual neighbour of z. Adjoining the disjoint singleton bag {z} gives
 `K1 join W4=Q6`. All six bags lie in H, with the original roots and
 their z-edges retained. QED
+
+## A prescribed singleton in the nonplanar case
+
+**Theorem.** Let H be four-connected and nonplanar. For every vertex z
+with `d_H(z)>=5`, H has a Q6 minor containing the singleton bag `{z}`.
+Consequently every four-connected Q6-minor-free graph is planar or
+four-regular.
+
+**Proof.** Put `L=H-z` and `S=N_H(z)`. Then L is three-connected.
+For every separation `(X,Y)` of L of order three, S meets both open
+sides. Otherwise, for example if `S subseteq X`, the separator `X intersect Y`
+also separates the nonempty set `Y-X` from z in H, contradicting
+four-connectivity.
+
+If L had no S-rooted K4, Martinsson–Steiner Lemma 3.1 would make H
+planar. Choose four actual S representatives in such a model and a fifth
+member of S. The five-root wheel extension applies in L even if the
+fifth root already belongs to that model. Its five disjoint bags retain
+five neighbours of z and avoid z. Adjoining `{z}` gives `K1 join W4=Q6`.
+Finally, four-connectivity gives minimum degree four; in a nonplanar
+Q6-minor-free graph the theorem excludes every higher degree. QED
 
 ## A universal vertex in the six-chromatic target
 
