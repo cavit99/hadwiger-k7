@@ -36,323 +36,68 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 
 ## Current work plan
 
-The routes below are provisional choices, not additional completion
-requirements; change them when a stronger credible construction emerges.
+The goal remains HC7 or an independently substantiated NT-comparable theorem.
+Conjecture 19, excluding `Q=K7-2K2`, is the selected exact route; neither
+its proof nor its significance assessment is complete. Routes may change
+without changing that completion criterion.
 
-Complete exclusion of four-vertex cuts of `F=G-({v} union B)` remains a
-checkpoint, covering every binary non-independent cut. Even this would
-leave the more connected complement. A direct construction may bypass
-these cases; they are not prerequisites imposed on a proof of C19.
+**Assessment of the last 20 commits, `a94a809` through `67f528a`.**
+The [four-chromatic exterior theorem](results/hc7_two_triangle_exterior_colour_bound.md)
+closes one entire remaining chromatic branch for arbitrary host order.
+The [four-cut theorem](results/hc7_four_cut_components.md) and
+[triangle-and-cycle separator theorem](results/hc7_triangle_four_cycle_separator.md)
+close specified separator configurations, not every four-cut.
+The [four-connected Q6 theorem](results/four_connected_five_chromatic_minor.md)
+is a complete lower-order result; its novelty and NT-level significance
+are unestablished. Other refinements supply useful bounds or eliminate
+shortcuts, but repeatedly stop at incompatible connected sets, lost
+colouring responses or an induction class that is not preserved.
+Further normal forms are not the preferred use of the next campaign.
 
-Review of the last 25 commits distinguishes completed critical-host cases
-from auxiliary refinements that still reach the same allocation gap.
-Freeze further relative-linkage normal forms: even its full three--two theorem would settle only the
-`3,2,1,1` boundary pattern. The two-sided construction retains actual
-proper-minor six-colourings, clique contacts and the literal near-clique
-exclusions after edge contractions, but still lacks compatible ownership.
-A one-side construction with six prescribed roots is only a candidate;
-its weaker degree/boundary formulation is false. The
-[technical frontier](active/hc7_k44_closure_frontier.md#full-contact-side-construction)
-records the exact missing construction and the limits of that shortcut.
-The alternative global attack is the chromatic augmentation: prove that every
-five-connected six-chromatic graph of minimum degree six contains Q.
-This would close C19 through the actual triangle quotient. Its marked
-form retains the full neighbourhood of a deleted critical-core vertex,
-relative boundary five and degree six outside those marks; the six-bag
-construction or an unrooted Q exit remains unproved. The
-[exterior colour bound](results/hc7_two_triangle_exterior_colour_bound.md),
-with two separate internal audits, now closes the entire four-chromatic
-exterior branch for arbitrary host order. One three-colouring of N(v)
-lets every exterior vertex miss a colour, so any whole exterior colour
-class can be absorbed. Thus `chi(G)<=max{4,chi(G-N[v])+2}` and the actual
-critical host has `chi(G-N[v])>=5`. Continue with the five-chromatic
-exterior: seek a compatible absorption of two classes giving a six-colouring,
-or a direct Q construction. The six-chromatic exterior remains possible.
-Neither the two-triangle case nor C19 is closed.
+**Exact host and completed cases.** The audited C19 reductions leave a
+seven-contraction-critical, seven-connected Q-minor-free graph G of minimum
+degree eight, with a degree-eight vertex v. The
+[cycle-and-triangle case](results/hc7_degree8_cycle_triangle_closure.md)
+is closed. Write the remaining neighbourhood as two triangles A,B and an
+edge xy, allowing the recorded extra edges, and put `W=G-N[v]`.
+The [wheel colouring corollary](results/hc7_rooted_wheel_extension.md)
+closes `chi(G-{x,y})=5`. The exterior theorem proves
+`chi(G)<=max{4,chi(W)+2}`. Thus the remaining host has
+`chi(G-{x,y})=6` and `chi(W)` equal to five or six.
 
-The [global codegree theorem](results/hc7_global_edge_codegree.md) now
-bounds common neighbours by four on every edge and after any first edge
-contraction. Contracting a suitable matching in either neighbourhood
-four-clique leaves a six-connected quotient with positive density excess
-and at most one degree-seven vertex. Further iteration is unproved.
-Use these stronger degree bounds in the global construction; the
-[joint-wheel barrier](barriers/hc7_joint_wheel_two_sets.md) refutes replacing
-them by five-connectivity, nonplanarity and minimum degree six alone.
-The next attempt must produce compatible bags or a colouring contradiction
-in the actual critical host, rather than another weakened side theorem.
+**Next concentrated checkpoint:** close the whole `chi(W)=5` branch,
+using a six-colouring or a simultaneous Q model in the actual host.
+The current mechanism seeks two exterior colour classes that can both
+use the three neighbourhood colours. Their missing-colour lists must be
+compatible in one colouring; separate colourings or separate minor models
+do not suffice. Keep all proper-minor six-colourings available. Neither
+fixed roots, a singleton v, nor two-class absorption is mandatory.
+The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+records the exact contact constraints and first unsupported exchanges.
+The six-chromatic exterior and the full two-triangle case remain open.
 
-The [chosen-response reduction](active/four_cut_boundary_responses.md),
-with a separate internal audit, needs only one minimum boundary partition
-to be realised on its coloured side. At a missed-root four-cut that
-minimum has three or four blocks. When both components contact all four
-clique roots it has four or five; minimum five permits only
-`3,2,1,1,1` or `2,2,2,1,1` and no independent boundary four-set.
-The remaining realisations and complete separator closure are open.
+Use the [global codegree bound](results/hc7_global_edge_codegree.md),
+including its first-quotient bound and suitable paired contraction, when
+it helps this construction. The [joint-wheel counterexample](barriers/hc7_joint_wheel_two_sets.md)
+refutes relying on five-connectivity, nonplanarity and minimum degree six alone.
+Freeze additional separator or relative-linkage refinements unless an
+identified application closes a whole remaining case or supplies a closed
+induction. All known separator residues remain in the designated frontier.
 
-The [relative three--two reduction](active/relative_five_three_two_five_cut_reduction.md)
-now has an audited induced-path endpoint: the small U root has two or
-three consecutive degree-six neighbours on the complementary V path.
-With two neighbours, contracting their triangle with the root leaves
-exactly one degree-five nonroot. This quotient lies outside the induction
-class; absorbing that vertex is unproved. The original colouring is not
-preserved by these auxiliary reductions. Neither the full linkage theorem
-nor a further critical-host separator case is closed by this checkpoint.
+**Competing global attack:** the [quantitative frontier](active/quantitative_star_contraction_frontier.md)
+gives an audited conditional route from an unrestricted connected
+contraction reducing independence number at edge cost `O(r^2)` to an
+improved double-logarithmic colouring exponent. The required contraction
+is unproved. Test this different mechanism independently; do not replace
+it with the refuted bounded-bag shortcut or call the conditional implication
+an achieved improvement. T44 and [rooted K5 contractibility](active/k5_contractibility_frontier.md)
+remain available, without making their auxiliary root requirements mandatory.
 
-The [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
-tests an exponent improvement beyond the September 2026 square-root
-colouring bound. Its required reduction and its global implication are
-separated explicitly; the stronger packing remains unproved. Retain a
-bounded independent attempt at an unrestricted contraction that decreases
-independence number with controlled edge loss, as specified there.
-Its shortcut through minors with uniformly bounded branch sets is now
-refuted, even under a small-order restriction. The density inequality and
-unrestricted contraction target remain open.
-
-The immediate target is Conjecture 19. Its audited critical-host reductions
-leave two spanning degree-eight neighbourhood configurations. The
-[cycle-and-triangle theorem](results/hc7_degree8_cycle_triangle_closure.md),
-with two separate internal audits, closes the entire five-cycle case for
-arbitrary host order. In the two-triangles-and-edge case, the
-[five-root wheel extension](results/hc7_rooted_wheel_extension.md), with two
-separate internal audits, closes the entire `chi(G-{x,y})=5` branch.
-It proves that a four-of-five rooted K4 in any three-connected graph
-extends to a wheel rooted at all five vertices. Its colouring corollary
-gives Q in every five-connected seven-chromatic graph having an edge xy
-with five-chromatic deletion. The remaining branch has
-`chi(G-{x,y})=6` and, by the exterior bound above, `chi(G-N[v])>=5`;
-the two-triangle case and Conjecture 19 remain open.
-
-The [four-connected colouring theorem](results/four_connected_five_chromatic_minor.md)
-now proves that every four-connected `K6-2K2`-minor-free graph other than
-K5 is four-colourable, with a separate internal audit. Its structural
-extension gives a Q6 minor with any prescribed degree-at-least-five
-vertex as a singleton in every four-connected nonplanar graph. Thus
-four-connected Q6-minor-free graphs are planar or four-regular. The
-universal-vertex case of the proposed five-connected six-chromatic Q
-construction is closed. The actual critical host has a five-connected six-chromatic
-triangle quotient of minimum degree at least six; constructing Q there
-would close C19. The new theorem supplies no simultaneous attachment of
-six bags to a general additional vertex. That marked construction remains
-open; neither novelty nor NT-level significance is established for this
-lower-order deduction.
-
-In the actual host, if `G-{v,x,y}` is five-chromatic, the six triangle
-vertices are colourful in every five-colouring of that graph. This keeps
-the universal colouring constraint in the marked construction. Explicit
-four-chromatic barriers now exclude replacing it by five-connectivity
-alone in the near-clique upgrade, or by a degree-five star with an avoiding
-four-clique. Neither barrier refutes the actual critical-host target.
-The marked construction now permits any equal-colour neighbour pair at
-an unmarked degree-five vertex: deleting only interfering centre edges
-in the coloured subgraph gives a valid contraction inside the separate
-ambient minor. It retains six marks and four-connectivity for one step;
-the marked terminal construction and an iterable reduction remain open.
-
-Write its neighbourhood as triangles `A,B` and edge `xy`, and put
-`W=V(G)-N[v]`. The
-[complement theorem](results/hc7_two_triangle_complement_four_connectivity.md)
-makes both `G-v-A` and `G-v-B` four-connected. The audited
-[four-clique contact bounds](results/hc7_four_clique_complement_contacts.md)
-give at most five vertices with two neighbours in either deleted
-four-clique, and at most three meeting any of its triangles twice.
-Each complement remains nonplanar after any one vertex deletion. The
-[four-cut theorem](results/hc7_four_cut_components.md), with a separate
-internal audit, makes every four-cut leave exactly two components and,
-under the critical colouring hypotheses, contain an edge. A clique root
-missed by a component has at most one neighbour in the cut. The new
-[seven-separator theorem](results/hc7_triangle_four_cycle_separator.md),
-with a separate internal audit, constructs Q when a seven-cut contains
-a disjoint triangle and four-cycle and all outside degrees are at least
-eight. It closes the missed-root four-cut case with a spanning four-cycle
-by combining two models on their common triangle. Other cut shapes,
-cuts with both components full to the clique, and the global allocation
-remain open. The
-[spanning-helper theorem](results/hc7_two_triangle_exterior_helpers.md),
-with a separate internal audit, makes `G-N[v]+{x,y}` two-connected and
-partitions it into connected x/y-rooted parts with all but at most one
-of their six contacts to `A`. The A roots remain singleton, and all B
-roots are excluded from both parts. The symmetric assertion holds for B.
-A simultaneous global allocation is still missing; even making both parts
-full to both triangles would not alone give the required minor.
-
-The [relative five-root wheel theorem](results/five_root_relative_degree_six_wheel.md),
-with a separate internal audit, now removes the need for a root triangle
-or a pre-existing clique: at least three nonroots, degree at least six
-and boundary at least five for every nonempty nonroot set suffice.
-The [two-port terminal](results/hc7_sealed_wheel_terminal.md) completes Q
-when both ports have the specified double triangle contacts and the
-exterior bag has its required contacts. The
-[weaker contact patterns](barriers/hc7_weak_wheel_terminal.md) fail even
-after completing the wheel and exterior bag to a clique. A repair must
-use resources beyond extra edges in that fixed six-bag core, such as
-additional bags or a changed allocation of triangle contacts. The actual
-critical-host construction remains open.
-
-The [reserved-neighbour theorem](results/hc7_two_triangle_reserved_neighbours.md)
-now obtains a four-clique rooted at the other four triangle vertices while
-reserving three of `a,b,x,y`, where these four vertices induce only `xy`.
-Four failed reservations would themselves give `Q` through four disjoint
-exterior regions. The [degree-six theorem](results/hc7_five_root_degree_six.md)
-also removes the earlier bound on degree-six nonroots in the five-root
-almost-clique construction, with two possible triangle endpoints for the
-missing edge. Both have separate internal audits; neither supplies the
-additional compatible helper or closes the two-triangle case.
-The audited [orientation deductions](active/hc7_five_root_oriented_construction.md)
-develop the stronger, still conjectural requirement that one prescribed
-nontriangle root be full. With at least two nonroots, a root diamond
-permits degree-five nonroots adjacent to that root; a minimum counterexample to the degree-six
-target has no triangle contact at the other root or any of its nonroot
-neighbours. One further paired contraction has a complete four-boundary
-replacement, but its refined degree-five terminal class and the global
-application remain unproved.
-The [two-response theorem](results/hc7_two_triangle_two_responses.md),
-with a separate internal audit, strengthens the boundary application:
-across all exterior four-boundaries in `G-v-B`, at most one A root can
-occur, and its other three boundary vertices lie in the exterior.
-At least two A-root deletions therefore give the prescribed rooted
-four-clique; the models may differ. The symmetric assertion holds for B.
-The remaining boundary's opposite side is connected after deleting v.
-The audited [central-root normalization](results/hc7_seven_boundary_path_allocation.md)
-removes unused components and concentrates the unallocated vertices on
-one path. A matching to three distinct port bags in the same model would
-close this boundary case under the frontier's stated centre condition;
-neither that matching nor the full two-triangle construction is proved.
-
-The [earlier full-helper partition](active/hc7_two_triangle_helper_partition.md)
-and [fixed colour-core response](active/hc7_two_triangle_fixed_colour_core.md)
-remain audited resources for that allocation. The latter preserves a
-fixed four-chromatic graph across all its four-colourings, giving either
-a minor rooted at four triangle vertices or five compatible endpoint
-paths. Neither result licenses combining independently chosen models.
-The [simultaneous recolouring argument](results/hc7_common_response_recolouring.md)
-now forces actual cross-colour edges in the three-loopless-layer response,
-while retaining a fixed five-chromatic graph and all six matching endpoints.
-The [three-edge reduction](results/hc7_three_edge_response_reduction.md)
-then reduces a broader response class to three-connected five-critical
-cores, with fixed minor lifts and strictly decreasing order. Marked
-endpoints may merge. Its path case reduces to the triangle case, where
-the required Q must already lie in the core. That terminal construction
-and the remaining matching and path-plus-edge cases are unproved.
-
-The [whole-colour-class reservation](results/hc7_critical_colour_class_reservation.md),
-with a separate internal audit, supplies K5 schemes rooted at five actual vertices for
-every independent triple of neighbours, reserving that triple. This
-reuses the earlier cycle argument and applies in both chromatic branches
-of the [matching construction](active/hc7_two_triangle_matching_colour_host.md).
-In the two-triangle case it also gives a rooted four-clique while reserving
-all four other neighbours, including both x and y. Deleting whole colour
-classes need not preserve connectivity or minimum degree. The
-[scheme-to-wheel deduction](results/k5_scheme_rooted_wheel.md), with a
-separate internal audit, now gives a wheel on all five roots of every
-K5-scheme, without prescribing the hub. It therefore supplies the wheel
-outside the entire reserved colour class I, for every eligible triple. The
-[remaining compatible choice](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-is a wheel whose complement contains that triple in one connected
-component; together with v this would give Q. That choice is unproved.
-The [colourful-set reduction](results/colourful_five_wheel.md), with a
-separate internal audit, adapts Martinsson–Steiner's separator argument
-to every k>=4, preserving a colourful set in a three-connected marked minor. Its five-colour corollary removes
-connectivity from wheel extraction. Consequently any whole colour class
-I in G-v can be reserved while a wheel has five bags meeting N(v)-I.
-The current construction allows those representatives to vary: six
-N(v)-meeting bags forming K6-2K2 would give Q upon adding v. The sixth
-bag and its contacts remain unproved. This is a broader extraction input,
-not a closure of the remaining case or a substantiated NT-level result.
-The [clique-deletion bound](results/hc7_clique_deletion_colour_bound.md)
-makes every four-clique deletion at least five-chromatic. More strongly,
-the [reduced-complement bound](results/hc7_two_triangle_reduced_complement_colour_bound.md)
-gives `chi(G[W union (A-{a})])>=5` whenever a misses x,y; at least two
-choices of a qualify. The
-[edge-pair boundary exclusion](results/hc7_two_triangle_edge_pair_boundary.md)
-closes another actual four-boundary configuration. These have separate
-internal audits. The [joint component constructions](results/hc7_reserved_core_component_bound.md)
-make the nonroot-port residue connected. The subsequent
-[global choice of omitted root](results/hc7_two_triangle_nonroot_port_closure.md)
-closes that entire branch: choose a missing B,x,y and maximise over the
-eligible omitted B roots. Both ports must then be their B roots, and the
-two A bags partition `W union (A-{a})`. Their union is therefore at least
-five-chromatic by the reduced-complement bound. Constructing Q in this
-remaining root-port case is open; the two-triangle case is not closed.
-The intact two-bag quotient cannot contain Q, so the construction must
-reallocate vertices within that core. A sufficient alternative is one K5
-model whose bags each contact two of the outside clique bags
-`{v,a,x,y}` and the three singleton B roots;
-the [frontier](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
-proves this certificate without asserting its existence.
-A second proved certificate uses strict Hall inequalities between four
-clique bags and five other clique bags. A labelled-tree construction gives
-Q; obtaining those inequalities in one actual model remains unproved.
-Reassessment of [near-clique transfers](results/hc7_q_free_rotation_separator.md)
-forces the missing pair to stay fixed and gives an actual separator in
-one transfer vertex and three common row bags. This removes the local
-path-ordering obstruction; allocation inside the three bags remains open.
-The [three-row path counterexample](barriers/hc7_three_row_cycle_allocation.md)
-shows that distinct contacts on all three rows do not alone suffice;
-the actual critical-host constraints must enter a further construction.
-The frontier also proves that contracting any triangle through v leaves
-a five-connected, six-chromatic graph. This permits a more flexible
-construction in a quotient; the required seven-bag construction and its
-split on lifting remain open.
-
-The [fully rooted K5 attack](active/k5_contractibility_frontier.md)
-addresses that extraction and an independent theorem target. Audited
-local exchanges change ownership across colours. The
-[four-connectivity theorem](results/k5_scheme_four_connectivity.md),
-with two internal reviews, now closes every three-cut for arbitrary host
-order: either the [two-region theorem](results/two_full_regions_paired_triangle.md)
-provides the required paired triangle, or two successive forest packings
-give a strictly smaller original-root-preserving scheme. Thus a minimum
-counterexample is four-connected. Its global allocation remains open.
-The [general paired-clique theorem](results/paired_clique_full_regions.md)
-extends the two-region construction to every k, with a sharp k−1
-region requirement and a polynomial-time algorithm. The audited
-[one-sided extension](results/paired_clique_one_sided_regions.md) allows
-the regions to contain one terminal set and requires fullness only to
-the other. It also supplies a valid terminal-cut side replacement.
-With k−2 regions, even the proposed paired four-cycle can fail by the
-[explicit obstruction](barriers/paired_regions_two_region_obstruction.md).
-Neither the new theorem nor its side replacement closes the colouring case.
-Explicit positive schemes refute
-two restrictive allocation rules. A complete K5 theorem would now supply
-extraction in every reservation branch, but leave the seven-bag extension open;
-its significance would require a separate assessment.
-The [colouring counterexample](barriers/critical_colour_singleton_root.md)
-also rules out fixing the extra root as a singleton from the rainbow
-condition alone. Root expansion and the actual critical-host hypotheses
-must remain available.
-
-The next task is one Q model in the actual two-triangle critical host.
-A six-root K3,3 scheme with two independent cross edges omitted would
-suffice, but a direct model may expand v's bag and allocate triangle
-vertices differently. The bipartite theorem supplies extraction only
-after compatible paths exist; it does not solve their allocation.
-Use one shared construction, with colouring, ownership and adversarial
-reviews addressing the same proposed move. Use the new freedom to reserve
-any whole class and change the wheel representatives; the fixed-triple
-construction remains an option. Separate models at N(v)-I and at the
-reserved neighbour's neighbourhood do not supply the same five contacts.
-The frontier records the exact recolouring conflict with I outside N(v).
-Any C19 claim still requires that construction and an audit of the
-whole implication. The
-[designated frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-records the exact gaps, including why arbitrary absorption or path
-contraction is not a proved reduction. Conjecture 19 and the user's
-HC7-or-comparable-theorem objective remain unmet.
-
-The [density and boundary-colouring routes](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
-and T44 remain conditional alternatives, not mandatory intermediate
-statements. An original proof of Conjecture 19 is the present concrete
-candidate for the Norin--Totschnig comparison; its proof and comparative
-assessment are still outstanding. Local results and commits do not meet
-the user's completion criterion.
-
-Resume from this ledger and the designated frontier; revisit history only
-for a disputed dependency or changed claim. The bipartite paper's
-[focused primary-source review](paper/bipartite-contractibility/citation_novelty_review.md)
-is complete, with a separate internal audit, and incorporated in the
-revised manuscript. It supports a substantial specialist contribution,
-assessed below the NT benchmark even granting first-valid-proof credit.
-No author contact is authorized.
+Advance a route on a complete proof with a valid lift, a decisive obstruction,
+or a changed global mechanism; do not measure progress by commits or lemma
+counts. Independently attack its strongest inference before promotion.
+The [frozen accumulated plan](archive/hc7_work_plan_before_concentrated_checkpoint_2026-09-12.md)
+preserves the earlier detailed summaries; it is not a second status authority.
 
 ## Current frontier and completed campaign
 

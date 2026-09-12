@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`a2f0cf0cee981826820df011147293199c9161b5783030c7d912cf1fe5ef6d3d`.
+`47cc69de4e6a239649fa31896cc58c2b9921c4c4ba4be8f85d1e8766b87ddf8b`.
 
 ## Preserved scope and exact provenance
 
@@ -1505,3 +1505,30 @@ a repair may retain that class or another hypothesis excluding the family.
 Seven frontier pins match; two new claims are inactive and old relations remain.
 The primary index, root README and historical audit text are preserved except
 the current header pin. No C19, HC7 or comparative-significance closure is inferred.
+
+
+## Concentrated checkpoint and larger-root-set obstruction
+
+**GREEN; separate internal audit, 12 September 2026.** Relative to Git
+`67f528a`, the only frontier addition is the explicit larger-root-set
+obstruction. Its audited source SHA-256 is
+`47cc69de4e6a239649fa31896cc58c2b9921c4c4ba4be8f85d1e8766b87ddf8b`.
+The satellite pairs have clique adhesions; no Q bag can lie wholly in a
+pair, and restriction preserves connectivity and contacts. The remaining
+four degree-four vertices induce a claw. Seven bags using nine, eight or
+seven vertices cannot accommodate these vertices without a low-degree
+singleton. This proves absence for arbitrary models, without enumeration.
+The example violates the actual host's codegree and literal-clique bounds;
+only the deduction from the larger root set and boundary contacts alone
+is refuted. The D-rooted exclusion and actual critical-host target survive.
+
+The revised ledger, SHA-256
+`2062ee4d8c02ebd6d94710136f8fb4aa8acdccb82370f6ba5ffcdb7a03df056b`,
+accurately assesses the last twenty commits and retains the full completion
+criterion. Its removed work-plan section is preserved exactly, apart from
+relative links and final separator whitespace, in the [frozen snapshot](../archive/hc7_work_plan_before_concentrated_checkpoint_2026-09-12.md),
+SHA-256 `6dd8a34ac74b177c7bbaaf56f1445f4fe34d576a305e91b63068ec4604f3ab96`.
+The recorded original-section hash was checked against Git. Other ledger
+text is unchanged. No existing proof was modified. The seven manifest
+source pins are updated to the new frontier hash; their claims and status
+are unchanged. No case closure or global theorem follows from this update.

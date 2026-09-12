@@ -2094,6 +2094,36 @@ the absence of D. Retain the actual proper-minor colourings and global
 connectivity in any exchange, or construct Q directly. The
 `chi(W)=6` branch and the global construction also remain open.
 
+**A larger root set does not suffice by itself; explicit obstruction.**
+Put `E={w in W: |N(w) intersect N(v)|>=3}`. Replacing D by E in the
+rooted-K4 exclusion above needs further actual-host information. Take
+`A={a,a1,a2}`, `B={b,b1,b2}`, the two triangle edge sets, xy, and all
+eight edges from v to `A union B union {x,y}`. Add a clique
+`W={h1,h2,h3,h4}` with respective boundary neighbourhoods
+`{a,b,y}`, `{a,b,y}`, `{a,x,y}`, `{b,x,y}`, and no other edges.
+All four helpers belong to E, so W itself is an E-rooted K4, but this
+thirteen-vertex graph has no Q minor.
+
+Indeed the pairs `{a1,a2}` and `{b1,b2}` attach along the clique edges
+va and vb. A Q bag cannot lie wholly in either pair, whose external
+boundary has at most three vertices. Restricting all bags to the
+nine-vertex core preserves connectivity and contacts through those
+attachment edges. In that core the degree-four vertices are exactly
+`{v,a,b,x}`, inducing a claw. They cannot be singleton Q bags. Seven
+bags on nine vertices would require two disjoint edges covering all four,
+which the claw lacks; one triple cannot cover four vertices. Omitting
+one or two vertices leaves at least three or two low-degree vertices
+but only one or no available contractions. This proves absence for every
+possible model, without a computational premise.
+
+The first unsupported inference is that an arbitrary E-rooted K4 in W
+and these boundary contacts alone force Q. Its contracted bags need not
+retain the original degree, codegree or literal near-clique exclusions:
+the displayed graph itself has codegree five on h1h2 and contains K5.
+It is not an actual critical-host counterexample. The D exclusion,
+two-class choice using D, and constructions retaining additional host
+information remain available.
+
 **Unrestricted degree-six nonroots; written proof with a separate audit.**
 The [five-root theorem](../results/hc7_five_root_degree_six.md) retains
 the triangle and the boundary-at-least-five hypothesis, but permits any
