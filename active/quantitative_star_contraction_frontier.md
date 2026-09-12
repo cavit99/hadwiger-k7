@@ -128,6 +128,18 @@ the original graph outside I by expanding each independent leaf set;
 one fresh colour suffices for I. This is a refinement of the cited
 elementary packing argument, not a new global colouring theorem.
 
+Allowing several centres in each connected bag gives no asymptotic gain
+within this lifting rule. Let I be independent in the original graph;
+delete only vertices of I and contract disjoint connected bags B with
+B-I independent in that same graph. If L counts the non-I vertices in
+nontrivial bags, the order loss is at most `L+|I|`. Assign each such vertex
+to an adjacent I-vertex in its bag. The resulting disjoint stars remove
+exactly L vertices and have the preceding one-colour lift. Deleting I
+alone removes `|I|` vertices with the same colour bound. One of these
+two operations therefore recovers at least half the proposed loss.
+Thus this lifting rule gives no stronger asymptotic reduction than stars
+or deletion of an independent set. A new packing argument could still help.
+
 Consequently it would suffice to prove
 
 ```text

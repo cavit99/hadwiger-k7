@@ -4,7 +4,7 @@
 Date: 9 September 2026. This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`0759a4ff5bada8eafe50e5ce1d0206027a30ab1f70549f21143f77119e756e9a`.
+`65a0a62ca3c72fb26697465e09e1bd6b65f986b2cdd5abdceaddd6d7a1df3d9f`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -104,3 +104,22 @@ and index at
 retire only the false auxiliary step. R, the density inequality, the
 improved colouring bound and the full HC7/comparable-theorem objective
 remain unproved. No previous audited proof was modified.
+
+## Several centres under the same one-colour lift
+
+**GREEN; separate scoped internal audit, 12 September 2026.**
+The added paragraph takes source
+`0759a4ff5bada8eafe50e5ce1d0206027a30ab1f70549f21143f77119e756e9a`
+to `65a0a62ca3c72fb26697465e09e1bd6b65f986b2cdd5abdceaddd6d7a1df3d9f`.
+Both I and each B-I must be independent in the original host. For deleted
+D subseteq I and b nontrivial bags, the exact order loss is
+`L+|D|+sum_B |B intersect I|-b<=L+|I|`. Connectivity gives each non-I
+bag vertex an adjacent I-centre. Assigning one produces disjoint stars
+removing exactly L vertices; their independent leaves inherit quotient
+colours, and all of I receives one fresh colour. Inter-star edges remain
+in the quotient. Singleton bags and unused I-vertices cause no exception.
+Deleting all I instead removes |I| vertices with the same colour bound,
+so one operation recovers at least half the original reduction.
+This excludes an asymptotic advantage of the enlarged operation class,
+not a new packing proof within that class. It does not establish R,
+the density inequality, an improved colouring bound or the global goal.
