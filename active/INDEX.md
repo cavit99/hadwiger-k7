@@ -36,7 +36,9 @@ to intermediate claims remain with their designated conditional routes.
 
 - [Quantitative star contractions](quantitative_star_contraction_frontier.md):
   a sufficient reduction for a cube-root double-logarithmic colouring bound;
-  the required larger reduction per colour remains unproved.
+  the required larger reduction per colour remains unproved. The auxiliary
+  [uniform-cost independence reduction](../barriers/quantitative_alpha_drop_cost.md)
+  is refuted; the density inequality and critical reduction remain open.
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
   the immediate C19 task is a simultaneous minor construction in the
   two-triangle critical host with six-chromatic x/y deletion; the

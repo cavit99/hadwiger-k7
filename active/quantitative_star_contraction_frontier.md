@@ -1,7 +1,8 @@
 # Quantitative star contractions
 
 **Status:** conditional route. The improved reduction below is unproved;
-no improved colouring bound is established. The primary exact campaign
+its auxiliary uniform-cost independence reduction is refuted. No improved
+colouring bound is established. The primary exact campaign
 remains Conjecture 19 in the [research ledger](../RESEARCH_LEDGER.md).
 
 ## Target and existing input
@@ -161,17 +162,35 @@ Thus the small-order hypothesis alone does not justify this extraction.
 Larger bags or use of the full density-surplus hypotheses remain possible;
 neither the density inequality nor R is refuted.
 
-An alternative density induction would suffice if, for an absolute `D>=1`,
-every connected noncomplete G in the same small-order, all-minor class
-had a connected set B, `|B|>=2`, with `alpha(G/B)<alpha(G)` and
-`e(G)-e(G/B)<=Dr^2`. This existential statement remains unproved.
-For connected G, induction on order gives the density bound: a complete
-base has `alpha=1` and `|G|<=r`; otherwise apply induction to G/B and
-add at most `Dr^2` edges for at least one unit of independence loss.
-The quotient stays connected, has fewer vertices and retains the
-all-minor and order hypotheses; its contraction preimages give the lift.
-Summing over connected components proves the general case with the same r.
-No roots or colouring constraints are needed for this proposed step.
+## The uniform-cost independence reduction is refuted
+
+The proposed alternative required, for an absolute D, a connected set B
+in every connected noncomplete graph of the small-order, all-minor class,
+with `alpha(G/B)<alpha(G)` and `e(G)-e(G/B)<=Dr^2`.
+The [counterexample](../barriers/quantitative_alpha_drop_cost.md) refutes
+this even when B is unrestricted: there are such graphs for which every
+independence-decreasing contraction costs `Omega(r^2 log r)`.
+Deleting a sublinear set from a suitable random graph leaves its maximum
+independence number unchanged under every further small deletion. Every
+eligible B is therefore linear in the host order and contains quadratically
+many edges. The construction retains the order cap and independence bound
+on every minor. The graphs themselves satisfy `e(G)<=r^2 alpha(G)`.
+
+The old conditional induction was valid: a complete base has order at
+most r, and contraction preserves the class and lifts through connected
+preimages. Its universally bounded-cost premise is false. The density
+inequality, critical reduction R and desired colouring bound remain open;
+the construction does not establish R's additional chromatic and critical
+hypotheses. Further attempts must use the density surplus or R directly.
+
+Allowing cost `Dr^2 (alpha(G)-alpha(G/B))` avoids this counterexample but
+merely restates the density obligation up to constants. Such reductions
+telescope to the density bound. Conversely, under that bound, contracting
+the whole connected noncomplete graph costs at most
+`2Dr^2 (alpha(G)-1)`, since `alpha(G)>=2`. This supplies no new proof.
+
+The following older local checks remain valid but do not restore the
+refuted universal premise.
 
 For a nonempty connected B, the exact identities are
 `alpha(G/B)=max(alpha(G-B),1+alpha(G-N[B]))` and
@@ -196,8 +215,8 @@ is its sole vertex in some maximum independent set. In the triangular
 prism with triangles `u1u2u3`, `w1w2w3` and matching `u_i w_i`, take the
 minimal alpha-dropping set B=`{u1,u2,w1,w2}`. Paths for its two opposite
 pairs, with interiors outside B, must both use the edge `u3w3`.
-The missing step is a simultaneous construction that preserves the
-independence decrease and controls the edge loss using the density surplus.
+This also blocks using separately chosen paths as a scheme. A construction
+using the full density-surplus hypotheses remains possible.
 
 Testing must respect the hypotheses. The all-minor independence bound
 implies `h(G)<=r`, by applying it to a clique minor. Thus a graph in the

@@ -85,12 +85,15 @@ identified application closes a whole remaining case or supplies a closed
 induction. All known separator residues remain in the designated frontier.
 
 **Competing global attack:** the [quantitative frontier](active/quantitative_star_contraction_frontier.md)
-gives an audited conditional route from an unrestricted connected
-contraction reducing independence number at edge cost `O(r^2)` to an
-improved double-logarithmic colouring exponent. The required contraction
-is unproved. Test this different mechanism independently; do not replace
-it with the refuted bounded-bag shortcut or call the conditional implication
-an achieved improvement. T44 and [rooted K5 contractibility](active/k5_contractibility_frontier.md)
+retains the critical one-colour reduction R and a sufficient density
+inequality for an improved double-logarithmic colouring exponent.
+The [uniform-cost independence reduction](barriers/quantitative_alpha_drop_cost.md)
+is now refuted under all its order and all-minor hypotheses: every eligible
+contraction can cost `Omega(r^2 log r)`. Retire this step; the density
+inequality and R are not refuted and remain unproved. Test a construction
+using their stronger hypotheses directly, without the earlier bounded-bag
+shortcut or a claim of an achieved colouring improvement.
+T44 and [rooted K5 contractibility](active/k5_contractibility_frontier.md)
 remain available, without making their auxiliary root requirements mandatory.
 
 Advance a route on a complete proof with a valid lift, a decisive obstruction,

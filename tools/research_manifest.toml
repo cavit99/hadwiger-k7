@@ -23884,7 +23884,7 @@ status = "conditional-target"
 source = "active/quantitative_star_contraction_frontier.md"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "627bbd53c83f4fdc0f69e7c54fb1298cbc74151d5a561fee35878fd70d5e69f6"
+expected_source_sha256 = "0759a4ff5bada8eafe50e5ce1d0206027a30ab1f70549f21143f77119e756e9a"
 scope = "minor-minimal q-chromatic graphs on at most r^(3/2) vertices whose every minor F satisfies alpha(F)>=|F|/r, with q>=Kr"
 colour_compatibility = "the desired minor retains chromatic number at least q-1"
 strict_parameter = "host order; the conditional proof minimises order then edge count"
@@ -24394,3 +24394,23 @@ source = "hc7.target.companion_neighbourhood_five_roots"
 target = "hc7.barrier.joint_wheel_two_sets"
 kind = "guarded_by"
 note = "The optional joint-wheel construction must retain stronger actual-host data than nonplanarity, five-connectivity and minimum degree six."
+
+
+[[claims]]
+id = "hadwiger.barrier.uniform_alpha_drop_cost"
+title = "Every independence-decreasing contraction can cost a logarithmic factor more than r squared"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/quantitative_alpha_drop_cost.md"
+audit = "barriers/quantitative_alpha_drop_cost_audit.md"
+active = false
+expected_source_sha256 = "1a31400ce2b7f88bcca1b0eda267ab5d4ec3bc01a952379187d90df17a5328db"
+scope = "an unbounded family of connected noncomplete graphs with integer r, order at most r^(3/2), and alpha(F)>=|F|/r for every minor F"
+conclusions = ["every connected independence-decreasing contraction has edge loss Omega(r^2 log r)", "no absolute uniform cost Dr^2 is possible even with unrestricted bags", "the examples have chi=o(r) and satisfy e<=r^2 alpha"]
+does_not_prove = ["failure of the density inequality", "failure of the critical high-chromatic reduction R", "failure of the proposed improved colouring bound", "HC7 or Conjecture 19", "novelty or NT-comparable significance"]
+
+[[relations]]
+source = "hadwiger.target.cubic_star_reduction"
+target = "hadwiger.barrier.uniform_alpha_drop_cost"
+kind = "related_to"
+note = "Refutes the auxiliary unrestricted uniform-cost independence induction; R and the density inequality remain open."

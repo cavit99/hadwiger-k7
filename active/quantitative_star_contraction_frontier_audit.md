@@ -4,7 +4,7 @@
 Date: 9 September 2026. This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`627bbd53c83f4fdc0f69e7c54fb1298cbc74151d5a561fee35878fd70d5e69f6`.
+`0759a4ff5bada8eafe50e5ce1d0206027a30ab1f70549f21143f77119e756e9a`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -74,3 +74,33 @@ statement check, not an independent audit of that paper's proof. Removing
 the addition byte-recovers the preceding audited source
 `6a2d2a1cf714a3d97f007d1e9b70348ce3d943da83eb6a34f5d45835142aea45`.
 The conditional mathematics and ordinary-minor dependencies are unchanged.
+
+
+## Refutation of the auxiliary uniform-cost reduction
+
+**GREEN; separate internal integration audit, 12 September 2026.**
+The preceding conditional deductions are preserved from source
+`627bbd53c83f4fdc0f69e7c54fb1298cbc74151d5a561fee35878fd70d5e69f6`.
+The revised source is
+`0759a4ff5bada8eafe50e5ce1d0206027a30ab1f70549f21143f77119e756e9a`.
+The [new barrier](../barriers/quantitative_alpha_drop_cost.md), source
+`1a31400ce2b7f88bcca1b0eda267ab5d4ec3bc01a952379187d90df17a5328db`,
+with its [separate proof audit](../barriers/quantitative_alpha_drop_cost_audit.md),
+refutes the uniform-cost premise under both its order and all-minor
+hypotheses. Its examples satisfy the density bound and have `chi=o(r)`;
+they refute neither that bound nor the high-chromatic critical reduction R.
+The original induction remains valid as a conditional implication.
+
+The stated proportional-cost repair is equivalent to the density bound
+up to constants. For D at least one, the terminal clique contributes at
+most `r^2/2`, and the independence losses telescope. Conversely the whole
+connected noncomplete graph has `alpha>=2`, so its contraction costs at
+most `2Dr^2(alpha-1)` under the density bound. No new construction follows.
+
+The separately reviewed ledger at
+`a19e3ad6d981b4f11ed4e6a7a350f7a139157f3423f489eff251c0e96e7f8d2d`
+and index at
+`6385f25e328a905a622f57c8e049598b2f7e7752c155733c981420f7d696cce9`
+retire only the false auxiliary step. R, the density inequality, the
+improved colouring bound and the full HC7/comparable-theorem objective
+remain unproved. No previous audited proof was modified.
