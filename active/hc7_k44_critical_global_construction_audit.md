@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`8bce5d2db2b3ed48088126af808d752ba6f0e0068d5ca46ebd134e8f8a7515d2`.
+`1c7e0acfdf0c8d682486c7aef0c9c1d17e51faeb7fb2e1a66e7100b8697e0757`.
 
 ## Preserved scope and exact provenance
 
@@ -1401,3 +1401,58 @@ Its input is retained in the [colourful-set source](../results/colourful_five_wh
 The [squared-cycle barrier](../barriers/rooted_k5_six_root_extension.md) / [separate audit](../barriers/rooted_k5_six_root_extension_audit.md), hashes `40a3f01036c13385b66e3c13397cf5ed87fb8fe96137f3bcb0f755dbcce75f3d` / `5a81598b85c7269725e202987a4730a4f644dea2fb57392ac8871f9c9bcbd331`, correctly exclude arbitrary sixth-root extension: every six-vertex minor has at most twelve edges; its four-chromatic host leaves the colourful five-chromatic target unaffected.
 All seven frontier pins, the response pin and the new barrier pin match. Existing claim identifiers and active flags are unchanged; the sole new claim is an inactive barrier with a scoped guarded-by relation. Historical audit records remain intact apart from the current header pin.
 This is internal review of parent-authored integration; the reviewer developed the marked refinement and checked the other deductions separately. No global conjectural target, full four-cut case, C19 or HC7/NT-comparable completion is certified.
+
+## Complete four-chromatic exterior closure and colour-class choice
+
+**Scoped verdict: GREEN**, 12 September 2026, against Git `9b8ab67`.
+Frontier SHA-256:
+`1c7e0acfdf0c8d682486c7aef0c9c1d17e51faeb7fb2e1a66e7100b8697e0757`;
+ledger `aeef74416f3ddaa973d7acbc020d2c77bb7d863006669bb6361b02d0f68156ee`;
+manifest `ded931b88fd4535e5fdf18da4366f2a84253f8266b3bf6b2945cc4c04db9306d`.
+Restoring only the replaced exterior-colouring block recovers the base
+frontier byte for byte. The [frozen block](../archive/hc7_exterior_colour_constraint_before_closure_2026-09-12.md),
+whole-file hash `8781f2aa0f6ea94d4a62f1747d2ee2b697e8aabfcd736c32f67361d1c60f7b61`,
+contains that predecessor block after its provenance header, with only
+the final blank line omitted; equality to `old_block.rstrip() + "\n"` was checked.
+
+The [exterior theorem](../results/hc7_two_triangle_exterior_colour_bound.md)
+and its [first](../results/hc7_two_triangle_exterior_colour_bound_audit.md)
+and [second](../results/hc7_two_triangle_exterior_colour_bound_second_audit.md)
+audits have respective hashes
+`4c3732c09aa157014c0ba417d3e1c0bda5ee16537ff253333cb0bf891caa1610`,
+`67fa80af1d38f993552c457f8aef1f9533c2643a17cdcf98e3eefdf8a5641d68`,
+`f53f697dddd2c40995afc625cae38bc392300feae5f5af4bc9700a9b19e3e82f`.
+All match. This reviewer supplied the separate second mathematical audit.
+The integration correctly states an arbitrary-order structural theorem:
+one common neighbourhood colouring absorbs any one whole exterior class.
+The five- and six-chromatic exterior cases remain open.
+
+The new D-rooted exclusion retains one actual model in W. Its four bags
+contact each of the disjoint connected bags A union {v}, B and {x,y}
+through their own D representatives. The v-edges supply both contacts
+incident with the first new bag; only B--{x,y} may be absent. This is Q.
+For compression, the four selected whole colour classes induce a
+four-colourable graph. Universal colourfulness there would force chromatic
+number four, so Martinsson--Steiner Theorem 1.3 supplies the forbidden
+rooted K4. Otherwise recolouring with the same four palette colours
+strictly decreases the number of colours meeting D. Other classes remain
+unchanged, giving a finite decreasing parameter and one simultaneous
+colouring. The pinned colourful-set source remains
+`d804335fc68cff69d4eb2de770c246cbb91e0da336eb36a206d93d89378a64a1`.
+
+The stated local obstruction is valid in its limited scope. Take just
+the base neighbourhood and v, plus an exterior edge wu whose two ends
+contact exactly a0,a1. The graph is a clique-sum of four-cliques and a
+triangle along separators of order at most two. Three-connectivity of
+K5-minus confines any such minor to one summand, which is too small.
+Thus all small-contraction exclusions hold, while wu has equal singleton
+missing-colour lists. This graph is not asserted to satisfy the global
+critical-host hypotheses or to obstruct choosing another class pair.
+
+The conditional index and results navigation retain the primary HC7
+target; existing manifest active flags are unchanged and the sole new
+claim is inactive. All seven frontier pins match. The ledger describes
+two-class absorption as a sufficient route, not a necessary form of a
+six-colouring. Earlier audit records are unchanged apart from the current
+header pin. No finite computation is a premise of the new mathematics;
+neither C19, HC7 nor substantiated NT-comparable significance is certified.

@@ -54,18 +54,21 @@ A one-side construction with six prescribed roots is only a candidate;
 its weaker degree/boundary formulation is false. The
 [technical frontier](active/hc7_k44_closure_frontier.md#full-contact-side-construction)
 records the exact missing construction and the limits of that shortcut.
-The next global attack is the chromatic augmentation: prove that every
+The alternative global attack is the chromatic augmentation: prove that every
 five-connected six-chromatic graph of minimum degree six contains Q.
 This would close C19 through the actual triangle quotient. Its marked
 form retains the full neighbourhood of a deleted critical-core vertex,
 relative boundary five and degree six outside those marks; the six-bag
-construction or an unrooted Q exit remains unproved. Retain also the
-new actual exterior colouring information:
-`W=G-N[v]` is at least four-chromatic, and, when it is four-chromatic,
-each class of every three-colouring of N(v) has a universally colourful
-neighbourhood in W. Separate rooted K4 models do not yet combine. Closing
-this whole branch is a possible intermediate payoff, not a required detour.
-No further critical-host case is closed at this checkpoint.
+construction or an unrooted Q exit remains unproved. The
+[exterior colour bound](results/hc7_two_triangle_exterior_colour_bound.md),
+with two separate internal audits, now closes the entire four-chromatic
+exterior branch for arbitrary host order. One three-colouring of N(v)
+lets every exterior vertex miss a colour, so any whole exterior colour
+class can be absorbed. Thus `chi(G)<=max{4,chi(G-N[v])+2}` and the actual
+critical host has `chi(G-N[v])>=5`. Continue with the five-chromatic
+exterior: seek a compatible absorption of two classes giving a six-colouring,
+or a direct Q construction. The six-chromatic exterior remains possible.
+Neither the two-triangle case nor C19 is closed.
 
 The [chosen-response reduction](active/four_cut_boundary_responses.md),
 with a separate internal audit, needs only one minimum boundary partition
@@ -105,7 +108,8 @@ It proves that a four-of-five rooted K4 in any three-connected graph
 extends to a wheel rooted at all five vertices. Its colouring corollary
 gives Q in every five-connected seven-chromatic graph having an edge xy
 with five-chromatic deletion. The remaining branch has
-`chi(G-{x,y})=6`; the two-triangle case and Conjecture 19 remain open.
+`chi(G-{x,y})=6` and, by the exterior bound above, `chi(G-N[v])>=5`;
+the two-triangle case and Conjecture 19 remain open.
 
 The [four-connected colouring theorem](results/four_connected_five_chromatic_minor.md)
 now proves that every four-connected `K6-2K2`-minor-free graph other than

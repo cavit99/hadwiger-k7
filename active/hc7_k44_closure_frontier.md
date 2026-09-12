@@ -2024,30 +2024,52 @@ its maximal helper bags can discard the vertices needed for a split;
 neither a compatible extra helper nor an admissible contraction quotient
 is returned by this theorem.
 
-**Exterior colouring constraint; written deduction.** In the actual host,
-`chi(W)>=4`. To see that `G[N(v)]` is three-colourable, colour x,y with
-1,2. C4-freeness leaves at most one vertex of each triangle adjacent to
-`{x,y}`, and at most one A--B edge. Colour each triangle with 1,2,3,
-initially assigning 3 to its attachment vertex. Permute the other colours
-to satisfy the A--B edge unless it joins both attachment vertices. In
-that case one attachment misses x or y: if both met both, they would
-form a C4 with x,y. Give that attachment the colour of the missed vertex
-and complete its triangle. This is the required three-colouring.
-A three-colouring of W with a separate palette would now six-colour G,
-giving v any W colour, a contradiction.
+**Complete four-chromatic exterior closure; written proof with two
+separate internal audits.** The
+[exterior colour bound](../results/hc7_two_triangle_exterior_colour_bound.md)
+proves `chi(G)<=max{4,chi(W)+2}` under the structural hypotheses here,
+without proper-minor colourability. Connected contractions of at most
+three vertices restrict the A--B contact relation to a matching and
+classify every exterior contact set of size at least three. One proper
+three-colouring of N(v) then makes every exterior vertex miss a colour.
+An entire independent class of any W-colouring can use these missing
+colours; the other exterior classes retain a disjoint palette, one of
+whose colours also serves v. Thus the actual critical host has
+`chi(W)>=5`. This supersedes the former open four-chromatic branch.
+The earlier deduction is preserved in the
+[frozen exterior-colouring note](../archive/hc7_exterior_colour_constraint_before_closure_2026-09-12.md).
 
-If `chi(W)=4`, more is forced. For every three-colouring of `G[N(v)]`
-and every one of its colour classes U, `N_W(U)` meets every colour class
-of every four-colouring of W. Otherwise reuse a missed W colour on U,
-give the other two neighbourhood classes two fresh colours, and colour
-v with a different W colour. This again six-colours G. Each neighbourhood
-colouring has class sizes `3,3,2`, since each triangle uses all three
-colours and x,y have different colours. Martinsson--Steiner Theorem 1.3,
-as pinned in the [colourful-set source](../results/colourful_five_wheel.md),
-therefore gives a K4 in W with every bag contacting U. For a pair class
-`U={a,b}`, a bag may contact only a or only b; neither their distribution
-nor the other classes' contacts to these same bags is prescribed.
-The simultaneous construction and the `chi(W)>4` case remain open.
+**Colour-class choice; written deduction.** Let D be the exterior
+vertices meeting each of A, B and `{x,y}`. There is no D-rooted K4 in W:
+its four bags, together with `{v} union A`, B and `{x,y}`, would give
+K7 with at most the B--`{x,y}` contact missing, hence Q. The bags of this
+rooted K4 may range throughout W, and their representatives need not be
+prescribed.
+
+For any k-colourable graph with no D-rooted K4, some k-colouring uses
+at most three colours on D. If D meets four colour classes, take their
+induced subgraph. Martinsson--Steiner Theorem 1.3, as pinned in the
+[colourful-set source](../results/colourful_five_wheel.md), gives a
+four-colouring of that subgraph with one colour missing D: otherwise
+D would be universally colourful and would root a K4. Recolour using
+the same four palette colours. The number of colours meeting D strictly
+decreases, and all other classes stay unchanged. Iteration therefore
+terminates with the asserted colouring. In particular, a five-colouring
+of W can have two whole classes disjoint from D.
+
+**Next construction; unproved.** When `chi(W)=5`, seek a common
+W-colouring and neighbourhood colouring for which two whole exterior
+classes can be coloured from their missing neighbourhood colours.
+Their union is bipartite, but its missing-colour lists need not be
+compatible merely for that reason. Even an edge whose ends both meet
+exactly the same two A vertices forces the same missing colour at both
+ends. The small-contraction contact rules permit that local pattern;
+it is not a counterexample to choosing a different pair or to the actual
+critical-host target. The first unproved inference is choosing a single
+W-colouring whose omitted pair is jointly colourable, while retaining
+the absence of D. Retain the actual proper-minor colourings and global
+connectivity in any exchange, or construct Q directly. The
+`chi(W)=6` branch and the global construction also remain open.
 
 **Unrestricted degree-six nonroots; written proof with a separate audit.**
 The [five-root theorem](../results/hc7_five_root_degree_six.md) retains

@@ -73,7 +73,13 @@ the entire five-cycle-and-triangle case for arbitrary host order.
 The [wheel theorem's colouring corollary](hc7_rooted_wheel_extension.md#7-colourful-sets-and-the-double-critical-branch)
 gives Q in every five-connected seven-chromatic graph with an edge xy
 such that `chi(G-{x,y})=5`. Thus the remaining two-triangle critical-host
-branch has `chi(G-{x,y})=6`. Conjecture 19 remains open.
+branch has `chi(G-{x,y})=6`. The
+[exterior colour bound](hc7_two_triangle_exterior_colour_bound.md), with
+[two](hc7_two_triangle_exterior_colour_bound_audit.md)
+[GREEN audits](hc7_two_triangle_exterior_colour_bound_second_audit.md),
+also closes the entire four-chromatic exterior branch: under the actual
+structural hypotheses `chi(G)<=max{4,chi(G-N[v])+2}`. Hence the remaining
+exterior has chromatic number five or six. Conjecture 19 remains open.
 
 The
 [cycle-and-triangle](hc7_degree8_cycle_exterior.md) and
