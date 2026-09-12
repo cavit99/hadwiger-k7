@@ -2,10 +2,10 @@
 
 Date: 12 September 2026.
 
-**Current verdict: GREEN** for the reduction, three-component exclusion
-and inner port coverage, with the full target still open.
+**Current verdict: GREEN** for the reductions, completed cut configurations,
+inner port coverage and small-U-root restrictions, with the full target open.
 **Current source SHA-256:**
-`89217494d2bc1d72b420e56f65f0635e1683d34c2c615d23caa0aa8ee705826f`.
+`d499b9b4e6b6e5f5289d7b5477c4160bec42c8c4fa406cfb196daa4152665354`.
 
 ## Initial reduction audit
 
@@ -82,3 +82,49 @@ Coverage gives at least one V choice for every port; it supplies neither
 a fixed V choice nor its compatibility with an outer construction.
 The initial review and provenance above are preserved; no further
 colouring, critical-host or global-conclusion claim is accepted.
+
+## Cut closures and a small U root
+
+**Scoped verdict: GREEN**, 12 September 2026, for the current source above.
+The diff against Git `268bcaa` retains the earlier mathematics through inner
+port coverage; it adds the cut constructions and assertion 5, and revises
+the title and remaining scope. The historical reviews above remain intact.
+The reusable [linkage source](../results/four_root_linkage_with_ports.md) is
+pinned at `f41f60cb657d39c9de1e19457c86d65b228607a9115e711b8c48a4d0dc92a8c1`,
+with [audit](../results/four_root_linkage_with_ports_audit.md)
+`f10c0a01f4e0329945bf830b647a740d2920a3e7f30ab1892fcbab195425ad51`.
+
+- The U-containing cut uses a connected opposite-side preimage. Its only
+  possible neighbour at any retained interior vertex was u0, so degrees
+  and boundaries survive. Root incidence at least nine licenses the
+  two-port criterion; expanding that preimage retains all three U roots.
+- Maximality ranges over cuts both containing and avoiding U. Absorbing a
+  port with at most one exterior neighbour leaves another U root outside
+  the new cut, so it gives a legitimate larger single-U component. The
+  relaxed V path can use unused ports while the U arm attaches to the
+  connected opposite component. The two-vertex endpoint uses the original
+  no-isolated-neighbour normalisation to obtain its actual V-to-port edge.
+- The fully completed graph's six-connectivity and Xie's exact smaller
+  completion classify the remaining cuts. A root-only component yields
+  a U root of D-degree two or three. No root-only carrier construction is
+  inferred merely from this classification.
+- The proper-six boundary bound and retained V-neighbours prove that F-U
+  is two-connected. Thus a nonroot p meeting all three U roots is terminal.
+  Otherwise contract the connected set `{u,p,U1}` for a small U root u
+  and a neighbour p meeting U1 but not U2. Relative boundary four survives.
+  Degree loss plus the new root incidence is +1, zero or -1 for one, two
+  or three neighbours in this set. At most two surviving nonroots have
+  three such neighbours. The other root incidences contribute at least
+  five, giving `2e>=6d+3`, contrary to the cofacial bound. The positive
+  linkage lifts through the fixed connected preimage with all U roots.
+- For a two-neighbour U root, contracting either incident edge preserves
+  the original induction class if the opposite port has degree at least
+  seven. Both port degrees therefore equal six. The stated connected
+  remainder and its attachment counts check; no terminal allocation for
+  that remaining configuration is inferred.
+
+This is separate internal review with the earlier development provenance,
+not external peer review. The two- and three-neighbour U-root residues and
+the full linkage target remain open. Neither these normalisations nor the
+new contractions preserve a fixed original colouring; no C19, HC7 or
+NT-comparable conclusion is accepted.

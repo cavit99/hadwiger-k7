@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48"
+expected_source_sha256 = "d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21718,7 +21718,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48"
+expected_source_sha256 = "d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21961,7 +21961,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48"
+expected_source_sha256 = "d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -22004,7 +22004,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48"
+expected_source_sha256 = "d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -23265,7 +23265,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48"
+expected_source_sha256 = "d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b"
 scope = "the actual seven-contraction-critical Q-free host of minimum degree eight, with a degree-eight neighbourhood spanning triangles A,B and edge xy"
 label_fidelity = "all six original triangle roots; scheme paths avoid v and have no foreign roots internally"
 allowed_exits = ["in G-v an A/B-rooted K3,3 scheme with two independent cross edges omitted, whose missing pairs may be chosen"]
@@ -23343,7 +23343,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 audit = "active/hc7_k44_critical_global_construction_audit.md"
 active = false
-expected_source_sha256 = "15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48"
+expected_source_sha256 = "d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b"
 scope = "the actual critical two-triangle host and an eligible independent reservation a,b,y; maximise the two A-rooted bags in G-v-a-b-x-y"
 label_fidelity = "the four original core roots stay separate; the five deleted vertices remain outside the model; original B-root path interiors are not available for simultaneous reuse"
 conclusions = ["exactly one nonroot B port is impossible", "zero nonroot ports leave H equal to the helper union and a,x,y", "with two nonroot ports the remainder is nonempty and every component contacts all five H ports and at least two actual B roots"]
@@ -23622,7 +23622,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 audit = "active/hc7_k44_critical_global_construction_audit.md"
 active = false
-expected_source_sha256 = "15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48"
+expected_source_sha256 = "d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b"
 scope = "the seven-connected critical two-triangle host and every independent triple T in its degree-eight neighbourhood"
 label_fidelity = "all five other actual neighbours root the wheel; I contains T, and both the whole class I and v remain unused"
 conclusions = ["a five-root W4 exists in G-v-I for every eligible T, in either matching branch", "if some such wheel leaves all of T in one complementary component, that component and v complete Q"]
@@ -24211,18 +24211,18 @@ note = "Only the final conditional 3+2 construction uses the wheel; the pair mus
 
 [[claims]]
 id = "rooted_minors.relative_five_three_two_reduction"
-title = "Five-boundary reduction and three-component closure for relative three--two linkage"
+title = "Relative three--two linkage reduces to a U root with at most three nonroot neighbours"
 kind = "lemma"
 status = "audited-green"
 source = "active/relative_five_three_two_five_cut_reduction.md"
 audit = "active/relative_five_three_two_five_cut_reduction_audit.md"
 active = false
-expected_source_sha256 = "89217494d2bc1d72b420e56f65f0635e1683d34c2c615d23caa0aa8ee705826f"
+expected_source_sha256 = "d499b9b4e6b6e5f5289d7b5477c4160bec42c8c4fa406cfb196daa4152665354"
 scope = "a minimum counterexample to the five-root three--two linkage target with at least two nonroots, nonroot degree six and relative boundary five"
 label_fidelity = "the original induction retains all five labelled roots; inner completions lift both carriers simultaneously"
 colour_compatibility = "no original colouring or critical-host hypothesis is asserted to survive the auxiliary completions"
-conclusions = ["every proper nonroot subset has boundary at least six", "full root completion is six-connected", "a cut consisting of the two roots and three nonroots cannot separate the three roots into three components, including root-only components"]
-does_not_prove = ["the relative three--two linkage target", "the two--one cut distribution or cuts containing a root", "realisation of a remaining minimum colour response", "Conjecture 19 or HC7", "NT-comparable significance"]
+conclusions = ["every proper nonroot subset has boundary at least six", "full root completion is six-connected", "the three-component cut, both-interior U-root cut and maximal pure nonempty side are excluded", "some U root has two or three nonroot neighbours, all anticomplete to the other U roots"]
+does_not_prove = ["the relative three--two linkage target", "absorption of the remaining prescribed root", "realisation of a remaining minimum colour response", "Conjecture 19 or HC7", "NT-comparable significance"]
 
 [[relations]]
 source = "hc7.companion.chosen_four_cut_responses"
@@ -24232,18 +24232,39 @@ note = "The full relative linkage target would realise a 3+2+1+1 response; these
 
 [[claims]]
 id = "rooted_minors.barrier.six_boundary_pair_and_arm"
-title = "A six-boundary side need not support a pair path and a disjoint arm"
+title = "A six-boundary side can obstruct a pair path forbidden from using other roots"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/relative_six_boundary_pair_and_arm.md"
 audit = "barriers/relative_six_boundary_pair_and_arm_audit.md"
 active = false
 expected_source_sha256 = "65d7a300fc205fbb289d5eaedac2694837a2abb6463ec459401fb401c7a2bd85"
-scope = "all path orders at least two, six boundary roots, internal degree six and relative boundary six, with disjoint prescribed-pair neighbourhoods"
+scope = "all path orders at least two, six boundary roots, internal degree six and relative boundary six, disjoint prescribed-pair neighbourhoods, and no other boundary roots internal to either path"
 does_not_prove = ["failure of the relative three--two linkage target", "failure of constructions using both sides", "a counterexample to HC7"]
 
 [[relations]]
 source = "rooted_minors.relative_five_three_two_reduction"
 target = "rooted_minors.barrier.six_boundary_pair_and_arm"
 kind = "guarded_by"
-note = "Rules out allocating both pair roots within one open side while reserving a disjoint arm; the proved three-component construction coordinates separate arms across sides."
+note = "Rules out the construction when paths cannot use other boundary roots; the new pair-and-arm theorem permits unused ports and retains the original barrier."
+
+
+[[claims]]
+id = "rooted_minors.four_root_linkage_with_ports"
+title = "Four-root degree-sum criterion and six-boundary pair-and-arm construction"
+kind = "lemma"
+status = "audited-green"
+source = "results/four_root_linkage_with_ports.md"
+audit = "results/four_root_linkage_with_ports_audit.md"
+active = false
+expected_source_sha256 = "f41f60cb657d39c9de1e19457c86d65b228607a9115e711b8c48a4d0dc92a8c1"
+scope = "the stated boundary and degree-sum hypotheses with four roots and any finite port set; the six-root arm theorem with degree and boundary at least six, disjoint V-neighbourhoods and at least two X-neighbours of u"
+label_fidelity = "connected eliminated sets with at most three boundary neighbours lift the two paths simultaneously"
+conclusions = ["the degree-sum criterion gives every prescribed two-linkage on the four roots", "with at least three interior vertices the V-pair path and U arm coexist when unused ports are allowed", "the two-interior-vertex endpoint gives each stated three--two partition"]
+does_not_prove = ["an arbitrary fixed arm endpoint", "the full relative three--two linkage target", "preservation of a colouring through a contraction", "Conjecture 19 or HC7", "NT-comparable significance"]
+
+[[relations]]
+source = "rooted_minors.relative_five_three_two_reduction"
+target = "rooted_minors.four_root_linkage_with_ports"
+kind = "uses"
+note = "The connected-side quotient meets the two-port degree-sum threshold, and the maximal pure side uses the pair-and-arm theorem with unused ports permitted."

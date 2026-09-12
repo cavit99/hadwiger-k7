@@ -1050,55 +1050,59 @@ five-root wheel supplies the required connected sets unless the pair
 occupies opposite rim bags. The remaining realisations are unproved;
 this does not exclude a four-cut.
 
-**Relative three--two construction; written reductions with a separate
-internal audit.** The
+**Relative three--two construction; written reductions with separate
+internal audits.** The
 [linkage target and proof](relative_five_three_two_five_cut_reduction.md)
 use five roots `U dotcup V`, of sizes three and two, at least two
 nonroots, nonroot degree at least six, and at least five neighbours for
-every nonempty nonroot subset. This is the sufficient construction for
-the `3,2,1,1` response after deleting its two singleton roots.
+every nonempty nonroot subset. The whole target would realise the
+`3,2,1,1` response after deleting its singleton roots.
 
-In a minimum counterexample to this linkage target, a largest proper
-five-neighbour nonroot side splits the problem into two strictly smaller
-instances. The outer clique completion retains the degree and boundary
-bounds; the inner linkage replaces virtual edges in both carriers
-simultaneously. Consequently every proper nonroot subset has at least
-six neighbours and completing all five roots gives a six-connected graph.
-This is a stronger completion than the one in Xie's theorem, so that
-theorem does not yet finish the construction.
+A minimum counterexample has every proper nonroot subset behind at least
+six neighbours. The five-boundary reduction uses smaller inner and outer
+instances and lifts both carriers simultaneously. Completing all five
+roots gives six-connectivity; Xie's smaller completion omits U--U edges
+and may still have small cuts.
 
-The proof also excludes a five-cut consisting of V and three nonroots
-which separates the U roots into three components, including every
-root-only endpoint. Two-path choices and paired cofacial edge counts
-coordinate arms through distinct sides. A
-[path counterexample](../barriers/relative_six_boundary_pair_and_arm.md)
-shows why allocating both V roots in one side while reserving a U arm
-is invalid. For every inner port, identifying the two V roots gives a
-strictly smaller instance without reducing nonroot degrees; a simple
-path in its returned pair carrier lifts from one actual V root. This
-supplies inner port coverage, with the V choice depending on the port.
-The two--one distribution, a possible four-cut isolating
-a U root, and five-cuts containing a U root remain unclosed. These
-normalisations retain the linkage class, not an original colouring or
-critical-host hypothesis; only a proof of the whole target would give
-the stated colour-block application. Other minimum-response types and
-the both-full-contact cuts remain open.
+Two [four-root linkage criteria](../results/four_root_linkage_with_ports.md),
+with a [separate audit](../results/four_root_linkage_with_ports_audit.md),
+now close the cut containing a U root when both sides have nonempty
+interiors, and a largest single-U side with nonempty interior whose cut
+avoids U. The first contracts the opposite side with its boundary U
+root into one connected prescribed preimage; an incidence bound survives
+eliminating sets of at most three boundary neighbours. The second permits
+the V path to use unused ports and joins the U arm through the opposite
+component. Its two-vertex endpoint uses the root-neighbourhood condition.
+This bypasses the unresolved synchronisation of independently selected
+inner and outer endpoints. The earlier three-component closure is retained.
 
-**Two-side continuation; recorded nonclosure.** In a two--one split,
-completing the outer port triangle and joining it to the retained U root
-and one V root would support a smaller linkage instance if every port
-had two neighbours outside the one-U component and `V union P`, and
-the other V root retained an outer nonroot neighbour. Choosing a maximal
-side has not yet proved these conditions.
-Even conditionally, the outer three-arm construction selects a port
-whose inner V choice need not match. Neither endpoint freedom nor a
-joint exchange is proved. Contracting a path between the two outer U
-roots instead merges boundary incidences; no bound sufficient to retain
-the four-neighbour condition of the cofacial argument has been
-established. A valid continuation must control those degrees and
-boundaries and the simultaneous port choice, or construct the carriers
-directly. These are unsupported reductions, not counterexamples to the
-actual target.
+Together these reductions force some U root to have only two or three
+nonroot neighbours. Those neighbours are anticomplete to the other U
+roots, by a four-root contraction and cofacial degree count. Absorbing
+this prescribed root while retaining both carriers is unproved. In the
+two-neighbour case its ports are adjacent degree-six vertices, and the
+remaining nonroots form a connected side full to the other roots and
+both ports. A four-root linkage after deleting the small root need not
+put either port in the U-carrier.
+
+**Root-contraction continuation; recorded nonclosure.** Contracting one
+edge at that small root cannot simply activate Xie's theorem. In a
+minimum counterexample every such choice has a degree-six common
+nonroot neighbour; otherwise it already preserves the original induction
+class. That neighbour survives with degree five, and completing edges
+between roots does not increase its degree. Simultaneous contractions
+would need disjoint connected preimages absorbing every affected vertex,
+with a proof of connectivity and a lift of all root labels. No such
+construction has been established.
+
+The [path barrier](../barriers/relative_six_boundary_pair_and_arm.md)
+remains valid for a V path forbidden from using other boundary roots.
+The new pair-and-arm theorem allows unused ports; it does not retract
+that barrier. These auxiliary reductions preserve the linkage class,
+not the original colouring or critical-host hypotheses. The whole
+linkage theorem, other minimum-response types and the
+both-full-clique-contact cuts remain open; the four-cut C19 checkpoint
+is not closed.
 
 **Recorded failed inference.** A bichromatic component containing the two
 roots of a desired pair and a third boundary root need not give a pair

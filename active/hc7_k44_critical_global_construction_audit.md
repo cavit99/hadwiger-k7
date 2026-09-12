@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`15191c9ab9837f35a3e55889829b973d828b870ca715cc7cbbe9389facb1db48`.
+`d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b`.
 
 ## Preserved scope and exact provenance
 
@@ -1322,3 +1322,20 @@ Coverage is existential in the V choice for each port. The frontier does not inf
 The proposed outer instance still requires two port neighbours beyond its one-U component and `V union P`, plus a surviving nonroot neighbour of the uncompleted V root. Those conditions and the subsequent simultaneous endpoint choice are explicitly unproved.
 All seven frontier pins and the source pin match; inactive relations retain their previous scopes. The barrier and its audit are unchanged.
 This is an internal delta review of the parent/Bacon construction and parent integration; earlier audit records are preserved except the current header pin. The full linkage target, four-cut C19 checkpoint and global completion criterion remain unmet.
+
+## Cut constructions and the remaining small U root
+
+**Scoped verdict: GREEN.** Separate review of the parent's integration against Git `268bcaa`.
+Frontier SHA-256: `d13a56900995806e05b45282cd527b7d50315921edac18c90ba153deea4fae2b`.
+Ledger SHA-256: `eb0d509b3daadb2d0e2c97ef8f161fc532b215523696df9e6f6024bbcc2a6a18`.
+The [reduction](relative_five_three_two_five_cut_reduction.md) / [audit](relative_five_three_two_five_cut_reduction_audit.md) hashes are
+`d499b9b4e6b6e5f5289d7b5477c4160bec42c8c4fa406cfb196daa4152665354` / `68ae19309e4509d56cd50b1ceb37b9153c361aa4e9ee53d0d6e1d91209fd2686`.
+The [linkage criteria](../results/four_root_linkage_with_ports.md) / [audit](../results/four_root_linkage_with_ports_audit.md) hashes are
+`f41f60cb657d39c9de1e19457c86d65b228607a9115e711b8c48a4d0dc92a8c1` / `f10c0a01f4e0329945bf830b647a740d2920a3e7f30ab1892fcbab195425ad51`.
+Restoring only the replaced frontier block and ledger paragraph recovers both base files byte for byte.
+The summaries retain connected contraction preimages, maximality over both cut types, the two-vertex endpoint and the permission for the V path to use unused ports.
+The small-root conclusion and its neighbours' exclusion from the other U roots have the proved minimum-counterexample scope.
+The new contraction caveat also checks: without a degree-six common nonroot neighbour, a root-edge contraction would preserve the original induction class; such a neighbour instead survives with degree five, unaffected by adding root--root edges.
+The earlier root-clean path barrier is retained with its exact restriction. No fixed colouring is transferred to the auxiliary normal form.
+This reviewer checked the constructions and frozen sources separately; the integration is parent-authored internal work, not external review.
+Earlier audit records are preserved apart from the current header pin. The small-root absorption, full relative linkage target, four-cut C19 checkpoint and HC7/NT-comparable objective remain unproved.

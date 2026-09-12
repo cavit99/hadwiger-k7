@@ -63,14 +63,17 @@ The remaining realisations and the both-full-clique-contact cuts are open.
 No complete separator case or conjecture is closed by this refinement.
 
 The [relative three--two linkage reduction](active/relative_five_three_two_five_cut_reduction.md),
-with a separate internal audit, removes proper five-neighbour nonroot
-sides in a minimum counterexample to that auxiliary target. It also
-excludes every three-component distribution of the three roots behind
-the specified five-cut, including root-only components. The two--one
-distribution and cuts containing a root remain open. These are reductions
-in the linkage class; they do not preserve an original side colouring.
-The whole linkage theorem, its three--two colour-block application and
-the complete four-cut C19 checkpoint remain unproved.
+with a separate internal audit, now closes two further cut configurations:
+a cut containing a U root with two nonempty interiors, and a largest
+single-U side with nonempty interior whose cut avoids U. The construction
+uses [four-root linkage criteria](results/four_root_linkage_with_ports.md)
+with an adjacent audit, retaining connected contraction preimages and
+allowing the pair path to use unused ports. Together with the earlier
+reductions, this forces a remaining minimum counterexample to have a U
+root with two or three nonroot neighbours. Absorbing that root with a
+valid lift is still unproved. These auxiliary reductions do not preserve
+an original side colouring; the whole linkage theorem and the complete
+four-cut C19 checkpoint remain open.
 
 The [quantitative star-contraction route](active/quantitative_star_contraction_frontier.md)
 tests an exponent improvement beyond the September 2026 square-root

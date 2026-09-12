@@ -1,4 +1,4 @@
-# Five-cut reduction for the relative three--two linkage target
+# Reductions for the relative three--two linkage target
 
 **Status:** written reduction with a
 [separate internal audit](relative_five_three_two_five_cut_reduction_audit.md)
@@ -25,6 +25,7 @@ partition. Then:
 4. No three-set `P subset D` makes `F-(V union P)` have exactly
    three components, each containing one U root, including root-only
    components.
+5. Some U root has at most three D-neighbours.
 
 Assertion 3 concerns a graph with virtual root edges; it is not a
 linkage conclusion in F.
@@ -414,24 +415,158 @@ does not prescribe that choice or synchronise it with the port
 and V root used by an outer construction; that allocation remains
 unproved.
 
+## Two nonempty sides when the cut contains a U root
+
+Suppose the components of `F-{u0,v1,v2,p,q}` are C1,C2, with
+`Ci intersect U={ui}` and nonempty `Xi=Ci-{ui}`. Here `p,q in D`.
+Every component of Xi is full to `{ui,u0,v1,v2,p,q}`, by the proper-six
+boundary bound. It has at least two vertices, since a singleton would
+see both V roots.
+
+The connected set `C2 union {u0}` contains exactly u0,u2 among the five
+roots and contacts p,q. Contract it to b, and retain `X=X1`, ports p,q
+and roots `a=u1,b,v1,v2`. Delete root--root edges. Every X degree and
+X-subset boundary is unchanged: its only possible neighbour in the
+contracted set was u0. Thus X degrees are at least six and its nonempty
+subsets have boundary at least six.
+
+The four roots have at least nine incidences with `X union {p,q}`.
+Root a retains its at least two D-neighbours. For either V root, take
+an X-neighbour x. The no-isolated-neighbour normalisation gives a second
+D-neighbour of that root adjacent to x; it must lie in `X union {p,q}`,
+since x has no other D-neighbours. Root b sees p,q and X, giving three
+more incidences.
+
+Apply the [four-root degree-sum criterion](../results/four_root_linkage_with_ports.md#1-a-degree-sum-criterion),
+with its [separate audit](../results/four_root_linkage_with_ports_audit.md),
+source SHA-256 `f41f60cb657d39c9de1e19457c86d65b228607a9115e711b8c48a4d0dc92a8c1`
+and audit SHA-256 `f10c0a01f4e0329945bf830b647a740d2920a3e7f30ab1892fcbab195425ad51`,
+using two ports. It supplies disjoint a--b and v1--v2 paths. Expand b to
+its fixed connected preimage in the first path. The resulting carriers
+have exact root sets U and V. Thus this whole cut configuration is
+impossible; no colouring is transferred through the contraction.
+
+## A largest single-U side with nonempty interior
+
+Write `F*=F+v1v2+K_{U,V}` for the smaller completion specified by Xie.
+Choose a single-U component C of maximum order over all cuts of F* of
+order at most five which have such a component. This choice ranges over
+cuts both containing and avoiding U roots. Suppose its boundary avoids
+U and `C={u} union X` with X nonempty.
+
+Both V roots belong to the cut: if either survived, all surviving roots
+would lie in one component, and another component would be a nonempty
+proper D-set with boundary at most five. Each component of X therefore
+has boundary contained in `{u} union V union P`, where P is the nonroot
+part of the cut. The six-neighbour bound forces `|P|=3` and fullness to
+all six vertices. The three-component case was excluded above, so the
+other component C2 contains the other two U roots. The cut is exactly
+`V union P`, and every port contacts C.
+
+Every p in P has at least two neighbours in C2. Otherwise absorbing p
+into C gives a connected larger single-U set with boundary contained in
+`(V union P)-{p}` and at most one exterior neighbour. This is a cut of
+order at most five. At most one of the other U roots enters that cut,
+so another U root survives outside the enlarged set. This contradicts
+maximality. The new cut may contain a U root; the stated choice of C
+permits it.
+
+If u has an edge to a port, use that edge as an arm and a V-pair path
+through a connected full component of X. Otherwise `|N_X(u)|>=2`, by
+the root-neighbour normalisation. For `|X|>=3`, the
+[pair-and-arm theorem](../results/four_root_linkage_with_ports.md#2-a-pair-path-and-a-disjoint-arm-using-three-ports)
+gives disjoint paths u--b and v1--v2 for some port b. Its V path may
+use other ports. Join the u--b arm to C2 along an actual b--C2 edge.
+This gives all three U roots in one connected carrier, disjoint from
+the V path. No outer endpoint choice or virtual port edge is needed.
+
+A singleton X is impossible. If `X={x,y}`, degree six and disjoint
+V-neighbourhoods force xy, all edges from X to `{u} union P`, and
+opposite V owners, say v1--x and v2--y. The normalisation of `N_D(v1)`
+forces a v1-neighbour p in P adjacent to x: y has the other V owner,
+x has no neighbour in C2, and u is a root. Choose `q in P-{p}`.
+Then `v1--p--y--v2` and `u--x--q` are disjoint paths. Attach C2 at q
+as before. This closes every nonempty maximal side of the stated type.
+
+## The surviving small root
+
+If F* were six-connected, Xie's specified theorem would give the target
+linkage. Otherwise every cut of order at most five contains V, and every
+remaining component contains a surviving U root, by the proper-six
+boundary bound. A cut containing no U root has two or three components;
+the three-component configuration has already been excluded. A cut
+containing one U root has two components. It cannot contain two U roots,
+since then a disconnected component would contain no surviving root.
+
+Choose a largest single-U component as above. If its cut avoids U, a
+nonempty interior is excluded by the preceding construction. A root-only
+component has at most three D-neighbours. If its cut contains a U root,
+two nonempty interiors are excluded by the connected-side contraction.
+A root-only component then has exactly two D-neighbours:
+there are at most two nonroot cut vertices, and each root has at least
+two D-neighbours. Consequently some U root has two or three D-neighbours.
+This proves assertion 5, not the impossibility of that remaining root.
+
+### Neighbours of the small root avoid the other U roots
+
+In fact every D-neighbour of a U root with at most three D-neighbours
+is anticomplete to the other U roots.
+
+First, `F-U` is two-connected. After at most one deletion, each V root
+retains a D-neighbour. If there were two components, each would contain
+a proper nonempty D-set whose boundary lies in U, the deleted vertex
+and its own V roots. The six-neighbour bound forces both V roots into
+each component, which is impossible. Consequently a nonroot p adjacent
+to all three U roots would be terminal: use their star at p and a
+V-pair path in `F-U-p`.
+
+Now let `|N_D(u)|<=3` and suppose p is adjacent to u and U1. The preceding
+case permits us to assume p is nonadjacent to U2. Contract the connected
+set `{u,p,U1}` to a root a. Every surviving nonroot set was a proper
+D-subset; identifying three boundary vertices loses at most two, so
+its new boundary has size at least four.
+
+If a surviving nonroot had k neighbours in this contracted set, its
+degree drops by `max(k-1,0)`, and its edge to a contributes one root
+incidence when k is positive. The net correction is therefore +1 for
+k=1, zero for k=2, and -1 for k=3. There are at most two k=3 vertices,
+since each belongs to `N_D(u)-{p}`. Root U2 retains at least two
+nonroot neighbours. The V roots retain at least three in total, since
+p sees at most one V root. With d surviving nonroots, the sum of all
+degrees after deleting root--root edges is thus at least `6d+3`.
+
+If a--U2 and v1--v2 disjoint paths were absent, the relative-four
+cofacial bound would give a degree sum at most `6d+2`. The resulting
+paths therefore exist; expanding a through `{u,p,U1}` lifts all U roots
+together and leaves the V path disjoint. This proves the claim.
+
+For a two-neighbour root, write `N_D(u)={p,q}`. Then pq is an edge
+and `d(p)=d(q)=6`: otherwise one of up,uq contracts to a smaller
+original instance, losing at most one from each proper-six boundary
+and leaving every surviving nonroot degree at least six. With
+`X=D-{p,q}`, each component of X is full to
+`{U1,U2,v1,v2,p,q}` and has at least two vertices. If X were disconnected,
+one component would supply the V path and another, together with p,u,
+the U-carrier. Thus X is connected; p,q avoid the other U roots and
+each has at least three X-neighbours. This residue remains open.
+
 ## Remaining scope
 
-The conjectural relative three--two theorem is still unproved. The
-new claim excludes the three-singleton-U distribution behind
-`V union P`, with all root-only endpoints included. It does not
-exclude a two--one U distribution, including a four-cut consisting
-of V and two nonroots, or a five-cut of the smaller Xie completion
-which also contains a U root. No HC7, whole C19,
-or independently substantiated NT-comparable conclusion is asserted.
+The relative three--two target is still unproved. The completed cut
+constructions reduce its remaining minimum-counterexample obstruction to
+a U root with two or three D-neighbours. Absorbing such a root still needs
+a construction retaining all three U roots and the disjoint V path.
+A four-root linkage after deleting that root does not suffice: its
+U-carrier need not contact a neighbour of the deleted root.
 
-A [path construction](../barriers/relative_six_boundary_pair_and_arm.md)
-refutes allocating both V roots in one side while retaining a disjoint
-u--P arm, even with degree six and six-neighbour boundaries. The
-two-side arm construction above avoids that false intermediate claim.
+The [path barrier](../barriers/relative_six_boundary_pair_and_arm.md)
+remains valid when the pair path must avoid every other boundary root.
+The new theorem permits it to use unused ports; it therefore neither
+retracts that barrier nor assumes its false intermediate construction.
 
-The induction class here retains the labelled linkage problem. Its
-virtual completions are not asserted to preserve a given colouring or
-critical-host hypothesis. Thus these normalisations cannot be imposed
-directly on the original coloured side of a missed-root four-cut. A
-proof of the whole relative linkage target would supply the required
-application to its three--two boundary blocks.
+These reductions retain the labelled linkage problem. Their contractions
+and virtual completions do not preserve an original side colouring or
+critical-host hypotheses. Only a proof of the whole linkage target would
+supply the three--two colour-block application. Other minimum-response
+types, the full four-cut C19 checkpoint, C19, HC7 and the requested
+NT-comparable objective remain unproved.
