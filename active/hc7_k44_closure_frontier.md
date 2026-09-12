@@ -1189,8 +1189,23 @@ for a connected set `C`, write `b=|N(C)|` and
 Every connected set of at most three vertices qualifies in the original
 seven-connected host. The
 [controlled two-edge proof](hc7_companion_two_edge_contractions.md)
-also allows any second contraction when the first meets a degree-eight
-vertex, including disjoint edges.
+applies after every first edge contraction by the
+[global codegree theorem](../results/hc7_global_edge_codegree.md),
+with a separate internal audit. Every original edge has at most four
+common neighbours: five would root a wheel in its nonplanar endpoint
+deletion, and the two endpoints would complete Q. Every first quotient
+is six-connected, has minimum degree seven with at most four exceptions
+to degree eight, and satisfies the same codegree bound. Thus every second
+edge contraction retains the literal K5-minus exclusion, without a
+degree-eight restriction on the first edge.
+
+For either neighbourhood four-clique R, a perfect matching can be chosen
+so at most one outside vertex loses a contact when its two edges are
+contracted. The quotient is six-connected, has `e>=4n+2`, minimum degree
+seven and at most one degree-seven vertex; its two poles retain disjoint
+clique preimages. A further arbitrary contraction keeps positive excess
+but can lose six-connectivity and create degree six. No closed iteration
+or retained six-chromaticity is asserted.
 
 These contractions have disjoint fixed preimages and strictly decrease
 host order. They do not preserve seven-connectivity, minimum degree eight
@@ -2290,6 +2305,27 @@ theorems. Arbitrarily contracting the six paths need not preserve the
 available chromatic lower bound, a clique model, or the required rooted
 placement in a returned wheel. A proof must construct the paired bags or
 preserve all these necessary data through a genuinely decreasing reduction.
+
+**All-edge version and its barrier.** For any edge uv in the actual host,
+put `M=G-{u,v}`, `S=N(u)-{v}`, `T=N(v)-{u}`. The global codegree theorem
+gives `|S intersect T|<=4`. The graph M is five-connected, with at most
+four degree-six vertices and every other degree at least seven. Its
+deletion of any one vertex is nonplanar: at most four remaining vertices
+can have degree five, contradicting Euler's bound for a planar graph.
+A wheel whose five bags each meet S and T would complete Q with u,v.
+Selecting an edge and these bags simultaneously remains unproved.
+
+The [two-arc counterexample](../barriers/hc7_joint_wheel_two_sets.md),
+with a separate internal audit, refutes the weaker assertion for arbitrary
+five-connected nonplanar graphs of minimum degree six, even for disjoint
+seven-vertex sets S,T. In a planar base with the sets on separate arcs of
+one face, all paired bags have a forest as their contact graph. Adding
+one universal apex cannot supply a paired wheel. The example has many
+degree-six vertices and a planar vertex deletion, so neither the actual
+degree class nor the critical-host construction is refuted. The first
+unsupported step was discarding those degree bounds before constructing
+the paired model. A repair must retain them or another hypothesis that
+excludes this family.
 
 ## 8. Stop rules
 

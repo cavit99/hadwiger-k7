@@ -45,8 +45,8 @@ leave the more connected complement. A direct construction may bypass
 these cases; they are not prerequisites imposed on a proof of C19.
 
 Review of the last 25 commits distinguishes completed critical-host cases
-from the latest auxiliary refinements. Freeze further relative-linkage
-normal forms: even its full three--two theorem would settle only the
+from auxiliary refinements that still reach the same allocation gap.
+Freeze further relative-linkage normal forms: even its full three--two theorem would settle only the
 `3,2,1,1` boundary pattern. The two-sided construction retains actual
 proper-minor six-colourings, clique contacts and the literal near-clique
 exclusions after edge contractions, but still lacks compatible ownership.
@@ -69,6 +69,17 @@ critical host has `chi(G-N[v])>=5`. Continue with the five-chromatic
 exterior: seek a compatible absorption of two classes giving a six-colouring,
 or a direct Q construction. The six-chromatic exterior remains possible.
 Neither the two-triangle case nor C19 is closed.
+
+The [global codegree theorem](results/hc7_global_edge_codegree.md) now
+bounds common neighbours by four on every edge and after any first edge
+contraction. Contracting a suitable matching in either neighbourhood
+four-clique leaves a six-connected quotient with positive density excess
+and at most one degree-seven vertex. Further iteration is unproved.
+Use these stronger degree bounds in the global construction; the
+[joint-wheel barrier](barriers/hc7_joint_wheel_two_sets.md) refutes replacing
+them by five-connectivity, nonplanarity and minimum degree six alone.
+The next attempt must produce compatible bags or a colouring contradiction
+in the actual critical host, rather than another weakened side theorem.
 
 The [chosen-response reduction](active/four_cut_boundary_responses.md),
 with a separate internal audit, needs only one minimum boundary partition

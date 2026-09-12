@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`a0a940a1d80ba2460f4606dfcedaddd685290c40c701b3272a8c297e86c70db3`.
+`a2f0cf0cee981826820df011147293199c9161b5783030c7d912cf1fe5ef6d3d`.
 
 ## Preserved scope and exact provenance
 
@@ -1479,3 +1479,29 @@ only the existing inactive claim is enhanced beyond hash updates.
 The primary index and root README are unchanged; results navigation keeps the limits.
 Historical audit text is unchanged apart from the current header pin.
 No C19, HC7, novelty or NT-comparable completion is certified.
+
+## Global codegree and joint-wheel barrier integration
+
+**Scoped verdict: GREEN**, 12 September 2026, against Git `bae478e`.
+Frontier `a2f0cf0cee981826820df011147293199c9161b5783030c7d912cf1fe5ef6d3d`;
+ledger `f8b073c20af0d4a3f9aa61e7a4530733879c4532869e91287d1d2709e07c1366`;
+manifest `b56190eb4011f07db756f0a170316e5e00bc388b336ed4a2b175fafcf18e384b`.
+The [theorem](../results/hc7_global_edge_codegree.md) and [separate audit](../results/hc7_global_edge_codegree_audit.md) have hashes
+`741b99349c61e632c3d9cd4711f339280b1f2044ca40d30fbdc8e49e9b17c0a5` and
+`04e5ca37e235043b264769b45504ea2bae6e95af9180f79eadc9bada9534d269`.
+The [barrier](../barriers/hc7_joint_wheel_two_sets.md) and [separate audit](../barriers/hc7_joint_wheel_two_sets_audit.md) have hashes
+`c6f017fac7dc200bd0718e2fed656ce60e9cdb4d1a0e81fc871db43db68027a7` and
+`b2d6a0801cdc74df474c354bbeff24eb9d3e7c6ce19f686d2b35cb46ae632b79`.
+All pins match. This reviewer authored the theorem; this review checks only
+integration and the added endpoint-deletion deduction, not that theorem's proof.
+Only two frontier blocks change. For `M=G-{u,v}`, every degree-six vertex
+was a degree-eight common neighbour of u,v, so there are at most four.
+Every other vertex has degree at least seven. After one further deletion,
+only those four can have degree five; all others have degree at least six.
+Euler therefore excludes every planar one-vertex deletion of M.
+The summaries retain quotient hypotheses, fixed preimages and iteration limits.
+The barrier excludes the weaker two-set assertion, not the actual degree class;
+a repair may retain that class or another hypothesis excluding the family.
+Seven frontier pins match; two new claims are inactive and old relations remain.
+The primary index, root README and historical audit text are preserved except
+the current header pin. No C19, HC7 or comparative-significance closure is inferred.

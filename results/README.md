@@ -81,6 +81,13 @@ also closes the entire four-chromatic exterior branch: under the actual
 structural hypotheses `chi(G)<=max{4,chi(G-N[v])+2}`. Hence the remaining
 exterior has chromatic number five or six. Conjecture 19 remains open.
 
+The [global codegree theorem](hc7_global_edge_codegree.md), with its
+[audit](hc7_global_edge_codegree_audit.md), bounds every edge's common
+neighbours by four and permits two arbitrary consecutive contractions
+without creating a literal K5-minus. A suitable paired-clique quotient
+retains six-connectivity and at most one degree-seven vertex; further
+iteration and the global minor construction remain unproved.
+
 The
 [cycle-and-triangle](hc7_degree8_cycle_exterior.md) and
 [two-triangle](hc7_degree8_two_triangle_exterior.md) exterior theorems, with
