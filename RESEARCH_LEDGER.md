@@ -73,12 +73,14 @@ compatible in one colouring; separate colourings or separate minor models
 do not suffice. A common five-colouring now gives one class avoiding
 A--other-group contacts and a second avoiding three-group contacts.
 The attempted component contraction does not preserve a compatible
-neighbourhood palette. The shared construction now retains one proper-minor
-response: two required neighbour sets are colourful in the same
-five-chromatic subgraph. Seek one wheel meeting both sets in the actual
-host; the two adjacent omitted vertices then complete Q. Separate wheels
-and additional standalone sufficient conditions do not finish it. Neither
-fixed roots, a singleton v, nor two-class absorption is mandatory.
+neighbourhood palette. The shared attack must use the five-colouring of
+the whole W and a proper-minor six-colouring in one construction. The
+two colourful neighbour sets in one five-chromatic subgraph give an
+optional joint-wheel target; that deduction alone does not use `chi(W)=5`.
+Restoration must handle the entire omitted independent set in one response.
+Allow both completing bags to expand and the two missing pairs to change,
+while retaining every required contact. No such exchange or colouring
+extension is proved. Fixed roots and two-class absorption are not mandatory.
 The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records the exact contact constraints and first unsupported exchanges.
 The six-chromatic exterior and the full two-triangle case remain open.

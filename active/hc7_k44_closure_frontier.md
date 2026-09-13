@@ -2114,7 +2114,10 @@ The A--B support matching contributes at most six further vertices; the
 four port--triangle supports contribute at most eight; xy contributes at
 most three. The union bound is `3+3+6+8+3=23`. In particular, for any
 neighbourhood three-colouring, singleton missing-colour lists occur only
-among these vertices. This does not bound the size of a list obstruction.
+among these vertices. This does not bound the size of a list obstruction:
+the [existing forced-path mechanism](../archive/hadwiger_contracted_tree_list_obstruction.md#3-why-this-is-stronger-than-separate-edge-witnesses)
+already allows arbitrarily long odd paths with endpoint lists `{1}` and
+internal lists `{1,2}`. This list example is not an actual-host counterexample.
 
 **Shared construction; unproved.** When `chi(W)=5`, seek a common
 W-colouring and neighbourhood colouring for which two whole exterior
@@ -2161,8 +2164,28 @@ In the actual five-connected graph `M=G-{v,a}`, one W4 whose five bags
 each meet both sets gives Q with the adjacent singleton bags `{v},{a}`.
 The wheel may use all of M, including previously reserved vertices.
 
-This is the shared construction to develop and challenge. No connectivity
-of F' or joint wheel follows from the two separate colourful-set theorems.
+Retain the entire omitted set `J=I-T'`. It is independent and anticomplete
+to a, and `M=F'+J`. In fact J is nonempty: otherwise the five-colouring
+of F' would colour `G-{v,a}`, contrary to the all-edge deletion bound
+above. Thus `H0=G-J=F'+{v,a}` is a proper minor. It is six-chromatic,
+since it contains the six-chromatic graph `F'+a`. These are induced
+deletions, so their inclusion maps retain all original vertices and edges;
+no contraction lift is needed. Any restoration must colour all of J in
+one six-colouring of H0, not select a different response for each vertex.
+
+This deduction does not use `chi(W)=5`: `J intersect W=I intersect W`,
+whose size is not bounded by this deduction. The shared attack must bring
+a five-colouring of the whole W into the same argument. Neither a five-colouring of
+`W-J` nor a separate proper-minor response supplies their compatibility.
+The joint wheel is sufficient; a direct Q construction may instead expand
+both completing bags, reassign all seven bags and change the missing pairs.
+An exchange must preserve every bag's connectivity and all retained
+contacts. Moving a connector can lose several donor contacts; the
+[existing transfer obstruction](#76-a-reduction-preserving-the-entire-core)
+already records this failure and the absence of a decreasing rotation.
+
+No connectivity of F' or joint wheel follows from the two separate
+colourful-set theorems.
 The [two-arc barrier](../barriers/hc7_joint_wheel_two_sets.md) refutes using
 ambient connectivity and degree six alone; it does not have this colourful
 core. Suppressing a path added to F', or identifying its endpoints when

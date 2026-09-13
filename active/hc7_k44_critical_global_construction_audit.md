@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`8a67814634ea84eef1403b818cd2663971f41bb3e094601ab587f9ee29660181`.
+`e471c4fd6bbffe4be7d855792f440fe5349d3f66bce3f2548ee8c6026903bd14`.
 
 ## Preserved scope and exact provenance
 
@@ -1579,3 +1579,35 @@ or equal-end identification may retain marked colourings but supplies no
 ambient five-connectivity or closed induction. The joint wheel remains
 unproved. No whole five-chromatic case, C19, HC7 or comparative-significance
 closure is certified.
+
+## Restoring the entire omitted class
+
+**Scoped verdict: GREEN**, 13 September 2026, for the frontier changes
+against Git `c45f92e`, at reviewed source SHA-256
+`e471c4fd6bbffe4be7d855792f440fe5349d3f66bce3f2548ee8c6026903bd14`.
+This separate review checks the new deductions and nonclosure statements;
+the earlier audits retain their scope. The reservation and wheel input
+hashes match their adjacent audits.
+
+Since `a in T' subseteq I` and I is independent, `J=I-T'` is independent
+and anticomplete to a. The definitions give the induced identities
+`M=F'+J` and `G-J=F'+{v,a}` with disjoint displayed vertex sets.
+The audited all-edge deletion bound gives `chi(M)=6`: at most four colours
+would extend over v,a using two fresh colours, five are excluded by the
+wheel corollary, and proper-minor colourability supplies six. Hence J
+cannot be empty. Deleting J strictly lowers host order; proper-minor
+colourability and the included six-chromatic `F'+a` give `chi(G-J)=6`.
+All original vertices and edges in these induced subgraphs are retained.
+This is not a recursive reduction or an assertion that the critical
+induction class survives deletion.
+
+Restoring J requires one common outside colouring. No compatible colouring
+of the whole W, successful exchange, or decreasing rotation is inferred.
+The corrected text asserts no bound on `J intersect W`, rather than an
+unproved unbounded family of actual critical hosts. The linked odd-path
+example has forced equal endpoint colours and an odd alternating path;
+deleting any vertex removes that conflict. It bounds neither actual-host
+obstructions nor their possible repairs and is not presented as new list
+theory. The ledger accurately retains the open whole-case checkpoint and
+the unmet HC7 or comparable-significance objective. This update records
+continuity and nonclosure, not a new proof milestone.
