@@ -15,53 +15,73 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 1. **Exhaustive global obligation:** prove `HC_7`, that every finite
    `K_7`-minor-free graph is six-colourable, or obtain an independent theorem
    of reach and significance comparable to Norin--Totschnig.
-2. **Current conditional route:** prove the direct one-colour reduction R
-   in the [quantitative frontier](active/quantitative_star_contraction_frontier.md).
-   Its recorded implication would give a cube-root double-logarithmic
-   colouring bound. R and that improvement remain unproved. The stronger
-   density theorem is reserved; its component-label construction is paused.
-   Conjecture 19 remains the exact alternative; Conjecture 21, T44 and
-   [rooted K5 contractibility](active/k5_contractibility_frontier.md)
-   remain available without imposing auxiliary roots on the objective.
-3. **Immediate laboratory:** in the actual minor-minimal q-chromatic host,
-   obtain a minor retaining at least q-1 colours and removing at least
-   `c n q^2/r^3` vertices. Retain the proper-minor colouring responses and
-   all-minor independence bound. The proposed low-degree case is empty:
-   the stronger neighbourhood inequality proved in the frontier excludes
-   it. Star contractions and subsequent critical minors remain possible,
-   but centre incidences alone cannot force the claimed additional losses.
-   No full construction is available. The
-   [exact frontier](active/hc7_k44_closure_frontier.md) retains the C19
-   residues; the [bipartite frontier](active/bipartite_contractibility_frontier.md)
-   records the completed theorem and its application limits.
+2. **Conditional routes under selection:** full Conjecture 19 in the
+   [actual critical host](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction),
+   and the direct one-colour reduction R in the
+   [quantitative frontier](active/quantitative_star_contraction_frontier.md).
+   Neither currently has a construction crossing its decisive gap. R's
+   recorded implication gives a cube-root double-logarithmic colouring
+   bound; both R and that improvement remain unproved. The stronger density
+   route is reserved. Other conditional routes remain in the active index.
+3. **Immediate laboratory:** one construction-selection round using the
+   full critical hypotheses. The exact proposal must produce compatible
+   colouring or minor data in the same host; the quantitative proposal must
+   prove additional order loss while retaining q-1 colours. Check each
+   proposal against all established constraints before investing in it.
+   An unproved sufficient statement or favourable finite example does not
+   select a campaign. The [bipartite frontier](active/bipartite_contractibility_frontier.md)
+   retains the completed theorem and its application limits.
 
 ## Current work plan
 
 The goal remains HC7 or an independently substantiated NT-comparable theorem.
-The recent density campaign improved diagnostics but closed no infinite
-case. Its finite models do not establish a universal extraction estimate;
-the cube test already contains a simple K128 model. Pause component
-labelling and uniform allocation rather than expanding those laboratories.
+Recent work improved diagnostics but closed no infinite case. The cube probe
+already has a simple K128 model, and the proposed low-degree R case is empty
+by the stronger neighbourhood inequality. Correct calculations, applicability
+to the actual hypotheses, and objective-level significance need separate
+checks. There is no justified leading construction yet.
 
-The direct R investigation uncovered a stronger neighbourhood constraint,
-which invalidates the claimed usefulness of the low-degree lead. Its
-conditional calculation was correct but vacuous. The replacement attempt
-counts extra coalescence and degrees of merged stars together. A critical
-minor may discard those vertices, and the available edge accounting still
-recovers only the old order-loss scale. R remains a target, not a ready
-proof plan. Further work must derive the missing quantitative gain from
-one common contraction and colouring argument; moving a threshold or
-adding another sufficient condition is not a case closure. Keep one shared
-construction under independent attack, with all colour losses and lifts
-explicit. Do not promise a high likelihood of completion from this evidence.
+The next discovery round compares two proposals, before renewing either
+campaign:
 
-Conjecture 19, excluding `Q=K7-2K2`, remains the exact challenger.
-Prefer reactivation when a concrete new operation combines the whole exterior
-with an actual proper-minor response; allow a stronger independent route
-and unrestricted recolouring. A complete five-chromatic exterior closure
-still leaves the six-chromatic case. Completion requires the full selected
-theorem, an audit of its implication chain, and a substantiated benchmark
-assessment.
+1. **Exact construction:** work in the actual seven-contraction-critical
+   C19 host, retaining every proper-minor six-colouring constraint. Seek a
+   six-colouring or an unrestricted `Q=K7-2K2` model. The whole exterior and
+   every omitted vertex must enter one response. Both remaining exterior
+   chromatic cases belong to the selected theorem; wheels, singleton bags
+   and a fixed exterior palette are optional tools, not required outputs.
+2. **Quantitative construction:** work under all of R's hypotheses. Derive
+   a minor retaining q-1 colours and losing `c n q^2/r^3` vertices. Existing
+   star packing supplies only `Omega(nq/r^2)`: the proposal must account for
+   the missing factor q/r in the same construction. Criticalisation, degree
+   mass and centre incidences alone do not establish it.
+
+Each builder must specify an actual graph operation and its first new
+inference. An independent challenger checks that inference against the
+recorded barriers, all available constraints and the required scale, then
+checks ownership and colouring; reductions also require strict decrease,
+class preservation and lift. Permit a substantive repair; do not extend
+a failed proposal into another catalogue of conditions.
+Nonvacuity checks mean consistency with proved constraints, not exhibiting
+a hypothetical counterexample to the target theorem.
+
+Concentrate subsequent work only when a proposal proves a construction
+crossing a recorded obstruction, or a decreasing reduction with a preserved
+class and valid lift. If neither does, record that no mechanism has qualified
+and change the operations. Do not automatically switch routes or repeat the
+same argument with new thresholds. Component labelling, uniform allocation
+and the old exterior recolouring construction remain paused.
+
+The five-connected six-chromatic augmentation target (order at least seven)
+in the exact frontier would close all C19, but drops proper-minor criticality
+and has no established construction advantage. Keep it as an optional
+endpoint. The squared-cycle
+barrier already defeats arbitrary sixth-root extension, even in a nonplanar
+host. K5 contractibility, depth refinements and region theorems are not
+benchmark substitutes without a substantiated consequence. Completion still
+requires a full theorem, its audited implication chain and an honest
+significance assessment. No current evidence supports a high-likelihood
+promise of that breakthrough.
 
 **Earlier exact campaign, `a94a809` through `67f528a`.**
 The [four-chromatic exterior theorem](results/hc7_two_triangle_exterior_colour_bound.md)
