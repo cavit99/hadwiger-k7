@@ -2,98 +2,172 @@
 
 **Status:** separate internal mathematical audit; not external peer review.
 **Verdict: GREEN.**
-**Date:** 8 September 2026.
+**Date:** 13 September 2026.
 
-**Exact source checked:** [main.tex](main.tex), whole-file SHA256
-`6d804a715f8782ac84679a8a5715105cb28d2a7cf4a594c60aec5b1072b387b9`.
+The auditor is a separate agent from the manuscript editor and did not
+write its radius proof. The full mathematical review below preceded the
+copyedit. The same auditor then independently reviewed the complete
+editorial diff against the saved source, verified the old and new artifact
+hashes, and checked that the changes preserve every statement and proof.
+No unresolved mathematical gap was found within the stated theorem scopes.
 
-The auditor, a separate agent from the manuscript editor, read the whole
-revised source and its diff against the previous manuscript. The auditor
-had previously reviewed the underlying argument and supplied pre-edit
-spot checks of the quotient sequence and vertex count; this was not a
-blinded review or an independent discovery of the proof. The full reading
-covered hash `ad42f119b9df851718e631ac3f3b5976a33e61032e12ad0d52cb5cb7910c698b`.
-Reversing only the final clarification to "nonempty collection" and the
-proof-mark command exactly recovers those bytes, so the verdict applies
-to the final source above.
+## Exact revision and provenance
 
-The [underlying theorem](../../results/bipartite_contractibility_via_matroid_reduction.md)
-was reread and its source hash checked:
-`3faac3d0628f4ea61ceb7e1b2005917371e46b1168ed446492907035efa09272`.
-Its two adjacent audits retain their separate provenance. The previous
-manuscript audit is preserved at Git revision `80ebbd2`, at this same
-path; it checked manuscript hash
-`8cea0ca4838a7090b5fb4798c2c9ec670efe60017a6f7df1e79dc0d668c0b701`
-and PDF hash
-`138e3da77020b7900641c8a2d0663afd9d6515297d04504387fc749c76627c87`.
-Those historical checks are not silently transferred to the new PDF.
+| Checked artifact | Whole-file SHA-256 |
+|---|---|
+| [Manuscript source](main.tex) | `8e531dfa43e072c438d4dd891f841f6171651d67e63d0d39849d6c0652b8b5e2` |
+| [Seven-page PDF](main.pdf) | `e6e922f8645389da8ccea0baebb8a361463fca135306babb26a80e8f66d681fc` |
+| [Universal theorem](../../results/bipartite_contractibility_via_matroid_reduction.md) | `3faac3d0628f4ea61ceb7e1b2005917371e46b1168ed446492907035efa09272` |
+| [Short-scheme radius theorem](../../results/bipartite_short_scheme_radius.md) | `4fd71c1bd710e84f168426d4934e7eb4b1e830ddd9d61ce003d5a8161684202d` |
+| [Radius proof audit](../../results/bipartite_short_scheme_radius_audit.md) | `2e53be1480c14ae4331dca2abb113f1a7f05be7904caccc01f42fbde1cf0f249` |
 
-## Mathematical checks
+The universal theorem's two existing audit pins were also verified:
+`1c8ed74e98829690dc4c1fd6d44631454d330443dd33faea4435d35beb5cca06`
+and `83df07a306bef1a71b50bf5f36020a48b7240187c40d503819eb10baf5348297`.
+Hash agreement supplements the present proof review; it is not its basis.
 
-Normalisation retains every root and turns each original path into a
-path using its endpoint colours. Matroid-union equality holds for any
-maximising disjoint forest family and any minimising set, forcing all
-the required component-spanning forests simultaneously.
+The full review immediately before this copyedit had SHA-256
+`5a0718b3662a5c765e6f319eef584376f698a46e7e306ded2e7e614b435548f7`.
+It checked manuscript source
+`4b1da09fcf141937ed2df87e14238755db7377ab4a4d621fc56a4875918ecbe5`
+and PDF `448e474b16ce45eeb1df9ed9557312ca4db2f04c8e64efae0835a29c9288523a`.
+That review read the complete source and underlying theorem proofs,
+compared the manuscript with Git revision `f7b52aff`, and attacked the
+original-host distance invariant. The saved `main.before.tex` and
+`main.before.pdf` have exactly those hashes. The current verdict combines
+that full review with the editorial-diff checks below.
 
-The decisive quotient sequence is valid even when a label belongs to
-several projections and is allocated elsewhere. Its original occurrence
-is omitted, while its two adjacent A vertices have the same component
-image. Only edges from original A vertices to surviving B vertices are
-retained. The allocated trees provide fixed disjoint connected preimages;
-no foreign owner's label is traversed or reused. Loop erasure introduces
-no foreign root and preserves the scheme intersection condition.
+The previous manuscript audit remains in Git at
+`f7b52aff:paper/bipartite-contractibility/main_audit.md`, SHA-256
+`a96d5e5df2fc61a9c8f45cce105867b28c257d385aa395eb51f6aff88f4d5397`.
+It audited the earlier manuscript source at
+`6d804a715f8782ac84679a8a5715105cb28d2a7cf4a594c60aec5b1072b387b9`
+and retains the earlier reviewers' precise provenance. Its verdict is
+historical, not silently transferred to the added theorem or current PDF.
 
-The exact count
-`|V(G)|-|V(Q)|=|X|+sum_a r_a(X)` applies to Q as defined, before any
-additional vertex deletion. It gives strict descent for nonempty X.
-The full-rank case supplies the required rooted model directly; otherwise
-the same target recurs on a smaller host. Isolated roots, zero-rank cases,
-reversal of the bipartition and composition of the fixed preimages are
-all covered.
+## Editorial-diff review
 
-Property `(*)` was checked against
-[Kriesell--Mohr, Definition 1, v2](https://arxiv.org/pdf/1911.09998v2).
-Selected bichromatic paths form a scheme, and normalisation proves the
-converse implication, including isolated target vertices. The stated
-equivalence and its bipartite consequence therefore hold.
+The abstract now names the target of the fully rooted model explicitly.
+The theorem quantifiers, three-edge length limit, intrinsic radius at the
+original prescribed root and sharpness statement are unchanged.
 
-The flow corollary correctly excludes foreign internal terminals using
-minimum degree two and bipartiteness. The private-four-cycle construction
-also checks: every added vertex is another prescribed root, so the old
-bags and their contacts lie entirely in the original host. It removes
-the degree restriction from the earlier intended rooted assertion.
+The forest wording correctly says that an independent set of full rank
+*restricts* to a spanning tree in each nontrivial component. It does not
+assert that the entire forest is one tree. Saying that the projected
+paths cover `M_a` retains both vertex and edge coverage. The rewritten
+quotient sentence still requires a witnessing original edge for each
+remaining step, with the same endpoint colours and surviving label.
 
-In the eight-vertex example the BLR right sets overlap, whereas the four
-displayed replacement bags are disjoint, connected, contain their named
-roots and have all four required cross-contacts. The negative claim
-concerns the prefix construction, not minor existence.
+“Orient the bipartition” correctly replaces “Choose the shore (A,B)”.
+Under the invariant, a current path of length greater than one is exactly
+the former “nonliteral” case. The root-preimage invariant, both absorption
+cases, opposite-shore reversal and final lift retain their original
+meaning. The flow corollary's assignment to distinct terminals is precisely
+the original injective terminal map; its minimum-degree hypothesis and
+independent-path condition remain intact.
 
-## Historical scope and limits
+The later-use paragraph only changes syntax and tense. It preserves the
+restricted demand-graph extraction claim and the qualifications concerning
+arbitrary targets and bounded depth. No new mathematical or literature
+claim is introduced. This review did not repeat the earlier finite or
+primary-literature checks.
 
-The BLR and Lee discussion is consistent with the separately audited
-[scope review](citation_novelty_review.md). The auditor also inspected
-[Kolbe--Spalding-Jamieson, Lemma 3.11 and Proposition 3.4](https://arxiv.org/html/2608.27179v1)
-and [Korhonen--Lokshtanov, Lemmas 4.3--4.4](https://arxiv.org/pdf/2308.04795v1).
-These support the manuscript's specific bounded-degree demand-graph
-route to unrooted clique minors; that route is not stated as universal
-rooted bipartite contractibility. No new downstream estimate is claimed.
+## Universal proof and root ownership
 
-No unresolved proof hypothesis or mathematical gap was found beyond the
-stated external matroid-union input. This audit does not establish first
-correct-proof priority, exhaustive absence of other proofs, significance
-comparable to Norin--Totschnig, or an implication to HC7. External peer
-review has not occurred.
+The normalisation contracts disjoint monochromatic components, each with
+at most one prescribed root. Endpoint-coloured path images can be made
+simple without introducing a foreign root. Every projection is connected;
+the label is unique within each projection. Matroid-union equality forces
+all component-spanning forests simultaneously, with disjoint labels.
+
+The strongest quotient step is valid when an omitted label is allocated
+to another root. Its two original base neighbours belong to the same
+projection component; its omission therefore gives a well-defined quotient
+walk. The retained edges have actual base-vertex witnesses. Loop erasure
+preserves both endpoint colours, all roots and the scheme intersection
+condition. The allocated connected preimages are fixed before recursion.
+The count `|X|+sum_a r_a(X)` gives strict descent for nonempty `X`.
+The full-rank case directly supplies all target contacts; the deficient
+case recurs on the same target with a smaller host. Isolated roots and
+reversal of the bipartition introduce no ownership exception.
+
+The property `(*)` equivalence, flow corollary and private-four-cycle
+augmentation remain unchanged. Their deductions were checked in the
+current source: all additional cycle vertices are prescribed roots, so
+restriction of a rooted model keeps the original bags inside the original
+host. The eight-vertex prefix example refutes the indicated construction
+and has the displayed replacement model.
+
+## Radius theorem: strongest checks
+
+Theorem 5.1 quantifies over every finite simple bipartite target and every
+scheme with path length at most three. The distances are inside the final
+branch sets and start at their original prescribed roots.
+
+The normalisation assertion is sufficient for that stronger conclusion.
+On a path of at most three edges, each endpoint of a monochromatic edge
+has a monochromatic route of at most two edges to the root of that colour.
+Consequently every vertex of a nontrivial monochromatic component has its
+own such route, and that component contains its unique prescribed root.
+A reduced nonliteral path must have odd length three; if an internal
+vertex had merged into a root component, loop erasure would shorten it.
+Its surviving interiors are therefore original singletons.
+
+Every subsequent projection is a root-centred star. For a three-edge
+demand `r_a x y r_b`, its selected label `x` has an actual edge to the
+original `r_a`, and the base vertex `y` reaches that root through its
+allocated label in two original edges. A spanning forest of a star chooses
+one label for each absorbed leaf. These witnesses lie in the same fixed
+preimage as the vertices they connect. Old witnesses remain available;
+only root preimages grow. Thus repeated contraction, including shore
+reversal, does not accumulate a radius factor.
+
+If the old path label is omitted, the retained last edge gives a
+root--root contact even when that label belongs to another root's forest
+or is deleted. The same contact works when only its base vertex is
+absorbed. Otherwise the two internal vertices remain singleton and the
+original path persists. Existing literal root contacts survive. This
+checks closure of all parts of the invariant and the final full-packing
+step, not just the radius of one contraction.
+
+In the six-vertex sharpness example, the two leaf roots share their sole
+neighbour. At least one radius-one leaf bag must be singleton, forcing
+that neighbour into the central bag, where it is not adjacent to the
+central root. This excludes every radius-one model; the displayed
+radius-two model has both required contacts. No finite computation is
+a premise of the theorem or sharpness proof.
+
+## Literature scope and remaining limits
+
+The new qualification was checked directly against
+[BLR v2, Section 1.2.2 and Lemma 3.13](https://arxiv.org/pdf/0808.0148v2).
+Their depth uses diameter measured by distances in the ambient graph.
+The manuscript's length-at-most-three theorem gives an intrinsic radius
+bound at the roots, and does not establish the general depth assertion.
+The longer proof-method obstruction is correctly omitted from this paper.
+
+The unchanged literature discussion was compared with the existing
+[scope review](citation_novelty_review.md), SHA-256
+`dda2925dbb76d623369ca997048ac1a3df8299de5e764ebcc1fe53a662ffb178`,
+and its [audit](citation_novelty_review_audit.md), SHA-256
+`1f5d50ecf88eed6301dde9bb33207225b7aedc573f77c638da0bb540ae0fcb73`.
+Those records describe their own earlier manuscript revision and primary
+checks; this audit does not claim a fresh exhaustive literature search.
+
+The external mathematical input remains the stated matroid-union formula.
+No further unproved assumption was found. Publication priority, longer-path
+radius bounds, significance comparable to Norin--Totschnig, HC7 and the
+related unresolved conjectures remain outside this verdict.
 
 ## Compilation and rendering
 
-The manuscript editor (the parent agent), separately from the mathematical
-auditor, reports that Tectonic compiled the final source without warnings,
-overfull or underfull boxes, or undefined references. The editor inspected
-all five final pages: mathematics and citations are legible, with no
-clipped or overlapping text.
+For the full review before this copyedit, the auditor independently rebuilt
+the source pinned above, compared its extracted text with the stored PDF,
+and inspected all seven pages. That build had no warnings or unresolved
+references, and those pages had no clipping or overlap.
 
-The mathematical auditor independently checked the copied
-[PDF](main.pdf) file's SHA256:
-`1e8d07ee6aedf7dbbf5d5c3c874957a1cffcbcf6e029407f676af0e0051001d8`.
-The visual-inspection verdict above is the editor's, not a second claimed
-render review.
+For the current revision, the manuscript editor reports a warning-free
+Tectonic build and visual inspection of all seven final pages. The present
+auditor verified the final source and PDF hashes in the table and read the
+editor's build record. The current rendering check is the editor's report,
+not a second independent inspection by this auditor.

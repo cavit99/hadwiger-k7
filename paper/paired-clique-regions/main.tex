@@ -1,0 +1,382 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage[hidelinks,pdftitle={Draft: Paired clique minors from connected regions}]{hyperref}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\title[Paired clique minors]{Paired clique minors from connected regions}
+\date{Draft, 13 September 2026}
+
+\begin{document}
+\begin{abstract}
+Let $R,S$ be disjoint sets of $k$ vertices joined by $k$ vertex-disjoint
+paths. We prove that $k-1$ disjoint connected regions, each adjacent to
+every vertex of $R\cup S$ and avoiding the terminals, force a $K_k$-minor
+whose branch sets each contain one vertex of $R$ and one of $S$.
+The pairing is not prescribed, and the number of regions is best
+possible. In a stronger one-sided theorem, the regions cover $S$ and
+each meets $S$, while adjacency is required only to $R$. A chain of
+minimum vertex separators shows that a linkage in a reduced graph has
+pairwise adjacent paths. The reductions give a polynomial-time
+construction when the regions are supplied.
+\end{abstract}
+\maketitle
+
+\section{Statements}
+
+All graphs are finite and simple. For disjoint vertex sets $R,S$,
+an \emph{$R$--$S$ linkage of order $k$} is a family of $k$ pairwise
+vertex-disjoint paths with distinct ends in $R$ and in $S$. We write
+$\kappa_G(R,S)$ for the largest possible order. A vertex set is
+\emph{full to} $R$ if every vertex of $R$ has a neighbour in it.
+A \emph{region} is a nonempty vertex set inducing a connected subgraph.
+
+For disjoint $k$-element sets $R,S$, a \emph{paired clique model} consists
+of $k$ pairwise disjoint nonempty connected branch sets that are pairwise
+adjacent, each containing exactly one vertex of $R$ and exactly one
+vertex of $S$. This is a $K_k$-minor model with a free terminal pairing.
+The regions in the following statements need not be preserved as
+additional branch sets.
+
+\begin{theorem}\label{thm:one-sided}
+Let $k\geq2$, let $R,S$ be disjoint $k$-element vertex sets in a graph
+$G$, and suppose that $\kappa_G(R,S)\geq k$. Suppose there are $k-1$
+pairwise disjoint regions $H_1,\ldots,H_{k-1}$ avoiding $R$, each full
+to $R$, such that
+\[
+ S\subseteq\bigcup_{j=1}^{k-1}H_j
+ \quad\text{and}\quad S\cap H_j\ne\varnothing\quad(1\leq j<k).
+\]
+Then $G$ has a paired clique model for $R,S$.
+\end{theorem}
+
+The theorem requires no global connectivity assumption on $G$ and implies
+the following symmetric statement.
+
+\begin{corollary}\label{cor:two-sided}
+Let $k\geq1$ and let $R,S$ be disjoint $k$-element vertex sets in $G$.
+Suppose $G$ contains $k-1$ pairwise disjoint regions avoiding $R\cup S$,
+each full to $R\cup S$. Then $G$ has a paired clique model for $R,S$
+if and only if $\kappa_G(R,S)\geq k$.
+\end{corollary}
+
+We prove Theorem~\ref{thm:one-sided} in
+Sections~\ref{sec:reductions} through~\ref{sec:contacts}.
+Section~\ref{sec:consequences} gives the polynomial-time construction
+and shows that the number of regions in Corollary~\ref{cor:two-sided}
+cannot be reduced below $k-1$, for any $k\geq2$.
+
+In the terminology of Protopapas, Thilikos and
+Wiederrecht~\cite[Sections 1.1 and 2.1]{PTW}, the conclusion is a
+\emph{rainbow $K_k$-minor} when $R$ and $S$ are the two colour sets
+and all other vertices are uncoloured. Each branch set meets both
+colour sets exactly once, since each set has $k$ vertices.
+Their Theorem~3.1, specialised to two colours and a rainbow
+$K_k$, starts from a $K_{4k}$-minor and gives a rainbow minor or a
+separator outcome. Our sufficient condition uses the supplied connected
+regions and the linkage. We make no claim of publication priority.
+
+An \emph{$R$--$S$ separator} is a set $C\subseteq V(G)$ such that
+$G-C$ has no path from $R\setminus C$ to $S\setminus C$; terminal
+vertices are allowed in $C$. We use the vertex form of Menger's
+theorem~\cite{Menger}: the minimum size of such a separator equals
+$\kappa_G(R,S)$. In particular, when $|R|=|S|=k$ and a linkage has
+order $k$, every terminal is a path end and no terminal is internal
+to a linkage path.
+
+\section{Reductions and terminal ownership}\label{sec:reductions}
+
+Suppose Theorem~\ref{thm:one-sided} is false. Choose a counterexample
+with $k$ minimum and, subject to this, with $|V(G)|$ minimum. Since
+$k$ vertices of $S$ occupy $k-1$ regions, each meeting $S$, exactly
+one region contains two of them and every other region contains one.
+
+No region is a singleton. Indeed, a singleton region is $\{s\}$ for
+some $s\in S$. Fix a linkage of order $k$ and let $r\in R$ be the
+other end of its path ending at $s$. Delete $r,s$. The other $k-1$
+paths form a linkage for $R\setminus\{r\},S\setminus\{s\}$, and the
+remaining $k-2$ regions satisfy the hypotheses of the theorem for
+$k-1$. Here $k\geq3$: when $k=2$, the only region contains both
+vertices of $S$. Minimality of $k$ supplies a paired clique model in
+$G-\{r,s\}$. Add the branch set $\{r,s\}$. It is connected, since
+$\{s\}$ is full to $R$, and $s$ is adjacent to the $R$ vertex in each
+other branch set. The earlier branch sets avoid $r,s$, since both
+terminals were deleted before induction.
+
+We may assume that the regions cover $V(G)\setminus R$. To see this,
+consider a component $D$ of
+$G-(R\cup\bigcup_j H_j)$. If $D$ contacts a region, absorb it into
+that region. This preserves disjointness, connectivity, fullness and
+all terminal memberships. If it contacts no region, its neighbourhood
+is contained in $R$. Every linkage of order $k$ avoids $D$: a path
+visiting $D$ would have to pass through an $R$ terminal internally to
+reach its $S$ end. Deleting $D$ therefore preserves the hypotheses,
+contrary to minimum host order. Absorbing all remaining components gives
+\begin{equation}\label{eq:partition}
+ V(G)=R\mathbin{\dot\cup}H_1\mathbin{\dot\cup}\cdots
+       \mathbin{\dot\cup}H_{k-1}.
+\end{equation}
+The graph has not changed, and no region is a singleton.
+
+Call an edge within a region \emph{permitted} if its ends are not both
+in $S$. Contracting a permitted edge preserves the two terminal sets:
+an $S$ endpoint, if present, retains its name. The resulting regions
+are still disjoint and connected, full to $R$, and have the same $S$
+memberships. If the quotient has a linkage of order $k$, minimum host
+order supplies its paired clique model. Lift that model by replacing
+the contracted vertex, if used, by its connected two-vertex preimage.
+This preimage contains no $R$ vertex and at most one $S$ vertex. The
+lift preserves disjointness, all contacts and every terminal assignment.
+Consequently,
+\begin{equation}\label{eq:failed-contraction}
+ \kappa_{G/uv}(R,S)\leq k-1
+ \quad\text{for every permitted region edge }uv.
+\end{equation}
+
+\section{Separators and a spanning linkage}\label{sec:separators}
+
+\begin{lemma}\label{lem:edge-cut}
+For every permitted edge $uv$ in $H_j$, there is an $R$--$S$ separator
+of size $k$ containing $u,v$, exactly one vertex in each other region,
+and no vertex of $R$. For any fixed linkage of order $k$, these $k$
+separator vertices lie one on each path.
+\end{lemma}
+
+\begin{proof}
+By~\eqref{eq:failed-contraction} and Menger's theorem, $G/uv$ has a
+separator $C'$ of size at most $k-1$. It contains the contracted
+vertex, since otherwise $C'$ would also separate $R$ from $S$ in $G$.
+Replace that vertex by $u,v$ to obtain a separator $C$ in $G$ of size
+at most $k$. The existing linkage forces $|C|=k$.
+
+Since $u,v\notin R$, the cut $C$ removes at most $k-2$ vertices of
+$R$, so some $R$ vertex survives. If $C$ missed another region, that
+region would connect this vertex to one of its $S$ terminals in $G-C$.
+The remaining $k-2$ cut vertices must therefore lie one in each of
+the other $k-2$ regions. In particular, $C$ avoids $R$. Each of the
+$k$ disjoint linkage paths meets $C$, so $|C|=k$ gives exactly one
+meeting per path.
+\end{proof}
+
+Fix a linkage $P_1,\ldots,P_k$ and orient each path from its $R$ end
+to its $S$ end. This linkage spans $G$: every region vertex outside $S$
+has a neighbour in its region because the region is connected and
+non-singleton. The incident edge is permitted, and
+Lemma~\ref{lem:edge-cut} places that vertex on the linkage. All
+terminals are already path ends, so~\eqref{eq:partition} proves the
+claim. The ends of every region edge lie on different paths:
+use Lemma~\ref{lem:edge-cut} for a permitted edge, and the distinct
+$S$ ends for an edge with both ends in $S$.
+
+\section{A chain of separators}\label{sec:chain}
+
+Write
+\[
+ P_i=p_{i,0}p_{i,1}\cdots p_{i,\ell_i},\qquad
+ p_{i,0}\in R,\quad p_{i,\ell_i}\in S.
+\]
+Consider all vectors $c=(c_1,\ldots,c_k)$ with
+$1\leq c_i\leq\ell_i$ such that
+$\{p_{i,c_i}:1\leq i\leq k\}$ is an $R$--$S$ separator.
+Identify each vector with its cut and order the vectors coordinatewise.
+The cuts exclude $R$ endpoints but may contain $S$ endpoints. The vector
+$(\ell_1,\ldots,\ell_k)$ selects $S$ and is the maximum of the collection.
+
+Since the linkage spans $G$, a vector $c$ is separating exactly when
+there is no edge from a strict prefix
+$\{p_{i,t}:t<c_i\}$ to a strict suffix
+$\{p_{j,t}:t>c_j\}$. Every prefix vertex connects to its $R$ end
+without meeting the selected cut, and every suffix vertex connects to
+its $S$ end. A crossing edge would therefore give a path avoiding the
+cut; without one, no surviving path can pass from a prefix to a suffix.
+This remains true when a selected $S$ endpoint has an empty suffix.
+
+The separating vectors are closed under coordinatewise minimum and
+maximum, denoted by $\wedge$ and $\vee$. For a crossing edge at
+$c\wedge d$, its prefix end is before both original cuts. Choose the
+original cut attaining the minimum at the suffix end's coordinate;
+the edge crosses that original cut, a contradiction. For $c\vee d$,
+choose the original cut attaining the maximum at the prefix end's
+coordinate. Its suffix end is after both original cuts, giving the
+same contradiction.
+
+Choose a maximal chain of separating vectors,
+\[
+ c^0<c^1<\cdots<c^m.
+\]
+It includes the minimum and maximum of this finite lattice. Every
+region vertex occurs in a cut on the chain. For a vertex outside $S$,
+Lemma~\ref{lem:edge-cut} provides a cut containing it; for an $S$
+vertex, use the maximum cut. If a vertex $z=p_{i,t}$ were skipped,
+the extreme cuts imply that two consecutive chain cuts $c<d$ would
+satisfy $c_i<t<d_i$. A cut $a$ containing $z$ would then give the
+strictly intermediate separating vector
+\[
+ (a\vee c)\wedge d,
+\]
+contrary to maximality of the chain. Monotonicity shows that the
+indices of chain cuts containing $z$ form a nonempty interval $I_z$
+of integers.
+
+\begin{lemma}\label{lem:edge-overlap}
+For every edge $uv$ within a region, $I_u\cap I_v\ne\varnothing$.
+\end{lemma}
+
+\begin{proof}
+If $u,v\in S$, their intervals contain the maximum cut. Otherwise
+Lemma~\ref{lem:edge-cut} gives a cut $a$ containing both ends, which
+lie on different paths. Suppose the occurrence intervals are disjoint.
+After interchanging the ends, let $r$ be the last index in $I_u$ and
+$l$ the first in $I_v$, with $r<l$. At $c^{r+1}$, the vertex $u$ is
+in a strict prefix. The actual edge $uv$ prevents $v$ from being in
+a strict suffix, so $l=r+1$: this next cut contains $v$.
+
+The separating vector
+\[
+ (a\vee c^r)\wedge c^{r+1}
+\]
+lies between the two consecutive cuts and contains both $u$ and $v$.
+It differs from $c^r$ at $v$'s coordinate and from $c^{r+1}$ at
+$u$'s coordinate, contradicting maximality. This step uses the edge
+$uv$ to exclude $v$ from a strict suffix when $u$ enters a strict prefix.
+\end{proof}
+
+\section{The first cut gives all clique contacts}\label{sec:contacts}
+
+Every chain cut meets every region. Indeed, the cut avoids $R$; an
+untouched region would contain an uncut $S$ vertex and connect it to
+$R$ by fullness. A cut has $k$ vertices and there are $k-1$ regions,
+so each region contributes at most two vertices to a chain cut.
+
+Fix a region $H_j$ and form the intersection graph $T_j$ of the
+intervals $(I_z:z\in H_j)$. No three of these intervals contain a
+common index. The graph $T_j$ is a forest: if it had a cycle, choose
+on that cycle an interval with smallest right endpoint. Both its
+cycle neighbours contain that endpoint, because each meets the chosen
+interval and has a right endpoint no smaller. This would give three
+intervals with a common index.
+
+By Lemma~\ref{lem:edge-overlap}, the connected graph $G[H_j]$ is a
+spanning subgraph of $T_j$. A forest with a connected spanning subgraph
+is a tree and cannot have any further edge. Hence $G[H_j]=T_j$.
+Thus two vertices of one region that occur in a common chain cut
+are adjacent in $G$.
+
+For each $i$, put $f_i=p_{i,1}$, the first vertex after the $R$ end
+of $P_i$; it may be an $S$ end. Each $f_i$ occurs in a separating
+vector. The coordinatewise minimum of one such vector for each $i$
+is therefore
+\[
+ F=\{f_1,\ldots,f_k\}.
+\]
+This is the minimum separating vector, so it is on the chain.
+Every region neighbour of an $R$ terminal lies in $F$. A neighbour
+later on its path would have a suffix to $S$ avoiding $F$, giving
+an $R$--$S$ path avoiding this cut.
+
+Exactly one region is represented twice in $F$, and every other
+region once. If $f_i,f_j$ lie in the same region, the preceding
+tree argument gives the edge $f_if_j$. If they lie in different
+regions, at least one of those regions is represented only once in
+$F$. The $R$ endpoint of the other path is full to that region,
+and all its neighbours there lie in $F$, so it is adjacent to that
+unique representative. Thus $P_i,P_j$ are adjacent in every case.
+
+The vertex sets of $P_1,\ldots,P_k$ form the required paired clique
+model, a contradiction. This proves Theorem~\ref{thm:one-sided}.
+The singleton step decreases $k$ after deleting both reserved terminals.
+Contraction decreases host order and lifts through a fixed connected
+preimage containing at most one terminal. Both steps preserve terminal
+ownership. \qed
+
+\section{The symmetric statement, sharpness and construction}
+\label{sec:consequences}
+
+\begin{proof}[Proof of Corollary~\ref{cor:two-sided}]
+A paired clique model supplies a linkage by choosing an $R$--$S$
+path inside each branch set. Conversely, suppose a linkage of order
+$k$ exists. For $k=1$, take its only path as the branch set. For
+$k\geq2$, assign the $k$ vertices of $S$ to the $k-1$ given regions,
+at least one to each, and adjoin each vertex to its assigned region.
+Fullness to $S$ makes the enlarged regions connected. They remain
+pairwise disjoint, avoid $R$ and are full to $R$. They cover $S$ and
+each meets $S$, so Theorem~\ref{thm:one-sided} applies.
+\end{proof}
+
+\begin{proposition}\label{prop:sharp}
+For every $k\geq2$, Corollary~\ref{cor:two-sided} fails if its
+number of full regions is reduced to $k-2$.
+\end{proposition}
+
+\begin{proof}
+Take $k$ disjoint edges $r_is_i$ with
+$R=\{r_1,\ldots,r_k\}$ and $S=\{s_1,\ldots,s_k\}$, and add
+$k-2$ vertices, each adjacent to all $2k$ terminals. Add no other
+edges. The matching is a linkage of order $k$, and each added vertex
+is a full singleton region avoiding the terminals.
+
+In any proposed paired clique model, at least two of its $k$ branch
+sets contain no added vertex. Each of these consists of exactly one
+$R$ vertex and one $S$ vertex. Connectivity forces it to be one of
+the matching edges, and two distinct such branch sets are not
+adjacent. This is a contradiction, including when $k=2$.
+\end{proof}
+
+\begin{corollary}\label{cor:algorithm}
+Under the hypotheses of Theorem~\ref{thm:one-sided} or
+Corollary~\ref{cor:two-sided}, a paired clique model can be found in
+polynomial time when the regions are supplied.
+\end{corollary}
+
+\begin{proof}
+For the symmetric statement, make the terminal assignment from the
+proof of Corollary~\ref{cor:two-sided}; for $k=1$, return a path.
+It remains to give a construction under the one-sided hypotheses.
+Vertex-capacitated maximum flow finds a linkage of order $k$ and
+tests whether one survives a specified contraction.
+
+First absorb or delete components outside $R$ and the regions, as
+in Section~\ref{sec:reductions}. If a region is a singleton
+$\{s\}$, take a linkage of order $k$ and let $r$ be the other end
+of its path ending at $s$. Recurse after deleting $r,s$ and this
+region, then append the branch set $\{r,s\}$. This recursion has
+$k-1\geq2$ and satisfies the smaller theorem's hypotheses.
+
+Otherwise test every permitted region edge. If contracting one
+preserves a linkage of order $k$, recurse on the quotient and lift
+the returned branch sets through that edge. If all these tests fail,
+return any linkage of order $k$. Its paths are pairwise adjacent by
+Sections~\ref{sec:separators} through~\ref{sec:contacts}: after normalisation
+and removal of the singleton case, those sections use minimality
+only through~\eqref{eq:failed-contraction}. The algorithm therefore
+does not construct the cut lattice or enumerate its maximal chains.
+
+Every recursive call decreases the number of vertices. There are
+therefore at most $|V(G)|$ calls, each using polynomially many flow
+tests and elementary graph operations. The disjoint connected
+preimages used for every contraction lift are recorded during the
+recursion. Component deletions and the singleton step require no
+further allocation, so all lifts also take polynomial time.
+\end{proof}
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{Menger}
+K.~Menger,
+\href{https://doi.org/10.4064/fm-10-1-96-115}{\emph{Zur allgemeinen
+Kurventheorie}}, Fund.~Math.\ \textbf{10} (1927), 96--115.
+
+\bibitem{PTW}
+E.~Protopapas, D.~M.~Thilikos and S.~Wiederrecht,
+\emph{Colorful Minors},
+\href{https://arxiv.org/abs/2507.10467v3}{arXiv:2507.10467v3}, 2026.
+\end{thebibliography}
+\end{document}

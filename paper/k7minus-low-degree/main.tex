@@ -8,7 +8,7 @@
   linkcolor=blue,
   citecolor=blue,
   urlcolor=blue,
-  pdftitle={DRAFT: Minimum Degree Eight in K7-minus-Minor-Free Contraction-Critical Graphs},
+  pdftitle={DRAFT: Degree, defect and separators in K7-minus-minor-free critical graphs},
   pdfauthor={Cavit Erginsoy}
 ]{hyperref}
 \setlength{\emergencystretch}{1em}
@@ -20,12 +20,12 @@
 \newcommand{\minor}{\preccurlyeq}
 \newcommand{\N}{N}
 
-\title[DRAFT: Minimum degree eight]
+\title[DRAFT: Degree, defect and separators]
 {\textbf{DRAFT}\\[0.5ex]
-Minimum degree eight in
-$K_7^{-}$-minor-free contraction-critical graphs}
+Degree, defect and separators in
+$K_7^{-}$-minor-free critical graphs}
 \author{Cavit Erginsoy}
-\date{Draft, 11 August 2026}
+\date{Draft, 13 September 2026}
 
 \subjclass[2020]{05C15, 05C40}
 \keywords{Hadwiger's conjecture, graph minors, contraction-critical graphs,
@@ -35,24 +35,22 @@ rooted minors}
 
 \begin{abstract}
 Let $G$ be a minor-minimal non-six-colourable graph with no $K_7^{-}$
-minor.  For each $i$, let $n_i$ count the vertices of degree $i$, and put
-$\tau=\sum_{i\geq10}(i-9)n_i$.  We prove that $G$ is seven-connected, has
-no vertices of degree seven, contains no $K_5$ subgraph, and satisfies
-\[
-        |E(G)|\geq4|V(G)|
-        \qquad\text{and}\qquad
-        n_8\geq25+\tau.
-\]
-In particular, $\delta(G)\geq8$, and the neighbourhood of every
-degree-eight vertex is $K_4$-free.  A classification of degree-seven
-neighbourhoods, followed by a rooted $K^*_{4,2}$ argument, gives the
-exclusion.  We also prove that every $(r+1)$-connected graph containing two
-distinct $K_r$ subgraphs has a $K_{r+2}^{-}$ minor.  The proof is
-computation-free.
+minor.  For each $i$, let $n_i$ count its degree-$i$ vertices, and put
+$\tau=\sum_{i\geq10}(i-9)n_i$.  We prove that $G$ is seven-connected,
+has minimum degree eight, contains no $K_5$ subgraph, and satisfies
+$n_8\geq27+\tau$.  Every degree-eight vertex is incident with an edge
+lying in at most three triangles, and deleting any seven-vertex cut
+leaves exactly two components.  The bound on $n_8$ follows from the broader
+statement that every $r$-connected $K_7^{-}$-minor-free graph with $r\geq6$
+and at least four times as many edges as vertices has defect
+$9|V|-2|E|\geq20+r$.  This statement uses a computer-assisted finite
+lemma on nine- and ten-vertex quotients.  We also give computation-free
+proofs of $n_8\geq26+\tau$, the incident-edge conclusion and the
+separator conclusion.
 \end{abstract}
 
 \maketitle
-\markboth{DRAFT: MINIMUM DEGREE EIGHT}{CAVIT ERGINSOY: DRAFT}
+\markboth{DRAFT: DEGREE, DEFECT AND SEPARATORS}{CAVIT ERGINSOY: DRAFT}
 
 \section{Introduction}
 
@@ -76,33 +74,56 @@ theorem describes such a graph under the exclusion in Conjecture 21.
 \begin{theorem}\label{thm:main}
 Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph.
 For each $i$, let $n_i$ denote the number of vertices of degree $i$, and put
-\[
-        \tau=\sum_{i\geq10}(i-9)n_i.
-\]
+$\tau=\sum_{i\geq10}(i-9)n_i$.
 Then $G$ is seven-connected and
 \[
-        n_7=0,
-        \qquad \delta(G)\geq8,
+        \delta(G)\geq8,
         \qquad |E(G)|\geq4|V(G)|.
 \]
 Moreover, $G$ contains no $K_5$ subgraph,
 \[
-        n_8\geq25+\tau,
+        n_8\geq27+\tau,
 \]
-and the neighbourhood of every degree-eight vertex is $K_4$-free.
+and the neighbourhood of every degree-eight vertex is $K_4$-free and has
+independence number three.  Every such vertex is incident with an edge
+lying in at most three triangles.  Every seven-vertex cut of $G$ leaves
+exactly two components.
+
+The bound $n_8\geq27+\tau$ uses the finite lemma
+\ref{lem:finite-quotients}.  All the other conclusions, together with the
+weaker bound $n_8\geq26+\tau$, have computation-free proofs.
 \end{theorem}
 
-The theorem does not settle Conjecture 21.  It reduces the conjecture to
-the open assertion that every seven-connected graph $H$ satisfying
-$|E(H)|\geq4|V(H)|$ contains a $K_7^{-}$ minor.
+These are necessary conditions for a counterexample to Conjecture 21.
+A sufficient open assertion
+is that every seven-connected graph $H$ satisfying
+$|E(H)|\geq4|V(H)|$ contains a $K_7^{-}$ minor.  The bound on $n_8$
+follows from the next theorem.
+
+\begin{theorem}\label{thm:defect-ladder}
+Let $r\geq6$, and let $H$ be an $r$-connected $K_7^{-}$-minor-free graph
+with $|E(H)|\geq4|V(H)|$.  Then
+\[
+                    9|V(H)|-2|E(H)|\geq20+r.
+\]
+The proof uses the finite lemma \ref{lem:finite-quotients}.
+\end{theorem}
+
+The proofs use linked cliques and rooted models to exclude vertices of
+degree seven and $K_5$ subgraphs.  Section~\ref{sec:degree-eight} then gives
+the computation-free bound $n_8\geq26+\tau$.  Theorem~\ref{thm:defect-ladder}
+uses a density-preserving contraction and induction on connectivity
+(Section~\ref{sec:defect}).  The separator proof aligns boundary colourings
+obtained from proper minors and extends precolourings over planar graphs
+(Section~\ref{sec:seven-cuts}).
 
 Mayer obtained a finite catalogue of candidate neighbourhood graphs for
 degree-seven vertices in six-contraction-critical graphs~\cite{Mayer1993}.
 In the minor-minimal $K_7^{\vee}$-minor-free setting, Norin and Totschnig
 proved that every degree-seven vertex belongs to a $K_5$ contained in its
 closed neighbourhood~\cite[Claim~4.4]{NorinTotschnig2025}.  We first
-determine the whole neighbourhood in the $K_7^{-}$ setting, then rule out
-degree seven.
+determine the neighbourhood under $K_7^{-}$ exclusion, then rule out degree
+seven.
 
 Rolek and Song proved the next result when $r=6$
 ~\cite[Lemma~1.9]{RolekSong2017}.  We shall use the uniform form with
@@ -132,7 +153,7 @@ then $K_7^{-}\minor G$.
 A \emph{minor model} of a graph $H$ in $G$ is a family
 $(B_x:x\in V(H))$ of pairwise disjoint connected vertex sets such that
 $B_x$ and $B_y$ are adjacent whenever $xy\in E(H)$.  A model is
-\emph{rooted} at nominated vertices when its branch sets contain them
+\emph{rooted} at prescribed vertices when its branch sets contain them
 one-to-one.  We write $H\minor G$ when $H$ is a minor of $G$.  All graphs
 are finite and simple.
 
@@ -177,12 +198,11 @@ that all neighbours of $C$ are $A$-ends or all are $B$-ends.  Hence
 $|\N_H(C)|\leq r$, contrary to $(r+1)$-connectivity.  Every component of
 $H-U$ therefore attaches to only one $P_i$.
 
-For each $i$, let $W_i$ be the union of the open interior of $P_i$ and all
-components of $H-U$ that attach to $P_i$.  No vertex of $W_i$ has a
-neighbour on $P_j$ for $j\ne i$.  Indeed, an edge from the open interior
-of $P_i$ to $P_j$ would be a usable cross-path, while such an edge from a
-component of $H-U$ would make that component attach to two distinct
-linkage paths, contrary to the preceding paragraph.  Hence
+For each $i$, let $W_i$ consist of the open interior of $P_i$ and the
+components of $H-U$ attached to $P_i$.  There is no edge from $W_i$ to
+$P_j$ for $j\ne i$: an edge from the path interior would be a usable
+cross-path, and an edge from a component would contradict its unique
+attachment.  Hence
 \[
         \N_H(W_i)\subseteq\{a_i,b_i\}.
 \]
@@ -210,8 +230,6 @@ $C$ missed a vertex of $X$, then $\N_G(C)$ would be a cut of order at most
 $r$.  Thus $C$ is adjacent to every vertex of $X$.  The vertices of $X$
 as singleton branch sets, together with $C$, form a $K_{r+2}^{-}$ model.
 \end{proof}
-
-We shall use Theorem~\ref{thm:two-cliques} with $r=5$.
 
 \begin{corollary}\label{cor:unique-k5}
 Every six-connected $K_7^{-}$-minor-free graph contains at most one $K_5$
@@ -276,13 +294,8 @@ required rooted $K_5$ model.
 
 \begin{theorem}\label{thm:local-classification}
 Under the hypotheses of Lemma~\ref{lem:rooted-k5}, every degree-seven
-vertex $v$ satisfies
-\[
-        G[\N(v)]\cong K_4\mathbin{\dot\cup}K_3
-        \quad\text{or}\quad
-        K_1\vee(K_3\mathbin{\dot\cup}K_3).             \tag{3.2}
-\]
-In particular, $v$ belongs to a $K_5$ subgraph.
+vertex $v$ has $G[\N(v)]\cong K_4\mathbin{\dot\cup}K_3$ and hence
+belongs to a $K_5$ subgraph.
 \end{theorem}
 
 \begin{proof}
@@ -311,41 +324,25 @@ degree sum is even, so some vertex $z$ has degree four.  Its four
 neighbours are independent.  Each is adjacent to both vertices outside
 $\N_F[z]$ to have degree at least three, and those two outside vertices
 are nonadjacent by triangle-freeness.  Hence $F\cong K_{3,4}$.  Taking
-complements gives (3.2).
+complements leaves $K_4\mathbin{\dot\cup}K_3$ or
+$K_1\vee(K_3\mathbin{\dot\cup}K_3)$ for $H$.  Mader's theorem makes $G$
+seven-connected, so Corollary~\ref{cor:unique-k5} gives at most one $K_5$
+subgraph.  The second possibility would place $v$ in two distinct $K_5$
+subgraphs, leaving the claimed neighbourhood.
 \end{proof}
 
-\begin{corollary}\label{cor:critical-local}
-Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph.
-Then $G$ contains at most one $K_5$ subgraph and every degree-seven vertex
-$v$ satisfies
-\[
-        G[\N(v)]\cong K_4\mathbin{\dot\cup}K_3.
-\]
-\end{corollary}
-
-\begin{proof}
-Albar's theorem gives $\chi(G)=7$, while minor minimality makes every
-proper minor six-colourable.  Corollary~\ref{cor:unique-k5} gives at most
-one $K_5$ subgraph.  The second graph in (3.2) would place $v$ in two
-distinct $K_5$ subgraphs, so only the first can occur.
-\end{proof}
-
-\section[Rooted-model closure]{Rooted
+\section[Rooted model closure]{Rooted
 \texorpdfstring{$K^*_{4,2}$}{K-star(4,2)} closure}
 
 For a graph $F$ and $S\subseteq V(F)$, say that $(F,S)$ is
 \emph{internally $k$-connected} if there is no separation $(A,B)$ of $F$
 with $S\subseteq A$, $B\setminus A\ne\varnothing$, and
-$|A\cap B|<k$.  A $Z$-rooted $K^*_{4,2}$ model consists of four pairwise
-disjoint connected branch sets, one containing each member of the
-four-set $Z$, and two further branch sets $U,V$.  Each of $U,V$ is adjacent
-to all four rooted branch sets and to the other; no adjacency between
-distinct rooted branch sets is required.
+$|A\cap B|<k$.  For a four-set $Z$, a $Z$-rooted $K^*_{4,2}$ model
+consists of six pairwise disjoint connected sets: four rooted at $Z$ and
+two others $U,V$, each adjacent to the other five.  Adjacencies among the
+rooted sets are not required.
 
-We use the following bound of Norin and Totschnig
-\cite[Lemma~12]{NorinTotschnig2025}.
-
-\begin{theorem}[Norin and Totschnig]
+\begin{theorem}[Norin and Totschnig {\cite[Lemma~12]{NorinTotschnig2025}}]
 \label{thm:rooted-two-helper-bound}
 Let $F$ be a graph and let $Z\subseteq V(F)$ have order four.  If $(F,Z)$
 is internally four-connected and $F$ has no $Z$-rooted $K^*_{4,2}$ model,
@@ -373,9 +370,9 @@ $z_i$ for the root in $R_i$, and put
 \[
         P_i=\{r\in R_i:r\text{ has a neighbour in }U\cup V\}.
 \]
-We claim that $|P_i|=1$.  Both $U$ and $V$ meet $R_i$, so $P_i$ is
+We claim that $|P_i|=1$.  Both $U$ and $V$ are adjacent to $R_i$, so $P_i$ is
 nonempty.  If it had at least two vertices, there would be distinct
-$u,w\in R_i$ such that $u$ meets $U$ and $w$ meets $V$; otherwise the two
+$u,w\in R_i$ such that $u$ has a neighbour in $U$ and $w$ has a neighbour in $V$; otherwise the two
 contact sets would be the same singleton.  Take a minimal tree in
 $F[R_i]$ containing $z_i,u,w$.  By the minimal choice of the rooted branch
 sets, this tree spans $R_i$.  One of $u,w$, say $u$, is a leaf different
@@ -385,8 +382,8 @@ the contact between $R_i$ and $U$, while $w$ preserves the contact between
 $R_i$ and $V$.  Every other required adjacency is unchanged, contrary to
 the choice of the model.  Hence $|P_i|=1$.
 
-No component outside the six branch sets can meet $U\cup V$, since it
-could be absorbed into whichever of $U,V$ it meets.  It follows that
+No component outside the six branch sets can have a neighbour in
+$U\cup V$, since it could be absorbed into the adjacent branch set.  It follows that
 \[
         |N_F(U\cup V)\setminus(U\cup V)|\leq4,          \tag{4.2}
 \]
@@ -427,59 +424,45 @@ $\frac92n-12$ edges contains a $K_7^{-}$ minor or is a
 $(K_{2,2,2,2},K_6,4)$-cockade~\cite[Theorem~4]{Jakobsen1983}; see also
 \cite[Theorem~2]{Albar2014}.
 
+Write $D(G)=9|V(G)|-2|E(G)|$ for the \emph{defect} of $G$.
+The \emph{codegree} $c(xy)=|N(x)\cap N(y)|$ counts the triangles containing
+an edge $xy$.  Contracting an edge reduces connectivity by at most one:
+a cut avoiding the contraction vertex lifts unchanged, while a cut
+containing it lifts after that vertex is replaced by the two ends.
+For an edge $e$ of codegree $c$,
+\begin{equation}\label{eq:contraction}
+ |E(G/e)|=|E(G)|-1-c,\qquad D(G/e)=D(G)-7+2c.             \tag{5.1}
+\end{equation}
+
 \begin{lemma}\label{lem:jakobsen-defect}
-Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph,
-with $n=|V(G)|$ and $m=|E(G)|$.  Then
-\[
-        2m\leq9n-25.                                   \tag{5.1}
-\]
+Every five-connected $K_7^{-}$-minor-free graph $G$ of order at least nine
+satisfies $D(G)\geq25$.
 \end{lemma}
 
 \begin{proof}
-The graph $G$ is neither of the two base graphs of the cockade family,
-since both $K_6$ and $K_{2,2,2,2}$ are six-colourable.  A nontrivial
-cockade has a vertex cut of order four, whereas $G$ is seven-connected.
-Thus $G$ is not an exceptional cockade.  Since it has no $K_7^{-}$ minor,
-Jakobsen's theorem gives $m<\frac92n-12$.  Integrality yields (5.1).
+The order excludes the two base cockades $K_6$ and $K_{2,2,2,2}$.
+A nontrivial cockade has a four-vertex cut, contrary to five-connectivity.
+Jakobsen's strict inequality $2|E(G)|<9|V(G)|-24$ and integrality give
+$D(G)\geq25$.
 \end{proof}
 
-\begin{proposition}\label{prop:preliminary-density}
-Let $G$ be a minor-minimal non-six-colourable $K_7^{-}$-minor-free graph.
-Then
-\[
-        n_7\leq5,
-        \qquad |E(G)|\geq4|V(G)|-2.                    \tag{5.2}
-\]
+\begin{proposition}\label{prop:critical-base}
+Every graph satisfying the hypotheses of Theorem~\ref{thm:main} is
+seven-connected, has minimum
+degree eight, has no $K_5$ subgraph, and satisfies
+$|E(G)|\geq4|V(G)|$ and $n_8\geq25+\tau$.
 \end{proposition}
 
 \begin{proof}
-By Corollary~\ref{cor:critical-local}, every degree-seven vertex lies in
-the unique possible $K_5$, so $n_7\leq5$.  Seven-connectivity gives minimum
-degree at least seven, and every vertex not counted by $n_7$ has degree at
-least eight.  Hence
-\[
-        2|E(G)|\geq7n_7+8(|V(G)|-n_7)
-                  =8|V(G)|-n_7
-                  \geq8|V(G)|-5.
-\]
-The left side is even, so it is at least $8|V(G)|-4$, proving (5.2).
-\end{proof}
-
-\begin{proof}[Proof of Theorem~\ref{thm:main}]
-Albar's theorem gives $\chi(G)=7$, and every proper minor is
-six-colourable by the choice of $G$.  The graph is noncomplete because it
-has no $K_7^{-}$ minor, so Mader's theorem gives seven-connectivity.
-
-Suppose that $v$ has degree seven.  Corollary~\ref{cor:critical-local}
-shows that $G[N(v)]$ contains a $K_4$.  Proposition
-\ref{prop:preliminary-density} gives
-\[
-        |E(G)|\geq4|V(G)|-2>4|V(G)|-6,
-\]
-which exceeds the threshold in Theorem~\ref{thm:rooted-closure} when
-$d_G(v)=7$.  That theorem gives the forbidden $K_7^{-}$ minor.  Thus
-$n_7=0$.  Seven-connectivity now gives $\delta(G)\geq8$, and degree
-summation gives $|E(G)|\geq4|V(G)|$.
+Albar's theorem gives $\chi(G)=7$, and Mader's theorem gives
+seven-connectivity.  By Theorem~\ref{thm:local-classification} and
+Corollary~\ref{cor:unique-k5}, every degree-seven vertex lies in the unique
+possible $K_5$, so $n_7\leq5$.  Degree summation gives
+$2|E(G)|\geq8|V(G)|-5$ and hence $|E(G)|\geq4|V(G)|-2$.
+If $v$ had degree seven, its neighbourhood would contain a $K_4$ and this
+density would exceed the threshold $4|V(G)|-6$ in
+Theorem~\ref{thm:rooted-closure}.  Thus no such vertex exists:
+$\delta(G)\geq8$ and $|E(G)|\geq4|V(G)|$.
 
 Put $q=|E(G)|-4|V(G)|$, so $q\geq0$.  Suppose that a $K_5$ subgraph has
 vertex set $K$.  For each $w\in K$, the neighbourhood of $w$ contains the
@@ -495,19 +478,38 @@ least $5(q+6)$ to
 \]
 which is impossible.  Thus $G$ contains no $K_5$ subgraph.
 
-Finally, Lemma~\ref{lem:jakobsen-defect} and the exact degree identity give
+The minimum degree ensures $|V(G)|\geq9$.  Lemma~\ref{lem:jakobsen-defect}
+and degree summation now give
 \[
         25\leq9|V(G)|-2|E(G)|=n_8-\tau.
 \]
-Therefore $n_8\geq25+\tau$.  If a degree-eight vertex had a $K_4$ in its
-neighbourhood, it would belong to a $K_5$, which has just been excluded.
+Therefore $n_8\geq25+\tau$.
+\end{proof}
+
+\input{degree-eight}
+\input{connectivity-defect}
+\input{seven-cuts}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Proposition~\ref{prop:critical-base} gives seven-connectivity, minimum
+degree eight, $|E(G)|\geq4|V(G)|$ and the absence of a $K_5$ subgraph.
+The last conclusion makes every neighbourhood $K_4$-free.
+Lemma~\ref{lem:independent-triple} gives independence number three in
+every degree-eight neighbourhood; Proposition~\ref{prop:critical-three-edge}
+gives the incident-edge conclusion and $n_8\geq26+\tau$ without computation.
+Theorem~\ref{thm:defect-ladder} applied with $r=7$ gives
+$9|V(G)|-2|E(G)|\geq27$.  The exact identity
+$9|V(G)|-2|E(G)|=n_8-\tau$ proves the asserted stronger bound.
+For a seven-vertex cut $S$, Lemma~\ref{lem:three-cut-boundary} leaves two
+or three components.  Three would give a $3,2,2$ boundary colouring, and
+Theorem~\ref{thm:three-component-colouring} would make $G$ six-colourable.
+Thus $G-S$ has exactly two components.
 \end{proof}
 
 \section*{Statement on AI use and independence}
 
-GPT-5.6 Sol, an OpenAI model, contributed to theorem discovery, proofs,
-verification and drafting.  Cavit Erginsoy directed the work and made the
-final decisions.  Erginsoy is not affiliated with OpenAI, and OpenAI
+OpenAI models contributed to theorem discovery, proofs, verification and
+drafting.  Cavit Erginsoy directed the work and made the final decisions.  Erginsoy is not affiliated with OpenAI, and OpenAI
 neither sponsored nor verified the work.
 
 {\hbadness=2000

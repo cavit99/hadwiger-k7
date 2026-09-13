@@ -12,17 +12,20 @@
 \newtheorem{corollary}[theorem]{Corollary}
 
 \title[Bipartite contractibility]{A matroid proof of bipartite contractibility}
-\date{Draft, 8 September 2026}
+\date{Draft, 13 September 2026}
 
 \begin{document}
 \begin{abstract}
 We give an independent proof that every scheme of a finite bipartite
-graph contains a minor rooted at all prescribed vertices. This supplies
+graph contains a fully rooted minor model of that graph. This proves
 the intended conclusion of an earlier bipartite-flow assertion of
 Biswal, Lee and Rao, whose prefix construction fails. The proof uses
 matroid union to allocate disjoint forests: either spanning trees give
 the model, or simultaneous component contractions yield a smaller
 scheme of the same target while preserving every root.
+When all scheme paths have at most three edges, the same construction
+gives branch sets of intrinsic radius at most two from their prescribed
+roots. A six-vertex example shows that radius one does not always suffice.
 \end{abstract}
 \maketitle
 
@@ -49,7 +52,7 @@ in~\cite[Section 8, Questions 2--4]{KPR}, including $K_{2,4}$, $K_{3,3}$
 and bipartite theta graphs. The earlier flow assertion is discussed in
 Section~\ref{sec:flow}.
 The proof uses Edmonds' matroid union rank formula and the following
-part of the coloured-scheme reduction of~\cite[Lemma 3.3]{KPR}.
+part of the coloured-scheme reduction in~\cite[Lemma 3.3]{KPR}.
 A minor is \emph{root-preserving} when its vertices have
 pairwise disjoint connected preimages and each new root's preimage
 contains its corresponding original root.
@@ -62,21 +65,21 @@ scheme paths use only their endpoint colours.
 
 \begin{proof}
 Delete unused edges and nonroot vertices. Give each root its target
-label. At each nonroot, choose an endpoint common to all target edges
+label. Give each nonroot an endpoint label common to all target edges
 whose paths contain it. Thus each path uses only its endpoint labels.
 Contract every connected component induced by one label. Such a component
 contains at most one root; the quotient colouring is proper. Each path
-maps to an endpoint-coloured walk, from which deleting closed excursions
-gives a simple path between the new roots. Another root cannot occur,
+maps to an endpoint-coloured walk. Deleting its closed excursions gives
+a simple path between the new roots. Another root cannot occur,
 since it has a different label. All paths meeting at a vertex have its
 label as a common target endpoint. Delete unused vertices and edges,
 retaining isolated prescribed roots.
 \end{proof}
 
 Contractibility is equivalent to property $(*)$ of Kriesell and
-Mohr~\cite[Definition 1]{KM}. There the roots form a transversal, one
-vertex from each class of a proper colouring, and each required pair is
-joined by a path using its two colours. Such paths form a scheme; conversely,
+Mohr~\cite[Definition 1]{KM}. The roots then form a transversal, with
+one vertex from each class of a proper colouring, and each required
+pair is joined by a path using its two colours. Such paths form a scheme; conversely,
 Lemma~\ref{lem:normalization} reduces every scheme to this setting and
 the resulting rooted model lifts. Thus every bipartite graph has
 property $(*)$.
@@ -113,8 +116,8 @@ For a minimising $X$ and a maximising disjoint family,
  \leq |E\setminus X|+\sum_jr_j(X)=R.
 \]
 Equality forces $|I_j\cap X|=r_j(X)$ for every $j$. An independent
-set of this rank is a spanning tree in each nontrivial component of
-$M_j(X)$, with isolated vertices retained.
+set of this rank restricts to a spanning tree in every nontrivial
+component of $M_j(X)$, with isolated vertices retained.
 \end{proof}
 
 \section{A simultaneous component contraction}
@@ -135,8 +138,8 @@ Denote the label set of $M_a$ by $E_a$.
 
 Suppressing the internal $B$ vertices of $P_{ab}$ and deleting its
 terminal root $r_b$ gives a path in $M_a$ starting at $r_a$. These
-projected paths cover $W_a$ and its edges, so $M_a$ is connected.
-For an isolated target vertex it is the one-vertex graph.
+projected paths cover $M_a$, so $M_a$ is connected. For an isolated target
+vertex, $M_a$ is the one-vertex graph.
 
 \begin{lemma}\label{lem:reduction}
 Suppose $X\subseteq E$ admits pairwise disjoint forests
@@ -171,9 +174,9 @@ $A$ vertex by its component vertex, omit every $x\in X$, and suppress
 consecutive repetitions. For each omitted segment $u x v$, the edge
 labelled $x$ places $u,v$ in the same component of $M_a(X)$. Their
 images therefore coincide, regardless of which forest owns $x$.
-Every remaining step is witnessed by an original edge from an $A$
-vertex to a surviving $B$ vertex. The sequence is consequently a walk
-in $Q$ between the new roots, using only colours $a,b$.
+Each remaining step has a witnessing original edge from an $A$ vertex
+to a surviving $B$ vertex. The sequence is therefore a walk in $Q$ between
+the new roots, using only colours $a,b$.
 
 Delete closed excursions to obtain a simple path. No foreign $A$ root
 has colour $a$, and the only $B$ root retained from $P_{ab}$ is $r_b$.
@@ -190,9 +193,9 @@ This is positive when $X\ne\varnothing$.
 \section{Proof of Theorem~\ref{thm:main}}
 
 Remove isolated target vertices and their roots, restoring them as their
-original singleton branch sets afterwards. An edgeless target is
-immediate. For the remaining fixed target use strong induction on the
-host order. Lemma~\ref{lem:normalization} gives a root-preserving minor
+original singleton branch sets afterwards. The result is immediate for
+an edgeless target. For the remaining fixed target, use strong induction
+on the host order. Lemma~\ref{lem:normalization} gives a root-preserving minor
 $K$ of the original host $G$, with a proper endpoint-coloured scheme and
 $|V(K)|\leq|V(G)|$.
 
@@ -211,7 +214,8 @@ If $R=N_A$, every $I_a$ is a spanning tree. Set
  C_a=W_a\cup I_a\quad(a\in A),\qquad C_b=\{r_b\}\quad(b\in B).
 \]
 The lifted trees make these sets connected, and the disjoint label sets
-make them disjoint. They retain every root. The final edge of $P_{ab}$
+make them disjoint. Each contains its prescribed root. The final edge
+of $P_{ab}$
 joins $r_b$ to $W_a$, giving every required contact.
 
 Otherwise $R<N_A\leq N_B=|E|$. A minimising set $X$ in
@@ -231,13 +235,94 @@ case, completing the induction. \qed
 The bipartition may reverse during induction, so lifted branch sets
 may expand on both original shores.
 
+\section{A sharp radius bound for short paths}\label{sec:radius}
+
+A branch set $C_v$ has \emph{intrinsic radius at most $r$ at its root}
+if every vertex of $C_v$ has a path of at most $r$ edges to $r_v$ entirely
+inside $C_v$. Distances are measured in the original host, within the
+branch set, rather than in a quotient graph.
+
+\begin{theorem}\label{thm:radius}
+Let $H$ be bipartite. Every $H$-scheme whose paths have at most three
+edges contains a rooted $H$-minor model in which every branch set has
+intrinsic radius at most two at its prescribed root. The bound of two
+cannot be replaced by one.
+\end{theorem}
+
+\begin{proof}
+Write $G_0$ for the original path union together with the isolated roots.
+Run the proof of Theorem~\ref{thm:main}, keeping its disjoint connected
+preimages in $G_0$. We maintain the following invariant: only root images
+have nonsingleton preimages, each of intrinsic radius at most two at its
+original root; every current scheme path is either a root--root edge
+or the image of its original three-edge path with both internal vertices
+still original singleton nonroots; and the quotient is properly
+endpoint-coloured, with surviving nonroots retaining their initial colours.
+
+First apply Lemma~\ref{lem:normalization}. Every vertex on a
+monochromatic edge has a monochromatic route of at most two edges to
+the root of its colour: this follows by inspecting the path of at most
+three edges containing that edge. Thus every nontrivial monochromatic
+component contains its own root and has the required intrinsic radius.
+All other preimages are singletons. A properly bichromatic path between
+its differently coloured roots has odd length. If its reduced length
+exceeds one, it must therefore retain all three original edges and both
+original singleton internal vertices. This establishes the invariant.
+
+Orient the bipartition $(A,B)$ as before. Every current path of length
+greater than one is the image of an original path
+\[
+ r_a\,x\,y\,r_b,\qquad f(x)=b,\quad f(y)=a.
+\]
+Consequently $M_a$ is a star centred at the image of $r_a$, allowing
+parallel edges: this path contributes the edge from that centre to $y$
+labelled $x$. In particular, $r_ax$ and $xy$ are original edges of $G_0$.
+For any $X\subseteq E$, every nontrivial component of $M_a(X)$ contains
+its root, and a forest spanning it allocates one label to each of its
+nonroot vertices. Under Lemma~\ref{lem:reduction}, a newly absorbed
+label is adjacent to the original root, and a newly absorbed base vertex
+reaches that root through its allocated label in two original edges.
+The old root preimage retains its existing witnesses. Only root
+preimages grow, so their intrinsic radii remain at most two.
+
+The invariant also holds for the scheme paths. For the displayed demand,
+if $x\in X$, its projected edge puts the root and $y$ in one component,
+even if $x$ is allocated to another root or deleted. The retained edge
+$yr_b$ then gives a root--root edge. This also holds if $x\notin X$ but
+$y$ is absorbed. Otherwise both internal vertices stay singleton and
+the path is unchanged. Existing root--root edges survive the retained-edge
+rule. The quotient colouring is unchanged on surviving nonroots.
+These arguments hold after reversing the shores as well.
+
+The two matroid-union cases complete the construction. A deficient
+packing gives the nonempty set $X$ and strict decrease in host order
+from Lemma~\ref{lem:reduction}. A full packing absorbs every projection
+star into its root with the same two-edge witnesses and supplies all
+required contacts. Thus the process terminates with a rooted model.
+The composed preimages satisfy the invariant in $G_0$, so the lifted
+branch sets have intrinsic radius at most two. Isolated roots stay singleton.
+
+For sharpness, take the target with edges $ab,ac$ and a host with six
+distinct vertices $a,b,c,a',b',c'$ and exactly the edges of
+\[
+ P_{ab}=a\,b'\,a'\,b,\qquad P_{ac}=a\,c'\,a'\,c.
+\]
+The paths form a scheme with prescribed roots $a,b,c$. Each of $b,c$
+has the unique neighbour $a'$. In a radius-one rooted model their
+disjoint branch sets cannot both contain $a'$, so one, say $C_b$, is
+singleton. Its contact with $C_a$ forces $a'\in C_a$, but $aa'$ is
+absent, contradicting radius one at $a$. Radius two is attained by
+$\{a,b',a'\}$, $\{b\}$, $\{c\}$.
+\end{proof}
+
 \section{The bipartite-flow assertion}\label{sec:flow}
 
 \begin{corollary}\label{cor:flow}
-Let $H$ be bipartite of minimum degree at least two. Inject its vertices
-into a finite graph $G$ as terminals and choose a simple path between
-the corresponding terminal pair for every target edge. If paths for edges with four distinct endpoints are
-vertex-disjoint, then $G$ has an $H$-minor rooted at every terminal.
+Let $H$ be bipartite of minimum degree at least two. Assign its vertices
+to distinct terminals of a finite graph $G$ and choose a simple path
+between the corresponding terminals for each target edge. If paths for
+edges with four distinct endpoints are vertex-disjoint, then $G$ has an
+$H$-minor rooted at every terminal.
 \end{corollary}
 
 \begin{proof}
@@ -278,14 +363,19 @@ Lemma~3.6, not the minor-existence conclusion: a rooted model is
 $\{a_0,b'_0\}$, $\{a_1,b'_1\}$, $\{b_0,a'_1\}$,
 $\{b_1,a'_0\}$, in the order $a_0,a_1,b_0,b_1$.
 
-Lee~\cite[Lemma 3.3]{Lee} later invokes the same bipartite-flow
-assertion. Some clique-flow applications now have another extraction
-argument: Kolbe and Spalding-Jamieson~\cite[Lemma 3.11 and Proposition 3.4]{KSJ}, using
-Korhonen and Lokshtanov~\cite[Lemmas 4.3--4.4]{KL}, choose a specific
-bounded-degree demand graph for each clique order and extract an
-unrooted clique minor. This does not establish contractibility for
+Lee~\cite[Lemma 3.3]{Lee} later invoked the same bipartite-flow assertion.
+For some clique-flow applications, Kolbe and
+Spalding-Jamieson~\cite[Lemma 3.11 and Proposition 3.4]{KSJ} give another
+extraction argument. Using Korhonen and
+Lokshtanov~\cite[Lemmas 4.3--4.4]{KL}, they choose a specific bounded-degree
+demand graph for each clique order and extract an unrooted clique minor.
+This does not establish contractibility for
 arbitrary bipartite targets. Our proof supplies no new spectral,
-separator or bounded-depth estimate.
+separator or general bounded-depth estimate. Theorem~\ref{thm:radius}
+gives the specific intrinsic-radius bound for schemes of length at most
+three; it does not establish the general depth assertion
+of~\cite[Lemma 3.13]{BLR}, whose depth convention uses diameter in the
+ambient host~\cite[Section 1.2.2]{BLR}.
 
 \begin{thebibliography}{9}
 \bibitem{BLR}

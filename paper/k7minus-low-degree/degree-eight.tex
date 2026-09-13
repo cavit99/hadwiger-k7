@@ -1,0 +1,124 @@
+\section{Degree-eight vertices without computation}\label{sec:degree-eight}
+
+\begin{lemma}\label{lem:independent-triple}
+Let $G$ satisfy the hypotheses of Theorem~\ref{thm:main}.  Every
+degree-eight vertex $v$ satisfies $\alpha(G[N(v)])=3$.
+\end{lemma}
+
+\begin{proof}
+Dirac's inequality (3.1) gives the upper bound three.  Put $J=G[N(v)]$.
+By Proposition~\ref{prop:critical-base}, $J$ has no $K_4$ subgraph and
+$|V(G)|\geq n_8\geq25$, so $G-N[v]$ is nonempty.  If $\alpha(J)\leq2$,
+Rolek, Song and Thomas~\cite[Lemma~2.1]{RolekSongThomas2022} show that $J$
+contains a spanning square of an eight-cycle.  Label its vertices
+cyclically $0,\ldots,7$.  An exterior component has at least seven
+neighbours in $N(v)$, by seven-connectivity.  Contract that component to
+$c$ and delete the other exterior vertices.  By cyclic symmetry and edge
+deletion, take $c$ adjacent to every cycle vertex except $0$.  The sets
+\[
+       \{0,7,2\},\quad\{3\},\quad\{4\},\quad\{1,v\},
+       \quad\{6\},\quad\{5\},\quad\{c\}
+\]
+are connected and pairwise adjacent except for $\{3\}:\{6\}$.  They
+form a forbidden $K_7^{-}$ model.  Hence $\alpha(J)=3$.
+\end{proof}
+
+\begin{lemma}\label{lem:good-deletion}
+Let $J$ be an eight-vertex graph with minimum degree at least four, no
+$K_4$ subgraph, and independence number three.  Call $r$ good if $J-r$
+has a $K_5^{-}$ minor.  Every vertex of $J$ has a good neighbour.
+\end{lemma}
+
+\begin{proof}
+The graph $J$ is three-connected.  Indeed, a component has order at least
+five, and a component behind a cutvertex has order at least four, excluding
+both kinds of separation on eight vertices.  A two-cut would leave two
+three-vertex components, each a triangle complete to the cut.  An edge in
+the cut gives a $K_4$; an independent cut gives independence number two.
+Both are impossible.
+
+Suppose first that $J$ is four-connected.  Then $J-r$ is three-connected
+for every $r$.  Wood and Woodall~\cite[Lemma~4.2.1]{WoodWoodall2009}
+classify three-connected $K_5^{-}$-minor-free graphs as wheels, the
+triangular prism and $K_{3,3}$.  If some $r$ is not good, order seven
+forces $J-r$ to be a wheel with six rim vertices.  Every rim vertex must
+see $r$ to have degree at least four, and the hub cannot see $r$ because
+$J$ has no $K_4$.  Thus $J=\overline{K_2}\vee C_6$.  With apices $p,q$
+and rim $v_0,\ldots,v_5$, deletion of $v_2$ leaves the $K_5^{-}$ model
+\[
+       \{p,v_0\},\quad\{q,v_1\},\quad\{v_3\},
+       \quad\{v_4\},\quad\{v_5\},
+\]
+missing only $\{v_3\}:\{v_5\}$.  Every rim vertex is therefore good,
+and the rim vertices meet every neighbourhood.  If no bad $r$ exists,
+the conclusion is immediate.
+
+Now let $S$ be a three-cut.  Its two components have orders two and three,
+since each has order at least two.  Write the first as $A=\{a,a'\}$ and
+the second as $B$.  The edge $aa'$ is present and both ends are complete
+to $S$.  Consequently $S$ is independent.  Every vertex of $B$ has a
+neighbour in $B$, so $J[B]$ is a path or triangle.
+
+If $B=b_1b_2b_3$ is a path, its ends are complete to $S$ and $b_2$ has at
+least two neighbours in $S$.  The following models establish that all
+vertices in $A\cup B$ are good; symmetry handles $a'$ and $b_3$.
+In the table, $b_1s_1$ abbreviates the branch set $\{b_1,s_1\}$, and
+similarly for the other entries.
+\[
+\begin{array}{c|c|c}
+\text{deleted vertex}&\text{five branch sets}&\text{only missing pair}\\\hline
+a&b_1s_1,b_3s_2,b_2,a',s_3&b_2:a'\\
+b_1&as_1,b_3s_2,b_2,a',s_3&b_2:a'\\
+b_2&as_1,b_1s_2,b_3,a',s_3&b_3:a'
+\end{array}
+\]
+Here $S=\{s_1,s_2,s_3\}$ is labelled with $b_2s_3$ present in the first
+row, and with $b_2s_1,b_2s_3$ present in the second.
+
+If $B$ is a triangle, each of its vertices sees at least two vertices of
+$S$, and no vertex of $S$ sees all of $B$.  Its missing incidences with
+$S$ therefore form a perfect matching; label these $b_is_i$.
+After deleting $a$ use
+\[
+       s_1b_2,\quad s_2a',\quad b_1,\quad s_3,\quad b_3,
+\]
+which misses only $s_3:b_3$; after deleting $b_1$ use
+\[
+       s_1b_2b_3,\quad s_2,\quad s_3,\quad a,\quad a',
+\]
+which misses only $s_2:s_3$.  Symmetry again makes all vertices in
+$A\cup B$ good.  In either case, the vertices of $A$ see one another,
+every vertex of $B$ has a neighbour in $B$, and every vertex of $S$ sees
+$A$.  Thus every vertex has a good neighbour.
+\end{proof}
+
+\begin{proposition}\label{prop:critical-three-edge}
+Let $G$ satisfy the hypotheses of Theorem~\ref{thm:main}.  Every
+degree-eight vertex is incident with an edge $e$ satisfying $c(e)\leq3$,
+and $n_8\geq26+\tau$.  Both conclusions have computation-free proofs.
+\end{proposition}
+
+\begin{proof}
+Fix a degree-eight vertex $v$ and put $J=G[N(v)]$.  By
+Proposition~\ref{prop:critical-base} and Lemma~\ref{lem:independent-triple},
+$J$ is $K_4$-free and has independence number three.  If every incident
+edge has codegree at least four, then $\delta(J)\geq4$.  An exterior
+component exists because $|V(G)|\geq25$, and seven-connectivity gives at
+least seven boundary neighbours.  Contract it to $c$ and delete the other
+exterior components.  Let $x$ be the vertex of $J$ missed by $c$, or any
+vertex if none is missed.  By Lemma~\ref{lem:good-deletion}, $x$ has a
+neighbour $r$ such that $J-r$ has a $K_5^{-}$ model $M_1,\ldots,M_5$.
+Then $cr$ is an edge, and
+\[
+                  \{v\},\quad\{c,r\},\quad M_1,\ldots,M_5
+\]
+form a $K_7^{-}$ model: the first two sets are adjacent through $vr$ and
+are adjacent to every $M_i$.  The sole possible missing contact from $c$
+is a singleton $M_i=\{x\}$, supplied instead by $rx$.  This contradiction
+proves that some edge $e=vx$ has $c(e)=d_J(x)\leq3$.
+
+The quotient $G/e$ is six-connected, has no $K_7^{-}$ minor and has order
+at least twenty-four.  Lemma~\ref{lem:jakobsen-defect} gives $D(G/e)\geq25$,
+while \eqref{eq:contraction} gives $D(G)\geq D(G/e)+1\geq26$.
+The identity $D(G)=n_8-\tau$ proves the bound.
+\end{proof}
