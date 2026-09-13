@@ -34,18 +34,22 @@ to intermediate claims remain with their designated conditional routes.
 
 ## Conditional routes
 
-- [Quantitative star contractions](quantitative_star_contraction_frontier.md):
-  direct reduction R is under construction selection alongside C19. R and
-  its cube-root double-logarithmic colouring consequence remain unproved.
-  The stronger density route is reserved and component labelling is paused;
-  direct barriers are in that frontier.
+- [Five-connected six-chromatic augmentation](hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction):
+  the selected discovery campaign seeks `K7-2K2` in every such graph with
+  minimum degree at least six and order at least seven. This unproved
+  theorem would close all C19; its marked construction and direct barriers
+  are in the linked frontier.
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
-  the C19 construction-selection task retains the actual
+  the retained C19 formulation uses the actual
   two-triangle critical host with six-chromatic x/y deletion; the
   five-chromatic deletion branch and the four-chromatic exterior branch
   are closed. The six-root bipartite scheme is an optional
   sufficient route; direct models may allocate v and the triangle roots
   differently. The global allocation remains open.
+- [Quantitative star contractions](quantitative_star_contraction_frontier.md):
+  reserved reduction R and its cube-root double-logarithmic colouring
+  consequence remain unproved. The stronger density route is also reserved;
+  component labelling is paused. Direct barriers are in that frontier.
 - [Fully rooted K5 contractibility](k5_contractibility_frontier.md):
   an independent theorem target and alternative extraction step in C19.
   The global construction and the remaining C19 implications are open.

@@ -15,79 +15,83 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 1. **Exhaustive global obligation:** prove `HC_7`, that every finite
    `K_7`-minor-free graph is six-colourable, or obtain an independent theorem
    of reach and significance comparable to Norin--Totschnig.
-2. **Conditional routes under selection:** full Conjecture 19 in the
-   [actual critical host](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction),
-   and the direct one-colour reduction R in the
-   [quantitative frontier](active/quantitative_star_contraction_frontier.md).
-   Neither currently has a construction crossing its decisive gap. R's
-   recorded implication gives a cube-root double-logarithmic colouring
-   bound; both R and that improvement remain unproved. The stronger density
-   route is reserved. Other conditional routes remain in the active index.
-3. **Immediate laboratory:** the comparison round is complete; neither
-   construction qualified. Triangle-contraction colourings did not yield
-   one compatible exact model. A quantitative star reduction preserves
-   chromatic number, but has no proved total order loss at the required
-   scale. A global choice using criticality remains unproved.
-   Change the operation or prove that choice before renewing a campaign.
+2. **Selected conditional theorem:** every five-connected six-chromatic
+   graph of minimum degree at least six and order at least seven contains
+   `Q7=K7-2K2`, with independent missing edges. This
+   [augmentation target](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+   would close all Conjecture 19 by the audited triangle-quotient reduction.
+   It remains unproved; neither C19 nor its comparable significance is
+   assumed to follow from a partial construction. The actual critical-host
+   formulation and quantitative R remain alternatives.
+3. **Immediate laboratory:** discover a simultaneous branch-set exchange
+   on graphs satisfying the augmentation target's full hypotheses. Compare
+   an explicitly obstructed construction with a successful unrestricted
+   model in the same host. Use the resulting operation to attempt an
+   arbitrary-order proof, allowing all bags and selected roots to change.
+   Finite models are discovery evidence, not a case closure.
    The [bipartite frontier](active/bipartite_contractibility_frontier.md)
    retains the completed theorem and its application limits.
 
 ## Current work plan
 
-The goal remains HC7 or an independently substantiated NT-comparable theorem.
-Recent work improved diagnostics but closed no infinite case. The cube probe
-already has a simple K128 model, and the proposed low-degree R case is empty
-by the stronger neighbourhood inequality. Correct calculations, applicability
-to the actual hypotheses, and objective-level significance need separate
-checks. There is no justified leading construction yet.
+The next sustained campaign targets the augmentation theorem above. Unlike
+our hypothetical critical counterexample, its hypotheses admit concrete
+positive hosts on which competing constructions can be compared. It drops
+proper-minor criticality, so it may be harder than the original problem;
+its experimental accessibility is the reason for this choice, not evidence
+of a proof. A triangle through the degree-eight vertex in the actual C19
+host contracts to a graph satisfying all these hypotheses. A Q7 model in
+that quotient lifts through the fixed triangle preimage, covering both
+remaining exterior cases without a separate restoration argument.
 
-**Executed comparison; no qualifying construction.** The exact attempt
-compared colourings from all three contractions of a literal triangle.
-Their common host does not align the responses. The tested bichromatic
-repair permits shared vertices whose ownership remains unresolved; neither
-an exact model nor a smaller preserved class resulted. Both C19 exterior
-cases remain open. The whole host, all omitted vertices and all required
-contacts must enter the same construction; no fixed palette or rooted
-wheel is mandatory.
+**Compute to expose the missing operation.** Reuse existing model checkers
+and graph generators. Certify chromatic number, connectivity and minimum
+degree for each input. Separate already-covered hosts from those on which
+a candidate construction stalls: literal K6, universal-vertex and existing
+wheel certificates are controls. A failed search is not an absence proof.
+Find and independently check unrestricted Q7 models in the same hosts;
+record how ownership changes between those models. Minimise informative
+instances while retaining the hypotheses and both certificates. Do not
+spend the campaign collecting easy models or enumerating neighbourhoods
+without their exteriors.
 
-The quantitative attempt first tested single bipartite bags and odd cycles;
-both give at most a factor-two advantage over independent deletion.
-The subsequent low-neighbourhood-cover contraction is chromatic-preserving
-and strictly decreases order, but gives no sufficient total loss. The
-[explicit counterexample](barriers/quantitative_neighbourhood_cover_charge.md)
-refutes charging arbitrary maximum-leaf stars uniformly, even in the
-small-order all-minor independence class. It lacks R's critical chromatic
-gap and admits a better star at another centre. Thus globally selecting
-eligible stars remains possible, but unproved. No new result is promoted
-as closing R: the required loss is still `c n q^2/r^3`, against existing
-packing of order `nq/r^2`.
+The [forest-exchange calibration](active/hc7_forest_exchange_probe.py)
+checks the existing eighteen-vertex barrier host and two controls. One
+exchange merges two bags and splits another, making the two missing
+contacts disjoint. The host has a literal K6; this calibrates the search
+and is not evidence for the general theorem.
 
-Each builder must specify an actual graph operation and its first new
-inference. An independent challenger checks that inference against the
-recorded barriers, all available constraints and the required scale, then
-checks ownership and colouring; reductions also require strict decrease,
-class preservation and lift. Permit a substantive repair; do not extend
-a failed proposal into another catalogue of conditions.
-Nonvacuity checks mean consistency with proved constraints, not exhibiting
-a hypothetical counterexample to the target theorem.
+**Develop one shared construction.** A proof builder, computational
+challenger and independent reconstructor work with the same graph states,
+failed move and successful model; the coordinating agent develops the
+full implication and integrates repairs. Permit root reselection, expansion
+of every bag, simultaneous transfers and temporary loss of contacts. A
+model entirely away from a chosen root is also a valid exit. The squared-
+cycle and minimum-model barriers prohibit treating a fixed sixth-root
+extension or a locally optimal clique model as sufficient.
 
-Concentrate subsequent work only when a proposal proves a construction
-crossing a recorded obstruction, or a decreasing reduction with a preserved
-class and valid lift. If neither does, record that no mechanism has qualified
-and change the operations. Do not automatically switch routes or repeat the
-same argument with new thresholds. Component labelling, uniform allocation
-and the old exterior recolouring construction remain paused.
+Turn the observed exchange into a construction for arbitrary host order.
+If recursion requires a larger marked class, prove its initialisation,
+preservation, strict decrease and fixed-preimage lift; intermediates need
+not satisfy the original target if the enlarged class is valid. Each
+proposed move must specify the retained colouring information, roots and
+contacts. Independent review attacks its first new inference before any
+promotion. Exhausting a move set may motivate a larger exchange; it is
+neither a counterexample to the theorem nor a reason to end discovery at
+the first failed idea. Reassess when the experiments and proof attempts
+cease to distinguish mechanisms, rather than resetting after each lemma.
 
-The five-connected six-chromatic augmentation target (order at least seven)
-in the exact frontier would close all C19, but drops proper-minor criticality
-and has no established construction advantage. Keep it as an optional
-endpoint. The squared-cycle
-barrier already defeats arbitrary sixth-root extension, even in a nonplanar
-host. K5 contractibility, depth refinements and region theorems are not
-benchmark substitutes without a substantiated consequence. Completion still
-requires a full theorem, its audited implication chain and an honest
-significance assessment. No current evidence supports a high-likelihood
-promise of that breakthrough.
+**Reserved routes and standing.** The preceding comparison found no common
+triangle-colouring response and no R-scale contraction. The quantitative
+low-neighbourhood-cover operation preserves chromatic number, but neither
+eligible-centre selection nor sufficient accumulated loss is proved. Its
+[maximum-star charge barrier](barriers/quantitative_neighbourhood_cover_charge.md)
+leaves favourable global choice possible. Retain R and the stronger density
+target in their [frontier](active/quantitative_star_contraction_frontier.md);
+component labelling, uniform allocation and the old exterior recolouring
+mechanism remain paused. No full theorem or high likelihood of success is
+established by this plan. Completion requires the proof, its audited
+implication chain and a substantiated comparison with the user's benchmark.
 
 **Earlier exact campaign, `a94a809` through `67f528a`.**
 The [four-chromatic exterior theorem](results/hc7_two_triangle_exterior_colour_bound.md)

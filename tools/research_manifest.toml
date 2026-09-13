@@ -23812,6 +23812,38 @@ note = "The proved reductions remain valid; a further path-plus-edge to triangle
 
 
 [[claims]]
+id = "hc7.target.five_connected_six_chromatic_augmentation"
+title = "Five-connected six-chromatic augmentation"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "7.5 A neighbourhood contact construction"
+active = false
+expected_source_sha256 = "4d6240d51c68e25816372cdfdefd0fa3cceb03d5afdd9edb4fff4402335e5931"
+scope = "every finite simple five-connected graph of chromatic number six, minimum degree at least six and order at least seven"
+allowed_exits = ["an unrestricted K7-2K2 minor, with independent missing edges"]
+conclusions = ["if proved, the audited triangle quotient and fixed-preimage lift close all Conjecture 19"]
+does_not_prove = ["existence of the required minor", "Conjecture 21 or HC7", "NT-comparable significance", "preservation of the target hypotheses under arbitrary contractions"]
+
+[[relations]]
+source = "hc7.target.five_connected_six_chromatic_augmentation"
+target = "hc7.companion.four_connected_chromatic_minor"
+kind = "related_to"
+note = "The lower-order theorem closes the universal-vertex case; its unrooted model does not supply the six simultaneous neighbour contacts in general."
+
+[[relations]]
+source = "hc7.target.five_connected_six_chromatic_augmentation"
+target = "hc7.barrier.rooted_k5_six_root_extension"
+kind = "guarded_by"
+note = "Arbitrary sixth-root extension is false; the barrier is only four-chromatic and does not refute this target."
+
+[[relations]]
+source = "hc7.target.five_connected_six_chromatic_augmentation"
+target = "hc7.barrier.minimum_clique_model_extension"
+kind = "guarded_by"
+note = "A construction may need to enlarge or replace an initial clique model; minimum size and balanced bags do not force a direct split."
+
+[[claims]]
 id = "hc7.companion.four_connected_chromatic_minor"
 title = "Six-vertex minors in four-connected graphs"
 kind = "theorem"
@@ -24527,6 +24559,13 @@ path = "active/quantitative_density_contraction_probe.py"
 sha256 = "434077d263a66781ce249220e7a14686e9795c8d905c7d4019b2b2613b9f32b2"
 timeout = 30
 expected_stdout = ["PASS: 8 finite cases; 6 verified models; 2 negative controls."]
+
+[[verifiers]]
+id = "forest-exchange-probe"
+path = "active/hc7_forest_exchange_probe.py"
+sha256 = "d65f38dc62d320ed464d66a7e72a832e1c9a69f5fc5051b0c3cdf4ad321a7aeb"
+timeout = 30
+expected_stdout = ["PASS: one-exchange balanced18 Q7 model and K7/square-C7 controls."]
 
 [[verifiers]]
 id = "component-label-probe"
