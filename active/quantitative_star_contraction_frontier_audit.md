@@ -5,7 +5,7 @@ Initial review: 9 September 2026; latest scoped review: 13 September 2026.
 This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`c61699a81e67d35ccda63bbcfbb40ab8c1cad1acd83e45f60be5b0c9a16aa8dc`.
+`3763dda793cedb1dc54e9ee142291051d388da47340300bf99eea9ce39d6e2e9`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -356,3 +356,60 @@ vertices therefore gives original disjoint independent-leaf stars. The
 bound `D<=L+|E|` and averaging prove the factor-two reduction. The argument
 does not bound the exception set's chromatic number or cover arbitrary
 intervening deletions. No improved packing follows from the accounting.
+
+## Chromatic-preserving construction selection
+
+**GREEN for the local reduction and nonclosure statements; R is unproved.**
+Separate scoped internal review by operation-challenger, 13 September 2026,
+of source `3763dda793cedb1dc54e9ee142291051d388da47340300bf99eea9ce39d6e2e9`.
+Removing its final section, including the preceding blank line, recovers
+`c61699a81e67d35ccda63bbcfbb40ab8c1cad1acd83e45f60be5b0c9a16aa8dc`;
+the reviewer checked this byte hash. The preceding mathematics is unchanged.
+
+For nonisolated u, the maximum independent neighbour set is nonempty.
+Supposing its star quotient has a `(p-1)`-colouring gives a colouring of
+H-u with the merged colour on its neighbourhood exactly at S. Since
+`chi(H)=p`, every other colour occurs there. The low-tau inequality gives
+at least `2r-2` singleton neighbour colours; `p>=2r` allows that many.
+Disconnected opposite-root Kempe components would permit a colouring of H,
+so the required paths exist. Their colour classes define a valid bipartite
+scheme avoiding u and S. Rooted extraction, the stated matching contractions
+and the original singleton u give K_(r+1). No minor-criticality of H is
+assumed in this contradiction.
+
+In the application, `q>=2r+1` ensures `p=q-1>=2r`. Deleting a nonempty
+independent set leaves exactly p colours. Every subsequent graph is a
+proper minor of the original G, so its chromatic upper bound remains p;
+the local lemma supplies the lower bound after each permitted contraction.
+Isolated vertices may be deleted. Order strictly decreases, the all-minor
+independence condition persists, and composition of disjoint connected
+preimages gives the claimed lift. This licenses an iteration, but proves
+no lower bound on its total order loss or on the availability of another
+eligible centre in the terminal graph.
+
+For an untouched vertex, deleting k neighbours lowers degree by k and
+independence by at most k. Contracting a bag meeting k neighbours lowers
+degree by k-1 and independence by at most k. An edge among those neighbours
+improves the latter bound to k-1. These establish every stated tau-change
+bound, including the unchanged case k=0. Maximality of the star leaves
+excludes positive drift at untouched neighbours of the centre. The new
+[counterexample and its audit](../barriers/quantitative_neighbourhood_cover_charge_audit.md)
+show why this local restriction does not give the proposed uniform charge.
+
+For a globally largest independent neighbourhood of size M, the induced
+independence hypothesis gives `d(z)<=rM` at every vertex. The union of
+neighbourhoods of its M leaves has size at most `rM^2`, proving the stated
+bound on positive singleton drift. A star maximised only over eligible
+low-tau centres does not supply that degree bound elsewhere. The source
+correctly leaves chromatic eligibility and the stronger charge unproved.
+
+The bipartite-bag lift uses its quotient colour on one shore and one fresh
+colour on the other; outside neighbours avoid the quotient colour. The
+larger independent shore gives a deletion of at least half the contraction
+loss. An odd cycle of order `2k+1` similarly supplies an independent k-set.
+If its quotient has a `(q-2)`-colouring, a cycle vertex missing a nonmerged
+exterior colour could use it while the remaining induced path uses the
+merged colour and one fresh colour. This would `(q-1)`-colour G, proving
+the stated saturation. It constructs no connected exterior allocation.
+None of these checks proves R, an improved colouring bound or completion
+of the user's mathematical objective.

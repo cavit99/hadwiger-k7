@@ -621,3 +621,63 @@ binary labels 0,...,7, the pairs 01,26,37,45 form a K4 model. Taking each
 pair separately at each of the 32 clone indices gives 128 disjoint
 two-vertex bags with every contact. The recorded K65 is a valid certificate,
 but supplies little evidence for universal extraction.
+
+## Construction selection: preserving chromatic number
+
+**Written deduction; R remains unproved.** Let r>=2 and p>=2r be integers,
+let `chi(H)=p`, `h(H)<=r`, and let u be nonisolated. Put
+`tau_H(u)=d_H(u)-alpha(H[N_H(u)])`. If
+`tau_H(u)<=2p-2r-2`, then contracting the star B consisting of u and a
+maximum independent set S in its neighbourhood retains at least p colours.
+Indeed, a `(p-1)`-colouring of H/B would give at least 2r-2 singleton
+neighbour colours by the preceding neighbourhood argument. Its rooted
+bipartite scheme and the original u would give K_(r+1), a contradiction.
+The star is nontrivial because S is nonempty. Isolated vertices can first
+be deleted without changing p.
+
+Start with G as in R with `q>=2r+1`, delete a nonempty independent set I,
+and put p=q-1.
+Then `chi(G-I)=p`: fewer colours would extend to G with one fresh colour,
+and proper-minor colourability supplies the upper bound. While the displayed
+low-tau condition holds at a nonisolated vertex, its star contraction
+retains exactly p colours, since every minor of G-I is p-colourable.
+Delete isolated vertices as necessary. Every operation strictly decreases
+order; the independence hypothesis persists and fixed connected preimages
+lift all further minors. This is a valid reduction to a state with no such
+vertex, not a lower bound on the accumulated order loss required by R.
+
+**Exact local changes and failed charge.** Induced vertex deletion cannot
+increase tau at a surviving vertex. For a connected bag B avoiding u, put
+`k=|N_H(u) intersect B|`. If k is positive, contraction lowers its degree
+by k-1 and can lower neighbourhood independence by at most k, so tau rises
+by at most one; if k=0 it is unchanged. If `H[N_H(u) intersect B]` has an
+edge, a maximum independent witness loses at most k-1 vertices, so tau
+cannot rise. For a star with maximal independent leaves S, every untouched
+neighbour of its centre sees both the centre and a leaf. Therefore positive
+changes occur only at neighbours of S outside the centre's closed
+neighbourhood.
+
+The [explicit maximum-star counterexample](../barriers/quantitative_neighbourhood_cover_charge.md)
+shows that this restriction does not bound the total change by a constant
+times r times the order loss, even with the order cap and all-minor
+independence bound. The example has a much better star at another centre
+and lacks the required chromatic gap. It refutes a uniform charge for
+arbitrary maximum-leaf stars, not an existential favourable choice in R.
+
+Under R's inherited independence bound, choosing S globally largest gives
+only a quadratic bound: every neighbourhood has independence number at most
+`M=|S|`, hence degree at most rM. At most `r M^2` untouched vertices can
+increase tau. That star need
+not have a low-tau centre or preserve p colours. Neither a stronger charge
+nor an exchange selecting a chromatic-preserving large star is proved.
+
+**Other tested operations; no quantitative gain.** Contracting a connected
+induced bipartite bag loses at most one colour, but deleting its larger
+independent shore retains q-1 colours and achieves at least half its order
+loss. An induced odd cycle of length 2k+1 likewise has an independent
+k-set, compared with contraction loss 2k. If its quotient is only
+`(q-2)`-colourable, every cycle vertex must meet every nonmerged colour:
+otherwise use a missed colour there, and colour the remaining path with
+the merged colour and one fresh colour to `(q-1)`-colour G. This saturation
+does not supply connected exterior bags or a larger deletion. Neither
+proposal, nor the low-tau iteration, has qualified for a renewed R campaign.

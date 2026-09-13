@@ -23,13 +23,13 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    recorded implication gives a cube-root double-logarithmic colouring
    bound; both R and that improvement remain unproved. The stronger density
    route is reserved. Other conditional routes remain in the active index.
-3. **Immediate laboratory:** one construction-selection round using the
-   full critical hypotheses. The exact proposal must produce compatible
-   colouring or minor data in the same host; the quantitative proposal must
-   prove additional order loss while retaining q-1 colours. Check each
-   proposal against all established constraints before investing in it.
-   An unproved sufficient statement or favourable finite example does not
-   select a campaign. The [bipartite frontier](active/bipartite_contractibility_frontier.md)
+3. **Immediate laboratory:** the comparison round is complete; neither
+   construction qualified. Triangle-contraction colourings did not yield
+   one compatible exact model. A quantitative star reduction preserves
+   chromatic number, but has no proved total order loss at the required
+   scale. A global choice using criticality remains unproved.
+   Change the operation or prove that choice before renewing a campaign.
+   The [bipartite frontier](active/bipartite_contractibility_frontier.md)
    retains the completed theorem and its application limits.
 
 ## Current work plan
@@ -41,20 +41,26 @@ by the stronger neighbourhood inequality. Correct calculations, applicability
 to the actual hypotheses, and objective-level significance need separate
 checks. There is no justified leading construction yet.
 
-The next discovery round compares two proposals, before renewing either
-campaign:
+**Executed comparison; no qualifying construction.** The exact attempt
+compared colourings from all three contractions of a literal triangle.
+Their common host does not align the responses. The tested bichromatic
+repair permits shared vertices whose ownership remains unresolved; neither
+an exact model nor a smaller preserved class resulted. Both C19 exterior
+cases remain open. The whole host, all omitted vertices and all required
+contacts must enter the same construction; no fixed palette or rooted
+wheel is mandatory.
 
-1. **Exact construction:** work in the actual seven-contraction-critical
-   C19 host, retaining every proper-minor six-colouring constraint. Seek a
-   six-colouring or an unrestricted `Q=K7-2K2` model. The whole exterior and
-   every omitted vertex must enter one response. Both remaining exterior
-   chromatic cases belong to the selected theorem; wheels, singleton bags
-   and a fixed exterior palette are optional tools, not required outputs.
-2. **Quantitative construction:** work under all of R's hypotheses. Derive
-   a minor retaining q-1 colours and losing `c n q^2/r^3` vertices. Existing
-   star packing supplies only `Omega(nq/r^2)`: the proposal must account for
-   the missing factor q/r in the same construction. Criticalisation, degree
-   mass and centre incidences alone do not establish it.
+The quantitative attempt first tested single bipartite bags and odd cycles;
+both give at most a factor-two advantage over independent deletion.
+The subsequent low-neighbourhood-cover contraction is chromatic-preserving
+and strictly decreases order, but gives no sufficient total loss. The
+[explicit counterexample](barriers/quantitative_neighbourhood_cover_charge.md)
+refutes charging arbitrary maximum-leaf stars uniformly, even in the
+small-order all-minor independence class. It lacks R's critical chromatic
+gap and admits a better star at another centre. Thus globally selecting
+eligible stars remains possible, but unproved. No new result is promoted
+as closing R: the required loss is still `c n q^2/r^3`, against existing
+packing of order `nq/r^2`.
 
 Each builder must specify an actual graph operation and its first new
 inference. An independent challenger checks that inference against the

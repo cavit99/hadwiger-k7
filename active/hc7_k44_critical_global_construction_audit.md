@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`dd78c87a954d03c1579dec906210851155a0bb6a2977e1fc8a89594eb5804bcc`.
+`4d6240d51c68e25816372cdfdefd0fa3cceb03d5afdd9edb4fff4402335e5931`.
 
 ## Preserved scope and exact provenance
 
@@ -1646,3 +1646,37 @@ assert that each particular hypothesis is necessary. Imposing the response
 form on an arbitrary proper-minor colouring remains unsupported. No whole
 five-chromatic exterior closure, Conjecture 19, HC7 or comparable theorem
 is established by this addition.
+
+## Triangle-response comparison
+
+**Scoped verdict: GREEN**, 13 September 2026, for the twenty-line insertion
+at whole-frontier SHA-256
+`4d6240d51c68e25816372cdfdefd0fa3cceb03d5afdd9edb4fff4402335e5931`.
+Removing precisely that insertion, including its separator blank, recovers
+the preceding source hash `dd78c87a954d03c1579dec906210851155a0bb6a2977e1fc8a89594eb5804bcc`
+byte for byte. Only the insertion is newly reviewed; the preceding audit
+content is preserved apart from the current header pin.
+
+Expanding the triangle quotient gives an all-equal colouring in the common
+graph `H0=G-E(T)`. Expanding each edge quotient gives its equal endpoint
+pair, with the third vertex different because its two incident triangle
+edges survive that contraction. A rainbow T colouring of H0 would colour
+G with six colours, so none exists. These are distinct existential
+responses; their compatibility is not inferred.
+
+The linked critical-triangle source and adjacent audit have hashes
+`21b5fd5c523efb673ca11b0e604e0e81d173a5dbda677baa235efd8924d4b865`
+and `c425b7eb9222349782b56625ebc0b9046ee811000f7921b88cac3117f6e2cf3e`.
+Their pins match. Theorem 3.1 retains Kempe-separated response families
+on a two-edge deletion; the insertion cites this as a caution, without
+applying that theorem to H0's three-edge deletion or asserting separation.
+
+In the stated locked-component case, each of the five other colours must
+appear among v's six neighbours outside T. At least four therefore appear
+once. This count neither supplies universal colourfulness nor prohibits
+different bichromatic components from sharing alpha vertices. Recolouring
+v alone still leaves the other two triangle vertices equal. Connectivity
+does not establish disjoint ownership for the proposed simultaneous model.
+The insertion records the first unsupported constructions and asserts no
+counterexample under the actual critical-host hypotheses, smaller induction
+class, complete case closure or objective-level theorem.

@@ -1844,6 +1844,26 @@ In particular this applies to `T={v,x,y}`. A minor found in the quotient
 has the fixed connected preimage T, but splitting its owning bag into
 two compatible bags is an additional construction, not an automatic lift.
 
+**Triangle-response comparison; recorded route nonclosure.** In
+`H0=G-E(T)`, a six-colouring of `G/T` gives an all-equal T response,
+while contracting each of its three edges gives the corresponding
+two-block response. No six-colouring of H0 makes T rainbow. The first
+unsupported inference is aligning these operation-specific responses;
+the [critical-triangle transition](../results/hc7_joint_persistent_incident_colour_fork.md)
+already retains the possibility of distinct Kempe classes.
+
+Starting at an all-equal response of colour alpha, a proposed alternative
+uses the case where, for each other colour, its bichromatic component
+through v contains all of T. This does not supply a rooted scheme:
+different components can reuse alpha-coloured vertices assigned to
+different roots. Degree eight gives four such components with unique
+neighbours at v, but does not make those neighbours universally rainbow
+in the exterior. Freeing a colour at v still leaves the other triangle
+edge to restore. Seven-connectivity supplies detours without the required
+simultaneous ownership. No terminal model or reduction preserving a
+smaller induction class was obtained; the actual critical-host target
+remains open.
+
 **Chromatic augmentation target; unproved.** Every five-connected
 six-chromatic graph of order at least seven contains Q. This would close
 C19 by the preceding quotient, without splitting T. The actual quotient
