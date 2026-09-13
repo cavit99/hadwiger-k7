@@ -74,7 +74,7 @@ links their proofs, audits and exact scopes.
 | [Regions full to one terminal set force a paired clique](results/paired_clique_one_sided_regions.md) | Written proof with a separate internal audit, for arbitrary target size and host order. Exact linkage and region hypotheses are in the [results map](results/README.md); no Conjecture 19 consequence is established. |
 | [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
 | [Four prescribed roots in a three-connected graph](results/rooted_k4minus_four_roots.md) | Elementary unbounded proof, with a [GREEN audit](results/rooted_k4minus_four_roots_audit.md), of a rooted `K_4^-` minor at any four distinct roots.  The missing quotient edge is not prescribed. |
-| [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Written unbounded host reduction with one deterministic finite local lemma and [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md).  It upgrades the current critical-host count to `n_8>=27+tau`. |
+| [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Written unbounded host reduction with explicit finite quotient inputs and [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md).  It upgrades the current critical-host count to `n_8>=27+tau`. |
 | [Three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md) | Computation-free written proof with a [GREEN audit](results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md).  In the critical `K_7^-` host, every seven-vertex cut therefore leaves exactly two components. |
 
 The preserved critical-host chain now gives
@@ -91,43 +91,15 @@ or `HC_7`.
 
 ## Manuscripts
 
-The primary manuscript candidate is the five-page DRAFT
-[A matroid proof of bipartite contractibility](paper/bipartite-contractibility/main.tex),
-with [PDF](paper/bipartite-contractibility/main.pdf) and
-[internal manuscript audit](paper/bipartite-contractibility/main_audit.md).
-It proves the universal rooted theorem and its bipartite-flow corollary.
-It supplies an independent proof of an already published broader flow
-assertion whose prefix argument has explicit gaps; it makes no priority
-claim or claim to prove Hadwiger's conjecture.
+The [manuscript collection](paper/README.md) separates current drafts,
+preserved precursors and further theorem packages, with links to sources,
+PDFs, exact-hash internal audits and literature assessments.
 
-The earlier DRAFT
-[Even subdivisions are contractible](paper/even-subdivision-contractibility/main.tex)
-is preserved unchanged. It gives the even-subdivision proof and the
-degree-three extension with one shore's roots preserved.
-
-The earlier four-page DRAFT
-[Every `K_{2,n}` is contractible](paper/k2n-contractibility/main.pdf), with
-[source](paper/k2n-contractibility/main.tex), a
-[hash-pinned GREEN internal audit](paper/k2n-contractibility/main_audit.md)
-and a
-[qualified-GREEN citation and novelty review](paper/k2n-contractibility/citation_novelty_review.md).
-It is computation-free and independent of the Hadwiger programme.
-
-The compact `K_7^-` paper is the clearly marked eight-page DRAFT
-[Minimum degree eight in `K_7^-`-minor-free contraction-critical
-graphs](paper/k7minus-low-degree/main.pdf), with
-[source](paper/k7minus-low-degree/main.tex), a
-[hash-pinned internal audit](paper/k7minus-low-degree/main_audit.md) and an
-[internal citation and novelty review](paper/k7minus-low-degree/citation_novelty_review.md).
-It is a frozen, computation-free snapshot: it proves the linked-cliques
-theorem, excludes degree seven and obtains the baseline bound
-`n_8>=25+tau`.  The later `27+tau` strengthening above is not incorporated
-in that draft.
-
-The former rooted-web manuscript is retained as a clearly labelled
-[historical DRAFT](archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf).
-Neither `K_7^-` manuscript proves Conjecture 21 or `HC_7`.  See the
-[manuscript map](paper/README.md) for the exact distinction.
+The editorial order is universal bipartite contractibility, paired clique
+minors from connected regions, then the structural critical-host paper.
+The earlier even-subdivision and K2,n arguments remain available as
+precursors. Current revision status is recorded in the
+[research ledger](RESEARCH_LEDGER.md#manuscript-status).
 
 ## Repository map
 

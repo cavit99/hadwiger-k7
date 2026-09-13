@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 12 September 2026. This is the sole authority for current
+**Last updated:** 13 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjectures
@@ -200,23 +200,60 @@ critical-host results. It is navigation, not a second status ledger.
 
 ## Manuscript status
 
-The five-page [bipartite manuscript](paper/bipartite-contractibility/main.pdf)
-is the current DRAFT, with its [source](paper/bipartite-contractibility/main.tex)
-and [internal audit](paper/bipartite-contractibility/main_audit.md).
+**Collection revised, 13 September 2026.** The
+[manuscript map](paper/README.md) separates three current drafts in editorial
+order, preserved precursors and further theorem packages. This packages
+existing proved work; it does not advance the global completion claim.
 
-**Revision complete, 8 September 2026:** *A matroid proof of bipartite
-contractibility* incorporates the [scope review](paper/bipartite-contractibility/citation_novelty_review.md),
-states the property `(*)` equivalence and distinguishes the intended BLR
-assertion from later specialised bypasses. The shared-label quotient path
-and exact host-order decrease are explicit. The five-page British-English
-draft has updated exact-hash internal audits and a checked PDF; the
-originating theorem source is unchanged. Historical priority and external
-specialist review remain open. No author contact is authorized.
+1. **Primary manuscript:** [A matroid proof of bipartite contractibility](paper/bipartite-contractibility/main.pdf),
+   with [source](paper/bipartite-contractibility/main.tex) and an updated
+   [separate GREEN internal audit](paper/bipartite-contractibility/main_audit.md).
+   The seven-page draft adds the sharp intrinsic-radius-two theorem for
+   paths of at most three edges, its invariant proof and six-vertex
+   sharpness example. It explicitly excludes the general BLR Lemma 3.13
+   depth assertion. The longer invariant obstruction remains outside the
+   paper. Its earlier [scope review](paper/bipartite-contractibility/citation_novelty_review.md)
+   retains its dated provenance; historical priority is still unresolved.
+2. **Selected next standalone package:** [Paired clique minors from connected regions](paper/paired-clique-regions/main.pdf),
+   with [source](paper/paired-clique-regions/main.tex) and a
+   [separate GREEN internal audit](paper/paired-clique-regions/main_audit.md).
+   The six-page draft proves the one-sided theorem, derives the two-sided
+   linkage equivalence and includes the sharp region requirement and
+   polynomial construction. The [focused primary-source assessment](paper/paired-clique-regions/citation_novelty_review.md)
+   identifies the rainbow-clique-minor connection and finds no direct
+   subsumption by the inspected statements; originality and priority
+   remain unresolved.
+3. **Structural manuscript:** [Degree, defect and separators in critical graphs](paper/k7minus-low-degree/main.pdf),
+   with [source](paper/k7minus-low-degree/main.tex),
+   [manuscript audit](paper/k7minus-low-degree/main_audit.md), and
+   [dependencies and finite reproduction](paper/k7minus-low-degree/README.md).
+   The 17-page draft incorporates the computation-free bound `n_8>=26+tau` and incident
+   codegree-three conclusion; the broader theorem `9n-2m>=20+r` for
+   r-connected, `K_7^-`-minor-free graphs with `r>=6` and `m>=4n`, giving
+   `n_8>=27+tau`; and the computation-free two-component seven-cut closure.
+   The broader theorem explicitly depends on both the nine- and ten-vertex
+   quotient checks. Its abstract, proofs, bibliography and audit are revised
+   together. These remain necessary conditions, not a proof of Conjecture 21.
 
-The [manuscript map](paper/README.md) distinguishes preserved earlier drafts.
-The low-degree `K_7^-` manuscript remains a frozen snapshot with
-`n_8>=25+tau`; the later audited repository bound is `n_8>=27+tau`.
-Existing theorem and manuscript sources remain at their audited revisions.
+The [even-subdivision](paper/even-subdivision-contractibility/README.md)
+and [K2,n](paper/k2n-contractibility/README.md) manuscripts are preserved
+unchanged as precursors, not separate current publication candidates.
+The original low-degree `25+tau` snapshot and its audit remain in Git
+at `f7b52aff0dfb2578bc30ade68f75df12671cf966`; its old verdict is not an
+audit of the strengthened manuscript. All three current PDFs have been
+rebuilt and visually checked; their audits identify exact source revisions.
+An academic language edit covers all three current manuscripts. The structural
+draft is shortened from 19 to 17 pages by consolidating intermediate results
+and contraction accounting, with finite-profile data retained in its
+reproducibility note. Its requested mathematical conclusions are unchanged.
+
+The wheel/colouring package remains the next alternative, with its complete
+four-connected `K_6-2K_2` exclusion theorem and its own originality
+assessment still to be done. The attachment and canonical-test
+counterexamples are reserved for a separate possible note. The
+[collection map](paper/README.md#further-theorem-packages) links both packages.
+No external specialist review, publication priority or NT-equivalence is
+established by these manuscript revisions.
 
 ## Preserved conditional routes and historical check
 

@@ -1,0 +1,209 @@
+\section{Connectivity and defect}\label{sec:defect}
+
+\begin{lemma}\label{lem:eight-complement}
+Every eight-vertex graph $J$ of minimum degree at least five contains a
+$K_6^{-}$ minor.
+\end{lemma}
+
+\begin{proof}
+The complement of $J$ has maximum degree at most two.  Extend it to an
+edge-maximal graph $F$ with that property.  Every component of $F$ is a
+cycle, except possibly one component which is $K_1$ or $K_2$: any longer
+path could be closed, and deficient vertices in two components could be
+joined.  The seven possibilities for $F$ and explicit models in its
+complement are displayed below.  Cycle labels are consecutive; a string
+such as $03$ denotes the set $\{0,3\}$.
+\[
+\begin{array}{c|c|c}
+F&\text{six branch sets}&\text{only missing pair}\\\hline
+C_8(0,\ldots,7)&03,15,2,4,6,7&6:7\\
+C_5(0,\ldots,4)\dot\cup C_3(5,6,7)&05,1,26,3,4,7&3:4\\
+C_4(0,\ldots,3)\dot\cup C_4(4,\ldots,7)&04,1,25,3,6,7&6:7\\
+C_7(0,\ldots,6)\dot\cup K_1(7)&024,1,3,5,6,7&5:6\\
+C_4(0,\ldots,3)\dot\cup C_3(4,5,6)\dot\cup K_1(7)
+ &024,1,3,5,6,7&5:6\\
+C_6(0,\ldots,5)\dot\cup K_2(6,7)&024,1,3,5,6,7&6:7\\
+C_3(0,1,2)\dot\cup C_3(3,4,5)\dot\cup K_2(6,7)
+ &03,14,2,5,6,7&6:7
+\end{array}
+\]
+Each nonsingleton is connected in $\overline F$, and all interbag
+adjacencies except the indicated one are present.  Since $\overline F$
+is a spanning subgraph of $J$, each displayed model also lies in $J$.
+\end{proof}
+
+Theorem~\ref{thm:defect-ladder} needs an edge of codegree at most three
+without a colouring hypothesis.  Contracting exterior components reduces
+the degree-seven and degree-eight cases to the following finite lemma.
+
+\begin{lemma}[Computer-assisted finite lemma]\label{lem:finite-quotients}
+For a graph $J$ and $A\subseteq V(J)$, let $Q(J,A)$ be obtained by adding
+nonadjacent vertices $v,c$, making $v$ complete to $J$ and giving $c$
+precisely the neighbourhood $A$.
+\begin{enumerate}
+\item If $|V(J)|=7$, $\delta(J)\geq4$ and $|A|\geq6$, then
+$K_7^{-}\minor Q(J,A)$.
+\item Fix a labelled graph $J$ with $|V(J)|=8$, $\delta(J)\geq4$ and
+$K_6^{-}\not\minor J$.  At most one set $A\subseteq V(J)$ with $|A|\geq6$
+makes $Q(J,A)$ $K_7^{-}$-minor-free.  If such a set exists,
+$V(J)\setminus A$ consists of two adjacent vertices of degree four in $J$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}[Finite verification and its scope]
+For part (1), $\overline J$ has maximum degree two, hence is a union of
+paths and cycles.  Enumerating the multisets of such components with total
+order seven gives 29 types.  For each, check the full attachment and its
+seven possible single omissions.  Each of the $29\cdot8=232$ nine-vertex
+quotients has a seven-bag model.  The checker enumerates all 750 partitions
+of vertex subsets into seven nonempty bags, and tests connectivity and all
+interbag adjacencies.  A seven-bag model on nine vertices uses seven, eight
+or nine vertices, so this search is exhaustive.
+
+For part (2), adjoin a vertex with each possible neighbourhood to each of
+the 1,044 unlabelled seven-vertex graphs in the NetworkX graph atlas.
+Every eight-vertex graph occurs.  The minimum-degree filter and exact
+isomorphism testing leave 424 classes.
+Of these, 55 have no $K_6^{-}$ minor.  Checking all missed sets of order
+zero, one or two gives $55(1+8+28)=2,035$ exterior profiles.  Exactly 2,031
+have certified $K_7^{-}$ models.  Each of the four remaining profiles
+has the uniqueness and degree properties in part (2).
+
+Here the minor engine starts with singleton bags and recursively either
+deletes a bag or merges two touching bags.  These operations preserve
+disjoint connected bags and generate every minor model by contracting
+spanning trees and deleting unused vertices.  At six or seven bags it
+accepts precisely when at most one pair is nonadjacent.  Every positive
+certificate is separately checked for disjointness, connectivity and
+interbag adjacencies.  The implementations test known positive and negative
+instances; a separate internal audit also checked the four negative
+quotients by all 11,880 seven-bag partitions of their vertex subsets.
+
+The accompanying reproducibility note, \texttt{README.md}, records the
+four profiles, executable inputs and SHA-256 certificate digests.
+Part (1) uses only the Python standard library; part (2) also uses
+NetworkX's atlas and exact isomorphism implementation.  The reductions
+below impose no bound on the order of an exterior component or of $G$.
+\end{proof}
+
+\begin{theorem}\label{thm:six-connected-eight}
+In every six-connected $K_7^{-}$-minor-free graph, each degree-eight vertex
+is incident with an edge of codegree at most three.
+\end{theorem}
+
+\begin{proof}
+Let $v$ have degree eight and put $J=G[N(v)]$.  Suppose every incident
+codegree is at least four.  Then $\delta(J)\geq4$, and $J$ has no
+$K_6^{-}$ minor because adjoining $\{v\}$ would give the forbidden
+minor.  If $G-N[v]$ is empty, minimum degree six in $G$ gives
+$\delta(J)\geq5$, contradicting Lemma~\ref{lem:eight-complement}.
+
+Every component $C$ of $G-N[v]$ has at least six neighbours in $N(v)$,
+since its neighbourhood separates it from $v$.  Contracting $C$ to $c$
+and deleting the other exterior components gives exactly
+$Q(J,N_G(C))$.  Lemma~\ref{lem:finite-quotients}(2) therefore applies to
+every exterior component.  For the fixed labelled graph $J$, all
+components must miss the same unique pair $a,b$.  Neither $a$ nor $b$
+has an exterior neighbour, so both have degree $1+4=5$ in $G$,
+contradicting six-connectivity.
+\end{proof}
+
+The degree-six case adapts a computation-free argument of Norin and
+Totschnig.  We verify the hypotheses under $K_7^{-}$ exclusion.
+
+\begin{lemma}[Degree-six disc bound]\label{lem:degree-six}
+Let $H$ be a five-connected $K_7^{-}$-minor-free graph on at least nine
+vertices.  If every edge has codegree at least four and some vertex has
+degree six, then $|E(H)|\leq4|V(H)|-9$.
+\end{lemma}
+
+\begin{proof}
+Let $v$ have degree six.  Since $d_{H[N(v)]}(x)=c(vx)\geq4$, label
+$N(v)=\{u_1,w_1,u_2,w_2,u_3,w_3\}$ so that all its possible nonedges
+are $u_iw_i$.  Two disjoint paths joining two distinct displayed pairs, with open
+interiors outside $N[v]$,
+would fill two of the three missing edges after contraction.  Together
+with $v$ they give a $K_7^{-}$ model.  We call this the two-pair
+obstruction; a present pair-edge may serve as one of the paths.
+
+All three displayed pair-edges are absent.  Otherwise an exterior
+component, with at least five neighbours in $N(v)$ by five-connectivity,
+joins a second pair and violates the two-pair obstruction.  Moreover,
+some pair, say $u_1,w_1$, has no exterior common neighbour.  Otherwise
+choose a common neighbour for each pair.  Two distinct choices contradict
+the obstruction.  If all choices coincide at $x$, order at least nine
+leaves a component outside $N[v]\cup\{x\}$.  Its boundary has at least
+five vertices, at least four of which belong to $N(v)$.  It therefore
+joins one pair disjointly from a second pair's path through $x$, again a
+contradiction.
+
+We now use the two-paths theorem in the form of
+\cite[Theorem~13]{NorinTotschnig2025}.  The next two applications are the
+degree-six argument in \cite[Claims~3.12--3.15]{NorinTotschnig2025}; we
+record the separator and density hypotheses needed for them.  There is
+no nontrivial separation $(A,B)$ of order five with $N[v]\subseteq A$.
+Indeed, five-connectivity and Menger's theorem provide five disjoint paths
+in $H[A]$ from five distinct members of $N(v)$ to the five boundary
+vertices, with interiors avoiding $N[v]$.  These five members contain
+two complete matching pairs.  Temporarily label their boundary ends
+$s_1,t_1$ and $s_2,t_2$, and label the fifth end $x$.  Apply the two-paths
+theorem in $H[B]-x$ to the order $s_1,s_2,t_1,t_2$.  A crossing violates
+the two-pair obstruction.  A separation outcome lifts after restoring
+$x$ to a cut of order at most four in $H$.  In the remaining outcome the
+graph embeds in a disc with the four terminals on its boundary.  An edge
+with an end in $B\setminus A$ has at most two common neighbours in that
+disc: three would enclose a vertex behind a triangle, which together
+with $x$ gives a cut of order at most four in $H$.  Restoring $x$ gives
+codegree at most three, a contradiction.
+
+Apply the same theorem to $H'=H-\{v,u_1,w_1\}$, with terminal order
+$u_2,u_3,w_2,w_3$.  A crossing again violates the two-pair obstruction.
+A separating outcome lifts, after restoring $u_1,w_1$, to a separation
+of order at most five with $N[v]$ on one side; five-connectivity and the
+preceding paragraph exclude it.  Thus $H'$ embeds in a disc with the
+four terminals on its boundary.  Put $n'=|V(H')|$.  Then
+$|E(H')|\leq3n'-7$.  Each of its vertices outside $N[v]$ sees at most
+one of $\{v,u_1,w_1\}$; the four remaining neighbourhood vertices see
+all three, and the deleted triple induces two edges.  Hence
+\[
+ |E(H)|\leq(3n'-7)+(n'-4)+12+2=4n'+3=4|V(H)|-9.
+\]
+The forbidden-minor hypothesis was used only for the displayed
+$K_7^{-}$ two-pair model.  Neither edge-maximality nor the stronger
+$K_7^{\vee}$ exclusion is used in this argument.
+\end{proof}
+
+\begin{proposition}\label{prop:density-edge}
+Let $G$ be six-connected and $K_7^{-}$-minor-free.  If
+$|E(G)|\geq4|V(G)|$, then some edge of $G$ has codegree at most three.
+\end{proposition}
+
+\begin{proof}
+The density implies order at least nine, so
+Lemma~\ref{lem:jakobsen-defect} gives average degree less than nine.  Thus a
+vertex of minimum degree has degree six, seven or eight.  Suppose every
+edge has codegree at least four.  Lemma~\ref{lem:degree-six} excludes
+degree six, and Theorem~\ref{thm:six-connected-eight} excludes degree
+eight.  At a degree-seven vertex $v$, the local graph $J=G[N(v)]$ has
+minimum degree at least four.  There is an exterior component, and
+six-connectivity gives it at least six boundary neighbours.  Contracting
+it produces a quotient forbidden by Lemma~\ref{lem:finite-quotients}(1).
+This excludes all three degrees.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:defect-ladder}]
+Let $G$ satisfy the hypotheses.  Proposition~\ref{prop:density-edge}
+supplies an edge $e$ of codegree at most three.  The quotient $G/e$ is
+$(r-1)$-connected and has no $K_7^{-}$ minor.  By \eqref{eq:contraction},
+$|E(G/e)|\geq4|V(G/e)|$ and $D(G)\geq D(G/e)+1$.
+The retained density ensures $|V(G/e)|\geq9$.
+
+For $r=6$, Lemma~\ref{lem:jakobsen-defect} gives $D(G/e)\geq25$, so
+$D(G)\geq26$.  For $r\geq7$, induction on $r$ applies to $G/e$ and gives
+\[
+              D(G)\geq D(G/e)+1\geq20+(r-1)+1=20+r.
+\]
+\end{proof}
+
+The base case uses Jakobsen's bound because contraction need not preserve
+six-connectivity.

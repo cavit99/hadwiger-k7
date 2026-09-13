@@ -1,0 +1,225 @@
+\section{Seven-vertex separators}\label{sec:seven-cuts}
+
+This section is computation-free.  A connected subgraph of $G-S$ is
+\emph{full at $S$} if it is adjacent to every vertex of $S$.
+We retain the exact equality partition of a boundary colouring, because
+its mere number of colours does not suffice for gluing.
+
+\begin{lemma}\label{lem:reflection}
+Let $V(G)=L\mathbin{\dot\cup}S\mathbin{\dot\cup}R$, with $L,R$ nonempty
+and anticomplete, and suppose every proper minor of $G$ is six-colourable.
+Let $\Pi$ partition $S$ into independent blocks.  Suppose that all its
+blocks, except some singleton blocks whose vertices form a clique, can
+be assigned injectively to disjoint connected subgraphs of $G[L]$ full
+at $S$, with at least one block assigned.  Then $G[R\cup S]$ has a
+six-colouring with equality partition on $S$ exactly $\Pi$.
+\end{lemma}
+
+\begin{proof}
+For each assigned block $B_j$ and its full subgraph $P_j$, contract the
+connected set $B_j\cup V(P_j)$.  These sets are disjoint.  Their images,
+together with the retained singleton blocks, form a clique: fullness
+supplies all adjacencies involving an assigned block, and the retained
+singletons form a clique by hypothesis.  At least one edge is contracted,
+so the resulting minor is proper.  Six-colour it and pull back only to
+$R\cup S$, assigning a block the colour of its image.  Each block is
+independent and every edge to a retained vertex was represented in the
+minor, so the pullback is proper.  The clique forces distinct colours on
+distinct blocks, giving exactly $\Pi$.
+\end{proof}
+
+\begin{lemma}\label{lem:seven-small}
+A graph on seven vertices with at least ten edges contains a $K_4^{-}$,
+a house, or $K_{2,3}$ as a not necessarily induced subgraph.  A house is
+a four-cycle with an additional vertex joined to the ends of one cycle
+edge.
+\end{lemma}
+
+\begin{proof}
+Suppose $Q$ contains none of the three.  Choose a maximum-degree vertex
+$v$, put $d=d(v)$, $A=N(v)$, and $B=V(Q)\setminus N[v]$.
+The graph $Q[A]$ is a matching, since a two-edge path there gives
+$K_4^{-}$ with $v$.  Every vertex of $B$ has at most two neighbours in
+$A$, since three would give $K_{2,3}$ with $v$.  For $d\geq5$,
+\[
+ |E(Q)|\leq d+\lfloor d/2\rfloor+2(6-d)+\binom{6-d}{2}\leq9.
+\]
+For $d\leq2$ there are at most seven edges.  Write
+$\alpha=|E(Q[A])|$, $x=|E_Q(A,B)|$, $\beta=|E(Q[B])|$.
+
+If $d=4$, then $\alpha\leq2$, $x\leq4$, $\beta\leq1$.
+For $\alpha=2$, ten edges force a vertex of $B$ with two neighbours in
+$A$.  If these are matched, there is a $K_4^{-}$; if they are on distinct
+matching edges, there is a house.  For $\alpha\leq1$, ten edges force
+$(\alpha,x,\beta)=(1,4,1)$.  Let $ab$ be the edge in $A$ and $c,t$ its
+isolated vertices.  A two-set of neighbours in $A$ using $a$ or $b$
+gives $K_4^{-}$ or a house.  Thus the two vertices $p,q$ of $B$ both see
+$c,t$; their edge gives a $K_4^{-}$ on $p,q,c,t$.
+
+If $d=3$, maximum degree gives exactly ten edges, so
+$\alpha+x+\beta=7$ and $\alpha\leq1$.  For $\alpha=1$, no vertex of
+$B$ can have two neighbours in $A$, by the same house or $K_4^{-}$
+argument.  Hence $x=\beta=3$: $B$ is a triangle and its three edges to
+$A$ have distinct ends, since a repetition gives $K_4^{-}$.  The edge
+of $A$, its two matched vertices in $B$, and $v$ form a house.
+
+It remains that $\alpha=0$.  If $\beta=3$, each vertex of $B$ already has two neighbours in $B$,
+so $x\leq3$, a contradiction.  If $\beta=2$, write $B=pqr$ as a path.
+Then $x=5$, and its cross-degrees are $2,1,2$.  Equal two-element
+$A$-neighbourhoods of $p,r$ give $K_{2,3}$.  If they differ, the neighbour
+of $q$ is either their common vertex, giving $K_4^{-}$, or one of the
+two other vertices, giving a house.  If $\beta=1$, every vertex of $B$
+has two neighbours in $A$.  Repeated two-sets give $K_4^{-}$ or
+$K_{2,3}$.  Otherwise label the edge of $B$ as $pq$ and write
+\[
+ N_A(p)=\{a,b\},\quad N_A(q)=\{a,c\},\quad N_A(r)=\{b,c\}.
+\]
+Then $a,v,b,p$ is a four-cycle with roof $q$.  Finally $\beta=0$ would
+force $x=7>6$.  Thus $Q$ has at most nine edges.
+\end{proof}
+
+\begin{lemma}\label{lem:three-cut-boundary}
+Let $G$ satisfy the hypotheses of Theorem~\ref{thm:main}, and let $S$
+be a seven-vertex cut.
+Then $G-S$ has two or three components.  If it has three, $G[S]$ has a
+proper three-colouring and every such colouring has class sizes $3,2,2$.
+\end{lemma}
+
+\begin{proof}
+Every component is full at $S$ by seven-connectivity.  If there are at
+least five, contract five of them to $c_1,\ldots,c_5$, label
+$S=\{s_1,\ldots,s_7\}$, and use
+\[
+             \{c_i,s_i\}\ (1\leq i\leq5),\qquad\{s_6\},\{s_7\}.
+\]
+All but possibly the last pair are adjacent, giving $K_7^{-}$.
+
+Suppose there are four components, contracted to $c_1,\ldots,c_4$.
+If $G[S]$ has a path $xyz$, choose three further vertices $u,v,w$ of
+$S$ and use
+\[
+ \{c_1\},\quad\{c_2,u\},\quad\{c_3,v\},\quad\{c_4,w\},
+ \quad\{x\},\quad\{y\},\quad\{z\}.
+\]
+Only $\{x\}:\{z\}$ may be nonadjacent, again impossible.  Hence $G[S]$
+is a matching and isolated vertices.  It has an isolated vertex $q$ and
+a partition $S=I_1\mathbin{\dot\cup}I_2\mathbin{\dot\cup}\{q\}$ into
+independent sets of orders $3,3,1$.  Split the four components into two
+pairs, whose unions are $L,R$.  In each union the two full components
+can be assigned to $I_1,I_2$ in Lemma~\ref{lem:reflection}, retaining
+$q$.  The two colourings have the same exact boundary partition;
+permuting colour names makes them agree on $S$ and yields a six-colouring
+of $G$, a contradiction.  Thus there are at most three components.
+
+Suppose there are three, with contracted vertices $c_1,c_2,c_3$.
+If $G[S]$ had at least ten edges, Lemma~\ref{lem:seven-small} would
+supply one of its three subgraphs.  For a $K_4^{-}$ subgraph, retain its
+four vertices and merge each $c_i$ with one of the three unused boundary
+vertices.  For a house or $K_{2,3}$, contract respectively the square
+edge opposite the roof or any edge to obtain a four-bag $K_4^{-}$ model
+using five boundary vertices.  Retain $c_1$ and merge $c_2,c_3$ with the
+two unused boundary vertices.  In either case the seven sets form a
+$K_7^{-}$ model.  Consequently $|E(G[S])|\leq9$.  The boundary also has
+no $K_4$ subgraph, by the same construction using four singleton roots.
+
+Every $K_4$-free graph on seven vertices with at most nine edges is
+three-colourable.  Otherwise take a four-critical subgraph $F$; it has
+minimum degree at least three.  On four vertices it is $K_4$.  On five
+vertices parity gives a universal vertex, whose deletion leaves a
+three-chromatic four-vertex graph, containing a triangle; this also gives
+$K_4$.  On six vertices a degree at least four forces ten edges.  Otherwise
+$F$ is cubic, with complement $C_6$ or $2C_3$; pairing consecutive
+vertices in the former or taking the triangles in the latter gives a
+three-colouring.  On seven vertices minimum degree three gives at least
+eleven edges.  These contradictions prove the assertion.
+
+If $G[S]$ were two-colourable, fix its partition into at most two
+independent blocks.  For each component use the other two full components
+in Lemma~\ref{lem:reflection} to reproduce the partition on that closed
+component.  The three colourings align and glue, a contradiction.
+Likewise, if any proper three-colouring has a singleton class, retain that
+singleton and assign the other two blocks to the other two components.
+The same gluing contradiction results.  Every class of a proper
+three-colouring therefore has order at least two; their orders are
+$3,2,2$.
+\end{proof}
+
+\begin{theorem}\label{thm:three-component-colouring}
+Let $G$ be seven-connected, with every proper minor six-colourable.  Let
+$S$ be a seven-vertex cut with exactly three components $D_1,D_2,D_3$.
+If $G[S]$ has a proper colouring with class sizes $3,2,2$, then $G$ is
+six-colourable.  No excluded-minor hypothesis is needed.
+\end{theorem}
+
+\begin{proof}
+Fix the independent boundary blocks
+$S=T\mathbin{\dot\cup}A\mathbin{\dot\cup}B$, with
+$|T|=3$ and $|A|=|B|=2$.  Every $D_i$ is full at $S$.
+Say that a component realises $(A,B)$ if it contains disjoint connected
+subgraphs $X_A,X_B$, the first adjacent to both vertices of $A$, the
+second to both vertices of $B$.  They can also be made adjacent: join
+them by a shortest path in the component, split it at an edge, and absorb
+the two halves into the respective subgraphs.
+
+If two components realise $(A,B)$, then for every retained component
+$D_i$ we may choose a different realising component $R$ and let $F$ be
+the third.  Contract the three disjoint connected sets
+\[
+                X_A\cup A,\qquad X_B\cup B,\qquad F\cup T.
+\]
+Their images form a triangle, using the adjacency of $X_A$ and $X_B$
+and fullness of $F$.  A six-colouring of this proper minor pulls back on
+$G[D_i\cup S]$ with exact boundary partition $T|A|B$.  The three
+colourings then align and glue.  Thus we may assume $D_1,D_2$ do not
+realise $(A,B)$.
+
+Fix one of these two components $D_i$.  Add four artificial terminals
+$a_1^*,b_1^*,a_2^*,b_2^*$, each with the neighbours in $D_i$ of its
+corresponding literal root.  There are no two disjoint paths joining the
+$a$-pair and the $b$-pair, since their interiors would realise $(A,B)$.
+Add the cycle edges in the displayed terminal order.  These do not
+create such a crossing: a path using an edge between consecutive
+terminals would meet a terminal of the other prescribed path.  Extend
+on the same vertex set to an edge-maximal graph with no such crossing.
+Humeau and Pous~\cite[Theorem~1.3]{HumeauPous2025} identify this completion
+as a web with the four terminals as frame.  In this form a web consists
+of a planar graph with the frame on a face and with cliques attached
+behind facial triangles.
+
+No clique inserted behind such a triangle can contain a vertex of $D_i$
+outside the triangle.  Otherwise those original vertices have no
+auxiliary neighbours outside the triangle.  Replace any artificial
+terminal of the triangle by its literal root and add the three omitted
+vertices of $T$.  These at most six actual vertices then separate a
+nonempty part of $D_i$ from another component of $G-S$, contrary to
+seven-connectivity.  Thus every original vertex of $D_i$ belongs to the
+planar part of the web.  Replacing the artificial terminals by their
+literal roots shows that
+\[
+                   H_i^+=G[D_i\cup A\cup B]+E(K_{A,B})
+\]
+is planar, with the added $K_{2,2}$ as an induced facial four-cycle.
+The cycle is induced because $A$ and $B$ are independent.  These added
+edges serve only in the planar extension; they are not asserted to be
+edges of $G$ or used in a minor of $G$.
+
+Contract in $G$ the two disjoint connected sets
+\[
+                        Q_0=D_1\cup T,\qquad Q_1=D_2\cup A.
+\]
+Their images are adjacent and each sees both retained vertices of $B$.
+Six-colour this proper minor.  Pulling back on $G[D_3\cup S]$ gives a
+colouring $c$ in which $T$ has colour $0$, $A$ a different colour $1$,
+and both vertices of $B$ avoid $0,1$.
+
+For $i=1,2$, precolour the induced four-cycle of $H_i^+$ by
+$c|_{A\cup B}$.  It uses at most three colours from the five-colour
+palette excluding $0$.  Diwan~\cite[Corollary~1]{Diwan2023} proves that
+a proper precolouring of an induced cycle of length at most $2k-5$
+using at most $k-1$ colours extends to a $k$-colouring of every planar
+supergraph containing it.  With $k=5$ it extends to each $H_i^+$.
+Use these extensions on $D_1,D_2$ and retain $c$ on $D_3\cup S$.
+They agree on $A\cup B$ and avoid $0$ on $D_1,D_2$, so every edge to
+$T$ is proper.  Distinct components are anticomplete.  The combined
+colouring is a six-colouring of $G$.
+\end{proof}
