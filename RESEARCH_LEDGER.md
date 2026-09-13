@@ -99,6 +99,14 @@ from different stages. Minimum-codegree contractions costing at most r
 fit the required edge budget. An audited private-neighbour inequality
 constrains more expensive contractions, but no bound on their combined
 cost is proved; repeated use of the same original vertices remains the gap.
+The [uniform-capacity allocation](barriers/quantitative_uniform_allocation.md)
+now fails even for connected graphs in the all-minor independence class.
+Those examples have no density surplus: they refute the proposed deficit-
+to-minor inference, not the density theorem. Budgets on a maximum
+independent set can localise a deficit to a dense induced subgraph, but
+that subgraph may be the whole host, so the proposed induction need not
+decrease. A construction using the surplus across this spanning case is
+still missing; neither this allocation nor the retained history is mandatory.
 The [sharp order example](barriers/quantitative_density_contraction_order.md)
 has arbitrarily large surplus and requires `r/2` order loss before the
 first independence decrease; an explicit batch attains this and succeeds.

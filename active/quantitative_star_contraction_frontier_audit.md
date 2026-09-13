@@ -5,7 +5,7 @@ Initial review: 9 September 2026; latest scoped review: 13 September 2026.
 This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3`.
+`6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -245,3 +245,29 @@ The high-cost charge, existence of a successful selection, density
 theorem, improved colouring bound and HC7/comparable-theorem objective
 remain unproved. This audit certifies only the scoped deductions and
 reported finite evidence, not a global construction or significance claim.
+
+## Uniform allocation and the spanning deficit
+
+**GREEN; separate scoped internal audit, 13 September 2026.**
+Allocation-construction checked the inserted allocation paragraphs at
+source `6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5`.
+Removing those paragraphs recovers the preceding audited source
+`687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3`.
+The [connected counterexample and its scope](../barriers/quantitative_uniform_allocation_audit.md)
+were separately audited. In particular it has no density surplus.
+
+Every active edge can retain a distinct original representative.
+Contraction discards its internal edge and one representative from each
+coalesced pair; retirement discards its incident representatives. None is
+charged twice. Their endpoints lie in W, proving the induced edge bound.
+The union of the operations' eligible I vertices is exactly `I intersect
+N[W]`. Capacitated Hall therefore gives the displayed strict inequality.
+Replacing the I vertices in N[W] by a maximum independent set of G[W]
+proves the final inequality.
+
+For proper W, the induction retains r and the order cap and decreases
+host order. Inclusion lifts connected disjoint branch sets without
+additional roots or colouring requirements. For spanning W there is no
+decrease; the text explicitly leaves that case open. This repair and
+density-maximisation do not close the density theorem, its colouring
+consequence, or the user's objective.

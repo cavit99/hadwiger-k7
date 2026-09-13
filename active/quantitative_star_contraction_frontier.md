@@ -370,6 +370,48 @@ selection. This bound is unproved. Private-neighbour counts alone do not
 supply it: the same original vertices can occur in many such counts.
 Any charge must retain actual preimages or provide a justified exchange.
 
+**Uniform allocation is refuted under the no-success hypothesis alone.**
+Set `b=r^2 alpha(G)/|G|>=r`. Paying at most b per operation costs at
+most `r^2 alpha(G)`; assigning the remaining merge losses to original
+vertices with capacity b would give the desired total bound. But the
+[connected padding construction](../barriers/quantitative_uniform_allocation.md)
+has no successful minor and a permissible history in which demand
+`Omega(N^2)` is supported on N original vertices of total capacity
+`o(N^2)`. This still fails when child preimages are eligible, capacities
+are computed per original connected component, or b is multiplied by
+any fixed constant. The first false step is inferring a minor from this
+allocation deficit. The examples satisfy `e(G)<r^2 alpha(G)`; they do not
+refute extraction under density surplus, or an existential history choice.
+
+**A tested repair still lacks a decreasing step.** Let I be a maximum
+independent set in G. For every vertex set W,
+`alpha(G[W])<=|I intersect N_G[W]|`: an independent set in W can replace
+the I vertices in its closed neighbourhood. Give each I vertex capacity
+`Dr^2`. For each merge or retirement, retain distinct original edge
+representatives of the active edges lost at that operation. For merge
+losses, retain one representative of each coalesced pair as the surviving
+edge and charge the other. Let W_t contain the complete preimages of
+every bag meeting a charged edge, and allow the operation's loss to use
+`I intersect N_G[W_t]`.
+
+A capacitated Hall deficit for operations X gives, with
+`W=union_(t in X) W_t`,
+
+```text
+e(G[W]) >= sum_(t in X) loss_t
+         > Dr^2 |I intersect N_G[W]| >= Dr^2 alpha(G[W]).
+```
+
+If W is proper, induction for the density target applies to G[W]: r and
+the order cap are retained, order strictly decreases, and every minor
+lifts by inclusion with the same connected disjoint bags. There are no
+root or colouring constraints in this target. If W is the entire host,
+the inequality only repeats the original surplus. Neither a minimal
+deficient collection nor maximising `e(H)/alpha(H)` over induced H proves
+that W is proper. This repair therefore supplies no complete induction;
+the spanning case still needs an actual minor construction. The allocation
+is not a new target or a necessary form of every successful construction.
+
 On an interval of constant independence number, a maximum independent
 set in its last quotient has representatives in distinct anticomplete
 bags throughout the interval. This witness need not extend through an

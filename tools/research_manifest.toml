@@ -23884,7 +23884,7 @@ status = "conditional-target"
 source = "active/quantitative_star_contraction_frontier.md"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3"
+expected_source_sha256 = "6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5"
 scope = "minor-minimal q-chromatic graphs on at most r^(3/2) vertices whose every minor F satisfies alpha(F)>=|F|/r, with q>=Kr"
 colour_compatibility = "the desired minor retains chromatic number at least q-1"
 strict_parameter = "host order; the conditional proof minimises order then edge count"
@@ -24464,7 +24464,7 @@ source = "active/quantitative_star_contraction_frontier.md"
 source_heading = "Density surplus and a retained contraction history"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3"
+expected_source_sha256 = "6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5"
 scope = "an absolute D>=1, all integers r>=2 and finite graphs with order at most r^(3/2) and e(G)>D r^2 alpha(G)"
 label_fidelity = "the proposed output uses disjoint connected original preimages and all original contacts, including those to retired history nodes"
 strict_parameter = "active order decreases at every generating merge or retirement; existence of a successful final node selection is unproved"
@@ -24508,3 +24508,22 @@ path = "active/quantitative_density_contraction_probe.py"
 sha256 = "434077d263a66781ce249220e7a14686e9795c8d905c7d4019b2b2613b9f32b2"
 timeout = 30
 expected_stdout = ["PASS: 8 finite cases; 6 verified models; 2 negative controls."]
+
+[[claims]]
+id = "hadwiger.barrier.uniform_allocation"
+title = "Uniform private-neighbour capacities fail even in connected hosts"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/quantitative_uniform_allocation.md"
+audit = "barriers/quantitative_uniform_allocation_audit.md"
+active = false
+expected_source_sha256 = "681581bc9364a715dc8690739c7e0c26dae1a1cb14b2caa3139838a52c4c4a55"
+scope = "an unbounded family of connected graphs with order at most r^(3/2) and independence ratio at most r in every minor"
+conclusions = ["a permissible history defeats uniform capacity r^2 alpha(G)/|G| on private-neighbour preimages", "failure persists with endpoint preimages and any fixed capacity multiplier", "the examples have e/(r^2 alpha) tending to one half"]
+does_not_prove = ["failure under density surplus or for an existential choice of history", "failure of adaptive or nonuniform capacities", "the density theorem, improved colouring bound, HC7 or NT-comparable significance"]
+
+[[relations]]
+source = "hadwiger.target.density_surplus_minor"
+target = "hadwiger.barrier.uniform_allocation"
+kind = "guarded_by"
+note = "A uniform allocation deficit alone cannot supply the minor, even for connected all-minor-bounded inputs; using density surplus remains possible."
