@@ -65,7 +65,7 @@ closes `chi(G-{x,y})=5`. The exterior theorem proves
 `chi(G)<=max{4,chi(W)+2}`. Thus the remaining host has
 `chi(G-{x,y})=6` and `chi(W)` equal to five or six.
 
-**Next concentrated checkpoint:** close the whole `chi(W)=5` branch,
+**Exact checkpoint:** close the whole `chi(W)=5` branch,
 using a six-colouring or a simultaneous Q model in the actual host.
 The current mechanism seeks two exterior colour classes that can both
 use the three neighbourhood colours. Their missing-colour lists must be
@@ -84,6 +84,21 @@ extension is proved. Fixed roots and two-class absorption are not mandatory.
 The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records the exact contact constraints and first unsupported exchanges.
 The six-chromatic exterior and the full two-triangle case remain open.
+
+**Comparison outcome.** Neither the exterior recolouring nor quantitative
+criticalisation attempt produced a whole-case closure or a closed decreasing
+reduction. The [one-buffer counterexample](barriers/hc7_one_buffer_recolouring.md)
+defeats that response form in a six-colourable host with the same literal
+neighbourhood and five-chromatic exterior, but fails the actual critical
+hypotheses. The [integer order-and-edge construction](barriers/quantitative_order_edge_potential.md)
+shows that the new degree and loss bounds alone cannot give the cubic
+colouring improvement; it is not a graph counterexample to R.
+Neither route has earned extended concentration from this comparison.
+The next construction must use actual graph constraints missing from these
+examples: a selectable proper-minor response coupled to a complete colouring
+extension or Q construction in the exact case, or additional control of the
+surviving contraction bags in R. Do not repeat the restricted response or
+scalar-potential arguments.
 
 Use the [global codegree bound](results/hc7_global_edge_codegree.md),
 including its first-quotient bound and suitable paired contraction, when

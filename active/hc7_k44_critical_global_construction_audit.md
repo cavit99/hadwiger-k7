@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`e471c4fd6bbffe4be7d855792f440fe5349d3f66bce3f2548ee8c6026903bd14`.
+`dd78c87a954d03c1579dec906210851155a0bb6a2977e1fc8a89594eb5804bcc`.
 
 ## Preserved scope and exact provenance
 
@@ -1611,3 +1611,38 @@ obstructions nor their possible repairs and is not presented as new list
 theory. The ledger accurately retains the open whole-case checkpoint and
 the unmet HC7 or comparable-significance objective. This update records
 continuity and nonclosure, not a new proof milestone.
+
+## Scope of the one-buffer obstruction
+
+**Scoped verdict: GREEN**, 13 September 2026, for the eleven-line addition
+in Section 7.5 at whole-frontier SHA-256
+`dd78c87a954d03c1579dec906210851155a0bb6a2977e1fc8a89594eb5804bcc`.
+Removing that insertion recovers Git
+`9ba0bb02a4c3d2e490c6f796e28f5022731a67e0`, whose frontier hash is
+`e471c4fd6bbffe4be7d855792f440fe5349d3f66bce3f2548ee8c6026903bd14`.
+Only this insertion is newly reviewed; all historical audit text and its
+qualified scope are preserved.
+
+The linked [barrier](../barriers/hc7_one_buffer_recolouring.md) has hash
+`adafebe8e3517607e8f72973883f3542e152cf92a664829be39538d991cf41d6`;
+its [separate audit](../barriers/hc7_one_buffer_recolouring_audit.md), at
+`f0c913955a28fbe66fab789a6f551f2ce8190e3a8f83ea40bb43ad3f538c117c`,
+checks that exact source. The source's status-header update and explicit
+minor wording leave the construction and proof unchanged.
+
+The summary correctly retains arbitrary five-colourings of W, boundary
+use of colour six, and every available colour for v. The source requires
+both independence of the movers and avoidance of boundary colour six;
+its universal six-colouring argument rules out every such response.
+The displayed positive colouring, connected five-chromatic exterior and
+literal neighbourhood are verified. The K7 certificate is explicitly a
+minor, not a subgraph.
+
+The graph is six-chromatic and has degree-three ports and degree-four B
+vertices. It therefore supplies no counterexample under the actual
+critical-host hypotheses. The corrected research direction permits any
+further actual-host hypothesis or a broader recolouring; it does not
+assert that each particular hypothesis is necessary. Imposing the response
+form on an arbitrary proper-minor colouring remains unsupported. No whole
+five-chromatic exterior closure, Conjecture 19, HC7 or comparable theorem
+is established by this addition.

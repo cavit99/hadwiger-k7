@@ -2152,6 +2152,17 @@ of the latter vertices minus one. Balanced exchanges give no decrease.
 Even minimising `(|Z|,|T|)` does not supply a lift of an arbitrary proper-minor
 response into this restricted palette.
 
+The broader [one-buffer response](../barriers/hc7_one_buffer_recolouring.md)
+also fails in general: begin with any five-colouring of W and any
+six-colouring of N(v), and move all conflicting exterior vertices to
+colour six. The eighteen-vertex counterexample allows that colour on
+N(v) and any available colour at v. It has the literal neighbourhood,
+connected five-chromatic W and a six-colouring, but no such response.
+It has a K7 minor and fails criticality and the minimum-degree bound, so
+the actual-host assertion remains possible. The first unsupported step
+is imposing this form on a proper-minor response. A repair must use further
+actual-host hypotheses or allow a broader recolouring.
+
 **Construction retaining one proper-minor response; unproved terminal.**
 Use the reservation theorem above: for an independent triple T in N(v),
 I is its entire reserved class, `F=G-v-I` is five-chromatic, and

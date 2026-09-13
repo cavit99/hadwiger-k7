@@ -1,10 +1,11 @@
 # Audit of the quantitative contraction route
 
 **Verdict: GREEN for the conditional deductions; the target is unproved.**
-Date: 9 September 2026. This is separate internal review, not peer review.
+Initial review: 9 September 2026; latest scoped review: 13 September 2026.
+This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`65a0a62ca3c72fb26697465e09e1bd6b65f986b2cdd5abdceaddd6d7a1df3d9f`.
+`86926710366d20ac3564195c5e11b126d8cb569f0cc565c0ae08c0b528741424`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -123,3 +124,62 @@ so one operation recovers at least half the original reduction.
 This excludes an asymptotic advantage of the enlarged operation class,
 not a new packing proof within that class. It does not establish R,
 the density inequality, an improved colouring bound or the global goal.
+
+## Criticalisation after a star packing
+
+**GREEN; separate scoped internal audit, 13 September 2026.**
+The comparison-adversary agent independently checked the appended
+70-line subsection and one earlier status-wording correction at source hash
+`86926710366d20ac3564195c5e11b126d8cb569f0cc565c0ae08c0b528741424`.
+The subsection is unchanged from the initially checked source
+`c070665c4b21fd762c0b33b541d426fd2ab9ae6e8817a54df3efd0c5ba43b9cc`.
+The preceding source, SHA-256
+`65a0a62ca3c72fb26697465e09e1bd6b65f986b2cdd5abdceaddd6d7a1df3d9f`,
+is byte-recovered by removing the appendix and restoring the earlier
+phrase "has been proved" from "at the required scale has been proved".
+The correction properly distinguishes the new conditional loss bound
+from the unresolved scale required by R. The historical audits above
+remain scoped to their stated revisions. Both new bipartite-input hash
+pins match the files and the existing input audit's recorded theorem hash.
+
+The strongest structural inference is valid. A singleton neighbour colour
+can be eliminated by a Kempe swap unless its root shares a bichromatic
+component with every other singleton root. Simple paths between opposite
+shores give a simultaneous scheme: every common vertex has one colour,
+so all paths there have that same target endpoint. A selected root cannot
+occur internally on a foreign path. Rooted bipartite extraction retains
+every neighbour of v; the matching contractions and singleton v then give
+the forbidden complete minor. This proves the stated integer degree bound.
+
+The star lift retains all edges between distinct bags. Every untouched
+neighbour u of a centre was eligible when its leaf set was chosen;
+maximality therefore supplies the second u-neighbour in that same bag.
+Different star bags give distinct coalescences. Moreover every minor of H
+is a proper minor of G and has chromatic number at most q-1. Thus minimum
+order and then minimum edge count among (q-1)-chromatic minors really does
+give full minor-minimality, not merely induced or vertex criticality.
+
+A singleton preimage's degree cannot increase under operations elsewhere.
+Consequently every U vertex is deleted or belongs to a bag of size at
+least two. Charging a size-b bag at most b vertices against its b-1 order
+loss proves the ceiling bound for arbitrary connected minor preimages.
+Composing those bags with the original stars preserves disjointness and
+all retained contacts; no roots or connectivity assumptions are imported.
+
+For the edge inequality, independence of I means its degree sum counts
+each centre-incident edge once. Internal edges vanish; a centre edge to
+an untouched vertex has a distinct leaf-edge witness that coalesces with
+it. Between two star bags, at most one of their centre-incident edges can
+survive simplification. Subtracting binom(k,2) therefore suffices, even
+when some bags are singletons or some pairs have no such edge.
+
+Reed--Seymour's primary page 148 was checked: (1.3) gives fractional
+2r-colourability under K_(r+1)-minor exclusion, and (1.4) gives the weighted
+independent-set statement directly. Degree weights yield e(G)/r with no
+cardinality guarantee. The source explicitly retains that missing cap.
+
+No bound forcing enough leaves or U vertices is established. The linked
+potential obstruction is identified as numerical, not an example meeting
+R's graph hypotheses. Neither this audit nor the new degree and charging
+deductions prove R, an improved colouring bound, or the HC7/comparable-
+theorem objective. No novelty or significance assessment is certified.

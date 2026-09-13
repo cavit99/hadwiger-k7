@@ -152,7 +152,7 @@ They do supply the desired gain when `delta(G)>=q^2/r`, up to absolute
 constants. The unresolved case therefore includes critical graphs with
 `q-1<=delta(G)<q^2/r`. Further vertex losses when passing to a critical
 minor might replace the stronger packing, but no bound on those losses
-has been proved.
+at the required scale has been proved.
 
 A distinct sufficient approach is the unproved density inequality
 `e(G)<=D r^2 alpha(G)` for an absolute `D>=1` in the same minor class.
@@ -238,3 +238,73 @@ large minimum degree. This observation neither proves nor refutes R.
 Successive independent sets in different quotients also need not have
 independent original preimages, so their colour losses cannot simply be
 charged once. Independent leaf sets are not a matroid.
+
+## Criticalisation after a star packing
+
+**Written deductions; global reduction still unproved.** The following
+uses the [rooted bipartite theorem](../results/bipartite_contractibility_via_matroid_reduction.md),
+source SHA-256 `3faac3d0628f4ea61ceb7e1b2005917371e46b1168ed446492907035efa09272`,
+and its [separate audit](../results/bipartite_contractibility_via_matroid_reduction_audit.md),
+SHA-256 `1c8ed74e98829690dc4c1fd6d44631454d330443dd33faea4435d35beb5cca06`.
+Those pins audit the input theorem, not this application.
+
+**Degree bound.** If G is minor-minimal of chromatic number p and
+`h(G)<=r`, where `r>=2`, then `delta(G)>=2p-2r+1`.
+Fix v and a `(p-1)`-colouring of `G-v`. Every colour appears on `N(v)`;
+at least `2(p-1)-d(v)` colours appear there exactly once. The unique
+neighbours of any two such colours lie in the same bichromatic component:
+otherwise a Kempe swap removes one colour from `N(v)`, colouring v too.
+If `d(v)<=2p-2r`, select `2r-2` such roots and simple bichromatic paths
+between every pair across an equal bipartition. Their colour projection
+gives a scheme: intersecting paths share an endpoint label, fibres are
+independent, and no selected root is internal on another path.
+The theorem gives a rooted `K_(r-1,r-1)` model in `G-v`.
+Contract `r-2` disjoint cross-pairs of its bags, retaining the two
+unpaired bags, to obtain a `K_r` model. Every bag contains a neighbour
+of v, so adjoining singleton v gives `K_(r+1)`, a contradiction.
+
+**Order accounting.** Let G satisfy R's hypotheses. Choose independent
+centres `I={v1,...,vk}` and, successively, maximal independent sets
+`Li` in `N(vi)` outside earlier leaves. Put `L=union_i Li`, `ell=|L|`,
+and contract the disjoint stars `Bi={vi} union Li`, with `ell>0`, to H.
+Their fixed preimages give `|H|=n-ell` and `chi(H)=q-1`: expanding
+independent leaves and giving I one fresh colour proves the lower bound;
+minor-minimality gives the upper bound. For every untouched vertex
+`u outside I union L`, maximality supplies a neighbour in Li whenever
+`uvi` is an edge. Therefore
+
+```text
+d_H(u) <= d_G(u)-|N_G(u) intersect I|,
+U = {u outside I union L : d_H(u)<2q-2r-1}.
+```
+
+Choose a `(q-1)`-chromatic minor J of H of minimum order, then minimum
+edge count. It is fully minor-minimal and has `delta(J)>=2q-2r-1`.
+No vertex of U survives as a singleton bag: contracting or deleting
+elsewhere cannot increase its degree. A deleted vertex costs one;
+a bag of size `b>=2` contains at most b members of U and costs
+`b-1>=b/2`. Consequently
+
+```text
+|G|-|J| >= ell+ceil(|U|/2),       chi(J)=q-1.
+```
+
+Composition of the two models preserves disjoint connected preimages.
+Also `e(G)-e(H)>=sum_(v in I) d(v)-binom(k,2)`: centre edges inside
+their own stars disappear; each centre edge to an untouched vertex
+coalesces with a leaf edge; between any pair of star bags at most one
+centre-incident edge survives. These cases account for every centre edge.
+
+The weighted external input [Reed--Seymour, (1.4), p. 148](https://cgm.cs.mcgill.ca/~breed/SummerNSERC04/frachad.pdf)
+gives `chi_f(G)<=2h(G)<=2r`. Its primary statement was inspected.
+Applying a fractional colouring to degree weights gives an independent
+set with degree sum at least `e(G)/r`. This does **not** ensure `|I|<=r`,
+so the earlier capped-centre packing estimate cannot be applied without
+another argument.
+
+It remains unproved that a choice forces
+`ell+ceil(|U|/2)>=c n q^2/r^3`. The
+[order and edge potential obstruction](../barriers/quantitative_order_edge_potential.md)
+shows why the displayed numerical bounds alone do not yield the cubic
+improvement; it is an arithmetic obstruction, not a graph counterexample
+to R. No improved global colouring theorem follows from this subsection.
