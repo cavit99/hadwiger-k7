@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`47cc69de4e6a239649fa31896cc58c2b9921c4c4ba4be8f85d1e8766b87ddf8b`.
+`8a67814634ea84eef1403b818cd2663971f41bb3e094601ab587f9ee29660181`.
 
 ## Preserved scope and exact provenance
 
@@ -1532,3 +1532,50 @@ The recorded original-section hash was checked against Git. Other ledger
 text is unchanged. No existing proof was modified. The seven manifest
 source pins are updated to the new frontier hash; their claims and status
 are unchanged. No case closure or global theorem follows from this update.
+
+## Compatible exterior classes and the shared successor
+
+**Scoped verdict: GREEN**, 13 September 2026, for the addition against
+Git `f7b52af`, whose frontier hash is
+`47cc69de4e6a239649fa31896cc58c2b9921c4c4ba4be8f85d1e8766b87ddf8b`.
+The reviewed source has SHA-256
+`8a67814634ea84eef1403b818cd2663971f41bb3e094601ab587f9ee29660181`.
+This separate internal audit checks only that addition; earlier reviews
+retain their historical scope. The invoked input source/audit pins match.
+
+An F_A-rooted wheel and the two displayed adjacent boundary bags give Q
+with disjoint original preimages. The colourful-wheel contrapositive gives
+one class avoiding F_A. Compressing D inside the other four classes keeps
+that class fixed and yields a distinct D-free class in the same colouring.
+The three choices of boundary partition are correctly stated as alternatives.
+
+For cross-group pairs choose q in a triangle. Its neighbourhood degree is
+at least `2+1_pq`, so the stated first-quotient formula gives at most two
+common W-neighbours. Original-edge codegree handles internal triangle pairs
+and xy. Each four-clique complement is four-connected with minimum degree
+six, hence nonplanar; v has exactly five neighbours there. The contact bound
+therefore gives three double-A and three double-B vertices. Every remaining
+multi-contact vertex has an AB, port--triangle or xy pair, giving the union
+bound `3+3+6+8+3=23`. This bounds singleton lists, not obstruction order.
+
+Nonempty lists make a bad component nontrivial. Contracting the whole
+two-class component preserves its exterior five-colouring; contracting a
+smaller obstruction need not. That colouring is not synchronized with the
+proper-minor six-colouring. The partial exchange now explicitly requires
+an available neighbourhood colour, one common S-colouring and avoidance
+of the remaining Z. Its stated order change is exact; balanced moves need
+not decrease either minimum.
+
+The reservation input and its audit match. Minimality of nonempty T' gives
+`chi(F+(T'-{a}))=5`: this graph contains F and is a proper T' subset.
+Adding a makes it six-chromatic, so its a-neighbourhood is colourful in
+every five-colouring. Restriction to F preserves R's universal rainbow
+condition in that same F'. Both sets lie in `M=G-{v,a}`, which is
+five-connected. The singleton poles v,a are adjacent; a jointly rooted
+wheel in M would therefore give Q with disjoint original bags, even if
+the wheel uses other reserved vertices. No connectivity of F' is inferred.
+The two-arc barrier lacks these colourful-core hypotheses. Ear suppression
+or equal-end identification may retain marked colourings but supplies no
+ambient five-connectivity or closed induction. The joint wheel remains
+unproved. No whole five-chromatic case, C19, HC7 or comparative-significance
+closure is certified.

@@ -70,7 +70,14 @@ using a six-colouring or a simultaneous Q model in the actual host.
 The current mechanism seeks two exterior colour classes that can both
 use the three neighbourhood colours. Their missing-colour lists must be
 compatible in one colouring; separate colourings or separate minor models
-do not suffice. Keep all proper-minor six-colourings available. Neither
+do not suffice. A common five-colouring now gives one class avoiding
+A--other-group contacts and a second avoiding three-group contacts.
+The attempted component contraction does not preserve a compatible
+neighbourhood palette. The shared construction now retains one proper-minor
+response: two required neighbour sets are colourful in the same
+five-chromatic subgraph. Seek one wheel meeting both sets in the actual
+host; the two adjacent omitted vertices then complete Q. Separate wheels
+and additional standalone sufficient conditions do not finish it. Neither
 fixed roots, a singleton v, nor two-class absorption is mandatory.
 The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 records the exact contact constraints and first unsupported exchanges.

@@ -2080,19 +2080,97 @@ decreases, and all other classes stay unchanged. Iteration therefore
 terminates with the asserted colouring. In particular, a five-colouring
 of W can have two whole classes disjoint from D.
 
-**Next construction; unproved.** When `chi(W)=5`, seek a common
+**Compatible class restrictions; written deduction.** Suppose `chi(W)=5`
+and put `F_A={w in W: w meets A and B union {x,y}}`. There is one
+proper five-colouring of W with distinct whole classes I,Z such that
+`I intersect F_A` and `Z intersect D` are empty. Indeed, an F_A-rooted
+W4 in W, together with the two connected adjacent bags A and
+`{v} union B union {x,y}`, gives `K2 join W4=Q`. The
+[colourful-wheel theorem](../results/colourful_five_wheel.md) therefore
+gives a five-colouring whose fifth class misses F_A. Since `D subseteq F_A`,
+D uses only the first four colours. Apply the preceding D compression
+inside their induced subgraph, keeping the fifth class fixed. It gives
+a second class missing D. All classes are nonempty because `chi(W)=5`.
+The same argument works for either other partition of the three groups
+A,B,`{x,y}`. These are alternatives, not simultaneous colourings.
+
+**Few vertices have singleton lists; written deduction.** At most 23
+vertices of W have two or more neighbours in N(v). For distinct p,q in
+N(v), the first-quotient
+[codegree bound](../results/hc7_global_edge_codegree.md) applied to
+`[vp]q` gives
+`|W intersect N(p) intersect N(q)| <= 4-d_N(v)(q)+1_{pq is an edge}`,
+where `d_N(v)(q)` denotes q's degree within N(v). Thus a pair involving
+a triangle vertex has at most two common W-neighbours: use this formula
+for different groups, and the original codegree bound for an edge within
+a triangle, whose common neighbours already include v and its third vertex.
+The pair xy has at most three, since v is already a common neighbour.
+The [four-clique contact bound](../results/hc7_four_clique_complement_contacts.md)
+gives at most three vertices meeting A twice and three meeting B twice.
+Its hypotheses hold for `{v} union A` and `{v} union B`: their complements
+are four-connected, have minimum degree at least six and are nonplanar
+by Euler's bound. The remaining clique vertex v has five neighbours there.
+The A--B support matching contributes at most six further vertices; the
+four port--triangle supports contribute at most eight; xy contributes at
+most three. The union bound is `3+3+6+8+3=23`. In particular, for any
+neighbourhood three-colouring, singleton missing-colour lists occur only
+among these vertices. This does not bound the size of a list obstruction.
+
+**Shared construction; unproved.** When `chi(W)=5`, seek a common
 W-colouring and neighbourhood colouring for which two whole exterior
 classes can be coloured from their missing neighbourhood colours.
+Use the proved neighbourhood colouring with all these lists nonempty.
 Their union is bipartite, but its missing-colour lists need not be
 compatible merely for that reason. Even an edge whose ends both meet
 exactly the same two A vertices forces the same missing colour at both
 ends. The small-contraction contact rules permit that local pattern;
 it is not a counterexample to choosing a different pair or to the actual
-critical-host target. The first unproved inference is choosing a single
-W-colouring whose omitted pair is jointly colourable, while retaining
-the absence of D. Retain the actual proper-minor colourings and global
-connectivity in any exchange, or construct Q directly. The
-`chi(W)=6` branch and the global construction also remain open.
+critical-host target. The compatible I,Z choice above retains more
+information, but does not establish their joint list-colourability.
+
+An uncolourable component has at least two vertices. Contracting an entire
+bad component C of `W[I union Z]` therefore gives a proper minor and preserves a
+five-colouring of the exterior quotient: the merged vertex can take either
+of the two old colours, since no other vertex of those classes neighbours
+C. Criticality also six-colours the proper minor G/C. The first unsupported
+step is combining these two colourings. The latter need not use three
+colours on N(v), so it need not return a compatible smaller instance.
+Using a vertex-minimal obstruction instead of the entire component also
+loses the stated exterior-colouring guarantee.
+
+Partial absorption permits N(v) and a changing set T of W to use three
+fresh colours, while S uses three old colours and the remaining independent
+set Z uses a fourth old colour, also assigned to v. To insert z in a fresh
+colour c absent from its N(v)-neighbours, displace its T-neighbours of colour c.
+They can enter
+S simultaneously only if they each miss a colour in the same S-colouring;
+those moved into Z must avoid `Z-{z}`. The change in `|Z|` is the number
+of the latter vertices minus one. Balanced exchanges give no decrease.
+Even minimising `(|Z|,|T|)` does not supply a lift of an arbitrary proper-minor
+response into this restricted palette.
+
+**Construction retaining one proper-minor response; unproved terminal.**
+Use the reservation theorem above: for an independent triple T in N(v),
+I is its entire reserved class, `F=G-v-I` is five-chromatic, and
+`R=N(v)-T` is rainbow in every five-colouring of F. We have `chi(F+T)=6`.
+Choose an inclusion-minimal nonempty `T' subseteq T` with `chi(F+T')=6`,
+choose `a in T'`, and put `F'=F+(T'-{a})`. Then `chi(F')=5`, and both
+R and `N_F'(a)` are colourful in every five-colouring of this same F':
+restrict to F for R, and extend to a if its neighbourhood misses a colour.
+In the actual five-connected graph `M=G-{v,a}`, one W4 whose five bags
+each meet both sets gives Q with the adjacent singleton bags `{v},{a}`.
+The wheel may use all of M, including previously reserved vertices.
+
+This is the shared construction to develop and challenge. No connectivity
+of F' or joint wheel follows from the two separate colourful-set theorems.
+The [two-arc barrier](../barriers/hc7_joint_wheel_two_sets.md) refutes using
+ambient connectivity and degree six alone; it does not have this colourful
+core. Suppressing a path added to F', or identifying its endpoints when
+they are forced equal-coloured, can preserve the marked colouring data
+but need not preserve five-connectivity of the ambient quotient. That
+is not a closed induction. The construction must retain both marked sets,
+disjoint ownership and the actual host constraints. The five-chromatic
+exterior, the six-chromatic exterior and the global case remain open.
 
 **A larger root set does not suffice by itself; explicit obstruction.**
 Put `E={w in W: |N(w) intersect N(v)|>=3}`. Replacing D by E in the
