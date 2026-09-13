@@ -23884,7 +23884,7 @@ status = "conditional-target"
 source = "active/quantitative_star_contraction_frontier.md"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5"
+expected_source_sha256 = "afb8bc75beaf5946f3caad0b14c0db4421448991ca604f6ba75321418d427aa6"
 scope = "minor-minimal q-chromatic graphs on at most r^(3/2) vertices whose every minor F satisfies alpha(F)>=|F|/r, with q>=Kr"
 colour_compatibility = "the desired minor retains chromatic number at least q-1"
 strict_parameter = "host order; the conditional proof minimises order then edge count"
@@ -24464,12 +24464,12 @@ source = "active/quantitative_star_contraction_frontier.md"
 source_heading = "Density surplus and a retained contraction history"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5"
+expected_source_sha256 = "afb8bc75beaf5946f3caad0b14c0db4421448991ca604f6ba75321418d427aa6"
 scope = "an absolute D>=1, all integers r>=2 and finite graphs with order at most r^(3/2) and e(G)>D r^2 alpha(G)"
-label_fidelity = "the proposed output uses disjoint connected original preimages and all original contacts, including those to retired history nodes"
-strict_parameter = "active order decreases at every generating merge or retirement; existence of a successful final node selection is unproved"
+label_fidelity = "simultaneous models and optional history selections retain disjoint connected original preimages and all original contacts"
+strict_parameter = "the conditional induced-subgraph reduction decreases order only for proper support; the simultaneous construction has no proved recursive step"
 conclusions = ["target: a minor F with |F|>r alpha(F)", "the contrapositive is the sufficient density inequality for critical reduction R"]
-does_not_prove = ["the high-cost contraction bound or global node selection", "the density inequality or improved global colouring theorem", "HC7 or Conjecture 19", "NT-comparable significance of the present deductions or finite experiments"]
+does_not_prove = ["a universal simultaneous construction or successful history selection", "the density inequality or improved global colouring theorem", "HC7 or Conjecture 19", "NT-comparable significance of the present deductions or finite experiments"]
 
 [[relations]]
 source = "hadwiger.target.cubic_star_reduction"
@@ -24508,6 +24508,13 @@ path = "active/quantitative_density_contraction_probe.py"
 sha256 = "434077d263a66781ce249220e7a14686e9795c8d905c7d4019b2b2613b9f32b2"
 timeout = 30
 expected_stdout = ["PASS: 8 finite cases; 6 verified models; 2 negative controls."]
+
+[[verifiers]]
+id = "component-label-probe"
+path = "active/quantitative_component_label_probe.py"
+sha256 = "80125aa6e1fb31805e92c9aae02cd165d92d5b7bd34e1ede663137499df2ba29"
+timeout = 30
+expected_stdout = ["PASS: 3 finite cases; 2 verified surplus models; 1 negative control; 10 clique-search cross-checks."]
 
 [[claims]]
 id = "hadwiger.barrier.uniform_allocation"

@@ -48,13 +48,23 @@ bags, allowing deletions, large bags and temporary
 ratio loss. One agent develops the construction, another attacks that same
 construction, and computation returns checked bags or a precise failed step.
 
-Use complete joins of parts consisting of unequal disjoint cliques, setting
-r to the sum of the largest clique orders in the parts. Their explicit
-r-colouring rules out a deletion-only solution; retain only instances with
-the required order cap and surplus. Use the high-girth blow-ups as the
-symbolic test against bounded bags. The padded-core example is a no-surplus
-control; the existing eight finite cases are regression checks. Success on these
-families is a screening condition, not the theorem. Before investing in
+The proposed unequal-clique joins have a one-edge contraction shortcut
+whenever they have surplus. Replace them as demanding tests with explicitly
+r-colourable planted graphs and sparse-base blow-ups, retaining only inputs
+with the order cap and surplus. The current component-label probe returns
+verified K47 and K65 models on two such inputs. Keeping all monochromatic
+components, including small ones, improves the cube test's clique number
+from at most 52 to 65. This is finite evidence only.
+
+The candidate labels vertices and selects whole connected monochromatic
+components. Its exact component-event probability is written, but surplus
+does not yet control that probability or the final independence ratio:
+many incident edges can pay for just one boundary label restriction.
+Existential labelling largely restates the missing minor construction.
+The next proof attempt must jointly control these boundary components and
+the selected model; further successful finite inputs alone cannot close it.
+Use high-girth blow-ups as the symbolic test against bounded bags, and the
+padded-core and existing finite examples as controls. Before investing in
 auxiliary lemmas, identify how the candidate handles spanning support and
 which actual hypothesis supplies the needed independence decrease or
 contacts. Reject a repair that merely returns the original host or assumes

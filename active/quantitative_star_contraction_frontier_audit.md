@@ -5,7 +5,7 @@ Initial review: 9 September 2026; latest scoped review: 13 September 2026.
 This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5`.
+`afb8bc75beaf5946f3caad0b14c0db4421448991ca604f6ba75321418d427aa6`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -271,3 +271,40 @@ additional roots or colouring requirements. For spanning W there is no
 decrease; the text explicitly leaves that case open. This repair and
 density-maximisation do not close the density theorem, its colouring
 consequence, or the user's objective.
+
+## Simultaneous connected components
+
+**GREEN; separate scoped internal audit, 13 September 2026.**
+Allocation-construction independently reviewed source
+`afb8bc75beaf5946f3caad0b14c0db4421448991ca604f6ba75321418d427aa6`
+and [probe](quantitative_component_label_probe.py), SHA-256
+`80125aa6e1fb31805e92c9aae02cd165d92d5b7bd34e1ede663137499df2ba29`.
+Removing the new section and restoring "Retained construction" to
+"Current construction" recovers the preceding source
+`6817a2efe41aba88dec8c7d17c071e96f112c387f7fd099bf65b7870a40346e5`.
+No earlier audited mathematics changed.
+
+The unequal-clique shortcut and its no-surplus alternative are correct.
+Maximal monochromatic components form disjoint connected bags with every
+original contact retained. The spare-label representation requires the
+full contact graph to be colourable; the initial draft's ambiguous
+target-colourability wording was corrected. Conditioning on component
+labels proves the displayed probability, including repeated labels and
+shared boundary vertices. The induced-minimal surplus inequality is valid,
+but does not supply the missing probability bound or a decreasing step.
+
+The reviewer inspected and reran the probe. Original independence numbers,
+order caps, surplus and explicit r-colourings check out. The exact clique
+search branches over coloured candidate prefixes; each prefix's proper
+colouring bounds its clique number. Direct checks in the original graph
+verify the returned K47 and K65 bags independently of that search.
+The negative control's width-three decomposition gives its claimed bound
+for every minor. All three cases and ten search cross-checks passed.
+
+The first draft's largest-component value 48 depended on its tie rule.
+The correction retains all tied largest components and obtains 52.
+Same-labelled components are anticomplete, so this optimises the clique
+number over every largest-per-label tie choice. The comparison with 65
+does not bound all attainable independence ratios. The ledger preserves
+that finite scope. No universal construction, density theorem, improved
+colouring bound, novelty or NT-comparable significance is certified.

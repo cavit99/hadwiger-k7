@@ -311,7 +311,7 @@ to R. No improved global colouring theorem follows from this subsection.
 
 ## Density surplus and a retained contraction history
 
-**Current construction; unproved.** Seek an absolute `D>=1` such that,
+**Retained construction; unproved.** Seek an absolute `D>=1` such that,
 for every integer `r>=2` and finite graph G with
 
 ```text
@@ -438,3 +438,90 @@ final line: `PASS: 8 finite cases; 6 verified models; 2 negative controls.`
 The negative controls are forests and K3,3, whose minors have ratio at
 most two and four respectively. No improved global theorem follows from
 the experiment or these deductions.
+
+## Simultaneous connected components
+
+**Written deductions and finite laboratory; universal extraction unproved.**
+The proposed unequal-clique test has a shortcut. In a complete join of
+cluster parts, let r be the sum of their largest clique orders. Retain
+one such clique per part, giving K_r. If two parts have further cliques,
+one spare vertex from each forms an edge whose contraction gives a full
+extra bag, hence K_(r+1). Otherwise, writing s for the repeated part's
+largest clique and R=r-s, its order M is at most `alpha(G)s`, and
+`e(G)<=M((s-1)/2+R)+R(R-1)/2<=alpha(G)r(r-1)/2`.
+Thus every genuine surplus input in this family has a one-edge solution.
+It cannot validate the missing simultaneous construction.
+
+The new laboratory assigns q independent uniform labels to all original
+vertices and contracts each maximal connected monochromatic component.
+Select any subcollection of these components using all original contacts.
+The bags are disjoint and connected without a size bound; labels are
+auxiliary, not a proper colouring of G. This is a direct model construction,
+not a decreasing induction. No success probability is proved.
+
+Every resulting quotient is q-colourable. Conversely, every minor model
+whose full contact graph is `(q-1)`-colourable can be represented: properly
+label that contact graph and give every unused vertex one reserved label.
+Bags of the same label are anticomplete, so each remains a maximal
+monochromatic component. Colourability of a target obtained by deleting
+contact edges is insufficient.
+Consequently existential labelling alone largely reformulates the minor
+problem; fixing q also imposes an additional output-colouring restriction.
+A density-based choice or probability bound, with valid component
+selection, is the missing theorem.
+
+**Exact event and failed estimate.** For fixed nonempty, connected,
+pairwise anticomplete sets `C_1,...,C_k`, put `U=union C_i`. The probability
+that all C_i are whole monochromatic components is
+
+```text
+q^(-|U|) sum_(sigma in [q]^k)
+  product_(x in N(U)-U)
+    (1-|{sigma_i : x has a neighbour in C_i}|/q).
+```
+
+For each assignment sigma, all vertices of each C_i must take its label;
+each outside neighbour must avoid the distinct adjacent labels. Outside
+choices are independent conditional on sigma. Different C_i may share
+a label, so their boundary exclusions cannot be multiplied independently.
+
+Choosing an induced graph minimal for density surplus does not close this
+estimate. For every such U, minimality gives
+`e(G)-e(G-N[U])>Dr^2 alpha(G[U])`: the residual has independence at most
+`alpha(G)-alpha(G[U])`, and satisfies the density bound if nonempty.
+The first unsupported inference is replacing this incident-edge cost by
+distinct forbidden-label events. Edges from N(U)-U to farther vertices
+contribute to the cost but no additional factor in the displayed product.
+Their endpoints' components and the total component count must be handled
+jointly. This inequality supplies no new induction or extraction theorem.
+
+**Three fixed tests.** The [component probe](quantitative_component_label_probe.py)
+checks explicit r-colourings, so neither surplus input admits a
+deletion-only solution. For the planted graph, 36 independent six-vertex
+classes have cross-edges sampled with probability 0.6 and seed zero;
+complement-clique enumeration gives its exact independence number.
+For `Q4[K32]`, one vertex from each fibre over a cube shore gives an
+independent eight-set; a perfect matching of the cube partitions the host
+into eight cliques, proving independence eight. The one-sum control has treewidth three,
+so every minor is four-colourable and has independence ratio at most four.
+
+| Host | Order | Edges | Independence | r | Labels q; seed | Verified clique minor |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| Planted graph | 216 | 13,630 | 9 | 36 | 54; 0 | K47 |
+| Q4[K32] | 512 | 40,704 | 8 | 64 | 96; 1 | K65 |
+| Two K4s joined at one vertex | 7 | 12 | 2 | 4 | 6; 3 | K4 |
+
+Both positive inputs satisfy the order cap and `D=1` surplus. For the
+cube input, selecting from all components gives clique number 65; allowing
+every tie choice among largest components of each label gives only 52.
+The successful model includes singleton bags and has maximum bag size
+thirteen. This comparison concerns clique numbers, not all attainable
+independence ratios. It justifies retaining small components in this test,
+not a universal selection rule.
+
+Run `uv run python3 active/quantitative_component_label_probe.py`; the final
+line is `PASS: 3 finite cases; 2 verified surplus models; 1 negative control;
+10 clique-search cross-checks.` The script emits explicit bags and graph/model
+hashes, checks every contact in the original host, and cross-checks its exact
+clique search on ten small graphs. These finite certificates prove neither
+the density target nor its colouring consequence.
