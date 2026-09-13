@@ -24,9 +24,11 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    remain available without imposing their auxiliary roots on the objective.
 3. **Immediate laboratory:** extract a minor of independence ratio greater
    than r from a graph with order at most `r^(3/2)` and
-   `e(G)>D r^2 alpha(G)`, for an absolute D. The construction retains a
-   minimum-codegree contraction history and selects disjoint connected
-   bags from it. Its global existence proof remains open. The
+   `e(G)>D r^2 alpha(G)`, for an absolute D. Develop a simultaneous
+   connected-bag construction using the surplus itself. Bag sizes,
+   intermediate independence ratios and contraction order are unrestricted;
+   the retained minimum-codegree history is optional. No global
+   construction is proved. The
    [exact frontier](active/hc7_k44_closure_frontier.md) retains the C19
    residues; the [bipartite frontier](active/bipartite_contractibility_frontier.md)
    records the completed theorem and its application limits.
@@ -34,10 +36,38 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 ## Current work plan
 
 The goal remains HC7 or an independently substantiated NT-comparable theorem.
-The current discovery round tests density-surplus minor extraction.
-Conjecture 19, excluding `Q=K7-2K2`, remains the exact alternative; neither
-its proof nor its significance assessment is complete. Changing routes
-does not change the completion criterion.
+Retain the density theorem as the provisional target; pause further
+allocation development until there is a concrete operation for the spanning
+case. The previous plan supplied accounting before its decisive construction.
+Replacing capacities or restating a spanning deficit does not repair that.
+
+**Next campaign.** Work directly on a simultaneous minor model under the
+full surplus hypothesis. Separate the immediate induced-subgraph case;
+concentrate on inputs where deletion cannot suffice. Propose actual connected
+bags, allowing deletions, large bags and temporary
+ratio loss. One agent develops the construction, another attacks that same
+construction, and computation returns checked bags or a precise failed step.
+
+Use complete joins of parts consisting of unequal disjoint cliques, setting
+r to the sum of the largest clique orders in the parts. Their explicit
+r-colouring rules out a deletion-only solution; retain only instances with
+the required order cap and surplus. Use the high-girth blow-ups as the
+symbolic test against bounded bags. The padded-core example is a no-surplus
+control; the existing eight finite cases are regression checks. Success on these
+families is a screening condition, not the theorem. Before investing in
+auxiliary lemmas, identify how the candidate handles spanning support and
+which actual hypothesis supplies the needed independence decrease or
+contacts. Reject a repair that merely returns the original host or assumes
+separately chosen models coexist. Continue through plausible repairs rather
+than ending the campaign at its first barrier.
+
+Conjecture 19, excluding `Q=K7-2K2`, remains the exact challenger.
+Prefer reactivation when a concrete new operation combines the whole exterior
+with an actual proper-minor response; allow a stronger independent route
+and unrestricted recolouring. A complete five-chromatic exterior closure
+still leaves the six-chromatic case. Completion requires the full selected
+theorem, an audit of its implication chain, and a substantiated benchmark
+assessment.
 
 **Assessment of the last 20 commits, `a94a809` through `67f528a`.**
 The [four-chromatic exterior theorem](results/hc7_two_triangle_exterior_colour_bound.md)
