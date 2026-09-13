@@ -35,10 +35,10 @@ to intermediate claims remain with their designated conditional routes.
 ## Conditional routes
 
 - [Quantitative star contractions](quantitative_star_contraction_frontier.md):
-  the current discovery round seeks a minor of larger independence ratio
-  from density surplus; retained contraction histories are optional.
-  The density inequality and its sufficient route to a cube-root double-logarithmic
-  colouring bound remain unproved; direct barriers are in that frontier.
+  the current discovery round seeks the direct one-colour reduction R in
+  critical hosts. R and its cube-root double-logarithmic colouring consequence
+  remain unproved. The stronger density route is reserved and component
+  labelling is paused; direct barriers are in that frontier.
 - [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
   the retained C19 task is a simultaneous minor construction in the
   two-triangle critical host with six-chromatic x/y deletion; the

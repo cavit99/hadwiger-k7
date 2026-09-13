@@ -2,7 +2,7 @@
 
 **Status:** conditional route. The improved reduction below is unproved;
 its auxiliary uniform-cost independence reduction is refuted. No improved
-colouring bound is established. The current density construction and
+colouring bound is established. The direct critical reduction and
 the retained exact alternatives are selected in the [research ledger](../RESEARCH_LEDGER.md).
 
 ## Target and existing input
@@ -525,3 +525,99 @@ line is `PASS: 3 finite cases; 2 verified surplus models; 1 negative control;
 hashes, checks every contact in the original host, and cross-checks its exact
 clique search on ten small graphs. These finite certificates prove neither
 the density target nor its colouring consequence.
+
+## Direct critical reduction: neighbourhood constraint and failed repairs
+
+**Written deduction; no case of R is closed.** Let G be minor-minimal
+q-chromatic, with `h(G)<=r` and integers `q>=2r>=4`. Then, for every v,
+
+```text
+d(v)-alpha(G[N(v)]) >= T := 2q-2r-1.
+```
+
+Choose a maximum independent set S in N(v) and contract the star
+`{v} union S`. This is a proper minor; give it a `(q-1)`-colouring in
+which the merged vertex has colour zero. Expanding S with colour zero
+gives a proper colouring of G-v: every outside neighbour of S avoids
+zero. On N(v), precisely S has colour zero, since every other neighbour
+of v sees the merged vertex. Criticality forces each of the other q-2
+colours to occur on N(v)-S. At least `2(q-2)-(d(v)-|S|)` occur once.
+If `d(v)-|S|<=T-1`, select 2r-2 such singleton roots. The Kempe argument
+from the earlier degree proof gives paths between every pair across an
+equal bipartition. These paths avoid S and v; their colour projection
+is a scheme with all selected roots retained. Bipartite contractibility
+gives a rooted `K_(r-1,r-1)`, and r-2 cross-pair contractions give K_r.
+Adding the original singleton v gives K_(r+1), a contradiction. All bags
+are disjoint in the original host; no induction or quotient-class closure
+is asserted by this deduction.
+
+**Correction to the proposed low-degree case.** In R, the induced
+independence bound gives `alpha(G[N(v)])>=d(v)/r`. Consequently
+
+```text
+d(v) >= rT/(r-1),       d(v)-T >= d(v)/r > q/(6r).
+```
+
+The last inequality follows already from `d(v)>=q-1`. Thus the proposed
+band `d(v)<=T+q/(6r)` is empty. Splitting a fractional 2r-colouring into
+independent sets of size at most `ceil(n/r)` does give total weight at
+most `2r+n/ceil(n/r)<=3r`: first trim to unit vertex coverage, then split
+each class into pieces, preserving that coverage. The ensuing conditional
+band calculation was arithmetically valid, but was incorrectly interpreted
+as a substantive case closure. It is not promoted as a result.
+
+More generally, for every independent centre set I,
+`|N(u) intersect I|<=alpha(N(u))<=d(u)-T`. Hence the earlier centre-incidence
+bound alone can never certify an untouched vertex's degree below T.
+Actual extra coalescence remains possible. Using a stronger threshold for
+the next critical minor requires a fresh estimate; it is not ruled out.
+
+**Attempted joint degree accounting; global gain unproved.** For the
+nontrivial maximal-star bags B_i, put `W=union B_i`, `A=V(G)-W`, and let
+H be their simultaneous quotient. Define
+
+```text
+D_* = sum_i d_H([B_i]),
+C_A = sum_(i,u in A) (e_G(B_i,{u})-1)_+,
+C_B = 2 sum_(i<j) (e_G(B_i,B_j)-1)_+.
+```
+
+Counting edges incident with W gives the exact identity
+`sum_(x in W) d_G(x)=D_*+C_A+C_B+2 sum_i e(G[B_i])`.
+Here C_A is the total degree loss at untouched vertices. Small coalescence
+therefore leaves degree on the merged vertices. But these vertices need
+not stay independent or survive the subsequent critical minor. Deleting
+one costs one further quotient vertex while discarding many edges; its
+original bag size has already been paid for in the star order loss.
+No sufficient charge for such deletions, or critical-minor choice retaining
+the vertices, is proved. At the baseline star order loss `nq/r^2`, an
+edge contribution of scale `nq^2/r^2` gives only the old order scale when
+divided by q. Division by r would assume the missing gain.
+
+Replacing degree by `d(u)-alpha(N(u))` also lacks a valid monotonicity
+step: contractions elsewhere can lower neighbourhood independence while
+u survives as a singleton. Retaining particular independent neighbours
+instead creates shared ownership costs, with no disjoint charge proved.
+These failed repairs refute no graph theorem; R and its consequence remain
+open. Multiple rounds must pay their actual colour losses.
+
+For a batch consisting only of star contractions with independent leaves,
+let E contain every original preimage of a selected centre. Each final
+bag B has B-E independent: when an original edge first becomes internal,
+at least one end lies in that round's centre preimage. Thus
+`chi(G)<=chi(H)+chi(G[E])`. If `chi(G[E])<=s` for an integer `s>=1`, assign each non-E vertex
+in a nontrivial bag to an adjacent E vertex in that bag. The s independent
+classes of E partition these original independent-leaf stars. Writing L
+for their total leaf count and D for the batch's order loss, `D<=L+|E|`.
+One class supplies at least L/s leaves, or deleting a class removes at
+least `|E|/s` vertices. One original one-colour operation therefore removes
+at least `D/(2s)`. This may discover a better packing, but low-colour
+accounting alone does not prove its size. No bound on `chi(G[E])` is
+proved; arbitrary intervening critical-minor deletions are not covered.
+
+The component-label experiment remains a control, not a leading proof
+mechanism. Its cube input already has a K128 minor: in a Q3 face with
+binary labels 0,...,7, the pairs 01,26,37,45 form a K4 model. Taking each
+pair separately at each of the 32 clone indices gives 128 disjoint
+two-vertex bags with every contact. The recorded K65 is a valid certificate,
+but supplies little evidence for universal extraction.

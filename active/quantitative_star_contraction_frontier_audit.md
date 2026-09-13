@@ -5,7 +5,7 @@ Initial review: 9 September 2026; latest scoped review: 13 September 2026.
 This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`afb8bc75beaf5946f3caad0b14c0db4421448991ca604f6ba75321418d427aa6`.
+`c61699a81e67d35ccda63bbcfbb40ab8c1cad1acd83e45f60be5b0c9a16aa8dc`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -308,3 +308,51 @@ number over every largest-per-label tie choice. The comparison with 65
 does not bound all attainable independence ratios. The ledger preserves
 that finite scope. No universal construction, density theorem, improved
 colouring bound, novelty or NT-comparable significance is certified.
+
+## Neighbourhood constraint and withdrawal of the empty case
+
+**GREEN for the correction; R remains unproved.** Separate scoped internal
+review, 13 September 2026. Critical-step-adversary checked source
+`c61699a81e67d35ccda63bbcfbb40ab8c1cad1acd83e45f60be5b0c9a16aa8dc`;
+critical-colouring-construction and critical-band-complement independently
+reconstructed the neighbourhood inequality before its insertion.
+Removing the final section and restoring the opening phrase "current
+density construction" recovers the preceding audited source
+`afb8bc75beaf5946f3caad0b14c0db4421448991ca604f6ba75321418d427aa6`.
+
+The maximum independent-neighbour star is nontrivial. Its proper-minor
+colouring lifts to G-v, with colour zero on N(v) exactly at S. All other
+colours appear there by criticality. The singleton count, Kempe paths and
+bipartite extraction retain every selected neighbour root, avoid S and v,
+and lift directly before adding the original singleton v. The argument
+proves the stated inequality without assuming a recursive class is closed.
+
+The induced independence bound makes the proposed low-degree band empty.
+The fractional-cover splitting calculation remains valid, but its proposed
+application closes no possible case. For every independent centre set,
+the centre-incidence bound is likewise insufficient to cross the stated
+threshold. This does not exclude actual extra coalescence or an argument
+using a stronger critical-minor threshold.
+
+The incident-degree identity counts contacts between star bags twice and
+contacts to untouched vertices once. It supplies no theorem retaining the
+merged vertices in a critical minor. The source correctly identifies their
+potential deletion and previously counted preimages as an unclosed step,
+not a counterexample within R's hypothetical class. The Q3 pair model
+and its 32-fold clone construction give the stated K128 control.
+
+The revised ledger and index retain the full completion criterion and
+withdraw the claimed value of the low-degree lead. No new global colouring
+bound, substantive case of R, novelty or comparative significance is
+certified. The earlier audited mathematics is unchanged.
+
+The final batch paragraph was separately checked by critical-step-adversary.
+Every original edge internal to a final bag first coalesces through a
+centre preimage, so removing all such preimages leaves independent bag
+parts. Colouring those parts from the full quotient and the exception set
+with fresh colours gives the stated lift. Connectedness supplies each
+remaining leaf with a centre neighbour; an independent class of exception
+vertices therefore gives original disjoint independent-leaf stars. The
+bound `D<=L+|E|` and averaging prove the factor-two reduction. The argument
+does not bound the exception set's chromatic number or cover arbitrary
+intervening deletions. No improved packing follows from the accounting.

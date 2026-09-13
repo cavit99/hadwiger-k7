@@ -15,20 +15,22 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 1. **Exhaustive global obligation:** prove `HC_7`, that every finite
    `K_7`-minor-free graph is six-colourable, or obtain an independent theorem
    of reach and significance comparable to Norin--Totschnig.
-2. **Current conditional route:** prove the density inequality in the
-   [quantitative frontier](active/quantitative_star_contraction_frontier.md).
+2. **Current conditional route:** prove the direct one-colour reduction R
+   in the [quantitative frontier](active/quantitative_star_contraction_frontier.md).
    Its recorded implication would give a cube-root double-logarithmic
-   colouring bound. Neither the inequality nor that improvement is proved.
-   Conjecture 19 remains the selected exact alternative; Conjecture 21,
-   T44 and [rooted K5 contractibility](active/k5_contractibility_frontier.md)
-   remain available without imposing their auxiliary roots on the objective.
-3. **Immediate laboratory:** extract a minor of independence ratio greater
-   than r from a graph with order at most `r^(3/2)` and
-   `e(G)>D r^2 alpha(G)`, for an absolute D. Develop a simultaneous
-   connected-bag construction using the surplus itself. Bag sizes,
-   intermediate independence ratios and contraction order are unrestricted;
-   the retained minimum-codegree history is optional. No global
-   construction is proved. The
+   colouring bound. R and that improvement remain unproved. The stronger
+   density theorem is reserved; its component-label construction is paused.
+   Conjecture 19 remains the exact alternative; Conjecture 21, T44 and
+   [rooted K5 contractibility](active/k5_contractibility_frontier.md)
+   remain available without imposing auxiliary roots on the objective.
+3. **Immediate laboratory:** in the actual minor-minimal q-chromatic host,
+   obtain a minor retaining at least q-1 colours and removing at least
+   `c n q^2/r^3` vertices. Retain the proper-minor colouring responses and
+   all-minor independence bound. The proposed low-degree case is empty:
+   the stronger neighbourhood inequality proved in the frontier excludes
+   it. Star contractions and subsequent critical minors remain possible,
+   but centre incidences alone cannot force the claimed additional losses.
+   No full construction is available. The
    [exact frontier](active/hc7_k44_closure_frontier.md) retains the C19
    residues; the [bipartite frontier](active/bipartite_contractibility_frontier.md)
    records the completed theorem and its application limits.
@@ -36,40 +38,22 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 ## Current work plan
 
 The goal remains HC7 or an independently substantiated NT-comparable theorem.
-Retain the density theorem as the provisional target; pause further
-allocation development until there is a concrete operation for the spanning
-case. The previous plan supplied accounting before its decisive construction.
-Replacing capacities or restating a spanning deficit does not repair that.
+The recent density campaign improved diagnostics but closed no infinite
+case. Its finite models do not establish a universal extraction estimate;
+the cube test already contains a simple K128 model. Pause component
+labelling and uniform allocation rather than expanding those laboratories.
 
-**Next campaign.** Work directly on a simultaneous minor model under the
-full surplus hypothesis. Separate the immediate induced-subgraph case;
-concentrate on inputs where deletion cannot suffice. Propose actual connected
-bags, allowing deletions, large bags and temporary
-ratio loss. One agent develops the construction, another attacks that same
-construction, and computation returns checked bags or a precise failed step.
-
-The proposed unequal-clique joins have a one-edge contraction shortcut
-whenever they have surplus. Replace them as demanding tests with explicitly
-r-colourable planted graphs and sparse-base blow-ups, retaining only inputs
-with the order cap and surplus. The current component-label probe returns
-verified K47 and K65 models on two such inputs. Keeping all monochromatic
-components, including small ones, improves the cube test's clique number
-from at most 52 to 65. This is finite evidence only.
-
-The candidate labels vertices and selects whole connected monochromatic
-components. Its exact component-event probability is written, but surplus
-does not yet control that probability or the final independence ratio:
-many incident edges can pay for just one boundary label restriction.
-Existential labelling largely restates the missing minor construction.
-The next proof attempt must jointly control these boundary components and
-the selected model; further successful finite inputs alone cannot close it.
-Use high-girth blow-ups as the symbolic test against bounded bags, and the
-padded-core and existing finite examples as controls. Before investing in
-auxiliary lemmas, identify how the candidate handles spanning support and
-which actual hypothesis supplies the needed independence decrease or
-contacts. Reject a repair that merely returns the original host or assumes
-separately chosen models coexist. Continue through plausible repairs rather
-than ending the campaign at its first barrier.
+The direct R investigation uncovered a stronger neighbourhood constraint,
+which invalidates the claimed usefulness of the low-degree lead. Its
+conditional calculation was correct but vacuous. The replacement attempt
+counts extra coalescence and degrees of merged stars together. A critical
+minor may discard those vertices, and the available edge accounting still
+recovers only the old order-loss scale. R remains a target, not a ready
+proof plan. Further work must derive the missing quantitative gain from
+one common contraction and colouring argument; moving a threshold or
+adding another sufficient condition is not a case closure. Keep one shared
+construction under independent attack, with all colour losses and lifts
+explicit. Do not promise a high likelihood of completion from this evidence.
 
 Conjecture 19, excluding `Q=K7-2K2`, remains the exact challenger.
 Prefer reactivation when a concrete new operation combines the whole exterior
@@ -79,7 +63,7 @@ still leaves the six-chromatic case. Completion requires the full selected
 theorem, an audit of its implication chain, and a substantiated benchmark
 assessment.
 
-**Assessment of the last 20 commits, `a94a809` through `67f528a`.**
+**Earlier exact campaign, `a94a809` through `67f528a`.**
 The [four-chromatic exterior theorem](results/hc7_two_triangle_exterior_colour_bound.md)
 closes one entire remaining chromatic branch for arbitrary host order.
 The [four-cut theorem](results/hc7_four_cut_components.md) and
@@ -120,9 +104,9 @@ neighbourhood and five-chromatic exterior, but fails the actual critical
 hypotheses. The [integer order-and-edge construction](barriers/quantitative_order_edge_potential.md)
 shows that the new degree and loss bounds alone cannot give the cubic
 colouring improvement; it is not a graph counterexample to R.
-The comparison justified replacing the tested constructions. The current
-round below uses density surplus directly; it does not repeat a uniform
-independence-drop cost or infer graph structure from scalar losses.
+The comparison justified replacing the tested constructions. The subsequent
+density campaign also left its spanning construction open; neither route
+may infer graph structure from the scalar losses alone.
 
 For retained C19 work, use the [global codegree bound](results/hc7_global_edge_codegree.md),
 including its first-quotient bound and suitable paired contraction, when
@@ -132,7 +116,7 @@ Freeze additional separator or relative-linkage refinements unless an
 identified application closes a whole remaining case or supplies a closed
 induction. All known separator residues remain in the designated frontier.
 
-**Density construction: current standing.** The
+**Reserved density construction.** The
 [retained history](active/quantitative_star_contraction_frontier.md#density-surplus-and-a-retained-contraction-history)
 allows intermediate ratio loss and a final selection of connected bags
 from different stages. Minimum-codegree contractions costing at most r
