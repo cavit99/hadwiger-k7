@@ -15,31 +15,29 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 1. **Exhaustive global obligation:** prove `HC_7`, that every finite
    `K_7`-minor-free graph is six-colourable, or obtain an independent theorem
    of reach and significance comparable to Norin--Totschnig.
-2. **Immediate theorem target:** Conjecture 19 asserts that every
-   `K_7^=`-minor-free graph is six-colourable, where the two deleted edges
-   are independent. This gives a concrete proposed comparison with
-   Norin--Totschnig; it is unproved. The stronger Conjecture 21 and its
-   sufficient structural target T44 remain available conditional routes.
-3. **Immediate structural laboratory:** the
-   [critical-host construction](active/hc7_k44_closure_frontier.md#7-the-critical-host-global-construction),
-   seeking one simultaneous Q-minor construction in the remaining case.
-   The six-root bipartite scheme is one sufficient route; retaining those
-   roots or leaving v singleton is not a requirement of the objective.
-   The [fully rooted K5 construction](active/k5_contractibility_frontier.md)
-   remains an alternative extraction route.
-   Neither global construction nor a closed induction is proved.
-   The
-   [technical frontier](active/bipartite_contractibility_frontier.md)
-   records the completed bipartite theorem, exact counterexamples and
-   application limits; the [T44 frontier](active/hc7_k44_closure_frontier.md)
-   retains the conditional HC7-related constructions.
+2. **Current conditional route:** prove the density inequality in the
+   [quantitative frontier](active/quantitative_star_contraction_frontier.md).
+   Its recorded implication would give a cube-root double-logarithmic
+   colouring bound. Neither the inequality nor that improvement is proved.
+   Conjecture 19 remains the selected exact alternative; Conjecture 21,
+   T44 and [rooted K5 contractibility](active/k5_contractibility_frontier.md)
+   remain available without imposing their auxiliary roots on the objective.
+3. **Immediate laboratory:** extract a minor of independence ratio greater
+   than r from a graph with order at most `r^(3/2)` and
+   `e(G)>D r^2 alpha(G)`, for an absolute D. The construction retains a
+   minimum-codegree contraction history and selects disjoint connected
+   bags from it. Its global existence proof remains open. The
+   [exact frontier](active/hc7_k44_closure_frontier.md) retains the C19
+   residues; the [bipartite frontier](active/bipartite_contractibility_frontier.md)
+   records the completed theorem and its application limits.
 
 ## Current work plan
 
 The goal remains HC7 or an independently substantiated NT-comparable theorem.
-Conjecture 19, excluding `Q=K7-2K2`, is the selected exact route; neither
-its proof nor its significance assessment is complete. Routes may change
-without changing that completion criterion.
+The current discovery round tests density-surplus minor extraction.
+Conjecture 19, excluding `Q=K7-2K2`, remains the exact alternative; neither
+its proof nor its significance assessment is complete. Changing routes
+does not change the completion criterion.
 
 **Assessment of the last 20 commits, `a94a809` through `67f528a`.**
 The [four-chromatic exterior theorem](results/hc7_two_triangle_exterior_colour_bound.md)
@@ -65,25 +63,14 @@ closes `chi(G-{x,y})=5`. The exterior theorem proves
 `chi(G)<=max{4,chi(W)+2}`. Thus the remaining host has
 `chi(G-{x,y})=6` and `chi(W)` equal to five or six.
 
-**Exact checkpoint:** close the whole `chi(W)=5` branch,
-using a six-colouring or a simultaneous Q model in the actual host.
-The current mechanism seeks two exterior colour classes that can both
-use the three neighbourhood colours. Their missing-colour lists must be
-compatible in one colouring; separate colourings or separate minor models
-do not suffice. A common five-colouring now gives one class avoiding
-A--other-group contacts and a second avoiding three-group contacts.
-The attempted component contraction does not preserve a compatible
-neighbourhood palette. The shared attack must use the five-colouring of
-the whole W and a proper-minor six-colouring in one construction. The
-two colourful neighbour sets in one five-chromatic subgraph give an
-optional joint-wheel target; that deduction alone does not use `chi(W)=5`.
-Restoration must handle the entire omitted independent set in one response.
-Allow both completing bags to expand and the two missing pairs to change,
-while retaining every required contact. No such exchange or colouring
-extension is proved. Fixed roots and two-class absorption are not mandatory.
-The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-records the exact contact constraints and first unsupported exchanges.
-The six-chromatic exterior and the full two-triangle case remain open.
+**Retained exact checkpoint:** close the whole `chi(W)=5` branch by a
+six-colouring or a simultaneous Q model in the actual host. The
+[technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+retains the contact constraints and failed palette and ownership exchanges.
+Any restoration must handle the entire omitted independent set in one
+response. No such construction is proved; neither roots nor two-class
+absorption are mandatory. Further repairs of the current recolouring
+mechanism are paused. The six-chromatic exterior also remains open.
 
 **Comparison outcome.** Neither the exterior recolouring nor quantitative
 criticalisation attempt produced a whole-case closure or a closed decreasing
@@ -93,14 +80,11 @@ neighbourhood and five-chromatic exterior, but fails the actual critical
 hypotheses. The [integer order-and-edge construction](barriers/quantitative_order_edge_potential.md)
 shows that the new degree and loss bounds alone cannot give the cubic
 colouring improvement; it is not a graph counterexample to R.
-Neither route has earned extended concentration from this comparison.
-The next construction must use actual graph constraints missing from these
-examples: a selectable proper-minor response coupled to a complete colouring
-extension or Q construction in the exact case, or additional control of the
-surviving contraction bags in R. Do not repeat the restricted response or
-scalar-potential arguments.
+The comparison justified replacing the tested constructions. The current
+round below uses density surplus directly; it does not repeat a uniform
+independence-drop cost or infer graph structure from scalar losses.
 
-Use the [global codegree bound](results/hc7_global_edge_codegree.md),
+For retained C19 work, use the [global codegree bound](results/hc7_global_edge_codegree.md),
 including its first-quotient bound and suitable paired contraction, when
 it helps this construction. The [joint-wheel counterexample](barriers/hc7_joint_wheel_two_sets.md)
 refutes relying on five-connectivity, nonplanarity and minimum degree six alone.
@@ -108,17 +92,22 @@ Freeze additional separator or relative-linkage refinements unless an
 identified application closes a whole remaining case or supplies a closed
 induction. All known separator residues remain in the designated frontier.
 
-**Competing global attack:** the [quantitative frontier](active/quantitative_star_contraction_frontier.md)
-retains the critical one-colour reduction R and a sufficient density
-inequality for an improved double-logarithmic colouring exponent.
-The [uniform-cost independence reduction](barriers/quantitative_alpha_drop_cost.md)
-is now refuted under all its order and all-minor hypotheses: every eligible
-contraction can cost `Omega(r^2 log r)`. Retire this step; the density
-inequality and R are not refuted and remain unproved. Test a construction
-using their stronger hypotheses directly, without the earlier bounded-bag
-shortcut or a claim of an achieved colouring improvement.
-T44 and [rooted K5 contractibility](active/k5_contractibility_frontier.md)
-remain available, without making their auxiliary root requirements mandatory.
+**Density construction: current standing.** The
+[retained history](active/quantitative_star_contraction_frontier.md#density-surplus-and-a-retained-contraction-history)
+allows intermediate ratio loss and a final selection of connected bags
+from different stages. Minimum-codegree contractions costing at most r
+fit the required edge budget. An audited private-neighbour inequality
+constrains more expensive contractions, but no bound on their combined
+cost is proved; repeated use of the same original vertices remains the gap.
+The [sharp order example](barriers/quantitative_density_contraction_order.md)
+has arbitrarily large surplus and requires `r/2` order loss before the
+first independence decrease; an explicit batch attains this and succeeds.
+It does not refute the target. The retained probe checks five surplus
+inputs and three controls, returning six verified models; three surplus
+inputs need only deletion. These are finite experiments, not a global
+construction theorem. The density inequality, critical reduction R and
+improved colouring bound remain unproved. Do not promote another count or
+extremal reformulation as closing the missing graph construction.
 
 Advance a route on a complete proof with a valid lift, a decisive obstruction,
 or a changed global mechanism; do not measure progress by commits or lemma

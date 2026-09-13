@@ -23884,7 +23884,7 @@ status = "conditional-target"
 source = "active/quantitative_star_contraction_frontier.md"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "86926710366d20ac3564195c5e11b126d8cb569f0cc565c0ae08c0b528741424"
+expected_source_sha256 = "687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3"
 scope = "minor-minimal q-chromatic graphs on at most r^(3/2) vertices whose every minor F satisfies alpha(F)>=|F|/r, with q>=Kr"
 colour_compatibility = "the desired minor retains chromatic number at least q-1"
 strict_parameter = "host order; the conditional proof minimises order then edge count"
@@ -24453,3 +24453,58 @@ source = "hadwiger.target.cubic_star_reduction"
 target = "hadwiger.barrier.order_edge_potential"
 kind = "guarded_by"
 note = "Criticalisation and scalar losses alone do not give the extra factor; a successful construction must use further graph constraints."
+
+
+[[claims]]
+id = "hadwiger.target.density_surplus_minor"
+title = "Minor extraction from density surplus"
+kind = "target"
+status = "conditional-target"
+source = "active/quantitative_star_contraction_frontier.md"
+source_heading = "Density surplus and a retained contraction history"
+audit = "active/quantitative_star_contraction_frontier_audit.md"
+active = false
+expected_source_sha256 = "687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3"
+scope = "an absolute D>=1, all integers r>=2 and finite graphs with order at most r^(3/2) and e(G)>D r^2 alpha(G)"
+label_fidelity = "the proposed output uses disjoint connected original preimages and all original contacts, including those to retired history nodes"
+strict_parameter = "active order decreases at every generating merge or retirement; existence of a successful final node selection is unproved"
+conclusions = ["target: a minor F with |F|>r alpha(F)", "the contrapositive is the sufficient density inequality for critical reduction R"]
+does_not_prove = ["the high-cost contraction bound or global node selection", "the density inequality or improved global colouring theorem", "HC7 or Conjecture 19", "NT-comparable significance of the present deductions or finite experiments"]
+
+[[relations]]
+source = "hadwiger.target.cubic_star_reduction"
+target = "hadwiger.target.density_surplus_minor"
+kind = "related_to"
+note = "The exact density contrapositive is a sufficient construction for R, with its conditional global implication already written."
+
+[[relations]]
+source = "hadwiger.target.density_surplus_minor"
+target = "hadwiger.barrier.bounded_bag_density"
+kind = "guarded_by"
+note = "A successful universal extraction cannot impose a fixed bound on the size of its final bags."
+
+[[claims]]
+id = "hadwiger.barrier.density_contraction_order"
+title = "A sharp order cost for independence decrease despite unbounded density surplus"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/quantitative_density_contraction_order.md"
+audit = "barriers/quantitative_density_contraction_order_audit.md"
+active = false
+expected_source_sha256 = "999502f1b82814d3647e479712825d2ca17ba1f4eb5a3f22e18c213ee25c1127"
+scope = "even k>=4, r=k^2, and the complete join of k parts each consisting of k disjoint k-cliques"
+conclusions = ["order r^(3/2), independence k and unbounded e/(r^2 alpha)", "every minor lowering independence by s loses at least rs/2 vertices for 1<=s<=k-1", "a disjoint matching batch attains this bound and gives independence ratio greater than r"]
+does_not_prove = ["failure of the density target or coordinated extraction", "the all-minor independence hypothesis or high-chromatic premise of R", "a global theorem or NT-comparable significance"]
+
+[[relations]]
+source = "hadwiger.target.density_surplus_minor"
+target = "hadwiger.barrier.density_contraction_order"
+kind = "guarded_by"
+note = "Arbitrarily large surplus does not guarantee an independence decrease within o(r) order loss; a complete epoch must be allowed."
+
+[[verifiers]]
+id = "density-contraction-probe"
+path = "active/quantitative_density_contraction_probe.py"
+sha256 = "434077d263a66781ce249220e7a14686e9795c8d905c7d4019b2b2613b9f32b2"
+timeout = 30
+expected_stdout = ["PASS: 8 finite cases; 6 verified models; 2 negative controls."]

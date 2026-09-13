@@ -5,7 +5,7 @@ Initial review: 9 September 2026; latest scoped review: 13 September 2026.
 This is separate internal review, not peer review.
 
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
-`86926710366d20ac3564195c5e11b126d8cb569f0cc565c0ae08c0b528741424`.
+`687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3`.
 The parent wrote the original quantitative argument. Literature-repair
 and universal-proof independently reviewed it; literature-repair also
 rechecked Delcourt–Postle's primary Theorem 1.6. Both reviewers separately
@@ -183,3 +183,65 @@ potential obstruction is identified as numerical, not an example meeting
 R's graph hypotheses. Neither this audit nor the new degree and charging
 deductions prove R, an improved colouring bound, or the HC7/comparable-
 theorem objective. No novelty or significance assessment is certified.
+
+## Density surplus and a retained contraction history
+
+**GREEN; separate scoped internal audit, 13 September 2026.**
+The density-construction-adversary agent independently checked source
+`687d6d121d47cb23d87e516667ef07b8e8f2c4964bd9130074f1728ddc3c63e3`.
+The change consists of the opening status correction and the final
+subsection; all preceding mathematical text is unchanged from source
+`86926710366d20ac3564195c5e11b126d8cb569f0cc565c0ae08c0b528741424`.
+The density-connected-construction agent separately checked the private-
+neighbour deduction, retirement model and complete edge-loss accounting.
+
+The density statement is the exact contrapositive in the stated order
+range. Its test inputs need not belong to the all-minor independence
+class. Each contraction joins adjacent connected bags; incomparable
+forest nodes therefore have disjoint connected original preimages.
+Retirement makes a node a root and prevents any later merger with it.
+Keeping every original contact, including those to retired roots, gives
+a valid minor for selections from different stages. The target permits
+existential retirement and tie choices; arbitrary choices are not certified.
+
+For the private-neighbour inequality, minimum codegree gives minimum
+degree at least c inside each endpoint's open neighbourhood. An
+independent set there has at most d-c members. This induced subgraph is
+a permitted node selection, so its ratio bound yields the displayed
+inequality at both endpoints. If one endpoint is universal, the other
+has no private neighbours. The claimed cost bound follows.
+
+Each merge loses exactly one active edge plus its codegree; retirement
+loses the bag's active degree. Every operation reduces active order by
+one, so there are exactly |G| operations before the active graph is empty
+and their losses sum to e(G). Retirements cost at most r. The initial
+leaf selection gives |G|<=r alpha(G), proving the combined charge for all
+retirements and merges costing at most r. No bound on the remaining
+cost is established. Repeated private-neighbour incidences cannot be
+charged as distinct original vertices without further proof.
+
+Lifting one representative from each bag of a final maximum independent
+set gives a fixed independent witness throughout a constant-alpha
+interval. The K4-ab example correctly excludes arbitrary extension
+through the next decrease. Adding two universal apex bags gives only
+an additive order deficit in the all-minor independence inequality;
+the source does not use an unjustified r-to-r-2 induction.
+
+The finite probe, SHA-256
+`434077d263a66781ce249220e7a14686e9795c8d905c7d4019b2b2613b9f32b2`,
+was read and rerun through uv. It returned the recorded eight cases,
+six verified models and two negative controls. All five target inputs
+satisfy the D=1 surplus and exact integer order checks; three require
+no contraction. The checker independently compares every pair of bags
+with the original contacts and checks connectivity and disjointness.
+The two negative controls have the stated mathematical ratio bounds.
+The r-core pruning admits an order deleting vertices of current degree
+less than r, so it fits the retirement budget. Higher-degree deletion
+prefixes are inspected as candidate output selections without changing
+the generating history. The script neither tests all forest antichains
+nor certifies unsuccessful searches as minor exclusion.
+
+The high-cost charge, existence of a successful selection, density
+theorem, improved colouring bound and HC7/comparable-theorem objective
+remain unproved. This audit certifies only the scoped deductions and
+reported finite evidence, not a global construction or significance claim.

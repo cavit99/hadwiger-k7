@@ -2,8 +2,8 @@
 
 **Status:** conditional route. The improved reduction below is unproved;
 its auxiliary uniform-cost independence reduction is refuted. No improved
-colouring bound is established. The primary exact campaign
-remains Conjecture 19 in the [research ledger](../RESEARCH_LEDGER.md).
+colouring bound is established. The current density construction and
+the retained exact alternatives are selected in the [research ledger](../RESEARCH_LEDGER.md).
 
 ## Target and existing input
 
@@ -308,3 +308,91 @@ It remains unproved that a choice forces
 shows why the displayed numerical bounds alone do not yield the cubic
 improvement; it is an arithmetic obstruction, not a graph counterexample
 to R. No improved global colouring theorem follows from this subsection.
+
+## Density surplus and a retained contraction history
+
+**Current construction; unproved.** Seek an absolute `D>=1` such that,
+for every integer `r>=2` and finite graph G with
+
+```text
+|G|<=r^(3/2),       e(G)>D r^2 alpha(G),
+```
+
+there is a minor F with `|F|>r alpha(F)`. This is exactly the
+contrapositive of the sufficient density inequality above. Test inputs
+need not satisfy the all-minor independence bound: the output witnesses
+its failure. No chromatic criticality or prescribed roots are required.
+
+Generate a history by contracting an edge of minimum codegree in the
+active quotient, or retiring a current bag of degree at most r. Record
+each merged pair as the children of its new bag; a retired bag becomes a
+forest root and is never merged again. Every operation decreases active
+order by one; continue until it is zero. Select pairwise incomparable
+forest nodes as the final bags, allowing retired roots and nodes from
+different stages. Use **all original contacts**, including those lost
+from the active quotient on retirement. The original preimages are
+connected and disjoint, so this contact graph is a minor after deleting
+unused vertices. The existential target permits choosing retirements,
+ties and final nodes; success for every choice is not assumed.
+
+This admits every induced subgraph of every intermediate quotient and
+avoids permanently losing useful bags through a later contraction.
+Merely inspecting full quotients misses a clique diluted by isolates.
+The [sharp order barrier](../barriers/quantitative_density_contraction_order.md)
+also forces a long interval before independence first decreases, despite
+arbitrarily large surplus. Its explicit batch crosses that interval.
+The global density construction remains unproved.
+
+**Private neighbours; written deduction.** Suppose the candidate forest
+has no selectable minor of independence ratio greater than r. At a
+minimum-codegree merge uv in its current quotient H, put
+
+```text
+c=|N_H(u) intersect N_H(v)|,
+p_u=|N_H(u)-N_H[v]|,       p_v=|N_H(v)-N_H[u]|.
+```
+
+Then `c+1<=r+(r-1)min(p_u,p_v)`. Indeed every vertex in `H[N(u)]`
+has degree at least c there. An independent set in that neighbourhood
+has at most `d_H(u)-c=p_u+1` vertices. Its induced ratio is at most r,
+so `d_H(u)<=r(p_u+1)`, giving the inequality; exchange u,v as well.
+In particular, merging a universal vertex costs at most r edges.
+An expensive merge therefore has private neighbours on both sides.
+
+**Exact remaining charge.** Each merge loses precisely `c+1` active
+edges; retirement loses the bag's current degree. These losses sum to
+`e(G)`, and the total number of operations is `|G|`. All retirements
+and merges costing at most r therefore contribute at most
+`r|G|<=r^2 alpha(G)`, since the original leaf selection also has ratio
+at most r. It would suffice to bound the expensive merges' cost by
+`C r^2 alpha(G)` for one permissible history without a successful
+selection. This bound is unproved. Private-neighbour counts alone do not
+supply it: the same original vertices can occur in many such counts.
+Any charge must retain actual preimages or provide a justified exchange.
+
+On an interval of constant independence number, a maximum independent
+set in its last quotient has representatives in distinct anticomplete
+bags throughout the interval. This witness need not extend through an
+independence decrease: in `K4-ab`, contracting the minimum-codegree edge
+ac gives K3, whose singleton maximum set at the fourth vertex cannot
+extend to the earlier unique maximum set `{a,b}`. No nested choice or
+exchange across intervals is proved. Nor does adding two apex vertices
+justify changing an all-minor ratio bound r to `r-2`.
+
+**Finite laboratory only.** The deterministic
+[probe](quantitative_density_contraction_probe.py) checks eight cases:
+five genuine `D=1` surplus inputs, one positive control and two negative
+controls. It returns six verified models; three surplus inputs are
+handled by deletion alone. This implementation inspects minimum-degree
+deletion prefixes and may prune to an r-core before contracting, which
+fits the degree-restricted retirement rule. Higher-degree deletion
+prefixes are inspected as possible outputs, not performed in the history.
+The probe does
+not enumerate all forest-node selections or prove their existence.
+Every output includes the original graph and model hashes and explicit
+bags, checked for connectivity, disjointness and exact contacts. Run
+`uv run python3 active/quantitative_density_contraction_probe.py`; expected
+final line: `PASS: 8 finite cases; 6 verified models; 2 negative controls.`
+The negative controls are forests and K3,3, whose minors have ratio at
+most two and four respectively. No improved global theorem follows from
+the experiment or these deductions.
