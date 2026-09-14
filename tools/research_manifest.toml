@@ -23258,6 +23258,40 @@ kind = "guarded_by"
 note = "Its valid side replacement must not be extended to the refuted k-2-region or abstract clique-boundary conclusions."
 
 [[claims]]
+id = "hc7.target.two_triangle_critical_closure"
+title = "Complete the actual two-triangle critical-host case"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_k44_closure_frontier.md"
+source_heading = "7.5 A neighbourhood contact construction"
+active = false
+expected_source_sha256 = "e2b26e556d0328719262f587b2525d91522bfd9635b98e55232bdf8a320fbed1"
+scope = "the actual finite seven-connected seven-contraction-critical Q7-minor-free host of minimum degree eight, with a degree-eight neighbourhood spanning two triangles and an edge; all audited hypotheses and possible extra neighbourhood edges retained"
+colour_compatibility = "every proper minor is six-colourable; a successor is not assumed to remain seven-contraction-critical"
+label_fidelity = "final bags may reselect roots and expand v; every invoked intermediate rooting and original-host ownership condition must be preserved or explicitly replaced"
+allowed_exits = ["a Q7=K7-2K2 minor with seven disjoint connected original-host bags", "a six-colouring of G"]
+conclusions = ["the selected whole-case closure must cover both five- and six-chromatic exteriors", "combined with the completed cases and an implication audit, closure would prove Conjecture 19"]
+does_not_prove = ["the global allocation", "closure of an unspecified successor class", "Conjecture 21 or HC7", "NT-comparable significance of current results"]
+
+[[relations]]
+source = "hc7.target.hadwiger7"
+target = "hc7.target.two_triangle_critical_closure"
+kind = "related_to"
+note = "Sole selected discovery campaign towards the user's objective; C19 completion is not itself an established HC7 implication or significance verdict."
+
+[[relations]]
+source = "hc7.target.two_triangle_critical_closure"
+target = "hc7.laboratory.mixed_colour_root_allocation"
+kind = "related_to"
+note = "Shared starting construction; its connected allocation is unproved and is not promoted to a theorem dependency."
+
+[[relations]]
+source = "hc7.target.two_triangle_critical_closure"
+target = "hc7.barrier.bipartite_colour_allocation"
+kind = "guarded_by"
+note = "Fixed connected-shore allocations fail in broader hosts. Actual proper-minor criticality and unrestricted reselection remain available."
+
+[[claims]]
 id = "hc7.target.two_triangle_bipartite_scheme"
 title = "Optional six-root bipartite scheme for the two-triangle case"
 kind = "target"

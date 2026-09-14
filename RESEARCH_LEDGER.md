@@ -15,110 +15,76 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
 1. **Exhaustive global obligation:** prove `HC_7`, that every finite
    `K_7`-minor-free graph is six-colourable, or obtain an independent theorem
    of reach and significance comparable to Norin--Totschnig.
-2. **Selected conditional theorem:** every five-connected six-chromatic
-   graph of minimum degree at least six and order at least seven contains
-   `Q7=K7-2K2`, with independent missing edges. This
-   [augmentation target](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
-   would close all Conjecture 19 by the audited triangle-quotient reduction.
-   It remains unproved; neither C19 nor its comparable significance is
-   assumed to follow from a partial construction. The actual critical-host
-   formulation and quantitative R remain alternatives.
-3. **Immediate laboratory:** turn one mixed-root K4 into seven compatible
-   bags, allowing the selected bipartite vertex set, its roots and all
-   bags to change. Its independent shores supply a valid colouring
-   argument; replacing them by connected bags is unproved and fails for
-   some fixed choices. Retain the actual critical-host alternative using
-   simultaneous proper-minor colouring responses. Finite models remain
-   discovery evidence, not a case closure.
-   The [bipartite frontier](active/bipartite_contractibility_frontier.md)
-   retains the completed theorem and its application limits.
+2. **Sole selected case closure:** rule out the remaining seven-connected,
+   seven-contraction-critical, `Q7=K7-2K2`-minor-free host of minimum degree
+   eight with a degree-eight vertex whose neighbourhood spans two triangles
+   and an edge. Retain every audited hypothesis and permit extra
+   neighbourhood edges. A complete construction in arbitrary host order,
+   together with the completed cases and an implication audit, would prove
+   Conjecture 19. It would not automatically prove HC7 or certify the
+   comparative-significance benchmark.
+3. **Immediate construction:** use actual proper-minor six-colourings to
+   resolve the connected allocation missing from the mixed-root K4 state.
+   The selected roots, colour classes and all branch sets may change;
+   the required output is one full Q7 model or a six-colouring of G.
+   The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
+   retains the exact host, proved inputs and allocation barriers.
 
 ## Current work plan
 
-The next sustained campaign targets the augmentation theorem above. Unlike
-our hypothetical critical counterexample, its hypotheses admit concrete
-positive hosts on which competing constructions can be compared. It drops
-proper-minor criticality, so it may be harder than the original problem;
-its experimental accessibility is the reason for this choice, not evidence
-of a proof. A triangle through the degree-eight vertex in the actual C19
-host contracts to a graph satisfying all these hypotheses. A Q7 model in
-that quotient lifts through the fixed triangle preimage, covering both
-remaining exterior cases without a separate restoration argument.
+**Single focus, 14 September 2026.** All discovery effort goes to the actual
+critical-host case above. The broader five-connected augmentation theorem,
+Liu--Luo extension, quantitative R and density targets, T44, rooted K5 and
+standalone manuscript development are parked. There is no parallel
+feasibility task on another theorem. Their records remain available as
+inputs or barriers when needed by this construction.
 
-**Compute to expose the missing operation.** Reuse existing model checkers
-and graph generators. Certify chromatic number, connectivity and minimum
-degree for each input. Separate already-covered hosts from those on which
-a candidate construction stalls: literal K6, universal-vertex and existing
-wheel certificates are controls. A failed search is not an absence proof.
-Find and independently check unrestricted Q7 models in the same hosts;
-record how ownership changes between those models. Minimise informative
-instances while retaining the hypotheses and both certificates. Do not
-spend the campaign collecting easy models or enumerating neighbourhoods
-without their exteriors.
+**Why this case.** The cycle-and-triangle case and the four-chromatic
+exterior case are complete. The remaining host supplies proper-minor
+colourings absent from the broader allocation counterexamples. The uniform
+contraction route still needs both global availability and a quantitative
+progress theorem; the new combinations give no better asymptotic bound.
+These facts justify concentrating here, not a claim that closure is near.
 
-**Executed exchange tests.** The
-[full-hypothesis obstructions](barriers/hc7_chromatic_augmentation_operations.md)
-refute single-edge preservation of the sixth colour and strict local
-descent even with a bag-balancing tie-break. A paired contraction recovers
-the sixth colour in the same eleven-vertex example; no universal choice
-is proved. The [exact probe](active/hc7_chromatic_exchange_probe.py) checks
-all connected seven-part partitions of two eleven-vertex hosts. Its local
-successes do not generalise, as the written 77-vertex example shows.
-The [earlier calibration](active/hc7_forest_exchange_probe.py) remains a
-control. No augmentation case or global colouring theorem was closed.
+**One shared construction.** Start from singleton v and two whole classes
+of a six-colouring of G-v. The mixed-root deduction supplies one K4 whose
+four roots neighbour v and contact both classes. Develop one operation on
+an entire troublesome attachment component: use a proper-minor colouring
+of that same host to reselect the classes and bags, and turn its response
+into a compatible connected allocation. The initial K4 and singleton v
+are starting data, not mandatory final bags. Preserve exactly the contacts
+needed by Q7, rather than requiring a stronger fixed-root target.
 
-**Adaptive discovery campaign.** The next mathematical checkpoint is a
-complete arbitrary-order Q7 construction, or a closed decreasing reduction
-that completes it. The coordinating agent develops the main proof and
-integrates the surviving arguments. Eight concurrent agents are capacity,
-not a requirement to maintain seven permanent subsidiary roles.
+Prefer a direct construction in the original graph. A recursive proposal
+must define and prove closure of its successor class, retain the needed
+colouring and ownership data, decrease a well-founded parameter and lift
+through fixed disjoint preimages. A proper minor cannot silently inherit
+seven-contraction-criticality: it is six-colourable. Another rooted model
+or an independently chosen colouring does not finish the allocation.
 
-Start two distinct attacks, using two builders on each when their tasks
-are independent:
+**Agent allocation.** The coordinator builds and integrates the proof.
+Up to four additional builders work on distinct obligations of this same
+operation: deriving the colouring response, choosing the connected sets,
+retaining all required contacts and completing the terminal argument.
+One challenger tests the current strongest inference. A computational
+agent is used only for a specified question that changes that inference;
+otherwise the slot supports the same proof or remains unused. A free
+slot or reassigned builder reconstructs a completed candidate independently.
+Capacity is eight simultaneous agents including the coordinator, not a
+requirement to duplicate work. No agent pursues a second research target.
 
-- **Colouring-led construction in the actual C19 host.** Use its proper-minor
-  six-colourings to select simultaneous contractions with fixed disjoint
-  preimages. The missing step is a global choice giving the required minor
-  or an admissible successor; recovering six colours alone is insufficient.
-- **Global model construction under the augmentation hypotheses.** Allow
-  every bag and chosen root to change, including simultaneous exchanges
-  that temporarily lose contacts. A terminal Q7 anywhere in the host is
-  valid. A smaller-instance exit must retain the invoked theorem's full
-  hypotheses; local optimality supplies neither exit automatically.
+**Continue to closure.** The theorem must cover both remaining exterior
+chromatic numbers, five and six. A local repair is a checkpoint to integrate
+and continue from, not the deliverable. If the operation again assumes
+connected colour classes, reuses an owned vertex or loses a successor
+hypothesis, reject that step and change the construction within this same
+case. Do not replace the gap with another sufficient condition. Evaluate
+progress by completed proof obligations and a valid terminal construction,
+not agent count, finite successes or commits. Independently reconstruct a
+complete candidate and audit the entire C19 implication before promotion;
+then assess its contribution against the user's original objective.
 
-Each attack must provide an explicit construction and its first unproved
-inference. One challenger attacks those same inferences immediately.
-Allocate another agent to computation only for a question whose answer
-changes the proof, and an independent reconstructor once there is an
-argument to reconstruct. Otherwise those slots support distinct discovery
-obligations. Keep productive agents in their existing contexts, give them
-only the relevant additional sources, and use one editing owner per file.
-Do not duplicate searches or spawn descendants when all slots are occupied.
-
-**Selection and sustained work.** Compare the attacks against the existing
-obstructions, then concentrate most builders on the stronger construction.
-Retain one independent alternative or challenger. Require original-host
-branch sets, one compatible colouring response where needed, and a valid
-lift. Recursion must specify the successor class, preserve its hypotheses
-and strictly decrease a well-founded parameter. A finite state space does
-not establish that a terminal model is reachable.
-
-Use the actual critical-host formulation when its extra hypotheses repair
-the failed inference; do not insist on proving the broader augmentation
-statement. Repeated failure at the same step triggers a mathematical change
-of approach, not another planning panel or a new sufficient condition.
-Reopen reserved routes for a concrete applicable construction. Batch record
-updates around substantive developments while preserving material failures
-and their exact scope. A preliminary smaller-minor diagnostic on the
-eleven-vertex obstruction has already run; independent reconstruction is
-required before use, but its completion is not a mandatory research detour.
-
-A candidate, a finite test and a proved reduction are different outcomes.
-Audit substantial proofs independently and check their complete implication
-chain. Neither A nor C19 automatically establishes HC7 or NT-comparable
-significance; the original completion criterion remains unchanged.
-
-**This construction round.** The
+**Completed augmentation cases.** The
 [neighbourhood theorem](results/five_chromatic_neighbourhood_minor.md),
 with a separate pinned internal audit, gives Q7 in every five-connected
 graph of order at least seven with a five-chromatic neighbourhood. It
@@ -181,14 +147,14 @@ closes `chi(G-{x,y})=5`. The exterior theorem proves
 `chi(G)<=max{4,chi(W)+2}`. Thus the remaining host has
 `chi(G-{x,y})=6` and `chi(W)` equal to five or six.
 
-**Retained exact checkpoint:** close the whole `chi(W)=5` branch by a
+**Required coverage:** close both `chi(W)=5` and `chi(W)=6` by a
 six-colouring or a simultaneous Q model in the actual host. The
 [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
 retains the contact constraints and failed palette and ownership exchanges.
 Any restoration must handle the entire omitted independent set in one
 response. No such construction is proved; neither roots nor two-class
 absorption are mandatory. Further repairs of the current recolouring
-mechanism are paused. The six-chromatic exterior also remains open.
+mechanism are paused. Neither remaining exterior case is closed.
 
 **Comparison outcome.** Neither the exterior recolouring nor quantitative
 criticalisation attempt produced a whole-case closure or a closed decreasing

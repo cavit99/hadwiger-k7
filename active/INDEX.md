@@ -32,20 +32,28 @@ to intermediate claims remain with their designated conditional routes.
   the independent flow-minor proof, the restrictions on further applications,
   and the preserved earlier results.
 
-## Conditional routes
+## Sole selected conditional campaign
+
+- [The actual two-triangle critical host](hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction):
+  construct Q7 or a six-colouring using all proper-minor colouring data.
+  Cover both remaining exterior chromatic numbers, five and six, in
+  arbitrary host order. The whole-case closure and implication audit would
+  complete C19; HC7 and comparative significance require separate judgement.
+  All discovery agents work on this case under the ledger's shared plan.
+
+## Parked routes
+
+These retain their mathematical status but receive no parallel discovery
+allocation. Their proved inputs and barriers may serve the selected case.
 
 - [Five-connected six-chromatic augmentation](hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction):
-  the selected discovery campaign seeks `K7-2K2` in every such graph with
+  the broader target seeks `K7-2K2` in every such graph with
   minimum degree at least six and order at least seven. This unproved
-  theorem would close all C19; its marked construction and direct barriers
+  theorem would close all C19; its construction and direct barriers
   are in the linked frontier.
-- [Global constructions for Conjectures 19 and 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
-  the retained C19 formulation uses the actual
-  two-triangle critical host with six-chromatic x/y deletion; the
-  five-chromatic deletion branch and the four-chromatic exterior branch
-  are closed. The six-root bipartite scheme is an optional
-  sufficient route; direct models may allocate v and the triangle roots
-  differently. The global allocation remains open.
+- [Critical-host construction for Conjecture 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
+  the separate K7-minus target retains its full boundary-colouring
+  obligations; its global construction remains open.
 - [Quantitative star contractions](quantitative_star_contraction_frontier.md):
   R and the density construction remain unproved and reserved. Liu–Luo v2
   supersedes the former cube-root colouring payoff. Component labelling
