@@ -66,67 +66,56 @@ successes do not generalise, as the written 77-vertex example shows.
 The [earlier calibration](active/hc7_forest_exchange_probe.py) remains a
 control. No augmentation case or global colouring theorem was closed.
 
-**Seven-subagent campaign.** Use two competing constructions to find one
-shared proof, with the coordinating agent developing the main argument and
-owning its assembly. The selected augmentation theorem is provisional;
-experimental accessibility does not justify discarding useful critical-host
-hypotheses. The next mathematical checkpoint is a complete arbitrary-order
-construction, directly or through a closed decreasing reduction. A repaired
-example, new potential or finite search is not that checkpoint.
+**Adaptive discovery campaign.** The next mathematical checkpoint is a
+complete arbitrary-order Q7 construction, or a closed decreasing reduction
+that completes it. The coordinating agent develops the main proof and
+integrates the surviving arguments. Eight concurrent agents are capacity,
+not a requirement to maintain seven permanent subsidiary roles.
 
-| Agent | Distinct responsibility and required handoff |
-| --- | --- |
-| 1: simultaneous contractions | Specify a batch or an immediate Q7 model; prove the required chromatic, connectivity and degree conditions whenever recursing. |
-| 2: global exchanges | Construct a terminal model or valid smaller instance while allowing temporary contact loss, root reselection and expansion of every bag. |
-| 3: actual critical host | Test whether proper-minor six-colourings repair the builders' precise missing inference; retain colouring and original branch ownership together. |
-| 4: computational discovery | Test the competing operations on the same certified hosts, reusing existing solvers; return explicit obstructed states and successful models where found. |
-| 5: counterexample search | Attack each proposed universal operation under its exact hypotheses, including irreducible hosts; distinguish failure of the operation from failure of the theorem. |
-| 6: reduction audit | Check initialisation, retained roots and colourings, successor-class closure, strict decrease and fixed-preimage lift before the construction is extended. |
-| 7: independent reconstruction | First challenge route choice and the implication to the objective; then reconstruct the surviving proof independently and provide a second final audit. |
+Start two distinct attacks, using two builders on each when their tasks
+are independent:
 
-**Handoffs and selection.** Each builder first supplies one exact proposed
-operation and its first unproved implication. Agents 3--6 work on those
-same statements, rather than produce neighbouring sufficient lemmas.
-Compare the proposals on the eleven- and seventy-seven-vertex obstructions;
-add hosts only to distinguish a named unresolved mechanism. A preliminary
-smaller-minor diagnostic on the eleven-vertex obstruction was run during
-planning; independently reconstruct it before use. This tests whether any
-minor of smaller order still satisfies all augmentation hypotheses, allowing
-deletions and contractions. Do not repeat discovery searches already run.
-The computation agent owns the search implementation; a separate reviewer checks returned
-certificates. No duplicated enumeration or unbounded sample collection.
-The coordinator then selects the strongest surviving construction and
-moves both builders onto its complementary obligations. Agent 7 supplies
-an independent reconstruction, not another permanent research front.
+- **Colouring-led construction in the actual C19 host.** Use its proper-minor
+  six-colourings to select simultaneous contractions with fixed disjoint
+  preimages. The missing step is a global choice giving the required minor
+  or an admissible successor; recovering six colours alone is insufficient.
+- **Global model construction under the augmentation hypotheses.** Allow
+  every bag and chosen root to change, including simultaneous exchanges
+  that temporarily lose contacts. A terminal Q7 anywhere in the host is
+  valid. A smaller-instance exit must retain the invoked theorem's full
+  hypotheses; local optimality supplies neither exit automatically.
 
-Maintain one current candidate argument with one editing owner per file.
-Handoffs state the host and colouring data, proposed operation, certificate
-or proof, first unsupported inference and the specific response needed.
-Route messages to the responsible builder and challenger; the coordinator
-integrates changes. Reassign completed agents to the current bottleneck
-instead of inventing unrelated work to keep every slot occupied. Do not
-spawn descendants while all eight slots are in use.
+Each attack must provide an explicit construction and its first unproved
+inference. One challenger attacks those same inferences immediately.
+Allocate another agent to computation only for a question whose answer
+changes the proof, and an independent reconstructor once there is an
+argument to reconstruct. Otherwise those slots support distinct discovery
+obligations. Keep productive agents in their existing contexts, give them
+only the relevant additional sources, and use one editing owner per file.
+Do not duplicate searches or spawn descendants when all slots are occupied.
 
-**Acceptance and redirection.** A nonterminal move must produce a genuinely
-smaller instance of an explicitly stated class, or form part of a proved
-terminating sequence. Merely visiting finite states without repetition
-does not prove that a terminal model is reachable. A smaller subgraph is
-an exit only if the invoked theorem applies: six-chromaticity does not
-preserve ambient connectivity, and a K6 minor does not certify six colours.
-An enlarged marked class needs its own initialisation, preservation and
-lift. Independent review attacks the first new inference before promotion.
+**Selection and sustained work.** Compare the attacks against the existing
+obstructions, then concentrate most builders on the stronger construction.
+Retain one independent alternative or challenger. Require original-host
+branch sets, one compatible colouring response where needed, and a valid
+lift. Recursion must specify the successor class, preserve its hypotheses
+and strictly decrease a well-founded parameter. A finite state space does
+not establish that a terminal model is reachable.
 
-Continue the augmentation route while a construction addresses its named
-barriers and advances an arbitrary-order proof. Transfer the builders to
-the actual C19 host when an available critical-host hypothesis repairs the
-failed inference; do not insist on the more general theorem. Repeated
-failure at the same inference triggers a route review before more variants
-or documentation. Reserved R is reopened for a concrete graph operation
-with the required colouring lift and quantitative loss, not a new scalar
-reformulation. Whole-case closure, valid reduction and explicit obstruction
-are distinct outcomes. Neither A nor C19 alone establishes HC7 or the
-requested significance comparison; audit the full implication and assess
-the resulting theorem against the original objective before claiming completion.
+Use the actual critical-host formulation when its extra hypotheses repair
+the failed inference; do not insist on proving the broader augmentation
+statement. Repeated failure at the same step triggers a mathematical change
+of approach, not another planning panel or a new sufficient condition.
+Reopen reserved routes for a concrete applicable construction. Batch record
+updates around substantive developments while preserving material failures
+and their exact scope. A preliminary smaller-minor diagnostic on the
+eleven-vertex obstruction has already run; independent reconstruction is
+required before use, but its completion is not a mandatory research detour.
+
+A candidate, a finite test and a proved reduction are different outcomes.
+Audit substantial proofs independently and check their complete implication
+chain. Neither A nor C19 automatically establishes HC7 or NT-comparable
+significance; the original completion criterion remains unchanged.
 
 **Reserved routes and standing.** The preceding comparison found no common
 triangle-colouring response and no R-scale contraction. The quantitative
