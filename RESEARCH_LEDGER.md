@@ -54,24 +54,25 @@ Share concrete constructions and obstructions, then concentrate builders
 on the unresolved steps of a promising candidate. All roots, colour
 classes and bags may change; require only the contacts needed by Q7.
 
-The current concrete candidate is the
-[three-path construction](active/hc7_two_triangle_prism_construction.md):
-maximise a connected port region outside three A--B paths, then obtain
-the attachment distribution giving an explicit Q7 model. The written
-normalisation makes every remaining vertex indispensable to the linkage;
-the subsequent construction closes every profile in which all three paths
-meet that region. The remaining linkage has a path anticomplete to it.
-If at most one path can meet the region, every internal vertex of that path
-has at least two region neighbours, and each noncut nonport region vertex
-attaches within three consecutive path positions. These are proved
-constraints, not a closure of that profile.
-Exchanges confined to the three paths do not yet close this case: a valid
-continuation must exploit global maximality of the complementary region,
-its internal connections or actual proper-minor colourings. The immediate
-attempt reroutes through that region and uses the released path interval
-to supply the missing contacts. Its simultaneous connection to a surviving
-port and the third path is unproved. Both exterior chromatic cases and the
-full objective remain open.
+The [three-path construction](active/hc7_two_triangle_prism_construction.md)
+remains an optional terminal construction. Its normalisation and closure of
+all profiles in which every path contacts the complementary region are
+proved. The one- and two-contact profiles remain open; their local attachment
+restrictions do not establish an available rerouting. Do not require a new
+proof to preserve this path decomposition or its chosen region.
+
+**Construction test, 14 September.** Star and edge responses, whole-colour
+exchanges and contractions of the contacted path have now been tested
+together. The first three still leave repeated-colour representatives or
+displacement sets without a compatible connected allocation; they do not
+improve the recorded reservation results. A new
+[quotient counterexample](barriers/vital_linkage_local_shortcuts.md#4-contracting-a-path-can-retain-the-entire-six-colour-obstruction)
+rules out assuming that the two uncontacted paths become five-colourable,
+or already give Q7, after contracting the contacted path. The actual
+seven-connected preimage remains available. No whole-case construction or
+decreasing reduction emerged. Further effort must derive an available
+whole-host operation from actual proper-minor colourings, allowing all bags
+to change, rather than extend another sufficient attachment condition.
 
 Prefer a direct construction in the original graph. A recursive proposal
 must define and prove closure of its successor class, retain the needed

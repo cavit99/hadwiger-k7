@@ -159,3 +159,30 @@ enumerating all linkages or searching for absent minor models.
 No unresolved mathematical gap was found in the pinned claims. The examples
 do not establish a universal improving exchange or close the zero-contact
 path case of the prism construction.
+
+## 4. Six-colour quotient: separate incremental audit
+
+**Scoped verdict: GREEN**, 14 September 2026, by
+`plan_objective_allocation`, who did not construct this example. Source SHA-256:
+`c1dd453108102231b9c3c18d2d927e57ccd82a45ada8e20aed11f6de42f77554`.
+Only Section 4 is reviewed. Earlier source bytes equal Git `e8aa4f3`;
+all earlier audit bytes, revision pins and qualified scopes are preserved.
+
+The layer two-separators force both vertices into every linkage, proving
+vitality. Every five-set has two nonedges between nonconsecutive layers,
+excluding literal K5-minus. Alternating complementary palettes force
+`chi(Z+v)=5`, hence `chi(J)=6`. The displayed colouring, minimum degree
+five and four-cut `{p,v} union L_1` also check directly.
+
+For no-Q, at most four model bags meet a clique four-separator of J'.
+Q's five-connectivity forbids bags avoiding it on both open sides. Retain
+the side containing all such bags. Each retained piece of a bag touching
+the separator reaches one of its owned separator vertices; clique edges
+reconnect those pieces. Any lost contact was between two separator-touching
+bags and is restored by their distinct owned clique vertices. All seven
+bags remain nonempty and disjoint. Repeating localises the model to one K6,
+which has too few vertices. Q is five-connected because deleting at most
+four vertices leaves at least three, each missing at most one adjacency.
+
+No finite enumeration is a premise. Only the listed quotient inference is
+refuted; no seven-connected critical preimage or global case closure follows.

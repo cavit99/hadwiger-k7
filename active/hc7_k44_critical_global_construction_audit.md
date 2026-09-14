@@ -1852,3 +1852,24 @@ audited the new source claims but did not author this frontier replacement.
 It is not another independent audit of those source proofs. The larger-block
 allocation, both exterior chromatic cases, C19, HC7 and the comparative
 completion criterion remain open.
+
+## Optional ear and six-colour quotient integration
+
+**Scoped verdict: GREEN**, 14 September 2026, by
+`plan_objective_allocation`, independent of authorship. Frontier SHA-256:
+`d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d`.
+Only the delta from Git `e8aa4f3` is reviewed: removing the fourteen-line
+construction-test block and reversing “Optional” to “Current” byte-recovers
+`5a916773daa9f755f1c09d72310855e366dcb8d491155d69c8af1af769bfc712`.
+All preceding audit bytes and scopes are preserved; this is no whole-frontier review.
+
+The ear certificate is unchanged. The new block records missing compatible
+allocations, not their universal impossibility. Its separately
+[audited quotient](../barriers/vital_linkage_local_shortcuts_audit.md), source
+`c1dd453108102231b9c3c18d2d927e57ccd82a45ada8e20aed11f6de42f77554`,
+is six-chromatic and Q-free with minimum degree five and a four-cut; no actual
+critical preimage is claimed. The corresponding ledger replacement, SHA-256
+`bd9c91e2523e24c8331a8da2b21ae9783e2f0856fa939b3c1fbf6e0e9cd74606`,
+preserves the proved cases, both open contact profiles and unrestricted
+model replacement. No whole-case construction, decreasing reduction, C19,
+HC7 or comparative-objective closure is asserted.

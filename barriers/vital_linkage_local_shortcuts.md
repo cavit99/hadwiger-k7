@@ -196,3 +196,57 @@ chromatic flag, the three-path normalisation or the actual critical host.
 It refutes that localisation step alone. Preserving selected coloured
 vertices also does not establish their connectivity after deleting an ear;
 the remaining argument must coordinate whole component responses.
+
+## 4. Contracting a path can retain the entire six-colour obstruction
+
+**Assertion refuted.** Let Z be spanned by two paths between disjoint
+two-vertex terminal sets, with every vertex vital for this free-pairing
+linkage. Add v adjacent exactly to the four terminals, which induce two
+disjoint edges, and a universal vertex p. If Z contains no literal K5-minus,
+then `Z+{p,v}` is five-colourable or has a Q minor.
+
+Take four disjoint pairs `L_i={r_i,s_i}`, for `0<=i<=3`. Each pair is
+an edge; completely join consecutive pairs and add no other Z edges.
+The terminal sets are L_0,L_3. Add v adjacent to these four terminals
+and p adjacent to all nine other vertices. Call the resulting graph J.
+
+The two column paths span Z. Each L_i is a two-vertex separator between
+the surviving terminal sets, so every linkage uses both its vertices.
+Thus every vertex is vital. The terminal graph is exactly two disjoint
+edges. Z has no literal K5-minus: every five-set meets layers at distance
+at least two. If either extreme layer contains two vertices, its nonedges
+to the opposite extreme give two missing pairs. If both extremes are
+singletons, the five-set must meet all four layers, again giving at least
+two missing pairs.
+
+**The quotient needs six colours.** Each consecutive layer pair induces
+K4. In a four-colouring of Z, the two-colour palettes of consecutive
+layers must be complementary. Hence L_0 and L_3 use all four colours
+between them, leaving none for v. Conversely, alternate palettes
+`{1,2}` and `{3,4}` along Z and give v colour five. Thus `chi(Z+v)=5`,
+and the universal p gives `chi(J)=6`.
+
+**The quotient has no Q minor.** Add all missing edges from v to Z,
+obtaining J'. It is a chain of three K6 graphs on
+`{p,v} union L_i union L_(i+1)`, whose consecutive intersections are
+four-cliques. A five-connected minor cannot straddle a clique separation
+of order four: at most four of its disjoint bags meet the separator;
+if bags avoiding it occur on both sides, those bags are separated in the
+target by at most four vertices. Otherwise restrict the model to the side
+containing all bags that avoid the separator. Separator edges reconnect
+the restricted bags and preserve contacts formerly supplied on the other
+side. Repeating this restriction would put a Q model in one K6, which
+has too few vertices. Here Q is five-connected, since deleting at most
+four vertices from `K7-2K2` leaves a connected graph. Thus J', and its
+subgraph J, have no Q minor. No finite search is a premise.
+
+**First unsupported inference and scope.** In the one-contacted-path
+construction, contracting that entire path to p leaves two uncontacted
+paths beside p,v. All-vitality of those paths, their terminal edges and
+literal exclusion within Z do not give the proposed colouring-or-minor
+alternative. J has minimum degree five and a four-vertex cut
+`{p,v} union L_1`. It is not the original seven-connected critical host;
+no such host or valid contraction preimage is constructed here. The
+original path can contain many distinct neighbours of vertices separated
+in the quotient. Using those neighbours in a common colouring or model
+remains possible, but must be proved before discarding the preimage.

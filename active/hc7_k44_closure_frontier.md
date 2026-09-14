@@ -1395,7 +1395,7 @@ without C; hence at most four outside vertices can have neighbours on both
 sides of an edge of a C-free path. These conditional constraints do not yet
 produce the global exchange.
 
-**Current global exchange; availability unproved.** Replace a segment of a
+**Optional global exchange; availability unproved.** Replace a segment of a
 contacted path P between distinct vertices p,q by a p--q path with internal
 vertices in C. Let I be the nonempty open old interval. If the new complementary
 component containing I contains a surviving port, has two distinct neighbours
@@ -1423,6 +1423,20 @@ path and two whole colour classes identify one component carrying that
 obstruction: the six-vertex control in the same barrier record combines
 incompatible boundary colourings from two components. A colouring argument
 must retain those responses together, not select an unsupported single ear.
+
+**Proper-minor construction test; recorded nonclosure.** Joint star and
+edge-response exchanges still require compatible representatives of repeated
+colour classes. Swapping one further colour reorients whole Kempe components;
+using two further colours requires disjoint, compatible displacement sets.
+The degree and codegree bounds have not supplied those sets. These attempts
+recover the reservation and shared-colour mechanisms below, not a new
+construction. Nor can the contacted path be contracted and the remaining
+two-path side assumed five-colourable or terminal: the
+[ten-vertex quotient](../barriers/vital_linkage_local_shortcuts.md#4-contracting-a-path-can-retain-the-entire-six-colour-obstruction)
+is six-chromatic and Q-free. It lacks the original connectivity and degree
+hypotheses. Retaining the whole path preimage and coordinating its attachments
+with the same proper-minor response remain unproved. The current task permits
+all bags to change and does not require the optional ear above.
 
 **Colour-donation attempt; withdrawn inference.** In a reserved
 two-class carrier, keeping v's colour singleton forces each of the four
