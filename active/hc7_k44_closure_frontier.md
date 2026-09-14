@@ -1377,11 +1377,52 @@ vertex of `G-v-C` is used by every three-path A--B linkage. This uses
 actual seven-connectivity and minimum-cut separations of order three;
 it is not a smaller critical instance. A component with two distinct
 attachments on each of two paths and at least one on the third gives
-an explicit wheel, completed by C and v to Q. The missing construction
-must obtain that distribution or another terminal model. Vitality and
-large boundary size alone do not distribute the contacts, and rerouting
-through C may disconnect the retained port region. The draft records
-these limits; neither exterior chromatic case is closed.
+an explicit wheel, completed by C and v to Q. The subsequent written
+construction closes all profiles in which every path meets C: the remaining
+`(h,1,1)` pattern supplies either a rim diagonal and Q, or a separator of
+at most five vertices. Every linkage in the fixed complement therefore
+has a path anticomplete to C. Maximising the number of contacted paths
+forbids an adjacent tail switch that would increase that number, but does
+not supply such a switch.
+
+If the maximum is one, the contacted path's ends meet C and every internal
+vertex has at least two C-neighbours. Every noncut nonport C-vertex attaches
+within three consecutive positions on that path and has C-degree at least
+five. The proof uses the residual cuts and a strict one-vertex exchange through
+C. It excludes nonport leaves, but not larger endblocks. Independently of
+this profile, simultaneous crossed edges at all three path splits give Q
+without C; hence at most four outside vertices can have neighbours on both
+sides of an edge of a C-free path. These conditional constraints do not yet
+produce the global exchange.
+
+**Current global exchange; availability unproved.** Replace a segment of a
+contacted path P between distinct vertices p,q by a p--q path with internal
+vertices in C. Let I be the nonempty open old interval. If the new complementary
+component containing I contains a surviving port, has two distinct neighbours
+on the previously C-free path and meets the third path, the original edges from p,q
+into I supply two contacts on the new P. The resulting `2,2,1` certificate
+gives Q. Thus a terminal exchange need not increase the order of C or preserve
+all of C. What is unproved is choosing the new path so that these connections
+survive together. A disconnected discarded piece cannot be assigned to that
+component without an actual connecting path.
+
+**Failed shortcuts.** The
+[explicit controls](../barriers/vital_linkage_local_shortcuts.md) refute
+inferring a root-free minimum separator from vitality, and inferring a small
+separator from ordered attachments and the fixed-linkage data. The latter
+control violates global maximality and proper-minor criticality; it does not
+refute the current exchange or the target. A separate colour-preserving
+absorption is valid when a bag coloured alpha absorbs a connected set touching
+it, together with all alpha-coloured neighbours of that set, while avoiding
+the other retained bags.
+Growing through a C-free path uses no additional C vertex, but consuming a
+vertex of each contacted path destroys both split-path rim connections.
+Their two disjoint replacements are unproved. Neither failed construction
+closes an exterior chromatic case. Nor does the four-chromatic union of a
+path and two whole colour classes identify one component carrying that
+obstruction: the six-vertex control in the same barrier record combines
+incompatible boundary colourings from two components. A colouring argument
+must retain those responses together, not select an unsupported single ear.
 
 **Colour-donation attempt; withdrawn inference.** In a reserved
 two-class carrier, keeping v's colour singleton forces each of the four

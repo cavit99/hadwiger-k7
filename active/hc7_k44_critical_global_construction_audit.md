@@ -1801,3 +1801,54 @@ The source remains an active construction draft. Both exterior chromatic
 cases, global rerouting, the complete C19 implication and the user's HC7
 or comparative-theorem objective remain open. No index or manifest check
 is included in this scoped verdict.
+
+## Zero-contact paths and conditional exchange integration
+
+**Scoped verdict: GREEN**, 14 September 2026. The exact reviewed frontier
+SHA-256 is
+`5a916773daa9f755f1c09d72310855e366dcb8d491155d69c8af1af769bfc712`.
+This review covers only the replacement beginning “Three-path construction;
+global step open.” and ending immediately before “Colour-donation attempt;
+withdrawn inference.” All bytes outside that unique block equal Git
+`93c2c81`, whose frontier hash is
+`23871fd9450f9dd7c5f059d8a690b6c730dd03a2dfa6f3aa4a19718ea76b8bfd`.
+All preceding audit bytes, including their historical header pin, remain
+unchanged; this is not a whole-frontier re-audit.
+
+The [prism source](hc7_two_triangle_prism_construction.md) matches
+`c8ce1f59cee42fc852153b92e8e53ab936894bb42e20045b9bf945a80b735724`,
+and its [scoped audit](hc7_two_triangle_prism_construction_audit.md) matches
+`38f50c0765fdd889d2b223dcd0420c93c6e66dc01fb0b9a785e1ff44bef3b029`.
+The summary retains the exact one-contact maximum for the degree and
+noncut-nonport conclusions, the conditional nature of tail switches, and
+the C-free hypothesis for the four-straddler bound. Neither the separator
+argument nor the simultaneous-switch certificate is converted into an
+unproved existence or global rerouting claim.
+
+For the conditional ear, let K be the new complementary component containing
+the nonempty released interval I, as the source now explicitly requires.
+The interval is connected. Its first and last vertices remain adjacent to
+the distinct retained vertices p,q, even when I is a singleton. K therefore
+contacts the new path twice. If K also contains a surviving port, contacts
+two distinct vertices of the unchanged C-free path and contacts the third
+path, the original terminal theorem applies to these actual disjoint bags.
+No increase of component order or preservation of both ports is needed.
+Existence of an ear satisfying these conditions remains unproved.
+
+The [three controls](../barriers/vital_linkage_local_shortcuts.md) and
+[audit](../barriers/vital_linkage_local_shortcuts_audit.md) respectively match
+`d1c8fb8a5ab6b19786db6d6f7382fa25d566fda4a0487f82794c84fc4893fa65`
+and `20c5ba2a53c92e440a796e5ccdeb79fc2b0214e1ab740ab494f4e1e1a5d5e3d3`.
+Their scope is retained. The elementary absorption observation requires the
+absorbed connected set to touch the alpha bag and includes all its outside
+alpha-coloured neighbours; contraction then creates no external alpha
+conflict. It does not preserve the two fixed-path rim connections when their
+internal vertices are consumed, or supply disjoint replacements. The final
+colouring control refutes component localisation, without claiming the
+five-class flag or actual critical-host hypotheses.
+
+This bounded integration review is by `plan_objective_allocation`, who
+audited the new source claims but did not author this frontier replacement.
+It is not another independent audit of those source proofs. The larger-block
+allocation, both exterior chromatic cases, C19, HC7 and the comparative
+completion criterion remain open.

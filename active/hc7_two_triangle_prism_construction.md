@@ -104,18 +104,137 @@ The vertices of Z miss both C and v. A nonempty Z would therefore be separated
 from C in G by at most six vertices, contrary to seven-connectivity.
 Every SCC step has Z empty, and no nonvital vertex exists. QED
 
-## First missing inference
+## Every linkage has a path missing C
 
-The normalisation gives one fixed partition `V(F)=C dotcup V(P1) dotcup
-V(P2) dotcup V(P3)` for every linkage in H. Six-connectivity of F gives
-`|D|>=6`. These facts do not distribute D over the three paths: profiles such
-as `(4,1,1)` or `(6,0,0)` do not satisfy the terminal certificate.
-Vitality and the minimum-cut chain alone do not imply balanced contacts.
+The normalisation gives the partition `V(F)=C dotcup V(P1) dotcup
+V(P2) dotcup V(P3)` for every linkage in H. Each Pi is induced: a chord
+would bypass an internal vertex, contrary to vitality. Also `|D|>=6`.
+Indeed, if `|D|<=5`, deleting D in the six-connected F leaves both C and
+some of the six terminals in H.
 
-The remaining obligation is a global rerouting, permitted to replace all paths,
-the component, the selected marks and the final bags, that either supplies one
-Q model or yields a six-colouring of G. A reroute through C must track which
-old C vertices it consumes, connect the released path vertices to the same
-remaining component, and retain every contact used by its final seven bags.
-No improving exchange or closed decreasing reduction is proved here. Both
-exterior chromatic cases and the complete C19 implication remain open.
+**Claim.** If all three paths of a linkage in H meet D, then G contains Q.
+Consequently every linkage in H has a path anticomplete to C.
+
+**Proof.** Two paths with at least two contacts give the first terminal
+certificate. Otherwise the contact counts are `(h,1,1)`, with `h>=4`.
+Orient the heavily contacted path P from A to B; let f,l be its first and
+last contacts. Write t1,t2 for the sole contacts on the other paths.
+
+Suppose an edge uw joins a vertex u of P strictly before l to a vertex w
+strictly after ti on a lightly contacted path. Split P between the later
+of u,f and l, and the light path between ti and w. Their four endpoint bags
+form the usual rim. The edge uw adds the diagonal from the A-half of P to
+the B-half of the light path. The untouched third path is the hub and meets C.
+All five core bags meet C except possibly that light B-half. The sole possible
+remaining core hole joins the B-half of P to the light A-half, so it is
+independent of the possible C--light-B hole. Together with v the bags give Q.
+Reversing both path orientations proves the same conclusion for an edge from
+a vertex of P strictly after f to a light-path vertex strictly before ti.
+
+In a Q-free host, the open interval Z=P(f,l) can therefore meet either light
+path only at its ti. Since P is induced and every C-neighbour lies in
+`Z union {f,l,t1,t2}`, we obtain
+`N_G(C union Z) subseteq {v,f,l,t1,t2}`.
+Each light path has distinct A and B ends, so at least one end survives
+outside that five-set and C union Z. This contradicts seven-connectivity. QED
+
+## Exchanges within H
+
+For this fixed H choose a linkage maximising the number of paths meeting D.
+The claim bounds that number by two. A useful exchange retains every vertex:
+if two paths have cross-edges pq and p'q', with p before p' and q' before q,
+switching their tails along these edges skips both open intervals P(p,p')
+and P'(q',q). Vitality forces p,p' and q',q to be consecutive. Thus the switch
+preserves all vertices and has a valid inverse. If it divides the D-contacts
+of one path between two new paths while the other old path misses D, it
+increases the number of contacted paths, contrary to the chosen maximum.
+This does not prove that such a switch exists.
+
+**Two simultaneous switches give Q.** Split one path P0 at an edge pq,
+with p nearer A. Suppose each other path Pi has an edge a_i b_i, oriented
+from A to B, with the cross-edges p b_i and q a_i. The seven bags consisting
+of v and the six endpoint halves give Q. Indeed, the two P0 halves and v
+form a triangle. They are full to the other four halves: triangle edges
+supply the same-end contacts, and the crossed edges supply the opposite-end
+contacts. The other four halves form a cycle through the two split edges
+and the A- and B-triangle edges. Thus the model is `K3 join C4=Q`, without C.
+
+Consequently at most three vertices of the other two paths have neighbours
+on both sides of any edge of P0. Two such vertices on one path must be
+consecutive, and the reversed-pair argument forces their crossed edges to
+the two ends of that P0 edge. Three on one path are impossible, since its
+first and third would have to be consecutive. Two on both paths give the
+terminal just proved. If P0 misses C, at most four vertices of G-P0 have
+neighbours on both sides of a P0 edge: these three and possibly v.
+
+## If only one path can meet C
+
+Retain the same G,C,H and the maximisation just defined. Suppose its maximum
+is one; write P for the contacted path and P2,P3 for the others.
+
+**Claim.** Both ends of P meet C, and every internal vertex w of P has
+`d_H(w)<=6` and at least two neighbours in C. For every noncut vertex c of C
+other than x,y, its H-neighbours lie within three consecutive vertices of P;
+in particular `d_C(c)>=5`.
+
+**Proof.** Use the residual SCC chain from the normalisation. Each cut has
+one current vertex on each path. A transition replaces old vertices O_i by
+new vertices N_i. No vertex has both copies in one SCC, so O_i,N_i are
+consecutive on their path and the SCC consists of the copies O_i+ and N_i-.
+
+If the A end of P missed C, all three A ends would miss C. At the first
+transition the nonempty fully processed set consists only of departing A
+ends. Its G-boundary lies in the new three-cut together with v, separating
+it from C by at most four vertices. This contradicts seven-connectivity.
+Reversing the chain proves the assertion about the B end.
+
+Within a transition the residual arcs are O_i+ to N_j- for actual edges
+O_i N_j, and N_i- to O_i+ for the used path edges in reverse. Contracting
+each matching pair gives a strongly connected directed graph on the changed
+path indices. A transition changing P and another path has a directed cycle
+through P. Replacing its matching edges by the cross-edges around that cycle
+permutes intact suffixes and gives a spanning linkage. P's two pieces lie
+on distinct new paths and contain its two C-contacted ends, contradicting
+the maximum of one. Thus every transition changing P changes only P.
+
+Fix an internal w of P. Let S_in be the cut just after w becomes current
+and S_out the cut just before it ceases to be current. Both contain w.
+Vertices processed entirely between these cuts lie on P2 or P3, since P
+cannot advance while w is current. They are nonterminals and miss C and v.
+Their external neighbours lie in `S_in union S_out`, of size at most five.
+If there were any such vertices, this boundary would separate them from C.
+Consequently P2 and P3 each advance at most once during this interval.
+
+The cuts immediately before w enters and after it leaves exclude earlier
+and later neighbours of w on P2,P3. Those two transitions change only P,
+so every such neighbour is among the four positions of P2,P3 in S_in,S_out.
+P is induced and supplies exactly two more H-neighbours. Hence `d_H(w)<=6`.
+Since w misses v, minimum degree eight gives at least two C-neighbours.
+
+Now let c be a noncut nonport vertex of C. All its H-neighbours lie on P.
+If the first and last, p,q, have distance at least three along P, replace
+P[p,q] by p-c-q. The other paths remain fixed. This consumes one C-vertex
+and releases at least two vertices in the open interval I=P(p,q). Each
+released vertex has a C-neighbour other than c. Since C-c is connected and
+contains x,y, `(C-c) union I` lies in a new, strictly larger port component.
+This contradicts maximality. Thus c has at most three H-neighbours within
+a length-two subpath of P. It misses v, so `d_C(c)>=5`. QED
+
+This rules out nonport leaves of C, but not larger endblocks. A path through
+several C vertices can consume every C-neighbour of a released interval,
+or disconnect its remaining neighbours from the ports.
+
+## The remaining global construction
+
+The remaining profiles are `(h,k,0)` with `h+k>=6`; k may be zero. The
+[local shortcut barriers](../barriers/vital_linkage_local_shortcuts.md)
+explain why vitality does not supply a separator avoiding the triangle roots,
+and why ordered attachments cannot be dismissed by a degree bound. The latter
+control fails global maximality of C and proper-minor criticality; both remain
+available to the construction.
+
+A reroute through C may replace all paths and final bags. It must either
+produce a full Q model or give a six-colouring of G, with the consumed and
+surviving pieces specified together. Neither an improving global exchange nor
+a closed decreasing reduction is proved here. Both exterior chromatic cases
+and the complete C19 implication remain open.

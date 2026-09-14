@@ -59,10 +59,19 @@ The current concrete candidate is the
 maximise a connected port region outside three A--B paths, then obtain
 the attachment distribution giving an explicit Q7 model. The written
 normalisation makes every remaining vertex indispensable to the linkage;
-it does not prove the required rerouting. A proposed recolouring that
-concentrated all four core roots on one carrier was withdrawn: sharing
-v's colour introduced untracked nonroot contacts. Both remaining exterior
-cases and the full objective remain open.
+the subsequent construction closes every profile in which all three paths
+meet that region. The remaining linkage has a path anticomplete to it.
+If at most one path can meet the region, every internal vertex of that path
+has at least two region neighbours, and each noncut nonport region vertex
+attaches within three consecutive path positions. These are proved
+constraints, not a closure of that profile.
+Exchanges confined to the three paths do not yet close this case: a valid
+continuation must exploit global maximality of the complementary region,
+its internal connections or actual proper-minor colourings. The immediate
+attempt reroutes through that region and uses the released path interval
+to supply the missing contacts. Its simultaneous connection to a surviving
+port and the third path is unproved. Both exterior chromatic cases and the
+full objective remain open.
 
 Prefer a direct construction in the original graph. A recursive proposal
 must define and prove closure of its successor class, retain the needed
