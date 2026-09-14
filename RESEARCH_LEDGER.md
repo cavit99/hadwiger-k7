@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 13 September 2026. This is the sole authority for current
+**Last updated:** 14 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` is not proved. T44 and Norin--Totschnig Conjectures
@@ -55,11 +55,16 @@ instances while retaining the hypotheses and both certificates. Do not
 spend the campaign collecting easy models or enumerating neighbourhoods
 without their exteriors.
 
-The [forest-exchange calibration](active/hc7_forest_exchange_probe.py)
-checks the existing eighteen-vertex barrier host and two controls. One
-exchange merges two bags and splits another, making the two missing
-contacts disjoint. The host has a literal K6; this calibrates the search
-and is not evidence for the general theorem.
+**Executed exchange tests.** The
+[full-hypothesis obstructions](barriers/hc7_chromatic_augmentation_operations.md)
+refute single-edge preservation of the sixth colour and strict local
+descent even with a bag-balancing tie-break. A paired contraction recovers
+the sixth colour in the same eleven-vertex example; no universal choice
+is proved. The [exact probe](active/hc7_chromatic_exchange_probe.py) checks
+all connected seven-part partitions of two eleven-vertex hosts. Its local
+successes do not generalise, as the written 77-vertex example shows.
+The [earlier calibration](active/hc7_forest_exchange_probe.py) remains a
+control. No augmentation case or global colouring theorem was closed.
 
 **Develop one shared construction.** A proof builder, computational
 challenger and independent reconstructor work with the same graph states,
@@ -71,7 +76,9 @@ cycle and minimum-model barriers prohibit treating a fixed sixth-root
 extension or a locally optimal clique model as sufficient.
 
 Turn the observed exchange into a construction for arbitrary host order.
-If recursion requires a larger marked class, prove its initialisation,
+A smaller subgraph is an exit only when its required theorem applies.
+Six-chromaticity alone does not preserve ambient connectivity. If recursion
+requires a larger marked class, prove its initialisation,
 preservation, strict decrease and fixed-preimage lift; intermediates need
 not satisfy the original target if the enlarged class is valid. Each
 proposed move must specify the retained colouring information, roots and

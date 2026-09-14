@@ -9,7 +9,7 @@ literature applications and stated nonclosures in Section 7 of the
 entire frontier or establish a global conjectural target.
 
 **Audited whole-frontier SHA-256:**
-`4d6240d51c68e25816372cdfdefd0fa3cceb03d5afdd9edb4fff4402335e5931`.
+`1b7ebe0a5d2c7fd712bc1bb5e9a9ceec75f6c05e5e4b94b64c04b5e6b54c02ed`.
 
 ## Preserved scope and exact provenance
 
@@ -1680,3 +1680,32 @@ does not establish disjoint ownership for the proposed simultaneous model.
 The insertion records the first unsupported constructions and asserts no
 counterexample under the actual critical-host hypotheses, smaller induction
 class, complete case closure or objective-level theorem.
+
+## Operations under every augmentation hypothesis
+
+**Scoped verdict: GREEN**, 14 September 2026, for the insertion beginning
+“Operations tested under every augmentation hypothesis” at whole-frontier
+SHA-256 `1b7ebe0a5d2c7fd712bc1bb5e9a9ceec75f6c05e5e4b94b64c04b5e6b54c02ed`.
+Removing that insertion and its separator blank recovers the preceding
+`4d6240d51c68e25816372cdfdefd0fa3cceb03d5afdd9edb4fff4402335e5931`
+source byte for byte. Earlier audit bytes are preserved except the header pin.
+
+The [counterexamples](../barriers/hc7_chromatic_augmentation_operations.md),
+SHA-256 `8b0fdc2a94bc4fb55464990dca7657b768131429f5211f0fd31102b365d9eea5`,
+have a [separate audit](../barriers/hc7_chromatic_augmentation_operations_audit.md).
+The eleven-vertex construction was independently reconstructed for this
+review. Every edge quotient loses both the sixth colour and the minimum-
+degree hypothesis; the simultaneous repair retains an explicit original-host
+Q7 model, without establishing a general selection or induction rule.
+The 77-vertex construction was independently reviewed by the other auditor.
+It refutes strict local descent, while retaining equal-defect ownership
+moves and proper full-hypothesis subgraphs as possible exits.
+
+The probe at SHA-256
+`c5f57b28431d0dd3c9b2ce38a2a13562b73a495d94ec04c49d05321170e087fd`
+checks the stated finite connected-partition and split/merge space. Its
+independent reconstruction is recorded in the counterexample audit.
+Neither colourfulness nor six-chromaticity alone preserves connectivity
+in a core; separate quotient colourings need not share branch-set ownership.
+The insertion asserts no smaller general induction class, complete case
+closure, proof of A, C19, HC7 or achievement of the comparative objective.

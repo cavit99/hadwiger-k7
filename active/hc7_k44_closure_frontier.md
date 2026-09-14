@@ -1919,6 +1919,27 @@ Q6 bags. Its seven-vertex host has no Q6 minor at all, but is only
 four-chromatic. The five-chromatic universally colourful hypothesis and
 the full marked construction above remain available.
 
+**Operations tested under every augmentation hypothesis.** The
+[written counterexamples](../barriers/hc7_chromatic_augmentation_operations.md)
+and their separate audit rule out two proposed progress rules. In an
+explicit six-connected, six-regular, six-chromatic eleven-vertex host,
+every edge quotient is five-chromatic with minimum degree five. Retaining
+a K6 minor does not retain chromatic number. Two disjoint contractions
+recover six colours in that example and lead to an explicit Q7 model;
+no universal selection rule or closed successor class is established.
+
+A 77-vertex full-hypothesis host refutes strict descent of missing contacts,
+overlapping omissions and squared bag sizes under any single connected
+split followed by an adjacent merge. An equal-defect transfer increases
+the balancing term. Each original bag already contains a smaller
+full-hypothesis host and Q7, so such an induction exit remains available.
+The [finite exchange probe](hc7_chromatic_exchange_probe.py) checks every
+seven-part partition and connected split/merge on two eleven-vertex hosts;
+its successful balancing refinement does not generalise. A construction
+may use nonmonotone exchanges or independently justified subgraph exits.
+Neither a six-chromatic core alone nor separately chosen quotient colourings
+supply the missing connectivity and simultaneous ownership.
+
 **The actual six triangle marks; written deduction.** Put
 `L=G-{v,x,y}` and `C=A union B`. If `chi(L)=5`, C is colourful in
 every five-colouring of L. Indeed, suppose a colour class I misses C.
