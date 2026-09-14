@@ -1758,3 +1758,46 @@ supplied the neighbourhood source's separate audit and participated in
 discovery of the fixed-allocation example; this note is not another
 independent audit of those source proofs. No historical proof, index,
 manifest or broader research status is newly audited here.
+
+## Maximal-component normalisation and withdrawn colour donation
+
+**Scoped verdict: GREEN**, 14 September 2026, for only the insertion
+beginning “Three-path construction; global step open.” and ending immediately
+before “The [two-triangle exterior theorem]”. The reviewed whole-frontier
+SHA-256 is
+`23871fd9450f9dd7c5f059d8a690b6c730dd03a2dfa6f3aa4a19718ea76b8bfd`.
+Removing exactly that insertion independently reproduces the HEAD frontier
+byte for byte at
+`e2b26e556d0328719262f587b2525d91522bfd9635b98e55232bdf8a320fbed1`.
+All earlier audit bytes and the historical header pin are preserved. This
+review does not enlarge the scope of any previous verdict.
+
+The [construction draft](hc7_two_triangle_prism_construction.md) and its
+[separate scoped audit](hc7_two_triangle_prism_construction_audit.md) match
+`137d12c34cf2f477b80498c254c9a089d2985f7ac4b868800871924d9d70fb31`
+and `c2c6124a27ba444bc262ffdfffbc5c653cde2b534371e281cfebf390c63a1558`.
+The insertion correctly distinguishes the proved all-vital normalisation
+from the conditional terminal contact allocation. Its order-three cuts are
+network cuts corresponding to A--B separators, possibly containing terminal
+vertices; the nonvital regions give actual separators of order at most six
+in G. No smaller critical instance, balanced attachment theorem or successful
+reroute is inferred. The required two, two and one distinct path contacts
+remain a sufficient certificate whose selection is unproved.
+
+The withdrawn colour-donation inference is identified correctly. While v's
+colour class is singleton, a vertex seeing every carrier colour must neighbour
+v, so the mixed set lies among the retained literal roots. Component flips
+can test their two-shore contacts. Once other vertices receive v's colour,
+seeing that colour no longer implies adjacency to v: nonroot vertices may
+enter the mixed set. Keeping the old containment in the literal roots is
+therefore unsupported. The insertion withdraws this concentration step and
+does not use it in the independently proved path normalisation.
+
+This integration review is by `plan_certificate_compute`, who supplied the
+separate construction audit and did not author the frontier insertion.
+It is not a second independent audit of that source, a review of other
+concurrent documentation changes, or a global nonexistence argument.
+The source remains an active construction draft. Both exterior chromatic
+cases, global rerouting, the complete C19 implication and the user's HC7
+or comparative-theorem objective remain open. No index or manifest check
+is included in this scoped verdict.

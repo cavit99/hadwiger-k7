@@ -23,10 +23,9 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    together with the completed cases and an implication audit, would prove
    Conjecture 19. It would not automatically prove HC7 or certify the
    comparative-significance benchmark.
-3. **Immediate construction:** use actual proper-minor six-colourings to
-   resolve the connected allocation missing from the mixed-root K4 state.
-   The selected roots, colour classes and all branch sets may change;
-   the required output is one full Q7 model or a six-colouring of G.
+3. **Immediate construction:** coordinate connected paths, regions and
+   actual proper-minor six-colourings to obtain one full Q7 model or a
+   six-colouring of G. The selected roots, classes and all bags may change.
    The [technical frontier](active/hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction)
    retains the exact host, proved inputs and allocation barriers.
 
@@ -46,14 +45,24 @@ contraction route still needs both global availability and a quantitative
 progress theorem; the new combinations give no better asymptotic bound.
 These facts justify concentrating here, not a claim that closure is near.
 
-**One shared construction.** Start from singleton v and two whole classes
-of a six-colouring of G-v. The mixed-root deduction supplies one K4 whose
-four roots neighbour v and contact both classes. Develop one operation on
-an entire troublesome attachment component: use a proper-minor colouring
-of that same host to reselect the classes and bags, and turn its response
-into a compatible connected allocation. The initial K4 and singleton v
-are starting data, not mandatory final bags. Preserve exactly the contacts
-needed by Q7, rather than requiring a stronger fixed-root target.
+**One case, distinct constructions.** The proof is not yet known, so do
+not divide an assumed construction into dependent assignments. Develop
+colouring-led, whole-model, joint-exchange and literal-neighbourhood
+constructions, with a fresh independent attack on the same case. The
+mixed-root K4 is an available starting point, not a required template.
+Share concrete constructions and obstructions, then concentrate builders
+on the unresolved steps of a promising candidate. All roots, colour
+classes and bags may change; require only the contacts needed by Q7.
+
+The current concrete candidate is the
+[three-path construction](active/hc7_two_triangle_prism_construction.md):
+maximise a connected port region outside three A--B paths, then obtain
+the attachment distribution giving an explicit Q7 model. The written
+normalisation makes every remaining vertex indispensable to the linkage;
+it does not prove the required rerouting. A proposed recolouring that
+concentrated all four core roots on one carrier was withdrawn: sharing
+v's colour introduced untracked nonroot contacts. Both remaining exterior
+cases and the full objective remain open.
 
 Prefer a direct construction in the original graph. A recursive proposal
 must define and prove closure of its successor class, retain the needed
@@ -62,16 +71,14 @@ through fixed disjoint preimages. A proper minor cannot silently inherit
 seven-contraction-criticality: it is six-colourable. Another rooted model
 or an independently chosen colouring does not finish the allocation.
 
-**Agent allocation.** The coordinator builds and integrates the proof.
-Up to four additional builders work on distinct obligations of this same
-operation: deriving the colouring response, choosing the connected sets,
-retaining all required contacts and completing the terminal argument.
-One challenger tests the current strongest inference. A computational
-agent is used only for a specified question that changes that inference;
-otherwise the slot supports the same proof or remains unused. A free
-slot or reassigned builder reconstructs a completed candidate independently.
+**Agent allocation.** Most effort goes to construction: up to five
+builders pursue the distinct attacks above while the coordinator develops,
+checks and combines their arguments. Reuse established inputs and inspect
+relevant barriers before discovery. Assign a challenger or computational
+worker when a specific inference needs testing; reassign a builder for
+independent reconstruction once there is a substantial candidate.
 Capacity is eight simultaneous agents including the coordinator, not a
-requirement to duplicate work. No agent pursues a second research target.
+quota. No agent pursues a second research target.
 
 **Continue to closure.** The theorem must cover both remaining exterior
 chromatic numbers, five and six. A local repair is a checkpoint to integrate

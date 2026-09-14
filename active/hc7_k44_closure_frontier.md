@@ -1369,6 +1369,31 @@ degree-eight vertex `v`, and spanning triangles `A,B` and edge `xy` in
 `N(v)`. Extra neighbourhood edges are allowed. Every proper minor is
 six-colourable; a construction may use all of this information.
 
+**Three-path construction; global step open.** The
+[prism draft](hc7_two_triangle_prism_construction.md) starts with three
+disjoint A--B paths avoiding x,y and maximises their complementary
+component C containing xy. Its written normalisation shows that every
+vertex of `G-v-C` is used by every three-path A--B linkage. This uses
+actual seven-connectivity and minimum-cut separations of order three;
+it is not a smaller critical instance. A component with two distinct
+attachments on each of two paths and at least one on the third gives
+an explicit wheel, completed by C and v to Q. The missing construction
+must obtain that distribution or another terminal model. Vitality and
+large boundary size alone do not distribute the contacts, and rerouting
+through C may disconnect the retained port region. The draft records
+these limits; neither exterior chromatic case is closed.
+
+**Colour-donation attempt; withdrawn inference.** In a reserved
+two-class carrier, keeping v's colour singleton forces each of the four
+remaining literal roots to see both shores of some carrier component.
+The proposed concentration on the xy-component recoloured other shores
+with v's colour. That colour then ceased to be singleton: nonroot core
+vertices could replace the literal roots in the mixed colourful set.
+The first unsupported step was still identifying that set with the four
+neighbours of v. A repair must control a whole core colour class and its
+new contacts, or replace the connected bags; the stronger concentration
+is not an input to the prism construction.
+
 The [two-triangle exterior theorem](../results/hc7_degree8_two_triangle_exterior.md)
 proves that `W=G-N[v]` is nonempty, connected and full to all eight
 neighbours. Its degree-free wheel lemma gives five prescribed rooted wheel
