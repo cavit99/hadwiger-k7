@@ -1709,3 +1709,52 @@ Neither colourfulness nor six-chromaticity alone preserves connectivity
 in a core; separate quotient colourings need not share branch-set ownership.
 The insertion asserts no smaller general induction class, complete case
 closure, proof of A, C19, HC7 or achievement of the comparative objective.
+
+## Neighbourhood closure and mixed-root allocation integration
+
+**Scoped verdict: GREEN**, 14 September 2026, for only the insertion
+beginning “Neighbourhood and join cases closed;” and ending immediately
+before “The actual six triangle marks;”. The reviewed whole-frontier
+SHA-256 is
+`e2b26e556d0328719262f587b2525d91522bfd9635b98e55232bdf8a320fbed1`.
+Removing exactly that insertion independently reproduced the HEAD frontier
+byte for byte, with SHA-256
+`1b7ebe0a5d2c7fd712bc1bb5e9a9ceec75f6c05e5e4b94b64c04b5e6b54c02ed`.
+Thus the previous scope is unchanged. All preceding audit bytes, including
+the historical header pin, are preserved; this addition does not attribute
+new claims to previous reviewers or extend their verdicts.
+
+The [neighbourhood and join source](../results/five_chromatic_neighbourhood_minor.md)
+and [separate audit](../results/five_chromatic_neighbourhood_minor_audit.md)
+match respectively
+`80c19491f50feb698f10857c19e1269107acfb0566de742d96ba8019e9f2e92a`
+and `c1d0efa494ee10cc3e4df895bec9c14e97b25a2a311fd10497623d240e730945`.
+The [allocation barrier](../barriers/bipartite_colour_allocation.md) and
+[separate audit](../barriers/bipartite_colour_allocation_audit.md) match
+`4121d35e1e91a505d5840486fac8beb0d7d075b4db65ddf95de095dbe3300ee9`
+and `b97d3f862eecc02d5843788074020306dbcfc99c884f36e63c7fddf0bededf0b`.
+The insertion accurately retains the sufficient neighbourhood and join
+hypotheses, the literal K6 exit, both actual pole contacts and the lack
+of a minimum-degree requirement for those results. Its counterexample
+summaries retain the fixed-allocation scope and the proper K7 exit in
+the seven-chromatic construction.
+
+The [mixed-root draft](hc7_augmentation_batch_draft.md), reviewed at
+`61109d89c905b21339437fab332eeda3afb48a21918d8d928955989a460d030f`,
+remains explicitly unaudited and unpromoted. The insertion separates its
+written absorption deductions from the missing connected allocation.
+Colourful two-shore contacts do not identify two connected external bags;
+valid colour exchanges provide neither guaranteed descent nor a closed
+induction. The finite exchange is only an original-host certificate.
+The small-contraction statement in the actual critical host supplies a
+conditional connectivity guarantee, not the unproved neighbourhood
+selection. No smaller full-hypothesis successor or global seven-bag
+construction is claimed. A, C19, C21, HC7 and the comparative completion
+criterion remain unresolved.
+
+This is a bounded integration review by `plan_certificate_compute`,
+independent of authorship of the insertion. The reviewer previously
+supplied the neighbourhood source's separate audit and participated in
+discovery of the fixed-allocation example; this note is not another
+independent audit of those source proofs. No historical proof, index,
+manifest or broader research status is newly audited here.

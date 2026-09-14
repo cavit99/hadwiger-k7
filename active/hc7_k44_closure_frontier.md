@@ -1940,6 +1940,66 @@ may use nonmonotone exchanges or independently justified subgraph exits.
 Neither a six-chromatic core alone nor separately chosen quotient colourings
 supply the missing connectivity and simultaneous ownership.
 
+**Neighbourhood and join cases closed; written proof with separate internal audit.**
+The [neighbourhood theorem](../results/five_chromatic_neighbourhood_minor.md)
+gives Q7 in every five-connected graph of order at least seven having a
+five-chromatic neighbourhood. A critical five-chromatic subgraph of that
+neighbourhood supplies four roots for a K4 and a fifth for the wheel
+extension in the ambient two-vertex deletion. The five wheel bags retain
+contacts to both deleted adjacent vertices. A literal K6 is a separate
+terminal exit. The same source closes every six-chromatic join: either
+a neighbourhood is five-chromatic, or two triangle-free nonbipartite join
+factors contain cycles contracting to K3 and C4. Hence an augmentation
+counterexample has connected complement and four-colourable neighbourhoods.
+No minimum-degree bound is needed for these sufficient cases.
+
+**Mixed-root construction; written unpromoted deductions.** The
+[current draft](hc7_augmentation_batch_draft.md) retains a bipartite
+vertex set S and four-colourable remainder R in a six-chromatic H.
+For every bipartition (U,V) of S, the vertices of R with neighbours in
+both shores meet every class in every four-colouring of R: a missed
+class could be absorbed into S, five-colouring H. Martinsson–Steiner
+therefore gives one K4 model with four simultaneous two-shore contacts.
+This holds for every independent orientation of S's components. Whole
+colour-class transfers and Kempe exchanges preserve a compatible colouring
+of the same host, but need not reduce the number of S-components.
+The absorption argument also applies to three colour classes against
+four. In the actual critical host, use singleton v and two whole classes
+of a six-colouring of G-v. It gives one K4 with four actual neighbours
+of v, each contacting both whole classes. Those contacts still need not
+belong to two connected sets avoiding the model.
+
+The [allocation counterexamples](../barriers/bipartite_colour_allocation.md)
+identify the next unsupported inference. In the eleven-vertex full-hypothesis
+host, a connected minimal S has no connected two-part partition whose
+common-neighbour set remains colourful; one four-colouring defeats both
+choices. Thus even synchronised colour responses do not license that
+fixed allocation. A separate 65-vertex example refutes selecting a
+connected induced bipartite dominating set from seven-connectivity,
+seven-chromaticity and minimum degree alone. It contains a proper K7,
+so actual proper-minor criticality and terminal or smaller-instance exits
+remain essential possibilities.
+
+The [discovery probe](hc7_augmentation_candidate_probe.py) retains finite
+positive models in two eleven-vertex hosts. A checked exchange in the
+draft changes a selected root and gives K7-minus-one-edge; no universal
+reachability or decreasing rule is inferred. Retained failed constructions
+are frozen in the [batch-selection record](../archive/hc7_critical_batch_selection_attempt_2026-09-14.md),
+[list-colouring record](../archive/hc7_augmentation_colour_extension_attempt_2026-09-14.md)
+and [earlier operation challenges](../archive/hc7_augmentation_challenges_2026-09-14.md).
+In particular, contracting all components outside a four-colourable neighbourhood leaves
+a five-colourable quotient and cannot supply a five-chromatic neighbourhood;
+freezing a proper colouring makes every monochromatic connected bag in
+its induced core a singleton.
+
+The next construction must supply seven compatible original-host bags,
+or a smaller instance with the invoked hypotheses and fixed lift. Neither
+has been obtained. In the actual C19 host, a quotient using at most two
+contractions retains five-connectivity, so a five-chromatic neighbourhood
+there would be terminal. Selecting such a quotient is unproved; separate
+proper-minor colourings do not establish a common response. The selected
+augmentation theorem, whole C19 implication, C21 and HC7 remain open.
+
 **The actual six triangle marks; written deduction.** Put
 `L=G-{v,x,y}` and `C=A union B`. If `chi(L)=5`, C is colourful in
 every five-colouring of L. Indeed, suppose a colour class I misses C.

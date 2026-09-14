@@ -23,12 +23,13 @@ The requested HC7 or comparable-theorem objective is not declared achieved.
    It remains unproved; neither C19 nor its comparable significance is
    assumed to follow from a partial construction. The actual critical-host
    formulation and quantitative R remain alternatives.
-3. **Immediate laboratory:** discover a simultaneous branch-set exchange
-   on graphs satisfying the augmentation target's full hypotheses. Compare
-   an explicitly obstructed construction with a successful unrestricted
-   model in the same host. Use the resulting operation to attempt an
-   arbitrary-order proof, allowing all bags and selected roots to change.
-   Finite models are discovery evidence, not a case closure.
+3. **Immediate laboratory:** turn one mixed-root K4 into seven compatible
+   bags, allowing the selected bipartite vertex set, its roots and all
+   bags to change. Its independent shores supply a valid colouring
+   argument; replacing them by connected bags is unproved and fails for
+   some fixed choices. Retain the actual critical-host alternative using
+   simultaneous proper-minor colouring responses. Finite models remain
+   discovery evidence, not a case closure.
    The [bipartite frontier](active/bipartite_contractibility_frontier.md)
    retains the completed theorem and its application limits.
 
@@ -116,6 +117,26 @@ A candidate, a finite test and a proved reduction are different outcomes.
 Audit substantial proofs independently and check their complete implication
 chain. Neither A nor C19 automatically establishes HC7 or NT-comparable
 significance; the original completion criterion remains unchanged.
+
+**This construction round.** The
+[neighbourhood theorem](results/five_chromatic_neighbourhood_minor.md),
+with a separate pinned internal audit, gives Q7 in every five-connected
+graph of order at least seven with a five-chromatic neighbourhood. It
+also closes every six-chromatic join under the same connectivity and
+order assumptions. No minimum-degree bound is needed in these cases.
+The general augmentation theorem remains open.
+
+The [mixed-root construction](active/hc7_augmentation_batch_draft.md)
+has written, unpromoted deductions: for a bipartite set S with
+four-colourable complement, every orientation of S's components supplies
+one rooted K4 whose roots contact both independent shores. Whole-class
+exchanges preserve the colouring, but no global allocation or decreasing
+reduction follows. The [connected-allocation counterexamples](barriers/bipartite_colour_allocation.md)
+rule out replacing a fixed S by connected shores even using one common
+colouring, and selecting a connected bipartite dominating set from the
+numerical critical-host conditions alone. Proper-minor criticality and
+unrestricted model reselection remain available. These deductions and
+case closures do not meet the user's completion criterion.
 
 **Reserved routes and standing.** The preceding comparison found no common
 triangle-colouring response and no R-scale contraction. The quantitative
