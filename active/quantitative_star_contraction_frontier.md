@@ -29,6 +29,24 @@ attachments follow from these estimates. Reopen this route only for a
 stronger quantitative consequence or a specified application of R;
 the old exponent alone is no longer a reason to pursue it.
 
+**Combination limit; no counterexample to R or the density target.** For
+fixed positive a,b and large integer r, take
+`r<=n<=min{r^(3/2),a r log^b r}` and put `lambda=1+log(n/r)`.
+Assume the stronger density target with a fixed `D>=1` and the all-minor
+independence hypothesis. Choose an integer `r<=d<=n`. A core A of minimum
+degree d then supplies
+`ceil(|A|d/(2D r^2))<=r` independent centres. Capped packing removes at
+least `|A|d^2/(2 exp(1) D r^3)` vertices per paid colour. Liu–Luo's core
+iteration would then cost `O(r^3 lambda/d^2)` colours to reach degeneracy
+below d. With `x=d/r`, their rounding yields
+`O(r lambda/x^2+r(1+log^+ x))`; choosing `x` of order `sqrt(lambda)`
+still gives `O(r(1+log lambda))`, the same asymptotic order as v2.
+R alone does not even supply this core reduction: it applies only to
+chromatic-critical graphs. A stronger packing with this polynomial gain
+therefore does not by itself justify an improved bound through that
+combination. The chromatic-preserving rule below remains a possible
+different mechanism, with global availability and total progress unproved.
+
 **Retained input provenance.** [Liu–Luo, v1, 6 September 2026](https://arxiv.org/html/2609.06867v1),
 Lemmas 3.1–3.2, contract disjoint stars with independent centres and
 independent leaf sets, losing at most one colour and removing
@@ -315,10 +333,18 @@ centre-incident edge survives. These cases account for every centre edge.
 
 The weighted external input [Reed--Seymour, (1.4), p. 148](https://cgm.cs.mcgill.ca/~breed/SummerNSERC04/frachad.pdf)
 gives `chi_f(G)<=2h(G)<=2r`. Its primary statement was inspected.
-Applying a fractional colouring to degree weights gives an independent
-set with degree sum at least `e(G)/r`. This does **not** ensure `|I|<=r`,
-so the earlier capped-centre packing estimate cannot be applied without
-another argument.
+**Capped-centre repair, 14 September 2026.** In R's order range, put
+`m=ceil(n/r)<=r`. Split every class of a fractional 2r-colouring into
+independent pieces of size at most m, retaining its weight on each piece.
+Unit vertex coverage is preserved and the total weight is at most
+`2r+n/m<=3r`. Weighted degree summation is `2e(G)`, so some piece I has
+`|I|<=r` and `sum_(v in I) d(v)>=2e(G)/(3r)`. The earlier packing recurrence
+then removes at least `2e(G)/(3 exp(1) r^2)` vertices at one-colour cost.
+This combines the already recorded fractional splitting with capped
+packing; it is also the mechanism of Liu–Luo v2, Lemma 4.1. It closes the
+previous cardinality gap, but gives only the baseline `nq/r^2` scale
+using our critical-degree bound. The extra factor `q/r` required by R
+remains unproved; no improvement over Liu–Luo v2 follows.
 
 It remains unproved that a choice forces
 `ell+ceil(|U|/2)>=c n q^2/r^3`. The

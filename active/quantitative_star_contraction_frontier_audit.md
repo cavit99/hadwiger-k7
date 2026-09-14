@@ -1,7 +1,7 @@
 # Audit of the quantitative contraction route
 
 **Verdict: GREEN for the conditional deductions; the target is unproved.**
-Initial review: 9 September 2026; latest scoped review: 13 September 2026.
+Initial review: 9 September 2026; latest scoped review: 14 September 2026.
 This is separate internal review, not peer review.
 
 **Source-preservation check, 14 September 2026 (coordinator, not an
@@ -426,3 +426,49 @@ merged colour and one fresh colour. This would `(q-1)`-colour G, proving
 the stated saturation. It constructs no connected exterior allocation.
 None of these checks proves R, an improved colouring bound or completion
 of the user's mathematical objective.
+
+## Capped centres and the density-rounding combination
+
+**GREEN; separate scoped internal audit, 14 September 2026.**
+Operation-adversary independently checked the new "Combination limit"
+paragraph and the replacement "Capped-centre repair" paragraph at source
+SHA-256 `754087e073cb84db191bc3b70b9f118503eaaade5739d0553c03f9babf6fab28`,
+against the preceding source
+`a2d62663ca942f1a7e7d473f32115fca63d1a95c9cc546deab97f1cc871e51b0`.
+The remaining source text is unchanged. This is not a full independent
+audit of Liu–Luo v2 or external peer review.
+
+Take unit vertex coverage in the fractional colouring, trimming any excess
+first. For nonempty G, `m=ceil(n/r)>=1`; since `n<=r^(3/2)<=r^2` and r is
+an integer, `m<=r`. Splitting weighted stable classes preserves coverage
+and gives positive total weight `W<=2r+n/m<=3r`. Their weighted degree
+sums total exactly `2e(G)`, so some piece has degree sum at least
+`2e(G)/(3r)`. The capped recurrence, with
+`(1-1/r)^(r-1)>=exp(-1)`, gives the stated
+`2e(G)/(3 exp(1) r^2)` leaf loss. Empty leaf sets can be skipped;
+`e(G)=0` makes the bound trivial. Disjoint stars remove exactly their
+leaf count. Every edge between bags survives, so expanding the independent
+leaves with quotient colours and giving the independent centres one fresh
+colour proves the claimed lift.
+
+Conditionally, the density target gives
+`alpha(A)>=|A|d/(2D r^2)`. For a nonempty d-core,
+`|A|d<r^3`, hence its required integer number of centres is at most
+`ceil(r/2)<=r`. Their degrees within A yield the stated loss with
+`eta=d^2/(2 exp(1) D r^3)<1`. The exterior peeling order survives
+contractions internal to the maximal d-core. Therefore successive cores
+shrink by at least the factor `1-eta`, and the number of paid colours is
+at most `1+eta^(-1) log^+(n/(d+1))`. The explicit range `r<=d<=n`
+justifies the displayed `O(r^3 lambda/d^2)` bound, including its additive
+constant. An initially empty core needs no contraction.
+
+For Liu–Luo v2, Lemma 4.3, use fractional parameter `2r`, so its R is
+`4r`. Uniformly over the resulting minors and `d<=n<=a r log^b r`, its
+concentration condition holds for sufficiently large r: the required
+right side is `O(r log^(2b+1) r log log r)=o(r^2)`. Taking
+`d=ceil(r sqrt(lambda))` is allowed because
+`sqrt(1+log t)<=t` for `t=n/r>=1`. This gives the stated bound;
+optimising the displayed expression retains that asymptotic order.
+The audit closes the earlier cardinality gap and verifies this conditional
+comparison. It establishes neither the density target nor R, an improved
+colouring theorem, HC7, or NT-comparable completion.
