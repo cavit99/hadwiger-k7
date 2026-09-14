@@ -23936,24 +23936,24 @@ note = "The marked chromatic construction remains open; its universal colouring 
 
 [[claims]]
 id = "hadwiger.target.cubic_star_reduction"
-title = "Stronger one-colour contraction for a cube-root colouring bound"
+title = "Unproved one-colour contraction with superseded colouring payoff"
 kind = "target"
 status = "conditional-target"
 source = "active/quantitative_star_contraction_frontier.md"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "3763dda793cedb1dc54e9ee142291051d388da47340300bf99eea9ce39d6e2e9"
+expected_source_sha256 = "a2d62663ca942f1a7e7d473f32115fca63d1a95c9cc546deab97f1cc871e51b0"
 scope = "minor-minimal q-chromatic graphs on at most r^(3/2) vertices whose every minor F satisfies alpha(F)>=|F|/r, with q>=Kr"
 colour_compatibility = "the desired minor retains chromatic number at least q-1"
 strict_parameter = "host order; the conditional proof minimises order then edge count"
 conclusions = ["conditional on the unproved reduction, an O(t(1+log log t)^(1/3)) colouring bound"]
-does_not_prove = ["the stronger contraction or density inequality", "an improved unconditional colouring theorem", "HC7 or Conjecture 19", "NT-comparable significance of existing results"]
+does_not_prove = ["the stronger contraction or density inequality", "an improvement over Liu–Luo v2: its bound is already stronger than this target's global payoff", "HC7 or Conjecture 19", "NT-comparable significance of existing results"]
 
 [[relations]]
 source = "hc7.target.hadwiger7"
 target = "hadwiger.target.cubic_star_reduction"
 kind = "related_to"
-note = "A separate conditional asymptotic route towards the user's alternative completion criterion; its conclusion would not prove HC7."
+note = "Reserved unproved construction; Liu–Luo v2 supersedes its former global colouring payoff, which also would not prove HC7. A new application is required before reopening."
 
 [[claims]]
 id = "hadwiger.barrier.bounded_bag_density"
@@ -24522,7 +24522,7 @@ source = "active/quantitative_star_contraction_frontier.md"
 source_heading = "Density surplus and a retained contraction history"
 audit = "active/quantitative_star_contraction_frontier_audit.md"
 active = false
-expected_source_sha256 = "3763dda793cedb1dc54e9ee142291051d388da47340300bf99eea9ce39d6e2e9"
+expected_source_sha256 = "a2d62663ca942f1a7e7d473f32115fca63d1a95c9cc546deab97f1cc871e51b0"
 scope = "an absolute D>=1, all integers r>=2 and finite graphs with order at most r^(3/2) and e(G)>D r^2 alpha(G)"
 label_fidelity = "simultaneous models and optional history selections retain disjoint connected original preimages and all original contacts"
 strict_parameter = "the conditional induced-subgraph reduction decreases order only for proper support; the simultaneous construction has no proved recursive step"

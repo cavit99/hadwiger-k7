@@ -144,9 +144,14 @@ low-neighbourhood-cover operation preserves chromatic number, but neither
 eligible-centre selection nor sufficient accumulated loss is proved. Its
 [maximum-star charge barrier](barriers/quantitative_neighbourhood_cover_charge.md)
 leaves favourable global choice possible. Retain R and the stronger density
-target in their [frontier](active/quantitative_star_contraction_frontier.md);
-component labelling, uniform allocation and the old exterior recolouring
-mechanism remain paused. No full theorem or high likelihood of success is
+target in their [frontier](active/quantitative_star_contraction_frontier.md)
+as unproved constructions. **The former cube-root colouring payoff is
+superseded:** Liu–Luo v2 (9 September 2026), Theorem 1.1, gives the stronger
+`O(t log log log t)` bound. The frontier records its exact scope and the
+correction to our stale v1 comparison. R is not refuted, but its old global
+payoff no longer motivates reopening this route. Component labelling,
+uniform allocation and the old exterior recolouring mechanism remain
+paused. No full theorem or high likelihood of success is
 established by this plan. Completion requires the proof, its audited
 implication chain and a substantiated comparison with the user's benchmark.
 

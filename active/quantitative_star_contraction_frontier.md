@@ -1,18 +1,35 @@
 # Quantitative star contractions
 
-**Status:** conditional route. The improved reduction below is unproved;
-its auxiliary uniform-cost independence reduction is refuted. No improved
-colouring bound is established. The direct critical reduction and
-the retained exact alternatives are selected in the [research ledger](../RESEARCH_LEDGER.md).
+**Status:** reserved construction route. Reduction R remains unproved;
+its auxiliary uniform-cost independence reduction is refuted. Its former
+global colouring target is superseded by Liu–Luo v2. No new colouring
+bound is established by this repository. Current priorities are in the
+[research ledger](../RESEARCH_LEDGER.md).
 
 ## Target and existing input
 
-The proposed global target is an absolute-constant bound
-`chi(G) <= C t (1+log log t)^(1/3)` for every finite `K_t`-minor-free
-graph and every integer `t>=3`. This would improve the exponent, rather
-than only the constant, in the newly reported square-root bound.
+**Literature correction, 14 September 2026.**
+[Liu–Luo, v2, 9 September 2026](https://arxiv.org/html/2609.06867v2),
+Theorem 1.1, gives `chi(G)<=C t log log log t` for every finite
+`K_t`-minor-free graph and integer `t>=16`, with an absolute constant C.
+The former target `O(t(1+log log t)^(1/3))` is asymptotically weaker:
+putting `x=log log t`, `log x=o(x^(1/3))`. Thus proving that global
+bound would no longer improve the published preprint's bound. This
+supersedes the proposed payoff, not the unproved contraction R or its
+conditional deduction below.
 
-[Liu–Luo, v1, 6 September 2026](https://arxiv.org/html/2609.06867v1),
+Version 2 combines contraction to low degeneracy (Lemma 3.2) with
+fractional-colouring rounding (Lemma 4.3). The latter's concentration
+condition is `R0^2>=64 k m^2 log n`, where `R0=2r`,
+`m=ceil(n/r)` and `k=ceil(R0 log(2 max{1,d/R0}))` for a d-degenerate
+n-vertex graph with fractional chromatic number at most r. Sections 3–6
+were inspected for scope and mechanism; this is not a separate full
+proof audit. Neither a six-colouring for t=7 nor prescribed branch-set
+attachments follow from these estimates. Reopen this route only for a
+stronger quantitative consequence or a specified application of R;
+the old exponent alone is no longer a reason to pursue it.
+
+**Retained input provenance.** [Liu–Luo, v1, 6 September 2026](https://arxiv.org/html/2609.06867v1),
 Lemmas 3.1–3.2, contract disjoint stars with independent centres and
 independent leaf sets, losing at most one colour and removing
 `Omega(n q/r^2)` vertices when `n<=r^2`, `q>=8r`, `delta>=q-1` and every induced
@@ -20,7 +37,8 @@ subgraph has independence number at least its order divided by r.
 [Lin, v1, 8 September 2026](https://arxiv.org/html/2609.08713v1),
 Lemmas 2.4–2.7, gives a related star packing and an iteration through
 critical minors. Both papers report `O(t sqrt(log log t))` colouring.
-Their primary statements and core proofs were inspected. These are fresh
+Their primary statements and core proofs were inspected. The Liu–Luo
+square-root comparison is historical and superseded above. These are fresh
 preprints; no claim of external verification or relative priority is made.
 
 [Lin, v3, 6 August 2026](https://arxiv.org/html/2607.21222v3),

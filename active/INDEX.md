@@ -47,9 +47,9 @@ to intermediate claims remain with their designated conditional routes.
   sufficient route; direct models may allocate v and the triangle roots
   differently. The global allocation remains open.
 - [Quantitative star contractions](quantitative_star_contraction_frontier.md):
-  reserved reduction R and its cube-root double-logarithmic colouring
-  consequence remain unproved. The stronger density route is also reserved;
-  component labelling is paused. Direct barriers are in that frontier.
+  R and the density construction remain unproved and reserved. Liu–Luo v2
+  supersedes the former cube-root colouring payoff. Component labelling
+  is paused; direct barriers and the revised comparison are in that frontier.
 - [Fully rooted K5 contractibility](k5_contractibility_frontier.md):
   an independent theorem target and alternative extraction step in C19.
   The global construction and the remaining C19 implications are open.

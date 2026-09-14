@@ -4,6 +4,19 @@
 Initial review: 9 September 2026; latest scoped review: 13 September 2026.
 This is separate internal review, not peer review.
 
+**Source-preservation check, 14 September 2026 (coordinator, not an
+additional independent audit).** The literature-status correction gives
+source SHA-256
+`a2d62663ca942f1a7e7d473f32115fca63d1a95c9cc546deab97f1cc871e51b0`.
+Everything from the paragraph beginning `[Lin, v3, 6 August 2026]` to
+end of file is byte-identical to the previously audited source below;
+this was checked against its Git blob using Python through uv. All
+conditional proofs and barriers retain their previous audit scope.
+Only the opening status and literature comparison changed: the old global
+colouring payoff is weaker than Liu–Luo v2's Theorem 1.1. R remains
+unproved. The new source reports inspection of that paper's statements
+and mechanism, not an independent audit or a new proof dependency.
+
 Reviewed [source](quantitative_star_contraction_frontier.md) SHA-256:
 `3763dda793cedb1dc54e9ee142291051d388da47340300bf99eea9ce39d6e2e9`.
 The parent wrote the original quantitative argument. Literature-repair
