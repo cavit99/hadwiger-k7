@@ -2,12 +2,14 @@
 """Finite exploratory density-minor probe; no universal conclusion.
 
 Run: uv run python3 active/quantitative_density_contraction_probe.py
+Add --summary to print only the CI summary after running all checks.
 Expected: six successful models and two unsuccessful negative controls.
 The negative controls lack density surplus; the positive control already
 has the required ratio. Failure to find a model is not a certificate of minor
 exclusion. NetworkX is pinned; all choices and random graph seeds are fixed.
 """
 
+import argparse
 from fractions import Fraction
 from hashlib import sha256
 import json
@@ -108,7 +110,10 @@ def digest(value):
     return sha256(json.dumps(value, separators=(",", ":")).encode()).hexdigest()
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--summary', action='store_true')
+    args = parser.parse_args(argv)
     successes = 0
     for name, original, r, kind, expected in suite():
         n, m, a = len(original), original.number_of_edges(), alpha(original)
@@ -121,7 +126,7 @@ def main():
         found = ratio > r
         assert found == expected, (name, found, ratio)
         successes += found
-        print(json.dumps({
+        record = {
             "case": name, "kind": kind, "n": n, "m": m, "alpha": a, "r": r,
             "surplus": str(Fraction(m, r * r * a)), "found": found,
             "minor_n": len(model), "minor_alpha": alpha(model), "ratio": str(ratio),
@@ -129,7 +134,9 @@ def main():
             "graph_sha256": digest([n, sorted(sorted(edge) for edge in original.edges)]),
             "model_sha256": digest(sorted(sorted(bag) for bag in bags)),
             "bags": sorted(sorted(bag) for bag in bags),
-        }, sort_keys=True))
+        }
+        if not args.summary:
+            print(json.dumps(record, sort_keys=True))
     assert successes == 6
     print("PASS: 8 finite cases; 6 verified models; 2 negative controls.")
 

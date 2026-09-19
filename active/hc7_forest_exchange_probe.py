@@ -1,11 +1,13 @@
 """Finite calibration: balanced 18-vertex host, K7 and squared C7.
 
 Run: uv run python3 active/hc7_forest_exchange_probe.py
+Add --summary to print only the CI summary after running all checks.
 JSON on stdout contains original graphs and complete model traces. This is
 not evidence for the five-connected six-chromatic augmentation target:
 its full hypotheses are not checked, and the balanced host has a literal K6.
 A failed bounded search concerns only its stated initial forest and depth.
 """
+import argparse
 from collections import deque
 from itertools import combinations
 import json
@@ -117,7 +119,10 @@ def search(g, initial, depth_cap):
             'no_escape_within_bound': found is None}
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--summary', action='store_true')
+    args = parser.parse_args(argv)
     g = balanced_graph()
     initial = {edge(f'c{i}', f'{s}{i}') for i in range(6) for s in 'st' if (i, s) != (0, 't')}
     cases = [('balanced18', g, initial, 2, True),
@@ -133,13 +138,14 @@ def main():
             assert list(exchanges(graph, frozenset())) == []
         results.append({'name': name, 'vertices': sorted(graph),
                         'edges': sorted(edge(*e) for e in graph.edges), **result})
-    print(json.dumps({'scope': 'Finite calibration only; full augmentation hypotheses not checked.',
+    report = {'scope': 'Finite calibration only; full augmentation hypotheses not checked.',
                       'encoding': 'Seven spanning connected bags represented by n-7 forest edges.',
                       'moves': 'Delete one forest edge and insert one host edge. Defect may increase; internal tree pivots are legal.',
                       'trace_labels': 'Bag indices are local to each state; old_parts and new_parts identify ownership changes.',
                       'negative_scope': 'No escape means exhaustive search within the cap from the given forest, not from every tree representation.',
                       'summary': 'PASS: one-exchange balanced18 Q7 model and K7/square-C7 controls.',
-                      'cases': results}, indent=2))
+                      'cases': results}
+    print(report['summary'] if args.summary else json.dumps(report, indent=2))
 
 
 if __name__ == '__main__':

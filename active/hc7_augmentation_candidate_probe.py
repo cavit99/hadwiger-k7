@@ -1,6 +1,7 @@
 """Targeted discovery checks for two augmentation construction proposals.
 
 Run: uv run python3 active/hc7_augmentation_candidate_probe.py
+Add --summary to print only the CI scope after running all checks.
 Scope: the two stored eleven-vertex hosts only. No universal conclusion.
 Existing partition, colouring and original-host model checkers are reused.
 For the singleton question H-z is connected, so unused vertices can be
@@ -9,6 +10,7 @@ below has order three; H-S is connected by five-connectivity, so the same
 argument makes spanning enumeration complete for its fixed two-bag split.
 """
 
+import argparse
 from collections import Counter
 from itertools import combinations
 import json
@@ -124,12 +126,20 @@ def examine(name, space, colouring):
             "minimal_bipartite_footprints": footprints}
 
 
-if __name__ == "__main__":
-    print(json.dumps({
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--summary', action='store_true')
+    args = parser.parse_args(argv)
+    report = {
         "scope": "Two stored eleven-vertex hosts only; exact finite proposal tests, not a theorem.",
         "proposals": [
             "A selected singleton z is universal to six connected Q6 bags in H-z.",
             "A minimal bipartite footprint with four-colourable complement splits into two universal bags of one Q7 model.",
         ],
         "cases": [examine(*host) for host in hosts()],
-    }, indent=2))
+    }
+    print(report['scope'] if args.summary else json.dumps(report, indent=2))
+
+
+if __name__ == "__main__":
+    main()

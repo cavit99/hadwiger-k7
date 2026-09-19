@@ -23899,7 +23899,8 @@ note = "The single-edge and strict balanced progress rules fail under the full t
 [[verifiers]]
 id = "chromatic-exchange-probe"
 path = "active/hc7_chromatic_exchange_probe.py"
-sha256 = "c5f57b28431d0dd3c9b2ce38a2a13562b73a495d94ec04c49d05321170e087fd"
+sha256 = "c04d4fa17860bc27358b99a352c12c902ce027049ba97dd7831e960a879fca03"
+args = ["--summary"]
 timeout = 90
 expected_stdout = ["PASS: genuine strict-defect trap, shortest two-move plateau escape, and finite balance refinement."]
 
@@ -24616,21 +24617,24 @@ note = "Arbitrarily large surplus does not guarantee an independence decrease wi
 [[verifiers]]
 id = "density-contraction-probe"
 path = "active/quantitative_density_contraction_probe.py"
-sha256 = "434077d263a66781ce249220e7a14686e9795c8d905c7d4019b2b2613b9f32b2"
+sha256 = "0887a3884881665a37b0691d7da5c7dce7b485b27c418677cd98fe319bf79378"
+args = ["--summary"]
 timeout = 30
 expected_stdout = ["PASS: 8 finite cases; 6 verified models; 2 negative controls."]
 
 [[verifiers]]
 id = "forest-exchange-probe"
 path = "active/hc7_forest_exchange_probe.py"
-sha256 = "d65f38dc62d320ed464d66a7e72a832e1c9a69f5fc5051b0c3cdf4ad321a7aeb"
+sha256 = "e312603a541828bf9882b501ebff2cc49f3c401f57b8e70c954ed0ee40e949ee"
+args = ["--summary"]
 timeout = 30
 expected_stdout = ["PASS: one-exchange balanced18 Q7 model and K7/square-C7 controls."]
 
 [[verifiers]]
 id = "component-label-probe"
 path = "active/quantitative_component_label_probe.py"
-sha256 = "80125aa6e1fb31805e92c9aae02cd165d92d5b7bd34e1ede663137499df2ba29"
+sha256 = "1b67f8db1c2bd02fd897f262aa4e005de86c2a22f6446b815b526529031f1177"
+args = ["--summary"]
 timeout = 30
 expected_stdout = ["PASS: 3 finite cases; 2 verified surplus models; 1 negative control; 10 clique-search cross-checks."]
 
@@ -24725,7 +24729,8 @@ note = "Current construction draft; no unproved selection step is promoted to a 
 [[verifiers]]
 id = "augmentation-candidate-probe"
 path = "active/hc7_augmentation_candidate_probe.py"
-sha256 = "ab910a2d43bd636216a846aa0a3368b8b6311fd3e3c036ab07ef782edaf982c3"
+sha256 = "c779afb8125b0f0332d7876b5855f77f0430af35fb0135e442c4358cab420b69"
+args = ["--summary"]
 timeout = 90
 expected_stdout = ["Two stored eleven-vertex hosts only; exact finite proposal tests, not a theorem."]
 

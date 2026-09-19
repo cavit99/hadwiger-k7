@@ -1,12 +1,14 @@
 """Exact exchange checks on two eleven-vertex full-hypothesis hosts.
 
 Run: uv run python3 active/hc7_chromatic_exchange_probe.py
+Add --summary to print only the CI summary after running all checks.
 The second host was found among complements of triangle-free four-regular
 NetworkX graphs (random_regular_graph(4, 11, seed=8093)). Explicit edges
 make this check deterministic. Results concern these two hosts only.
 A move splits one connected bag into two connected parts and merges two
 adjacent resulting parts. Every spanning-tree representation is covered.
 """
+import argparse
 from collections import Counter
 from itertools import combinations
 import json
@@ -155,7 +157,10 @@ def examine(space):
             'three_coordinate_local_minima': len(balanced_traps)}
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--summary', action='store_true')
+    args = parser.parse_args(argv)
     pairs = tuple(combinations(range(11), 2))
     circulant = ModelSpace(11, [e for e in pairs if (e[1] - e[0]) % 11 in (2, 3, 5, 6, 8, 9)])
     complement = [(0, 1), (0, 6), (0, 7), (0, 10), (1, 2), (1, 5), (1, 8),
@@ -188,12 +193,13 @@ def main():
     assert [item['objective'] for item in results[1]['trace']] == [(3, 0, 23), (3, 0, 21), (2, 0, 19)]
     results[1]['one_move_count_including_unchanged'] = len(one_move)
     results[1]['one_move_defect_histogram'] = {str(k): v for k, v in sorted(histogram.items())}
-    print(json.dumps({'scope': 'Two explicit eleven-vertex hosts only; no universal exchange theorem.',
+    report = {'scope': 'Two explicit eleven-vertex hosts only; no universal exchange theorem.',
                       'moves': 'Connected split followed by adjacent merge; roots and ownership may change.',
                       'objectives': ['missing contacts', 'pairs of missing contacts sharing a bag',
                                      'sum of squared bag sizes'],
                       'summary': 'PASS: genuine strict-defect trap, shortest two-move plateau escape, and finite balance refinement.',
-                      'cases': results}, indent=2))
+                      'cases': results}
+    print(report['summary'] if args.summary else json.dumps(report, indent=2))
 
 
 if __name__ == '__main__':

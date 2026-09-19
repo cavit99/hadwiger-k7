@@ -130,6 +130,31 @@ class IntegrityTests(unittest.TestCase):
     def test_valid_fixture(self) -> None:
         self.assertEqual([], self.errors())
 
+    def test_verifier_args_must_be_a_list_of_strings(self) -> None:
+        self.repo.write("results/verify.py", "print('PASS')\n")
+        self.repo.commit()
+        digest = index.sha256_file(self.repo.root / "results/verify.py")
+        base = self.repo.manifest.read_text().replace("verifiers = []\n", "")
+        for args, valid in (
+            ('["--summary"]', True),
+            ('[]', True),
+            ('"--summary"', False),
+            ('["--summary", 1]', False),
+        ):
+            with self.subTest(args=args):
+                self.repo.manifest.write_text(
+                    base + '\n[[verifiers]]\nid = "sample"\n'
+                    'path = "results/verify.py"\n'
+                    f'sha256 = "{digest}"\ntimeout = 2\n'
+                    f'expected_stdout = ["PASS"]\nargs = {args}\n',
+                    encoding="utf-8",
+                )
+                errors = self.errors()
+                if valid:
+                    self.assertEqual([], errors)
+                else:
+                    self.assertIn("args must be a list of strings", "\n".join(errors))
+
     def test_changed_theorem_fails_hash_and_audit(self) -> None:
         self.repo.write("results/theorem.md", "# Theorem\n\nChanged.\n")
         errors = "\n".join(self.errors())
@@ -1039,6 +1064,40 @@ class VerifierRunnerTests(unittest.TestCase):
             slow = {"verifiers": [{"id": "slow", "path": "slow.py", "timeout": 0.05, "expected_stdout": []}]}
             with self.assertRaises(index.IntegrityError):
                 index.run_verifiers(root, slow)
+
+    def test_arguments_are_forwarded_without_shell_interpretation(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "probe.py").write_text(
+                "import sys\n"
+                "assert sys.argv[1] == '--summary'\n"
+                "print(sys.argv[2])\n",
+                encoding="utf-8",
+            )
+            literal = "two words; $(touch pwned)"
+            manifest = {"verifiers": [{
+                "id": "probe", "path": "probe.py", "timeout": 2,
+                "args": ["--summary", literal], "expected_stdout": [literal],
+            }]}
+            index.run_verifiers(root, manifest)
+            self.assertFalse((root / "pwned").exists())
+
+    def test_matching_summary_does_not_hide_failures_or_extra_output(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest = {"verifiers": [{
+                "id": "probe", "path": "probe.py", "timeout": 2,
+                "args": ["--summary"], "expected_stdout": ["PASS"],
+            }]}
+            for tail, error in (
+                ("raise SystemExit(1)\n", "failed with exit 1"),
+                ("import sys\nprint('warning', file=sys.stderr)\n", "wrote to stderr"),
+                ("print('unexpected')\n", "output mismatch"),
+            ):
+                with self.subTest(error=error):
+                    (root / "probe.py").write_text("print('PASS')\n" + tail, encoding="utf-8")
+                    with self.assertRaisesRegex(index.IntegrityError, error):
+                        index.run_verifiers(root, manifest)
 
     def test_unknown_selected_verifier_fails(self) -> None:
         with self.assertRaises(index.IntegrityError):

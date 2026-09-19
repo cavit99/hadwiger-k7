@@ -1351,7 +1351,7 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
                         errors.append(f"discovery {record_id} {side} hash drift: expected {expected_hash}, got {actual_hash}")
 
     for verifier in manifest.get("verifiers", []):
-        unknown = set(verifier) - {"id", "path", "sha256", "timeout", "expected_stdout", "requires"}
+        unknown = set(verifier) - {"id", "path", "sha256", "timeout", "expected_stdout", "requires", "args"}
         if unknown:
             errors.append(f"verifier {verifier.get('id', '<missing>')} has unknown keys: {sorted(unknown)}")
         missing = {"id", "path", "sha256", "timeout", "expected_stdout"} - set(verifier)
@@ -1372,6 +1372,9 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
             errors.append(f"verifier {verifier['id']} timeout must be a positive integer")
         if not isinstance(verifier["expected_stdout"], list):
             errors.append(f"verifier {verifier['id']} expected_stdout must be a list")
+        args = verifier.get("args", [])
+        if not isinstance(args, list) or not all(isinstance(arg, str) for arg in args):
+            errors.append(f"verifier {verifier['id']} args must be a list of strings")
     return errors
 
 
@@ -2105,7 +2108,7 @@ def run_verifiers(root: Path, manifest: dict, selected: set[str] | None = None) 
     for verifier in manifest["verifiers"]:
         if selected is not None and verifier["id"] not in selected:
             continue
-        command = [sys.executable, verifier["path"]]
+        command = [sys.executable, verifier["path"], *verifier.get("args", [])]
         start = time.monotonic()
         try:
             result = subprocess.run(command, cwd=root, check=False, capture_output=True, text=True, timeout=verifier["timeout"], shell=False)

@@ -12,6 +12,13 @@ peer review or a novelty assessment.
 - `active/hc7_chromatic_exchange_probe.py` SHA-256:
   `c5f57b28431d0dd3c9b2ce38a2a13562b73a495d94ec04c49d05321170e087fd`.
 
+**CI compatibility check, 19 September 2026.** The probe now has SHA-256
+`c04d4fa17860bc27358b99a352c12c902ce027049ba97dd7831e960a879fca03`.
+Only argument parsing and output selection changed. Both modes were rerun:
+the default report is byte-identical to the reviewed revision; `--summary`
+runs the same checks and emits the registered summary. This does not extend
+the mathematical audit's scope.
+
 **Independence.** The reviewer who developed the eleven-vertex construction
 independently reconstructed Section 2 and the finite probe. The reviewer
 who developed the seventy-seven-vertex construction independently

@@ -69,6 +69,11 @@ concurrent report commands. When an active target disappears, the generator
 removes only stale `context_*.md` files bearing its own marker; unrelated cache
 files are not swept.
 
+Verifier records require exact stdout, a zero exit code and no stderr. An
+optional `args` list supplies script arguments without a shell. Probes with
+detailed reports use `args = ["--summary"]` to run every check and emit their
+registered summary; their default output retains the full report.
+
 The verifier whitelist is intentionally small and deterministic. Install its
 locked dependency with
 

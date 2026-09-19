@@ -254,6 +254,15 @@ prefixes are inspected as candidate output selections without changing
 the generating history. The script neither tests all forest antichains
 nor certifies unsuccessful searches as minor exclusion.
 
+**CI compatibility check, 19 September 2026.** The density and component-label
+probes now have SHA-256, respectively,
+`0887a3884881665a37b0691d7da5c7dce7b485b27c418677cd98fe319bf79378` and
+`1b67f8db1c2bd02fd897f262aa4e005de86c2a22f6446b815b526529031f1177`.
+Only argument parsing and output selection changed. Both modes were rerun:
+default reports are byte-identical to the reviewed revisions; `--summary`
+runs the same checks and emits the registered summaries. The mathematical
+audit's scope is unchanged.
+
 The high-cost charge, existence of a successful selection, density
 theorem, improved colouring bound and HC7/comparable-theorem objective
 remain unproved. This audit certifies only the scoped deductions and

@@ -2,10 +2,12 @@
 """Finite tests of simultaneous monochromatic-component contractions.
 
 Run: uv run python3 active/quantitative_component_label_probe.py
+Add --summary to print only the CI summary after running all checks.
 Expected: two verified surplus models and one negative control.
 These fixed tests establish no universal construction or density bound.
 """
 
+import argparse
 from fractions import Fraction
 from hashlib import sha256
 from itertools import combinations
@@ -139,7 +141,10 @@ def digest(value):
     return sha256(json.dumps(value, separators=(",", ":")).encode()).hexdigest()
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--summary', action='store_true')
+    args = parser.parse_args(argv)
     check_clique_search()
     successes = 0
     for name, original, r, a, colouring, q, seed, expected, largest_expected in cases():
@@ -182,7 +187,8 @@ def main():
             assert restricted == largest_expected
             record["best_largest_per_label_clique_number"] = restricted
             record["comparison_scope"] = "clique numbers, not maximum induced-subgraph independence ratios"
-        print(json.dumps(record, sort_keys=True))
+        if not args.summary:
+            print(json.dumps(record, sort_keys=True))
     assert successes == 2
     print("PASS: 3 finite cases; 2 verified surplus models; 1 negative control; 10 clique-search cross-checks.")
 
