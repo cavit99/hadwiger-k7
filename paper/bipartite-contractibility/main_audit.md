@@ -1,33 +1,31 @@
 # Internal manuscript audit
 
-## Current attribution revision — 21 September 2026
+## Current disclosure revision — 21 September 2026
 
-**Verdict: GREEN for the editorial changes.** A reviewer separate from
-the manuscript editor checked the complete diff against Git revision
-`80ea4d8821e053ce1e0ade60971ee9a6a4f436a8` and independently verified:
+**Verdict: GREEN for the editorial change.** A reviewer separate from
+the editor checked the complete source diff against Git revision
+`7a1b98ce04a663cc7f01d46752608a0b65c94ecd` and independently verified:
 
 | Current artifact | SHA-256 |
 |---|---|
-| [Source](main.tex), including bibliography | `33adadc84142c11137f2199863c09e6220a18d8b410f76399ed0bea37358b892` |
-| [Seven-page PDF](main.pdf) | `4ec6b4cde3ab6d7f995c02c3a5ccd7d0179b6131b8a9debaa845db47cb3b3ea0` |
+| [Source](main.tex), including bibliography | `02d771ae0973da267cea22be6e2bec6f1d9ac9905222f8c17b22c644e42fe391` |
+| [7-page PDF](main.pdf) | `44a9d8daa02da9e93649d976935a1c42e99a30d4327b28ffeae3c5b62d527159` |
 
-The only source changes add Cavit Erginsoy as author and PDF author,
-and update the draft date. Removing those three changes reproduces
-the previously audited source byte for byte. The entire document body,
-including every mathematical statement, proof and reference, is unchanged.
-No new mathematical assumption or gap is introduced by this revision;
-the mathematical assessment remains the historical review below.
+The sole source change adds the exact two-sentence AI disclosure approved
+by the author before the bibliography. Removing it reproduces the base
+source byte for byte. Every mathematical statement, proof and reference
+is unchanged; the historical mathematical verdict and its scope remain
+unchanged. This is a limited editorial review, not a fresh proof
+reconstruction, literature search or external review.
 
-The editor reports a warning-free build. The present reviewer checked
-the final PDF's author metadata and page count and visually inspected
-all seven rendered pages. No clipping, overlap, missing glyph or unresolved
-reference was observed. This is a limited editorial and rendering review,
-not a fresh proof reconstruction, literature search or external review.
+The editor reports a warning-free build, byte-identical renders for pages
+1–6 against the previously reviewed PDF, and a clean visual inspection
+of the changed page 7. The reviewer independently checked the artifact
+hashes; the current rendering check is the editor's report.
 
-The preceding audit is preserved at the cited Git revision, with SHA-256
-`ff46ae3dc823f39ee3cb61cf2c1e0fbb4150130387b818ed66c60483c9246234`.
-Its text follows unchanged; references there to the current revision
-mean the 13 September revision and its historical artifact hashes.
+The preceding attribution review and its artifact pins are preserved at
+the cited Git revision. The historical review below is unchanged; its
+revision references and hashes concern the 13 September artifacts.
 
 ## Historical mathematical and editorial review — 13 September 2026
 
