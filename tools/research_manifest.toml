@@ -23712,6 +23712,27 @@ strict_parameter = "host order in every separator replacement"
 conclusions = ["a three-connected k-chromatic marked minor retaining universal colourfulness", "in five colours a W4 model with five distinct bags meeting the colourful set, without connectivity", "in six colours a wheel with five colourful-set-meeting bags avoiding any selected whole colour class, which contains at least one further mark"]
 does_not_prove = ["that unselected marks outside the deleted class remain unused", "a sixth compatible marked bag", "Conjecture 19 or HC7", "priority or NT-comparable significance"]
 
+[[claims]]
+id = "colourful_sets.two_triangle_four_connected_reduction"
+title = "Colourful unions of two triangles reduce to four-connectivity"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_colourful_reduction.md"
+audit = "results/hc7_two_triangle_colourful_reduction_audit.md"
+expected_source_sha256 = "f82ab1b68dd04ff2cae5a95628a5ba1d680a81933e49ced1b63ff88f48f79534"
+active = false
+scope = "finite five-colourable graphs with a universally colourful union of two disjoint literal triangles; cross edges are allowed"
+label_fidelity = "every marked quotient vertex retains a distinct original mark in a fixed disjoint connected preimage"
+strict_parameter = "vertex order at every nonterminal separator replacement"
+conclusions = ["a K5 model meeting the six marks or a four-connected marked minor in the same colourful two-triangle class", "application to both chromatic branches of the exceptional degree-seven critical host"]
+does_not_prove = ["the four-connected marked K5 construction", "either exceptional degree-seven case", "HC7", "connectivity or criticality inherited from the original host"]
+
+[[relations]]
+source = "colourful_sets.two_triangle_four_connected_reduction"
+target = "colourful_sets.three_connected_reduction"
+kind = "uses"
+note = "Uses only the marked-minor reduction across cuts of order at most two, not the rooted-wheel corollary. The five-mark exit separately invokes Kriesell–Mohr Definition 1 and Theorem 7, https://arxiv.org/html/1911.09998."
+
 [[relations]]
 source = "colourful_sets.three_connected_reduction"
 target = "hc7.companion.five_root_wheel_extension"

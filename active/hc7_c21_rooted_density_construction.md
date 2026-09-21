@@ -158,13 +158,30 @@ of four disjoint connected core bags meeting both endpoint components and
 retaining the boundary contacts to `u`. Separate colourful-set models
 do not supply that collection; zero exceptional connections is not an exit.
 
-The [exceptional-neighbourhood calculation](hc7_degree7_exceptional_construction_working.md)
-uses the existing helper-port argument, not a new normalisation mechanism.
-In the `K_{3,3} dotunion K_1` complement case, a five-connected deletion
-has two named triangles. A five-bag model meeting their union would finish.
-The first-hit helper transfer can instead lose a required contact with
-the first triangle. A valid simultaneous exchange has not been proved;
-the five-chromatic and six-chromatic deletion cases both remain open.
+**Concentrated attack:** the entire `K_{3,3} dotunion K_1` complement
+case, detailed in the [two-triangle construction](hc7_degree7_exceptional_construction_working.md).
+Write `N(u)=P dotunion Q dotunion {r}`, with two triangles `P,Q` and
+`r` adjacent to all six roots. A `K5` model in `G-{u,r}` whose bags all
+meet `P union Q` finishes with singleton bags `{u},{r}`.
+
+Deleting the whole `r`-colour class from any six-colouring of `G-u`
+gives a five-chromatic graph in which the six roots are colourful in
+every five-colouring. The [new marked-minor reduction](../results/hc7_two_triangle_colourful_reduction.md),
+with [separate internal reviews](../results/hc7_two_triangle_colourful_reduction_audit.md),
+either finishes the model or reduces this pair to four-connectivity.
+It covers all separators of order at most three, decreases vertex order,
+and preserves the original marks in fixed disjoint preimages. Five
+surviving marks finish by the existing rooted-certificate theorem; six
+retain two literal triangles, with cross edges allowed.
+
+The four-connected construction remains unproved. This reduction handles
+both chromatic values of `G-{u,r}` but closes neither branch. Taking a
+minimum `r`-colour class does not force a usable connector: the class may
+be `{r}`. Paths from different Kempe colourings can reuse a vertex while
+representing independent demands, so they do not automatically form a
+bipartite scheme. The existing first-hit helper transfer can lose a
+required triangle contact. The needed repair remains a simultaneous
+choice of all five bags or a valid recolouring of the original host.
 
 Two proposed reductions also remain invalid. Minimising arbitrary
 seven-cut shores selects the original singleton `{u}`, without a terminal

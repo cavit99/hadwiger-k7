@@ -40,11 +40,12 @@ connectivity assumptions and are not uniformly subsumed by ours.
    eight and nine remain beyond this checkpoint. Separately, the assembled
    [C21 manuscript](paper/k7minus-six-colour/main.pdf) needs expert review.
 
-The latest degree-seven attempt gives an internally audited recolouring
-refinement and an explicit barrier to extracting a minor from selected
-colour paths alone. It closes no critical-host case. The technical
-frontier records the remaining simultaneous-contact construction and the
-failed separator and colouring lifts; the primary target is unchanged.
+The current attack treats the entire exceptional two-triangle
+neighbourhood case. An [audited reduction](results/hc7_two_triangle_colourful_reduction.md)
+covers every auxiliary separator of order at most three, with decreasing
+order and valid marked lifts. It leaves a four-connected colourful
+two-triangle construction unproved, so no critical-host case is closed.
+The primary target remains unchanged.
 
 ## Completed C21 construction
 

@@ -23,16 +23,29 @@ whose five bags meet `T` completes to `K7` with singleton bags `{u},{r}`.
 All five bags avoid both added singletons; both singletons see each bag
 at its actual `T` vertex, and `ur` is an edge.
 
-If `chi(J)=5`, `T` is colourful in every five-colouring of `J`. Otherwise
-give `u` a colour missing from `T` and give `r` a new sixth colour. This
-six-colours `G`. The two literal cliques `{u,r} union P` and
-`{u,r} union Q` do not themselves supply the required rooted model.
+Both chromatic branches now have one rigorous auxiliary reduction.
+Choose any six-colouring of `G-u`, let `I` be the entire colour class of
+`r`, and put `K=G-u-I`. Then `K` is five-chromatic and `T` is colourful
+in every five-colouring of `K`: otherwise restore `I` in colour six and
+give `u` a colour missing from `T`. The
+[audited reduction](../results/hc7_two_triangle_colourful_reduction.md#7-application-to-the-exceptional-critical-host)
+either finishes the `T`-meeting model or gives a four-connected marked
+minor with the same colourful two-triangle invariant. Every cut of order
+at most three is covered, including cuts meeting the marks and cuts with
+all marks on one side. Vertex order strictly decreases and all marked
+models lift through fixed disjoint connected preimages.
 
-The following static terminal is still **unproved**:
+The resulting sufficient terminal is still **unproved**:
 
-> If a five-connected, five-chromatic graph has two disjoint literal
-> triangles whose union is colourful in every five-colouring, it has a
-> `K5` model with every bag meeting that union.
+> Every four-connected, five-colourable graph with a colourful union of
+> two disjoint literal triangles has a `K5` model meeting that union.
+
+Cross edges between the triangles are allowed in this auxiliary class.
+Neither five-connectivity nor criticality of `G` is claimed for the
+quotient. If `chi(J)=5`, one can choose `I={r}`; otherwise `I` contains
+additional vertices. The reduction covers both branches without needing
+the extra vertices as connectors. The original graph and all its
+proper-minor colourings remain available to a direct construction.
 
 The general colourful-set theorem cannot be substituted here:
 Martinsson--Steiner [Theorem 1.3](https://arxiv.org/html/2209.00594v1#S1)
@@ -138,3 +151,31 @@ form a bipartite scheme. The existing
 and [reserved-connector barrier](../barriers/hc7_sole_exterior_reserved_connector_barrier.md)
 remain applicable to those weaker inferences. They do not refute the
 static terminal above or the full critical-host construction.
+
+## 5. Direct prism construction: remaining gap
+
+The original `J` retains more than the auxiliary minor. Every nonempty
+`X subseteq J-T` has at least six neighbours in `J`, since `u` has no
+neighbour in `X` and deleting `r` loses at most one boundary vertex.
+Also `chi(J-x)>=5` for every vertex `x`. Suppose `J-x` had a
+four-colouring. If `x` is outside `T`, give `x,u` colour five and
+`r` colour six. If `x in P`, choose a colour absent from `P-{x}`,
+recolour the neighbours of `x` having that colour with colour five,
+and give `x` the chosen colour. The recoloured set is independent and avoids
+`T`; again `u` can use five and `r` six. The `Q` case is symmetric.
+In particular, the Four Colour Theorem excludes every apex decomposition
+of `J`, including one whose apex is a root.
+
+Three disjoint `P`--`Q` paths form a triangular prism with its two
+triangles literal. If deleting one whole vertical path leaves a `K4`
+model rooted at the other four endpoints, that path is the fifth bag;
+the triangle edges give its four contacts. The first unsupported step
+would be applying connectivity of `J` to this path-deleted graph: its
+separator can have arbitrarily many neighbours along the deleted path.
+Norin--Thomas [Lemma 4.2](https://arxiv.org/html/1402.1999v3) also leaves
+a three-legged bridge to the prism; a cross-free conclusion alone does
+not imply planarity. Deleting its centre and three feet does not preserve
+ownership of paths through the surviving legs. No monotone rerouting or
+actual root-free set with at most five neighbours has been obtained.
+These are route nonclosures, not counterexamples to the critical-host
+case. Its full colouring hypotheses remain available.
