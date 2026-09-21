@@ -1,173 +1,90 @@
-# Hadwiger's Conjecture for $K_7$-minor-free graphs
+# Towards Hadwiger's conjecture
 
-> **Research status:** $HC_7$ is not proved in this repository.
+Research on graph colouring and graph minors, focused on the first open
+case of Hadwiger's conjecture.
 
-This repository is an open research workspace on the first unresolved case
-of Hadwiger's Conjecture. It contains written theorems, conjectural
-proof targets, computer-assisted finite results, internal audits, and
-counterexamples to intermediate claims. Internal audits are not external
-peer review.
-
-The notation `$HC_7$` used in historical filenames and internal claim IDs
-indexes the excluded clique `K_7`. In Seymour's convention, where `HC(t)`
-means that every `K_{t+1}`-minor-free graph is `t`-colourable, this is
-`HC(6)`.
+**[Read the main paper (PDF)](paper/k7minus-six-colour/main.pdf)** ·
+[LaTeX source](paper/k7minus-six-colour/main.tex) ·
+[All manuscripts](paper/README.md)
 
 ## The problem
 
-A $K_t$-minor model in a graph $G$ consists of $t$ pairwise disjoint
-connected branch sets, with an edge between every pair. Hadwiger's
-Conjecture asserts
+A proper vertex colouring assigns colours so that adjacent vertices have
+different colours. A **graph minor** is obtained by deleting vertices or
+edges and contracting edges. The **complete graph** $K_t$ has $t$ vertices,
+with an edge between every pair.
 
-$$
-K_t\not\preccurlyeq G\quad\Longrightarrow\quad \chi(G)\le t-1.
-$$
+Hadwiger's conjecture says that every finite simple graph with no $K_t$
+minor can be coloured with at most $t-1$ colours. The case studied here is:
 
-The conjecture is known for $t\le6$; the $t=6$ case is due to
-[Robertson, Seymour, and Thomas](https://doi.org/10.1007/BF01202354),
-building on the Four-Colour Theorem. It remains open for every $t\ge7$.
-This repository studies
+> Can every graph with no $K_7$ minor be coloured with at most six colours?
 
-$$
-HC_7:\qquad K_7\not\preccurlyeq G\quad\Longrightarrow\quad\chi(G)\le6.
-$$
+The seven refers to the excluded complete graph; the graphs being coloured
+may have any number of vertices. This case, abbreviated `HC7` or `HC_7`,
+is not proved.
 
-## Current research status
+## Main result
 
-The universal bipartite campaign now has a computation-free written proof
-with separate internal audits: **every finite bipartite graph is
-contractible**, with every prescribed root retained. The
-[theorem](results/bipartite_contractibility_via_matroid_reduction.md)
-uses simultaneous component contractions supplied by matroid union and
-strict induction on host order. The
-[technical frontier](active/bipartite_contractibility_frontier.md) records
-the result and its application boundary. No implication to `HC_7` is
-established; `HC_7` remains the primary open objective.
+Let $K_7^-$ be the complete graph on seven vertices with one edge deleted.
+The principal manuscript, by Cavit Erginsoy, gives a proof of the following:
 
-The repository now has a [written proof of Conjecture 21](results/hc7_k7minus_bilight_extremal.md)
-with two separate hash-pinned internal audits: **every finite
-`K7^-`-minor-free graph is six-colourable**. Its extremal theorem forces
-`K7^-` in every 4-bilight graph on `n>=3` vertices with `e>=4n-2`.
-The proof combines a new [rooted helper theorem](results/five_root_one_missing_contact.md)
-and global construction with explicitly cited external machinery. Its
-terminal degree-seven step uses an exact finite quotient lemma.
+> Every finite simple graph with no $K_7^-$ minor is six-colourable.
 
-This strengthens the colouring conclusion of Norin–Totschnig, but does not
-prove HC7. External mathematical review and historical priority remain
-outstanding. Conjecture 19 was resolved by
-[Dvořák–Norin–Rahman](https://arxiv.org/abs/2609.17760), whose work is an
-input, not a result claimed by this repository. T44 remains an open
-structural statement, no longer needed for the C21 conclusion.
-The [research ledger](RESEARCH_LEDGER.md) is the sole status authority;
-[the active index](active/INDEX.md) is the concise navigation map.
+This covers fewer graphs than the full conjecture: a graph may contain a
+$K_7^-$ minor without containing a $K_7$ minor.
 
-## Selected completed work
+The proof builds on the rooted-minor and colouring work of
+[Dvořák, Norin and Rahman](https://arxiv.org/abs/2609.17760v1).
+It develops new minor constructions and an edge-count theorem, applying to
+graphs of arbitrary size. One step uses a computer-checked lemma covering
+232 nine-vertex graphs.
 
-The repository contains many proof notes.  The following are the strongest
-reader-facing completed results; the [selected-results map](results/README.md)
-links their proofs, audits and exact scopes.
+The manuscript has separate internal proof reviews; external mathematical
+review remains outstanding. See its [proof reviews and verification instructions](paper/k7minus-six-colour/README.md)
+and the [research ledger](RESEARCH_LEDGER.md) for the exact status.
 
-| Result | Status and scope |
+## Two further papers
+
+- **[A matroid proof of bipartite contractibility](paper/bipartite-contractibility/main.pdf).**
+  Shows how suitable systems of overlapping paths yield bipartite minors
+  while retaining prescribed vertices. Gives an independent proof of an
+  earlier assertion by Biswal, Lee and Rao, and a sharp distance bound for
+  short paths.
+- **[Paired clique minors from connected regions](paper/paired-clique-regions/main.pdf).**
+  Gives sharp conditions for constructing a complete-graph minor whose
+  connected parts each contain one vertex from each of two specified
+  terminal sets.
+
+These are independent specialist papers. The structural, even-subdivision
+and complete-bipartite precursor drafts are preserved in the
+[manuscript collection](paper/README.md).
+
+## Finding your way around
+
+| Resource | What to find there |
 |---|---|
-| [Every `K7^-`-minor-free graph is six-colourable](results/hc7_k7minus_bilight_extremal.md) | Written proof with two separate internal audits. Proves C21 and the 4-bilight `4n-2` extremal theorem for arbitrary host order; includes an exact finite nine-vertex quotient input. HC7 remains open. |
-| [Every bipartite graph is contractible](results/bipartite_contractibility_via_matroid_reduction.md) | Computation-free written proof with two separate internal audits. Every scheme of every finite bipartite target contains the fully prescribed rooted minor, with no degree or path-length bound. It independently proves the intended BLR bipartite-flow assertion. The ledger assesses this as a substantial specialist contribution below the Norin--Totschnig benchmark; priority remains qualified. |
-| [Two helpers with at most one missing contact](results/five_root_one_missing_contact.md) | Written proof with two separate internal audits, for every finite 4-light five-rooted graph of rooted four-density at least two. Retains all five roots and improves the two-contact allowance in the cited Dvořák–Norin–Rahman theorem. It is an input to the completed C21 proof; historical priority is not asserted. |
-| Preserved bipartite precursors | Audited proofs of [fully rooted even subdivisions](results/even_subdivision_contractibility.md), [fully rooted `K_{2,n}`](results/k2n_contractibility_via_matroid_packing.md), and [degree-three schemes retaining the opposite shore's roots](results/degree_three_bipartite_weak_contractibility.md). The universal theorem subsumes these families. |
-| [Degree-eight cycle-and-triangle case](results/hc7_degree8_cycle_triangle_closure.md) | Written proof with two separate internal audits. Closes this entire neighbourhood case in the Conjecture 19 reduction for arbitrary host order. |
-| [Five-root wheel extension](results/hc7_rooted_wheel_extension.md) | Written proof with two separate internal audits. In a three-connected graph, a `K_4` rooted at four of five prescribed vertices extends to a wheel rooted at all five; its hub is not prescribed. The colouring corollary closes the five-chromatic endpoint-deletion branch. |
-| [Regions full to one terminal set force a paired clique](results/paired_clique_one_sided_regions.md) | Written proof with a separate internal audit, for arbitrary target size and host order. Exact linkage and region hypotheses are in the [results map](results/README.md); no Conjecture 19 consequence is established. |
-| [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
-| [Four prescribed roots in a three-connected graph](results/rooted_k4minus_four_roots.md) | Elementary unbounded proof, with a [GREEN audit](results/rooted_k4minus_four_roots_audit.md), of a rooted `K_4^-` minor at any four distinct roots.  The missing quotient edge is not prescribed. |
-| [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Audited unbounded host reduction with explicit finite inputs. The degree-eight local theorem remains independently applicable; the density-restricted defect theorem and its `n_8>=27+tau` critical-host consequence are superseded by C21 and its extremal theorem. |
-| [Three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md) | Computation-free written proof with a [GREEN audit](results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md).  In the critical `K_7^-` host, every seven-vertex cut therefore leaves exactly two components. |
+| [Research ledger](RESEARCH_LEDGER.md) | Authoritative current status, exact claims and review records |
+| [Current research](active/INDEX.md) | Open questions and active proof work |
+| [Supporting results](results/README.md) | Theorem statements, proofs and their internal audits |
+| [Counterexamples](barriers/) | Constructions refuting proposed intermediate claims |
+| [Archive](archive/) | Superseded drafts, failed approaches and research history |
 
-The earlier critical-host degree, defect and separator results retain their
-proofs and exact scopes. They are now subsumed, for the hypothetical C21
-counterexample, by its exclusion in the complete theorem.
+## Working with the repository
 
-## Manuscripts
+Read [AGENTS.md](AGENTS.md) before contributing. Python experiments use
+[uv](https://docs.astral.sh/uv/). To install the locked dependencies and
+check the research records:
 
-The [manuscript collection](paper/README.md) separates current drafts,
-preserved precursors and further theorem packages, with links to sources,
-PDFs, exact-hash internal audits and literature assessments.
-
-The primary draft is
-[Every graph with no K7-minus minor is six-colourable](paper/k7minus-six-colour/main.pdf),
-with the complete C21 argument, supporting constructions and a
-[separate internal manuscript audit](paper/k7minus-six-colour/main_audit.md).
-The bipartite and paired-clique papers remain independent specialist drafts.
-The structural, even-subdivision and K2,n papers are preserved precursors.
-Current revision status is recorded in the
-[research ledger](RESEARCH_LEDGER.md#manuscript-status).
-
-## Repository map
-
-| Location | Purpose |
-|---|---|
-| [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current mathematical status |
-| [`active/INDEX.md`](active/INDEX.md) | Sole active target and its direct proved inputs and barriers |
-| [`results/README.md`](results/README.md) | Selected completed and audited proofs; navigation only |
-| [`paper/README.md`](paper/README.md) | Current and historical manuscript map |
-| [`barriers/`](barriers/) | Counterexamples to intermediate claims, with exact scope |
-| [`archive/`](archive/) | Frozen, superseded and retracted work retained for provenance |
-| [`tools/README.md`](tools/README.md) | Search, curated dependency metadata, audit hashes and integrity checks |
-
-Directory placement alone does not establish a claim.  Read a theorem in
-[`results/`](results/) together with its adjacent audit, and use the ledger
-to determine whether it belongs to the current proof spine.
-
-## Claim labels
-
-- **Written proof:** a proof with explicit hypotheses and conclusion.
-- **Separate internal audit:** an independent agent checked that revision;
-  this is not peer review.
-- **Computer-assisted finite result:** an exact finite reduction with
-  retained code and, where practical, checkable certificates.
-- **Conjectural target:** an unproved next theorem.
-- **Recorded negative finding / route nonclosure:** a failed mechanism or
-  unsupported inference, not a counterexample.
-- **Barrier:** a counterexample to an intermediate claim, not to Hadwiger's
-  Conjecture.
-
-Finite computation is used to test conjectured lemmas and settle explicitly
-finite subproblems. It is never substituted for an unbounded proof.
-
-## Research memory and integrity
-
-Every tracked Markdown file, including archived work, is searchable through
-a disposable SQLite/FTS index:
-
-```bash
-uv run --locked python tools/research_index.py build
-uv run --locked python tools/research_index.py search '"bounded interface"'
-uv run --locked python tools/research_index.py context hc7.target.k44_sevenconnected_closure
-uv run --locked python tools/research_index.py check
-uv run --locked python tools/research_index.py report
+```sh
+uv sync --locked
+uv run python3 tools/research_index.py check
+uv run python3 tools/research_index.py report
 ```
 
-The generated index and reports are retrieval and integrity aids. Markdown
-proofs remain authoritative, `RESEARCH_LEDGER.md` is the sole status
-authority, and the curated dependency graph is not presumed complete.
-
-## Repository layout
-
-```text
-.
-├── README.md            # durable public overview
-├── RESEARCH_LEDGER.md   # authoritative current research status
-├── AGENTS.md            # workflow and proof-integrity rules
-├── tools/               # generated index and integrity checks
-├── results/             # written claims and adjacent audits
-├── active/              # current proof targets and live scripts
-├── barriers/            # counterexamples to intermediate claims
-└── archive/             # superseded work retained for provenance
-```
-
-See [`AGENTS.md`](AGENTS.md) before contributing. Prefer standard
-graph-theoretic language, state exact trust boundaries, and do not modify an
-audited theorem without renewing its audit.
+[Tool documentation](tools/README.md) covers searching the proof library,
+checking dependencies and reproducing computations. Internal audits and
+finite checks record their scope and the exact revisions they cover.
 
 ## Licence
 
-Repository materials are available under the [MIT License](LICENSE). The
-licence permits reuse; it does not certify the mathematical claims.
+[MIT](LICENSE).
