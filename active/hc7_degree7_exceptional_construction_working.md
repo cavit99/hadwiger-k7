@@ -40,6 +40,12 @@ The resulting sufficient terminal is still **unproved**:
 > Every four-connected, five-colourable graph with a colourful union of
 > two disjoint literal triangles has a `K5` model meeting that union.
 
+This stronger auxiliary statement is optional. The selected target is
+closure of the original critical-host case, allowing the `u,r` bags and
+all root assignments to change. The construction below retains the
+stronger original-host conditions instead of replacing them by this
+terminal statement.
+
 Cross edges between the triangles are allowed in this auxiliary class.
 Neither five-connectivity nor criticality of `G` is claimed for the
 quotient. If `chi(J)=5`, one can choose `I={r}`; otherwise `I` contains
@@ -179,3 +185,130 @@ ownership of paths through the surviving legs. No monotone rerouting or
 actual root-free set with at most five neighbours has been obtained.
 These are route nonclosures, not counterexamples to the critical-host
 case. Its full colouring hypotheses remain available.
+
+## 6. Exact extremal representation and the unresolved exchange
+
+The [extremal prism theorem](../results/hc7_two_triangle_extremal_prism.md),
+with a [separate internal audit](../results/hc7_two_triangle_extremal_prism_audit.md),
+strengthens Sections 2--3. Maximising the connected helper `E` forces
+`J-E` to be exactly an induced prism subdivision with literal end
+triangles `P,Q` and three nontrivial paths `R_i=p_i...q_i`. Its proof
+uses actual block-cut-tree boundaries and needs only four-connectivity
+and an ordinary `K5` minor. No part of the graph is discarded.
+
+In the original graph, roots have at least two `E`-neighbours, path
+interiors at least four, and `F=G[E union {r}]` has chromatic number
+at least four. Every non-cut vertex of `E` has its prism neighbours
+within one end triangle or a segment of at most two edges of one path,
+and has degree at least three inside `E`. The theorem gives the explicit
+bags and cardinality comparison proving these restrictions.
+
+The open step concerns connected sets in `E`, not another neighbourhood
+census. A set meeting two relevant path portions can finish the model
+when its complement remains connected and keeps the required root
+contacts. These complementary conditions have not been established
+through neutral vertices or two-vertex separations of `E`. In particular,
+the attempted inference that three-connectivity of `E` suffices omitted
+vertices with no path-interior contact, including vertices with no prism
+contact at all. Its first unsupported step was assigning every edge
+leaving one path's contact class an endpoint contacting another path.
+The valid single-vertex exchange and the complete original-host target
+remain unaffected. A repair must control the whole transferred set and
+its complement simultaneously.
+
+Allowing triangle roots to move still does not justify contracting both
+pieces before that repair. The
+[intact-helper counterexample](../barriers/hc7_prism_intact_helper_barrier.md)
+has balanced root ownership and contacts from each piece to all three
+paths, but permits no model even with all triangle roots movable.
+It refutes only the weaker four-connected quotient claim. The actual
+pieces' contact multiplicity and ability to split must remain available.
+
+One comparison under deletion is valid. For `x in E`, let `E_x` be
+any extremal helper supplied by the theorem in `J-x`. Then
+`|E_x|<=|E|-1`, with equality if `E-x` is connected. Indeed, `J-x` is
+four-connected and still has an ordinary `K5` minor by Section 5.
+If `|E_x|>=|E|`, the vertex `x` cannot contact `E_x`, since absorbing it
+would enlarge the original helper. Thus its at least six neighbours
+all lie on the new prism. Two neighbours on one vertical path with
+a nonempty interval between them allow that interval to move into
+`E_x`, replacing it on the path by `x`; every moved vertex has an
+`E_x` neighbour by four-connectivity. This again enlarges the helper.
+Otherwise `x` has exactly two consecutive neighbours `y_i,z_i` on
+each of the three paths, in order from `p_i`. A forbidden model has
+the three `p_i`--`y_i` prefixes as bags, a fourth bag consisting of
+`x` and the `z_1`--`q_1` suffix, and a fifth `E_x union {q_2}`.
+The prefixes contact each other through `P`; the fourth contacts them
+through `x`; the fifth through the original `P` roots; and the final
+contact is `q_1q_2`. Each bag meets a distinct triangle root.
+This proves the inequality. When `E-x` is connected it remains
+`P`-full, since every root has at least two `E` neighbours, proving
+equality by maximality in `J-x`.
+
+This is a working comparison, not an induction: `J-x` need not retain
+the original critical-host hypotheses, and equality does not identify
+the two extremal choices. No recursive conclusion is imported from it.
+
+One whole end-block exchange can retain the root contacts. Let `W=B-z`
+be the interior of an end-block of `E`, attached at `z`, and suppose
+all its prism contacts lie on `R_i`. It has at least five such contacts,
+by the six-neighbour boundary condition. Let `s,t` be the extreme ones
+and `K` the open interval between them. The set `(E-W) union K` is
+connected: otherwise `K` has no neighbour in `E-W`, and `W union K`
+has boundary contained in `{z,s,t}`, impossible. If `W` owns all
+helper contacts of `p_i`, then `s=p_i` and the first internal path
+vertex, now in `K`, restores that contact. Other P contacts survive.
+The complementary helper replaces this interval by the connected `W`
+and remains connected and P-full. Thus maximality proves only
+`|K|<=|W|`. Strict gain has not been established, so this valid move
+does not eliminate the end-block. Adjoining the interval to `W` is
+also not a small-separator argument: its other neighbours in `E-W`
+remain part of the actual boundary.
+
+Alternatively, for each `i`, put `H_i=J-V(R_i)`. The cycle formed by
+the other two paths fixes the four-root order. A rooted `K4` in `H_i`
+would finish with `R_i`, so Fabila-Monroy--Wood
+[Lemmas 2 and 7](https://arxiv.org/html/1102.3760v1)
+give a separate ordered web completion of each `H_i`; their primary
+statements were inspected. For a web cell behind three gates in `H_i`,
+the theorem does not bound its additional contacts on `R_i`. The three completions
+have not been shown to have compatible cells or gates. Thus neither
+attempt gives a root-free set with at most five neighbours in `J`.
+
+## 7. Proper-minor colourings retained for that construction
+
+The following are working deductions, not additional case closures.
+They must be used together with the exact representation and actual
+attachments, rather than as an independent response table.
+
+For any induced `P`--`Q` path `R=v_0...v_k` meeting the triangles only
+at its ends, take a six-colouring of `G/R`. Write the distinct colours
+of `u,r,R` as `alpha,beta,gamma`, and put `H=J-V(R)`. For every colour
+`t` outside these three, a component of `H[gamma,t]` contacts both
+parities of `R`. Otherwise alternate `gamma,t` on `R` and flip each
+whole two-colour component so that its contact side is opposite the
+parity it meets. No `gamma` vertex of `H` contacts `R`, by the quotient
+colouring. Thus all contacts are repaired; other colours, including
+`alpha,beta`, cause no conflict. This six-colours the original graph.
+The four surviving triangle roots may change colour in these flips.
+
+Each forced component supplies an even path outside `R` joining vertices
+at odd distance on `R`. If `k` is even, a fourth such component exists
+for `t=alpha`: the isolated vertex `u` in the off-path two-colour graph
+contacts only the two same-parity ends, so cannot be the obstruction.
+Different bridges may share `gamma` vertices and need not cross. Replacing
+an odd path interval by an even bridge need not leave an induced path;
+shortening chords can change parity. Thus this operation does not prove
+the existence of an induced even path or a decreasing rerouting.
+
+There is also a direct full-colour-class constraint on the extremal
+remainder. In any four-colouring of `F=E+r`, let `I` be a colour class
+not containing `r`, and let `S=J-E`. Then `chi(G[S union I])=4`.
+It is at most four because `S` is three-colourable and `I` is independent.
+If it were at most three, recolour `S union I` using its old `I` colour
+and two fresh colours. Keep the other three `F` colours, and give `u`
+one of those three different from `r`. This six-colours `G`: no vertex
+of `T` retains one of those three colours, and `u` has no neighbour in
+`E`. The conclusion is conditional on a four-colouring of `F`; the
+case `chi(F)>=5` is not removed. Neither this constraint nor separate
+colourful-set models supplies simultaneous branch-set ownership.

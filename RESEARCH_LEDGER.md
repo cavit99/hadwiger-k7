@@ -41,11 +41,15 @@ connectivity assumptions and are not uniformly subsumed by ours.
    [C21 manuscript](paper/k7minus-six-colour/main.pdf) needs expert review.
 
 The current attack treats the entire exceptional two-triangle
-neighbourhood case. An [audited reduction](results/hc7_two_triangle_colourful_reduction.md)
-covers every auxiliary separator of order at most three, with decreasing
-order and valid marked lifts. It leaves a four-connected colourful
-two-triangle construction unproved, so no critical-host case is closed.
-The primary target remains unchanged.
+neighbourhood case in the original critical graph, allowing all branch
+sets to change. The [auxiliary separator reduction](results/hc7_two_triangle_colourful_reduction.md)
+remains an optional sufficient route. A new
+[extremal prism reduction](results/hc7_two_triangle_extremal_prism.md),
+with a separate internal audit, retains every vertex and attachment:
+the remaining graph is an induced prism subdivision and one connected
+remainder. Its exchanges and actual colouring restrictions do not yet
+compose to a minor or a six-colouring. No critical-host case is closed;
+HC7 remains the primary target.
 
 ## Completed C21 construction
 

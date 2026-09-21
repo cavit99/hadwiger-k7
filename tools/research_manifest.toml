@@ -6,6 +6,38 @@ navigation_root = "active/INDEX.md"
 public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
+[[claims]]
+id = "hc7.two_triangle_extremal_prism"
+title = "Extremal prism normalisation for two anticomplete triangles"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_extremal_prism.md"
+source_heading = "Statement"
+audit = "results/hc7_two_triangle_extremal_prism_audit.md"
+expected_source_sha256 = "8d617e35d5bc6fac0f25b5f418c6f35e976d282d883401199084e15c6d258222"
+active = false
+scope = "finite four-connected graphs with an ordinary K5 minor and two anticomplete literal triangles, but no K5 model with every bag meeting their union"
+label_fidelity = "the two original triangles are retained, and every other vertex belongs to exactly one induced vertical path or the connected extremal helper"
+strict_parameter = "finite maximisation of helper order; no recursive case closure is asserted"
+conclusions = ["an exact induced prism subdivision outside a connected extremal helper", "under the stated critical-host hypotheses, actual contact bounds and explicit non-cut-vertex exchanges"]
+does_not_prove = ["a transferable connected set with a connected root-full complement", "the two-triangle critical-host case", "the whole degree-seven case", "HC7"]
+keywords = ["two anticomplete triangles", "triangle-roundedness", "induced prism", "connected helper", "simultaneous exchange"]
+
+[[claims]]
+id = "hc7.barrier.prism_intact_helpers"
+title = "Two intact helpers cannot always repair prism root ownership"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_prism_intact_helper_barrier.md"
+source_heading = "Graph and exact scope"
+audit = "barriers/hc7_prism_intact_helper_barrier_audit.md"
+expected_source_sha256 = "956c8ae01234f20d26d8dc74c45a30f513423aa021d18a700c4b8717a54d624d"
+active = false
+scope = "an explicit eleven-vertex four-connected graph with an extremal prism helper, split root ownership and contacts from both helper vertices to every vertical interior"
+conclusions = ["an ordinary K5 minor exists but no K5 model has all five bags meeting the two triangles", "moving roots alone cannot universally repair the two-piece quotient"]
+does_not_prove = ["failure under the actual five-connectivity or six-neighbour boundary conditions", "failure of splitting the original connected pieces internally", "a counterexample to HC7"]
+keywords = ["prism", "root ownership", "intact helpers", "lost contact multiplicity"]
+
 [[required_text]]
 file = "README.md"
 pattern = "HC_7.{0,20}not proved"

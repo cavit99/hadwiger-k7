@@ -162,7 +162,38 @@ do not supply that collection; zero exceptional connections is not an exit.
 case, detailed in the [two-triangle construction](hc7_degree7_exceptional_construction_working.md).
 Write `N(u)=P dotunion Q dotunion {r}`, with two triangles `P,Q` and
 `r` adjacent to all six roots. A `K5` model in `G-{u,r}` whose bags all
-meet `P union Q` finishes with singleton bags `{u},{r}`.
+meet `P union Q` finishes with singleton bags `{u},{r}`. This placement
+is sufficient, not compulsory. The target is a complete construction
+in the original critical graph; all seven bags may change.
+
+The [extremal prism reduction](../results/hc7_two_triangle_extremal_prism.md)
+now supplies an exact representation if that rooted model is absent.
+It applies already in four-connected graphs with an ordinary `K5`
+minor and two anticomplete triangles. Maximising one connected helper
+forces its complement to be an induced subdivision of the triangular
+prism. Every original vertex is retained. In the actual critical graph,
+each triangle vertex has at least two neighbours in the helper `E`,
+and each path interior vertex has at least four. Moreover `G[E union {r}]`
+requires at least four colours. Explicit exchanges confine every non-cut
+vertex's prism contacts to one end triangle or a segment of at most two
+edges of one path; its degree inside `E` is at least three.
+
+The missing step is extending this exchange through vertices with no
+path-interior contact and through separations of `E`, while retaining
+the complementary helper's connectivity and all root contacts. A proposed
+exclusion of three-connected `E` omitted these vertices and is withdrawn.
+No induction or case closure follows from the representation. The
+construction keeps the original colouring responses available; it does
+not assume that a contracted helper or another extremal choice inherits
+them.
+
+The [intact-helper barrier](../barriers/hc7_prism_intact_helper_barrier.md)
+rules out repairing root ownership solely after contracting two connected
+pieces to single vertices. Its four-connected eleven-vertex graph has an
+extremal helper and contacts from both pieces to all three paths, but no
+`K5` model whose five bags all meet the triangles. It fails the stronger original-host
+connectivity and contact bounds. A valid repair must retain those bounds
+and the pieces' internal splitting choices.
 
 Deleting the whole `r`-colour class from any six-colouring of `G-u`
 gives a five-chromatic graph in which the six roots are colourful in
@@ -174,8 +205,9 @@ and preserves the original marks in fixed disjoint preimages. Five
 surviving marks finish by the existing rooted-certificate theorem; six
 retain two literal triangles, with cross edges allowed.
 
-The four-connected construction remains unproved. This reduction handles
-both chromatic values of `G-{u,r}` but closes neither branch. Taking a
+The four-connected construction remains unproved and is an optional
+stronger target, rather than the required next theorem. This reduction
+handles both chromatic values of `G-{u,r}` but closes neither branch. Taking a
 minimum `r`-colour class does not force a usable connector: the class may
 be `{r}`. Paths from different Kempe colourings can reuse a vertex while
 representing independent demands, so they do not automatically form a
