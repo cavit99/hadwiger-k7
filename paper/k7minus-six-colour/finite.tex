@@ -1,4 +1,4 @@
-\section{The finite degree-seven lemma}\label{sec:finite}
+\section{The degree-seven quotient lemma}\label{sec:finite}
 
 \begin{lemma}\label{lem:quotient}
 Let $R$ be a graph on seven vertices with minimum degree at least four.
@@ -7,41 +7,51 @@ $c$ adjacent to at least six vertices of $R$. No edge $vc$ is required.
 The resulting graph contains a $K_7^{-}$ minor.
 \end{lemma}
 
-This lemma is computer-assisted. Its verification concerns only
-nine-vertex graphs; the global proof supplies the reduction from hosts
-of arbitrary order. We describe the enumeration and the certificates
-so that the scope of the computation is explicit.
+\begin{proof}
+Delete edges if necessary so that $vc$ is absent and $c$ misses exactly
+one vertex $x$ of $R$. The complement $F$ of $R$ has maximum degree at
+most two. Add edges to $F$ until it is edge-maximal subject to this bound,
+obtaining $F'$. Replacing $R$ by $\overline{F'}$ only deletes edges, so
+it suffices to find the minor in the resulting graph.
 
-The complement $F$ of $R$ has maximum degree at most two. Each component
-of $F$ is therefore a path, an isolated vertex, or a cycle of length at
-least three. Enumerating multisets of these components with total order
-seven gives $29$ isomorphism types. For each type, the verifier tests all
-eight possibilities for $c$: it meets every vertex of $R$, or misses
-one specified vertex. Thus there are $29\cdot8=232$ cases. Extra edges,
-including $vc$, can be discarded.
+Every component of $F'$ is a path or a cycle. A path of order at least
+three could be closed into a cycle, and two distinct path components
+could be joined at vertices of degree less than two. Maximality therefore
+leaves only cycles and at most one additional $K_1$ or $K_2$. Since $F'$
+has seven vertices, its possible forms are
+\[
+C_7,\quad C_4\dot\cup C_3,\quad C_6\dot\cup K_1,\quad
+C_3\dot\cup C_3\dot\cup K_1,\quad C_5\dot\cup K_2.
+\]
 
-For each case, the program searches for seven bags among the nine
-vertices. It enumerates every partition of a subset of order seven,
-eight or nine into seven nonempty blocks. There are respectively
-$36$, $252$ and $462$ such partitions. A certificate records the bags
-as vertex bitmasks. The verifier checks that they are disjoint and
-nonempty, that every bag is connected, and that at most one of the
-$21$ pairs of bags lacks an edge. These checks certify a $K_7^{-}$
-minor directly; no minor-testing library is used.
-
-All $232$ cases pass. The returned models use seven vertices in
-$67$ cases, eight in $102$ cases and nine in $63$ cases. The program
-also checks a literal $K_7^{-}$ as a positive example and a padded
-$K_6$ and $K_{2,2,2,2}$ as negative examples. It validates each returned
-certificate after the search; this validation reuses the connectivity
-and contact predicates and is not an independently implemented checker.
-
-The complete standard-library Python program is preserved at a fixed
-revision in the accompanying repository:
-\begin{center}
-\href{https://github.com/cavit99/hadwiger-k7/blob/320ea3275197f3b5124b38fb26af24bb05754d57/active/hc7_k7minus_degree7_quotient_verify.py}
-{\texttt{hc7\_k7minus\_degree7\_quotient\_verify.py}}.
-\end{center}
-Run it with \texttt{uv run python3} from a checkout of that revision.
-The manuscript's accompanying README records the source hash, expected
-output and certificate digest.
+Label each cycle consecutively as indicated below. Up to automorphisms
+of $F'$, there are nine choices of the marked vertex $x$. The table
+gives a model for each; two rows each cover two choices. Concatenated
+labels denote a single bag, for example $03=\{0,3\}$ and
+$2v=\{2,v\}$.
+\[
+\begin{array}{c|c|c|c}
+F'&x&\text{seven branch sets}&\text{only missing pair}\\
+\hline
+C_7(0,\ldots,6)&0&03,15,2,4,6,v,c&v:c\\
+C_4(0,\ldots,3)\dot\cup C_3(4,5,6)&0,4
+ &04,1,25,3,6,v,c&v:c\\
+C_6(0,\ldots,5)\dot\cup K_1(6)&0
+ &024,1,3,5,6,v,c&v:c\\
+C_6(0,\ldots,5)\dot\cup K_1(6)&6
+ &02,1,3,4c,5,6,v&02:1\\
+C_3(0,1,2)\dot\cup C_3(3,4,5)\dot\cup K_1(6)&0
+ &03,14,2,5,6,v,c&v:c\\
+C_3(0,1,2)\dot\cup C_3(3,4,5)\dot\cup K_1(6)&6
+ &03,1c,2,4,5,6,v&4:5\\
+C_5(0,\ldots,4)\dot\cup K_2(5,6)&0,5
+ &05,1,2v,3,4,6,c&3:4
+\end{array}
+\]
+In every row the bags are disjoint and connected, and all pairs except
+the indicated pair are adjacent. For example, in the first row $03$
+and $15$ are edges of $\overline{F'}$; together with the singleton bags
+$2,4,6$, they are pairwise adjacent. Both $v$ and $c$ are adjacent to
+all five bags. The other rows are checked in the same way.
+Contracting the bags gives a $K_7^{-}$ minor.
+\end{proof}

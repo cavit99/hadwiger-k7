@@ -36,8 +36,7 @@ $K_7^-$ minor without containing a $K_7$ minor.
 The proof uses rooted-minor and separation tools of
 [Dvořák, Norin and Rahman](https://arxiv.org/abs/2609.17760v1).
 It develops new minor constructions and an edge-count theorem, applying to
-graphs of arbitrary size. One step uses a computer-checked lemma covering
-232 nine-vertex graphs.
+graphs of arbitrary size. The proof does not require a computer check.
 
 The manuscript has separate internal proof reviews; external mathematical
 review remains outstanding. See its [proof reviews and verification instructions](paper/k7minus-six-colour/README.md)

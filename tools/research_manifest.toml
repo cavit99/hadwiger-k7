@@ -9381,7 +9381,7 @@ status = "audited-green"
 source = "results/hc7_k7minus_bilight_extremal.md"
 source_heading = "8. The extremal theorem and six-colour corollary"
 audit = "results/hc7_k7minus_bilight_extremal_audit.md"
-expected_source_sha256 = "4ffbe9fc80a47713173a5f260759959da9397379ff26c2b18754eba5e97a560f"
+expected_source_sha256 = "4c48b60d4de77de2afc357ba81b47d8f2107656b5684005f743d247f894620d3"
 active = false
 scope = "all finite K7-minus-minor-free graphs; Corollary 8.2 uses the 4-bilight extremal theorem and Dvořák–Norin–Rahman Theorem 1.6, https://arxiv.org/html/2609.17760v1#S1"
 colour_compatibility = "a minor-minimal non-six-colourable graph has seven-connectivity and at least 4n-2 edges by the explicitly cited external theorem"
@@ -19609,7 +19609,7 @@ status = "audited-green"
 source = "results/hc7_k7minus_bilight_extremal.md"
 source_heading = "8. The extremal theorem and six-colour corollary"
 audit = "results/hc7_k7minus_bilight_extremal_audit.md"
-expected_source_sha256 = "4ffbe9fc80a47713173a5f260759959da9397379ff26c2b18754eba5e97a560f"
+expected_source_sha256 = "4c48b60d4de77de2afc357ba81b47d8f2107656b5684005f743d247f894620d3"
 active = false
 scope = "arbitrary six-connected graphs with at least four times as many edges as vertices"
 conclusions = ["a K7-minus minor, as an immediate corollary of the stronger 4-bilight 4n-2 theorem"]
@@ -24966,6 +24966,28 @@ does_not_prove = ["an unbounded host conclusion without the written quotient red
 keywords = ["computer-assisted finite lemma", "232 quotients", "exact branch-set certificates"]
 
 [[claims]]
+id = "hc7.k7minus_degree7_quotient_hand_proof"
+title = "An elementary nine-vertex K7-minus minor lemma"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_k7minus_degree7_quotient_hand_proof.md"
+source_heading = "Lemma (nine-vertex quotient)"
+audit = "results/hc7_k7minus_degree7_quotient_hand_proof_audit.md"
+expected_source_sha256 = "34b881c8b29ca1abfd3d322ee1aa63d7cbc5b7f132aecca7edeb682844af3bd6"
+active = false
+scope = "every seven-vertex graph of minimum degree at least four, with one new universal vertex and another new vertex adjacent to at least six original vertices"
+label_fidelity = "five maximal complement forms and nine marked cases have explicit disjoint connected branch sets with at most one missing contact"
+conclusions = ["a K7-minus minor, proved without computational dependence"]
+does_not_prove = ["an unbounded host conclusion without the written quotient reduction", "HC7"]
+keywords = ["nine-vertex quotient", "maximal degree-two complement", "explicit minor models", "elementary proof"]
+
+[[relations]]
+source = "hc7.k7minus_degree7_quotient_hand_proof"
+target = "hc7.k7minus_degree7_quotient_finite"
+kind = "supersedes"
+note = "Replaces the computational proof of the same lemma; the earlier note, audit and verifier remain unchanged as corroborating records."
+
+[[claims]]
 id = "hc7.k7minus_saturated_degree7_exclusion"
 title = "Saturated six-connected K7-minus-free graphs have no degree-seven vertex"
 kind = "theorem"
@@ -25004,14 +25026,14 @@ status = "audited-green"
 source = "results/hc7_k7minus_bilight_extremal.md"
 source_heading = "8. The extremal theorem and six-colour corollary"
 audit = "results/hc7_k7minus_bilight_extremal_audit.md"
-expected_source_sha256 = "4ffbe9fc80a47713173a5f260759959da9397379ff26c2b18754eba5e97a560f"
+expected_source_sha256 = "4c48b60d4de77de2afc357ba81b47d8f2107656b5684005f743d247f894620d3"
 active = false
 scope = "all finite simple 4-bilight graphs on n>=3 vertices with at least 4n-2 edges"
 strict_parameter = "lexicographic minimization of vertex count and edge count in the 4-bilight K7-minus-minor-free density class"
 label_fidelity = "every rooted construction preserves the prescribed boundary vertices and every minor lifts through fixed disjoint connected preimages"
 conclusions = ["a K7-minus minor with no original-host order bound", "in particular, the five-connected density assertion in Dvořák–Norin–Rahman Conjecture 1.5"]
-does_not_prove = ["HC7", "an entirely computation-free proof", "historical priority or external peer review"]
-keywords = ["K7 minus", "4-bilight", "4n-2", "oriented fragments", "fragment ends", "232 certified quotients"]
+does_not_prove = ["HC7", "historical priority or external peer review"]
+keywords = ["K7 minus", "4-bilight", "4n-2", "oriented fragments", "fragment ends", "elementary nine-vertex lemma"]
 
 [[relations]]
 source = "hc7.k7minus_bilight_extremal"
@@ -25039,9 +25061,9 @@ note = "A unique attachment supplies a quasi-five-connected contraction; separat
 
 [[relations]]
 source = "hc7.k7minus_bilight_extremal"
-target = "hc7.k7minus_degree7_quotient_finite"
+target = "hc7.k7minus_degree7_quotient_hand_proof"
 kind = "uses"
-note = "The unbounded degree-seven reduction is written directly in Theorem 8.1; its contracted nine-vertex graph is one of the 232 certified finite quotients."
+note = "Theorem 8.1 contracts a whole exterior component to obtain a nine-vertex graph covered by the elementary lemma; its explicit model lifts through the component's fixed connected preimage."
 
 [[relations]]
 source = "hc7.target.k7minus_sixconnected_4n_extremal"

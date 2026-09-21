@@ -1,5 +1,25 @@
 # Second internal audit: the 4-bilight extremal theorem
 
+## Current revision review
+
+**21 September 2026: GREEN.** The current proof source has SHA-256
+`4c48b60d4de77de2afc357ba81b47d8f2107656b5684005f743d247f894620d3`.
+Its complete diff from the original source below replaces only the
+computer-assisted degree-seven input and its description with the
+[independently audited elementary lemma](hc7_k7minus_degree7_quotient_hand_proof_audit.md).
+The statement required by the global proof and the connected component
+preimage used to lift its model are unchanged. The replacement proof
+covers all five maximal complement types and nine marked cases without
+an executable premise. All other mathematical arguments and external
+inputs remain unchanged.
+
+This is the same focused replacement review recorded in the first global
+audit, not a second new reconstruction. The independent reconstructions
+below retain their scope for the unchanged arguments; their finite-verifier
+discussion records the superseded computational revision.
+
+## Original reconstructions: superseded computational revision
+
 **Verdict:** GREEN.
 
 The verdict is within the stated external-theorem and finite-verifier

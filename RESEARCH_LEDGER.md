@@ -6,8 +6,8 @@ research status. Internal audits are not external peer review.
 **Standing:** `HC_7` and T44 are not proved. Norin–Totschnig Conjecture 21
 now has a [written proof](results/hc7_k7minus_bilight_extremal.md) with two
 separate hash-pinned internal audits: every finite `K7^-`-minor-free graph
-is six-colourable. The proof includes an unbounded extremal theorem and a
-finite nine-vertex quotient lemma. This is not external peer review or a
+is six-colourable. The proof includes an unbounded extremal theorem and an
+elementary nine-vertex quotient lemma. This is not external peer review or a
 historical priority determination. Conjecture 19 was resolved externally.
 
 **Objective assessment:** the new C21 theorem, if correct, meets the requested
@@ -67,8 +67,13 @@ give the same conclusion together with Mader's connectivity theorem.
 Their Theorem 1.1 proves C19, not C21;
 the new result also proves their stated Conjecture 1.5. Their small-root,
 reducible-fragment and rooted-density machinery are explicit external
-inputs. The final degree-seven reduction uses all 232 certified nine-vertex
-quotients; it applies to original hosts of arbitrary order.
+inputs. The final degree-seven reduction now uses an
+[elementary quotient lemma](results/hc7_k7minus_degree7_quotient_hand_proof.md):
+five maximal complement types and nine marked cases, with explicit models
+and a [separate internal audit](results/hc7_k7minus_degree7_quotient_hand_proof_audit.md).
+It replaces the computational premise without changing the theorem.
+The original 232-case proof and verifier remain preserved cross-checks;
+the current proof applies to hosts of arbitrary order without computation.
 
 The earlier six-cut case analysis is superseded by the global theorem.
 Its [proved cases](results/hc7_c21_triangle_boundary_sixcut.md) and
@@ -181,7 +186,7 @@ by Cavit Erginsoy, with [source](paper/k7minus-six-colour/main.tex),
 [separate internal manuscript audit](paper/k7minus-six-colour/main_audit.md)
 and [build and verification instructions](paper/k7minus-six-colour/README.md).
 The 16-page draft includes the supporting constructions, exact external
-inputs, and the 232-case finite lemma. It preserves the audited theorem
+inputs and the elementary quotient lemma. It preserves the audited theorem
 scopes and explicitly distinguishes C21 from HC7. External review and
 historical priority remain outstanding.
 

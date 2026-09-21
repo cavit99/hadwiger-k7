@@ -1,5 +1,25 @@
 # Independent audit of the K7-minus density and six-colour theorem
 
+## Current revision review
+
+**21 September 2026: GREEN.** The current proof source has SHA-256
+`4c48b60d4de77de2afc357ba81b47d8f2107656b5684005f743d247f894620d3`.
+A separate auditor checked its complete diff from the original revision
+below and independently reconstructed the replacement
+[nine-vertex lemma](hc7_k7minus_degree7_quotient_hand_proof_audit.md).
+Only the degree-seven input and its description changed: the lemma's
+hypotheses and conclusion, the component contraction and its lift are
+unchanged. The new proof classifies five maximal complements and supplies
+all nine marked models explicitly. No executable premise remains in this
+step; the external inputs and all other mathematical arguments are unchanged.
+
+This is one focused replacement audit, recorded in both global audit files,
+not two new whole-proof reconstructions. The original reconstruction below
+applies to the unchanged arguments; its computational review is preserved
+as provenance for the superseded proof of the nine-vertex lemma.
+
+## Original reconstruction: superseded computational revision
+
 **Date:** 21 September 2026.
 
 **Verdict:** GREEN.

@@ -2,8 +2,8 @@
 
 **Status:** written proof. The [adjacent independent audit](hc7_k7minus_bilight_extremal_audit.md)
 records its verdict against the exact source hash. Internal audits are not
-external peer review. The proof includes one finite lemma covering 232
-nine-vertex quotients; the original graphs have no order bound.
+external peer review. The degree-seven step uses an elementary nine-vertex
+lemma; the original graphs have no order bound.
 
 **Theorem.** Every finite simple 4-bilight graph on `n>=3` vertices with
 at least `4n-2` edges contains `K7^-` as a minor.
@@ -86,13 +86,11 @@ The following are the inputs used below.
    vertex `x` has exactly one neighbour `a` in the fragment, then
    contracting `xa` leaves a four-connected graph with no four-cut
    whose two open sides both have at least two vertices.
-5. The [degree-seven quotient lemma](../active/hc7_k7minus_degree7_common_neighbour_exclusion.md)
-   and its [exact verifier](../active/hc7_k7minus_degree7_quotient_verify.py).
-   Its 232 cases are the 29 seven-vertex graphs whose complements have
-   maximum degree at most two, with an exterior vertex attached to all
-   or all but one of the seven vertices. Adding a vertex full to those
-   seven vertices forces `K7^-`. Each case has checked connected,
-   disjoint branch sets; the host reduction is unbounded.
+5. The [elementary nine-vertex lemma](hc7_k7minus_degree7_quotient_hand_proof.md):
+   if a seven-vertex graph has minimum degree at least four, adjoining
+   one vertex full to it and another meeting at least six of its vertices
+   forces `K7^-`. Its proof reduces the complement to five maximal forms
+   and gives explicit models for all nine marked cases.
 6. Robertson--Seymour--Thomas, *Hadwiger's conjecture for K6-free graphs*,
    [Theorem (2.4)](https://thomas.math.gatech.edu/PAP/hadwiger.pdf), also
    quoted as Theorem 13 in [Norin--Totschnig, 2507.03244v1](https://arxiv.org/html/2507.03244v1).
@@ -606,23 +604,12 @@ The common-neighbour bound gives `delta(J)>=4`. There is a component
 Contract all of `C` to one vertex and delete the other exterior
 components. The resulting nine-vertex minor consists of `J`, the
 vertex `v` full to `J`, and a nonadjacent exterior vertex full to
-at least six vertices of `J`. It is one of the 232 cases of the
-degree-seven quotient lemma, so has a `K7^-` model. Replacing the
-contracted vertex by `C` lifts the model to `G`, a contradiction.
+at least six vertices of `J`. The elementary nine-vertex lemma gives a
+`K7^-` model. Replacing the contracted vertex by `C` lifts the model to
+`G`, a contradiction.
 
 No minimum counterexample exists. QED
 
-For precision, the [finite verifier](../active/hc7_k7minus_degree7_quotient_verify.py)
-tests all 29 complement types and all eight attachment choices for
-each. It enumerates all seven-bag partitions of supports of order
-seven, eight or nine, checks connectivity and every required contact,
-and tests known positive and negative instances. Its certificate digest is
-
-```text
-b98ac56930aa7044c3a6a7c029b75cd85feb39f4dabd8476a0ba7f08ccdb7306
-```
-
-The finite trust boundary is exactly these nine-vertex quotients.
 No upper bound is imposed on `G`, `C`, or any preceding fragment.
 
 **Corollary 8.2 (C21).** Every `K7^-`-minor-free graph is six-colourable.

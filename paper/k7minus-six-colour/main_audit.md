@@ -4,11 +4,16 @@
 
 This separate internal audit found no unresolved mathematical gap in the
 manuscript's stated density theorem, rooted helper theorem or six-colour
-corollary, subject to the cited external results and the finite verification
-below. The auditor reconstructed the arguments and checked the conversion
+corollary, subject to the cited external results. The original auditor
+reconstructed the arguments and checked the conversion
 from the research proofs; earlier audit verdicts were not treated as proof.
 This is not external peer review, a historical priority assessment or a
 proof of HC7.
+
+The current revision replaces the former computational premise by an
+[elementary proof with a separate focused audit](../../results/hc7_k7minus_degree7_quotient_hand_proof_audit.md).
+The review below distinguishes this replacement from the earlier full
+reconstruction; it does not claim a new full reconstruction of the paper.
 
 ## Exact revision
 
@@ -17,27 +22,27 @@ The audited manuscript is the following frozen source and its compiled
 
 | File | SHA-256 |
 |---|---|
-| [main.tex](main.tex) | `647f2de4e6a1c9454d0007fb7430f34ae62287d9de564047f2885d0218d42d37` |
+| [main.tex](main.tex) | `2a74c20991cafcba623c0dabc03acf4f2a90e11c48b7011f33d1546c662e5efe` |
 | [preliminaries.tex](preliminaries.tex) | `2c0901be8ce7b215e2975532be13c13e76cff675fe21cb28cacd0abecfbb3013` |
 | [rooted.tex](rooted.tex) | `d76f410bfa9ab159daf1fcd585e1796d52c279070df42bbb40168fb35e4adbef` |
 | [global.tex](global.tex) | `95ccbc9052eeecec898be729cd1435b01adb6f24122053887c212ee6fcf13cef` |
-| [finite.tex](finite.tex) | `8917dba9aecb046eed6ac3b508837a9cdcc0d6800f012cf48b85837bb377c4f4` |
+| [finite.tex](finite.tex) | `24af117b72808d1675e1e708663d08da708583f925dda38d7c67aa22226092fd` |
 | [references.bib](references.bib) | `ded089d41254ede7b13c9dee176b7a9d032f1ee95e88ae9e48524c40381f3336` |
-| [main.pdf](main.pdf) | `4caea8db35d65724e46550c720578b6f20dfbd36f61cbd32a92ae72e77f2988a` |
-| [Finite verifier](../../active/hc7_k7minus_degree7_quotient_verify.py) | `ac0c37438d802930a0aa80bfd1d6491101da3df9a55fac1e1cf3db5ae1b7e445` |
+| [main.pdf](main.pdf) | `6bb65044b94f606427e4e2079b07a975da01f487ad733c061e5409a03af2b3d7` |
 
-The following underlying proofs were inspected when reconstructing the
-manuscript. The manuscript contains its own supporting proofs rather than
-requiring the reader to reconstruct them from these notes.
+The following underlying proofs were inspected in the original
+reconstruction or the focused revision review. The manuscript contains
+its own supporting proofs rather than requiring the reader to reconstruct
+them from these notes.
 
 | Source | SHA-256 |
 |---|---|
-| [Global density and colouring theorem](../../results/hc7_k7minus_bilight_extremal.md) | `4ffbe9fc80a47713173a5f260759959da9397379ff26c2b18754eba5e97a560f` |
+| [Global density and colouring theorem](../../results/hc7_k7minus_bilight_extremal.md) | `4c48b60d4de77de2afc357ba81b47d8f2107656b5684005f743d247f894620d3` |
 | [Two-helper theorem](../../results/five_root_one_missing_contact.md) | `078ba860d4cdde187cdc6e618a4e1842dd623523dbefbe3ead06544c7d8afa18` |
 | [Rooted reductions](../../results/hc7_c21_rooted_density_low_degree_reduction.md) | `431bd7d7d2b5bcb59e385781234c6d7ed6824f62ee50eb8ddf49e69da792cef2` |
 | [Degree-five elimination](../../results/hc7_c21_helper_degree_six.md) | `85927a0f7d1af6229930fd67f7144eac35b934c54ad504539a34d39e209020ee` |
 | [Rooted dart](../../results/rooted_dart_nonroot_degree_five.md) | `37dcf256f64fca7c49a1bd4ec66021371fba9a7863bf9523597ba4b898ecfad2` |
-| [Degree-seven quotient reduction](../../active/hc7_k7minus_degree7_common_neighbour_exclusion.md) | `663c1b7e0de9b0951de89801d52baf4aae12535d7807547d19d04fc10b00c4b0` |
+| [Elementary nine-vertex lemma](../../results/hc7_k7minus_degree7_quotient_hand_proof.md) | `34b881c8b29ca1abfd3d322ee1aa63d7cbc5b7f132aecca7edeb682844af3bd6` |
 
 ## Main inferences checked
 
@@ -100,33 +105,33 @@ Lemma 3.1. The local quasi-five lemma is proved in the manuscript; the
 stronger global hypotheses of its cited source are not silently assumed.
 The audit does not reprove the full external dependency chains.
 
-## Finite verification
+## Elementary quotient revision
 
-The auditor read the generating and checking code and ran:
+**Verdict: GREEN for the replacement.** A reviewer separate from the editor
+reconstructed the complement-maximalisation argument, checked all nine
+marked cases by hand and compared them with the exact Appendix A pinned
+above. Edge deletion has the correct monotonicity; the five maximal forms
+and nine vertex orbits are exhaustive. All displayed bags are connected
+and disjoint, with exactly twenty contacts. The unchanged global reduction
+contracts a whole exterior component and lifts through its fixed connected
+preimage. No new hypothesis or computational premise is needed.
 
-```sh
-UV_CACHE_DIR=/tmp/hadwiger-k7-uv-cache uv run python3 active/hc7_k7minus_degree7_quotient_verify.py
-```
+This replaces the earlier appendix, SHA-256
+`8917dba9aecb046eed6ac3b508837a9cdcc0d6800f012cf48b85837bb377c4f4`.
+The [prior review record](https://github.com/cavit99/hadwiger-k7/blob/cb8a9db56144ba8151448095e0eda82213f1ec56/paper/k7minus-six-colour/main_audit.md)
+preserves the original 232-case verification, its coverage and shared-predicate
+trust boundary. The original note and verifier are unchanged. The editor
+reran the verifier as an optional cross-check; its certificate digest is
+unchanged. It is no longer an input to the manuscript's proof.
 
-It returned 29 complement types, 232 attachment cases and model support
-counts `{7: 67, 8: 102, 9: 63}`, with certificate digest
-`b98ac56930aa7044c3a6a7c029b75cd85feb39f4dabd8476a0ba7f08ccdb7306`.
-The path-and-cycle classification covers every relevant seven-vertex
-complement. The 750 partitions cover every seven-bag model on a subset
-of the nine-vertex quotient. Each returned model is checked for disjointness,
-nonemptiness, connectivity and at most one missing contact. The positive
-and negative sanity checks pass. Search and validation share predicates;
-this is not a separately implemented checker. This finite boundary does
-not impose an order bound on the original graphs.
+The editor rebuilt the 16-page PDF without warnings, rendered all pages
+and visually inspected pages 1 and 16. The other fourteen page renders
+are byte-identical to the previous PDF. The introduction now describes
+the elementary proof; the author, AI-use statement and theorem scopes
+are unchanged. These build and rendering checks are the editor's report.
+The separate replacement audit covers the exact proof sources.
 
-All TeX sources were read. Text extracted from the frozen PDF was checked
-for the principal statements, author, final deduction, finite appendix and
-references. The manuscript records Cavit Erginsoy as author, distinguishes
-external inputs from the new construction, discloses AI use and makes no
-claim of external review or historical firstness. No unresolved assumptions
-beyond the stated external theorems and finite computation were found.
-
-## Editorial revision review
+## Prior attribution revision
 
 **Verdict: GREEN for the editorial change.** A reviewer separate from the
 editor compared the frozen sources with Git base
@@ -140,11 +145,8 @@ the other authors' discovery dates or historical firstness.
 
 The final colouring proof retains DNR Theorem 1.6 as its cited formulation.
 The distinct rooted-density and separation inputs remain attributed to
-DNR. No theorem, mathematical argument, finite input or verification code
-changed, so the preceding mathematical verdict remains applicable; no
-unchanged finite check was repeated. The reviewer independently checked
-the source and PDF hashes above. The editor reports a warning-free
-16-page build, byte-identical renders of the unchanged pages and a clean
-visual inspection of the changed pages 1, 5, 9, 15 and 16. Those rendering
-checks are the editor's report; this additional review covers the source
-diff, historical statements and artifact pins.
+DNR. In that revision, no theorem, mathematical argument, finite input or
+verification code changed. The reviewer checked its source and PDF hashes;
+the editor reported a warning-free 16-page build and visual inspection.
+The linked prior review record preserves those artifact pins. The current
+elementary-proof replacement and its rendering checks are recorded above.

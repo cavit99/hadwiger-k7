@@ -8,8 +8,8 @@
 The manuscript proves that every finite simple `K7^-`-minor-free graph
 is six-colourable, through a stronger extremal theorem for 4-bilight
 graphs with at least `4n-2` edges. It includes the new supporting
-constructions and states its external inputs explicitly. Its final
-degree-seven lemma is computer-assisted. It does not prove HC7 or
+constructions and states its external inputs explicitly. The proof is
+computation-free. It does not prove HC7 or
 claim external peer review or historical priority.
 
 ## Source map and provenance
@@ -20,17 +20,21 @@ claim external peer review or historical priority.
 | [preliminaries.tex](preliminaries.tex) | Definitions and exact external tools. |
 | [rooted.tex](rooted.tex) | Local constructions, rooted reductions and the two-helper theorem. |
 | [global.tex](global.tex) | Separation consistency, degree-five and five-cut elimination, terminal cases and colouring. |
-| [finite.tex](finite.tex) | The nine-vertex lemma, exhaustive classification and certificate checks. |
+| [finite.tex](finite.tex) | The nine-vertex lemma: five complement types and explicit minor models. |
 | [references.bib](references.bib) | Primary sources with version-specific theorem numbering. |
 
 The draft consolidates the proof package at Git revision
 `320ea3275197f3b5124b38fb26af24bb05754d57`, principally the
 [global theorem](../../results/hc7_k7minus_bilight_extremal.md) and
 [rooted helper theorem](../../results/five_root_one_missing_contact.md),
-including their cited supporting proofs. The original audited notes
-are unchanged. The manuscript proves internal five-connectivity before
+including their cited supporting proofs. The manuscript proves internal five-connectivity before
 analysing contraction obstructions, simplifying that step; its separate
-audit checks this reordering as well as the full conversion.
+audit checks this reordering as well as the full conversion. The revised
+degree-seven step uses an [elementary proof](../../results/hc7_k7minus_degree7_quotient_hand_proof.md)
+with a [separate internal audit](../../results/hc7_k7minus_degree7_quotient_hand_proof_audit.md).
+Its five maximal complement types give nine marked cases, covered by seven
+rows of explicit models. The global proof uses the same replacement;
+the earlier computer-assisted note and its audit remain unchanged.
 
 The critical-graph density reduction was also obtained independently in
 earlier repository work: the [29 July neighbourhood classification](https://github.com/cavit99/hadwiger-k7/blob/c3acf6216ce59a397721ffdc89d11e9c20031ba5/results/hc7_k7minus_degree7_clique_incidence.md)
@@ -40,7 +44,11 @@ of Dvořák–Norin–Rahman Theorem 1.6, which the manuscript cites. The distin
 rooted-density and separation tools from their Sections 2–5 remain external
 inputs. The Git dates do not establish those authors' discovery dates.
 
-## Finite verification
+## Optional computational cross-check
+
+The original exhaustive verification is retained for reproducibility;
+it is no longer a proof dependency. Appendix A now proves the same lemma
+directly, including the completeness of its classification and the models.
 
 From the repository root:
 
@@ -62,12 +70,9 @@ GREEN: every quotient contains a certified K_7^- minor
 
 Verifier SHA-256:
 `ac0c37438d802930a0aa80bfd1d6491101da3df9a55fac1e1cf3db5ae1b7e445`.
-The immutable source link is in Appendix A. The independent manuscript
-audit reran the program and inspected its coverage and certificates.
-The certificate validation shares predicates with the search; it is not
-a separately implemented checker. Only this stated finite lemma is
-established computationally; the reduction from arbitrary host order is
-proved in the manuscript.
+The [original source](https://github.com/cavit99/hadwiger-k7/blob/320ea3275197f3b5124b38fb26af24bb05754d57/active/hc7_k7minus_degree7_quotient_verify.py)
+is unchanged. Its certificate validation shares predicates with the search;
+the elementary proof removes this computational trust requirement.
 
 ## Build
 

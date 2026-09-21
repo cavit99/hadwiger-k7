@@ -49,8 +49,12 @@ The new construction has two parts.
    contradiction. The resulting six-connected graph has only high-triangle
    edges, and the degree-six and degree-seven terminal arguments finish.
 
-The degree-seven step uses an exact finite lemma on 232 nine-vertex
-quotients, together with a written reduction from arbitrary host order.
+The degree-seven step uses an
+[elementary nine-vertex lemma](../results/hc7_k7minus_degree7_quotient_hand_proof.md),
+with a [separate internal audit](../results/hc7_k7minus_degree7_quotient_hand_proof_audit.md),
+together with a written reduction from arbitrary host order. Five maximal
+complement types and explicit models replace the former 232-case
+computational premise; its original proof and verifier remain preserved.
 The [earlier helper probes](hc7_c21_helper_search_findings.md) are not proof
 inputs. The [working draft](../archive/hc7_c21_global_composition_working_2026-09-21.md)
 preserves the superseded routes; it is not the audited final proof.
