@@ -1,5 +1,36 @@
 # Internal manuscript audit
 
+## Current attribution revision — 21 September 2026
+
+**Verdict: GREEN for the editorial changes.** A reviewer separate from
+the manuscript editor checked the complete diff against Git revision
+`80ea4d8821e053ce1e0ade60971ee9a6a4f436a8` and independently verified:
+
+| Current artifact | SHA-256 |
+|---|---|
+| [Source](main.tex), including bibliography | `f5d7c88a991bde3c92626beebc9f9be04e481395c1d26baee37cf09935328a2a` |
+| [Six-page PDF](main.pdf) | `f0f7f031572416c45a4a2a1ea59d54717d4057a38548cc983bdd65c90faf3c25` |
+
+The only source changes add Cavit Erginsoy as author and PDF author,
+and update the draft date. Removing those three changes reproduces
+the previously audited source byte for byte. The entire document body,
+including every mathematical statement, proof and reference, is unchanged.
+No new mathematical assumption or gap is introduced by this revision;
+the mathematical assessment remains the historical review below.
+
+The editor reports a warning-free build. The present reviewer checked
+the final PDF's author metadata and page count and visually inspected
+all six rendered pages. No clipping, overlap, missing glyph or unresolved
+reference was observed. This is a limited editorial and rendering review,
+not a fresh proof reconstruction, literature search or external review.
+
+The preceding audit is preserved at the cited Git revision, with SHA-256
+`3e8aa83f94a809be49685530e43fad4992a655541d5200d619e88a0cee8f7873`.
+Its text follows unchanged; references there to the current revision
+mean the 13 September revision and its historical artifact hashes.
+
+## Historical mathematical and editorial review — 13 September 2026
+
 **Verdict: GREEN.** Date: 13 September 2026.
 **Status:** separate internal mathematical review; not external peer review.
 

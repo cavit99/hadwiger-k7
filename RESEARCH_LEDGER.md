@@ -203,11 +203,13 @@ hypothesis. The audited manuscript and provenance remain unchanged.
 The five-page [even-subdivision](paper/even-subdivision-contractibility/README.md)
 and four-page [K2,n](paper/k2n-contractibility/README.md) papers also remain
 preserved precursors. Do not create replacement manuscripts merely to
-retain their number. The [collection map](paper/README.md) records the
-next limited editorial pass and version-specific length comparisons.
-Pending edits include clearer C21 proof motivation and attribution, and
-the missing author fields on the two specialist drafts; these require
-rebuilding and renewing the corresponding audit hashes.
+retain their number. The [collection map](paper/README.md) records this
+organisation and version-specific length comparisons. The 21 September
+editorial pass adds C21 proof motivation and precise NT/DNR attribution,
+and names Cavit Erginsoy in both specialist papers and their PDF metadata.
+All three current PDFs were rebuilt, visually checked and covered by
+updated editorial-diff audits. The mathematical arguments and precursor
+PDFs are unchanged; this is not a further theorem or external review.
 
 The wheel/colouring and attachment-counterexample packages remain parked;
 no new manuscript or significance claim follows from this reclassification.

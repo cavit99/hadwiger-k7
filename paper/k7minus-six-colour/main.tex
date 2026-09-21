@@ -61,13 +61,29 @@ Every five-connected graph on $n\geq6$ vertices with at least $4n-2$
 edges contains a $K_7^{-}$ minor.
 \end{corollary}
 
-The new rooted construction gives five prescribed root bags and two
-root-free bags, with at least ten of the eleven possible contacts
-involving the latter two bags. It uses a rooted-star construction,
-careful contraction across five-separations, and Mader's atom theorem.
-The global argument first excludes vertices of degree five and then
-all five-cuts. In the resulting six-connected graph, contractions force
-dense degree-six and degree-seven neighbourhoods, which yield the minor.
+The rooted construction in~\cite[Theorem~2.9]{DNR2026} supplies two
+additional bags alongside five prescribed root bags, but permits two
+missing contacts among the eleven involving the additional bags.
+Even if the root bags form a clique, this need not give $K_7^{-}$.
+Our construction allows only one missing contact when the rooted
+four-density is at least two. The main difficulty is that contracting
+an edge can violate the separation conditions needed for induction.
+We locate each such obstruction on a five-vertex boundary. A rooted-star
+construction handles small configurations; an auxiliary clique then
+allows Mader's atom theorem to select a smallest eligible fragment.
+The resulting size bound contradicts a degree count inside the fragment.
+The auxiliary clique is used only to select the fragment, not to
+construct the desired minor.
+
+The unrooted argument must also handle five-cuts with a side of density
+one, where the new rooted theorem does not apply. In a minimum
+counterexample, we show that the low-density sides of five-cuts are
+consistent. Local contractions and rooted constructions then exclude
+vertices of degree five, and an inclusion-minimal fragment excludes all
+five-cuts. The resulting six-connectivity allows contractions that force dense neighbourhoods
+at vertices of degree six or seven. These give the required minor,
+using an adaptation of Norin--Totschnig's degree-six argument and the
+finite lemma for degree seven.
 
 We state the external tools precisely in Section~\ref{sec:preliminaries}
 and supply the supporting constructions and the full global argument
@@ -88,5 +104,8 @@ drafting and internal proof checks. This draft has not undergone
 external mathematical review.
 
 \bibliographystyle{amsplain}
+\begingroup
+\raggedright
 \bibliography{references}
+\endgroup
 \end{document}

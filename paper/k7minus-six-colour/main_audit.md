@@ -17,13 +17,13 @@ The audited manuscript is the following frozen source and its compiled
 
 | File | SHA-256 |
 |---|---|
-| [main.tex](main.tex) | `802e91b0ff79028fd129bb735ad9932454eae64947e28406c43d478d4b79711f` |
+| [main.tex](main.tex) | `732de540ad860baa937aae51c4fa0aaef2ec07d2a1998504e5a7119159b07349` |
 | [preliminaries.tex](preliminaries.tex) | `2c0901be8ce7b215e2975532be13c13e76cff675fe21cb28cacd0abecfbb3013` |
-| [rooted.tex](rooted.tex) | `698ed0a0742cdfbb5aa7ffeb3f7d2e75e99d1c82ecb9e8c80cca404f0b06c095` |
-| [global.tex](global.tex) | `58268fa2ee67d19e2298a0208ee518183aa26a18dccc9a6b9cb01f7334a41d61` |
+| [rooted.tex](rooted.tex) | `d76f410bfa9ab159daf1fcd585e1796d52c279070df42bbb40168fb35e4adbef` |
+| [global.tex](global.tex) | `f46116a341e9415bbfcc9134b473598e69d0da44ca7e33ff4cd06030ea2b6a12` |
 | [finite.tex](finite.tex) | `8917dba9aecb046eed6ac3b508837a9cdcc0d6800f012cf48b85837bb377c4f4` |
 | [references.bib](references.bib) | `cc2ef60233fb4fc6f7b0f1305d1e77e57a1aca2d392b7b880f8b07907f5ad51c` |
-| [main.pdf](main.pdf) | `35466aeb0fd663d9eb3d36264fd179c395b153f641b3472c7091f1a7648ee83f` |
+| [main.pdf](main.pdf) | `bd3de99533a4678be71d58fd4acbc21c06a7a80beaceb8d9efeda03d71b9492f` |
 | [Finite verifier](../../active/hc7_k7minus_degree7_quotient_verify.py) | `ac0c37438d802930a0aa80bfd1d6491101da3df9a55fac1e1cf3db5ae1b7e445` |
 
 The following underlying proofs were inspected when reconstructing the
@@ -125,3 +125,29 @@ references. The manuscript records Cavit Erginsoy as author, distinguishes
 external inputs from the new construction, discloses AI use and makes no
 claim of external review or historical firstness. No unresolved assumptions
 beyond the stated external theorems and finite computation were found.
+
+## Editorial revision review
+
+The revision above was compared with Git base
+`80ea4d8821e053ce1e0ade60971ee9a6a4f436a8`, which preserves the original
+conversion audit and its hashes. This additional review concerns the
+editorial diff; it is not a claim that a new mathematical result was proved
+or that the entire external literature was reaudited.
+
+The introduction now explains the missing-contact obstruction, separates
+the auxiliary atom selection from the actual minor construction, and gives
+the proof steps in their dependency order. The degree-six argument is
+explicitly attributed to Norin–Totschnig's Section 3. The comparison with
+DNR Lemma 4.10 retains the rooted-star lemma's independence assumption;
+it does not claim an unconditional strengthening of that published lemma.
+These attributions agree with the primary statements and arguments inspected
+in the original review. All theorem statements, hypotheses and proofs,
+including root ownership, induction parameters and lifts, are unchanged.
+The finite verifier and appendix are unchanged, so their recorded check was
+not repeated.
+
+All 16 pages of the rebuilt PDF were visually inspected. Equations, labels,
+tables, author details, page headers and the now left-aligned bibliography
+render correctly, with no clipping, overlapping text or missing glyphs found.
+The refreshed hashes were checked directly. The GREEN verdict and its
+original mathematical scope are unchanged.

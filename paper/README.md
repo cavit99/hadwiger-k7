@@ -6,7 +6,11 @@ the [results map](../results/README.md) covers the larger proof library.
 All manuscripts are drafts. Internal audits establish neither external
 acceptance nor publication priority.
 
-The primary draft is
+The collection has one principal paper, two independent specialist papers
+and three preserved precursors.
+
+## Principal paper
+
 [Every graph with no K7-minus minor is six-colourable](k7minus-six-colour/main.pdf),
 by Cavit Erginsoy, with [source](k7minus-six-colour/main.tex),
 [separate manuscript audit](k7minus-six-colour/main_audit.md) and
@@ -41,7 +45,9 @@ existing paths. They are not separate current publication candidates.
 | [Degree, defect and separators in critical graphs](k7minus-low-degree/main.pdf) · [source](k7minus-low-degree/main.tex) · [audit](k7minus-low-degree/main_audit.md) | Superseded headline: C21 excludes its critical host, and the new five-connected `4n-2` theorem excludes the broader defect theorem's `r>=6, e>=4n` class. [Independent surviving lemmas](k7minus-low-degree/README.md#surviving-independent-content) remain reusable. |
 | [Even subdivisions are contractible](even-subdivision-contractibility/main.pdf) · [source](even-subdivision-contractibility/main.tex) · [provenance](even-subdivision-contractibility/README.md) | Direct even-subdivision proof and the degree-three argument retaining all roots on one shore. |
 | [Every K2,n is contractible](k2n-contractibility/main.pdf) · [source](k2n-contractibility/main.tex) · [provenance](k2n-contractibility/README.md) | Short specialised matroid-packing proof. |
-| [Earlier rooted-web manuscript](../archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf) | Historical structural architecture and proof provenance. |
+
+An [earlier rooted-web draft](../archive/manuscripts/k7minus-rooted-web-2026-08-09/main.pdf)
+remains in the historical archive.
 
 The original low-degree snapshot with `n_8>=25+tau`, including its source,
 bibliography, PDF and audit, remains in Git at revision
@@ -49,15 +55,13 @@ bibliography, PDF and audit, remains in Git at revision
 The revised audit distinguishes that historical review from the current
 source and finite dependencies.
 
-## Next editorial pass
+## Editorial revision
 
-The C21 proof needs a short explanation of the obstruction and how its
-new constructions resolve it, rather than further compression. Attribute
-the degree-six adaptation explicitly to NT Section 3 and place the rooted
-star beside DNR Lemma 4.10. These are editorial tasks, not identified
-mathematical gaps. Add Cavit Erginsoy to the author fields and PDF metadata
-of the two specialist drafts; both presently omit an author. Rebuild and
-renew the affected audit pins together. Keep the precursor PDFs frozen.
+The 21 September revision explains the C21 proof strategy and makes the
+NT degree-six and DNR rooted-star attributions explicit. All three current
+papers name Cavit Erginsoy in the manuscript and PDF metadata. Their PDFs
+were rebuilt and their audit hashes renewed; the precursor PDFs remain
+unchanged. No theorem statement or proof was changed by this editorial pass.
 
 The checked comparison versions have 17 pages for
 [NT v1](https://arxiv.org/pdf/2507.03244v1), 35 for
