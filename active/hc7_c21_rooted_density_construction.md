@@ -130,3 +130,48 @@ exclude the old shortcuts. Keep the original critical host fixed; a
 quotient supplies a colouring, not inherited criticality. Any recursive
 construction needs a proved decreasing parameter and both colouring and
 minor lifts. No such completion mechanism is presently established.
+
+### Current construction and its limits
+
+The [recolouring calculation](hc7_degree7_colour_repair_working.md), with
+a separate internal audit, works with all six-colourings of one actual
+edge-deletion graph. For an interior edge it identifies every endpoint
+connection requiring `u` and gives a coupled interchange that can remove
+all such exceptions. A single endpoint repair is precisely the reverse
+of the earlier separating-edge move; it is not a decreasing reduction.
+Even the strengthened singleton-root incidence does not suffice:
+the [ten-vertex selected-layer counterexample](../barriers/hc7_degree7_selected_colour_layers.md)
+has a written width-five certificate. It lacks criticality and seven-
+connectivity, so the full construction remains possible.
+
+**Working boundary-edge refinement.** For `h=sv`, with `s in S` and
+`v in C`, the same interchange argument gives at most one exceptional
+connection: the equality colour already occurs at `s`. An exception
+forces a repeated pair `{s,t}` with `t in N_F(s)-N_G(v)`, where
+`F=overline{G[S]}`. If `d_F(s)=2`, there are at most two companion roots.
+Moreover `D=N_C(s)` contains an edge: otherwise `{u} union D` is an
+independent subset of `N(s)` of size `|D|+1`, contrary to Dirac's bound
+`alpha(G[N(s)])<=d(s)-5=|D|`. Thus the chosen boundary edge can belong
+to an actual triangle through `s`. These restrictions do not synchronise
+its different edge responses. The missing construction is one collection
+of four disjoint connected core bags meeting both endpoint components and
+retaining the boundary contacts to `u`. Separate colourful-set models
+do not supply that collection; zero exceptional connections is not an exit.
+
+The [exceptional-neighbourhood calculation](hc7_degree7_exceptional_construction_working.md)
+uses the existing helper-port argument, not a new normalisation mechanism.
+In the `K_{3,3} dotunion K_1` complement case, a five-connected deletion
+has two named triangles. A five-bag model meeting their union would finish.
+The first-hit helper transfer can instead lose a required contact with
+the first triangle. A valid simultaneous exchange has not been proved;
+the five-chromatic and six-chromatic deletion cases both remain open.
+
+Two proposed reductions also remain invalid. Minimising arbitrary
+seven-cut shores selects the original singleton `{u}`, without a terminal
+construction. Contracting a connected fibre and using its quotient
+colouring does not give a colouring lift. Closing an edge fibre under its
+equality colour and the colour of `u` can reach another protected root;
+if the endpoint connection closes inside the fibre, restoring the edge
+creates an odd cycle and defeats the proposed two-colour lift.
+A repair must preserve the required boundary partition and prove either
+a colour extension or a strictly decreasing, liftable construction.

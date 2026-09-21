@@ -40,6 +40,12 @@ connectivity assumptions and are not uniformly subsumed by ours.
    eight and nine remain beyond this checkpoint. Separately, the assembled
    [C21 manuscript](paper/k7minus-six-colour/main.pdf) needs expert review.
 
+The latest degree-seven attempt gives an internally audited recolouring
+refinement and an explicit barrier to extracting a minor from selected
+colour paths alone. It closes no critical-host case. The technical
+frontier records the remaining simultaneous-contact construction and the
+failed separator and colouring lifts; the primary target is unchanged.
+
 ## Completed C21 construction
 
 The [rooted helper theorem](results/five_root_one_missing_contact.md) gives
