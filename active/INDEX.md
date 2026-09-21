@@ -20,6 +20,14 @@ Immediate barriers:
 No counterexample to `HC_7` is established. Barriers
 to intermediate claims remain with their designated conditional routes.
 
+Selected conditional checkpoint:
+
+- [Complete degree-seven critical-host case](hc7_c21_rooted_density_construction.md#4-what-remains-towards-hc7):
+  construct a `K7` minor or a six-colouring extending over the chosen vertex.
+  The existing colouring and model inputs are linked there; the global
+  construction remains open, and degrees eight and nine remain outside
+  this checkpoint.
+
 ## Completed theorem and current application laboratory
 
 - [Universal bipartite contractibility](../results/bipartite_contractibility_via_matroid_reduction.md),

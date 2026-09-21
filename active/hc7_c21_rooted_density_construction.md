@@ -101,3 +101,28 @@ The old `K7^-`-minor-free critical-host degree, clique and defect restrictions
 cannot be transferred to this larger class. The separate `3,2,2`
 [seven-cut colouring theorem](../results/hc7_k7minus_three_component_seven_cut_exclusion.md)
 can be reused only when its actual connectivity and boundary hypotheses hold.
+
+**Selected checkpoint — conjectural:** every seven-connected graph `G`
+with `chi(G)=7`, every proper minor six-colourable, and a degree-seven
+vertex contains a `K7` minor. This would exclude an entire unbounded case;
+it would not settle HC7. A hypothetical minimal counterexample has a
+vertex of degree seven, eight or nine, by Mader's connectivity and edge
+bounds; see [Rolek–Song, Theorems 1.8 and 2.1](https://sciences.ucf.edu/math/zxsong/wp-content/uploads/sites/13/2018/04/Coloring-graphs-with-forbidden-minors.pdf).
+
+The [existing degree-seven programme](hc7_degree7_model_separator_frontier.md)
+already supplies a connected exterior, proper-minor colourings realising
+every single repeated neighbour pair, and rooted five-bag models. Its
+global compatibility step is still open. For `S=N(u)`, the construction
+must produce either a `K7` model or a six-colouring of `G-u` using at most
+five colours on `S`; the latter extends to `u`. Choose the repeated pair,
+colouring and rooted bags together. More fixed-model responses or a fresh
+enumeration of neighbourhoods do not close this checkpoint.
+
+Use the [actual boundary-aligned edge response](../results/hc7_low_degree_boundary_edge_alignment.md)
+as a common-host witness, subject to its precise hypotheses. The
+[selected-response barrier](../barriers/hc7_degree7_single_edge_response_alignment_barrier.md)
+and [reversible rotations](../barriers/hc7_near_k7_rotation_involution_barrier.md)
+exclude the old shortcuts. Keep the original critical host fixed; a
+quotient supplies a colouring, not inherited criticality. Any recursive
+construction needs a proved decreasing parameter and both colouring and
+minor lifts. No such completion mechanism is presently established.

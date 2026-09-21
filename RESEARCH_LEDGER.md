@@ -32,12 +32,13 @@ connectivity assumptions and are not uniformly subsumed by ours.
 2. **Completed refinement:** every finite `K7^-`-minor-free graph is
    six-colourable (C21). Its stronger extremal input forces `K7^-` in every
    4-bilight graph on `n>=3` vertices with `e>=4n-2`.
-3. **Immediate work:** independent expert review of the assembled
-   [C21 manuscript](paper/k7minus-six-colour/main.pdf), with its exact
-   external and computational dependencies. The
-   [technical account](active/hc7_c21_rooted_density_construction.md)
-   records the closed construction and the remaining HC7 boundary. No
-   further discovery route is presumed to follow automatically from C21.
+3. **Immediate laboratory:** close the entire degree-seven case of an
+   HC7-minimal host, using its proper-minor six-colourings and jointly
+   chosen rooted bags. The [technical frontier](active/hc7_c21_rooted_density_construction.md#4-what-remains-towards-hc7)
+   specifies the colouring-or-minor construction and prior barriers.
+   This is an old unresolved case, not a consequence of C21; degrees
+   eight and nine remain beyond this checkpoint. Separately, the assembled
+   [C21 manuscript](paper/k7minus-six-colour/main.pdf) needs expert review.
 
 ## Completed C21 construction
 

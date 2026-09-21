@@ -11,26 +11,28 @@ primary target. Authoritative current status belongs only to the
 **Conjectural target — Hadwiger's conjecture for `t=7`.** Every finite
 graph with no `K_7` minor is six-colourable.
 
-The acceptable alternative is an independent theorem of reach and
-significance comparable to Norin--Totschnig. That benchmark remains unmet
-by the demonstrated contribution. No proved result is invoked as a direct
-sufficient reduction of `HC_7`; in particular, no implication from
-bipartite contractibility to `HC_7`, T44 or Conjecture 21 is established.
+The separate [C21 manuscript](../paper/k7minus-six-colour/main.pdf) now has
+a complete written proof and internal audits. The ledger assesses its
+mathematical scope as meeting the Norin--Totschnig benchmark, conditional
+on correctness; external review and priority remain outstanding. Bipartite
+contractibility itself supplies no established implication to `HC_7`, T44
+or C21.
 
 A preserved conditional refinement is
 [T44](hc7_k44_closure_frontier.md): every seven-connected graph containing
-a `K_{4,4}` minor contains a `K_7^-` minor. T44 would prove Conjecture 21,
-that every `K_7^-`-minor-free graph is six-colourable. Both remain open.
+a `K_{4,4}` minor contains a `K_7^-` minor. T44 remains open; C21 now
+follows by another route.
 The designated T44 frontier retains its two literal residues, closure
 under the proposed induction, and the separate nonliteral branch-set
 ownership obligation. Completing only the literal residues would not
 prove T44. These are conditional routes, not consequences of bipartite
 contractibility.
 
-The selected [rooted density construction](hc7_c21_rooted_density_construction.md)
-targets Conjecture 21. Conjecture 19 was resolved externally by
-Dvořák–Norin–Rahman; reproducing that result would not meet the user's
-originality requirement. The new construction and its global lift remain open.
+The [rooted density construction](hc7_c21_rooted_density_construction.md)
+records the completed C21 proof and the selected HC7 checkpoint: exclude
+the entire degree-seven case of a minor-minimal counterexample, using
+proper-minor colourings and jointly chosen branch sets. This remains
+conjectural; degrees eight and nine would still require new work.
 
 ## Completed universal theorem
 
