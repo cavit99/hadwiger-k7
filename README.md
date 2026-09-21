@@ -3,7 +3,7 @@
 > **Research status:** $HC_7$ is not proved in this repository.
 
 This repository is an open research workspace on the first unresolved case
-of Hadwiger's Conjecture. It contains written partial results, conjectural
+of Hadwiger's Conjecture. It contains written theorems, conjectural
 proof targets, computer-assisted finite results, internal audits, and
 counterexamples to intermediate claims. Internal audits are not external
 peer review.
@@ -44,18 +44,20 @@ strict induction on host order. The
 the result and its application boundary. No implication to `HC_7` is
 established; `HC_7` remains the primary open objective.
 
-Conjecture 19, excluding `K7-2K2`, is resolved by Dvořák–Norin–Rahman's
-[September 2026 preprint](https://arxiv.org/abs/2609.17760), not by this
-repository. The selected conditional target is now Conjecture 21: every
-`K7^-`-minor-free graph is six-colourable. Its
-[rooted density construction](active/hc7_c21_rooted_density_construction.md)
-remains open. The [preserved C19 results](results/README.md#results-towards-conjecture-19)
-retain their original scopes.
+The repository now has a [written proof of Conjecture 21](results/hc7_k7minus_bilight_extremal.md)
+with two separate hash-pinned internal audits: **every finite
+`K7^-`-minor-free graph is six-colourable**. Its extremal theorem forces
+`K7^-` in every 4-bilight graph on `n>=3` vertices with `e>=4n-2`.
+The proof combines a new [rooted helper theorem](results/five_root_one_missing_contact.md)
+and global construction with explicitly cited external machinery. Its
+terminal degree-seven step uses an exact finite quotient lemma.
 
-The seven-connected `K_{4,4}` closure conjecture, T44, remains a preserved
-conditional route to Norin--Totschnig Conjecture 21. It is open and would
-not by itself prove `HC_7`. Its proved inputs and remaining obligations are
-in the [T44 technical frontier](active/hc7_k44_closure_frontier.md).
+This strengthens the colouring conclusion of Norin–Totschnig, but does not
+prove HC7. External mathematical review and historical priority remain
+outstanding. Conjecture 19 was resolved by
+[Dvořák–Norin–Rahman](https://arxiv.org/abs/2609.17760), whose work is an
+input, not a result claimed by this repository. T44 remains an open
+structural statement, no longer needed for the C21 conclusion.
 The [research ledger](RESEARCH_LEDGER.md) is the sole status authority;
 [the active index](active/INDEX.md) is the concise navigation map.
 
@@ -67,7 +69,9 @@ links their proofs, audits and exact scopes.
 
 | Result | Status and scope |
 |---|---|
+| [Every `K7^-`-minor-free graph is six-colourable](results/hc7_k7minus_bilight_extremal.md) | Written proof with two separate internal audits. Proves C21 and the 4-bilight `4n-2` extremal theorem for arbitrary host order; includes an exact finite nine-vertex quotient input. HC7 remains open. |
 | [Every bipartite graph is contractible](results/bipartite_contractibility_via_matroid_reduction.md) | Computation-free written proof with two separate internal audits. Every scheme of every finite bipartite target contains the fully prescribed rooted minor, with no degree or path-length bound. It independently proves the intended BLR bipartite-flow assertion. The ledger assesses this as a substantial specialist contribution below the Norin--Totschnig benchmark; priority remains qualified. |
+| [Two helpers with at most one missing contact](results/five_root_one_missing_contact.md) | Written proof with two separate internal audits, for every finite 4-light five-rooted graph of rooted four-density at least two. Retains all five roots and improves the two-contact allowance in the cited Dvořák–Norin–Rahman theorem. It is an input to the completed C21 proof; historical priority is not asserted. |
 | Preserved bipartite precursors | Audited proofs of [fully rooted even subdivisions](results/even_subdivision_contractibility.md), [fully rooted `K_{2,n}`](results/k2n_contractibility_via_matroid_packing.md), and [degree-three schemes retaining the opposite shore's roots](results/degree_three_bipartite_weak_contractibility.md). The universal theorem subsumes these families. |
 | [Degree-eight cycle-and-triangle case](results/hc7_degree8_cycle_triangle_closure.md) | Written proof with two separate internal audits. Closes this entire neighbourhood case in the Conjecture 19 reduction for arbitrary host order. |
 | [Five-root wheel extension](results/hc7_rooted_wheel_extension.md) | Written proof with two separate internal audits. In a three-connected graph, a `K_4` rooted at four of five prescribed vertices extends to a wheel rooted at all five; its hub is not prescribed. The colouring corollary closes the five-chromatic endpoint-deletion branch. |
@@ -77,17 +81,9 @@ links their proofs, audits and exact scopes.
 | [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Written unbounded host reduction with explicit finite quotient inputs and [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md).  It upgrades the current critical-host count to `n_8>=27+tau`. |
 | [Three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md) | Computation-free written proof with a [GREEN audit](results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md).  In the critical `K_7^-` host, every seven-vertex cut therefore leaves exactly two components. |
 
-The preserved critical-host chain now gives
-
-```text
-n_7 = 0,  delta(G) >= 8,  |E(G)| >= 4|V(G)|,
-G has no K_5 subgraph,  and  n_8 >= 27 + tau,
-```
-
-where `tau=sum_{i>=10}(i-9)n_i`.  Every degree-eight neighbourhood is
-`K_4`-free.  Thus `n_8<=26` would finish Conjecture 21.  These are necessary
-conditions on a hypothetical counterexample, not a proof of Conjecture 21
-or `HC_7`.
+The earlier critical-host degree, defect and separator results retain their
+proofs and exact scopes. They are now subsumed, for the hypothetical C21
+counterexample, by its exclusion in the complete theorem.
 
 ## Manuscripts
 
@@ -95,8 +91,8 @@ The [manuscript collection](paper/README.md) separates current drafts,
 preserved precursors and further theorem packages, with links to sources,
 PDFs, exact-hash internal audits and literature assessments.
 
-The editorial order is universal bipartite contractibility, paired clique
-minors from connected regions, then the structural critical-host paper.
+The next editorial priority is the complete C21 proof package. The existing
+bipartite, paired-clique and structural papers are preserved.
 The earlier even-subdivision and K2,n arguments remain available as
 precursors. Current revision status is recorded in the
 [research ledger](RESEARCH_LEDGER.md#manuscript-status).

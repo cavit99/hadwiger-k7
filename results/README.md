@@ -17,7 +17,9 @@ the limitations of an earlier argument are not current open bipartite cases.
 
 | Theorem | Proof and audit | Exact scope |
 |---|---|---|
+| Every `K7^-`-minor-free graph is six-colourable | [Proof](hc7_k7minus_bilight_extremal.md) · [Audit](hc7_k7minus_bilight_extremal_audit.md) · [Second audit](hc7_k7minus_bilight_extremal_second_audit.md) | Proves C21. Every 4-bilight graph on `n>=3` vertices with `e>=4n-2` contains `K7^-`; the proof applies at arbitrary order and includes a finite nine-vertex quotient lemma. HC7 and historical priority are not claimed. |
 | Every finite bipartite graph is contractible | [Proof](bipartite_contractibility_via_matroid_reduction.md) · [GREEN audit](bipartite_contractibility_via_matroid_reduction_audit.md) · [second GREEN audit](bipartite_contractibility_via_matroid_reduction_second_audit.md) · [manuscript](../paper/bipartite-contractibility/main.pdf) | Every scheme yields the fully prescribed rooted minor. No degree, order or path-length bound. The intended BLR flow assertion follows independently; priority and comparative significance remain qualified. |
+| Two helpers with at most one missing contact | [Proof](five_root_one_missing_contact.md) · [Audit](five_root_one_missing_contact_audit.md) · [Second audit](five_root_one_missing_contact_second_audit.md) | Every finite 4-light five-rooted graph of rooted four-density at least two has the five prescribed-root bags and two root-free helpers, with at least ten of eleven contacts involving a helper. Root–root contacts are not required. This is a computation-free input to the complete C21 proof. |
 | Three-edge bipartite schemes have rooted models of intrinsic radius two | [Proof](bipartite_short_scheme_radius.md) · [GREEN audit](bipartite_short_scheme_radius_audit.md) | Every bag stays within two edges of its original root, internally. Radius one is insufficient. No bound for longer schemes is established. |
 | Degree at most three on one bipartition side forces a minor retaining all prescribed roots on the opposite side | [Proof](degree_three_bipartite_weak_contractibility.md) · [GREEN audit](degree_three_bipartite_weak_contractibility_audit.md) | Includes weak contractibility of every `K_{3,n}` and every bipartite subcubic target; does not retain all roots on the degree-bounded side. |
 | Universal weak and rooted bipartite contractibility are equivalent | [Proof](bipartite_weak_to_rooted.md) · [GREEN audit](bipartite_weak_to_rooted_audit.md) | An exact polynomial reduction with pendant four-cycles forces prescribed roots in an enlarged target. Neither universal statement is proved by the reduction. |
@@ -44,6 +46,9 @@ explicit scheme has no fully rooted minor. The bipartite theorem is unaffected.
 
 ## Structural results for the `K_7^-` critical host
 
+These results are preserved inputs and earlier checkpoints; the complete
+C21 theorem above excludes the hypothetical critical host.
+
 The compact [low-degree manuscript](../paper/k7minus-low-degree/main.pdf)
 packages the computation-free baseline: degree seven is excluded,
 `delta(G)>=8`, `|E(G)|>=4|V(G)|`, there is no `K_5` subgraph, and
@@ -67,6 +72,9 @@ its [GREEN audit](hc7_five_root_density_sixcut_audit.md), closes every
 three-component six-cut with four, five or six boundary edges in the
 six-connected `4n` target. This uses the external five-root universality
 theorem; the other sparse boundary cases and the two-component case remain.
+The [triangle-boundary construction](hc7_c21_triangle_boundary_sixcut.md),
+with its [audit](hc7_c21_triangle_boundary_sixcut_audit.md), also closes the
+three-edge triangle case for arbitrary component orders.
 
 ## Results towards Conjecture 19
 

@@ -1,16 +1,15 @@
 # Sparse three-component frontier for the six-connected `4n` theorem
 
-**Status:** retained conditional refinement, updated on 21 September 2026
-for the [selected C21 construction](hc7_c21_rooted_density_construction.md).
-The new five-root density application closes three more boundary cases;
-it does not close this whole separator case. The universal theorem,
-Conjecture 21 and `HC_7` remain open. Every
-statement called proved below has a separate hash-pinned internal audit; an
-internal audit is not external peer review.
+**Status, 21 September 2026:** superseded as a global research frontier by
+[the audited 4-bilight `4n-2` theorem](../results/hc7_k7minus_bilight_extremal.md),
+which proves the six-connected `4n` target and Conjecture 21. HC7 remains
+open. The case analysis below is preserved as the prior conditional route;
+its stronger local inequalities and placement claims are not thereby
+proved. Current work is mapped in the [active index](INDEX.md).
 
 ## 1. Entrance and exact accounting
 
-The open extremal statement is
+The former extremal target, now a corollary of the global theorem, is
 
 > Every six-connected graph `G` with `|E(G)|>=4|V(G)|` contains a
 > `K_7^-` minor.
@@ -25,7 +24,9 @@ three-component separation whose boundary spans at least seven edges.
 
 The [five-root density application](../results/hc7_five_root_density_sixcut.md),
 with a separate pinned audit, also eliminates boundaries with four, five
-or six edges. The present frontier is the remaining three-component case.
+or six edges. The [triangle-boundary construction](../results/hc7_c21_triangle_boundary_sixcut.md)
+eliminates the three-edge triangle, with its own pinned audit. The present
+frontier is the remaining three-component case.
 Thus `S` is an
 order-six cut, `G-S` has three components `C_1,C_2,C_3`, every component is
 adjacent to every vertex of `S`, and
@@ -33,6 +34,8 @@ adjacent to every vertex of `S`, and
 ```text
 |E(G[S])|<=3.
 ```
+
+If equality holds, `G[S]` is not a triangle plus three isolated vertices.
 
 For a component `C`, put
 
@@ -82,6 +85,11 @@ three-component host, the new density application proves `eta<=10`, hence
 `6<=eta<=10`. Its boundary-specific bounds are `eta<=10,9,8,7` for
 zero, one, two and three boundary edges, respectively. At three edges,
 accounting forces `sigma=0` and all three component excesses equal to seven.
+The triangle case uses these exact excesses: either puncturing an isolated
+boundary root supplies a rooted near-clique, or that root has four neighbours
+in every lobe. A star realised through one reserved lobe then gives a rooted
+four-clique with two compatible helpers in another; the last lobe supplies
+the seventh bag. This closes that case without imposing an order bound.
 
 ## 3. Proved structural reductions towards (2)
 
@@ -205,6 +213,11 @@ The following stronger-looking statements are false and must not be used:
 These examples do not refute (2).  They show that a proof must retain
 multi-vertex branch sets and exact-separation structure, rather than only
 incidence counts or abstract two-part connectedness.
+
+The [helper-placement barrier](../barriers/five_root_helper_completion.md#2-two-prescribed-vertices-need-not-occupy-opposite-helpers)
+also forbids assuming that two omitted boundary roots can always occupy
+different helpers. Its example has thirteen boundary edges and does not
+refute a construction using the remaining sparse boundary conditions.
 
 ## 5. Immediate research obligation
 

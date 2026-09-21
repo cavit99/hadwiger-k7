@@ -3,79 +3,74 @@
 **Last updated:** 21 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
-**Standing:** `HC_7` is not proved. T44 and Norin–Totschnig Conjecture 21
-remain unproved. Conjecture 19 is resolved in an external preprint; see below.
-Universal rooted bipartite contractibility has a written proof and two
-separate GREEN internal audits. The subsequent triangle-free classification
-and hereditary canonical two-copy sufficiency proposals are refuted.
-The requested HC7 or comparable-theorem objective is not declared achieved.
+**Standing:** `HC_7` and T44 are not proved. Norin–Totschnig Conjecture 21
+now has a [written proof](results/hc7_k7minus_bilight_extremal.md) with two
+separate hash-pinned internal audits: every finite `K7^-`-minor-free graph
+is six-colourable. The proof includes an unbounded extremal theorem and a
+finite nine-vertex quotient lemma. This is not external peer review or a
+historical priority determination. Conjecture 19 was resolved externally.
+
+**Objective assessment:** the new C21 theorem, if correct, meets the requested
+alternative in mathematical reach and significance. It strengthens NT's
+colouring conclusion from excluding two adjacent deleted edges to excluding
+one deleted edge, and supplies new rooted and global constructions. This
+assessment concerns the completed implication chain, not the number of
+lemmas or favourable audits. It relies on cited external results, notably
+Dvořák–Norin–Rahman; their contribution is not claimed as ours. HC7 itself
+remains open, and the proof still needs external mathematical scrutiny.
 
 ## Three-level frontier
 
-1. **Global obligation:** prove `HC_7`, or obtain our own independent theorem
-   of reach and significance comparable to Norin–Totschnig.
-2. **Sole selected conditional target:** Norin–Totschnig Conjecture 21:
-   every finite `K7^-`-minor-free graph is six-colourable. The former C19
-   target has been resolved externally; reproducing it would not meet the
-   user's originality and significance criterion.
-3. **Immediate construction:** improve the rooted five-boundary construction
-   to leave at most one missing helper contact, and compose it without
-   losing density, roots or branch-set ownership. The
-   [technical construction](active/hc7_c21_rooted_density_construction.md)
-   states the candidate and its exact unresolved contraction case.
+1. **Global obligation:** prove `HC_7`, or obtain our own theorem of reach
+   and significance comparable to Norin–Totschnig. The alternative now has
+   a complete internally audited proof package; the original conjecture
+   remains the sole open primary target.
+2. **Completed refinement:** every finite `K7^-`-minor-free graph is
+   six-colourable (C21). Its stronger extremal input forces `K7^-` in every
+   4-bilight graph on `n>=3` vertices with `e>=4n-2`.
+3. **Immediate work:** consolidate the proof and its exact external and
+   computational dependencies for independent expert review. The
+   [technical account](active/hc7_c21_rooted_density_construction.md)
+   records the closed construction and the remaining HC7 boundary. No
+   further discovery route is presumed to follow automatically from C21.
 
-## Current work plan
+## Completed C21 construction
 
-**Changed input, 21 September.** Dvořák–Norin–Rahman,
-[arXiv:2609.17760v1](https://arxiv.org/html/2609.17760v1), submitted
-15 September, prove C19 in Theorem 1.1. Their Theorem 1.3 also directly
-excludes our former selected host: it is five-connected, has order at
-least nine, and has `e>=4n>=4n-7`. Both exterior-colouring cases are covered
-by that external result. We inspected the primary statements and this
-application, not an independent reconstruction of the entire proof.
-This is not our own theorem and does not achieve HC7.
+The [rooted helper theorem](results/five_root_one_missing_contact.md) gives
+five prescribed-root bags and two root-free helpers with at most one missing
+helper contact in every 4-light five-rooted graph of rooted four-density at
+least two. Its computation-free proof uses a degree reduction, a rooted-star
+construction and Mader's atom theorem in an auxiliary padded graph.
 
-**Selected attack.** Use the new rooted-density machinery to construct
-`K7^-` in the actual critical host. Our existing audited reduction already
-gives `delta>=8`, `e>=4n` and no literal K5. The new paper's `4n-2`
-critical-host lower bound therefore does not improve our reduction.
-Its rooted constructions are the materially new input. A broader
-six-connected `4n` theorem is sufficient, but is not mandatory.
+The [global proof](results/hc7_k7minus_bilight_extremal.md) handles the
+obstruction that the rooted result alone did not settle. A minimum
+4-bilight counterexample has a consistent high-density side at each five-cut.
+The new degree-five construction and an inclusion-minimal-fragment lemma
+exclude all five-cuts. Six-connectivity then permits every low-triangle
+contraction; the remaining degree-six and degree-seven neighbourhoods
+finish the contradiction. Every minor reduction decreases order or the
+lexicographic pair `(order, size)` and lifts through disjoint connected
+preimages. No quotient inherits chromatic criticality.
 
-**Current gap.** The published two-helper construction permits two missing
-contacts. Reducing that number to one is unproved. In the tested induction,
-a quotient's positive four-boundary fragment can lift to a five-boundary
-side of density one, outside the proposed density-two induction class.
-A star replacement has a valid minor lift and may preserve the density
-budget; its preservation of lightness still needs proof. The candidate
-alone would not close C21 without the remaining global composition.
+Dvořák–Norin–Rahman [Theorem 1.6](https://arxiv.org/html/2609.17760v1#S1)
+puts a hypothetical minor-minimal non-six-colourable `K7^-`-free graph
+inside this extremal class. Their Theorem 1.1 proves C19, not C21;
+the new result also proves their stated Conjecture 1.5. Their small-root,
+reducible-fragment and rooted-density machinery are explicit external
+inputs. The final degree-seven reduction uses all 232 certified nine-vertex
+quotients; it applies to original hosts of arbitrary order.
 
-**Actual progress.** The [audited five-root density application](results/hc7_five_root_density_sixcut.md)
-closes every three-component six-cut with four, five or six boundary edges
-in the retained `4n` host, for arbitrary order. Boundaries with zero to
-three edges remain; at three edges all three excesses must equal seven.
-The two-component case also remains. This is a bounded set of complete
-separator cases, not C21 or the user's significance benchmark.
-
-**Execution.** Concentrate builders on that construction and its separator
-application, sharing exact successful operations and failed lifts. The
-coordinator integrates them and assigns independent challenges to the
-strongest inference. Capacity is eight agents including the coordinator,
-not a quota. T44, asymptotic improvements, standalone manuscripts and Lean
-receive no parallel discovery allocation. Check existing barriers before
-reusing a mechanism; all bags and colour choices may change.
-
-**Acceptance.** A reduction must preserve its exact successor class,
-colouring constraints and disjoint preimages, strictly decrease a stated
-parameter, and lift its conclusion. A proper minor cannot inherit
-seven-contraction-criticality. Complete separator cases and local lemmas
-are checkpoints; completion requires the user's theorem and an audited
-implication chain. No high likelihood of success has been established.
+The earlier six-cut case analysis is superseded by the global theorem.
+Its [proved cases](results/hc7_c21_triangle_boundary_sixcut.md) and
+[audited barriers](barriers/five_root_helper_completion.md) remain valid.
+In particular, density one still does not force the stronger rooted helper
+model: the proof excludes the global obstruction without asserting that
+false local extension.
 
 The [frozen C19 plan](archive/hc7_c19_campaign_before_external_resolution_2026-09-21.md)
-preserves the previous constructions and their nonclosures. Existing
-proofs and barriers remain valid within their stated hypotheses; Q-free
-constraints do not automatically transfer to a `K7^-`-free host.
+and [global working draft](archive/hc7_c21_global_composition_working_2026-09-21.md)
+preserve the previous constructions and their nonclosures. Prior finite
+helper searches are not inputs to the rooted theorem.
 
 ## Current frontier and completed campaign
 
@@ -126,8 +121,10 @@ extraction step for some clique-flow applications without proving the
 universal rooted theorem. The repair is assessed as a substantial
 specialist contribution below NT's demonstrated advance, even granting
 first-valid-proof credit; historical firstness remains unresolved.
-The objective remains unmet. The [active index](active/INDEX.md) retains `HC_7` as the
-sole primary target, with no direct sufficient proved input.
+This earlier bipartite result alone does not meet the benchmark. The C21
+assessment above concerns the subsequent colouring theorem. The
+[active index](active/INDEX.md) retains `HC_7` as the sole primary target;
+C21 does not by itself imply it.
 
 ## Durable results and preserved proofs
 
@@ -167,6 +164,10 @@ partial-routing theorem, the four-root `K_4^-` theorem and audited
 critical-host results. It is navigation, not a second status ledger.
 
 ## Manuscript status
+
+**New priority, 21 September 2026:** turn the audited C21 proof package into
+a concise, independently reviewable manuscript. The existing PDFs below
+are preserved; none contains the new complete C21 proof.
 
 **Collection revised, 13 September 2026.** The
 [manuscript map](paper/README.md) separates three current drafts in editorial
@@ -215,7 +216,7 @@ draft is shortened from 19 to 17 pages by consolidating intermediate results
 and contraction accounting, with finite-profile data retained in its
 reproducibility note. Its requested mathematical conclusions are unchanged.
 
-The wheel/colouring package remains the next alternative, with its complete
+The wheel/colouring package is a preserved alternative, with its complete
 four-connected `K_6-2K_2` exclusion theorem and its own originality
 assessment still to be done. The attachment and canonical-test
 counterexamples are reserved for a separate possible note. The
@@ -240,14 +241,17 @@ boundary-colouring families are now explicit; converting their
 incompatibility into a terminal model remains unproved. The former
 C19 construction had a short literal-core proof but lacked a decreasing
 arbitrary-model exchange. Its external resolution does not repair that
-exchange or establish C21. Neither conjecture was settled by our work.
+exchange. C21 is now proved by the separate rooted-density chain above;
+our former C19 construction remains incomplete.
 
 The [exceptional-centre programme](active/hc7_k7minus_seven_exceptional_frontier.md)
 retains `n_8>=27+tau`, where `tau=sum_(i>=10)(i-9)n_i`; an upper bound
 `n_8<=26` in the same critical host would prove Conjecture 21. Colouring
 and branch-model compatibility remain unresolved. The
 [six-connected density programme](active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
-and other earlier routes retain their conditional or frozen status.
+is superseded by the stronger global theorem. Its proposed local rooted
+inequalities do not become proved merely because the global target closes.
+Other earlier routes retain their conditional or frozen status.
 
 The [chronology review](archive/research_chronology_review_2026-09-04.md)
 was checked against initial commit `a14eb38`, fortnightly snapshots

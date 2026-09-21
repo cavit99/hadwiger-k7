@@ -6,7 +6,7 @@
 `active/hc7_k7minus_degree6_common_neighbour_bound.md`
 
 **SHA-256:**
-`e157c0e8fa5805cee15888abb9a002d35d51d7e877154e7eee1a37627732493e`
+`b09df4f5f723abb65e3b322c0d1893c56514fae08e4f64702eb7323c17cd4303`
 
 ## Statement checked
 
@@ -41,9 +41,13 @@ neighbours on every edge satisfies
    vertex outside `N[v]` and the shared common neighbour.  A component there
    supplies the second disjoint path.
 
-5. The separation argument is precisely Norin--Totschnig Claim 3.15.  The
-   five prescribed paths follow from the set-to-set form of Menger's
-   theorem.  In the two-paths theorem, the crossing outcome fills two
+5. The separation argument is precisely Norin--Totschnig Claim 3.15.
+   Set-to-set Menger gives paths from an arbitrary five-element subset
+   of the six neighbours. That subset contains two whole matching pairs.
+   The labels are changed only inside this subargument, which does not
+   use the special pair's absence of an exterior common neighbour, and
+   restored before the final count. In the two-paths theorem, the crossing
+   outcome fills two
    matching non-edges, and its separation outcome lifts to a cut of order at
    most four in `H`.
 
@@ -91,3 +95,25 @@ reprove that external theorem.
 No unresolved mathematical gap was found.  This theorem is a conditional
 local bound; it does not establish that an arbitrary extremal enemy has the
 four-common-neighbour property.
+
+## Relabelling correction, 21 September 2026
+
+The prior source, SHA-256
+`e157c0e8fa5805cee15888abb9a002d35d51d7e877154e7eee1a37627732493e`,
+and this audit's former item 5 prescribed the five path endpoints without
+justifying that prescription after the special pair had already been
+chosen. The primary Claim 3.15 obtains arbitrary five endpoints and
+relabels. The corrected source now makes that relabelling local and
+restores the original labels afterwards. Its five-separation argument
+uses only the missing matching pairs and the two-pair obstruction; thus
+it does not need to retain the special pair while relabelling. The final
+calculation uses the original pair again. This repairs the unsupported
+proof step without changing the theorem or any hypothesis.
+
+A separate audit of this exact corrected source hash independently
+checked the local relabelling against Norin--Totschnig Claim 3.15 and
+Robertson--Seymour--Thomas (2.4), with scoped verdict **GREEN**.
+Menger's paths can be truncated at their last vertices in `T`; this
+removes every internal vertex of `N[v]` without prescribing which five
+vertices remain as their ends. The correction leaves no unresolved
+assumption in this step.

@@ -1,9 +1,9 @@
-# Conjecture 21: rooted density construction
+# Conjecture 21: completed rooted-density construction
 
-**Status, 21 September 2026:** conjectural construction towards the sole
-selected conditional target, Norin–Totschnig Conjecture 21. Neither that
-conjecture nor HC7 is proved here. The user's completion criterion remains
-HC7 or our own theorem of comparable significance to Norin–Totschnig.
+**Status, 21 September 2026:** written proof with two separate hash-pinned
+internal audits. Every finite `K7^-`-minor-free graph is six-colourable.
+The [research ledger](../RESEARCH_LEDGER.md) gives the current significance
+assessment. HC7 remains open; internal audits are not external peer review.
 
 ## 1. Changed external input
 
@@ -25,84 +25,67 @@ These are external preprint results. The statements and this implication
 have been inspected; we have not independently reconstructed their whole
 proof. They are not our own completion of the user's objective.
 
-## 2. Selected target and retained inputs
+## 2. The completed theorem
 
-Prove that every finite `K7^-`-minor-free graph is six-colourable.
-Equivalently, rule out its minor-minimal seven-chromatic counterexample.
-Our audited [rooted-helper closure](../results/hc7_k7minus_degree7_rooted_helper_closure.md)
-already gives minimum degree eight, `e>=4n`, and exclusion of literal K5
-in this host. Thus the new external `4n-2` lower bound is not an improvement
-over our present reduction.
+The [global proof](../results/hc7_k7minus_bilight_extremal.md),
+[first audit](../results/hc7_k7minus_bilight_extremal_audit.md) and
+[second audit](../results/hc7_k7minus_bilight_extremal_second_audit.md)
+establish that every 4-bilight graph on `n>=3` vertices with `e>=4n-2`
+contains `K7^-`. In particular this proves Dvořák–Norin–Rahman Conjecture
+1.5 for five-connected graphs. Their Theorem 1.6 then gives C21.
 
-We are testing a construction using rooted density across separators.
-A sufficient broader theorem would give a `K7^-` minor in every
-six-connected graph with `e>=4n`; its
-[retained frontier](hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
-has both two- and three-component obligations. Alternatively, a construction
-may use the actual proper-minor six-colourings and avoid that broader theorem.
-The exact root labels and branch-set ownership must survive either choice.
+The new construction has two parts.
 
-## 3. Immediate two-helper construction
+1. The [rooted helper theorem](../results/five_root_one_missing_contact.md)
+   gives five prescribed-root bags and two root-free helpers with at least
+   ten of eleven possible contacts involving a helper. It holds at rooted
+   four-density two in every 4-light five-rooted graph, without an order
+   bound. Its reductions preserve all roots and fixed disjoint preimages;
+   padding is used only to select a fragment. This part is computation-free.
+2. The global proof eliminates degree-five vertices and all five-cuts of
+   a minimum density counterexample. A low-density fragment contains a
+   low-triangle edge; consistent orientation makes an inclusion-minimal
+   such fragment an unrestricted end. A new local end lemma gives the
+   contradiction. The resulting six-connected graph has only high-triangle
+   edges, and the degree-six and degree-seven terminal arguments finish.
 
-For a graph F with five prescribed roots S, write
-`rho4(F)=|E(F)-E(F[S])|-4|V(F)-S|`. It is **4-light** if every nonempty
-root-free vertex set Y with at most four neighbours outside Y satisfies
-`|E(F[Y])|+|E_F(Y,V(F)-Y)|-4|Y|<=0`.
+The degree-seven step uses an exact finite lemma on 232 nine-vertex
+quotients, together with a written reduction from arbitrary host order.
+The [earlier helper probes](hc7_c21_helper_search_findings.md) are not proof
+inputs. The [working draft](../archive/hc7_c21_global_composition_working_2026-09-21.md)
+preserves the superseded routes; it is not the audited final proof.
 
-Dvořák–Norin–Rahman Theorem 2.9 gives, when `rho4>=2`, five rooted bags and
-two helper bags with either:
+## 3. Barriers remain valid
 
-- both helpers full to all roots, with their mutual contact optional; or
-- adjacent helpers, each missing at most one root contact, with the two
-  possible missing contacts having distinct root ends.
+- A [boundary-star replacement](../barriers/five_root_star_replacement.md)
+  can preserve density and destroy lightness. The final argument proves
+  admissibility of its particular operations instead.
+- [Density one](../barriers/five_root_helper_completion.md#1-the-density-one-extension-fails)
+  does not force the ten-contact rooted model. The global end argument
+  excludes those obstructions in a minimum counterexample.
+- [Arbitrary density](../barriers/five_root_helper_completion.md#3-arbitrary-density-does-not-force-all-eleven-contacts)
+  cannot force all eleven contacts. This blocks a direct strengthening
+  of the rooted theorem to complete helpers.
+- Independently selected helper models can yield `K_{2,2,2,2}`, without
+  `K7^-`; the [working draft](../archive/hc7_c21_global_composition_working_2026-09-21.md)
+  records that exact model-composition obstruction. The final proof does
+  not rely on arbitrary such composition at six-cuts.
 
-The latter outcome has two missing contacts. Combining it with a rooted K5
-on the other side proves Q, but does not prove `K7^-`.
+The [former six-cut frontier](hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
+is now historical. Its global target follows from the new theorem; its
+stronger local placement assertions are not automatically proved.
 
-**Candidate, unproved:** every 4-light five-rooted graph with `rho4>=2`
-has such seven bags with at most **one** missing contact among the ten
-root–helper pairs and the helper–helper pair. Root–root edges are not
-required. Both helper bags avoid all prescribed roots.
+## 4. What remains towards HC7
 
-This is a construction test, not an established equivalent of Conjecture 21.
-Even if proved, its use in a complete density or critical-host induction
-would require a separate proof of preservation and termination.
+C21 guarantees a seven-bag minor with at most one missing adjacency in
+every non-six-colourable graph. HC7 requires all 21 adjacencies. Completing
+that contact while preserving disjoint connected bags remains unproved.
+A density-only version of the new theorem cannot supply the last step:
+two universal vertices joined to a five-connected plane triangulation give
+seven-connected `K7`-minor-free graphs with `5n-15` edges, as noted in
+Dvořák–Norin–Rahman's introduction. Their chromatic structure must matter.
 
-**First unresolved step in the tested induction.** Contracting an edge can
-destroy 4-lightness. A positive fragment with at most four boundary vertices
-in the quotient can lift to a five-rooted side of density exactly one.
-The proposed density-two induction does not apply to that side. The old
-theorem supplies only the two-missing-contact outcome. Contracting the side
-to a boundary star can restore the density budget, but preservation of
-4-lightness is unproved when a new fragment has the star centre on its
-boundary. No recursion may skip this case or assume criticality in a proper
-minor.
-
-## 4. What the joint-centre attack supplied
-
-The preceding attack found no independent completion before the external
-C19 result was discovered. Its common-colouring constraints give signed
-parity obstructions and original-host odd cycles through selected centres;
-certificates for different colour pairs still need not have compatible
-ownership. Two disjoint four-cliques and the guaranteed linkage likewise
-do not supply all missing contacts. These are unpromoted deductions and
-route nonclosures, not new completed cases.
-
-The [audited six-cut application](../results/hc7_five_root_density_sixcut.md)
-closes the complete four-, five- and six-edge boundary cases for arbitrary
-host order. Retaining the sixth boundary vertex as a nonroot gives a full
-rooted K5 without discarding its incidence edges. The zero- through
-three-edge cases and the separate two-component case remain open. This
-is a new application of external machinery, with no priority or
-NT-equivalence claim.
-
-The [star-replacement counterexample](../barriers/five_root_star_replacement.md)
-shows that a density-preserving boundary-star contraction can destroy
-4-lightness even when five external root paths exist. It does not satisfy
-all restrictions of a minimal counterexample to the candidate. A valid
-replacement using those additional restrictions remains possible.
-
-Most discovery effort goes to constructing the missing contacts. Independent
-checking targets the contraction and lifting steps once a complete candidate
-exists. Further manuscripts, asymptotic improvements, T44 and formalisation
-are not parallel campaigns.
+The immediate priority is an independently reviewable C21 manuscript and
+its proof dependencies, not an automatic commitment to a particular HC7
+construction. External review and historical priority remain outstanding;
+no author contact has been authorised.

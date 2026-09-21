@@ -69,14 +69,18 @@ different pair are disjoint, again a contradiction.  Relabel so that
 We next show that there is no nontrivial separation `(A,B)` of order five
 with `N_H[v] subseteq A`.  Suppose otherwise and put `S=A intersect B`.
 By the standard set-to-set form of Menger's theorem, there are five disjoint
-paths in `H[A]`, internally disjoint from `N_H[v]`, joining
+paths in `H[A]`, internally disjoint from `N_H[v]`, joining five distinct
+vertices of `T` to the five distinct vertices of `S`. Any five vertices of
+`T` contain two whole matching pairs. For this five-separation argument
+only, relabel the three pairs and their ends so that the five path ends are
 
 ```text
 u_1,w_1,u_2,w_2,w_3
 ```
 
-to the five distinct vertices of `S`.  Denote their ends in `S`, in the
-same order, by `s_1,t_1,s_2,t_2,x`.
+Denote their ends in `S`, in the same order, by `s_1,t_1,s_2,t_2,x`.
+This local relabelling need not preserve the special property of the
+original pair `u_1,w_1`; that property is not used in this subargument.
 
 Apply the Robertson--Seymour--Thomas two-paths theorem to `H[B]-x`, with
 the cyclically ordered terminals `s_1,s_2,t_1,t_2`.  Its crossing-path
@@ -91,7 +95,8 @@ neighbours in a plane drawing put one behind a triangle containing the
 edge, and that triangle, together with `x` if necessary, gives a separator
 of `H` of order at most four.  Restoring `x` therefore gives an edge of `H`
 with at most three common neighbours, contrary to hypothesis 2.  This proves
-the asserted absence of a five-separation.
+the asserted absence of a five-separation. Restore the original labels,
+so `u_1,w_1` again have no common neighbour outside `N_H[v]`.
 
 Finally apply the same two-paths theorem to
 

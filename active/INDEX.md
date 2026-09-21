@@ -9,9 +9,8 @@
 
 > Every finite graph with no `K_7` minor is six-colourable.
 
-**Status:** conjectural target. The universal bipartite contractibility
-theorem below is proved, but supplies no established reduction of this
-remaining target.
+**Status:** conjectural target. The completed C21 and bipartite theorems
+below do not by themselves establish it.
 
 Selected audited inputs: none is invoked as a direct sufficient `HC_7`
 reduction at this checkpoint.
@@ -32,20 +31,23 @@ to intermediate claims remain with their designated conditional routes.
   the independent flow-minor proof, the restrictions on further applications,
   and the preserved earlier results.
 
-## Sole selected conditional campaign
+## Completed C21 campaign and immediate work
 
-- [Conjecture 21 through rooted density](hc7_c21_rooted_density_construction.md):
-  construct `K7^-` in the actual critical host. The immediate test improves
-  the two-helper construction to at most one missing contact and preserves
-  the separator reduction. The construction and global composition are open.
+- [Every `K7^-`-minor-free graph is six-colourable](../results/hc7_k7minus_bilight_extremal.md):
+  the written proof of C21 and the stronger 4-bilight `4n-2` theorem,
+  with [two](../results/hc7_k7minus_bilight_extremal_audit.md)
+  [separate internal audits](../results/hc7_k7minus_bilight_extremal_second_audit.md).
+- [Construction, exact dependencies and HC7 boundary](hc7_c21_rooted_density_construction.md):
+  the new helper and global end arguments, retained barriers and finite
+  quotient input. Immediate work is an independently reviewable manuscript.
 - [Externally resolved C19](hc7_c21_rooted_density_construction.md#1-changed-external-input):
-  the former two-triangle case is excluded by Dvořák–Norin–Rahman Theorem 1.3.
-  This is an external result, not our completion of the user's objective.
+  Dvořák–Norin–Rahman's result is an explicit external input.
 
 ## Parked routes
 
-These retain their mathematical status but receive no parallel discovery
-allocation. Their proved inputs and barriers may serve the selected case.
+These retain their exact mathematical scopes and receive no parallel
+discovery allocation. The old C19 and C21 constructions are historical;
+their incomplete local mechanisms are not claimed as consequences of closure.
 
 - [Five-connected six-chromatic augmentation](hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction):
   the broader target seeks `K7-2K2` in every such graph with
@@ -63,8 +65,8 @@ allocation. Their proved inputs and barriers may serve the selected case.
   an independent theorem target and alternative extraction step in C19.
   The global construction and the remaining C19 implications are open.
 - [T44](hc7_k44_closure_frontier.md): every seven-connected graph with a
-  `K_{4,4}` minor has a `K_7^-` minor. This remains open and would prove
-  Norin--Totschnig Conjecture 21, not `HC_7`.
+  `K_{4,4}` minor has a `K_7^-` minor. This structural statement remains open; C21 now follows by another route.
 - [Exceptional-centre critical-host refinement](hc7_k7minus_seven_exceptional_frontier.md)
   and [six-connected density programme](hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
-  remain preserved conditional programmes.
+  are preserved historical programmes; the global density target is now
+  subsumed by the completed theorem.

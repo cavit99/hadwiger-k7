@@ -220,7 +220,7 @@ The imported theorem revisions checked in this reconstruction were:
 | input | SHA-256 |
 |---|---|
 | eight-vertex complement lemma | `2ffeb857f4c999abc14bc28cd4650332d9397a140c601929117376f38f637449` |
-| degree-six common-neighbour bound | `e157c0e8fa5805cee15888abb9a002d35d51d7e877154e7eee1a37627732493e` |
+| degree-six common-neighbour bound | `b09df4f5f723abb65e3b322c0d1893c56514fae08e4f64702eb7323c17cd4303` |
 | degree-seven common-neighbour exclusion | `663c1b7e0de9b0951de89801d52baf4aae12535d7807547d19d04fc10b00c4b0` |
 | exact six-cut localisation | `f2a4480d27556996620117a68a8a7924dd61cf37bf5ec9e8cce4c953dfcc88af` |
 
@@ -228,3 +228,18 @@ Jakobsen's threshold was also checked in the exact form quoted as Theorem 2
 by Albar: at least `9n/2-12` edges force a `K_7^-` minor or a
 `(K_{2,2,2,2},K_6,4)`-cockade.  No counterexample, labelling gap,
 quantifier error, circular dependency, or arithmetic error was found.
+
+## Dependency refresh, 21 September 2026
+
+The degree-six input previously had SHA-256
+`e157c0e8fa5805cee15888abb9a002d35d51d7e877154e7eee1a37627732493e`.
+Its proof now explicitly relabels the five Menger endpoints locally and
+restores the originally chosen pair before the final count. The
+[adjacent correction audit](../active/hc7_k7minus_degree6_common_neighbour_bound_audit.md)
+records a separate GREEN check of the new hash in the table. Its theorem
+hypotheses and `e(H)<=4v(H)-9` conclusion are unchanged. Corollary 3
+of this audited source uses only that conclusion under six-connectivity,
+order at least nine, forbidden `K7^-`, and four common neighbours on
+every edge; it does not use the corrected linkage step separately.
+Thus the dependency pin is refreshed without changing the source or
+reattributing the earlier audit.

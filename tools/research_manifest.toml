@@ -9376,22 +9376,18 @@ keywords = ["K7 minus", "seven roots", "list colouring", "odd cycle", "barrier"]
 [[claims]]
 id = "hc7.target.k7minus_six_colour_conjecture"
 title = "Every K7-minus-minor-free graph is six-colourable"
-kind = "target"
-status = "conditional-target"
-source = "active/hc7_c21_rooted_density_construction.md"
-source_heading = "2. Selected target and retained inputs"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_bilight_extremal.md"
+source_heading = "8. The extremal theorem and six-colour corollary"
+audit = "results/hc7_k7minus_bilight_extremal_audit.md"
+expected_source_sha256 = "4ffbe9fc80a47713173a5f260759959da9397379ff26c2b18754eba5e97a560f"
 active = false
-scope = "all finite graphs"
-label_fidelity = "the conclusion may be a six-colouring or, in a hypothetical minor-minimal counterexample, an explicit K7-minus minor model"
-allowed_exits = [
-  "a proof that every K7-minus-minor-free graph is six-colourable",
-  "a contradiction to the existence of a minor-minimal non-six-colourable K7-minus-minor-free graph",
-]
-does_not_prove = [
-  "the seven-connected 4n-2 extremal theorem",
-  "HC7",
-]
-keywords = ["K7 minus", "Norin Totschnig Conjecture 21", "six-colour conjecture", "critical host"]
+scope = "all finite K7-minus-minor-free graphs; Corollary 8.2 uses the 4-bilight extremal theorem and Dvořák–Norin–Rahman Theorem 1.6, https://arxiv.org/html/2609.17760v1#S1"
+colour_compatibility = "a minor-minimal non-six-colourable graph has seven-connectivity and at least 4n-2 edges by the explicitly cited external theorem"
+conclusions = ["every K7-minus-minor-free graph is six-colourable, proving Norin–Totschnig Conjecture 21"]
+does_not_prove = ["HC7", "historical priority or external peer review"]
+keywords = ["K7 minus", "Norin Totschnig Conjecture 21", "six-colour theorem", "4-bilight density"]
 
 [[claims]]
 id = "hc7.target.k7minus_extremal_4n_minus_5"
@@ -11908,8 +11904,8 @@ keywords = ["K7 minus", "induced path", "spanning K6 model", "owner circuit", "R
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_remote_interface_topological_reduction"
-kind = "uses"
-note = "Every hypothetical critical host has at least twenty-seven exceptional centres, and each remote interface now lies in one of four exact topological cases."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.k7minus_remote_interface_topological_reduction"
@@ -17916,8 +17912,8 @@ note = "The same no-degree-seven, no-literal-K5 and 25-centre conclusion now hol
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_critical_host_degree7_closure"
-kind = "uses"
-note = "The audited critical-host reduction eliminates degree seven and every literal K5 and forces at least 25 exceptional degree-eight vertices."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
@@ -17928,8 +17924,8 @@ note = "Replacement abundance is consumed by the direct six-coordinate component
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_six_coordinate_forest_reduction"
-kind = "uses"
-note = "This is the active exhaustive six-coordinate host reduction, including its exact six-cut and exact-model rows."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
@@ -17994,14 +17990,14 @@ note = "This gives the exhaustive growth-to-eight-coordinates or bounded-feedbac
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_bounded_feedback_degree_elimination"
-kind = "uses"
-note = "This eliminates the entire bounded-feedback alternative, so the seven-connected row now forces the eight-coordinate exact-model host."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_eight_coordinate_endpoint_visibility"
-kind = "uses"
-note = "This terminalises endpoint placement in the forced eight-coordinate exact model and reduces that row to a bounded response interface with an explicit coordinate-label-loss alternative."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
@@ -18012,20 +18008,20 @@ note = "This is consumed by the sharper model-anchored hull and appendage-owners
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_model_anchored_appendage_ownership"
-kind = "uses"
-note = "This gives the direct nonsingleton terminal normal form: one list-critical core and at most two coordinate-free appendages with disjoint model ownership."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_singleton_coordinate_localisation"
-kind = "uses"
-note = "This gives the exhaustive singleton fork into one common induced-path response host or a dominated forest coordinate."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_dominated_singleton_low_degree_terminal"
-kind = "uses"
-note = "This aligns the dominated singleton in every degree while retaining the original exact model, coordinate colouring, a fresh exclusive response and an actual response component."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
@@ -19174,20 +19170,20 @@ keywords = ["K7 minus", "connected exterior", "centre deletion", "six-connected"
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_remote_crossing_five_cube_model_renewal"
-kind = "uses"
-note = "The exact-seven nonfull interface now carries one five-edge 242-pattern operation cube and renewed exact model."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_remote_two_component_shore_stability"
-kind = "uses"
-note = "The two covered residual topologies now have a nonseparating remote edge, high-demand response partitions and four prescribed cycles."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_connected_full_remote_centre_deletion"
-kind = "uses"
-note = "The connected-full order-eight case is reduced to one common pointed-cube graph and an exhaustive lift of every six-cut."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.k7minus_remote_crossing_five_cube_model_renewal"
@@ -19608,29 +19604,17 @@ keywords = ["separator order", "degree eight", "K8n", "full components", "barrie
 [[claims]]
 id = "hc7.target.k7minus_sixconnected_4n_extremal"
 title = "Six-connected coefficient-four K7-minus extremal theorem"
-kind = "target"
-status = "conditional-target"
-source = "active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md"
-source_heading = "1. Entrance and exact accounting"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_bilight_extremal.md"
+source_heading = "8. The extremal theorem and six-colour corollary"
+audit = "results/hc7_k7minus_bilight_extremal_audit.md"
+expected_source_sha256 = "4ffbe9fc80a47713173a5f260759959da9397379ff26c2b18754eba5e97a560f"
 active = false
 scope = "arbitrary six-connected graphs with at least four times as many edges as vertices"
-separator_order = "a minimum target-free enemy returns an order-six cut with two or three full components"
-hypotheses = [
-  "six-connectivity",
-  "at least 4n edges",
-  "no K7-minus minor",
-]
-allowed_exits = [
-  "an explicit K7-minus minor model",
-  "a contradiction to the exact returned-cut density identity",
-]
-does_not_prove = [
-  "the sparse three-component local rooted extremal theorem",
-  "the returned two-component case",
-  "Conjecture 21 without the audited critical-contraction reduction",
-  "HC7",
-]
-keywords = ["K7 minus", "six connectivity", "4n density", "order-six cut", "component excess"]
+conclusions = ["a K7-minus minor, as an immediate corollary of the stronger 4-bilight 4n-2 theorem"]
+does_not_prove = ["HC7"]
+keywords = ["K7 minus", "six connectivity", "4n density", "4-bilight extremal corollary"]
 
 [[claims]]
 id = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
@@ -19690,8 +19674,8 @@ keywords = ["K7 minus", "six-cut", "Wood--Woodall", "wheel", "exact singleton", 
 [[relations]]
 source = "hc7.target.k7minus_sixconnected_4n_extremal"
 target = "hc7.target.k7minus_six_colour_conjecture"
-kind = "subproblem_of"
-note = "The audited critical-contraction reduction turns any hypothetical counterexample into a six-connected target-free quotient at coefficient-four density."
+kind = "related_to"
+note = "These are separate corollaries of the stronger 4-bilight extremal theorem; the historical critical-contraction route is not used in their final proofs."
 
 [[relations]]
 source = "hc7.target.k7minus_sparse_threecomponent_local_extremal"
@@ -19708,26 +19692,26 @@ note = "The exact-singleton theorem eliminates the no-exact-fragment subcase of 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_sixconnected_degree_eight_low_codegree"
-kind = "uses"
-note = "The global low-codegree theorem raises the critical-host defect to twenty-seven and removes the last local-degree obstruction to a coefficient-four contraction."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_returned_three_component_dense_boundary"
-kind = "uses"
-note = "The target-sensitive rooted inequalities eliminate the dense three-component cuts returned by the coefficient-four contraction programme."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_returned_type_vii_elimination"
-kind = "uses"
-note = "The type-VII theorem completes the elimination of every seven- and eight-edge three-component returned cut."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.k7minus_critical_codegree_three_separator_or_surplus"
-kind = "uses"
-note = "The critical-edge theorem replaces the degree-eight local choice by an exhaustive positive-surplus quotient or prescribed-vertex separation."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[relations]]
 source = "hc7.k7minus_critical_codegree_three_separator_or_surplus"
@@ -24776,7 +24760,7 @@ note = "Minimum cuts may contain triangle roots; fixed-complement contact optimi
 source = "hc7.target.hadwiger7"
 target = "hc7.target.k7minus_six_colour_conjecture"
 kind = "related_to"
-note = "Sole selected conditional campaign after external C19 resolution; C21 does not automatically imply HC7."
+note = "The near-clique six-colour theorem is a proved special case; it does not automatically imply HC7."
 
 [[claims]]
 id = "hc7.five_root_density_sixcut"
@@ -24795,27 +24779,28 @@ does_not_prove = ["the zero-through-three-edge boundary cases", "the two-compone
 [[relations]]
 source = "hc7.target.k7minus_sixconnected_4n_extremal"
 target = "hc7.five_root_density_sixcut"
-kind = "uses"
-note = "Closes the three-component four-through-six-edge boundary rows for arbitrary order; the sparse rows and two-component case remain."
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
 
 [[claims]]
 id = "hc7.target.five_root_one_missing_contact"
 title = "Two rooted helpers with at most one missing contact"
-kind = "target"
-status = "conditional-target"
-source = "active/hc7_c21_rooted_density_construction.md"
-source_heading = "3. Immediate two-helper construction"
+kind = "theorem"
+status = "audited-green"
+source = "results/five_root_one_missing_contact.md"
+audit = "results/five_root_one_missing_contact_audit.md"
+expected_source_sha256 = "078ba860d4cdde187cdc6e618a4e1842dd623523dbefbe3ead06544c7d8afa18"
 active = false
 scope = "all finite simple 4-light five-rooted graphs of rooted four-density at least two"
 label_fidelity = "five prescribed roots lie in separate connected bags; two additional disjoint helpers avoid all roots"
-allowed_exits = ["seven bags with at least ten of the eleven root-helper and helper-helper contacts"]
-does_not_prove = ["the candidate theorem", "lightness preservation by star replacement", "a complete unrooted density induction", "Conjecture 21 or HC7"]
+conclusions = ["seven bags with at least ten of the eleven root-helper and helper-helper contacts, at arbitrary host order"]
+does_not_prove = ["root-root contacts", "a complete unrooted density induction", "Conjecture 21 or HC7", "historical priority or NT-comparable significance"]
 
 [[relations]]
 source = "hc7.target.k7minus_six_colour_conjecture"
 target = "hc7.target.five_root_one_missing_contact"
 kind = "related_to"
-note = "Immediate construction test, not an established equivalent or sufficient proof by itself."
+note = "The rooted theorem enters transitively through the proved 4-bilight extremal theorem; it is not an equivalent of C21 by itself."
 
 [[claims]]
 id = "hc7.barrier.five_root_star_replacement"
@@ -24835,3 +24820,237 @@ source = "hc7.target.five_root_one_missing_contact"
 target = "hc7.barrier.five_root_star_replacement"
 kind = "guarded_by"
 note = "The induction must prove lightness preservation using additional hypotheses; density and five-linkage alone do not suffice."
+
+[[claims]]
+id = "rooted_minors.dart_nonroot_degree_five"
+title = "A rooted dart from nonroot minimum degree five"
+kind = "theorem"
+status = "audited-green"
+source = "results/rooted_dart_nonroot_degree_five.md"
+audit = "results/rooted_dart_nonroot_degree_five_audit.md"
+expected_source_sha256 = "37dcf256f64fca7c49a1bd4ec66021371fba9a7863bf9523597ba4b898ecfad2"
+active = false
+scope = "finite internally four-connected four-rooted graphs with at least two nonroots, each of degree at least five"
+conclusions = ["a rooted dart with all four prescribed roots retained"]
+does_not_prove = ["the degree-four variant", "Conjecture 21 or HC7"]
+
+[[claims]]
+id = "hc7.helper_minimal_counterexample_reduction"
+title = "Rooted helper degree and connectivity reductions"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_c21_rooted_density_low_degree_reduction.md"
+audit = "results/hc7_c21_rooted_density_low_degree_reduction_audit.md"
+expected_source_sha256 = "431bd7d7d2b5bcb59e385781234c6d7ed6824f62ee50eb8ddf49e69da792cef2"
+active = false
+scope = "a hypothetical lexicographically minimum counterexample to the density-two rooted helper theorem, together with a general rooted-star lemma"
+conclusions = ["density exactly two and internal five-connectivity", "nonroot minimum degree at least five", "no adjacent degree-five nonroots with exactly three common neighbours", "a spanning rooted star under the stated order and degree bounds"]
+does_not_prove = ["Conjecture 21 or HC7", "unrooted induction-class preservation"]
+
+[[relations]]
+source = "hc7.helper_minimal_counterexample_reduction"
+target = "rooted_minors.dart_nonroot_degree_five"
+kind = "uses"
+note = "Excludes a minimum four-boundary fragment while retaining full nonroot degrees."
+
+[[claims]]
+id = "hc7.helper_degree_six"
+title = "Elimination of degree-five nonroots in the helper proof"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_c21_helper_degree_six.md"
+audit = "results/hc7_c21_helper_degree_six_audit.md"
+expected_source_sha256 = "85927a0f7d1af6229930fd67f7144eac35b934c54ad504539a34d39e209020ee"
+active = false
+scope = "the same hypothetical minimum rooted-helper counterexample"
+conclusions = ["every nonroot has degree at least six", "the selected alternative contraction preserves rooted lightness, density and all prescribed roots"]
+does_not_prove = ["the analogous unrooted reduction", "Conjecture 21 or HC7"]
+
+[[relations]]
+source = "hc7.helper_degree_six"
+target = "hc7.helper_minimal_counterexample_reduction"
+kind = "uses"
+note = "Uses internal five-connectivity, the density-one side bound and the forbidden degree-five pair."
+
+[[relations]]
+source = "hc7.target.five_root_one_missing_contact"
+target = "hc7.helper_minimal_counterexample_reduction"
+kind = "uses"
+note = "Uses the exact low-triangle contraction obstruction and the spanning rooted-star construction."
+
+[[relations]]
+source = "hc7.target.five_root_one_missing_contact"
+target = "hc7.helper_degree_six"
+kind = "uses"
+note = "Minimum degree six excludes one- and two-vertex atoms after the padded Mader theorem application."
+
+[[claims]]
+id = "hc7.triangle_boundary_sixcut"
+title = "The complete triangle-boundary three-component six-cut case"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_c21_triangle_boundary_sixcut.md"
+audit = "results/hc7_c21_triangle_boundary_sixcut_audit.md"
+expected_source_sha256 = "8a4454062fed34ae10de23a189c501af40f4a07cf5a04b1425fd5a0fa323766c"
+active = false
+scope = "finite six-connected graphs with e>=4n and a six-cut whose boundary is a triangle plus three isolated vertices and whose deletion leaves three components"
+conclusions = ["a K7-minus minor, with no component-order bound"]
+does_not_prove = ["other sparse boundary cases", "the two-component case", "the six-connected 4n theorem", "Conjecture 21 or HC7"]
+
+[[relations]]
+source = "hc7.triangle_boundary_sixcut"
+target = "hc7.five_root_density_sixcut"
+kind = "uses"
+note = "Fixes all three component excesses at seven and supplies the punctured-root terminal construction."
+
+[[relations]]
+source = "hc7.triangle_boundary_sixcut"
+target = "hc7.k7minus_low_degree_rooted_helper_closure"
+kind = "uses"
+note = "Invokes its four-root helper input and fifth-root augmentation, with virtual star edges lifted through one reserved lobe."
+
+[[relations]]
+source = "hc7.target.k7minus_sixconnected_4n_extremal"
+target = "hc7.triangle_boundary_sixcut"
+kind = "related_to"
+note = "Historical local route; the final corollary instead uses the stronger 4-bilight extremal theorem."
+
+[[claims]]
+id = "hc7.barrier.five_root_helper_completion"
+title = "Limits of strengthening and placing rooted helpers"
+kind = "barrier"
+status = "barrier"
+source = "barriers/five_root_helper_completion.md"
+audit = "barriers/five_root_helper_completion_audit.md"
+expected_source_sha256 = "0ab6ea87d6bf0bf0debf55307c2dfe9cfdd8d4bdea97819071ce0bacb27dc67b"
+active = false
+scope = "two explicit finite examples and an unbounded six-connected two-apex planar family"
+conclusions = ["density one does not force ten helper contacts", "two prescribed vertices cannot always be placed in opposite helpers", "no fixed density threshold forces all eleven helper contacts"]
+does_not_prove = ["failure of the density-two ten-contact theorem", "failure of sparse-boundary-specific placement", "failure of Conjecture 21 or HC7"]
+
+[[relations]]
+source = "hc7.target.five_root_one_missing_contact"
+target = "hc7.barrier.five_root_helper_completion"
+kind = "guarded_by"
+note = "The proof and applications cannot silently lower the density, prescribe helper placement, or strengthen to all eleven contacts."
+
+[[claims]]
+id = "graph_connectivity.unique_attachment_quasi_five"
+title = "A unique attachment gives a quasi-five-connected contraction"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_c21_helper_degree_six.md"
+source_heading = "1. A local contraction fact"
+audit = "results/hc7_c21_helper_degree_six_audit.md"
+expected_source_sha256 = "85927a0f7d1af6229930fd67f7144eac35b934c54ad504539a34d39e209020ee"
+active = false
+scope = "a five-connected finite graph, a five-fragment of order at least three with opposite open side of order at least two, and a boundary vertex having exactly one neighbour in the fragment"
+conclusions = ["contracting the unique attachment edge gives a four-connected graph with no nontrivial four-cut"]
+does_not_prove = ["a triangle bound for the contracted edge", "density preservation without a separate edge count"]
+keywords = ["quasi five-connectivity", "unique attachment", "Kou Qin Yang Zhang Zhao Lemma 1"]
+
+[[claims]]
+id = "hc7.k7minus_degree7_quotient_finite"
+title = "All 232 saturated nine-vertex quotients contain K7-minus"
+kind = "lemma"
+status = "audited-green"
+source = "active/hc7_k7minus_degree7_common_neighbour_exclusion.md"
+source_heading = "Lemma 1 (nine-vertex quotient)"
+audit = "active/hc7_k7minus_degree7_common_neighbour_exclusion_audit.md"
+expected_source_sha256 = "663c1b7e0de9b0951de89801d52baf4aae12535d7807547d19d04fc10b00c4b0"
+active = false
+scope = "the 29 seven-vertex complement types of maximum degree at most two, with a universal vertex and a second nonadjacent vertex meeting all or all but one of the seven vertices"
+label_fidelity = "the verifier checks seven disjoint connected branch sets and at most one missing interbag contact in each literal nine-vertex quotient"
+conclusions = ["all 232 prescribed quotients have a certified K7-minus minor"]
+does_not_prove = ["an unbounded host conclusion without the written quotient reduction"]
+keywords = ["computer-assisted finite lemma", "232 quotients", "exact branch-set certificates"]
+
+[[claims]]
+id = "hc7.k7minus_saturated_degree7_exclusion"
+title = "Saturated six-connected K7-minus-free graphs have no degree-seven vertex"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_k7minus_degree7_common_neighbour_exclusion.md"
+source_heading = "Theorem 2 (degree-seven exclusion)"
+audit = "active/hc7_k7minus_degree7_common_neighbour_exclusion_audit.md"
+expected_source_sha256 = "663c1b7e0de9b0951de89801d52baf4aae12535d7807547d19d04fc10b00c4b0"
+active = false
+scope = "finite six-connected K7-minus-minor-free graphs of order at least nine in which every edge has at least four common neighbours"
+label_fidelity = "contracting one exterior component gives a prescribed nine-vertex quotient and every certified branch set lifts through its fixed connected preimage"
+conclusions = ["no vertex has degree seven, with no bound on the original host order"]
+does_not_prove = ["the four-common-neighbour condition for an arbitrary host", "HC7"]
+
+[[relations]]
+source = "hc7.k7minus_saturated_degree7_exclusion"
+target = "hc7.k7minus_degree7_quotient_finite"
+kind = "uses"
+note = "Six-connectivity makes one exterior component meet at least six of the seven neighbourhood vertices; its contraction gives a certified quotient."
+
+[[verifiers]]
+id = "c21-helper-search-sanity"
+path = "active/hc7_c21_helper_search.py"
+sha256 = "09a223bc320c62dedce4cb2bc569471b07f66fed5fa6d1102f3d8065b4a3635e"
+args = ["sanity"]
+timeout = 30
+expected_stdout = [
+  '{"sanity": "pass", "independent_assignment_comparisons": 105, "star_model": [1, 2, 4, 8, 272, 32, 128], "quotient_violation": [192, 39, 1]}',
+]
+
+[[claims]]
+id = "hc7.k7minus_bilight_extremal"
+title = "Every 4-bilight graph with at least 4n-2 edges contains K7-minus"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k7minus_bilight_extremal.md"
+source_heading = "8. The extremal theorem and six-colour corollary"
+audit = "results/hc7_k7minus_bilight_extremal_audit.md"
+expected_source_sha256 = "4ffbe9fc80a47713173a5f260759959da9397379ff26c2b18754eba5e97a560f"
+active = false
+scope = "all finite simple 4-bilight graphs on n>=3 vertices with at least 4n-2 edges"
+strict_parameter = "lexicographic minimization of vertex count and edge count in the 4-bilight K7-minus-minor-free density class"
+label_fidelity = "every rooted construction preserves the prescribed boundary vertices and every minor lifts through fixed disjoint connected preimages"
+conclusions = ["a K7-minus minor with no original-host order bound", "in particular, the five-connected density assertion in Dvořák–Norin–Rahman Conjecture 1.5"]
+does_not_prove = ["HC7", "an entirely computation-free proof", "historical priority or external peer review"]
+keywords = ["K7 minus", "4-bilight", "4n-2", "oriented fragments", "fragment ends", "232 certified quotients"]
+
+[[relations]]
+source = "hc7.k7minus_bilight_extremal"
+target = "hc7.target.five_root_one_missing_contact"
+kind = "uses"
+note = "H2 composes with a full rooted K5 on the opposite side; the orientation and reduction arguments also use the explicitly cited DNR Theorem 2.6, Lemma 3.3 and Section 5 machinery, https://arxiv.org/html/2609.17760v1."
+
+[[relations]]
+source = "hc7.k7minus_bilight_extremal"
+target = "hc7.helper_minimal_counterexample_reduction"
+kind = "uses"
+note = "Uses only the general rooted star and rooted triangle lemmas from this source, not its restrictions on a rooted-helper counterexample."
+
+[[relations]]
+source = "hc7.k7minus_bilight_extremal"
+target = "rooted_minors.dart_nonroot_degree_five"
+kind = "uses"
+note = "A minimum four-cut side with retained nonroot minimum degree five supplies a rooted dart and a reducible fragment."
+
+[[relations]]
+source = "hc7.k7minus_bilight_extremal"
+target = "graph_connectivity.unique_attachment_quasi_five"
+kind = "uses"
+note = "A unique attachment supplies a quasi-five-connected contraction; separate common-neighbour counts preserve density and quasi-five-connectivity implies 4-bilightness."
+
+[[relations]]
+source = "hc7.k7minus_bilight_extremal"
+target = "hc7.k7minus_degree7_quotient_finite"
+kind = "uses"
+note = "The unbounded degree-seven reduction is written directly in Theorem 8.1; its contracted nine-vertex graph is one of the 232 certified finite quotients."
+
+[[relations]]
+source = "hc7.target.k7minus_sixconnected_4n_extremal"
+target = "hc7.k7minus_bilight_extremal"
+kind = "uses"
+note = "Every six-connected graph is 4-bilight and the assumed 4n edge bound exceeds 4n-2."
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.k7minus_bilight_extremal"
+kind = "uses"
+note = "Corollary 8.2 combines the global theorem with external Dvořák–Norin–Rahman Theorem 1.6: a minor-minimal non-six-colourable K7-minus-free graph is seven-connected and has e>=4n-2, https://arxiv.org/html/2609.17760v1#S1."

@@ -11,7 +11,7 @@
 ## Pinned dependencies
 
 1. `active/hc7_k7minus_degree6_common_neighbour_bound.md`, SHA-256
-   `e157c0e8fa5805cee15888abb9a002d35d51d7e877154e7eee1a37627732493e`.
+   `b09df4f5f723abb65e3b322c0d1893c56514fae08e4f64702eb7323c17cd4303`.
 
 2. `active/hc7_k7minus_degree7_common_neighbour_exclusion.md`, SHA-256
    `663c1b7e0de9b0951de89801d52baf4aae12535d7807547d19d04fc10b00c4b0`.
@@ -22,6 +22,18 @@
 
 The degree-six input has a written proof.  The degree-seven input has a
 written unbounded reduction and an exact finite quotient verification.
+
+The degree-six dependency pin was refreshed on 21 September 2026 from
+`e157c0e8fa5805cee15888abb9a002d35d51d7e877154e7eee1a37627732493e`.
+That input now explicitly makes its five-endpoint relabelling local and
+restores the original special pair before the final count. Its
+[adjacent audit](hc7_k7minus_degree6_common_neighbour_bound_audit.md)
+records an independent GREEN check of the correction. The theorem's
+hypotheses and conclusion are unchanged. The present source uses only
+the bound `e(H)<=4v(H)-9`, after establishing six-connectivity, order
+at least nine, exclusion of `K7^-`, and four common neighbours on every
+edge; it does not use the corrected linkage step separately. The
+audited source and earlier verdict attribution are unchanged.
 
 ## Minimality and small orders
 

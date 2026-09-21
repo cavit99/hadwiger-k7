@@ -1,6 +1,9 @@
 # Audit: saturated degree-seven exclusion
 
-**Verdict:** GREEN within the stated finite-computation trust boundary.
+**Verdict:** GREEN.
+
+This verdict retains the finite-computation trust boundary stated below;
+it is not a computation-free proof or external peer review.
 
 **Audited theorem source:**
 `active/hc7_k7minus_degree7_common_neighbour_exclusion.md`

@@ -6,7 +6,14 @@ the [results map](../results/README.md) covers the larger proof library.
 All manuscripts are drafts. Internal audits establish neither external
 acceptance nor publication priority.
 
-## Current collection, in editorial order
+The immediate editorial priority is the new
+[complete C21 proof package](../results/hc7_k7minus_bilight_extremal.md),
+with [two](../results/hc7_k7minus_bilight_extremal_audit.md)
+[internal audits](../results/hc7_k7minus_bilight_extremal_second_audit.md).
+It has not yet been assembled into a manuscript PDF. The existing papers
+below retain their original scopes.
+
+## Existing manuscript collection
 
 | Manuscript | Contents | Review and supporting material |
 |---|---|---|
@@ -18,7 +25,8 @@ Here `tau=sum_{i>=10}(i-9)n_i` and `n_i` counts degree-i vertices; the
 bounds are on `n_8`. The radius refinement does not prove BLR's general
 depth assertion, Lemma 3.13. The structural paper does not prove
 Norin–Totschnig Conjecture 21. None of these manuscripts establishes
-`HC_7` or the repository's NT-comparable-theorem objective.
+`HC_7`; the ledger's new benchmark assessment concerns the separate C21
+proof package, not these earlier manuscripts.
 
 ## Preserved precursors
 
