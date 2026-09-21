@@ -9377,9 +9377,9 @@ keywords = ["K7 minus", "seven roots", "list colouring", "odd cycle", "barrier"]
 id = "hc7.target.k7minus_six_colour_conjecture"
 title = "Every K7-minus-minor-free graph is six-colourable"
 kind = "target"
-status = "frozen"
-source = "active/hc7_k7minus_seven_exceptional_frontier.md"
-source_heading = "1. Historical target and exact finishing reduction"
+status = "conditional-target"
+source = "active/hc7_c21_rooted_density_construction.md"
+source_heading = "2. Selected target and retained inputs"
 active = false
 scope = "all finite graphs"
 label_fidelity = "the conclusion may be a six-colouring or, in a hypothetical minor-minimal counterexample, an explicit K7-minus minor model"
@@ -20054,7 +20054,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "T44"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "all finite seven-connected graphs containing a K4,4 minor"
 label_fidelity = "the eight K4,4 branch labels and every branch-set contact must survive any literal completion, separator rotation or reconstruction"
 separator_order = "exact seven in the vertex-minimal nonliteral branch-model reduction"
@@ -21378,7 +21378,7 @@ status = "active-target"
 source = "active/bipartite_contractibility_frontier.md"
 source_heading = "Remaining global target"
 active = true
-expected_source_sha256 = "4ae4b722ab38ef00bceab1d04a54d7e8f4b89471dba9e875d907fc2ac199411a"
+expected_source_sha256 = "8d169eec889b7ab981d4282b07151e7f6eae091138fe7681a8e19e71ee3a807f"
 scope = "every finite simple graph"
 hypotheses = ["G contains no K7 minor"]
 allowed_exits = ["a proof that G is six-colourable for every such G"]
@@ -21718,7 +21718,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.4.1 The four-clique construction and contraction closure"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "seven-connected graphs with a literal four-clique whose deletion leaves minimum degree at least six"
 allowed_exits = ["an explicit K7-equals minor"]
 does_not_prove = ["the global allocation of three helpers", "a closed induction through exact order-seven separations", "Conjecture 19, Conjecture 21 or HC7"]
@@ -21961,7 +21961,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.3 The full boundary-colouring obligation"
 active = false
 audit = "active/hc7_k44_critical_global_construction_audit.md"
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "seven-connected seven-contraction-critical K7-equals-minor-free hosts with a literal four-clique R and an exact cut R union T"
 conclusions = ["T cannot be an independent triple", "if T is an edge and an isolated vertex, one component supplies every stated four-root model", "a three-contact matching is a sufficient terminal construction"]
 does_not_prove = ["simultaneous models for different omitted roots", "the required contact matching", "Conjecture 19 or HC7"]
@@ -22004,7 +22004,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "deleting a degree-eight vertex from the critical companion-free host; the retained graph is six-connected and has at least 4n-4 edges"
 allowed_exits = ["some five original neighbours root five disjoint bags with at least nine contacts, and a sixth bag contacts all five"]
 does_not_prove = ["the existence of that model", "the optional universal five-connected every-five-set strengthening", "Conjecture 19 or HC7"]
@@ -23261,11 +23261,11 @@ note = "Its valid side replacement must not be extended to the refuted k-2-regio
 id = "hc7.target.two_triangle_critical_closure"
 title = "Complete the actual two-triangle critical-host case"
 kind = "target"
-status = "conditional-target"
+status = "superseded"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "the actual finite seven-connected seven-contraction-critical Q7-minor-free host of minimum degree eight, with a degree-eight neighbourhood spanning two triangles and an edge; all audited hypotheses and possible extra neighbourhood edges retained"
 colour_compatibility = "every proper minor is six-colourable; a successor is not assumed to remain seven-contraction-critical"
 label_fidelity = "final bags may reselect roots and expand v; every invoked intermediate rooting and original-host ownership condition must be preserved or explicitly replaced"
@@ -23277,7 +23277,7 @@ does_not_prove = ["the global allocation", "closure of an unspecified successor 
 source = "hc7.target.hadwiger7"
 target = "hc7.target.two_triangle_critical_closure"
 kind = "related_to"
-note = "Sole selected discovery campaign towards the user's objective; C19 completion is not itself an established HC7 implication or significance verdict."
+note = "Former selected campaign, excluded externally by Dvorak-Norin-Rahman Theorem 1.3; no original C19 or HC7 proof is claimed."
 
 [[relations]]
 source = "hc7.target.two_triangle_critical_closure"
@@ -23299,7 +23299,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "the actual seven-contraction-critical Q-free host of minimum degree eight, with a degree-eight neighbourhood spanning triangles A,B and edge xy"
 label_fidelity = "all six original triangle roots; scheme paths avoid v and have no foreign roots internally"
 allowed_exits = ["in G-v an A/B-rooted K3,3 scheme with two independent cross edges omitted, whose missing pairs may be chosen"]
@@ -23377,7 +23377,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 audit = "active/hc7_k44_critical_global_construction_audit.md"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "the actual critical two-triangle host and an eligible independent reservation a,b,y; maximise the two A-rooted bags in G-v-a-b-x-y"
 label_fidelity = "the four original core roots stay separate; the five deleted vertices remain outside the model; original B-root path interiors are not available for simultaneous reuse"
 conclusions = ["exactly one nonroot B port is impossible", "zero nonroot ports leave H equal to the helper union and a,x,y", "with two nonroot ports the remainder is nonempty and every component contacts all five H ports and at least two actual B roots"]
@@ -23656,7 +23656,7 @@ source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 audit = "active/hc7_k44_critical_global_construction_audit.md"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "the seven-connected critical two-triangle host and every independent triple T in its degree-eight neighbourhood"
 label_fidelity = "all five other actual neighbours root the wheel; I contains T, and both the whole class I and v remain unused"
 conclusions = ["a five-root W4 exists in G-v-I for every eligible T, in either matching branch", "if some such wheel leaves all of T in one complementary component, that component and v complete Q"]
@@ -23853,7 +23853,7 @@ status = "conditional-target"
 source = "active/hc7_k44_closure_frontier.md"
 source_heading = "7.5 A neighbourhood contact construction"
 active = false
-expected_source_sha256 = "d6c266021de5253442e733cf90e54e8437e0e8c6779e77160b52c4e10f95e51d"
+expected_source_sha256 = "ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc"
 scope = "every finite simple five-connected graph of chromatic number six, minimum degree at least six and order at least seven"
 allowed_exits = ["an unrestricted K7-2K2 minor, with independent missing edges"]
 conclusions = ["if proved, the audited triangle quotient and fixed-preimage lift close all Conjecture 19"]
@@ -24771,3 +24771,67 @@ source = "hc7.laboratory.two_triangle_prism_construction"
 target = "hc7.barrier.vital_linkage_local_shortcuts"
 kind = "guarded_by"
 note = "Minimum cuts may contain triangle roots; fixed-complement contact optimisation does not replace global component maximality or criticality."
+
+[[relations]]
+source = "hc7.target.hadwiger7"
+target = "hc7.target.k7minus_six_colour_conjecture"
+kind = "related_to"
+note = "Sole selected conditional campaign after external C19 resolution; C21 does not automatically imply HC7."
+
+[[claims]]
+id = "hc7.five_root_density_sixcut"
+title = "Five-root density closes the four-through-six-edge boundary cases"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_root_density_sixcut.md"
+audit = "results/hc7_five_root_density_sixcut_audit.md"
+expected_source_sha256 = "4c31950cca633178dbcff0800a0ac1b55bc5a58cf9fe0127f165b1a24017a812"
+active = false
+scope = "arbitrary finite six-connected K7-minus-minor-free hosts with a six-cut leaving three components; the complete-case corollary assumes e>=4n"
+label_fidelity = "five prescribed boundary roots retain disjoint bags; the sixth boundary vertex is a nonroot and is not reused in either exterior bag"
+conclusions = ["boundaries with four, five or six edges are impossible under e>=4n", "every component excess is at most ten", "three boundary edges force zero global surplus and three component excesses of seven"]
+does_not_prove = ["the zero-through-three-edge boundary cases", "the two-component case", "the six-connected 4n theorem", "Conjecture 21 or HC7", "novelty or NT-comparable significance"]
+
+[[relations]]
+source = "hc7.target.k7minus_sixconnected_4n_extremal"
+target = "hc7.five_root_density_sixcut"
+kind = "uses"
+note = "Closes the three-component four-through-six-edge boundary rows for arbitrary order; the sparse rows and two-component case remain."
+
+[[claims]]
+id = "hc7.target.five_root_one_missing_contact"
+title = "Two rooted helpers with at most one missing contact"
+kind = "target"
+status = "conditional-target"
+source = "active/hc7_c21_rooted_density_construction.md"
+source_heading = "3. Immediate two-helper construction"
+active = false
+scope = "all finite simple 4-light five-rooted graphs of rooted four-density at least two"
+label_fidelity = "five prescribed roots lie in separate connected bags; two additional disjoint helpers avoid all roots"
+allowed_exits = ["seven bags with at least ten of the eleven root-helper and helper-helper contacts"]
+does_not_prove = ["the candidate theorem", "lightness preservation by star replacement", "a complete unrooted density induction", "Conjecture 21 or HC7"]
+
+[[relations]]
+source = "hc7.target.k7minus_six_colour_conjecture"
+target = "hc7.target.five_root_one_missing_contact"
+kind = "related_to"
+note = "Immediate construction test, not an established equivalent or sufficient proof by itself."
+
+[[claims]]
+id = "hc7.barrier.five_root_star_replacement"
+title = "Density-preserving boundary-star contraction can destroy lightness"
+kind = "barrier"
+status = "barrier"
+source = "barriers/five_root_star_replacement.md"
+audit = "barriers/five_root_star_replacement_audit.md"
+expected_source_sha256 = "cf158c177800e7b75b70bd7fa5b11ad081f60adf21e34235aba17e18449f469d"
+active = false
+scope = "one explicit nine-vertex five-rooted graph and one root-preserving contraction"
+conclusions = ["rooted density stays two and an external five-linkage exists, but the quotient is not 4-light"]
+does_not_prove = ["failure under every minimal-counterexample restriction", "failure of the one-missing-contact helper target", "failure of Conjecture 21 or HC7"]
+
+[[relations]]
+source = "hc7.target.five_root_one_missing_contact"
+target = "hc7.barrier.five_root_star_replacement"
+kind = "guarded_by"
+note = "The induction must prove lightness preservation using additional hypotheses; density and five-linkage alone do not suffice."

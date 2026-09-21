@@ -1,5 +1,12 @@
 # Seven-connected `K_{4,4}` closure frontier
 
+**Update, 21 September 2026:** C19 is resolved externally by
+Dvořák–Norin–Rahman, arXiv:2609.17760v1. The selected C21 attack and exact
+application are in the [rooted density construction](hc7_c21_rooted_density_construction.md).
+The C19 constructions and open-case descriptions in Sections 7.4–7.8 below
+are retained historical records. Their proofs are unchanged; their former
+status as the selected open campaign is superseded. T44 and C21 remain open.
+
 **Status (5 September 2026):** T44 is a preserved conditional target.
 [Universal bipartite contractibility](bipartite_contractibility_frontier.md)
 now has a written proof with separate internal audits; no implication to

@@ -44,13 +44,13 @@ strict induction on host order. The
 the result and its application boundary. No implication to `HC_7` is
 established; `HC_7` remains the primary open objective.
 
-The immediate campaign is Norin--Totschnig Conjecture 19: graphs with no
-`K_7-2K_2` minor are six-colourable, where the two deleted edges are
-independent. Audited proofs close the five-cycle-and-triangle neighbourhood
-case and the five-chromatic endpoint-deletion branch. The remaining
-two-triangles-and-edge case requires a simultaneous minor construction;
-Conjecture 19 remains open. See the
-[completed cases and available inputs](results/README.md#results-towards-conjecture-19).
+Conjecture 19, excluding `K7-2K2`, is resolved by Dvořák–Norin–Rahman's
+[September 2026 preprint](https://arxiv.org/abs/2609.17760), not by this
+repository. The selected conditional target is now Conjecture 21: every
+`K7^-`-minor-free graph is six-colourable. Its
+[rooted density construction](active/hc7_c21_rooted_density_construction.md)
+remains open. The [preserved C19 results](results/README.md#results-towards-conjecture-19)
+retain their original scopes.
 
 The seven-connected `K_{4,4}` closure conjecture, T44, remains a preserved
 conditional route to Norin--Totschnig Conjecture 21. It is open and would

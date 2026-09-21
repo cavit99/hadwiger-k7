@@ -62,10 +62,19 @@ Later theorem notes strengthen and extend that snapshot:
 These are necessary structural theorems about a hypothetical counterexample.
 They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
 
+The [five-root density application](hc7_five_root_density_sixcut.md), with
+its [GREEN audit](hc7_five_root_density_sixcut_audit.md), closes every
+three-component six-cut with four, five or six boundary edges in the
+six-connected `4n` target. This uses the external five-root universality
+theorem; the other sparse boundary cases and the two-component case remain.
+
 ## Results towards Conjecture 19
 
 Here `Q=K_7-2K_2`, with two independent edges deleted. The conjecture
-asserts that every Q-minor-free graph is six-colourable. The
+asserts that every Q-minor-free graph is six-colourable. It is resolved by
+[Dvořák–Norin–Rahman, Theorem 1.1](https://arxiv.org/html/2609.17760v1),
+not by the work below. These are preserved results from our earlier attack.
+The
 [cycle-case theorem](hc7_degree8_cycle_triangle_closure.md), with
 [two](hc7_degree8_cycle_triangle_closure_audit.md)
 [GREEN audits](hc7_degree8_cycle_triangle_closure_second_audit.md), closes
@@ -79,7 +88,8 @@ branch has `chi(G-{x,y})=6`. The
 [GREEN audits](hc7_two_triangle_exterior_colour_bound_second_audit.md),
 also closes the entire four-chromatic exterior branch: under the actual
 structural hypotheses `chi(G)<=max{4,chi(G-N[v])+2}`. Hence the remaining
-exterior has chromatic number five or six. Conjecture 19 remains open.
+exterior had chromatic number five or six. The external density theorem
+now excludes that host directly.
 
 The [global codegree theorem](hc7_global_edge_codegree.md), with its
 [audit](hc7_global_edge_codegree_audit.md), bounds every edge's common

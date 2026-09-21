@@ -1873,3 +1873,14 @@ critical preimage is claimed. The corresponding ledger replacement, SHA-256
 preserves the proved cases, both open contact profiles and unrestricted
 model replacement. No whole-case construction, decreasing reduction, C19,
 HC7 or comparative-objective closure is asserted.
+
+## 21 September: external resolution and status-only reclassification
+
+The frontier's current SHA-256 is `ef6a0a767a772bd973eb10887ecab62970304c1f73ffe6e0a3f5d176f5f044cc`.
+Its sole change from Git `8305738` is the opening status notice and link;
+removing that notice reproduces the earlier source byte for byte. No
+previously audited construction was changed. The scoped independent
+[external application audit](../results/hc7_five_root_density_sixcut_audit.md#separate-check-of-the-external-c19-application)
+checks the new C19 statement and exact host implication. The old C19
+open-case descriptions are explicitly retained as historical records;
+this update certifies no new T44 or C21 construction.

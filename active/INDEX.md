@@ -34,12 +34,13 @@ to intermediate claims remain with their designated conditional routes.
 
 ## Sole selected conditional campaign
 
-- [The actual two-triangle critical host](hc7_k44_closure_frontier.md#75-a-neighbourhood-contact-construction):
-  construct Q7 or a six-colouring using all proper-minor colouring data.
-  Cover both remaining exterior chromatic numbers, five and six, in
-  arbitrary host order. The whole-case closure and implication audit would
-  complete C19; HC7 and comparative significance require separate judgement.
-  All discovery agents work on this case under the ledger's shared plan.
+- [Conjecture 21 through rooted density](hc7_c21_rooted_density_construction.md):
+  construct `K7^-` in the actual critical host. The immediate test improves
+  the two-helper construction to at most one missing contact and preserves
+  the separator reduction. The construction and global composition are open.
+- [Externally resolved C19](hc7_c21_rooted_density_construction.md#1-changed-external-input):
+  the former two-triangle case is excluded by Dvořák–Norin–Rahman Theorem 1.3.
+  This is an external result, not our completion of the user's objective.
 
 ## Parked routes
 
@@ -51,9 +52,9 @@ allocation. Their proved inputs and barriers may serve the selected case.
   minimum degree at least six and order at least seven. This unproved
   theorem would close all C19; its construction and direct barriers
   are in the linked frontier.
-- [Critical-host construction for Conjecture 21](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
-  the separate K7-minus target retains its full boundary-colouring
-  obligations; its global construction remains open.
+- [Earlier critical-host construction](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction):
+  its boundary-colouring obligations and failed model exchanges remain
+  available; the selected construction is linked above.
 - [Quantitative star contractions](quantitative_star_contraction_frontier.md):
   R and the density construction remain unproved and reserved. Liu–Luo v2
   supersedes the former cube-root colouring payoff. Component labelling

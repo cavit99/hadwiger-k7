@@ -17,7 +17,7 @@ by the demonstrated contribution. No proved result is invoked as a direct
 sufficient reduction of `HC_7`; in particular, no implication from
 bipartite contractibility to `HC_7`, T44 or Conjecture 21 is established.
 
-The preserved principal conditional refinement is
+A preserved conditional refinement is
 [T44](hc7_k44_closure_frontier.md): every seven-connected graph containing
 a `K_{4,4}` minor contains a `K_7^-` minor. T44 would prove Conjecture 21,
 that every `K_7^-`-minor-free graph is six-colourable. Both remain open.
@@ -27,10 +27,10 @@ ownership obligation. Completing only the literal residues would not
 prove T44. These are conditional routes, not consequences of bipartite
 contractibility.
 
-The current construction effort uses the
-[critical-host hypotheses](hc7_k44_closure_frontier.md#7-the-critical-host-global-construction)
-for Conjecture 19. Its remaining two-triangle neighbourhood construction,
-boundary-colouring data and ownership obligations are recorded there.
+The selected [rooted density construction](hc7_c21_rooted_density_construction.md)
+targets Conjecture 21. Conjecture 19 was resolved externally by
+Dvořák–Norin–Rahman; reproducing that result would not meet the user's
+originality requirement. The new construction and its global lift remain open.
 
 ## Completed universal theorem
 

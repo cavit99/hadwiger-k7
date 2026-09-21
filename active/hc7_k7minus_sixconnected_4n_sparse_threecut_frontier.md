@@ -1,9 +1,10 @@
 # Sparse three-component frontier for the six-connected `4n` theorem
 
-**Status:** frozen conditional refinement, last consolidated on 17 August
-2026.  It was a parallel conditional route, not the primary campaign, and is
-not on the current T44 spine.  References below to the “live” obligation are
-historical.  The universal theorem, Conjecture 21 and `HC_7` remain open.  Every
+**Status:** retained conditional refinement, updated on 21 September 2026
+for the [selected C21 construction](hc7_c21_rooted_density_construction.md).
+The new five-root density application closes three more boundary cases;
+it does not close this whole separator case. The universal theorem,
+Conjecture 21 and `HC_7` remain open. Every
 statement called proved below has a separate hash-pinned internal audit; an
 internal audit is not external peer review.
 
@@ -22,12 +23,15 @@ reduces a minimum counterexample to an order-six separation.  The audited
 dense-boundary and type-VII theorems eliminate every returned
 three-component separation whose boundary spans at least seven edges.
 
-The present frontier is the remaining three-component case.  Thus `S` is an
+The [five-root density application](../results/hc7_five_root_density_sixcut.md),
+with a separate pinned audit, also eliminates boundaries with four, five
+or six edges. The present frontier is the remaining three-component case.
+Thus `S` is an
 order-six cut, `G-S` has three components `C_1,C_2,C_3`, every component is
 adjacent to every vertex of `S`, and
 
 ```text
-|E(G[S])|<=6.
+|E(G[S])|<=3.
 ```
 
 For a component `C`, put
@@ -72,7 +76,12 @@ packet number one.  Combining `eta<=5 mu` with (1) gives a strict
 contradiction.
 
 This is an unbounded rooted extremal theorem, not a finite boundary
-classification.  It has not been proved.
+classification. It has not been proved. In the actual target-free
+three-component host, the new density application proves `eta<=10`, hence
+(2) whenever `mu>=2`. The remaining local range is `mu=1` and
+`6<=eta<=10`. Its boundary-specific bounds are `eta<=10,9,8,7` for
+zero, one, two and three boundary edges, respectively. At three edges,
+accounting forces `sigma=0` and all three component excesses equal to seven.
 
 ## 3. Proved structural reductions towards (2)
 
@@ -199,8 +208,9 @@ incidence counts or abstract two-part connectedness.
 
 ## 5. Immediate research obligation
 
-The live proof obligation is to eliminate a minimum counterexample to (2)
-after the exact-six descent.  The proved reductions leave two concrete
+The remaining proof obligation is to eliminate a minimum counterexample
+in the packet-one range above, while preserving the original host or a
+proved successor class. The earlier exact-six reductions leave two concrete
 forms:
 
 1. a rooted four-bag model whose two support branch sets contain essential
