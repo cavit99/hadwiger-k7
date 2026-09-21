@@ -32,6 +32,14 @@ are unchanged. The manuscript proves internal five-connectivity before
 analysing contraction obstructions, simplifying that step; its separate
 audit checks this reordering as well as the full conversion.
 
+The critical-graph density reduction was also obtained independently in
+earlier repository work: the [29 July neighbourhood classification](https://github.com/cavit99/hadwiger-k7/blob/c3acf6216ce59a397721ffdc89d11e9c20031ba5/results/hc7_k7minus_degree7_clique_incidence.md)
+and [1 August clique-uniqueness and density theorems](https://github.com/cavit99/hadwiger-k7/blob/2f78c8b46afc4ace5e7148f1e1d1f61314573689/results/hc7_k7minus_two_literal_k5_exclusion.md).
+Together with Mader's seven-connectivity theorem, these give the conclusion
+of Dvořák–Norin–Rahman Theorem 1.6, which the manuscript cites. The distinct
+rooted-density and separation tools from their Sections 2–5 remain external
+inputs. The Git dates do not establish those authors' discovery dates.
+
 ## Finite verification
 
 From the repository root:

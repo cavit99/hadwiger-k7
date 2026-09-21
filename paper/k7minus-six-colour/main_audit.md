@@ -17,13 +17,13 @@ The audited manuscript is the following frozen source and its compiled
 
 | File | SHA-256 |
 |---|---|
-| [main.tex](main.tex) | `46b6536ec3ba450b85823abefc5d904e2fe0e9d066176b098b6df16b276911c6` |
+| [main.tex](main.tex) | `647f2de4e6a1c9454d0007fb7430f34ae62287d9de564047f2885d0218d42d37` |
 | [preliminaries.tex](preliminaries.tex) | `2c0901be8ce7b215e2975532be13c13e76cff675fe21cb28cacd0abecfbb3013` |
 | [rooted.tex](rooted.tex) | `d76f410bfa9ab159daf1fcd585e1796d52c279070df42bbb40168fb35e4adbef` |
-| [global.tex](global.tex) | `f46116a341e9415bbfcc9134b473598e69d0da44ca7e33ff4cd06030ea2b6a12` |
+| [global.tex](global.tex) | `95ccbc9052eeecec898be729cd1435b01adb6f24122053887c212ee6fcf13cef` |
 | [finite.tex](finite.tex) | `8917dba9aecb046eed6ac3b508837a9cdcc0d6800f012cf48b85837bb377c4f4` |
-| [references.bib](references.bib) | `cc2ef60233fb4fc6f7b0f1305d1e77e57a1aca2d392b7b880f8b07907f5ad51c` |
-| [main.pdf](main.pdf) | `a5be72d5b615de75904f6a026b352197bcd088262d2d04a928e21ebfe38e8b2d` |
+| [references.bib](references.bib) | `ded089d41254ede7b13c9dee176b7a9d032f1ee95e88ae9e48524c40381f3336` |
+| [main.pdf](main.pdf) | `4caea8db35d65724e46550c720578b6f20dfbd36f61cbd32a92ae72e77f2988a` |
 | [Finite verifier](../../active/hc7_k7minus_degree7_quotient_verify.py) | `ac0c37438d802930a0aa80bfd1d6491101da3df9a55fac1e1cf3db5ae1b7e445` |
 
 The following underlying proofs were inspected when reconstructing the
@@ -130,17 +130,21 @@ beyond the stated external theorems and finite computation were found.
 
 **Verdict: GREEN for the editorial change.** A reviewer separate from the
 editor compared the frozen sources with Git base
-`7a1b98ce04a663cc7f01d46752608a0b65c94ecd`, which preserves the
-previous full conversion and editorial reviews and their artifact hashes.
-The sole change replaces the AI disclosure with the exact two sentences
-approved by the author. Reverting that paragraph reproduces `main.tex`
-byte for byte; every other TeX input, bibliography and finite verifier is
-unchanged. The mathematical scope, hypotheses, proofs and attributions
-therefore retain the preceding review's verdict. No new mathematical or
-external-review claim is made, and no unchanged finite check was repeated.
+`373ec9d9272223063bb9df401aea80c9efb50890`. The introduction and an
+immutable historical citation now recognise the repository's independent
+critical-graph density reduction. The reviewer inspected the dated July
+and August proofs: vertex deletion gives chromatic number seven, Mader
+gives seven-connectivity, and Corollary 3 at revision `2f78c8b` gives
+the density required by DNR Theorem 1.6. These Git records do not establish
+the other authors' discovery dates or historical firstness.
 
-The reviewer independently checked the source and PDF hashes above. The
-editor reports a warning-free build, byte-identical renders for pages
-1–15 against the previously reviewed PDF, and a clean visual inspection
-of the changed page 16. This rendering check is the editor's report; the
-present additional review is limited to the source diff and artifact pins.
+The final colouring proof retains DNR Theorem 1.6 as its cited formulation.
+The distinct rooted-density and separation inputs remain attributed to
+DNR. No theorem, mathematical argument, finite input or verification code
+changed, so the preceding mathematical verdict remains applicable; no
+unchanged finite check was repeated. The reviewer independently checked
+the source and PDF hashes above. The editor reports a warning-free
+16-page build, byte-identical renders of the unchanged pages and a clean
+visual inspection of the changed pages 1, 5, 9, 15 and 16. Those rendering
+checks are the editor's report; this additional review covers the source
+diff, historical statements and artifact pins.

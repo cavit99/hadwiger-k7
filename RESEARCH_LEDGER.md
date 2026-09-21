@@ -59,7 +59,11 @@ preimages. No quotient inherits chromatic criticality.
 
 Dvořák–Norin–Rahman [Theorem 1.6](https://arxiv.org/html/2609.17760v1#S1)
 puts a hypothetical minor-minimal non-six-colourable `K7^-`-minor-free graph
-inside this extremal class. Their Theorem 1.1 proves C19, not C21;
+inside this extremal class. That critical-graph reduction was also obtained
+independently in the repository by 1 August 2026; the
+[dated proofs](paper/k7minus-six-colour/README.md#source-map-and-provenance)
+give the same conclusion together with Mader's connectivity theorem.
+Their Theorem 1.1 proves C19, not C21;
 the new result also proves their stated Conjecture 1.5. Their small-root,
 reducible-fragment and rooted-density machinery are explicit external
 inputs. The final degree-seven reduction uses all 232 certified nine-vertex

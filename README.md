@@ -33,7 +33,7 @@ The principal manuscript, by Cavit Erginsoy, gives a proof of the following:
 This covers fewer graphs than the full conjecture: a graph may contain a
 $K_7^-$ minor without containing a $K_7$ minor.
 
-The proof builds on the rooted-minor and colouring work of
+The proof uses rooted-minor and separation tools of
 [Dvořák, Norin and Rahman](https://arxiv.org/abs/2609.17760v1).
 It develops new minor constructions and an edge-count theorem, applying to
 graphs of arbitrary size. One step uses a computer-checked lemma covering
