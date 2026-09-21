@@ -18,6 +18,10 @@ assessment concerns the completed implication chain, not the number of
 lemmas or favourable audits. It relies on cited external results, notably
 Dvořák–Norin–Rahman; their contribution is not claimed as ours. HC7 itself
 remains open, and the proof still needs external mathematical scrutiny.
+The fresh manuscript comparison confirms this assessment of mathematical
+scope, conditional on correctness: the colouring conclusion strengthens
+both NT and DNR. Their extremal theorems have different thresholds and
+connectivity assumptions and are not uniformly subsumed by ours.
 
 ## Three-level frontier
 
@@ -54,7 +58,7 @@ lexicographic pair `(order, size)` and lifts through disjoint connected
 preimages. No quotient inherits chromatic criticality.
 
 Dvořák–Norin–Rahman [Theorem 1.6](https://arxiv.org/html/2609.17760v1#S1)
-puts a hypothetical minor-minimal non-six-colourable `K7^-`-free graph
+puts a hypothetical minor-minimal non-six-colourable `K7^-`-minor-free graph
 inside this extremal class. Their Theorem 1.1 proves C19, not C21;
 the new result also proves their stated Conjecture 1.5. Their small-root,
 reducible-fragment and rooted-density machinery are explicit external
@@ -176,60 +180,37 @@ inputs, and the 232-case finite lemma. It preserves the audited theorem
 scopes and explicitly distinguishes C21 from HC7. External review and
 historical priority remain outstanding.
 
-The [manuscript map](paper/README.md) also retains the following three
-earlier drafts, revised on 13 September 2026, preserved precursors and
-further theorem packages. Assembling the new draft does not itself add
-a mathematical result to the audited C21 proof package.
+**Fresh collection assessment, 21 September 2026:** retain three current
+papers: C21 as the principal contribution, the seven-page
+[bipartite proof/repair](paper/bipartite-contractibility/main.pdf), and the
+six-page [paired-region theorem](paper/paired-clique-regions/main.pdf).
+The latter two remain mathematically independent of C21. The bipartite
+paper is a substantial specialist contribution, with a sharp radius-two
+refinement; the paired-region criterion is a useful specialist theorem
+for arbitrary terminal-set size. Neither has demonstrated NT-comparable
+colouring reach. Their existing audits and qualified priority assessments
+remain applicable to the exact revisions they identify.
 
-1. **Bipartite manuscript:** [A matroid proof of bipartite contractibility](paper/bipartite-contractibility/main.pdf),
-   with [source](paper/bipartite-contractibility/main.tex) and an updated
-   [separate GREEN internal audit](paper/bipartite-contractibility/main_audit.md).
-   The seven-page draft adds the sharp intrinsic-radius-two theorem for
-   paths of at most three edges, its invariant proof and six-vertex
-   sharpness example. It explicitly excludes the general BLR Lemma 3.13
-   depth assertion. The longer invariant obstruction remains outside the
-   paper. Its earlier [scope review](paper/bipartite-contractibility/citation_novelty_review.md)
-   retains its dated provenance; historical priority is still unresolved.
-2. **Paired-region manuscript:** [Paired clique minors from connected regions](paper/paired-clique-regions/main.pdf),
-   with [source](paper/paired-clique-regions/main.tex) and a
-   [separate GREEN internal audit](paper/paired-clique-regions/main_audit.md).
-   The six-page draft proves the one-sided theorem, derives the two-sided
-   linkage equivalence and includes the sharp region requirement and
-   polynomial construction. The [focused primary-source assessment](paper/paired-clique-regions/citation_novelty_review.md)
-   identifies the rainbow-clique-minor connection and finds no direct
-   subsumption by the inspected statements; originality and priority
-   remain unresolved.
-3. **Structural manuscript:** [Degree, defect and separators in critical graphs](paper/k7minus-low-degree/main.pdf),
-   with [source](paper/k7minus-low-degree/main.tex),
-   [manuscript audit](paper/k7minus-low-degree/main_audit.md), and
-   [dependencies and finite reproduction](paper/k7minus-low-degree/README.md).
-   The 17-page draft incorporates the computation-free bound `n_8>=26+tau` and incident
-   codegree-three conclusion; the broader theorem `9n-2m>=20+r` for
-   r-connected, `K_7^-`-minor-free graphs with `r>=6` and `m>=4n`, giving
-   `n_8>=27+tau`; and the computation-free two-component seven-cut closure.
-   The broader theorem explicitly depends on both the nine- and ten-vertex
-   quotient checks. Its abstract, proofs, bibliography and audit are revised
-   together. These remain necessary conditions, not a proof of Conjecture 21.
+The 17-page [structural draft](paper/k7minus-low-degree/main.pdf) is now
+**a preserved precursor**. C21 excludes its hypothetical critical host.
+The new five-connected `e>=4n-2` theorem also excludes its broader defect
+theorem's `r>=6, e>=4n` class. Minimum-degree-eight, no-`K5`, degree counts
+and the critical-host seven-cut conclusion are therefore not additional
+current advances beyond C21. Its [independent supporting lemmas](paper/k7minus-low-degree/README.md#surviving-independent-content)
+retain their exact scopes; some apply without a colouring or density
+hypothesis. The audited manuscript and provenance remain unchanged.
 
-The [even-subdivision](paper/even-subdivision-contractibility/README.md)
-and [K2,n](paper/k2n-contractibility/README.md) manuscripts are preserved
-unchanged as precursors, not separate current publication candidates.
-The original low-degree `25+tau` snapshot and its audit remain in Git
-at `f7b52aff0dfb2578bc30ade68f75df12671cf966`; its old verdict is not an
-audit of the strengthened manuscript. These three earlier PDFs have been
-rebuilt and visually checked; their audits identify exact source revisions.
-An academic language edit covers all three earlier manuscripts. The structural
-draft is shortened from 19 to 17 pages by consolidating intermediate results
-and contraction accounting, with finite-profile data retained in its
-reproducibility note. Its requested mathematical conclusions are unchanged.
+The five-page [even-subdivision](paper/even-subdivision-contractibility/README.md)
+and four-page [K2,n](paper/k2n-contractibility/README.md) papers also remain
+preserved precursors. Do not create replacement manuscripts merely to
+retain their number. The [collection map](paper/README.md) records the
+next limited editorial pass and version-specific length comparisons.
+Pending edits include clearer C21 proof motivation and attribution, and
+the missing author fields on the two specialist drafts; these require
+rebuilding and renewing the corresponding audit hashes.
 
-The wheel/colouring package is a preserved alternative, with its complete
-four-connected `K_6-2K_2` exclusion theorem and its own originality
-assessment still to be done. The attachment and canonical-test
-counterexamples are reserved for a separate possible note. The
-[collection map](paper/README.md#further-theorem-packages) links both packages.
-No external specialist review, publication priority or NT-equivalence is
-established by these manuscript revisions.
+The wheel/colouring and attachment-counterexample packages remain parked;
+no new manuscript or significance claim follows from this reclassification.
 
 ## Preserved conditional routes and historical check
 
@@ -252,13 +233,18 @@ exchange. C21 is now proved by the separate rooted-density chain above;
 our former C19 construction remains incomplete.
 
 The [exceptional-centre programme](active/hc7_k7minus_seven_exceptional_frontier.md)
-retains `n_8>=27+tau`, where `tau=sum_(i>=10)(i-9)n_i`; an upper bound
-`n_8<=26` in the same critical host would prove Conjecture 21. Colouring
-and branch-model compatibility remain unresolved. The
-[six-connected density programme](active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
-is superseded by the stronger global theorem. Its proposed local rooted
-inequalities do not become proved merely because the global target closes.
-Other earlier routes retain their conditional or frozen status.
+and [six-connected density programme](active/hc7_k7minus_sixconnected_4n_sparse_threecut_frontier.md)
+are superseded by the global theorem. Their local model and colouring
+mechanisms remain historical nonclosures; a global conclusion does not
+prove those stronger local assertions. Their old restrictions cannot be
+imported into an HC7 counterexample, which may contain `K7^-`.
+
+After scrutiny of the C21 proof, the next discovery focus is an actual
+minor-minimal non-six-colourable `K7`-minor-free host, retaining its proper-minor
+six-colourings alongside a changeable `K7^-` model. The required model
+completion or colouring lift is unproved. The [technical frontier](active/hc7_c21_rooted_density_construction.md#4-what-remains-towards-hc7)
+keeps the density-only barriers and valid surviving inputs beside that
+obligation. This is no claim of a small residual gap or a success probability.
 
 The [chronology review](archive/research_chronology_review_2026-09-04.md)
 was checked against initial commit `a14eb38`, fortnightly snapshots

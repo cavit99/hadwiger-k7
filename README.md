@@ -78,7 +78,7 @@ links their proofs, audits and exact scopes.
 | [Regions full to one terminal set force a paired clique](results/paired_clique_one_sided_regions.md) | Written proof with a separate internal audit, for arbitrary target size and host order. Exact linkage and region hypotheses are in the [results map](results/README.md); no Conjecture 19 consequence is established. |
 | [Five-root partial routing](results/llru_question61_via_km_property_star.md) | Written proof with a [GREEN audit](results/llru_question61_via_km_property_star_audit.md) and a [second GREEN cold audit](results/llru_question61_via_km_property_star_second_cold_audit.md).  It answers Lafferty--Liu--Rolek--Yu Question 6.1 and gives their stated `k>=11` connectivity consequence. |
 | [Four prescribed roots in a three-connected graph](results/rooted_k4minus_four_roots.md) | Elementary unbounded proof, with a [GREEN audit](results/rooted_k4minus_four_roots_audit.md), of a rooted `K_4^-` minor at any four distinct roots.  The missing quotient edge is not prescribed. |
-| [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Written unbounded host reduction with explicit finite quotient inputs and [two GREEN internal audits](results/hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md).  It upgrades the current critical-host count to `n_8>=27+tau`. |
+| [Degree-eight low-codegree and defect theorem](results/hc7_k7minus_sixconnected_degree_eight_low_codegree.md) | Audited unbounded host reduction with explicit finite inputs. The degree-eight local theorem remains independently applicable; the density-restricted defect theorem and its `n_8>=27+tau` critical-host consequence are superseded by C21 and its extremal theorem. |
 | [Three-component order-seven-cut exclusion](results/hc7_k7minus_three_component_seven_cut_exclusion.md) | Computation-free written proof with a [GREEN audit](results/hc7_k7minus_three_component_seven_cut_exclusion_audit.md).  In the critical `K_7^-` host, every seven-vertex cut therefore leaves exactly two components. |
 
 The earlier critical-host degree, defect and separator results retain their
@@ -95,9 +95,9 @@ The primary draft is
 [Every graph with no K7-minus minor is six-colourable](paper/k7minus-six-colour/main.pdf),
 with the complete C21 argument, supporting constructions and a
 [separate internal manuscript audit](paper/k7minus-six-colour/main_audit.md).
-The existing bipartite, paired-clique and structural papers are preserved.
-The earlier even-subdivision and K2,n arguments remain available as
-precursors. Current revision status is recorded in the
+The bipartite and paired-clique papers remain independent specialist drafts.
+The structural, even-subdivision and K2,n papers are preserved precursors.
+Current revision status is recorded in the
 [research ledger](RESEARCH_LEDGER.md#manuscript-status).
 
 ## Repository map

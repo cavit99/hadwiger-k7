@@ -1,6 +1,13 @@
 # Degree, defect and separators in critical graphs
 
-Current structural manuscript: [source](main.tex), [PDF](main.pdf),
+**Reclassified 21 September 2026: preserved precursor.** The new
+[C21 manuscript](../k7minus-six-colour/main.pdf), if correct, excludes the
+hypothetical critical host studied here. Its five-connected `e>=4n-2`
+theorem also excludes the broader defect theorem's `r>=6, e>=4n` class.
+Those headline conclusions therefore no longer support a separate current
+paper. The audited TeX, PDF and reviews are preserved unchanged.
+
+Preserved structural manuscript: [source](main.tex), [PDF](main.pdf),
 [separate internal manuscript audit](main_audit.md), and
 [citation and originality scope](citation_novelty_review.md).
 The status and hashes in the manuscript audit govern the exact revision it
@@ -10,6 +17,21 @@ This is a paper about necessary conditions for a hypothetical counterexample
 to Norin–Totschnig Conjecture 21. It does not prove that conjecture, Hadwiger's
 conjecture for `t=7`, or a theorem established as comparable in significance
 to Norin–Totschnig. Originality and publication priority remain unestablished.
+
+## Surviving independent content
+
+The uniform linked-clique theorem, fifth-root placement and exact boundary
+colouring reflection retain their stated hypotheses. The six-connected
+`K4`-neighbourhood closure at degree `d` uses `e>=4n+d-13`; for
+`6<=d<=10` it reaches sparser graphs than the new `4n-2` theorem.
+The degree-eight low-codegree theorem needs no global density or colouring
+assumption. The [three-component `3,2,2` seven-cut colouring theorem](../../results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+needs no excluded-minor hypothesis and may still apply to HC7.
+
+These remain a library of lemmas, not an automatically justified replacement
+paper. Their originality and further applications need separate assessment.
+The old critical-host minimum-degree-eight, no-`K5` and defect conclusions
+cannot be imported into a `K7`-minor-free host: such a host may contain `K7^-`.
 
 ## Contents and proof dependencies
 

@@ -49,29 +49,29 @@ explicit scheme has no fully rooted minor. The bipartite theorem is unaffected.
 These results are preserved inputs and earlier checkpoints; the complete
 C21 theorem above excludes the hypothetical critical host.
 
-The compact [low-degree manuscript](../paper/k7minus-low-degree/main.pdf)
-packages the computation-free baseline: degree seven is excluded,
-`delta(G)>=8`, `|E(G)|>=4|V(G)|`, there is no `K_5` subgraph, and
-`n_8>=25+tau`.  It is a DRAFT with a
-[GREEN internal audit](../paper/k7minus-low-degree/main_audit.md).
-
-Later theorem notes strengthen and extend that snapshot:
+The [structural manuscript](../paper/k7minus-low-degree/main.pdf) is now
+a preserved precursor, with its [audit](../paper/k7minus-low-degree/main_audit.md)
+unchanged. Its critical-host and density-restricted defect hypotheses
+describe empty classes under the new theorems. Its
+[independent supporting lemmas](../paper/k7minus-low-degree/README.md#surviving-independent-content)
+retain their separate scopes.
 
 | Theorem | Proof and audit | Consequence |
 |---|---|---|
 | A low-codegree edge at every degree-eight vertex in a six-connected target-free graph | [Proof](hc7_k7minus_sixconnected_degree_eight_low_codegree.md) · [two GREEN internal audits](hc7_k7minus_sixconnected_degree_eight_low_codegree_audit.md) | Uses a deterministic finite local lemma and an unbounded host reduction; proves the defect ladder `D(G)>=20+kappa(G)` and upgrades the critical-host count to `n_8>=27+tau`. |
 | Capacity of a seven-vertex cut in the critical host | [Proof](hc7_k7minus_critical_seven_cut_capacity.md) · [GREEN audit](hc7_k7minus_critical_seven_cut_capacity_audit.md) | Leaves two or three components and sharply constrains their boundary-full connected subgraphs and boundary colouring. |
-| Exclusion of the remaining three-component `3,2,2` cut | [Proof](hc7_k7minus_three_component_seven_cut_exclusion.md) · [GREEN audit](hc7_k7minus_three_component_seven_cut_exclusion_audit.md) | Computation-free; together with the capacity theorem, every seven-vertex cut in the critical host leaves exactly two components. |
+| Three-component `3,2,2` seven-cut colouring | [Proof](hc7_k7minus_three_component_seven_cut_exclusion.md) · [GREEN audit](hc7_k7minus_three_component_seven_cut_exclusion_audit.md) | Seven-connectivity, proper-minor six-colourability and the stated boundary partition suffice; no excluded-minor hypothesis. Its old C21 critical-host consequence is superseded. |
 | Safe literal-core contractions in the critical host | [First safe edge](hc7_k44_critical_safe_contraction.md) · [preservation refinement](hc7_k44_safe_contraction_preservation.md) · [GREEN audit](hc7_k44_safe_contraction_preservation_audit.md) | The first safe quotient is seven-connected. Exterior order at least eight gives a second safe contraction preserving seven-connectivity. No unbounded induction or literal T44 closure follows. |
 
-These are necessary structural theorems about a hypothetical counterexample.
-They do not prove the `K_7^-` six-colour conjecture or `HC_7`.
+The C21 critical-host consequences are historical, not further restrictions
+on an HC7 counterexample. Only independently stated hypotheses may be reused.
 
 The [five-root density application](hc7_five_root_density_sixcut.md), with
 its [GREEN audit](hc7_five_root_density_sixcut_audit.md), closes every
 three-component six-cut with four, five or six boundary edges in the
 six-connected `4n` target. This uses the external five-root universality
-theorem; the other sparse boundary cases and the two-component case remain.
+theorem. The remaining cases in that former programme are now subsumed
+by the global density theorem; their stronger local assertions do not follow.
 The [triangle-boundary construction](hc7_c21_triangle_boundary_sixcut.md),
 with its [audit](hc7_c21_triangle_boundary_sixcut_audit.md), also closes the
 three-edge triangle case for arbitrary component orders.

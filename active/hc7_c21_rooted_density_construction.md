@@ -91,3 +91,13 @@ a [separate internal audit](../paper/k7minus-six-colour/main_audit.md).
 External review and historical priority remain outstanding. No author
 contact has been authorised, and no particular HC7 construction follows
 automatically from this theorem.
+
+The next discovery focus is the actual minor-minimal non-six-colourable
+`K7`-minor-free host: combine its proper-minor six-colourings with a changeable
+`K7^-` model to obtain a `K7` model or a valid colouring lift. This is an
+HC7-level construction obligation, not a proved reduction to a small local
+case. The density-only and all-eleven-contact barriers above remain in force.
+The old `K7^-`-minor-free critical-host degree, clique and defect restrictions
+cannot be transferred to this larger class. The separate `3,2,2`
+[seven-cut colouring theorem](../results/hc7_k7minus_three_component_seven_cut_exclusion.md)
+can be reused only when its actual connectivity and boundary hypotheses hold.
