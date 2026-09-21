@@ -1,0 +1,47 @@
+\section{The finite degree-seven lemma}\label{sec:finite}
+
+\begin{lemma}\label{lem:quotient}
+Let $R$ be a graph on seven vertices with minimum degree at least four.
+Add a vertex $v$ adjacent to every vertex of $R$, and another vertex
+$c$ adjacent to at least six vertices of $R$. No edge $vc$ is required.
+The resulting graph contains a $K_7^{-}$ minor.
+\end{lemma}
+
+This lemma is computer-assisted. Its verification concerns only
+nine-vertex graphs; the global proof supplies the reduction from hosts
+of arbitrary order. We describe the enumeration and the certificates
+so that the scope of the computation is explicit.
+
+The complement $F$ of $R$ has maximum degree at most two. Each component
+of $F$ is therefore a path, an isolated vertex, or a cycle of length at
+least three. Enumerating multisets of these components with total order
+seven gives $29$ isomorphism types. For each type, the verifier tests all
+eight possibilities for $c$: it meets every vertex of $R$, or misses
+one specified vertex. Thus there are $29\cdot8=232$ cases. Extra edges,
+including $vc$, can be discarded.
+
+For each case, the program searches for seven bags among the nine
+vertices. It enumerates every partition of a subset of order seven,
+eight or nine into seven nonempty blocks. There are respectively
+$36$, $252$ and $462$ such partitions. A certificate records the bags
+as vertex bitmasks. The verifier checks that they are disjoint and
+nonempty, that every bag is connected, and that at most one of the
+$21$ pairs of bags lacks an edge. These checks certify a $K_7^{-}$
+minor directly; no minor-testing library is used.
+
+All $232$ cases pass. The returned models use seven vertices in
+$67$ cases, eight in $102$ cases and nine in $63$ cases. The program
+also checks a literal $K_7^{-}$ as a positive example and a padded
+$K_6$ and $K_{2,2,2,2}$ as negative examples. It validates each returned
+certificate after the search; this validation reuses the connectivity
+and contact predicates and is not an independently implemented checker.
+
+The complete standard-library Python program is preserved at a fixed
+revision in the accompanying repository:
+\begin{center}
+\href{https://github.com/cavit99/hadwiger-k7/blob/320ea3275197f3b5124b38fb26af24bb05754d57/active/hc7_k7minus_degree7_quotient_verify.py}
+{\texttt{hc7\_k7minus\_degree7\_quotient\_verify.py}}.
+\end{center}
+Run it with \texttt{uv run python3} from a checkout of that revision.
+The manuscript's accompanying README records the source hash, expected
+output and certificate digest.

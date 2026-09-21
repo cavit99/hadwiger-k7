@@ -28,8 +28,9 @@ remains open, and the proof still needs external mathematical scrutiny.
 2. **Completed refinement:** every finite `K7^-`-minor-free graph is
    six-colourable (C21). Its stronger extremal input forces `K7^-` in every
    4-bilight graph on `n>=3` vertices with `e>=4n-2`.
-3. **Immediate work:** consolidate the proof and its exact external and
-   computational dependencies for independent expert review. The
+3. **Immediate work:** independent expert review of the assembled
+   [C21 manuscript](paper/k7minus-six-colour/main.pdf), with its exact
+   external and computational dependencies. The
    [technical account](active/hc7_c21_rooted_density_construction.md)
    records the closed construction and the remaining HC7 boundary. No
    further discovery route is presumed to follow automatically from C21.
@@ -165,16 +166,22 @@ critical-host results. It is navigation, not a second status ledger.
 
 ## Manuscript status
 
-**New priority, 21 September 2026:** turn the audited C21 proof package into
-a concise, independently reviewable manuscript. The existing PDFs below
-are preserved; none contains the new complete C21 proof.
+**Primary draft, 21 September 2026:**
+[Every graph with no K7-minus minor is six-colourable](paper/k7minus-six-colour/main.pdf),
+by Cavit Erginsoy, with [source](paper/k7minus-six-colour/main.tex),
+[separate internal manuscript audit](paper/k7minus-six-colour/main_audit.md)
+and [build and verification instructions](paper/k7minus-six-colour/README.md).
+The 16-page draft includes the supporting constructions, exact external
+inputs, and the 232-case finite lemma. It preserves the audited theorem
+scopes and explicitly distinguishes C21 from HC7. External review and
+historical priority remain outstanding.
 
-**Collection revised, 13 September 2026.** The
-[manuscript map](paper/README.md) separates three current drafts in editorial
-order, preserved precursors and further theorem packages. This packages
-existing proved work; it does not advance the global completion claim.
+The [manuscript map](paper/README.md) also retains the following three
+earlier drafts, revised on 13 September 2026, preserved precursors and
+further theorem packages. Assembling the new draft does not itself add
+a mathematical result to the audited C21 proof package.
 
-1. **Primary manuscript:** [A matroid proof of bipartite contractibility](paper/bipartite-contractibility/main.pdf),
+1. **Bipartite manuscript:** [A matroid proof of bipartite contractibility](paper/bipartite-contractibility/main.pdf),
    with [source](paper/bipartite-contractibility/main.tex) and an updated
    [separate GREEN internal audit](paper/bipartite-contractibility/main_audit.md).
    The seven-page draft adds the sharp intrinsic-radius-two theorem for
@@ -183,7 +190,7 @@ existing proved work; it does not advance the global completion claim.
    depth assertion. The longer invariant obstruction remains outside the
    paper. Its earlier [scope review](paper/bipartite-contractibility/citation_novelty_review.md)
    retains its dated provenance; historical priority is still unresolved.
-2. **Selected next standalone package:** [Paired clique minors from connected regions](paper/paired-clique-regions/main.pdf),
+2. **Paired-region manuscript:** [Paired clique minors from connected regions](paper/paired-clique-regions/main.pdf),
    with [source](paper/paired-clique-regions/main.tex) and a
    [separate GREEN internal audit](paper/paired-clique-regions/main_audit.md).
    The six-page draft proves the one-sided theorem, derives the two-sided
@@ -209,9 +216,9 @@ and [K2,n](paper/k2n-contractibility/README.md) manuscripts are preserved
 unchanged as precursors, not separate current publication candidates.
 The original low-degree `25+tau` snapshot and its audit remain in Git
 at `f7b52aff0dfb2578bc30ade68f75df12671cf966`; its old verdict is not an
-audit of the strengthened manuscript. All three current PDFs have been
+audit of the strengthened manuscript. These three earlier PDFs have been
 rebuilt and visually checked; their audits identify exact source revisions.
-An academic language edit covers all three current manuscripts. The structural
+An academic language edit covers all three earlier manuscripts. The structural
 draft is shortened from 19 to 17 pages by consolidating intermediate results
 and contraction accounting, with finite-profile data retained in its
 reproducibility note. Its requested mathematical conclusions are unchanged.

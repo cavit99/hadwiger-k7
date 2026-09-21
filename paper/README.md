@@ -6,27 +6,30 @@ the [results map](../results/README.md) covers the larger proof library.
 All manuscripts are drafts. Internal audits establish neither external
 acceptance nor publication priority.
 
-The immediate editorial priority is the new
-[complete C21 proof package](../results/hc7_k7minus_bilight_extremal.md),
-with [two](../results/hc7_k7minus_bilight_extremal_audit.md)
-[internal audits](../results/hc7_k7minus_bilight_extremal_second_audit.md).
-It has not yet been assembled into a manuscript PDF. The existing papers
-below retain their original scopes.
+The primary draft is
+[Every graph with no K7-minus minor is six-colourable](k7minus-six-colour/main.pdf),
+by Cavit Erginsoy, with [source](k7minus-six-colour/main.tex),
+[separate manuscript audit](k7minus-six-colour/main_audit.md) and
+[build and verification instructions](k7minus-six-colour/README.md).
+Its 16 pages contain the complete C21 proof, supporting constructions,
+explicit external inputs and the finite nine-vertex lemma. The
+[original proof package](../results/hc7_k7minus_bilight_extremal.md)
+and its two internal audits remain unchanged.
 
-## Existing manuscript collection
+## Earlier manuscript collection
 
 | Manuscript | Contents | Review and supporting material |
 |---|---|---|
 | **1. [A matroid proof of bipartite contractibility](bipartite-contractibility/main.pdf)** · [source](bipartite-contractibility/main.tex) | Universal fully rooted bipartite contractibility; sharp intrinsic radius two for scheme paths of at most three edges; precise flow corollary. | [Manuscript audit](bipartite-contractibility/main_audit.md) · [scope review](bipartite-contractibility/citation_novelty_review.md). The scope review records the earlier revision; the new manuscript audit covers the radius addition. |
-| **2. [Paired clique minors from connected regions](paired-clique-regions/main.pdf)** · [source](paired-clique-regions/main.tex) | Arbitrary terminal-set size; one-sided theorem; two-sided linkage equivalence; sharp region requirement and polynomial construction. Selected as the next standalone package. | [Manuscript audit](paired-clique-regions/main_audit.md) · [focused originality assessment](paired-clique-regions/citation_novelty_review.md). |
+| **2. [Paired clique minors from connected regions](paired-clique-regions/main.pdf)** · [source](paired-clique-regions/main.tex) | Arbitrary terminal-set size; one-sided theorem; two-sided linkage equivalence; sharp region requirement and polynomial construction. | [Manuscript audit](paired-clique-regions/main_audit.md) · [focused originality assessment](paired-clique-regions/citation_novelty_review.md). |
 | **3. [Degree, defect and separators in K7-minus-minor-free critical graphs](k7minus-low-degree/main.pdf)** · [source](k7minus-low-degree/main.tex) | Necessary critical-host conditions: computation-free 26+tau, broader connectivity–defect theorem giving 27+tau with explicit finite inputs, and computation-free two-component seven-cut closure. | [Manuscript audit](k7minus-low-degree/main_audit.md) · [dependencies and finite verification](k7minus-low-degree/README.md) · [citation review](k7minus-low-degree/citation_novelty_review.md). |
 
 Here `tau=sum_{i>=10}(i-9)n_i` and `n_i` counts degree-i vertices; the
 bounds are on `n_8`. The radius refinement does not prove BLR's general
 depth assertion, Lemma 3.13. The structural paper does not prove
 Norin–Totschnig Conjecture 21. None of these manuscripts establishes
-`HC_7`; the ledger's new benchmark assessment concerns the separate C21
-proof package, not these earlier manuscripts.
+`HC_7`; the ledger's new benchmark assessment concerns the C21 theorem
+and manuscript, not these earlier papers.
 
 ## Preserved precursors
 

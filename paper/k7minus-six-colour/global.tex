@@ -1,0 +1,541 @@
+\section{Orienting the separations}
+\label{sec:global-orientations}
+
+Suppose that Theorem~\ref{thm:bilight} is false, and choose a
+counterexample $G$ minimising $(v(G),e(G))$ lexicographically. Thus $G$
+is $4$-bilight, has at least three vertices and $\rho(G)\geq-2$, and
+has no $\Kminus$ minor. Simplicity gives $v(G)\geq9$. Throughout the
+next two sections, $G$ denotes this minimum counterexample.
+Every use of minimality will preserve $4$-bilightness, the density
+bound and the lower bound of three on the order. Models in a minor
+lift by replacing each contracted vertex with its fixed connected
+preimage.
+
+For a fragment $A$, write $R_A$ for $G[A\cup N_G(A)]$ rooted at
+$N_G(A)$. We call a five-rooted side \emph{heavy} if its rooted
+density is at least two, and \emph{low} if its density is at most one.
+For a separation $(A,B)$, write $R_{A,B}=G[B]$, rooted at $A\cap B$.
+
+\begin{lemma}\label{gl:reducible}
+The graph $G$ has no reducible fragment.
+\end{lemma}
+
+\begin{proof}
+Replace an inclusion-maximal reducible fragment by its boundary-rooted
+clique or dart. By Lemma~\ref{lem:reduction}, the resulting graph is
+a minor, is $4$-bilight and has density at least $\rho(G)$. The
+definition of reducibility leaves at least three vertices outside the
+fragment. The replacement strictly decreases the order: a clique
+removes every interior vertex, and a dart retains one when there were
+at least two. This contradicts minimality.
+\end{proof}
+
+The next lemma adapts the separation argument of
+\cite[Section~5]{DNR2026}. We give the details because the threshold
+two and the final $\Kminus$ model are important here.
+
+\begin{lemma}\label{gl:orientations}
+The following assertions hold.
+\begin{enumerate}
+\item If one side of a five-separation is heavy, the opposite side
+is $4$-light.
+\item For every five-separation with boundary $X$, exactly one side
+is heavy. If $m=10-e(G[X])$, the heavy side has density at least $m+7$.
+\item There is no bifragment $(S,T)$ with both boundaries of order
+at most five, both densities positive, and every member with boundary
+of order five heavy.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We first record the small-separation step. Suppose $(C,D)$ has order
+at most four, $R_{C,D}$ is $4$-light and has nonpositive density, and
+\[
+ |(C\setminus D)\cup N_G(C\setminus D)|\geq3.
+\]
+There cannot be a five-separation $(A,B)$ with $B\subseteq D$ and
+$R_{A,B}$ both $4$-light and heavy. To see this, remove from $C\cap D$
+the vertices with no neighbour in $C\setminus D$, obtaining $C'$.
+The rooted graph $H=R_{C',D}$ remains $4$-light and of nonpositive
+density. This is the root-forgetting observation
+\cite[Observation~5.2]{DNR2026}: if a root set of order at most four
+is reduced, each forgotten root contributes at most four incident
+edges outside a given old fragment, offset by its density cost four.
+The roots of $H$ lie in $A$, so $(A\cap D,B)$ is a root separation
+of $H$ with right side $R_{A,B}$. Theorem~\ref{thm:helper} gives the
+helper model there. It contains one of the rooted graphs allowed in
+Lemma~\ref{lem:extraction}; that lemma supplies a reducible fragment
+of $H$. This is also reducible in $G$, since at least $|C'|\geq3$
+vertices remain outside it. Lemma~\ref{gl:reducible} excludes it.
+
+For (1), suppose that the side opposite a heavy side $R_{A,B}$ is
+not $4$-light. It contains a positive fragment $L\subseteq A\setminus B$
+with at most four neighbours. Bilightness makes $R_{A,B}$ $4$-light,
+since a positive small-boundary fragment inside $B\setminus A$
+would form a dense bifragment with $L$. Set
+\[
+ (C,D)=(L\cup N_G(L),\,V(G)\setminus L).
+\]
+The side $R_{C,D}$ is $4$-light and has nonpositive density: otherwise
+its whole interior, or a positive small-boundary fragment inside it,
+would again pair with $L$. Also $|L\cup N_G(L)|\geq6$, since $L$
+has positive density. Now $B\subseteq D$, contradicting the preceding
+small-separation step.
+
+Let $a\geq b$ be the two densities at a five-separation with boundary
+$X$. Then
+\begin{equation}\label{gl:density-sum}
+ a+b=\rho(G)+20-e(G[X])\geq m+8.
+\end{equation}
+In particular, $a\geq\lceil(m+8)/2\rceil$. If $b\geq2$, (1) makes
+both sides $4$-light. The rooted clique bound
+(Corollary~\ref{thm:rooted-clique}) applies to the side of density $a$;
+Theorem~\ref{thm:helper} applies to the other. Join matching root bags
+at their common root. The five joined bags form a clique; the two
+helper bags stay in the second open side and retain at least ten of
+their eleven possible contacts. This is a $\Kminus$ model. Thus
+$b\leq1$, and \eqref{gl:density-sum} gives $a\geq m+7$, proving (2).
+
+For (3), first consider two heavy five-fragments $S,T$ forming a
+bifragment. By (1), both $R_S$ and $R_T$ are $4$-light. We claim that
+their closed sides can be joined by five disjoint paths. Otherwise
+Menger's theorem gives a separation $(C,D)$ of order at most four
+containing $S\cup N_G(S)$ in $C$ and $T\cup N_G(T)$ in $D$.
+Here $|C\setminus D|\geq3$, since $|S|\geq2$.
+
+We verify that $R_{C,D}$ is $4$-light and has nonpositive density.
+Discard from its root set the vertices with no neighbour in
+$D\setminus C$, leaving a separation $(C,D')$. No vertex of $S$
+can lie in $C\cap D'$, since all neighbours of $S$ lie in $C$.
+Consequently $R_{C,D'}$ is a root side of order at most four in the
+side opposite $R_S$. By (1) it has nonpositive density, equal to
+that of $R_{C,D}$. Applying the same argument to every root side of
+$R_{C,D}$ proves its $4$-lightness. The small-separation step, now
+applied to $R_T$, gives a contradiction. The five paths therefore exist.
+
+Trim these paths so that they run between $N_G(S)$ and $N_G(T)$,
+with interiors outside both closed sides. The ends are distinct on
+each five-element boundary; a shared boundary vertex uses a trivial
+path. Apply the helper theorem in $R_S$ and the rooted clique bound
+in $R_T$, using (2). Join corresponding root bags along these paths.
+Their interiors are disjoint and assigned to their own joined bag,
+so all bags remain disjoint and connected. Again they give $\Kminus$.
+This excludes two heavy five-fragments. A heavy five-fragment and a
+positive fragment of boundary at most four contradict (1). Two
+positive fragments of boundary at most four contradict bilightness.
+\end{proof}
+
+\begin{lemma}\label{gl:exact-density}
+We have $e(G)=4v(G)-2$.
+\end{lemma}
+
+\begin{proof}
+If $\rho(G)\geq-1$, delete an edge $uv$ to obtain $J$. Minimality
+forces a dense bifragment $(S,T)$ in $J$, with both boundaries of
+order at most four. Unless this already violates bilightness in $G$,
+we may label the ends so that $u\in S$ and
+$v\notin S\cup N_J(S)$. If $v\in T$, choose the labels also so that
+$|N_G(S)|\geq|N_G(T)|$. Then $|N_G(S)|\leq5$ and
+$\rho_G(S)=\rho_J(S)+1\geq2$, so $|S|\geq2$.
+
+Put $S'=S\setminus\{u\}$. We have
+\[
+ N_G(S')\subseteq(N_G(S)\setminus\{v\})\cup\{u\},\qquad
+ \rho_G(S')=\rho_G(S)+4-e_G(\{u\},N_G(S)).
+\]
+The pair $(S',T)$ is nonadjacent in $G$. If $|N_G(S)|\leq4$, both
+members have boundary at most four and positive density, a
+contradiction. Otherwise Lemma~\ref{gl:orientations}(2) gives
+$\rho_G(S)\geq7$, hence $\rho_G(S')\geq6$. The density of $T$ is
+positive, and at least two if its boundary grows to order five.
+Lemma~\ref{gl:orientations}(3) again gives a contradiction.
+\end{proof}
+
+\section{Degree bounds and five-vertex cuts}
+\label{sec:global-cuts}
+
+\begin{lemma}\label{gl:five-connected}
+The graph $G$ has minimum degree at least five and is five-connected.
+\end{lemma}
+
+\begin{proof}
+If $d_G(v)\leq4$, the smaller minor $J=G-v$ has density at least $-2$
+and at least eight vertices. Any dense bifragment in $J$ with
+boundaries of order at most four remains a bifragment in $G$. Its
+members remain positive; if a boundary grows to order five, the
+restored vertex adds at least one incident edge, so the density is
+at least two. Lemma~\ref{gl:orientations}(3) excludes such a pair.
+Thus $J$ is $4$-bilight, contrary to minimality.
+
+Suppose that $G$ has connectivity $k\leq4$, and let $S$ be a minimum
+cut, possibly empty. Each component of $G-S$ has neighbourhood $S$.
+By bilightness some component $A$ has nonpositive density. The side
+$R_A$ is internally $k$-connected, and its nonroots retain degree at
+least five. For $k\leq2$, its connected interior gives a rooted
+clique directly. For $k=3$, use Lemma~\ref{lem:triangle}; for $k=4$,
+use Lemma~\ref{lem:dart}. In the last case $|A|\geq2$, since the
+minimum degree is five. Another component together with $S$ has at
+least six vertices, again by the degree bound. Hence $A$ is reducible,
+contrary to Lemma~\ref{gl:reducible}.
+\end{proof}
+
+Write $t(xy)=|N_G(x)\cap N_G(y)|$ for an edge $xy$. Contracting it
+changes the global density by
+\begin{equation}\label{gl:contraction-density}
+ \rho(G/xy)=\rho(G)+3-t(xy).
+\end{equation}
+A quasi-five-connected graph is $4$-bilight: any member of a dense
+bifragment has boundary four and at least two vertices, and the
+other member supplies at least two vertices on the opposite side of
+that cut. Thus a quasi-five-connected contraction with $t(xy)\leq3$
+would contradict minimality.
+
+We will use one further observation repeatedly. In a five-connected
+graph, contraction of an edge gives a four-connected graph, and every
+four-cut contains the merged vertex. Consequently, in a dense
+bifragment of the contraction with boundaries of order at most four,
+the merged vertex belongs to both boundaries. Its open sets lift to
+positive five-fragments of the original graph, with both contracted
+ends in each boundary. Their densities do not decrease; they remain
+disjoint and nonadjacent. Each has at least two vertices, because a
+singleton of boundary four has density zero in the contraction.
+
+\begin{lemma}\label{gl:degree-six}
+The minimum degree of $G$ is at least six.
+\end{lemma}
+
+\begin{proof}
+Suppose that $d_G(v)=5$. If $N_G(v)$ is a clique, choose a component
+$C$ outside $N_G[v]$. Such a component exists because $v(G)\geq9$,
+and five-connectivity gives $N_G(C)=N_G(v)$. The five singleton
+neighbours, $\{v\}$ and $C$ form a $\Kminus$ model.
+
+Otherwise choose nonadjacent $a,b\in N_G(v)$ and set $J=G-v+ab$.
+This is a minor: contract $va$, then delete the new edges at $a$
+other than $ab$. It has density $-2$, so a dense bifragment $(Y,Z)$
+with boundaries of order at most four exists in $J$. For either
+member, say $Y$, put $k=e_G(\{v\},Y)$ and let $c$ be one if the
+added edge $ab$ has an end in $Y$, and zero otherwise. Then
+\begin{equation}\label{gl:split-density}
+ \rho_G(Y)=\rho_J(Y)+k-c.
+\end{equation}
+Since $c=1$ implies $k\geq1$, both sets remain positive in $G$;
+they are still disjoint and nonadjacent, and their boundaries have
+order at most five. Lemma~\ref{gl:orientations}(3) therefore lets
+us choose $Y$ with boundary five and $\rho_G(Y)=1$. Its boundary
+grows on restoring $v$, so $k\geq1$. Equation~\eqref{gl:split-density}
+forces $\rho_J(Y)=k=c=1$. Exchange $a,b$ if necessary: $a$ is the
+unique neighbour of $v$ in $Y$, and $b$ lies in the boundary of $Y$
+in both graphs. Hence $|Y|\geq2$. The opposite side of $Y$ in $G$
+contains $Z$, which has at least two vertices.
+
+If $|Y|\geq3$, Lemma~\ref{lem:quasi} makes $G/va$
+quasi-five-connected. As $ab$ is absent and $d_G(v)=5$, we have
+$t(va)\leq3$, a contradiction. We are left with $Y=\{a,c\}$.
+The equation
+\[
+ 1=d_G(a)+d_G(c)-e(G[\{a,c\}])-8
+\]
+forces $ac\in E(G)$ and $d_G(a)=d_G(c)=5$. Their common neighbours
+form a triple $R$, and their complete neighbourhoods are
+\begin{equation}\label{gl:first-pair}
+ N_G(a)=\{c,v\}\cup R,\qquad
+ N_G(c)=\{a,b\}\cup R,\qquad |R|=3.
+\end{equation}
+In particular $vb$ is an edge.
+
+Contract $ac$, which has exactly three common neighbours. By
+minimality and the preceding contraction observation, a dense
+bifragment lifts to two positive five-fragments. Choose a member
+$T$ of density one, using Lemma~\ref{gl:orientations}(3). Lifting
+increases its density by $|T\cap R|$, so $T$ avoids $R$. Both $a,c$
+are in its boundary; thus $v,b\in T$, and $v$ is the unique
+neighbour of $a$ in $T$. Its opposite side has at least two vertices.
+If $|T|\geq3$, Lemma~\ref{lem:quasi} applies to $av$; the missing
+edge $cv$ gives $t(av)\leq3$, again a contradiction. Therefore
+$T=\{v,b\}$, and the same degree calculation gives
+\begin{equation}\label{gl:second-pair}
+ N_G(v)=\{a,b\}\cup D,\qquad
+ N_G(b)=\{c,v\}\cup D,\qquad |D|=3.
+\end{equation}
+The four degree-five vertices induce the cycle $a,c,b,v,a$, and
+$R,D$ avoid the cycle.
+
+If $|R\cap D|\geq2$, the cycle has at most four external neighbours.
+There is a vertex outside the cycle and its boundary, because
+$v(G)\geq9$, contradicting five-connectivity. If $|R\cap D|=1$,
+put $S=R\cup D$ and $U=\{a,c,b,v\}$. Here $|S|=5$ and
+$\rho_G(U)=0$. Its opposite side $W$ has
+\[
+ \rho_G(W)=18-e(G[S])\geq8.
+\]
+In particular $W$ is nonempty. Its closed side rooted at $S$ is
+internally five-connected, so the rooted clique theorem applies.
+The connected bags $\{a,v\}$ and $\{c,b\}$ are adjacent to each
+other and to every vertex of $S$. Together with the rooted clique
+they give a $K_7$ model.
+
+Finally suppose that $R\cap D=\varnothing$. Every five-cut $L$
+containing $a,v$ must also contain $c,b$. Indeed, if $c\notin L$,
+all of $R$ lies in its component of $G-L$ or in $L$. Then $a$ has
+no neighbour in any other component, and removing $a$ from $L$
+leaves a cut of order four. The argument for $b$ is the same, using
+the neighbours of $v$.
+
+Now $t(av)=0$. The contraction $G/av$ has sufficient density, so
+it has a dense bifragment. Both lifted five-boundaries contain all
+four cycle vertices, by the preceding paragraph. Each open side
+meets both $R$ and $D$, because its boundary contains $a,v$.
+One of these disjoint sides, say $B$, contains exactly one vertex
+$r$ of $R$. It cannot be a singleton, since its image has positive
+density and boundary four. If $|B|=2$, then $B=\{r,d\}$ for some
+$d\in D$, and its boundary consists of the four cycle vertices
+and one further vertex $z$. The vertex $r$ is adjacent to neither
+$v$ nor $b$, so its neighbours would all lie in $\{a,c,d,z\}$,
+contrary to the minimum degree five.
+
+Thus $|B|\geq3$, its opposite side has at least two vertices,
+and $a$ has the unique neighbour $r$ in $B$. Lemma~\ref{lem:quasi}
+makes $G/ar$ quasi-five-connected. Also $t(ar)\leq3$, since $a$
+has degree five and its neighbour $v$ is not adjacent to $r$.
+This final contraction contradicts minimality. All contractions
+used above leave at least eight vertices, so the order condition
+is retained throughout.
+\end{proof}
+
+\begin{lemma}\label{gl:low-edge}
+Every proper low five-fragment $A$ contains an endpoint of an edge
+$e$ with $t(e)\leq3$.
+\end{lemma}
+
+\begin{proof}
+Put $S=N_G(A)$ and $a=|A|$. The minimum degree six gives
+\[
+ \rho_G(A)=\sum_{v\in A}d_G(v)-e(G[A])-4a
+ \geq2a-\binom a2,
+\]
+so $a\geq5$. Also
+\[
+ \sum_{v\in A}\bigl(d_G(v)+|N_G(v)\cap S|\bigr)
+ =8a+2\rho_G(A)\leq8a+2.
+\]
+Choose $v\in A$ whose summand is at most eight. Suppose that every
+edge at $v$ has at least four common neighbours. Let $H$ be
+$G[N_G(v)]$ with the edges within $X_0=N_G(v)\cap S$ deleted.
+Vertices of $H-X_0$ have degree at least four, and vertices in
+$X_0$ have degree at least $5-|X_0|$. Moreover
+$v(H)+|X_0|\leq8$.
+
+The side $G[A\cup S]$, rooted at $S$, is internally five-connected.
+Choose five disjoint paths from $S$ to $N_G(v)$, stopped when they
+first reach $N_G(v)$. They avoid $v$, and the paths at vertices
+of $X_0$ are trivial.
+Their five ends form a set containing $X_0$. Apply
+Lemma~\ref{lem:star} to $H$ rooted at these ends. Its central bag
+avoids $S$. Use this bag and $\{v\}$ as helpers. Four of the
+linkage paths become root bags; delete the last vertex of the
+central path to obtain the fifth root bag. This trimmed path is
+nonempty, since its end lies outside $X_0$ and hence outside $S$.
+Both helpers meet the other four root bags, the helpers are adjacent,
+and the trimmed bag meets the central helper. Thus at least ten
+of the eleven helper contacts are present. Every bag lies in
+$A\cup S$, and no artificial boundary edge has been used.
+
+The opposite side is internally five-connected and has density
+at least $m+7$, where $m=10-e(G[S])$, by
+Lemma~\ref{gl:orientations}(2). It supplies a rooted clique on $S$.
+Joining corresponding root bags gives $\Kminus$, a contradiction.
+\end{proof}
+
+The following elementary end argument will exclude the remaining
+five-cuts. A proper five-fragment is called an $F$-fragment, for a
+family $F$ of edges, if its boundary contains both ends of an edge
+in $F$. An $F$-end is an $F$-fragment containing no $F$-fragment as
+a strict subset.
+
+\begin{lemma}\label{gl:end}
+Let $J$ be five-connected, with every proper five-fragment of order
+at least four. If $A$ is an $F$-end, no edge $e\in F$ can meet $A$,
+lie in $A\cup N_J(A)$ and have both ends in a five-cut of $J$.
+\end{lemma}
+
+\begin{proof}
+Put $S=N_J(A)$ and $C=V(J)\setminus(A\cup S)$. Suppose a five-cut
+$T$ contains both ends of such an edge $e$, and partition $J-T$
+into two nonempty unions of components $B,D$. Write
+\[
+ \begin{array}{lll}
+ p=|A\cap T|,&s=|S\cap T|,&r=|C\cap T|,\\
+ u=|S\cap B|,&w=|S\cap D|.&
+ \end{array}
+\]
+Then $p+s+r=u+s+w=5$, $p\geq1$ and $p+s\geq2$.
+
+If $A\cap B\ne\varnothing$, its neighbourhood lies in
+$(A\cap T)\cup(S\cap T)\cup(S\cap B)$. This containing set cannot
+have order below five, by connectivity. If it has order five, it
+equals the actual boundary and contains both ends of $e$, giving
+an $F$-fragment strictly inside $A$. Its opposite side contains
+$C$, and strict containment follows from $p\geq1$. Therefore
+\[
+ p+s+u\geq6,\qquad p>w,\qquad u>r.
+\]
+The opposite corner $C\cap D$ has boundary contained in a set of
+order $r+s+w=5+r-u<5$, so it is empty. Symmetrically, if
+$A\cap D\ne\varnothing$, then $p>u$, $w>r$ and $C\cap B$ is empty.
+In these applications a nonempty opposite corner witnesses that
+the candidate separation is proper.
+
+If both $A$-corners are nonempty, then $C\subseteq T$, so
+$r=|C|\geq4$, contrary to $p+s\geq2$. If just $A\cap B$ is
+nonempty, then $D=S\cap D$, giving $w=|D|\geq4$. Since $p>w$,
+we have $p=5$ and $r=s=0$. Now $C=C\cap B$ has all its neighbours
+in $S\cap B$, of order $u=5-w\leq1$, again impossible. The other
+one-corner case is symmetric.
+
+If neither $A$-corner is nonempty, then $A\subseteq T$ and
+$p=|A|\geq4$. Since $|C|\geq4$ and $r\leq1$, a $C$-corner is
+nonempty, say $C\cap B$. Its boundary has order at most $r+s+u$,
+so connectivity gives $u\geq p\geq4$. The other $C$-corner must
+be empty, or similarly $w\geq4$. But then $D=S\cap D$, and again
+$w=|D|\geq4$. This contradicts $u+w\leq5$ in every case.
+\end{proof}
+
+\begin{lemma}\label{gl:six-connected}
+The graph $G$ is six-connected.
+\end{lemma}
+
+\begin{proof}
+It is already five-connected. We first show that every proper
+five-fragment has at least four vertices. A singleton would have
+degree five. For a fragment of order $a=2$ or $3$, the degree bound
+and the possible incident edges give
+\[
+ 2a-\binom a2\leq\rho_G(A)\leq\binom a2+a.
+\]
+Its density is therefore three if $a=2$, and between three and six
+if $a=3$. Both contradict Lemma~\ref{gl:orientations}(2), which
+allows only densities at most one or at least seven. Notice also
+that a low five-fragment is automatically proper: an empty opposite
+side would give density $18-e(G[N_G(A)])\geq8$.
+
+Let $F$ be the edges with at most three common neighbours. Every
+edge in $F$ has both ends in the boundary of a five-fragment of
+density one. Indeed, its contraction preserves the density bound
+by \eqref{gl:contraction-density}, so is not $4$-bilight. Its dense
+bifragment lifts to two positive five-fragments, as described above;
+Lemma~\ref{gl:orientations}(3) forces one density to equal one.
+
+Suppose a five-cut exists. It has a low side, so
+Lemma~\ref{gl:low-edge} supplies an edge of $F$. The preceding
+paragraph supplies a low $F$-fragment. Choose an inclusion-minimal
+one, $A$. In fact $A$ is an $F$-end without any density restriction.
+For a smaller $F$-fragment $B\subsetneq A$, a heavy $B$ would be
+disjoint and nonadjacent to the heavy opposite side of $A$, violating
+Lemma~\ref{gl:orientations}(3). Thus $B$ would be low, contradicting
+the choice of $A$.
+
+Lemma~\ref{gl:low-edge} now supplies an edge $e\in F$ meeting $A$.
+Its other end lies in $A\cup N_G(A)$, and both ends lie in a
+five-cut by the earlier contraction argument. This contradicts
+Lemma~\ref{gl:end} and excludes every five-cut.
+\end{proof}
+
+\section{The final degree cases}
+\label{sec:global-terminal}
+
+The degree-six case uses the two-paths theorem of Robertson,
+Seymour and Thomas~\cite[Theorem~(2.4)]{RST1993}, in the form also
+quoted in \cite[Theorem~13]{NT2025}. For four distinct vertices in
+a specified cyclic order, it gives disjoint paths joining opposite
+pairs, a separation of order at most three with all terminals on
+one side and at least two vertices in the other open side, or a
+drawing in a disc with the terminals on its boundary in that order.
+
+\begin{lemma}\label{gl:degree-six-terminal}
+Let $H$ be six-connected, with at least nine vertices and no
+$\Kminus$ minor. If every edge has at least four common neighbours
+and $H$ has a vertex of degree six, then $e(H)\leq4v(H)-9$.
+\end{lemma}
+
+\begin{proof}
+Let $d_H(v)=6$. The complement of $H[N_H(v)]$ is a matching, since
+each neighbour of $v$ has at least four neighbours there. Label the
+six neighbours $u_1,w_1,u_2,w_2,u_3,w_3$ so that the only possible
+nonedges are $u_iw_i$.
+
+There cannot be disjoint paths joining two different pairs $u_i,w_i$
+with interiors outside $N_H[v]$: contracting the interior of each
+path into one of its ends fills two of the three possible missing
+contacts. Together with $\{v\}$, the six resulting bags give
+$\Kminus$. In particular all three pairs are nonedges. Otherwise
+an existing pair edge and a path for another pair through an exterior
+component would suffice. Such a component exists and is adjacent
+to all six neighbours of $v$, by six-connectivity.
+
+Some pair, say $u_1,w_1$, has no common neighbour outside $N_H[v]$.
+Otherwise choose an exterior common neighbour $x_i$ for each pair.
+Two distinct choices give the forbidden disjoint length-two paths,
+so all choices coincide at a vertex $x$. There is a component $C$
+outside $N_H[v]\cup\{x\}$, because $v(H)\geq9$. Its boundary is
+contained in $N_H(v)\cup\{x\}$ and has at least six vertices.
+Thus at least five neighbours of $v$ meet $C$, giving a path for
+one pair through $C$ and a disjoint path for another through $x$.
+
+Apply the two-paths theorem to
+$H'=H-\{v,u_1,w_1\}$, with ordered terminals $u_2,u_3,w_2,w_3$.
+The two paths are excluded above. A separation $(A,B)$ in the
+second outcome lifts to
+\[
+ (A\cup\{v,u_1,w_1\},\ B\cup\{u_1,w_1\})
+\]
+in $H$, of order at most five. It is proper: $v$ lies in the first
+open side, and the second contains $B\setminus A$. No neighbour
+of $v$ lies in that second open side. This contradicts
+six-connectivity.
+
+Hence $H'$ has the disc drawing. Its four distinct boundary
+terminals give $e(H')\leq3v(H')-7$. Every vertex outside $N_H[v]$
+meets the deleted triple at most once, by the choice of $u_1,w_1$.
+Each of the other four neighbours of $v$ meets it three times,
+and the triple induces two edges. With $n'=v(H')=v(H)-3$,
+\[
+ e(H)\leq(3n'-7)+(n'-4)+12+2=4v(H)-9.
+\]
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:bilight}]
+Our minimum counterexample $G$ is six-connected by
+Lemma~\ref{gl:six-connected}. Every edge has at least four common
+neighbours: otherwise contracting it gives a five-connected, hence
+$4$-bilight, smaller graph of density at least $-2$. The average
+degree is $8-4/v(G)<8$, whereas Lemma~\ref{gl:degree-six} gives
+minimum degree at least six. Thus some vertex has degree six or seven.
+
+Degree six contradicts Lemma~\ref{gl:degree-six-terminal}, since
+$e(G)=4v(G)-2$. For a degree-seven vertex $v$, put $J=G[N_G(v)]$.
+The common-neighbour bound gives $\delta(J)\geq4$. Choose a
+component $C$ outside $N_G[v]$, which exists since $v(G)\geq9$.
+Its boundary lies in $N_G(v)$ and has at least six vertices.
+Contract $C$ to a vertex and delete the other exterior components.
+The resulting nine-vertex minor consists of $J$, the vertex $v$
+adjacent to all of $J$, and a nonadjacent second vertex adjacent to
+at least six vertices of $J$. Lemma~\ref{lem:quotient} gives a
+$\Kminus$ model in this minor. Replacing the contracted vertex by
+the connected set $C$ lifts the model to $G$.
+
+Both degree cases are impossible, so no counterexample exists.
+\end{proof}
+
+\begin{proof}[Proofs of Corollary~\ref{thm:five-connected} and
+Theorem~\ref{thm:colour}]
+Every five-connected graph is $4$-bilight, giving
+Corollary~\ref{thm:five-connected}. For the colouring theorem, suppose
+a $\Kminus$-minor-free graph is not six-colourable, and choose such
+a graph $G$ minor-minimal. Then its chromatic number is at least
+seven and every proper minor is six-colourable.
+Dvo\v r\'ak, Norin and Rahman~\cite[Theorem~1.6]{DNR2026} give
+seven-connectivity and $e(G)\geq4v(G)-2$. The graph is therefore
+$4$-bilight, and Theorem~\ref{thm:bilight} supplies the forbidden
+minor.
+\end{proof}

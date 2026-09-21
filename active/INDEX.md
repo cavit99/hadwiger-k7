@@ -39,7 +39,10 @@ to intermediate claims remain with their designated conditional routes.
   [separate internal audits](../results/hc7_k7minus_bilight_extremal_second_audit.md).
 - [Construction, exact dependencies and HC7 boundary](hc7_c21_rooted_density_construction.md):
   the new helper and global end arguments, retained barriers and finite
-  quotient input. Immediate work is an independently reviewable manuscript.
+  quotient input.
+- [Complete C21 manuscript](../paper/k7minus-six-colour/main.tex), with
+  [PDF](../paper/k7minus-six-colour/main.pdf) and a
+  [separate internal audit](../paper/k7minus-six-colour/main_audit.md).
 - [Externally resolved C19](hc7_c21_rooted_density_construction.md#1-changed-external-input):
   Dvořák–Norin–Rahman's result is an explicit external input.
 

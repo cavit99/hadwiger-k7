@@ -91,8 +91,11 @@ The [manuscript collection](paper/README.md) separates current drafts,
 preserved precursors and further theorem packages, with links to sources,
 PDFs, exact-hash internal audits and literature assessments.
 
-The next editorial priority is the complete C21 proof package. The existing
-bipartite, paired-clique and structural papers are preserved.
+The primary draft is
+[Every graph with no K7-minus minor is six-colourable](paper/k7minus-six-colour/main.pdf),
+with the complete C21 argument, supporting constructions and a
+[separate internal manuscript audit](paper/k7minus-six-colour/main_audit.md).
+The existing bipartite, paired-clique and structural papers are preserved.
 The earlier even-subdivision and K2,n arguments remain available as
 precursors. Current revision status is recorded in the
 [research ledger](RESEARCH_LEDGER.md#manuscript-status).

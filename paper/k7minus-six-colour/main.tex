@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage[unicode,hidelinks]{hyperref}
+\emergencystretch=1em
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Kminus}{K_7^{-}}
+
+\title[Graphs with no \(K_7^{-}\) minor]{Every graph with no \(K_7^{-}\) minor is six-colourable}
+\author{Cavit Erginsoy}
+\date{Draft, 21 September 2026}
+\hypersetup{pdftitle={Every graph with no K7-minus minor is six-colourable},pdfauthor={Cavit Erginsoy}}
+
+\begin{document}
+\begin{abstract}
+Let $K_7^{-}$ be the graph obtained from $K_7$ by deleting one edge.
+We prove that every graph with no $K_7^{-}$ minor is six-colourable.
+The main extremal result is that every $4$-bilight graph on $n\geq3$
+vertices with at least $4n-2$ edges contains a $K_7^{-}$ minor.
+The proof strengthens the rooted density construction of
+Dvo\v r\'ak, Norin and Rahman: five prescribed root bags admit two
+additional bags with at most one missing contact. A separator argument
+then reduces the extremal theorem to six-connected graphs. The final
+degree-seven case uses a finite verification of $232$ nine-vertex graphs.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+All graphs in this paper are finite and simple. Write $K_7^{-}$ for
+$K_7$ with one edge deleted. We prove the following statement, posed as
+Conjecture~21 by Norin and Totschnig~\cite{NT2025}.
+
+\begin{theorem}\label{thm:colour}
+Every graph with no $K_7^{-}$ minor is six-colourable.
+\end{theorem}
+
+Norin and Totschnig~\cite{NT2025} proved the corresponding result when
+the excluded minor is $K_7$ with two incident edges deleted.
+Dvo\v r\'ak, Norin and Rahman~\cite{DNR2026} proved it for $K_7$ with
+two independent edges deleted. Theorem~\ref{thm:colour} strengthens
+both conclusions. It does not settle Hadwiger's conjecture for $K_7$.
+
+The proof builds on the rooted density and separation framework
+of Dvo\v r\'ak, Norin and Rahman. Their critical-graph reduction turns
+Theorem~\ref{thm:colour} into an extremal problem. Our main result is
+Theorem~\ref{thm:bilight}, for the class of $4$-bilight graphs defined
+below. In particular, it proves their Conjecture~1.5:
+
+\begin{corollary}\label{thm:five-connected}
+Every five-connected graph on $n\geq6$ vertices with at least $4n-2$
+edges contains a $K_7^{-}$ minor.
+\end{corollary}
+
+The new rooted construction gives five prescribed root bags and two
+root-free bags, with at least ten of the eleven possible contacts
+involving the latter two bags. It uses a rooted-star construction,
+careful contraction across five-separations, and Mader's atom theorem.
+The global argument first excludes vertices of degree five and then
+all five-cuts. In the resulting six-connected graph, contractions force
+dense degree-six and degree-seven neighbourhoods, which yield the minor.
+
+We state the external tools precisely in Section~\ref{sec:preliminaries}
+and supply the supporting constructions and the full global argument
+in the subsequent sections. The only computational input is
+Lemma~\ref{lem:quotient}; Appendix~\ref{sec:finite} explains its finite
+scope, certificates and reproducibility.
+
+\input{preliminaries}
+\input{rooted}
+\input{global}
+
+\appendix
+\input{finite}
+
+\section*{Use of AI}
+OpenAI Codex was used for mathematical exploration, computation,
+drafting and internal proof checks. This draft has not undergone
+external mathematical review.
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

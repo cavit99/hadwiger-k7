@@ -85,7 +85,9 @@ two universal vertices joined to a five-connected plane triangulation give
 seven-connected `K7`-minor-free graphs with `5n-15` edges, as noted in
 Dvořák–Norin–Rahman's introduction. Their chromatic structure must matter.
 
-The immediate priority is an independently reviewable C21 manuscript and
-its proof dependencies, not an automatic commitment to a particular HC7
-construction. External review and historical priority remain outstanding;
-no author contact has been authorised.
+The complete [C21 manuscript](../paper/k7minus-six-colour/main.pdf) now
+includes the supporting constructions and exact proof dependencies, with
+a [separate internal audit](../paper/k7minus-six-colour/main_audit.md).
+External review and historical priority remain outstanding. No author
+contact has been authorised, and no particular HC7 construction follows
+automatically from this theorem.
