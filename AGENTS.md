@@ -16,6 +16,14 @@ adding further sufficient conditions or records. Retain colouring and
 branch-set constraints together when testing compatibility. Give every
 delegated agent the full completion criterion and exact unresolved obligation.
 
+Keep the main effort on constructions, deductions and mathematical
+progress. Reserve independent checks, including separate reconstruction
+by a delegated agent, for an argument with established promise: one that
+appears to close a case, give a valid induction and lift, or remove a
+substantial gap. When the argument's own comparison already shows that
+it does not, record that failure and continue the construction. Promotion
+of a written proof still requires its adjacent audit.
+
 For research decisions, consult `RESEARCH_LEDGER.md`, `active/INDEX.md` and
 the designated technical frontier. Reuse that orientation until relevant
 state changes; revisit history only for a disputed dependency or claim.
