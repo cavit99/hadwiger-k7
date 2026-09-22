@@ -40,9 +40,13 @@ connectivity assumptions and are not uniformly subsumed by ours.
    eight and nine remain beyond this checkpoint. Separately, the assembled
    [C21 manuscript](paper/k7minus-six-colour/main.pdf) needs expert review.
 
-The current attack treats the entire exceptional two-triangle
-neighbourhood case in the original critical graph, allowing all branch
-sets to change. The [auxiliary separator reduction](results/hc7_two_triangle_colourful_reduction.md)
+The selected attack is the entire six-chromatic branch of the exceptional
+two-triangle neighbourhood case: with `J=G-{u,r}`, prove that `chi(J)=6`
+forces a `K7` minor in the original critical graph. There is no restriction
+to a particular owner pattern or number of bags entering the remainder;
+all final bags may change. The five-chromatic branch and the rest of the
+degree-seven checkpoint remain beyond this case closure.
+The [auxiliary separator reduction](results/hc7_two_triangle_colourful_reduction.md)
 remains an optional sufficient route. A new
 [extremal prism reduction](results/hc7_two_triangle_extremal_prism.md),
 with a separate internal audit, retains every vertex and attachment:
@@ -56,12 +60,15 @@ closes several contact patterns in a particular three-owner configuration.
 Its six-chromatic branch supplies an ordinary `K6` minor. A further
 [working construction](active/hc7_degree7_exceptional_construction_working.md#10-a-six-clique-model-using-two-remainder-bags)
 finishes whenever exactly two of that model's bags enter the connected
-remainder. A [second construction](active/hc7_degree7_exceptional_construction_working.md#11-three-helpers-when-the-first-triangle-is-singleton)
-finishes if the first triangle can be kept singleton in the six-bag
-model. General models with three or more remainder bags, and some
-five-chromatic contact patterns, remain unresolved. These constructions are not
-separately audited; neither the particular configuration nor the whole
-critical-host case is closed. The C21 manuscript is unchanged.
+remainder. The [new two-singleton construction](active/hc7_two_triangle_six_chromatic_working.md)
+finishes whenever a K6 model leaves two vertices of either triangle
+singleton, with no restriction on the other bags or the remaining roots.
+This strengthens the previous singleton-triangle construction. Obtaining
+that placement from a general model remains unproved: transferring a
+root-bag part can lose its only contacts to two other bags. The attempts
+using proper-minor colourings have not repaired this loss. These working
+proofs are not separately audited; the whole six-chromatic case remains
+open. The C21 manuscript is unchanged.
 
 ## Completed C21 construction
 

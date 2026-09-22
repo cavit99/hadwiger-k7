@@ -158,13 +158,24 @@ of four disjoint connected core bags meeting both endpoint components and
 retaining the boundary contacts to `u`. Separate colourful-set models
 do not supply that collection; zero exceptional connections is not an exit.
 
-**Concentrated attack:** the entire `K_{3,3} dotunion K_1` complement
-case, detailed in the [two-triangle construction](hc7_degree7_exceptional_construction_working.md).
+**Concentrated attack:** the entire six-chromatic branch of the
+`K_{3,3} dotunion K_1` complement case, detailed in the
+[two-triangle construction](hc7_degree7_exceptional_construction_working.md).
 Write `N(u)=P dotunion Q dotunion {r}`, with two triangles `P,Q` and
 `r` adjacent to all six roots. A `K5` model in `G-{u,r}` whose bags all
 meet `P union Q` finishes with singleton bags `{u},{r}`. This placement
 is sufficient, not compulsory. The target is a complete construction
 in the original critical graph; all seven bags may change.
+
+The current case assumes `chi(J)=6`, where `J=G-{u,r}`. It retains
+seven-connectivity and all proper-minor six-colourings of `G`, and places
+no restriction on the order, root-ownership pattern or initial `K6` model.
+Hadwiger's theorem for six supplies that model. The existing two-bag and
+two-singleton constructions are terminal cases of the attack, not
+extra assumptions. The missing step is a joint reassignment using the
+actual colouring responses, or a direct `K7` construction. A theorem
+about arbitrary five-connected graphs is not required. The branch
+`chi(J)=5` remains open but is not receiving parallel discovery effort.
 
 The [extremal prism reduction](../results/hc7_two_triangle_extremal_prism.md)
 now supplies an exact representation if that rooted model is absent.
@@ -203,13 +214,39 @@ path, and handles the minimal remaining contact sets when deleting the
 root pair leaves a five-chromatic graph. The six-chromatic branch forces
 an ordinary `K6` minor. The [two-bag construction](hc7_degree7_exceptional_construction_working.md#10-a-six-clique-model-using-two-remainder-bags)
 turns any such model with exactly two bags entering `E` into the required
-rooted `K5`, for arbitrary subdivision lengths. A [three-helper construction](hc7_degree7_exceptional_construction_working.md#11-three-helpers-when-the-first-triangle-is-singleton)
-also finishes when the first triangle is singleton in the `K6` model,
-using paths in the entire graph after deleting that triangle.
-Normalising general models with three or more bags entering `E`, and
-the extra-contact five-chromatic instances, remain open. These
-are working proofs without separate audits, within a pattern not shown
-to cover the whole case.
+rooted `K5`, for arbitrary subdivision lengths. The stronger
+[two-singleton construction](hc7_two_triangle_six_chromatic_working.md)
+now finishes if just two vertices of either triangle are singleton in
+the `K6` model. It uses the whole graph after deleting those two vertices,
+allows arbitrary remaining bags, and covers every placement of the other
+triangle. When all three of its roots lie in one bag, three choices of
+helper pair give nested actual cutvertex shores; their incompatible
+boundary restrictions force a linkage. It subsumes the previous
+[singleton-triangle case](hc7_degree7_exceptional_construction_working.md#11-three-helpers-when-the-first-triangle-is-singleton).
+Its four-colour deletion application also finishes if deleting a triangle
+edge's ends leaves a four-colourable graph. These are working proofs,
+without separate audits, and do not close the whole six-chromatic branch.
+
+**First unresolved step in the extensions.** In a general `K6` model, a
+part of a root bag can carry its only contacts to two helpers. Moving it
+to one helper loses the other contact. Retaining only one singleton root
+leaves routing cuts containing whole helper bags and up to two actual
+vertices; the cutvertex nesting above no longer applies. Six disjoint
+paths from `T` to chosen model representatives do not fix this: they can
+enter other bags first. The stronger actual boundary condition has not
+yielded a split preserving every required contact. These are route
+nonclosures, not counterexamples to the desired construction.
+
+The colouring attempts retain the same unresolved compatibility issue.
+Minimising the size of the `r`-colour class gives five-colourings after
+its deletion, with `T` using all five colours. Proper-minor colourings
+can use fewer colours on `T`, but their restrictions need not agree with
+those five-colourings. Contracting a triangle edge in `G` gives a
+six-chromatic proper minor, yet does not make the relevant pair deletion
+in `J` four-colourable. Across an actual
+seven-cut, a colouring of a contracted shore likewise need not lift
+through that shore. A valid joint recolouring or a simultaneous bag
+reassignment remains possible; no decreasing transition has been proved.
 
 The [intact-helper barrier](../barriers/hc7_prism_intact_helper_barrier.md)
 rules out repairing root ownership solely after contracting two connected

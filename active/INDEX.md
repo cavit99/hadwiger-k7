@@ -26,7 +26,8 @@ Selected conditional checkpoint:
   construct a `K7` minor or a six-colouring extending over the chosen vertex.
   The existing colouring and model inputs are linked there; the global
   construction remains open, and degrees eight and nine remain outside
-  this checkpoint.
+  this checkpoint. The current attack selects the whole six-chromatic
+  branch of the two-triangle case, retaining the original critical host.
 
 ## Completed theorem and current application laboratory
 
