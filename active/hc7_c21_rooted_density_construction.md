@@ -264,6 +264,29 @@ obstruction or additional frame information must enter. Cells with extra
 reserved contacts and the final whole-host colouring also remain outside
 these closures.
 
+Requiring both the gate side and the port side to be nonplanar also
+fails: the [explicit 42-vertex barrier](../barriers/hc7_both_nonplanar_cell.md)
+retains seven-connectivity, the local Dirac inequalities and the exact
+boundary and path data. Its finite hypotheses and six-colouring are
+checked by a deterministic verifier; it has not had a separate audit.
+Independent helper and linkage models therefore cannot be combined on
+these structural premises alone. The original split-clique frame and
+non-six-colourability remain available; neither is realised by the example.
+
+The subsequent colouring attempts reach a common lift obstruction.
+Contracting full sides supplies actual exterior colourings and common
+available colours on the deleted sides, but not their list-colouring
+extensions. Likewise, a quotient identifying both port pairs and a gate
+edge gives a compatible outside response only: it is not an edge-deletion
+colouring of the whole graph until the cell is restored. The four-clique
+list-matching formulation reproduces the existing repeated P--D pair
+rather than a decreasing exchange. These are route nonclosures, not new
+counterexamples. The bipartite matroid proof does not supply this lift:
+its contractions combine original colours, and its spanning forests may
+consume the vertices reserved for the extra path. The complete case
+still requires an original-host colouring or seven compatible bags; a
+new approach need not preserve these chosen sides or models.
+
 The attempted two-separator descent has a concrete nonclosure, not a
 counterexample or an exhaustive normal form. A separator `Z={z1,z2}`
 may leave two components with H0 boundaries `Z union {q1,t}` and

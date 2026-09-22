@@ -62,8 +62,12 @@ of the selected type, and every cell whose vertices all have at least
 five boundary neighbours. A second [audited construction](results/hc7_planar_seven_boundary_cell.md)
 closes the planar case by a six-colouring of the whole original graph.
 The remaining minimum exact cell has a nonplanar completed side and
-internal triangles. These are unbounded cell-family closures, not the
-whole neighbourhood case. Other degree-seven configurations and degrees
+internal triangles. A [new explicit barrier](barriers/hc7_both_nonplanar_cell.md)
+rules out closing it from nonplanarity of both overlapping sides alone;
+its finite hypotheses are checked, without a separate audit. The attempted
+proper-minor colourings still lack an extension through the restored cell.
+The two audited theorems close unbounded cell families, not the whole
+neighbourhood case. Other degree-seven configurations and degrees
 eight and nine also remain. The C21 manuscript is unchanged.
 
 ## Completed C21 construction

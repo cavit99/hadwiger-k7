@@ -238,7 +238,12 @@ The remaining completed side is therefore nonplanar. Its structural
 data alone cannot force two helpers meeting the same two ports: the
 [odd-wheel barrier](../barriers/hc7_seven_boundary_odd_wheel.md) satisfies
 those data and all six applicable rooted-density thresholds but has
-no K7 minor. A continuation must use the original colouring obstruction
+no K7 minor. Requiring the port side to be nonplanar as well does not
+repair this: a [42-vertex counterexample](../barriers/hc7_both_nonplanar_cell.md)
+has both nonplanar sides, seven-connectivity and all the local Dirac
+bounds. Its finite hypotheses have been checked, without a separate audit;
+it is six-colourable and does not realise the original split-clique frame.
+A continuation must use the original colouring obstruction
 or a further retained restriction of the P,D frame. Absorbing a long F
 interval can consume an exterior root bag; connectedness of X cannot
 join helpers through vertices already assigned to those bags. Neither
@@ -253,11 +258,15 @@ repeated P--D colour pair without supplying the two legs at the chosen
 D root. These failures leave joint recolouring and an admissible change
 of reserved state possible; neither has yet been constructed.
 
-Even an actual planar `H0` would leave the induced graph on the two
-reserved paths to be coloured compatibly with `u`. Their union is
-not asserted bipartite, and the vertices `r,p3,q3` need not have one
-colour. Thus planarity of the remainder alone is not a six-colouring
-of `G`. No whole-case closure or induction is asserted.
+Even an actual planar `H0` leaves the reserved graph to be coloured
+compatibly with `u`. The minimum-state contact rules permit a monotone
+triangulated ladder between the r stem and F, with several disjoint odd
+triangles; removing one core corner need not make it bipartite. Enlarging
+the P-root bags along their stems gives another valid rooted-minor test,
+but its quotient can acquire cells and its colouring need not expand.
+Alternating both stems between their root colours and one fresh colour
+can also assign that fresh colour to both adjacent P roots. Thus this is
+not yet a whole-host colouring or a valid induction.
 
 In the original contraction-critical host, a sufficient terminal is
 the weaker statement `chi(G-{u,r})<=5`. Indeed the only common

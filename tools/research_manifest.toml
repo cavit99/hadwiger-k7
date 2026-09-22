@@ -7,6 +7,19 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.barrier.both_nonplanar_cell"
+title = "Both overlapping seven-boundary cell sides can be nonplanar"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_both_nonplanar_cell.md"
+source_heading = "Scope and reproducibility"
+active = false
+scope = "one explicit 42-vertex graph with seven-connectivity, all local Dirac inequalities, the exact seven-boundary cell and induced port path, an outside literal K5 and a four-connected gate side; finite hypotheses checked, not separately audited"
+conclusions = ["both gate and port sides have explicit K5 models while the host is K7-minor-free", "the host has an explicit six-colouring"]
+does_not_prove = ["failure in an original split-clique contraction-critical host", "failure of a colouring-or-minor construction", "a counterexample to HC7"]
+keywords = ["seven-boundary cell", "both sides nonplanar", "two apices", "colouring lift", "shared allocation"]
+
+[[claims]]
 id = "hc7.planar_seven_boundary_cell"
 title = "A planar seven-boundary cell has a proper-minor six-colouring lift"
 kind = "theorem"
