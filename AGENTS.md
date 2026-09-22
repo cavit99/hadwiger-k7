@@ -16,6 +16,14 @@ adding further sufficient conditions or records. Retain colouring and
 branch-set constraints together when testing compatibility. Give every
 delegated agent the full completion criterion and exact unresolved obligation.
 
+Allocate agents to genuinely different constructions or deductions towards
+the same case closure. Before dispatch, check existing results, barriers and
+other agents' work; distinguish each task's mathematical mechanism, not just
+its wording. Share decisive findings promptly and redirect overlapping work
+that reaches the same unsupported step. Use available concurrency where it
+adds independent mathematical work, rather than filling slots with variants
+of an already blocked approach.
+
 Keep the main effort on constructions, deductions and mathematical
 progress. Reserve independent checks, including separate reconstruction
 by a delegated agent, for an argument with established promise: one that
