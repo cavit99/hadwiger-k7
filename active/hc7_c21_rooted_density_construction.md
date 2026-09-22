@@ -215,6 +215,17 @@ The attack must choose the two parts, root ownership and proper-minor
 colourings together; models obtained for different choices of `r` cannot
 be combined without a valid ownership argument. All final bags may change.
 
+A [working root-placement strengthening](hc7_split_clique_construction_working.md)
+reconstructs the proof with one triangle kept singleton. It gives four
+partitions of the same three-connected `M`: in the partition indexed by
+`r`, one P-meeting part is adjacent to all of `D` and the other misses
+only `r`. This deduction is not separately audited. The explicit joint
+construction joins two deficient parts and keeps the P-containing component
+of their complement. The unresolved step is retaining all four clique
+contacts in that component; no intersection-connectivity assumption or
+common spanning tree is available. This is the current construction,
+not a further completed case.
+
 #### Previous attack: use six-chromaticity at the model separator
 
 **Preserved preceding plan and its failed construction; no case closure.** A duplication
