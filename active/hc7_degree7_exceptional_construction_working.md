@@ -1,7 +1,9 @@
 # The two exceptional degree-seven neighbourhoods
 
-**Status:** working deduction and recorded route nonclosure; no separate
-audit. Neither exceptional case is closed. This note belongs to the
+**Status:** preserved working deductions and earlier route nonclosures;
+this note has no separate audit. The second exceptional case is now closed
+by the [audited two-triangle theorem](../results/hc7_two_triangle_case_closure.md).
+The `K3 dotunion K4` case remains open. This note belongs to the
 [degree-seven construction laboratory](hc7_c21_rooted_density_construction.md#4-what-remains-towards-hc7),
 not to the promoted proof inputs.
 

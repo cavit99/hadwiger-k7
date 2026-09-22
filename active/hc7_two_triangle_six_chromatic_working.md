@@ -1,9 +1,9 @@
 # A six-clique model with two singleton triangle roots
 
-**Status:** written working proof, not separately audited. This is a
-sufficient terminal construction in the
-[six-chromatic two-triangle attack](hc7_c21_rooted_density_construction.md#current-construction-and-its-limits),
-not a closure of that branch or of HC7.
+**Status:** preserved working proof, not separately audited. This earlier
+sufficient construction is superseded in the critical-host application by
+the [audited whole-case theorem](../results/hc7_two_triangle_case_closure.md).
+Its more general statement below remains a separate unaudited claim.
 
 ## Statement
 

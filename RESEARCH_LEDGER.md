@@ -40,49 +40,23 @@ connectivity assumptions and are not uniformly subsumed by ours.
    eight and nine remain beyond this checkpoint. Separately, the assembled
    [C21 manuscript](paper/k7minus-six-colour/main.pdf) needs expert review.
 
-The selected attack is the entire six-chromatic branch of the exceptional
-two-triangle neighbourhood case: with `J=G-{u,r}`, prove that `chi(J)=6`
-forces a `K7` minor in the original critical graph. There is no restriction
-to a particular owner pattern or number of bags entering the remainder;
-all final bags may change. The five-chromatic branch and the rest of the
-degree-seven checkpoint remain beyond this case closure.
-The [next attack](active/hc7_c21_rooted_density_construction.md#next-attack-use-six-chromaticity-at-the-model-separator)
-must use six-chromaticity to repair an actual separator inside the rooted
-model, or turn failed repair into a colouring contradiction. The proposed
-four-bag-plus-connector formulation was checked against earlier work and
-is the same unresolved mechanism, not a new reduction. Recent primary-source
-checks found no theorem supplying its missing step. Case closure remains
-unproved; its probability cannot responsibly be quantified.
-The [auxiliary separator reduction](results/hc7_two_triangle_colourful_reduction.md)
-remains an optional sufficient route. A new
-[extremal prism reduction](results/hc7_two_triangle_extremal_prism.md),
-with a separate internal audit, retains every vertex and attachment:
-the remaining graph is an induced prism subdivision and one connected
-remainder. Its exchanges and actual colouring restrictions do not yet
-compose to a minor or a six-colouring. No critical-host case is closed;
-HC7 remains the primary target.
+The entire degree-seven neighbourhood `K1 join (K3 dotunion K3)` now has
+[a written case-closure proof](results/hc7_two_triangle_case_closure.md)
+with a fresh separate whole-chain internal audit. This excludes both
+`chi(G-{u,r})=5` and `6`, not merely the selected six-chromatic branch.
+Its structural theorem gives a `K5` model meeting the two triangles in
+every bag, or an apex planar graph. The original host either extends that
+model to `K7` or admits a six-colouring. No proper-minor criticality is
+transferred, and no finite computation is used. This is one complete
+unbounded neighbourhood case, not the whole degree-seven case or HC7.
 
-The subsequent [construction attack](active/hc7_degree7_exceptional_construction_working.md#9-a-construction-for-some-three-owner-patterns)
-closes several contact patterns in a particular three-owner configuration.
-Its six-chromatic branch supplies an ordinary `K6` minor. A further
-[working construction](active/hc7_degree7_exceptional_construction_working.md#10-a-six-clique-model-using-two-remainder-bags)
-finishes whenever exactly two of that model's bags enter the connected
-remainder. The [new two-singleton construction](active/hc7_two_triangle_six_chromatic_working.md)
-finishes whenever a K6 model leaves two vertices of either triangle
-singleton, with no restriction on the other bags or the remaining roots.
-This strengthens the previous singleton-triangle construction. Obtaining
-that placement from a general model remains unproved: transferring a
-root-bag part can lose its only contacts to two other bags. The attempts
-using proper-minor colourings have not repaired this loss. These working
-proofs are not separately audited; the whole six-chromatic case remains
-open. The [joint cap-edge response](active/hc7_two_triangle_six_chromatic_working.md#a-joint-cap-edge-colouring-response)
-now expands one end into a connected set with five actual common
-neighbours of the other, retaining `u,r` and the third cap root. Selecting
-that expansion together with the opposite-triangle linkage remains
-unproved. Its single-path version gives six-chromatic proper-minor probes,
-but loses the required critical-host induction class; the natural cap
-switch is reversible. These are working deductions, not a case closure.
-The C21 manuscript is unchanged.
+The [next concentrated attack](active/hc7_c21_rooted_density_construction.md#next-attack-the-split-clique-neighbourhood)
+is the other exceptional neighbourhood, `K3 dotunion K4`. Its original
+critical host has a common exterior for all four choices of a vertex in
+the four-clique. The new structural theorem supplies triangle-meeting
+models, but a compatible allocation giving the last contacts remains
+unproved. Other degree-seven configurations and degrees eight and nine
+also remain. The C21 manuscript is unchanged.
 
 ## Completed C21 construction
 

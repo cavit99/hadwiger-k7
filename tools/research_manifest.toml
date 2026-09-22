@@ -7,6 +7,153 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.two_triangle_case_closure"
+title = "The entire two-triangle degree-seven neighbourhood case"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_case_closure.md"
+source_heading = "Structural theorem"
+audit = "results/hc7_two_triangle_case_closure_audit.md"
+expected_source_sha256 = "4d28c778b4eb668a0b322f6f8b989af75aaab510aad9ced7f7a141722349b1d4"
+active = false
+scope = "five-connected finite simple graphs with an ordinary K5 minor, two anticomplete triangles T and at least six neighbours for every nonempty set outside T; and the stated seven-connected original-host application"
+label_fidelity = "the rooted alternative has five disjoint connected bags each meeting the original six roots; adjoining the actual u,r singletons yields a K7 model"
+strict_parameter = "finite extremal normalisation followed by direct structural contradictions; no inherited criticality or recursive reduction"
+conclusions = ["a T-meeting K5 model or J-z planar for some z outside T", "a K7 minor in every seven-connected graph of chromatic number at least seven with degree-seven neighbourhood K1 joined to two anticomplete triangles", "both original-host chromatic branches are closed"]
+does_not_prove = ["the other degree-seven neighbourhood configurations", "degrees eight and nine", "HC7", "external peer review or historical priority"]
+keywords = ["complete case closure", "two anticomplete triangles", "degree seven", "apex alternative", "planar pocket", "Euler contradiction"]
+
+[[claims]]
+id = "hc7.prism_two_connected_cell_exclusion"
+title = "Two-connected remainders exclude every clean prism web cell"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_prism_two_connected_cell_exclusion.md"
+source_heading = "Statement and inputs"
+audit = "results/hc7_prism_two_connected_cell_exclusion_audit.md"
+expected_source_sha256 = "b765f99f798f0251bf2c152011cc637ede2d6bd091b125b0064f969e7ec7c84c"
+active = false
+scope = "the whole induced prism with a two-connected remainder, actual six-neighbour root-free boundary bound, two/four root/interior attachment bounds, no T-meeting K5 model and three clean ordered webs"
+strict_parameter = "exhaustive structural cell classification and a direct Euler contradiction; no chromatic or induction premise"
+conclusions = ["every actual cell component is excluded", "the resulting three planar path-deleted graphs contradict the actual degree and attachment bounds"]
+does_not_prove = ["the general three-gate cofacial insertion claim", "HC7 on its own"]
+keywords = ["connected complement", "contact-preserving projection", "planar pocket", "isolated gate", "cell exclusion"]
+
+[[relations]]
+source = "hc7.two_triangle_case_closure"
+target = "hc7.two_triangle_extremal_prism"
+kind = "uses"
+note = "Under failure of a T-meeting model, the ordinary K5 and connectivity yield the exact whole-graph prism partition."
+
+[[relations]]
+source = "hc7.two_triangle_case_closure"
+target = "hc7.two_triangle_web_path_cells"
+kind = "uses"
+note = "A path-containing cell yields the apex alternative; otherwise all three webs are clean."
+
+[[relations]]
+source = "hc7.two_triangle_case_closure"
+target = "hc7.prism_remainder_cutvertex_exclusion"
+kind = "uses"
+note = "Excluding all apex alternatives makes the connected remainder have no cutvertex."
+
+[[relations]]
+source = "hc7.two_triangle_case_closure"
+target = "hc7.prism_two_connected_cell_exclusion"
+kind = "uses"
+note = "The remaining two-connected case is inconsistent by actual cell exclusion and the disk Euler count."
+
+[[relations]]
+source = "hc7.prism_two_connected_cell_exclusion"
+target = "hc7.two_triangle_web_path_cells"
+kind = "uses"
+note = "Uses the ordered webs and disjointness of arbitrary E-only shores from different views; the new pocket argument retains all actual rail contacts."
+
+[[claims]]
+id = "hc7.prism_remainder_cutvertex_exclusion"
+title = "A non-apex five-connected prism host has no remainder cutvertex"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_prism_remainder_cutvertex_exclusion.md"
+source_heading = "Hypotheses and conclusion"
+audit = "results/hc7_prism_remainder_cutvertex_exclusion_audit.md"
+expected_source_sha256 = "dfe9546cf960a39eb6b87f1d18f70bc3ee8c4200e6b3e046a4bd81c2855ad42c"
+active = false
+scope = "five-connected induced-prism hosts with the stated root-free boundary and attachment bounds, no T-meeting K5, and J-z nonplanar for every remainder vertex z"
+strict_parameter = "direct projection and actual separator contradiction; no induction"
+conclusions = ["the connected remainder has no cutvertex"]
+does_not_prove = ["exclusion of two-connected remainders on its own", "all degree-seven neighbourhood cases", "HC7"]
+keywords = ["connected complement", "planar pocket", "actual four-cut", "prism", "cutvertex"]
+
+[[relations]]
+source = "hc7.prism_remainder_cutvertex_exclusion"
+target = "hc7.two_triangle_web_path_cells"
+kind = "uses"
+note = "Uses the proof's arbitrary three-gate shore consequence, clean alternate webs and cross-view disjointness."
+
+[[claims]]
+id = "planarity.three_disjoint_facial_webs"
+title = "Three disjoint facial-triangle web descriptions force planarity"
+kind = "theorem"
+status = "audited-green"
+source = "results/three_web_remainder_planarity.md"
+source_heading = "Exact statement"
+audit = "results/three_web_remainder_planarity_audit.md"
+expected_source_sha256 = "d58c33ff25efd8b9e08e8186516c5170db90814a4ea4ee3a5714165d4afdd65e"
+active = false
+scope = "finite simple graphs with three planar facial-triangle cell descriptions whose whole cell interiors are disjoint across descriptions"
+strict_parameter = "one fixed Kuratowski subdivision and a finite branch-vertex count; no recursion"
+conclusions = ["the common graph is planar without a connectivity assumption"]
+does_not_prove = ["a prescribed embedding or cofacialness of a chosen gate triple", "planarity of the full path-deleted prism graphs", "HC7", "a historical novelty claim"]
+keywords = ["Kuratowski subdivision", "three web descriptions", "facial triangles", "disjoint cells", "planarity"]
+
+[[claims]]
+id = "hc7.two_triangle_web_path_cells"
+title = "A path-containing prism web cell forces an apex planar graph"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_web_path_cells.md"
+source_heading = "Hypotheses and conclusion"
+audit = "results/hc7_two_triangle_web_path_cells_audit.md"
+expected_source_sha256 = "21d22e189e0cb1e0f5a536aec3267577645bc8c37af94a888dbb3f3098ae4e50"
+active = false
+scope = "finite induced prism partitions with connected remainder, no K5 model meeting the six cap roots in every bag, the six-neighbour root-free boundary bound and the stated actual attachment bounds"
+label_fidelity = "all six cap roots, all three original rails and every actual host edge are retained in the planar patch construction"
+strict_parameter = "direct planar construction; no induction or inherited quotient criticality"
+conclusions = ["a web cell meeting a surviving rail forces J-z planar for some remainder vertex z", "whole E-only cell interiors in different views are disjoint"]
+does_not_prove = ["planarity in every clean-web case", "the whole six-chromatic two-triangle case", "the degree-seven case", "HC7"]
+keywords = ["three web views", "path-containing cell", "apex planar", "actual boundary", "disjoint diagonals"]
+
+[[claims]]
+id = "hc7.two_triangle_three_connected_remainder"
+title = "A three-connected remainder is excluded in the six-chromatic prism case"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_triangle_three_connected_remainder.md"
+source_heading = "Precise setting and inputs"
+audit = "results/hc7_two_triangle_three_connected_remainder_audit.md"
+expected_source_sha256 = "bf1ca479698259b2aa9752060afd7bc9e8c0f66f21e14ee2ef9b68e672a83980"
+active = false
+scope = "clean prism webs with disjoint whole cell interiors across views, three-connected remainder, remainder vertices of J-degree at least six and the stated actual rail attachment bounds"
+label_fidelity = "whole actual cell patches are inserted simultaneously with every actual gate and edge preserved; auxiliary completion edges prove planarity only"
+strict_parameter = "direct cofacial construction and Euler contradiction; no recursive reduction"
+conclusions = ["all three actual path-deleted graphs are planar", "the edge count contradicts the original-host degree and attachment bounds"]
+does_not_prove = ["the remainder cases with cutvertices or two-vertex separators", "the whole six-chromatic two-triangle case", "the degree-seven case", "HC7"]
+keywords = ["whole-cell insertion", "cofacial gates", "three-connected remainder", "Euler count", "prism"]
+
+[[relations]]
+source = "hc7.two_triangle_web_path_cells"
+target = "hc7.two_triangle_extremal_prism"
+kind = "uses"
+note = "The original-host application uses the exact spanning prism partition; the theorem states the partition and actual boundary bounds explicitly."
+
+[[relations]]
+source = "hc7.two_triangle_three_connected_remainder"
+target = "hc7.two_triangle_web_path_cells"
+kind = "uses"
+note = "In the six-chromatic original-host case, path cells are excluded and whole E-only cells are disjoint across views."
+
+[[claims]]
 id = "hc7.two_triangle_extremal_prism"
 title = "Extremal prism normalisation for two anticomplete triangles"
 kind = "theorem"

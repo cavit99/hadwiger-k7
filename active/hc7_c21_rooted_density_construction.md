@@ -158,28 +158,66 @@ of four disjoint connected core bags meeting both endpoint components and
 retaining the boundary contacts to `u`. Separate colourful-set models
 do not supply that collection; zero exceptional connections is not an exit.
 
-**Concentrated attack:** the entire six-chromatic branch of the
-`K_{3,3} dotunion K_1` complement case, detailed in the
-[two-triangle construction](hc7_degree7_exceptional_construction_working.md).
-Write `N(u)=P dotunion Q dotunion {r}`, with two triangles `P,Q` and
-`r` adjacent to all six roots. A `K5` model in `G-{u,r}` whose bags all
-meet `P union Q` finishes with singleton bags `{u},{r}`. This placement
-is sufficient, not compulsory. The target is a complete construction
-in the original critical graph; all seven bags may change.
+#### Completed case: the two-triangle neighbourhood
 
-The current case assumes `chi(J)=6`, where `J=G-{u,r}`. It retains
-seven-connectivity and all proper-minor six-colourings of `G`, and places
-no restriction on the order, root-ownership pattern or initial `K6` model.
-Hadwiger's theorem for six supplies that model. The existing two-bag and
-two-singleton constructions are terminal cases of the attack, not
-extra assumptions. The next attack uses six-chromaticity to repair the
-actual separator inside a rooted model, as specified below. A theorem
-about arbitrary five-connected graphs is not required. The branch
-`chi(J)=5` remains open but is not receiving parallel discovery effort.
+The [case-closure theorem](../results/hc7_two_triangle_case_closure.md)
+has a fresh separate whole-chain internal audit. If a seven-connected
+graph of chromatic number at least seven has a vertex `u` with
+`N(u)=P dotunion Q dotunion {r}`, where `P,Q` are anticomplete triangles
+and `r` is complete to both, it contains a `K7` minor. Both chromatic
+branches of `J=G-{u,r}` are covered. Other degree-seven neighbourhoods
+and degrees eight and nine remain open.
 
-#### Next attack: use six-chromaticity at the model separator
+The structural theorem is more general. A five-connected graph `J` with
+an ordinary `K5` minor, two anticomplete triangles `T=P union Q`, and
+at least six neighbours for every nonempty root-free set has either a
+`K5` model meeting `T` in every bag or `J-z` planar for `z outside T`.
+In the original host, the model extends with `{u},{r}`; a four-colouring
+of `J-z` extends by giving `u,z` colour five and `r` colour six.
 
-**Plan; no new case closure or reduction is claimed.** A duplication
+Its direct construction retains the whole
+[extremal prism](../results/hc7_two_triangle_extremal_prism.md).
+[Path-containing web cells](../results/hc7_two_triangle_web_path_cells.md)
+give the apex outcome. Otherwise
+[cutvertex exclusion](../results/hc7_prism_remainder_cutvertex_exclusion.md)
+and the [two-connected cell theorem](../results/hc7_prism_two_connected_cell_exclusion.md)
+exhaust the remainder: all actual cells are empty. Three disk Euler
+bounds contradict the actual degree and rail-contact bounds. The decisive
+projection uses a connected complementary region to retain every actual
+rail contact, and a separate connected projection only to fix its side
+of the surviving cycle. No completion edge becomes a minor contact.
+
+The earlier [three-connected insertion proof](../results/hc7_two_triangle_three_connected_remainder.md)
+and the independent [common-graph planarity lemma](../results/three_web_remainder_planarity.md)
+remain audited results, but neither is needed in the final chain. The
+[isolated-gate precursor](../archive/hc7_prism_isolated_gate_working_2026-09-22.md)
+is preserved. The final proof bypasses its cofacial-insertion difficulty
+by excluding the cells themselves. The following older response and
+allocation gaps are historical route nonclosures, not gaps in this
+case-closure theorem.
+
+#### Next attack: the split-clique neighbourhood
+
+**Open construction target:** exclude `G[N(u)]=K3 dotunion K4` in the
+original seven-contraction-critical host. Write its triangle as `P`,
+its four-clique as `D`, and its exterior as `C=G-N[u]`. For every
+`r in D`, the new structural theorem applies to `J_r=G-{u,r}` with
+triangles `P,D-{r}`. The apex alternative would six-colour `G`, so a
+triangle-meeting `K5` model exists. Its bags need not distribute the
+three roots of either triangle into distinct bags.
+
+A concrete sufficient construction is a partition of the common graph
+`M=G-({u} union D)=P union C` into connected sets `A,B`, each meeting
+`P` and each adjacent to all four vertices of `D`. Since `M` is connected,
+these two parts are adjacent. Together with singleton bags `D` and `{u}`,
+they give the required `K7`. This partition is not yet proved to exist.
+The attack must choose the two parts, root ownership and proper-minor
+colourings together; models obtained for different choices of `r` cannot
+be combined without a valid ownership argument. All final bags may change.
+
+#### Previous attack: use six-chromaticity at the model separator
+
+**Preserved preceding plan and its failed construction; no case closure.** A duplication
 check against [the matching-bridge theorem, Theorem 3.5](../results/hc7_degree7_matching_bridge_bundle.md)
 and [the connector-or-separator theorem](../results/hc7_exact7_rooted_k5_connector_separator.md)
 shows that constructing four rooted bags and then seeking a connector is
