@@ -426,6 +426,66 @@ vertex, but no increasing exchange or complete four-contact
 construction has been proved. This conditional construction is working
 material, not a further independently audited closure.
 
+**Fixed-colour-class construction; working reduction, not case closure.**
+The [edge-response normal form](hc7_degree7_colour_repair_working.md)
+can retain X without the preceding pivot. In its two-exception case,
+normalise a colouring of `G-h`, for an exterior edge `h=xy`, as
+`P={a1,a2,b}`, `D={d1,d2,d3,d4}`, with `ai,di` coloured i for
+`i=1,2`, d3,d4 coloured three,four, and `u,x,y` coloured five.
+The singleton P vertex b has colour six. In each of the five--i
+layers, swap the component containing ai after deleting u, and restore h.
+These are two colourings of `G-u`; they fix D and the entire sixth
+colour class `B={b} union I`. Thus the same graph `K=G-({u} union B)`
+and its component X containing `A={a1,a2}` are retained. The audited
+three-contact theorem makes this fixed X adjacent to all four D vertices.
+
+In fact h lies inside X. Otherwise its exterior endpoints both lie
+outside X. Splice the original edge-deletion colouring on X with either
+repaired colouring outside X; the fixed D colours are the only interface
+in K. This five-colours K with only four colours on `A union D`, a
+contradiction. The argument uses no inherited criticality of K.
+
+For `v in X`, give v the list of colours one to five excluding the
+colours of its D-neighbours; additionally forbid five at both A vertices.
+This list instance is uncolourable, since a colouring would extend over
+the other components of `K-D` and again remove the fifth boundary colour.
+Deleting h makes it colourable. The two repairs violate the lists only
+at a1 and a2, respectively. Hence an inclusion-minimal induced
+uncolourable subgraph Z contains both A vertices and both h endpoints;
+it is connected and satisfies `d_Z(v)>=|L(v)|`. These facts do not
+make Z contraction-critical or provide a lift from a contracted Z.
+
+**An audited configuration closure within this construction.** The
+[Ore-core theorem](../results/hc7_split_clique_ore_core.md), with a
+[separate reconstruction audit](../results/hc7_split_clique_ore_core_audit.md),
+excludes a literal five-clique `R=A union E`, `|E|=3`, and an exterior
+vertex y adjacent to every vertex of `E union D`. It applies in the
+original seven-connected split-clique host, with arbitrary additional
+vertices and without a colouring premise. Components outside
+`R union D union {u,y}` can be joined through at most three D vertices
+to give an R-full bag containing b. The remaining D vertex joins u
+to y in a disjoint second R-full bag; these bags and R give K7.
+This eliminates the Ore-type list obstruction, whose four D contacts
+can otherwise all occur at y.
+
+The general list obstruction remains open. No literal-five-clique
+classification has been obtained. Replacing R by a minor model loses
+the boundary count: an outside component can have seven neighbours
+inside a few large bags and no D contact. The two repaired path systems
+also cannot yet be combined into one bipartite scheme: their shared
+vertices can have different required owners. A first D-full bag may
+remove the other component's D contacts.
+
+The response cases outside this construction remain open as well. With
+zero exceptions, deleting the singleton P colour may give only a
+five-colouring of `K-h`, while K itself can require six colours; if
+the endpoints have that deleted colour, the class contains h and is
+not independent in G. With one exception, moving the defective edge
+along its bichromatic component may encounter a nontrivial block, so
+an adjacent edge need not be separating. A new proper-minor colouring
+does not retain the old response. These are first unsupported steps,
+not counterexamples to a joint construction using the original host.
+
 **Attempted six-root construction; no valid induction yet.** For every
 `r in D`, `J=G-{u,r}` is six-chromatic and therefore contains an ordinary
 K6 minor by HC6. The colour repair below with X empty excludes five colours.

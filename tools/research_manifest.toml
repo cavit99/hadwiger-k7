@@ -7,6 +7,23 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.split_clique_ore_core"
+title = "A literal five-clique configuration in the split-clique frame forces K7"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_split_clique_ore_core.md"
+source_heading = "Structural statement"
+audit = "results/hc7_split_clique_ore_core_audit.md"
+expected_source_sha256 = "9948d60a5f425edc94ac05592178db2c7ae06e1f52a0bd9ac769fb32896ca468"
+active = false
+scope = "finite seven-connected graphs with disjoint literal cliques R=A union E of order five and D of order four, |A|=2, |E|=3, distinct outside vertices u,b,y, N(u)=A union D union {b}, b complete to A and y complete to E union D; arbitrary other vertices and consistent extra edges allowed"
+label_fidelity = "five singleton R roots and two disjoint connected R-full bags; one contains b and at most three D vertices, the other is u,y and a remaining D vertex"
+strict_parameter = "direct construction in the original host; no induction, quotient criticality or colouring lift"
+conclusions = ["a K7 minor with all twenty-one contacts explicitly retained", "the literal Ore-core configuration is excluded in the seven-connected split-clique host without a host-order bound"]
+does_not_prove = ["classification of general list-critical obstructions", "replacement of the literal five-clique by an arbitrary minor model", "the whole two-exception response branch", "the whole split-clique case", "HC7"]
+keywords = ["Ore core", "literal five-clique", "four-clique", "component boundary", "seven-connectivity", "simultaneous allocation"]
+
+[[claims]]
 id = "hc7.split_clique_three_contact"
 title = "The three-contact colouring branch of a split-clique neighbourhood"
 kind = "theorem"

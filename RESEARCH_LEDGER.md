@@ -76,7 +76,12 @@ Thus that component must contact all four clique vertices for every
 choice of contracted edge and colouring. This closes one unbounded
 branch; the remaining four-contact construction is open. The proposed
 component exchanges can lose connecting vertices and do not yet give
-a monotone reduction. The whole split-clique case, other degree-seven
+a monotone reduction. The subsequent fixed-colour-class construction
+retains that component across two edge-response repairs. An
+[audited Ore-core exclusion](results/hc7_split_clique_ore_core.md)
+now closes one resulting literal-five-clique configuration for arbitrary
+host order; general list obstructions and the other response types remain
+unresolved. The whole split-clique case, other degree-seven
 configurations, and degrees eight and nine remain. The C21 manuscript
 is unchanged.
 
