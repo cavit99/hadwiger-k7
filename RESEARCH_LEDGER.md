@@ -46,6 +46,13 @@ forces a `K7` minor in the original critical graph. There is no restriction
 to a particular owner pattern or number of bags entering the remainder;
 all final bags may change. The five-chromatic branch and the rest of the
 degree-seven checkpoint remain beyond this case closure.
+The [next attack](active/hc7_c21_rooted_density_construction.md#next-attack-use-six-chromaticity-at-the-model-separator)
+must use six-chromaticity to repair an actual separator inside the rooted
+model, or turn failed repair into a colouring contradiction. The proposed
+four-bag-plus-connector formulation was checked against earlier work and
+is the same unresolved mechanism, not a new reduction. Recent primary-source
+checks found no theorem supplying its missing step. Case closure remains
+unproved; its probability cannot responsibly be quantified.
 The [auxiliary separator reduction](results/hc7_two_triangle_colourful_reduction.md)
 remains an optional sufficient route. A new
 [extremal prism reduction](results/hc7_two_triangle_extremal_prism.md),

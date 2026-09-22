@@ -172,10 +172,98 @@ seven-connectivity and all proper-minor six-colourings of `G`, and places
 no restriction on the order, root-ownership pattern or initial `K6` model.
 Hadwiger's theorem for six supplies that model. The existing two-bag and
 two-singleton constructions are terminal cases of the attack, not
-extra assumptions. The missing step is a joint reassignment using the
-actual colouring responses, or a direct `K7` construction. A theorem
+extra assumptions. The next attack uses six-chromaticity to repair the
+actual separator inside a rooted model, as specified below. A theorem
 about arbitrary five-connected graphs is not required. The branch
 `chi(J)=5` remains open but is not receiving parallel discovery effort.
+
+#### Next attack: use six-chromaticity at the model separator
+
+**Plan; no new case closure or reduction is claimed.** A duplication
+check against [the matching-bridge theorem, Theorem 3.5](../results/hc7_degree7_matching_bridge_bundle.md)
+and [the connector-or-separator theorem](../results/hc7_exact7_rooted_k5_connector_separator.md)
+shows that constructing four rooted bags and then seeking a connector is
+already an unresolved repository mechanism. Rebuilding the core is not
+the next research task.
+
+Its useful specialised form is as follows. Delete the whole `r`-class
+`I0` of a six-colouring of `G-u`. The resulting graph `H` has colourful
+`T` in every five-colouring. Delete the repeated-pair class `C` of one
+such colouring, containing `p in P,q in Q`. The four remaining roots
+`Z=T-{p,q}` are colourful in the four-colourable graph `L=H-C`:
+otherwise restoring `C` omits a colour on `T`. Martinsson--Steiner
+[Theorem 1.3](https://arxiv.org/html/2209.00594v1#S1), or the bichromatic
+`K2,2` scheme and our bipartite theorem, supplies a `Z`-rooted `K4`.
+
+A `p-q` path avoiding these four bags in `J` completes a `T`-meeting
+`K5`, hence `K7` with `{u},{r}`. If there is no such path, an actual
+inclusion-minimal `p-q` separator inside the four bags has order at
+least five, by five-connectivity of `J`. Its two distinguished components
+are full to it. Thus one bag contains two separator vertices, but no
+valid split follows merely from this fact. The separator can have
+arbitrary order. This is the old obstruction, not a new reduction.
+
+The selected case adds `chi(J)=6`. In particular `I0-{r}` is nonempty;
+the connector may use these vertices and all other unused colours.
+Nonemptiness alone gives no linkage. The next construction must show
+how six-chromaticity forces a compatible bag exchange across that actual
+separator, or how failure yields a five-colouring of `J` or six-colouring
+of `G`. All colourings, repeated pairs and bags may change. A successful
+model of this form is sufficient, not compulsory for case closure.
+
+The following restarts still lack an improvement: a Kempe swap can move
+cut vertices out of the core colours, but rebuilding the core can move
+the separator back; minimising the `r`-class does not synchronise root
+and neighbour contacts; contracting a full shore supplies a colouring
+without an expansion. None is a new mechanism merely because `I0-{r}`
+is nonempty.
+
+Begin with two complementary construction workers and the coordinating
+agent: one develops a joint recolouring from actual proper-minor
+responses, the other a simultaneous allocation across the full separator.
+They must produce an explicit exchange, not more sufficient conditions.
+Before scaling, specify its use of `chi(J)=6`, retained roots and contacts,
+success and failure outcomes, and a strict improvement or complete lift.
+If it applies unchanged to a known weaker barrier, test that example
+first. A failure for one frozen colouring or model does not refute an
+existential construction.
+
+Only after such an exchange has promise should further workers handle
+its separator cases and targeted computational tests, using existing
+tools. Recursion requires a preserved class, strict descent and a lift;
+none follows from choosing a smaller quotient. If the first construction
+cycle returns the same ownership gap, change the proposed operation
+before allocating another cycle. Independent reconstruction begins when
+an argument appears to close the case or remove a substantial gap. The
+whole six-chromatic case remains the success criterion; we do not yet
+have a validated new operation that closes it.
+
+**Primary-source recheck, 22 September 2026.** Targeted searches and
+version checks found no theorem supplying this joint construction:
+
+- [*Colorful Minors*, v5, 4 September, Theorem 3.1](https://arxiv.org/html/2507.10467v5#S3)
+  needs an ordinary `K_k` model with `k>=floor(3qt/2)+t`.
+  One annotation for `T` and five target bags require `K12`, not our `K6`.
+- [*The Erdős–Pósa Property for Colorful Minors*, 4 September, Corollary 2.3](https://arxiv.org/pdf/2609.04956)
+  gives the one-annotation packing–covering property exactly for
+  outerplanar targets. It gives no general bounded hitting-set theorem
+  for a `T`-meeting `K5`; the critical-host case remains possible.
+- [Liu–Luo v2, 9 September](https://arxiv.org/html/2609.06867v2), and
+  [Lin, 8 September, Lemma 2.4](https://arxiv.org/html/2609.08713v1),
+  give simultaneous star contractions costing at most one colour.
+  Neither gives an exact six-colouring lift or the missing bag contacts.
+- [Dvořák–Norin–Rahman, v1, 15 September](https://arxiv.org/html/2609.17760v1)
+  remains the current version. Its `K7^-`-free critical-host restrictions
+  do not apply to the present host, and its colouring theorem does not
+  complete the missing adjacency. Its preserved induction class remains
+  a useful methodological example.
+
+These checks do not establish an exhaustive literature search. They
+support concentrating on the joint construction rather than reopening
+the asymptotic or density-only programmes. Its probability of success
+cannot presently be quantified responsibly.
+
+#### Existing constructions and exact nonclosures
 
 The [extremal prism reduction](../results/hc7_two_triangle_extremal_prism.md)
 now supplies an exact representation if that rooted model is absent.
