@@ -264,6 +264,20 @@ obstruction or additional frame information must enter. Cells with extra
 reserved contacts and the final whole-host colouring also remain outside
 these closures.
 
+The attempted two-separator descent has a concrete nonclosure, not a
+counterexample or an exhaustive normal form. A separator `Z={z1,z2}`
+may leave two components with H0 boundaries `Z union {q1,t}` and
+`Z union {q2,t}`, where `T={q1,q2,t}` and neither separator vertex
+sees q1 or q2. If both components see all four F contacts, each actual
+boundary has order eight. The natural helpers miss different clique
+gates; expanding both corresponding exterior bags consumes the two
+components. An alternative exterior model rooted at t and all four
+ports is not supplied by the linkage argument, which can leave its
+surviving clique side at an omitted q1 or q2. Contracting Z does not
+repair the proof: it may reduce an original seven-boundary set to six
+and does not preserve the degree data. A valid colouring lift or a
+different simultaneous allocation remains possible.
+
 The colouring terminal need only be `chi(G-{u,r})<=5`: the
 [existing selected-edge argument](hc7_degree7_exceptional_construction_working.md#4-scope-of-the-negative-findings)
 would extend it to a six-colouring of G. The construction must therefore
