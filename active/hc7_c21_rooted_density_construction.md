@@ -238,6 +238,22 @@ an argument appears to close the case or remove a substantial gap. The
 whole six-chromatic case remains the success criterion; we do not yet
 have a validated new operation that closes it.
 
+**First joint construction cycle.** The
+[cap-edge response](hc7_two_triangle_six_chromatic_working.md#a-joint-cap-edge-colouring-response)
+first finishes any cap edge with three actual common neighbours in J.
+Otherwise one contraction colouring supplies at most two alternating
+paths. Their prefixes expand one endpoint, keep the other singleton,
+and reserve five distinct common neighbours, including u,r and the third
+cap root. This corrects the common-contact deficit simultaneously, but
+does not preserve the opposite triangle or the linkage after the expanded
+set is deleted. The single-path case gives six-chromatic proper minors;
+these do not inherit seven-criticality. The eligible opposite-cap switch
+has an inverse and preserves path length. No strict improvement or case
+closure was obtained, and no separate audit was commissioned. The
+[failed continuations](hc7_two_triangle_six_chromatic_working.md#why-the-joint-response-has-not-closed-the-case)
+identify the exact missing lift; repeating a shortest-response argument
+without a different operation is not an advance.
+
 **Primary-source recheck, 22 September 2026.** Targeted searches and
 version checks found no theorem supplying this joint construction:
 

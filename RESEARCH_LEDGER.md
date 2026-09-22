@@ -75,7 +75,14 @@ that placement from a general model remains unproved: transferring a
 root-bag part can lose its only contacts to two other bags. The attempts
 using proper-minor colourings have not repaired this loss. These working
 proofs are not separately audited; the whole six-chromatic case remains
-open. The C21 manuscript is unchanged.
+open. The [joint cap-edge response](active/hc7_two_triangle_six_chromatic_working.md#a-joint-cap-edge-colouring-response)
+now expands one end into a connected set with five actual common
+neighbours of the other, retaining `u,r` and the third cap root. Selecting
+that expansion together with the opposite-triangle linkage remains
+unproved. Its single-path version gives six-chromatic proper-minor probes,
+but loses the required critical-host induction class; the natural cap
+switch is reversible. These are working deductions, not a case closure.
+The C21 manuscript is unchanged.
 
 ## Completed C21 construction
 

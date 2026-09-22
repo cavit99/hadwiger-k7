@@ -158,6 +158,110 @@ the K6 model required above. Thus an unclosed six-chromatic instance
 has chi(J-{a,b})>=5 for every edge within either triangle. No such
 four-colouring is assumed to exist in the general instance.
 
+## A joint cap-edge colouring response
+
+The following working deductions use the original critical graph `G`:
+it is seven-connected, seven-chromatic, every proper minor is six-colourable,
+and `N(u)=P union Q union {r}`, with anticomplete triangles `P,Q` and
+`r` adjacent to every vertex of `T=P union Q`. Put `J=G-{u,r}` and
+assume there is no `T`-meeting K5 in J. These deductions hold in both
+chromatic branches; they do not themselves exploit `chi(J)=6`.
+
+**The common-neighbour exit.** For an edge `ab` of P, there are at most
+two common neighbours of a,b in J. Otherwise choose three of them.
+Three-connectivity of `J-{a,b}` gives three disjoint paths from that
+three-set to Q. The paths are pairwise adjacent through Q, and each
+touches a and b. Together with `{a},{b}` they give a T-meeting K5.
+The same assertion holds for every edge of Q. Thus every cap edge has
+at most four common neighbours in G, including u,r and its third cap
+vertex p. In the prism representation its ends have at most one common
+neighbour in E.
+
+Consequently `chi(G-{a,b})=6`. Indeed, in any five-colouring of that
+graph a colour i misses the common neighbourhood. Recolour the colour-i
+neighbours of a with a new sixth colour, give a colour i and b colour
+six. The recoloured set is independent and avoids b, so this six-colours
+G, a contradiction. The upper bound follows from proper-minor criticality.
+
+**Simultaneous expansion.** Fix any six-colouring of `G/ab`, with the
+contracted vertex coloured 0. Expand it to a colouring of `G-ab`, where
+only ab is monochromatic. Let D be the other colour-0 vertices. They
+are independent and anticomplete to `{a,b}`. For each colour i other
+than 0, choose a shortest a-b path in the subgraph on colours 0,i,
+with ab omitted. Such a path exists: otherwise interchanging the colours
+on the component of a repairs ab and six-colours G.
+
+If i occurs on a common neighbour, choose the length-two path through
+one such vertex. In particular choose u,r,p for their three distinct
+colours. For each path let `w_i` be its last vertex before b, and let
+`A_i` be its prefix ending immediately before `w_i`. Put `A=union A_i`.
+Then:
+
+- A is connected and contains a, while b is outside A;
+- the five vertices `w_i` are distinct, outside A, and adjacent to both
+  A and b; they include u,r,p;
+- `A-{a}` is anticomplete to b.
+
+Here every prefix contains a. Different paths intersect internally only
+at vertices of D, since their other colours differ; each `w_i` has its
+own nonzero colour and was omitted from its sole path prefix. This proves
+disjointness from A. Shortestness excludes a b-neighbour earlier on a
+path, proving the last assertion. This direct prefix union is the
+singleton-end case of the two-tree allocation used in earlier work; no
+new matroid theorem is needed.
+
+There are one or two colours absent from the original common neighbourhood.
+Only their paths enlarge A beyond a. With one absent colour, A is an
+induced bipartite path; with two, it is the union of two alternating
+path prefixes and is at most three-colourable. In either case u,r,p are
+preserved, and at least three of the new common neighbours lie in J.
+Vertices of Q, however, may belong to A.
+
+**A chromatic consequence, not an induction.** In the one-absent-colour
+case, `chi((G-b)/A)=6`. More generally, this holds with b replaced by
+any vertex z outside A whose neighbours in A lie in one bipartition
+class. A five-colouring of `(G-z)/A` would lift by giving that class
+the contracted vertex's colour, and the other class and z a new sixth
+colour. All neighbours outside A avoid the contracted colour, and z
+misses the new-colour class. This would six-colour G. The proper-minor
+upper bound gives equality. If A avoids Q, then u also contacts A only
+at a, so `chi((G-u)/A)=6` as well. Neither quotient inherits the original
+seven-critical hypothesis.
+
+## Why the joint response has not closed the case
+
+The new common neighbours would finish by three disjoint paths to Q in
+`J-(A union {b})`. The expansion and those paths have not been selected
+jointly. If Q survives but the linkage fails, Menger gives a separator
+of order at most two in this residual graph. Its lifted boundary can
+also contain the whole of A and b; it is not a small cut of J.
+
+The original host does give three-connectivity of `J-P` and `J-Q`.
+For example, after deleting at most two vertices from `J-P`, the surviving
+Q vertices lie in one component. Any other component X is root-free and
+has `N_J(X)` contained in P and those two deleted vertices, contrary
+to the six-neighbour bound. But this does not preserve connectivity
+after the prescribed expansion is deleted. A topological bypass may use
+other colours and cease to be an eligible colouring response.
+
+Shortest path length also fails to orient the natural cap switch. If a
+Q edge e on the alternating a-b path separates a from b in the entire
+two-colour graph with ab omitted, flip one component after deleting e.
+This repairs ab and makes e monochromatic, giving a colouring of G/e.
+The cycle consisting of the old path and ab supplies the new bridge
+after e is removed. Its length is unchanged, and reversing the switch
+recovers the original response. Without the separator condition even
+this transfer is unjustified. With two absent colours, the prefixes
+can also intersect in D; their valid union supplies no additional lift.
+
+An earlier proposed separator exchange was withdrawn before use: full
+components on either side of a separator inside four bags can themselves
+contain parts of retained bags. Taking the whole components therefore
+does not establish disjointness. Similarly, deleting the contracted
+vertex's whole colour class does not make the common neighbourhood
+five-colourful: a proposed recolouring can conflict with other vertices
+of that deleted class. Neither assertion is a proved terminal case.
+
 ## Remaining global obligation
 
 In the selected critical-host branch, chi(J)=6 supplies an ordinary K6
