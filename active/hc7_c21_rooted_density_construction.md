@@ -377,51 +377,54 @@ when restored. Unlike u,r, its neighbourhood is not one of the two
 controlled neighbour sets. No valid iteration has been obtained. Neither
 the adjacent-degree-seven case nor the whole split-clique case is closed.
 
-**Working asymmetric colouring construction; no case closure or separate
-audit.** Choose `p in P`, six-colour the proper minor `G/up`, and give
-its merged vertex colour six. Let I be the other vertices of that colour.
-Then I is an independent subset of C, anticomplete to p. The original
-induced graph `K=G-({u,p} union I)` is five-colourable, and
-`T=(P-{p}) union D` is colourful in every five-colouring of K. Otherwise
-restore p and I in colour six and give u a colour missing from T.
-This uses a minor with one fewer vertex only to obtain a colouring;
-no criticality or connectivity is transferred to K.
+**Audited three-contact closure; the four-contact branch remains.** Choose
+`p in P`, six-colour `G/up` with its contracted vertex coloured six,
+and let I be the other vertices of that colour. Then I is independent
+and anticomplete to p. Put `K=G-({u,p} union I)`, and let X be the
+component of `K-D` containing the edge `P-{p}`. That edge together
+with D uses all five colours in every five-colouring of K.
 
-The following extraction handles this whole auxiliary class. Let a
-five-colourable graph K contain an anticomplete literal edge A and
-four-clique D, with `A union D` colourful in every five-colouring.
-Let X be the component of `K-D` containing A. Then either:
+The [three-contact theorem](../results/hc7_split_clique_three_contact.md),
+with a [separate reconstruction audit](../results/hc7_split_clique_three_contact_audit.md),
+proves that if X misses any D vertex, G contains K7. The six paths
+in the earlier five-bag extraction combine with three additional
+colour-six paths from p to form a fully rooted K3,3 scheme. The two
+literal root triangles and u complete K7. No maximality, connectivity
+hypothesis or induction is needed for this branch.
 
-- X contacts all four D vertices; X and the singleton D bags form K5; or
-- X misses exactly one `d in D`, and `K[X union (D-{d})]` contains a
-  K5 minor rooted at all five vertices of `A union (D-{d})`.
+Thus in a hypothetical counterexample, X contacts all four D vertices
+for **every** p and **every** colouring of `G/up`. The same applies
+for every independent `I subset C` anticomplete to p for which
+`G-({u,p} union I)` is five-colourable: its colouring extends back to
+`G/up`. The [earlier extraction](../archive/hc7_split_clique_asymmetric_extraction_2026-09-22.md)
+is frozen; its three-contact allocation gap is resolved.
 
-To prove this, fix a colouring with D in colours one to four. The edge
-A uses colour five and one other colour. If X missed two D vertices,
-choose a missing boundary colour different from A's other colour.
-Interchanging it with five throughout X preserves every boundary edge
-and removes five from A, a contradiction. Hence X misses at most one
-D vertex. The D-full case has the displayed model.
+**Working exchanges in the remaining four-contact branch.** Normalise a
+colouring of `G-u` as `P={p_6,a_5,b_4}`, `D={d_4,q_1,q_2,q_3}`.
+Swapping any components on colours five and six is valid. Swapping
+the one L containing the edge pa makes a the unique colour-six
+neighbour of u, and therefore supplies a colouring of `G/ua`.
+The new removed class is
+`I'=(I-L) union ((V_5 intersection L)-{a})`. Old colour-five vertices
+are removed, and old colour-six vertices are restored. The former may
+separate X, so the new component need not contain the old one or be
+larger. Maximising |X| over all choices supplies no strict exchange
+without a retention argument. Universal four-contact retention does
+not itself repair this: all four contacts can remain in an unchanged
+part of X. Replacing the entire layer on colours four, five and six
+by another proper three-colouring is also valid, but supplies no
+monotone parameter by itself.
 
-If X misses d, the same interchange proves that A uses exactly colour
-five and d's colour in every colouring. Put `Q=D-{d}`. For each
-`a in A,q in Q`, their bichromatic component in `K[X union Q]`
-contains both roots: otherwise interchanging the component at a changes
-A's forced pair of colours. This interchange extends to K, since X's
-entire outside neighbourhood is Q. The six resulting paths form a
-rooted K2,3 scheme: A has the two distinct colours absent from Q, and
-every intersection has the colour of a common endpoint. Bipartite
-contractibility supplies its rooted minor; the actual A edge and Q
-triangle complete K5. All five bags lie in the stated original subgraph.
-
-Applied above, these are explicit distributions of four D roots and
-one P-meeting bag, or three D roots and two distinct P-rooted bags.
-Neither supplies K7 yet. In the second distribution, two disjoint
-paths from the omitted d to the two P roots exist in
-`G-({u,p} union Q)`, which is two-connected. They need not avoid the
-vertices used by the rooted K5 construction. The first distribution
-likewise lacks the required contacts from p to the four D bags.
-The independent class I does not automatically supply either lift.
+There is a further direct construction if d lies in both the
+four--five component containing ab and the four--six component
+containing pb. The resulting a--d and p--d paths, together with the
+six forced a/p--Q paths, form a fully rooted K2,4 scheme. Its minor,
+the literal D clique and edge ap, and singleton u give K7. Criticality
+forces the p--Q paths but not p--d: b shares d's colour. Swapping a
+component which misses d can move the repeated colour to another P
+vertex, but no increasing exchange or complete four-contact
+construction has been proved. This conditional construction is working
+material, not a further independently audited closure.
 
 **Attempted six-root construction; no valid induction yet.** For every
 `r in D`, `J=G-{u,r}` is six-chromatic and therefore contains an ordinary

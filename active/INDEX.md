@@ -30,6 +30,8 @@ Selected conditional checkpoint:
   internally audited proof covering both chromatic branches. The next
   selected construction concerns the other exceptional neighbourhood,
   a disjoint triangle and four-clique, in the original critical host.
+  Its [three-contact colouring branch](../results/hc7_split_clique_three_contact.md)
+  now has an audited closure; the four-contact branch remains open.
 
 ## Completed theorem and current application laboratory
 

@@ -7,6 +7,29 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.split_clique_three_contact"
+title = "The three-contact colouring branch of a split-clique neighbourhood"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_split_clique_three_contact.md"
+source_heading = "Statement"
+audit = "results/hc7_split_clique_three_contact_audit.md"
+expected_source_sha256 = "a72ad9a6e69497a4d064d826738f04ae0c19f49141fe124aaafd98d950f2f110"
+active = false
+scope = "finite simple non-six-colourable graphs whose every proper minor is six-colourable, with a vertex u whose neighbourhood is an anticomplete triangle P and four-clique D; any p in P and any six-colouring of G/up whose other contracted-root-colour vertices are removed"
+label_fidelity = "nine paths from one original-host colouring give a fully rooted K3,3 on P and three D vertices; literal root triangles and the singleton u retain all twenty-one K7 contacts"
+strict_parameter = "direct construction in the original graph; contraction supplies only a colouring, with no recursive criticality or induction"
+conclusions = ["a K7 minor if the component containing P minus p in the reduced graph minus D misses any D vertex", "in a hypothetical K7-free host that component contacts all four D vertices for every p and every quotient colouring"]
+does_not_prove = ["the four-contact branch", "the whole split-clique neighbourhood case", "the entire degree-seven case", "HC7", "external peer review"]
+keywords = ["three-contact closure", "split-clique neighbourhood", "proper-minor colouring", "K3,3 scheme", "unbounded branch"]
+
+[[relations]]
+source = "hc7.split_clique_three_contact"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "The nine bichromatic paths satisfy the full scheme axiom; fully rooted K3,3 extraction retains the six literal roots used for the final clique contacts."
+
+[[claims]]
 id = "hc7.barrier.both_nonplanar_cell"
 title = "Both overlapping seven-boundary cell sides can be nonplanar"
 kind = "barrier"

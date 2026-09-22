@@ -66,14 +66,19 @@ internal triangles. A [new explicit barrier](barriers/hc7_both_nonplanar_cell.md
 rules out closing it from nonplanarity of both overlapping sides alone;
 its finite hypotheses are checked, without a separate audit. The attempted
 proper-minor colourings still lack an extension through the restored cell.
-Further working constructions use simultaneous star colourings and a
-five-colour reduction with a marked edge and four-clique. The latter now
-has an explicit K5 extraction with two specified root distributions.
-The required extra contacts remain unproved in both constructions;
-neither closes another case or has a separate audit.
-The two audited theorems close unbounded cell families, not the whole
-neighbourhood case. Other degree-seven configurations and degrees
-eight and nine also remain. The C21 manuscript is unchanged.
+A separate five-colour reduction now has an
+[audited three-contact closure](results/hc7_split_clique_three_contact.md).
+After contracting any edge from the centre to its triangle, delete the
+contracted root's other colour-class vertices. If the component containing
+the remaining triangle edge misses any four-clique vertex, nine paths
+from the same colouring form a fully rooted K3,3 scheme and yield K7.
+Thus that component must contact all four clique vertices for every
+choice of contracted edge and colouring. This closes one unbounded
+branch; the remaining four-contact construction is open. The proposed
+component exchanges can lose connecting vertices and do not yet give
+a monotone reduction. The whole split-clique case, other degree-seven
+configurations, and degrees eight and nine remain. The C21 manuscript
+is unchanged.
 
 ## Completed C21 construction
 
