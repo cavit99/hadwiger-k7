@@ -268,6 +268,19 @@ Alternating both stems between their root colours and one fresh colour
 can also assign that fresh colour to both adjacent P roots. Thus this is
 not yet a whole-host colouring or a valid induction.
 
+Nor do the current exchanges establish that the reserve is three-colourable.
+A triangle core `c1,c2,cr` and an F vertex `y` adjacent to all three give
+a literal `K4`. The P/D swap can keep these four vertices, exchanging
+only the reserved P endpoint; the reverse two-contact swap frees no
+vertex. This is a nonclosure of those exchange rules, not an example
+satisfying the full minimum-state and critical-host hypotheses.
+
+The planar root palette itself can be reduced to two colours: in outer
+order `p1,p2,q1,q2`, identify the noncrossing nonadjacent pairs `p1,q2`
+and `p2,q1` through the outer face, then four-colour the planar quotient.
+This does not colour the reserve or insulate a shared colour from all its
+H0 attachments. Those operations must be justified simultaneously.
+
 In the original contraction-critical host, a sufficient terminal is
 the weaker statement `chi(G-{u,r})<=5`. Indeed the only common
 neighbours of `u,r` are the three vertices of `D-{r}`. In a proposed

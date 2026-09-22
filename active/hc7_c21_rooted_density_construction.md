@@ -287,6 +287,57 @@ consume the vertices reserved for the extra path. The complete case
 still requires an original-host colouring or seven compatible bags; a
 new approach need not preserve these chosen sides or models.
 
+More specifically, normalising a selected bipartite scheme can absorb
+actual neighbours of the fourth D root into another prescribed D bag.
+Even a triangle of such neighbours does not itself prevent that loss;
+additional original-host edges must enter the rerouting. Marked forest
+allocations without this retention step therefore remain conditional.
+The [cell-free colouring discussion](hc7_split_clique_rooted_construction_working.md#the-remaining-global-construction)
+also records why the present exchanges do not imply a three-colour reserve.
+
+**Working adjacent-degree-seven branch; no case closure.** Suppose some
+`r in D` also has degree seven. Put `Q=D-{r}` and `T=N_C(r)`. Then T is
+a triangle: `|T|=3`, u is anticomplete to T, and Dirac's neighbourhood
+bound `alpha(N(r))<=2` excludes two nonadjacent vertices in T. In one
+six-colouring of the proper minor `G/ur`, give the merged vertex colour
+six and Q colours one, two, three. Both `P union Q` and `T union Q`
+use all five remaining colours. Otherwise split the merged vertex,
+giving the endpoint with at most four neighbour colours a missing colour
+and the other endpoint colour six, to six-colour G.
+
+Consequently P and T each have unique vertices `p_i,t_i` of colours
+`i=4,5`. In `J=G-{u,r}`, there is a `p_i`--`t_i` path using only colours
+`i,6`: otherwise the component of u in that two-colour graph of `G-ur`
+can be interchanged and the edge ur restored properly. These two paths
+can share colour-six vertices. If the induced graph `J[4,5,6]` has no
+two disjoint paths between the two cap edges `p4p5,t4t5`, Menger gives
+a single separating vertex x of colour six. It has a neighbour of each
+Q colour: recolouring x with a missing Q colour would destroy the forced
+two-colour connection and permit the same interchange. These neighbours
+need not be the prescribed Q roots.
+
+There is a joint extraction if the extra Q colours on P,T are different
+and the two displayed bichromatic paths A,B can be chosen disjoint. Let I
+be the colour-six class in J. In every five-colouring of `J-I`, each cap
+together with Q uses all five colours: otherwise restore I in colour six
+and split u,r as above. For each Q colour i, one cap omits i. This forces
+paths from `q_i` to that cap's colour-four and colour-five vertices in
+the respective bichromatic subgraphs of `J-I`; swapping the component
+at `q_i` would otherwise remove i from the colourful union. The first
+paths avoid B, and the second avoid A. Contract A,B and truncate these
+paths at their first contacts. They form a rooted `K_{3,2}` scheme.
+The bipartite theorem supplies five compatible bags; lifting retains both
+P and T contacts in each helper. The literal Q edges and `p4p5` complete
+their clique, and `{u},{r}` complete K7. This is a working conditional
+construction, without a separate audit.
+
+The missing step is choosing one colouring with different extra cap
+colours and two disjoint paths in their specified two-colour layers.
+An arbitrary free-pairing linkage in `J[4,5,6]` need not preserve that
+avoidance. No such simultaneous choice is proved, and the branch also
+leaves all choices with `d(r)>=8` unresolved. Neither criticality nor
+this colouring is transferred to a further quotient.
+
 The attempted two-separator descent has a concrete nonclosure, not a
 counterexample or an exhaustive normal form. A separator `Z={z1,z2}`
 may leave two components with H0 boundaries `Z union {q1,t}` and

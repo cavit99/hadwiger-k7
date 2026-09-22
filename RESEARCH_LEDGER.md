@@ -66,6 +66,10 @@ internal triangles. A [new explicit barrier](barriers/hc7_both_nonplanar_cell.md
 rules out closing it from nonplanarity of both overlapping sides alone;
 its finite hypotheses are checked, without a separate audit. The attempted
 proper-minor colourings still lack an extension through the restored cell.
+For an adjacent degree-seven vertex in the four-clique, a further working
+construction obtains compatible minor bags from one common colouring,
+conditional on different extra cap colours and disjoint bichromatic paths.
+The simultaneous choice is unproved, so no additional case is closed.
 The two audited theorems close unbounded cell families, not the whole
 neighbourhood case. Other degree-seven configurations and degrees
 eight and nine also remain. The C21 manuscript is unchanged.
