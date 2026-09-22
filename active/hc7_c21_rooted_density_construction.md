@@ -377,6 +377,52 @@ when restored. Unlike u,r, its neighbourhood is not one of the two
 controlled neighbour sets. No valid iteration has been obtained. Neither
 the adjacent-degree-seven case nor the whole split-clique case is closed.
 
+**Working asymmetric colouring construction; no case closure or separate
+audit.** Choose `p in P`, six-colour the proper minor `G/up`, and give
+its merged vertex colour six. Let I be the other vertices of that colour.
+Then I is an independent subset of C, anticomplete to p. The original
+induced graph `K=G-({u,p} union I)` is five-colourable, and
+`T=(P-{p}) union D` is colourful in every five-colouring of K. Otherwise
+restore p and I in colour six and give u a colour missing from T.
+This uses a minor with one fewer vertex only to obtain a colouring;
+no criticality or connectivity is transferred to K.
+
+The following extraction handles this whole auxiliary class. Let a
+five-colourable graph K contain an anticomplete literal edge A and
+four-clique D, with `A union D` colourful in every five-colouring.
+Let X be the component of `K-D` containing A. Then either:
+
+- X contacts all four D vertices; X and the singleton D bags form K5; or
+- X misses exactly one `d in D`, and `K[X union (D-{d})]` contains a
+  K5 minor rooted at all five vertices of `A union (D-{d})`.
+
+To prove this, fix a colouring with D in colours one to four. The edge
+A uses colour five and one other colour. If X missed two D vertices,
+choose a missing boundary colour different from A's other colour.
+Interchanging it with five throughout X preserves every boundary edge
+and removes five from A, a contradiction. Hence X misses at most one
+D vertex. The D-full case has the displayed model.
+
+If X misses d, the same interchange proves that A uses exactly colour
+five and d's colour in every colouring. Put `Q=D-{d}`. For each
+`a in A,q in Q`, their bichromatic component in `K[X union Q]`
+contains both roots: otherwise interchanging the component at a changes
+A's forced pair of colours. This interchange extends to K, since X's
+entire outside neighbourhood is Q. The six resulting paths form a
+rooted K2,3 scheme: A has the two distinct colours absent from Q, and
+every intersection has the colour of a common endpoint. Bipartite
+contractibility supplies its rooted minor; the actual A edge and Q
+triangle complete K5. All five bags lie in the stated original subgraph.
+
+Applied above, these are explicit distributions of four D roots and
+one P-meeting bag, or three D roots and two distinct P-rooted bags.
+Neither supplies K7 yet. In the second distribution, two disjoint
+paths from the omitted d to the two P roots exist in
+`G-({u,p} union Q)`, which is two-connected. They need not avoid the
+vertices used by the rooted K5 construction. The first distribution
+likewise lacks the required contacts from p to the four D bags.
+The independent class I does not automatically supply either lift.
+
 **Attempted six-root construction; no valid induction yet.** For every
 `r in D`, `J=G-{u,r}` is six-chromatic and therefore contains an ordinary
 K6 minor by HC6. The colour repair below with X empty excludes five colours.
@@ -386,17 +432,19 @@ retain those roots automatically; the earlier
 [three-helper normalisation gap](hc7_degree7_exceptional_construction_working.md#11-three-helpers-when-the-first-triangle-is-singleton)
 remains relevant.
 
-There is a global batch of contractions retaining six-chromaticity.
+There is a global batch of deletions retaining six-chromaticity.
 Let X be an independent subset of C, anticomplete to r, with
-`|N_G(X) intersection P|<=1`. For each x choose an adjacent parent in
-`J-X`, and contract the disjoint stars formed by each parent and its
-chosen children. A five-colouring of the quotient lifts to `J-X`.
+`|N_G(X) intersection P|<=1`. Suppose `J-X` had a five-colouring.
 Of the two colours absent from Q, choose one whose P vertex, if present,
 misses X. Give X, r and that P vertex colour six, and give u the chosen
-colour. This would six-colour G. Thus the quotient is six-chromatic;
-all six roots remain distinct, and rooted models lift through fixed
-disjoint star preimages. This is one simultaneous operation, not a
-claim that its hypothesis survives iteration.
+colour. This would six-colour G, so `chi(J-X)=6`. Alternatively, choose
+an adjacent parent in `J-X` for each x and contract the resulting
+disjoint stars. A five-colouring of that quotient would lift to `J-X`,
+so the quotient is also six-chromatic. All six roots remain distinct,
+and rooted models lift through fixed disjoint star preimages. Neither
+operation asserts that its hypothesis survives iteration. A minimal
+six-critical subgraph can change after deletion; choosing one does not
+provide an independent set meeting all such subgraphs.
 
 The colouring lift does not establish the required relative
 six-connectivity. A failure after one root-free edge contraction would
@@ -407,6 +455,29 @@ in the quotient can lie behind this cut without retaining the six roots.
 A six-root allocation across the original boundary, or a colouring
 extension through Y, is still needed. Neither follows from the batch
 colouring lift, so this does not supply a smaller induction instance.
+
+Two other construction attempts do not close the case. Contracting a
+maximal partition's sparse full part B gives one common available colour
+on its restored vertices, not degree-sized lists: outside neighbours may
+use all five other colours. Small blocks therefore do not justify a
+list-colouring extension. A six-path flow in `G-u`, with P capacities
+`(2,2,2)` and D capacities `(2,2,1,1)`, gives two valid reserved-pair
+webs when its incidence graph is an alternating spanning path. But a
+cell in either view may contain a tail from the other reserve, with
+only one path gate. Clean cells in a common remainder, a suitable
+incidence pattern and a third view are all unproved. The completed
+three-web planarity argument cannot be imported under these premises.
+
+The full split-clique frame also excludes a two-apex explanation, even
+without chromaticity. If `G-R` were planar for a pair R, it would be
+five-connected and contain no K4: in a planar K4 embedding, a face's
+three vertices would separate any additional vertex. Thus R meets
+`{u} union D` twice and `{u} union P` once, forcing `R={u,d}` with
+`d in D`. The planar graph `G-R` has minimum degree at least five and
+Euler's inequality forces at least twelve degree-five vertices. Each
+must see both deleted vertices to have G-degree at least seven. This
+contradicts `d_G(u)=7`. This working deduction does not show that a
+K7-minor-free graph must be two-apex; no such structural premise is used.
 
 The attempted two-separator descent has a concrete nonclosure, not a
 counterexample or an exhaustive normal form. A separator `Z={z1,z2}`

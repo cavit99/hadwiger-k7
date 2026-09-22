@@ -66,14 +66,11 @@ internal triangles. A [new explicit barrier](barriers/hc7_both_nonplanar_cell.md
 rules out closing it from nonplanarity of both overlapping sides alone;
 its finite hypotheses are checked, without a separate audit. The attempted
 proper-minor colourings still lack an extension through the restored cell.
-For an adjacent degree-seven vertex in the four-clique, a further working
-construction now forces different repeated clique colours on its two
-triangles, using two simultaneous star contractions and an explicit
-colouring lift. The same construction now applies to the degree-eight
-and degree-nine instances of the recorded common-stem obstruction.
-Compatible minor bags would follow if the resulting
-specified bichromatic paths could be chosen disjoint. That allocation
-remains unproved, so no additional case is closed.
+Further working constructions use simultaneous star colourings and a
+five-colour reduction with a marked edge and four-clique. The latter now
+has an explicit K5 extraction with two specified root distributions.
+The required extra contacts remain unproved in both constructions;
+neither closes another case or has a separate audit.
 The two audited theorems close unbounded cell families, not the whole
 neighbourhood case. Other degree-seven configurations and degrees
 eight and nine also remain. The C21 manuscript is unchanged.
