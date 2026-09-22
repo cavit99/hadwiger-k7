@@ -53,10 +53,12 @@ unbounded neighbourhood case, not the whole degree-seven case or HC7.
 The [next concentrated attack](active/hc7_c21_rooted_density_construction.md#next-attack-the-split-clique-neighbourhood)
 is the other exceptional neighbourhood, `K3 dotunion K4`. Its original
 critical host has a common exterior for all four choices of a vertex in
-the four-clique. The new structural theorem supplies triangle-meeting
-models, but a compatible allocation giving the last contacts remains
-unproved. Other degree-seven configurations and degrees eight and nine
-also remain. The C21 manuscript is unchanged.
+the four-clique. A new working construction retains two disjoint bags
+and an actual four-rooted remainder: a rooted `K4` there would give `K7`.
+Its web description and decreasing bag exchanges preserve the original
+contacts, but leave an unresolved seven-boundary cell and colouring
+composition. This is not a case closure. Other degree-seven configurations
+and degrees eight and nine also remain. The C21 manuscript is unchanged.
 
 ## Completed C21 construction
 

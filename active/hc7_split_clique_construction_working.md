@@ -4,6 +4,13 @@
 root placement in the [structural two-triangle proof](../results/hc7_two_triangle_case_closure.md). It does not close
 the split-clique degree-seven case or HC7.
 
+The [current four-root construction](hc7_split_clique_rooted_construction_working.md)
+works directly in the original host without the oriented strengthening
+below. The [maximal-partition exchanges](hc7_split_clique_exchange_working.md)
+develop this conditional route; the
+[three-colour counterexample](../barriers/hc7_split_clique_three_colour_rooted_minor.md)
+records a failed colouring shortcut. None closes the case.
+
 ## Oriented structural conclusion
 
 Let J be five-connected, contain an ordinary K5 minor and two disjoint

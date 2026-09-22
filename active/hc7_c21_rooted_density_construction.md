@@ -223,8 +223,31 @@ only `r`. This deduction is not separately audited. The explicit joint
 construction joins two deficient parts and keeps the P-containing component
 of their complement. The unresolved step is retaining all four clique
 contacts in that component; no intersection-connectivity assumption or
-common spanning tree is available. This is the current construction,
-not a further completed case.
+common spanning tree is available. The [maximal-partition exchanges](hc7_split_clique_exchange_working.md)
+give smaller possible shapes for the full helper, but do not resolve
+this loss of contacts. These remain working deductions, not a further
+completed case.
+
+The [current four-root construction](hc7_split_clique_rooted_construction_working.md)
+avoids that unaudited root-placement premise. It reserves two disjoint
+connected bags in the actual host; any remaining rooted `K4` would lift
+to `K7`. Fabila-Monroy--Wood's full obstruction theorem gives a spanning
+web directly, because the four roots have two disjoint actual edges.
+Minimising the number of reserved vertices gives explicit decreasing
+exchanges, with all root contacts retained. Their first surviving
+configuration is a cell with three web gates and four neighbours on
+one reserved path. Its seven-vertex boundary is allowed; no reduction
+or compatible colouring of this configuration is proved.
+
+The colouring terminal need only be `chi(G-{u,r})<=5`: the
+[existing selected-edge argument](hc7_degree7_exceptional_construction_working.md#4-scope-of-the-negative-findings)
+would extend it to a six-colouring of G. The construction must therefore
+produce a rooted minor or a valid five-colouring of that whole graph,
+possibly through an apex description. Separate planarity or colouring
+of its pieces is insufficient. The
+[six-vertex colouring barrier](../barriers/hc7_split_clique_three_colour_rooted_minor.md)
+also excludes a proposed shortcut: two disjoint Kempe components can
+have conflicting simultaneous swaps across an edge.
 
 #### Previous attack: use six-chromaticity at the model separator
 
