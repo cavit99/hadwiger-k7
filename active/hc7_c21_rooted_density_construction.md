@@ -187,6 +187,30 @@ construction keeps the original colouring responses available; it does
 not assume that a contracted helper or another extremal choice inherits
 them.
 
+The [contraction and colouring attack](hc7_degree7_exceptional_construction_working.md#8-what-the-contraction-attack-establishes)
+now forces a triangle around a root with exactly two helper neighbours
+and proves exact colouring lifts for a path owning a root. Contracting an induced
+three-vertex path retains the prism theorem's premises, but can leave
+the owned-root configuration inside the smaller helper. Mandatory Kempe
+moves on both triangles, obtained using bipartite contractibility, are
+also reversible. The unresolved construction must retain the complementary
+connected set's contacts while rerouting or splitting it; neither fewer
+quotient vertices nor a change of repeated pair establishes descent.
+
+The subsequent [three-owner construction](hc7_degree7_exceptional_construction_working.md#9-a-construction-for-some-three-owner-patterns)
+excludes a common root missing an independent pair of the four-vertex
+path, and handles the minimal remaining contact sets when deleting the
+root pair leaves a five-chromatic graph. The six-chromatic branch forces
+an ordinary `K6` minor. The [two-bag construction](hc7_degree7_exceptional_construction_working.md#10-a-six-clique-model-using-two-remainder-bags)
+turns any such model with exactly two bags entering `E` into the required
+rooted `K5`, for arbitrary subdivision lengths. A [three-helper construction](hc7_degree7_exceptional_construction_working.md#11-three-helpers-when-the-first-triangle-is-singleton)
+also finishes when the first triangle is singleton in the `K6` model,
+using paths in the entire graph after deleting that triangle.
+Normalising general models with three or more bags entering `E`, and
+the extra-contact five-chromatic instances, remain open. These
+are working proofs without separate audits, within a pattern not shown
+to cover the whole case.
+
 The [intact-helper barrier](../barriers/hc7_prism_intact_helper_barrier.md)
 rules out repairing root ownership solely after contracting two connected
 pieces to single vertices. Its four-connected eleven-vertex graph has an
@@ -194,6 +218,8 @@ extremal helper and contacts from both pieces to all three paths, but no
 `K5` model whose five bags all meet the triangles. It fails the stronger original-host
 connectivity and contact bounds. A valid repair must retain those bounds
 and the pieces' internal splitting choices.
+The new two-bag construction has the additional premise of an explicit
+`K6` model; the barrier does not refute this stronger statement.
 
 Deleting the whole `r`-colour class from any six-colouring of `G-u`
 gives a five-chromatic graph in which the six roots are colourful in

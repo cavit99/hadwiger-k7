@@ -260,8 +260,13 @@ helper contacts of `p_i`, then `s=p_i` and the first internal path
 vertex, now in `K`, restores that contact. Other P contacts survive.
 The complementary helper replaces this interval by the connected `W`
 and remains connected and P-full. Thus maximality proves only
-`|K|<=|W|`. Strict gain has not been established, so this valid move
-does not eliminate the end-block. Adjoining the interval to `W` is
+`|K|<|W|`. Indeed equality would make the new helper maximum, so its
+complement would again be an induced prism. But every vertex of `W`
+is non-cut in `E`, has degree at least three in `E`, and has at most
+one neighbour outside `W`. Thus `E[W]` contains a cycle, impossible
+inside the three root-free path interiors of the new prism. The move
+therefore loses helper vertices; it does not eliminate the end-block.
+Adjoining the interval to `W` is
 also not a small-separator argument: its other neighbours in `E-W`
 remain part of the actual boundary.
 
@@ -312,3 +317,355 @@ of `T` retains one of those three colours, and `u` has no neighbour in
 `E`. The conclusion is conditional on a four-colouring of `F`; the
 case `chi(F)>=5` is not removed. Neither this constraint nor separate
 colourful-set models supplies simultaneous branch-set ownership.
+
+## 8. What the contraction attack establishes
+
+**Written deductions; [separate internal audit](hc7_degree7_exceptional_contraction_audit.md).**
+All statements below retain the original critical graph and the extremal
+representation of Section 6. They do not establish a recursive reduction
+or close the two-triangle case.
+
+### Two owners force a triangle
+
+If a triangle root `p` has exactly two `E`-neighbours `x,y`, and `v` is
+its first vertical-path neighbour, then `{v,x,y}` induces a triangle.
+Indeed `d_G(p)=7`. Any nonedge among these three vertices, together with
+`u`, gives an independent triple in `N_G(p)`. Contract its star with
+centre `p` and six-colour the proper minor. Give the triple the contracted
+colour on expansion. The other four neighbours use at most four further
+colours, leaving a colour for `p`, a contradiction. This argument also
+applies to roots in `Q`, and needs no assumption that `x,y` are non-cut.
+
+### A three-vertex contraction preserves the prism theorem's premises
+
+Let `B={a,b,c}` induce `a-b-c` in `E`, put `H=J/B`, and call the
+contracted vertex `z`. Then `H` is four-connected and `chi(H)>=5`.
+A cut of size at most three avoiding `z` lifts unchanged to `J`.
+A cut containing `z` lifts to `B` and at most two other vertices.
+Every resulting component must meet `T`, by the six-neighbour condition
+for root-free sets. Yet deleting any two vertices from the prism leaves
+all surviving roots connected: each triangle's surviving roots are
+connected, and at least one vertical path remains intact. This excludes
+the cut. A four-colouring of `H` would expand with `a,c` in the colour
+of `z`, `b,u` in a fresh fifth colour and `r` in a sixth, again impossible.
+
+A `T`-meeting `K5` in `H` lifts through the fixed preimage `B`, so none
+exists. The prism theorem therefore applies. Write `m=|E|` and let `M`
+be any maximum helper in `H`, with `P` singleton and `Q` in its complement.
+Then
+
+    m-2 <= |M| <= m.
+
+The old `E/B` proves the lower bound. If `z in M`, expanding it proves
+`|M|=m-2`. Otherwise expansion in the complementary helper proves the
+upper bound. In this latter case `z` is an internal vertex on a new
+vertical path, between vertices `s,t`. Choose a shortest subpath `L` of
+`B` joining a neighbour of `s` to a neighbour of `t`. All neighbours of
+`B` outside `B` lie in `M union {s,t}`. Each unused vertex of `B` has
+a neighbour in `M`, since its degree in `J` is at least six. Absorbing
+these unused vertices into `M`, and replacing `s-z-t` by `s-L-t`, gives
+an admissible original partition. Hence
+
+    |M| + 3 - |L| <= m.
+
+When `|M|=m`, this forces `L=B`, so the whole path becomes consecutive
+vertices of another induced prism. It is an exchange between maxima,
+not a decreasing operation. When one root is adjacent to all of `B`,
+every maximum `M` instead has size exactly `m-2`: if `z` lies outside
+`M`, that root is `s` or `t` and there is a one-vertex choice of `L`.
+Thus even the three-owner path can remain inside the contracted helper.
+The quotient has fewer vertices but is not known to be in the original
+critical-host class; induction on its order would be unsupported.
+
+### A colouring lift for a path owning a root
+
+Let `X` induce a nonempty path in `E`, let `p=p_i`, and let `v` be the
+first internal vertex of `R_i`. Suppose `N_E(p) subseteq X` and all
+vertices of `N_X(v)` lie in one bipartition class of `X`. Then
+
+    chi(G/(X union {p})) = 6.
+
+The quotient is a proper minor. Suppose it
+has a five-colouring, with fibre colour `gamma` and `u`-colour `delta`.
+These colours differ. Recolour every outside `delta`-vertex except
+`u` and, when applicable, `v` with a fresh colour six. Give `p` colour
+six and alternate `gamma,delta` on `X`, assigning `gamma` to every
+`X`-neighbour of `v`. No outside neighbour of `X` has colour `gamma`;
+the remaining outside `delta`-vertices cause no conflict. The outside
+neighbours of `p` are exactly `u,r,P-{p},v`. The vertices `r,P-{p}`
+avoid `delta`, since they form a clique with `u`; neither `u` nor `v`
+was recoloured. This gives a proper six-colouring of `G`, impossible.
+The proper-minor upper bound now proves equality. This proof does not
+assume that `E-X` is connected. The related lower bound
+`chi(G-(X union {p}))>=5` supplies no additional information: that
+deletion already contains the literal `K5` on `{u,r} union Q`.
+
+### Mandatory Kempe moves within one colouring
+
+In every six-colouring of `G-u`, exactly one pair of vertices of `N(u)`
+has the same colour; write it as `a in P`, `b in Q`, of colour `c`.
+There is a Kempe interchange moving the repeated pair within `P`,
+and another moving it within `Q`. These assertions concern the same
+colouring, not the nine separately available star-contraction colourings.
+
+For a move within `P`, take `x in P-{a}` of colour `t`. Its `c,t`
+component contains `a`, by the edge `ax`. If it avoids `b`, swapping
+the component changes the repeated pair to `x,b`. Suppose both choices
+of `x` instead have components containing `b`. They give paths from
+`b` to the two roots of `P-{a}`. The four cross-pairs between `P-{a}`
+and `Q-{b}` are also connected in their two colours: otherwise a swap
+would reduce the number of colours on `N(u)` to five and extend to `u`.
+These six paths form a `K_{2,3}` scheme with shores `P-{a}` and `Q`.
+The omitted root `a` may occur internally on the two paths incident
+with `b`; this is permitted. At every common vertex, its colour is
+the colour of a common target endpoint. No prescribed root is internal
+to a nonincident path, and the whole `r`-colour class is avoided.
+The [bipartite contractibility theorem](../results/bipartite_contractibility_via_matroid_reduction.md)
+therefore supplies five disjoint rooted bags in `J`. The literal edges
+within the two shores complete a `K5`, a contradiction. The move within
+`Q` follows symmetrically.
+
+These moves are reversible. Even the boundary pairs in one Kempe orbit
+could occupy only a two-by-two rectangle of the three-by-three array:
+that satisfies the forced-move rule and may include only one matched
+prism pair. Thus the rule neither reaches all nine pairs nor proves
+that a reserved path and the five-bag model can be chosen disjointly.
+
+### Where the construction still fails
+
+The attempted construction already leaves open a removable induced path
+owning all three helper contacts of `p_i`:
+its vertices `a,b,c` all meet `p_i`, with `a` also meeting `p_j`,
+`b` having no other prism contact, and `c` meeting only the first
+internal vertex of `R_i`. This describes a surviving configuration,
+not a constructed critical graph or a counterexample. The two-owner
+argument does not exclude it, and the contraction comparison gives
+no improvement. Switching the fixed triangle does not repair it:
+`(E-X) union {p_i}` is disconnected precisely because `X` owns `p_i`.
+
+The colouring lift handles this path but does not finish the minor.
+Even a suitably aligned model in its six-chromatic quotient can need
+the same first rail vertex both to restore `p_i`'s contact and to route
+the other part of `X` towards `Q`. Those uses cannot be allocated
+independently. Rerouting to retain one owner may merely transfer the
+lost contact to another root; no decreasing potential or simultaneous
+allocation has been proved. More concretely, in this three-vertex
+pattern put `Y=E-X`. An `a`--`c` path `Z` with interior in `Y` would
+finish if `Y-int(Z)` were connected, Q-full and adjacent to `b`:
+use the three singleton Q bags together with
+
+    (Y-int(Z)) union {b,p_i},
+    ((P union I_1 union I_2 union I_3)-{p_i}) union V(Z).
+
+The first is connected through `b`, the second through `a`'s cap
+contact and `c`'s rail contact; both are Q-full and the edge `ab`
+joins them. Their roots are distinct. Existence of this path, with
+all complementary contacts retained, remains unproved. This pattern
+has not been shown to cover every failure of the global exchange.
+The outstanding construction must split
+the actual connected remainder while preserving the colouring data,
+or repair the original colouring. Contracting that remainder first,
+or repeating the separate Kempe responses, leaves this obligation open.
+
+## 9. A construction for some three-owner patterns
+
+**Working proof; not separately audited.** This section concerns only the
+particular surviving pattern in Section 8, not every extremal remainder.
+Write `p=p_i`, `s=p_j`, `t=p_k`, and let `v` be the first internal vertex
+of `R_i`. Assume `E={a,b,c} dotunion Y`, with `Y` connected,
+`N_E(p)={a,b,c}`, and
+
+    E[{a,b,c}] = a-b-c,
+    N_S(a)={p,s},  N_S(b)={p},  N_S(c)={p,v},
+
+where `S=J-E`. Thus `a-b-c-v` is induced and
+`N_G(p)={u,r,s,t,a,b,c,v}`. All arguments retain the original critical
+graph; no quotient is asserted to remain critical.
+
+### Five-root construction
+
+Five differently coloured roots containing a literal triangle give a
+rooted `K5` if every missing pair is bichromatically connected.
+Use the seven demands of `K5` minus that triangle, choosing literal edges
+for present demands. Their paths form a scheme: any common vertex has
+the colour of a common target endpoint, and the five distinct root colours
+exclude other roots internally. Kündgen--Pelsmajer--Ramamurthi,
+[Theorem 6.2](https://arxiv.org/pdf/1207.6141v1), proves fully rooted
+contractibility of this demand graph, `K_{1,1,3}`. The literal triangle
+edges finish the model. The primary definition and proof were inspected.
+
+In particular, contract the star joining `p` to any independent triple
+`I subseteq N_G(p)`, and six-colour the resulting proper minor. On
+expansion, keep `I` monochromatic and omit `p`. The other five neighbours
+must have all five remaining colours, or the colouring extends to `p`.
+Every missing pair of those five neighbours is bichromatically connected:
+otherwise a Kempe interchange again frees a colour for `p`. The core
+constructed above avoids the entire colour class of `I`.
+
+### An absent independent pair completes the minor
+
+Suppose `r` misses both ends `x,y` of a nonedge of the induced path
+`a-b-c-v`. Use `I={r,x,y}`. The other five neighbours are the literal
+triangle `{u,s,t}` and the two remaining path vertices. The five-root
+construction gives a core avoiding `p,r,x,y`.
+
+Apply the singleton-triangle normalisation of Section 2 in
+`G-{p,r,x}`, retaining those last two roots in the helpers. This graph
+is four-connected. The normalisation proof still works with these
+helper roots prescribed: it only adds vertices to their bags.
+Both resulting helpers meet `Q`, since the only neighbours of `u`
+outside the retained triangle in this graph are the vertices of `Q`.
+Adjoin singleton bags `{p},{r}`. Both see every triangle root and both
+helpers at their `Q` vertices; `pr` supplies the last contact. All seven
+bags are disjoint, giving a `K7` minor.
+
+Consequently, the surviving set of `r`-neighbours on `a-b-c-v` must contain
+one of `{a,b}`, `{a,v}`, `{c,v}`. This is a restriction on this pattern,
+not an exhaustive reduction of the two-triangle case.
+
+### Two chromatic branches
+
+Put `H=G-{p,r}`. Its chromatic number is five or six. In every
+five-colouring of `H`, the common neighbourhood `N(p) intersect N(r)`
+uses all five colours, by the selected-edge recolouring in Section 4.
+If the `r`-neighbours on the path are exactly one of the three pairs
+above, that common neighbourhood has exactly five vertices and contains
+the triangle `{u,s,t}`. Its roots are rainbow, and a missing bichromatic
+connection would contradict colourfulness by a Kempe interchange.
+The five-root construction and singleton bags `{p},{r}` finish `K7`.
+If `r` has three or four path neighbours, colourfulness alone does not
+make the common neighbourhood rainbow; these five-chromatic instances
+remain open.
+
+If `chi(H)=6`, then `chi(J-p)=6`. Otherwise five-colour `J-p=H-u`.
+The five neighbours `{s,t} union Q` of `u` in `H` must be rainbow and
+have all missing bichromatic connections, since any missing colour
+would extend the colouring to `H`. The bipartite contractibility theorem
+packages the six demands between `{s,t}` and `Q`; their literal shore
+edges give a `K5`. Singleton bags `{u},{r}` complete `K7`, a
+contradiction. The proper-minor upper bound proves the claimed equality.
+Hence this branch supplies an ordinary `K6` minor in `J-p`, by `HC6`.
+Its bags are not yet allocated among the six triangle roots.
+
+The next construction must handle the extra-contact five-chromatic
+instances and turn the six-chromatic branch into a suitably rooted model.
+There is no induction here and no closure of the three-owner pattern.
+In particular, `K6` cannot simply replace `K5` in the triangle-retaining
+theorem: Costalonga--Zhou explicitly exclude that unrestricted extension
+after their Theorem 4. Nor does a small separator in a contracted model
+lift to a separator of the same order in the original graph.
+
+## 10. A six-clique model using two remainder bags
+
+**Working proof; not separately audited.** Let a graph consist of an
+induced triangular-prism subdivision `S`, with end triangles `P,Q`, and
+a connected set `E` outside `S`. Assume that every vertex of `S` has an
+`E`-neighbour. If the graph has a `K6` model with exactly two bags
+meeting `E`, it has a `K5` model whose five bags meet `T=P union Q`.
+The statement has no bound on the subdivision or the remainder.
+
+The other four bags form a `K4` model entirely in `S`. They cover all
+of `S`: deleting any vertex of a prism subdivision destroys all `K4`
+minors. To see the latter assertion, prune the broken path's hanging
+ends and suppress the two corresponding triangle vertices of degree
+two. After removing parallel edges, the remainder is a cycle or its
+subdivision. The same reduction works when the deleted vertex is a
+triangle vertex. None of these operations hides a `K4` model.
+
+The other two bags therefore lie entirely in `E`. Absorb each component
+of their complement in `E` into a bag it meets; such a bag exists by
+connectedness of `E`. This gives a connected partition `E=X dotunion Y`
+retaining the `K6` model. Contract `X,Y` to adjacent vertices `x,y`.
+Every prism vertex still sees at least one of them.
+
+Each of the four prism bags meets `T`, since a connected root-free
+subgraph of `S` is an interval with at most two external neighbours in
+`S`. Along a vertical path, only its endpoint bags can occur: any other
+bag there would have no route within its own vertices to `T`. Contract
+the interiors of their prefix and suffix to the corresponding roots;
+if both endpoints are in one bag, keep their two roots distinct and
+contract the path to an edge. This retains the six distinct roots and
+the `K6` model, giving the literal prism plus `x,y`. All contraction
+preimages are fixed, connected and disjoint, so a rooted model in this
+eight-vertex graph lifts to the original graph.
+
+The four prism bags partition its six roots. There are three types, up
+to permuting indices and interchanging the caps:
+
+- one whole cap and the three opposite roots singleton;
+- two vertical pairs and the remaining two roots singleton;
+- one vertical pair, the other two roots of one cap paired, and the
+  opposite two roots singleton.
+
+Indeed, a bag of size three leaves a singleton triangle and is the
+opposite cap. Otherwise there are two edge bags and two adjacent
+singletons. Two cap edges fail one required contact; the remaining
+possibilities are the last two types above.
+
+Here is a common construction. Define
+
+    A={i: yp_i and xq_i are edges},
+    B={i: xp_i and yq_i are edges}.
+
+Choose distinct `i in A`, `j in B`. Partition `Q` into `U,V`, placing
+`q_i` in `U` and `q_j` in `V`. Force `q_k` into `U` when `p_k` misses
+`x`, and into `V` when `p_k` misses `y`. These requirements do not
+conflict, because each `p_k` sees `x` or `y`; neither contradicts the
+two chosen placements. Assign the other vertices arbitrarily.
+The sets `{x} union U` and `{y} union V` are connected through their
+chosen `Q` neighbours, each is `P`-full, and `xy` joins them. With
+singleton `P`, these are the required five bags.
+
+Such distinct indices exist in all three partition types. In the first,
+every `Q` root sees both apices and both apices meet `P`. Their
+`P`-neighbour sets cover all three roots, so they have distinct
+representatives. In the second, the singleton vertical index belongs
+to both `A,B`. Each other vertical pair meets both apices and both of
+its roots see an apex; hence it supplies an index in `A` or `B`.
+In the third, the two singleton `Q` roots see both apices, and each
+apex meets their paired `P` roots. Since both those roots see an apex,
+the two apices have distinct representatives among them. This proves
+the construction and its lift.
+
+Applied to Section 9's six-chromatic branch, any remaining `K6` model
+must therefore have at least three bags meeting `E`. This is a complete
+conditional construction, not a proof that such a model can be rerouted
+to use only two remainder bags. Moving a fan endpoint from a third bag
+can still lose that bag's sole contact with another rooted bag.
+
+## 11. Three helpers when the first triangle is singleton
+
+**Working proof; not separately audited.** Let `J` be five-connected,
+let `P,Q` be disjoint literal triangles, and suppose `J` has a `K6`
+model with the three `P` vertices as singleton bags. Then `J` has a
+`K5` model all of whose bags meet `P union Q`.
+
+Absorb every unused component of `J-P` into one of the three helpers
+it meets, so the helpers partition `J-P`. If two helpers meet `Q`,
+retain them together with singleton `P`. Otherwise all of `Q` lies
+in one helper `A`; call the other two `B,C`.
+
+Set `R=J-P`, which is two-connected, and contract `B,C` to `b,c`.
+There are two vertex-disjoint paths from `{b,c}` to `Q`, with distinct
+starts and distinct ends. Indeed, a separating vertex outside `{b,c}`
+would lift unchanged to a cutvertex of `R`: the contracted preimages
+remain connected. Deleting `b` does not separate `c` from `Q`, since
+`A` is connected, contains `Q`, and meets `C`; the case of `c` is
+symmetric. Menger's theorem therefore supplies the paths.
+
+Lift each path and add its vertices outside the starting bag to `B`
+or `C`, respectively. The two enlargements remain disjoint, connected
+and `P`-full; they meet distinct vertices of `Q` and retain their old
+mutual edge. Singleton `P` completes the required model. There is no
+recursive invocation and no lost prescribed root.
+
+Keeping only `A union Q` when finding these paths would be an invalid
+restriction: it can have a cutvertex bypassed by other vertices of
+`R`, including the prism paths. Using the entire original `R` closes
+that apparent separator case.
+
+This does not normalise an arbitrary triangle-rooted `K6` model to
+singleton `P`. A nonroot leaf of a root bag can carry its only contacts
+to two helpers, so moving that leaf into one helper need not preserve
+the other contact. The two-helper normalisation of Section 2 does not
+establish this stronger three-helper premise.

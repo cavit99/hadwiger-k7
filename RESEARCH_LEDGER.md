@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 21 September 2026. This is the sole authority for current
+**Last updated:** 22 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` and T44 are not proved. Norin–Totschnig Conjecture 21
@@ -50,6 +50,18 @@ the remaining graph is an induced prism subdivision and one connected
 remainder. Its exchanges and actual colouring restrictions do not yet
 compose to a minor or a six-colouring. No critical-host case is closed;
 HC7 remains the primary target.
+
+The subsequent [construction attack](active/hc7_degree7_exceptional_construction_working.md#9-a-construction-for-some-three-owner-patterns)
+closes several contact patterns in a particular three-owner configuration.
+Its six-chromatic branch supplies an ordinary `K6` minor. A further
+[working construction](active/hc7_degree7_exceptional_construction_working.md#10-a-six-clique-model-using-two-remainder-bags)
+finishes whenever exactly two of that model's bags enter the connected
+remainder. A [second construction](active/hc7_degree7_exceptional_construction_working.md#11-three-helpers-when-the-first-triangle-is-singleton)
+finishes if the first triangle can be kept singleton in the six-bag
+model. General models with three or more remainder bags, and some
+five-chromatic contact patterns, remain unresolved. These constructions are not
+separately audited; neither the particular configuration nor the whole
+critical-host case is closed. The C21 manuscript is unchanged.
 
 ## Completed C21 construction
 
