@@ -305,10 +305,32 @@ use all five remaining colours. Otherwise split the merged vertex,
 giving the endpoint with at most four neighbour colours a missing colour
 and the other endpoint colour six, to six-colour G.
 
-Consequently P and T each have unique vertices `p_i,t_i` of colours
-`i=4,5`. In `J=G-{u,r}`, there is a `p_i`--`t_i` path using only colours
-`i,6`: otherwise the component of u in that two-colour graph of `G-ur`
-can be interchanged and the edge ur restored properly. These two paths
+The repeated Q colours on the two caps can be forced to differ. More
+precisely, choose any nonedge `t q_j` between T and Q, any other
+`q_i in Q`, and any `p in P`. Such a nonedge exists in the initial
+colouring: the two triangles T,Q share a colour. Contract the disjoint
+stars `{u,p,q_i}` and `{r,t,q_j}` and six-colour this proper minor.
+Lift its colouring to `J=G-{u,r}`, giving each leaf pair its contracted
+colour. This is proper: the only pairs identified within J are the
+nonedges `p q_i,t q_j`; every other original edge survives in the
+quotient. The two star colours differ because `q_i q_j` is an edge.
+
+Each of `P union Q` and `T union Q` now uses at most five colours.
+Their nonempty sets of missing colours must be the same singleton
+`{gamma}`: distinct representatives would colour u,r and hence G.
+Thus both unions use exactly five colours, with unique repeated pairs
+`p q_i` and `t q_j`, respectively. Giving the merged ur vertex colour
+gamma yields a colouring of `G/ur` with distinct repeated Q colours.
+This works for every prescribed choice above. It uses a proper minor
+with four fewer vertices and an explicit colouring lift, not induction
+or inherited criticality. It does not retain a previously chosen
+colour-six class or previously chosen paths.
+
+Relabel gamma as six and the Q colours as one, two, three. Then P and T
+each have unique vertices `p_i,t_i` of colours `i=4,5`. In J there is
+a `p_i`--`t_i` path using only colours `i,6`: otherwise the component
+of u in that two-colour graph of `G-ur` can be interchanged and the
+edge ur restored properly. These two paths
 can share colour-six vertices. If the induced graph `J[4,5,6]` has no
 two disjoint paths between the two cap edges `p4p5,t4t5`, Menger gives
 a single separating vertex x of colour six. It has a neighbour of each
@@ -316,8 +338,8 @@ Q colour: recolouring x with a missing Q colour would destroy the forced
 two-colour connection and permit the same interchange. These neighbours
 need not be the prescribed Q roots.
 
-There is a joint extraction if the extra Q colours on P,T are different
-and the two displayed bichromatic paths A,B can be chosen disjoint. Let I
+There is a joint extraction if the two displayed bichromatic paths A,B
+can be chosen disjoint in such a colouring. Let I
 be the colour-six class in J. In every five-colouring of `J-I`, each cap
 together with Q uses all five colours: otherwise restore I in colour six
 and split u,r as above. For each Q colour i, one cap omits i. This forces
@@ -331,12 +353,25 @@ P and T contacts in each helper. The literal Q edges and `p4p5` complete
 their clique, and `{u},{r}` complete K7. This is a working conditional
 construction, without a separate audit.
 
-The missing step is choosing one colouring with different extra cap
-colours and two disjoint paths in their specified two-colour layers.
+The missing step is choosing, within this family of common colourings,
+two disjoint paths in their specified two-colour layers.
 An arbitrary free-pairing linkage in `J[4,5,6]` need not preserve that
-avoidance. No such simultaneous choice is proved, and the branch also
-leaves all choices with `d(r)>=8` unresolved. Neither criticality nor
-this colouring is transferred to a further quotient.
+avoidance. For example, a wheel with rim `p4,p5,t4,t5` in that cyclic
+order and a centre x of colour six has two disjoint cross-cap edges,
+but both prescribed bichromatic paths must use x. Its connected rim
+also prevents a four--five Kempe switch from repairing this. This is
+an obstruction to that local inference, not a critical-host counterexample.
+An attempted rerouting instead uses helpers `{x,p4,t5}` and `{p5,t4}`.
+The first still needs paths from Q to x in colours `i,6`; the second
+needs paths in colours `i,4,5` avoiding `p4,t5`. Neither is forced by
+the current construction. The simultaneous-star freedom has not yet
+supplied these missing attachments.
+
+Adding an exterior star contraction does not preserve the colouring
+lift automatically: its centre need not admit the common missing colour
+when restored. Unlike u,r, its neighbourhood is not one of the two
+controlled cap boundaries. No valid iteration has been obtained. The
+branch with all `d(r)>=8` also remains unresolved.
 
 The attempted two-separator descent has a concrete nonclosure, not a
 counterexample or an exhaustive normal form. A separator `Z={z1,z2}`
