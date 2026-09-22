@@ -7,6 +7,55 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.planar_seven_boundary_cell"
+title = "A planar seven-boundary cell has a proper-minor six-colouring lift"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_planar_seven_boundary_cell.md"
+source_heading = "Statement"
+audit = "results/hc7_planar_seven_boundary_cell_audit.md"
+expected_source_sha256 = "b503e1a6175f7cb62071d424c49cb3be7a9db26515024d6661ccb88b82f8f56f"
+active = false
+scope = "seven-connected finite simple graphs with every proper minor six-colourable, a connected shore of order at least two and exact boundary three gates plus four ports, two prescribed opposite nonedge pairs, and a plane embedding of the shore with the gates cofacial"
+label_fidelity = "two disjoint actual paths identify only the independent port pairs; the final lift preserves every outside colour and restores all actual gate colours"
+strict_parameter = "one proper-minor colouring followed by an explicit extension; no recursive criticality"
+conclusions = ["the original graph is six-colourable", "the planar completed-side branch of a minimum exact seven-boundary cell is excluded"]
+does_not_prove = ["nonplanar completed sides", "arbitrary cycle precolouring extension", "the whole split-clique neighbourhood case", "HC7"]
+keywords = ["seven-boundary cell", "planar", "opposite-port linkage", "proper-minor colouring", "three cofacial gates", "complete family closure"]
+
+[[claims]]
+id = "hc7.barrier.seven_boundary_odd_wheel"
+title = "A seven-boundary odd wheel defeats structural full-contact completion"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_seven_boundary_odd_wheel.md"
+source_heading = "Exact scope"
+audit = "barriers/hc7_seven_boundary_odd_wheel_audit.md"
+expected_source_sha256 = "4f8dd41fe16b1eb13f6fb2dd4417de126f294fde2085f8c4b7d6c06b1af92716"
+active = false
+scope = "the explicit join of K2 with the icosahedron, with the labelled odd-wheel shore, three gates, four path contacts and outside literal K5"
+conclusions = ["seven-connectivity, the Dirac inequalities and a four-connected nonplanar completed side do not force K7", "all six five-rooted choices are internally five-connected with rooted four-density four", "the displayed graph is six-colourable and K7-minor-free"]
+does_not_prove = ["failure of a colouring-or-minor construction", "failure in the original split-clique contraction-critical host", "a counterexample to HC7"]
+keywords = ["odd wheel", "icosahedron", "two apices", "seven-boundary cell", "helper density", "colouring lift"]
+
+[[claims]]
+id = "hc7.split_clique_seven_boundary_cell"
+title = "Four path contacts exclude triangle-free seven-boundary cells"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_split_clique_seven_boundary_cell.md"
+source_heading = "Theorem"
+audit = "results/hc7_split_clique_seven_boundary_cell_audit.md"
+expected_source_sha256 = "3566ff81ee491ecaf13ab4ce2ee89583922666b96df2b9be968bec3bb7195cd9"
+active = false
+scope = "seven-connected finite simple graphs with the stated literal outside K5, exact seven-boundary connected shore, four ordered contacts on a path meeting that K5 once, no common extreme-contact neighbour, and the neighbourhood independence inequality on the shore"
+label_fidelity = "the exterior clique retains three gate roots and any two selected path contacts; the two final helpers lie wholly inside the disjoint shore"
+strict_parameter = "direct construction in the original graph; no induction or quotient criticality"
+conclusions = ["a K7 minor if every shore vertex has at least five boundary neighbours", "a K7 minor if the shore is triangle-free, without an order bound"]
+does_not_prove = ["arbitrary triangle-containing shores", "cells with other boundary patterns", "the whole split-clique neighbourhood case", "HC7"]
+keywords = ["seven-boundary cell", "triangle-free", "five-fan", "boundary roots", "outside clique", "complete family closure"]
+
+[[claims]]
 id = "hc7.two_triangle_case_closure"
 title = "The entire two-triangle degree-seven neighbourhood case"
 kind = "theorem"

@@ -56,9 +56,15 @@ critical host has a common exterior for all four choices of a vertex in
 the four-clique. A new working construction retains two disjoint bags
 and an actual four-rooted remainder: a rooted `K4` there would give `K7`.
 Its web description and decreasing bag exchanges preserve the original
-contacts, but leave an unresolved seven-boundary cell and colouring
-composition. This is not a case closure. Other degree-seven configurations
-and degrees eight and nine also remain. The C21 manuscript is unchanged.
+contacts. The [seven-boundary cell theorem](results/hc7_split_clique_seven_boundary_cell.md),
+with a separate internal audit, now excludes every triangle-free cell
+of the selected type, and every cell whose vertices all have at least
+five boundary neighbours. A second [audited construction](results/hc7_planar_seven_boundary_cell.md)
+closes the planar case by a six-colouring of the whole original graph.
+The remaining minimum exact cell has a nonplanar completed side and
+internal triangles. These are unbounded cell-family closures, not the
+whole neighbourhood case. Other degree-seven configurations and degrees
+eight and nine also remain. The C21 manuscript is unchanged.
 
 ## Completed C21 construction
 

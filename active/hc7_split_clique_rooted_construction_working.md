@@ -185,13 +185,73 @@ present. Contacts sharing an endpoint are not covered by this rule.
 
 The explicit swaps above strictly reduce a finite parameter whenever
 their stated forbidden intervals are nonempty. They do not eliminate
-all web cells. In particular, none yet handles a cell whose reserved
-neighbours all lie on F: three H gates and four F neighbours give an
-actual boundary of order seven, consistent with seven-connectivity.
-A path through that cell between two F contacts need not be shorter
-than the F segment it replaces. No valid reduction of this remaining
-configuration, preserving the two root bags or the colouring data,
-has been proved.
+all web cells. The [seven-boundary cell construction](../results/hc7_split_clique_seven_boundary_cell.md)
+now handles every connected actual cell `X` whose boundary consists
+of three H0 gates and four F contacts, provided every vertex of `X`
+has at least five boundary neighbours. This includes every triangle-free
+cell in the original contraction-critical host. Its exterior `K5`
+retains all three gates and any chosen two F contacts; its two internal
+helpers supply every remaining contact. The written proof has a separate
+internal audit.
+
+Consequently a surviving exact cell has a vertex with at most four
+boundary neighbours lying in an internal triangle. A path through it
+need not be shorter than the F segment it replaces. Cells with more
+reserved neighbours or with neighbours in both R and F also remain.
+
+### Selecting a smaller actual shore
+
+The following working reduction keeps the original host fixed. Among
+nonempty connected H0 sets with three actual H0 neighbours, the same
+four F neighbours and no R neighbour, choose `X` of minimum order;
+write its gates as `T`. If a proper nonempty connected `Y subset X`
+has at most three H0 neighbours, seven-connectivity forces exactly
+three and all four F neighbours. It is a smaller eligible shore.
+The exterior rooted-clique construction applies to its new gates
+directly. No contraction or transfer of criticality is involved.
+
+Such a minimum `X` has no cutvertex. If `z` were one and some component
+of `X-z` missed a gate, its H0 boundary would have order at most three,
+giving the preceding decrease. Otherwise every component sees all
+three gates and, by seven-connectivity, at least three of the four
+F contacts. Choose two components; their F contacts overlap in at
+least two vertices. Add `z` to the first component. These disjoint
+connected adjacent helpers see all gates and the same two contacts,
+so the exterior rooted `K5` completes `K7`.
+
+Also `G[X union T]+K3[T]` is four-connected. Any cut of order at most
+three would leave a component avoiding the surviving gate clique.
+It is a proper connected subset of X with at most three H0 neighbours,
+contradicting minimality. Removing all three gates leaves connected X.
+The added gate edges are only used in this auxiliary connectivity
+statement; they are not asserted actual contacts. This reduces the
+selected exact-cell task to a two-connected interior.
+
+If that completed graph is planar, its gate triangle bounds a face,
+since a separating triangle would contradict four-connectivity. The
+[audited planar-cell theorem](../results/hc7_planar_seven_boundary_cell.md)
+then six-colours G. Its proper-minor contraction makes the four ports
+use at most two colours; the actual cell uses four other colours while
+retaining the exterior colouring at its three cofacial gates.
+
+The remaining completed side is therefore nonplanar. Its structural
+data alone cannot force two helpers meeting the same two ports: the
+[odd-wheel barrier](../barriers/hc7_seven_boundary_odd_wheel.md) satisfies
+those data and all six applicable rooted-density thresholds but has
+no K7 minor. A continuation must use the original colouring obstruction
+or a further retained restriction of the P,D frame. Absorbing a long F
+interval can consume an exterior root bag; connectedness of X cannot
+join helpers through vertices already assigned to those bags. Neither
+operation yet supplies a colouring lift or a further valid descent.
+
+The next colouring construction must also distinguish original roots
+from arbitrary gates. The nonedges between P and D do not make internal
+gate--port pairs independent. Contracting an exterior path to transport
+one of those colours can identify adjacent outside vertices, so its
+colouring need not expand. Likewise a colouring of `G-u` may move the
+repeated P--D colour pair without supplying the two legs at the chosen
+D root. These failures leave joint recolouring and an admissible change
+of reserved state possible; neither has yet been constructed.
 
 Even an actual planar `H0` would leave the induced graph on the two
 reserved paths to be coloured compatibly with `u`. Their union is

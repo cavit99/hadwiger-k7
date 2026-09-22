@@ -234,10 +234,35 @@ connected bags in the actual host; any remaining rooted `K4` would lift
 to `K7`. Fabila-Monroy--Wood's full obstruction theorem gives a spanning
 web directly, because the four roots have two disjoint actual edges.
 Minimising the number of reserved vertices gives explicit decreasing
-exchanges, with all root contacts retained. Their first surviving
-configuration is a cell with three web gates and four neighbours on
-one reserved path. Its seven-vertex boundary is allowed; no reduction
-or compatible colouring of this configuration is proved.
+exchanges, with all root contacts retained. The
+[seven-boundary cell theorem](../results/hc7_split_clique_seven_boundary_cell.md),
+with a separate internal audit, now excludes every triangle-free cell
+with three actual web gates and four contacts on one reserved path.
+More generally it excludes the entire family in which every cell vertex
+has at least five boundary neighbours. The proof combines two connected
+internal helpers with an exterior clique model retaining all three gates
+and the two middle contacts. No quotient inherits criticality.
+
+A minimum remaining exact cell has a two-connected interior and a
+four-connected graph after completing its three gates to a triangle;
+the working construction gives the actual-shore decrease and the cutvertex
+exit. The [planar-cell theorem](../results/hc7_planar_seven_boundary_cell.md),
+with a separate internal audit, closes the planar completed-side case:
+two edge bounds force opposite-port paths, contracting them supplies a
+proper-minor colouring with at most two port colours, and a four-colour
+extension at the three cofacial gates colours the whole original host.
+No arbitrary precolouring extension across a longer cycle is assumed.
+
+Thus the remaining completed side is nonplanar, and its low-boundary-degree
+vertices lie in internal triangles. The
+[odd-wheel counterexample](../barriers/hc7_seven_boundary_odd_wheel.md)
+shows that seven-connectivity, the neighbourhood independence bounds and
+this completed-side connectivity do not themselves force the desired
+minor, even when every choice of two path contacts gives rooted
+four-density four for the helper theorem. The original colouring
+obstruction or additional frame information must enter. Cells with extra
+reserved contacts and the final whole-host colouring also remain outside
+these closures.
 
 The colouring terminal need only be `chi(G-{u,r})<=5`: the
 [existing selected-edge argument](hc7_degree7_exceptional_construction_working.md#4-scope-of-the-negative-findings)
