@@ -69,7 +69,9 @@ proper-minor colourings still lack an extension through the restored cell.
 For an adjacent degree-seven vertex in the four-clique, a further working
 construction now forces different repeated clique colours on its two
 triangles, using two simultaneous star contractions and an explicit
-colouring lift. Compatible minor bags would follow if the resulting
+colouring lift. The same construction now applies to the degree-eight
+and degree-nine instances of the recorded common-stem obstruction.
+Compatible minor bags would follow if the resulting
 specified bichromatic paths could be chosen disjoint. That allocation
 remains unproved, so no additional case is closed.
 The two audited theorems close unbounded cell families, not the whole

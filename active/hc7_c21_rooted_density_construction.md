@@ -295,56 +295,60 @@ allocations without this retention step therefore remain conditional.
 The [cell-free colouring discussion](hc7_split_clique_rooted_construction_working.md#the-remaining-global-construction)
 also records why the present exchanges do not imply a three-colour reserve.
 
-**Working adjacent-degree-seven branch; no case closure.** Suppose some
-`r in D` also has degree seven. Put `Q=D-{r}` and `T=N_C(r)`. Then T is
-a triangle: `|T|=3`, u is anticomplete to T, and Dirac's neighbourhood
-bound `alpha(N(r))<=2` excludes two nonadjacent vertices in T. In one
-six-colouring of the proper minor `G/ur`, give the merged vertex colour
-six and Q colours one, two, three. Both `P union Q` and `T union Q`
-use all five remaining colours. Otherwise split the merged vertex,
-giving the endpoint with at most four neighbour colours a missing colour
-and the other endpoint colour six, to six-colour G.
-
-The repeated Q colours on the two caps can be forced to differ. More
-precisely, choose any nonedge `t q_j` between T and Q, any other
-`q_i in Q`, and any `p in P`. Such a nonedge exists in the initial
-colouring: the two triangles T,Q share a colour. Contract the disjoint
-stars `{u,p,q_i}` and `{r,t,q_j}` and six-colour this proper minor.
-Lift its colouring to `J=G-{u,r}`, giving each leaf pair its contracted
-colour. This is proper: the only pairs identified within J are the
-nonedges `p q_i,t q_j`; every other original edge survives in the
-quotient. The two star colours differ because `q_i q_j` is an edge.
+**Working simultaneous-star construction; no case closure.** For
+`r in D`, put `Q=D-{r}`, `T=N_C(r)` and `k=|T|`, so `d(r)=k+4`.
+Suppose some `q_j in Q` misses an independent set `W subset T` of
+order `k-2`. Choose any other `q_i in Q` and any `p in P`. Contract
+the disjoint stars `{u,p,q_i}` and `{r,q_j} union W`, then six-colour
+the resulting proper minor. Lift to `J=G-{u,r}`, giving the leaves
+of each star its contracted colour. This is proper: each identified
+leaf set is independent, and every other original J-edge survives
+between distinct quotient vertices. The two star colours differ because
+`q_i q_j` is an edge.
 
 Each of `P union Q` and `T union Q` now uses at most five colours.
 Their nonempty sets of missing colours must be the same singleton
 `{gamma}`: distinct representatives would colour u,r and hence G.
-Thus both unions use exactly five colours, with unique repeated pairs
-`p q_i` and `t q_j`, respectively. Giving the merged ur vertex colour
-gamma yields a colouring of `G/ur` with distinct repeated Q colours.
-This works for every prescribed choice above. It uses a proper minor
-with four fewer vertices and an explicit colouring lift, not induction
-or inherited criticality. It does not retain a previously chosen
-colour-six class or previously chosen paths.
+Thus both unions use exactly five colours. In the first, the unique
+repeated pair is `p q_i`; in the second, `W union {q_j}` is one colour
+class and all four other vertices have distinct colours. Give the merged
+ur vertex colour gamma. This yields a colouring of `G/ur` in which P
+and T each use exactly one Q colour, and those colours differ. It works
+for every prescribed choice above. The minor has `k+1` fewer vertices;
+this is an explicit colouring lift, not an induction. It does not retain
+an earlier colouring or its paths.
+
+The hypothesis holds whenever `d(r)=7`: T is a triangle by Dirac's
+bound and u's anticompleteness to T. In any six-colouring of `G/ur`,
+the triangles T,Q avoid the merged vertex's colour, so they share a
+colour and have a nonedge `t q_j`. Take `W={t}`.
+It also holds for the degree-eight and degree-nine instances of the
+[common-stem residue](hc7_split_clique_exchange_working.md#where-a-two-p-partition-can-still-resist-the-label-switch).
+There the third owned Q label misses T, and T induces a disjoint union
+of paths on four or five vertices. Its larger bipartition class has
+at least `k-2` vertices, from which W can be chosen. This applies to
+that recorded configuration, not to every higher-degree neighbour.
 
 Relabel gamma as six and the Q colours as one, two, three. Then P and T
 each have unique vertices `p_i,t_i` of colours `i=4,5`. In J there is
 a `p_i`--`t_i` path using only colours `i,6`: otherwise the component
 of u in that two-colour graph of `G-ur` can be interchanged and the
-edge ur restored properly. These two paths
-can share colour-six vertices. If the induced graph `J[4,5,6]` has no
-two disjoint paths between the two cap edges `p4p5,t4t5`, Menger gives
+edge ur restored properly. These two paths can share colour-six vertices.
+If the induced graph `J[4,5,6]` has no
+two disjoint paths between the pairs `{p4,p5}` and `{t4,t5}`, Menger gives
 a single separating vertex x of colour six. It has a neighbour of each
 Q colour: recolouring x with a missing Q colour would destroy the forced
 two-colour connection and permit the same interchange. These neighbours
 need not be the prescribed Q roots.
 
 There is a joint extraction if the two displayed bichromatic paths A,B
-can be chosen disjoint in such a colouring. Let I
-be the colour-six class in J. In every five-colouring of `J-I`, each cap
-together with Q uses all five colours: otherwise restore I in colour six
-and split u,r as above. For each Q colour i, one cap omits i. This forces
-paths from `q_i` to that cap's colour-four and colour-five vertices in
-the respective bichromatic subgraphs of `J-I`; swapping the component
+can be chosen disjoint in such a colouring. Let I be the colour-six class
+in J. In every five-colouring of `J-I`, each
+of `P union Q,T union Q` uses all five colours: otherwise restore I
+in colour six and colour u,r with distinct available colours. For each
+Q colour i, one of P,T omits i. This forces paths from `q_i` to that
+set's colour-four and colour-five vertices in the respective bichromatic
+subgraphs of `J-I`; swapping the component
 at `q_i` would otherwise remove i from the colourful union. The first
 paths avoid B, and the second avoid A. Contract A,B and truncate these
 paths at their first contacts. They form a rooted `K_{3,2}` scheme.
@@ -370,8 +374,39 @@ supplied these missing attachments.
 Adding an exterior star contraction does not preserve the colouring
 lift automatically: its centre need not admit the common missing colour
 when restored. Unlike u,r, its neighbourhood is not one of the two
-controlled cap boundaries. No valid iteration has been obtained. The
-branch with all `d(r)>=8` also remains unresolved.
+controlled neighbour sets. No valid iteration has been obtained. Neither
+the adjacent-degree-seven case nor the whole split-clique case is closed.
+
+**Attempted six-root construction; no valid induction yet.** For every
+`r in D`, `J=G-{u,r}` is six-chromatic and therefore contains an ordinary
+K6 minor by HC6. The colour repair below with X empty excludes five colours.
+A model rooted at all six vertices of `P union Q` would finish
+the whole split-clique case by adjoining u. The ordinary model does not
+retain those roots automatically; the earlier
+[three-helper normalisation gap](hc7_degree7_exceptional_construction_working.md#11-three-helpers-when-the-first-triangle-is-singleton)
+remains relevant.
+
+There is a global batch of contractions retaining six-chromaticity.
+Let X be an independent subset of C, anticomplete to r, with
+`|N_G(X) intersection P|<=1`. For each x choose an adjacent parent in
+`J-X`, and contract the disjoint stars formed by each parent and its
+chosen children. A five-colouring of the quotient lifts to `J-X`.
+Of the two colours absent from Q, choose one whose P vertex, if present,
+misses X. Give X, r and that P vertex colour six, and give u the chosen
+colour. This would six-colour G. Thus the quotient is six-chromatic;
+all six roots remain distinct, and rooted models lift through fixed
+disjoint star preimages. This is one simultaneous operation, not a
+claim that its hypothesis survives iteration.
+
+The colouring lift does not establish the required relative
+six-connectivity. A failure after one root-free edge contraction would
+have an actual root-free region Y with
+`N_J(Y)={x,y} union Z`, `|Z|=4`; contracting xy gives it a five-cut.
+Seven-connectivity of G forces Y to meet `N_C(r)`. An ordinary K6 model
+in the quotient can lie behind this cut without retaining the six roots.
+A six-root allocation across the original boundary, or a colouring
+extension through Y, is still needed. Neither follows from the batch
+colouring lift, so this does not supply a smaller induction instance.
 
 The attempted two-separator descent has a concrete nonclosure, not a
 counterexample or an exhaustive normal form. A separator `Z={z1,z2}`
