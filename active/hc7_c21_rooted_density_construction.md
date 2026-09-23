@@ -456,9 +456,13 @@ the resulting whole-host colourings as
 `phi(P)=(p_6,a_5,b_4)` and `psi(P)=(p_6,a_3,b_5)`, with D fixed and the
 same entire sixth class B. Criticality forces all six p/a-to-`{d1,d2,d3}`
 bichromatic paths under phi, and all six p/b-to-`{d1,d2,d4}` paths under
-psi. The immediate construction target is to use these two complete path
-systems together, retaining the original-host colouring constraints. A
-single connecting path from the second system omits available hypotheses.
+psi. Also `I=B-{p}` contacts every D vertex. In a colouring with repeated
+label j, if I misses d_i for `i!=j`, recolour d_i six and u with i.
+The two different labels cover all four D vertices. Hence a largest flexible
+B dominates all G, and no response pairing p with a D root can retain B
+monochromatic. These are working deductions, not a connected-bag allocation.
+
+The construction must retain the original-host colouring constraints.
 The output may use three P bags and three D-containing bags, omitting or
 merging D roots, instead of insisting on two helpers and four singleton D
 bags. Either output must explicitly retain all twenty-one K7 contacts.
@@ -472,11 +476,42 @@ lie in one strongly connected component. Any additional component permits
 a sink change in phi or a source change in psi, reducing disagreement
 without changing the A colours. Hence all disagreement lies in one such
 component, disjoint from B and D. This uses boundary nonextendibility, not
-just the existence of two selected path systems. A forest exchange still
-needs to allocate a shared vertex without destroying an earlier hub's
-connectivity or clique contact; no rank witness or decreasing lift has
-been obtained. Contracting the disagreement component can leave internal
-monochromatic edges when expanded and guarantees only one available colour.
+just the existence of two selected path systems. However, the
+[seventeen-vertex counterexample](../barriers/hc7_two_colouring_region.md)
+has all twelve paths and precisely one directed triangle of disagreement,
+yet has treewidth five. Thus these selected data do not suffice for the
+minor construction. The example permits a boundary-extending colouring
+and does not assert global minimality of its selected pair. The full
+colouring relation and original-host hypotheses remain available.
+
+**A whole-layer recolouring construction in the triangle subcase.** Suppose
+the disagreement region is exactly `{a,x,b}`, with colour signatures
+`a=(5,3), x=(3,4), b=(4,5)`. Write F_i for the unchanged vertices of
+colour i outside `{u,a,x,b}`, and let `H=G[F_1 union F_2 union F_5]`.
+Then H+x is four-chromatic. Indeed, any three-colouring of H+x using `{1,2,5}` extends
+to G: keep F_3,F_4,B in their old colours, set a=3 and b=4, and give u
+the colour in `{1,2,5}` missing from d1,d2. The two original colourings
+ensure that a misses F_3, b misses F_4, and x misses both. Every restored
+edge is proper. Conversely H is three-colourable, so adding x needs at
+most a fourth colour. This is a working reduction with a complete lift,
+not a separately audited case closure or a recursive critical-host step.
+
+A second actual four-chromatic graph is `J=G[V(H) union {a,b}]`, and
+`J-ab` is three-colourable. To see this, fix d1=1,d2=2 in any three-colouring
+of H+a. If a avoids five, set b=4,x=3,u=5 and keep the other outside
+colours; again every edge restores properly. Thus a is forced to five.
+The symmetric argument forces b to five in every colouring of H+b, so
+J is not three-colourable. Giving both a,b colour five colours J-ab;
+giving b a new fourth colour colours J.
+
+These conclusions use whole induced layers, including edges absent from
+the selected paths. A K4 minor in H+x still needs compatible attachments
+to all three P bags; neither four-chromaticity nor an arbitrary returned
+model provides them. A proper-minor colouring of its contraction only
+guarantees one available colour per expanded bag. No simultaneous
+augmentation, valid induction or general disagreement-region construction
+has been obtained. The triangle subcase and the whole split-clique case
+remain open.
 
 The remaining construction must use these colourings in the original host.
 Minimality colours Z-v only; it gives no extension across X-Z or through

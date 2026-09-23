@@ -7,6 +7,19 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.barrier.two_colouring_region"
+title = "Two complete bichromatic path systems and one disagreement region do not force K7"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_two_colouring_region.md"
+source_heading = "Statement refuted"
+active = false
+scope = "one explicit seventeen-vertex graph with a literal split-clique neighbourhood, two proper colourings sharing their whole sixth class, all twelve specified paths and exactly one directed triangle of disagreement; a displayed width-five elimination certificate excludes K7"
+conclusions = ["the selected two-system and strongly-connected-region conditions do not suffice for simultaneous minor extraction", "the graph has a six-colouring retaining the same sixth class and fixed four-clique colours"]
+does_not_prove = ["failure under universal fixed-class boundary nonextendibility", "failure for a globally minimum-disagreement pair", "failure in a seven-connected contraction-critical host", "a counterexample to HC7"]
+keywords = ["two colourings", "strongly connected disagreement", "bichromatic paths", "width-five certificate", "split-clique neighbourhood"]
+
+[[claims]]
 id = "hc7.split_clique_flexible_entry"
 title = "Every split-clique critical host admits a flexible fixed colour class"
 kind = "theorem"

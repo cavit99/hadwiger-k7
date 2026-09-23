@@ -90,7 +90,13 @@ and contacts all four clique vertices. A
 even these properties and K7 exclusion do not make deletion of the root
 edge colourable; it does not satisfy the original critical-host hypotheses.
 The general obstruction still needs a joint minor construction or an
-original-host colouring lift. The whole split-clique case, other degree-seven
+original-host colouring lift. A further
+[explicit counterexample](barriers/hc7_two_colouring_region.md) rules out
+extracting K7 from the two complete selected path systems and one strongly
+connected disagreement region alone. Current work retains the whole colouring
+condition; its triangle subcase now reduces to actual
+four-chromatic induced layers, with compatible augmentation still unproved.
+The whole split-clique case, other degree-seven
 configurations, and degrees eight and nine remain. The C21 manuscript
 is unchanged.
 
