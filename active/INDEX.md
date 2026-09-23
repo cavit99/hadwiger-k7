@@ -31,7 +31,12 @@ Selected conditional checkpoint:
   selected construction concerns the other exceptional neighbourhood,
   a disjoint triangle and four-clique, in the original critical host.
   Its [three-contact colouring branch](../results/hc7_split_clique_three_contact.md)
-  now has an audited closure; the four-contact branch remains open.
+  now has an audited closure. The
+  [universal flexible-class reduction](../results/hc7_split_clique_flexible_entry.md)
+  supplies a fixed colouring problem with two opposite fifth-colour owners
+  and a minimal obstruction contacting all four clique vertices, without a
+  special edge-response premise. The four-contact construction remains open;
+  its immediate barriers are recorded in the technical frontier above.
 
 ## Completed theorem and current application laboratory
 

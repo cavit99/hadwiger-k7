@@ -426,7 +426,74 @@ vertex, but no increasing exchange or complete four-contact
 construction has been proved. This conditional construction is working
 material, not a further independently audited closure.
 
-**Fixed-colour-class construction; working reduction, not case closure.**
+**Universal fixed-class entry; audited reduction, not case closure.** The
+[flexible-class theorem](../results/hc7_split_clique_flexible_entry.md), with a
+[separate reconstruction audit](../results/hc7_split_clique_flexible_entry_audit.md),
+now supplies some p and independent `B={p} union I` for which
+`K=G-({u} union B)` has two five-colourings fixing D, with opposite owners
+of colour five on `A=P-{p}`. This is available in every hypothetical
+split-clique host; a two-exception response is not required. If one endpoint
+is forced to have five after one deletion, deleting its whole colour class
+either supplies the flexible pair or gives a rooted K2,4 scheme and K7.
+Every minimal induced obstruction Z for the lists below contains both A
+vertices and contacts all four D vertices. Local swaps on Z force paths
+under one actual whole-host colouring; they need not extend through X-Z.
+
+Two working normalisations sharpen the same problem. Choose B largest among
+the flexible choices. Then B dominates the exterior: adding a vertex which
+misses B preserves independence and both opposite-owner colourings by
+restriction, a contradiction. This does not connect B. Also, for any fixed
+admissible B, at least two D colours occur on the non-five endpoint of A
+across its five-colourings. If that colour were always j, bichromatic paths
+from all three P vertices to `D-{d_j}` would form a K3,3 scheme: a component
+swap changing j fixes D unless it contains a D root, and the D clique then
+forces the required path. The literal triangles and u would complete K7.
+
+These facts supply opposite-owner colourings with different repeated D
+colours: if a chosen opposite pair has the same label, pair a colouring
+with another label with a colouring having the opposite owner. Normalise
+the resulting whole-host colourings as
+`phi(P)=(p_6,a_5,b_4)` and `psi(P)=(p_6,a_3,b_5)`, with D fixed and the
+same entire sixth class B. Criticality forces all six p/a-to-`{d1,d2,d3}`
+bichromatic paths under phi, and all six p/b-to-`{d1,d2,d4}` paths under
+psi. The immediate construction target is to use these two complete path
+systems together, retaining the original-host colouring constraints. A
+single connecting path from the second system omits available hypotheses.
+The output may use three P bags and three D-containing bags, omitting or
+merging D roots, instead of insisting on two helpers and four singleton D
+bags. Either output must explicitly retain all twenty-one K7 contacts.
+
+There is a joint exchange description, not yet a minor construction.
+Choose such a pair with minimum disagreement and orient an edge xy from x
+to y when `psi(x)=phi(y)`. A successor-closed set can be changed from phi
+to psi without losing properness. Since `b->a`, failure of a to reach b
+would permit a change leaving neither A endpoint in colour five. Thus a,b
+lie in one strongly connected component. Any additional component permits
+a sink change in phi or a source change in psi, reducing disagreement
+without changing the A colours. Hence all disagreement lies in one such
+component, disjoint from B and D. This uses boundary nonextendibility, not
+just the existence of two selected path systems. A forest exchange still
+needs to allocate a shared vertex without destroying an earlier hub's
+connectivity or clique contact; no rank witness or decreasing lift has
+been obtained. Contracting the disagreement component can leave internal
+monochromatic edges when expanded and guarantees only one available colour.
+
+The remaining construction must use these colourings in the original host.
+Minimality colours Z-v only; it gives no extension across X-Z or through
+vertices restored from B. Even contracting the whole component X does not
+repair this: the quotient may give p a D colour and the vertices of I
+different colours, imposing new restrictions throughout their neighbourhoods
+in X. A smaller list instance is not a smaller critical host.
+
+The [root-edge counterexample](../barriers/hc7_flexible_nucleus_root_edge.md)
+rules out inferring that deleting ab makes the list instance colourable.
+It has X=Z, both opposite-owner colourings, all four contacts and a
+K7-minor-free literal split-clique frame; the frame is six-colourable and
+not seven-connected. Thus neither exterior restoration nor K7 exclusion
+alone explains the failure. The original host's full hypotheses remain
+available for a construction.
+
+**Earlier edge-response refinement; conditional working reduction.**
 The [edge-response normal form](hc7_degree7_colour_repair_working.md)
 can retain X without the preceding pivot. In its two-exception case,
 normalise a colouring of `G-h`, for an exterior edge `h=xy`, as

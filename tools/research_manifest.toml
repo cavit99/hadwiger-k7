@@ -7,6 +7,42 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.split_clique_flexible_entry"
+title = "Every split-clique critical host admits a flexible fixed colour class"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_split_clique_flexible_entry.md"
+source_heading = "1. Statement and notation"
+audit = "results/hc7_split_clique_flexible_entry_audit.md"
+expected_source_sha256 = "aeee39e55cbd3962da8a93c48e4075508cadbeaee45ab918f8a98a71a707e49a"
+active = false
+scope = "finite simple non-six-colourable K7-minor-free graphs whose every proper minor is six-colourable and with N(u) an anticomplete triangle P and four-clique D; there exists a flexible deleted class, not necessarily every starting class"
+label_fidelity = "one fixed independent deleted class containing exactly one P root; D colours fixed in both five-colourings; the K2,4 and K3,3 extractions use one original-host colouring and retain all prescribed roots"
+strict_parameter = "direct existence and path construction; no recursive criticality or induction is asserted"
+conclusions = ["some deleted class permits opposite fifth-colour owners on P minus p", "every minimal induced forbidden-fifth-colour obstruction contains both remaining P roots and contacts all four D roots", "the entry requires no special edge-deletion response"]
+does_not_prove = ["root-edge deletion colourability", "extension of a colouring of Z-v through X-Z", "criticality of a contracted obstruction", "the whole split-clique case", "HC7"]
+keywords = ["universal entry", "fixed colour class", "opposite ownership", "list obstruction", "four contacts", "split-clique neighbourhood"]
+
+[[relations]]
+source = "hc7.split_clique_flexible_entry"
+target = "graph_schemes.bipartite_contractible"
+kind = "uses"
+note = "The forced-colour dichotomy and restricted list-obstruction argument produce fully rooted bipartite schemes under a single original-host colouring."
+
+[[claims]]
+id = "hc7.barrier.flexible_nucleus_root_edge"
+title = "A flexible minimal list obstruction can remain uncolourable after root-edge deletion"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_flexible_nucleus_root_edge.md"
+source_heading = "Statement refuted"
+active = false
+scope = "an explicit nine-vertex minimal list obstruction and a fifteen-vertex K7-minor-free six-colourable literal split-clique frame; the frame is not seven-connected or minor-critical"
+conclusions = ["opposite fifth-colour ownership, minimality and all four clique contacts do not imply colourability after deleting the root edge", "the failure persists with X equal to Z and with K7 exclusion"]
+does_not_prove = ["failure under the original seven-connected critical-host hypotheses", "failure of a different global colouring or minor construction", "a counterexample to HC7"]
+keywords = ["root-edge deletion", "minimal list obstruction", "opposite ownership", "Moser spindle", "clique sum", "colouring lift"]
+
+[[claims]]
 id = "hc7.split_clique_ore_core"
 title = "A literal five-clique configuration in the split-clique frame forces K7"
 kind = "theorem"

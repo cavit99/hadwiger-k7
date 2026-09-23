@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 22 September 2026. This is the sole authority for current
+**Last updated:** 23 September 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` and T44 are not proved. Norin–Totschnig Conjecture 21
@@ -80,8 +80,17 @@ a monotone reduction. The subsequent fixed-colour-class construction
 retains that component across two edge-response repairs. An
 [audited Ore-core exclusion](results/hc7_split_clique_ore_core.md)
 now closes one resulting literal-five-clique configuration for arbitrary
-host order; general list obstructions and the other response types remain
-unresolved. The whole split-clique case, other degree-seven
+host order. The [universal flexible-class reduction](results/hc7_split_clique_flexible_entry.md),
+with a separate internal audit, removes the special edge-response premise:
+every hypothetical split-clique host admits a fixed deleted colour class
+and two five-colourings giving opposite endpoints of the remaining triangle
+edge the fifth colour. Every minimal list obstruction contains that edge
+and contacts all four clique vertices. A
+[local counterexample](barriers/hc7_flexible_nucleus_root_edge.md) shows that
+even these properties and K7 exclusion do not make deletion of the root
+edge colourable; it does not satisfy the original critical-host hypotheses.
+The general obstruction still needs a joint minor construction or an
+original-host colouring lift. The whole split-clique case, other degree-seven
 configurations, and degrees eight and nine remain. The C21 manuscript
 is unchanged.
 
