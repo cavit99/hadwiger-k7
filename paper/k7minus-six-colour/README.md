@@ -1,6 +1,6 @@
 # Every graph with no K7-minus minor is six-colourable
 
-**Author:** Cavit Erginsoy. **Draft:** 21 September 2026.
+**Author:** Cavit Erginsoy. **Draft:** 24 September 2026.
 
 [PDF](main.pdf) · [LaTeX entry point](main.tex) ·
 [separate internal audit](main_audit.md).

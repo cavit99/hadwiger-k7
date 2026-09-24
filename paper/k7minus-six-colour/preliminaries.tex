@@ -1,12 +1,15 @@
-\section{Notation and external tools}\label{sec:preliminaries}
+\section{Preliminaries}\label{sec:preliminaries}
 
 \subsection{Minors and densities}
 Write $v(G)=|V(G)|$, $e(G)=|E(G)|$ and $\rho(G)=e(G)-4v(G)$.
-A minor model consists of pairwise disjoint, nonempty connected
-vertex sets, called \emph{bags}, with an edge between bags whenever
-the target requires one. In a graph with prescribed roots $X$, a
-rooted model retains each root in its corresponding bag, and no bag
-contains two roots. Extra edges are allowed.
+An $H$-minor model in $G$ consists of pairwise disjoint, nonempty
+connected vertex sets $B_h\subseteq V(G)$, one for each $h\in V(H)$,
+such that $B_h$ and $B_{h'}$ are adjacent whenever $hh'\in E(H)$.
+The sets $B_h$ are the \emph{branch sets} of the model. A graph
+$(G,X)$ with a prescribed root set $X$ is \emph{$k$-rooted} if
+$|X|=k$. A rooted model contains each root in its corresponding
+branch set, and no branch set contains two roots. Additional edges
+between branch sets are allowed.
 We allow an empty root set and interpret its rooted clique $K_0$ as
 the empty model.
 
@@ -25,14 +28,14 @@ In a rooted graph, fragments are required to avoid the roots. Set
 Thus $\rho_4(G[Y\cup N_G(Y)],N_G(Y))=\rho_G(Y)$.
 
 A $k$-rooted graph $(G,X)$ is \emph{$4$-light} if
-$\rho_G(Y)\leq0$ for every root-free fragment with fewer than $k$
-boundary vertices. In particular, for five roots the tested boundary
-orders are at most four. The graph is \emph{internally $k$-connected}
+$\rho_G(Y)\leq0$ for every root-free fragment whose boundary has
+fewer than $k$ vertices. Thus, for five roots, the condition applies
+to boundaries of order at most four. The graph is \emph{internally $k$-connected}
 if every nonempty root-free set has at least $k$ external neighbours.
 
-Two disjoint, nonadjacent fragments form a \emph{bifragment}; it is
-\emph{dense} if both fragments have positive density. Here nonadjacent
-means that no edge joins the two fragments. An unrooted graph is
+Two disjoint fragments with no edge between them form a
+\emph{bifragment}; it is \emph{dense} if both fragments have positive
+density. An unrooted graph is
 \emph{$4$-bilight} if it has no dense bifragment with both boundary
 orders at most four. Every five-connected graph is $4$-bilight. Our main
 extremal theorem is as follows.
@@ -48,16 +51,15 @@ It is proper if both open sides are nonempty. For a root separation
 we also require $X\subseteq A$. Its right-hand side is $G[B]$
 rooted at $A\cap B$. When a linkage carries these boundary roots
 back to $X$, its paths are disjoint and their interiors avoid $B$.
-Roots already on the boundary use trivial paths. Appending the paths
-to their respective bags preserves disjointness and all contacts.
+Roots already on the boundary use trivial paths. Appending each path
+to the corresponding branch set preserves disjointness and adjacencies.
 
-We repeatedly use the following lifting convention. Every vertex of
-a minor is assigned its fixed connected preimage in the original
-graph. Preimages of different vertices are disjoint. Replacing a bag
-by the union of its preimages lifts connectivity, contacts and all
-prescribed roots. Our minimal-counterexample arguments minimise
-$(v(G),e(G))$ lexicographically; each reduction explicitly preserves
-the relevant density and separation conditions.
+When working in a minor, we fix a connected preimage for each vertex;
+these preimages are pairwise disjoint. A model in the minor lifts to
+the original graph by taking the union of the preimages in each branch
+set. This preserves connectivity, adjacencies and prescribed roots.
+Our minimal-counterexample arguments minimise $(v(G),e(G))$
+lexicographically.
 
 \subsection{Rooted density theorems}
 Let $\mathcal S_{5,j}$ be the class of graphs on five vertices with
@@ -87,8 +89,8 @@ If $\rho_4(G,X)\geq\lceil(m+3)/2\rceil$, then $G$ has a rooted
 $K_5$ minor.
 \end{corollary}
 \begin{proof}
-The target class at this threshold, and every higher threshold,
-contains every graph with $m$ edges. Apply
+At this threshold and above, the target class contains every
+five-vertex graph with $m$ edges. Apply
 Theorem~\ref{thm:rooted-targets} to the missing edges of $G[X]$,
 then retain the existing root edges.
 \end{proof}
@@ -97,7 +99,7 @@ A \emph{dart} has four roots, two root edges forming a three-vertex
 path, and one nonroot adjacent to all four roots. The fourth root
 is isolated in the root-induced graph. Dvo\v r\'ak's small-root
 theorem~\cite[Corollary~13]{Dvorak2026}, together with
-\cite[Lemma~3.1]{DNR2026}, gives the following fact: a $4$-light
+\cite[Lemma~3.1]{DNR2026}, implies that a $4$-light
 $k$-rooted graph of positive rooted density contains a rooted $K_k$
 if $k\leq3$, and a rooted dart if $k=4$.
 
@@ -110,22 +112,22 @@ also require $|V(G)\setminus Y|\geq3$.
 
 A \emph{reducent} replaces $Y$ by such a clique or dart, retaining
 the graph outside $Y$. The replacement is a minor: the rooted model
-provides fixed preimages for the boundary vertices and, for a dart,
-its one additional vertex. In both cases the order strictly decreases.
+provides disjoint connected preimages for the boundary vertices and,
+for a dart, its additional vertex. In both cases the order strictly decreases.
 
 \begin{lemma}[{\cite[Lemma~3.3]{DNR2026}}]\label{lem:reduction}
-Replacing an inclusionwise-maximal reducible fragment preserves
+Replacing an inclusion-maximal reducible fragment preserves
 $4$-bilightness and does not decrease $\rho$ in an unrooted
 $4$-bilight graph. In a $4$-light five-rooted graph, it preserves
 $4$-lightness and does not decrease $\rho_4$. All original roots
-are retained in distinct prescribed bags.
+are retained in their prescribed, distinct branch sets.
 \end{lemma}
 
 For the extraction step, two weaker patterns from~\cite{DNR2026}
 are useful. Each has five independent roots and two nonroots.
 In the first, the nonroots are adjacent and each misses at most
 one root, with distinct missed roots if both omissions occur.
-In the second, the nonroots are nonadjacent and both meet every
+In the second, the nonroots are nonadjacent and both are adjacent to every
 root; this is $K_{2,5}$ rooted at its five-vertex part.
 
 \begin{lemma}[{\cite[Corollary~4.2]{DNR2026}}]\label{lem:extraction}
@@ -135,21 +137,20 @@ one of the two weaker patterns. Then $G$ has a reducible fragment
 $Y$ containing $B\setminus A$.
 \end{lemma}
 
-The mechanism, also used for five roots below, is worth specifying.
+We recall the extraction argument, which we also use for five roots.
 Restrict either pattern to a proper subset $Z$ of its roots by deleting
 the other root vertices. The remaining graph contains a rooted clique
 if $|Z|\leq3$, or a dart if $|Z|=4$~\cite[Observation~4.1]{DNR2026}.
 If five disjoint paths do not link the original roots to the boundary,
 Menger's theorem gives an isolating separator of order at most four,
 linked to a proper subset of the boundary. The clique or dart lifts
-along this linkage. Its interior has at least two vertices, because
-the two helper bags remain there. Lightness gives nonpositive density
-when the isolator is smaller than the root set. When its order equals
-the root count, choose the isolator $(X,V(G))$; its density is
+along this linkage. The isolated side has at least two interior vertices,
+since it contains both nonroot branch sets. Lightness gives nonpositive
+density when the separator is smaller than the root set. When its order
+equals the root count, take the separation $(X,V(G))$ instead; its density is
 $\rho_4(G,X)\leq0$ by assumption.
-This gives the reducible fragment. When transferring it to an unrooted
-ambient graph, we separately check that at least three vertices remain
-outside it.
+This gives the reducible fragment. To use it in an unrooted graph,
+we must also check that at least three vertices remain outside it.
 
 We also use the root-forgetting rule~\cite[Observation~5.2]{DNR2026}:
 if $|X|\leq4$, $(G,X)$ is $4$-light and $\rho_4(G,X)\leq0$, then

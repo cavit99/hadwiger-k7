@@ -1,12 +1,12 @@
 \section{Local rooted constructions}
 
-We first record three small rooted constructions and a local contraction
-lemma. They will also be used in the unrooted argument.
+We begin with three rooted constructions and a local contraction lemma,
+all used again in the unrooted argument.
 
 The rooted-star lemma is related to~\cite[Lemma~4.10]{DNR2026}, which
 gives three spokes at one of five roots when $|V(H)|+|X|\le8$.
-Here independence of $X$ allows all $k-1$ spokes and the bound
-$|V(H)|+|X|\le2k-1$; the degree assumptions are stated below.
+Under the degree assumptions below, independence of $X$ allows all
+$k-1$ spokes and the bound $|V(H)|+|X|\le2k-1$.
 
 \begin{lemma}[Rooted star]\label{lem:star}
 Let $Z\subseteq V(H)$ have order $k$, and let $X\subsetneq Z$ be
@@ -22,14 +22,15 @@ of $Z\setminus\{z\}$.
 \end{lemma}
 
 \begin{proof}
-Put $T=V(H)\setminus Z$. A component $D$ of $H[T]$ misses at most
-$|D|$ vertices of $Z$: any vertex of $D$ has at least $k-|D|$
-neighbours in $Z$. Consequently at most $|T|$ roots miss some component
-of $H[T]$. Since $|T|+|X|\le k-1$, there is a vertex
+Put $T=V(H)\setminus Z$. A component $D$ of $H[T]$ is adjacent to
+all but at most $|D|$ vertices of $Z$, since every vertex of $D$ has
+at least $k-|D|$ neighbours in $Z$. Thus at most $|T|$ roots have no
+neighbour in some component of $H[T]$. Since $|T|+|X|\le k-1$,
+there is a vertex
 $z\in Z\setminus X$ adjacent to every component. Thus $T\cup\{z\}$
 is connected, including when $T=\varnothing$.
 
-A vertex $r\in Z\setminus\{z\}$ which has no neighbour in $T$ must
+A vertex $r\in Z\setminus\{z\}$ with no neighbour in $T$ must
 be adjacent to $z$. For $r\notin X$ this follows from $d_H(r)\ge k-1$;
 for $r\in X$, independence of $X$ and $d_H(r)\ge k-|X|$ force
 adjacency to every vertex of $Z\setminus X$.
@@ -49,19 +50,20 @@ a two-fan from $c$ to that cycle. Either their union contains a cycle
 through all three vertices, or it contains a theta whose three paths
 contain $a,b,c$ separately. In the latter case, assign one end of the
 theta to the $a$-path and the other to the $b$-path; the interior of the
-third path is the $c$-bag. These three bags are connected and pairwise
-adjacent.
+third path is the branch set at $c$. These three branch sets are
+connected and pairwise adjacent.
 
 Consider the block-cut tree of $R$, representing a root which is a
 cutvertex by its cutvertex node, and any other root by its block node.
-If the median of the three root nodes is a block, the roots have three
-distinct attachments to that block. The block is two-connected, so the
-preceding observation supplies a triangle rooted at the attachments.
-Appending the three disjoint exterior root paths gives the result.
+If the median of the three root nodes is a block node, the roots have
+three distinct attachments to that block. The block is two-connected,
+so the preceding observation supplies a triangle minor rooted at the
+attachments. Appending the three disjoint exterior root paths gives
+the result.
 
 If the median is a cutvertex $c$, each component of $R-c$ contains at
 most one root. The nonroots in any such component would have boundary
-contained in $c$ and that possible root, contrary to internal
+contained in $c$ and the possible root, contrary to internal
 three-connectivity. Hence $c$ is the only nonroot, but then its degree
 is at most three. This is also impossible.
 \end{proof}
@@ -72,8 +74,8 @@ leaves of a tree $T$. Its two degree-three branching vertices $v_1,v_2$
 may coincide at a degree-four vertex. Choose $T$ to minimise the length
 of the path between these vertices. If, after deleting $v_1,v_2$, every
 partition of the roots into two pairs has a path joining the pairs,
-then the graph has a rooted dart. This part of the cited proof uses
-only the stated tree and path conditions, not a density hypothesis.
+then the graph has a rooted dart. This part of the cited proof requires
+only these tree and path conditions; no density hypothesis is needed.
 
 \begin{lemma}[Rooted dart]\label{lem:dart}
 An internally four-connected graph with four prescribed roots, at least
@@ -82,8 +84,9 @@ dart.
 \end{lemma}
 
 \begin{proof}
-Write $(F,Z)$ for the rooted graph and induct on $|V(F)|$. Delete the
-root--root edges; this preserves all nonroot degrees and boundaries.
+Write $(F,Z)$ for the rooted graph and proceed by induction on $|V(F)|$.
+Delete the root--root edges; this preserves all nonroot degrees and
+boundaries.
 Every partition of $Z$ into two pairs has two disjoint paths between
 the pairs. Otherwise Menger's theorem gives a separation of order at
 most one, with one pair on each side. The nonroots on either open side
@@ -91,7 +94,7 @@ then have boundary contained in that pair and the separator, of order
 at most three. Internal four-connectivity would put all nonroots in
 the separator, contradicting their number.
 
-Each component of $F-Z$ sees all four roots. It therefore supplies a
+Each component of $F-Z$ is adjacent to all four roots, so it supplies a
 tree whose leaves are exactly $Z$. Choose such a tree with a shortest
 branching path, with ends $v_1,v_2$. Unless $\{v_1,v_2\}$ separates
 two roots from the other two, the terminal construction above gives a
@@ -105,8 +108,8 @@ $B_1\cap B_2=\{v_1,v_2\}$ and two roots in each open side. Put
 \]
 If both $W_i$ are empty, the degree bound makes $v_1,v_2$ adjacent to
 each other and to every root. Use $v_1$ as the dart's helper and absorb
-$v_2$ into one root bag: the resulting root star contains the required
-three-vertex path.
+$v_2$ into one root branch set: the resulting root star contains the
+required three-vertex path.
 
 Otherwise choose a nonempty $W_i$. It has at least two vertices, since
 a single vertex would have at most the four neighbours in $Z_i$.
@@ -119,12 +122,12 @@ Take the two disjoint paths between the two original root pairs
 established above. They cross the separator at different vertices.
 Their segments after their last visits to $\{v_1,v_2\}$ lie outside
 $B_i$, apart from their initial vertices, and end at the two opposite
-roots. Append these segments to the bags at $v_1,v_2$. They are disjoint
-from the other bags and from the helper, and restore the four original
-roots without losing any contact.
+roots. Append these segments to the branch sets at $v_1,v_2$. They are
+disjoint from the other branch sets and the helper, and restore the four
+original roots while preserving every required adjacency.
 \end{proof}
 
-Call a graph \emph{quasi five-connected} if it is four-connected and has
+Call a graph \emph{quasi-five-connected} if it is four-connected and has
 no four-separation with at least two vertices on each open side. The
 following local version of the crossing argument in
 \cite[Lemma~1]{Kou2025} does not assume contraction-criticality.
@@ -133,12 +136,13 @@ following local version of the crossing argument in
 Let $Q$ be five-connected, and let $A$ have boundary $S=N_Q(A)$ of
 order five. Suppose that $|A|\ge3$ and
 $|V(Q)\setminus(A\cup S)|\ge2$. If $x\in S$ has a unique neighbour
-$a$ in $A$, then $Q/xa$ is quasi five-connected.
+$a$ in $A$, then $Q/xa$ is quasi-five-connected.
 \end{lemma}
 
 \begin{proof}
-An edge contraction preserves four-connectivity. A forbidden
-four-separation of $Q/xa$ would lift to a five-cut $T$ of $Q$ containing
+Since the graph is five-connected, an edge contraction preserves
+four-connectivity. A forbidden four-separation of $Q/xa$ would lift to
+a five-cut $T$ of $Q$ containing
 $x,a$, with open sides $B,D$ of order at least two. Write
 $C=V(Q)\setminus(A\cup S)$ and
 \[
@@ -167,49 +171,52 @@ of order at most $r+s+u=5+r-w\le4$, so it too is empty. This leaves
 $|C|=r\le1$, the final contradiction.
 \end{proof}
 
-\section{Two rooted helpers}
+\section{The rooted theorem}\label{sec:helper}
 
 For five prescribed roots $X$, say that a model has the
-\emph{helper property} if it consists of five prescribed-root bags and
-two further nonempty connected bags, all pairwise disjoint, and at least
-ten of the eleven possible helper--root and helper--helper contacts
-are present. The two helpers contain no root; no root--root contact is
-required.
+\emph{helper property} if it consists of five branch sets at the
+prescribed roots and two further nonempty connected branch sets, all
+pairwise disjoint, with at least ten of the eleven possible helper--root
+and helper--helper adjacencies. The two helpers contain no root;
+no root--root adjacency is required.
 
 \begin{theorem}\label{thm:helper}
 Every $4$-light five-rooted graph $(G,X)$ with $\rho_4(G,X)\ge2$ has
 the helper property.
 \end{theorem}
 
-The proof first restricts a minimum counterexample. It then uses a
-weighted neighbourhood to find an edge with few common neighbours.
-An auxiliary clique allows Mader's atom theorem to be applied without
-requiring intersections of positive-density fragments to remain positive.
+We first establish structural properties of a minimum counterexample,
+then use a weighted neighbourhood to find an edge with few common
+neighbours. An auxiliary clique allows us to apply Mader's atom theorem
+without requiring intersections of positive-density fragments to have
+positive density.
 
 \subsection{Minimum-counterexample reductions}
 
 Suppose the theorem is false, and choose a counterexample minimising
-$(|V(G)|,|E(G)|)$ lexicographically. Throughout this section, contractions
-identify at most one original root in each preimage. A rooted model in
-a minor lifts by replacing each of its vertices with the fixed connected
-preimage; in particular, all five prescribed roots remain distinct.
+$(|V(G)|,|E(G)|)$ lexicographically. Throughout this section, the preimage
+of each vertex under a contraction contains at most one original root.
+A rooted model in a minor lifts by replacing each vertex with its fixed
+connected preimage; in particular, all five prescribed roots remain
+distinct.
 
 We use the following consequence of the isolator argument in
 \cite[Observation~4.1 and proof of Corollary~4.2]{DNR2026}. Suppose a
 root-free region has a helper-property model on a five-vertex boundary,
-or two helpers full to a larger boundary. Either five disjoint exterior
-paths attach the original roots to five boundary bags, or a separator of
-order $k\le4$ isolates the region and has a linkage to $k$ of its
-boundary bags. A helper model restricted to those
-$k$ bags contains a rooted $K_k$ for $k\le3$, and a rooted dart for
-$k=4$. Indeed, retain a helper adjacent to all four roots and absorb the
-other into a root bag to obtain two root contacts. For three roots,
-absorb the helpers into two root bags; smaller cases follow by restriction.
-The same conclusion holds when both helpers are full to a larger
-boundary. If the isolated interior has at least two vertices and
-nonpositive density, it is a reducible fragment. The linkage is outside
-the original region, except for its ends, so it does not use a helper
-vertex. This is the only form of the isolator argument needed below.
+or two helpers adjacent to every branch set at a larger boundary.
+Either five disjoint exterior paths attach the original roots to five
+boundary branch sets, or a separator of order $k\le4$ isolates the
+region and has a linkage to $k$ of its boundary branch sets. A helper
+model restricted to those $k$ branch sets contains a rooted $K_k$ for
+$k\le3$, and a rooted dart for $k=4$. Indeed, retain a helper adjacent
+to all four root branch sets and absorb the other into a root branch
+set to obtain two root--root adjacencies. For three roots, absorb the
+helpers into two root branch sets; smaller cases follow by restriction.
+The same conclusion holds when both helpers are adjacent to every branch
+set at a larger boundary. If the isolated interior has at least two
+vertices and nonpositive density, it is a reducible fragment. Apart from
+its ends, the linkage lies outside the original region and hence avoids
+the helpers. This is the only form of the isolator argument needed below.
 
 \begin{lemma}\label{rh:basic}
 The minimum counterexample has the following properties:
@@ -226,9 +233,10 @@ and every root has degree at least two.
 
 \begin{proof}
 Root--root edges contribute neither to the density nor to a required
-helper contact, and cannot occur inside a bag containing just one root.
-Thus minimality makes $X$ independent. A maximal reducible fragment
-would give, by \cite[Lemma~3.3]{DNR2026}, a smaller $4$-light rooted
+helper adjacency, and cannot occur inside a branch set containing just
+one root. Thus minimality makes $X$ independent. An inclusion-maximal
+reducible fragment would give, by \cite[Lemma~3.3]{DNR2026}, a smaller
+$4$-light rooted
 minor of nondecreasing density. Its helper model would lift, proving
 (1).
 
@@ -240,29 +248,32 @@ that model to $X$. Otherwise the isolator argument gives a reducible
 fragment: its interior contains the two helpers and has nonpositive
 density by $4$-lightness. Both possibilities contradict (1).
 
-The densities of the components of $G-X$ sum to $\rho_4(G,X)$. Each
-positive-density component sees all five roots, by $4$-lightness. Two
-such components give two full helpers, with only their mutual contact
-possibly missing. Hence there is exactly one positive component and
-its density is at least two. Any other component would make this a
-proper five-boundary set, contrary to (2). Thus $G-X$ is connected and
-sees every root.
+The densities of the components of $G-X$ sum to $\rho_4(G,X)$. By
+$4$-lightness, each component of positive density is adjacent to every
+root. Two such components give two helpers adjacent to all five
+roots, with only the adjacency between the helpers possibly missing.
+Hence there is exactly one component of positive density, and its
+density is at least two. Any other component would make this a proper
+five-boundary set, contrary to (2). Thus $G-X$ is connected and adjacent
+to every root.
 
 Suppose a nonroot $z$ has $d\ge4$ root neighbours. For the components
 $Q_i$ of $G-(X\cup\{z\})$,
 \[
  \sum_i\rho_G(Q_i)=\rho_4(G,X)+4-d.
 \]
-Each $Q_i$ sees $z$, and each positive one sees at least four roots.
-If $d=5$, there is a positive component; it and $\{z\}$ are adjacent
-helpers with at least ten contacts. If $d=4$, let $x$ be the missing
-root. A component seeing all roots already gives the required model.
-Otherwise each positive component has exactly four root neighbours,
-and has density at most one by (2). Their sum is at least two, so there
-are at least two positive components. Choose a component $R$ seeing
-$x$, and a positive component $Q\ne R$. The helpers $\{z\}\cup R$
-and $Q$ are adjacent and have respectively five and at least four root
-contacts. This again contradicts the choice of $G$.
+Each $Q_i$ is adjacent to $z$, and each component of positive density
+is adjacent to at least four roots. If $d=5$, there is a component
+of positive density; it and $\{z\}$ are adjacent helpers with at least
+ten required adjacencies. If $d=4$, let $x$ be the missing root. A
+component adjacent to every root already gives the required model.
+Otherwise each component of positive density has exactly four root
+neighbours, and has density at most one by (2). These densities sum to
+at least two, so at least two components have positive density. Choose
+a component $R$ adjacent to $x$, and a component $Q\ne R$ of
+positive density. The helpers $\{z\}\cup R$ and $Q$ are adjacent and
+have respectively five and at least four root adjacencies. This again
+contradicts the choice of $G$.
 
 If a root $x$ had just one neighbour $v$, the side $G-x$, rooted at
 $(X\setminus\{x\})\cup\{v\}$, would have density
@@ -294,11 +305,11 @@ otherwise $Y$ already violates $4$-lightness in $G$. Its restored
 density is at least two and its boundary has order five. This is a
 proper side, since its boundary contains the nonroot $v$ and could not
 also contain all five roots. Lemma~\ref{rh:basic}(2) excludes it.
-Thus deletion stays in the induction class, a contradiction.
+Thus deletion stays in the induction class, contradicting minimality.
 
 If internal five-connectivity fails, choose a connected root-free set
 $Y$ of minimum boundary order $k\le4$, and put $S=N_G(Y)$. The rooted
-shore $(G[Y\cup S],S)$ is internally $k$-connected, retains all nonroot
+graph $(G[Y\cup S],S)$ is internally $k$-connected, retains all nonroot
 degrees, and has nonpositive density. For $k=0,1,2$, it contains a rooted
 $K_k$ (using a path through $Y$ when $k=2$). For $k=3$, apply
 Lemma~\ref{lem:triangle}. For $k=4$, the degree bound implies $|Y|\ge2$,
@@ -315,7 +326,7 @@ of common neighbours in $Q_0$. The rooted density after contraction is
  \rho_4(G/e,X_e)=2+3-t(e),
 \end{equation}
 where $X_e$ denotes the unchanged or naturally identified roots. The
-completion counts exactly the edges which become root--root edges when
+completion counts exactly the edges that become root--root edges when
 one endpoint is a root.
 
 \begin{lemma}\label{rh:blocker}
@@ -355,7 +366,7 @@ with boundary $\{p,q\}\cup D$, where $|D|=3$, avoiding $A$.
 Since both $p,q$ have neighbours in $T$, their neighbourhoods force
 $u,v\in T$; in particular these are nonroots.
 
-Delete $p,q$ from this shore and reroot at $\{u,v\}\cup D$:
+Delete $p,q$ from this side and reroot at $\{u,v\}\cup D$:
 \[
  R=G[T\cup D],\qquad Z=\{u,v\}\cup D.
 \]
@@ -375,17 +386,18 @@ The rooted universality theorem \cite[Theorem~2.6]{DNR2026} supplies
 all these missing edges simultaneously: its table contains every
 $m$-edge graph in this range (the exceptional graph at density three
 has four edges). Retain the root edges already present. We obtain
-five rooted bags in $R$, with the bags at $u,v$ adjacent to one another
-and to all three bags at $D$.
+five rooted branch sets in $R$, with those at $u,v$ adjacent to one
+another and to all three branch sets at $D$.
 
-Append $p$ to the $u$-bag and $q$ to the $v$-bag. These are adjacent
-root-free helpers, full to the boundary $A\cup D$. For $A\cap D$
-use the existing $D$-bags; for $A\setminus D$ use singletons. These
-choices are disjoint because $T\cap A=\varnothing$.
+Append $p$ to the branch set at $u$ and $q$ to the branch set at $v$.
+These give adjacent root-free helpers, each adjacent to every branch
+set at the boundary $A\cup D$. For $A\cap D$ use the existing branch
+sets at $D$; for $A\setminus D$ use singletons. These branch sets are
+disjoint because $T\cap A=\varnothing$.
 
 The root-free set $U=T\cup\{p,q\}$ has boundary exactly $A\cup D$.
-If five exterior paths link $X$ to this boundary, retain the five bags
-at their distinct ends and append the paths. This gives the helper
+If five exterior paths link $X$ to this boundary, retain the five branch
+sets at their distinct ends and append the paths. This gives the helper
 property rooted at $X$. Otherwise the isolator argument gives a
 separator of order at most four, a rooted clique or dart on it, and a
 root-free interior containing $U$. That interior has at least two
@@ -396,7 +408,7 @@ are impossible.
 \subsection{Eliminating degree five}
 
 \begin{lemma}\label{rh:quasi-light}
-If $u,v$ are nonroots and $Q_0/uv$ is quasi five-connected, then
+If $u,v$ are nonroots and $Q_0/uv$ is quasi-five-connected, then
 $(G/uv,X)$ is $4$-light.
 \end{lemma}
 
@@ -406,7 +418,7 @@ density. Every root has degree at least five in $Q_0/uv$: its at least
 two nonroot neighbours merge to at least one, and it retains the four
 other roots as neighbours. A root-free set with boundary at most four
 has nonempty opposite side, because there are five roots. Its boundary
-therefore has order four, and quasi five-connectivity makes one open
+therefore has order four, and quasi-five-connectivity makes one open
 side a singleton. A singleton root-free side has degree four and
 density zero. A singleton opposite side would be a root of degree at
 most four, which is impossible.
@@ -454,7 +466,7 @@ $z$, with boundary $(X\setminus\{z\})\cup\{v\}$, and independence
 of $X$ would give $d_G(z)\le1$.
 
 Lemma~\ref{lem:quasi} now applies to the unique edge $va$ into $Y$.
-Thus $Q_0/va$ is quasi five-connected, and Lemma~\ref{rh:quasi-light}
+Thus $Q_0/va$ is quasi-five-connected, and Lemma~\ref{rh:quasi-light}
 makes $G/va$ $4$-light. Since $v$ has degree five and $b$ misses $a$,
 the edge $va$ has at most three common neighbours. Its contraction
 retains rooted density at least two and decreases order, a contradiction.
@@ -464,11 +476,12 @@ and Menger's theorem give five disjoint paths from $X$ to $N_G(v)$,
 with interiors outside $N_G[v]$. Roots already in $N_G(v)$ use trivial
 paths. Choose $z\in N_G(v)\setminus X$, which exists because $v$ has
 at most three root neighbours. Use $\{v\},\{z\}$ as helpers, and the
-five linkage paths as root bags, removing $z$ from its own path. That
-trimmed bag is nonempty because $z$ is not an original root. The helper
-$z$ meets all five root bags, $v$ meets the other four, and $vz$ joins
-the helpers. Every used clique edge has nonroot end $z$, so is an actual
-edge of $G$. This gives the ten required contacts.
+five linkage paths as root branch sets, removing $z$ from its own path.
+The trimmed branch set is nonempty because $z$ is not an original root.
+The helper $z$ is adjacent to all five root branch sets, $v$ is adjacent
+to the other four, and $vz$ joins the helpers. Every clique edge used
+has nonroot end $z$, so is an edge of $G$. This gives the ten required
+adjacencies.
 \end{proof}
 
 \subsection{Weighted neighbourhoods and an atom}
@@ -495,15 +508,15 @@ Otherwise a separator of order at most four would isolate, in $G$,
 a root-free component containing $v$. Truncate the paths at their first
 entries to $N_G(v)$. Their five ends form a set $Z$ containing $X_0$,
 and their interiors avoid the neighbourhood. Lemma~\ref{lem:star}
-gives a central bag
+gives a central branch set
 \[
  C=(N_G(v)\setminus Z)\cup\{z\},\qquad z\in Z\setminus X_0,
 \]
 adjacent to the four other ends. Use $C$ and $\{v\}$ as helpers,
 keeping the four other linkage paths and trimming $z$ from its path.
-The trimmed root bag is nonempty; all bags are disjoint. The helper
-$C$ has five root contacts, $v$ has four, and they are adjacent. This
-is the helper property, a contradiction.
+The trimmed root branch set is nonempty, and all branch sets are
+disjoint. The helper $C$ has five root adjacencies, $v$ has four, and
+they are adjacent. Thus the model has the helper property, a contradiction.
 \end{proof}
 
 In particular, $E_0$ is nonempty. If $m=|V(G)\setminus X|$, the
@@ -536,14 +549,14 @@ Add a set $W$ of $|V(G)|+1$ vertices and make $X\cup W$ a clique,
 with no edges from $W$ to $V(G)\setminus X$; call the resulting graph
 $Q$. Internal five-connectivity shows that $Q$ is five-connected, and
 $X$ separates $G-X$ from $W$, so its connectivity is exactly five.
-This padding changes neither boundaries of original root-free sets nor
-common-neighbour counts of original edges with a nonroot end.
+Adding this clique changes neither boundaries of original root-free
+sets nor common-neighbour counts of original edges with a nonroot end.
 
 Let $\mathcal S=\{V(e):e\in E_0\}$. By Lemma~\ref{rh:blocker},
 $\mathcal S$-fragments exist in $Q$, with an example of order at most
-$m=|V(G)\setminus X|$. Choose an $\mathcal S$-atom $A$, among all
-such fragments, so $|A|\le m$. It avoids $X\cup W$: otherwise its
-five-boundary would force it to contain the whole surviving clique,
+$m=|V(G)\setminus X|$. Choose an $\mathcal S$-atom $A$, so
+$|A|\le m$. It avoids $X\cup W$: otherwise its five-boundary would
+force it to contain the whole surviving clique,
 of order at least $|W|>m$. Thus $A\subseteq V(G)\setminus X$, and
 its boundary is the same in $G$ and $Q$.
 
@@ -570,7 +583,7 @@ ends of $f$ and meeting $A$ at $v$. Consequently
 $V(f)\subseteq T\setminus\overline A$, so \eqref{rh:atom-hyp} holds.
 Mader's theorem yields $|A|\le5/2$, contradicting $|A|\ge3$.
 
-The auxiliary clique has only selected an atom: no model has been
-constructed in the padded graph. The contradiction proves the theorem
-in the original rooted graph.
+We used the auxiliary clique only to select an atom; no model was
+constructed in the enlarged graph. The contradiction proves the theorem
+for the original rooted graph.
 \end{proof}
