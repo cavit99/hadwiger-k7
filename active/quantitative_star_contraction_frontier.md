@@ -1,10 +1,34 @@
 # Quantitative star contractions
 
-**Status:** reserved construction route. Reduction R remains unproved;
-its auxiliary uniform-cost independence reduction is refuted. Its former
-global colouring target is superseded by Liu–Luo v2. No new colouring
-bound is established by this repository. Current priorities are in the
+**Status:** parked construction route. The external linear list-colouring
+bound supersedes its former payoff and, if accepted, makes existential R
+vacuous. The contraction mechanism and density target remain unproved;
+the auxiliary uniform-cost independence reduction is refuted. No new
+colouring bound is established here. Current priorities are in the
 [research ledger](../RESEARCH_LEDGER.md).
+
+## External update, 7 October 2026
+
+OpenAI's [linear list-colouring manuscript](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-linear-list-coloring-bound-in-terms-of-the-Hadwiger-number-September-23-2026),
+Theorem 1.1, asserts `chi_list(G)<=C h(G)` for an absolute integer C.
+It implies `chi(G)<=C(t-1)` for every `K_t`-minor-free graph, improving
+both the old payoff below and Liu–Luo v2 asymptotically. The
+[release review](../archive/openai_math_review_2026-10-07/README.md)
+distinguishes our statement and mechanism inspection from a full proof
+audit; no Lean build was run here.
+
+**Conditional consequence for R.** Its all-minor independence hypothesis
+implies `h(G)<=r`: applying it to a `K_s` minor gives `1>=s/r`.
+The external theorem therefore gives `q=chi(G)<=Cr`. Choose an integer
+`K>max{C,2}`. Then no graph satisfies R's premise `q>=Kr`, so its
+existential statement holds vacuously, with any permitted c. This supplies
+neither a contraction construction in a nonempty class nor the separate
+density inequality. Reopening requires a specified nonvacuous application.
+
+The dated work below preserves the earlier deductions and failure records.
+Its descriptions of R or the colouring payoff as open refer to that
+earlier state and are superseded by this conditional update. The general
+Hadwiger counterexample does not refute an unspecified linear bound.
 
 ## Target and existing input
 

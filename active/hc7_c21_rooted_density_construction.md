@@ -81,6 +81,16 @@ stronger local placement assertions are not automatically proved.
 
 ## 4. What remains towards HC7
 
+**External update, 7 October 2026.** The
+[reviewed OpenAI release](../archive/openai_math_review_2026-10-07/README.md)
+changes the general conjecture's standing, not this fixed-case target.
+The counterexample graphs already contain `K7`. The companion linear
+list bound does not give six colours here, and its simultaneous rooted
+model and path theorem requires connectivity and list-chromatic bounds
+unavailable in a degree-seven critical host. Simultaneous construction
+is a useful design principle, but no new closing lemma has been imported.
+The selected split-clique case below remains open.
+
 C21 guarantees a seven-bag minor with at most one missing adjacency in
 every non-six-colourable graph. HC7 requires all 21 adjacencies. Completing
 that contact while preserving disjoint connected bags remains unproved.

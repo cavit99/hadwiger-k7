@@ -9,6 +9,12 @@ acceptance nor publication priority.
 The collection has one principal paper, two independent specialist papers
 and three preserved precursors.
 
+The [7 October external research review](../archive/openai_math_review_2026-10-07/README.md)
+records OpenAI's general counterexample and linear list-colouring result.
+Neither settles the case `t=7` or invalidates the theorem statements
+in this collection. They are external contributions; this documentation
+update does not revise the manuscripts or extend their audit coverage.
+
 ## Principal paper
 
 [Every graph with no K7-minus minor is six-colourable](k7minus-six-colour/main.pdf),

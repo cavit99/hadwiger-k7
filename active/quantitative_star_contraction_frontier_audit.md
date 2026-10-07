@@ -1,5 +1,16 @@
 # Audit of the quantitative contraction route
 
+**Source-preservation check, 7 October 2026 (coordinator; not a new
+independent proof audit).** Current source SHA-256:
+`61bcd15e008137cb9d06ae68590c64c2760853ec358b24f233e4e7a97872bda2`.
+Everything from `## Target and existing input` onwards is byte-identical
+to the previously recorded source `754087e073cb84db191bc3b70b9f118503eaaade5739d0553c03f9babf6fab28`.
+Only the opening status and external-research update changed. The old
+conditional deductions retain their audit scope. Accepting the released
+linear list theorem makes existential R vacuous by choosing K above its
+constant; no contraction or density construction is certified. The dated
+verdicts below describe the earlier research state.
+
 **Verdict: GREEN for the conditional deductions; the target is unproved.**
 Initial review: 9 September 2026; latest scoped review: 14 September 2026.
 This is separate internal review, not peer review.

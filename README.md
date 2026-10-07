@@ -1,4 +1,4 @@
-# Towards Hadwiger's conjecture
+# Towards Hadwiger's conjecture for seven
 
 Research on graph colouring and graph minors, focused on the first open
 case of Hadwiger's conjecture.
@@ -14,14 +14,24 @@ different colours. A **graph minor** is obtained by deleting vertices or
 edges and contracting edges. The **complete graph** $K_t$ has $t$ vertices,
 with an edge between every pair.
 
-Hadwiger's conjecture says that every finite simple graph with no $K_t$
-minor can be coloured with at most $t-1$ colours. The case studied here is:
+In its general form, Hadwiger's conjecture asserts that every finite simple
+graph with no $K_t$ minor can be coloured with at most $t-1$ colours.
+The case studied here is:
 
 > Can every graph with no $K_7$ minor be coloured with at most six colours?
 
 The seven refers to the excluded complete graph; the graphs being coloured
 may have any number of vertices. This case, abbreviated `HC7` or `HC_7`,
 is not proved.
+
+**Research update, 7 October 2026.** OpenAI has released a
+[claimed counterexample to the general conjecture](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-counterexample-to-Hadwigers-conjecture-September-23-2026).
+Our [informal proof audit](archive/openai_math_review_2026-10-07/audit-summary.md)
+found no fatal gap; this is a provisional assessment, not a formal
+certificate or independent human verification. The constructed graphs
+already contain $K_7$, so they do not refute the case studied here or our
+main theorem. A companion linear list-colouring result also changes the
+asymptotic landscape; see the [release review](archive/openai_math_review_2026-10-07/README.md).
 
 ## Main result
 

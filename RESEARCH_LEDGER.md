@@ -1,6 +1,6 @@
 # Hadwiger `K_7` research ledger
 
-**Last updated:** 23 September 2026. This is the sole authority for current
+**Last updated:** 7 October 2026. This is the sole authority for current
 research status. Internal audits are not external peer review.
 
 **Standing:** `HC_7` and T44 are not proved. Norin–Totschnig Conjecture 21
@@ -9,6 +9,18 @@ separate hash-pinned internal audits: every finite `K7^-`-minor-free graph
 is six-colourable. The proof includes an unbounded extremal theorem and an
 elementary nine-vertex quotient lemma. This is not external peer review or a
 historical priority determination. Conjecture 19 was resolved externally.
+
+**External research update:** OpenAI's general Hadwiger counterexample has
+received a [provisional positive informal audit here](archive/openai_math_review_2026-10-07/audit-summary.md):
+no fatal gap or unmatched dependency was identified at the pinned release
+revision. This is neither independent human verification nor a formal
+certificate. Its examples already contain `K7`; HC7 and our C21 theorem
+are unaffected. The companion linear list-colouring theorem, whose
+statement and relevant mechanisms were inspected but whose full proof was
+not audited here, supersedes the parked asymptotic payoff if correct.
+The [release review](archive/openai_math_review_2026-10-07/README.md) records
+exact scope, sources and consequences. These are external results, not
+additional achievements of this repository.
 
 **Objective assessment:** the new C21 theorem, if correct, meets the requested
 alternative in mathematical reach and significance. It strengthens NT's

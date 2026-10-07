@@ -19,6 +19,9 @@ Immediate barriers:
 
 No counterexample to `HC_7` is established. Barriers
 to intermediate claims remain with their designated conditional routes.
+The [general Hadwiger counterexample and companion release](../archive/openai_math_review_2026-10-07/README.md)
+do not close or refute this fixed case; they are literature context,
+not direct proof inputs.
 
 Selected conditional checkpoint:
 
@@ -79,9 +82,9 @@ their incomplete local mechanisms are not claimed as consequences of closure.
   its boundary-colouring obligations and failed model exchanges remain
   available; the selected construction is linked above.
 - [Quantitative star contractions](quantitative_star_contraction_frontier.md):
-  R and the density construction remain unproved and reserved. Liu–Luo v2
-  supersedes the former cube-root colouring payoff. Component labelling
-  is paused; direct barriers and the revised comparison are in that frontier.
+  the released linear list bound supersedes the former payoff and makes
+  existential R vacuous if accepted. No contraction construction follows;
+  the density target remains unproved. The route stays parked.
 - [Fully rooted K5 contractibility](k5_contractibility_frontier.md):
   an independent theorem target and alternative extraction step in C19.
   The global construction and the remaining C19 implications are open.
