@@ -108,6 +108,10 @@ extracting K7 from the two complete selected path systems and one strongly
 connected disagreement region alone. Current work retains the whole colouring
 condition; its triangle subcase now reduces to actual
 four-chromatic induced layers, with compatible augmentation still unproved.
+The [7 October construction](active/hc7_split_clique_global_colour_lifts.md)
+gives an unaudited original-host colouring lift in the no-rooted-K4
+alternative at an exterior six-cut. The rooted alternative remains open;
+the round produced no complete case closure or valid induction.
 The whole split-clique case, other degree-seven
 configurations, and degrees eight and nine remain. The C21 manuscript
 is unchanged.

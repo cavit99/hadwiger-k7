@@ -7,6 +7,40 @@ public_overview = "README.md"
 database = ".cache/research/index.sqlite"
 
 [[claims]]
+id = "hc7.laboratory.split_clique_global_colour_lifts"
+title = "Original-host colouring lift at a split-clique exterior six-cut"
+kind = "laboratory"
+status = "written-unaudited"
+source = "active/hc7_split_clique_global_colour_lifts.md"
+source_heading = "A colouring lift across an exterior six-cut"
+active = false
+scope = "a seven-connected seven-chromatic K7-minor-free graph with all proper minors six-colourable, a split triangle and four-clique neighbourhood, and a six-cut of G-u avoiding the neighbourhood"
+colour_compatibility = "a proper-minor response is restored on the entire original graph when one four-root obstruction admits the five-colour extension"
+strict_parameter = "one proper minor has |A|+2 fewer vertices; this is a direct colouring lift, not a recursive induction"
+conclusions = ["the absence of the specified rooted K4 on a shore gives a six-colouring of the original host", "all twelve single-pair boundary states occur in the original host"]
+does_not_prove = ["the rooted alternative at the six-cut", "compatibility of the two shore models", "a valid induction", "the whole split-clique case", "HC7"]
+keywords = ["exterior six-cut", "four-root extension", "whole-host colouring lift", "boundary palette"]
+
+[[claims]]
+id = "graph_schemes.barrier.forest_two_colour_lift"
+title = "Projection forests can force non-bipartite host branch sets"
+kind = "barrier"
+status = "barrier"
+source = "barriers/bipartite_forest_two_colour_lift.md"
+source_heading = "Statement refuted"
+active = false
+scope = "one properly coloured K2,3 scheme with eleven host vertices and two additional host edges; direct written check without separate audit"
+conclusions = ["every disjoint full-rank forest allocation in the stated orientation has a host branch set containing a triangle"]
+does_not_prove = ["failure of bipartite rooted contractibility", "failure of all allocation orientations", "failure of a joint recolouring", "a counterexample to the critical-host target"]
+keywords = ["matroid union", "projection forest", "colouring lift", "two-colour expansion"]
+
+[[relations]]
+source = "hc7.laboratory.split_clique_global_colour_lifts"
+target = "graph_schemes.barrier.forest_two_colour_lift"
+kind = "guarded_by"
+note = "The separate matroid-contraction attempt cannot restore arbitrary host fibres with only the quotient colour and one spare colour."
+
+[[claims]]
 id = "hc7.barrier.two_colouring_region"
 title = "Two complete bichromatic path systems and one disagreement region do not force K7"
 kind = "barrier"

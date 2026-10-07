@@ -225,6 +225,20 @@ The attack must choose the two parts, root ownership and proper-minor
 colourings together; models obtained for different choices of `r` cannot
 be combined without a valid ownership argument. All final bags may change.
 
+The [7 October global-colouring construction](hc7_split_clique_global_colour_lifts.md)
+retains the full boundary-colouring condition. At a six-cut T in C,
+with P and D on opposite sides, it gives an actual six-colouring of G
+unless the P side contains a rooted K4 at `T-{a,b}`, for each nonedge ab
+of T. The proof is working and unaudited. The remaining rooted models
+on both sides still lack two compatible helper bags, so neither this
+separator branch nor the whole case is closed. Independent whole-side
+contractions can return incompatible boundary partitions. The
+[forest-expansion counterexample](../barriers/bipartite_forest_two_colour_lift.md)
+also rules out repairing a general matroid contraction with just the
+quotient colour and one spare colour. These failures leave simultaneous
+recolouring and a different allocation possible; no valid induction has
+been obtained.
+
 A [working root-placement strengthening](hc7_split_clique_construction_working.md)
 reconstructs the proof with one triangle kept singleton. It gives four
 partitions of the same three-connected `M`: in the partition indexed by
