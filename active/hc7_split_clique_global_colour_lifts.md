@@ -27,6 +27,108 @@ minor of G; its colouring omits u's colour on the roots. This does not
 provide a lift through the contracted branch sets. The finite set of
 boundary partitions places no bound on the size of the exterior.
 
+## Exchanging a flexible colour class
+
+The [audited flexible entry](../results/hc7_split_clique_flexible_entry.md)
+supplies an independent class B containing one P vertex p. Choose B of
+maximum size among all flexible choices, allowing p to change. The
+[working normalisation](hc7_c21_rooted_density_construction.md#next-attack-the-split-clique-neighbourhood)
+gives two whole-H colourings with common sixth class B,
+
+    phi(P)=(p_6,a_5,b_4),  psi(P)=(p_6,a_3,b_5),  phi(d_i)=psi(d_i)=i.
+
+Every five-colouring of H-B uses all five colours on the six retained
+roots. B dominates C: an undominated exterior vertex could be added
+while restricting both colourings. It also dominates P by the clique
+edges. If it missed d_i, choose the response whose repeated P--D colour
+is not i, recolour d_i six and set u=i. Thus B dominates H. This section
+proves exchange rules; it does not prove that an improving exchange exists.
+
+**A complete paired exchange.** For R subset B choose restoration
+colours `t_phi(r),t_psi(r)` in `[5]` for each r in R. Let S consist of
+all neighbours of r having colour `t_phi(r)` under phi or `t_psi(r)`
+under psi, for all r in R. If S is independent and `N_B(S) subset R`,
+then `B'=(B-R) union S` is independent. In each response give S colour
+six, restore each r in its chosen colour, and retain all other colours.
+These are proper colourings of the entire H. R is independent; all
+conflicts with restored vertices were included in S; and no vertex of
+S sees B-R. No exterior edge is discarded. The root colours must still
+be checked before this certifies a flexible choice or colours G.
+
+For the uniform choice `t_phi=5,t_psi=3`, put
+
+    U=phi^{-1}(5) union psi^{-1}(3),  F=G[B union U].
+
+Let R union S be the p-component of the bipartite graph consisting of
+the B--U edges, with R subset B and S subset U. This is the least
+exchange closed under both neighbour requirements. It contains p in R
+and a in S, and `U intersect (P union D)={a,d3}`. If S is independent,
+the exchange above applies. If d3 belongs to S, its phi response frees
+colour three on N(u), so u=3 colours G. Otherwise B' is flexible with
+deleted root a: the remaining P colours are `(p_5,b_4)` and `(p_3,b_5)`.
+Thus `|S|>|R|` is impossible for a maximum choice B.
+
+A zero-gain exchange has a genuine but limited decreasing parameter.
+Its new union is `U'=(U-S) union R`, with `B' union U'=B union U`.
+There are no edges from R to U-S. Hence `e(G[U'])<=e(G[U])`, strictly
+if S has a neighbour in U-S. Such strict steps terminate. They do not
+resolve negative gain or an edge inside S, and do not yield induction
+on critical hosts.
+
+**Recolouring an entire component goes further.** Let W be any bipartite
+component of F, with shores L,M. Give L colour five under phi and three
+under psi, and give M colour six in both; retain both colourings outside
+W. Either orientation is valid. Every potentially conflicting exterior
+vertex has phi-colour five, psi-colour three, or common colour six,
+so belongs to F and would lie in W. This accounts for all original edges.
+
+If W contains d3, its phi response six-colours G with u=3. Otherwise
+both responses certify `B'=(B-W) union M` as flexible. The edge pa puts
+both p,a in W or neither; in the former case the deleted root may change
+to a. No D root moves. Maximality therefore gives
+
+    max(|L|,|M|) <= |B intersect W|.
+
+If both shores attain equality, every exterior vertex outside W and B
+whose B-neighbours all lie in W must meet both shores. Otherwise one of
+the two maximum replacements leaves it undominated and permits augmentation.
+This whole-component operation can resolve crossing edges between the
+smaller B--U components. However, the d3-component of F must be
+three-chromatic: it cannot be bipartite, and B and the two independent
+sets forming U give a three-colouring.
+
+**What the exchange does not establish.** The
+[maximum-class barrier](../barriers/hc7_flexible_nucleus_root_edge.md#maximum-flexibility-does-not-force-an-exchange)
+has B uniquely maximum independent, all the fixed-B boundary constraints
+and odd target components for every response pair. It is six-colourable
+and not seven-connected. Thus fixed-B palette choices and maximality
+alone cannot guarantee augmentation or a bipartite target component.
+The original critical-host hypotheses must control an exchange through
+vertices outside F; they have not yet done so.
+
+Nor does an odd cycle itself supply the required rooted contacts.
+Indeed, already for one phi and each `i in {1,2,3}`, the d_i-component
+of `G[B union phi^{-1}(5) union {d_i}]` is nonbipartite. Otherwise
+two-colouring it with five and six frees i at u. A shortest odd cycle
+there is induced and passes through d_i. This elementary obstruction
+uses no flexibility. Its other vertices need not include p or a, and
+separate connecting paths may consume a retained bag's only contact.
+
+Contracting such a cycle O and six-colouring the proper minor gives,
+on expansion, exactly the lists
+
+    L(v)=[6] minus c(N_G(v)-V(O)),  v in V(O).
+
+Each contains the quotient colour. There is no proved second available
+colour: an induced-cycle vertex may see all five other colours outside
+O. Even lists all equal to the same two-element set fail on an odd
+cycle. Thus decreasing order alone gives neither a colouring lift nor
+a closed induction class. Swapping selected bichromatic components can
+also move a conflict to a different edge instead of removing it. The
+unresolved construction is a coupled change of the full responses and
+their exterior constraints, or a simultaneous allocation of all seven
+minor bags. No whole split-clique closure follows from these rules.
+
 ## Contracting an independent anti-neighbourhood
 
 Fix v in P, put A=P-{v}={a,b}, I=C-N(v), and suppose I is independent.

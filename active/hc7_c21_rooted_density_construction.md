@@ -510,6 +510,25 @@ The two different labels cover all four D vertices. Hence a largest flexible
 B dominates all G, and no response pairing p with a D root can retain B
 monochromatic. These are working deductions, not a connected-bag allocation.
 
+**Selected global exchange and its limit.** The
+[whole-response construction](hc7_split_clique_global_colour_lifts.md#exchanging-a-flexible-colour-class)
+can replace part of B while restoring both complete colourings, and can
+change its P root. Recolouring a whole bipartite component of
+`G[B union phi^{-1}(5) union psi^{-1}(3)]` extends this operation; a
+component containing d3 would six-colour G. Some equal-size exchanges
+strictly reduce the number of edges inside the union of the two restored
+colour classes. These are genuine operations, but not a forced descent.
+The [new maximum-class barrier](../barriers/hc7_flexible_nucleus_root_edge.md#maximum-flexibility-does-not-force-an-exchange)
+has a uniquely largest flexible class and odd target components for
+every response pair. It is six-colourable and fails seven-connectivity;
+the full host assumptions remain essential. Contracting an obstructing
+odd cycle supplies only one common colour on expansion, not a list
+colouring of the cycle. Thus the next construction must change exterior
+constraints using actual proper-minor responses, or allocate the odd
+region together with all retained contacts. Further fixed-B palette
+conditions alone will not close this route. The entire split-clique
+case remains the target; these exchanges are working, unaudited material.
+
 The construction must retain the original-host colouring constraints.
 The output may use three P bags and three D-containing bags, omitting or
 merging D roots, instead of insisting on two helpers and four singleton D

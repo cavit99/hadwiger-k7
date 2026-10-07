@@ -134,3 +134,67 @@ This refutes root-edge deletion colourability inferred from the stated
 local data, even together with `K7` exclusion. The original host's
 seven-connectivity and proper-minor colouring constraints remain
 available and are not refuted.
+
+## Maximum flexibility does not force an exchange
+
+**Status:** explicit counterexample to a further intermediate claim;
+written proof, not separately audited. This construction is distinct from
+the root-edge deletion barrier above. Even a uniquely largest flexible
+deleted class, together with all its fixed-boundary five-colourings, need
+not supply a bipartite target component or a cardinality augmentation.
+This does not refute the full six-colouring-or-`K7` outcome.
+
+Write `G_0` for the preceding frame, with `D={d_1,d_2,d_3,d_4}`.
+For each `i in {1,2,3,4}`, add `v_i` adjacent to exactly
+`{y} union (D-{d_i})` among existing vertices, and add `r_i` adjacent
+to `y,v_i`. Put
+
+`W=(V(G_0)-{u,p}) union {v_1,v_2,v_3,v_4}`.
+
+For every `w in W`, add two private leaves adjacent only to `w`.
+There are no other new edges. Call the resulting graph `G^+` and put
+
+`B={p,r_1,r_2,r_3,r_4} union {all new leaves}`.
+
+The set B is independent and meets `N(u)` exactly at p. The graph
+`G^+-({u} union B)` is the original K with the four vertices `v_i`.
+Every five-colouring fixing `d_i=i` has `y=5` and therefore `v_i=i`.
+Consequently both opposite-owner colourings extend, and every such
+five-colouring still uses five on exactly one of a,b. Giving B colour
+six produces the required whole-graph responses on `G^+-u`.
+
+For any two such responses phi,psi and every `i in {1,2,3,4}`, consider
+
+`F_i=G^+[B union phi^{-1}(5) union psi^{-1}(i)]`.
+
+The `d_i`-component of `F_i` contains the edge `d_i y` and the triangle
+`y v_i r_i y`: y always has colour five, `v_i` always has colour i,
+and `r_i` belongs to B. Thus every target component is nonbipartite,
+for all response choices and all four palette labels.
+
+Moreover B is the unique maximum independent set of `G^+-u`. If S is
+independent and `T=S intersect W`, its vertices exclude the `2|T|`
+distinct private leaves attached to T. Since every vertex outside W
+in `G^+-u` belongs to B,
+
+`|S| <= |B|-2|T|+|T| = |B|-|T|`.
+
+Equality with `|B|` therefore requires `T=empty` and `S=B`. In particular
+B is uniquely largest among flexible deleted classes. Neither a larger
+independent class nor a different equal-sized flexible class exists,
+even when the triangle vertex in the class may change.
+
+The graph still excludes `K7`. Each `v_i` is attached on the existing
+four-clique `{y} union (D-{d_i})`, each `r_i` on the edge `y v_i`, and
+each leaf on a singleton. These are clique attachments whose added
+cliques have order at most five; the clique-separation argument above
+preserves `K7` exclusion at each attachment. The displayed six-colouring
+of `G_0` extends by setting `v_i=i`, `r_i=6`, and giving each leaf any
+colour different from its neighbour.
+
+The original critical-host hypotheses still fail: p retains degree three,
+so `G^+` is not seven-connected, and the whole graph is six-colourable,
+so it is not the required proper-minor-critical host. The barrier concerns
+inferences from maximum B and its full colouring relation alone. A use
+of the original host's connectivity or proper-minor constraints remains
+possible. No enumeration or computer-assisted conclusion is used here.

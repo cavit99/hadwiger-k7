@@ -118,6 +118,14 @@ configurations, including an independent anti-neighbourhood of order at most two
 without bounding the host order. The general independent case and its
 extension to arbitrary anti-neighbourhoods remain open. These are working
 deductions, not a separately audited case closure or a valid induction.
+The current global exchange replaces a flexible deleted class while
+restoring both full colourings, including a change of its triangle root.
+It also permits whole-component recolouring. The
+[maximum-class barrier](barriers/hc7_flexible_nucleus_root_edge.md#maximum-flexibility-does-not-force-an-exchange)
+shows that maximality and all fixed-class responses do not force an
+augmentation. The remaining construction must use actual proper-minor
+responses to change exterior constraints, or retain every contact in a
+joint minor model; contracting the odd obstruction alone does not lift.
 The whole split-clique case, other degree-seven
 configurations, and degrees eight and nine remain. The C21 manuscript
 is unchanged.
