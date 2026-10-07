@@ -2,8 +2,8 @@
 
 **Status, 7 October 2026:** working deductions, not separately audited.
 Neither the exterior six-cut branch nor the whole split-clique case is
-closed. The strongest construction below restores a colouring of the
-original host in one rooted-minor alternative. No induction is asserted.
+closed. The constructions below restore whole-host colourings or give
+explicit minors under additional hypotheses. No induction is asserted.
 
 Throughout, G is finite and simple, seven-connected, seven-chromatic and
 K7-minor-free, and every proper minor is six-colourable. The neighbourhood
@@ -26,6 +26,167 @@ using at most five colours on those roots. Adjoining u produces a proper
 minor of G; its colouring omits u's colour on the roots. This does not
 provide a lift through the contracted branch sets. The finite set of
 boundary partitions places no bound on the size of the exterior.
+
+## Contracting an independent anti-neighbourhood
+
+Fix v in P, put A=P-{v}={a,b}, I=C-N(v), and suppose I is independent.
+Write W=V(G)-({u,v} union I). This section gives terminal constructions
+for this conditional case; it does not establish that I is independent
+for some choice of v.
+
+First, `chi(G-{u,v})=6`. Otherwise five-colour that graph and choose a
+colour t absent from A. Give v colour six; if t occurs at a D vertex,
+give that unique vertex colour six too. These two vertices are nonadjacent.
+Now u can receive t. The same argument proves the deletion statement
+for every v in P union D, with the two cliques interchanged when needed.
+
+Each vertex i of I has a neighbour in C-I: it misses u,v and has at
+most six neighbours in A union D, whereas its degree is at least seven.
+For each i choose a parent f(i) in W adjacent to it, and contract all
+edges i f(i). Their fibres are disjoint stars, each containing just one
+W vertex. Let Q_f be the resulting minor of G-{u,v}. Contracting uv as
+well gives a proper minor of G whose contracted vertex is universal to
+Q_f: u sees the retained roots and v sees C-I. Hence Q_f is five-colourable.
+All six roots A union D remain distinct, with their literal clique edges.
+The operation removes |I|+1 vertices from G. No quotient inherits
+contraction-criticality, and no recursion is used.
+
+**Exact response.** Every five-colouring of every Q_f uses all five
+colours on A union D. Otherwise retain its colours on W, colour I union
+{v} with six, and give u a colour absent from the six retained roots.
+Consequently there is exactly one repeated A--D pair: one A colour lies
+outside the four D colours, and the other equals one D colour. The
+quantifiers are important: the colouring may depend on the parent map.
+
+**Two disjoint neighbourhoods give a colouring lift.** Suppose distinct
+d,e in D satisfy `(N(d) intersect I) intersect (N(e) intersect I)=empty`.
+Choose parents d for all I-neighbours of d and e for all I-neighbours
+of e; choose other parents arbitrarily. In a five-colouring of Q_f, at
+least one of d,e has a colour t absent from A. Call that root d. Restore
+the original graph as follows:
+
+- retain the colours on W-{d};
+- colour I intersect N(d) with t;
+- colour d, v and I-N(d) with six;
+- colour u with t.
+
+The three parts of the colour-six class are pairwise anticomplete.
+Every W-neighbour other than d of an I vertex assigned t avoids t,
+because its edge to the contracted d-fibre survives in Q_f. The other
+D roots and both A roots avoid t, so all edges at u are proper. This
+is a six-colouring of G. Thus the four sets N(d) intersect I, d in D,
+must be pairwise intersecting in any remaining instance. Empty sets
+are included in this conclusion.
+
+The following minor construction uses the complementary neighbours.
+For every d in D,
+
+`|N(d) intersect (C-I)| >= 2`.
+
+Indeed, write its numbers of I and C-I neighbours as k,l. The k
+I-neighbours together with u form an independent subset of N(d), while
+`d_G(d)=4+k+l`. The contraction-critical inequality
+`alpha(G[N(d)]) <= d_G(d)-5` gives `k+1 <= k+l-1`.
+For completeness, that inequality follows by contracting the star on a
+vertex s and an independent subset J of N(s), six-colouring the proper
+minor, then restoring J in the contracted colour. If `d(s)-|J|<=4`,
+at most five colours appear on N(s), allowing s to be restored too.
+
+**A connected cover with at most one C-I vertex gives a minor.** Suppose
+L is connected, contains a, meets every D-neighbourhood, and is contained
+in `{a} union I union {w}` for some w in C-I (w need not belong to L).
+Let R be all vertices outside `{u} union D union L`. Its base consists
+of v,b and the remaining C-I vertices, and is connected through v.
+Every remaining I vertex has a neighbour in that base: otherwise its
+neighbours lie in `{a,w} union D`, at most six vertices. Each d retains
+a C-I neighbour in R by the preceding bound. Thus
+
+`{u}, {d} (d in D), L, R`
+
+are seven disjoint connected bags with every required contact. The L--R
+edge is ab. In particular, this closes the case in which the I-neighbours
+of either a or b collectively contact all four D vertices.
+
+**An I vertex complete to D also gives a minor.** Let x in I see all
+of D. If x sees a or b, use the preceding construction. Otherwise put
+`F=G-(D union {u,v,x})`. The graph G-D is three-connected. Deleting v
+leaves a two-connected graph in which u has exactly the adjacent
+neighbours a,b; deleting that simplicial vertex preserves
+two-connectivity. Thus F+x is two-connected and F is connected.
+Some neighbour z of x is not a cutvertex of F: an end block of F must
+have an x-neighbour away from its cutvertex, or that cutvertex would
+separate F+x. If F has no cutvertex, any x-neighbour works.
+
+Since x misses P and I is independent, z belongs to C-I and is adjacent
+to v. Take bags `{u,v,z}`, `{x}`, `V(F)-{z}`, and the four singleton D
+vertices. The third bag is connected and contains a,b. The first two
+are adjacent through zx, and each meets the third: use ua for the first
+and another C-neighbour of x for the second. Such a neighbour exists
+because x has at least three C-neighbours. Every d has at least three
+C-neighbours; deleting x,z leaves a contact to the third bag. All other
+contacts follow through u or x. This is a K7 model.
+
+After this exclusion, every I vertex has at least two C-I neighbours:
+it has at most three D-neighbours and two A-neighbours. The connected
+cover construction therefore also permits L to contain both a,b and
+at most one C-I vertex. Its complement is connected through v, and
+every remaining I vertex retains a C-I neighbour. In particular, if
+the I-neighbours of A collectively contact D, take L to be A together
+with those neighbours. Thus some D vertex in the remaining instance
+has no I-neighbour adjacent to either A root.
+
+These terminal operations in particular exclude `|I|<=2`, for arbitrary
+host order. They do not close the independent-I case. In its residue,
+each pair of D vertices has a common I-neighbour, no I vertex is complete
+to D, and the connected cover just described is absent. A K6 model in
+G-{u,v} exists by the six-chromatic deletion statement and HC6. Exactly
+one of its bags lies wholly in I, and that bag is a singleton: two such
+bags could not be adjacent, while if every bag met W, adjoining {u,v}
+would give K7. Enlarging that singleton without losing another bag's
+contacts remains unproved. A smaller quotient alone does not resolve it.
+For the stated order-two consequence, pairwise intersecting nonempty
+subsets of a two-element set have a common element; that element would
+be an I vertex complete to D. The empty case is covered by the colouring
+lift.
+
+A fan repair remains unproved too. Four disjoint a--D paths avoiding
+u,v,b exist. They would form a rooted K2,4 scheme with the length-two
+v--D paths if every d had a C-I neighbour outside the fan or on its
+own fan path. Minimising total fan length only controls cycles of
+foreign contacts: a cyclic reassignment cannot shorten the paths.
+An open chain of such contacts can leave a terminal uncovered, so
+minimality does not yet provide the required simultaneous choice.
+
+## A whole array from a two-vertex colour class
+
+A different conditional branch assumes `G-{u,p,d}` is five-colourable
+for p in P and d in D. Its remaining roots `A=P-{p}`, `B=D-{d}` use
+five distinct colours: otherwise restore p,d with six and then colour u.
+Restoring just p,d makes the entire sixth class exactly `{p,d}`.
+
+For every pair `a_i in A`, `b_j in B`, their two-colour subgraph contains
+an a_i--b_j path, or a Kempe interchange frees a colour at u. There is
+also a p--d path of length at most three whose internal vertices have
+those two colours. A common neighbour gives a length-two path. If
+neither colour occurs at a common neighbour, interchange p with the
+b_j-coloured leaves of its star, and d with the a_i-coloured leaves of
+its star. These swaps would free a colour at u unless two such leaves
+are adjacent; that edge supplies the length-three path.
+
+A sufficient, **unproved** extraction from the full two-by-three array
+is a rooted K5 model on A union B satisfying, for every i,j,
+
+`p contacts the b_j bag OR d contacts the a_i bag`.
+
+The clauses force either all three former contacts or both latter
+contacts. The corresponding extra root and u would then complete K7.
+The ordinary bipartite scheme theorem does not preserve these clauses.
+In a deficient projection reduction the orientation may change, and a
+vertex carrying an auxiliary contact may enter a different labelled
+bag. Its actual contact survives but its required clause need not.
+Including every contact vertex also requires proving connectivity of
+its projection to the named root. Neither obligation has been met;
+this is a construction target, not a new application of contractibility.
 
 ## Four-root five-colour extension
 
@@ -161,6 +322,14 @@ information: in every six-colouring of G-e the two ends of e are equal,
 since otherwise G would be six-colourable. These are exactly the
 colourings of G/e. A construction using full minor criticality must use
 additional contractions and prove their expansion step.
+
+The completed two-triangle structural proof cannot currently be applied
+with a distinguished split root. Contracting an edge of D supplies an
+ordinary cap-meeting K5, but its bag at that edge need not split while
+retaining the other contacts. The existing prism normalisation excludes
+all such K5 models; excluding only those that admit the split-root lift
+does not justify that normalisation. A new construction must address
+this first inference before using its later web descriptions.
 
 ## Minimising a shore while retaining the root placements
 

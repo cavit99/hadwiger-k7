@@ -225,6 +225,18 @@ The attack must choose the two parts, root ownership and proper-minor
 colourings together; models obtained for different choices of `r` cannot
 be combined without a valid ownership argument. All final bags may change.
 
+The current [whole-host contraction attempt](hc7_split_clique_global_colour_lifts.md#contracting-an-independent-anti-neighbourhood)
+chooses v in P and contracts the independent set `I=C-N(v)` into
+disjoint stars. The connected anchor `{u,v}` then dominates the quotient.
+Two disjoint D-neighbourhoods in I give a six-colouring lift; complementary
+connected-cover and end-block constructions give actual K7 models. These
+unaudited terminal operations exclude `|I|<=2` and further unbounded
+configurations. The remaining independent case still needs a joint
+allocation; independence itself has not been obtained in general. A
+minimum-length fan does not yet supply the necessary terminal assignment.
+This whole-case attack does not assume the six-cut in the conditional
+construction below. No complete split-clique closure is claimed.
+
 The [7 October global-colouring construction](hc7_split_clique_global_colour_lifts.md)
 retains the full boundary-colouring condition. At a six-cut T in C,
 with P and D on opposite sides, it gives an actual six-colouring of G

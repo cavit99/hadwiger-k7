@@ -8,18 +8,18 @@ database = ".cache/research/index.sqlite"
 
 [[claims]]
 id = "hc7.laboratory.split_clique_global_colour_lifts"
-title = "Colouring lifts and minimum shores at a split-clique six-cut"
+title = "Whole-host colouring lifts and contractions in the split-clique case"
 kind = "laboratory"
 status = "written-unaudited"
 source = "active/hc7_split_clique_global_colour_lifts.md"
 source_heading = "Global colouring lifts in the split-clique case"
 active = false
-scope = "a seven-connected seven-chromatic K7-minor-free graph with all proper minors six-colourable, a split triangle and four-clique neighbourhood, initially an exterior six-cut of G-u; minimum-shore cuts may subsequently meet the triangle but avoid the four-clique"
-colour_compatibility = "a proper-minor response is restored on the entire original graph when one four-root obstruction admits the five-colour extension"
-strict_parameter = "one proper minor has |A|+2 fewer vertices; this is a direct colouring lift, not a recursive induction"
-conclusions = ["the absence of the specified rooted K4 on an exterior-cut shore gives a six-colouring of the original host", "all twelve single-pair boundary states occur in the original host", "every nonempty proper subset of the minimum shore in the expanded cut class has at least seven neighbours"]
-does_not_prove = ["the rooted alternative at the six-cut", "compatibility of the two shore models", "a valid induction", "the whole split-clique case", "HC7"]
-keywords = ["exterior six-cut", "four-root extension", "whole-host colouring lift", "minimum shore", "simultaneous helpers", "doubled routing"]
+scope = "a seven-connected seven-chromatic K7-minor-free graph with all proper minors six-colourable and a split triangle and four-clique neighbourhood; the star construction additionally assumes C-N(v) independent for v in the triangle, while the separate separator construction assumes a six-cut"
+colour_compatibility = "fixed disjoint star fibres give an exact five-colour quotient response and an explicit original-host lift when two D-neighbourhoods in I are disjoint; the separate four-root extension restores the whole original graph across a six-cut"
+strict_parameter = "the star-and-anchor contraction removes |I|+1 vertices; the shore contraction removes |A|+2; these are terminal operations, not recursive induction"
+conclusions = ["all twelve single-pair boundary states occur in the original host", "independent anti-neighbourhoods with two disjoint D-neighbourhoods, a specified connected cover or a D-complete vertex admit terminal constructions", "independent anti-neighbourhoods C-N(v) of order at most two are excluded for v in the triangle", "the absence of the specified rooted K4 on an exterior-cut shore gives a six-colouring of the original host", "every nonempty proper subset of the minimum shore in the expanded cut class has at least seven neighbours"]
+does_not_prove = ["the general independent anti-neighbourhood case", "existence of a triangle vertex with independent anti-neighbourhood", "the rooted alternative at the six-cut", "compatibility of the two shore models", "a valid induction", "the whole split-clique case", "HC7"]
+keywords = ["independent anti-neighbourhood", "star contraction", "end block", "whole-host colouring lift", "exterior six-cut", "four-root extension", "minimum shore", "simultaneous helpers"]
 
 [[claims]]
 id = "hc7.barrier.six_cut_three_part_partition"
