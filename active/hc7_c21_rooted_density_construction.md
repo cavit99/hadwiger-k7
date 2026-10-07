@@ -239,6 +239,18 @@ quotient colour and one spare colour. These failures leave simultaneous
 recolouring and a different allocation possible; no valid induction has
 been obtained.
 
+The same working note now [minimises the triangle-side shore](hc7_split_clique_global_colour_lifts.md#minimising-a-shore-while-retaining-the-root-placements)
+in the fixed host, allowing triangle roots on the cut while keeping the
+four-clique on the other side. Every proper subset of that minimum shore
+has at least seven neighbours. When at least two triangle roots remain
+inside, two disjoint connected sets meeting those roots and sharing four
+cut neighbours would give K7 directly. Their existence is unproved;
+[splitting every cut neighbourhood among three rooted parts](../barriers/hc7_six_cut_three_part_partition.md)
+is too strong. The singleton endpoint has two adjacent degree-seven
+centres with respective four-cliques and remains open. The release's
+doubled-route lemma cannot retain an arbitrary whole rooted model across
+this cut; the exact applicability limits are in the working note.
+
 A [working root-placement strengthening](hc7_split_clique_construction_working.md)
 reconstructs the proof with one triangle kept singleton. It gives four
 partitions of the same three-connected `M`: in the partition indexed by

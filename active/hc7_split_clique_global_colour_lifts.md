@@ -161,3 +161,97 @@ information: in every six-colouring of G-e the two ends of e are equal,
 since otherwise G would be six-colourable. These are exactly the
 colourings of G/e. A construction using full minor criticality must use
 additional contractions and prove their expansion step.
+
+## Minimising a shore while retaining the root placements
+
+Starting from an exterior six-cut, allow subsequent six-cuts T of H to
+meet P, but require `T intersect D` to be empty and `P-T` to be nonempty.
+The two components A,B contain P-T,D, respectively. They are the only
+components and both are full, by seven-connectivity and the two literal
+cliques. Choose |A| minimum over this enlarged class in the **fixed G**.
+Write `k=|T intersect P|`, so k is 0, 1 or 2.
+
+Every nonempty proper subset U of A has at least seven neighbours in H.
+For connected U missing P, this follows from seven-connectivity of G,
+since u misses U. For connected U meeting P, a boundary of size six
+would be a smaller eligible cut: it avoids D, every P vertex outside U
+lies on the boundary, and D remains on the other side. A smaller
+boundary contradicts seven-connectivity. For disconnected U, apply the
+bound to one component, whose neighbours are also outside U.
+
+Consequently, if |A|>=2, every t in T has at least two A-neighbours:
+otherwise deleting its sole neighbour v leaves the nonempty proper set
+A-v with boundary contained in `{v} union (T-{t})`. Completing T to a
+clique makes H[A union T] seven-connected. A cut of order at most six
+cannot detach a proper A-subset; deleting all of T leaves A connected.
+The completion is auxiliary: its new edges are not minor contacts.
+
+This is a minimum-shore argument, not induction on a smaller critical
+graph. A replacement cut strictly decreases |A| and retains the original
+G, D and all named P vertices, including those now on T. It does not
+justify discarding the k=1 or k=2 endpoints.
+
+## The simultaneous construction still needed
+
+For any four-element X subset T, four disjoint paths in H[B union X]
+join X to distinct D vertices. A separator of order at most three there,
+together with u and T-X, would separate G with at most six vertices.
+These paths give four clique bags, each containing its D endpoint.
+
+Thus, when k=0 or 1, it suffices to find two disjoint connected subsets
+L,R of A, each meeting P, with at least four common neighbours in T.
+They are adjacent through the literal P clique. Choosing four common
+neighbours as X gives the four preceding bags, L,R and {u}: seven
+disjoint connected bags with every required contact. Unused A vertices
+can be assigned to L or R while preserving connectedness, so a connected
+bipartition is an equivalent sufficient target. **Its existence is
+unproved**, even under the minimum-shore boundary condition.
+
+There are elementary endpoints. If k=0 and A=P, each P vertex has at
+least five T-neighbours, so two share four. If |A|=2, both vertices are
+adjacent and complete to T. For k=1 take them as L,R. For k=2 write
+`A={p,x}` and choose `q in T intersect P`; take `L={p}`, `R={x,q}` and
+`X=T-P`. All four X contacts are actual, and R meets P through q.
+These constructions exclude those endpoints without a colouring lift.
+
+The singleton endpoint necessarily has k=2. Write `A={p}`,
+`P={p,a,b}` and `Q=T-{a,b}`. Then
+`N_G(p)={u,a,b} union Q` and Q is a four-clique: Dirac's degree-seven
+neighbourhood bound excludes an independent triple `{u,x,y}` with
+nonadjacent x,y in Q. This leaves two adjacent degree-seven centres u,p
+with common neighbours a,b and respective four-cliques D,Q. It is not
+closed. The named clique and centre adjacencies do not force equal D,Q
+palettes in a colouring of G/up: the possible boundary trace
+`a=5, b=4, D={1,2,3,4}, Q={1,2,3,5}, up=6` defeats that inference alone.
+Recolouring a centre with its omitted clique colour conflicts with a
+or b. A compatible linkage or a different whole-host colouring is needed.
+
+The stronger proposal to partition A into three P-rooted connected sets
+while splitting every T-neighbourhood is
+[false](../barriers/hc7_six_cut_three_part_partition.md). This does not
+refute the two-set target. Maximising the number of shared neighbours
+also gives no descent yet: moving a connected piece can gain one contact
+and lose another, or disconnect the retained P-containing side. The
+missing exchange must preserve both connected sides and root ownership,
+then increase that number or produce a genuinely smaller eligible shore.
+
+## What transfers from the OpenAI release
+
+At the [reviewed revision](../archive/openai_math_review_2026-10-07/README.md),
+the linear list-colouring paper's constrained-colouring lemma requires
+lists of size at least `m+6k`, induced k-connected subgraphs to be
+m-choosable, and a weighted boundary budget at most `2k^2`. Its separator
+accounting is a useful template, but at six colours the numerical slack
+is unavailable. Ordinary proper-minor six-colourability is not the
+required list-colouring hypothesis.
+
+Lemma 6.9 combines doubled routes, selecting one start from each pair
+and unspecified distinct targets. It does not preserve a chosen endpoint
+assignment. Here retaining an entire X-rooted K4 on the A side leaves
+only T-X, two vertices, for P-to-D routes avoiding that model. This
+cannot supply two doubled P sources. Releasing bags permits more routes
+but requires rebuilding their contacts simultaneously. Unpaired path
+minimisation can change source ownership, so its sparsity bound does not
+repair that step. The two-set target above incorporates the needed
+contacts in the construction itself; it is not a consequence of the
+released lemma. No additional HC7 case or valid induction follows yet.

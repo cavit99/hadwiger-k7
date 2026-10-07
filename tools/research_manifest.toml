@@ -8,18 +8,37 @@ database = ".cache/research/index.sqlite"
 
 [[claims]]
 id = "hc7.laboratory.split_clique_global_colour_lifts"
-title = "Original-host colouring lift at a split-clique exterior six-cut"
+title = "Colouring lifts and minimum shores at a split-clique six-cut"
 kind = "laboratory"
 status = "written-unaudited"
 source = "active/hc7_split_clique_global_colour_lifts.md"
-source_heading = "A colouring lift across an exterior six-cut"
+source_heading = "Global colouring lifts in the split-clique case"
 active = false
-scope = "a seven-connected seven-chromatic K7-minor-free graph with all proper minors six-colourable, a split triangle and four-clique neighbourhood, and a six-cut of G-u avoiding the neighbourhood"
+scope = "a seven-connected seven-chromatic K7-minor-free graph with all proper minors six-colourable, a split triangle and four-clique neighbourhood, initially an exterior six-cut of G-u; minimum-shore cuts may subsequently meet the triangle but avoid the four-clique"
 colour_compatibility = "a proper-minor response is restored on the entire original graph when one four-root obstruction admits the five-colour extension"
 strict_parameter = "one proper minor has |A|+2 fewer vertices; this is a direct colouring lift, not a recursive induction"
-conclusions = ["the absence of the specified rooted K4 on a shore gives a six-colouring of the original host", "all twelve single-pair boundary states occur in the original host"]
+conclusions = ["the absence of the specified rooted K4 on an exterior-cut shore gives a six-colouring of the original host", "all twelve single-pair boundary states occur in the original host", "every nonempty proper subset of the minimum shore in the expanded cut class has at least seven neighbours"]
 does_not_prove = ["the rooted alternative at the six-cut", "compatibility of the two shore models", "a valid induction", "the whole split-clique case", "HC7"]
-keywords = ["exterior six-cut", "four-root extension", "whole-host colouring lift", "boundary palette"]
+keywords = ["exterior six-cut", "four-root extension", "whole-host colouring lift", "minimum shore", "simultaneous helpers", "doubled routing"]
+
+[[claims]]
+id = "hc7.barrier.six_cut_three_part_partition"
+title = "Three rooted parts need not split every boundary neighbourhood"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_six_cut_three_part_partition.md"
+source_heading = "Statement refuted"
+active = false
+scope = "one ten-vertex graph with a four-vertex clique core, a prescribed triangle and six independent boundary vertices; direct written check without separate audit"
+conclusions = ["proper-subset boundary at least seven does not force a three-part rooted partition splitting every boundary neighbourhood"]
+does_not_prove = ["failure of the simultaneous two-set target", "failure under the original critical-host hypotheses", "a counterexample to HC7"]
+keywords = ["minimum shore", "connected partition", "boundary contacts", "split-clique neighbourhood"]
+
+[[relations]]
+source = "hc7.laboratory.split_clique_global_colour_lifts"
+target = "hc7.barrier.six_cut_three_part_partition"
+kind = "guarded_by"
+note = "The two-set target cannot be replaced by the stronger demand that all six boundary neighbourhoods split across three triangle-rooted parts."
 
 [[claims]]
 id = "graph_schemes.barrier.forest_two_colour_lift"
