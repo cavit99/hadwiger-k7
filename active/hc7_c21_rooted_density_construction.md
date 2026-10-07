@@ -510,24 +510,30 @@ The two different labels cover all four D vertices. Hence a largest flexible
 B dominates all G, and no response pairing p with a D root can retain B
 monochromatic. These are working deductions, not a connected-bag allocation.
 
-**Selected global exchange and its limit.** The
+**Paired exchange and the selected proper-minor repair.** The
 [whole-response construction](hc7_split_clique_global_colour_lifts.md#exchanging-a-flexible-colour-class)
 can replace part of B while restoring both complete colourings, and can
-change its P root. Recolouring a whole bipartite component of
-`G[B union phi^{-1}(5) union psi^{-1}(3)]` extends this operation; a
-component containing d3 would six-colour G. Some equal-size exchanges
-strictly reduce the number of edges inside the union of the two restored
-colour classes. These are genuine operations, but not a forced descent.
-The [new maximum-class barrier](../barriers/hc7_flexible_nucleus_root_edge.md#maximum-flexibility-does-not-force-an-exchange)
-has a uniquely largest flexible class and odd target components for
-every response pair. It is six-colourable and fails seven-connectivity;
-the full host assumptions remain essential. Contracting an obstructing
-odd cycle supplies only one common colour on expansion, not a list
-colouring of the cycle. Thus the next construction must change exterior
-constraints using actual proper-minor responses, or allocate the odd
-region together with all retained contacts. Further fixed-B palette
-conditions alone will not close this route. The entire split-clique
-case remains the target; these exchanges are working, unaudited material.
+change its P root. Some equal-size exchanges decrease the number of
+edges inside the restored class union, but the
+[maximum-class barrier](../barriers/hc7_flexible_nucleus_root_edge.md#maximum-flexibility-does-not-force-an-exchange)
+prevents forcing augmentation from these fixed-class data alone.
+
+The [next actual-minor construction](hc7_split_clique_global_colour_lifts.md#repairing-a-clique-contraction-colouring-in-the-original-host)
+contracts `{u} union P`. Restoring this clique against a fixed quotient
+colouring is exactly a two-edge matching problem between P and the four
+D colours. However, a new explicit frame defeats restoration from
+**every** quotient colouring, even with K7 exclusion and no literal K6.
+The construction therefore deletes the contracted vertex before changing
+the exterior. A two-step Kempe repair can then introduce its former
+colour at selected P-neighbours and restore all of G, even on that
+barrier. The D colours may move. The unresolved step is to force both
+component-avoidance conditions, or convert their failures into compatible
+minor bags. The second switch must not create a new conflict at its own
+target root. No decreasing sequence of such repairs is proved. Cycle,
+star and rooted-model contractions have not supplied that forcing step;
+their smaller quotients do not inherit seven-chromatic criticality.
+The entire split-clique case remains the target. These are working,
+unaudited constructions, not another case closure.
 
 The construction must retain the original-host colouring constraints.
 The output may use three P bags and three D-containing bags, omitting or

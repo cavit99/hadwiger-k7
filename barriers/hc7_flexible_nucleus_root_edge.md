@@ -198,3 +198,37 @@ so it is not the required proper-minor-critical host. The barrier concerns
 inferences from maximum B and its full colouring relation alone. A use
 of the original host's connectivity or proper-minor constraints remains
 possible. No enumeration or computer-assisted conclusion is used here.
+
+## Preserving the quotient can prevent every lift
+
+**Status:** explicit counterexample to a restricted restoration strategy;
+written proof, not separately audited. A six-colourable K7-minor-free
+split-clique frame need not admit a colouring obtained by restoring its
+central four-clique while retaining any colouring of its contraction.
+The example also has no literal K6. It is not seven-connected.
+
+Start with `R={u} union P` inducing K4 and `{u} union D` inducing K5,
+with no P--D edges. For each p in P add a disjoint private graph
+`F_p=K2 join C5`, and join p to all of F_p. There are no other edges.
+In particular `N(u)=P dotunion D` exactly. Each F_p is five-chromatic,
+and each block `p join F_p=K3 join C5` is six-chromatic with clique
+number five. It has no K7 minor: discarding the at most three bags
+meeting its K3 would leave a K4 minor in C5, which is impossible.
+The whole graph is a clique sum of these blocks, K4 and K5 along
+single vertices, so excludes K7 and has no literal K6. Six-colour R
+and `{u} union D` consistently; each private F_p can use the five
+colours other than p's. This colours the entire graph.
+
+Contract R to q. In every six-colouring of this quotient, normalised
+by `q=6,D=1,2,3,4`, each F_p must use all of colours one to five.
+Thus every p has an exterior neighbour of every colour in `[5]`.
+Keeping this exterior colouring leaves every P vertex only colour six,
+so the triangle cannot be restored. This holds for every quotient
+colouring, not merely one chosen response or its Kempe class.
+
+The [two-step exterior repair](../active/hc7_split_clique_global_colour_lifts.md#repairing-a-clique-contraction-colouring-in-the-original-host)
+does restore the graph, by moving selected private colour classes to
+six after q is deleted. The barrier therefore rejects the requirement
+that intermediate exterior colourings continue to descend to the
+quotient. It does not reject recolouring in the original host. Its
+cutvertices and six-colourability exclude the critical-host hypotheses.

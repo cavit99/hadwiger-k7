@@ -15,11 +15,11 @@ source = "active/hc7_split_clique_global_colour_lifts.md"
 source_heading = "Global colouring lifts in the split-clique case"
 active = false
 scope = "a seven-connected seven-chromatic K7-minor-free graph with all proper minors six-colourable and a split triangle and four-clique neighbourhood; the star construction additionally assumes C-N(v) independent for v in the triangle, while the separate separator construction assumes a six-cut"
-colour_compatibility = "paired class exchanges and whole-component recolouring restore both complete responses; fixed disjoint star fibres and the separate four-root extension give original-host lifts under their stated hypotheses"
+colour_compatibility = "paired class exchanges restore both responses; the central-K4 contraction gives an exact free-colour matching criterion, and a two-step exterior repair after deleting its contracted vertex permits D colours to move while restoring all original edges; star and four-root lifts retain their stated hypotheses"
 strict_parameter = "some equal-size class exchanges decrease the number of edges inside the restored class union; star and shore contractions decrease order, but no forced exchange or recursive induction is proved"
-conclusions = ["all twelve single-pair boundary states occur in the original host", "explicit paired exchanges preserve whole-host colourings and may change the deleted triangle root", "a bipartite component containing the specified D root gives a six-colouring", "independent anti-neighbourhoods with two disjoint D-neighbourhoods, a specified connected cover or a D-complete vertex admit terminal constructions", "independent anti-neighbourhoods C-N(v) of order at most two are excluded for v in the triangle", "the absence of the specified rooted K4 on an exterior-cut shore gives a six-colouring of the original host", "every nonempty proper subset of the minimum shore in the expanded cut class has at least seven neighbours"]
-does_not_prove = ["a forced class augmentation", "a colouring lift through an odd-cycle contraction", "the general independent anti-neighbourhood case", "existence of a triangle vertex with independent anti-neighbourhood", "the rooted alternative at the six-cut", "compatibility of the two shore models", "a valid induction", "the whole split-clique case", "HC7"]
-keywords = ["flexible class exchange", "whole-component recolouring", "independent anti-neighbourhood", "star contraction", "end block", "whole-host colouring lift", "exterior six-cut", "four-root extension", "minimum shore", "simultaneous helpers"]
+conclusions = ["all twelve single-pair boundary states occur in the original host", "explicit paired exchanges preserve whole-host colourings and may change the deleted triangle root", "a bipartite component containing the specified D root gives a six-colouring", "the two-step exterior repair gives a whole-G six-colouring under its exact component-avoidance conditions", "independent anti-neighbourhoods with two disjoint D-neighbourhoods, a specified connected cover or a D-complete vertex admit terminal constructions", "independent anti-neighbourhoods C-N(v) of order at most two are excluded for v in the triangle", "the absence of the specified rooted K4 on an exterior-cut shore gives a six-colouring of the original host", "every nonempty proper subset of the minimum shore in the expanded cut class has at least seven neighbours"]
+does_not_prove = ["a forced class augmentation", "existence of the two-step exterior repair in every host", "a colouring lift through an odd-cycle contraction", "the general independent anti-neighbourhood case", "existence of a triangle vertex with independent anti-neighbourhood", "the rooted alternative at the six-cut", "compatibility of the two shore models", "a valid induction", "the whole split-clique case", "HC7"]
+keywords = ["clique contraction", "exterior Kempe repair", "free-colour matching", "flexible class exchange", "whole-component recolouring", "independent anti-neighbourhood", "star contraction", "end block", "whole-host colouring lift", "exterior six-cut", "four-root extension", "minimum shore", "simultaneous helpers"]
 
 [[claims]]
 id = "hc7.barrier.six_cut_three_part_partition"
@@ -97,22 +97,22 @@ note = "The forced-colour dichotomy and restricted list-obstruction argument pro
 
 [[claims]]
 id = "hc7.barrier.flexible_nucleus_root_edge"
-title = "A flexible minimal list obstruction can remain uncolourable after root-edge deletion"
+title = "Limits of fixed colouring data and quotient restoration in split-clique frames"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_flexible_nucleus_root_edge.md"
 source_heading = "Statement refuted"
 active = false
-scope = "an explicit nine-vertex minimal list obstruction, a fifteen-vertex split-clique frame, and its clique-attachment extension with a unique maximum independent flexible class; both frames are K7-minor-free and six-colourable, not seven-connected or minor-critical"
-conclusions = ["opposite fifth-colour ownership, minimality and all four clique contacts do not imply colourability after deleting the root edge", "the failure persists with X equal to Z and with K7 exclusion", "maximum flexible class size and the full fixed-class colouring relation do not force a bipartite target component or a cardinality augmentation"]
+scope = "explicit split-clique frames: a nine-vertex list obstruction, its maximum-independent-class extension, and private K2-join-C5 attachments defeating every central-K4 quotient response; all frames are K7-minor-free and six-colourable, not seven-connected or minor-critical"
+conclusions = ["opposite fifth-colour ownership, minimality and all four clique contacts do not imply colourability after deleting the root edge", "the failure persists with X equal to Z and with K7 exclusion", "maximum flexible class size and the full fixed-class colouring relation do not force a bipartite target component or a cardinality augmentation", "every colouring of the central-K4 contraction can fail to restore its original clique, although exterior recolouring after deleting the contracted vertex succeeds"]
 does_not_prove = ["failure under the original seven-connected critical-host hypotheses", "failure of a different global colouring or minor construction", "a counterexample to HC7"]
-keywords = ["root-edge deletion", "minimal list obstruction", "opposite ownership", "maximum flexible class", "odd component", "Moser spindle", "clique sum", "colouring lift"]
+keywords = ["root-edge deletion", "minimal list obstruction", "opposite ownership", "maximum flexible class", "odd component", "clique contraction", "quotient colouring", "Moser spindle", "clique sum", "colouring lift"]
 
 [[relations]]
 source = "hc7.laboratory.split_clique_global_colour_lifts"
 target = "hc7.barrier.flexible_nucleus_root_edge"
 kind = "guarded_by"
-note = "The clique-attachment extension defeats augmentation or bipartite-component existence inferred solely from maximum class size and all fixed-class colourings. Original-host criticality and connectivity remain available."
+note = "Clique attachments defeat fixed-class augmentation and restoration constrained to keep a proper quotient colouring. Exterior repairs may leave that colouring space; original-host criticality and connectivity remain available."
 
 [[claims]]
 id = "hc7.split_clique_ore_core"

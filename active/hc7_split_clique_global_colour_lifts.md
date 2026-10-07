@@ -129,6 +129,100 @@ unresolved construction is a coupled change of the full responses and
 their exterior constraints, or a simultaneous allocation of all seven
 minor bags. No whole split-clique closure follows from these rules.
 
+## Repairing a clique-contraction colouring in the original host
+
+This construction uses an actual proper-minor response and allows the
+repaired exterior colouring to cease descending to that minor. The
+distinction is necessary, as the counterexample below shows. The result
+is a conditional whole-host lift, not a forced exchange or case closure.
+
+Put `R={u} union P` and contract this literal four-clique to q. Six-colour
+the proper minor Q, normalising `c(q)=6` and `c(d_i)=i` for `i in [4]`.
+Set `F=G-R`, and restrict c to F. Every P-neighbour in F avoids six,
+because its edge to q is present in Q. For each p in P put
+
+    E_p={i in [4]: no neighbour of p in F has colour i}.
+
+Keeping c on F, R can be restored **if and only if** the bipartite
+graph with edges `p i` for `i in E_p` has a matching of size two.
+For sufficiency, give the matched P vertices their two distinct labels,
+the third P vertex six, and u five. For necessity, u has colour five
+or six since D uses `[4]`; at most one P vertex can use the other of
+these two colours. Two P vertices must therefore use different colours
+from `[4]`. If restoration fails, all free pairs lie in a single row
+or a single column, possibly with no free pair. This follows directly
+from the absence of two disjoint edges in a bipartite graph.
+
+**Why recolouring Q is too restrictive.** The
+[clique-contraction barrier](../barriers/hc7_flexible_nucleus_root_edge.md#preserving-the-quotient-can-prevent-every-lift)
+is six-colourable and K7-minor-free, with the exact split neighbourhood
+and no literal K6, yet every six-colouring of Q has every E_p empty.
+Thus even an arbitrary change to the quotient colouring need not permit
+restoration. In particular, switches involving the quotient colour six
+preserve the free-pair graph after normalisation: all P-neighbours of
+the other colour lie in the component containing q. The original
+host's seven-connectivity and criticality are absent from the example.
+
+**A two-step exterior repair.** Delete q before switching components.
+Choose `P={p,a,b}` and distinct `i,j in [4]`. Let S be a union of
+components of the subgraph of F on colours six and i, containing every
+colour-i neighbour of a and no colour-i neighbour of p. Swap six and
+i on S, obtaining c1. Optional components may be included; their choice
+can affect the second step.
+
+Let T be the union of the components on c1-colours six and j which meet
+a colour-j neighbour of b. Suppose
+
+    T misses N_F(p) intersect c1^{-1}(j),
+    T misses N_F(b) intersect c1^{-1}(6).
+
+Swap six and j on T, obtaining c2, and restore
+
+    p=6,  a=i,  b=j,  u=5.
+
+This is a six-colouring of all G. The first swap removes every colour-i
+neighbour of a and creates none, since initially a has no colour-six
+neighbour. It also leaves p without a colour-six neighbour. The second
+swap preserves these two properties: it never changes colour i, and
+its first avoidance condition protects p. It removes every colour-j
+neighbour of b; its second condition prevents old colour-six neighbours
+of b from becoming new colour-j neighbours. Both switches preserve
+properness on the whole F. The colours of D may move, but they remain
+distinct and avoid five. Thus every edge at u and inside P is proper,
+as are all edges from P to F. There are no other edges to restore.
+
+This repair works on the barrier just cited. Its private graphs F_a,F_b
+have no colour-six vertices and no edges between them. For S use the
+entire colour-i class in F_a; for T use the entire colour-j class in
+F_b. These are unions of isolated vertices in their respective layers.
+All avoidance conditions hold. The resulting exterior colouring need
+not colour Q, because some neighbours of its former vertex q now use
+six. That is permitted and is essential to the lift.
+
+**First unresolved inference.** No proof forces a choice of p,a,b,i,j,S
+satisfying both steps in the original critical host. The first failure
+is a component joining the relevant a- and p-neighbourhoods. After a
+successful first step, the second can fail by meeting the protected
+p-neighbourhood or by joining both colour classes of b's neighbourhood.
+In particular the second avoidance condition cannot be omitted. These
+connections need not meet the correspondingly coloured D roots; a
+common colour is not branch-set ownership. No decreasing parameter for
+a sequence of repairs, or compatible minor construction from all their
+failures, has been proved. The entire split-clique case remains open.
+
+The other proper-minor tests did not supply that missing forcing step.
+Contracting an odd cycle still requires a list-colouring lift; switching
+an exterior component can free a colour at one cycle vertex while
+removing it at another. Contracting a rooted K5 selects missing contacts
+already forced by K7 exclusion, without preserving those contacts upon
+expansion. For any admissible `B={p} union I` above, contracting up and
+one edge from each i in I to a neighbour outside B gives a six-chromatic
+quotient. A five-colouring would restore B in a sixth colour and give
+u the contracted up colour, absent from the other six roots. None of
+these quotients is a smaller seven-chromatic critical host. These are
+route nonclosures, not further case closures or counterexamples to the
+full hypotheses.
+
 ## Contracting an independent anti-neighbourhood
 
 Fix v in P, put A=P-{v}={a,b}, I=C-N(v), and suppose I is independent.
